@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-09 j.h: updated to v2.6
+  2008-01-05 j.h: updated en;fr to v2.4.
+  2007-06-04 kost: added 'no'
+  2006-07-03 lexa: enhanced docbook compliance
+  2006-06-17 added note en;fr for special characters by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  050818 de reviewed by axel.wernicke
+  -->
+<!--revision2790 2009-03-22-->
+<sect2 id="gimp-tool-text">
+  <title lang="en">Text</title>
+  <title lang="ja">テキスト</title>
+
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Text</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Text</primary>
+    <secondary>Tool</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>テキスト</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>テキスト</primary>
+    <secondary>ツール</secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">The Text tool in Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>テキスト</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/ja/toolbox-text.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The Text tool places text into an image. When you click on an image with
+    this tool the <emphasis>Text Editor dialog</emphasis> is opened where
+    you can type your text, and a text layer is added in the Layer Dialog.
+    In the <emphasis>Text Option dialog</emphasis>, you can change the font,
+    color and size of your text, and justify it, interactively.
+  </para>
+  <para lang="en">
+    A new possibility appeared with GIMP-2.6: click-dragging the
+    mouse pointer on the canvas draws a rectangular frame that you
+    can enlarge and move as you do with rectangular selections. The
+    text you type in the Text Editor is displayed in this frame and
+    automatically adapted to the frame size. You can adjust this frame
+    whenever you like.
+  </para>
+  <para lang="en">
+    When the mouse pointer is around the center of the frame, it
+    comes with a small move-cross
+    <guiicon>
+      <inlinegraphic fileref="images/toolbox/stock-tool-move-16.png"/>
+    </guiicon>.
+    Click-and-drag to move the frame and its contents (the text shows up when
+    you release the mouse button). The text remains at the same place in the
+    frame.
+  </para>
+  <para lang="ja">
+    テキストツールは画像内に文字や語句を置くためのものです。 このツールで画像を
+    クリックすると文章を書きこめる<quote>テキストエディタ</quote>ダイアログが
+    開かれます。 入力された文は新たなテキストレイヤーとなり、 レイヤーダイアログで
+    管理できます。 <emphasis>ツールオプション</emphasis> 上で書体 (フォント) や
+    文字の色、 大きさが変更できて、 即座に画像上で変化を確かめられます。
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym> 2.6 より新たな手段が加わりました。 キャンバス内で
+    クリックしてマウスポインタを曳いて矩形枠を描くと、 矩形選択ツールと同じ方法
+    で拡げたり移動したりできます。 テキスト編集ウィンドウに書き込んだテキストは
+    この枠内に表示され、 枠の大きさにその文字が自動的に適合します。 <!--たぶん
+    嘘-->この枠はいつでも調整できます。
+  </para>
+  <para lang="ja">
+    マウスポインタはこの枠内の中央に入ると小さな移動十字 (四方矢印)
+    <guiicon>
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/stock-move-16.png"/>
+        </imageobject>
+      </inlinemediaobject>
+    </guiicon>.
+    の姿に変化します。 そこでクリックして曳けばこの枠とその内容が移動します
+    (テキストはマウスボタンを放すと現れます)。 テキストは枠内での同じ位置に
+    有ります。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access this tool in several ways:
+    </para>
+    <para lang="ja">このツールを起用する方法はいくつかあります:</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the image menu through
+          <menuchoice>
+            <guimenu><accel>T</accel>ools</guimenu>
+            <guisubmenu>Te<accel>x</accel>t</guisubmenu>
+            </menuchoice>,
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by clicking the tool icon
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-text-22.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          in Toolbox,
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the <keycap>T</keycap> keyboard shortcut.
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>テキスト(<accel>X</accel>)</guisubmenu>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-text-22.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="ja">
+          キーボードショートカット <keycap>T</keycap>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Text tool options</title>
+      <title lang="ja">
+        <quote>テキスト</quote>ツールのツールオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-options-text.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Overview</term>
+        <term lang="ja">概観</term>
+        <listitem>
+          <xi:include href="about-common-options-display.xml"/>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Font</term>
+        <term lang="ja">フォント</term>
+        <listitem>
+          <para lang="en">
+            There are two ways of selecting fonts in GIMP. The first is from
+            the image Dialogs/Fonts menu. The second is with the Font selector
+            in this tool. Both methods select from the installed X fonts. When
+            you select a font it is interactively applied to your text.
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>ではフォントを選択する方法が2通りあります。
+            ひとつめはメニューより
+            <menuchoice>
+              <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+              <guisubmenu>ドッキング可能なダイアログ(<accel>D</accel>)</guisubmenu>
+              <guimenuitem>フォント(<accel>F</accel>)</guimenuitem>
+            </menuchoice> と辿って得られるダイアログで選ぶ方法です。 もうひとつ
+            はこのツールの <guilabel>フォント:</guilabel> セレクタを利用する
+            ことです。 いずれの手順でもシステムにインストールされているフォント
+            や、 <acronym>GIMP</acronym>のユーザディレクトリに追加したフォント
+            を使えます。 テキストレイヤーを活性化してフォントを変更すると直ちに
+            画像にもそのフォントが適用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Size</term>
+        <term lang="ja">大きさ</term>
+        <listitem>
+          <para lang="en">
+            This control sets the size of the font in any of several
+            selectable units.
+          </para>
+          <para lang="ja">
+            ここでフォントの大きさを調節できます。
+            単位も数種類から利用できます。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Hinting</term>
+        <term lang="ja">ヒント情報</term>
+        <listitem>
+          <para lang="en">
+            Uses the indices of adjustment to modify the characters in
+            order to produce clear letters in small font sizes.
+          </para>
+          <para lang="ja">
+            小さな文字がつぶれたり歪んだりするのを防ぐ補正情報を利用します。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Force Auto-Hinter</term>
+        <term lang="ja">自動ヒント強制</term>
+        <listitem>
+          <para lang="en"><guilabel>Auto Hinter</guilabel> tries to automatically
+            compute information for better representation of the
+            character font.
+          </para>
+          <para lang="ja">
+            このオプションは文字の字体を美しく見せるための情報を自動的に算出
+            しようとします。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Antialiasing</term>
+        <term lang="ja">アンチエイリアス</term>
+        <listitem>
+          <para lang="en">
+            Antialiasing will render the text with much smoother edges and
+            curves. This is achieved by slight blurring and merging of the
+            edges. This option can radically improve the visual appearance of
+            the rendered typeface. Caution should be exercised when using
+            antialiasing on images that are not in RGB color space.
+          </para>
+          <para lang="ja">
+            アンチエイリアス処理は文字の筆画の縁や曲線をより滑らかに描きます。
+            そのために縁の線をわずかにぼかしたりまとめたりしています。 この
+            オプションは書体の描画表現を視覚的に向上させることが可能です。
+            ただし非<acronym>RGB</acronym>画像でアンチエイリアスを使用するには
+            経験を積む必要がありますのでご注意ください。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Color</term>
+        <term lang="ja">色</term>
+        <listitem>
+          <para lang="en">
+            Color of the text that will be drawn next. Defaults to black.
+            Selectable from the color picker dialog box that opens when the
+            current color sample is clicked.
+          </para>
+          <para lang="ja">
+            これから書く文字の色を予め指定します。 既定の色は黒です。 この色
+            ボタンをクリックすると現れる<quote>文字色</quote>ダイアログで
+            色を指定できます。
+          </para>
+          </para>
+          <tip>
+            <para lang="en">
+              You can also click-and-drag the color from the Toolbox color
+              area onto the text.
+            </para>
+            <para lang="ja">
+              ツールボックスの色標識をクリックしてテキストレイヤー上まで曳いて
+              きて直接放っても文字色を変更できます。
+            </para>
+            <para lang="en">
+              Before changing color of a text by gradient or a pattern,
+              set <guilabel>Lock:</guilabel> at Layer Dialog, for protecting
+              transparent area of the text layer.  Then apply colors by
+              gradient or fill with a pattern.  Although this layer will
+              enclose the specificity as a text layer temporally, you can
+              re-edit this text by clicking this layer,
+              and this text will colored with black.
+            </para>
+            <para lang="ja">
+              グラデーションやパターンを使って着色するときはレイヤーダイアログで
+              <guilabel>透明保護</guilabel> を有効にしてから行なってください。
+              ただしこのときからテキストレイヤーとしての属性が一時的に
+              失われます。 この文字列はテキストツールでクリックすれば再び編集
+              できますが、 そのときは文字色が黒一色に戻されます。
+            </para>
+          </tip>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Justify</term>
+        <term lang="ja">揃え位置</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Justify</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>揃え位置</primary>
+          </indexterm>
+          <para lang="en">
+            Causes the text to be justified according to any of four rules
+            selectable from the associated icons.
+          </para>
+          <para lang="ja">
+            文字列を <guiicon><inlinemediaobject><phrase>右揃え</phrase>
+            </inlinemediaobject></guiicon>、 <guiicon><inlinemediaobject>
+            <phrase>左揃え</phrase></inlinemediaobject></guiicon>、 <guiicon>
+            <inlinemediaobject><phrase>中央揃え</phrase></inlinemediaobject>
+            </guiicon>、 <guiicon><inlinemediaobject><phrase>均等割り</phrase>
+            </inlinemediaobject></guiicon> の4つの揃え方から選びます。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Indent</term>
+        <term lang="ja">インデント</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Indent</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>インデント</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>字下げ</primary>
+          </indexterm>
+          <para lang="en">
+            Controls the indent spacing from the left margin, for the fist
+            line.
+          </para>
+          <para lang="ja">
+            一行目の字下げの幅を指定します。 単位はピクセルです。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Line Spacing</term>
+        <term lang="ja">行間隔</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Line spacing</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>行間隔</primary>
+          </indexterm>
+          <para lang="en">
+            Controls the spacing between successive lines of text. This
+            setting is interactive: it appears at the same time in image text.
+            The number is not the space between lines itself, but how many
+            pixels must be added to or subtracted from this space (the value
+            can be negative).
+          </para>
+          <para lang="ja">
+            複数行の文章の行間の幅を調節します。 単位はピクセルです。 変更は
+            即座に画像のテキストレイヤーに反映します。 行送り間隔ではないので
+            既定値は 0.0 です。 さらに近づけるには負の値を用います。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Letter Spacing</term>
+        <term lang="ja">文字間隔</term>
+        <listitem>
+          <para lang="en">
+            Controls the spacing between letters. Also in this case the number
+            is not the space itself between letters, but how many pixels must
+            be added to or substracted from this space (the value can be
+            negative).
+          </para>
+          <para lang="ja">
+            文字と文字の間の幅を調節します。 これも文字幅ではないので既定値は
+            0.0 です。 文字を重ねるようにするには負の値が必要でしょう。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="text-along-path">
+        <term lang="en">Text along Path</term>
+        <term lang="ja">パスに沿ってテキストを配置</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Text along Path</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>パスに沿ってテキストを配置</primary>
+          </indexterm>
+          <para lang="en">
+            This option is enabled only if a
+            <link linkend="gimp-using-paths">path</link> exists. When your
+            text is created, then create or import a path and make it active.
+            If you create your path before the text, the path becomes
+            invisible and you have to make it visible in the Path Dialog.
+          </para>
+          <para lang="en">
+            This command is also available from the <quote>Layer</quote> menu:
+          </para>
+          <para lang="ja">
+            このオプションは予め
+            <link linkend="gimp-using-paths">パス</link> が描かれていることが
+            条件です。 文字を収めたテキストレイヤーを作ったら、 パスを作成するか
+            もしくは転換によって作成して活性化します。 もし既に作ったパスを
+            利用する場合は大抵が不可視になっていることが多いのでパスダイアログ
+            で可視化します。
+          </para>
+          <para lang="ja">
+            ちなみにこのコマンドは<quote>レイヤー</quote>メニューにも現れます:
+          </para>
+          <figure>
+            <title lang="en">
+              The Text to Path command among text commands in the Layer menu
+            </title>
+            <title lang="ja">
+              <quote>パスに沿ってテキストを配置</quote>はレイヤーメニューに
+              現れるテキストコマンド群のひとつ
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/menus/ja/layer-text-commands.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  This group of options appears only if a layer text is
+                  activated.
+                </para>
+                <para lang="ja">
+                  このオプション群はテキストレイヤーを活性化しているときのみ
+                  現れる。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            If you want to use a text which already exists, make it active
+            in the <link linkend="gimp-layer-dialog">Layer dialog</link>,
+            select the Text tool and click on the text in the image window.
+          </para>
+          <para lang="en">
+            Click on the <guibutton>Text along Path</guibutton> button. The
+            text is bent along the path. Letters are represented with their
+            outline. Each of them is a component of the new path which
+            appears in the <link linkend="gimp-path-dialog">Path
+              dialog</link>. All path options should apply to this new path.
+          </para>
+          <para lang="ja">
+            もし既に書かれているテキストを利用するのなら、
+            <link linkend="gimp-layer-dialog">レイヤーダイアログ</link>
+            にてそのテキストレイヤーを活性化してください。 つづいてテキストツール
+            を呼び出してから画像ウィンドウのテキストをクリックしてください。
+          </para>
+          <para lang="ja">
+            ツールオプションの <guibutton>パスに沿ってテキストを配置</guibutton>
+            ボタンをクリックします。 するとテキストはパスに沿ってうねるように
+            綴られます。 それぞれの文字は輪郭だけが描かれています。 これらは
+            新たなパスの成分になっていて、
+            <link linkend="gimp-path-dialog">パスダイアログ</link> でも確認
+            できます。 パスに適用できるオプションは全てこのパスにも適用
+            できます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Text along Path</quote> example
+            </title>
+            <title lang="ja">
+              <quote>パスに沿ってテキストを配置</quote>の例
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/ja/text-along-path.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/ja/text-path.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry id="text-to-path">
+        <term lang="en">Create Path from Text</term>
+        <term lang="ja">テキストからパスを作成</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Text to Path</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>テキストをパスに</primary>
+          </indexterm>
+          <para lang="en">
+            This tool creates a selection path from the selected text. Every
+            letter is surrounded with a path component. So you can modify
+            the shape of letters by moving path control points.
+          </para>
+          <para lang="ja">
+            このツールは選択したテキストをもとにパスを作成できます。 全ての文字
+            は輪郭がパス成分として描かれます。 つまり文字の形状はパスの
+            コントロールポイント (アンカーやハンドル) を操作して加工が可能
+            です。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="gimp-text-editor-dialog">
+    <title lang="en">Text Editor</title>
+    <title lang="ja">テキストエディタ</title>
+    <indexterm lang="en">
+      <primary>Text</primary>
+      <secondary>Editor</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>テキスト</primary>
+      <secondary>エディタ</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>文字</primary>
+      <secondary>編集</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">The Text Editor options</title>
+      <title lang="ja">テキストエディタオプションダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-dialog-text.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <indexterm lang="en">
+        <primary>Text</primary>
+        <secondary>Load text from file</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>テキスト</primary>
+        <secondary>ファイルからのテキスト読み込み</secondary>
+      </indexterm>
+      <varlistentry>
+        <term lang="en">Overview</term>
+        <term lang="ja">概観</term>
+        <listitem>
+          <para lang="en">
+            This dialog window is opened when you click on the image with the
+            Text Tool. There, you can enter the text which shows up in real
+            time in the frame on top of the canvas.
+          </para>
+          <para lang="en">
+            You can correct the text you are writing and you can change the
+            text font with the Font Editor.
+          </para>
+          <para lang="en">
+            As soon as you start writing, a Text layer is created in the Layer
+            Dialog. On an image with such a layer (the image you are working
+            on, or a .xcf image), you can resume text editing by activating
+            this text layer then clicking on it (double click). Of course,
+            you can apply to this text layer the same functions you use with
+            other layers.
+          </para>
+          <para lang="en">
+            To add another text to your image click on a non-text layer: a new
+            Text Editor will appear and a new text layer will be created. To
+            pass from a text to another one activate the corresponding text
+            layer and click on it to activate the editor.
+          </para>
+          <para lang="ja">
+            このダイアログウィンドウはテキストツールで画像をクリックしたときに
+            開きます。 ここに書き込んだテキストは同時にキャンバス上のテキスト枠
+            の中にも表示されます。
+          </para>
+          <para lang="ja">
+            テキストレイヤーに書き込まれた文字はフォントエディタを通じていつでも
+            訂正可能ですし、 書体も変更できます。
+          </para>
+          <para lang="ja">
+            語句や文章を書き込み始めるとすぐにレイヤーダイアログにテキストレイヤー
+            が現れます。 こんなふうにレイヤーがある画像 (今実践されているのなら
+            その画像、 あるいは <filename>.xcf</filename> 画像) ならば、
+            テキストレイヤーを活性化してテキスト上でクリック (もしくはダブル
+            クリック) すればテキスト編集を再開できます。 もちろん他の一般の
+            レイヤーと同じように様々な機能を使ってテキストレイヤーを操作できます。
+          </para>
+          <para lang="ja">
+            他に新たなテキストを画像に貼り付けたいときはテキストレイヤーのない
+            領域をクリックしてください。 新たなテキストエディタが現れるとともに
+            新しいテキストレイヤーが画像に加わります。 どれかのテキストを扱って
+            いたあとで他のテキストの編集を行ないたい場合は、 そのテキストレイヤー
+            を活性化したうえでテキストの枠内をクリックしてテキストエディタを
+            開きます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Load Text from File</term>
+        <term lang="ja">ファイルからテキストを読み込む</term>
+        <listitem>
+          <para lang="en">
+            Text can be loaded from a text file by clicking the folder icon in
+            the text editor. All the text in the file is loaded.
+          </para>
+          <para lang="ja">
+            テキストはテキストファイルの内容を利用できます。 テキストエディタの
+            <guiicon><inlinemediaobject><phrase>開く</phrase>
+            </inlinemediaobject></guiicon> ボタンをクリックして
+            <quote>テキストファイル (UTF-8) を開く</quote>ダイアログから
+            ファイルを選んでください。 ファイル内の全てのテキストが
+            読み込まれます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Clear all Text</term>
+        <term lang="ja">文面を消去</term>
+        <listitem>
+          <para lang="en">
+            Clicking this icon clears the editor and the associated text on
+            the image.
+          </para>
+          <para lang="ja">
+            <guiicon><inlinemediaobject><phrase>消去</phrase>
+            </inlinemediaobject></guiicon> ボタンを押すとテキストエディタ内の
+            全ての文字と画像上の連関したテキストレイヤーの文字が消えます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">From Left to Right</term>
+        <term lang="ja">左から右への書式 <guilabel>LTR</guilabel></term>
+        <listitem>
+          <para lang="en">
+            This option causes text to be entered from left to right, as
+            is the case with most Western languages and may Eastern
+            languages.
+          </para>
+          <para lang="ja">
+            このオプションは左からはじまって右方向に書き連ねられるテキスト
+            のためのもので、 ほとんどの西洋諸語や東洋の一部の言語に適用
+            されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">From Right to Left</term>
+        <term lang="ja">右から左への書式 <guilabel>RTL</guilabel></term>
+        <listitem>
+          <para lang="en">
+            This option allows text to be entered from right to left, as is
+            the case with some Eastern languages, such as Arabic (illustrated
+            in the icon).
+          </para>
+          <para lang="ja">
+            このオプションは右からはじまって左方向に書き連ねられるテキスト
+            のためのもので、 (アイコンにも示されているように) アラビア語の
+            ような東洋の一部の言語に適用されます。
+          </para>
+          <note lang="ja">
+            <para lang="en">
+              Unfortunately, on the current versions the text tool does not
+              allow to align text vertically.  But there's a script called
+              <quote>TateGaki-Fu</quote> for this purpose.
+            </para>
+            <para lang="ja">
+              現在のところテキストツールは縦書きには対応していません。 しかし
+              <quote>縦書きふ〜</quote>スクリプトがあるそうです。
+            </para>
+          <note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Use Selected Font</term>
+        <term lang="ja">アクティブなフォントで表示(<accel>U</accel>)</term>
+        <listitem>
+          <para lang="en">
+            Default doesn't use the font you have selected in the Options
+            dialog. If you want to use it, check this option.
+          </para>
+          <para lang="ja">
+            既定ではオプションダイアログで指定している書体をこのエディタ上では
+            使用しません。 使用するにはこのオプションにチェックを入れます。
+          </para>
+          <note>
+            <para lang="en">
+              See also <xref linkend="gimp-using-text"/>.
+            </para>
+            <para lang="ja">
+              <xref linkend="gimp-using-text"/> もご覧ください。
+            </para>
+          </note>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

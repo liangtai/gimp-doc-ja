@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-04-04 alex falappa: fixed missing italian part
+  2007-03-24 lexa: merged path concept and path usage
+  2007-02-17 no rewritten by KoSt
+  2007-02-12 de translation of re-written part by ude
+  2007-01-11 fr modified by Pierre ; 1rst part re-written
+  2006-09-10 added norwegian translation by KoSt
+-->
+<!--revision2806 2009-04-07-->
+<sect1 id="gimp-using-paths">
+  <title>
+    <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
+    <phrase lang="en">Paths</phrase>
+    <phrase lang="ja">パス</phrase>
+  </title>
+  <indexterm lang="en">
+    <primary>Paths</primary>
+    <secondary>Using</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Image</primary>
+    <secondary>Paths</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>画像</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>パス</primary>
+    <secondary>使用法</secondary>
+  </indexterm>
+
+  <para lang="en">
+    Paths are curves (known as Bézier-curves). In <acronym>GIMP</acronym> it's
+    very easy to learn and to use them. To understand their concepts and
+    mechanism you can go to the glossary
+    <link linkend="glossary-bezier-curve">Bézier-curve</link> or to Wikipedia
+    <ulink url="http://en.wikipedia.org/wiki/Bézier_curve">
+    http://en.wikipedia.org/wiki/Bézier_curve</ulink>. It is a very powerful
+    tool to design sophisticated forms. To use it in <acronym>GIMP</acronym>
+    you must operate by two successive ways: 1st Create the path and 2nd
+    Stroke path.
+  </para>
+  <para lang="en">
+    According to the terminology used in <acronym>GIMP</acronym>,
+    <quote>Stroke path</quote> means here to apply a specific style to the
+    path (color, width, pattern... ).
+  </para>
+  <para lang="en">
+    Paths are used for two main purposes:
+  </para>
+  <para lang="ja">
+    パスとは (ベジエ曲線で知られる) 曲線のことです。 <acronym>GIMP</acronym>
+    ならその習得も使用も難しくありません。 この概念や機構については用語集の
+    <link linkend="glossary-bezier-curve">ベジエ曲線</link>の項や
+    ウィキペディアの
+    <ulink url="http://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A">
+    ベジエ曲線</ulink>にも書かれています。 このツールは手の込んだ形象を創造する
+    ことにかけては非常に強力です。 <acronym>GIMP</acronym>ではパス操作の系統に
+    2段階あります: 第1はパスの作成で第2がパスの境界線を描画することです。
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>の用語法では、 <quote>パスの境界線を描画する</quote>
+    とはパスに (色、 幅、 文様などの) 具体的な姿を与えることを意味します。
+  </para>
+  <para lang="ja">パスは主に2つの目的で使用されています:</para>
+  <itemizedlist>
+    <listitem>
+      <para lang="en">A closed path can be converted into a selection.</para>
+      <para lang="ja">閉じたパスは選択に転換できます。</para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        An open or closed path can be <emphasis>stroked</emphasis>,
+        that is, painted on the image, in a variety of ways.
+      </para>
+      <para lang="ja">
+        開いたパスも閉じたパスも、 <emphasis>境界線を描画</emphasis> できます。
+        つまりそれらを多彩な手法で描画して画像に加えられるということです。
+      </para>
+    </listitem>
+  </itemizedlist>
+  <figure>
+    <title lang="en">Illustration of four different path creating.</title>
+    <title lang="ja">パス作成の例4つ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/path-examples.png" format="PNG"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          Four examples of GIMP paths: one closed and polygonal; one open and
+          polygonal; one closed and curved; one with a mixture of straight and
+          curved segments.
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>パスの4例: 閉じた多辺形、 開いた多辺形、
+          閉じた曲線、 直線と曲線の混成。
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+
+  <sect2 id="gimp-using-paths-creating">
+    <title lang="en">Path Creating</title>
+    <title lang="ja">パスの作成</title>
+    <para lang="en">
+      At this step you can design a skeleton of wished form; this skeleton
+      will be modified later by various ways. To do this you can go to
+      <link linkend="gimp-tool-path">Paths</link>.
+      A short example will be useful to understand the creating process.
+    </para>
+    <para lang="ja">
+      さてここからは、 思いどおりの姿の骨格を形作るところまで進みましょう。
+      あとでその骨格にさまざまな肉付けをしてゆきます。 このために
+      <link linkend="gimp-tool-path">パス</link>をひととおり見ておくと
+      良いでしょう。 つぎの小さな例が作成手順の理解に役立つはずです。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the image menu, click
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guimenuitem>Path</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          メニューから
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guimenuitem>パス(<accel>H</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or on the relevant icon
+          <guiicon>
+            <inlinegraphic fileref="images/toolbox/stock-tool-path-22.png"/>
+          </guiicon> in toolbox,
+        </para>
+        <para lang="ja">
+          ツールボックスのアイコン
+          <guiicon>
+            <inlinegraphic fileref="images/toolbox/stock-tool-path-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">or use hotkey <keycap>B</keycap></para>
+        <para lang="ja">キーボードショートカット <keycap>B</keycap></para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      Your pointer changes into a pen feature with a curve beginning; if you
+      left-click in the image you print a point (white inner circle with a
+      black border); moving mouse and left-clicking again you create
+      automatically a second point linked to previous one. You can carry on as
+      often as you wish it to design a polyline, but to learn you need two
+      points only. Now if you approach pointer close to segment ranging
+      between the two points, the little <quote>+</quote>
+      close to pointer changes into a cross (for moving). Now press down left
+      button moving pointer to any side.
+    </para>
+    <para lang="en">
+      Then two events occur. One is a bending of the segment to the moving
+      direction and this bending is proportional to displacement. The
+      second reveals two segments ended with squares (named handles) at the
+      two curve ends . If you place the mouse pointer on these squares it
+      changes into a pointing finger. Now, if you click-and-drag you can see
+      the consequence on the curve feature. By this mean you can change the
+      starting curve orientation as well as its <quote>lengthening</quote>
+      on modified side.
+    </para>
+    <para lang="ja">
+      するとマウスポインタが万年筆の姿になります。 曲線の始点は画像上で
+      左クリックした場所にでき、 そこに点(黒縁白抜きの丸印)が現れます。 マウス
+      を移動してからまた左クリックすると、 第2の点ができて前の点と線で結ばれて
+      います。 打てば打つほどどこまでも線が繋がってゆきますが、 習得には始めの
+      2点だけで充分です。 さてポインタを2点間の線の中央に近づけると、 ポインタ
+      の右上にあった小さな十字<quote>+</quote>が四方矢印 (移動のしるし) に
+      替わります。 そこで右マウスボタンを押したまま移動してみてください。
+    </para>
+    <para lang="ja">
+      すると2つの反応が起きます。 まず一つめは、 ポインタを曳いた方向に線が
+      曲がり、 曲がり方は変位に比例します。 二つめは曲線の両端にそれぞれ接線が
+      伸び、 その先に (ハンドルと呼ばれる) 正方形がついているのが見てとれます。
+      これらの正方形にポインタを近づけるとその右上のしるしが四方矢印に替わり
+      ます。 早速それをクリックして曳いてゆけば曲線の形がつられて反応します。
+      そこで気がついてほしいことは、
+      はじめに曳いた方面での<quote>伸び具合</quote>のみならず、
+      曲線の接線方向すら当初とは異なる向きに変えられるということです。
+    </para>
+    <figure>
+      <title lang="en">
+        Appearance of a path while it is being manipulated using the Path
+        tool.
+      </title>
+      <title lang="ja">パスツールで操作中のパスの様子</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/path-with-anchors.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Black squares are anchor points, the open circle is the selected
+            anchor, and the two open squares are its handles. Note that this
+            path has two components.
+          </para>
+          <para lang="ja">
+            黒い正方形がアンカー (繋留) 点、 白抜きの円が活性化アンカー、
+            2つの白抜きの正方形がそのハンドル (把手) です。
+            この図では2本のパスがひかれています。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Paths can be created and manipulated using the
+      <link linkend="gimp-tool-path">Path tool</link>.
+      Paths, like layers and channels, are components of an image. When an
+      image is saved in GIMP's native XCF file format, any paths it has are
+      saved along with it. The list of paths in an image can be viewed and
+      operated on using the
+      <link linkend="gimp-path-dialog">Paths dialog</link>.
+      If you want to move a path from one image to another, you can do so by
+      copying and pasting using the pop-up menu in the Paths dialog, or by
+      dragging an icon from the Paths dialog into the destination image's
+      window.
+    </para>
+    <para lang="en">
+      GIMP paths belong to a mathematical type called
+      <quote>Bezier paths</quote>. What this means in practical terms is that
+      they are defined by <emphasis>anchors</emphasis> and
+      <emphasis>handles</emphasis>. <quote>Anchors</quote> are points the path
+      goes through. <quote>Handles</quote> define the direction of a path when
+      it enters or leaves an anchor point: each anchor point has two handles
+      attached to it.
+    </para>
+    <para lang="en">
+      Paths can be very complex. If you create them by hand using the Path
+      tool, unless you are obsessive they probably won't contain more than a
+      few dozen anchor points (often many fewer); but if you create them by
+      transforming a selection into a path, or by transforming text into a
+      path, the result can easily contain hundreds of anchor points, or even
+      thousands.
+    </para>
+    <para lang="en">
+      A path may contain multiple <emphasis>components</emphasis>. A
+      <quote>component</quote>
+      is a part of a path whose anchor points are all connected to each other
+      by path segments. The ability to have multiple components in paths
+      allows you to convert them into selections having multiple disconnected
+      parts.
+    </para>
+    <para lang="en">
+      Each component of a path can be either <emphasis>open</emphasis> or
+      <emphasis>closed</emphasis>: <quote>closed</quote>
+      means that the last anchor point is connected to the first anchor point.
+      If you transform a path into a selection, any open components are
+      automatically converted into closed components by connecting the last
+      anchor point to the first anchor point with a straight line.
+    </para>
+    <para lang="en">
+      Path segments can be either straight or curved. A path all of whose
+      segments are straight is called <quote>polygonal</quote>.
+      When you create a path segment, it starts out straight, because the
+      handles for the anchor points are initially placed directly on top of
+      the anchor points, yielding handles of zero length, which produce
+      straight-line segments. You can make a segment curved by dragging a
+      handle away from one of the anchor points.
+    </para>
+    <para lang="en">
+      One nice thing about paths is that they are very light in terms of
+      resource consumption, especially in comparison with images. Representing
+      a path in RAM only requires storing the coordinates of its anchors and
+      handles: 1K of memory is enough to hold quite a complex path, but not
+      enough to hold even a 20x20 pixel RGB layer. Therefore, it is quite
+      possible to have literally hundreds of paths in an image without putting
+      any significant stress of your system. (How much stress managing them
+      would put on <emphasis>you</emphasis>
+      is, of course, another question.) Even a path with thousands of segments
+      consumes minimal resources in comparison to a typical layer or channel.
+    </para>
+    <para lang="ja">
+      パスの作成や操作には
+      <link linkend="gimp-tool-path">パスツール</link>が使えます。 パスはレイヤー
+      やチャンネルと同じく、 画像の一部です。 画像を<acronym>GIMP</acronym>由来
+      のXCFファイル形式で保存すれば、 画像上のパスはすべて一緒に保存されます。
+      <link linkend="gimp-path-dialog">パスダイアログ</link>を使えば画像に収め
+      られたパスの一覧を見回して選びだし、 さらに手を加えることも可能です。
+      パスを画像から他の画像へと移動させるには、 パスダイアログの
+      ポップアップメニューで写し取りと貼り付けをするか、 パスダイアログから
+      アイコンを相手の画像ウィンドウ上に曳いて放ってください。
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>のパスは数学でいうところの<quote>ベジエ曲線</quote>
+      に属しています。 その語句の実践的な意味は、 この曲線が <emphasis>アンカー
+      </emphasis> と <emphasis>ハンドル</emphasis> で定義されるということです。
+      <quote>アンカー</quote>はパスが通る点です。 <quote>ハンドル</quote>は
+      アンカー点に入って抜けるそれぞれのパスの方向を定めます。
+      アンカーひとつにつき2つのハンドルがついています。
+    </para>
+    <para lang="ja">
+      パスは非常に複雑になりやすいものです。 パスツールを用いて手書きでパスを
+      描くならば、 こだわり過ぎなければアンカー点の数はせいぜい数十個程度、
+      普段はもっと少なく抑えられるでしょう。
+      ところが選択をパスに変換するだとか、 テキストをパスに変換するといった
+      操作があるとたちまち数百、 数千ものアンカー点ができてしまいます。
+    </para>
+    <para lang="ja">
+      パスには数本の <emphasis>成分</emphasis> が入れられます。 <quote> 成分
+      </quote> は一本のパスとそれに貫かれたたくさんのアンカー点からなります。
+      数本の成分をまとめてパスに含められることによって、 
+      それを選択に変換したときに飛び地のある選択が作れます。
+    </para>
+    <para lang="ja">
+      パスの成分はそれぞれ <emphasis>開いた</emphasis> ものか <emphasis>閉じた
+      </emphasis> もののいずれかです: <quote>閉じた</quote>成分は終点の
+      アンカーが始点のアンカーに繋っています。 パスを選択に変換するときには、
+      <quote>開いた</quote>成分はいずれも終点から始点まで
+      自動的に直線で結ばれ閉じられてから変換されます。
+    </para>
+    <para lang="ja">
+      パスの成分は直線にも曲線にもなります。 直線だけで構成された成分は
+      <quote>多辺形</quote>といいます。 パスの成分ができるときの始めは直線から
+      です。 これは当初はハンドルがアンカー点の真上に置かれていて
+      長さが0のため、 直線がひかれるという理由からです。
+      どこかのアンカー点のハンドルを曳けば、 その成分に曲線ができます。
+    </para>
+    <para lang="ja">
+      パスの長所のひとつが[メモリ]資源の消費が極めて少ないことです。 画像
+      そのものと比較すればなおさらです。 <acronym>RAM</acronym>上でのパスは
+      各アンカーとハンドルの座標を記録する分だけしかメモリを要求しないので、
+      とても込み入ったパスでもたった1キロバイト程度のメモリ容量で十分です。
+      片や画像ならば20&#xd7;20ピクセルの<acronym>RGB</acronym>レイヤーでさえ
+      このメモリ量では足りません。 こうしたことから、 コンピュータシステム
+      に大したストレスも伴わずに優に数百にものぼるパスを画像上にのせられます。
+      (無論この作業があなたにもたらすストレスの量は別問題です。)
+      パスに数千もの成分が含まれていたとしても、
+      やはり普通のレイヤーやチャンネルと比べれば資源消費量は微量です。
+    </para>
+  </sect2>
+
+  <sect2>
+    <title lang="en">Paths and Selections</title>
+    <title lang="ja">パスと選択領域</title>
+    <para lang="en">
+      GIMP lets you transform the selection for an image into a path; it also
+      lets you transform paths into selections. For information about the
+      selection and how it works, see the
+      <link linkend="gimp-concepts-selection">Selection</link> section.
+    </para>
+    <para lang="en">
+      When you transform a selection into a path, the path closely follows the
+      <quote>marching ants</quote>.
+      Now, the selection is a two-dimensional entity, but a path is a
+      one-dimensional entity, so there is no way to transform the selection
+      into a path without losing information. In fact, any information about
+      partially selected areas (i.e., feathering) will be lost when the
+      selection is turned into a path. If the path is transformed back into a
+      selection, the result is an all-or-none selection, similar to what would
+      be obtained by executing "Sharpen" from the Select menu.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>では画像上の選択をパスに変換できます。 また
+      パスから選択へも変換できます。 選択についての情報とその働きについては、
+      <link linkend="gimp-concepts-selection">選択</link>の節をご覧ください。
+    </para>
+    <para lang="ja">
+      選択をパスに変換すると、 パスは点滅破線 (<quote>蟻の行進</quote>) に
+      沿ってひかれます。 ところが選択は二次元の構造を持っているのにパスは
+      一次元のため、 選択からパスへの変換にはどうしても情報の欠損が生じます。
+      実際に選択をパスに変換すると不完全選択な部分 (ぼかし) の情報は全て
+      失われます。 パスを選択に変換しなおすと、 一切か無かの選択になりますが、
+      これは<menuchoice><guilabel>選択(<accel>S</accel>)</guilabel>
+      <guilabel>境界を明確化(<accel>S</accel>)</guilabel></menuchoice>
+      したのと同等です。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-using-paths-transforming">
+    <title lang="en">Transforming Paths</title>
+    <title lang="ja">パスの変換</title>
+    <para lang="en">
+      Each of the Transform tools (Rotate, Scale, Perspective, etc) can be set
+      to act specifically on paths, using the <quote>Affect:</quote> option
+      in the tool's Tool Options dialog. This gives you a powerful set of
+      methods for altering the shapes of paths without affecting other
+      elements of the image.
+    </para>
+    <para lang="en">
+      By default a Transform tool, when it is set to affect paths, only acts
+      on a single path: the <emphasis>active path</emphasis>
+      for the image, which is shown highlighted in the Paths dialog. You can
+      make a transformation affect more than one path, and possibly other
+      things as well, using the <quote>transform lock</quote> buttons in the
+      Paths dialog.
+      Not only paths, but also layers and channels, can be transform-locked.
+      If you transform one element that is transform-locked, all others will
+      be transformed in the same way. So, for example, if you want to scale a
+      layer and a path by the same amount, click the transform-lock buttons
+      so that <quote>chain</quote> symbols appear next to the layer in the
+      Layers dialog, and the path in the Paths dialog; then use the Scale
+      tool on either the layer or the path, and the other will automatically
+      follow.
+    </para>
+    <para lang="ja">
+      <link linkend="gimp-tool-transform">変換ツール</link>のいずれも (回転、
+      拡大・縮小、 遠近法など) がツールオプションダイアログの
+      <guilabel>変換対象:</guilabel> オプションを定めればパスの操作を
+      できるようになっています。 強力な変換ツールの機能を直に利用して、
+      画像上の他の構成要素に全く影響を与えずにパスの形状を変更できます。
+    </para>
+    <para lang="ja">
+      パスを変換対象と定められた変換ツールは、 初期設定では一面のパスにのみ
+      作用します: これは <emphasis>活性化パス</emphasis> としてパスダイアログで
+      目立つ表示がなされます。 変換作用を一面のパスに限らずに、 パスダイアログ
+      の<quote>アイテムの連結</quote>ボタンを使うことで数面のパスを同時に変化
+      させることも可能です。 変換アイテムの連結はパス同士だけではなくレイヤーや
+      チャンネルとも連係できます。 変換用に連結されている要素に変換作用を
+      及ぼすと、 連結されていたそれ以外の要素にも一緒に作用します。 ですから
+      例えば、 レイヤーとパスを同程度に拡大・縮小したいときは、 レイヤーダイアログ
+      でそのレイヤーの左隣をクリックして<quote>鎖</quote>のしるし
+      <guiicon>
+        <inlinegraphic fileref="images/dialogs/stock-vchain-24.png" />
+      </guiicon>
+      を出し、 パスダイアログでも同様にすれば、 拡大・縮小ツールでの変換対象が
+      パスであってもレイヤーであっても、 もう一方にも変換が自動的に作用します。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-using-paths-stroking">
+    <title lang="en">Stroking a Path</title>
+    <title lang="ja">パスの境界線を描画</title>
+    <figure>
+      <title lang="en">
+        The four paths from the top illustration, each stroked in a
+        different way.
+      </title>
+      <title lang="ja">前掲のパス4例の境界線をそれぞれ異なる方法で描画</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/path-stroking-examples.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Paths do not alter the appearance of the image pixel data unless
+      they are <emphasis>stroked</emphasis>, using
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+        <guimenuitem>Stroke Path</guimenuitem>
+      </menuchoice>
+      from the image menu or the Paths dialog right-click menu, or the
+      <quote>Stroke Path</quote> button in the Tool Options dialog for the
+      Path tool.
+    </para>
+    <para lang="en">
+      Choosing <quote>Stroke Path</quote> by any of these means brings up a
+      dialog that allows you to control the way the stroking is done. You
+      can choose from a wide variety of line styles, or you can stroke with
+      any of the Paint tools, including unusual ones such as the Clone tool,
+      Smudge tool, Eraser, etc.
+    </para>
+    <para lang="ja">
+      パスはその <emphasis>境界線を描画</emphasis> しなければ画素 (ピクセル)
+      には何の表象もありません。 そのコマンドはメニューから
+      <menuchoice>
+        <guimenu>編集(<accel>E</accel>)</guimenu>
+        <guimenuitem>パスの境界線を描画(<accel>K</accel>)...</guimenuitem>
+      </menuchoice>
+     と進むか、 もしくはパスダイアログの右クリックメニューの
+      <guimenuitem>パスの境界線を描画(<accel>K</accel>)...</guimenuitem>
+      を選ぶ方法と、 パスツールのツールオプションダイアログ上で
+      <guilabel>パスの境界線を描画</guilabel>ボタンを押す方法があります。
+    </para>
+    <para lang="ja">
+      いずれの方法も<quote>パスの境界線を描画</quote>に進めばダイアログが現れ、
+      描画方法の設定ができます。 多彩な描線形状が選べるほか、 描画ツールは
+      スタンプやにじみや消しゴムまで何でも使えます。
+    </para>
+    <figure>
+      <title lang="en">The <guilabel>Stroke Path</guilabel> dialog.</title>
+      <title lang="ja"><quote>パスの境界線を描画</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/ja/gimp-path-stroke.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      You can further increase the range of stroking effects by stroking a
+      path multiple times, or by using lines or brushes of different widths.
+      The possibilities for getting interesting effects in this way are almost
+      unlimited.
+    </para>
+    <para lang="ja">
+      パスの境界線の描画は重ね打ちすることでその効果を増したり、
+      線やブラシの太さを変えて重ねることもできます。 こんな風にすれば
+      おもしろい効果はほとんど無限にありそうです。
+    </para>
+  </sect2>
+
+  <sect2>
+    <title lang="en">Paths and Text</title>
+    <title lang="ja">パスとテキスト</title>
+    <figure>
+      <title lang="en">Text converted to a path</title>
+      <title lang="ja">パスに転換されたテキスト</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/path-from-text.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Text converted to a path and then transformed using the
+            Perspective tool.
+          </para>
+          <para lang="ja">
+            パスに転換され、 遠近法ツールで変換されたテキスト。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/path-text-stroked.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The path shown above, stroked with a fuzzy brush and then
+            gradient-mapped using the Gradient Map filter with the
+            <quote>Yellow Contrast</quote> gradient.
+          </para>
+          <para lang="ja">
+            承前、 ぼかし入りブラシで描画、 <quote>Yellow Contrast</quote>
+            グラデーションを用いたグラディエントマップフィルタを適用。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      A text item created using the Text tool can be transformed into a path
+      using the <guibutton>Create path from text</guibutton> button in the
+      Tool Options for the Text tool. This can be useful for several
+      purposes, including:
+    </para>
+    <para lang="ja">
+      テキストツールで作られたテキストは、 テキストツールのツールオプションの
+      <guibutton>テキストからパスを生成</guibutton> ボタンを使ってパスに転換 
+      できます。 次のようなさまざまな用途に便利です:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          Stroking the path, which gives you many possibilities for fancy
+          text.
+        </para>
+        <para lang="ja">
+          パスの境界線の描画機能を利用し、 テキスト装飾の可能性を広げること。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          More importantly, transforming the text. Converting text into a
+          path, then transforming the path, and finally either stroking the
+          path or converting it to a selection and filling it, often leads to
+          much higher-quality results than rendering the text as a layer and
+          transforming the pixel data.
+        </para>
+        <para lang="ja">
+          テキストの形状変換はさらに重要。 テキストをパスに転換、 続いてパスを
+          変換、 最後はパスの境界線に描画したり、 パスを選択に転換して
+          塗りつぶすこと。 テキストレイヤーの画素情報 (ピクセルデータ) を変換
+          描画するよりも高品質に仕上りやすい。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+
+  <sect2>
+    <title lang="en">Paths and <acronym>SVG</acronym> files</title>
+    <title lang="ja">パスと<acronym>SVG</acronym>ファイル</title>
+    <para lang="en">
+      <acronym>SVG</acronym>, standing for <quote>Scalable Vector
+      Graphics</quote>, is an increasingly popular file format for
+      <emphasis>vector graphics</emphasis>, in which graphical elements are
+      represented in a resolution-independent format, in contrast to
+      <emphasis>raster graphics</emphasis>; in which graphical elements are
+      represented as arrays of pixels. GIMP is mainly a raster graphics
+      program, but paths are vector entities.
+    </para>
+    <para lang="en">
+      Fortunately, paths are represented in <acronym>SVG</acronym> files in
+      almost exactly the same way they are represented in GIMP.  (Actually
+      fortune has nothing to do with it: GIMP's path handling was rewritten
+      for GIMP 2.0 with SVG paths in mind.) This compatibility makes it
+      possible to store GIMP paths as <acronym>SVG</acronym> files without
+      losing any information. You can access this capability in the Paths
+      dialog.
+    </para>
+    <para lang="en">
+      It also means that GIMP can create paths from
+      <acronym>SVG</acronym> files saved in other programs, such as
+      <application>Inkscape</application> or
+      <application>Sodipodi</application>,
+      two popular open-source vector graphics applications. This is nice
+      because those programs have much more powerful path-manipulation tools
+      than GIMP does. You can import a path from an <acronym>SVG</acronym>
+      file using the Paths dialog.
+    </para>
+    <para lang="en">
+      The <acronym>SVG</acronym>
+      format handles many other graphical elements than just paths: among
+      other things, it handles figures such as squares, rectangles, circles,
+      ellipses, regular polygons, etc. GIMP cannot do anything with these
+      entities, but it can load them as paths.
+    </para>
+    <para lang="ja">
+      <quote>Scalable Vector Graphics</quote>--略して<acronym>SVG</acronym>は、
+      近年人気の高まってきた <emphasis>ベクター画像</emphasis> のファイル形式
+      であり、 解像度に依存しない形式で画素が表現される特徴があります。
+      この形式と対照的なのが <emphasis>ラスター画像</emphasis> であり、
+      整列したピクセルで画素が表現されています。 <acronym>GIMP</acronym>は
+      ラスター画像を主体にしたプログラムですが、 パスはベクター成分です。
+    </para>
+    <para lang="ja">
+      幸いにもパスは<acronym>SVG</acronym>ファイル中でも<acronym>GIMP</acronym>
+      上でもほぼ同じ形態で表現されています。 (現在は何も将来的な変更予定が
+      ありません。 <acronym>GIMP</acronym> 2.0 を契機にパス関連の書き直しが
+      <acronym>SVG</acronym>パスを意識して行なわれたためです。) 互換性がある
+      ことから、 <acronym>GIMP</acronym>のパスの情報を何ら損失することなく
+      <acronym>SVG</acronym>ファイルへ保存することが可能です。
+      パスダイアログの右クリックメニューからこの機能が使えます。
+    </para>
+    <para lang="ja">
+      <acronym>SVG</acronym>ファイルを保存できるプログラムには、 <application>
+      Inkscape</application> や <application>Sodipodi</application> という
+      ベクター画像を扱う2つのオープンソースプログラム等がありますが、 もちろん
+      <acronym>GIMP</acronym>はこれらによって保存された<acronym>SVG</acronym>
+      ファイルからパスを読み込めます。 こういったプログラムには<acronym>GIMP
+      </acronym>よりずっと強力なパス操作ツールが備わっていますから、 この連携は
+      うれしいものです。 <acronym>SVG</acronym>ファイルからのパスのインポートは
+      パスダイアログの右クリックメニューにあります。
+    </para>
+    <para lang="ja">
+      <acronym>SVG</acronym>形式はパスにとどまらず様々な多くの画像要素を
+      扱えます。 中には正方形や長方形、 円と楕円、 一般的な多角形などがあって、
+      <acronym>GIMP</acronym> はこれらを成分として扱うことは一切できませんが、
+      パスとしては読み込めます。
+    </para>
+    <note>
+      <para lang="en">
+        Creating paths is not the only thing GIMP can do with
+        <acronym>SVG</acronym> files. It can also open
+        <acronym>SVG</acronym> files as GIMP images, in the usual way.
+      </para>
+      <para lang="ja">
+        <acronym>GIMP</acronym>ができる<acronym>SVG</acronym>ファイルの
+        読み込み方はパスの作成だけではありません。
+        普段通り画像ファイルとして<acronym>SVG</acronym>ファイルを
+        <acronym>GIMP</acronym>に読み込ませることも可能です。
+      </para>
+    </note>
+  </sect2>
+</sect1>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2008-04-01 Added 'no' by Mr.Dust
+  2007-06-25 Added Spanish translation by AntI
+  2007-05-28 KoSt: added 'no'
+  2007-06-21 alex falappa: added italian translation
+  2007-05-11 lexa: initial version
+-->
+<!--revision2792 2009-03-23-->
+<sect1 id="gimp-tutorial-straight-lines">
+  <title lang="en">How to Draw Straight Lines</title>
+  <title lang="ja">直線のひきかた</title>
+  <indexterm lang="en">
+    <primary>Tutorial</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Draw</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>演習</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ドロー</primary>
+  </indexterm>
+  <para lang="en">
+    This tutorial is based on Text and images Copyright © 2002 Seth Burgess.
+    The original tutorial can be found in the internet
+    <xref linkend="bibliography-online-tutorial01"/>.
+  </para>
+  <para lang="ja">
+    この演習は Seth Burgess 氏の著作(著作権 &#xa9; 2002)の文と画像が
+    もとになっています。 原本はインターネット上で
+    <xref linkend="bibliography-online-tutorial01" /> 入手できます。
+  </para>
+
+  <sect2>
+    <title lang="en">Intention</title>
+    <title lang="ja">この演習の意図</title>
+    <figure>
+      <title lang="en">Example of straight drawn lines</title>
+      <title lang="ja">真っ直ぐに引いた線の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/straight-lines-intro.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This tutorial shows you how you can do straight lines with GIMP, using a
+      feature called the Shift Key. Straight lines are a convenient way to
+      make things that aren't so terribly affected by the imprecision of a
+      mouse or tablet, and to take advantage of the power of a computer to
+      make things look neat and orderly. This tutorial doesn't use Straight
+      Lines for complex tasks; its intended to show how you can use it to
+      create quick and easy line effects.
+    </para>
+    <para lang="ja">
+      この演習は<acronym>GIMP</acronym>での直線のひきかたについて、
+      とくにシフトキーを使った方法を紹介します。 直線がひけるならば、
+      マウスやタブレットの不正確さに足をすくわれずに、
+      きびきびとコンピュータらしい能力で何かを描くことができます。
+      この演習では直線を使って何ら複雑な作業をするつもりはありません。
+      手早く簡単に直線がひけるようになることに重点をおいています。
+    </para>
+    <procedure>
+      <step>
+        <title lang="en">Preparations</title>
+        <title lang="ja">準備</title>
+        <figure>
+          <title lang="en">Introducing the <keycap>Shift</keycap>-key</title>
+          <title lang="ja"><keycap>Shift</keycap> キーの紹介</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/straight-lines-1.png"/>
+            </imageobject>
+          </mediaobject>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/straight-lines-1b.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          The invention called the typewriter introduced the
+          <keycap>Shift</keycap>
+          Key. You generally have 2 of them on your keyboard. They look
+          something like the picture on the left. They are located on the left
+          and right sides of your keyboard. The other invention, called the
+          Mouse, was invented by Douglas C. Engelbart in 1970. These come in
+          different varieties, but always have at least one button located on
+          them. They are located on your desk, or sometimes on a mouse pad.
+        </para>
+        <para lang="ja">
+          タイプライタの発明は <keycap>Shift</keycap> キーを生みだしました。
+          たいていのキーボードには2つついているはずです。 その形は左側の写真で
+          ご覧ください。 キーボードの左右両端にひとつづつあります。 一方で
+          マウスは、 1970年に Douglas C. Engelbart 氏によって発明されました。
+          いろいろな変種がありますが、少なくとも1つのボタンが必ずついています。
+          これを机上において作業するか、 かわりにマウスパッドを使います。
+        </para>
+      </step>
+      <step>
+        <title lang="en">Creating a Blank Drawable</title>
+        <title lang="ja">白紙の画像を用意する</title>
+        <figure>
+          <title lang="en">New image</title>
+          <title lang="ja">新しい画像</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/ja/straight-lines-2.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          First, create a new image. Any size will do. You can do so by
+          selecting
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenu>New</guimenu>
+          </menuchoice>
+          from the menu in the toolbox window.
+        </para>
+        <para lang="ja">
+          まず白紙の画像を新たに用意します。 大きさはどんなものでも
+          かまいません。 やり方は、 メニューから 
+          <menuchoice>
+            <guimenu>ファイル(<accel>F</accel>)</guimenu>
+            <guimenuitem>新しい画像(<accel>N</accel>)...</guimenuitem>
+          </menuchoice> と辿ります。
+        </para>
+      </step>
+      <step>
+        <title lang="en">Choose a Tool</title>
+        <title lang="ja">ツールを選ぶ</title>
+        <figure>
+          <title lang="en">Paint tools in the toolbox</title>
+          <title lang="ja">ツールボックスでの描画ツール</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/ja/straight-lines-3.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          Then click on the paintbrush. Any of the red-highlighted tools on
+          the above toolbox can do lines.
+        </para>
+        <para lang="ja">
+          では次に<quote>ブラシで描画</quote>アイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/stock-tool-paintbrush-22.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          をクリックします。 上図 のツールボックスで赤く強調したツールは
+          いずれも線をひくのに使えます。
+        </para>
+      </step>
+      <step>
+        <title lang="en">Create a Starting Point</title>
+        <title lang="ja">始点をとる</title>
+        <figure>
+          <title lang="en">Starting point</title>
+          <title lang="ja">始点</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/ja/straight-lines-4.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          After you click the paintbrush tool, you can click the image. A
+          single dot will appear on the screen. The size of this dot
+          represents the current brush size, which you can change in the Brush
+          Dialog (see <xref linkend="gimp-brush-dialog"/>). Now, lets start
+          drawing a line. Hold down the <keycap>Shift</keycap> button, and
+          keep it down.
+        </para>
+        <para lang="ja">
+          <quote>ブラシで描画</quote>ツールのアイコンをクリックしたら、
+          こんどは画像をクリックしてみましょう。 画面には点がひとつ現れます。
+          この点の大きさでいま使っているブラシの大きさがわかります。
+          ブラシの大きさは<quote>ブラシ</quote>ダイアログ上で変えられます。 (
+          <xref linkend="gimp-brush-dialog" />参照)。 さあ線をひいて
+          みましょう。 <keycap>Shift</keycap> キーを押したままにしてください。
+        </para>
+      </step>
+      <step>
+        <title lang="en">Drawing the Line</title>
+        <title lang="ja">線をひく</title>
+        <figure>
+          <title lang="en">Drawing the Line</title>
+          <title lang="ja">線をひく</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/ja/straight-lines-5.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          After you have a starting point, and have held down the
+          <keycap>Shift</keycap>
+          Key, you'll see a line like above if you're running GIMP version
+          1.2.x or later. Press the first button on the Mouse (the leftmost
+          one usually) and then let it go. During that whole
+          <quote>click</quote> of the <mousebutton>Mouse button</mousebutton>,
+          you need to keep the <keycap>Shift</keycap> Key held down.
+        </para>
+        <para lang="ja">
+          始点をとってから <keycap>Shift</keycap> キーを押したままにすれば、
+          <acronym>GIMP</acronym> 1.2.x以降の版ならば上図のように画面上に線が
+          現れます。 マウスの <mousebutton>第1ボタン</mousebutton> (大概は左端)
+          を押してから移動してみましょう。
+          <mousebutton>第1ボタン</mousebutton> で<quote>クリック</quote>する
+          までの間、 <keycap>Shift</keycap> キーを押し続けていてください。
+        </para>
+      </step>
+      <step>
+        <title lang="en">Final</title>
+        <title lang="ja">完成</title>
+        <figure>
+          <title lang="en">Final Image</title>
+          <title lang="ja">完成図</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/ja/straight-lines-6.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+      See how the line is drawn on top of the preview? This is a powerful
+      feature of the Paint Brush. You can use it with any of the tools shown
+      in step 3, or even draw more lines at the end of this one. Our last step
+      is to let go of the <keycap>Shift</keycap>
+      key. And there you have it. Some more examples are shown below.
+      Questions? Comments? Let us know. Happy GIMPing!
+    </para>
+        <para lang="ja">
+          プレビュー画面上では、 直線はどんなふうにひかれましたか？ 以上が
+          <quote>描画ブラシ</quote>のすばらしい機能です。 <quote>3.
+          ツールを選ぶ</quote>で紹介したツールならばどれでも線が引けます。
+          それから直線はつなげてつぎつぎとひくことができます。
+          おつかれさまでした。 <keycap>Shift</keycap> キーを放してください。
+          これで完成です。 このあとはいろいろな例をご覧ください。 ご質問や
+          ご意見をお寄せください。 楽しく<acronym>GIMP</acronym>しましょう!
+      </para>
+      </step>
+    </procedure>
+  </sect2>
+  <sect2>
+    <title lang="en">Examples</title>
+    <title lang="ja">実行例</title>
+    <figure>
+      <title lang="en">Examples I</title>
+      <title lang="ja">例その1</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/straight-lines-example1.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+              This one I turned on gradient in the Paint Brush Tool.
+            </para>
+          <para lang="ja">
+            <quote>ブラシで描画</quote>ツールで<guilabel>
+            グラデーションで描画</guilabel> を有効にしてひいた直線です。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/straight-lines-example3.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+              This one I used the Clone tool, and set the source to "Maple
+              Leaves" pattern.
+            </para>
+          <para lang="ja">
+            <quote>スタンプで描画</quote>ツールで描いたもので、
+            <quote>カエデの葉</quote>文様を使いました。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Examples II</title>
+      <title lang="ja">例その2</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/straight-lines-example2.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+              This one I rendered a grid, and then used the Smudge Tool with a
+              low spacing and a slightly larger brush.
+            </para>
+          <para lang="ja">
+            これはあらかじめ格子線を描いてから、 <quote>にじみ</quote>ツール
+            を用いて、 ブラシ間隔を狭く、 やや大きめのブラシで引いたものです。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/straight-lines-example4.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+              This one I rendered a plasma cloud, and used the Erase Tool with
+              a square brush.
+            </para>
+          <para lang="ja">
+            これはあらかじめプラズマ雲を描いてから、 <quote>消しゴム</quote>
+            ツールを用いて四角のブラシでひいたものです。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Example III</title>
+      <title lang="ja">例その3</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/straight-lines-example5.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+              This one I used the <quote>dodge</quote> tool on the top and
+              left of a blue box, then used the <quote>burn</quote> tool on
+              the right and bottom.
+            </para>
+          <para lang="ja">
+            <quote>暗室</quote>ツールの<quote>覆い焼き</quote>で青い箱の上辺と
+            左辺に、 <quote>焼き込み</quote>で底辺と右辺に線をひきました。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect2>
+</sect1>

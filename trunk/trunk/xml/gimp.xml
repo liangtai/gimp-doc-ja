@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                      "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2009-02-21 j.h: removed using/docks.xml
+  2009-02-15 ude: removed menu-xtns.xml
+  2008-12-28 j.h: added menus-windows.xml
+  2008-01-21 ude: removed filters_color.xml (moved to Colors menu)
+  2007-01-01 lexa: updated copyright to 2008
+  2007-08-15 ude: removed script-fu filters "Selection"
+  2007-08-13 ude: added script-fu filters: Alpha to Logo, Decor, Selection
+  2007-05-28 lexa: resolved the last issues from the reorganization
+  2007-02-28 lexa: did a major reorganization of part I and II
+  2007-01-07 lexa: updated copyright to 2007
+  2006-05-27 added norwegian translation by KoSt
+  2006-03-12 lexa: made section docbook compliant
+  2005-12-18 slightly reordered the introduction by lexa
+  2005-12-12 moved GIMP history from introduction to appendix by lexa
+  2005-03-10 restructuring - troubleshooting is now in own chapter
+-->
+<!--revision2796 2009-03-27-->
+<book xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-main" lang="ja">
+  <bookinfo>
+    <title lang="en">GNU Image Manipulation Program</title>
+    <title lang="en">
+      <acronym>GIMP</acronym> (<acronym>GNU</acronym> 画像編集プログラム)
+    </title>
+    <subtitle lang="en">User Manual</subtitle>
+    <subtitle lang="ja">使用のてびき</subtitle>
+    <copyright>
+      <year>2002</year>
+      <year>2003</year>
+      <year>2004</year>
+      <year>2005</year>
+      <year>2006</year>
+      <year>2007</year>
+      <year>2008</year>
+      <year>2009</year>
+      <holder>The GIMP Documentation Team</holder>
+    </copyright>
+    <legalnotice>
+      <title lang="en">Legal Notice</title>
+      <title lang="ja">利用条件または商標</title>
+      <para lang="en">
+        Permission is granted to copy, distribute and/or modify this document
+        under the terms of the GNU Free Documentation License, Version 1.2 or
+        any later version published by the Free Software Foundation; with no
+        Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A
+        copy of the license is included in the section enphrased
+        <link linkend="legal">GNU Free Documentation License</link>.
+      </para>
+      <para lang="ja">
+        この文書を、フリーソフトウェア財団発行の GNU フリー文書利用許諾契約書
+        (バージョン1.2かそれ以降から一つを選択) が定める条件の下で複製、
+        頒布、あるいは改変することを許可する。 変更不可部分、
+        表カバーテキスト、 裏カバーテキストは存在しない。 この利用許諾契約書
+        の複製物は「<link linkend="legal"> GNU フリー文書利用許諾契約書
+        </link>」という章に含まれている。
+      </para>
+      <para lang="ja">
+        [参考<ulink url="http://ja.wikipedia.org/wiki/GNU_Free_Documentation_License">ウィキペディア:GNU FDL</ulink>]
+      </para>
+    </legalnotice>
+  </bookinfo>
+  <toc/>
+  <preface>
+    <title lang="en">Preface</title>
+    <title lang="ja">まえがき</title>
+    <xi:include href="preface/authors.xml"/>
+  </preface>
+  <part>
+    <title lang="en">Getting started</title>
+    <title lang="ja">最初から</title>
+    <chapter id="introduction">
+      <title lang="en">Introduction</title>
+      <title lang="ja">はじめに</title>
+      <xi:include href="introduction.xml"/>
+      <xi:include href="introduction/whats-new.xml"/>
+    </chapter>
+    <chapter id="gimp-fire-up">
+      <title lang="en">Fire up the GIMP</title>
+      <title lang="ja"><acronym>GIMP</acronym>始動</title>
+      <xi:include href="concepts/intro.xml"/>
+      <xi:include href="concepts/setup.xml"/>
+    </chapter>
+    <chapter id="gimp-first-steps">
+      <title lang="en">First Steps With Wilber</title>
+      <title lang="ja">ウィルバー君とはじめの一歩</title>
+      <xi:include href="concepts/concepts.xml"/>
+      <xi:include href="concepts/basic-setup.xml"/>
+      <xi:include href="concepts/undo.xml"/>
+      <xi:include href="tutorial/quickies.xml"/>
+      <xi:include href="tutorial/straight-lines.xml"/>
+    </chapter>
+    <chapter id="gimp-getting-unstuck">
+      <title lang="en">Getting Unstuck</title>
+      <title lang="ja">固まったときの対処</title>
+      <xi:include href="using/getting-unstuck.xml"/>
+    </chapter>
+  </part>
+  <part>
+    <title lang="en">How do I Become a <acronym>GIMP</acronym> Wizard?</title>
+    <title lang="ja"><acronym>GIMP</acronym>の達人になるには</title>
+    <chapter id="gimp-images-in">
+      <title lang="en">Getting Images Into GIMP</title>
+      <title lang="ja"><acronym>GIMP</acronym>への画像の取り込み</title>
+      <para lang="en">
+        This chapter is about getting images into GIMP. It explains how to
+        create new images, how to load images from files, how to scan them and
+        how to make screenshots.
+      </para>
+      <para lang="en"><!-- new: 2007-03-15 -->
+        But first we want to introduce you to the general structure of images
+        in GIMP.
+      </para>
+      <para lang="ja"><!-- new: 2007-03-15 -->
+        この章は<acronym>GIMP</acronym>への画像の取り込み方について述べて
+        います。 新しい画像の作り方と、ファイルから画像を読み込む方法と、
+        画像のスキャンの仕方、及びスクリーンショットの撮り方について
+        説明があります。
+      </para>
+      <para lang="ja"><!-- new: 2007-03-15 -->
+        しかしその前に、 <acronym>GIMP</acronym>の一般的な
+        画像構造についてご紹介いたします。
+      </para>
+      <xi:include href="concepts/image-types.xml"/>
+      <xi:include href="concepts/images.xml"/>
+      <xi:include href="concepts/images-loading.xml"/>
+    </chapter>
+    <chapter id="gimp-images-out">
+      <title lang="en">Getting images out of GIMP</title>
+      <title lang="ja"><acronym>GIMP</acronym>からの画像の引き出し</title>
+      <xi:include href="using/fileformats.xml"/>
+      <xi:include href="using/web.xml"/>
+    </chapter>
+    <chapter id="gimp-painting">
+      <title lang="en">Painting with GIMP</title>
+      <title lang="ja"><acronym>GIMP</acronym>で描画</title>
+      <xi:include href="concepts/selection.xml"/>
+      <xi:include href="using/selections.xml"/>
+      <xi:include href="concepts/qmask.xml"/>
+      <xi:include href="using/qmask.xml"/>
+      <xi:include href="using/paths.xml"/>
+      <xi:include href="concepts/brushes.xml"/>
+      <xi:include href="using/brushes.xml"/>
+      <xi:include href="using/animated-brushes.xml"/>
+      <xi:include href="using/variable-size-brush.xml"/>
+      <xi:include href="concepts/gradients.xml"/>
+      <xi:include href="concepts/patterns.xml"/>
+      <xi:include href="concepts/palettes.xml"/>
+      <xi:include href="using/simpleobjects.xml"/>
+    </chapter>
+    <chapter id="gimp-image-combining">
+      <title lang="en">Combining Images</title>
+      <title lang="ja">画像の組み合わせ</title>
+      <xi:include href="concepts/layers.xml"/>
+      <xi:include href="concepts/layer-modes.xml"/>
+      <xi:include href="using/layers.xml"/>
+      <xi:include href="concepts/fonts-and-text.xml"/>
+      <xi:include href="using/fonts-and-text.xml"/>
+    </chapter>
+    <chapter id="gimp-imaging-photos">
+      <title lang="en">Enhancing Photographs</title>
+      <title lang="ja">写真の補正</title>
+      <xi:include href="using/photography.xml"/>
+    </chapter>
+    <chapter id="gimp-imaging-color-management">
+      <title lang="en">Color Management with GIMP</title>
+      <title lang="ja"><acronym>GIMP</acronym>の色管理</title>
+      <xi:include href="concepts/color-management.xml"/>
+    </chapter>
+    <chapter id="gimp-pimping">
+      <title lang="en">Pimp my GIMP</title>
+      <title lang="ja"><acronym>GIMP</acronym>改造達人部</title>
+      <xi:include href="using/preferences/preferences_introduction.xml"/>
+      <xi:include href="concepts/grid-and-guides.xml"/>
+      <xi:include href="using/grid-and-guides.xml"/>
+      <xi:include href="using/setup.xml"/>
+      <xi:include href="using/shortcuts.xml"/>
+      <!--<xi:include href="using/docks.xml"/>-->
+      <xi:include href="using/customize-splashscreen.xml"/>
+    </chapter>
+    <chapter id="gimp-scripting">
+      <title lang="en">Scripting</title>
+      <title lang="ja"><acronym>GIMP</acronym>スクリプト</title>
+      <xi:include href="concepts/plugins.xml"/>
+      <xi:include href="concepts/script-fu.xml"/>
+      <xi:include href="using/script-fu-tutorial.xml"/>
+    </chapter>
+  </part>
+  <part>
+    <title lang="en">Function Reference</title>
+    <title lang="ja"><acronym>GIMP</acronym>機能参照書</title>
+    <chapter id="gimp-toolbox">
+      <title lang="en">Toolbox</title>
+      <title lang="ja">ツールボックス</title>
+      <xi:include href="toolbox/intro.xml"/>
+      <xi:include href="toolbox/tools-selection.xml"/>
+      <xi:include href="toolbox/tools-paint.xml"/>
+      <xi:include href="toolbox/tools-transform.xml"/>
+      <xi:include href="toolbox/tools-color.xml"/>
+      <xi:include href="toolbox/other-tools.xml"/>
+      <xi:include href="toolbox/toolbox-color-area.xml"/>
+    </chapter>
+    <chapter id="dialogs">
+      <title lang="en">Dialogs</title>
+      <title lang="ja">ダイアログ</title>
+      <xi:include href="dialogs/dialogs_introduction.xml"/>
+      <xi:include href="dialogs/dialogs-structure.xml"/>
+      <xi:include href="dialogs/dialogs-content.xml"/>
+      <xi:include href="dialogs/dialogs-management.xml"/>
+      <xi:include href="dialogs/dialogs-misc.xml"/>
+    </chapter>
+    <chapter id="menus">
+      <title lang="en">Menus</title>
+      <title lang="ja">メニュー</title>
+      <xi:include href="menus/introduction.xml"/>
+      <xi:include href="menus/file.xml"/>
+      <xi:include href="menus/edit.xml"/>
+      <xi:include href="menus/select.xml"/>
+      <xi:include href="menus/view.xml"/>
+      <xi:include href="menus/image.xml"/>
+      <xi:include href="menus/layer.xml"/>
+      <xi:include href="menus/colors.xml"/>
+      <xi:include href="menus/menus-tools.xml"/>
+      <xi:include href="menus/menus-filters.xml"/>
+      <xi:include href="menus/menus-windows.xml"/>
+      <xi:include href="menus/help.xml"/>
+    </chapter>
+    <chapter id="filters">
+      <title lang="en">Filters</title>
+      <title lang="ja">フィルタ</title>
+      <xi:include href="filters/introduction.xml"/>
+      <xi:include href="filters/blur.xml"/>
+      <xi:include href="filters/enhance.xml"/>
+      <xi:include href="filters/distort.xml"/>
+      <xi:include href="filters/light-effects.xml"/>
+      <xi:include href="filters/noise.xml"/>
+      <xi:include href="filters/edge-detect.xml"/>
+      <xi:include href="filters/generic.xml"/>
+      <xi:include href="filters/combine.xml"/>
+      <xi:include href="filters/artistic.xml"/>
+      <xi:include href="filters/decor.xml"/>
+      <xi:include href="filters/map.xml"/>
+      <xi:include href="filters/render.xml"/>
+      <xi:include href="filters/web.xml"/>
+      <xi:include href="filters/animation.xml"/>
+      <!-- -->
+      <xi:include href="filters/alpha-to-logo.xml"/>
+    </chapter>
+    <xi:include href="key-reference.xml"/>
+  </part>
+  <xi:include href="glossary/glossary.xml"/>
+<!--
+  <xi:include href="dictionary/dictionary.xml"/>
+-->
+  <xi:include href="appendix/bibliography.xml"/>
+  <xi:include href="appendix/history.xml"/>
+  <xi:include href="appendix/bugs.xml"/>
+  <xi:include href="appendix/fdl.xml"/>
+  <xi:include href="help-missing.xml"/>
+  <index id="gimp-help-index"/>
+</book>

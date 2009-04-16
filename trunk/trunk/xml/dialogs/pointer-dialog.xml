@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-16 j.h: updated en;fr to v2.6. Standardized xml structure, may be
+             with some errors in lt;no,ru languages.
+  2008-03-01 ude: renamed id (old: gimp-pointer-dialog)
+  2008-01-23 ude: de translation
+  2007-11-22 j.h: created
+-->
+<sect2 id="gimp-pointer-info-dialog">
+  <!--<sect2info role="cvs">
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2691 $</revnumber>
+        <date>2008-12-16</date>
+        <authorinitials>j.h</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase>Pointer Dialog</phrase>
+  </title>
+  <indexterm>
+    <primary>Dialogs</primary>
+    <secondary>Pointer</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>Pointer</primary>
+  </indexterm>
+  <figure>
+    <title>
+      <phrase>Pointer dialog</phrase>
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/pointer-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para>
+    This dialog offers you, in a same window, in real time, the position of
+    the mouse pointer, and the channel values of the pointed pixel, in the
+    chosen color model.
+  </para>
+  <sect3>
+    <title>
+      <phrase>Activate Dialog</phrase>
+    </title>
+    <para>
+      The <quote>Pointer</quote> dialog is dockable. Read
+      <xref linkend="gimp-concepts-docks"/> to learn more about the concept
+      of dockability. You can access to this dialog in different ways:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          From the image Menu-bar:
+          <menuchoice><guimenu>Windows</guimenu><guisubmenu>Dockable Dialogs</guisubmenu><guimenuitem>Pointer</guimenuitem></menuchoice>,
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase><quote>Pointer</quote> dialog options</phrase>
+    </title>
+    <para>
+      As in every dialog that contains preview icons, you can control the
+      preview images in the tab menu. To get more informations about that
+      topic read <xref linkend="gimp-concepts-docks"/>.
+    </para>
+    <variablelist>
+      <title>
+        <phrase>Pointer Information</phrase>
+      </title>
+      <varlistentry>
+        <term>
+          <phrase>Pixels</phrase>
+        </term>
+        <listitem>
+          <para>
+            Shows the position of the pointed pixel, in X (horizontal) and Y
+            (vertical) coordinates, stated in pixels from the origin (the
+            upper left corner of the canvas).
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <phrase>Units</phrase>
+        </term>
+        <listitem>
+          <para>
+            Shows the distance from the origin, in inches.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <phrase>Channel values</phrase>
+        </term>
+        <listitem>
+          <variablelist>
+            <para>
+              The channel values for the selected
+              <link linkend="glossary-colormodel">color model</link> are shown
+              below. Both pulldown menus contain the same choices, which
+              makes it easier for you to compare the color values of a
+              particular pixel using different color models.
+              <quote>Hex</quote> is the
+              <link linkend="glossary-html-notation">HTML Notation</link> of
+              the pixel color, in hexadecimal. The choices on the pulldown
+              menus are (<guilabel>Pixel</guilabel> is the default):
+            </para>
+            <varlistentry>
+              <term>
+                <phrase>Pixel</phrase>
+              </term>
+              <listitem>
+                <para>
+                  The <link linkend="glossary-rgb">RGB</link> channel values.
+                  This choice displays the <emphasis>Red</emphasis>,
+                  <emphasis>Green</emphasis>, <emphasis>Blue</emphasis> and
+                  <emphasis>Alpha</emphasis> values of the pixel, as numbers
+                  between 0 and 255.
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>
+                <phrase>RGB</phrase>
+              </term>
+              <listitem>
+                <para>
+                  The <link linkend="glossary-rgb">RGB</link> channel values.
+                  This choice displays the <emphasis>Red</emphasis>,
+                  <emphasis>Green</emphasis>, <emphasis>Blue</emphasis> and
+                  <emphasis>Alpha</emphasis> values of the pixel, as
+                  percentages. It also shows the hexadecimal value of the
+                  pixel's color.
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>
+                <phrase>HSV</phrase>
+              </term>
+              <listitem>
+                <para>
+                  The <link linkend="glossary-hsv">HSV</link> components.
+                  This choice displays the <emphasis>Hue</emphasis>, in
+                  degrees, as well as the <emphasis>Saturation</emphasis>,
+                  <emphasis>Value</emphasis> and <emphasis>Alpha</emphasis> of
+                  the pixel, as percentages.
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>
+                <phrase>CMYK</phrase>
+              </term>
+              <listitem>
+                <para>
+                  The <link linkend="glossary-cmyk">CMYK</link> channel
+                  values. This choice displays the <emphasis>Cyan</emphasis>,
+                  <emphasis>Magenta</emphasis>, <emphasis>Yellow</emphasis>,
+                  <emphasis>Black</emphasis> and <emphasis>Alpha</emphasis>
+                  values of the pixel, as percentages.
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <phrase>Sample Merged</phrase>
+        </term>
+        <listitem>
+          <para>
+            If this option is checked (default), sampling is performed on all
+            layers. If it is unchecked, sampling is performed on the active
+            layer only.
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

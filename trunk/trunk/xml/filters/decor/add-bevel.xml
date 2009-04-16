@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-01 KoSt: Added 'no'
+  2007-09-02 AntI: Added 'es'
+  2007-09-02 j.h: translated to fr
+  2007-08-25 alex falappa: added it
+  2007-08-16 ude: created en, de
+-->
+<!--TODO: ko: translation incomplete -->
+<sect2 id="script-fu-add-bevel">
+  <!--  <sect2info>
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2728 $</revnumber>
+        <date>2007-08-16</date>
+        <authorinitials>ude</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase>Add Bevel</phrase>
+  </title>
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Add Bevel</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>Add Bevel</primary>
+  </indexterm>
+  <sect3>
+    <title>
+      <phrase>Overview</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase>
+          Example for the <quote>Add Bevel</quote> filter
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/decor-add-bevel20.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para>
+            Original image, the colored rectangle is selected
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/decor-add-bevel21.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para><quote>Add Bevel</quote> applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      This filter adds a slight bevel to an image using a <link linkend="plug-in-bump-map">bump map</link> (see below). If there is a
+      selection, it is bevelled, otherwise the filter has no effect.
+    </para>
+    <figure>
+      <title>
+        <phrase>
+          Another <quote>Add Bevel</quote> example, with bumpmap
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/decor-add-bevel10.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para>Original image</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/decor-add-bevel12.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para>Bumpmap</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/decor-add-bevel11.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para>Filter applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Activate the filter</phrase>
+    </title>
+    <para>
+      You can find this filter in the image window menu under
+      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Decor</guisubmenu><guimenuitem>Add Bevel</guimenuitem></menuchoice>.
+    </para>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Options</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase><quote>Add Bevel</quote> options</phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/options-decor-add-bevel.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Thickness</term>
+        <listitem>
+          <para>
+            You can specify the thickness of the bevel, in pixels. Maximal
+            thickness is 30 pixels.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Work on copy</term>
+        <listitem>
+          <para>
+            By default the filter creates a copy and bevels this copy. This is
+            one more open window on your desktop.  However, since you can undo
+            the filter effect you may also uncheck this option and work on the
+            original image.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Keep bump layer</term>
+        <listitem>
+          <para>
+            When checked, you will keep the generated bumpmap as a new, not
+            visible layer (below the layer dialog):
+          </para>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/filters/examples/decor-add-bevel23.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-16 j.h: reviwed for v2.6. No change
+  2008-04-07 JPL reviewed fr
+  2007-10-21 lexa: reviewed de for GIMP 2.4
+  2007-06-17 kost: added norwegian
+  2006-04-30 added it content by ciampix
+  2006-02-10 en;fr revised by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  050522 de reviewed by axel.wernicke
+  -->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-ink">
+<!--  <sect2info>
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2786 $</revnumber>
+        <date>2009-03-20</date>
+        <authorinitials>liangtai</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title lang="en">Ink</title>
+  <title lang="ja">インクで描画</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Ink</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Ink</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>インクで描画</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>インクで描画</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">
+      The <quote>Ink</quote> tool in Toolbox
+    </title>
+    <title lang="ja">
+      ツールボックス上の<quote>インクで描画</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/ja/toolbox-pen.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The Ink tool uses a simulation of an ink pen with a controllable nib to
+    paint solid brush strokes with an antialiased edge. The size, shape and
+    angle of the nib can be set to determine how the strokes will be rendered.
+  </para>
+  <para lang="ja">
+    <quote>インクで描画</quote>ツールは万年筆やつけペンなどのペン先を調整できる
+    ものを再現します。 描線の濃さは一様ですが縁にアンチエイリアスがかかって
+    います。 筆勢を特徴づけるペン先の大きさと形状および射角は変えられます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">You can find the Ink tool in several ways :</para>
+    <para lang="ja">
+      <quote>インクで描画</quote>ツールを起用する方法はつぎのいずれかです:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the image-menu through:
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Paint Tools</guisubmenu>
+            <guimenuitem>Ink</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>描画ツール(<accel>P</accel>)</guisubmenu>
+            <guimenuitem>インクで描画(<accel>K</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking on the tool icon:
+          <guiicon><inlinegraphic
+            fileref="images/toolbox/stock-tool-ink-22.png"/>
+          </guiicon> in Toolbox,
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon><inlinegraphic
+            fileref="images/toolbox/stock-tool-ink-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By using the <keycap>K</keycap> keyboard shortcut.
+        </para>
+        <para lang="ja">
+          キーボードショートカット <keycap>K</keycap>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">キー修飾 (初期設定)</title>
+    <para lang="en">This tool has no special modifier keys.</para>
+    <para lang="ja">修飾キーにこのツール特有のものはありません。</para>
+  </sect3>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Ink Tool options</title>
+      <title lang="ja">
+        <quote>インクで描画</quote>ツールのツールオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/ja/tool-options-ink.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Mode; Opacity</term>
+        <term lang="ja">モード; 不透明度</term>
+        <listitem>
+          <xi:include href="about-common-brush-options.xml"/>
+          <!--<para lang="ja">ブラシツール共通のオプションです。</para>-->
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Adjustment</term>
+        <term lang="ja">補正</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Size</term>
+              <term lang="ja">大きさ</term>
+              <listitem>
+                <para lang="en">
+                  Controls the apparent width of the pen's nib with values
+                  that ranges from 0 (very thin) to 20 (very thick).
+                </para>
+                <para lang="ja">
+                  概念上のペン先の切割りの幅を調節するもので、 0 (極細) から
+                  20 (極太) までの描線の太さを選びます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Angle</term>
+              <term lang="ja">角度</term>
+              <listitem>
+                <para lang="en">
+                  This controls the apparent angle of the pen's nib relative
+                  to horizontal.
+                </para>
+                <para lang="ja">
+                  概念上のペン先の射角を調整するもので、 水平線からの角度を
+                  選びます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sensitivity</term>
+        <term lang="ja">感度</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Size</term>
+              <term lang="ja">大きさ</term>
+              <listitem>
+                <para lang="en">
+                  This controls the size of the nib, from minimum to maximum.
+                  Note that a size of 0 does not result in a nib of size zero,
+                  but rather a nib of minimum size.
+                </para>
+                <para lang="ja">
+                  ペン先の大きさを調整するものです。 最大値と最小値があり、
+                  0.0を選んでもペン先の大きさがゼロになるわけではなく最小値が
+                  選ばれます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Tilt</term>
+              <term lang="ja">傾き</term>
+              <listitem>
+                <para lang="en">
+                  Controls the apparent tilt of the nib relative to
+                  horizontal. This control and the Angle control described
+                  above are interrelated. Experimentation is the best means of
+                  learning how to use them.
+                </para>
+                <para lang="ja">
+                  概念上のペン先の射角を調整するもので、 水平線からの角度を
+                  選びます。 上述の角度調整とこの傾き調整は相互に関連して
+                  います。 いろいろ試してみるのが理解する早道です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Speed</term>
+              <term lang="ja">スピード</term>
+              <listitem>
+                <para lang="en">
+                  This controls the effective size of the nib as a function of
+                  drawing speed. That is, as with a physical pen, the faster
+                  you draw, the narrower the line.
+                </para>
+                <para lang="ja">
+                  筆運びの速さにつられてペン先の大きさが変化する効果を調整
+                  します。 つまり実際のペンと同じように、 素早くペンを走らせ
+                  るほど線が細くなります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Type and Shape</term>
+        <term lang="ja">種類と形状</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Type</term>
+              <term lang="ja">種類</term>
+              <listitem>
+                <para lang="en">
+                  There are three nib shapes to choose from: circle, square,
+                  and diamond.
+                </para>
+                <para lang="ja">
+                  ペン先の形状を円形、 正方形、 平行四辺形の3種類から選びます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Shape</term>
+              <term lang="ja">形状</term>
+              <listitem>
+                <para lang="en">
+                  The geometry of the nib type can be adjusted by holding
+                  button 1 of the mouse on the small square at the center of
+                  the Shape icon and moving it around.
+                </para>
+                <para lang="ja">
+                  ペン先の幾何図形的配置を調節するもので、 形状アイコンの
+                  内部にある小さな正方形をマウスの <mousebutton> 第1ボタン
+                  </mousebutton> で掴んで移動すればペン先が変形します。
+                </para>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tool-options/ja/ink-type-circle.png" format="PNG"/>
+                    </imageobject>
+                  </inlinemediaobject>
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

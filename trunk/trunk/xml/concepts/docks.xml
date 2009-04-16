@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-07-31 prokoudine: yet another shot at Russian content
+  2008-03-23 reviewed 'ko' by Mr.Dust
+  2008-01-14 alex falappa: fixed outstanding TODOs for'it'
+  2007-05-28 Fixed Auto Follow Active Image by j.h
+  2007-03-19 reviewed Korean translation by Dust
+  2006-07-27 added italian translation by ciampix
+  2006-05-02 added Korean translation by Dust
+  2006-02-08 added norwegian translation by KoSt
+  2005-12-18 reviewed by lexa
+-->
+<!--revision2805 2009-04-03-->
+<sect2 id="gimp-concepts-docks">
+  <title lang="en">Dialogs and Docking</title>
+  <title lang="ja">ダイアログとその合体</title>
+  <indexterm lang="en">
+    <primary>Docking</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Docking</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>合体</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>合体</secondary>
+  </indexterm>
+
+  <sect3 id="gimp-dock-separator">
+    <title lang="en">Docking areas</title>
+    <title lang="ja">合体領域</title>
+    <para lang="en">
+      GIMP offers a lot of flexibility about the arrangement
+      of dialog windows on your screen. Instead of placing each dialog in its
+      own window, you can group them together using docks. A "dock" is a
+      container window that can hold a collection of persistent dialogs, such
+      as the Tool Options dialog, Brushes dialog, Palette dialog, etc. Docks
+      cannot, however, hold image windows: each image always has its own
+      separate window. They also can't hold non-persistent dialogs, such as
+      the Preferences dialog or the New Image dialog.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>は画面上でのダイアログの配置のしかたについて
+      幾通りもの柔軟な方法を提供しています。 ダイアログをそれぞれウィンドウ
+      として置く方法のほか、 ドック上で纏めることもできます。 ドックとは、
+      ツールオプションダイアログやブラシダイアログやパレットダイアログ
+      等の常設ダイアログを重ねあわせて保持する容器ウィンドウのことです。
+      ただし画像ウィンドウは入れられません。 画像はおのおのにウィンドウが
+      割り当てられています。 それから環境設定ダイアログや
+      <quote>新しい画像を作成</quote>ダイアログのような非常設ダイアログも
+      入れられません。
+    </para>
+    <para lang="en">
+      <acronym>GIMP</acronym> is now supplied with two docks:
+      <itemizedlist>
+        <listitem>
+          <para>
+            The Layers, Channels and Paths dock
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The Brushes, Patterns and Gradients dock
+          </para>
+        </listitem>
+      </itemizedlist>
+      In these docks, every window is in its own tab.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>は現在2種類のドックを提供しています:
+      <itemizedlist>
+        <listitem>
+          <para>
+            レイヤー, チャンネル, パスのドック
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            ブラシ, パターン, グラデーションのドック
+          </para>
+        </listitem>
+      </itemizedlist>
+      いずれのドックもそれぞれにタブが備わっています。
+    </para>
+    <para lang="en">
+      The Toolbox is now also a <emphasis>utility window</emphasis>. The
+      Tool Options window is normally attached under the Toolbox and displays
+      the options of the selected tool.
+    </para>
+    <para lang="en">
+      A list of dockable windows is available in
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guisubmenu>Dockable Windows</guisubmenu>
+      </menuchoice>.
+      Click on the name of one of them to open it as an independent window.
+    </para>
+    <para lang="en">
+      Every dockable window has two types of docking areas: the dock bars and
+      the docking-tab area.
+    </para>
+    <para lang="ja">
+      ツールボックスは <emphasis>万能ウィンドウ</emphasis> でもあります。
+      普通はツールオプションウィンドウがその下にくっついていて、 呼び出された
+      ツールのオプションが表示されます。
+    </para>
+    <para lang="ja">
+      ドッキング可能なウィンドウは
+      <menuchoice>
+        <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+        <guisubmenu>ドッキング可能なダイアログ(<accel>D</accel>)</guisubmenu>
+      </menuchoice>
+      のサブメニューでリストになっています。 そこからどれかをクリックすると、
+      独立したウィンドウとして開かれます。
+    </para>
+    <para lang="ja">
+      いずれのドッキング可能なダイアログも合体バーと合体タブ領域の2種類の
+      合体用領域を備えています。
+    </para>
+    <figure id="figure-dock">
+      <title lang="en">Docking bars</title>
+      <title lang="ja">合体バー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/ja/dialog-highlight-dockbar.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            A window with <emphasis>docking bars</emphasis> highlighted.
+            These are thin gray bars, very unobtrusive and easy not to
+            notice: most people don't realize that they exist until they are
+            specifically pointed out.
+          </para>
+          <para lang="ja">
+            ウィンドウの <emphasis>合体バー</emphasis> を強調した。 これらは
+            非常に目立たないなかなか気付かれにくい薄い灰色の桿なので、
+            ほとんどの方はこうして指摘するまでそのような物の存在をご存じ
+            なかっただろう。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      In an isolated window, the <emphasis>docking-tab area</emphasis> is
+      the same as the drag handle area (see below). In a dock, the
+      docking-tab area covers all the window.
+    </para>
+    <para lang="ja">
+      孤立したウィンドウでは <emphasis>合体タブ領域</emphasis> は合体用持ち手の
+      領域 (以下参照) と同じようになっています。 ドックにおいて合体タブは
+      全てのウィンドウを包括します。
+    </para>
+    <indexterm lang="en">
+      <primary>Docks</primary>
+      <secondary>Docking areas</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ドック</primary>
+      <secondary>合体領域</secondary>
+    </indexterm>
+  </sect3>
+
+  <sect3 id="gimp-dockable-drag-area">
+    <title lang="en">Docking Drag Handles</title>
+    <title lang="ja">合体用持ち手</title>
+    <indexterm lang="en">
+      <primary>Docks</primary>
+      <secondary>Docking drag handle</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ドック</primary>
+      <secondary>合体用持ち手</secondary>
+    </indexterm>
+    <para lang="en">
+      Each dockable window has a <emphasis>drag handle area</emphasis>,
+      as highlighted in the figure below. You can recognize this by
+      the fact that the cursor changes to a hand shape when the pointer is
+      over the drag handle area. To dock a dialog, you simply click on its
+      drag handle area, and drag it onto
+      <itemizedlist>
+        <listitem>
+          <para>
+            either one of the docking bars in a window: the dialog will be
+            attached under this window,
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            or the docking-tab area: the dialog will be added as a tab.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para lang="ja">
+      合体できるウィンドウはどれにもひとつづつ下図で強調して
+      示したところに <emphasis>合体用持ち手</emphasis>があります。
+      持ち手部の上にマウスを移動するとポインタが手の姿に変化するのを
+      確かめてみて下さい。 ダイアログを合体するには、 単にこの持ち手部を
+      クリックしたままで、
+      <itemizedlist>
+        <listitem>
+          <para>
+            ウィンドウの合体バーのどれかひとつの上まで曳いて放ちます。
+            そのウィンドウの下にダイアログがくっつきます。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            合体タブ領域まで曳いて放ちます。 ダイアログがタブとなって
+            加えられます。
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <figure id="figure-docked-dialogs">
+      <title lang="en">
+        A dockable window, with the drag handle area highlighted.
+      </title>
+      <title lang="ja">
+        ドッキング可能なウィンドウ。 強調部分は合体用持ち手。
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/ja/dialog-highlight-handle.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            This screenshot shows the area that can be used to drag a
+            dialog window onto a dock. It can also be used to take a dialog
+            off the dock.
+          </para>
+          <para lang="ja">
+            ダイアログウィンドウをドックまで曳いてゆくのに使われる部分を示した
+            スクリーンショット。
+            ドックからダイアログを切り離すのにも用いられる。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure id="figure-docking-types">
+      <title lang="en">The two docking types.</title>
+      <title lang="ja">2種類の合体様式</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/ja/dock-attached.png"
+                     format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The dockable window has been docked onto a dock bar.
+          </para>
+          <para lang="ja">
+            ドッキング可能なウィンドウが合体バー上で合体した。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/ja/dock-tab.png"
+                     format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The dockable window has been docked onto the docking-tab area.
+            A new tab has been created.
+          </para>
+          <para lang="ja">
+            ドッキング可能なウィンドウが合体タブ領域内で合体した。 新たなタブ
+            ができている。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <para lang="ja">
+      合体バーに曳き入れられるダイアログは一つとは限りません。
+      追加した分をふくめ、 それぞれがアイコンつきのタブに変化して並びます。
+      入りたいダイアログに対してはそのタブの爪をクリックして
+      前面に出してから操作して下さい。
+    </para>
+
+    <note>
+      <para lang="en">
+        You can also add a new tab in a window, detach it, delete it by using
+        the Tab menu. Please see below.
+      </para>
+      <para lang="ja">
+        ウィンドウに新たなタブを追加したり、 ウィンドウから切り放したり削除
+        したりする操作はタブメニューにもあります。 後で説明があります。
+      </para>
+    </note>
+  </sect3>
+  <sect3 id="gimp-dock-image-menu">
+    <title lang="en">Image Menu</title>
+    <title lang="ja">画像メニュー</title>
+    <anchor id="gimp-dock-auto-button"/>
+    <indexterm lang="en">
+      <primary>Docks</primary>
+      <secondary>Auto button</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ドック</primary>
+      <secondary>自動ボタン</secondary>
+    </indexterm>
+    <para lang="en">
+      Some docks contain an <emphasis>Image Menu</emphasis>:
+      a menu listing all of the images open in GIMP, and displaying the name
+      of the image whose information is shown in the dock. You can use the
+      Image Menu to select a different image (don't confuse this menu for the
+      Image Menu that is the Menu of the active image on your screen). If the
+      <guilabel>Auto</guilabel> button is depressed, then the menu always
+      shows the name of GIMP's currently active image, that is, the image
+      you are currently working on.
+    </para>
+    <para lang="ja">
+      一部のドックには <emphasis>画像メニュー</emphasis> が入れられます。
+      <acronym>GIMP</acronym>が読み込んだ画像全てを一覧にしたこのメニュー
+      には、今ドックも関わって操作している画像の名前が表示されています。
+      このメニューを使って他の画像が選べます (画面に表示した画像を操作する
+      ための[画像ウィンドウ上部の]画像メニューとは異なります)。
+      <guilabel>自動</guilabel>ボタンを押し込んだ場合は、
+      つねに現在の<acronym>GIMP</acronym>で操作中の活性画像の名前を
+      このメニューが表示します。
+    </para>
+    <figure>
+      <title lang="en">A dock with an Image Menu highlighted</title>
+      <title lang="ja">ドック。 画像メニューを強調してある。</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/ja/dialog-highlight-imagemenu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      By default, a <quote>Layers, Channels, and Paths</quote>
+      dock shows an Image Menu at the top, and other types of docks do not.
+      You can always add or remove an Image Menu, however, using the "Show
+      Image Menu" toggle in the Tab menu, as described below. (Exception: you
+      cannot add an Image Menu to the dock that contains the Toolbox.)
+    </para>
+    <para lang="ja">
+      &lt;!-- By default, a <quote>レイヤー、チャンネル、パス</quote> dock
+      shows an Image Menu at the top, and other types of docks do not. --&gt;
+      画像メニューは後で述べる<guilabel>選択画像を表示(<accel>S</accel>)
+      </guilabel> メニューでドック上に表示したり隠したりできます。 (ただし、
+      ツールボックスを含むドックには画像メニューを加えられません。)
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-dockable-menu">
+    <title lang="en">Tab Menu</title>
+    <title lang="ja">タブメニュー</title>
+    <indexterm lang="en">
+      <primary>Docks</primary>
+      <secondary>Tab menu</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ドック</primary>
+      <secondary>タブメニュー</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">
+        A dialog in a dock, with the Tab menu button highlighted
+      </title>
+      <title lang="ja">
+        ドック内のダイアログ。 そのタブメニューを強調してある。
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/ja/dialog-highlight-tabmenu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      In each dialog, you can access a special menu of tab-related operations
+      by pressing the Tab Menu button, as highlighted in the figure on the
+      right. Exactly which commands are shown in the menu varies a bit from
+      dialog to dialog, but they always include operations for creating new
+      tabs, or closing or detaching tabs.
+    </para>
+    <para lang="ja">
+      ダイアログにはいずれもタブメニューボタンがあって、 これを押すとそのタブに
+      関連した操作ができるようになっています。 上図<!--右図-->はこの部分を
+      強調しています。
+      メニューはその属するダイアログによって内容コマンドが少しづつ異なって
+      いますが、いずれも新規タブの生成および消去と分離の指示が含まれます。
+    </para>
+    <figure>
+      <title lang="en">Tab menu from the Layers dialog</title>
+      <title lang="ja">フォントダイアログにおけるタブメニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/ja/tab-menu.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The Tab menu gives you access to the following commands:
+    </para>
+    <para lang="ja">タブメニューで提供されるコマンドは次のとおり:</para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Context Menu</term>
+        <term lang="ja">脈絡メニュー(直接関連のあるメニュー)</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>Context menu</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary>
+            <secondary>脈絡メニュー(直接関連のあるメニュー)</secondary>
+          </indexterm>
+          <para lang="en">
+            At the top of each Tab menu is an entry that opens into the
+            dialog's context menu, which contains operations specific to that
+            particular type of dialog. For example, the context menu for the
+            Patterns dialog contains a set of operations for manipulating
+            patterns.
+          </para>
+          <para lang="ja">
+            タブメニューの最上部にはダイアログの機能に関連のある項目をまとめた
+            脈絡メニューが載っています。 たとえば、 パターンダイアログの
+            脈絡メニューにはパターンを操作する項目が揃っています。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Add Tab</term>
+        <term lang="ja">タブに追加(<accel>T</accel>)</term>
+        <listitem>
+          <anchor id="gimp-dock-tab-add"/>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>Add Tab</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary>
+            <secondary>タブに追加</secondary>
+          </indexterm>
+          <para lang="en">
+            This entry opens into a submenu allowing you to add a large
+            variety of dockable dialogs as new tabs.
+          </para>
+          <para lang="ja">
+            この項目はドック入りが可能な数々のダイアログからどれかを選んで
+            新たなタブとして追加するためのサブメニューを呼びだします。
+          </para>
+          <figure>
+            <title lang="en"><quote>Add tab</quote> sub-menu</title>
+            <title lang="ja"><quote>タブに追加</quote>サブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/using/ja/tab-menu-add-tab.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Close Tab</term>
+        <term lang="ja">タブを閉じる(<accel>C</accel>)</term>
+        <listitem>
+          <anchor id="gimp-dock-tab-close"/>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>Close tab</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary>
+            <secondary>タブを閉じる</secondary>
+          </indexterm>
+          <para lang="en">
+            This entry closes the dialog. Closing the last dialog in a dock
+            causes the dock itself to close. Choosing this menu entry has the
+            same effect as pressing the "Close Tab" button.
+          </para>
+          <para lang="ja">
+            この項目はダイアログを閉じます。 最後の一つのダイアログを閉じた
+            ときはドックも閉じられます。 このメニュー項目は
+            <guibutton>タブを閉じる</guibutton>ボタンの機能と同等です。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Detach Tab</term>
+        <term lang="ja">タブを切り放す(<accel>D</accel>)</term>
+        <listitem>
+          <anchor id="gimp-dock-tab-detach"/>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>Detach tab</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary>
+            <secondary>タブを切り放す</secondary>
+          </indexterm>
+          <para lang="en">
+            This entry detaches the dialog from the dock, creating a new dock
+            with the detached dialog as its only member. It has the same
+            effect as dragging the tab out of the dock and releasing it at a
+            location where it cannot be docked.
+          </para>
+          <para lang="ja">
+            この項目はダイアログをドックから切り離し、 そのダイアログだけが
+            入った新たなドックをつくります。 このメニュー項目はタブをクリック
+            してドックの及ばないところまで曳き出すのと同じ効果があります。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Preview Size</term>
+        <term lang="ja">プレビューサイズ(<accel>P</accel>)</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Previews</primary>
+            <secondary>Tab preview size</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Layer</primary>
+            <secondary>Preview size</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>プレビュー</primary>
+            <secondary>サイズを変更</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>レイヤー</primary>
+            <secondary>プレビューサイズ</secondary>
+          </indexterm>
+          <figure id="figure-gimp-dock-preview-size">
+            <title lang="en">Preview Size submenu of a Tab menu</title>
+            <title lang="ja">
+              タブメニューよりプレビューサイズ-サブメニュー
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/using/ja/tab-menu-preview-size.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <anchor id="gimp-dock-preview-size"/>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>Preview size</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary>
+            <secondary>プレビューサイズ</secondary>
+          </indexterm>
+          <para lang="en">
+            Many, but not all, dialogs have Tab menus containing a
+            <guilabel>Preview Size</guilabel>
+            option, which opens into a submenu giving a list of sizes for the
+            items in the dialog (cf.
+            <xref linkend="figure-gimp-dock-preview-size"/>
+            ). For example, the Brushes dialog shows pictures of all available
+            brushes: the Preview Size determines how large the pictures are.
+            The default is <guilabel>Medium</guilabel>.
+          </para>
+          <para lang="ja">
+            大多数のダイアログはそのタブメニューに
+            <guilabel>プレビューサイズ</guilabel> の項目があり、
+            このサブメニューはダイアログ内で扱われる絵や図形の大きさ
+            を選べるリストになっています。 (参照:
+            <xref linkend="figure-gimp-dock-preview-size" /> [= 上図])。
+            たとえば、 ブラシダイアログには利用できるたくさんのブラシが
+            絵で表されていますが、プレビューサイズとはこういった絵の大きさの
+            ことを指しています。 初期設定値は<guilabel>中間</guilabel>です。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Tab Style</term>
+        <term lang="ja">タブの見出し(<accel>T</accel>)</term>
+        <listitem>
+          <figure id="figure-gimp-dock-tab-style">
+            <title lang="en">Tab Style submenu of a Tab menu</title>
+            <title lang="ja">タブメニューよりタブの見出し-サブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/using/ja/tab-menu-tab-style.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <anchor id="gimp-dock-tab-style"/>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>Tab style</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary>
+            <secondary>タブの見出し</secondary>
+          </indexterm>
+          <para lang="en">
+            This entry is available when multiple dialogs are in the same
+            dock: it opens into a submenu allowing you to choose how the tabs
+            at the top will appear (cf.
+            <xref linkend="figure-gimp-dock-tab-style"/>
+            ). There are five choices, not all of which will be available for
+            all types of dialogs:
+          </para>
+          <para lang="ja">
+            この項目は複数のダイアログが同じドックに入っているときにサブメニュー
+            として現れます。 ここでタブの爪の姿を選択できます。 (参照:
+            <xref linkend="figure-gimp-dock-tab-style" /> [= 上図])。
+            5つの選択肢がありますが、 その全てがどんなダイアログにでも
+            適応できるのではありません。
+          </para>
+          <para>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">Icon</term>
+                <term lang="ja">アイコン(<accel>I</accel>)</term>
+                <listitem>
+                  <para lang="en">
+                    This choice gives you an icon representing the dialog
+                    type.
+                  </para>
+                  <para lang="ja">
+                    ダイアログの種類を表すアイコンのみを表示します。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Current Status</term>
+                <term lang="ja">現在の状態(<accel>S</accel>)</term>
+                <listitem>
+                  <para lang="en">
+                    This choice is only available for dialogs that allows you
+                    to select something, such as a brush, a pattern, a
+                    gradient, etc. It gives you a tab showing a representation
+                    of the item currently selected.
+                  </para>
+                  <para lang="ja">
+                    これはブラシや文様 (パターン) やグラディエントのような
+                    ツールを選ぶダイアログに対してのみ有効です。
+                    選ばれたツールがタブの爪に表示されます。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Text</term>
+                <term lang="ja">文字(<accel>T</accel>)</term>
+                <listitem>
+                  <para lang="en">
+                    This choice gives you a tab showing the dialog type in
+                    text.
+                  </para>
+                  <para lang="ja">
+                    これはダイアログの種類をタブの爪に文字で表わします。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Icon and Text</term>
+                <term lang="ja">アイコンと文字(<accel>C</accel>)</term>
+                <listitem>
+                  <para lang="en">
+                    This choice gives you wider tabs, containing both an icon
+                    and the type of dialog in text.
+                  </para>
+                  <para lang="ja">
+                    これはタブの爪を横長にとり、 そこにダイアログの種類を表す
+                    アイコンと文字の両方を表示します。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Status and Text</term>
+                <term lang="ja">状態と文字(<accel>A</accel>)</term>
+                <listitem>
+                  <para lang="en">
+                    This choice, where available, shows the item currently
+                    selected, as well as the type of dialog.
+                  </para>
+                  <para lang="ja">
+                    これは現在選択されているツールと
+                    ダイアログの種類を表す文字とを表示します。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">View as List; View as Grid</term>
+        <term lang="ja">一覧で表示(<accel>L</accel>);
+          並べて表示(<accel>G</accel>)</term>
+        <listitem>
+          <anchor id="gimp-dock-view-as-list"/>
+          <anchor id="gimp-dock-view-as-grid"/>
+          <indexterm lang="en">
+            <primary>Docks</primary>
+            <secondary>View as List/Grid</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary><secondary>並べて表示</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ドック</primary><secondary>一覧で表示</secondary>
+          </indexterm>
+          <para lang="en">
+            These entries are shown in dialogs that allows you to select an
+            item from a set: brushes, patterns, fonts, etc. You can choose
+            whether to view the items as a vertical list, with the name of
+            each beside it, or as a grid, with representations of the items
+            but no names. Each has its advantages: viewing as a list gives you
+            more information, but viewing as a grid allows you to see many
+            more possibilities at once. The default for this varies across
+            dialogs: for brushes and patterns, the default is a grid; for most
+            other things, the default is a list.
+          </para>
+          <para lang="ja">
+            この二つの項目はブラシやパターンやフォント(書体)など、 一揃いから
+            ひとつの細目を選択するダイアログに対して指定するものです。
+            細目とその名前の組を縦排列に並べるか、 名前を省き細目を格子状に
+            並べるかを選べます。 それぞれに利点があり、 縦排列にすれば
+            その名前まで詳しくわかりますが、 格子状ならば一度により多くの
+            選択肢を見て選べます。 初期設定は一律にしませんでした。
+            ブラシやパターンのダイアログは格子状に、
+            それ以外のほとんどのダイアログは縦排列にしてあります。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Show Image Menu</term>
+        <term lang="ja">選択画像を表示(<accel>S</accel>)</term>
+        <listitem>
+          <para lang="en">
+            This is a toggle. If it is checked, then an Image Menu is shown at
+            the top of the dock. It is not available for dialogs docked below
+            the Toolbox. Don't confuse this menu with the Image Menu, that is
+            the menu of the active image on your screen.
+          </para>
+          <para lang="ja">
+            これは二者択一です。 チェックが入りのときは、 画像メニューが
+            ドックの上部に置かれます。 ただしツールボックスの下に合体した
+            ダイアログ上では指定できません。 画像表示ウィンドウの上部の
+            メニューを指しているのではないことにご注意ください。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Auto Follow Active Image</term>
+        <term lang="ja">アクティブな画像を自動的に追跡(<accel>F</accel>)
+        </term>
+        <listitem>
+          <para lang="en">
+            If this option is checked, the related dialog will be that of the
+            current image and will change if you select another image. For
+            example, if you have two images and the Histogram dialog on your
+            screen (and this option checked in this dialog), then the
+            histogram of the activated image will be displayed.
+          </para>
+          <para lang="ja">
+            この項目のチェックが入りのときは、 ダイアログはつねに現在の
+            活性画像にかかわり、 他の画像を選択するとすぐさまダイアログも
+            それを追います。 たとえば、2枚の画像を画面に表示して
+            ヒストグラムダイアログを開いていると
+            (もちろんこのダイアログでこの項目のチェックを入れていると)、
+            活性画像のヒストグラムがいつも表示されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

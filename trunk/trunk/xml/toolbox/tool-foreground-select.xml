@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-03-23 JPL reviewed for fr
+  2008-01-12 PP reviewed for fr
+  2007-11-11 KoSt: added 'no'
+  2007-11-02 Dust : added 'ko'
+  2007-10-06 lexa: review for de
+  2007-09-14 AntI: Added 'es'
+  2007-07-26 en;fr created by j.h
+     -->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-foreground-select">
+<!--  <sect2info>
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2786 $</revnumber>
+        <date>2009-03-22</date>
+        <authorinitials>liangtai</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title lang="en">Foreground Select</title>
+  <title lang="ja">前景抽出選択</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Foreground Select</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Foreground Select</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Foreground Select</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>前景抽出選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>選択</primary>
+    <secondary>前景抽出選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>前景抽出選択</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">
+      The <quote>Foreground Select</quote> tool in the Toolbox
+    </title>
+    <title lang="ja">
+      ツールボックス上の<quote>前景抽出選択<quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/ja/toolbox-FG-select.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    This tool lets you extract the foreground from the active layer or from a
+    selection. It is based on the SIOX method (Simple Interactive Object
+    Extraction). You can visit its Web page at
+    <xref linkend="bibliography-online-siox"/>.
+  </para>
+  <para lang="ja">
+    このツールで実行状態のレイヤーもしくは選択範囲から前景を抽出できます。
+    このしくみは<acronym>SIOX</acronym>方式 (Simple Interactive Object
+    Extraction) がもとになっています。 ウェブサイトへは
+    <xref linkend="bibliography-online-siox" /> からどうぞ。
+  </para>
+
+  <sect3 id="tool-fg-select-usage">
+    <title lang="en">Directions for use</title>
+    <title lang="ja">使用法</title>
+    <para lang="en">
+      The creation of a selection with this tool works in a couple of steps:
+    </para>
+    <para lang="ja">
+      このツールを使って選択をとるまでに2段階の手順があります:
+    </para>
+    <procedure>
+      <step>
+        <para lang="en">
+          <emphasis>Roughly select the foreground</emphasis> you want
+          to extract. When you select this tool, the mouse pointer goes with
+          the lasso icon. It actually works like the Fuzzy Select tool.
+          Select as little as possible from the background.
+        </para>
+        <para lang="en">
+          As soon as you release the mouse button, the non selected part of
+          the image is covered with a dark blue mask. If the selection is not
+          closed, its ends will be linked automatically together by a straight
+          line. The mouse pointer goes now with the Paint-brush icon for the
+          next step.
+        </para>
+        <para lang="ja">
+          切り出したい <emphasis>前景を大まかに選択</emphasis> します。
+          このツールを起用するとポインタの姿はなげなわツールのアイコンに
+          なります。 そのはたらきはファジー選択ツールそのものです。
+          背景はなるべく入らないようにします。
+        </para>
+        <para lang="ja">
+          マウスボタンを放した途端に画像の非選択部分が暗い青色のマスクで
+          覆われます。 選択の輪郭が閉じられていなかったときは自動的に
+          終点から始点まで直線で結ばれ閉じられます。 マウスポインタの姿は
+          ここから描画ブラシアイコンに替わります。
+        </para>
+        <figure>
+          <title lang="en">The foreground is roughly selected</title>
+          <title lang="ja">前景が大まかに選択された</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/FG-select-ex1.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          <emphasis>Draw a line through the foreground</emphasis>: using the
+          paintbrush, whose size can be changed in options, draw a continuous
+          line in the selected foreground going over colors which will be
+          kept for the extraction. The color used to draw the line is of no
+          importance; not using the same color as foreground is better. Be
+          careful not painting background pixels.
+        </para>
+        <para lang="ja">
+          <emphasis>前景内部に線を這わせます</emphasis>:
+          描画ブラシを用い (ブラシの大きさはオプションで変えられます)、
+          前景の残しておきたい色のある部分を通るように一筆書きで線を
+          描きます。 線の色には意味が無いので何色でも構いません。 前景と
+          異なる色を使うと作業しやすいでしょう。 背景の画素 (ピクセル) を通って
+          塗ってしまわないように気を付けましょう。
+        </para>
+        <figure>
+          <title lang="en">The line drawn on the foreground</title>
+          <title lang="ja">前景に這わされた線</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/FG-select-ex2.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                In this example, it is important that the line goes over the
+                yellow capitulum of the flower.
+              </para>
+              <para lang="ja">
+                この例では花の黄色い頭状花序のところに線が通っていることが
+                重要である。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          When you release the mouse button, all non-selected areas are in
+          dark :
+        </para>
+        <para lang="ja">
+          マウスボタンを放すと、 非選択部分が暗くマスクをかけられます:
+        </para>
+        <figure>
+          <title lang="en">The area which will be selected</title>
+          <title lang="ja">選択されるであろう領域</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/FG-select-ex3.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="ja">2. と 3. の工程は繰り返し行えます。</para>
+      </step>
+      <step>
+        <para lang="en">
+          You still have to press the <keycap>Enter</keycap> key to get the
+          wanted selection :
+        </para>
+        <para lang="ja">
+          そして選択を確定するために <keycap>Enter</keycap> キーを押します。
+        </para>
+        <figure>
+          <title lang="en">Foreground is selected.</title>
+          <title lang="ja">前景が選択された</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/FG-select-ex4.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </step>
+    </procedure>
+    <note>
+      <para lang="en">
+        Until you press <keycap>Enter</keycap>, you can't undo this selection
+        by <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo> nor by
+        <menuchoice><guimenu>Select</guimenu><guimenuitem>None</guimenuitem></menuchoice>,
+        and the Undo History is not concerned. To delete this selection, you
+        must select another tool.
+      </para>
+      <para lang="ja">
+        <keycap>Enter</keycap> キーを押すまでは、
+        <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
+        によっても、
+        <menuchoice>
+          <guimenu>選択(<accel>S</accel>)</guimenu>
+          <guimenuitem>選択を解除(<accel>N</accel>)</guimenuitem>
+        </menuchoice>
+        としても選択を取り消すことはできませんし、
+        操作履歴には何も記録されていません。
+        選択を途中で取り消すときは他のツールを起用するしかありません。
+      </para>
+    </note>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can activate the Foreground Select tool in two ways:
+    </para>
+    <para lang="ja">
+      <quote>前景抽出選択</quote>ツールを呼びだす方法は2通りあります:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          By clicking on the tool icon
+          <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/toolbox/stock-tool-foreground-select-22.png" format="PNG"/></imageobject></inlinemediaobject></guiicon>
+          in the Toolbox.
+        </para>
+        <para lang="ja">
+          ツールボックス上のツールアイコン
+          <guiicon><inlinemediaobject><imageobject><imagedata format="PNG" fileref="images/toolbox/stock-tool-foreground-select-22.png" /></imageobject></inlinemediaobject></guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Through
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Selection Tools</guisubmenu>
+            <guimenuitem>Foreground Select</guimenuitem>
+          </menuchoice>
+          in the image menu.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>選択ツール(<accel>S</accel>)</guisubmenu>
+            <guimenuitem>前景抽出選択(<accel>O</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          This tool has no shortcut, but you can set one using
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guisubmenu>Preferences</guisubmenu>
+            <guisubmenu>Interface</guisubmenu>
+            <guisubmenu>Configure Keyboard Shortcuts</guisubmenu>
+            <guisubmenu>tools</guisubmenu>
+            <guimenuitem>Foreground Select</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          キーボードショートカットはありません。
+          しかし<quote>環境設定</quote>ダイアログより
+          <menuchoice>
+            <guimenu>ユーザーインタフェース</guimenu>
+            <guimenuitem>キーボードショートカット設定(<accel>K</accel>)...</guimenuitem>
+          </menuchoice>
+          として<quote>キーボードショートカット設定</quote>ダイアログを呼びだし
+          <menuchoice>
+            <guisubmenu>ツールアイコン</guisubmenu>
+            <guimenuitem>前景抽出選択</guimenuitem>
+          </menuchoice>
+          と進めば、 随意にキーを設定できます。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">修飾キー (初期設定)</title>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            By pressing the <keycap>Ctrl</keycap> key, you can switching
+            between foreground and background selection painting.
+          </para>
+          <para lang="ja">
+            前景だけでなく背景も線を描いて抽出できます。 <keycap>Ctrl</keycap>
+            キーを押している間は背景を選択する描線ができます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Foreground Select</quote> tool options
+      <title lang="ja">
+        <quote>前景抽出選択</quote>ツールのツールオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-options-FG-select.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            <guilabel>Feather Edges</guilabel> and <guilabel>Color Sensitivity
+            </guilabel> options have been checked.
+          </para>
+          <para lang="ja">
+            <guilabel>境界をぼかす</guilabel> と <guilabel>色感度</guilabel>
+            オプションがチェックされている。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Mode; Antialiasing; Feather edges</term>
+        <term lang="ja">モード; アンチエイリアス; 境界をぼかす</term>
+        <listitem>
+          <xi:include href="about-common-select-options.xml"/>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Contiguous</term>
+        <term lang="ja">単一領域を抽出</term>
+        <listitem>
+          <para lang="en">
+            If this option is enabled, only the area contiguous to the stroke
+            will be selected. Otherwise all the areas with same colors will be
+            selected.
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると、 描線された連続する領域だけが
+            選択されます。 反対に無効にすると抽出された領域の色と同じ部分が
+            全て選択されます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Contiguous</quote> option effect
+            </title>
+            <title lang="ja">
+              <quote>単一領域を抽出</quote>オプションの効果
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/FG-select-contig1.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Two separated areas with the same color. On the left, only
+                  the left area is marked.
+                </para>
+                <para lang="ja">
+                  同色の2つに分かれた領域。 左側の領域だけ塗られた。
+                </para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/FG-select-contig2.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  The Contiguous option is checked: only the area close to the
+                  painted line is selected.
+                </para>
+                <para lang="ja">
+                  <quote>単一領域を抽出</quote> オプションが有効な場合:
+                  塗られた線に接した領域だけが選択された。
+                </para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/FG-select-contig3.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  The Contiguous option is not checked: both areas, although
+                  they are separated, are selected.
+                </para>
+                <para lang="ja">
+                  <quote>単一領域を抽出</quote> オプションが無効な場合:
+                  離れていても両領域が選択される。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Interactive refinement</term>
+        <term lang="ja">抽出部分の修正</term>
+        <listitem>
+          <para lang="en">
+            Here are some options to work more precisely on your selection:
+          </para>
+          <para lang="ja">選択をより繊細に行なうためのオプションです:</para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Mark foreground</term>
+              <term lang="ja">前景部分をマーク</term>
+              <listitem>
+                <para lang="en">
+                  default option. The foreground color of the Toolbox is used
+                  to paint. Colors covered by the painted line will be used
+                  for extraction.
+                </para>
+                <para lang="ja">
+                  既定のオプションです。 塗られる色はツールボックスの色領域に
+                  示される前景色です。
+                  描線で覆われた画素の色が抽出に使われます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Mark background</term>
+              <term lang="ja">背景部分をマーク</term>
+              <listitem>
+                <para lang="en">
+                  You can access this option either by clicking on the radio
+                  button or, more simply, by pressing the <keycap>Ctrl</keycap>
+                  key. The mouse pointer goes with a small eraser icon<!-- and a
+                  minus sign-->. The used color is the background color of
+                  Toolbox.
+                  The pixels of the selection which have the same color as the
+                  <quote>erased</quote> pixels will NOT be extracted.
+                </para>
+                <para lang="ja">
+                  こちらのオプションをとるにはラジオボタンをクリックするほか、
+                  <keycap>Ctrl</keycap> キーを押すだけの簡単な方法があります。
+                  マウスポインタの姿は消しゴムアイコンに変化します。
+                  使用される色はツールボックスの色領域に示される背景色です。
+                  <quote>消された</quote>画素と同じ色の画素は
+                  選択範囲にあっても抽出されません。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Small brush / Large brush</term>
+              <term lang="ja">小さいブラシ / 大きいブラシ</term>
+              <listitem>
+                <para lang="en">
+                  This slider lets you adapt the size of the brush used to
+                  paint the line. A small brush fits well thin details.
+                </para>
+                <para lang="ja">
+                  このスライダで線を引くときのブラシの大きさを調節します。
+                  小さいブラシは狭小細部にうまく合います。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Smoothing</term>
+        <term lang="ja">スムージング</term>
+        <listitem>
+          <para lang="en">
+            The slider lets you remove small holes in your selection.
+          </para>
+          <para lang="ja">
+            このスライダで選択範囲に空いた穴を埋められます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Smoothing</quote> option effect
+            </title>
+            <title lang="ja">
+              <quote>スムージング</quote>オプションの効果
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/FG-select-smoothing1.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  For this demonstration, small holes painted with the
+                  background color of the image have been added (left).
+                </para>
+                <para lang="ja">
+                  今回の実演のため、 画像の背景色で小さな穴を予め描いておいた。
+                </para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/FG-select-smoothing2.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Smoothing= 0 : more than 1 pixel wide holes are not
+                  selected.
+                </para>
+                <para lang="ja">
+                  スムージング = 0 の場合、 1ピクセルを越える大きさの穴は
+                  選択されない。
+                </para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/FG-select-smoothing3.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Smoothing = 7 : less than 3 pixels wide holes are selected.
+                </para>
+                <para lang="ja">
+                  スムージング = 7 の場合、 3ピクセル未満の大きさの穴は
+                  選択される。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Preview color</term>
+        <term lang="ja">プレビュー色</term>
+        <listitem>
+          <para lang="en">
+            You can select between Red, Green and Blue to mask the image
+            background.
+          </para>
+          <para lang="ja">
+            画像の背景領域をマスクする色を赤緑青からひとつ選びます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color Sensitivity</term>
+        <term lang="ja">色感度</term>
+        <listitem>
+          <para lang="en">
+            This option uses the
+            <link linkend="glossary-lab">L*a*b</link> color model. If your
+            image contains many pixels of the same color in different tones,
+            you can increase the sensibility of the selection for this
+            color.
+          </para>
+          <para lang="ja">
+            このオプションは
+            <link linkend="glossary-lab">L*a*b</link> 色モデルを使用
+            しています。 濃淡の異なる同色が多い画像を扱うときは、
+            選択したい色に対する感度を上げてみましょう。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

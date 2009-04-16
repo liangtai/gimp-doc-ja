@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  Section history:
+  2008-12-10 JPL: updated v2.6
+  2008-04-16 Mr.Dust : added 'ko'
+  2006-08-14 added italian translation by ciampix
+  2005-11-30 replaced informalfigure by figure  by lexa
+  2008-01-28 jpl: update text & images
+-->
+<!--revision2786 2009-03-24-->
+<sect2 id="gimp-prefs-toolbox">
+  <title lang="en">Toolbox</title>
+  <title lang="ja">ツールボックス</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Preferences</secondary>
+    <tertiary>Toolbox</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Toolbox</primary>
+    <secondary>Preferences</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>環境設定</secondary>
+    <tertiary>ツールボックス</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツールボックス</primary>
+    <secondary>環境設定</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>道具箱</primary>
+    <secondary>環境設定</secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Toolbox Preferences</title>
+    <title lang="ja">環境設定 ツールボックスのページ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/preferences/ja/prefs-toolbox.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Default Toolbox appearance</title>
+      <title lang="ja">ツールボックスの外観 (初期設定)</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/ja/toolbox-description.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This page lets you customize the appearance of the Toolbox, by deciding
+      whether the three "context information" areas should be shown at the
+      bottom.
+    </para>
+    <para lang="ja">
+      このページはツールボックスの底部にある3つの脈絡情報区画のそれぞれについて
+      表示するかどうかを決めて外観を誂えるものです。 その効果については
+      <xref linkend="gimp-toolbox-areas"/> をご覧ください。
+    </para>
+    <variablelist>
+      <title lang="en">Appearance</title>
+      <title lang="ja">表示形式</title>
+      <indexterm lang="en">
+        <primary>Color area</primary>
+        <secondary>Preferences</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Brush, Pattern, Gradient area</primary>
+        <secondary>Preferences</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Image</primary>
+        <secondary>Active Image Thumbnail</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>色の標識区画</primary>
+        <secondary>環境設定</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>ブラシ/パターン/グラデーションの区画</primary>
+        <secondary>環境設定</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>画像</primary>
+        <secondary>活性画像の見本</secondary>
+      </indexterm>
+      <varlistentry>
+        <term lang="en">Show foreground and background color</term>
+        <term lang="ja">描画色と背景色(<accel>F</accel>)</term>
+        <listitem>
+          <para lang="en">
+            Controls whether the color area on the left (3) appears in the
+            Toolbox.
+          </para>
+          <para lang="ja">
+            ツールボックスの下部左側 
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/callouts/2.png"/>
+                </imageobject>
+                <textobject><phrase>(2)</phrase></textobject>
+              </inlinemediaobject>
+            </guiicon>
+            の区画に色の標識区画を置くかどうか定めます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Show active brush, pattern, and gradient</term>
+        <term lang="ja">
+          アクティブなブラシ・パターン・グラデーション(<accel>B</accel>)
+        </term>
+        <listitem>
+          <para lang="en">
+            Controls whether the area in the center (4), with the brush,
+            pattern, and gradient icons, appears in the
+            Toolbox.
+          </para>
+          <para lang="ja">
+            ツールボックスの下部中央
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/callouts/3.png"/>
+                </imageobject>
+                <textobject><phrase>(3)</phrase></textobject>
+              </inlinemediaobject>
+            </guiicon>
+            に現在のブラシとパターンと
+            グラデーションのアイコンを表示するかどうかを指定します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Show active image</term>
+        <term lang="ja">アクティブな画像(<accel>I</accel>)</term>
+        <listitem>
+          <para lang="en">
+            Controls whether a preview of the currently active image
+            appears on the right (5).
+          </para>
+          <para lang="ja">
+            ツールボックスの下部右側
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/callouts/4.png"/>
+                </imageobject>
+                <textobject><phrase>(4)</phrase></textobject>
+              </inlinemediaobject>
+            </guiicon>
+            に現在活性化している画像の縮尺見本を表示するかどうか決めます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

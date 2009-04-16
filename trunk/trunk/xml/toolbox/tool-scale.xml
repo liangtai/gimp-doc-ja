@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-06-13 kost: added 'no'
+  2007-04-21 Added Spanish translation by AntI
+  2007-02-03 lexa: minor fixes for de and docbook compliance
+  2006-02-18 en;fr revised - scale dialog added by j.h
+  2005-12-06 replaced simplesect by sect3 by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  050530 de added content for scale dialog
+  050530 de reviewed by axel.wernicke
+-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-scale">
+<!--  <sect2info role="cvs">
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2765 $</revnumber>
+        <date>2009-02-08</date>
+        <authorinitials>liangtai</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase lang="en">Scale</phrase>
+    <phrase lang="ja">拡大・縮小</phrase>
+  </title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Scale layer, selection contour or path</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Scale Layer, selection contour or path</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>レイヤー、 選択範囲の境界線、 パスを拡大・縮小</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー、 選択範囲の境界線、 パスを拡大・縮小</primary>
+  </indexterm>
+
+  <figure>
+    <title>
+      <phrase lang="en">The Scale tool in Toolbox</phrase>
+      <phrase lang="ja">
+        ツールボックス上の<quote>拡大・縮小</quote>ツールアイコン
+      </phrase>
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/ja/toolbox-scale.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect3>
+    <title>
+      <phrase lang="en">Overview</phrase>
+      <phrase lang="ja">概観</phrase>
+    </title>
+    <para lang="en">
+      The Scale Tool is used to scale layers, selections or paths (the
+      Object).
+    </para>
+    <para lang="en">
+      When you click on image with the tool the Scaling Information dialog box
+      is opened, allowing to change separately <guilabel>Width</guilabel>
+      and <guilabel>Height</guilabel>.
+      At the same time a Preview (possibly with a grid or an outline) is
+      superimposed on the object and handles appear on corners and borders
+      that you can click and drag to change dimensions. A small circle
+      appears at center of the Preview allowing to move this preview.
+    </para>
+    <para lang="ja">
+      <quote>拡大・縮小</quote>ツールはレイヤーや選択範囲やパスといった物体の
+      大きさを伸縮するためのものです。
+    </para>
+    <para lang="ja">
+      このツールで画像をクリックすると<quote>拡大・縮小</quote>ダイアログが
+      開かれ、 ここで <guilabel>幅</guilabel> と <guilabel>高さ</guilabel> を
+      個別に変えられます。 また同時に画面上では、 対象物体の上にプレビューが
+      (格子と輪郭が選べます) 重ねて表示され、 その4隅と各辺にマウスでクリック
+      して曳くと寸法を変えられるハンドルがつきます。 プレビューの中心には小さな
+      円が現れ、 これを掴んで移動できるようになっています。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>
+      <phrase lang="en">Activating the Tool</phrase>
+      <phrase lang="ja">呼び出し方</phrase>
+    </title>
+    <para lang="en">
+      You can access to the Scale Tool in different ways:
+    </para>
+    <para lang="ja">
+      <quote>拡大・縮小</quote>ツールを起用する方法はつぎのいずれかです:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          From the image menu bar
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Transform Tools</guisubmenu>
+            <guimenuitem>Scale</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>変換ツール(<accel>T</accel>)</guisubmenu>
+            <guimenuitem>拡大・縮小(<accel>S</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking the tool icon:
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject><imagedata
+                fileref="images/toolbox/stock-tool-scale-22.png"/>
+              </imageobject></inlinemediaobject>
+          </guiicon> in the Toolbox,
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject><imagedata
+                fileref="images/toolbox/stock-tool-scale-22.png"/>
+              </imageobject></inlinemediaobject>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By using the
+          <keycombo><keycap>Shift</keycap><keycap>T</keycap></keycombo>
+          key combination.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Shift</keycap><keycap>T</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title>
+      <phrase lang="en">Key modifiers (Defaults)</phrase>
+      <phrase lang="ja">キー修飾 (初期設定)</phrase>
+    </title>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            When moving a corner, holding the <keycap>Ctrl</keycap> key down
+            will toggle the <guilabel>Keep Aspect</guilabel> option.
+          </para>
+          <para lang="ja">
+            角のハンドルを移動するとき、 <keycap>Ctrl</keycap> キーを押して
+            いると <guilabel>縦横比を維持</guilabel> オプションがはたらきます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title>
+      <phrase lang="en">Tool Options</phrase>
+      <phrase lang="ja">オプション</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase lang="en">Tool options for the Scale tool</phrase>
+        <phrase lang="ja">
+          <quote>拡大・縮小</quote>ツールのツールオプション
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/ja/tool-options-scale.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">
+          Transform; Interpolation; Direction; Clipping; Preview
+        </term>
+        <term lang="ja">
+          変換対象; 変換方向; 補間アルゴリズム; クリッピング; プレビュー
+        </term>
+        <listitem>
+          <note>
+            <para lang="en">
+              The Transform mode works on the active layer only. To work on
+              all layers of the image, use
+              <link linkend="gimp-image-scale">Scale image</link>.
+            </para>
+            <para lang="ja">
+              [レイヤーを対象とする]変換モードは活性レイヤーにしか作用しません。
+              画像の全てのレイヤーを対象にするときは
+              <link linkend="gimp-image-scale">画像の拡大・縮小</link>
+              を起用してください。
+            </para>
+          </note>
+          <xi:include href="about-common-transform-options.xml"/>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Keep Aspect (Ctrl)</term>
+        <term lang="ja">縦横比を維持 (Ctrl)</term>
+        <listitem>
+          <para lang="en"><guilabel>Keep Aspect</guilabel>: when you move a corner of
+            the selection frame, this option will constrain the scale such as
+            the Height/Width ratio of the layer will remain constant. Note
+            that this doesn't work with border handles. Note also that it
+            toggles the linking chain in the dialog.
+          </para>
+          <para lang="ja">
+            <guilabel>縦横比を維持</guilabel>: 領域枠の角ハンドルを移動する
+            ときに、 このオプションはレイヤーの縦と横の比を保って寸法が変わる
+            ようにします。 ちなみに辺ハンドルを移動する場合はこのオプションは
+            無視されます。 またちなみにダイアログ上では縦横の各欄を結ぶ鎖の印が
+            連結に切り替わります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase lang="en">The Scaling Information dialog window</phrase>
+      <phrase lang="ja">
+        <quote>拡大・縮小</quote>ダイアログのウィンドウ
+      </phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase lang="en">The Scaling Information dialog window</phrase>
+        <phrase lang="ja">
+          <quote>拡大・縮小</quote>ダイアログのウィンドウ
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/ja/tool-dialog-scale.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Width/Height</term>
+        <term lang="ja">幅(<accel>W</accel>) / 高さ(<accel>E</accel>)</term>
+        <listitem>
+          <para lang="en">
+            Here, you can set Width and Height you want to give to the object.
+            The default unit of measurement is pixel. You can change it by
+            using the drop-down list. These values are also automatically
+            changed when you drag handles in the image. If the associated
+            linking chain is broken, you can change Width and Height
+            separately.
+          </para>
+          <para lang="ja">
+            ここでは、 随意に対象物体の幅と高さを設定できます。 長さの既定の
+            単位はピクセルですが、 引き出し排列を使って変更できます。 これらの
+            値は画面上でハンドルを操作すると自動的に変化します。 2つの欄を結ぶ
+            鎖が切れているときは、 幅と高さを個別に変更できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
