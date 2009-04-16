@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2008-04-14 Mr.Dust : added 'ko'
+  2007-03-23 KoSt: added 'no'
+  2006-11-01 lexa: made the file docbook compliant
+  2008-01-28 jpl: update text & images
+-->
+<!--revision2796 2009-03-27 -->
+<sect2 id="gimp-prefs-tool-options">
+  <title lang="en">Tool Options</title>
+  <title lang="ja">ツールオプション</title>
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Preferences</secondary>
+    <tertiary>Tool Options</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Preferences</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>環境設定</secondary>
+    <tertiary>ツールオプション</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>環境設定</secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Tool Options Preferences</title>
+    <title lang="ja">環境設定 ツールオプションのページ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/preferences/ja/prefs-tool-options.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          This page lets you customize several aspects of the behavior of
+          tools.
+        </para>
+        <para lang="ja">
+          このページでツールのふるまいの諸相を誂えられます。
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <variablelist>
+      <title lang="en">General</title>
+      <title lang="ja">一般</title>
+      <varlistentry>
+        <term lang="en">Save Tool Options On Exit</term>
+        <term lang="ja">
+          終了時にツールオプション設定を保存(<accel>S</accel>)
+        </term>
+        <listitem>
+          <para lang="en">Self explanatory</para>
+          <para lang="ja">言葉通り</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Save Tool Options Now</term>
+        <term lang="ja">
+          現在のツールオプション設定を保存(<accel>N</accel>)
+        </term>
+        <listitem>
+          <para lang="en">Self explanatory</para>
+          <para lang="ja">言葉通り</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Reset Saved Tool Options To Default Values</term>
+        <term lang="ja">ツールオプション設定をリセット(<accel>R</accel>)</term>
+        <listitem>
+          <para lang="en">Self explanatory</para>
+          <para lang="ja">言葉通り</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Guide and Grid Snapping</title>
+      <title lang="ja">ガイドとグリッドにスナップ</title>
+      <varlistentry>
+        <term lang="en">Snap distance</term>
+        <term lang="ja">スナップ距離(<accel>S</accel>)</term>
+        <listitem>
+          <para lang="en">
+            <quote>Snapping</quote> to guides, or to an image grid, means
+            that when a tool is applied by clicking somewhere on the image
+            display, if the clicked point is near enough to a guide or grid,
+            it is shifted exactly onto the guide or grid.  Snapping to
+            guides can be toggled using
+            <menuchoice>
+              <guimenu>View</guimenu>
+              <guimenuitem>Snap to Guides</guimenuitem>
+            </menuchoice>
+            in the image menu; and if the grid is switched on, snapping
+            to it can be toggled using
+            <menuchoice>
+              <guimenu>View</guimenu>
+              <guimenuitem>Snap to Grid</guimenuitem>
+            </menuchoice>.  This preference option determines how close a
+            clicked point must be to a guide or grid in order to be
+            snapped onto it, in pixels.
+          </para>
+        <para lang="ja">
+            ガイド (見当線) やグリッド (升目) に<quote>吸い付かせる (スナップ)
+            </quote>とは、 何かツールで画像表示のどこかをクリックしたときに、
+            その位置が見当線や升目の格子線に十分近い場合に、 その線上にクリック
+            地点を移すことをさしています。 見当線へ<quote>吸い付かせる</quote>
+            か否かは、 メニューの
+            <menuchoice>
+              <guimenu>表示(<accel>V</accel>)</guimenu>
+              <guimenuitem>ガイドにスナップ(<accel>A</accel>)</guimenuitem>
+            </menuchoice>
+            で切り替えられます。 升目表示を有効にしている場合に、 そこに<quote>
+            吸い付かせる</quote>か否かは、 メニューの
+            <menuchoice>
+              <guimenu>表示(<accel>V</accel>)</guimenu>
+              <guimenuitem>グリッドにスナップ(<accel>P</accel>)</guimenuitem>
+            </menuchoice>
+            で切り替えられます。 またこの環境設定オプションではクリック地点を
+            <quote>吸い付かせる</quote>にはどの程度の距離まで見当線や升目格子線
+            に近づける必要があるかを、 ピクセル単位で指定できます。
+        </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Scaling</title>
+      <title lang="ja">拡大・縮小</title>
+      <varlistentry>
+        <term lang="en">Default interpolation</term>
+        <term lang="ja">既定の補間方法(<accel>I</accel>)</term>
+        <listitem>
+          <para lang="en">
+            When you scale something, each pixel in the result is calculated
+            by interpolating several pixels in the source. This option
+            determines the default interpolation method: it can always be
+            changed, though, in the Tool Options dialog. There are three
+            choices:
+          </para>
+          <para lang="en">
+            <emphasis>None</emphasis> is fastest, but quite crude: you should
+            only consider using it if your machine is very seriously
+            speed-impaired.
+          </para>
+          <para lang="en"><emphasis>Linear</emphasis> is the default, and is good
+            enough for most purposes.
+          </para>
+          <para lang="en"><emphasis>Cubic</emphasis> is the best (although
+            it can actually look worse than Linear for some types of
+            images), but also the slowest.
+          </para>
+          <para lang="ja">
+            描画されたものを拡大もしくは縮小すると、 結果の画素はいずれも元画像
+            のいくつかの画素を補間計算してつくられます。 このオプションは既定の
+            補間方法を定めますが、 拡大・縮小ツールではツールオプションの
+            <guilabel>補間アルゴリズム</guilabel> で、 拡大・縮小ダイアログでは
+            <guilabel>補間方法</guilabel> でいつでも変更可能です。 4つの選択肢
+            があります。
+          </para>
+          <para lang="ja">
+            <guimenuitem>補間しない</guimenuitem> は最速ですがどう見ても粗雑
+            です。 マシンの処理速度が深刻な被害を受けるというのであるときのみ、
+            これを考慮する価値があります。
+          </para>
+          <para lang="ja">
+            初期設定では <guimenuitem>線形</guimenuitem> を既定に据えています。
+            さまざまな用途に十分良い結果が出ます。
+          </para>
+          <para lang="ja">
+            最高なのは <guimenuitem>キュービック</guimenuitem> (ただし実際は
+            ある種の画像においては線形に劣ります) ですが、
+            処理が最も遅くなります。
+          </para>
+          <para lang="ja">
+            <guimenuitem>Sinc (Lanczos3)</guimenuitem> sinc関数に似た
+            3次ランツォシュ窓関数を低域通過フィルタとして用います。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Paint Options Shared Between Tools</title>
+      <title lang="ja">ツール共有の描画オプション</title>
+      <varlistentry>
+        <term lang="en">Brush, Pattern, Gradient</term>
+        <term lang="ja">
+          ブラシ(<accel>B</accel>)、 パターン(<accel>P</accel>)、
+          グラデーション(<accel>G</accel>)
+        </term>
+        <listitem>
+          <para lang="en">
+            You can decide here whether changing the brush etc for one tool
+            should cause the new item to be used for all tools, or whether
+            each individual tool (pencil, paintbrush, airbrush, etc) should
+            remember the item that was last used for it specifically.
+          </para>
+          <para lang="ja">
+            これらは何かの描画ツールでブラシ等を選ぶと他の描画ツールでもその
+            新たに選択された物品が使われるようにするか、 それとも個々の描画
+            ツール (鉛筆、 絵筆、 エアブラシなどなど) それぞれが直前に選ばれた
+            物品を記憶しておくようにするかを定めます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Move tool</title>
+      <title lang="ja">移動ツール</title>
+      <varlistentry>
+        <term lang="en">Change current layer or path</term>
+        <term lang="ja">つかんだレイヤーやパスをアクティブに</term>
+        <listitem>
+          <para lang="en">
+            You can decide here whether changing the current layer or path
+            when using the move tool and without pressing any key.
+          </para>
+          <para lang="ja">
+            ここでは修飾キーなしで移動ツールを使いながら他のレイヤーやパスの
+            活性化が可能かどうかを定めます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

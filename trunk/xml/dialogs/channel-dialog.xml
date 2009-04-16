@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-13 j.h: updated to v2.6
+  2007-08-29 j.h : link to glossary Alpha Channel added en;fr
+  2006-03-06 lexa: reviewed and made docbook compliant
+-->
+<!--revision2803 2009-04-02-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-channel-dialog">
+  <title lang="en"><quote>Channels</quote> Dialog</title>
+  <title lang="ja">チャンネルダイアログ</title>
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Channels</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Channel</primary>
+    <secondary>Dialog</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>テャンネル</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>テャンネル</primary>
+    <secondary>ダイアログ</secondary>
+  </indexterm>
+  <figure>
+    <title lang="en">The Channel dialog</title>
+    <title lang="ja">チャンネルダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/dialogs/ja/channels-dialog.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Channels dialog is the main interface to edit, modify and manage your
+    channels. Channels have a double usage. This is why the dialog is divided
+    into two parts: the first part for color channels and the second part for
+    selection masks.
+  </para>
+  <para lang="en">
+    Color channels: Color channels apply to the image and not to a specific
+    layer. Basically, three primary colors are necessary to render all the
+    wide range of natural colors. As other digital software, the GIMP
+    uses Red, Green, and Blue as primary colors. The first and primary
+    channels display the <guilabel>Red</guilabel>, <guilabel>Green</guilabel>,
+    and <guilabel>Blue</guilabel>
+    values of each pixel in your image. In front of each channel is a
+    thumbnail displaying a grayscale representation of each channel, where
+    white is 100% and black is 0% of the primary color. Alternatively, if your
+    image is not a colored but a Grayscale image, there is only one primary
+    channel called <guilabel>Gray</guilabel>.
+    For an Indexed image with a fixed number of known colors there is also
+    only one primary channel called <guilabel>Indexed</guilabel>.
+    Then there is a optional channel called <guilabel>Alpha</guilabel>.
+    This channel displays transparency values of each pixel in your image
+    (See <link linkend="glossary-alpha-channel">Alpha Channel</link> in
+    Glossary). In front of this channel is a thumbnail displaying a grayscale
+    representation of the transparency where white is opaque and visible, and
+    black is transparent and invisible. If you create your image without
+    transparency then the Alpha channel is not present, but you can add it
+    from the <link linkend="gimp-layer-dialog">Layers dialog menu</link>.
+    Also, if you have more than one layer in your image, GIMP automatically
+    creates an Alpha channel.
+  </para>
+  <para lang="ja">
+    チャンネルダイアログはチャンネルを編集、 加工、 管理する主要なインター
+    フェイスです。 チャンネルには二重の使い道があります。 そのためダイアログも
+    2つに区切られています。 上側には色のチャンネルがあり、 下側には選択マスクが
+    置かれます。
+  </para>
+  <para lang="ja">
+    カラーチャンネルは、 特定のレイヤーではなく画像に対して適用されます。 原則
+    として自然な色全般を描写するには3原色が必須です。 他のデジタル式
+    ソフトウェアと同じく<acronym>GIMP</acronym>も赤緑青を3原色にしています。
+    上段の原色チャンネルが画像の各画素にある <guilabel>赤</guilabel>、
+    <guilabel>緑</guilabel>、 <guilabel>青</guilabel> の値をそれぞれ表現して
+    います。 各チャンネルの左側にチャンネルをグレイスケールで図示した縮小見本
+    画像があり、 その原色の100%発色が白、 0%発色が黒で描かれています。 一方で
+    画像に色彩がなくグレイスケールモードになっている場合は、 ここには
+    <guilabel>グレー</guilabel> と書かれた原色チャンネルだけがあります。
+    またインデックス付きカラー画像は一定数の既知の色でできていますから、 これも
+    <guilabel>インデックス</guilabel> と書かれたひとつのチャンネルだけで
+    できています。 このほか随意に追加できるチャンネルとして
+    <guilabel>アルファ値</guilabel> があります。
+    このチャンネルは画像の各画素の透過度を描写します (用語集の
+    <link linkend="glossary-alpha-channel">アルファチャンネル</link> もご覧
+    ください。) 一覧表ではチャンネルの左側に透過度を表すグレイスケール描写が
+    縮小画像として表示されています。 この白い部分は不透明で画像が見えるところ、
+    黒い部分は透明で不可視になります。
+    透過効果なしで作成された画像にはアルファチャンネルがありませんが、 
+    <link linkend="gimp-layer-dialog">レイヤーダイアログのメニュー</link> など
+    に追加のコマンドがあります。 そのうえレイヤーが1層の画像にレイヤーを追加
+    して複数層にすると、 <acronym>GIMP</acronym>は自動的にその <emphasis>画像に
+    </emphasis> アルファチャンネルを追加します。
+  </para>
+  <note>
+    <para lang="en">GIMP doesn't support CMYK or YUV color models.</para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>は<acronym>CMYK</acronym>色モデルや<acronym>YUV
+      </acronym>色モデルを扱えません。
+    </para>
+  </note>
+  <figure>
+    <title lang="en">Representation of an image with channels</title>
+    <title lang="ja">チャンネルによる画像表現</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                   fileref="images/dialogs/wilber-channels-red.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">Red channel</para>
+        <para lang="ja">赤チャンネル</para>
+      </caption>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                   fileref="images/dialogs/wilber-channels-green.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">Green channel</para>
+        <para lang="ja">緑チャンネル</para>
+      </caption>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                   fileref="images/dialogs/wilber-channels-blue.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">Blue channel</para>
+        <para lang="ja">青チャンネル</para>
+      </caption>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                   fileref="images/dialogs/wilber-channels-alpha.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">Alpha channel</para>
+        <para lang="ja">アルファテャンネル</para>
+      </caption>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                   fileref="images/dialogs/wilber-channels-combined.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en"><!-- All channels combined -->All Channels</para>
+        <para lang="ja"><!--全てのチャンネルの合成 -->全てのチャンネル</para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The right image is decomposed in three color channels (red, green, and
+    blue) and the Alpha channel for transparency. On the right image the
+    transparency is displayed as a gray checkerboard. In the color channel
+    white is always white because all the colors are present and black is
+    black. The red hat is visible in the red channel but quite invisible in
+    the other channels. This is the same for plain green and blue which are
+    visible only in their own channels and invisible in others.
+  </para>
+  <para lang="ja">
+    右端の画像を赤緑青の3つの色チャンネルと透明度を表すアルファチャンネルに分解
+    した様子です。 右端の画像では透過部分を灰色濃淡による市松模様で表現して
+    あります。 いずれの色チャンネルでも白の部分は全ての色が出ているので白く
+    なっており、 黒の部分は黒くなっています。 赤い帽子は赤チャンネルでは見えて
+    も他の色チャンネルでは全く見えません。 このことは仮に真緑や真青であっても
+    同じで、 その色のチャンネルでは見えても他の色チャンネルでは見えなく
+    なります。
+  </para>
+
+  <sect3 id="gimp-channel-dialog-calling">
+    <title lang="en">Activating the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Channels</quote> dialog is a dockable dialog; see the
+      section <xref linkend="gimp-concepts-docks"/> for help on manipulating
+      it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>チャンネル</quote>ダイアログはドッキング可能です。 その扱い方に
+      ついては
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from an image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Channels</guimenuitem>
+          </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ(<accel>D</accel>)</guisubmenu>
+            <guimenuitem>チャンネル(<accel>C</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Channels</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加(<accel>A</accel>)</guimenu>
+            <guimenuitem>チャンネル(<accel>C</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Channels</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Channels</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      <guimenu>ウィンドウ(<accel>W</accel>)</guimenu> メニューでは
+      ダイアログがひとつだけの状態で開かれている場合に限り、
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 この場合には画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+        <guimenuitem>チャンネル</guimenuitem>
+      </menuchoice>
+      と進めば<quote>チャンネル</quote>ダイアログを浮かび上がらせられます。
+      <!--<footnote>
+        <para>
+          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
+          <quote>チャンネル</quote>ダイアログウィンドウが単独で (例えば<quote>
+          チャンネル</quote>タブとなっていたダイアログが
+          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
+          [隠れて]いるときは、 画像メニューから
+          <menuchoice>
+            <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+            <guimenuitem>チャンネル</guimenuitem>
+          </menuchoice>
+          と進めばこのダイアログを浮かび上がらせられます。
+        </para>
+      </footnote>-->
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-channel-dialog-using">
+    <title lang="en">Using the Channel dialog</title>
+    <title lang="ja">チャンネルダイアログの利用法</title>
+    <sect4 id="gimp-channel-dialog-using-overview">
+      <title lang="en">Using the Channel dialog</title>
+      <title lang="ja">チャンネルダイアログの利用法</title>
+      <para lang="en">
+        The top channels are the color channels and the optional Alpha
+        channel. They are always organized in the same order and they cannot
+        be erased. Selection masks are described below and displayed as a list
+        in the dialog. Every channel appears in the list in form of a
+        thumbnail. A right-click in a channel thumbnail opens the
+        <link linkend="gimp-channel-menu">channel context menu</link>.
+      </para>
+      <para lang="ja">
+        上段のチャンネルは色チャンネルと随意追加できるアルファチャンネルから
+        なります。 これらは常に同じ順番に並んでおり、 消去はできません。 選択
+        マスクはこの後で述べますが、 ダイアログ上ではリスト状に並びます。
+        いずれのチャンネルも一覧表内では縮小見本画像を伴っています。 その縮小
+        画像をマウスの <mousebutton>第2ボタン</mousebutton> でクリックすると
+        <link linkend="gimp-channel-menu">チャンネルの脈絡メニュー</link>
+        が現れます。
+      </para>
+    </sect4>
+    <sect4 id="gimp-channel-dialog-using-attributes">
+      <title lang="en">Channel attributes</title>
+      <title lang="ja">チャンネルのプロパティ (属性)</title>
+      <para lang="en">
+        Every channel is shown in the list with its own attributes, which are
+        very similar to the <link linkend="gimp-layer-attributes">layer
+        attributes</link>:
+      </para>
+      <para lang="ja">
+        一覧表上ではいずれのチャンネルにもその属性が表示されており、 その内容は
+        <link linkend="gimp-layer-attributes">レイヤーのプロパティ (属性)
+        </link> と非常によく似ています。
+      </para>
+      <variablelist>
+        <anchor id="channel-attributes"/>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+                       fileref="images/dialogs/channel-list-entry.png"/>
+          </imageobject>
+        </mediaobject>
+        <varlistentry>
+          <term>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-eye-20.png"/>
+            </guiicon>
+            <phrase lang="en">Channel visibility</phrase>
+            <phrase lang="ja">チャンネルの可視度</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              By default every channel and thus every color value is visible.
+              This is indicated by an <quote>open eye</quote> icon. Clicking
+              on the eye-symbol (or the space if the channel is not visible)
+              will toggle the visibility of the channel.
+            </para>
+            <para lang="ja">
+              最初は全てのチャンネルが、 つまりは全ての色成分が可視化されて
+              います。 どれかのチャンネルを不可視にするにはその左側にある
+              <quote>開いた眼</quote>のアイコンをクリックすればよいのです。
+              そうすると画像からこのチャンネルに対応する色成分が失われ、 その
+              チャンネルの段の眼のアイコンが消えます。 その空き地を再びクリック
+              すれば画像にそのチャンネルの色成分が蘇ります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-vchain-24.png"/>
+            </guiicon>
+            <phrase lang="en">Chain channels</phrase>
+            <phrase lang="ja">チャンネルの連結</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              The channels representing selection masks (the new channels in
+              the lower part of the channel list) may be grouped using the
+              button with the <quote>chain</quote> symbol. Then these channels
+              are all affected in the same way by operations applied to any
+              one of them.
+            </para>
+            <para lang="en">
+              Primary color channels (the default channels in the upper part
+              of the channel list) may be grouped too. By default, all color
+              channels (and the alpha channel) are selected, their list
+              entries are highlighted. Operations will be performed on all
+              channels. By clicking on a channel list entry you can
+              deactivate this channel. Operations like
+              <link linkend="gimp-tool-colorize">colorizing</link> a layer
+              will then be applied to the selected (<quote>grouped</quote>)
+              channels only. Clicking again on the list entry will activate
+              the channel.
+            </para>
+            <para lang="ja">
+              選択マスクのチャンネル (チャンネル一覧表の下段に置かれる新たな
+              チャンネル) は<quote>鎖</quote>の印のついたアイコンボタンを使って
+              連結ができます。 連結されたチャンネルはそのうちのいずれかひとつが
+              受けた操作を他のチャンネルも同等に受けます。
+            </para>
+            <para lang="ja">
+              原色チャンネル (チャンネル一覧表の上段に置かれる既定のチャンネル)
+              も纏められます。 初期設定では全ての色チャンネル (およびアルファ
+              チャンネル) が選択されており、 一覧表上ではいずれも強調表示がされ
+              ています。 操作は全てのチャンネルに対して実行されます。 一覧表の
+              チャンネル項目はクリックすると不活性となります。 レイヤーに
+              <link linkend="gimp-tool-colorize">着色</link> ツールによるような
+              操作を実行すると、 選択された (<quote>連結された</quote>)
+              チャンネルだけがその効果を受けます。 チャンネル項目は再びクリック
+              すれば活性化できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Preview image</term>
+          <term lang="ja">縮小見本画像</term>
+          <listitem>
+            <para lang="en">
+              A small preview-icon represents the effect of the channel. On
+              a selection mask, this preview can be enlarged by holding
+              click down on it.
+            </para>
+            <para lang="ja">
+              小さなプレビュー画像がチャンネルの効果を示しています。 選択マスク
+              の縮小画像はクリックしたまま待つと拡大されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Channel name</term>
+          <term lang="ja">チャンネル名</term>
+          <listitem>
+            <para lang="en">
+              The name of the channel, which must be unique within the image.
+              Double-clicking on the name of a selection mask channel will
+              allow you to edit it. The names of the primary channels (Red,
+              Green, Blue, Alpha) can not be changed.
+            </para>
+            <para lang="ja">
+              選択マスクのチャンネル名はダブルクリックすれば編集できます。 基本
+              のチャンネルの名前 (赤、 緑、 青、 アルファ) は変更できません。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <caution>
+        <para lang="en">
+          Activated channels appear highlighted (generally) in blue in the
+          dialog. If you click on a channel in the list you toggle activation
+          of the corresponding channel. Disabling a color channel red, blue,
+          or green has severe consequences. For instance if you disable the
+          blue channel, all pixels from now on added to the image will not
+          have blue component, and so a white pixel will have the yellow
+          complementary color.
+        </para>
+        <para lang="ja">
+          活性化したチャンネルはダイアログでは強調表示 (多くは青) されて
+          います。 一覧表上の項目をクリックするとそのチャンネルの活性と不活性が
+          切り替わります。 赤緑青の色チャンネルは不活性化すると画像に重大な結果
+          を及ぼします。 例えば青のチャンネルを不活性にすればその間、 画像に
+          塗った色には青の成分が含まれないことになり、 また白の画素は青の補色の
+          イエローになってしまいます。
+        </para>
+      </caution>
+    </sect4>
+    <sect4 id="gimp-channel-dialog-using-managing">
+      <title lang="en">Managing channels</title>
+      <title lang="ja">チャンネルの管理</title>
+      <indexterm lang="en">
+        <primary>Channel</primary>
+        <secondary>Edit Channel Attributes</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Channel</primary>
+        <secondary>Create a New Channel mask</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Channel</primary>
+        <secondary>Move Channel mask</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Channel</primary>
+        <secondary>Duplicate Channel mask</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Channel</primary>
+        <secondary>Delete Channel mask</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Channel</primary>
+        <secondary>Channel to Selection</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>チャンネル</primary>
+        <secondary>チャンネルの属性を編集</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>チャンネル</primary>
+        <secondary>新しいチャンネルマスクを作成</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>チャンネル</primary>
+        <secondary>チャンネルマスクを移動</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>チャンネル</primary>
+        <secondary>チャンネルマスクを複製</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>チャンネル</primary>
+        <secondary>チャンネルマスクを削除</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>チャンネル</primary>
+        <secondary>チャンネルを選択範囲に</secondary>
+      </indexterm>
+      <para lang="en">
+        Under the channel list is a set of buttons allowing you to perform
+        some basic operations on channel list.
+      </para>
+      <para lang="ja">
+        ダイアログをマウスの <mousebutton>第2ボタン</mousebutton> でクリック
+        すると出てくるメニューのほかに、 チャンネルの一覧表より下に並ぶボタンで
+        一覧表上のチャンネルに対する基本的な操作ができます。
+      </para>
+      <variablelist>
+        <varlistentry id="gimp-channel-edit">
+          <term>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/stock-edit-16.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">Edit channel attributes,</phrase>
+            <phrase lang="ja">
+              チャンネルプロパティの編集(<accel>E</accel>)...
+            </phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              only available for selection masks. Here you can change the
+              <guilabel>Channel name</guilabel>. The other two parameters
+              affect channel is visibility in the image window; they control
+              <guilabel>Opacity</guilabel> and color used for the mask in the
+              image window. A click on the color button displays the GIMP
+              color selector and then you can change the mask color.
+            </para>
+            <para lang="ja">
+              選択マスクにのみ有効です。 <guilabel>
+              チャンネル名(<accel>N</accel>)</guilabel> はここで変更できます。
+              この他に画像ウィンドウ上でのチャンネルの見え方を設定する項目が2つ
+              あります。 これらは画像ウィンドウ上でマスクの <guilabel>
+              塗り不透明度(<accel>F</accel>)</guilabel> と色を調節します。 色
+              ボタンをクリックすると<quote>チャンネル表示色の<!--XXX変更-->編集
+              </quote>ウィンドウが開かれ、 ここでマスクの表示色を変更できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry id="gimp-channel-new">
+          <term>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/dialogs-icon-new.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">New channel</phrase>
+            <phrase lang="ja">チャンネルを追加(<accel>N</accel>)...</phrase>
+          </term>
+          <listitem>
+            <para lang="en"><!--changed 070612-->
+              You can create here a new channel. The displayed dialog lets
+              you set <guilabel>Opacity</guilabel> and mask color used in
+              the image to represent the selection. (If you use the
+              <guibutton>New Channel</guibutton> button in Channel Menu,
+              you can create this new channel with the options previously
+              used by pressing the <keycap>Shift</keycap> key when clicking).
+              This new channel is a channel mask (a selection mask) applied
+              over the image. See
+              <link linkend="dialogs-selection-masks">Selection Mask</link>
+            </para>
+            <para lang="ja">
+              ここで新しいチャンネルが作成できます。 ダイアログが出てきたら
+              <guilabel>チャンネル名(<accel>N</accel>)</guilabel> や
+              <guilabel>塗り不透明度(<accel>F</accel>)</guilabel> と、 画像上で
+              選択範囲を表現するマスクの色を設定しましょう。 (アイコンボタンを
+              使うときは <keycap>Shift</keycap> ボタンを押しながらクリック
+              すれば直前に使用したオプションを再利用してチャンネルを作成
+              できます。) 新しくできたチャンネルは画像に適用されるチャンネル
+              マスク (選択マスク) になっています。 この節の後半で述べる
+              <link linkend="dialogs-selection-masks">選択マスク</link>
+              も参照してください。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <anchor id="gimp-channel-raise"/>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/dialogs-icon-raise.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">Raise channel,</phrase>
+            <phrase lang="ja">チャンネルを上段へ(<accel>R</accel>)</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              only available for selection masks : you can here put the
+              channel up a level in the list. Press <keycap>Shift</keycap>
+              key to move channel to top of the list.
+            </para>
+            <para lang="ja">
+              選択マスクに対してのみ有効です。 一覧表内でチャンネルを一段上に
+              置きます。 <keycap>Shift</keycap> キーを押しながらだと一覧表の
+              最上部に移動します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <anchor id="gimp-channel-lower"/>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/dialogs-icon-lower.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">Lower channel</phrase>
+            <phrase lang="ja">チャンネルを下段へ(<accel>L</accel>)</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              You can here put the channel down a level in the list. Press the
+              <keycap>Shift</keycap> key to move the channel to bottom of the
+              list.
+            </para>
+            <para lang="ja">
+              一覧表内でチャンネルを一段下げます。 <keycap>Shift</keycap> を
+              押しながらだとチャンネルは一覧表の底部に移動します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <anchor id="gimp-channel-duplicate"/>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/stock-duplicate-16.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">Duplicate channel</phrase>
+            <phrase lang="ja">チャンネルの複製(<accel>U</accel>)</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              You can create here a copy of the active channel. Name of new
+              channel is suffixed with a number.
+            </para>
+            <para lang="ja">
+              これで現在活性化しているチャンネルのコピーが作成できます。 新しく
+              作られたチャンネルの名前は原本の名前に<quote>コピー</quote>の語句
+              を付け加えたものが使われ、 さらに複製をとると番号が振られます。
+            </para>
+            <tip>
+              <para lang="en">
+                You can also duplicate a color channel or the Alpha channel.
+                It's an easy way to keep a copy of them and to use them later
+                as a selection in an image.
+              </para>
+              <para lang="ja">
+                色チャンネルやアルファチャンネルの複製も可能です。 複製は簡単に
+                保管できるうえ、 後で選択範囲として画像操作に使えます。
+              </para>
+            </tip>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <anchor id="gimp-channel-selection-replace"/>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/stock-selection-16.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">Channel to selection</phrase>
+            <phrase lang="ja">チャンネルを選択範囲に(<accel>C</accel>)</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              here you can transform the channel to become a selection. By
+              default the selection derived from a channel replaces any
+              previous active selection. It's possible to change this by
+              clicking on control keys.
+            </para>
+            <para lang="ja">
+              ここでチャンネルを選択範囲に変換できます。 そのままでは作成された
+              選択範囲は既存の選択範囲に置き換わりますが、 修飾キーを使えば
+              既存の選択範囲との合成が可能になります。
+            </para>
+            <itemizedlist>
+              <listitem id="gimp-channel-selection-add">
+                <para lang="en"><keycap>Shift</keycap>:
+                  the selection derived from a channel is added to the
+                  previous active selection. The final selection is merged
+                  from both.
+                </para>
+                <para lang="ja">
+                  チャンネルから作成された選択範囲は既存の活性選択範囲に追加
+                  されます。 できあがった選択範囲は両者の合成です。
+                </para>
+              </listitem>
+              <listitem id="gimp-channel-selection-subtract">
+                <para lang="en"><keycap>Ctrl</keycap>:
+                  the final selection is the subtraction of selection derived
+                  from a channel from the previously active one.
+                </para>
+                <para lang="ja">
+                  最後には既存の活性選択範囲からチャンネルに基づいて作成された
+                  選択範囲が除外された選択範囲ができます。
+                </para>
+              </listitem>
+              <listitem id="gimp-channel-selection-intersect">
+                <para lang="en">
+                  <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>:
+                  the final selection is the intersection of selection derived
+                  from a channel with the previously active one. Only common
+                  parts are kept.
+                </para>
+                <para lang="ja">
+                  最終的な選択範囲は、 既存の活性選択範囲とチャンネルから作成
+                  された選択範囲の重なった部分です。 両者の共通部分が残ります。
+                </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+            <anchor id="gimp-channel-selection-delete"/>
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/dialogs/dialogs-icon-delete.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            <phrase lang="en">Delete channel</phrase>
+            <phrase lang="ja">チャンネルの削除(<accel>D</accel>)</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              only available for selection masks: you can here delete the
+              active channel.
+            </para>
+            <para lang="ja">
+              選択マスクに対してのみ有効です。 ここで現在活性化している
+              チャンネルを削除できます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+    <xi:include href="channel-menu.xml"/>
+  </sect3>
+  <xi:include href="channel-selection-mask.xml"/>
+  <xi:include href="qmask.xml"/>
+</sect2>

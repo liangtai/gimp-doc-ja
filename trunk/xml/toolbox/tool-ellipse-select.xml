@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-03-19 JPL  rewieved en & fr
+  2007-02-12 PP rewieved en & fr and re-arranged according to
+                tool-rect-select.xml page other lang. to verify
+  2007-10-30 Dust: added 'ko' contents
+  2007-10-05 lexa: reviewed de for GIMP 2.4
+  2007-06-02 kost: added 'no'
+  2006-03-30 lexa: added docbook compliance
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-12-01 informalfigure replaced by figure by lexa
+-->
+<!--revision2790 2009-03-22-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-ellipse-select">
+  <title lang="en">Ellipse Selection</title>
+  <title lang="ja">楕円選択</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Ellipse Selection</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Ellipse selection</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Ellipse Selection Tool</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>楕円選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>選択</primary>
+    <secondary>楕円選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>楕円選択ツール</primary>
+  </indexterm>
+  <figure>
+    <title lang="en">Ellipse Select icon in the Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>楕円選択</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/ja/toolbox-ellipsel.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Ellipse Selection tool is designed to select circular and elliptical
+    regions from an image, with high-quality anti-aliasing if you want it. For
+    information on selections and how they are used in GIMP see
+    <link linkend="gimp-concepts-selection">Selections</link>;
+    for information on features common to all selection tools see
+    <link linkend="gimp-tool-select">Selection Tools</link>.
+  </para>
+  <para lang="en">
+    This tool is also used for rendering a circle or ellipse on an image. To
+    render a filled ellipse, create an elliptical selection, and then fill it
+    using the <link linkend="gimp-tool-bucket-fill">Bucket Fill tool</link>.
+    To create an elliptical outline, the simplest and most flexible approach
+    is to create an elliptical selection and then
+    <link linkend="gimp-selection-stroke">stroke</link>
+    it. However, the quality of anti-aliasing with this approach is rather
+    crude. A higher quality outline can be obtained by creating two elliptical
+    selections with different sizes, subtracting the inner one from the outer
+    one; however this is not always easy to get right. The command
+    <menuchoice>
+      <guimenu>Select</guimenu>
+      <guimenuitem>Border...</guimenuitem>
+    </menuchoice>
+    makes it easy.
+  </para>
+  <para lang="ja">
+    楕円選択ツールは画像から円形や楕円形の領域を選択するためのものです。
+    必要ならば高品質なアンチエイリアスで輪郭をとります。
+    <acronym>GIMP</acronym>における選択についての情報や使い方は
+    <link linkend="gimp-concepts-selection">選択</link>を
+    選択ツール全種類に共通する機能についての情報は
+    <link linkend="gimp-tool-select">選択ツール</link>を
+    ご覧ください。
+  </para>
+  <para lang="ja">
+    このツールは画像上に円形や楕円形を描くためにも用いられます。 色が一様な
+    楕円形を描くには、 楕円選択をとり、 その内側を
+    <link linkend="gimp-tool-bucket-fill">塗りつぶし</link>ます。
+    楕円形の輪郭を描く最も簡単で柔軟性のある方法は、 楕円選択をとってその
+    <link linkend="gimp-selection-stroke">選択範囲の境界線を描画</link>します。
+    しかしこの作業でアンチエイリアスを使うと品質が粗雑になってしまいます。
+    もっと上質の輪郭を描くには異なる大きさの2つの楕円選択を重ねて外側の
+    選択範囲から内側の選択範囲を引くとよいのですが、 いつも上手にこなすのは
+    簡単ではありません。
+    <menuchoice>
+      <guimenu>選択(<accel>S</accel>)</guimenu>
+      <guimenuitem>縁取り選択(<accel>R</accel>)...</guimenuitem>
+    </menuchoice>
+    コマンドを使うと簡単です。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access to the Ellipse Selection Tool in different ways:
+    </para>
+    <para lang="ja">
+      <quote>楕円選択</quote>ツールを起用する方法はつぎのいずれかです:
+    </para>
+    <itemizedlist lang="ja">
+      <listitem>
+        <para lang="en">
+          From the image menu bar
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Selection Tools</guisubmenu>
+            <guimenuitem>Ellipse Select</guimenuitem>
+          </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>選択ツール(<accel>S</accel>)</guisubmenu>
+            <guimenuitem>楕円選択(<accel>E</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking on the tool icon
+          <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/toolbox/stock-tool-ellipse-select-22.png"/></imageobject></inlinemediaobject></guiicon>
+          in the ToolBox,
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/toolbox/stock-tool-ellipse-select-22.png" /></imageobject></inlinemediaobject></guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By using the keyboard shortcut <keycap>E</keycap>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット <keycap>E</keycap>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title lang="en">Key modifiers</title>
+    <title lang="ja">キー修飾</title>
+    <xi:include href="about-common-select-modifiers.xml"/>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            Pressing the key after starting your selection, and holding it
+            down until you are finished, causes your starting point to be used
+            as the center of the selected ellipse, instead of a corner of the
+            rectangle that may contain it. Note that if you press the Ctrl key
+            <emphasis>before</emphasis>
+            starting to make the selection, the resulting selection will be
+            subtracted from the existing selection.
+          </para>
+          <para lang="ja">
+            選択をとり始めた後にこのキーを押し、 選択範囲ができあがるまで
+            押し続けていたならば、 開始点が楕円の外接矩形の角ではなく、
+            楕円の中心点として扱われます。 選択をとり始める <emphasis>前から
+            </emphasis> <keycap>Ctrl</keycap> キーを押し続けていた場合は、
+            それまでの選択範囲に新たに作られた範囲が加えられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycap>Shift</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            Pressing the Shift key after starting your selection, and holding
+            it down until you are finished, constrains the selection to be a
+            circle. Note that if you press the Shift key
+            <emphasis>before</emphasis>
+            starting to make the selection, the resulting selection will be
+            added to the existing selection.
+          </para>
+          <para lang="ja">
+            選択をとり始めた後に <keycap>Shift</keycap> を押し、
+            選択が終わるまで押し続けていたならば、 選択範囲は正円になります。
+            これは<guilabel>値を固定</guilabel> オプションが有効になって、
+            固定される条件が <guilabel>縦横比</guilabel> (初期設定 1:1)
+            であったためです。 この条件は変更できます。 選択をとり始める
+            <emphasis>前から</emphasis> <keycap>Ctrl</keycap> キーを押し続けて
+            いた場合は、 それまでの選択範囲から新たに作られた範囲が引かれます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>Shift</keycap>
+          </keycombo>
+        </term>
+        <listitem>
+          <para lang="en">
+            Pressing both keys combines the two effects, giving you a circular
+            selection centered on your starting point.
+          </para>
+          <para lang="ja">
+            両方のキーを同時に押したときは、 上述のオプションが共に有効となり、
+            開始点を中心とする正円が選択範囲になります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="tool-ellipse-select-manip">
+    <title lang="en">Tool handling</title>
+    <title lang="ja">ツールの操縦</title>
+    <figure>
+      <title lang="en">Example of Ellipse Selection.</title>
+      <title lang="ja">楕円選択の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ellipse-selection.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      When this tool is selected the mouse pointer comes with a circle icon
+      as soon as it is over the image. A drag-and-drop allows you to
+      get an ellipse (or a circle) within a rectangular box.
+      When the mouse button is relaxed, a dotted line (<quote>marching
+      ants</quote>) outlines the elliptic selection. It's not necessary to
+      adjust the selection with care; you can resize it easily later.
+    </para>
+    <para lang="en">
+      When the pointer is moving on the canvas, the pointer and selection
+      aspects change. You can change the size of the selection by using
+      handles. See
+      <link linkend="tool-rect-select-manip">Tool handling</link> within
+      the rectangular chapter.
+    </para>
+    <para lang="ja">
+      このツールが使用されているときのマウスカーソルは画像上では円形を
+      あしらった姿をしています。 画像上で曳くと楕円形(もしくは正円)がその外側に
+      矩形(あるいは正方形)を伴って現れます。 マウスボタンを放すと点滅破線
+      <quote>蟻の行進</quote>が選択範囲の楕円の輪郭を描きます。 選択の領域を
+      始めから正確にする必要はありません。 後で簡単に整形[や移動]ができます。
+    </para>
+    <para lang="ja">
+      マウスポインタを画面上で移動させると場所によりその姿が変化し、
+      選択の矩形ん形状を変える方法が示されます。 選択範囲の大きさは
+      ハンドルを利用して変更できます。 矩形選択の節の
+      <link linkend="tool-rect-select-manip">ツールの扱い方</link>
+      を参照してください。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Tool Options for the Ellipse Select tool</title>
+      <title lang="ja"><quote>楕円選択</quote>ツールのツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-options-ellipsel.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      <xi:include href="about-common-select-options.xml"/>
+      <varlistentry>
+        <term lang="en">Modes; Antialiasing; Feather edges</term>
+        <term lang="ja">モード; アンチエイリアス; 境界をぼかす</term>
+        <listitem>
+          <para lang="en">Common select options.</para>
+          <para lang="ja">選択ツール共通のオプションです。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">All other options</term>
+        <term lang="ja">その他のオプション</term>
+        <listitem>
+          <para lang="en">
+            All these options work exactly the same way, they were described
+            for the rectangular selection already. See for
+            <xref linkend="tool-rect-select-options"/> details.
+          </para>
+          <para lang="ja">
+            どのオプションも矩形選択で説明したのと同じ効果があります。 詳しくは
+            <xref linkend="tool-rect-select-options" /> に書かれています。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

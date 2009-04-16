@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-21 j.h: revised for v2.6
+  2008-03-23 reviewed 'ko' by Mr.Dust
+  2006-09-06 added norwegian translation by KoSt
+  2006-05-02 Dust: added Korean translation
+  2006-02-25 lexa: added translation for de and made file docbook compliant
+-->
+<!--revision2796 2009-03-27-->
+<sect1 id="gimp-concepts-undo">
+  <title lang="en">Undoing</title>
+  <title lang="ja">取り消し</title>
+  <indexterm lang="en">
+    <primary>Undo</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>取り消し</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>操作履歴</primary>
+  </indexterm>
+
+  <para lang="en">
+    Almost anything you do to an image in GIMP can be undone.  You can
+    undo the most recent action by choosing
+    <menuchoice>
+      <guimenu>Edit</guimenu>
+      <guimenuitem>Undo</guimenuitem>
+    </menuchoice>
+    from the image menu, but this is done so frequently that you
+    really should memorize the keyboard shortcut,
+    <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>.
+  </para>
+  <para lang="en">
+    Undoing can itself be undone. After having undone an action, you
+    can <emphasis>redo</emphasis> it by choosing
+    <menuchoice>
+      <guimenu>Edit</guimenu>
+      <guimenuitem>Redo</guimenuitem>
+    </menuchoice>
+    from the image menu, or use the keyboard shortcut,
+    <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo>.
+    It is often helpful to judge the effect of an action by repeatedly
+    undoing and redoing it.  This is usually very quick, and does not
+    consume any extra resources or alter the undo history, so there is
+    never any harm in it.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>では画像に対して行なった動作はほとんど何でも
+    取り消せます。 画像メニューで
+    <menuchoice>
+      <guimenu>編集(<accel>E</accel>)</guimenu>
+      <guimenuitem>... を元に戻す(<accel>U</accel>)</guimenuitem>
+    </menuchoice>
+    (... は最後に行われた動作の具体的な名前です) とたどれば一番最近の動作が
+    取り消されます。 しかしこのコマンドはよく使われるので、
+    かわりにキーボードショートカット
+    <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
+    を覚えておくとよいでしょう。
+  </para>
+  <para lang="ja">
+    取り消しを取り消すことも可能です。 ある動作を取り消したあとで、 メニューで
+    <menuchoice>
+      <guimenu>編集(<accel>E</accel>)</guimenu>
+      <guimenuitem>やり直す(<accel>R</accel>)</guimenuitem>
+    </menuchoice>
+    と進むか、キーボードショートカット
+    <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo> とすれば
+    <emphasis>やり直す</emphasis> ことができます。
+    取り消しとやり直しを交互に使えば、 ある動作の効果を確かめるのに便利です。
+    この動作は素早く、 操作履歴を変化させずしかもメモリ消費をさらに
+    増やすことがないので、 損失は一切ありません。
+  </para>
+  <caution>
+    <para lang="en">
+      If you undo one or more actions and then operate on the image in any way
+      except by using Undo or Redo, it will no longer be possible to redo
+      those actions: they are lost forever. The solution to this, if it
+      creates a problem for you, is to duplicate the image and then operate on
+      the copy. ( <emphasis>Not</emphasis> the original, because the undo/redo
+      history is not copied when you duplicate an image.)
+    </para>
+    <para lang="ja">
+      これまでの動作をひとつもしくは数手にわたって取り消したあとで、
+      取り消しややり直しではない何らかの新たな操作を画像に対し行なったときは、
+      それ以降の操作履歴は白紙に戻され、 やり直すことができなくなります。
+      それでは困る場合にこの問題に対処する方法は、 その時点の画像の複製をとり、
+      複製画像の上で新たな操作をすることです。 (原本で行なっては
+      <emphasis>いけません</emphasis>。
+      なぜならば画像を複製しても操作履歴までは写し取られないからです。)
+    </para>
+  </caution>
+  <para lang="en">
+    If you often find yourself undoing and redoing many steps at a time, it
+    may be more convenient to work with the
+    <link linkend="gimp-undo-dialog">Undo History dialog</link>,
+    a dockable dialog that shows you a small sketch of each point in the
+    Undo History, allowing you to go back or forward to that point by
+    clicking.
+  </para>
+  <para lang="en">
+    Undo is performed on an image-specific basis: the "Undo History" is one of
+    the components of an image. GIMP allocates a certain amount of memory to
+    each image for this purpose. You can customize your Preferences to
+    increase or decrease the amount, using the
+    <link linkend="gimp-prefs-environment">Environment</link>
+    page of the Preferences dialog. There are two important variables: the
+    <emphasis>minimal number of undo levels</emphasis>,
+    which GIMP will maintain regardless of how much memory they consume, and
+    the <emphasis>maximum undo memory</emphasis>, beyond which GIMP will
+    begin to delete the oldest items from the Undo History.
+  </para>
+  <para lang="ja">
+    幾手もの取り消しあるいはやり直しを頻繁に行なう場合には、 <link
+    linkend="gimp-undo-dialog">操作履歴ダイアログ</link> を使うと作業がもっと
+    楽になるはずです。 このダイアログでは操作履歴が各時点での画像の小さな
+    スケッチで表わされており、 それを見てクリックするだけで履歴を遡ったり
+    進めたりできます。 ダイアログの合体も可能です。
+  </para>
+  <para lang="ja">
+    取り消しのしくみはその基礎を描画に置いています。 つまり、
+    <quote>操作履歴</quote>は画像の一部なのです。 この機能のためのメモリを、
+    <acronym>GIMP</acronym>は画像ごとに一定量割り当てています。
+    扱われるメモリの量は環境設定ダイアログの
+    <link linkend="gimp-prefs-environment">環境</link> のページで調節できます。
+    特に重要な数量はつぎの2つです:
+    <guilabel>操作履歴の最小エントリ数(<accel>U</accel>)</guilabel>
+    の範囲で記録されたぶんの操作履歴に消費されるメモリ量を
+    <acronym>GIMP</acronym>は制限しません。
+    <guilabel>操作履歴のメモリサイズ(<accel>M</accel>)</guilabel> を越えると
+    <acronym>GIMP</acronym>は最も古い操作の記録から順に削除してゆきます。
+  </para>
+  <note>
+    <para lang="en">
+      Even though the Undo History is a component of an image, it is not saved
+      when you save the image using GIMP's native XCF format, which preserves
+      every other image property. When the image is reopened, it will have an
+      empty Undo History.
+    </para>
+    <para lang="ja">
+      操作履歴は画像の一部であると申しあげましたが、 <acronym>GIMP</acronym>
+      由来のXCF型式で画像を保存した場合でも、 画像の他の情報は保存されますが
+      操作履歴だけは対象外です。 読み込み直した画像の操作履歴は白紙です。
+    </para>
+  </note>
+  <para lang="en">
+    The implementation of Undo by GIMP is rather sophisticated. Many
+    operations require very little Undo memory (e.g., changing visibility of a
+    layer), so you can perform long sequences of them before they drop out of
+    the Undo History. Some operations (changing layer visibility is again an
+    example) are <emphasis>compressed</emphasis>,
+    so that doing them several times in a row produces only a single point
+    in the Undo History. However, there are other operations that may consume
+    a lot of undo memory. Most filters are examples of this: because they are
+    implemented by plug-ins, the GIMP core has no really efficient way of
+    knowing what they have changed, so it has no way to implement Undo except
+    by memorizing the entire contents of the affected layer before and after
+    the operation. You might only be able to perform a few such operations
+    before they drop out of the Undo History.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>の操作履歴のしくみはよく吟味して実装しました。
+    大多数の操作はそのメモリ消費量が極めて小さくなっており(レイヤーの可視度の変更
+    はその例です)、 操作履歴からこぼれ落ちるまでに相当な数の手数を踏めます。
+    (レイヤーの可視度の変更も含め)ある種の操作は <emphasis>圧縮</emphasis>
+    がかけられており、 何度も繰り返し操作しても操作履歴上ではほんのひとかけら
+    にしかなりません。 しかし操作履歴のメモリを多量に消費する操作もあります。
+    大抵のフィルタ操作はこの例です。 フィルタはプラグインの一種であるため
+    <acronym>GIMP</acronym>コアは当然それらの及ぼした影響を知る術を
+    持ちえませんので、 操作を受けたレイヤーの操作前後それぞれの全内容を
+    保存するほかに履歴を録る手段がないからです。 こういった操作については
+    操作履歴からこぼれ落ちるまでに踏める手数はかなり少なくなります。
+  </para>
+
+  <sect2>
+    <title lang="en">Things That Cannot be Undone</title>
+    <title lang="ja">取り消しの効かない操作</title>
+    <para lang="en">
+      Most actions that alter an image can be undone. Actions that do not
+      alter the image generally cannot be. This includes operations such as
+      saving the image to a file, duplicating the image, copying part of the
+      image to the clipboard, etc. It also includes most actions that affect
+      the image display without altering the underlying image data. The most
+      important example is zooming. There are, however, exceptions: toggling
+      QuickMask on or off can be undone, even though it does not alter the
+      image data.
+    </para>
+    <para lang="en">
+      There are a few important actions that do alter an image but
+      cannot be undone:
+    </para>
+    <para lang="ja">
+      画像を変更する操作のほとんどは取り消せます。 それに対し画像の変更を
+      伴わない操作は一般的にはそれができません。 画像をファイルに保存したり、
+      画像の複製をとったり、 画像の一部をクリップボードに写し取ったりするのは
+      後者にあたります。 また画像表示に対する操作のうち、 その画像データを
+      変更しないものもほとんどがこちらに含まれます。 たとえばズーム操作が
+      そうです。 ただし例外があって、 クイックマスクの切り替えは画像データを
+      何も変更しませんが、 取り消せます。
+    </para>
+    <para lang="ja">
+      画像を変更するにもかかわらず取り消せない重大な操作が僅かに存在します:
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Closing the image</term>
+        <term lang="ja">画像を閉じること</term>
+        <listitem>
+          <para lang="en">
+            The Undo History is a component of the image, so when the image is
+            closed and all of its resources are freed, the Undo History goes
+            along. Because of this, unless the image has not been modified
+            since the last time it was saved, GIMP always asks you to confirm
+            that you really want to close it. (You can disable this in the
+            <link linkend="gimp-prefs-environment">Environment</link>
+            page of the Preferences dialog; if you do, you are assuming
+            responsibility for thinking about what you are doing.)
+          </para>
+          <para lang="ja">
+            操作履歴は画像の一部ですが、 画像を閉じたときにそれらは開放され、
+            失われます。 このため未保存の操作がある画像を閉じるさいに、
+            <acronym>GIMP</acronym>は本当に閉じてよいか必ず確認をとります。
+            (環境設定ダイアログの
+            <link linkend="gimp-prefs-environment">環境</link>
+            ページでこれを止めさせることができます。 ただしそれが何を
+            意味するのか充分認識したうえで行ってください。)
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Reverting the image</term>
+        <term lang="ja">画像の復帰</term>
+        <listitem>
+          <para lang="en"><quote>Reverting</quote>
+            means reloading the image from file. GIMP actually implements this
+            by closing the image and creating a new image, so the Undo History
+            is lost as a consequence. Because of this, if the image is
+            unclean, GIMP always asks you to confirm that you really want to
+            revert the image.
+          </para>
+          <para lang="ja">
+            <quote>復帰</quote>とは画像をファイルから再読み込みすることを
+            さします。 実際には<acronym>GIMP</acronym>はこの操作を、
+            画像を閉じてから新たに画像を起こす<!--原文:creating a new image-->
+            ことで実装しており、 したがって操作履歴は失なわれます。 このような
+            理由から、 画像が手付かずでないならば、 <acronym>GIMP</acronym>
+            は本当に画像を復帰してもよいか必ず確認をとります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en"><quote>Pieces</quote> of actions</term>
+        <term lang="ja">操作の<quote>細分</quote></term>
+        <listitem>
+          <para lang="en">
+            Some tools require you to perform a complex series of
+            manipulations before they take effect, but only allow you to undo
+            the whole thing rather than the individual elements. For example,
+            the Intelligent Scissors require you to create a closed path by
+            clicking at multiple points in the image, and then clicking inside
+            the path to create a selection. You cannot undo the individual
+            clicks: undoing after you are finished takes you all the way back
+            to the starting point. For another example, when you are working
+            with the Text tool, you cannot undo individual letters, font
+            changes, etc.: undoing after you are finished removes the newly
+            created text layer.
+          </para>
+          <para lang="ja">
+            ツールによってはその効果を得るまでに一連の手のこんだ操作を要求する
+            ものがありますが、 取り消せるのはその全体のみで部分的には
+            できません。 例えば電脳はさみは閉じたパスを引くよう要請するので、
+            その通過点を次々と画像上でクリックしたうえでパスの内側をクリック
+            して選択域としなければなりません。 しかしそれらのクリックを個々には
+            取り消せず、 パスを完成させたあとで取り消すと、 振り出しに戻って
+            各点のクリックから始めるしかありません。 他の例ではテキストを
+            貼りつけるとき、 個々の文字やフォント指定などの過程だけを取り消す
+            ことはできません。 テキスト貼り付けの取り消しは
+            そのテキストレイヤーが削除されるだけです。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para lang="en">
+      Filters, and other actions performed by plugins or scripts, can be
+      undone just like actions implemented by the GIMP core, but this requires
+      them to make correct use of GIMP's Undo functions. If the code is not
+      correct, a plugin can potentially corrupt the Undo History, so that not
+      only the plugin but also previous actions can no longer properly be
+      undone. The plugins and scripts distributed with GIMP are all believed
+      to be set up correctly, but obviously no guarantees can be given for
+      plugins you obtain from other sources. Also, even if the code is
+      correct, canceling a plugin while it is running can sometimes leave the
+      Undo History corrupted, so it is best to avoid this unless you have
+      accidentally done something whose consequences are going to be very
+      harmful.
+    </para>
+    <para lang="ja">
+      プラグインやスクリプトが司るフィルタなどの操作は、 その取り消しが他の
+      操作と同様にできるように<acronym>GIMP</acronym>コアを実装してありますが、
+       一方で<acronym>GIMP</acronym>の操作履歴機能を正しく利用することが
+      それらの操作機能の実装に求められています。 不完全なコードのプラグインは
+      操作履歴を壊すおそれがあり、 そのプラグインの操作のみならずそれまでの
+      他の操作をも正しく取り消せなくなってしまうことが予想されます。
+      <acronym>GIMP</acronym>の公式配布物のプラグインは全て正当に組まれて
+      いますが、 他所から手に入れられるプラグインは明らかにその保証がない
+      ようです。 また、正しいコードで書かれたプラグインであっても、
+      プラグインが進行中に中止すると操作履歴が壊れることがたまにあり、
+      プラグインを進行しつづけることが余程危険だという状況でない限り、
+      途中で中止するのは避けたほうがよいでしょう。
+    </para>
+  </sect2>
+</sect1>

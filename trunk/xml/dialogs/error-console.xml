@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-16 j.h: updated en;fr to v2.6
+  2007-05-04 Added Spanish translation by AntI
+  2006-09-20 lexa: added german translation
+  2006-08-20 added italian content by ciampix
+  2006-07-15 created en;fr by j.h
+-->
+<sect2 id="gimp-errors-dialog">
+  <!--<sect2info role="cvs">
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2692 $</revnumber>
+        <date>2008-12-16</date>
+        <authorinitials>j.h</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase>Error Console</phrase>
+  </title>
+  <indexterm>
+    <primary>Error console</primary>
+  </indexterm>
+  <para>
+    The <guilabel>Error console</guilabel> offers more possibilities than
+    the single <quote>GIMP Message</quote>. This is a log of all errors
+    occurring while GIMP is running. You can save all this log or only a
+    selected part.
+  </para>
+  <sect3>
+    <title>
+      <phrase>Activate Dialog</phrase>
+    </title>
+    <para>
+      You can access to this dialog in different ways:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          From the image menu:
+          <menuchoice><guimenu>Windows</guimenu><guisubmenu>Dockable Dialogs</guisubmenu><guimenuitem>Error Console</guimenuitem></menuchoice>.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Or from the Tab menu in any dialog :
+          <menuchoice><guimenu>Add a dock</guimenu><guimenuitem>Error Console</guimenuitem></menuchoice>.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>
+        The <quote>Error Console</quote> Dialog
+      </phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase><quote>Error Console</quote> Dialog window</phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/dialogs/error-console.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Clear errors</term>
+        <listitem>
+          <para>
+            This button lets you delete all errors in the log.
+          </para>
+          <warning>
+            <para>
+              You can't <quote>undo</quote> this action.
+            </para>
+          </warning>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Save all errors</term>
+        <listitem>
+          <para>
+            This button lets you save
+            the whole log. You can also select a part of the log (by
+            click-and-dragging the mouse pointer or by using the
+            <keycombo><keycap>Shift</keycap><keycap>Arrow
+            keys</keycap></keycombo> key combination) and save only this
+            selected part by pressing the <keycap>Shift</keycap> key.
+          </para>
+          <para>
+            A dialog window <guilabel>Save Error Log to File </guilabel> lets
+            you choose the name and the destination directory of this file:
+          </para>
+          <para>
+            A dialog window <guilabel>Save Error Log to File </guilabel> lets
+            you choose the name and the destination directory of this file:
+          </para>
+          <figure>
+            <title>
+              <phrase><quote>Save Error Log to file</quote> Dialog window
+              </phrase>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/dialogs/error-console-record.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <tip>
+      <para>
+        You will as well find these button actions in the dialog tab menu by
+        clicking on
+        <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/dialogs/stock-menu-left-12.png" format="PNG"/></imageobject></inlinemediaobject></guiicon>,
+        or in the context menu you get by right-clicking on the dialog
+        window.
+      </para>
+    </tip>
+  </sect3>
+</sect2>

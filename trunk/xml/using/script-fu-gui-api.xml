@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-03-12 jpl: fr & en update
+  2007-11-27 ude: created (en,de)
+-->
+<sect3 id="gimp-using-script-fu-api">
+  <title lang="en">
+    The Script-Fu parameter API
+    <footnote>
+      <para>This section is not part of the original tutorial.</para>
+    </footnote>
+  </title>
+  <title lang="ja">
+    Script-Fuパラメータ<acronym>API</acronym>
+    <footnote>
+      <para>この節は原文の演習には含まれていません。</para>
+    </footnote>
+  </title>
+  <note>
+    <para lang="en">
+      Beside the above parameter types there are more types for the
+      interactive mode, each of them will create a widget in the control
+      dialog. You will find the description of these parameters and examples
+      in the test script
+      <filename>plug-ins/script-fu/scripts/test-sphere.scm</filename>
+      shipped with the <acronym>GIMP</acronym> source code.
+    </para>
+    <para lang="ja">
+      上記のパラメータ型に加え、 制御用ダイアログ上にウィジェットを作成するのに
+      使えるさらに多くの相互モード用の型があります。 <acronym>GIMP</acronym>の
+      ソースコードとともに配布されているテストスクリプト
+      <filename>plug-ins/script-fu/scripts/test-sphere.scm</filename> に
+      そういったパラメータの説明や使用例があります。
+    </para>
+  </note>
+  <informaltable>
+    <tgroup cols="2">
+      <thead>
+        <row>
+          <entry>
+            <para lang="en">Param Type</para>
+            <para lang="ja">パラメータの型</para>
+          </entry>
+          <entry>
+            <para lang="en">Description</para>
+            <para lang="ja">説明</para>
+          </entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>
+            <para lang="en">SF-ADJUSTMENT</para>
+            <para lang="ja"><function>SF-ADJUSTMENT</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              In interactive mode it creates an adjustment widget in the
+              dialog.
+            </para>
+            <para lang="en">
+              SF-ADJUSTMENT "label" '(value lower upper step_inc page_inc
+              digits type)
+            </para>
+            <para lang="en">"label" : Text printed before the widget.</para>
+            <para lang="en">value : Value print at the start.</para>
+            <para lang="en">
+              lower / upper : the lower / upper values (range of choice).
+            </para>
+            <para lang="en">step_inc : increment/decrement value.</para>
+            <para lang="en">
+              page_inc : increment/decrement value using page key.
+            </para>
+            <para lang="en">
+              digits : digits after the point (decimal part).
+            </para>
+            <para lang="en">
+              type : is one of: SF-SLIDER or 0, SF-SPINNER or 1
+            </para>
+            <para lang="ja">
+              相互モードではダイアログ上に値を調節するためのウィジェットを作成
+              します。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-ADJUSTMENT</function> _"<replaceable>label</replaceable>" '(<replaceable>value lower upper step_inc page_inc digits type</replaceable>)
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <?dbhtml list-presentation="table"?>
+                <segtitle>値</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句 
+                    (_記号でgettextを用いて訳語へ交換が可能になる)
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>value</replaceable></seg>
+                  <seg>当初の数値</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>
+                    <replaceable>lower</replaceable>;
+                    <replaceable>upper</replaceable>
+                  </seg>
+                  <seg>最低値と最高値 (選べる値の範囲)</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>step_inc</replaceable></seg>
+                  <seg>最小変動値、 公差</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>page_inc</replaceable></seg>
+                  <seg>
+                    <keycap>PgUp</keycap> キーと <keycap>PgDn</keycap> 
+                    キーによる操作での公差。
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>digits</replaceable></seg>
+                  <seg>小数点以下の桁数 (十進数)</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>type</replaceable></seg>
+                  <seg>
+                    スライダは SF-SLIDER もしくは 0、
+                    スピンボックスは SF-SPINNER もしくは 1
+                  </seg>
+                </seglistitem>
+              </segmentedlist>
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-COLOR</para>
+            <para lang="ja"><function>SF-COLOR</function></para>
+          </entry>
+          <entry>
+            <para lang="en">Creates a color button in the dialog.</para>
+            <para lang="en">SF-COLOR "label" '(red green blue)</para>
+            <para lang="en">or</para>
+            <para lang="en">SF-COLOR "label" "color"</para>
+            <para lang="en">"label" : Text printed before the widget.</para>
+            <para lang="en">
+              '(red green blue) : list of three values for the red, green and
+              blue components.
+            </para>
+            <para lang="en">"color" : a color name in CSS notatation.</para>
+            <para lang="ja">ダイアログにカラーボタンを作成します。</para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-COLOR</function> _"<replaceable>label</replaceable>" '(<replaceable>red green blue</replaceable>)
+              </synopsis>
+              もしくは
+              <synopsis>
+                <function>SF-COLOR</function> _"<replaceable>label</replaceable>" "<replaceable>color</replaceable>"
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <?dbhtml list-presentation="table"?>
+                <segtitle>値</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                    (_記号でgettextを用いて訳語へ置換が可能になる)
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>'(<replaceable>red green blue</replaceable>)</seg>
+                  <seg>赤緑青の3つの成分</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>color</replaceable>"</seg>
+                  <seg><acronym>CSS</acronym>notatationの色名</seg>
+                </seglistitem>
+              </segmentedlist>
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-FONT</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              Creates a font-selection widget in the dialog. It returns a
+              fontname as a string. There are two new gimp-text procedures to
+              ease the use of this return parameter:
+            </para>
+            <para lang="en">
+              (gimp-text-fontname image drawable x-pos y-pos text border
+              antialias size unit font)
+            </para>
+            <para lang="en">
+              (gimp-text-get-extents-fontname text size unit font)
+            </para>
+            <para lang="en">
+              where font is the fontname you get. The size specified in the
+              fontname is silently ignored. It is only used in the
+              font-selector. So you are asked to set it to a useful value (24
+              pixels is a good choice).
+            </para>
+            <para lang="en">SF-FONT "label" "fontname"</para>
+            <para lang="en">"label" : Text printed before the widget.</para>
+            <para lang="en">"fontname" : name of the défault font.</para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-BRUSH</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a preview area (which when pressed will produce a
+              popup preview ) and a button with the "..." label. The button
+              will popup a dialog where brushes can be selected and each of
+              the characteristics of the brush can be modified.
+            </para>
+            <para lang="en">SF-BRUSH "Brush" '("Circle (03)" 100 44 0)</para>
+            <para lang="en">
+              Here the brush dialog will be popped up with a default brush of
+              Circle (03) opacity 100 spacing 44 and paint mode of Normal
+              (value 0).
+            </para>
+            <para lang="en">
+              If this selection was unchanged the value passed to the function
+              as a parameter would be '("Circle (03)" 100 44 0).
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-PATTERN</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a preview area (which when pressed will produce a
+              popup preview ) and a button with the "..." label. The button
+              will popup a dialog where patterns can be selected.
+            </para>
+            <para lang="en">SF-PATTERN "Pattern" "Maple Leaves"</para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the pattern name. If the above selection was not
+              altered the string would contain "Maple Leaves".
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-GRADIENT</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a button containing a preview of the selected
+              gradient.
+            </para>
+            <para lang="en">
+              If the button is pressed a gradient selection dialog will popup.
+            </para>
+            <para lang="en">SF-GRADIENT "Gradient" "Deep Sea"</para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the gradient name. If the above selection was not
+              altered the string would contain "Deep Sea".
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-PALETTE</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a button containing the name of the selected
+              palette.
+            </para>
+            <para lang="en">
+              If the button is pressed a palette selection dialog will popup.
+            </para>
+            <para lang="en">SF-PALETTE "Palette" "Named Colors"</para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the palette name. If the above selection was not
+              altered the string would contain "Named Colors".
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-FILENAME</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a button containing the name of a file.
+            </para>
+            <para lang="en">
+              If the button is pressed a file selection dialog will popup.
+            </para>
+            <para lang="en">
+              SF-FILENAME "Environment Map" (string-append ""
+              gimp-data-directory "/scripts/beavis.jpg")
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the filename.
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-DIRNAME</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              Only useful in interactive mode. Very similar to SF-FILENAME,
+              but the created widget allows to choose a directory instead of a
+              file.
+            </para>
+            <para lang="en">
+              SF-DIRNAME "Image Directory" "/var/tmp/images"
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the dirname.
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-OPTION</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget is a
+              combo-box showing the options that are passed as a list.
+            </para>
+            <para lang="en">The first option is the default choice.</para>
+            <para lang="en">
+              SF-OPTION "Orientation" '("Horizontal" "Vertical")
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked is the number of
+              the chosen option, where the option first is counted as 0.
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-ENUM</para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget is a
+              combo-box showing all enum values for the given enum type. This
+              has to be the name of a registered enum, without the "Gimp"
+              prefix. The second parameter speficies the default value, using
+              the enum value's nick.
+            </para>
+            <para lang="en">
+              SF-ENUM "Interpolation" '("InterpolationType" "linear")
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked corresponds to
+              chosen enum value.
+            </para>
+          </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+</sect3>

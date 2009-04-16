@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-17 Added Spanish translation by AntI
+  2007-04-11 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-11-30 replaced informalfigure by axel.wernicke
+  050930 de replaced informalfigure by axel.wernicke
+  050829 de added by axel.wernicke
+-->
+<sect2 id="plug-in-sobel">
+  <!--  <sect2info role="cvs">
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2728 $</revnumber>
+        <date>2006-11-20</date>
+        <authorinitials>j.h</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase>Sobel</phrase>
+  </title>
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Edge Detect</secondary>
+    <tertiary>Sobel</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Sobel</primary>
+  </indexterm>
+  <sect3>
+    <title>
+      <phrase>Overview</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase>Applying example of the Sobel filter</phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Original image</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/edge-taj-sobel.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Filter <quote>Sobel</quote> applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      Sobel's filter detects horizontal and vertical edges separately on a
+      scaled image. Color images are turned into RGB scaled images. As with
+      the Laplace filter, the result is a transparent image with black lines
+      and some rest of colors.
+    </para>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Activate the filter</phrase>
+    </title>
+    <para>
+      You can find this filter through
+      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Edge detect</guisubmenu><guimenuitem>Sobel</guimenuitem></menuchoice>.
+    </para>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Options</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase>
+          Sobel filter options
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/sobel-options.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Parameters Settings</term>
+        <listitem>
+          <itemizedlist>
+            <listitem>
+              <para><guilabel>Sobel Horizontally</guilabel>: Renders near
+                horizontal edges.
+              </para>
+            </listitem>
+            <listitem>
+              <para><guilabel>Sobel Vertically</guilabel>: Renders near
+                vertical edges.
+              </para>
+            </listitem>
+            <listitem>
+              <para><guilabel>Keep sign of result</guilabel>: This option works
+                when one and only one direction is selected: it gives a
+                flat relief with bumps and hollows to the image.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Keep sign of result</term>
+        <listitem>
+          <para>
+            This option allows you to set how the filter will work if you
+            have selected one direction for use only: an embossed grayscale
+            image will be created.
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-17 j.h: revised for v2.6
+  2008-04-05 Mr.Dust : reviewed and added 'ko'
+  2007-09-15 AntI: Added 'es'
+  2006-09-06 added norwegian translation by KoSt
+  2006-05-09 added Korean translation by Dust
+  2006-04-30 HdJ: added dutch translation
+  2006-04-12 ciampix: added italian translation
+  2006-03-05 lexa: added german translation an made the file docbook compliant
+  2005-11-28 lexa: replaced informalfigures by figures
+  2005-05-09 nn: added french translation
+-->
+<!--revision2796 2009-03-27-->
+<sect1 id="gimp-concepts-patterns">
+  <title lang="en">Patterns</title>
+  <title lang="en">パターン</title>
+  <indexterm lang="en">
+    <primary>Patterns</primary>
+    <secondary>Introduction</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>パターン</primary>
+    <secondary>はじめに</secondary>
+  </indexterm>
+
+  <para lang="en">
+    A <emphasis>pattern</emphasis> is an image, usually small, used
+    for filling regions by <emphasis>tiling</emphasis>, that is, by
+    placing copies of the pattern side by side like ceramic tiles.  A
+    pattern is said to be <emphasis>tileable</emphasis> if copies of
+    it can be adjoined left-edge-to-right-edge and
+    top-edge-to-bottom-edge without creating obvious seams.  Not all
+    useful patterns are tileable, but tileable patterns are nicest for
+    many purposes.  (A <emphasis>texture</emphasis>, by the way, is
+    the same thing as a pattern.)
+  </para>
+  <para lang="ja">
+    <emphasis>パターン (文様)</emphasis> とは <emphasis>タイル状</emphasis>
+    に小さな画像の複製が並び、 ちょうど焼き物のタイルが継ぎあわされるように
+    一定の区画を敷き詰めるために使うものです。 パターンのなかでもその複製同士で
+    上辺と下辺を継いでも左辺と右辺を継いでも目立った区切りがないものがあり、
+    これらを <emphasis>継ぎ目なしタイル</emphasis> と呼びます。 有用なパターン
+    が全て継ぎ目なしタイルだとは限りませんが、 継ぎ目なしのほうが何かと便利
+    です。 (ついでに言えば <emphasis>テクスチャ</emphasis> もパターンと同じ
+    ようなものです。)
+  </para>
+  <figure>
+    <title lang="en">Pattern usage</title>
+    <title lang="ja">パターン使用法</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/patterns-usage.png" format="PNG"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          Three ways of using the <quote>Leopard</quote> pattern:
+          bucket-filling a selection, painting with the Clone tool, and
+          stroking an elliptical selection with the pattern.
+        </para>
+        <para lang="ja">
+          <quote>Leopard</quote>パターン (豹柄) の3つの使用例:
+          選択範囲を埋め尽くし; スタンプツールの描線; 楕円選択の輪郭線を描画。
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <para lang="en">In GIMP there are three main uses for patterns:</para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>のパターンの使い方には主に3通りあります:
+  </para>
+  <itemizedlist>
+    <listitem>
+      <para lang="en">
+        With the <link linkend="gimp-tool-bucket-fill">Bucket
+        Fill</link> tool, you can choose to fill a region with a
+        pattern instead of a solid color.
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-bucket-fill">塗りつぶし</link> ツールは
+        選択範囲を埋めるのに単色のみならずパターンも使えます。
+      </para>
+      <figure>
+        <title lang="en">The checked box for use a pattern</title>
+        <title lang="ja">パターンを使うときのチェック欄</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/ja/pattern-checked.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              The box for pattern fill is checked and a click on the pattern
+              shows you all patterns in grid mode.
+            </para>
+            <para lang="ja">
+              パターン塗りのところにチェックを入れ、 パターンのボタンをクリック
+              すると格子状にパターンの見本がずらりと並ぶ。
+            </para>
+          </caption>
+        </mediaobject>
+      </figure>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        With the <link linkend="gimp-tool-clone">Clone</link> tool,
+        you can paint using a pattern, with a wide variety of
+        paintbrush shapes.
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-clone">スタンプ</link> ツールならいろんな
+        ブラシを使ってパターンによる描画ができます。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        When you <emphasis>stroke</emphasis> a path or selection, you
+        can do it with a pattern instead of a solid color.  You can
+        also use the Clone tool as your choice if you stroke the
+        selection using a painting tool.
+      </para>
+      <para lang="ja">
+        選択範囲やパスの <emphasis>境界線を描画</emphasis> するときに、
+        単色のみならずパターンも使えます。 また描画ツールを用いて選択範囲の
+        境界線を描画するときに選んだのと同じものをスタンプツールでも使えます。
+      </para>
+    </listitem>
+  </itemizedlist>
+  <tip>
+    <para lang="en">
+      Note: Patterns do not need to be opaque. If you fill or paint using a
+      pattern with translucent or transparent areas, then the previous
+      contents of the area will show through from behind it. This is one of
+      many ways of doing <quote>overlays</quote> in GIMP.
+    </para>
+    <para lang="ja">
+      パターンは必ずしも不透明でなくても構いません。 パターンを用いて半透明な
+      ところや透過部分を埋め尽くしたり塗ったりすると、 その部分では下側のレイヤ
+      の内容が透けて見えます。 これは<acronym>GIMP</acronym>でできる数多くの
+      <quote>オーバーレイ</quote>の技法のひとつです。
+    </para>
+  </tip>
+  <para lang="en">
+    When you install GIMP, it comes presupplied with a few dozen
+    patterns, which seem to have been chosen more or less randomly.
+    You can also add new patterns, either ones you create yourself, or
+    ones you download from the vast number available online.
+  </para>
+  <para lang="en">
+    GIMP's <emphasis>current pattern</emphasis>,
+    used in most pattern-related operations, is shown in the
+    Brush/Pattern/Gradient area of the Toolbox. Clicking on the pattern symbol
+    brings up the <link linkend="gimp-pattern-dialog">Patterns dialog</link>,
+    which allows you to select a different pattern. You can also access the
+    Patterns dialog by menu, or dock it so that it is present continuously.
+  </para>
+  <para lang="en">
+    To add a new pattern to the collection, so that it shows up in the
+    Patterns dialog, you need to save it in a format GIMP can use, in a folder
+    included in GIMP's pattern search path. There are several file formats you
+    can use for patterns:
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>をインストールすると数十種のパターンがついてきます
+    が、 これらは幾分無作為に選ばれてきた感じがします。 このほか自作のパターン
+    やオンラインで公開されている膨大な数のパターンをダウンロードして追加も
+    できます。
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>の <emphasis>現在活性化しているパターン</emphasis>
+    はパターンに関連する操作の大部分に使われており、 ツールボックスのブラシ /
+    パターン / グラデーションの領域でもその見本が表示されいます。 見本の標識を
+    クリックすると
+    <link linkend="gimp-pattern-dialog">パターンダイアログ</link> が開かれ、
+    様々なパターンから選べるようになっています。 パターンダイアログはメニュー
+    から呼びだせるほか、 ドックに入れて常設することも可能です。
+  </para>
+  <para lang="ja">
+    新しいパターンをコレクションに加えパターンダイアログ上の見本に並ぶように
+    するには、 <acronym>GIMP</acronym>で読み込めるファイル形式にして保存し、
+    <acronym>GIMP</acronym>のパターンを検索する場所に登録されているフォルダに
+    収める必要があります。 パターンとして読み込めるファイル形式は数種類です:
+  </para>
+
+  <variablelist>
+    <varlistentry>
+      <term>PAT</term>
+      <listitem>
+        <para lang="en">
+          The <filename>.pat</filename> format is used only by GIMP, so
+          you will not find patterns in this format unless they were
+          created specifically for GIMP.  You can, however, convert any
+          image into a <filename>.pat</filename> file by opening it in
+          GIMP and then saving it using a file name ending in
+          <filename>.pat</filename>.
+        </para>
+        <para lang="ja">
+          <filename>.pat</filename> 形式は<acronym>GIMP</acronym>でのみ使える
+          種類ですから、 <acronym>GIMP</acronym>専用で作成されたものでなければ
+          この形式のパターンファイルに出会うことはないでしょう。 でも何か他の
+          画像を<acronym>GIMP</acronym>で読み込んでから拡張子 <filename>.pat
+          </filename> をつけて保存すればこの形式への変換ができます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>PNG, JPEG, BMP, GIF, TIFF</term>
+      <listitem>
+        <para lang="en">
+          Since GIMP 2.2 is the ability to use
+          <filename>.png</filename>,  <filename>.jpg</filename>,
+          <filename>.bmp</filename>, <filename>.gif</filename>, or
+          <filename>.tiff</filename> files as patterns.
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym> 2.2 以降は
+          <filename>.png</filename>、 <filename>.jpg</filename>、
+          <filename>.bmp</filename>、 <filename>.gif</filename>、
+          <filename>.tiff</filename> 形式の各ファイルをパターンとして使えます。
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para lang="en">
+    To make a pattern available, you place it in one of the folders in GIMP's
+    pattern search path. By default, the pattern search path includes two
+    folders, the system <filename>patterns</filename> folder, which you should
+    not use or alter, and the <filename>patterns</filename>
+    folder inside your personal GIMP directory. You can add new folders to the
+    pattern search path using the
+    <link linkend="gimp-prefs-folders-data">Pattern Folders</link>
+    page of the Preferences dialog. Any PAT file (or, in GIMP 2.2, any of the
+    other acceptable formats) included in a folder in the pattern search path
+    will show up in the Patterns dialog the next time you start GIMP.
+  </para>
+  <para lang="en">
+    There are countless ways of creating interesting patterns in GIMP, using
+    the wide variety of available tools and filters -- particularly the
+    rendering filters. You can find tutorials for this in many locations,
+    including the GIMP home page <xref linkend="bibliography-online-gimp"/>.
+    Some of the filters have options that allows you to make their results
+    tileable. Also, see <xref linkend="script-fu-tile-blur"/>, this
+    filter allows you to blend the edges of an image in order to make it more
+    smoothly tileable.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>でパターンファイルを使えるようにするには、 まずその
+    ファイルを<acronym>GIMP</acronym>がパターンを検索する場所として登録された
+    パターン用フォルダに入れてください。 初期設定では、 ユーザは改変できない
+    システム用の <filename>patterns</filename> フォルダと、 個人用の<acronym>
+    GIMP</acronym>ディレクトリ内の <filename>patterns</filename> フォルダの
+    2箇所が既にパターン用フォルダとして登録されています。 それ以外のフォルダを
+    追加するには環境設定ダイアログの
+    <link linkend="gimp-prefs-folders-data">パターン用フォルダ</link> のページ
+    で登録してください。 PAT形式のファイル (や<acronym>GIMP</acronym> 2.2 以降
+    ならパターンに利用可能なその他の形式のファイル) はいずれもパターン用
+    フォルダに入れておけば次の<acronym>GIMP</acronym>の起動時からパターン
+    ダイアログの一覧に加わります。
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>に備わる様々なツールやいろいろなフィルタ、 中でも
+    描写フィルタを使えば、 面白いパターンをつくる方法はいくらでもあります。
+    そういったチュートリアルを紹介するサイトも沢山ありますが、
+    <acronym>GIMP</acronym>のホームページ (英語)
+    <xref linkend="bibliography-online-gimp"/> もそのひとつです。 フィルタの
+    一部には継ぎ目なしの仕上りになるオプションつきのものもあります。 また、
+    <xref linkend="script-fu-tile-blur"/> フィルタは画像をもっと円滑に継ぎ
+    合わせられるよう、 画像の縁をブレンドするためのものです。
+  </para>
+  <figure>
+    <title lang="en">Pattern script examples</title>
+    <title lang="ja">パターン化スクリプトの例</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/pattern-script-examples.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          Examples of patterns created using six of the Pattern script-fu's
+          that come with GIMP. Default settings were used for everything
+          except size. (From left to right: 3D Truchet; Camouflage; Flatland;
+          Land; Render Map; Swirly)
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>同梱のパターン化 script-fu から6種類を使った
+          パターンの例。 大きさを除き初期設定を利用。 (上段を左から順に:
+          立体曲線タイル; 迷彩; 平野地形図。 下段: 立体地形図; 地図; 渦巻。)
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    Also of interest are a set of pattern-generating scripts that come with
+    GIMP: you can find them in the menu bar, through
+    <menuchoice>
+      <guimenu>File</guimenu>
+      <guisubmenu>Create</guisubmenu>
+      <guimenuitem>Patterns</guimenuitem>
+    </menuchoice>.
+    Each of the scripts creates a new image filled with a particular type of
+    pattern: a dialog pops up that allows you to set parameters controlling
+    the details of the appearance. Some of these patterns are most useful for
+    cutting and pasting; others serve best as bumpmaps.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>にはパターンを作成するスクリプトが数点ついてくるのも
+    面白いところです。 それらはメニューより
+    <menuchoice>
+      <guimenu>ファイル(<accel>F</accel>)</guimenu>
+      <guisubmenu>画像の作成</guisubmenu>
+      <guisubmenu>パターン(<accel>P</accel>)</guisubmenu>
+    </menuchoice>
+    と辿った先のサブメニューにあります。 これらのパターンはいずれも一定の様式の
+    パターンで埋め尽くされた新たな画像を作成します。 作成時にはダイアログが
+    現れ、 表現を詳細に調節できるようになっています。 切り取って貼り付けるのに
+    向いているパターンと、 バンプマッピングに最適なパターンがあります。
+  </para>
+  <figure>
+    <title lang="en">How to create new patterns</title>
+    <title lang="ja">パターンを新たに作成する方法</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/ja/pattern-create.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+</sect1>

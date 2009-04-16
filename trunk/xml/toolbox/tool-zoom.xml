@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-11 j.h: review for v2.6. No change
+  2008-02-28 j.h: added Ctrl+mouse wheel en;fr
+  2007-12-21 j.h: updated to v2.4. One option is deprecated
+  2007-06-05 kost: added 'no'
+  2007-05-20 lexa: enhanced docbook compliance
+  2006-08-17 changed Threshold by j.h
+  2006-04-17 small spelling fix for german by romanofski
+  2006-02-23 changed description paragraph by j.h
+  2005-12-06 replaced simplesect by sect3 by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  050818 de reviewed by axel.wernicke
+-->
+<!--revision2796 2009-03-27-->
+<sect2 id="gimp-tool-zoom">
+  <title lang="en">Magnify</title>
+  <title lang="ja">ズーム</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Magnify</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Magnify</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Zoom</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>ズーム</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ズーム</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>拡大視</primary>
+  </indexterm>
+  <figure>
+    <title lang="en">
+      The <quote>Zoom</quote> tool in Toolbox
+    </title>
+    <title lang="ja">
+      ツールボックス上の<quote>ズーム</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/ja/toolbox-zoom.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Magnify Tool is used to change the zoom level of your working image.
+    If you only click on the image, the zoom is applied to the whole image.
+    But you can also click-and-drag the mouse pointer to create a zoom
+    rectangle. Then, the action of this rectangle is better understood if the
+    <quote>Allow window resizing</quote>
+    option is unchecked: you can see that the content of this rectangle will
+    be enlarged or reduced so that its biggest dimension fit the corresponding
+    dimension of the image window (if the biggest dimension of the rectangle
+    is width, then it will fit the width of the image window).
+  </para>
+  <para lang="ja">
+    ズームツールは作業を受ける画像の視覚的な拡大/縮小をする倍率を変更するための
+    ものです。 ただ画像をクリックしただけならば、 画像全体の表示倍率を変更
+    します。 しかしこのツールはマウスポインタでクリックして曳くとズーム矩形を
+    作れます。 ここでこの矩形を描く動作のはたらきをよく理解するにはとりあえず
+    <quote>ウィンドウの自動リサイズ</quote>オプションを切っておきましょう:
+    さて矩形を描くとその内容画像が拡大もしくは縮小して見えますが、 画像
+    ウィンドウの幅もしくは高さのうち描かれた矩形の長い方の辺と同じ側に対し、
+    その辺がぴったり収まるような倍率で伸縮して表示されていることがわかります
+    (例えば矩形が横長ならば幅の方が大きいので、
+    画像ウィンドウの幅と矩形の幅が同じになるように画像を伸縮します)。
+  </para>
+  <note>
+    <para lang="en">
+      Using the Magnify tool is not the only way to zoom an image.
+      The <link linkend="gimp-view-zoom">Zoom menu</link> provides
+      access to several functions for changing the image magnification
+      level. For example, you can easily choose an exact magnification
+      level from this menu.
+    </para>
+    <para lang="en">
+      You can also find another way to magnifing your image, by using a simple
+      <link linkend="gimp-image-window-zoom">zoom button</link> on the bottom
+      of each image window.
+    </para>
+    <para lang="ja">
+      画像をズームする手段はズームツールに依るだけが唯一の方法ではありません。
+      <link linkend="gimp-view-zoom">ズームメニュー</link> でも画像の表示倍率を
+      変更する機能がいくつか利用できます。 例えば、 このメニューから数種の
+      固定倍率を簡単に選べます。
+    </para>
+    <para lang="ja">
+      また画像ウィンドウ下部にも簡素な
+      <link linkend="gimp-image-window-zoom">ズームボタン</link> があります。
+    </para>
+  </note>
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access this tool in several ways:
+    </para>
+    <para lang="ja">
+      <quote>ズーム</quote>ツールを起用する方法はいくつかあります:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can get to the Magnify Tool from the image-menu through :
+          <menuchoice>
+            <guimenu><accel>T</accel>ools</guimenu>
+            <guisubmenu>M<accel>a</accel>gnify</guisubmenu>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>ズーム(<accel>A</accel>)</guisubmenu>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by clicking the tool icon:
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-zoom-22.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          in Toolbox.
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-zoom-22.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">キー修飾 (初期設定)</title>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            Holding <keycap>Ctrl</keycap> when clicking on a point of your
+            image will change the zoom direction from zooming in to zooming
+            out.
+          <para lang="ja">
+          </para>
+            画像上でクリックする、 あるいは矩形を作る際にこのキーを押して
+            いると、 近づくズームではなく離れるズームになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>Mouse
+              wheel</keycap>
+          </keycombo>
+        </term>
+        <term lang="ja">
+          <keycombo>
+            <keycap>Ctrl</keycap><mousebutton>マウス車</mousebutton>
+          </keycombo>
+        </term>
+        <listitem>
+          <para lang="en">
+            Spinning the mouse wheel, without clicking, while pressing Ctrl,
+            varies the zoom.
+          </para>
+          <para lang="ja">
+            このキーを押しながら、 クリックではなくマウス車を回転させると、
+            下方向の回転で縮小、 上方向の回転で拡大の表示に連続して切り替わり
+            ます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Zoom tool options</title>
+      <title lang="ja"><quote>ズーム</quote>ツールのツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-options-zoom.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Overview</term>
+        <term lang="ja">概観</term>
+        <listitem>
+          <xi:include href="about-common-options-display.xml"/>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Auto-resize window</term>
+        <term lang="ja">ウィンドウの自動リサイズ</term>
+        <listitem>
+          <para lang="en">
+            This option will allow the canvas to be resized if the zoom level
+            dictates it.
+          </para>
+          <para lang="ja">
+            このオプションはズーム倍率の変化が起こるたびに画像ウィンドウの
+            大きさを画像の大きさに合わせるようにするものです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Tool Toggle</term>
+        <term lang="ja">機能の切り替え</term>
+        <listitem>
+          <para lang="en">
+            The two available tool toggles are used for changing the zoom
+            direction between zooming in and zooming out.
+          </para>
+          <para lang="ja">
+            この2択切り替えは近づくズームと離れるズームから
+            どちらかを選ぶのに使用します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-04-11 ude: changed id (gimp-layer-desaturate -> gimp-tool-desaturate)
+  2009-03-12 j.h: moved from menus:colors/. revised for v2.6
+  2008-01-21 ude: updated de; added equations
+  2007-12-31 j.h updated to v2.4. Options added en;fr
+  2007-10-16 ude: copied here from "menus/layer-desaturate.xml"
+  2007-06-6 Added Spanish translation by AntI
+  2007-02-22 KoSt: added no
+  2005/11/12 split of from layer-colors.xml by axel.wernicke
+-->
+<!--revision2814 2009-04-13-->
+<sect2 id="gimp-tool-desaturate">
+  <title lang="en">Desaturate</title>
+  <title lang="ja">脱色</title>
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Convert to gray scale</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Desaturate</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>色</primary>
+    <secondary>グレースケール画像に変換</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>脱色</primary>
+  </indexterm>
+  <para lang="en">
+    By using the <guimenuitem>Desaturate</guimenuitem> command, you can
+    convert all of the colors on the active layer to corresponding shades
+    of gray. This differs from converting the image to grayscale in two
+    respects. First, it only operates on the active layer and second,
+    the colors on the layer are still RGB values with three components. This
+    means that you can paint on the layer, or individual parts of it,
+    using color at a later time.
+  </para>
+  <para lang="ja">
+    <quote>脱色</quote>ツールは現在活性化しているレイヤーの色調を測って
+    全ての画素の色を灰色陰影に変換します。 これは画像をグレースケール化する
+    のとは2つの意味で異なります。 第1に、 このツールは活性レイヤーにのみ作用
+    します。 第2に、 レイヤーはそれでもなお<acronym>RGB</acronym>の3つの成分を
+    使って色を表現しています。 これはつまりこのレイヤー上にあとから色彩で描ける
+    ことを意味します。
+  </para>
+
+  <note>
+    <para lang="en">
+      This command only works on layers of RGB images. If the image is in
+      Grayscale or Indexed mode, the menu entry is insensitive and
+      grayed out.
+    </para>
+    <para lang="ja">
+      このツールは<acronym>RGB</acronym>モードの画像のレイヤーでのみ利用可能
+      です。
+    </para>
+  </note>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">You can get to this tools in several ways :</para>
+    <para lang="ja">このツールを起用する方法はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the image menu through
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Color Tools</guisubmenu>
+            <guimenuitem>Desturate</guimenuitem>
+          </menuchoice> or
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guimenuitem>Desaturate</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール(<accel>T</accel>)</guimenu>
+            <guisubmenu>色ツール(<accel>C</accel>)</guisubmenu>
+            <guimenuitem>脱色(<accel>D</accel>)...</guimenuitem>
+          </menuchoice> あるいは
+          <menuchoice>
+            <guimenu>色(<accel>C</accel>)</guimenu>
+            <guimenuitem>脱色(<accel>D</accel>)...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking on the tool icon
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata
+                  fileref="images/toolbox/stock-convert-grayscale-16.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          in Toolbox, if this tool has been installed there (see
+          <link linkend="gimp-tools-dialog">Tools dialog</link>.
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata
+                  fileref="images/toolbox/stock-convert-grayscale-16.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          。 但しこの色ツールをツールボックスに登録した場合に限ります。
+          <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link>
+          をご覧ください。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="en">オプション</title>
+    <figure>
+      <title lang="en">The <quote>Desaturate</quote> option dialog</title>
+      <title lang="ja"><quote>脱色</quote>ツールのダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-dialog-desaturate.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">Three options are available:</para>
+    <para lang="ja">3つのオプションがあります。</para>
+    <variablelist>
+      <title lang="en">Choose shade of gray based on</title>
+      <title lang="ja">灰色陰影の基準となる階調を次の3つから選びます。</title>
+      <varlistentry>
+        <term lang="en">Lightness</term>
+        <term lang="ja">明度</term>
+        <listitem>
+          <para lang="en">The graylevel will be calculated as</para>
+          <para lang="ja">この基準は次の計算式で求められます。</para>
+          <informalequation>
+            <mediaobject>
+              <textobject>
+                <phrase>
+                  Lightness = ½ * (max(R,G,B) + min(R,G,B))
+                </phrase>
+              </textobject>
+            </mediaobject>
+          </informalequation>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Luminosity</term>
+        <term lang="ja">光度</term>
+        <listitem>
+          <para lang="en">The graylevel will be calculated as</para>
+          <para lang="ja">この基準は次の計算式で求められます。</para>
+          <informalequation>
+            <mediaobject>
+              <textobject>
+                <phrase>
+                  Luminosity = 0.21 * R + 0.71 * G + 0.07 * B
+                </phrase>
+              </textobject>
+            </mediaobject>
+          </informalequation>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Average</term>
+        <term lang="ja">平均</term>
+        <listitem>
+          <para lang="en">The graylevel will be calculated as</para>
+          <para lang="ja">この基準は次の計算式で求められます。</para>
+          <informalequation>
+            <mediaobject>
+              <textobject>
+                <phrase>Average Brightness = (R + G + B) / 3</phrase>
+              </textobject>
+            </mediaobject>
+          </informalequation>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <figure>
+      <title lang="en">Comparing the three options</title>
+      <title lang="ja">3つの基準の比較</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/sunflower.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/colors-desaturate-brightness.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Lightness</quote> applied</para>
+          <para lang="ja"><quote>明度</quote>を採用</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/colors-desaturate-luminosity.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            <quote>Luminosity</quote> applied. The result is brighter.
+          </para>
+          <para lang="ja">
+            <quote>光度</quote>を採用。 明るい結果になる。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/colors-desaturate-average.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            <quote>Average</quote> applied. The result is in between
+            Brightness and Luminosity.
+          </para>
+          <para lang="ja">
+            <quote>平均</quote>を採用。 明度と光度の間の結果になる。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

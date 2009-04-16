@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2008-03-22 reviewed 'ko' contents by Mr.Dust
+  2008-01-14 alex falappa: fixed outstanding TODOs for 'it'
+  2008-01-04 ude: replaced calloutlist with orderedlist
+  2007-02-27 fixed Korean translation by Dust
+  2006-10-16 added Spanish translation by manuq
+  2006-09-17 added norwegian translation by KoSt
+  2006-07-24 added italian translation by ciampix
+  2006-07-15 fixed spelling errors in german
+  2006-05-02 added Korean translation by Dust
+  2006-01-11 note added by j.h line 744
+  2006-01-06 HdJ: Revised dutch text.
+ -->
+<!--revision2813 2009-04-11-->
+<sect2 id="gimp-image-window">
+  <title lang="en">Image Window</title>
+  <title lang="ja">画像ウィンドウ</title>
+  <indexterm lang="en">
+    <primary>Image Windows</primary>
+    <secondary>Description</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Status bar</primary>
+    <secondary>In image window</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Navigation preview</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Preview</primary>
+    <secondary>Navigation preview</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>画像ウィンドウ</primary>
+    <secondary>解説</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ステイタスバー</primary>
+    <secondary>画像ウィンドウ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ナビゲーションプレビュー</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>プレビュー</primary>
+    <secondary>ナビゲーションプレビュー</secondary>
+  </indexterm>
+  <figure>
+    <title lang="en">
+      A screenshot of the image window illustrating the important components
+    </title>
+    <title lang="ja">
+      画像ウィンドウのスクリーンショット。重要な部分を際立たせてある。
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/ja/imagewindow-description.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <orderedlist>
+    <para lang="en">
+      <acronym>GIMP</acronym> starts opening an empty window which is named
+      <quote>GNU Image Manipulating Program</quote>. As soon as you open an
+      image, it is displayed in the window and its specifications are
+      displayed in the title bar according to the settings you defined in
+      <link linkend="gimp-prefs-dialog">Preference Dialog</link>.
+      Each image that you have open is displayed in its own separate
+      window. (In some cases, multiple windows may all display the same image,
+      but this is unusual.) We will begin with a brief description of the
+      components that are present by default in an ordinary image window. Some
+      of them can be removed by using commands in the
+      <link linkend="gimp-imagewindow-menus-view">View</link>
+      menu; but probably you don't want to do that.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>を起動すると<quote>GNU Image Manipulating Program
+      </quote>のタイトルのついた空のウィンドウが開きます。 画像を開くと
+      すぐにそのウィンドウで表示され、 タイトルバーには画像に関する情報が
+      <link linkend="gimp-prefs-dialog">環境設定ダイアログ</link> で設定された
+      通りの形式で表示されます。 画像はひとつ開くごとにひとつのウィンドウが割り
+      当てられ表示されます。 (複数のウィンドウに同一の画像を表示させることも
+      できなくはありませんが、 普通はしないでしょう。) それでは一般的な画像
+      ウィンドウについてその各部分の説明を手短にすすめてゆきましょう。 ただし
+      これは初期設定の場合の話でありまして、 そのうちのいくつかは
+      <link linkend="gimp-imagewindow-menus-view">表示(<accel>V</accel>)</link>
+      メニューを通じて消せます。
+      とはいってもそんなことをする必要はおそらく無いでしょう。
+    </para>
+    <listitem>
+      <!--1-->
+      <para lang="en"><emphasis>Title Bar:</emphasis>
+        At the top of the image window you will probably see a emphasis bar,
+        showing the name of the image and some basic information about it. The
+        emphasis bar is actually provided by the windowing system, not by GIMP
+        itself, so its appearance may vary with different operating systems,
+        window managers, and/or themes. In the
+        <link linkend="gimp-prefs-dialog">Preferences dialog</link>
+        you can customize the information that appears here, if you want to.
+      </para>
+      <para lang="ja">
+        タイトルバーは大抵は画像ウィンドウのてっぺんにあって、 画像の名前と
+        その基本的な情報を表示しています。 タイトルバーは<acronym>GIMP
+        </acronym>由来ではなくウィンドウシステムが提供するものなので、 その
+        外観はオペレーティングシステムやウィンドウマネージャ、 さらにはその
+        テーマ設定によって異なっています。 表示の内容は、
+        <link linkend="gimp-prefs-dialog">環境設定ダイアログ</link>
+        で調節ができます。
+      </para>
+    </listitem>
+    <listitem>
+      <!--2-->
+      <para lang="en"><emphasis>Image Menu:</emphasis>
+        Directly below the emphasis bar appears the Image Menu (unless it has
+        been suppressed). This menu gives you access to nearly every operation
+        you can perform on an image. (There are some <quote>global</quote>
+        actions that can only be accessed via the Toolbox menu.) You can
+        also get the Image Menu by right-clicking inside the image
+        <footnote><para lang="en">
+            Users with an Apple Macintosh and a one button mouse can use
+            <keycombo><keycap>Ctrl</keycap><mousebutton>mousebutton</mousebutton></keycombo> instead.
+          </para></footnote>
+        , or by left-clicking on the little <quote>arrow</quote> symbol in
+        the upper left corner, if for some reason you find one of these more
+        convenient.
+        More: most menu operations can also be activated from the keyboard,
+        using Alt plus an <quote>accelerator</quote> key underlined in the
+        menu emphasis.
+        More: you can define your own custom shortcuts for menu actions, if
+        you enable <link linkend="gimp-prefs-interface"> Use Dynamic Keyboard
+        Shortcuts</link> in the Preferences dialog.
+      </para>
+      <para lang="ja">
+        <emphasis>メニューバー:</emphasis> タイトルバーの真下にあるのが
+        メニューバーです (隠せます)。 このメニューには画像に対して行なう
+        ほとんど全ての操作が並んでいます。
+        &lt;!-- (There are some <quote>global</quote>
+        actions that can only be accessed via the Toolbox menu.) --&gt;
+        何かの事情のために、メニューは画像の上で右クリック
+        <footnote>
+          <para>
+            アップルマッキントッシュの単ボタンマウスをお使いの方は
+            <keycombo>
+              <keycap>Ctrl</keycap><mousebutton>マウスボタン</mousebutton>
+            </keycombo> で代用してください。
+          </para>
+        </footnote>
+        しても、あるいはウィンドウの左上隅の小さな <quote>矢印</quote> を
+        クリックしても呼びだせるようになってます。 ついでにその1: メニューの
+        ほとんどの作業はキーボードでも進めることができます。 メニューにアンダー
+        ライン付きで書かれた<quote>アクセラレータ</quote>キーと <keycap>Alt
+        </keycap> キーを組み合わせて下さい。 ついでにその2: メニューの項目に
+        独自のショートカットを割り当てるには環境設定ダイアログの
+        <link linkend="gimp-prefs-interface">ユーザインタフェイス</link> の
+        ページで <guilabel>
+        動的なキーボードショートカットを使用(<accel>D</accel>)</guilabel>
+        を有効にして下さい。
+      </para>
+    </listitem>
+    <listitem>
+      <!--3-->
+      <anchor id="gimp-image-window-origin"/>
+      <para lang="en"><emphasis>Menu Button:</emphasis>
+        Clicking on this little button gives you the Image Menu, except in a
+        column instead of a row. Mnemonics users who don't want the menu bar
+        visible can access to this menu by pressing the
+        <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo> key.
+      </para>
+       <para lang="ja">
+        <emphasis>メニューボタン:</emphasis> この小さなボタンをクリック
+        すると、 画像メニューが横一文字ではなく縦に並んで出てきます。
+        メニューバー無しでもよいという記憶力にすぐれたユーザのために
+        メニューを
+        <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo>
+        キーで呼びだす方法があります。
+      </para>
+    </listitem>
+    <listitem>
+      <!--4-->
+      <anchor id="gimp-image-window-ruler"/>
+      <para lang="en"><emphasis>Ruler:</emphasis>
+        In the default layout, rulers are shown above and to the left of the
+        image, indicating coordinates within the image. You can control what
+        type of coordinates are shown if you want to. By default, pixels are
+        used, but you can change to other units, using the Units setting
+        described below.
+      </para>
+      <para lang="en">
+        One of the most important uses of rulers is to create
+        <emphasis>guides</emphasis>.
+        If you click on a ruler and drag into the image display, a guideline
+        will be created, which you can use to help you position things
+        accurately. Guides can be moved by clicking on them and dragging, or
+        deleted by dragging them out of the image display.
+      </para>
+      <para lang="ja">
+        <emphasis>定規:</emphasis> 初期設定での配置では左辺および上辺に
+        定規があり、 画像上の座標を示しています。 座標の単位は変更できます。
+        初期設定では画素 (ピクセル) を単位としていますが、
+        単位を変えるには後で述べる単位設定で行ってください。
+      </para>
+      <para lang="ja">
+        定規には <emphasis>見当線 (ガイド)</emphasis> をつくるというとても
+        重要なはたらきがあります。 定規をクリックしたまま画像上に曳いてゆくと
+        見当線が現れ、 正確な位置決めがしやすくなります。
+        見当線は曳いて移動ができ、画像表示の外まで曳けば消去できます。
+      </para>
+    </listitem>
+    <listitem>
+      <!--5-->
+      <anchor id="quick-mask-toggle"/>
+      <para lang="en"><emphasis>QuickMask Toggle:</emphasis>
+        At the lower left corner of the image display is a small button that
+        toggles on or off the Quick Mask, which is an alternate, and often
+        extremely useful, way of viewing the selected area within the image.
+        For more details see <link linkend="gimp-qmask">QuickMask</link>.
+      </para>
+      <para lang="ja">
+        <emphasis>クイックマスク切り替え:</emphasis>
+        画像表示の左下隅にクイックマスクのオン/オフを切り替える小さなボタンが
+        あります。 クイックマスクは画像内の<quote>選択</quote>のようすを
+        一発転換で視覚化する、 往々にして極めて効果的な手段です。 詳しくは
+        <link linkend="gimp-qmask">クイックマスク</link>をご覧ください。
+      </para>
+    </listitem>
+    <listitem>
+      <!--6-->
+      <para lang="en"><emphasis>Pointer Coordinates:</emphasis>
+        In the lower left corner of the window is a rectangular area used to
+        show the current pointer coordinates (that is, the mouse location, if
+        you are using a mouse), whenever the pointer is within the image
+        boundaries. The units are the same as for the rulers.
+      </para>
+      <para lang="ja">
+        <emphasis>ポインタの座標:</emphasis> ウィンドウの左下の一区画に
+        現在のポインタの座標が表示されています。 (マウスをお使いならば
+        これはマウスの位置のことです)。 この表示は画像上にポインタがある
+        ときに限ります。 定規と同じ単位です。
+      </para>
+    </listitem>
+    <listitem>
+      <!--7-->
+      <para lang="en"><emphasis>Units menu:</emphasis>
+        By default, the units used for the rulers and several other purposes
+        are pixels. You can change to inches, cm, or several other
+        possibilities using this menu. (If you do, note that the setting of
+        <quote>Dot for dot</quote> in the View menu affects how the display is
+        scaled: see <link linkend="gimp-view-dot-for-dot">Dot for Dot</link>
+        for more information.
+      </para>
+      <para lang="ja">
+        <emphasis>単位メニュー:</emphasis> 初期設定では、 定規をはじめ
+        いくつかの機能で使われる単位はピクセルです。 このメニューで
+        インチやセンチメートルをはじめさまざまな尺度に変更ができます。
+        (この変更にさいして、 <guimenuitem>表示</guimenuitem>メニューの
+        <guilabel>点に点を対応させる</guilabel> を指定した場合に画像表示の
+        大きさがどう変わるかに注意してください:
+        <link linkend="gimp-view-dot-for-dot">点に点を対応させる</link>
+        にさらに詳しい説明があります。)
+      </para>
+    </listitem>
+    <listitem><!--Chaged 2008-12-27-->
+      <!--8-->
+      <anchor id="gimp-image-window-zoom"/>
+      <para lang="en"><emphasis>Zoom button:</emphasis>
+        There are a number of ways to zoom the image in or out, but this menu
+        is perhaps the simplest. With GIMP-2.6 it is now possible to enter
+        the zoom level you want in the text box.
+      </para>
+      <para lang="ja">
+        <emphasis>ズームボタン</emphasis> ズームで近づいたり離れたりする方法
+        はたくさん用意されていますが、 このメニューが最も単純かもしれません。
+        <acronym>GIMP</acronym> 2.6 からは表示倍率が数値入力欄で直接指定
+        できます。
+      </para>
+    </listitem>
+    <listitem>
+      <!--9-->
+      <anchor id="gimp-image-window-status-bar"/>
+      <para lang="en"><emphasis>Status Area:</emphasis>
+        The Status Area appears below the image display. Most of the time, by
+        default, it shows which part of the image is currently active, and the
+        amount of system memory that the image is consuming. You can customize
+        the information that appears here, by changing your Preferences. When
+        you perform time-consuming operations, the status area changes
+        temporarily to show what operation is being performed, and its state
+        of progress.
+      </para>
+      <para lang="ja">
+        <emphasis>状態情報:</emphasis> 状態情報は画像表示の底部に出ています。
+        初期設定ではほとんどの時間、ここには画像の現在の作業域と
+        この画像のために消費されているメモリ量の表示がされています。
+        環境設定のところでこの情報の内容を設定できます。
+        時間を多く費す作業をしているときに、状態情報は一時的に
+        その作業が何であるかの表示に切り替わり、進捗を報告します。
+      </para>
+      <note>
+        <para lang="en">
+          Note that the amount of memory consumed by the image is quite
+          different from the image file size. For instance, a 69.7Kb .PNG
+          image will occupy 246Kb in memory when displayed. Two reasons for
+          that. First, image is reconstituted from the compressed .PNG file.
+          Then, GIMP keeps a copy of the image in memory to be used by the
+          Undo command.
+        </para>
+        <para lang="ja">
+          画像が費やすメモリ量は画像ファイルのサイズとは全く違います。
+          たとえば 69.7Kbの.PNG画像が表示に246Kbのメモリを占める
+          というふうなことです。 これには二つの理由があります。
+          まず、.PNGファイルは圧縮されているのに対し、
+          画像はこれを展開したものです。
+          それから、<acronym>GIMP</acronym>は取り消しコマンドに備え
+          画像のコピーを控えるためにメモリを使っています。
+        </para>
+      </note>
+    </listitem>
+    <listitem>
+      <!--10-->
+      <para lang="en"><emphasis>Cancel Button:</emphasis>
+        At the lower right corner of the window the Cancel button appears
+        temporarily. If you start a complex, time-consuming operation (most
+        commonly a plug-in), and then decide, while it is being computed,
+        that you didn't really want to do it after all, this button, which
+        appears then, will cancel it immediately.
+      </para>
+      <para lang="ja">
+        <emphasis>中止ボタン:</emphasis> 中止ボタンがウィンドウの右下の区画に
+        一時的に現れることがあります。 (たいていはプラグインのような) 複雑で
+        時間のかかる作業中に、 このボタンが現れますので、
+        途中だが止めたいという場合に押せば直ちに中止できます。
+      </para>
+      <note>
+        <para lang="en">
+          There are a few plug-ins that respond badly to being canceled,
+          possibly leaving corrupted pieces of images behind.
+        </para>
+        <para lang="ja">
+          残念ながら中断するとまずいプラグインがまれにあり、
+          壊れた画像を残して終了するおそれがあります。
+        </para>
+      </note>
+    </listitem>
+    <listitem>
+      <!--11-->
+      <anchor id="gimp-image-window-nav-button"/>
+      <indexterm lang="en">
+        <primary>Navigation</primary>
+        <secondary>Navigation button</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>ナビゲーション</primary>
+        <secondary>ナビゲーションボタン</secondary>
+      </indexterm>
+      <para lang="ja">
+      <para lang="en"><emphasis>Navigation control:</emphasis>
+        This is a small cross-shaped button at the lower right corner of the
+        image display. Clicking on it, and holding the left mouse button down,
+        brings up a window showing a miniature view of the image (Navigation
+        Preview), with the
+        displayed area outlined. You can pan to a different part of the image
+        by moving the mouse while keeping the button depressed. For large
+        images of which only a small part is displayed, the navigation window
+        is often the most convenient way of getting to the part of the image
+        you are looking for. (See
+        <link linkend="gimp-navigation-dialog">Navigation Dialog</link>
+        for other ways to access the Navigation Window). (If your mouse has a
+        middle-button, click-drag with it to span across the image).
+      </para>
+        <emphasis>ナビゲーションコントロール(遷域制御):</emphasis>
+        これは小さな十字ボタンになっていて画像表示の右下隅にあります。
+        ここをクリックしたままにすると画像の縮小版(ナビゲーションプレビュー)
+        が表示枠に囲まれて表示されている小さなウィンドウが出てきます。
+        ボタンを離すまでは、マウスで画面上での視野を移すことができます。
+        表示枠よりも大きな画像のため一部しか見えないとき、
+        画像の見たい部分をとらえるのにナビゲーションウィンドウだとたいてい
+        一番簡単にできます。
+        (ナビゲーションウィンドウを呼びだす別の方法については、 <link
+        linkend="gimp-navigation-dialog">ナビゲーションダイアログ</link>
+        を参考にしてください。)
+        (3ボタンマウスをお使いの場合、中ボタンで曳くと画像上を巡れます。)
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en"><emphasis>Inactive Padding Area:</emphasis>
+        This padding area separates the active image display and the inactive
+        padding area, so you're able to distinguish between them. You cannot
+        apply any Filters or Operations in general on the inactive area.
+      </para>
+      <para lang="ja">
+        <emphasis>外部不活性区域:</emphasis> 画像表示の外側を囲んで
+        不活性な領域がひろがっており、 画像上とそれ以外を区別できます。
+        不活性区域はどんなフィルタも操作も受け付けません。
+      </para>
+    </listitem>
+    <listitem>
+      <!--12-->
+      <anchor id="imagewindow-display"/>
+      <para lang="en"><emphasis>Image Display:</emphasis>
+        The most important part of the image window is, of course, the image
+        display or canvas. It occupies the central area of the window,
+        surrounded by a yellow dotted line showing the image boundary, against
+        a neutral gray background. You can change the zoom level of the image
+        display in a variety of ways, including the Zoom setting described
+        below.
+      </para>
+      <para lang="ja">
+        <emphasis>画像表示:</emphasis> 画像ウィンドウのうちで最も重要なのは
+        当然ながら画像表示すなわち キャンバスです。 画像ウィンドウの中央を
+        占め、 黄色の点線が画像とその外部の無色な灰色の背景との境界を
+        示しています。 画像をズーム表示するその段階を調整する方法はいろいろ
+        ありますが、 以下[?]に述べているズーム調整もそのひとつです。
+      </para>
+    </listitem>
+    <listitem>
+      <!--13-->
+      <anchor id="gimp-image-window-zoom-follow-button"/>
+      <para lang="en"><emphasis>Image Window Resize Toggle:</emphasis>
+        If this button is pressed, the image itself will be resized if the
+        image window is resized.
+      </para>
+      <para lang="ja">
+        <emphasis>ウィンドウと画像の連動伸縮の切り替え:</emphasis>
+        このボタンを押すと、画像ウィンドウが伸縮されるのにあわせ
+        画像の表示サイズも変わるようになります。
+      </para>
+    </listitem>
+  </orderedlist>
+</sect2>
