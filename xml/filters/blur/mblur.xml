@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-08-03 prokoudine: improved Russian content, added localized screenshot
+  2007-03-29 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050819 de added by axel.wernicke
+  050930 de fixed figure issue by axel.wernicke
+  051111 en;fr reviewed by julien hardelin
+-->
+<sect2 id="plug-in-mblur">
+<!--  <sect2info>
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2728 $</revnumber>
+        <date>2006-10-23</date>
+        <authorinitials>j.h</authorinitials>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase>Motion Blur</phrase>
+  </title>
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Blur</secondary>
+    <tertiary>Motion Blur</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Motion Blur</primary>
+  </indexterm>
+  <sect3>
+    <title>
+      <phrase>Overview</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase>
+          Starting example for Motion Blur filter
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Original image</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/blur-taj-mblur-linear.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Linear blur</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title>
+        <phrase>Using example for Motion Blur filter</phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/blur-taj-mblur-radial.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Radial blur</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/blur-taj-mblur-zoom.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Zoom blur</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      The Motion Blur filter creates a movement blur. The filter is capable of
+      Linear, Radial, and Zoom movements. Each of these movements can be
+      further adjusted, with Length, or Angle settings available.
+    </para>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Activate the filter</phrase>
+    </title>
+    <para>
+      You can find this filter in the image menu under
+      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</guisubmenu><guimenuitem>Motion Blur</guimenuitem></menuchoice>
+    </para>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Options</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase><quote>Motion Blur</quote> filter options
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/options-blur-mblur.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Blur Type</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term>Linear</term>
+              <listitem>
+                <para>
+                  Is a blur that travels in a single direction,
+                  horizontally, for example. In this case, Length means as
+                  Radius in other filters:it represents the blur intensity.
+                  More Length will result in more blurring. Angle describes
+                  the actual angle of the movement. Thus, a setting of 90
+                  will produce a vertical blur, and a setting of 0 will
+                  produce a horizontal blur.
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+          <variablelist>
+            <varlistentry>
+              <term>Radial</term>
+              <listitem>
+                <para>
+                  motion blur that creates a circular blur. The Length
+                  slider is not important with this type of blur. Angle on
+                  the other hand, is the primary setting that will affect
+                  the blur. More Angle will result in more blurring in a
+                  circular direction.  The Radial motion blur is similar to
+                  the effect of a spinning object. The center of the spin
+                  in this case, is the center of the image.
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+          <variablelist>
+            <varlistentry>
+              <term>Zoom</term>
+              <listitem>
+                <para>
+                  Produces a blur that radiates out from the center of the
+                  image. The center of the image remains relatively calm,
+                  whilst the outer areas become blurred toward the
+                  center. This filter option produces a perceived forward
+                  movement, into the image. Length is the main setting
+                  here, and affects the amount of speed, as it were, toward
+                  the center of the image.
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Blur settings</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term>Length</term>
+              <listitem>
+                <para>
+                  This slider controls the distance pixels are moved (1 -
+                  256)
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>Angle</term>
+              <listitem>
+                <para>
+                  As seen above, Angle slider effect depends on Blur type
+                  (0 - 360).
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Blur Center</term>
+        <listitem>
+          <para>
+            With this option, you can set the starting point of movement.
+            Effect is different according to the Blur Type you have selected.
+            With Radial Type for instance, you set rotation center. With Zoom
+            Type, vanishing point. This option is greyed out with Linear type.
+          </para>
+          <tip>
+            <para>
+              You have to set the blur center coordinates. Unfortunately, you
+              can't do that by clicking on the image. But, by moving mouse
+              pointer on the image, you can see its coordinates in the lower
+              left corner of the image window. Only copy them out into the
+              input boxes.
+            </para>
+          </tip>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

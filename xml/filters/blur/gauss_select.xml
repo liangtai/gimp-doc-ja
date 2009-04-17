@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-08-03 prokoudine: improved Russian content, added localized screenshot
+  2007-03-29 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050819 de added by axel.wernicke
+  050930 de fixed figure issue by axel.wernicke
+  051110 en;fr reviewed by julien hardelin
+-->
+<sect2 id="plug-in-sel-gauss">
+  <title>Selective Gaussian Blur</title>
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Blur</secondary>
+    <tertiary>Selective Gaussian</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Selective Gaussian Blur</primary>
+  </indexterm>
+  <sect3>
+    <title>Overview</title>
+    <figure>
+      <title>The Selective Gaussian Blur filter</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/taj_orig.jpg"
+            format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Original</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/examples/blur-taj-selective.jpg"
+            format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>Blur applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      Contrary to the other blur plug-ins, the Selective Gaussian Blur plug-in
+      doesn't act on all pixels: blur is applied only if the difference
+      between its value and the value of the surrounding pixels is less than a
+      defined Delta value. So, contrasts are preserved because difference is
+      high on contrast limits. It is used to blur a background so that the
+      foreground subject will stand out better. This add a sense of depth to
+      the image with only a single operation.
+    </para>
+  </sect3>
+  <sect3>
+    <title>Activate the filter</title>
+    <para>
+      You can find this filter in the image menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Blur</guisubmenu>
+        <guimenuitem>Selective Gaussian Blur</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+  <sect3>
+    <title>Options</title>
+    <figure>
+      <title>
+        <quote>Selective Gaussian</quote> filter parameters settings
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/filters-blur-gaussselect.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Blur Radius</term>
+        <listitem>
+          <para>
+            Here you can set the blur intensity, in pixels.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Max. Delta</term>
+        <listitem>
+          <para>
+            Here you can set the maximum difference (0-255) between the
+            pixel value and the surrounding pixel values. Above this Delta,
+            blur will not be applied to that pixel.
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

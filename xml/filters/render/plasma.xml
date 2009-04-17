@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-02 AntI: Added "es"
+  2007-05-18 KoSt: added 'no'
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  2005/09/21 de added by axel.wernicke
+-->
+<sect2 id="plug-in-plasma">
+  <title>Plasma</title>
+
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Plasma</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Plasma</primary>
+  </indexterm>
+
+  <sect3>
+    <title>Overview</title>
+    <figure>
+      <title>Example of a rendered plasma</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-plasma.jpg"/>
+        </imageobject>
+        <caption>
+          <para>Filter <quote>Plasma</quote> applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      All of the colors produced by Plasma are completely saturated.
+      Sometimes the strong colors may be distracting, and a more
+      interesting surface will appear when you desaturate the image
+      using
+      <guimenuitem>Layer/Colors/Desaturate</guimenuitem>.
+    </para>
+    <note>
+      <para>
+        An enhanced version of the Plasma plug-in, called
+        <emphasis>Plasma2</emphasis>, with many more options and
+        parameters, is available from the GIMP Plugin Registry
+        <xref linkend="bibliography-online-gimp-plugin-plasma2"/>.
+      </para>
+    </note>
+  </sect3>
+
+  <sect3>
+    <title>Activating the filter</title>
+    <para>
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guisubmenu>Clouds</guisubmenu>
+        <guimenuitem>Plasma</guimenuitem>
+      </menuchoice>.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Options</title>
+    <figure>
+      <title><quote>Plasma</quote> filter options</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-render-plasma.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Random Seed</term>
+        <listitem>
+          <para>
+            <guilabel>Random Seed</guilabel> controls the randomization
+            element. The <guibutton>Randomize</guibutton> check-button will
+            set the seed using the hardware clock of the computer.
+            There is no reason to use anything else unless you want to
+            be able to repeat the exact same pattern of randomization
+            on a later occasion.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Turbulence</term>
+        <listitem>
+          <para>
+            This parameter controls the complexity of the plasma.
+            High values give a hard feeling to the cloud (like an
+            abstract oil painting or mineral grains), low values
+            produce a softer cloud (like steam, mist or smoke).  The
+            range is 0.1 to 7.0.
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
