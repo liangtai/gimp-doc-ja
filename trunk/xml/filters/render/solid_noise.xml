@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-05-15 KoSt: added 'no'
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  2005/09/21 de added by axel.wernicke
+-->
+<sect2 id="plug-in-solid-noise">
+  <title>Solid Noise</title>
+
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Solid Noise</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Solid noise</primary>
+  </indexterm>
+
+  <sect3>
+    <title>Overview</title>
+    <figure>
+      <title>Example of turbulent solid noise</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-solidnoise.jpg"/>
+        </imageobject>
+        <caption>
+          <para>Filter <quote>Solid noise</quote> applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      Solid Noise is a great texture maker. Note that this noise is
+      always gray, even if you applied it to a very colorful image (it
+      doesn't matter what the original image looks like -- this filter
+      completely overwrites any existing background in the layer it is
+      applied to). This is also a good tool to create displacement maps for
+      the <link linkend="plug-in-warp">Warp</link> plug-in or for the
+      <link linkend="plug-in-bump-map">Bump Map</link> plug-in. With the
+      "turbulence" setting active, the results look quite a bit like real
+      clouds.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Activating the filter</title>
+    <para>
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guisubmenu>Clouds</guisubmenu>
+        <guimenuitem>Solid noise</guimenuitem>
+      </menuchoice>.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Options</title>
+    <figure>
+      <title><quote>Solid Noise</quote> filter options</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/solid-noise-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Random Seed</term>
+        <listitem>
+          <para>
+            <guilabel>Random Seed</guilabel> controls random behaviour of the
+            filter. If the same random seed in the same situation is used, the
+            filter produces exactly the same results. A different random seed
+            produces different results. Random seed can be entered manually or
+            generated randomly by pressing <guibutton>New Seed</guibutton>
+            button.
+          </para>
+          <para>
+            When the <guilabel>Randomize</guilabel> option is checked, random
+            seed cannot be entered manually, but is randomly generated each
+            time the filter is run. If it is not checked, the filter remembers
+            the last random seed used.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Turbulent</term>
+        <listitem>
+          <para>
+            If you check this, you'll get very interesting effects,
+            often something that looks much like oil on water, or
+            clouds of smoke, or living tissue, or a Rorschach blot.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Detail</term>
+        <listitem>
+          <para>
+            This controls the amount of detail in the noise
+            texture. Higher values give a higher level of detail, and
+            the noise seems to be made of spray or small particles,
+            which makes it feel hard. A low value makes it more soft
+            and cloudy.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Tileable</term>
+        <listitem>
+          <para>
+            If you check Tileable, you'll get a noise which can be
+            used as tiles. For example, you can use it as a background
+            in an HTML page, and the tile edges will be joined
+            seamlessly.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>X and Y Size</term>
+        <listitem>
+          <para>
+            These control the size and proportion of the noise shapes
+            in X (horizontal) and Y (vertical) directions (range 0.1
+            to 16.0).
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

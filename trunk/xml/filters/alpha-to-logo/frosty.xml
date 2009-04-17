@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-10-29 ude: continued ('en','de')
+  2088-08-19 kost: added 'no'
+  2008-08-17 ude: created stub ('en','de')
+-->
+<sect2 id="script-fu-frosty-logo-alpha">
+  <title>
+    <phrase>Frosty</phrase>
+  </title>
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Frosty</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Frosty</primary>
+  </indexterm>
+  <sect3>
+    <title>
+      <phrase>Overview</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase>
+          Example for the <quote>Frosty</quote> filter
+        </phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/alpha-to-logo/frosty.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>The <quote>Frosty</quote> filter applied</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/file/create/logos/frosty.jpg" format="JPG"/>
+        </imageobject>
+        <caption>
+          <para>The <quote>Frosty</quote> logo</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      This filter is derived from the <quote>Frosty</quote> logo script
+      (<menuchoice><guimenu>File</guimenu><guisubmenu>Create</guisubmenu><guisubmenu>Logos</guisubmenu><guimenuitem>Frosty</guimenuitem></menuchoice>
+      in the image window), which creates a frozen logo like the example above.
+    </para>
+    <para>
+      The filter adds this frosty effect to the alpha, that is the area of the
+      active layer defined by the non-transparent pixels (think of it as a
+      <quote>selection by visibility</quote>). The filter effect will always
+      be applied according to the alpha values.
+    </para>
+    <note>
+      <para>
+        Unlike the most alpha to logo filters, the <quote>Frosty</quote>
+        filter will <emphasis>not</emphasis> resize the image to the active
+        layer's size.
+      </para>
+    </note>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Activate the filter</phrase>
+    </title>
+    <para>
+      This filter is found in the image window menu under
+      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Alpha to Logo</guisubmenu><guimenuitem>Frosty</guimenuitem></menuchoice>.
+    </para>
+  </sect3>
+  <sect3>
+    <title>
+      <phrase>Options</phrase>
+    </title>
+    <figure>
+      <title>
+        <phrase><quote>Frosty</quote> options</phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/alpha-to-logo/frosty-options.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <phrase>Effect size (pixels)</phrase>
+        </term>
+        <listitem>
+          <figure>
+            <title>
+              <phrase><quote>Effect size</quote> examples</phrase>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/filters/alpha-to-logo/frosty-10.jpg" format="JPG"/>
+              </imageobject>
+              <caption>
+                <para>Effect size 10</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/filters/alpha-to-logo/frosty-200.jpg" format="JPG"/>
+              </imageobject>
+              <caption>
+                <para>Effect size 200</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/filters/alpha-to-logo/frosty-400.jpg" format="JPG"/>
+              </imageobject>
+              <caption>
+                <para>Effect size 400</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <phrase>Background color</phrase>
+        </term>
+        <listitem>
+          <para>
+            This color is used to fill the background layer created by the
+            filter. It defaults to white. When you click on the color button,
+            a color selector pops up where you can select any other color.
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
