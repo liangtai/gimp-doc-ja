@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-03-09 j.h: updated to v2.6
   2008-01-05 j.h: updated en;fr to v2.4.
@@ -10,7 +11,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--revision2790 2009-03-22-->
+<!--revision2818 2009-04-20-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -59,22 +60,13 @@
     automatically adapted to the frame size. You can adjust this frame
     whenever you like.
   </para>
-  <para lang="en">
-    When the mouse pointer is around the center of the frame, it
-    comes with a small move-cross
-    <guiicon>
-      <inlinegraphic fileref="images/toolbox/stock-tool-move-16.png"/>
-    </guiicon>.
-    Click-and-drag to move the frame and its contents (the text shows up when
-    you release the mouse button). The text remains at the same place in the
-    frame.
-  </para>
   <para lang="ja">
     テキストツールは画像内に文字や語句を置くためのものです。 このツールで画像を
     クリックすると文章を書きこめる<quote>テキストエディタ</quote>ダイアログが
-    開かれます。 入力された文は新たなテキストレイヤーとなり、 レイヤーダイアログで
-    管理できます。 <emphasis>ツールオプション</emphasis> 上で書体 (フォント) や
-    文字の色、 大きさが変更できて、 即座に画像上で変化を確かめられます。
+    開かれます。 入力された文は新たなテキストレイヤーとなり、 レイヤー
+    ダイアログで管理できます。 <emphasis>ツールオプション</emphasis> 上で書体
+    (フォント) や文字の色、 大きさが変更できて、 即座に画像上で変化を
+    確かめられます。
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym> 2.6 より新たな手段が加わりました。 キャンバス内で
@@ -83,15 +75,31 @@
     この枠内に表示され、 枠の大きさにその文字が自動的に適合します。 <!--たぶん
     嘘-->この枠はいつでも調整できます。
   </para>
+  <figure>
+    <title lang="en">Text tool bounding box</title>
+    <title lang="ja">テキストツールの矩形枠</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                    fileref="images/using/text-tool.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    When the mouse pointer is around the center of the frame, it
+    comes with a small crosshair
+    <guiicon>
+      <inlinegraphic fileref="images/toolbox/stock-tool-move-16.png"/>
+    </guiicon>.
+    Click-and-drag to move the frame and its contents (the text shows up when
+    you release the mouse button). The text remains at the same place in the
+    frame.
+  </para>
   <para lang="ja">
     マウスポインタはこの枠内の中央に入ると小さな移動十字 (四方矢印)
     <guiicon>
-      <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="images/toolbox/stock-move-16.png"/>
-        </imageobject>
-      </inlinemediaobject>
-    </guiicon>.
+      <inlinegraphic fileref="images/toolbox/stock-move-16.png"/>
+    </guiicon>
     の姿に変化します。 そこでクリックして曳けばこの枠とその内容が移動します
     (テキストはマウスボタンを放すと現れます)。 テキストは枠内での同じ位置に
     有ります。
@@ -103,7 +111,9 @@
     <para lang="en">
       You can access this tool in several ways:
     </para>
-    <para lang="ja">このツールを起用する方法はいくつかあります:</para>
+    <para lang="ja">
+      <quote>テキスト</quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -113,26 +123,6 @@
             <guisubmenu>Te<accel>x</accel>t</guisubmenu>
             </menuchoice>,
         </para>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          by clicking the tool icon
-          <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/toolbox/stock-tool-text-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
-          </guiicon>
-          in Toolbox,
-        </para>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          or by using the <keycap>T</keycap> keyboard shortcut.
-        </para>
-      </listitem>
-      <listitem>
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
@@ -142,32 +132,39 @@
         </para>
       </listitem>
       <listitem>
+        <para lang="en">
+          by clicking the tool icon
+          <guiicon>
+            <inlinegraphic
+                fileref="images/toolbox/stock-tool-text-22.png"/>
+          </guiicon>
+          in Toolbox,
+        </para>
         <para lang="ja">
           ツールボックスのツールアイコン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/toolbox/stock-tool-text-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic
+                fileref="images/toolbox/stock-tool-text-22.png"/>
           </guiicon>
         </para>
       </listitem>
       <listitem>
+        <para lang="en">
+          or by using the <keycap>T</keycap> keyboard shortcut.
+        </para>
         <para lang="ja">
           キーボードショートカット <keycap>T</keycap>
         </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
     <title lang="en">Options</title>
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en">Text tool options</title>
-      <title lang="ja">
-        <quote>テキスト</quote>ツールのツールオプション
-      </title>
+      <title lang="ja"><quote>テキスト</quote>ツールのツールオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -176,15 +173,9 @@
       </mediaobject>
     </figure>
 
-    <variablelist>
-      <varlistentry>
-        <term lang="en">Overview</term>
-        <term lang="ja">概観</term>
-        <listitem>
-          <xi:include href="about-common-options-display.xml"/>
-        </listitem>
-      </varlistentry>
+    <xi:include href="about-common-options-display.xml"/>
 
+    <variablelist>
       <varlistentry>
         <term lang="en">Font</term>
         <term lang="ja">フォント</term>
@@ -245,7 +236,8 @@
         <term lang="en">Force Auto-Hinter</term>
         <term lang="ja">自動ヒント強制</term>
         <listitem>
-          <para lang="en"><guilabel>Auto Hinter</guilabel> tries to automatically
+          <para lang="en">
+            <guilabel>Auto Hinter</guilabel> tries to automatically
             compute information for better representation of the
             character font.
           </para>
@@ -502,12 +494,14 @@
             </title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/toolbox/ja/text-along-path.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/ja/text-along-path.png"/>
               </imageobject>
             </mediaobject>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/toolbox/ja/text-path.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/ja/text-path.png"/>
               </imageobject>
             </mediaobject>
           </figure>

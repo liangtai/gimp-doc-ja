@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-02-25 j.h: revised for v2.6
   2007-08-09 revised for v2.4 by j.h
   2007-05-03 Added Spanish translation by AntI
   2006-09-03 lexa: added german translation
@@ -8,130 +10,174 @@
   2006-02-26 Several updates to v2.10 by j.h in en
   2005-11-28 replaced informalfigures by figures by lexa
 -->
+<!--revision2817 2009-04-19-->
 <sect2 id="gimp-buffer-dialog">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2007-08-09</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Buffers Dialog</phrase>
-  </title>
-  <indexterm>
+  <title lang="en"><quote>Buffers</quote> Dialog</title>
+
+  <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Buffers</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Buffers</primary>
     <secondary>Dialog</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Buffers</primary>
     <secondary>Cut named</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Buffers</primary>
     <secondary>Copy named</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Buffers</primary>
     <secondary>Paste named</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Cut Named</primary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Copy Named</primary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Paste Named</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>Dialogs</primary>
+    <secondary>Buffers</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Buffers</primary>
+    <secondary>Dialog</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Buffers</primary>
+    <secondary>Cut named</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Buffers</primary>
+    <secondary>Copy named</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Buffers</primary>
+    <secondary>Paste named</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Cut Named</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Copy Named</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>Paste Named</primary>
+  </indexterm>
+
   <figure>
-    <title>
-      <phrase>The Buffers dialog (as a list)</phrase>
-    </title>
+    <title lang="en">The <quote>Buffers</quote> dialog (as a list)</title>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="images/dialogs/buffers-dialog.png" format="PNG"/>
+        <imagedata fileref="images/dialogs/ja/buffers-list.png" format="PNG"/>
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     Buffers are temporary repositories for image data, created when
     you cut or copy part of a drawable (a layer, layer mask, etc.).
     You can save a document in this buffer in two ways:
-    <menuchoice><guimenu>Edit</guimenu><guisubmenu>Buffer</guisubmenu><guimenuitem>Copy Named</guimenuitem></menuchoice>
+    <menuchoice>
+      <guimenu>Edit</guimenu>
+      <guisubmenu>Buffer</guisubmenu>
+      <guimenuitem>Copy Named</guimenuitem>
+    </menuchoice>
     or
-    <menuchoice><guimenu>Edit</guimenu><guisubmenu>Buffer</guisubmenu><guimenuitem>Cut Named</guimenuitem></menuchoice>
+    <menuchoice>
+      <guimenu>Edit</guimenu>
+      <guisubmenu>Buffer</guisubmenu>
+      <guimenuitem>Cut Named</guimenuitem>
+    </menuchoice>
     A dialog pops up asking you to name a buffer to store the data
-    in.  There is no hard limit on the number of named buffers you
+    in. There is no hard limit on the number of named buffers you
     can create, although, of course, each one consumes a share of memory.
   </para>
-  <para>
-    The Buffers dialog shows you the contents of all existing named buffers,
-    and allows you to operate on them in several ways. It also shows you, at
-    the top, the contents of the Global Buffer, but this is merely a display:
-    you can't do anything with it.
+  <para lang="en">
+    The <quote>Buffers</quote> dialog shows you the contents of all existing
+    named buffers, and allows you to operate on them in several ways. It
+    also shows you, at the top, the contents of the Global Buffer, but this
+    is merely a display: you can't do anything with it.
+  </para>
+  <para lang="ja">
+  </para>
+  <para lang="ja">
   </para>
   <caution>
-    <para>
+    <para lang="en">
       Named buffers are not saved across sessions. The only way to save their
       contents is to paste them into images.
     </para>
+    <para lang="ja">
+    </para>
   </caution>
+
   <sect3 id="gimp-buffer-dialog-activate">
-    <title>
-      <phrase>Activate Dialog</phrase>
-    </title>
-    <para>
-      The Buffers dialog is a dockable dialog; see the section
-      <xref linkend="gimp-concepts-docks"/>
-      for help on manipulating it. It can be activated in several ways:
+    <title lang="en">Activating the Dialog</title>
+    <para lang="en">
+      This dialog is a dockable dialog; see the
+      section <xref linkend="gimp-concepts-docks"/> for help on manipulating
+      it.
+    </para>
+    <para lang="en">
+      You can access it:
     </para>
     <itemizedlist>
       <listitem>
-        <para>
-          From the Toolbox menu:
-          <menuchoice><guimenu>File</guimenu><guisubmenu>Dialogs</guisubmenu><guimenuitem>Buffer</guimenuitem></menuchoice>.
+        <para lang="en">
+          from an image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Buffers</guimenuitem>
+          </menuchoice>;
         </para>
       </listitem>
       <listitem>
-        <para>
-          From an image menu:
-          <menuchoice><guimenu>Dialogs</guimenu><guimenuitem>Buffer</guimenuitem></menuchoice>,
-          
-          
-          or
-          <menuchoice><guimenu>Edit</guimenu><guisubmenu>Buffer</guisubmenu><guimenuitem>Paste Named</guimenuitem></menuchoice>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          From the Tab menu in any dockable dialog:
-          <menuchoice><guimenu>Add Tab</guimenu><guimenuitem>Buffer</guimenuitem></menuchoice>.
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Buffers</guimenuitem>
+          </menuchoice>.
         </para>
       </listitem>
     </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Buffers</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Buffers</guimenuitem>
+      </menuchoice>.
+    </para>
   </sect3>
+
   <sect3 id="gimp-buffer-dialog-using">
-    <title>
-      <phrase>Using the Buffers dialog</phrase>
-    </title>
+    <title lang="en">Using the <quote>Buffers</quote> dialog</title>
     <figure>
-      <title>
-        <phrase>The Buffers Menu</phrase>
-      </title>
+      <title lang="en">The <quote>Buffers</quote> Menu</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/dialogs/buffers-dialog.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/dialogs/ja/buffers-list.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Clicking on a buffer in the display area makes it the active buffer, i.
       e., the one that will be used for paste commands executed with the
       Buffers Menu or the buttons at the bottom of the dialog. Double-clicking
@@ -139,49 +185,57 @@
       floating selection; this is a quick way of executing the <quote>Paste
       Buffer</quote> command.
     </para>
-    <para>
+    <para lang="en">
       At the bottom of the dialog are four buttons. The operations they
       perform can also be accessed from the Buffers Menu that you get by right
       clicking on the active buffer.
     </para>
+    <para lang="ja">
+    </para>
+    <para lang="ja">
+    </para>
     <figure>
-      <title>
-        <phrase>The Buffers dialog (Grid View)</phrase>
-      </title>
+      <title lang="en">The <quote>Buffers</quote> dialog (Grid View)</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/dialogs/buffers-dialog-grid.png" format="PNG"/>
+          <imagedata format="PNG"
+                     fileref="images/dialogs/ja/buffers-grid.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
-      In the Tab menu for the Buffers dialog, you can choose between
-      <guimenuitem>View as Grid</guimenuitem> and
+    <para lang="en">
+      In the Tab menu for the <quote>Buffers</quote> dialog, you can choose
+      between  <guimenuitem>View as Grid</guimenuitem> and
       <guimenuitem>View as List</guimenuitem>.
       In Grid mode, the buffers are laid out in a rectangular array.
       In List mode, they are lined up vertically, with each row showing
       a preview of the contents of the buffer, its name, and its pixel
       dimensions.
     </para>
+    <para lang="ja">
+    </para>
     <note>
-      <para>
+      <para lang="en">
         You can change the size of the buffer previews in the dialog using
         the <quote>Preview Size</quote> submenu of the dialog's Tab menu.
       </para>
+      <para lang="ja">
+      </para>
     </note>
+
     <sect4 id="gimp-buffer-dialog-buttons">
-      <title>
-        <phrase>Buttons at the bottom</phrase>
-      </title>
-      <para>
+      <title lang="en">Buttons at the bottom</title>
+      <para lang="en">
         At the bottom of the dialog you find a couple of buttons:
+      </para>
+      <para lang="ja">
       </para>
       <variablelist>
         <varlistentry>
-          <term>Paste Buffer</term>
+          <term lang="en">Paste Buffer</term>
           <listitem>
             <anchor id="gimp-buffer-paste"/>
-            <para>
+            <para lang="en">
               This command pastes the contents of the selected buffer into the
               active image, as a floating selection. The only difference
               between this and the ordinary
@@ -189,64 +243,72 @@
               command is that it uses the selected buffer rather than the
               global clipboard buffer.
             </para>
+            <para lang="ja">
+            </para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>Paste Buffer Into</term>
+          <term lang="en">Paste Buffer Into</term>
           <listitem>
             <anchor id="gimp-buffer-paste-into"/>
-            <para>
+            <para lang="en">
               This command pastes the contents of the selected buffer into
               the active image's selection, as a floating selection. The
-              only difference between this and the ordinary <link linkend="gimp-edit-paste-into">Paste Into</link> command is
+              only difference between this and the ordinary
+              <link linkend="gimp-edit-paste-into">Paste Into</link> command is
               that it uses the selected buffer rather than the global
               clipboard buffer.
             </para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Paste Buffer as New</term>
-          <listitem>
-            <anchor id="gimp-buffer-paste-as-new"/>
-            <para>
-              This command creates a new single-layer image out of the
-              contents of the selected buffer. The only difference between
-              this and the ordinary <link linkend="gimp-edit-paste-as-new">Paste as New</link> command
-              is that it uses the selected buffer rather than the content
-              of the global clipboard buffer.
+            <para lang="ja">
             </para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>Delete Buffer</term>
+          <term lang="en">Paste Buffer as New</term>
+          <listitem>
+            <anchor id="gimp-buffer-paste-as-new"/>
+            <para lang="en">
+              This command creates a new single-layer image out of the
+              contents of the selected buffer. The only difference between
+              this and the ordinary
+              <link linkend="gimp-edit-paste-as-new">Paste as New</link>
+              command is that it uses the selected buffer rather than the
+              content of the global clipboard buffer.
+            </para>
+            <para lang="ja">
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Delete Buffer</term>
           <listitem>
             <anchor id="gimp-buffer-delete"/>
-            <para>
+            <para lang="en">
               This command deletes the selected named buffer, no questions
               asked. You cannot delete the Global Buffer.
+            </para>
+            <para lang="ja">
             </para>
           </listitem>
         </varlistentry>
       </variablelist>
     </sect4>
+
     <sect4 id="gimp-buffer-dialog-menu">
-      <title>
-        <phrase>Context menu</phrase>
-      </title>
+      <title lang="en">Context menu</title>
       <figure>
-        <title>
-          <phrase>
-            The <quote>Buffers</quote> context menu
-          </phrase>
-        </title>
+        <title lang="en">The <quote>Buffers</quote> context menu</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/dialogs/buffers-context-menu.png" format="PNG"/>
+            <imagedata format="PNG"
+                       fileref="images/dialogs/ja/buffers-contextmenu.png"/>
           </imageobject>
         </mediaobject>
       </figure>
-      <para>
+      <para lang="en">
         These commands are explained above with Buttons.
+      </para>
+      <para lang="ja">
       </para>
     </sect4>
   </sect3>

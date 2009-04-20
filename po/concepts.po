@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-Help 2.6\n"
-"POT-Creation-Date: 2009-04-13 09:49+0900\n"
-"PO-Revision-Date: 2009-04-01 20:07+0900\n"
+"POT-Creation-Date: 2009-04-19 10:02+0900\n"
+"PO-Revision-Date: 2009-04-19 15:11+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gimp-docs@lists.xcf.berkeley.edu>\n"
 "MIME-Version: 1.0\n"
@@ -292,13 +292,12 @@ msgid "Screenshot of the Toolbox"
 msgstr "ツールボックスのスクリーンショット"
 
 #: src/concepts/toolbox.xml:29(para)
-#, fuzzy
 msgid ""
 "The Main Toolbox is the heart of GIMP. If you close it, you quit GIMP. "
 "Hereis a quick tour of what you will find there."
 msgstr ""
-"ツールボックスは<acronym>GIMP</acronym>の心臓部です。これだけはウィンドウを複"
-"数開くことも消すこともできません。 さて図にでているものを順に素早く見てゆきま"
+"ツールボックスは<acronym>GIMP</acronym>の心臓部です。これを閉じると<acronym>GIMP</acronym>は終了します。 "
+"さて図にでているものを順に素早く見てゆきま"
 "しょう。"
 
 #: src/concepts/toolbox.xml:34(para)
@@ -2217,7 +2216,7 @@ msgstr "パターンを新たに作成する方法"
 msgid ""
 "@@image: 'images/dialogs/palettes-dialog.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/dialogs/ja/palettes-dialog.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/dialogs/ja/palettes-list.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -2233,7 +2232,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/dialogs/colormap-dialog.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/dialogs/ja/colormap-dialog.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/dialogs/ja/colormap.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -2557,7 +2556,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/dialogs/link-visibility.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/dialogs/link-visibility.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/dialogs/layer-link-visibility.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -2800,7 +2799,6 @@ msgid "Alpha channel example: Alpha channel added to the Background"
 msgstr "アルファチャンネルの例: 背景レイヤーにアルファチャンネルを追加"
 
 #: src/concepts/layers.xml:218(para)
-#, fuzzy
 msgid ""
 "We used the <menuchoice><guimenu>Layer</guimenu><guimenuitem>Transparency</"
 "guimenuitem><guisubmenu>Add Alpha Channel</guisubmenu></menuchoice> command, "
@@ -2811,8 +2809,8 @@ msgid ""
 msgstr ""
 "<menuchoice>  <guimenu>レイヤー(<accel>L</accel>)</guimenu>  <guimenuitem>透"
 "明部分(<accel>A</accel>)</guimenuitem>  <guisubmenu>アルファチャンネルを追加"
-"(<accel>H</accel>)</guisubmenu></menuchoice> コマンドを使った。 このコマンド"
-"は背景レイヤーを活性化したときのみ有効になる。 とうとうこの画像の左半分は完全"
+"(<accel>H</accel>)</guisubmenu></menuchoice> コマンドを背景レイヤーに対して使った。 "
+"とうとうこの画像の左半分は完全"
 "に透過し、 画像が置かれたページの色が出ている。<!-- ?? --> アルファチャンネル"
 "の左部分は透明になり、 チャンネルダイアログ上では黒く表示された。"
 
@@ -4685,9 +4683,8 @@ msgstr ""
 "クします。 利用したい言語をリストの最上位に移動します。"
 
 #: src/concepts/intro.xml:133(term)
-#, fuzzy
 msgid "Another GIMP instance"
-msgstr "重ねて新たに<acronym>GIMP</acronym>を起動。"
+msgstr "重複して<acronym>GIMP</acronym>を走らせるとき"
 
 #: src/concepts/intro.xml:135(para)
 msgid ""
@@ -4696,6 +4693,12 @@ msgid ""
 "for GIMP in your language and <emphasis>LANGUAGE=en gimp-2.6 -n</emphasis> "
 "to have GIMP in English also. This is useful for translators."
 msgstr ""
+"コマンドラインで <option>-n</option> オプションをつけると、 重ねて"
+"新たな<acronym>GIMP</acronym>の実施ができます。 例えば、 先に普段の"
+"言語で <command>gimp-2.6</command> を起動し、 英語版の<acronym>GIMP"
+"</acronym>を <command>LANGUAGE=en gimp-2.6 -n</command> として起動"
+"するのです。 こうすると翻訳者も助かります。 "
+"<!--ja.poを見た方が素早く楽にできると思うけど...[訳者]-->"
 
 #: src/concepts/intro.xml:148(title)
 msgid "Command Line Arguments"
@@ -4891,8 +4894,7 @@ msgstr "--system-gimprc=<replaceable>filename</replaceable>"
 
 #: src/concepts/intro.xml:285(para)
 msgid "Use an alternate system gimprc file"
-msgstr ""
-"システム側の <filename>gimprc</filename> ファイルで別名のものを指定します。"
+msgstr "システム側の <filename>gimprc</filename> ファイルで別名のものを指定します。"
 
 #: src/concepts/intro.xml:289(term)
 msgid "-b, --batch=<replaceable>commands</replaceable>"
@@ -5644,7 +5646,6 @@ msgid "Copy and Paste"
 msgstr "写して貼る (コピペ)"
 
 #: src/concepts/images-loading.xml:190(para)
-#, fuzzy
 msgid ""
 "For some applications, if the application gives you a way of copying the "
 "image to the clipboard (on some systems, the <keycap>Print Screen</keycap> "
@@ -5656,8 +5657,11 @@ msgid ""
 msgstr ""
 "アプリケーションによっては、 画像をクリップボードに写し取ることができるので "
 "(一部のシステムは<keycap>Print Screen</keycap>キーを押すだけでクリップボード"
-"に取り込めます) あとは<acronym>GIMP</acronym>のメニューで <menuchoice>  "
-"<guimenu>編集(<accel>E</accel>)</guimenu>  <guisubmenu>クリップボードから生成"
+"に取り込めます) あとは<acronym>GIMP</acronym>の画像ウィンドウのメニューで "
+"<menuchoice>  <guimenu>ファイル(<accel>F</accel>)</guimenu>  <guisubmenu>画像"
+"の生成<guisubmenu>  <guimenuitem>クリップボードから(<accel>C</accel>)</"
+"guimenuitem></menuchoice> と進むか、 もしくは <menuchoice>  <guimenu>編集(<"
+"accel>E</accel>)</guimenu>  <guisubmenu>クリップボードから生成"
 "(<accel>P</accel>)</guisubmenu>  <guimenuitem>画像(<accel>N</accel>)</"
 "guimenuitem></menuchoice> と進めば新たな画像ウィンドウでその画像を開けます。 "
 "この機能が有効かどうかは一概に言えませんので、 まずはご自分で試してみてお確か"
@@ -6878,7 +6882,6 @@ msgid "Docking bars"
 msgstr "合体バー"
 
 #: src/concepts/docks.xml:79(para)
-#, fuzzy
 msgid ""
 "A window with <emphasis>docking bars</emphasis> highlighted. These are thin "
 "gray bars, very unobtrusive and easy not to notice: most people don't "
@@ -6925,8 +6928,7 @@ msgstr ""
 
 #: src/concepts/docks.xml:119(para)
 msgid "or the docking-tab area: the dialog will be added as a tab."
-msgstr ""
-"合体タブ領域まで曳いて放ちます。 ダイアログがタブとなって加えられます。"
+msgstr "合体タブ領域まで曳いて放ちます。 ダイアログがタブとなって加えられます。"
 
 #: src/concepts/docks.xml:105(para)
 msgid ""
@@ -7245,8 +7247,7 @@ msgstr "状態と文字(<accel>A</accel>)"
 msgid ""
 "This choice, where available, shows the item currently selected, as well as "
 "the type of dialog."
-msgstr ""
-"これは現在選択されているツールとダイアログの種類を表す文字とを表示します。"
+msgstr "これは現在選択されているツールとダイアログの種類を表す文字とを表示します。"
 
 #: src/concepts/docks.xml:464(term)
 msgid "View as List; View as Grid"
@@ -8356,3 +8357,4 @@ msgstr ""
 #: src/concepts/basic-setup.xml:0(None)
 msgid "translator-credits"
 msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
+

@@ -12,7 +12,7 @@
   050801 addition en;fr by j.h
   050517 de reviewed by axel.wernicke
 -->
-<!--revision2796 2009-03-27-->
+<!--revision2818 2009-04-20-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-free-select">
   <title lang="en">Free Selection (Lasso)</title>
   <title lang="ja">自由選択 (なげなわ)</title>
@@ -72,16 +72,15 @@
     features common to all selection tools see <link linkend="gimp-tool-select">Selection Tools</link>.
   </para>
   <para lang="ja">
-    なげなわツールの名で知られる自由選択ツールは、 マウスの
-    <mousebutton>左ボタン</mousebutton> を押しながら (またはタブレット上に
-    尖筆を押しつけながら) 随意に輪郭を描いて選択範囲を作るためのものです。
-    マウスボタンを放すと現在のポインタの位置から開始点までを結ぶ直線が引かれ
-    選択範囲の輪郭が閉じられます。 画像領域の外に線がはみ出してもどこかで
-    内側に戻ってこれば問題ありません。 なげなわは選択範囲を
-    <quote>大雑把に描く</quote>ときにたびたび重宝するツールです。
-    精密に選択する用途には向きません。 達人たちは
-    <link linkend="gimp-qmask">クイックマスク</link> モードで
-    細かく作業する前に、 なげなわツールで大まかに選択をとっておくと
+    なげなわツールの名で知られる自由選択ツールは、 マウスの <mousebutton>
+    第1ボタン</mousebutton> を押しながら (またはタブレット上に尖筆を押しつけ
+    ながら) 任意に輪郭を描いて選択範囲を作るためのものです。 マウスボタンを
+    放すと現在のポインタの位置から開始点までを結ぶ直線が引かれ選択範囲の輪郭が
+    閉じられます。 画像領域の外に線がはみ出してもどこかで内側に戻ってこれば
+    問題ありません。 なげなわは選択範囲を<quote>大雑把に描く</quote>ときに
+    たびたび重宝するツールです。 精密に選択する用途には向きません。 達人たちは
+    <link linkend="gimp-qmask">クイックマスク</link> モードで細かく作業する
+    前に、 なげなわツールで大まかに選択をとっておくと
     作業が楽になることを知っています。
   </para>
   <para lang="ja">
@@ -106,7 +105,7 @@
     click only. This creates an anchor point. Then moving the mouse pointer
     draws a line with a new anchor point that you can move as long as you
     don't click again (the mouse pointer comes with the moving cross).
-    Clicking gain anchors this point and creates a segment. By pressing
+    Clicking again anchors this point and creates a segment. By pressing
     the <keycap>Ctrl</keycap> keyboard key while moving the mouse pointer
     contrains moving angles to 15°.
   </para>
@@ -116,9 +115,11 @@
   <para lang="ja">
     <acronym>GIMP</acronym> 2.6 より新たな機能が加わりました。 多角形選択です。
     クリックして曳き続ける手書きの自由選択に対し、 これはクリックのみで
-    作られ、 つぎつぎとアンカーポイントが置かれます。 各アンカーポイントの間
-    には線分が現れて、 アンカーポイントは再びクリックして曳けば移動できます
-    (マウスポインタはアンカーポイント上で移動四方矢印の姿になります)。
+    作られ、 つぎつぎとアンカーポイントが置かれます。 最後に置かれたアンカー
+    ポイントからマウスの現在位置までには直線が表示され、 再びクリックするまでは
+    その直線がマウスの動きに反応します (マウスポインタはアンカーポイント上で
+    移動四方矢印の姿になります)。 つぎのクリックで新たなアンカーポイントが
+    置かれ、 直前に置かれたアンカーポイントとの間に分節の線分が引かれます。
     <keycap>Ctrl</keycap> キーを押している間は直前のアンカーポイントから 15 度
     刻みの方角の位置にのみ次のポイントが置けます。
   </para>
@@ -166,30 +167,24 @@
       </listitem>
       <listitem>
         <para lang="en">
-          By clicking on the tool icon
+          by clicking on the tool icon
           <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/toolbox/stock-tool-free-select-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-free-select-22.png"/>
           </guiicon>
           in the ToolBox,
         </para>
         <para lang="ja">
           ツールボックスのツールアイコン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/toolbox/stock-tool-free-select-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-free-select-22.png"/>
           </guiicon>
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          By using the keyboard shortcut <keycap>F</keycap>.
+          by using the keyboard shortcut <keycap>F</keycap>.
         </para>
         <para lang="ja">
           キーボードショートカット <keycap>F</keycap>
