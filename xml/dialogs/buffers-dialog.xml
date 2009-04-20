@@ -13,6 +13,7 @@
 <!--revision2817 2009-04-19-->
 <sect2 id="gimp-buffer-dialog">
   <title lang="en"><quote>Buffers</quote> Dialog</title>
+  <title lang="ja"><quote>バッファ</quote>ダイアログ</title>
 
   <indexterm lang="en">
     <primary>Dialogs</primary>
@@ -44,37 +45,38 @@
     <primary>Paste Named</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Dialogs</primary>
-    <secondary>Buffers</secondary>
+    <primary>ダイアログ</primary>
+    <secondary>バッファ</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Buffers</primary>
-    <secondary>Dialog</secondary>
+    <primary>バッファ</primary>
+    <secondary>ダイアログ</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Buffers</primary>
-    <secondary>Cut named</secondary>
+    <primary>バッファ</primary>
+    <secondary>名前付きで切り取り</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Buffers</primary>
-    <secondary>Copy named</secondary>
+    <primary>バッファ</primary>
+    <secondary>名前付きでコピー</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Buffers</primary>
-    <secondary>Paste named</secondary>
+    <primary>バッファ</primary>
+    <secondary>名前を選んで貼り付け</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Cut Named</primary>
+    <primary>名前付きで切り取り</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Copy Named</primary>
+    <primary>名前付きでコピー</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Paste Named</primary>
+    <primary>名前を選んで貼り付け</primary>
   </indexterm>
 
   <figure>
     <title lang="en">The <quote>Buffers</quote> dialog (as a list)</title>
+    <title lang="ja"><quote>バッファ</quote>ダイアログ (一覧で表示)</title>
     <mediaobject>
       <imageobject>
         <imagedata fileref="images/dialogs/ja/buffers-list.png" format="PNG"/>
@@ -107,8 +109,29 @@
     is merely a display: you can't do anything with it.
   </para>
   <para lang="ja">
+    バッファとは描画対象 (レイヤーやレイヤーマスクなど) を切り取りもしくは
+    写し取ったときにできる画像データの一時的保管庫のことです。 バッファに作品を
+    保管する方法にはつぎの2つのコマンドがあります。
+    <menuchoice>
+      <guimenu>編集(<accel>E</accel>)</guimenu>
+      <guisubmenu>バッファ操作(<accel>B</accel>)</guisubmenu>
+      <guimenuitem>名前付きでコピー(<accel>C</accel>)...</guimenuitem>
+    </menuchoice>
+    あるいは
+    <menuchoice>
+      <guimenu>編集(<accel>E</accel>)</guimenu>
+      <guisubmenu>バッファ操作(<accel>B</accel>)</guisubmenu>
+      <guimenuitem>名前付きで切り取り(<accel>T</accel>)...</guimenuitem>
+    </menuchoice>
+    。 いずれもダイアログが開かれてそこに保管される画像の名前を尋ねますので
+    記入してください。 名前つきバッファの総数に制限はありませんのでいくつ作って
+    も構いませんが、 無論そのひとつひとつがメモリを消費してゆきます。
   </para>
   <para lang="ja">
+    <quote>バッファ</quote>ダイアログでは現在の全ての名前付きバッファがその見本
+    画像つきで表示され、 何らかの操作が可能になっています。 またその上部には
+    通用バッファの見本も表示されていますが、 これは単なる表示に過ぎず、 ここで
+    は何も操作できません。
   </para>
   <caution>
     <para lang="en">
@@ -116,11 +139,14 @@
       contents is to paste them into images.
     </para>
     <para lang="ja">
+      名前つきバッファは<acronym>GIMP</acronym>を終了してしまうと失われます。
+      バッファに保管された内容を保存するには画像に貼り付けるしかありません。
     </para>
   </caution>
 
   <sect3 id="gimp-buffer-dialog-activate">
     <title lang="en">Activating the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
     <para lang="en">
       This dialog is a dockable dialog; see the
       section <xref linkend="gimp-concepts-docks"/> for help on manipulating
@@ -129,6 +155,12 @@
     <para lang="en">
       You can access it:
     </para>
+    <para lang="ja">
+      <quote>バッファ</quote>ダイアログはドッキング可能です。
+      その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -138,6 +170,14 @@
             <guisubmenu>Dockable Dialogs</guisubmenu>
             <guimenuitem>Buffers</guimenuitem>
           </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ(<accel>D</accel>)</guisubmenu>
+            <guimenuitem>バッファ(<accel>U</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
       <listitem>
@@ -152,6 +192,17 @@
             <guimenuitem>Buffers</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加(<accel>A</accel>)</guimenu>
+            <guimenuitem>バッファ(<accel>U</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
     <para lang="en">
@@ -164,12 +215,39 @@
         <guimenuitem>Buffers</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      <guimenu>ウィンドウ(<accel>W</accel>)</guimenu> メニューでは
+      ダイアログがひとつだけの状態で開かれている場合に限り、
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 この場合には画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+        <guimenuitem>バッファ</guimenuitem>
+      </menuchoice>
+      と進めば<quote>バッファ</quote>ダイアログを浮かび上がらせられます。
+      <!--<footnote>
+        <para>
+          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
+          <quote>バッファ</quote>ダイアログウィンドウが単独で (例えば<quote>
+          バッファ</quote>タブとなっていたダイアログが
+          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
+          [隠れて]いるときは、 画像メニューから
+          <menuchoice>
+            <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
+            <guimenuitem>バッファ</guimenuitem>
+          </menuchoice>
+          と進めばこのダイアログを浮かび上がらせられます。
+        </para>
+      </footnote>-->
+    </para>
   </sect3>
 
   <sect3 id="gimp-buffer-dialog-using">
     <title lang="en">Using the <quote>Buffers</quote> dialog</title>
+    <title lang="ja"><quote>バッファ</quote>ダイアログの利用法</title>
     <figure>
       <title lang="en">The <quote>Buffers</quote> Menu</title>
+      <title lang="ja"><!--no use--></title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -191,11 +269,24 @@
       clicking on the active buffer.
     </para>
     <para lang="ja">
+      ダイアログ上の一覧表のどれかひとつをクリックするとそのバッファが活性化し
+      ます。 つまりバッファ操作メニューの貼り付けコマンドを実行したりこの
+      ダイアログの底部にあるアイコンボタンをクリックするとそのバッファが使用
+      されます。 バッファの見本をダブルクリックするとその内容が活性画像に
+      フローティング選択範囲として貼り付けられます。 結果的には <guimenuitem>
+      バッファを貼り付け(<accel>P</accel>)</guimenuitem> コマンドを実行するのと
+      変わりませんが、 こちらのほうが手早くできます。
     </para>
     <para lang="ja">
+      ダイアログの底部には4つのアイコンボタンがあります。 これらを使った操作は
+      バッファダイアログの脈絡メニューを通じてもできます。 脈絡メニューは活性
+      バッファを <mousebutton>第2ボタン</mousebutton> でクリックするか、 タブ
+      メニューアイコンをクリックして出てくるメニューの最初の項目を進むと
+      呼び出せます。
     </para>
     <figure>
       <title lang="en">The <quote>Buffers</quote> dialog (Grid View)</title>
+      <title lang="ja"><quote>バッファ</quote>ダイアログ (並べて表示)</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -213,6 +304,12 @@
       dimensions.
     </para>
     <para lang="ja">
+      バッファダイアログのタブメニューで <guimenuitem>
+      並べて表示(<accel>G</accel>)</guimenuitem> と <guimenuitem>
+      一覧で表示(<accel>L</accel>)</guimenuitem> を切り替えられます。
+      <quote>並べて表示</quote>の場合はフォントの見本が升目状に並びます。
+      <quote>一覧で表示</quote>の場合はバッファが縦一列に列挙され、 各段に
+      その見本画像と名前とピクセル単位の大きさが表示されます。
     </para>
     <note>
       <para lang="en">
@@ -220,19 +317,25 @@
         the <quote>Preview Size</quote> submenu of the dialog's Tab menu.
       </para>
       <para lang="ja">
+        バッファの見本画像の大きさはダイアログのタブメニューの
+        <guisubmenu>プレビューサイズ(<accel>P</accel>)</guisubmenu>
+        サブメニューで調節できます。
       </para>
     </note>
 
     <sect4 id="gimp-buffer-dialog-buttons">
       <title lang="en">Buttons at the bottom</title>
+      <title lang="ja">底部の各アイコンボタン</title>
       <para lang="en">
         At the bottom of the dialog you find a couple of buttons:
       </para>
       <para lang="ja">
+        ダイアログの底部に4つのボタンが並んでいます。
       </para>
       <variablelist>
         <varlistentry>
           <term lang="en">Paste Buffer</term>
+          <term lang="ja">選択したバッファを貼り付け</term>
           <listitem>
             <anchor id="gimp-buffer-paste"/>
             <para lang="en">
@@ -244,11 +347,16 @@
               global clipboard buffer.
             </para>
             <para lang="ja">
+              このコマンドは選択されたバッファの内容を活性画像にフローティング
+              選択範囲として貼り付けます。 この操作は通常の
+              <link linkend="gimp-edit-paste">貼り付け</link> 操作とは異なり
+              通用クリップボードバッファではなく選ばれたバッファを使用します。
             </para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term lang="en">Paste Buffer Into</term>
+          <term lang="ja">選択したバッファを選択範囲内に貼り付け</term>
           <listitem>
             <anchor id="gimp-buffer-paste-into"/>
             <para lang="en">
@@ -260,11 +368,17 @@
               clipboard buffer.
             </para>
             <para lang="ja">
+              このコマンドは選択されたバッファの内容を活性画像の選択範囲に
+              フローティング選択範囲として貼り付けます。 この操作は通常の
+              <link linkend="gimp-edit-paste-into">選択範囲内に貼り付け</link>
+              操作とは異なり
+              通用クリップボードバッファではなく選ばれたバッファを使用します。
             </para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term lang="en">Paste Buffer as New</term>
+          <term lang="ja">選択したバッファで画像を生成</term>
           <listitem>
             <anchor id="gimp-buffer-paste-as-new"/>
             <para lang="en">
@@ -276,11 +390,17 @@
               content of the global clipboard buffer.
             </para>
             <para lang="ja">
+              このコマンドは選択されたバッファの内容を基にレイヤー1層からなる
+              画像を生成します。 この操作は通常の
+              <link linkend="gimp-edit-paste-as-new">画像をクリップボードから
+              生成</link> 操作とは異なり通用クリップボードバッファの内容では
+              なく選ばれたバッファを使用します。
             </para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term lang="en">Delete Buffer</term>
+          <term lang="ja">選択したバッファを削除</term>
           <listitem>
             <anchor id="gimp-buffer-delete"/>
             <para lang="en">
@@ -288,6 +408,8 @@
               asked. You cannot delete the Global Buffer.
             </para>
             <para lang="ja">
+              このコマンドは選択された名前つきバッファを削除します。 実行前の
+              確認はありません。 通用バッファは削除できません。
             </para>
           </listitem>
         </varlistentry>
@@ -296,8 +418,12 @@
 
     <sect4 id="gimp-buffer-dialog-menu">
       <title lang="en">Context menu</title>
+      <title lang="ja"><quote>バッファ</quote>ダイアログの脈絡メニュー</title>
       <figure>
         <title lang="en">The <quote>Buffers</quote> context menu</title>
+        <title lang="ja">
+          <quote>バッファ</quote>ダイアログの脈絡メニュー
+        </title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
@@ -309,6 +435,7 @@
         These commands are explained above with Buttons.
       </para>
       <para lang="ja">
+        これらのコマンドは上述のボタンの項で説明しました。
       </para>
     </sect4>
   </sect3>
