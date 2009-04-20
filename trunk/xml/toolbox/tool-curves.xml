@@ -11,7 +11,7 @@
   2005-12-01 informalfigure replaced by figure by lexa
   2005-08-08 de reviewed by axel.wernicke
 -->
-<!--revision2790 2009-03-22-->
+<!--revision2818 2009-04-20-->
 <sect2 id="gimp-tool-curves">
   <title lang="en">Curves</title>
   <title lang="ja">トーンカーブ</title>
@@ -133,8 +133,6 @@
                 </imageobject>
               </inlinemediaobject>
             </guiicon>
-            and you can get a favourite preset back by selecting it in the
-            <guibutton>Pick a setting from the list</guibutton> button.
           </para>
           <para lang="ja">
             画像の色設定の内容は追加ボタン
@@ -145,9 +143,52 @@
                 </imageobject>
               </inlinemediaobject>
             </guiicon>
-            をクリックすればプリセット一覧に保存され、 引き出しリストから選んだ
-            プリセットは復元できます。
           </para>
+            をクリックすればプリセット一覧に保存できます。
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/presets-menu-icon.png"/>
+            </guiicon>
+            ボタンをクリックするとつぎのメニューが呼び出されます。
+          </para>
+          <figure>
+            <title lang="en">Preset Menu</title>
+            <title lang="ja">プリセットメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/toolbox/ja/presets-menu.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            which lets you <guilabel>Import Settings from File</guilabel> or
+            <guilabel>Export Settings to File</guilabel>,
+            and gives you access to the Manage Save Settings dialog:
+          </para>
+          <para lang="en">
+            このメニューでは <guimenuitem>設定をエクスポート(<accel>E</accel>)
+            </guimenuitem> によって現在の設定を記憶させたり、 <guimenuitem>
+            設定をインポート(<accel>I</accel>)</guimenuitem> によって他の画像の
+            処理などに使った設定を再利用できます。 記憶された設定の数々は
+            <guimenuitem>プリセットデータの編集...(<accel>M</accel>)
+            </guimenuitem> に進むと出てくるつぎのダイアログで管理できます。
+            <!--<guimenuitem>プリセットデータの編集(<accel>M</accel>)...
+            </guimenuitem>-->
+          </para>
+          <figure>
+            <title lang="en">Manage saved Settings Dialog</title>
+            <title lang="ja">
+              <quote>プリセットデータの編集</quote>ダイアログ
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                        fileref="images/toolbox/ja/manage-saved-settings.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -258,7 +299,8 @@
         <listitem>
           <itemizedlist>
             <listitem>
-              <para lang="en"><emphasis>The vertical gradient</emphasis>: it represents the
+              <para lang="en">
+                <emphasis>The vertical gradient</emphasis>: it represents the
                 the destination, the output tonal scale. It ranges from 0
                 (black) to 255 (white), from Shadows to Highlights.
               </para>
@@ -269,7 +311,8 @@
               </para>
             </listitem>
             <listitem>
-              <para lang="en"><emphasis>The horizontal gradient</emphasis>: it represents
+              <para lang="en">
+                <emphasis>The horizontal gradient</emphasis>: it represents
                 the input tonal scale. It, too, ranges from 0 (black) to 255
                 (white), from Shadows to Highlights. When you
                 adjust the curve, it splits up into two parts; the upper part
@@ -286,7 +329,8 @@
               </para>
             </listitem>
             <listitem>
-              <para lang="en"><emphasis>The chart</emphasis>: the curve is drawn on a grid
+              <para lang="en">
+                <emphasis>The chart</emphasis>: the curve is drawn on a grid
                 and goes from the bottom left corner to the top right corner.
                 The pointer x/y position is permanently displayed in the top
                 left part of the grid. By default, this curve is straight,
@@ -394,9 +438,9 @@
                 アンカーが新たに置かれます。
               </para>
               <para lang="ja">
-                選択範囲もしくは活性レイヤーの選択されたチャンネルのヒストグラム
-                は曲線図表上では灰色のグラフで表されています。 参考にして
-                ください。
+                選択範囲もしくは活性レイヤーの選択されたチャンネルの
+                ヒストグラムは曲線図表上では灰色のグラフで表されています。
+                参考にしてください。
               </para>
             </listitem>
           </itemizedlist>
@@ -434,8 +478,8 @@
           </para>
           <para lang="ja">
             <guimenuitem>自由曲線</guimenuitem>: この様式はぎざぎざの線を
-            描けますが <guimenuitem>滑らか</guimenuitem> 様式を選べば滑らかな
-            曲線に変換されます。
+            描けますが再び <guibutton>滑らか</guibutton> ボタンをクリックすると
+            滑らかな曲線に変換されます。
           </para>
         </listitem>
       </varlistentry>
@@ -515,8 +559,8 @@
     </para>
     <para lang="ja">
       色カーブの形を変えるには色カーブの分節上にアンカーを置きそれを移動する
-      ことを学びました。 色カーブは選択範囲や活性レイヤーの<quote>入力側</quote>
-      の色調を<quote>出力側</quote>の色調に射影します。
+      ことを学びました。 色カーブは選択範囲や活性レイヤーの<quote>入力側
+      </quote>の色調を<quote>出力側</quote>の色調に射影します。
     </para>
     <simplesect role="NotInToc" lang="ja">
       <title lang="en">How the Curves tool works</title>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-04-06 j.h: reviewed for v2.6
   2008-01-29 j.h: updated to v2.4 'en;fr'
   2007-06-03 kost: added 'no'
   2006-06-02 "Add to palette" translated to en;fr from german by j.h
@@ -11,8 +13,8 @@
   050818 de fixed wrong shortcut - its O not Shift-O
   050817 de reviewed by axel.wernicke
 -->
-<!--revision2790 2009-03-22-->
-<sect2 id="gimp-tool-color-picker">
+<!--revision2818 2009-04-20-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-color-picker">
   <title lang="en">Color Picker</title>
   <title lang="ja">スポイト (カラーピッカー)</title>
   <indexterm lang="en">
@@ -86,8 +88,8 @@
         <para lang="en">
           In the image menu through
           <menuchoice>
-            <guimenu><accel>T</accel>ools</guimenu>
-            <guisubmenu>C<accel>o</accel>lor Picker.</guisubmenu>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Color Picker.</guisubmenu>
           </menuchoice>,
         </para>
         <para lang="ja">
@@ -101,25 +103,15 @@
       <listitem>
         <para lang="en">
           by clicking the tool icon
-          <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata
-                  fileref="images/toolbox/stock-tool-color-picker-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+          <guiicon><inlinegraphic
+            fileref="images/toolbox/stock-tool-color-picker-22.png"/>
           </guiicon>
           in Toolbox,
         </para>
         <para lang="ja">
           ツールボックスのツールアイコン
-          <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata
-                  fileref="images/toolbox/stock-tool-color-picker-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+          <guiicon><inlinegraphic
+            fileref="images/toolbox/stock-tool-color-picker-22.png"/>
           </guiicon>
         </para>
       </listitem>
@@ -132,7 +124,7 @@
         </para>
       </listitem>
       <listitem>
-        <para lang="en"><!--TODO es;it;pl;ru-->
+        <para lang="en">
           by pressing the <keycap>Ctrl</keycap> key while using a paint
           tool. The Color-picker dialog is not opened during this operation
           and the tool remains unchanged after releasing the key.
@@ -224,14 +216,10 @@
         </imageobject>
       </mediaobject>
     </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
     <variablelist>
-      <varlistentry>
-        <term lang="en">Overview</term>
-        <term lang="ja">概観</term>
-        <listitem>
-          <xi:include href="about-common-options-display.xml"/>
-        </listitem>
-      </varlistentry>
       <varlistentry>
         <term lang="en">Sample Merged</term>
         <term lang="ja">レイヤー結合色</term>

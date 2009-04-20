@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-03-14 j.h: revised for v2.6
   2008-01-13 j.h: updated to v2.4
@@ -12,20 +13,10 @@
   050529 de added content for rotate dialog
   050529 de reviewed by axel.wernicke
 -->
+<!--revision2818 2009-04-20-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-rotate">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2782 $</revnumber>
-        <date>2009-03-15</date>
-        <authorinitials>liangtai</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase lang="en">Rotate</phrase>
-    <phrase lang="ja">回転</phrase>
-  </title>
+  <title lang="en">Rotate</title>
+  <title lang="ja">回転</title>
   <indexterm lang="en">
     <primary>Tools</primary>
     <secondary>Rotate</secondary>
@@ -42,24 +33,21 @@
   </indexterm>
 
   <figure>
-    <title>
-      <phrase lang="en">The Rotate tool in Toolbox</phrase>
-      <phrase lang="ja">
-        ツールボックス上の<quote>回転</quote>ツールアイコン
-      </phrase>
+    <title lang="en">The Rotate tool in Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>回転</quote>ツールアイコン
     </title>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="images/toolbox/ja/toolbox-rotate.png" format="PNG"/>
+        <imagedata format="PNG"
+          fileref="images/toolbox/ja/toolbox-rotate.png"/>
       </imageobject>
     </mediaobject>
   </figure>
 
   <sect3>
-    <title>
-      <phrase lang="en">Overview</phrase>
-      <phrase lang="ja">概観</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <para lang="en">
       This tool is used to rotate the active layer, a selection or a path.
       When you click on the image or the selection with this tool a
@@ -78,10 +66,8 @@
   </sect3>
 
   <sect3>
-    <title>
-      <phrase lang="en">Activating the Tool</phrase>
-      <phrase lang="ja">呼び出し方</phrase>
-    </title>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
     <para lang="en">
       You can access to the Rotate tool in different ways:
     </para>
@@ -91,7 +77,7 @@
     <itemizedlist>
       <listitem>
         <para lang="en">
-          From the image menu bar
+          from the image menu bar
           <menuchoice>
             <guimenu>Tools</guimenu>
             <guisubmenu>Transform Tools</guisubmenu>
@@ -109,27 +95,23 @@
       </listitem>
       <listitem>
         <para lang="en">
-          By clicking the tool icon:
+          by clicking the tool icon:
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata
-                fileref="images/toolbox/stock-tool-rotate-22.png"/>
-              </imageobject></inlinemediaobject>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rotate-22.png"/>
           </guiicon> in the Toolbox.
         </para>
         <para lang="ja">
           ツールボックスのツールアイコン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata
-                fileref="images/toolbox/stock-tool-rotate-22.png"/>
-              </imageobject></inlinemediaobject>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rotate-22.png"/>
           </guiicon>
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          By using the
+          by using the
           <keycombo><keycap>Shift</keycap><keycap>R</keycap></keycombo>
           key combination.
         </para>
@@ -140,16 +122,13 @@
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase lang="en">Key modifiers (Defaults)</phrase>
-      <phrase lang="ja">キー修飾 (初期設定)</phrase>
-    </title>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">キー修飾 (初期設定)</title>
     <variablelist>
       <varlistentry>
-        <term>
-          <keycap>Ctrl</keycap>
-        </term>
+        <term><keycap>Ctrl</keycap></term>
         <listitem>
           <para lang="en">
             Holding <keycap>Ctrl</keycap> will constrain the rotation
@@ -162,19 +141,17 @@
       </varlistentry>
     </variablelist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase lang="en">Options</phrase>
-      <phrase lang="ja">オプション</phrase>
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase lang="en">Rotation tool options</phrase>
-        <phrase lang="ja"><quote>回転</quote>ツールのツールオプション</phrase>
-      </title>
+      <title lang="en">Rotation tool options</title>
+      <title lang="ja"><quote>回転</quote>ツールのツールオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/toolbox/ja/tool-options-rotate.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-options-rotate.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -232,10 +209,12 @@
         <term lang="en">Constraints</term>
         <term lang="ja">角度の制限について</term>
         <listitem>
-          <para lang="en"><guilabel>15 Degrees (Ctrl)</guilabel> will constrain the rotation
+          <para lang="en">
+            <guilabel>15 Degrees (Ctrl)</guilabel> will constrain the rotation
             to angles divisible by 15 degrees.
           </para>
-          <para lang="ja"><guilabel>15度ずつ回転 (Ctrl)</guilabel> が有効な場合は
+          <para lang="ja">
+            <guilabel>15度ずつ回転 (Ctrl)</guilabel> が有効な場合は
             15度刻みの回転に制限されます。
           </para>
         </listitem>
@@ -244,17 +223,11 @@
   </sect3>
 
   <sect3>
-    <title>
-      <phrase lang="en">The Rotation Information window</phrase>
-      <phrase lang="ja">回転情報ウィンドウ</phrase>
-    </title>
-      <title>
-      </title>
+    <title lang="en">The Rotation Information window</title>
+    <title lang="ja">回転情報ウィンドウ</title>
     <figure>
-      <title>
-        <phrase lang="en">The Rotation Information dialog window</phrase>
-        <phrase lang="ja">回転情報のダイアログウィンドウ</phrase>
-      </title>
+      <title lang="en">The Rotation Information dialog window</title>
+      <title lang="ja">回転情報のダイアログウィンドウ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"

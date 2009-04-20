@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-09-17 aprokoudine: fixed bugs
   2008-01-11 j.h: updated to v2.4 'en;fr'
@@ -13,7 +14,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   2005-08-14 de reviewed by axel.wernicke
 -->
-<!--revision2796 2009-03-27-->
+<!--revision2818 2009-04-20-->
 <sect2 id="gimp-tool-path">
   <title lang="en">Path</title>
   <title lang="ja">パス</title>
@@ -91,22 +92,15 @@
         <para lang="en">
           By clicking the tool icon:
           <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/toolbox/stock-tool-path-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-path-22.png"/>
           </guiicon>
           in Toolbox,
         </para>
         <para lang="ja">
           ツールボックスのツールアイコン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/toolbox/stock-tool-path-22.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic fileref="images/toolbox/stock-tool-path-22.png"/>
           </guiicon>
         </para>
       </listitem>
@@ -185,23 +179,10 @@
         </imageobject>
       </mediaobject>
     </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
     <variablelist>
-      <varlistentry>
-        <term lang="en">Overview</term>
-        <term lang="ja">概観</term>
-        <listitem>
-          <xi:include href="about-common-options-display.xml"/>
-          <para lang="en">
-            As with other tools, you can delete your changes by
-            <keycap>Ctrl-Z</keycap>.
-          </para>
-          <para lang="ja">
-            他のツールと同じく、 操作を取り消すのに
-            <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
-            が使えます。
-          </para>
-        </listitem>
-      </varlistentry>
       <varlistentry>
         <term lang="en">Design Mode</term>
         <term lang="ja">作成モード</term>
@@ -221,7 +202,8 @@
           <para>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/tool-options/path-stroke.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/tool-options/path-stroke.png"/>
               </imageobject>
               <caption>
                 <para lang="en">
@@ -236,7 +218,8 @@
           <para>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/tool-options/path-curve.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/tool-options/path-curve.png"/>
               </imageobject>
               <caption>
                 <para lang="en">
@@ -269,9 +252,15 @@
               ましたが、 今ではツールオプションや
               <link linkend="gimp-path-dialog">パスダイアログ</link> の
               <guibutton>パスを選択範囲に</guibutton>
-              <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/dialogs/stock-selection-16.png"/></imageobject></inlinemediaobject></guiicon>
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-selection-16.png"/>
+              </guiicon>
               ボタンや <guibutton>パスの境界線を描画</guibutton>
-              <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/dialogs/ja/stock-path-stroke-16.png"/></imageobject></inlinemediaobject></guiicon>
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/ja/stock-path-stroke-16.png"/>
+              </guiicon>
               ボタンが使えます。
             </para>
           </tip>
@@ -322,15 +311,16 @@
             before. A handle appears. Drag it to bend the curve.
             Pressing <keycap>Shift</keycap> toggles to symmetric handles.
           </para>-->
-          <para lang="en"><emphasis>Modify segment</emphasis>: When you click on a
-            segment, the mouse pointer turns to a 4-arrows cross. Drag
+          <para lang="en">
+            <emphasis>Modify segment</emphasis>: When the mouse pointer
+            goes over a segment, it turns to a 4-arrows cross. Click-and-drag
             it to bend the segment. As soon as you move, handles appear
             at both ends of the segment. Pressing <keycap>Shift</keycap>
             key toggles to symmetric handles.
           </para>
           <para lang="ja">
-            <emphasis>パス分節の変形</emphasis>: 分節上をクリックするとマウス
-            ポインタは右上に小さな四方矢印がついたままの姿になります。 分節は
+            <emphasis>パス分節の変形</emphasis>: 分節上にマウスポインタをかざ
+            すとその姿が右上に小さな四方矢印がついた形に変わります。 分節は
             曳くと変形します。 移動と同時に、 分節の両端のアンカーにはそれぞれ
             ハンドルが現れます。 ハンドルをクリックして曳くと分節が変形します。
           </para>
@@ -346,19 +336,22 @@
         <term lang="en">Edit Mode</term>
         <term lang="ja">編集モード</term>
         <listitem>
-          <para lang="en"><guilabel>Edit</guilabel> performs functions which are not
+          <para lang="en">
+            <guilabel>Edit</guilabel> performs functions which are not
             available in <guilabel>Design</guilabel> mode. With this
             mode, you can work only on the existing path.  Outside, the
             pointer is a small crossed circle (on the whole image if
             there is no path!) and you can do nothing.
           </para>
-          <para lang="en"><emphasis>Add a segment between two nodes</emphasis>: Click
-            on a node at one end of the path to activate it. Pointer is
+          <para lang="en">
+            <emphasis>Add a segment between two nodes</emphasis>: Click
+            on a node at one end of the path to activate it. The pointer is
             like a union symbol. Click on an other node to link both
             nodes. This is useful when you have to link unclosed
             components.
           </para>
-          <para lang="en"><emphasis>Remove a segment from a path</emphasis>: While pressing
+          <para lang="en">
+            <emphasis>Remove a segment from a path</emphasis>: While pressing
             <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
             key combination, point to a segment. Pointer turns to -.
             Click to delete the segment.
@@ -367,11 +360,13 @@
             segment. Pointer turns to +. Click where you want to place
             the new control point.
           </para>
-          <para lang="en"><emphasis>Remove a node</emphasis>: While pressing
-            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo> key combination, point to a node. Pointer turns
+          <para lang="en">
+            <emphasis>Remove a node</emphasis>: While pressing
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>                key combination, point to a node. Pointer turns
             to -. Click to delete the node.
           </para>
-          <para lang="en"><emphasis>Add a handle to a node</emphasis>: Point to a
+          <para lang="en">
+            <emphasis>Add a handle to a node</emphasis>: Point to a
             node.  Pointer turns to a 4-arrow cross. Click the node: handle
             appears if they have not been removed.  When there is one handle or
             nothing, dragging the node provides a handle.  Two handles can
@@ -379,8 +374,10 @@
             with pressing <keycap>Shift</keycap> key, drag the handle.  Then
             a handle appears on the other side of it symmetrically.
           </para>
-          <para lang="en"><emphasis>Remove a handle from a node</emphasis>: While pressing
-            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo> key combination, point to a handle. Pointer
+          <para lang="en">
+            <emphasis>Remove a handle from a node</emphasis>: While pressing
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            key combination, point to a handle. The pointer
             doesn't turn to the expected - and remains a hand. Click
             to delete the handle.
           </para>
@@ -569,11 +566,12 @@
         </listitem>
       </varlistentry>
     </variablelist>
-    <para lang="en"><!--added 20060607-->
-      See the <link linkend="gimp-concepts-paths"><quote>Path</quote></link>concept.
+    <para lang="en">
+      See the <link linkend="gimp-concepts-paths"><quote>Path</quote>
+      </link>concept.
     </para>
     <para lang="ja">
-      <link linkend="gimp-concepts-paths"><quote>パス</quote></link>についての
+      <link linkend="gimp-concepts-paths"><quote>パス</quote></link> についての
       概念もお読みください。
     </para>
   </sect3>

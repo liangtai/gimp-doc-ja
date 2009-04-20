@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-03-19 JPL rewiewed & modified en
   2007-12-01  PP rewiewed fr  and a new section added in en & fr
@@ -11,45 +12,62 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050517 de reviewed by axel.wernicke
 -->
+<!--revision2818 2009-04-20-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-rect-select">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2752 $</revnumber>
-        <date>2009-02-18</date>
-        <authorinitials>liangtai</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase lang="ja">矩形選択</phrase>
-  </title>
-  <indexterm lang="ja">
-    <primary>選択</primary><secondary>矩形選択</secondary>
+  <title lang="en">Rectangle Selection</title>
+  <title lang="ja">矩形選択</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Rectangle Selection</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Rectangle selection</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>ツール</primary><secondary>矩形選択</secondary>
+    <primary>選択</primary>
+    <secondary>矩形選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>矩形選択</secondary>
   </indexterm>
 
   <figure>
-    <title>
-      <phrase lang="ja">
-        ツールボックス上の<quote>矩形選択</quote>ツールアイコン
-      </phrase>
+    <title lang="en">Rectangle Select icon in the Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>矩形選択</quote>ツールアイコン
     </title>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="images/toolbox/ja/toolbox-rectsel.png" format="PNG"/>
+        <imagedata format="PNG"
+          fileref="images/toolbox/ja/toolbox-rectsel.png"/>
       </imageobject>
     </mediaobject>
   </figure>
+  <para lang="en">
+    The Rectangle Selection tool is designed to select rectangular regions of
+    the active layer: it is the most basic of the selection tools, but very
+    commonly used. For information on selections and how they are used in GIMP
+    see <link linkend="gimp-concepts-selection">Selections</link>;
+    for information on features common to all selection tools see
+    <link linkend="gimp-tool-select">Selection Tools</link>.
+  </para>
+  <para lang="en">
+    This tool is also used for rendering a rectangle on an image. To render a
+    filled rectangle, create a rectangular selection, and then fill it using
+    the <link linkend="gimp-tool-bucket-fill">Bucket Fill tool</link>.
+    To create a rectangular outline, the simplest and most flexible approach
+    is to create a rectangular selection and then
+    <link linkend="gimp-selection-stroke">stroke</link> it.
+  </para>
   <para lang="ja">
-    矩形選択ツールは画像から矩形領域を選択するためのものです: 選択ツール
-    としては最も基本的なものですが、 非常によく使われています。
+    矩形選択ツールは活性レイヤーから矩形領域を選択するためにあります。
+    選択ツールとしては最も基本的なものですが、 非常によく使われています。
     <acronym>GIMP</acronym>における選択についての情報や使い方は
-    <link linkend="gimp-concepts-selection">選択</link>を、 選択ツール全種類に
+    <link linkend="gimp-concepts-selection">選択</link> を、 選択ツール全種類に
     共通する機能についての情報は
-    <link linkend="gimp-tool-select">選択ツール</link>を
+    <link linkend="gimp-tool-select">選択ツール</link> を
     ご覧ください。
   </para>
   <para lang="ja">
@@ -61,12 +79,22 @@
   </para>
 
   <sect3>
-    <title>
-      <phrase lang="ja">呼び出し方</phrase>
-    </title>
+    <title lang="en">Activating the tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access to the Selection Tool in different ways:
+    </para>
     <para lang="ja">選択ツールを起用する方法はいくつかあります:</para>
     <itemizedlist>
       <listitem>
+        <para lang="en">
+          from the image menu bar
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Selection Tools</guisubmenu>
+            <guimenuitem>Rectangle Select</guimenuitem>
+          </menuchoice>,
+        </para>
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
@@ -77,39 +105,61 @@
         </para>
       </listitem>
       <listitem>
+        <para lang="en">
+          by clicking on the tool icon
+          <guiicon><inlinegraphic
+            fileref="images/toolbox/stock-tool-rect-select-22.png"/>
+          </guiicon>
+          in the ToolBox,
+        </para>
         <para lang="ja">
-          ツールボックスのツールアイコン <guiicon> <inlinemediaobject>
-          <imageobject> <imagedata
-          fileref="images/toolbox/stock-tool-rect-select-22.png" />
-          </imageobject> </inlinemediaobject> </guiicon>
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rect-select-22.png" />
+          </guiicon>
         </para>
       </listitem>
       <listitem>
+        <para lang="en">
+          by using the keyboard shortcut <keycap>R</keycap>.
+        </para>
         <para lang="ja">キーボードショートカット <keycap>R</keycap></para>
       </listitem>
     </itemizedlist>
   </sect3>
 
   <sect3>
-    <title>
-      <phrase lang="ja">修飾キー</phrase>
-    </title>
+    <title lang="en">Key modifiers</title>
+    <title lang="ja">修飾キー</title>
     <xi:include href="about-common-select-modifiers.xml"/>
     <variablelist>
       <varlistentry>
-        <term>
-          <keycap>Ctrl</keycap>
-        </term>
+        <term><keycap>Ctrl</keycap></term>
         <listitem>
+          <para lang="en">
+            Pressing the Ctrl key after starting
+            your selection, and holding it down until you are finished,
+            causes your starting point to be used as the center of the
+            selected rectangle, instead of a corner.  Note that if you
+            press the Ctrl key <emphasis>before</emphasis> starting to
+            make the selection, the resulting selection will be
+            subtracted from the existing selection. The cursor becomes
+            <guiicon>
+              <inlinegraphic
+                fileref="images/toolbox/cursor-select-rect-minus.png"/>
+            </guiicon>
+          </para>
           <para lang="ja">
             選択範囲を作っている途中から作り終えるまで <keycap>Ctrl</keycap>
             キーを押し続けると、 選択範囲を作り始めた位置は始点ではなく
             矩形の中心とされます。 もし選択範囲を作る <emphasis>前に</emphasis>
             <keycap>Ctrl</keycap> キーを押したのなら、 今新たに作った範囲が
             それまでの選択範囲から引かれます。 このときのカーソルはこのように
-            <guiicon> <inlinemediaobject> <imageobject> <imagedata format="PNG"
-            fileref="images/toolbox/cursor-select-rect-minus.png" />
-            </imageobject> </inlinemediaobject> </guiicon>
+            <guiicon>
+              <inlinegraphic
+                fileref="images/toolbox/cursor-select-rect-minus.png" />
+            </guiicon>
             (右上にマイナス記号がついている) なります。
           </para>
         </listitem>
@@ -119,13 +169,32 @@
           <keycap>Shift</keycap>
         </term>
         <listitem>
+          <para lang="en">
+            If you press the <keycap>Shift</keycap> key
+            <emphasis>before</emphasis> starting the selection, the
+            resulting selection will be added to the existing one. The cursor
+            becomes
+            <guiicon><inlinegraphic
+              fileref="images/toolbox/cursor-select-rect-plus.png"/>
+            </guiicon>
+          </para>
+          <para lang="en">
+            Pressing the <keycap>Shift</keycap> key <emphasis>after
+            </emphasis> starting your selection, toggles the <guilabel>Fixed
+            </guilabel> option, and holding it down until you are finished,
+            will constrain the selection to a square, if it is your first
+            selection. Later, with the default <guilabel>Aspect Ratio
+            </guilabel>, your selection will respect the aspect ratio of the
+            previous selection.
+          </para>
           <para lang="ja">
             もし選択範囲を作る <emphasis>前に</emphasis> <keycap>Shift</keycap>
             キーを押したのなら、 今新たに作った範囲がそれまでの選択範囲に
-            加えられます。 このときのカーソルはこのように <guiicon>
-            <inlinemediaobject> <imageobject> <imagedata format="PNG"
-            fileref="images/toolbox/cursor-select-rect-minus.png" />
-            </imageobject> </inlinemediaobject> </guiicon>
+            加えられます。 このときのカーソルはこのように
+            <guiicon>
+              <inlinegraphic
+                fileref="images/toolbox/cursor-select-rect-minus.png" />
+            </guiicon>
             (右上にプラス記号がついている) なります。
           </para>
           <para lang="ja">
@@ -146,13 +215,24 @@
           </keycombo>
         </term>
         <listitem>
+          <para lang="en">
+            Pressing both keys after starting your selection
+            combines the two effects, giving you a square selection centered
+            on your starting point. Note that pressing these keys before
+            starting your selection intersects the resulting selection with
+            the existing one and the pointer change shape accordingly :
+            <guiicon><inlinegraphic
+              fileref="images/toolbox/cursor-select-rect-intersect.png"/>
+            </guiicon>
+          </para>
           <para lang="ja">
             この両方のキーを選択範囲を作り始めた後で押したなら、 開始点を
             中心とした正方形の選択範囲ができます。 選択範囲を作り始める前に
             この両方のキーを押していた場合は、 ポインタカーソルがこのように
-            <guiicon> <inlinemediaobject> <imageobject> <imagedata format="PNG"
-            fileref="images/toolbox/cursor-select-rect-intersect.png" />
-            </imageobject> </inlinemediaobject> </guiicon>
+            <guiicon>
+              <inlinegraphic
+                fileref="images/toolbox/cursor-select-rect-intersect.png" />
+            </guiicon>
             (右上に積集合記号がついている) なり、
             それまでの選択範囲とこのときの範囲の共通部分だけが残されます。
           </para>
@@ -160,25 +240,86 @@
       </varlistentry>
     </variablelist>
   </sect3>
+
   <sect3 id="tool-rect-select-manip">
-    <title>
-      <phrase lang="ja">ツールの操縦</phrase>
-    </title>
+    <title lang="en">Tool manipulation</title>
+    <title lang="ja">ツールの操縦</title>
     <figure>
-      <title>
-        <phrase lang="ja">矩形選択の例</phrase>
-      </title>
+      <title lang="en">Example of Rectangle Selection.</title>
+      <title lang="ja">矩形選択の例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/toolbox/rectangle-selection.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/toolbox/rectangle-selection.png"/>
         </imageobject>
       </mediaobject>
     </figure>
+    <para lang="en">
+      When this tool is selected the mouse pointer is displayed like this:
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/cross-pt.png"/>
+      </guiicon>
+      as soon as it is over the image. A drag and drop allows to get a
+      rectangular (or square) shape. When the mouse button is relaxed, a
+      dotted line (<quote>marching ants</quote>) outlines the selection. It's
+      not necessary to adjust the selection with care; you can resize it
+      easily later.
+    </para>
+    <para lang="en">
+      When the pointer is moving on the canvas, the pointer and selection
+      aspects change:
+    </para>
+    <para lang="en">
+      - outside the selection it looks like previously; this allows to design
+      a new selection but will erase the existing one if this isn't combined
+      with an action on the relevant key to add or subtract another selection
+      as described in the previous paragraph.
+    </para>
+    <para lang="en">
+      - within selection peripheral parts, the mouse pointer changes into
+      various shapes when overflying rectangular sensitive and clearly marked
+      areas. These <emphasis>handles</emphasis> allow you to resize the
+      selection. In selection corners the pointer changes into a shape
+      according to the context; for instance in the low right corner it
+      becomes:
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/corner-pt.png"/>
+      </guiicon>.
+      So, by click-and-dragging these areas, you can magnify or shrink the
+      selection size. Over median selection parts, lateral, low or up,
+      pointer is changed into appropriate shapes according to the context.
+      For instance, when the mouse pointer is over the median right side, the
+      pointer looks like:
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/side-pt.png"/>
+      </guiicon>.
+      So you can click-and-drag to magnify or to shrink the selection size by
+      moving the chosen boundary.
+    </para>
+    <para lang="en">
+      - inside selection central area the mouse pointer looks like usual for
+      object manipulation, i.e.:
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/pointer.png"/>
+      </guiicon>.
+      So you can move the whole selection by a click-and-drag.
+    </para>
+    <para lang="en">
+      Moreover, if you have not unchecked the <guilabel>Highlight</guilabel>
+      option, your work will be easier because what is out the selection will be
+      darkest than what is in the selection, and then the selection seems
+      highlighted.
+    </para>
     <para lang="ja">
       このツールが使用されているときのマウスカーソルは画像上ではこのような
-      <guiicon> <inlinemediaobject> <imageobject> <imagedata format="PNG"
-      fileref="images/toolbox/cross-pt.png" /> </imageobject>
-      </inlinemediaobject></guiicon> 姿をしています。 画像上でクリックして
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/cross-pt.png" />
+      </guiicon> 姿をしています。 画像上でクリックして
       曳くと長方形 (もしくは正方形) が現れます。 マウスボタンを放すと点滅破線
       (<quote>蟻の行進</quote>) が選択範囲の輪郭を描きます。 選択の領域を
       始めから正確にとる必要はありません。 後で簡単に整形[や移動]ができます。
@@ -199,22 +340,23 @@
       これらの部位は <quote>ハンドル</quote>といい、 選択範囲の矩形の高さや幅を
       変更するのに使います。 選択範囲の矩形の角地では、 ポインタは角地と
       分かるような姿に変わります: 例えば左下角ではこのような
-      <guiicon> <inlinemediaobject> <imageobject> <imagedata
-      fileref="images/toolbox/corner-pt.png" /> </imageobject>
-      </inlinemediaobject> </guiicon> 姿です。 そこでクリックして曳けば選択範囲
-      の形状を拡げたり縮めたりできます。 上下左右の辺の中間部では、 ポインタは
-      辺上にふさわしい姿に変わります。 例えば、 マウスポインタが左辺の中程に
-      あるとき、 ポインタはこのような <guiicon><inlinemediaobject><imageobject>
-      <imagedata fileref="images/toolbox/side-pt.png" /></imageobject>
-      </inlinemediaobject></guiicon> 姿です。 そこでクリックして曳けば辺が
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/corner-pt.png" />
+      </guiicon>
+      姿です。 そこでクリックして曳けば選択範囲の形状を拡げたり縮めたりできま
+      す。 上下左右の辺の中間部では、 ポインタは辺上にふさわしい姿に変わりま
+      す。 例えば、 マウスポインタが左辺の中程にあるとき、 ポインタはこのような
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/side-pt.png" />
+      </guiicon> 姿です。 そこでクリックして曳けば辺が
       動き、 選択範囲の辺の長さを伸縮できます。
     </para>
     <para lang="ja">
       - ハ. 選択範囲の中央部ではマウスポインタの姿は部品移動でよく見る姿
-      <guiicon> <inlinemediaobject> <imageobject> <imagedata
-      fileref="images/toolbox/pointer.png" /> </imageobject>
-      </inlinemediaobject> </guiicon>
-      (移動十字)になります。 そこでクリックして曳けば選択範囲全体を移動できます。
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/pointer.png" />
+      </guiicon> (移動十字)になります。
+      そこでクリックして曳けば選択範囲全体を移動できます。
     </para>
     <para lang="ja">
       なお、 <guilabel>選択範囲をハイライト表示</guilabel> オプション
@@ -222,6 +364,11 @@
       暗くされ、 選択範囲が浮かびあがりますから作業がしやすくなるでしょう。
     </para>
     <tip>
+      <para lang="en">
+        If you use moving keys you can move the selection or modify its size
+        by one pixel step. If you use it in combination with
+        <keycap>Shift</keycap> you can move it by a 25 pixel step.
+      </para>
       <para lang="ja">
         <keycap>矢印</keycap> キーを用いた選択範囲の移動もしくは変形は
         1ピクセルずつ変化します。 このキーと<keycap>Shift</keycap> キーとの
@@ -229,20 +376,30 @@
       </para>
     </tip>
     <figure>
-      <title>
-        <phrase lang="ja">選択範囲内の反応する部位</phrase>
-      </title>
+      <title lang="en">Sensitive selection areas</title>
+      <title lang="ja">選択範囲内の反応する部位</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/toolbox/select-area.png" format="PNG"/>
         </imageobject>
         <caption>
+          <para lang="en">
+          Display of all possible pointers in function of their localization
+          with respect to the selection area.
+        </para>
           <para lang="ja">
             選択範囲内外各所でのポインタのはたらきを全て示した模式図
           </para>
         </caption>
       </mediaobject>
     </figure>
+    <para lang="en">
+      After creating and modifying the selection, you will have to exit this
+      editing mode (and commit any changes). You can do this with a single
+      click inside the selection or by pressing the <keycap>Enter</keycap>
+      key. Or you can just use a non-selection tool and, for example, fill or
+      paint the selection.
+    </para>
     <para lang="ja">
       選択範囲を作成し加工したあとは、 編集モードから抜け出ることが
       (そして何らかの変化を起こすことが)必要になるはずです。
@@ -251,19 +408,17 @@
       例えば塗りつぶしたり選択範囲を描画したりは直後にできます。
     </para>
   </sect3>
+
   <sect3 id="tool-rect-select-options">
-    <title>
-      <phrase lang="ja">オプション</phrase>
-    </title>
+    <title lang="en">Tool Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase lang="ja">
-          <quote>矩形選択</quote>ツールのツールオプション
-        </phrase>
-      </title>
+      <title lang="en">Tool Options for the Rectangle Select tool</title>
+      <title lang="ja"><quote>矩形選択</quote>ツールのツールオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/toolbox/ja/tool-options-rectsel.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/toolbox/ja/tool-options-rectsel.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -273,15 +428,25 @@
     <variablelist>
       <xi:include href="about-common-select-options.xml"/>
       <varlistentry>
+        <term lang="en">
+          Mode; Antialiasing; Feather edges
+        </term>
         <term lang="ja">モード ; アンチエイリアス ; 境界をぼかす</term>
         <listitem>
+          <para lang="en">Common select options.</para>
           <para lang="ja">選択ツール共通のオプションです。</para>
         </listitem>
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">Rounded corners</term>
         <term lang="ja">角を丸める</term>
         <listitem>
+          <para lang="en">
+            If you enable this option, a slider appears. You can use this to
+            adjust the radius that is used to round the corners of the
+            selection.
+          </para>
           <para lang="ja">
             このオプションを有効にするとスライダが現れます。
             選択の矩形の角を丸める円の半径を定めるのに使えます。
@@ -301,8 +466,13 @@
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">Expand from center</term>
         <term lang="ja">中央から拡げる</term>
         <listitem>
+          <para lang="en">
+            If you enable this option, the point the selection is started by
+            pressing the mouse button is used as center of the selected area.
+          </para>
           <para lang="ja">
             このオプションが有効なときはマウスで曳き始めた選択の始点が
             選択領域の中心とされます。
@@ -311,16 +481,28 @@
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">Fixed</term>
         <term lang="ja">値を固定</term>
-        <listitem>
+          <para lang="en">
+            This menu allows you the option of constraining the shape of
+            the rectangle in different ways.
+          </para>
           <para lang="ja">
             このメニューにはいろいろな条件で矩形の形状を制限するための
             オプションがあります。
           </para>
           <variablelist>
             <varlistentry>
+              <term lang="en">Aspect ratio</term>
               <term lang="ja">縦横比</term>
               <listitem>
+                <para lang="en">
+                  This option allows you to design and resize the selection
+                  while keeping the aspect ratio fixed and written within the
+                  relevant box. By default the ratio is 1:1 (so we have a
+                  square) but it can be changed. With the two little landscape
+                  and picture icons, you can invert this ratio.
+                </para>
                 <para lang="ja">
                   このオプションは選択の矩形の高さと幅の比を一定に保ちつつ
                   変形させるためのもので、 専用のボックスに比を記入すれば
@@ -331,24 +513,37 @@
               </listitem>
             </varlistentry>
             <varlistentry>
+              <term lang="en">Width</term>
               <term lang="ja">幅</term>
               <listitem>
+                <para lang="en">
+                  With this choice you can fix the width of the selection.
+                </para>
                 <para lang="ja">
                   これを選ぶと選択の矩形の幅が固定されます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
+              <term lang="en">Height</term>
               <term lang="ja">高さ</term>
               <listitem>
+                <para lang="en">
+                  With this choice you can fix the height of the selection.
+                </para>
                 <para lang="ja">
                   これを選ぶと選択の矩形の高さが固定されます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
+              <term lang="en">Size</term>
               <term lang="ja">大きさ</term>
               <listitem>
+                <para lang="en">
+                  With this choice you can fix the width and height of the
+                  selection.
+                </para>
                 <para lang="ja">
                   これを選ぶと選択の矩形の幅と高さが固定されます。
                 </para>
@@ -359,8 +554,14 @@
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">X; Y; Width; Height</term>
         <term lang="ja">X; Y; 幅; 高さ</term>
         <listitem>
+          <para lang="en">
+            These four text fields contain the current place and size of the
+            selection. You can use these fields to adjust size and place of
+            the selection by numbers.
+          </para>
           <para lang="ja">
             これら4つの記入欄の数値は現在の選択範囲の位置と大きさに
             基づいています。 ここに数値を記入することにより選択範囲の位置と
@@ -370,8 +571,13 @@
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">Highlight</term>
         <term lang="ja">選択範囲をハイライト表示</term>
         <listitem>
+          <para lang="en">
+            If you enable this option, the selected area is emphasized by a
+            surrounding mask to make visual selection much easier.
+          </para>
           <para lang="ja">
             このオプションを有効にすると、 選択範囲の周囲にマスクを掛けて
             選択範囲を際立たせることで、 視覚的に選択しやすくなります。
@@ -380,12 +586,22 @@
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">Guides</term>
         <term lang="ja">見当 (ガイド)</term>
         <listitem>
+          <indexterm lang="en">
+            <primary>Guides</primary>
+            <secondary>Selection guides</secondary>
+          </indexterm>
           <indexterm lang="ja">
             <primary>見当線</primary>
             <secondary>矩形選択</secondary>
           </indexterm>
+          <para lang="en">
+            With this menu you can select the type of guides that is shown
+            within the selection to make the creation of a selection easier,
+            respecting <emphasis>Photo composition rules</emphasis>.
+          </para>
           <para lang="ja">
             このコンボメニューから分割の種類を選ぶと、 選択範囲内を分割する
             見当線が現れますので、 選択範囲の <emphasis>写真の構図法</emphasis>
@@ -393,31 +609,50 @@
           </para>
           <variablelist>
             <varlistentry>
+              <term lang="en">No Guides</term>
               <term lang="ja">ガイドなし</term>
               <listitem>
+                <para lang="en">
+                  No guides are shown at all.
+                </para>
                 <para lang="ja">ガイドは表示されません。</para>
               </listitem>
             </varlistentry>
 
             <varlistentry>
+              <term lang="en">Center lines</term>
               <term lang="ja">センターライン</term>
               <listitem>
+                <para lang="en">
+                  Only center lines are shown as guides within the selected
+                  area.
+                </para>
                 <para lang="ja">
                   選択範囲の縦横の中心に見当線が引かれます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
+              <term lang="en">Rule of thirds</term>
               <term lang="ja">三分割法</term>
               <listitem>
+                <para lang="en">
+                  Guides are shown along the rule of thirds while creating the
+                  selection.
+                </para>
                 <para lang="ja">
                   選択範囲を3&#xd7;3等分するように見当線が引かれます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
+              <term lang="en">Golden sections</term>
               <term lang="ja">黄金分割</term>
               <listitem>
+                <para lang="en">
+                  With this option, guides show up to mark the golden
+                  sections.
+                </para>
                 <para lang="ja">
                   このオプションでは見当線が黄金分割を示します。
                 </para>
@@ -428,8 +663,22 @@
       </varlistentry>
 
       <varlistentry>
+        <term lang="en">Auto Shrink Selection</term>
         <term lang="ja">選択範囲の自動縮小</term>
         <listitem>
+          <para lang="en">
+            The <guilabel>Auto Shrink Selection</guilabel> check-box will
+            make your next selection automatically shrink to the nearest
+            rectangular shape available on the image layer.  The
+            algorithm for finding the best rectangle to shrink to is
+            <quote>intelligent</quote>, which in this case means that it
+            sometimes does surprisingly sophisticated things, and sometimes
+            does surprisingly strange things.  In any case, if the region
+            that you want to select has a solid-colored surround,
+            auto-shrinking will always pick it out correctly.  Note that
+            the resulting selection does not need to have the
+            same shape as the one you sweep out.
+          </para>
           <para lang="ja">
             <guilabel>選択範囲の自動縮小</guilabel> ボタンは現在活性化している
             レイヤー上の図形で選択範囲内の境界線に最も近い長方形や辺に
@@ -443,8 +692,17 @@
         </listitem>
       </varlistentry>
       <varlistentry>
+        <term lang="en">Shrink merged</term>
         <term lang="ja">レイヤー結合部分を基準に縮小</term>
         <listitem>
+          <para lang="en">
+            If <guilabel>Sample Merged</guilabel>
+            is also enabled, then Auto Shrink will use the pixel information
+            from the visible display of the image, rather than just from the
+            active layer. For further information regarding Sample Merge, see
+            the glossary entry
+            <link linkend="glossary-samplemerge">Sample Merge</link>.
+          </para>
           <para lang="ja">
             <guilabel>レイヤー結合色</guilabel> も有効な場合に、
             <quote>選択範囲の自動縮小</quote> は活性レイヤーだけではなく画像の

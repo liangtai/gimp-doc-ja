@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-03-14 j.h: rebuilt the Allow Growing example
   2008-03-01 j.h: rewrote Shrink Merged. Added "arrow keys"
@@ -13,7 +14,7 @@
   2005-12-01 informalfigure replaced by figure by lexa
   0506609 de reviewed by axel.wernicke
   -->
-<!--revision2790 2009-03-22-->
+<!--revision2818 2009-04-20-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-crop">
   <title lang="en">Crop</title>
   <title lang="ja">切り抜き</title>
@@ -120,27 +121,27 @@
   <note>
     <para lang="en">
       You can see the aspect ratio in the status bar:
-      <figure>
-        <title>Aspect ratio display</title>
+<!--      <figure>
+        <title>Aspect ratio display</title>-->
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
                        fileref="images/toolbox/display_ratio.png"/>
           </imageobject>
         </mediaobject>
-      </figure>
+<!--      </figure>-->
     </para>
     <para lang="ja">
       画像ウィンドウ底部の状態表示 (ステイタスバー) で縦横比がわかります。
-      <figure>
-        <title>縦横比の表示</title>
+<!--      <figure>
+        <title>縦横比の表示</title>-->
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
                        fileref="images/toolbox/ja/display_ratio.png"/>
           </imageobject>
         </mediaobject>
-      </figure>
+<!--      </figure>-->
     </para>
   </note>
 
@@ -161,7 +162,7 @@
             <guimenu>Tools</guimenu>
             <guisubmenu>Transform tools</guisubmenu>
             <guimenuitem>Crop</guimenuitem>
-          </menuchoice>.
+          </menuchoice>,
         </para>
         <para lang="ja">
           画像ウィンドウのメニューより
@@ -174,16 +175,18 @@
       </listitem>
       <listitem>
         <para lang="en">
-          By clicking the tool icon:
+          by clicking the tool icon:
           <guiicon>
-            <inlinemediaobject><imageobject><imagedata
-              fileref="images/toolbox/stock-tool-crop-22.png"/></imageobject>
-            </inlinemediaobject>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-crop-22.png"/>
           </guiicon>in the ToolBox,
         </para>
         <para lang="ja">
           ツールボックスのツールアイコン
-          <guiicon><inlinemediaobject><imageobject><imagedata fileref="images/toolbox/stock-tool-crop-22.png"/></imageobject></inlinemediaobject></guiicon>
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-crop-22.png"/>
+          </guiicon>
         </para>
       </listitem>
       <listitem>
@@ -212,57 +215,40 @@
   <sect3>
     <title lang="en">Key modifiers (Defaults)</title>
     <title lang="ja">修飾キー (初期設定)</title>
-    <!--<variablelist>
-      <varlistentry>
-        <term>Shortcut</term>
-        <listitem>
-          <para>
-            The
-            <keycombo><keycap>Shift</keycap><keycap>C</keycap></keycombo>
-            shortcut will change the active tool to the Crop Tool.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Key modifiers</term>
-        <listitem>-->
-          <para lang="en">
-            When you maintain click on the crop rectangle, handles
-            disappear and
-          </para>
-          <para lang="ja">
+    <para lang="en">
+      When you maintain click on the crop rectangle, handles
+      disappear and
+    </para>
+    <para lang="ja">
       切り抜き矩形を描いてからその内側でクリックしたままマウスボタンを押し
-      続けると、 ハンドルが消えて...
-          </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                holding down the <keycap>Ctrl</keycap> key toggles to the
-                <guilabel>Extend from Center</guilabel> option,
-              </para>
-              <para lang="ja">
+      続けると、 ハンドルが消えて&hellip;
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          holding down the <keycap>Ctrl</keycap> key toggles to the
+          <guilabel>Extend from Center</guilabel> option,
+        </para>
+        <para lang="ja">
           <keycap>Ctrl</keycap> キーを押している間は
           <guilabel>中央から拡げる</guilabel> オプションが有効になります。
           (反応がないときは
           <keycombo><keycap>Alt</keycap><keycap>Ctrl</keycap></keycombo>)
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                holding down the <keycap>Shift</keycap> key toggles to the
-                <guilabel>Fixed</guilabel> option, which makes some
-                dimensions fixed.
-              </para>
-              <para lang="ja">
-                <keycap>Shift</keycap> キーを押している間は
-                <guilabel>固定</guilabel> オプションが有効になり、 位置や寸法
-                などの一部が固定されます。
-              </para>
-            </listitem>
-          </itemizedlist>
-        <!--</listitem>
-      </varlistentry>
-    </variablelist>-->
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          holding down the <keycap>Shift</keycap> key toggles to the
+          <guilabel>Fixed</guilabel> option, which makes some
+          dimensions fixed.
+        </para>
+        <para lang="ja">
+          <keycap>Shift</keycap> キーを押している間は
+          <guilabel>固定</guilabel> オプションが有効になり、 位置や寸法
+          などの一部が固定されます。
+        </para>
+      </listitem>
+    </itemizedlist>
   </sect3>
   <sect3>
     <title lang="en">Tool Options</title>
