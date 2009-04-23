@@ -1,42 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-12-15 j.h: updated en;fr to v2.6
   2007-05-04 Added Spanish translation by AntI
   2006-09-10 lexa: added translated to german
   2006-07-05 created en;fr by j.h
 -->
+<!--revision2818 2009-04-23-->
 <sect2 id="gimp-device-status-dialog">
-  <!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-07-05</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Device Status Dialog</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Device Status Dialog</title>
+  <title lang="ja">デバイスの状態ダイアログ</title>
+  <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Device Status</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Device Status</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>デバイスの状態</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>デバイスの状態</primary>
+  </indexterm>
   <figure>
-    <title>
-      <phrase>The <quote>Device Status</quote> Dialog</phrase>
-    </title>
+    <title lang="en">The <quote>Device Status</quote> Dialog</title>
+    <title lang="ja"><quote>デバイスの状態</quote>ダイアログ</title>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="images/dialogs/device-status.png" format="PNG"/>
+        <imagedata fileref="images/dialogs/ja/device-status.png" format="PNG"/>
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     This window gathers together the current options of Toolbox, for each
     of your input devices: the mouse (named <quote>Core pointer</quote>) or
     either the tablet, if you have one. These options are represented by
@@ -45,31 +43,63 @@
     which lets you select another option; the tool-box will be updated when
     changing.
   </para>
-  <para>
+  <para lang="en">
     The <quote>Record device status</quote> button at the bottom of the
     window, seems to have the same action as the <quote>Record device
     status now</quote> option in the Input Devices section in preferences.
   </para>
+  <para lang="ja">
+    このウィンドウにはツールボックスの現在のオプションが、 お使いのデバイス
+    ごとにまとめて表示されています。 マウスは <guilabel>Core Pointer</guilabel>
+    と表示され、 タブレットがあればその項目も現れます。 ツール、 描画色、
+    背景色、 ブラシ、 パターン、 グラデーションの各オプションは全てアイコン化
+    されています。 色のアイコンを除くすべてのアイコンはクリックするとその資材を
+    変更できるダイアログが呼び出されます。 変更の結果はツールボックスの標識領域
+    でも表示されます。
+  </para>
+  <para lang="ja">
+    ダイアログ底部の
+    <guiicon>
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="images/dialogs/ja/stock-save-16.png"/>
+        </imageobject>
+        <textobject>
+          <phrase>「デバイスの状態を保存」</phrase>
+        </textobject>
+      </inlinemediaobject>
+    </guiicon> アイコンボタンは
+    <link linkend="gimp-prefs-input-devices">環境設定</link>
+    ダイアログの<quote>入力デバイス</quote>のページの
+    <guibutton>現在の入力デバイスの設定を保存(<accel>N</accel>)</guibutton>
+    ボタンに似たはたらきをします。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activate Dialog</phrase>
-    </title>
-    <para>
+    <title lang="en">Activating the Dialog</title>
+    <para lang="en">
       The device status dialog is a dockable dialog; see the section
       <xref linkend="gimp-concepts-docks"/>
-      for help on manipulating it. It can be activated in several ways:
+      for help on manipulating it. It can be activated in two ways:
     </para>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           From an image menu :
-          <menuchoice><guimenu>Windows</guimenu><guisubmenu>Dockable Dialogs</guisubmenu><guimenuitem>Device Status</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Device Status</guimenuitem>
+          </menuchoice>.
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           From the Tab menu in any dialog :
-          <menuchoice><guimenu>Add a Dock</guimenu><guimenuitem>Device Status</guimenuitem></menuchoice>
+          <menuchoice>
+            <guimenu>Add a Dock</guimenu>
+            <guimenuitem>Device Status</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>
