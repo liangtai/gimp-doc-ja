@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-03-11 j.h: revised for v2.6. Added Presets
   2008-02-03 ude: updated 'de'
@@ -11,10 +12,11 @@
   2005-12-01 informalfigure replaced by figure by lexa
   2005-08-08 de reviewed by axel.wernicke
 -->
-<!--revision2818 2009-04-20-->
+<!--commit-idef9860867051cdfa59ba024eb4270079991aa5ba 2009-04-24-->
 <sect2 id="gimp-tool-curves">
   <title lang="en">Curves</title>
   <title lang="ja">トーンカーブ</title>
+
   <indexterm lang="en">
     <primary>Tools</primary>
     <secondary>Curves</secondary>
@@ -29,6 +31,7 @@
   <indexterm lang="ja">
     <primary>トーンカーブ</primary>
   </indexterm>
+
   <para lang="en">
     The Curves tool is the most sophisticated tool for changing the color,
     brightness, contrast or transparency of the active layer or a selection.
@@ -42,10 +45,11 @@
     ハイライトまでを扱いますが、 トーンカーブツールはどんな色調範囲をも
     扱います。 <acronym>RGB</acronym>画像[とグレースケール画像]が扱えます。
   </para>
+
   <sect3>
     <title lang="en">Activate the Tool</title>
     <title lang="ja">呼び出し方</title>
-    <para lang="en">You can get to this tools in several ways :</para>
+    <para lang="en">You can get to this tool in several ways :</para>
     <para lang="ja">このツールを起用する方法は2通りあります:</para>
     <itemizedlist>
       <listitem>
@@ -195,9 +199,7 @@
         <term lang="en">Channel</term>
         <term lang="ja">チャンネル(<accel>N</accel>)</term>
         <listitem>
-          <para lang="en">
-            There are five options:
-          </para>
+          <para lang="en">There are five options:</para>
           <para lang="ja">5通りのオプションがあります:</para>
           <variablelist>
             <varlistentry>
@@ -300,18 +302,6 @@
           <itemizedlist>
             <listitem>
               <para lang="en">
-                <emphasis>The vertical gradient</emphasis>: it represents the
-                the destination, the output tonal scale. It ranges from 0
-                (black) to 255 (white), from Shadows to Highlights.
-              </para>
-              <para lang="ja">
-                <emphasis>垂直勾配</emphasis>: この方向は出力側の色調の尺度を
-                表します。 0 (黒) から 255 (白) までの範囲は影からハイライトに
-                相当します。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
                 <emphasis>The horizontal gradient</emphasis>: it represents
                 the input tonal scale. It, too, ranges from 0 (black) to 255
                 (white), from Shadows to Highlights. When you
@@ -326,6 +316,18 @@
                 これは2つに分割されており、 上部はレイヤーもしくは選択範囲の
                 <emphasis>色調の均衡線</emphasis> を表しています。-->
                 <!--全く意味がわからない-->
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <emphasis>The vertical gradient</emphasis>: it represents the
+                the destination, the output tonal scale. It ranges from 0
+                (black) to 255 (white), from Shadows to Highlights.
+              </para>
+              <para lang="ja">
+                <emphasis>垂直勾配</emphasis>: この方向は出力側の色調の尺度を
+                表します。 0 (黒) から 255 (白) までの範囲は影からハイライトに
+                相当します。
               </para>
             </listitem>
             <listitem>
@@ -446,41 +448,44 @@
           </itemizedlist>
         </listitem>
       </varlistentry>
-      <varlistentry lang="en">
-        <term>All Channels</term>
-        <listitem>
-          <para><guilabel>Open</guilabel>: This button allows you to select
-            a file holding curve settings.
-          </para>
-          <para><guilabel>Save</guilabel>: Allows you to save any curves
-            you have set to a file that can be loaded later.
-          </para>
-        </listitem>
-      </varlistentry>
       <varlistentry>
         <term lang="en">Curve type</term>
         <term lang="ja">カーブの種類(<accel>T</accel>)</term>
         <listitem>
-          <para lang="en">
-            <guilabel>Smooth</guilabel>: This the default mode. It
-            constrains the curve type to a smooth line with tension. It
-            provides a more realistic render than the following.
-          </para>
-          <para lang="en">
-            <guilabel>Free Hand</guilabel>: With this mode, you can draw
-            a broken line that you can smooth by clicking the
-            <guibutton>Smooth</guibutton> button.
-          </para>
-          <para lang="ja">
-            <guimenuitem>滑らか</guimenuitem>: こちらが既定値です。 この様式は
-            色カーブに張力の効いた滑らかさを保つよう仕向けます。 結果的にもう
-            一方の様式よりも現実的な描画をもたらします。
-          </para>
-          <para lang="ja">
-            <guimenuitem>自由曲線</guimenuitem>: この様式はぎざぎざの線を
-            描けますが再び <guibutton>滑らか</guibutton> ボタンをクリックすると
-            滑らかな曲線に変換されます。
-          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Smooth</term>
+              <term lang="ja">滑らか</term>
+              <listitem>
+                <para lang="en">
+                  This the default mode. It constrains the curve type to a
+                  smooth line with tension. It provides a more realistic
+                  render than the following.
+                </para>
+                <para lang="ja">
+                  こちらが既定値です。 この様式は色カーブに張力の効いた
+                  滑らかさを保つよう仕向けます。 結果的にもう一方の様式よりも
+                  現実的な描画をもたらします。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Free Hand</term>
+              <term lang="ja">自由曲線</term>
+              <listitem>
+                <para lang="en">
+                  With this mode, you can draw a broken line that you can
+                  smooth by clicking the <guibutton>Curve Type</guibutton>
+                  button again.
+                </para>
+                <para lang="ja">
+                  この様式はぎざぎざの線を描けますが再び
+                  <guibutton>カーブの種類</guibutton> ボタンをクリックすると
+                  滑らかな曲線に変換されます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -534,10 +539,10 @@
         <term lang="ja">色の平均を取る</term>
         <listitem>
           <para lang="en">
-             This slider sets the <quote>radius</quote> of the color-picking
-             area. This area appears as a more or less enlarged square
-             when you maintain the click on a pixel. Here, the eye-dropper is
-             used to locate a pixel: radius = 1 seems the best.
+            This slider sets the <quote>radius</quote> of the color-picking
+            area. This area appears as a more or less enlarged square when you
+            maintain the click on a pixel. Here, the eye-dropper is used to
+            locate a pixel: radius = 1 seems the best.
           </para>
           <para lang="ja">
             このスライダは色を採取する領域の<quote>半径</quote>を設定します。
@@ -552,244 +557,260 @@
   <sect3>
     <title lang="en">Using the <quote>Curves</quote> tool</title>
     <title lang="ja">トーンカーブツールの利用</title>
-    <para lang="en">
-      We create anchors and segments on the curve and we move them to
-      shape the curve. This curve maps <quote>input</quote> tones of
-      the active layer or selection to <quote>output</quote> tones.
-    </para>
-    <para lang="ja">
-      色カーブの形を変えるには色カーブの分節上にアンカーを置きそれを移動する
-      ことを学びました。 色カーブは選択範囲や活性レイヤーの<quote>入力側
-      </quote>の色調を<quote>出力側</quote>の色調に射影します。
-    </para>
-    <simplesect role="NotInToc" lang="ja">
-      <title lang="en">How the Curves tool works</title>
-      <title lang="ja">トーンカーブツールはどのようにはたらくのか</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="images/toolbox/curves-work.png" format="PNG"/>
-        </imageobject>
-        <caption>
-          <para lang="en">Moving the anchor upwards</para>
-          <para lang="ja">アンカーを上に移動</para>
-        </caption>
-      </mediaobject>
-      <para lang="en">
-        Moving the anchor of a pixel upwards makes this pixel
-        brighter.
-      </para>
-      <para lang="ja">
-       アンカーを上に移動すると画像は明るくなります。 その付近の範囲の画素の
-       出力が上がるからです。
-      </para>
-    </simplesect>
 
-    <simplesect role="NotInToc" lang="ja">
-      <title lang="en">Making the curve more horizontal</title>
-      <title lang="ja">水平に近づけられた色カーブ</title>
+    <sect4>
+      <title lang="en">Summary and basic shapes</title>
+      <title lang="ja">以上のまとめと基本的な色曲線形状</title>
+
       <para lang="en">
-        Making the curve more horizontal forces all the input tonal
-        range to occupy a shrunk output tonal range.
-      </para>
-      <para lang="en">
-        The histogram shows the compression of pixels into the
-        output range. Darkest and brightest pixels disappeared:
-        contrast decreases.
+        We create anchors and segments on the curve and we move them to
+        shape the curve. This curve maps <quote>input</quote> tones of
+        the active layer or selection to <quote>output</quote> tones.
       </para>
       <para lang="ja">
-        色カーブを水平に近づけてゆくと (下図左側)、 入力側の全ての色調は
-        出力側の狭められた色調範囲に押しこめられる格好になります。
+        色カーブの形を変えるには色カーブの分節上にアンカーを置きそれを移動する
+        ことを学びました。 色カーブは選択範囲や活性レイヤーの<quote>入力側
+        </quote>の色調を<quote>出力側</quote>の色調に射影します。
       </para>
-      <para lang="ja">
-        右側のヒストグラムでは出力範囲に画素が圧縮されているのがわかります。
-        最も暗い方の画素と最も明るい方の画素はもうありません。 コントラストは
-        減りました。
-      </para>
-      <figure>
+
+      <simplesect role="NotInToc">
+        <title lang="en">How the Curves tool works</title>
+        <title lang="ja">トーンカーブツールはどのようにはたらくのか</title>
+        <para lang="en">
+          Moving the anchor of a pixel upwards makes this pixel
+          brighter.
+        </para>
+        <para lang="ja">
+          アンカーを上に移動すると画像は明るくなります。 その付近の範囲の画素の
+          出力が上がるからです。
+        </para>
         <mediaobject>
           <imageobject>
-            <imagedata format="PNG"
-              fileref="images/toolbox/curves-horiz-1.png"/>
+            <imagedata fileref="images/toolbox/curves-work.png" format="PNG"/>
           </imageobject>
           <caption>
-            <para lang="en">
-              Vertical distance is shorten between both ending anchors of the
-              left side and the right side.
-            </para>
-            <para lang="ja">
-              左右両端のアンカーの垂直距離が狭まった。
-            </para>
+            <para lang="en">Moving the anchor upwards</para>
+            <para lang="ja">アンカーを上に移動</para>
           </caption>
         </mediaobject>
-        <mediaobject>
-          <imageobject>
-            <imagedata format="PNG"
-              fileref="images/toolbox/curves-horiz-2.png"/>
-          </imageobject>
-          <caption>
-            <para lang="en">The histgram of result.</para>
-            <para lang="ja">結果のヒストグラム。</para>
-          </caption>
-        </mediaobject>
-      </figure>
-    </simplesect>
+      </simplesect>
 
-    <simplesect role="NotInToc" lang="ja">
-      <title lang="en">Making the curve more vertical</title>
-      <title lang="ja">垂直に近づけられた色カーブ</title>
-      <para lang="en">
-        Moving the upper end point to the left and the lower end
-        point to the right is the same as moving the white slider to
-        the left and the black slider to the right in the Levels
-        tool: all pixels whose value is more than the white point
-        (the flat part of the curve) are made white (more colored /
-        more opaque according to the selected channel). All pixels
-        whose value is less than the black point (the lower
-        flattened curve) are made black (black / completely
-        transparent).
-        Pixels corresponding to points of the curve that have moved
-        up are made lighter. Pixels corresponding to points of the
-        curve that have moved down are made darker  (green arrows).
-        All these pixels will be extended to the whole output tonal
-        range.
-      </para>
-      <para lang="en">
-        The histogram shows the extension of values, from black (0)
-        to White (255): contrast is increased. Since the Value
-        channel is selected, changes affect all color channels and
-        colors increase.
-      </para>
-      <para lang="ja">
-        各終点アンカーの上端を左寄りに、 下端を右寄りに移動することは、
-        <link linkend="gimp-tool-levels">レベル</link> ツールで白スライダを
-        左寄りに、 黒スライダを右寄りに移動するのと同じです。 白点よりも大きな
-        (=色カーブの平坦部の) 値の画素は全て白く (選んだチャンネルによっては、
-        より色が強く / より不透明に) なります。 黒点よりも小さな (=色カーブの
-        下側の平坦部の) 値の画素は全て黒く (真っ黒に / 完全透過に) なります。
-        色カーブの持ち上げられた部分の各点に対応する画素は色が薄くなります。
-        反対に色カーブの引き下げられた部分の各点に対応する画素は暗くなります
-        (緑の矢印)。 そうした全ての画素は出力側の色調範囲いっぱいに拡がって
-        分布します。
-      </para>
-      <para lang="ja">
-        ヒストグラムでは値が全域に拡散していることがわかります。 コントラストは
-        増します。 明度チャンネルが選択されたことから、 この変更は全ての色
-        チャンネルに影響し、 色が強くなりました。
-      </para>
-      <figure>
+      <simplesect role="NotInToc">
+        <title lang="en">Making the curve more horizontal</title>
+        <title lang="ja">水平に近づけられた色カーブ</title>
+        <para lang="en">
+          Making the curve more horizontal forces all the input tonal range to
+          occupy a shrunk output tonal range.
+        </para>
+        <para lang="en">
+          The histogram shows the compression of pixels into the output range.
+          Darkest and brightest pixels disappeared: contrast decreases.
+        </para>
+        <para lang="ja">
+          色カーブを水平に近づけてゆくと (下図左側)、 入力側の全ての色調は
+          出力側の狭められた色調範囲に押しこめられる格好になります。
+        </para>
+        <para lang="ja">
+          右側のヒストグラムでは出力範囲に画素が圧縮されているのがわかります。
+          最も暗い方の画素と最も明るい方の画素はもうありません。 コントラストは
+          減りました。
+        </para>
+        <figure>
+          <title lang="en">Making the curve more horizontal</title>
+          <title lang="ja">水平に近づけられた色カーブ</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/curves-horiz-1.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Vertical distance is shorten between both ending anchors of the
+                left side and the right side.
+              </para>
+              <para lang="ja">
+                左右両端のアンカーの垂直距離が狭まった。
+              </para>
+            </caption>
+          </mediaobject>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/curves-horiz-2.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">The resulting histogram</para>
+              <para lang="ja">結果のヒストグラム</para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </simplesect>
+
+      <simplesect role="NotInToc">
         <title lang="en">Making the curve more vertical</title>
         <title lang="ja">垂直に近づけられた色カーブ</title>
+
+        <para lang="en">
+          Moving the upper end point to the left and the lower end point to
+          the right is the same as moving the white slider to the left and the
+          black slider to the right in the Levels tool: all pixels whose value
+          is more than the white point (the flat part of the curve) are made
+          white (more colored / more opaque according to the selected
+          channel). All pixels whose value is less than the black point (the
+          lower flattened curve) are made black (black / completely
+          transparent).  Pixels corresponding to points of the curve that have
+          moved up are made lighter. Pixels corresponding to points of the
+          curve that have moved down are made darker  (green arrows).  All
+          these pixels will be extended to the whole output tonal range.
+        </para>
+        <para lang="en">
+          The histogram shows the extension of values, from black (0) to White
+          (255): contrast is increased. Since the Value channel is selected,
+          changes affect all color channels and colors increase.
+        </para>
+        <para lang="ja">
+          各終点アンカーの上端を左寄りに、 下端を右寄りに移動することは、
+          <link linkend="gimp-tool-levels">レベル</link> ツールで白スライダを
+          左寄りに、 黒スライダを右寄りに移動するのと同じです。 白点よりも
+          大きな (=色カーブの平坦部の) 値の画素は全て白く (選んだチャンネルに
+          よっては、 より色が強く / より不透明に) なります。 黒点よりも小さな
+          (=色カーブの下側の平坦部の) 値の画素は全て黒く (真っ黒に /
+          完全透過に) なります。 色カーブの持ち上げられた部分の各点に対応する
+          画素は色が薄くなります。 反対に色カーブの引き下げられた部分の各点に
+          対応する画素は暗くなります (緑の矢印)。 そうした全ての画素は出力側の
+          色調範囲いっぱいに拡がって分布します。
+        </para>
+        <para lang="ja">
+          ヒストグラムでは値が全域に拡散していることがわかります。 コントラスト
+          は増します。 明度チャンネルが選択されたことから、 この変更は全ての色
+          チャンネルに影響し、 色が強くなりました。
+        </para>
+        <figure>
+          <title lang="en">Making the curve more vertical</title>
+          <title lang="ja">垂直に近づけられた色カーブ</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/curves-vert-1.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Horizontal distance is shorten between both ending anchors of
+                the left side and the right side.
+              </para>
+              <para lang="ja">
+                左右両端の終点アンカーの水平距離が短くなった。
+              </para>
+            </caption>
+          </mediaobject>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/toolbox/curves-vert-2.png">
+            </imageobject>
+            <caption>
+              <para lang="en">Result and its histogram</para>
+              <para lang="ja">結果とヒストグラム</para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </simplesect>
+    </sect4>
+
+    <sect4>
+      <title lang="en">Practical cases</title>
+      <title lang="ja">実践編</title>
+
+      <simplesect role="NotInToc">
+        <title lang="en">Invert colors</title>
+        <title lang="ja">色の逆転</title>
+
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/toolbox/curves-vert-1.png"/>
+              fileref="images/toolbox/curves-invert.png"/>
           </imageobject>
           <caption>
-            <para lang="en">
-              Horizontal distance is shorten between both ending anchors of the
-              left side and the right side.
-            </para>
-            <para lang="ja">
-              左右両端の終点アンカーの水平距離が短くなった。
-            </para>
+            <para lang="en">Inverted curve</para>
+            <para lang="ja">逆転された色カーブ</para>
           </caption>
         </mediaobject>
+        <para lang="en">
+          Black is made White (fully colored / fully opaque). White is made
+          black (black, fully transparent). All pixels adopt the complementary
+          color. Why that? Because subtracting the channel values from 255
+          gives the complementary color. For example: 19;197;248 a sky blue
+          gives 255-19; 255-197; 255-248 = 236;58;7, a bright red.
+        </para>
+        <para lang="ja">
+          左の終端を最上部まで、 右の終端を最下部まで移動すると、 色は逆転
+          します: 黒は白に (最強色に / 完全不透明に) なります。 白は黒に
+          (真っ黒に / 完全透過に) なります。 全ての画素は補色を取ります。
+          なぜでしょう？ 理由はチャンネルの値と 255 の差が補色の値になるから
+          です。 例を挙げましょう。 スカイブルーは (19,197,248) ですが、
+          それぞれの差から得た
+          (255-19,255-197,255-48) = (236,58,7) は明るい赤になります。
+        </para>
+      </simplesect>
+
+      <simplesect role="NotInToc">
+        <title lang="en">Enhance contrast</title>
+        <title lang="ja">コントラストの増し方</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/toolbox/curves-H-S.png" format="PNG"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Contrast is increased.</para>
+            <para lang="ja">コントラストが増した。</para>
+          </caption>
+        </mediaobject>
+        <para lang="en">
+          Contrast is increased in mid tones because the curve is steeper
+          there. Highlights and Shadows are increased but contrast is slightly
+          less in these areas because the curve is flatter.
+        </para>
+        <para lang="ja">
+          中色域では色カーブの傾斜がより険しくなったためコントラストが増し
+          ました。 ハイライトや影も増えましたがそれらの色カーブの傾きは
+          よりなだらかになったのでコントラストもやや減りました。
+        </para>
+      </simplesect>
+
+      <simplesect role="NotInToc">
+        <title lang="en">Working on color channels</title>
+        <title lang="ja">色チャンネルの操作</title>
+
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/toolbox/curves-vert-2.png">
+              fileref="images/toolbox/curves-lighten-1.png"/>
+          </imageobject>
+        </mediaobject>
+        <para lang="en">
+          For every channel, we moved the white point horizontally to the
+          left, to the first Highlights. This lightens Highlights up. Then we
+          shaped the curve to lighten Mid tons and Shadows while keeping
+          black.
+        </para>
+        <para lang="ja">
+          全ての色チャンネルで、 それぞれのハイライトのはじまりの位置まで白点
+          (右上の終端アンカー) を水平に左方向へ移動しました。 するとハイライト
+          はより明るくなります。 つぎに色カーブの調整に取り掛かり、 黒点は
+          そのままに中色をより明るくなるようにしました。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/toolbox/curves-lighten-2.png"/>
           </imageobject>
           <caption>
-            <para lang="en">The histgram and result.</para>
-            <para lang="ja">結果とヒストグラム。</para>
+            <para lang="en">The original image and the result</para>
+            <para lang="ja">元画像と結果の画像</para>
           </caption>
         </mediaobject>
-      </figure>
-    </simplesect>
-    <simplesect role="NotInToc" lang="ja">
-      <title lang="en">Invert colors</title>
-      <title lang="ja">色の逆転</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="images/toolbox/curves-invert.png" format="PNG"/>
-        </imageobject>
-        <caption>
-          <para lang="en">Inverted curve</para>
-          <para lang="ja">逆転された色カーブ</para>
-        </caption>
-      </mediaobject>
-      <para lang="en">
-        Black is made White (fully colored / fully opaque). White
-        is made black (black, fully transparent). All pixels adopt
-        the complementary color. Why that? Because subtracting
-        the channel values from 255 gives the complementary color. For
-        example: 19;197;248 a sky blue gives 255-19; 255-197;
-        255-248 = 236;58;7, a bright red.
-      </para>
-      <para lang="ja">
-        左の終端を最上部まで、 右の終端を最下部まで移動すると、 色は逆転します:
-        黒は白に (最強色に / 完全不透明に) なります。 白は黒に (真っ黒に /
-        完全透過に) なります。 全ての画素は補色を取ります。 なぜでしょう？
-        理由はチャンネルの値と 255 の差が補色の値になるからです。 例を挙げ
-        ましょう。 スカイブルーは (19,197,248) ですが、 それぞれの差から得た
-        (255-19,255-197,255-48) = (236,58,7) は明るい赤になります。
-      </para>
-    </simplesect>
-    <simplesect role="NotInToc" lang="ja">
-      <title lang="en">Enhance contrast</title>
-      <title lang="ja">コントラストの増し方</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="images/toolbox/curves-H-S.png" format="PNG"/>
-        </imageobject>
-        <caption>
-          <para lang="en">Contrast is increased.</para>
-          <para lang="ja">コントラストが増した。</para>
-        </caption>
-      </mediaobject>
-      <para lang="en">
-        Contrast is increased in mid tones because the curve is
-        steeper there. Highlights and Shadows are increased but
-        contrast is slightly less in these areas because the curve
-        is flatter.
-      </para>
-      <para lang="ja">
-        中色域では色カーブの傾斜がより険しくなったためコントラストが増し
-        ました。 ハイライトや影も増えましたがそれらの色カーブの傾きは
-        よりなだらかになったのでコントラストもやや減りました。
-      </para>
-    </simplesect>
-    <simplesect role="NotInToc" lang="ja">
-      <title lang="en">Working on color channels</title>
-      <title lang="ja">色チャンネルの操作</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/toolbox/curves-lighten-1.png"/>
-        </imageobject>
-      </mediaobject>
-      <para lang="en">
-        For every channel, we moved the white point horizontally to
-        the left, to the first Highlights. This lightens Highlights
-        up. Then we shaped the curve to lighten Mid tons and
-        Shadows while keeping black.
-      </para>
-      <para lang="ja">
-        全ての色チャンネルで、 それぞれのハイライトのはじまりの位置まで白点
-        (右上の終端アンカー) を水平に左方向へ移動しました。 するとハイライトは
-        より明るくなります。 つぎに色カーブの調整に取り掛かり、 黒点は
-        そのままに中色をより明るくなるようにしました。
-      </para>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/toolbox/curves-lighten-2.png"/>
-        </imageobject>
-        <caption>
-          <para lang="en">The original image and the result.</para>
-          <para lang="ja">元画像と結果の画像</para>
-        </caption>
-      </mediaobject>
-    </simplesect>
+      </simplesect>
+    </sect4>
   </sect3>
 </sect2>
