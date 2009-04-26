@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-04-14 Added Spanish translation by AntI
   2007-01-22 modified Korean Translation by Dust
@@ -7,7 +8,7 @@
   2006-08-19 Added Norwegian translation by KoSt
   2006-07-22 dust: added ko translation
 -->
-<!--revision2786-->
+<!--2009-04-26-->
 <sect1 id="gimp-using-setup-tile-cache">
   <title lang="en">How to Set Your Tile Cache</title>
   <title lang="ja">タイルキャッシュの設定方法</title>
@@ -57,8 +58,17 @@
     </quote>といいます。
   </para>
   <para lang="ja">
+    タイルキャッシュ値が低いということは、 <acronym>GIMP</acronym>がデータを
+    非常に素早くディスクに送り、 利用可能な<acronym>RAM</acronym>も実際には
+    使おうとせず、 ディスクをはたらかせるほどのこともない場合にあたります。
+    タイルキャッシュ値が高くなっていて、 他のアプリケーションの使えるシステム
+    の資源が欠乏してスワップ現象が起きだすと、 ディスクばかりに負担をかける結果
+    になります。 こういうときは<acronym>RAM</acronym>が不足しているので不意に
+    終了するものや異常をきたしはじめるものさえ出てくるかもしれません。
   </para>
   <para lang="ja">
+    それではタイルキャッシュの大きさはどの位が適当でしょうか。 ちょうど良い値を
+    見付けるためのコツやちょっとした技をここに紹介します。
   </para>
   <itemizedlist>
     <listitem>
@@ -71,6 +81,13 @@
         the best solution.
       </para>
       <para lang="ja">
+        一番楽なやり方は何も気にしないで、 既定値でうまくいくと信じることです。
+        コンピュータに搭載されている<acronym>RAM</acronym>がたとえ少なかったと
+        しても、 <acronym>GIMP</acronym>で扱う画像が小さくて、 同時に稼動して
+        いる他のアプリケーションが1つか2つぐらいだったらそれでも大丈夫
+        でしょう。 難しいことが嫌いな方にとっては、 <acronym>GIMP</acronym>の
+        主な用途がスクリーンショットを撮ったりロゴを作成したりするだけならば、
+        これが最良の処方だといえそうです。
       </para>
     </listitem>
     <listitem>
@@ -81,6 +98,11 @@
         applications. Probably even 3/4 of your RAM would be fine.
       </para>
       <para lang="ja">
+        メモリをふんだんに搭載 (512メガバイト以上) した最新のコンピュータなら、
+        タイルキャッシュの設定量がその<acronym>RAM</acronym>量の半分あれば、
+        他のアプリケーションと奪い合いにならない限り<acronym>GIMP</acronym>の
+        処理状況はおそらく良好です。 <acronym>RAM</acronym>量の4分の3ぐらいに
+        しておけばほぼ大丈夫でしょう。
       </para>
     </listitem>
     <listitem>
@@ -93,6 +115,12 @@
         money, or drinks, as price for the service.
       </para>
       <para lang="ja">
+        お使いのコンピュータが大勢で共有されているものならば、 管理者か誰かに
+        設定を頼むのが良策です。 ただし<acronym>GIMP</acronym>なんか走らせる
+        から計算機が台無しになるんだと言って怒る人や、 かえって<acronym>GIMP
+        </acronym>の処理状況を悪化させるような人物は避けましょう。 お使いの
+        コンピュータがあなたご自身の所有でしかも一度に一人だけで使えるもの
+        (パソコン) だったら、 謝礼にお金か飲み物を用意しましょうか。
       </para>
     </listitem>
     <listitem>
@@ -104,6 +132,10 @@
         others.
       </para>
       <para lang="ja">
+        一定の間をとりながら少しずつその値を上昇させてゆくのなら、 システムが
+        メモリ不足を訴えることもなくそのつど加速が伺えます。 ただしときには
+        突然にメモリ不足が顕在化し、 一部のアプリケーションを資源確保のため
+        強制終了するはめになるおそれがあります。
       </para>
     </listitem>
     <listitem>
@@ -114,6 +146,11 @@
         best from your computer.
       </para>
       <para lang="ja">
+        簡単な計算で済みますから実用的な値を弾き出しましょう。 遅かれ早かれ調整
+        しなければならないことですし、 上に挙げた方法によることになるでしょう。
+        さあこれでタイルキャッシュの設定の違いでどんな結果がでるか
+        分かりましたし、 お使いのコンピュータから最大限の処理能力が引き出せる
+        ようになりました。
       </para>
     </listitem>
   </itemizedlist>
@@ -146,10 +183,40 @@
     system swap:
   </para>
   <para lang="ja">
+    最後の提案にあったちょうど良い値が気になると思います。 これを得るには、
+    まずはじめにお使いのコンピュータについていくつかのデータを用意せねば
+    なりません。 システムに搭載されている<acronym>RAM</acronym>の容量、
+    オペレーティングシステムのスワップスペースの利用可能な容量を調べることは
+    もちろん、 さらにはオペレーティングシステムのスワップスペースがあるディスク
+    や<acronym>GIMP</acronym>のスワップスペースがあるディスクの読み書き速度に
+    ついてもおおよその目安をつけてください。 ディスクの検査をするとか回転速度
+    (<acronym>RPM</acronym>) を確かめるという意味ではありません。 複数台ある
+    ときにどちらかが明らかに速かったりもしくはほとんど同じだったりするので、
+    そういったことを知っておけば十分です。 <acronym>GIMP</acronym>のスワップ用
+    フォルダを置くディレクトリについては、
+    <link linkend="gimp-prefs-folders">環境設定</link> ダイアログの
+    <quote>フォルダ</quote>のページの <guilabel>スワップ用フォルダ</guilabel>
+    で変更できます。
   </para>
   <para lang="ja">
+    つぎに、 <acronym>GIMP</acronym>と同時に稼動させたい他のアプリケーションが
+    使う資源量を見積らなくてはなりません。 この測定ではそのとき使いたい
+    <acronym>GIMP</acronym>以外のアプリケーションを全部起動して使用量を
+    調べます。 測定に使うアプリケーションはお使いの<acronym>OS</acronym>などの
+    使用環境によって異なりますが、 例えば <command>top</command> や <command>
+    free</command> コマンドが利用できます。 見てほしいのは残りメモリ容量と、
+    ファイルキャッシュ残量です。 最近のUNIX系システムなら未使用メモリを
+    できるだけ小さくして大きなファイルやバッファキャッシュを保持しようとして
+    いるはずです。 <productname>Linux</productname> の <command>free</command>
+    コマンドの出力では、 <computeroutput>free</computeroutput> と書かれた行と
+    <computeroutput>-/+ buffers/cache</computeroutput> と書かれた行を見て
+    ください。 スワップ残量も読み取りましょう。
   </para>
   <para lang="ja">
+    あとはいよいよ決断ですがちょっとだけ簡単な計算が必要です。 決断で肝心な
+    点は、 全てのタイルキャッシュを<acronym>RAM</acronym>にたよるか、 <acronym>
+    RAM</acronym>だけでなく一部をオペレーティングシステムのスワップ領域にも依存
+    するのかどうかということで、 これで考え方も変わります。
   </para>
   <procedure>
     <step>
@@ -162,6 +229,14 @@
         RAM and just go to the final decision; no more things to check.
       </para>
       <para lang="ja">
+        <acronym>GIMP</acronym>と他のアプリケーションと頻繁に切り替えながら
+        作業されていますか？ それともずっと長時間専ら<acronym>GIMP</acronym>
+        だけで作業されているのでしょうか？ <acronym>GIMP</acronym>と長く過ごす
+        方は<acronym>RAM</acronym>とスワップの両方に空き容量があるか確かめて
+        ください。 ほとんど残っていない場合は2番に進みましょう。 (よくわから
+        ない方も2番に進みましょう。) 一方、 細切れにアプリケーションを切り替え
+        ながら使う方は<acronym>RAM</acronym>の空き容量だけを読み取ってから
+        4番に進んでください。 他の値を調べる必要はありません。
       </para>
     </step>
     <step>
@@ -170,6 +245,10 @@
         swap? If so, add RAM and swap. Otherwise go to the next step.
       </para>
       <para lang="ja">
+        オペレーティングシステムのスワップ領域が置かれているのと同じディスク内
+        に<acronym>GIMP</acronym>のスワップ用フォルダを置いていますか？ 同じで
+        あれば<acronym>RAM</acronym>とシステムのスワップを増やすとよい
+        でしょう。 ディスクが別の方は3番に進んでください。
       </para>
     </step>
     <step>
@@ -179,6 +258,12 @@
         faster or similar, add free RAM and swap.
       </para>
       <para lang="ja">
+        <acronym>OS</acronym>のスワップ領域があるディスクの速さは<acronym>GIMP
+        </acronym>のスワップ用フォルダがあるディスクと同等もしくはそれ以上
+        でしょうか。 逆に遅いものであるなら<acronym>RAM</acronym>の空き容量だけ
+        が問題です。 同等もしくはそれ以上の速いディスクだったら、 そのシステム
+        用スワップと<acronym>RAM</acronym>の空き容量の両方を増やすと
+        よいでしょう。
       </para>
     </step>
     <step>
@@ -188,6 +273,10 @@
         the Tile Cache you could use as a good start.
       </para>
       <para lang="ja">
+        <acronym>RAM</acronym>の空き容量だけ、 もしくは<acronym>RAM</acronym>の
+        空き容量と<acronym>OS</acronym>のスワップの残量の和の数値が分かりました
+        でしょうか。 この値を、 万全を期すため少し小さくしてからタイル
+        キャッシュの設定値にしてみるのが良策でしょう。
       </para>
     </step>
   </procedure>
@@ -234,15 +323,50 @@
     It is also helpful to know if you will require more RAM and/or disk space.
   </para>
   <para lang="ja">
+    もうお分かりになったと思いますが、 全ては記憶資源の残量の確認と、 いかに
+    <acronym>OS</acronym>のスワップを有効活用するかにかかっており、 さもなくば
+    手をつけられないほどの問題を抱えるおそれがあります。
   </para>
   <para lang="ja">
+    もちろんタイルキャッシュの設定には他の理由もあります。 まず基本的なところ
+    ではコンピュータの使用状況が変化するとか、 ハードウェア自体を変更したという
+    場合です。 そういうときには[今までの]コンピュータの使い方や処理速度について
+    の感覚はもはやあてになりません。 やはり先に述べた決断への過程を通して適当な
+    値を見極める必要があります。 その値は以前のものとほとんど変わらないかも
+    知れませんし、 全然違う値が出てくるかもしれません。
   </para>
   <para lang="ja">
+    タイルキャッシュの値を変えるもうひとつの理由はどうも<acronym>GIMP</acronym>
+    の動きが鈍くて他のアプリケーションと比べると遅いように感じられる場合です。
+    考えられるのは他のアプリケーションの邪魔をするほどではなくとももう少し多く
+    <acronym>GIMP</acronym>にメモリを与えてもよいかもしれないということです。
+    逆に他のアプリケーションがメモリ不足を訴える場合には、 あまり<acronym>GIMP
+    </acronym>が食べ過ぎないよう調節するといいかもしれません。
   </para>
   <para lang="ja">
+    <acronym>RAM</acronym>だけ使うと判断していて<acronym>GIMP</acronym>の動作が
+    遅い場合は、 設定値を少しだけ増やしてみましょう。 ただしスワップの残りも
+    全部使ってしまわないようにしてください。 その逆の場合、 つまり<acronym>RAM
+    </acronym>とシステムスワップの両方を使っていて記憶資源不足が問題になって
+    いるときは、 <acronym>GIMP</acronym>が使える<acronym>RAM</acronym>の分量を
+    減らしたほうがよいでしょう。
   </para>
   <para lang="ja">
+    このほかには手持ちの一番速いディスクや、 普段使っているファイルを収める
+    ディスクとは別のディスクにスワップ用フォルダを置く技があります。 通常は
+    オペレーティングシステムが管理するスワップ領域を複数のディスクに分散して
+    置くのも良策といえます。 言わずもがなではありますが<acronym>RAM</acronym>を
+    もっと容量の大きなものに買い替えるか増設する手がありますし、 同時にあまり
+    たくさんのプログラムを走らせ過ぎないようにするのも方法です。 そもそも
+    [搭載メモリ]16<acronym>MB</acronym>のコンピュータでポスター大の画像を
+    編集できるわけがありませんし、 きびきびとした操作は無理というものです。
   </para>
   <para lang="ja">
+    画像を開いたらそれが消費するメモリ量も見てみてはどうでしょうか。 画像は
+    大きいものほど、 また操作履歴が長くなればなるほど、 資源の消費量も増えて
+    いきます。 ここで得られる数値を参考にするのもひとつの方法ではあります。
+    ただし扱う画像の大きさがほとんど同じで、 消費される実際のメモリ量も変化
+    しないことが条件です。 そのほかこの消費量を参考にすれば必要な<acronym>RAM
+    </acronym>容量やディスク容量の目安にもなるでしょう。
   </para>
 </sect1>
