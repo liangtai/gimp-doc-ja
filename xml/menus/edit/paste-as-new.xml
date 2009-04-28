@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-10 j.h : updated en;fr to v2.4
+-->
+<sect3 id="gimp-edit-paste-as-new">
+  <title>Paste as New Image</title>
+
+  <indexterm>
+    <primary>Image</primary>
+    <secondary>Paste as</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>Selection</primary>
+    <secondary>Paste</secondary>
+  </indexterm>
+
+  <para>
+    The <guimenuitem>Paste As New Image</guimenuitem> command creates a new
+    image and pastes the image data from the Clipboard into it. If the data is
+    not rectangular or square in shape, any regions outside the selection are
+    left transparent (an alpha channel is automatically created). Of course,
+    you have to copy your selection before you use this command, so that you
+    get an image with the same dimensions as the selection.
+  </para>
+  <para>
+    This command has the same action as the
+    <menuchoice>
+      <guimenu>File</guimenu>
+      <guisubmenu>Create</guisubmenu>
+      <guimenuitem>From Clipboard</guimenuitem>
+    </menuchoice> command.
+  </para>
+
+  <sect4>
+    <title>Activate the Command</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guisubmenu>Paste as</guisubmenu>
+            <guimenuitem>New Image</guimenuitem>
+          </menuchoice>.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect4>
+</sect3>

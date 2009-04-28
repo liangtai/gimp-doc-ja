@@ -2,18 +2,26 @@
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <glossary id="glossary">
-  <title>Glossary</title>
+  <title lang="en">Glossary</title>
+  <title lang="ja">用語集</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Glossary</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>用語集</primary>
   </indexterm>
 
   <glossentry id="glossary-alpha">
     <glossterm>
-      <phrase>Alpha</phrase>
+      <phrase lang="en">Alpha</phrase>
+      <phrase lang="ja">アルファ</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Alpha</primary>
+    </indexterm>
+    <indexterm significance="normal" lang="en">
+      <primary>アルファ</primary>
     </indexterm>
     <glossdef>
       <para lang="en">
@@ -31,25 +39,53 @@
         Channel.
       </para>
       <para lang="en">
-         With some image
-         <link linkend="glossary-fileformat">file formats</link>,
-         you can only specify that a pixel is completely transparent or
-         completely opaque. Other file formats allow a variable level of
-         transparency.
-       </para>
+        With some image
+        <link linkend="glossary-fileformat">file formats</link>,
+        you can only specify that a pixel is completely transparent or
+        completely opaque. Other file formats allow a variable level of
+        transparency.
+      </para>
+      <para lang="ja">
+アルファ値は画素の透明度を示します。 赤、 緑、 青の各値とは別に画素には
+アルファ値があります。 アルファ値が低くなるにつれその画素の色の可視度が
+強くなります。 アルファ値が 0 の画素は完全透過します。 アルファ値が 
+255 の画素は完全不透明です。
+      </para>
+      <para lang="ja">
+アルファだけをレイヤーごとにグレースケールとして表示するしくみは
+ありません。 チャンネルダイアログで見られるアルファチャンネルは[可視
+レイヤー]全部を合成した画像です。 仮にどこかの画素で1層のレイヤーだけが
+完全不透明で他のレイヤーは皆透明だったとすると、 アルファチャンネルは
+白で表わされます。
+      </para>
+      <para lang="ja">
+いくつかの画像用 
+<link linkend="glossary-fileformat">ファイル形式</link> は画素の透明度
+を表すのに完全透過か完全不透明のどちらかしか選べないものがあります。 
+それ以外のファイル形式では透明度が何段階にも表せます。
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-alpha-channel">
     <glossterm>
-      <phrase>Alpha Channel</phrase>
+      <phrase lang="en">Alpha Channel</phrase>
+      <phrase lang="ja">アルファチャンネル</phrase>
     </glossterm>
     <glossdef>
-      <indexterm significance="normal">
+      <indexterm significance="normal" lang="en">
         <primary>Transparency</primary>
         <secondary>Alpha channel</secondary>
       </indexterm>
-      <indexterm significance="normal">
+      <indexterm significance="normal" lang="en">
         <primary>Alpha Channel</primary>
+      </indexterm>
+      <indexterm significance="normal" lang="ja">
+        <primary sortas="トウカコウカ">透過効果</primary>
+        <secondary>アルファチャンネル</secondary>
+      </indexterm>
+      <indexterm significance="normal" lang="ja">
+        <primary>アルファチャンネル</primary>
       </indexterm>
       <para lang="en">
         An Alpha Channel represents the transparency of the image. Imagine
@@ -69,15 +105,39 @@
         See also <link linkend="alpha-channel-example">Alpha channel example
         </link>. <!--In concepts/layers.xml-->
       </para>
+      <para lang="ja">
+アルファチャンネルは画像の透明度を表します。 透けて見える画像を思い浮か
+べていただければ十分です。 アルファテャンネルは画像に2枚目のレイヤーを
+追加すると自動的に追加されます。 チャンネルダイアログでそれが分かり
+ます。 これでレイヤーが透過もできるようになります。 しかし背景レイヤー
+にだけはこの能力が自動付加されません。 可能にするには<quote>
+アルファチャンネルを追加</quote>コマンドを実行しなければなりません。
+      </para>
+      <para lang="ja">
+アルファチャンネルは目に見えませんが背景レイヤーを除く全てのレイヤーに
+付加されています。 アルファチャンネルを可視化しているものがチャンネル
+ダイアログにありますが、 これは全てのレイヤーのアルファ値を合成して
+表示しています。
+      </para>
+      <para lang="ja">
+<link linkend="alpha-channel-example">アルファチャンネルの例</link> 
+もご覧ください。
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-antialiasing">
     <glossterm>
-      <phrase>Antialiasing</phrase>
+      <phrase lang="en">Antialiasing</phrase>
+      <phrase lang="ja">アンチエイリアス</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Antialiasing</primary>
       <secondary>Explanation</secondary>
+    </indexterm>
+    <indexterm significance="normal" lang="ja">
+      <primary>アンチエイリアス</primary>
+      <secondary sortas="セツメイ">説明</secondary>
     </indexterm>
     <glossdef>
       <para lang="en">
@@ -89,7 +149,15 @@
         transition to the background is achieved. With selections, the
         opacity of the edge of the selection is appropriately reduced.
       </para>
-      <para lang="en">
+      <para lang="ja">
+アンチエイリアス化とは近似 (エイリアス) されたところを元に戻す工程を
+指しており、 つまりは<quote>ギザギザ現象</quote>を減らすしくみと
+いえます。 アンチエイリアスが掛けられた領域の画素と背景との境目は、 
+滑らかな曲線になるよう調整されます。 一般的には画素の発色や不透明度に
+変化をつけることによって背景と滑らかにつながったように見せています。 
+選択をとると、 選択範囲の境界線付近では選択の強度が適切に弱められます。
+      </para>
+      <para>
         <inlinemediaobject>
           <imageobject>
             <imagedata fileref="images/glossary/alias.png" format="PNG"/>
@@ -103,9 +171,11 @@
       </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-bezier-curve">
     <glossterm>
-      <phrase>Bezier curve</phrase>
+      <phrase lang="en">Bezier curve</phrase>
+      <phrase lang="ja">ベジエ曲線</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -134,10 +204,35 @@
         Bezier curves are used in <acronym>GIMP</acronym> as component
         parts of <link linkend="glossary-path">Paths</link>.
       </para>
-      <para lang="en">
+      <para lang="ja">
+スプラインとは数式により定義された曲線のことで、 なおかつコントロール
+ポイントが数カ所ついています。 ベジエスプラインは4つのコントロール
+ポイントからなる立方スプラインであり、 始めと終わりのコントロール
+ポイント (ノットとかアンカーともいいます) が曲線の終端になっており、 
+内側にある2つのコントロールポイント (ハンドルともいいます) が終端から
+発する曲線の方向を決めています。
+      </para>
+      <para lang="ja">
+数式とは別の観点から言えば、 曲線を形作る金属製もしくは木製のしなやかな
+部材がスプラインです。 この種類のスプラインによって曲線を描くさまは、 
+かつての造船の時代を思い起こさせます。 当時はスプラインを曲げるために
+おもりがつり下げられていました。 ベジエスプラインの端点のコントロール
+ポイントはスプラインに縄を括り付けて引く位置に似ており、 内側にある2つ
+のコントロールポイントは曲線を調整するためのおもりにあたります。
+      </para>
+      <para lang="ja">
+ベジエスプラインは曲線を数式で表現する唯一の方法です。 この技法はルノー
+社で働いていた技術者 Pierre Bézier 氏が1960年代に考案しました。
+      </para>
+      <para lang="ja">
+<acronym>GIMP</acronym>はベジエ曲線を 
+<link linkend="glossary-path">パス</link> 成分を描くのに用いています。
+      </para>
+      <para>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/glossary/bezier-curve.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/glossary/bezier-curve.png"/>
           </imageobject>
         </mediaobject>
       </para>
@@ -149,10 +244,18 @@
         P3 and stretch it. They change position when you stretch the
         curve in different ways.
       </para>
-      <para lang="en">
+      <para lang="ja">
+上図はベジエ曲線を描く様子を示しています。 点 P0 と P3 はパス上にあり、 
+それぞれマウスでクリックして置かれました。 点 P1 と P4 がハンドルで、 
+P0 と P3 の間のパス分節をクリックして曳き延ばすと<acronym>GIMP
+</acronym>は自動的にこれらを生成します。 この曲線をいろいろな方法を用いて
+曳き延ばすとハンドルの位置が変化します。
+      </para>
+      <para>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/using/path-with-anchors.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/using/path-with-anchors.png"/>
           </imageobject>
         </mediaobject>
       </para>
@@ -164,12 +267,20 @@
         the two handles which are associated with this anchor from the
         curves on either side of it.
       </para>
+      <para lang="ja">
+上図には2つの成分からなるパスが描かれており、 両方とも直線や曲線の分節
+が含まれています。 この作業は
+<link linkend="gimp-tool-path">パスツール</link> で行ないました。 
+ひとつだけある白丸は選択されたアンカーを表していて、 2つの白い正方形は
+そのアンカーから延びる2本の曲線のこの端点でのハンドルを表しています。
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-bitmap">
     <glossterm>
-      <phrase>Bitmap</phrase>
+      <phrase lang="en">Bitmap</phrase>
+      <phrase lang="ja">ビットマップ</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -177,7 +288,7 @@
         <emphasis>
           The Free Online Dictionary of Computing (13 Mar 01)
         </emphasis>:
-        <blockquote><para lang="en">
+        <blockquote><para>
             bitmap &mdash; A data file or structure which corresponds bit for
             bit with an image displayed on a screen, probably in the same
             format as it would be stored in the display's video memory or
@@ -192,6 +303,25 @@
             eye's greater discrimination in this component.
           </para></blockquote>
       </para>
+      <para lang="ja">
+<ulink url="http://foldoc.org/index.cgi?bitmap">
+<citetitle>The Free Online Dictionary of Computing (1996-09-21)
+</citetitle></ulink> によると
+        <blockquote>
+          <para>
+bitmap &mdash; 画面上に表示される画像の画素と1対1で対応するデータ
+ファイルもしくは構造のことをいい、 ディスプレイ用ビデオメモリ上に
+展開される形式とおそらくは同一であり、 機種非依存のビットマップ形式
+を指すこともある。 ビットマップの特性は画像の幅と高さの画素数と各
+画素のビット深度によって決まる。 画素のビット深度は灰色陰影の階調
+あるいは表現可能な色の数を決定づけている。 カラー画像のビットマップ
+ (<quote>ピクスマップ</quote>) はふつう赤、 緑、 青の成分それぞれに
+1乃至8ビットを割り当てているが、 他の色エンコーディングも利用されて
+いる。 ヒトの視力は緑成分に対する識別能力が高いので、 この成分には
+しばしば他の2つの成分よりも多くのビットを割り当てることがある。
+          </para>
+        </blockquote>
+      </para>
     </glossdef>
   </glossentry>
 
@@ -204,8 +334,12 @@
     <indexterm significance="normal">
       <primary>BMP</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Formats</primary>
+      <secondary>BMP</secondary>
+    </indexterm>
+    <indexterm significance="normal" lang="ja">
+      <primary sortas="ケイシキ">形式</primary>
       <secondary>BMP</secondary>
     </indexterm>
     <glossdef>
@@ -217,11 +351,21 @@
         supports more. Because it is not compressed and the files are large,
         it is not very well suited for use in the internet.
       </para>
+      <para lang="ja">
+BMPはマイクロソフト社が発案した非圧縮の画像 
+<link linkend="glossary-fileformat">ファイル形式</link> のひとつで、 
+主に <productname>Windows</productname> で使われています。 色は主に
+1、 4、 8ビットのいずれかで表現されていますが、 このファイル形式
+自体はさらに多様な方法が可能です。 非圧縮なためファイルが大きくなって
+しまうので、 インターネット上での使用には向いていません。
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-bumpmapping">
     <glossterm>
-      <phrase>Bump mapping</phrase>
+      <phrase lang="en">Bump mapping</phrase>
+      <phrase lang="ja">バンプマッピング</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -236,11 +380,23 @@
         irregularities which are not actually contained in the geometry of the
         model.
       </para>
+      <para lang="ja">
+バンプマッピングとは幾何学計算をあまり複雑にせずに非常に緻密な物体を
+描出する技法です。 3次元の視覚化プログラムでよく使われています。 
+この手品は必要な情報の表現を、 物体の表面の質感や陰影を描いておいた
+テクスチャに全て委ねています。
+      </para>
+      <para lang="ja">
+バンプマッピングは表面のでこぼこした様子を実際には模型の構造に含めずに
+模倣する唯一の (たいへん効果的な) 方法です。
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-channelmask">
     <glossterm>
-      <phrase>Channel Mask</phrase>
+      <phrase lang="en">Channel Mask</phrase>
+      <phrase lang="ja">チャンネルマスク</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -248,15 +404,26 @@
         transparency of a selection. See <xref linkend="glossary-masks"/> for
         a detailed description.
       </para>
+      <para lang="ja">
+チャンネルマスクとは選択範囲の透明度や強度を示せる特別な種類のマスク
+です。 詳しい説明は用語集の
+<xref linkend="glossary-masks"/> の項をご覧ください。
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-channels">
     <glossterm>
-      <phrase>Channels</phrase>
+      <phrase lang="en">Channels</phrase>
+      <phrase lang="ja">チャンネル</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Channel</primary>
       <secondary>Introduction</secondary>
+    </indexterm>
+    <indexterm significance="normal" lang="ja">
+      <primary>チャンネル</primary>
+      <secondary sortas="アラマシ">あらまし</secondary>
     </indexterm>
     <glossdef>
       <para lang="en">
@@ -300,17 +467,67 @@
         In addition to these channels, <acronym>GIMP</acronym> also allows
         you to create other channels (or more correctly, Channel Masks),
         which are displayed in the lower part of the Channels dialog. You
-        can convert a selection to a channel mask by using the <link linkend="gimp-selection-to-channel">Save to Channel</link>
+        can convert a selection to a channel mask by using the
+        <link linkend="gimp-selection-to-channel">Save to Channel</link>
         command. You can also create a channel by right-clicking in the
-        Channels dialog and using the <link linkend="gimp-channel-new">New
-        channel</link> command.  See the glossary entry on <link linkend="glossary-masks">Masks</link> for more information about
+        Channels dialog and using the
+        <link linkend="gimp-channel-new">New channel</link> command.
+        See the glossary entry on
+        <link linkend="glossary-masks">Masks</link> for more information about
         Channel Masks.
+      </para>
+      <para lang="ja">
+チャンネルとは画素の色成分ひとつを示すことばです。 <acronym>GIMP
+</acronym>で扱う色つき画素は、 通常は赤、 緑、 青の色成分と、 必須では
+ありませんが透過効果 (アルファ) 成分によって構成されます。 
+<link linkend="glossary-graylevel">グレースケール</link> 画像は灰色
+陰影のチャンネルとアルファチャンネルで、
+<link linkend="glossary-indexedcolors">インデックス化</link> カラー画像
+はインデックス化カラーマップとアルファチャンネルで構成されています。
+      </para>
+      <para lang="ja">
+いずれかの色成分を画像から抜き出せば、 全ての画素に対する行列式の全体像
+もまたチャンネルとして参照できます。 このような色チャンネルのようすは
+チャンネルダイアログ上で見られます。
+      </para>
+      <para lang="ja">
+画像を表示するとき、 <acronym>GIMP</acronym>は色成分を画面やプリンタを
+はじめとする出力デバイスに合わせて再編成します。 一部の出力デバイスは
+赤緑青とは異なる色チャンネル構成を使用しています。 このようなデバイスに
+で画像が表示されるとき、 <acronym>GIMP</acronym>のチャンネルはそれらに
+最適なものに変換されます。
+      </para>
+      <para lang="ja">
+ある特定の画像の色を調節したいとき、 チャンネルを利用すると便利です。 
+たとえば写真から<quote>赤目</quote>を除去したいときは、 赤チャンネルで
+作業するとよいでしょう。
+      </para>
+      <para lang="ja">
+チャンネルがもつ色だけに着目できることから、 チャンネルはその色の出力
+マスクとしても活用できます。 チャンネルの情報にフィルタをかければ、 
+多種多様で繊細な効果を画像にかけられます。 色チャンネルにフィルタを
+かける単純な例として
+<link linkend="plug-in-colors-channel-mixer">チャンネルミキサー</link>
+フィルタがあります。
+      </para>
+      <para lang="ja">
+3つの色チャンネルに加え、 <acronym>GIMP</acronym>では他にもチャンネル
+ (正確にはチャンネルマスク) を作成できます。 これらはチャンネル
+ダイアログの下側に表示されます。 
+<link linkend="gimp-selection-to-channel">チャンネルに保存</link> 
+コマンドを使えば選択範囲を変換してチャンネルマスクが作成できます。 
+チャンネルダイアログの脈絡メニューには新たにチャンネルを作成する 
+<link linkend="gimp-channel-new">チャンネルを追加...</link> コマンド
+もあります。 より詳しい情報は用語集の 
+<xref linkend="glossary-masks"/> の項をご覧ください。
       </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-clipboard">
     <glossterm>
-      <phrase>Clipboard</phrase>
+      <phrase lang="en">Clipboard</phrase>
+      <phrase lang="ja">クリップボード</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -338,16 +555,46 @@
         canvas, the Paste operation uses the image clipboard. If the target
         is a text entry box, the paste operation uses the text clipboard.
       </para>
+      <para lang="ja">
+クリップボードとは、 別のアプリケーションや別の文書・作品との間で
+データをやりとりするときに使える一時的な記憶領域のことです。 <acronym>
+GIMP</acronym>ではデータを<quote>切り取り</quote>、 <quote>写し取り
+</quote>、 <quote>貼り付け</quote>するときに利用しています。
+      </para>
+      <para lang="ja">
+クリップボードはオペレーティングシステムが異なると少しずつ実装に違いが
+あります。 <productname>Linux</productname> などのUNIX系システムと
+<productname>Xorg</productname>の環境では、 <acronym>GIMP</acronym>は
+Xの提供するテキスト用クリップボードを使いますが、 画像作品同士の画像
+データのやりとりには<acronym>GIMP</acronym>内部の画像用クリップボード
+を使います。 このあたりは他のオペレーティングシステムでのクリップ
+ボードのはたらきがいくぶん異なっていることでしょう。 この詳細について
+はお使いのオペレーティングシステムに関する<acronym>GIMP</acronym>の
+文書を[探して]お読みください。
+      </para>
+      <para lang="ja">
+クリップボードを使ってできる基本的な操作は<quote>切り取り</quote>、 
+<quote>写し取り</quote>、 <quote>貼り付け</quote>です。 切り取りとは
+対象を文書や作品から削除し、 その部分の写しをクリップボードに取り込む
+ことです。 写し取り (コピー) とは文書や作品にその対象部分を残しつつ
+写しをクリップボードに取り込むことです。 貼り付け (ペースト) とは
+クリップボードの内容を文書や作品に写し取ることです。 <acronym>GIMP
+</acronym>は貼り付け操作のときその対象文書によって扱うものを知能的に
+判断します。 対象がキャンバスならば貼り付け操作は画像用クリップボード
+を使用します。 対象がテキスト入力欄ならば、 貼り付け操作はテキスト用
+クリップボードを使用します。
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-cmyk">
     <glossterm>
       <phrase>CMY, CMYK</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>CMYK</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>Subtractive color synthesis</secondary>
     </indexterm>
@@ -371,13 +618,18 @@
         letter K is used for Black to prevent confusion, since B usually
         stands for Blue.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
       <figure float="0">
-        <title>
-          <phrase>Subtractive color model</phrase>
-        </title>
+        <title lang="en">Subtractive color model</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/glossary/color-model-subtractive.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/glossary/color-model-subtractive.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -407,17 +659,23 @@
         way. The printer doesn't have to mix the other three colors to create
         an imperfect Black, it just has to add Black.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-colordepth">
     <glossterm>
-      <phrase>Color depth</phrase>
+      <phrase lang="en">Color depth</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color depth</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>bpp</primary>
     </indexterm>
     <glossdef>
@@ -431,14 +689,16 @@
         256&nbsp;*&nbsp;256&nbsp;*&nbsp;256&nbsp;=&nbsp;16,777,216 possible
         colors (8 bits allow 256 colors).
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-colormodel">
     <glossterm>
-      <phrase>Color model</phrase>
+      <phrase lang="en">Color model</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color model</primary>
     </indexterm>
     <glossdef>
@@ -459,6 +719,10 @@
         application of that is that colors are specified with three
         components (with a few exceptions). There are about 30 to 40 color
         space systems in use. Some important examples are:
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
       </para>
       <itemizedlist>
         <listitem>
@@ -491,12 +755,12 @@
   </glossentry>
   <glossentry id="glossary-dithering">
     <glossterm>
-      <phrase>Dithering</phrase>
+      <phrase lang="en">Dithering</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Dithering</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>Dithering</secondary>
     </indexterm>
@@ -535,13 +799,23 @@
         <link linkend="glossary-floyd-steinberg-dithering">Floyd-Steinberg
         dithering</link>, which is used in <acronym>GIMP</acronym>.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-exif">
     <glossterm>
       <phrase>EXIF</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>EXIF</primary>
     </indexterm>
     <glossdef>
@@ -558,19 +832,23 @@
         TIFF/EP and DCF standards
         <xref linkend="bibliography-online-wkpd-exif"/>.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-feathering">
     <glossterm>
-      <phrase>Feathering</phrase>
+      <phrase lang="en">Feathering</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Feathering selection border</primary>
     </indexterm>
     <glossdef>
       <para lang="en"><acronym>GIMP</acronym> uses the process of Feathering to make a
         smooth transition between a region and the background by softly
         blending the edges of the region.
+      </para>
+      <para lang="ja">
       </para>
       <para lang="en">
         <mediaobject>
@@ -583,13 +861,15 @@
         In <acronym>GIMP</acronym>, you can feather the edges of a
         selection. Brushes can also have feathered edges.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-fileformat">
     <glossterm>
-      <phrase>File Format</phrase>
+      <phrase lang="en">File Format</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>File format</primary>
     </indexterm>
     <glossdef>
@@ -611,12 +891,16 @@
         greater significance. See
         <link linkend="gimp-using-fileformats">Format types</link>.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-floatingselection">
     <glossterm>Floating Selection</glossterm>
-    <indexterm>
+    <indexterm lang="en">
       <primary>Selection</primary>
       <secondary>Floating selection</secondary>
     </indexterm>
@@ -635,14 +919,18 @@
         do that more easily now with layers). Now floating selections have no
         practical use, but you must know what you have to do with them.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-floyd-steinberg-dithering">
     <glossterm>
-      <phrase>Floyd-Steinberg Dithering</phrase>
+      <phrase lang="en">Floyd-Steinberg Dithering</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Floyd-Steinberg</primary>
     </indexterm>
     <glossdef>
@@ -665,14 +953,18 @@
         mode, you can choose between two variants of Floyd-Steinberg
         dithering.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-gamma">
     <glossterm>
-      <phrase>Gamma</phrase>
+      <phrase lang="en">Gamma</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Gamma</primary>
     </indexterm>
     <glossdef>
@@ -712,13 +1004,21 @@
         <link linkend="gimp-tool-levels">Levels Tool</link>, where you can
         use the middle slider to change the gamma value.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-gamut">
     <glossterm>
-      <phrase>Gamut</phrase>
+      <phrase lang="en">Gamut</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Gamut</primary>
     </indexterm>
     <glossdef>
@@ -736,13 +1036,15 @@
         some of the colors in the original are lost in the process.
         <xref linkend="bibliography-online-wkpd-gamut"/>
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-gif">
     <glossterm>
       <phrase>GIF</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>GIF</primary>
     </indexterm>
     <glossdef>
@@ -793,6 +1095,16 @@
         from the first six bytes of a GIF file. Interpreted as ASCII symbols,
         they are <quote>GIF87a</quote> or <quote>GIF89a</quote>.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-gnu">
@@ -831,14 +1143,20 @@
         (GNU Image Manipulation Program) is an official GNU application
         <xref linkend="bibliography-online-wkpd-gnu"/>.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-grayscale">
     <glossterm>
       <anchor id="glossary-graylevel" xreflabel="Grayscale"/>
-      <phrase>Grayscale</phrase>
+      <phrase lang="en">Grayscale</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Grayscale</primary>
       <secondary>Overview</secondary>
     </indexterm>
@@ -869,13 +1187,21 @@
       <para lang="en">
         Grayscale image files (8-bit) are smaller than RGB files.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-guides">
     <glossterm>
-      <phrase>Guides</phrase>
+      <phrase lang="en">Guides</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Guides</primary>
       <secondary>Using</secondary>
     </indexterm>
@@ -929,13 +1255,25 @@
         <link linkend="gimp-concepts-image-grid">Grids and Guides</link>
         section.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-histogram">
     <glossterm>
-      <phrase>Histogram</phrase>
+      <phrase lang="en">Histogram</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Histogram</primary>
     </indexterm>
     <glossdef>
@@ -949,6 +1287,8 @@
         histograms for the individual color channels. The latter makes the
         most sense, since most procedures are based on grayscale images and
         therefore further processing is immediately possible.
+      </para>
+      <para lang="ja">
       </para>
     </glossdef>
   </glossentry>
@@ -974,6 +1314,10 @@
         <emphasis>Grokking the GIMP</emphasis>, which explains their
         interrelationship.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
       <variablelist>
         <para lang="en">Brief description of the HSV components:</para>
         <varlistentry>
@@ -989,6 +1333,8 @@
               <quote>Hue</quote>. The RGB colors are <quote>primary
               colors</quote>.)
             </para>
+            <para lang="ja">
+            </para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -1000,6 +1346,8 @@
               increases, the color becomes a pastel shade. A completely
               saturated color is pure. Saturation values go from 0 to 100,
               from white to the purest color.
+            </para>
+            <para lang="ja">
             </para>
           </listitem>
         </varlistentry>
@@ -1016,6 +1364,8 @@
               the HSV color model is the maximum of these elementary values in
               the RGB space (scaled to 0-100).
             </para>
+            <para lang="ja">
+            </para>
           </listitem>
         </varlistentry>
       </variablelist>
@@ -1024,12 +1374,12 @@
 
   <glossentry id="glossary-html-notation">
     <glossterm>
-      <phrase>HTML notation</phrase>
+      <phrase lang="en">HTML notation</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>HTML notation</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>HTML notation</secondary>
     </indexterm>
@@ -1043,13 +1393,15 @@
         <quote>rr</quote> represents red, <quote>gg</quote> represents green
         and <quote>bb</quote> represents blue.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-imagehose">
     <glossterm>
-      <phrase>Image Hose</phrase>
+      <phrase lang="en">Image Hose</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Image Hose</primary>
     </indexterm>
     <glossdef>
@@ -1073,13 +1425,19 @@
         Brushes</link> and <link linkend="gimp-using-brushes">Using
         Brushes</link> sections.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-incremental">
     <glossterm>
-      <phrase>Incremental, paint mode</phrase>
+      <phrase lang="en">Incremental, paint mode</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Incremental</primary>
     </indexterm>
     <glossdef>
@@ -1095,15 +1453,21 @@
         effect of a brush is then determined by the opacity, and stroking with
         the brush repeatedly does not increase the effect beyond this limit.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
       <para lang="en">
         <inlinemediaobject>
           <imageobject>
-            <imagedata fileref="images/glossary/tool-opt-increment.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/glossary/tool-opt-increment.png"/>
           </imageobject>
         </inlinemediaobject>
         <inlinemediaobject>
           <imageobject>
-            <imagedata fileref="images/glossary/tool-opt-nonincrement.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/glossary/tool-opt-nonincrement.png"/>
           </imageobject>
         </inlinemediaobject>
       </para>
@@ -1119,16 +1483,20 @@
         checking the <guilabel moreinfo="none">Incremental</guilabel> checkbox in the
         toolbox for the tool (Paintbrush, Pencil and Eraser).
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-indexedcolors">
     <glossterm>
-      <phrase>Indexed Colors</phrase>
+      <phrase lang="en">Indexed Colors</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Indexed Colors</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>Indexed colors</secondary>
     </indexterm>
@@ -1149,11 +1517,15 @@
         section and the <link linkend="gimp-image-convert-indexed">Convert Image to Indexed
         Colors</link> command.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-interpolation">
     <glossterm>
-      <phrase>Interpolation</phrase>
+      <phrase lang="en">Interpolation</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -1166,6 +1538,8 @@
         general, the better the quality, the more time the interpolation
         takes. The methods are:
       </para>
+      <para lang="ja">
+      </para>
       <itemizedlist>
         <listitem>
           <para lang="en"><emphasis>None</emphasis> (sometimes called <quote>Nearest
@@ -1173,6 +1547,8 @@
             closest neighboring pixel in the original image. This often
             results in aliasing (the <quote>stair-step</quote> effect) and a
             coarse image, but it is the fastest method.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
         <listitem>
@@ -1182,6 +1558,8 @@
             image. This gives a satisfactory result for most images and is a
             good compromise between speed and quality.
           </para>
+          <para lang="ja">
+          </para>
         </listitem>
         <listitem>
           <para lang="en"><emphasis>Cubic</emphasis> (sometimes called
@@ -1189,6 +1567,8 @@
             the average color of the eight closest pixels in the original
             image. This usually gives the best result, but it naturally takes
             more time.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </itemizedlist>
@@ -1199,13 +1579,15 @@
         can also set the default interpolation method in the <link linkend="gimp-prefs-tool-options">Tools Options Preferences</link>
         dialog.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-jpeg">
     <glossterm>
       <phrase>JPEG</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>JPEG</primary>
     </indexterm>
     <glossdef>
@@ -1221,6 +1603,8 @@
         photographs and for computer-generated images (CGI). It is not well
         suited for:
       </para>
+      <para lang="ja">
+      </para>
       <itemizedlist>
         <listitem>
           <para lang="en">
@@ -1228,11 +1612,15 @@
             graphics), in which there are many neighboring pixels with the
             same color values, few colors and hard edges,
           </para>
+          <para lang="ja">
+          </para>
         </listitem>
         <listitem>
           <para lang="en">
             Black and white images (only black and white, one bit per pixel)
             or
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
         <listitem>
@@ -1248,6 +1636,10 @@
         then saving a JPEG file causes a new, lossy compression. Increasing
         the quality factor later will not bring back the image information
         which was lost.
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
       </para>
     </glossdef>
   </glossentry>
@@ -1274,13 +1666,17 @@
         exchange format between devices. Lab is also the internal color
         model of PostScript Level II.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-layer">
     <glossterm>
-      <phrase>Layer</phrase>
+      <phrase lang="en">Layer</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Layer</primary>
     </indexterm>
     <glossdef>
@@ -1294,6 +1690,10 @@
       <para lang="en">
         You can view and manage the layers of the image through the
         <link linkend="gimp-layer-dialog">Layers dialog</link>.
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
       </para>
       <figure>
         <title>Example image with layers</title>
@@ -1319,7 +1719,7 @@
 
   <glossentry id="glossary-marching-ants">
     <glossterm>
-      <phrase>Marching Ants</phrase>
+      <phrase lang="en">Marching Ants</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -1333,13 +1733,17 @@
         option or by using the keyboard shortcut
         <keycombo moreinfo="none"><keycap moreinfo="none">Ctrl</keycap><keycap moreinfo="none">T</keycap></keycombo>.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-masks">
     <glossterm>
-      <phrase>Masks</phrase>
+      <phrase lang="en">Masks</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Masks</primary>
       <secondary>Overview</secondary>
     </indexterm>
@@ -1351,6 +1755,8 @@
         color. When the mask is <quote>applied</quote>, non masked pixels
         will remain visible (the others will be transparent) or will be
         selected, according to the type of mask.
+      </para>
+      <para lang="ja">
       </para>
       <para lang="en">There are two types of masks:</para>
       <itemizedlist>
@@ -1367,6 +1773,8 @@
             effects, volume effects, merging elements from another image, etc.
             See the <link linkend="gimp-layer-mask">Layer Mask</link>
             section for more details.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
         <listitem>
@@ -1387,15 +1795,17 @@
              <link linkend="dialogs-selection-masks">Selection mask</link>
              section for more details.
           </para>
+          <para lang="ja">
+          </para>
         </listitem>
       </itemizedlist>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-moire">
     <glossterm>
-      <phrase>Moiré Effect</phrase>
+      <phrase lang="en">Moiré Effect</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Moiré</primary>
     </indexterm>
     <glossdef>
@@ -1421,19 +1831,25 @@
          <link linkend="plug-in-nlfilt">NL Filter</link> (Non-Linear)
          filters.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-parasite">
     <glossterm>
-      <phrase>Parasite</phrase>
+      <phrase lang="en">Parasite</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>XCF</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>.xcf</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Parasite</primary>
     </indexterm>
     <glossdef>
@@ -1450,11 +1866,15 @@
         save options for the TIFF, JPEG and PNG file formats, the gamma value
         the image was created with and EXIF data.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-path">
     <glossterm>
-      <phrase>Path</phrase>
+      <phrase lang="en">Path</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -1474,6 +1894,10 @@
         paths in your image with the
         <link linkend="gimp-path-dialog">Paths dialog</link>.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-pdb">
@@ -1488,20 +1912,18 @@
         these functions in the PDB by using the
         <link linkend="plug-in-dbbrowser">Procedure Browser</link>.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-pdf">
     <glossterm>
-      <phrase>
-      
-      
-      PDF
-    </phrase>
+      <phrase>PDF</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>PDF</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Formats</primary>
       <secondary>PDF</secondary>
     </indexterm>
@@ -1515,13 +1937,15 @@
         <acronym>GIMP</acronym>'s support of the PDF format is through the
         free Ghostscript libraries.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
   <glossentry id="glossary-pixel">
     <glossterm>
-      <phrase>Pixel</phrase>
+      <phrase lang="en">Pixel</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Pixel</primary>
     </indexterm>
     <glossdef>
@@ -1534,14 +1958,17 @@
         Green and Blue components of its color, and sometimes its Alpha
         (transparency).
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-plug-in">
     <glossterm>
       <anchor id="glossary-plugin" xreflabel="Plugin"/>
-      <phrase>Plugin</phrase>
+      <phrase lang="en">Plugin</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Plugins</primary>
       <secondary>Definition</secondary>
     </indexterm>
@@ -1552,16 +1979,19 @@
         application and provide specific functions on-demand. See
         <xref linkend="gimp-concepts-plugins"/> for further information.
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-png">
     <glossterm>
       <phrase>PNG</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>PNG</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>.png</primary>
     </indexterm>
     <glossdef>
@@ -1575,12 +2005,14 @@
         (several millions of colors), indexed images (256 colors like GIF),
         and 256 transparency levels (while GIF supports only two levels).
       </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-postscript">
     <glossterm>PostScript</glossterm>
-    <indexterm>
+    <indexterm lang="en">
       <primary>Formats</primary>
       <secondary>PostScript</secondary>
     </indexterm>
@@ -1600,24 +2032,24 @@
         is not a good format to use for saving images that are later going to
         be edited using <acronym>GIMP</acronym> or another graphics program.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
 
   <glossentry id="glossary-psd">
     <glossterm>
-      <phrase>
-      PSD
-      
-      
-    </phrase>
+      <phrase>PSD</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>PSD</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>.psd</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Formats</primary>
       <secondary>PSD</secondary>
     </indexterm>
@@ -1652,13 +2084,18 @@
         development team, and the lack of information makes it very difficult
         to maintain up-to-date support for PSD files.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-quantization">
     <glossterm>
-      <phrase>Quantization</phrase>
+      <phrase lang="en">Quantization</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Quantization</primary>
     </indexterm>
     <glossdef>
@@ -1683,13 +2120,18 @@
         command. However, they only work on RGB images and not on Indexed
         images.
       </para>
+      <para lang="ja">
+      </para>
+      <para lang="ja">
+      </para>
     </glossdef>
   </glossentry>
+
   <glossentry id="glossary-rendering-intent">
     <glossterm>
-      <phrase>Rendering Intent</phrase>
+      <phrase lang="en">Rendering Intent</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color Management</primary>
     </indexterm>
     <glossdef>
@@ -1698,6 +2140,8 @@
         out-of-<xref linkend="glossary-gamut"/> colors present in the source
         space that the destination space is incapable of producing. There are
         four rendering intents defined by the ICC:
+      </para>
+      <para lang="ja">
       </para>
       <variablelist>
         <varlistentry>
@@ -1747,21 +2191,20 @@
     <glossterm>
       <phrase>RGB</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>RGB</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>Additive color model</secondary>
     </indexterm>
     <glossdef>
       <figure float="0">
-        <title>
-          <phrase>Additive color model</phrase>
-        </title>
+        <title lang="en">Additive color model</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/glossary/color-model-additive.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/glossary/color-model-additive.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -1807,12 +2250,11 @@
         circle:
       </para>
       <figure float="0">
-        <title>
-          <phrase>Colorcircle</phrase>
-        </title>
+        <title lang="en">Colorcircle</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/glossary/colorcircle.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/glossary/colorcircle.png"/>
           </imageobject>
           <caption>
             <para lang="en">
@@ -1854,7 +2296,7 @@
   </glossentry>
   <glossentry id="glossary-samplemerge">
     <glossterm>
-      <phrase>Sample Merge</phrase>
+      <phrase lang="en">Sample Merge</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -1874,12 +2316,12 @@
   </glossentry>
   <glossentry id="glossary-saturation">
     <glossterm>
-      <phrase>Saturation</phrase>
+      <phrase lang="en">Saturation</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Saturation</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>Saturation</secondary>
     </indexterm>
@@ -1893,9 +2335,9 @@
   </glossentry>
   <glossentry id="glossary-supersampling">
     <glossterm>
-      <phrase>Supersampling</phrase>
+      <phrase lang="en">Supersampling</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Supersampling</primary>
     </indexterm>
     <glossdef>
@@ -1932,10 +2374,10 @@
     <glossterm>
       <phrase>SVG</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>SVG</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Formats</primary>
       <secondary>SVG</secondary>
     </indexterm>
@@ -1951,18 +2393,15 @@
   </glossentry>
   <glossentry id="glossary-tga">
     <glossterm>
-      <phrase>TGA
-      
-      
-    </phrase>
+      <phrase>TGA</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>TGA</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>TARGA</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Formats</primary>
       <secondary>TGA</secondary>
     </indexterm>
@@ -1980,11 +2419,9 @@
   </glossentry>
   <glossentry id="glossary-tiff">
     <glossterm>
-      <phrase>TIFF
-      
-    </phrase>
+      <phrase>TIFF</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>TIFF</primary>
     </indexterm>
     <glossdef>
@@ -2005,7 +2442,7 @@
   </glossentry>
   <glossentry id="glossary-tile">
     <glossterm>
-      <phrase>Tile</phrase>
+      <phrase lang="en">Tile</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -2034,7 +2471,7 @@
     <glossterm>
       <phrase>URI</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>URI</primary>
     </indexterm>
     <glossdef>
@@ -2051,7 +2488,7 @@
     <glossterm>
       <phrase>URL</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>URL</primary>
     </indexterm>
     <glossdef>
@@ -2071,12 +2508,12 @@
   </glossentry>
   <glossentry id="glossary-value">
     <glossterm>
-      <phrase>Value</phrase>
+      <phrase lang="en">Value</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Value</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Color</primary>
       <secondary>Value</secondary>
     </indexterm>
@@ -2089,20 +2526,18 @@
   </glossentry>
   <glossentry id="glossary-xcf">
     <glossterm>
-      <phrase>
-      XCF
-    </phrase>
+      <phrase>XCF</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>XCF</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>.xcf</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>.xcf.gz</primary>
     </indexterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>Formats</primary>
       <secondary>XCF</secondary>
     </indexterm>
@@ -2152,7 +2587,7 @@
     <glossterm>
       <phrase>YCbCr</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>YCbCr</primary>
     </indexterm>
     <glossdef>
@@ -2205,7 +2640,7 @@
     <glossterm>
       <phrase>YUV</phrase>
     </glossterm>
-    <indexterm significance="normal">
+    <indexterm significance="normal" lang="en">
       <primary>YUV</primary>
     </indexterm>
     <glossdef>

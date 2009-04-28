@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+     2009-01-25 j.h: v2.6 reviewed
+     2007-12-01 j.h: v2.4 update
+     2007-06-14 Added Spanish translation by AntI
+     2007-03-08 KoSt: added 'no'
+     2006-08-03 scb: revised 'en'
+     2006-01-13 lexa: fixed error in de
+     2005/11/11 split of from layer-mask.xml by axel.wernicke
+     -->
+<sect2 id="gimp-layer-alpha-selection-subtract">
+  <title>Subtract from Selection</title>
+
+  <indexterm>
+    <primary>Layer</primary>
+    <secondary>Transparency managing</secondary>
+    <tertiary>Subtract non-transparent pixels from selection</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Selection</primary>
+    <secondary>Subtract non-transparent pixels</secondary>
+  </indexterm>
+
+  <para>
+    The <guimenuitem>Subtract from Selection</guimenuitem> command
+    creates a selection in the current layer from the Alpha Channel. Opaque
+    pixels are fully selected, transparent pixels are unselected, and
+    translucent pixels are partially selected.This selection is
+    <emphasis>subtracted</emphasis> from the existing selection. The Alpha
+    channel itself is not changed.
+  </para>
+  <sect3>
+    <title>Activate the Command</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Transparency</guisubmenu>
+            <guimenuitem>Subtract from Selection</guimenuitem>
+          </menuchoice>.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title>Example</title>
+    <figure>
+      <title>
+        Applying <quote>Subtract from Selection</quote>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/BBR.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/layer-alpha-sub.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para>
+            Non-transparent pixels of the active layer have been subtracted
+            from the existing rectangular selection.
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

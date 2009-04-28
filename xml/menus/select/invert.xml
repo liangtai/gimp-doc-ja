@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-01-10 j.h: reviewed for v2.6
+  2008-01-02 Added access through Selection Editor
+  2007-05-12 Added Spanish translation by AntI
+  2006-08-15 scb: revised 'en'
+  2006-01-28 en;fr reviewed by j.h
+  2005/09/14 de created by axel.wernicke
+-->
+<sect2 id="gimp-selection-invert">
+  <!--<sect2info role="cvs">
+    <revhistory>
+      <revision>
+        <revnumber>$Revision: 2704 $</revnumber>
+        <date>2008-01-02</date>
+        <authorinitials>j.h</authorinitials>
+        <revremark>Reviewed for v2.6</revremark>
+      </revision>
+    </revhistory>
+  </sect2info>-->
+  <title>
+    <phrase>Invert</phrase>
+  </title>
+  <indexterm>
+    <primary>Selection</primary>
+    <secondary>Invert selection</secondary>
+  </indexterm>
+  <para>
+    The <guimenuitem>Invert</guimenuitem> command inverts the selection
+    in the current layer. That means that all of the layer contents which
+    were previously outside of the selection are now inside it, and vice
+    versa. If there was no selection before, the command selects the
+    entire layer.
+  </para>
+  <warning>
+    <para>
+      Do not confuse this command with the
+      <link linkend="gimp-layer-invert">Invert colors</link> command.
+    </para>
+  </warning>
+  <sect3>
+    <title>
+      <phrase>Activate the Command</phrase>
+    </title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Select</guimenu>
+            <guimenuitem>Invert</guimenuitem>
+          </menuchoice>.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          You can also use the keyboard shortcut
+          <keycombo><keycap>Ctrl</keycap><keycap>I</keycap></keycombo>,
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          or click on the corresponding icon in the <link linkend="gimp-selection-dialog">Selection Editor</link>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>

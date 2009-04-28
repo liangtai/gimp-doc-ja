@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-16 ude: (brief) v2.6 review/update
+  2009-01-06 j.h: Improved "mouse pointer capture"
+  2008-12-29 Created from menus/acquire.xml by j.h
+-->
+<sect2 id="gimp-file-create">
+  <title>Create</title>
+
+  <indexterm>
+    <primary>Image</primary>
+    <secondary>Acquire an image</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>Acquire</primary>
+  </indexterm>
+
+  <figure>
+    <title>The <quote>Create</quote> submenu</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG" fileref="images/menus/file/create.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>
+    This menu item replaces the <quote>Acquire</quote> menu which
+    existed in <acronym>GIMP</acronym> previous versions in the Toolbox
+    Menu and contains a lot of logos, buttons, patterns...
+  </para>
+  <para>
+    These commands vary somewhat, depending upon your system, since
+    the <acronym>GIMP</acronym> makes calls to system functions.
+  </para>
+
+  <sect3> <!--id="gimp-file-create-activate"-->
+    <title>Activate the Submenu</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          You can access this submenu from the Image menu bar through
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenuitem>Create</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3 id="gimp-file-create-clipboard">
+    <title>From Clipboard</title>
+    <para>
+      When you copy a selection, it goes into the clipboard. Then you can
+      create a new image with it.
+    </para>
+    <para>
+      This command has the same action as the
+      <link linkend="gimp-edit-paste-as-new">Paste as new</link> command.
+    </para>
+    <para>
+      The <keycap>Print Screen</keycap> keyboard key captures the screen and
+      puts it in the clipboard. This command has the same action as
+      <quote>taking a screenshot of the entire screen</quote> in the
+      <link linkend="plug-in-screenshot">Screenshot</link> dialog window. The
+      <keycombo><keycap>Alt</keycap><keycap>Print Screen</keycap>
+      </keycombo> key combination grabs the active window in the screen
+      with its decorations and puts it in the clipboard.
+    </para>
+  </sect3>
+
+  <sect3 id="plug-in-screenshot">
+    <title>Screenshot</title>
+
+    <indexterm>
+      <primary>Screenshot</primary>
+    </indexterm>
+
+    <figure>
+      <title>The <quote>Screenshot</quote> window</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/file/create/screenshot.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>
+      The <guimenuitem>Screenshot</guimenuitem> command opens a
+      dialog with two parts:
+    </para>
+
+    <variablelist>
+      <varlistentry>
+        <term>Area</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term>Take a screenshot of a single window</term>
+              <listitem>
+                <para>
+                  The mouse pointer becomes a cross. Click in the image window
+                  you want to capture. A new image is created. If the
+                  <guilabel>Include window decoration</guilabel> option is
+                  unchecked, the title bar and the blue frame around the image
+                  will be removed.
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>Take a screenshot of the entire screen</term>
+              <listitem>
+                <para>
+                  This is useful if you want to capture a pop menu. A delay is
+                  then necessary, so that you have time to pull the pop menu
+                  down.
+                </para>
+                <para>
+                  If the <guilabel>Include mouse pointer</guilabel> option is
+                  checked, then the mouse pointer and its coming with icon are
+                  also captured. The mouse pointer is captured in a separate
+                  layer. So you can move it to another place in the image.
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>Select a region to grab</term>
+              <listitem>
+                <para>
+                  The mouse pointer becomes a cross. Click and drag to create
+                  a rectangular selection in the image window. This selection
+                  will be opened as a new image. Its size is adapted to the
+                  selection size.
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>Delay</term>
+        <listitem>
+          <para>
+            When taking a screenshot of the entire screen, the screen is
+            captured after this delay. In the other cases, the mouse pointer
+            turns to a cross after this delay.
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <!--TODO: somebody with scanner and/or camera should review/update this-->
+  <sect3>
+    <title>Image capture devices</title>
+    <!--<anchor id="twain-acquire"/>-->
+    <para>
+      This item is present only if you have  installed image capture
+      devices.
+    </para>
+    <figure>
+      <title>Scanner and Camera</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/file/create/scanner.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>
+      The kinds of devices used to take pictures are too varied to be
+      described here. Fortunately, their use is fairly intuitive. In the
+      example shown, you can start a scanner or take an image with a
+      webcam.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Buttons, Logos, Patterns, Web Page Themes</title>
+    <para>
+      An impressive list of script-fus. Have a look at it!
+    </para>
+  </sect3>
+</sect2>

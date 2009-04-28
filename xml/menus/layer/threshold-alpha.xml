@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-06-13 Added Spanish translation by AntI
+  2007-03-12 Kolbjørn: added no translation
+  2005/11/16 split of from layer-transparency.xml by axel.wernicke
+-->
+<sect2 id="plug-in-threshold-alpha">
+  <title>Threshold Alpha</title>
+
+  <indexterm>
+    <primary>Layer</primary>
+    <secondary>Transparency managing</secondary>
+    <tertiary>Threshold</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Alpha</primary>
+  </indexterm>
+
+  <para>
+    The <guimenuitem>Threshold Alpha</guimenuitem> command converts
+    semi-transparent areas of the active layer into completely transparent or
+    completely opaque areas, based on a threshold you set, between 0 and
+    255. It only works on layers of RGB images which have an alpha
+    channel. If the image is Grayscale or Indexed, or if the layer does not
+    have an alpha channel, the menu entry is insensitive and grayed out.
+    If the <guilabel>Keep transparency</guilabel> option is checked in the
+    Layers dialog, the command displays an error message.
+  </para>
+
+  <sect3>
+    <title>Activating the Command</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Transparency</guisubmenu>
+            <guimenuitem>Threshold Alpha</guimenuitem>
+          </menuchoice>.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title>Description of the Dialog Window</title>
+    <figure>
+      <title>
+        <phrase>
+          The only one option of the <quote>Threshold Alpha</quote>
+          dialog</phrase>
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/threshold-alpha-dialog.png"
+            format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Threshold</term>
+        <listitem>
+          <para>
+            You can set the transparency value to be used as a threshold by
+            using the slider or by entering a value between 0 and 255 in
+            the input box. All transparency values below this threshold will
+            become opaque and all transparency values above it will become
+            completely transparent. The transition is abrupt.
+          </para>
+          <figure>
+            <title>Threshold Alpha example</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/menus/threshold-alpha-ex1.png" />
+              </imageobject>
+              <caption>
+                A transparency gradient 0-255.
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/menus/threshold-alpha-ex2.png" />
+              </imageobject>
+              <caption>
+                Threshold Alpha set to 92.
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
