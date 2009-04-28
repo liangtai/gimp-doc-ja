@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
@@ -14,7 +15,7 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ファイル</primary>
-    <secondary>開く</secondary>
+    <secondary sortas="ヒラク">開く</secondary>
   </indexterm>
   <para lang="en">
     There are several ways of opening an existing image in
@@ -148,8 +149,8 @@
       属性情報が表示されます。 プレビュー画は作成とともにキャッシュされて再利用
       されるため、 操作後の現状と食い違うプレビュー画を表示することも
       ありえます。 そこで、間違いが予見できる場合にプレビュー区画で
-      <keycombo><keycap>Ctrl</keycap><mousebutton>マウスボタン</mousebutton>
-      </keycombo>とすれば 強制的にプレビュー画を更新できます。
+      <keycap>Ctrl</keycap> キーを押しながらクリックすれば強制的に
+      プレビュー画を更新できます。
     </para>
     <para lang="ja">
       初期設定の場合、 <quote>画像を開く</quote>ダイアログには <guilabel>
@@ -172,16 +173,16 @@
         image file, it is either corrupt or not in a supported format.
       </para>
       <para lang="ja">
-        排列からファイル名を選びだしてダイアログの右下にある
-        <guibutton>開く(<accel>O</accel>)</guibutton>ボタンを押すと、
-        ほとんどの場合<acronym>GIMP</acronym>はファイルの形式を自動的に
-        判別します。 しかしまれにファイル形式が異例でその拡張子が不完全
-        なとき、 読み込みに失敗します。 そのときにはダイアログの下部にある
+        排列からファイル名を選びだしてダイアログの右下にある <guibutton>
+        開く(<accel>O</accel>)</guibutton> ボタンを押すと、 ほとんどの場合
+        <acronym>GIMP</acronym>はファイルの形式を自動的に判別します。 
+        しかしまれにファイル形式が異例でその拡張子が不完全なとき、 読み込みに
+        失敗します。 そのときにはダイアログの下部にある
         <guilabel>ファイルタイプを選択(<accel>T</accel>)</guilabel>
         オプションを引き出し、 これから開きたいファイルの形式を選んで
-        <acronym>GIMP</acronym>に知らせることもできますが、 その画像ファイルを
-        <acronym>GIMP</acronym>が読み込めなかった時点で そのファイルが
-        破損していたか、 もともとサポートされていなかった形式だったと
+        <acronym>GIMP</acronym>に知らせることもできますが、 それでもその画像
+        ファイルを<acronym>GIMP</acronym>が読み込めなかった場合は、 その
+        ファイルが破損していたか、 もともとサポートされていなかった形式だったと
         一般的には考えられます。
       </para>
     </note>

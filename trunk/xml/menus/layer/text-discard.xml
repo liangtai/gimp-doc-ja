@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-05-24 Added Spanish translation by AntI
+  2007-04-09 de translation by ude
+  2007-04-03 Created by j.h
+-->
+<sect2 id="gimp-layer-text-discard">
+  <title>Discard Text Information</title>
+
+  <indexterm>
+    <primary>Layer</primary>
+    <secondary>Text</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>Text</primary>
+    <secondary>Discard information</secondary>
+  </indexterm>
+
+  <para>
+    This command belongs to a group of Text commands displayed only if a
+    text layer is present.
+  </para>
+  <figure>
+    <title>
+      The Discard Text command among text commands in the Layer menu
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/menus/layer-text-commands.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para>
+    When you add text to an image, <acronym>GIMP</acronym> adds specific
+    informations. This command lets you discard these informations,
+    transforming the current text layer into a normal bitmap layer. The
+    reason to do that is not evident.
+  </para>
+  <para>
+    Note that this transformation of text into bitmap is automatically
+    performed when you apply a graphic operation to the text layer. You can
+    get text information back by undoing the operation which modified the
+    text.
+  </para>
+
+  <sect3>
+    <title>Activating the Command</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guimenuitem>Discard Text Information</guimenuitem>
+          </menuchoice>.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>
