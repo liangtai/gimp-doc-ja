@@ -18,7 +18,7 @@
   2005-11-30 replaced informalfigure by figure by lexa
   2005-05-23 de reviewed by axel.wernicke
 -->
-<!--2009-04-27-->
+<!--2009-05-04-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-clone">
   <title lang="en">Clone</title>
   <title lang="ja">スタンプで描画 (クローン)</title>
@@ -132,9 +132,9 @@
   <sect3>
     <title lang="en">How to Activate</title>
     <title lang="ja">呼び出し方</title>
-    <para lang="en">You can activate the Clone tool in several ways :</para>
+    <para lang="en">You can activate this tool in several ways:</para>
     <para lang="ja">
-      <quote>スタンプで描画</quote>ツールを起用する方法はつぎのいずれかです:
+      <quote>スタンプで描画</quote>ツールを起用する方法はつぎのいずれかです。
     </para>
     <itemizedlist>
       <listitem>
@@ -281,11 +281,11 @@
         <listitem>
           <indexterm lang="en">
             <primary>Patterns</primary>
-            <secondary>Pattern as a source to clone</secondary>
+            <secondary>Clone</secondary>
           </indexterm>
           <indexterm lang="ja">
             <primary>パターン</primary>
-            <secondary sortas="パターンヲスタンプツールデリヨウ">パターンをスタンプツールで利用</secondary>
+            <secondary>スタンプツール</secondary>
           </indexterm>
           <para lang="en">
             The choice you make here determines whether data will be copied
@@ -426,12 +426,21 @@
                   brush strokes will usually clash if they intersect each
                   other.
                 </para>
+                <para lang="en">
+                  Example below: At every new brush stroke, the source goes
+                  back to its first position. The same sample is always
+                  cloned.
+                </para>
                 <para lang="ja">
                   このモードでは一筆一筆それぞれが別個のものとして扱われます。
                   一筆ごとに始めのクリックの位置には参照元の原点から転写され
                   ます。 ある描線とその他の描線との間には何の関係もないもの
                   とします。 位置合わせをしないモードでは描線を重ねると
                   大抵は不一致が起きます。
+                </para>
+                <para lang="ja">
+                  下の例図では、 一筆ごとに最初の参照位置が原点に戻っています。
+                  常に同じ部分が転写されます。
                 </para>
                 <figure>
                   <title lang="en"><quote>None</quote> clone alignment</title>
@@ -441,16 +450,6 @@
                       <imagedata format="PNG"
                         fileref="images/toolbox/clone-none.png"/>
                     </imageobject>
-                    <caption>
-                      <para lang="en">
-                        At every new brush stroke, the source goes back to
-                        its first position. The same sample is always cloned.
-                      </para>
-                      <para lang="ja">
-                        一筆ごとに最初の参照位置が原点に戻っている。 常に同じ
-                        部分が転写される。
-                      </para>
-                    </caption>
                   </mediaobject>
                 </figure>
               </listitem>
@@ -470,6 +469,13 @@
                   If you want to change the offset, select a new source origin
                   by clicking with the <keycap>Ctrl</keycap> key pressed.
                 </para>
+                <para lang="en">
+                  In the example below, at every new brush stroke, the source
+                  keeps the same offset it had with the previous brush stroke.
+                  So, there is no cloning offset for the first brush stroke.
+                  Here, for the following strokes, the source ends up out of
+                  the source image canvas; hence the truncated aspect.
+                </para>
                 <para lang="ja">
                   このモードでは描画の最初のクリックの位置に基づき参照原点と
                   転写位置との間合いを測り、 それ以降の描線は全てその間合いで
@@ -479,6 +485,12 @@
                 <para lang="ja">
                   参照原点を変更したいときは <keycap>Ctrl</keycap> キーを
                   押しながら新たな原点をクリックします。
+                </para>
+                <para lang="ja">
+                  下の例図では、 何れの新たな描線もそれ以前の描線と同じ間合いで
+                  参照しています。 すなわち最初の描線以降は転写の間合いを
+                  測りません。 それから、 続く描線で参照が元画像から
+                  はみ出すと、 画像が途切れてしまいます。
                 </para>
                 <figure>
                   <title lang="en"><quote>Aligned</quote> clone alignment
@@ -491,22 +503,6 @@
                       <imagedata format="PNG"
                         fileref="images/toolbox/clone-aligned.png"/>
                     </imageobject>
-                    <caption>
-                      <para lang="en">
-                        At every new brush stroke, the source keeps the
-                        same offset it had with the previous brush stroke.
-                        So, there is no cloning offset for the first brush
-                        stroke. Here, for the following strokes, the source
-                        ends up out of the source image canvas; hence the
-                        truncated aspect.
-                      </para>
-                      <para lang="ja">
-                        何れの新たな描線もそれ以前の描線と同じ間合いで参照して
-                        いる。 すなわち最初の描線以降は転写の間合いを測らない。
-                        それから、 続く描線で参照が元画像からはみ出すと、
-                        画像が途切れてしまう。
-                      </para>
-                    </caption>
                   </mediaobject>
                 </figure>
               </listitem>
@@ -525,6 +521,12 @@
                   another layer within the same image. (But remember that you
                   can also clone from one image to another image.)
                 </para>
+                <para lang="en">
+                  At every brush stroke, the source adopts the position of the
+                  mouse pointer in the destination layer. In the following
+                  example, destination layer is smaller than the source
+                  layer; so, there is no truncated aspect.
+                </para>
                 <para lang="ja">
                   <quote>登録されたもの</quote>のモードは他の位置合わせのモード
                   とは異なります。 画像から写し取るときは元画像のレイヤーを
@@ -534,6 +536,11 @@
                   参照されます。 このしくみは同じ画像内のあるレイヤーから他の
                   レイヤーへ転写するのに便利です。
                   (もちろん画像から他の画像への転写もできます。)
+                </para>
+                <para lang="ja">
+                  いずれの描線も元画像への参照位置は転写を受けるレイヤー上の
+                  マウスポインタの位置に適応します。 次の例図では受け側の
+                  レイヤーが元画像よりも小さいので画像は途切れません。
                 </para>
                 <figure>
                   <title lang="en"><quote>Registered</quote> clone alignment
@@ -547,17 +554,6 @@
                         fileref="images/toolbox/clone-registered.png"/>
                     </imageobject>
                     <caption>
-                      <para lang="en">
-                        At every brush stroke, the source adopts the position
-                        of the mouse pointer in the destination layer. Here,
-                        the destination layer is smaller than the source
-                        layer; so, there is no truncated aspect.
-                      </para>
-                      <para lang="ja">
-                        いずれの描線も元画像への参照位置は転写を受けるレイヤー
-                        上のマウスポインタの位置に適応している。 ここでは受け
-                        レイヤーが元画像よりも小さいので画像は途切れない。
-                      </para>
                     </caption>
                   </mediaobject>
                 </figure>
@@ -573,10 +569,18 @@
                   <guilabel>Aligned</guilabel> even when drawing a line. The
                   source will not be moved.
                 </para>
+                <para lang="en">
+                  See that the source remains fixed. The same small sample is
+                  reproduced identically in a tightened way:
+                </para>
                 <para lang="ja">
                   このモードでの描画は <guilabel>なし</guilabel> モードや
                   <guilabel>揃える</guilabel> モードとは違って、 線を伸ばしても
                   元画像の原点しか参照しません。 参照点は移動しません。
+                </para>
+                <para lang="ja">
+                  [次の例図で]元画像の参照点が固定されているのが分かると思い
+                  ます。 同じ小さな判子絵が等しく執拗に繰り返されています。
                 </para>
                 <figure>
                   <title lang="en"><quote>Fixed</quote> clone alignment</title>
@@ -586,16 +590,6 @@
                       <imagedata format="PNG"
                         fileref="images/toolbox/clone-fixed.png"/>
                     </imageobject>
-                    <caption>
-                      <para lang="en">
-                        The source remains fixed. The same small sample is
-                        reproduced identically in a tightened way.
-                      </para>
-                      <para lang="ja">
-                        元画像の参照点は固定される。 同じ小さな判子絵が等しく
-                        執拗に繰り返される。
-                      </para>
-                    </caption>
                   </mediaobject>
                 </figure>
               </listitem>

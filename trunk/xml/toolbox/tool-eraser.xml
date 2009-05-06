@@ -2,19 +2,19 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-     2009-03-16 j.h: reviewed for v2.6
-     2008-04-07 JPL reviewed fr
-     2008-02-13 j.h: added tip
-     2008-01-26  PP updating to v2.4
-     2007-10-07 lexa: reviewed de for GIMP 2.4
-     2007-06-18 kost: added norwegian
-     2007-02-10 lexA: fixed bug #396404 for en and de
-     2006-06-04 changed first para, added para in anti-erase, en;fr by j.h
-     2005-12-07 replaced <simplesect> by <sect3> by lexa
-     2005-12-01 informalfigure replaced by figure by lexa
-     050521 de reviewed by axel.wernicke
+   2009-03-16 j.h: reviewed for v2.6
+   2008-04-07 JPL reviewed fr
+   2008-02-13 j.h: added tip
+   2008-01-26  PP updating to v2.4
+   2007-10-07 lexa: reviewed de for GIMP 2.4
+   2007-06-18 kost: added norwegian
+   2007-02-10 lexA: fixed bug #396404 for en and de
+   2006-06-04 changed first para, added para in anti-erase, en;fr by j.h
+   2005-12-07 replaced <simplesect> by <sect3> by lexa
+   2005-12-01 informalfigure replaced by figure by lexa
+   050521 de reviewed by axel.wernicke
 -->
-<!--2009-04-27-->
+<!--2009-05-04-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-eraser">
   <title lang="en">Eraser</title>
   <title lang="ja">消しゴム</title>
@@ -146,8 +146,10 @@
   <sect3>
     <title lang="en">How to Activate</title>
     <title lang="ja">呼び出し方</title>
-    <para lang="en">You can activate the Eraser tool in several ways :</para>
-    <para lang="ja">消しゴムツールを起用する方法はつぎのいずれかです:</para>
+    <para lang="en">You can activate this tool in several ways:</para>
+    <para lang="ja">
+      <quote>消しゴム</quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -279,11 +281,10 @@
     <variablelist>
       <varlistentry>
         <term lang="en">
-          Mode; Opacity; Brush; Scale; Brush Dynamics; Fade Out; Apply
-          Jitter; Incremental
+          Brush; Scale; Brush Dynamics; Fade Out; Apply Jitter; Incremental
         </term>
         <term lang="ja">
-          モード; 不透明度; ブラシ; 拡大・縮小; ブラシ感度の調整;
+          ブラシ; 拡大・縮小; ブラシ感度の調整;
           フェードアウト; 揺らぎ; 重ね塗り
         </term>
         <listitem>
@@ -371,10 +372,13 @@
               して残っています。 逆消ゴムの作用はアルファ値を増やすものなので、
               <acronym>RGB</acronym>データは[見ようと思えば]再び見られます。
             </para>
+            <!--TODO: CHECK: I can't reproduce it and it doesn't make
+                make any sense to me - ude, 2009-05-03
             <para lang="ja">
               困った機能: 背景色を透明にしたレイヤー上で逆消ゴムをかけると、
               何も描かれていない領域では黒く着色されてしまいます。
             </para>
+            -->
           </note>
         </listitem>
       </varlistentry>

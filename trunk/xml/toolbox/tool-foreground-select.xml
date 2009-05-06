@@ -10,7 +10,7 @@
   2007-09-14 AntI: Added 'es'
   2007-07-26 en;fr created by j.h
      -->
-<!--2009-04-27-->
+<!--2009-05-04-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-foreground-select">
   <title lang="en">Foreground Select</title>
   <title lang="ja">前景抽出選択</title>
@@ -62,7 +62,7 @@
     このツールで実行状態のレイヤーもしくは選択範囲から前景を抽出できます。
     このしくみは<acronym>SIOX</acronym>方式 (Simple Interactive Object
     Extraction) がもとになっています。 ウェブサイトへは
-    <xref linkend="bibliography-online-siox" /> からどうぞ。
+    <xref linkend="bibliography-online-siox"/> からどうぞ。
   </para>
 
   <sect3 id="tool-fg-select-usage">
@@ -153,7 +153,7 @@
       <step>
         <para lang="en">
           When you release the mouse button, all non-selected areas are in
-          dark :
+          dark:
         </para>
         <para lang="ja">
           マウスボタンを放すと、 非選択部分が暗くマスクをかけられます:
@@ -173,7 +173,7 @@
       <step>
         <para lang="en">
           You still have to press the <keycap>Enter</keycap> key to get the
-          wanted selection :
+          wanted selection:
         </para>
         <para lang="ja">
           そして選択を確定するために <keycap>Enter</keycap> キーを押します。
@@ -193,8 +193,14 @@
     <note>
       <para lang="en">
         Until you press <keycap>Enter</keycap>, you can't undo this selection
-        by <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo> nor by
-        <menuchoice><guimenu>Select</guimenu><guimenuitem>None</guimenuitem></menuchoice>,
+        by
+        <keycombo>
+          <keycap>Ctrl</keycap><keycap>Z</keycap>
+        </keycombo> nor by
+        <menuchoice>
+          <guimenu>Select</guimenu>
+          <guimenuitem>None</guimenuitem>
+        </menuchoice>,
         and the Undo History is not concerned. To delete this selection, you
         must select another tool.
       </para>
@@ -324,16 +330,6 @@
           <imagedata format="PNG"
             fileref="images/toolbox/ja/tool-options-FG-select.png"/>
         </imageobject>
-        <caption>
-          <para lang="en">
-            <guilabel>Feather Edges</guilabel> and <guilabel>Color Sensitivity
-            </guilabel> options have been checked.
-          </para>
-          <para lang="ja">
-            <guilabel>境界をぼかす</guilabel> と <guilabel>色感度</guilabel>
-            オプションがチェックされている。
-          </para>
-        </caption>
       </mediaobject>
     </figure>
 
@@ -362,8 +358,7 @@
             全て選択されます。
           </para>
           <figure>
-            <title lang="en"><quote>Contiguous</quote> option effect
-            </title>
+            <title lang="en"><quote>Contiguous</quote> option effect</title>
             <title lang="ja">
               <quote>単一領域を抽出</quote>オプションの効果
             </title>
@@ -493,8 +488,7 @@
             このスライダで選択範囲に空いた穴を埋められます。
           </para>
           <figure>
-            <title lang="en"><quote>Smoothing</quote> option effect
-            </title>
+            <title lang="en"><quote>Smoothing</quote> option effect</title>
             <title lang="ja">
               <quote>スムージング</quote>オプションの効果
             </title>
@@ -520,7 +514,7 @@
               </imageobject>
               <caption>
                 <para lang="en">
-                  Smoothing= 0 : more than 1 pixel wide holes are not
+                  Smoothing = 0 : more than 1 pixel wide holes are not
                   selected.
                 </para>
                 <para lang="ja">

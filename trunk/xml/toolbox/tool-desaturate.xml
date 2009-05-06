@@ -11,7 +11,7 @@
   2007-02-22 KoSt: added no
   2005/11/12 split of from layer-colors.xml by axel.wernicke
 -->
-<!--2009-04-27-->
+<!--2009-05-04-->
 <sect2 id="gimp-tool-desaturate">
   <title lang="en">Desaturate</title>
   <title lang="ja">脱色</title>
@@ -24,7 +24,9 @@
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="イロ">色</primary>
-    <secondary sortas="グレースケールガゾウニヘンカン">グレースケール画像に変換</secondary>
+    <secondary sortas="グレースケールガゾウニヘンカン">
+      グレースケール画像に変換
+    </secondary>
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="ダッショク">脱色</primary>
@@ -49,20 +51,21 @@
 
   <note>
     <para lang="en">
-      This command only works on layers of RGB images. If the image is in
-      Grayscale or Indexed mode, the menu entry is insensitive and
-      grayed out.
+      This command only works on layers of
+      <link linkend="glossary-rgb">RGB</link> images. If the image is in
+      Grayscale or Indexed mode, the menu entry is insensitive and grayed out.
     </para>
     <para lang="ja">
-      このツールは<acronym>RGB</acronym>モードの画像のレイヤーでのみ利用可能
-      です。
+      このツールは
+      <link linkend="glossary-rgb">RGB</link> モードの画像のレイヤーでのみ
+      利用可能です。
     </para>
   </note>
 
   <sect3>
     <title lang="en">Activating the Command</title>
     <title lang="ja">呼び出し方</title>
-    <para lang="en">You can get to this tools in several ways :</para>
+    <para lang="en">You can get to this tools in several ways:</para>
     <para lang="ja">このツールを起用する方法はつぎのとおりです。</para>
     <itemizedlist>
       <listitem>
@@ -143,7 +146,7 @@
             <mediaobject>
               <textobject>
                 <phrase>
-                  Lightness = ½ * (max(R,G,B) + min(R,G,B))
+                  Lightness = &frac12; &times; (max(R,G,B) + min(R,G,B))
                 </phrase>
               </textobject>
             </mediaobject>
@@ -160,7 +163,9 @@
             <mediaobject>
               <textobject>
                 <phrase>
-                  Luminosity = 0.21 * R + 0.71 * G + 0.07 * B
+                  Luminosity = 0.21 &times; R +
+                               0.71 &times; G +
+                               0.07 &times; B
                 </phrase>
               </textobject>
             </mediaobject>
@@ -176,7 +181,7 @@
           <informalequation>
             <mediaobject>
               <textobject>
-                <phrase>Average Brightness = (R + G + B) / 3</phrase>
+                <phrase>Average Brightness = (R + G + B) &divide; 3</phrase>
               </textobject>
             </mediaobject>
           </informalequation>
@@ -212,10 +217,12 @@
         </imageobject>
         <caption>
           <para lang="en">
-            <quote>Luminosity</quote> applied. The result is brighter.
+            <quote>Luminosity</quote> applied.
+            <!-- The result is brighter. -->
           </para>
           <para lang="ja">
-            <quote>光度</quote>を採用。 明るい結果になる。
+            <quote>光度</quote>を採用。
+            <!-- 明るい結果になる。 -->
           </para>
         </caption>
       </mediaobject>
@@ -226,14 +233,21 @@
         </imageobject>
         <caption>
           <para lang="en">
-            <quote>Average</quote> applied. The result is in between
-            Brightness and Luminosity.
+            <quote>Average</quote> applied.
+            <!-- The result is in between Brightness and Luminosity. -->
           </para>
           <para lang="ja">
-            <quote>平均</quote>を採用。 明度と光度の間の結果になる。
+            <quote>平均</quote>を採用。
+            <!-- 明度と光度の間の結果になる。 -->
           </para>
         </caption>
       </mediaobject>
+      <!-- XXX:
+        The conclusions above are true only for this special example;
+        e.g. try
+        lightness vs. luminosity with (0, 255, 0) or (0, 0, 255),
+        lightness vs. average with (255, 255, 0) or (255, 0, 0).
+      -->
     </figure>
   </sect3>
 </sect2>
