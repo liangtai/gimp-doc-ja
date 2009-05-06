@@ -61,15 +61,6 @@
     to the contour you are trying to select.
   </para>
   <para lang="en">
-    Each time you left-click with the mouse, you create a new control point,
-    which is connected to the last control point by a curve that tries to
-    follow edges in the image. To finish, click on the first point (the cursor
-    changes to indicate when you are in the right spot). You can adjust the
-    curve by dragging the control nodes, or by clicking to create new control
-    nodes. When you are satisfied, click anywhere inside the curve to convert
-    it into a selection.
-  </para>
-  <para lang="en">
     Unfortunately, there seem to be some problems with the edge-following
     logic for this tool, with the result that the selections it creates tend
     to be pretty crude in a lot of cases. A good way to clean them up is to
@@ -90,15 +81,6 @@
     なるべく色の対照の強い境目をなぞって、 各コントロールノードを結ぶ
     連続した曲線を引いてゆきます。 うまくゆけばツールが引いた経路は
     選択したい輪郭と一致するはずです。
-  </para>
-  <para lang="ja">
-    マウスで左クリックしてゆく度に、 新たなコントロールポイントが置かれ、
-    直前に置かれたポイントと結ばれる線が形象の輪郭をたどって引かれます。
-    一周したら開始点をクリックします (カーソルの姿が開始点の真上を
-    知らせてくれます)。 コントロールノード(ポイント)を曳いて移動したり
-    新たなコントロールノードを追加して曲線を整えてゆきます。 満足のゆく
-    曲線ができあがったところで、 内側をクリックすれば曲線の輪が選択に
-    変換されます。
   </para>
   <para lang="ja">
     残念ながら色の境目をたどるこのツールの特質に起因して、 できあがった選択
@@ -236,6 +218,15 @@
       </mediaobject>
     </figure>
     <para lang="en">
+      Each time you left-click with the mouse, you create a new control point,
+      which is connected to the last control point by a curve that tries to
+      follow edges in the image. To finish, click on the first point (the
+      cursor changes to indicate when you are in the right spot). You can
+      adjust the curve by dragging the control nodes, or by clicking to create
+      new control nodes. When you are satisfied, click anywhere inside the
+      curve to convert it into a selection.
+    </para>
+    <para lang="en">
       As said above when you click with this tool you drop points. The
       selection boundary is driven by these control points. During creation you
       can move each one by clicking and dragging, except the first and the last
@@ -264,6 +255,15 @@
       You have to notice that you can get only one selection; if you
       create a second selection, the first one is erased when you validate the
       second one.
+    </para>
+    <para lang="ja">
+      マウスで左クリックしてゆく度に、 新たなコントロールポイントが置かれ、
+      直前に置かれたポイントと結ばれる線が形象の輪郭をたどって引かれます。
+      一周したら開始点をクリックします (カーソルの姿が開始点の真上を
+      知らせてくれます)。 コントロールノード(ポイント)を曳いて移動したり
+      新たなコントロールノードを追加して曲線を整えてゆきます。 満足のゆく
+      曲線ができあがったところで、 内側をクリックすれば曲線の輪が選択に
+      変換されます。
     </para>
     <para lang="ja">
       上で述べたとおり、 このツールはクリックしてポイントを置きます。

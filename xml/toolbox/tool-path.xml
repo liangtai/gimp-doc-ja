@@ -14,9 +14,9 @@
   2005-12-06 replaced informalfigure by figure by lexa
   2005-08-14 de reviewed by axel.wernicke
 -->
-<!--2009-04-27-->
+<!--2009-05-04-->
 <sect2 id="gimp-tool-path">
-  <title lang="en">Path</title>
+  <title lang="en">Paths</title>
   <title lang="ja">パス</title>
   <indexterm lang="en">
     <primary>Tools</primary>
@@ -42,7 +42,7 @@
   </indexterm>
 
   <figure>
-    <title lang="en">Path tool</title>
+    <title lang="en">Paths tool</title>
     <title lang="ja">ツールボックス上の<quote>パス<quote>ツールアイコン</title>
     <mediaobject>
       <imageobject>
@@ -51,7 +51,7 @@
     </mediaobject>
   </figure>
   <para lang="en">
-    The Path tool allows to create complex selections called Bezier Curves, a
+    The Paths tool allows to create complex selections called Bezier Curves, a
     bit like Lasso but with all the adaptability of vectorial curves. You can
     edit your curve, you can paint with your curve, or even save, import, and
     export the curve. You can also use paths to create geometrical figures.
@@ -69,8 +69,10 @@
   <sect3>
     <title lang="en">Activating the Tool</title>
     <title lang="ja">呼び出し方</title>
-    <para lang="en">You can get to Path tool in several ways :</para>
-    <para lang="en">パスツールを起用する方法はいくつかあります:</para>
+    <para lang="en">You can get this tool in several ways:</para>
+    <para lang="en">
+      <quote>パス<quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -143,11 +145,11 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Ctrl/Alt</term>
-        <term lang="ja"><keycap>Ctrl</keycap> / <keycap>Alt</keycap></term>
+        <term lang="en">Ctrl;Alt</term>
+        <term lang="ja"><keycap>Ctrl</keycap>; <keycap>Alt</keycap></term>
         <listitem>
           <para lang="en">
-            Three modes are available to work with the Path tool:
+            Three modes are available to work with the Paths tool:
             <guilabel>Design</guilabel>,<guilabel>Edit</guilabel>
             and <guilabel>Move</guilabel>.
             <keycap>Ctrl</keycap> key toggles between Design and Edit.
@@ -266,8 +268,9 @@
           </tip>
           <para lang="en">Several functions are available with this mode:</para>
           <para lang="ja">このモードでできる操作がいくつかあります:</para>
-          <para lang="en"><emphasis>Add a new node</emphasis>
-            : if the active node (a small empty circle after clicking on a node)
+          <para lang="en">
+            <emphasis>Add a new node</emphasis>:
+            If the active node (a small empty circle after clicking on a node)
             is at the end of the path, the mouse pointer is a '+' sign and a new
             node is created, linked to the previous one by a segment. If the
             active node is on the path, the pointer is a square and you can
@@ -275,6 +278,28 @@
             independent from the other, but belongs to the path as you can see
             on the Path dialog. Pressing <keycap>Shift</keycap>
             forces the creation of a new component.
+          </para>
+          <para lang="en">
+            <emphasis>Move one or several nodes</emphasis>: On a node,
+            the mouse pointer becomes a 4-arrows cross. You can click
+            and drag it.
+            You can select several nodes by <keycap>Shift</keycap> and
+            click and move them by click and drag.
+            Pressing <keycombo><keycap>Ctrl</keycap><keycap>Alt
+            </keycap></keycombo> allows to move all the path, as a
+            selection.
+          </para>
+          <para lang="en">
+            <emphasis>Modify handles</emphasis>: you have to Edit a node
+            before. A handle appears. Drag it to bend the curve.
+            Pressing <keycap>Shift</keycap> toggles to symmetric handles.
+          </para>
+          <para lang="en">
+            <emphasis>Modify segment</emphasis>: When the mouse pointer
+            goes over a segment, it turns to a 4-arrows cross. Click-and-drag
+            it to bend the segment. As soon as you move, handles appear
+            at both ends of the segment. Pressing <keycap>Shift</keycap>
+            key toggles to symmetric handles.
           </para>
           <para lang="ja">
             <emphasis>新たにアンカーを追加</emphasis>: パスの終端が活性アンカー
@@ -288,16 +313,6 @@
             を見れば一目瞭然です。 <keycap>Shift</keycap> キーを押しながらでは
             強制的に新しい成分が作られます。
           </para>
-          <para lang="en">
-            <emphasis>Move one or several nodes</emphasis>: On a node,
-            the mouse pointer becomes a 4-arrows cross. You can click
-            and drag it.
-            You can select several nodes by <keycap>Shift</keycap> and
-            click and move them by click and drag.
-            Pressing <keycombo><keycap>Ctrl</keycap><keycap>Alt
-            </keycap></keycombo> allows to move all the path, as a
-            selection.
-          </para>
           <para lang="ja">
             <emphasis>ひとつもしくは複数のアンカーを移動</emphasis>: アンカーの
             上ではマウスポインタの右上に小さな四方矢印がつきます。 そのアンカー
@@ -307,12 +322,12 @@
             </keycombo> の組み合わせを押しながら曳けば (選択範囲の移動のように)
             全面的にパスを移動できます。
           </para>
-          <para lang="en">
-            <emphasis>Modify segment</emphasis>: When the mouse pointer
-            goes over a segment, it turns to a 4-arrows cross. Click-and-drag
-            it to bend the segment. As soon as you move, handles appear
-            at both ends of the segment. Pressing <keycap>Shift</keycap>
-            key toggles to symmetric handles.
+          <para lang="ja">
+             <emphasis>ハンドルを操作</emphasis>: まずはその前にアンカーの
+             編集を行なってください。 するとハンドルが現れますので、 これを
+             曳いて曲線の曲がり具合を調節してください。 <keycap>Shift</keycap>
+            キーを押しながら操作するとアンカーのもう一方の分節のハンドルと
+            点対称に動きます。
           </para>
           <para lang="ja">
             <emphasis>パス分節の変形</emphasis>: 分節上にマウスポインタをかざ
@@ -348,7 +363,8 @@
             key combination, point to a segment. Pointer turns to -.
             Click to delete the segment.
           </para>
-          <para lang="en"><emphasis>Add a node to a path</emphasis>: point to a
+          <para lang="en">
+            <emphasis>Add a node to a path</emphasis>: point to a
             segment. Pointer turns to +. Click where you want to place
             the new control point.
           </para>
@@ -436,9 +452,9 @@
         <term lang="en">Move Mode</term>
         <term lang="ja">移動モード</term>
         <listitem>
-          <para lang="en"><guilabel>Move</guilabel>
-            mode allows to move one or all components of a path. Simply click on
-            the path and drag it.
+          <para lang="en">
+            <guilabel>Move</guilabel> mode allows to move one or all
+            components of a path. Simply click on the path and drag it.
           </para>
           <para lang="en">
             If you have several components, only the selected one is moved. If
