@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--2009-05-06-->
+<!--2009-05-08-->
 <glossary id="glossary">
   <title lang="en">Glossary</title>
   <title lang="ja">用語集</title>
@@ -944,7 +944,8 @@ Exchangeable image file format (略すとExif、 <acronym>EXIF</acronym>
 <xref linkend="glossary-tiff"/> 形式のタグをもとにしています。 
 <acronym>TIFF</acronym>、 Exif、 <acronym>TIFF/EP</acronym>、 <acronym>
 DCF</acronym>の各標準規格のタグの間には大きな共通点があります。 
-<xref linkend="bibliography-online-wkpd-exif"/> を参考にしてください。
+<link linkend="bibliography-online-wkpd-exif">ウィキペディア</link> を
+参考にしてください。
       </para>
     </glossdef>
   </glossentry>
@@ -1711,7 +1712,8 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
 <link linkend="gimp-tool-color-picker">スポイトツール</link> で
 いずれかの色モデルで色を変更すると、 他でも変化することから確認できます。 
 これらの相互関連についての説明を読む勇気のある方は、 
-<xref linkend="bibliography-online-grokking-gimp"/> をご覧ください。
+<link linkend="bibliography-online-grokking-gimp">Grokking th GIMP</link> 
+をご覧ください。
       </para>
       <variablelist>
         <para lang="en">Brief description of the HSV components:</para>
@@ -1760,7 +1762,7 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
         </varlistentry>
         <varlistentry>
           <term lang="en">Value</term>
-          <term lang="ja">明度</term>
+          <term lang="ja">色の値</term>
           <listitem>
             <para lang="en">
               This value describes the luminosity, the luminous intensity. It
@@ -2078,6 +2080,7 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
           </para>
         </listitem>
       </itemizedlist>
+      <!-- please add Sinc (Lanczos3) -->
       <para lang="en"><acronym>GIMP</acronym> uses interpolation when you
         <link linkend="gimp-image-scale">Scale</link> an image,
         <link linkend="gimp-layer-scale">Scale</link> a layer, and when you
@@ -2552,6 +2555,13 @@ Exifデータがプラグインの例です。
 しまいます。
       </para>
       <para lang="ja">
+パスについての基本的な情報は
+<link linkend="gimp-concepts-paths">パスの概念</link> や 
+<link linkend="gimp-using-paths">パスの利用法</link> で、 パスの作成
+方法や編集方法については 
+<link linkend="gimp-tool-path">パスツール</link> をご覧ください。 
+画像に置いたパスの管理は 
+<link linkend="gimp-path-dialog">パスダイアログ</link> を使います。
       </para>
     </glossdef>
   </glossentry>
@@ -2570,9 +2580,11 @@ Exifデータがプラグインの例です。
       </para>
       <para lang="ja">
 <acronym>GIMP</acronym>やその拡張プログラムがもつ機能は全てプロシージャ
-・データベース (PDB) に登録されています。 各機能については 
+・データベース (<acronym>PDB</acronym>) に登録されています。 各機能に
+ついては 
 <link linkend="plug-in-dbbrowser">プロシージャ・ブラウザ</link> を使えば
-PDBから探し出してその有益なプログラミング用情報が得られます。
+<acronym>PDB</acronym>から探し出してその有益なプログラミング用情報が
+得られます。
       </para>
     </glossdef>
   </glossentry>
@@ -3049,7 +3061,7 @@ Rendering Intent はつぎのとおりです。
 でしょう。 答えばヒトの目と脳にあります。 色は自発的に存在するのでは
 なく、 連続する光の波長のスペクトラムだけが存在します。 網膜内には3つ
 の種類の角膜があります。 同じ波長の光が3層に分かれた角膜に差し込むと
-それぞれ異なった刺激を受け、 数億年もの進化の歳月を経て我々が身に
+それぞれ異なった刺激を受け、 数百万年もの進化の歳月を経て我々が身に
 つけた感覚能力でその差異から色を認識します。
       </para>
       <para lang="ja">
@@ -3440,7 +3452,8 @@ Adapter</foreignphrase> の略であり、 <acronym>TARGA</acronym>は
 ますが同様の切り分けを行ないます。
       </para>
       <para lang="ja">
-タイルはメインメモリ、 <acronym>RAM</acronym>上のタイルキャッシュ、 
+タイルはメインメモリ、 <acronym>RAM</acronym>上の 
+<link linkend="gimp-using-setup-tile-cache">タイルキャッシュ</link>、 
 ディスク上のいずれかにいつも置かれています。 現時点で作業対象のタイルは
 メインメモリ上に置かれます。 最近使われたタイルは<acronym>RAM</acronym>
 上です。 <acronym>RAM</acronym>のタイルキャシュが満杯になると、 最も
@@ -3522,7 +3535,7 @@ Adapter</foreignphrase> の略であり、 <acronym>TARGA</acronym>は
   <glossentry id="glossary-value">
     <glossterm>
       <phrase lang="en">Value</phrase>
-      <phrase lang="ja">値</phrase>
+      <phrase lang="ja">色の値</phrase>
     </glossterm>
     <indexterm significance="normal" lang="en">
       <primary>Value</primary>
@@ -3532,11 +3545,11 @@ Adapter</foreignphrase> の略であり、 <acronym>TARGA</acronym>は
       <secondary>Value</secondary>
     </indexterm>
     <indexterm significance="normal" lang="ja">
-      <primary sortas="アタイ">値</primary>
+      <primary sortas="イロノアタイ">色の値</primary>
     </indexterm>
     <indexterm significance="normal" lang="ja">
       <primary sortas="イロ">色</primary>
-      <secondary sortas="アタイ">値</secondary>
+      <secondary sortas="イロノアタイ">色の値</secondary>
     </indexterm>
     <glossdef>
       <para lang="en">
@@ -3827,15 +3840,15 @@ luma信号の算出の際には、 根底にある<acronym>RGB</acronym>デー�
 <link linkend="glossary-gamma">ガンマ</link> 値で調整されてから
 R'G'B'の各信号値を得ます。 3つの個々の成分が異なる比率で足し合わ
 され、 かつての白黒テレビに使われた<acronym>VBS</acronym> (
-<foreignphrase>Video BaseBand Signal</foreignphrase>, 白黒信号)
+<foreignphrase>Video BaseBand Signal</foreignphrase>: 白黒信号)
 のようにも機能する輝度情報の形になります。
       </para>
       <para lang="en">Y=R+G+B</para>
       <para lang="ja">
 しかし実際はヒトの目の色覚のさまざまな特徴を考慮する必要がある
-ため、 正確な計算方法はもっと複雑です。 例えば緑は赤よりも明るく
-感じられ、 青りも明るく感じられます。 さらにシステムによっては
-基本色のガンマ補正がさいしょ に行われます。
+ため、 本当の計算方法はもっと複雑です。 例えば緑は赤よりも明るく
+感じられ、 青よりも明るく感じられます。 さらにシステムによっては
+基本色のガンマ補正が最初に行われます。
       </para>
       <para lang="ja">
 クロミナンス信号と色差信号も色情報を含んでいます。 これらは青
