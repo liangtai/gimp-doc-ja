@@ -10,6 +10,7 @@
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-channel-dialog">
   <title lang="en"><quote>Channels</quote> Dialog</title>
   <title lang="ja">チャンネルダイアログ</title>
+
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Channels</secondary>
@@ -20,14 +21,15 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ダイアログ</primary>
-    <secondary>テャンネル</secondary>
+    <secondary>チャンネル</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>テャンネル</primary>
+    <primary>チャンネル</primary>
     <secondary>ダイアログ</secondary>
   </indexterm>
+
   <figure>
-    <title lang="en">The Channel dialog</title>
+    <title lang="en">The Channels dialog</title>
     <title lang="ja">チャンネルダイアログ</title>
     <mediaobject>
       <imageobject>
@@ -145,7 +147,7 @@
       </imageobject>
       <caption>
         <para lang="en">Alpha channel</para>
-        <para lang="ja">アルファテャンネル</para>
+        <para lang="ja">アルファチャンネル</para>
       </caption>
     </mediaobject>
     <mediaobject>
@@ -154,7 +156,7 @@
                    fileref="images/dialogs/wilber-channels-combined.png"/>
       </imageobject>
       <caption>
-        <para lang="en"><!-- All channels combined -->All Channels</para>
+        <para lang="en"><!-- All channels combined -->All channels</para>
         <para lang="ja"><!--全てのチャンネルの合成 -->全てのチャンネル</para>
       </caption>
     </mediaobject>
@@ -280,8 +282,8 @@
     <title lang="en">Using the Channel dialog</title>
     <title lang="ja">チャンネルダイアログの利用法</title>
     <sect4 id="gimp-channel-dialog-using-overview">
-      <title lang="en">Using the Channel dialog</title>
-      <title lang="ja">チャンネルダイアログの利用法</title>
+      <title lang="en">Overview</title>
+      <title lang="ja">概観</title>
       <para lang="en">
         The top channels are the color channels and the optional Alpha
         channel. They are always organized in the same order and they cannot
@@ -300,6 +302,7 @@
         が現れます。
       </para>
     </sect4>
+
     <sect4 id="gimp-channel-dialog-using-attributes">
       <title lang="en">Channel attributes</title>
       <title lang="ja">チャンネルのプロパティ (属性)</title>
@@ -445,12 +448,15 @@
         </para>
       </caution>
     </sect4>
+
     <sect4 id="gimp-channel-dialog-using-managing">
       <title lang="en">Managing channels</title>
       <title lang="ja">チャンネルの管理</title>
+
+      <!--TODO: check: do we really need so many indexterms?-->
       <indexterm lang="en">
         <primary>Channel</primary>
-        <secondary>Edit Channel Attributes</secondary>
+        <secondary>Edit Channel attributes</secondary>
       </indexterm>
       <indexterm lang="en">
         <primary>Channel</primary>
@@ -490,6 +496,7 @@
           チャンネルを選択範囲に
         </secondary>
       </indexterm>
+
       <para lang="en">
         Under the channel list is a set of buttons allowing you to perform
         some basic operations on channel list.
@@ -549,7 +556,7 @@
             <phrase lang="ja">チャンネルを追加(<accel>N</accel>)...</phrase>
           </term>
           <listitem>
-            <para lang="en"><!--changed 070612-->
+            <para lang="en">
               You can create here a new channel. The displayed dialog lets
               you set <guilabel>Opacity</guilabel> and mask color used in
               the image to represent the selection. (If you use the
@@ -714,7 +721,9 @@
               </listitem>
               <listitem id="gimp-channel-selection-intersect">
                 <para lang="en">
-                  <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>:
+                  <keycombo>
+                    <keycap>Shift</keycap><keycap>Ctrl</keycap>
+                  </keycombo>:
                   the final selection is the intersection of selection derived
                   from a channel with the previously active one. Only common
                   parts are kept.
