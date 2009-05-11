@@ -7,12 +7,12 @@
   2007-05-19 ude: fixed calspair coords
   2006-03-06 lexa: reviewed and made docbook compliant
 -->
-<!--2009-04-25-->
+<!--2009-05-09-->
+<!-- This dialog is included from channel-dialog.xml-->
 <sect3 id="gimp-qmask">
-
-  <!-- This dialog is called from channel-dialog.xml-->
   <title lang="en">Quick Mask</title>
   <title lang="ja">クイックマスク</title>
+
   <figure>
     <title lang="en">Dialog Quick Mask</title>
     <title lang="ja">クイックマスクをかけられた画像</title>
@@ -43,21 +43,27 @@
     見せてしまいます。 こんなとき、 クイックマスクを使ってみると非常に良好な
     仕上がりが期待できるでしょう。
   </para>
+
   <sect4>
     <title lang="en">Activating the dialog</title>
     <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      The QuickMask can be activated in different ways:
+    </para>
+    <para lang="ja">
+      クイックマスクを起用する方法はつぎのいずれかです。
+    </para>
     <itemizedlist>
       <listitem>
         <para lang="en">
-          The QuickMask can be activated in the following order, from the
-          image-menu:
+          From the image menu:
           <menuchoice>
             <guimenu>Select</guimenu>
             <guimenuitem>Toggle QuickMask</guimenuitem>
           </menuchoice>.
         </para>
         <para lang="ja">
-          クイックマスクはメニューより
+          画像ウィンドウのメニューより
           <menuchoice>
             <guimenu>選択(<accel>S</accel>)</guimenu>
             <guimenuitem>クイックマスクに切り替え(<accel>Q</accel>)</guimenuitem>
@@ -67,28 +73,29 @@
       </listitem>
       <listitem>
         <para lang="en">
-          The QuickMask can also be activated by clicking the left-bottom
-          button showed in red on the screenshot.
+          by clicking the left-bottom button showed in red on the screenshot.
         </para>
         <para lang="ja">
-          クイックマスクはスクリーンショットで示したように、 画像ウィンドウの
-          左下にある小さな正方形のボタンをクリックして赤い状態にすれば有効に
-          なります。
+          スクリーンショットでも見えている画像ウィンドウの
+          左下にある小さな正方形のボタンをクリック
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          It can also be activated by using <keycap>Shift+Q</keycap>
+          By using the
+          <keycombo>
+            <keycap>Shift</keycap><keycap>Q</keycap>
+          </keycombo>
           shortcut.
         </para>
         <para lang="ja">
           キーボードショートカット
           <keycombo><keycap>Shift</keycap><keycap>Q</keycap></keycombo>
-          を押しても切り替えられます。
         </para>
       </listitem>
     </itemizedlist>
   </sect4>
+
   <sect4>
     <title lang="en">Creating a Quick Mask</title>
     <title lang="ja">クイックマスクの作成</title>
@@ -97,52 +104,67 @@
       click the bottom-left button in the image window. If a selection was
       active in your image, then its content appears unchanged while the
       border is covered with a translucent red color. If no selection was
-      active then all the image is covered with a translucent red color. At
+      active then all the image is covered with a translucent red color.
+      Another click on the bottom-left button will deactivate the quick mask.
+    </para>
+    <para lang="en">
+      From the channel dialog you can double click on the name or the
+      thumbnail to edit the <guilabel>QMask</guilabel> attributes. Then you
+      can change the <guilabel>Opacity</guilabel> and its filling color.  At
       every moment you can hide the mask by clicking on the eye icon
       <guiicon>
-        <inlinegraphic
-              fileref="images/dialogs/stock-eye-20.png"/>
+        <inlinegraphic fileref="images/dialogs/stock-eye-20.png"/>
       </guiicon>
       in front of the <guilabel>QMask</guilabel>.
-      From the channel dialog you can double click on the name or the
-      thumbnail to edit the <guilabel>QMask</guilabel>
-      attributes. Then you can change the <guilabel>Opacity</guilabel>
-      and its filling color. Once a quick mask is initialized click on it to
+    </para>
+    <para lang="en">
+      The mask is coded in gray tones, so you must use white or gray to
+      decrease the area limited by the mask and black to increase it. The area
+      painted in light or dark gray will be transition areas for the selection
+      like feathering. When your mask is ready, click again on the bottom-left
+      button in the image window and the quick mask will be removed from the
+      channel list and converted to a selection.
+    </para>
+    <para lang="en">
+      Quick mask's purpose is to paint a selection and its transitions with
+      the paint tools without worrying about managing selection masks. It's a
+      good way to isolate a subject in a picture because once the selection is
+      made you only have to remove its content (or inverse if the subject is
+      in the selection).
+Once a quick mask is initialized click on it to
       be sure it is selected and blue highlighted in the list, and start to
-      paint on it with any GIMP paint tool. The mask is coded in gray tones,
-      so you must use white or gray to decrease the area limited by the mask
-      and black to increase it. The area painted in light or dark gray will
-      be transition areas for the selection like feathering. When your mask
-      is ready, click again on the bottom-left button in the image window and
-      the quick mask will be removed from the channel list and converted to
-      a selection. Quick mask's purpose is to paint a selection and its
-      transitions with the paint tools without worrying about managing
-      selection masks. It's a good way to isolate a subject in a picture
-      because once the selection is made you only have to remove its content
-      (or inverse if the subject is in the selection).
+      paint on it with any GIMP paint tool.
     </para>
     <para lang="ja">
       <quote>クイックマスク</quote>を使うにはまず画像ウィンドウの左下のボタンを
       クリックしてください。 画像上に何か選択範囲があれば、 その境界線が半透明
       な赤で覆われて選択範囲の内容が変更を受けることなく表示されます。 選択範囲
-      が何も無かったときは画像全体が半透明な赤で覆われます。 いつ何時でも一覧表
-      の <guilabel>クイックマスク</guilabel> の欄の<quote>目</quote>のアイコン
+      が何も無かったときは画像全体が半透明な赤で覆われます。 この左下のボタンを
+      またクリックするとクイックマスクは解除されます。
+    </para>
+    <para lang="ja">
+      チャンネルダイアログ上ではクイックマスクの縮小見本画像か名前をダブル
+      クリックすれば<quote>チャンネルプロパティの編集</quote>ダイアログが開かれ
+      ますので、 ここでクイックマスクの <guilabel>塗り不透明度(<accel>F</accel>)
+      </guilabel> や塗りつぶし色を変更できます。 いつ何時でも一覧表の
+      <guilabel>クイックマスク</guilabel> の欄の<quote>目</quote>のアイコン
       <guiicon>
         <inlinegraphic fileref="images/dialogs/stock-eye-20.png"/>
       </guiicon>
-      をクリックすればマスクを隠せます。 チャンネルダイアログ上ではクイック
-      マスクの縮小見本画像か名前をダブルクリックすれば<quote>
-      チャンネルプロパティの編集</quote>ダイアログが開かれますので、 ここで
-      クイックマスクの <guilabel>塗り不透明度(<accel>F</accel>)</guilabel> や
-      塗りつぶし色を変更できます。 クイックマスクの状態に一旦入ったらまず念の
-      ため一覧表のクイックマスクの欄をクリックして強調表示させてから<acronym>
-      GIMP</acronym>の描画ツールで塗りはじめましょう。 マスクは灰色陰影の階調で
-      構成されているので、 マスクで塞がれた領域を減らすには白か灰色を、 増やす
-      には黒を使わなくてはなりません。 濃淡のついた灰色で塗られている領域は
-      選択範囲のぼかされた境界付近のような漸進変化をしています。 マスクができ
-      あがったら画像ウィンドウの左下のボタンを再びクリックすればチャンネルの
-      一覧表からクイックマスクが消え、 その内容は選択範囲に変換されます。 
-      以上のような手法は画像内にある物体を孤立させて取り出すのに使うと、
+      をクリックすればマスクを隠せます。
+    </para>
+    <para lang="ja">
+      マスクは灰色陰影の階調で構成されているので、 マスクで塞がれた領域を減らす
+      には白か灰色を、 増やすには黒を使わなくてはなりません。 濃淡のついた灰色
+      で塗られている領域は選択範囲のぼかされた境界付近のような漸進変化をして
+      います。 マスクができあがったら画像ウィンドウの左下のボタンを再びクリック
+      すればチャンネルの一覧表からクイックマスクが消え、 その内容は選択範囲に
+      変換されます。 
+    </para>
+    <para lang="ja">
+      クイックマスクの使用目的は選択マスクの管理に煩わされることなく選択範囲を
+      描画ツールで描くこと、 しかも必要なら選択になだらかな強弱を加えること
+      です。 このような手法は画像内にある物体を孤立させて取り出すのに使うと、
       選択範囲はもうできあがっているのであとはその範囲内の画像を (もし欲しい
       物体が範囲内にあるときは反転してから) 削除すればよいだけになりますから
       便利です。

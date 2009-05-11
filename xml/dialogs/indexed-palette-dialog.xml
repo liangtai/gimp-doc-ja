@@ -9,10 +9,11 @@
   2006-03-12 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-05-07-->
+<!--2009-05-09-->
 <sect2 id="gimp-indexed-palette-dialog">
   <title lang="en">Colormap Dialog</title>
   <title lang="ja">カラーマップダイアログ</title>
+
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Colormap</secondary>
@@ -27,6 +28,7 @@
   <indexterm lang="ja">
     <primary>カラーマップ</primary>
   </indexterm>
+
   <figure>
     <title lang="en">
       An indexed image with 6 colors and its Colormap dialog
@@ -67,8 +69,7 @@
     <title lang="ja">ダイアログの呼び出し方</title>
     <para lang="en">
       The <quote>Colormap</quote> dialog is a dockable dialog; see the section
-      <xref linkend="gimp-concepts-docks"/>
-      for help on manipulating it.
+      <xref linkend="gimp-concepts-docks"/> for help on manipulating it.
     </para>
     <para lang="en">
       You can access it:
@@ -102,7 +103,7 @@
           from the Tab menu in any dockable dialog by clicking on
           <guiicon>
             <inlinegraphic format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
+              fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> and selecting
           <menuchoice>
             <guimenu>Add Tab</guimenu>
@@ -113,7 +114,7 @@
           任意のドッキング可能なダイアログのアイコンボタン
           <guiicon>
             <inlinegraphic format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
+              fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
             <guimenu>タブに追加(<accel>A</accel>)</guimenu>
@@ -163,34 +164,31 @@
     <title lang="en">Colormaps and Indexed Images</title>
     <title lang="ja">カラーマップとインデックス化カラー画像</title>
     <para lang="en">
-      In an Indexed image, colors are assigned to pixels by an indirect
-      method, using a look-up table called a <emphasis>colormap</emphasis>.
-      In GIMP, the maximum number of entries in a colormap is 256. For a
-      maximum-sized colormap, each index from 0 to 255 is assigned an
-      arbitrary RGB color. There are no rules restricting the colors that can
-      be assigned to an index or the order they appear in: any index can be
-      assigned any color.
+      In an Indexed image, instead of being assigned a color directly (as
+      happens in RGB and Grayscale images), colors are assigned to pixels by
+      an indirect method, using a look-up table called a
+      <emphasis>colormap</emphasis>.
     </para>
     <para lang="en">
-      In an Indexed image, instead of being assigned a color directly (as
-      happens in RGB and Grayscale images), each pixel is assigned an index.
       To determine the color that should be shown for that pixel, GIMP looks
       up the index in the image's colormap. Each indexed image has its own
-      private colormap.
+      private colormap.  In GIMP, the maximum number of entries in a colormap
+      is 256. For a maximum-sized colormap, each index from 0 to 255 is
+      assigned an arbitrary RGB color. There are no rules restricting the
+      colors that can be assigned to an index or the order they appear in: any
+      index can be assigned any color.
     </para>
     <para lang="en"><!-- changed dithering to quantization, bug #356354 -->
       It is important to realize that the colors in the colormap are the
-      <emphasis>only colors available</emphasis>
-      for an indexed image (that is, unless you add new colors to the
-      colormap). This has a major effect on many GIMP operations: for example,
-      in a pattern fill, GIMP will usually not be able to find exactly the
-      right colors in the colormap, so it will approximate them by
-      using the nearest color available.
-          This is sometimes referred to as
-          <link linkend="glossary-quantization">Quantization</link>, which
-          is described in the Glossary.
-      If the colormap is too limited or poorly chosen, this can easily
-      produce very poor image quality.
+      <emphasis>only colors available</emphasis> for an indexed image (that
+      is, unless you add new colors to the colormap). This has a major effect
+      on many GIMP operations: for example, in a pattern fill, GIMP will
+      usually not be able to find exactly the right colors in the colormap, so
+      it will approximate them by using the nearest color available.  This is
+      sometimes referred to as
+      <link linkend="glossary-quantization">Quantization</link>.
+      If the colormap is too limited or poorly chosen, this can easily produce
+      very poor image quality.
     </para>
     <para lang="en">
       The Colormap dialog allows you to alter the colormap for an image,
@@ -201,21 +199,20 @@
       numbered with 0 in the upper left corner, 1 to its right, etc.
     </para>
     <para lang="ja">
-      インデックス化された画像の色は <emphasis>カラーマップ</emphasis> と
-      呼ばれる対照表を通して遠回しに画素に与えられます。 <acronym>GIMP
-      </acronym>ではカラーマップに並べられる色数は最大で256色の制限があります。
+      インデックス化された画像では、 各画素に直接色を与える方法 (つまり
+      <acronym>RGB</acronym>画像やグレースケール画像での方式) をとらず、 各画素
+      の色は <emphasis>カラーマップ</emphasis> と呼ばれる対照表を通して遠回しに
+      画素に与えられます。
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>は画素に表示する色を判定するときに画像のカラー
+      マップ[対照表]を見て、 その参照番号にある色を出します。 インデックス化
+      画像はそれぞれ固有のカラーマップを持っています。 <acronym>GIMP</acronym>
+      ではカラーマップに並べられる色数は最大で256色の制限があります。
       カラーマップは最大色数ならば0から255までの索引番号のひとつひとつに任意の
       <acronym>RGB</acronym>色が割り振られます。 対照表に登録できる色には何ら
       制限はなく、 その順序も問いません。 どの索引番号にどの色を結び付けても
       構わないのです。
-    </para>
-    <para lang="ja">
-      インデックス化された画像では、 各画素に直接色を与える方法 (つまり
-      <acronym>RGB</acronym>画像やグレイスケール画像での方式) をとらず、 各画素
-      には索引への参照番号が与えられます。 <acronym>GIMP</acronym>は画素に
-      表示する色を判定するときに画像のカラーマップ[対照表]を見て、 その参照番号
-      にある色を出すのです。 インデックス化画像はそれぞれ固有のカラーマップを
-      持っています。
     </para>
     <para lang="ja">
       インデックス化カラー画像で <emphasis>使える</emphasis> 色はカラーマップに
@@ -225,10 +222,9 @@
       の大多数の操作に大きな影響を及ぼします。 例えば、 パターンで埋め尽くそう
       とするとほとんどの場合カラーマップには同等な色が見付からないので、
       <acronym>GIMP</acronym>は一番近そうな色で近似を行ないます。 この処理に
-      量子化を援用することもよくあります (用語集に
-      <link linkend="glossary-quantization">量子化</link> の説明があります)。
-      カラーマップの制約が大きかったり色数が乏しいと仕上がりはほぼ確実に非常に
-      貧弱な画質になります。
+      <link linkend="glossary-quantization">量子化</link> を援用することも
+      よくあります。 カラーマップの制約が大きかったり色数が乏しいと仕上がりの
+      画質はほぼ確実に非常に貧相になります。
     </para>
     <para lang="ja">
       カラーマップダイアログで画像のカラーマップを変更できます。 新たに登録項目
