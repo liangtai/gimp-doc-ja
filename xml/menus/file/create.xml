@@ -6,19 +6,29 @@
   2009-01-06 j.h: Improved "mouse pointer capture"
   2008-12-29 Created from menus/acquire.xml by j.h
 -->
+<!--2009-05-14-->
 <sect2 id="gimp-file-create">
-  <title>Create</title>
+  <title lang="en">Create</title>
+  <title lang="ja">画像の作成</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Acquire an image</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
+    <primary>Acquire</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>画像</primary>
+    <secondary>Acquire an image</secondary>
+  </indexterm>
+  <indexterm lang="ja">
     <primary>Acquire</primary>
   </indexterm>
 
   <figure>
-    <title>The <quote>Create</quote> submenu</title>
+    <title lang="en">The <quote>Create</quote> submenu</title>
+    <title lang="ja"><quote>画像の作成</quote>サブメニュー</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG" fileref="images/menus/file/create.png"/>
@@ -26,25 +36,43 @@
     </mediaobject>
   </figure>
 
-  <para>
+  <para lang="en">
     This menu item replaces the <quote>Acquire</quote> menu which
     existed in <acronym>GIMP</acronym> previous versions in the Toolbox
     Menu and contains a lot of logos, buttons, patterns...
   </para>
-  <para>
+  <para lang="en">
     These commands vary somewhat, depending upon your system, since
     the <acronym>GIMP</acronym> makes calls to system functions.
   </para>
+  <para lang="ja">
+    このメニュー項目は以前の版の<acronym>GIMP</acronym>でツールボックスメニュー
+    バーにあった <guimenu>Acq<accel>u</accel>ire</guimenu> メニューの代わりに
+    作られました。 ツールボックスメニューは他にもロゴ作成やボタン画像作成、 
+    パターン生成をするたくさんのメニューがありました。
+  </para>
+  <para lang="ja">
+    これらのコマンドはシステムの機能を呼び出しますので、 お使いのシステムに
+    よっていくぶんふるまいが異なります。
+  </para>
 
   <sect3> <!--id="gimp-file-create-activate"-->
-    <title>Activate the Submenu</title>
+    <title lang="en">Activate the Submenu</title>
+    <title lang="ja">サブメニューへの入り方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this submenu from the Image menu bar through
           <menuchoice>
             <guimenu>File</guimenu>
             <guimenuitem>Create</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ファイル(<accel>F</accel>)</guimenu>
+            <guimenuitem>画像の生成</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -52,16 +80,17 @@
   </sect3>
 
   <sect3 id="gimp-file-create-clipboard">
-    <title>From Clipboard</title>
-    <para>
+    <title lang="en">From Clipboard</title>
+    <title lang="ja">クリップボードから(<accel>C</accel>)</title>
+    <para lang="en">
       When you copy a selection, it goes into the clipboard. Then you can
       create a new image with it.
     </para>
-    <para>
+    <para lang="en">
       This command has the same action as the
       <link linkend="gimp-edit-paste-as-new">Paste as new</link> command.
     </para>
-    <para>
+    <para lang="en">
       The <keycap>Print Screen</keycap> keyboard key captures the screen and
       puts it in the clipboard. This command has the same action as
       <quote>taking a screenshot of the entire screen</quote> in the
@@ -70,17 +99,41 @@
       </keycombo> key combination grabs the active window in the screen
       with its decorations and puts it in the clipboard.
     </para>
+    <para lang="ja">
+      選択範囲を
+      <link linkend="gimp-edit-copy">コピー</link> すると写し取られた選択範囲は
+      クリップボードに入ります。 これを利用して新しい画像が作成できます。
+    </para>
+    <para lang="ja">
+      このコマンドは <guimenu>編集(<accel>E</accel>)</guimenu> メニューの
+      <link linkend="gimp-edit-paste-as-new">クリップボードから生成</link> 
+      コマンドと同じはたらきをします。
+    </para>
+    <para lang="ja">
+      キーボードの <keycap>Print Screen</keycap> キーを押すと画面の表示が画像と
+      なってクリップボードに取り込まれます。 この機能は次に述べる
+      <link linkend="plug-in-screenshot">スクリーンショット</link> ダイアログで
+      <guilabel>画面全体(<accel>S</accel>)</guilabel> のスクリーンショットを
+      撮る機能と同じです。 <keycombo><keycap>Alt</keycap><keycap>Print Screen
+      </keycap></keycap> キーの組み合わせなら活性ウィンドウだけをその装飾枠も
+      含んだ表示から画像を作成しクリップボードに取り込みます。
+    </para>
   </sect3>
 
   <sect3 id="plug-in-screenshot">
-    <title>Screenshot</title>
+    <title lang="en">Screenshot</title>
+    <title lang="ja">スクリーンショット(<accel>S</accel>)...</title>
 
-    <indexterm>
+    <indexterm lang="en">
       <primary>Screenshot</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>スクリーンショット</primary>
     </indexterm>
 
     <figure>
-      <title>The <quote>Screenshot</quote> window</title>
+      <title lang="en">The <quote>Screenshot</quote> window</title>
+      <title lang="ja"><quote>スクリーンショット</quote>ウィンドウ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -89,52 +142,85 @@
       </mediaobject>
     </figure>
 
-    <para>
+    <para lang="en">
       The <guimenuitem>Screenshot</guimenuitem> command opens a
       dialog with two parts:
+    </para>
+    <para lang="ja">
+      <guimenuitem>スクリーンショット(<accel>S</accel>)...</guimenuitem>
+      コマンドはダイアログを開きます。 ダイアログは2つの部分に分かれています。
     </para>
 
     <variablelist>
       <varlistentry>
-        <term>Area</term>
+        <term lang="en">Area</term>
+        <term lang="ja">取り込む範囲</term>
         <listitem>
           <variablelist>
             <varlistentry>
-              <term>Take a screenshot of a single window</term>
+              <term lang="en">Take a screenshot of a single window</term>
+              <term lang="ja">単一ウィンドウ(<accel>W</accel>)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   The mouse pointer becomes a cross. Click in the image window
                   you want to capture. A new image is created. If the
                   <guilabel>Include window decoration</guilabel> option is
                   unchecked, the title bar and the blue frame around the image
                   will be removed.
                 </para>
+                <para lang="ja">
+                  マウスポインタが照準点の姿になったら、 撮影したいウィンドウを
+                  クリックしてください。 新しい画像が作成され画像ウィンドウで
+                  開かれます。 このとき <guilabel>
+                  ウィンドウのデコレーションも含める(<accel>D</accel>)
+                  </guilabel> オプションにチェックが入っていない場合はタイトル
+                  バーやウィンドウ枠が除かれます。 [上図がその例です。]
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Take a screenshot of the entire screen</term>
+              <term lang="en">Take a screenshot of the entire screen</term>
+              <term lang="ja">画面全体(<accel>S</accel>)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   This is useful if you want to capture a pop menu. A delay is
                   then necessary, so that you have time to pull the pop menu
                   down.
                 </para>
-                <para>
+                <para lang="en">
                   If the <guilabel>Include mouse pointer</guilabel> option is
                   checked, then the mouse pointer and its coming with icon are
                   also captured. The mouse pointer is captured in a separate
                   layer. So you can move it to another place in the image.
                 </para>
+                <para lang="ja">
+                  これは吹き出しメニューなどポップアップするウィンドウを撮り
+                  込むときに役立ちます。 メニューなどを引き出す余裕の時間として
+                  <quote>待ち時間</quote>が必要になるはずです。
+                </para>
+                <para lang="ja">
+                  <guilabel>マウスポインタを含める<!--<accel>M</accel>)-->
+                  </guilabel> オプションを有効にするとマウスポインタの姿も撮り
+                  込まれます。 マウスポインタだけはもう1層のレイヤーになります
+                  ので、 あとから画像内で位置を変更できます。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Select a region to grab</term>
+              <term lang="en">Select a region to grab</term>
+              <term lang="ja">指定した範囲(<accel>R</accel>)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   The mouse pointer becomes a cross. Click and drag to create
                   a rectangular selection in the image window. This selection
                   will be opened as a new image. Its size is adapted to the
                   selection size.
+                </para>
+                <para lang="ja">
+                  マウスポインタが照準点の姿になったら、 画面上で任意の位置から
+                  クリックして曳くと矩形枠ができます。 マウスボタンを放したとき
+                  の矩形内の画面が撮り込まれ、 新しい画像ウィンドウで開かれ
+                  ます。
                 </para>
               </listitem>
             </varlistentry>
@@ -143,12 +229,18 @@
       </varlistentry>
 
       <varlistentry>
-        <term>Delay</term>
+        <term lang="en">Delay</term>
+        <term lang="ja">取り込むまでの待ち時間</term>
         <listitem>
-          <para>
+          <para lang="en">
             When taking a screenshot of the entire screen, the screen is
             captured after this delay. In the other cases, the mouse pointer
             turns to a cross after this delay.
+          </para>
+          <para lang="ja">
+            画面全体のスクリーンショットを撮る場合は待ち時間が経過すると自動的
+            に撮り込まれます。 それ以外の範囲を選んだときは待ち時間が経過すると
+            マウスポインタが照準点の姿に変わります。
           </para>
         </listitem>
       </varlistentry>
@@ -157,14 +249,19 @@
 
   <!--TODO: somebody with scanner and/or camera should review/update this-->
   <sect3>
-    <title>Image capture devices</title>
+    <title lang="en">Image capture devices</title>
+    <title lang="ja">撮影・取り込みデバイス</title>
     <!--<anchor id="twain-acquire"/>-->
-    <para>
+    <para lang="en">
       This item is present only if you have  installed image capture
       devices.
     </para>
+    <para lang="ja">
+      この項目はスキャナやカメラなど撮影して画像を作成するデバイスをシステムに
+      導入されている場合にのみ出現します。
+    </para>
     <figure>
-      <title>Scanner and Camera</title>
+      <title lang="en">スキャナとカメラ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -172,18 +269,30 @@
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The kinds of devices used to take pictures are too varied to be
       described here. Fortunately, their use is fairly intuitive. In the
       example shown, you can start a scanner or take an image with a
       webcam.
     </para>
+    <para lang="ja">
+      撮影ができるデバイスの種類はここで説明しきれないほど豊富にあります。
+      幸いどれもかなり直観的に使えます。 上の例図ではスキャナかウェブカムが
+      利用できることがわかります。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Buttons, Logos, Patterns, Web Page Themes</title>
-    <para>
+    <title lang="en">Buttons, Logos, Patterns, Web Page Themes</title>
+    <title lang="ja">
+      ボタン(<accel>B</accel>); ロゴ(<accel>L</accel>);
+      パターン(<accel>P</accel>); Web ページテーマ(<accel>W</accel>)
+    </title>
+    <para lang="en">
       An impressive list of script-fus. Have a look at it!
+    </para>
+    <para lang="ja">
+      以下はScript-Fuのありがたいリストです。 ともかく何があるか見てください。
     </para>
   </sect3>
 </sect2>
