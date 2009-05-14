@@ -5,7 +5,7 @@
   2009-02-17 j.h: reviewed for v2.6
   2007-05-08 Added Spanish translation by AntI
 -->
-<!--2009-04-27-->
+<!--2009-05-14-->
 <sect1 id="gimp-using-animated-brushes">
   <title lang="en">The GIH Dialog Box</title>
   <title lang="ja">GIHダイアログ</title>
@@ -15,7 +15,9 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>アニメーション</primary>
-    <secondary sortas="アニメーションブラシノサクセイ">アニメーションブラシの作成</secondary>
+    <secondary sortas="アニメーションブラシノサクセイ">
+      アニメーションブラシの作成
+    </secondary>
   </indexterm>
 
   <para lang="en">
@@ -51,7 +53,7 @@
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
-          fileref="images/using/ja/file-gih-save.png"/>
+          fileref="images/using/file-gih-save.png"/>
       </imageobject>
       <caption>
         <para lang="en">
@@ -154,8 +156,8 @@
           1つある設定になります。
         </para>
         <para lang="ja">
-          たった1層の大きなレイヤーを細かくセルに分けてアニメーションするブラシの
-          様々な相に割り当てることが可能です。
+          たった1層の大きなレイヤーを細かくセルに分けてアニメーションする
+          ブラシの様々な相に割り当てることが可能です。
         </para>
         <para lang="ja">
           例えば、 大きさが 100&#xd7;100 ピクセルで8つの相 (変化形) からなる
@@ -187,9 +189,9 @@
           one layer per aspect.
         </para>
         <para lang="ja">
-          これはレイヤー1層あたりのセル数 (1つの相に1個のセルが必要) を定めます。
-          既定では1つの相に1層だけレイヤーがあるとみなすので初期値はレイヤーの数と
-          同じになります。
+          これはレイヤー1層あたりのセル数 (1つの相に1個のセルが必要) を
+          定めます。 既定では1つの相に1層だけレイヤーがあるとみなすので
+          初期値はレイヤーの数と同じになります。
         </para>
       </listitem>
     </varlistentry>
@@ -203,8 +205,8 @@
           four layers, GIMP will display: "1 rows of 2 columns on each layer".
         </para>
         <para lang="ja">
-          この表示はセルをレイヤーに配置する様子です。 例えばもし4層のレイヤーを
-          使ってそれぞれに高さセルを2つ置く割合にすると、 この表示は
+          この表示はセルをレイヤーに配置する様子です。 例えばもし4層の
+          レイヤーを使ってそれぞれに高さセルを2つ置く割合にすると、 この表示は
           <guilabel>1行2列(各レイヤー)</guilabel> となるでしょう。
         </para>
       </listitem>
@@ -312,13 +314,13 @@
           <acronym>GIMP</acronym>はこの種のブラシに対してはまずレイヤーごとに
           セルを読み込みにゆき、 それらを<acronym>FIFO</acronym>スタック
           (先入れ先出し: 収められた最も古いものから順に取り出せる収録方法)
-          に収めることから始めます。 先の例では4層のレイヤーにそれぞれ2個のセルが
-          上下の順に入っています。 これらの読み込みは第1のレイヤーの第1のセルから
-          始まり、 同じレイヤーの第2のセル、 第2のレイヤーの第1のセル、 第2のレイヤー
-          の第2のセル、 (中略)、 第4のレイヤーの第2のセルの順に進みます。 仮に
-          1層のレイヤーに置かれているセルが1個だけでも数個でもやはり結果は
-          同じです。 このスタックの様子は <filename>.gih</filename> 形式の画像
-          ファイルに保存したあとでレイヤーダイアログを見るとわかります。
+          に収めることから始めます。 先の例では4層のレイヤーにそれぞれ2個のセル
+          が上下の順に入っています。 これらの読み込みは第1のレイヤーの第1のセル
+          から始まり、 同じレイヤーの第2のセル、 第2のレイヤーの第1のセル、 第2
+          のレイヤーの第2のセル、 (中略)、 第4のレイヤーの第2のセルの順に進み
+          ます。 仮に1層のレイヤーに置かれているセルが1個だけでも数個でもやはり
+          結果は同じです。 このスタックの様子は <filename>.gih</filename> 形式
+          の画像ファイルに保存したあとでレイヤーダイアログを見るとわかります。
         </para>
         <para lang="ja">
           つぎに<acronym>GIMP</acronym>はこのスタックをコンピュータ式配列に
@@ -539,7 +541,7 @@
                   <inlinemediaobject>
                     <imageobject>
                       <imagedata
-                        fileref="images/dialogs/ja/stock-reload-16.png"/>
+                        fileref="images/dialogs/stock-reload-16.png"/>
                     </imageobject>
                     <textobject>
                       <phrase>「ブラシの再読み込み」</phrase>
@@ -861,11 +863,11 @@
               <emphasis>レイヤーを順番通り並べます</emphasis>: ブラシを使った
               ときの動作に対して要求通りの形象を<acronym>GIMP</acronym>が拾える
               ように、 レイヤーを順序よく配置しなければなりません。 既に例題の
-              レイヤーはその順序で並べ終えていますが、 レイヤーの配置順の一般的な
-              方則についても理解しておく必要があるでしょう。 序列化のしくみに
+              レイヤーはその順序で並べ終えていますが、 レイヤーの配置順の一般的
+              な方則についても理解しておく必要があるでしょう。 序列化のしくみに
               ついて見当をつける方法が2通りありますのでご紹介しましょう。
-              1つめは数学的な見方です。 <acronym>GIMP</acronym>は16層のレイヤーを
-              4層ごとに区切って4つのグループとみなし、 これが第1次元に
+              1つめは数学的な見方です。 <acronym>GIMP</acronym>は16層のレイヤー
+              を4層ごとに区切って4つのグループとみなし、 これが第1次元に
               なります。 それぞれのグループがブラシの方角を表すのです。
               さらに、 それぞれのグループを2つに分けて、 2層のレイヤーからなる
               8つのグループとみなし、 これが第2次元になります。 このグループは
@@ -878,7 +880,7 @@
               <mediaobject>
                 <imageobject>
                     <imagedata format="PNG"
-                      fileref="images/using/ja/correlation.png"/>
+                      fileref="images/using/correlation.png"/>
                 </imageobject>
               </mediaobject>
             </para>
@@ -894,7 +896,7 @@
               <mediaobject>
                 <imageobject>
                     <imagedata format="PNG"
-                      fileref="images/using/ja/hands_gih.png"/>
+                      fileref="images/using/hands_gih.png"/>
                 </imageobject>
               </mediaobject>
             </para>
