@@ -15,10 +15,11 @@
                    examples and equations
   2006-09-06 scb: thorough review and/or rewrite of English
 -->
-<!--2009-05-09-->
+<!--2009-05-15-->
 <sect1 id="gimp-concepts-layer-modes">
   <title lang="en">Layer Modes</title>
   <title lang="ja">レイヤーのモード</title>
+
   <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Modes</secondary>
@@ -39,7 +40,9 @@
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="イロ">色</primary>
-    <secondary sortas="レイヤーモードヲトウゴウ">レイヤーモードを統合</secondary>
+    <secondary sortas="レイヤーモードヲトウゴウ">
+      レイヤーモードを統合
+    </secondary>
   </indexterm>
 
   <para lang="en">
@@ -1238,8 +1241,9 @@
           for detailed information.
         </para>
         <para lang="ja">
-          <!!--This paragraph should be placed at the multi layer mode section.
-          -->
+          これ以外の2つのモードは描画ツール専用です。 詳しくは
+          <link linkend="gimp-tool-painting-modes">描画モード</link>
+          をご覧ください。
         </para>
         <figure>
           <title lang="en">
@@ -1996,17 +2000,20 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para lang="en"><acronym>GIMP</acronym>
-    also has similar modes which are used for the painting tools. These are
-    the same twenty-one modes as the layer modes, plus an additional two modes
-    which are specific to the painting tools. You can set these modes from the
-    <guilabel>Mode</guilabel>
-    menu in the Tools option dialog. In the equations shown above, the layer
-    you are painting on is the <quote>lower layer</quote>
-    and the pixels painted by the tool are the <quote>upper layer</quote>.
-    Naturally, you do not need more than one layer in the image to use these
-    modes, since they only operate on the current layer and the selected
-    painting tool. The two additional painting modes are described here.
+  <para lang="en">
+    <acronym>GIMP</acronym> also has similar modes which are used for the
+    painting tools. These are the same twenty-one modes as the layer modes,
+    plus an additional two modes which are specific to the painting tools. You
+    can set these modes from the <guilabel>Mode</guilabel> menu in the Tools
+    option dialog. In the equations shown above, the layer you are painting on
+    is the <quote>lower layer</quote> and the pixels painted by the tool are
+    the <quote>upper layer</quote>. Naturally, you do not need more than one
+    layer in the image to use these modes, since they only operate on the
+    current layer and the selected painting tool.
+  </para>
+  <para lang="en">
+    See <link linkend="gimp-paint-mode-examples"/> for a description of the
+    two additional painting modes.
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>の描画ツールにも同じようなモードがあります。
@@ -2016,20 +2023,10 @@
     描画対象のレイヤーが<quote>下側のレイヤー I</quote>で、 そのツールで
     描かれる画素は<quote>上側のレイヤー M</quote>にあります。 これらのモードを
     使用するのに画像にはレイヤーがひとつあれば充分です。 任意の描画ツールで
-    現在使用中のレイヤーに操作をするのですから当然ですね。 追加の2つのモードの
-    説明については次に示しておきましょう。
+    現在使用中のレイヤーに操作をするのですから当然ですね。
   </para>
-  <tip>
-    <para lang="en">
-      There are two more layer modes, but these are available only for
-      painting tools. See
-      <link linkend="gimp-tool-painting-modes">Painting Modes</link>
-      for detailed information.
-    </para>
-    <para lang="ja">
-      これ以外の2つのモードは描画ツール専用です。 詳しくは
-      <link linkend="gimp-tool-painting-modes">描画モード</link>
-      をご覧ください。
-    </para>
-  </tip>
+  <para lang="ja">
+    別の2つの描画モードについては
+    <link linkend="gimp-paint-mode-examples"/> をご覧ください。
+  </para>
 </sect1>

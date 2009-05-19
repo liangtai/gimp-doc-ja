@@ -14,12 +14,14 @@
 <sect1 id="gimp-concepts-running">
   <title lang="en">Running GIMP</title>
   <title lang="ja"><acronym>GIMP</acronym>を起動する</title>
+
   <indexterm lang="en">
     <primary>Running GIMP</primary>
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="キドウ">起動</primary>
   </indexterm>
+
   <para lang="en">
     Most often, you start GIMP either by clicking on an icon (if your system
     is set up to provide you with one), or by typing <command>gimp</command>
@@ -67,7 +69,8 @@
       ソフトです。<acronym>GIMP</acronym>は以下のプラットフォームで
       動作することが分かっています:
     </para>
-    <para lang="en"><productname><acronym>GNU</acronym>/Linux</productname>,
+    <para lang="en">
+      <productname><acronym>GNU</acronym>/Linux</productname>,
       <productname>Apple Mac OS X</productname>,
       <productname>Microsoft Windows</productname>,
       <productname>OpenBSD</productname>, <productname>NetBSD</productname>,
@@ -131,7 +134,8 @@
         <term lang="en"><productname>UNIX</productname> clones</term>
         <term lang="ja"><productname>UNIX</productname>クローン</term>
         <listitem>
-          <para lang="en"><emphasis>In LINUX</emphasis>: in console mode,
+          <para lang="en">
+            <emphasis>In LINUX</emphasis>: in console mode,
             type <userinput>LANGUAGE=en gimp</userinput> or
             <userinput>LANG=en gimp</userinput>
             replacing en by fr, de, ... according to the language you
@@ -182,14 +186,13 @@
           <para lang="en">
             If you often change language, you can create a batch file. Open
             NotePad. Type the following commands (for french for instance):
-            <literallayout>
-              <userinput>
-                set lang=fr
-                start gimp-2.6.exe
-              </userinput>
-            </literallayout>
-            Save this file as GIMP-FR.BAT (or another name, but always with a
-            .BAT extension). Create shortcut and drag it to your desktop.
+            <!--do not reformat the following lines (literallayout)-->
+            <literallayout><userinput>set lang=fr
+start gimp-2.6.exe</userinput></literallayout>
+            Save this file as <filename>GIMP-FR.BAT</filename> (or another
+            name, but always with a
+            <filename class="extension">.BAT</filename> extension). Create
+            shortcut and drag it to your desktop.
           </para>
           <para lang="en">
             Another possibility:
@@ -242,15 +245,12 @@
             たびたび言語を変更する必要があるときは、バッチファイルの
             利用をおすすめします。メモ帳などのテキストエディタを開き、
             たとえば以下のようなコマンドを記入します。
-            <literallayout>
-              <userinput>\n
-                set lang=zh_TW.Big5\n
-                start GIMP-2.6.exe\n
-              </userinput>
-            </literallayout>
+            <literallayout><userinput>set lang=zh_TW.Big5
+start GIMP-2.6.exe</userinput></literallayout>
             この例では臺灣繁體字を選択しているのでファイル名を
             <filename>GIMP臺灣.bat</filename> のように (ファイル名はご自由に、
-            ただし拡張子 <filename>.bat</filename> は必須) して保存します。
+            ただし拡張子 <filename class="extension">.bat</filename> は必須) 
+            して保存します。
             そのショートカットを作成してデスクトップに置くのもよいでしょう。
           </para>
           <para lang="ja">
@@ -286,10 +286,10 @@
         <listitem>
           <para lang="en">
             You can have a new GIMP instance by running the command line with
-            the <emphasis>-n</emphasis> option:
-            For example: <emphasis>gimp-2.6</emphasis> for GIMP in your
-            language and <emphasis>LANGUAGE=en gimp-2.6 -n</emphasis> to have
-            GIMP in English also. This is useful for translators.
+            the <userinput>-n</userinput> option:
+            For example: <userinput>gimp-2.6</userinput> for GIMP in your
+            language and <userinput>LANGUAGE=en gimp-2.6 -n</userinput> to
+            have GIMP in English also. This is useful for translators.
           </para>
           <para lang="ja">
             コマンドラインで <option>-n</option> オプションをつけると、 重ねて
@@ -297,7 +297,6 @@
             言語で <command>gimp-2.6</command> を起動し、 英語版の<acronym>GIMP
             </acronym>を <command>LANGUAGE=en gimp-2.6 -n</command> として起動
             するのです。 こうすると翻訳者も助かります。
-            <!--ja.poを見た方が素早く楽にできると思うけど...[訳者]-->
           </para>
         </listitem>
       </varlistentry>

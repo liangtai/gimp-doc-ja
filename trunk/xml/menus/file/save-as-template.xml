@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-10-23 j.h: no change for v2.4
   2007-05-19 Added Spanish translation by AntI
 -->
+<!--2009-05-16-->
 <sect2 id="gimp-file-save-as-template">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2009-01-02</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Updated to v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect2info>-->
+  <title lang="en">Save as Template</title>
+  <title lang="ja">テンプレートとして保存(<accel>T</accel>)...</title>
 
-  <title>
-    <phrase>Save as Template</phrase>
-  </title>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Save image</secondary>
     <tertiary>Save as template</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Save as Template</primary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Template</primary>
     <secondary>Save as Template</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="ガゾウヲホゾン">画像を保存</secondary>
+    <tertiary sortas="テンプレートトシテホゾン">
+      テンプレートとして保存
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="テンプレートトシテホゾン">
+      テンプレートとして保存
+    </primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>テンプレート</primary>
+    <secondary sortas="テンプレートトシテホゾン">
+      テンプレートとして保存
+    </secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Save as Template</guimenuitem> command creates a
     template with the same dimensions and color space as the current
     image. A dialog pops up, which asks you to
@@ -44,16 +53,37 @@
     <link linkend="gimp-template-dialog">Templates</link> dialog
     to modify or delete templates.
   </para>
+  <para lang="ja">
+    <guimenuitem>テンプレートとして保存(<accel>A</accel>)...</guimenuitem> 
+    コマンドは現在の画像の大きさと解像度と色空間を基にテンプレートを作成
+    します。 ダイアログが出てきますので作成されるテンプレートに名前を付けて
+    保存すれば 
+    <link linkend="gimp-file-new">新しい画像を作成</link> ダイアログでこの
+    テンプレートが利用できます。 ここで既にあるテンプレート名を指定すると、
+    重複を避けるため<acronym>GIMP</acronym>は自動的にその名前のあとに番号を付加
+    します。 これらのテンプレートは
+    <link linkend="gimp-template-dialog">テンプレート</link> ダイアログで変更も
+    削除もできます。
+  </para>
   <sect3>
-    <title>
-      <phrase>Activate Command</phrase>
-    </title>
+    <title lang="en">Activate Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access to this command from the image menubar through
-          <menuchoice><guimenu>File</guimenu><guimenuitem>Save as Template</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenuitem>Save as Template</guimenuitem>
+          </menuchoice>.
           There is no default keyboard shortcut.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ファイル(<accel>F</accel>)</guimenu>
+            <guimenuitem>テンプレートとして保存(<accel>T</accel>)...</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

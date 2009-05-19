@@ -34,6 +34,16 @@
   <sect3 id="gimp-dock-separator">
     <title lang="en">Docking areas</title>
     <title lang="ja">合体領域</title>
+
+    <indexterm lang="en">
+      <primary>Docks</primary>
+      <secondary>Docking areas</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ドック</primary>
+      <secondary sortas="ガッタイリョウイキ">合体領域</secondary>
+    </indexterm>
+
     <para lang="en">
       GIMP offers a lot of flexibility about the arrangement
       of dialog windows on your screen. Instead of placing each dialog in its
@@ -101,8 +111,11 @@
       Click on the name of one of them to open it as an independent window.
     </para>
     <para lang="en">
-      Every dockable window has two types of docking areas: the dock bars and
-      the docking-tab area.
+      Every dockable window has two types of docking areas: the docking bars
+      and the docking-tab area.
+      In an isolated window, the <emphasis>docking-tab area</emphasis> is
+      the same as the drag handle area (see below). In a dock, the
+      docking-tab area covers all the window.
     </para>
     <para lang="ja">
       ツールボックスは <emphasis>万能ウィンドウ</emphasis> でもあります。
@@ -120,7 +133,71 @@
     </para>
     <para lang="ja">
       いずれのドッキング可能なダイアログも合体バーと合体タブ領域の2種類の
-      合体用領域を備えています。
+      合体用領域を備えています。 孤立したウィンドウの <emphasis>合体タブ領域
+      </emphasis> は (下図に示した) 合体用持ち手の部分と同じですが、 ドック
+      に入ると合体タブ領域はウィンドウ全体を包み込みます。
+    </para>
+
+    <figure id="figure-docking-types">
+      <title lang="en">The two docking types</title>
+      <title lang="ja">2種類の合体様式</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/dock-attached.png"
+            format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The dockable window has been docked onto a dock bar.
+          </para>
+          <para lang="ja">
+            ドッキング可能なウィンドウが合体バー上で合体した。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/dock-tab.png"
+            format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The dockable window has been docked onto the docking-tab area. A
+            new tab has been created.
+          </para>
+          <para lang="ja">
+            ドッキング可能なウィンドウが合体タブ領域内で合体した。 新たなタブ
+            ができている。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+
+  <sect3 id="gimp-dockable-dock-bars">
+    <title lang="en">Docking bars</title>
+    <title lang="ja">合体バー</title>
+
+    <indexterm lang="en">
+      <primary>Docks</primary>
+      <secondary>Docking bars</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ドック</primary>
+      <secondary sortas="ガッタイバー">合体バー</secondary>
+    </indexterm>
+
+    <para lang="en">
+      Each dockable window has two <emphasis>docking bars</emphasis>. These
+      bars are thin gray bars, very unobtrusive and easy not to notice: most
+      people don't realize that they exist until they are specifically pointed
+      out.
+    </para>
+    <para lang="ja">
+      ドッキング可能なウィンドウには2本の <emphasis>合体バー</emphasis> が
+      ついています。 これらは非常に目立たないなかなか気付かれにくい薄い灰色の
+      桿なので、 ほとんどの方はこうして指摘するまでそのような物の存在をご存じ
+      なかったでしょう。
     </para>
     <figure id="figure-dock">
       <title lang="en">Docking bars</title>
@@ -133,37 +210,13 @@
         <caption>
           <para lang="en">
             A window with <emphasis>docking bars</emphasis> highlighted.
-            These are thin gray bars, very unobtrusive and easy not to
-            notice: most people don't realize that they exist until they are
-            specifically pointed out.
           </para>
           <para lang="ja">
-            ウィンドウの <emphasis>合体バー</emphasis> を強調した。 これらは
-            非常に目立たないなかなか気付かれにくい薄い灰色の桿なので、
-            ほとんどの方はこうして指摘するまでそのような物の存在をご存じ
-            なかっただろう。
+            ウィンドウの <emphasis>合体バー</emphasis> を強調した。
           </para>
         </caption>
       </mediaobject>
     </figure>
-    <para lang="en">
-      In an isolated window, the <emphasis>docking-tab area</emphasis> is
-      the same as the drag handle area (see below). In a dock, the
-      docking-tab area covers all the window.
-    </para>
-    <para lang="ja">
-      孤立したウィンドウでは <emphasis>合体タブ領域</emphasis> は合体用持ち手の
-      領域 (以下参照) と同じようになっています。 ドックにおいて合体タブは
-      全てのウィンドウを包括します。
-    </para>
-    <indexterm lang="en">
-      <primary>Docks</primary>
-      <secondary>Docking areas</secondary>
-    </indexterm>
-    <indexterm lang="ja">
-      <primary>ドック</primary>
-      <secondary sortas="ガッタイリョウイキ">合体領域</secondary>
-    </indexterm>
   </sect3>
 
   <sect3 id="gimp-dockable-drag-area">
@@ -244,40 +297,6 @@
         </caption>
       </mediaobject>
     </figure>
-    <figure id="figure-docking-types">
-      <title lang="en">The two docking types.</title>
-      <title lang="ja">2種類の合体様式</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="images/using/dock-attached.png"
-                     format="PNG"/>
-        </imageobject>
-        <caption>
-          <para lang="en">
-            The dockable window has been docked onto a dock bar.
-          </para>
-          <para lang="ja">
-            ドッキング可能なウィンドウが合体バー上で合体した。
-          </para>
-        </caption>
-      </mediaobject>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="images/using/dock-tab.png"
-                     format="PNG"/>
-        </imageobject>
-        <caption>
-          <para lang="en">
-            The dockable window has been docked onto the docking-tab area.
-            A new tab has been created.
-          </para>
-          <para lang="ja">
-            ドッキング可能なウィンドウが合体タブ領域内で合体した。 新たなタブ
-            ができている。
-          </para>
-        </caption>
-      </mediaobject>
-    </figure>
 
     <para lang="ja">
       合体バーに曳き入れられるダイアログは一つとは限りません。
@@ -297,6 +316,7 @@
       </para>
     </note>
   </sect3>
+
   <sect3 id="gimp-dock-image-menu">
     <title lang="en">Image Menu</title>
     <title lang="ja">画像メニュー</title>
@@ -612,9 +632,9 @@
           <para lang="en">
             This entry is available when multiple dialogs are in the same
             dock: it opens into a submenu allowing you to choose how the tabs
-            at the top will appear (cf.
-            <xref linkend="figure-gimp-dock-tab-style"/>
-            ). There are five choices, not all of which will be available for
+            at the top will appear
+            (cf. <xref linkend="figure-gimp-dock-tab-style"/>).
+            There are five choices, not all of which will be available for
             all types of dialogs:
           </para>
           <para lang="ja">

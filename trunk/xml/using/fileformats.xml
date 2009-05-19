@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!-- section history:
+<!-- section history。
   2008-04-03 Mr.Dust : added 'ko' for some missing part
   2007-10-06 ude: added description for "quality settings from original image"
   2007-07-15 lexa: added PackBits description
@@ -12,7 +12,7 @@
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2009-05-14-->
+<!--2009-05-18-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -37,12 +37,12 @@
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>は膨大な種類の画像ファイル形式を読み書きできます。
-    <acronym>GIMP</acronym>由来のXCFファイル形式を除き、 すべてのファイルは
+    <acronym>GIMP</acronym>由来の<acronym>XCF</acronym>ファイル形式を除き、 すべてのファイルは
     プラグインがこなします。 そのおかげで比較的簡単に<acronym>GIMP</acronym>は
     新しいファイル形式への対応要望に応えられます。
   </para>
   <para lang="ja">
-    どんなファイル形式であれ全ての目的に叶うものではありません。 このあたりで
+    どんなファイル形式であれ全ての目的に適うものではありません。 このあたりで
     それぞれの形式の有利な点と不利な点をお話しすることにしましょう。
   </para>
 
@@ -72,16 +72,17 @@
       ひとくぎりつくたびに保存するのが良策です。 <acronym>GIMP</acronym>は結構
       頑丈なプログラムなのに、 稀に謎めいたクラッシュを起こすことがあるとの
       出所不明の噂があることも知っています。) <acronym>GIMP</acronym>で開ける
-      ファイル形式のほとんどが保存も可能です。 ただ一つの特別な形式&mdash;XCF
-      は<acronym>GIMP</acronym>由来であり、 <emphasis>あらゆる</emphasis> 画像
-      の情報を保存できる便利なファイル形式です。 (おっと、 <emphasis>
-      ほとんど何でも</emphasis> でした。 <quote>操作履歴</quote>の情報は
-      保存できませんから。) このように、 XCF形式は途中結果を保存したり、
-      あとでまた<acronym>GIMP</acronym>で開くつもりの画像を保存するのに特に
-      適しています。 画像を表示できる他のプログラムでXCF形式のファイルを
-      開けるものは少ないので、 画像加工が完成したらそれらをより広く使われている
-      <acronym>JPEG</acronym> や <acronym>PNG</acronym> や
-      <acronym>TIFF</acronym> の形式で保存することになるでしょう。
+      ファイル形式のほとんどが保存も可能です。 ただ一つの特別な形式&mdash;
+      <acronym>XCF</acronym>は<acronym>GIMP</acronym>由来であり、 <emphasis>
+      あらゆる</emphasis> 画像の情報を保存できる便利なファイル形式です。 (
+      おっと、 <emphasis>ほとんど何でも</emphasis> でした。 <quote>操作履歴
+      </quote>の情報は保存できませんから。) このように、 <acronym>XCF</acronym>
+      形式は途中結果を保存したり、 あとでまた<acronym>GIMP</acronym>で開く
+      つもりの画像を保存するのに特に適しています。 画像を表示できる他の
+      プログラムで<acronym>XCF</acronym>形式のファイルを開けるものは少ない
+      ので、 画像加工が完成したらそれらをより広く使われている<acronym>JPEG
+      </acronym>や<acronym>PNG</acronym>や<acronym>TIFF</acronym>の形式で
+      保存することになるでしょう。
     </para>
   </sect2>
 
@@ -113,10 +114,10 @@
       出来上がった画像を保存するファイル形式について、 <acronym>GIMP</acronym>
       は幾種類もの対応ができます。 ただしレイヤーや透明度をはじめ画像の情報を
       <emphasis>全て</emphasis> 保存できる形式は、 <acronym>GIMP</acronym>
-      由来のXCF形式をおいて他にないということは重要です。 これ以外の形式は
-      いずれも、 画像の属性を一定の範囲は保存できても一部は失ないます。
-      画像を保存する際に<acronym>GIMP</acronym>はこの事実を知らせてきますが、
-      あなたの選択する形式の性能を理解するのはあなた次第です。
+      由来の<acronym>XCF</acronym>形式をおいて他にないということは重要です。 
+      これ以外の形式はいずれも、 画像の属性を一定の範囲は保存できても一部は
+      失ないます。 画像を保存する際に<acronym>GIMP</acronym>はこの事実を知らせ
+      てきますが、 あなたの選択する形式の性能を理解するのはあなた次第です。
     </para>
     <figure>
       <title lang="en">Example of an Export dialog</title>
@@ -332,7 +333,7 @@
                   </para>
                   <para lang="ja">
                     このオプションはフレームの重ね方を指定するもので、
-                    未定だった場合は以下の3つから選びます:
+                    未定だった場合は以下の3つから選びます。
                   </para>
                   <itemizedlist mark="opencircle">
                     <listitem>
@@ -418,8 +419,9 @@
         <acronym>GIMP</acronym>.
       </para>
       <para lang="ja">
-        <acronym>JPEG</acronym>ファイルは通常 <filename>.jpg</filename> か
-        <filename>.JPG</filename> もしくは <filename>.jpeg</filename>
+        <acronym>JPEG</acronym>ファイルは通常 <filename class="extention">.jpg
+        </filename> か <filename class="extention">.JPG</filename> もしくは 
+        <filename class="extention">.jpeg</filename>
         のいずれかの拡張子を持っています。 画像を非常に効率的に圧縮しつつも
         画像の品質低下を最小限に抑える性能があり、 広範に使われています。
         その圧縮能率は他の形式の追随を許しません。 しかし透過画像や複数レイヤー
@@ -585,11 +587,14 @@
               <varlistentry>
                 <term lang="en">Save EXIF data</term>
                 <term lang="ja">
-                  <acronym>EXIF</acronym> データを保存(<accel>E</accel>)
+                  EXIF データを保存(<accel>E</accel>)
                 </term>
                 <listitem>
-                  <indexterm>
+                  <indexterm lang="en">
                     <primary>EXIF</primary>
+                  </indexterm>
+                  <indexterm lang="ja">
+                    <primary>Exif</primary>
                   </indexterm>
                   <para lang="en">
                     JPEG files from many digital cameras contain extra
@@ -611,22 +616,20 @@
                   </para>
                   <para lang="ja">
                     デジタルカメラの生成する<acronym>JPEG</acronym>には
-                    <acronym>EXIF</acronym>データと呼ばれる外部情報が混入
-                    されており、 そこにカメラ設定や撮影環境の情報が記録されて
-                    います。 あなたのシステムが<quote>libexif</quote>ライブラリ
-                    を利用できるよう設定されていない場合は (<acronym>GIMP
-                    </acronym>には同梱されていません) 、 <acronym>GIMP
-                    </acronym>はこの<acronym>EXIF</acronym>データを活用
+                    Exifデータと呼ばれる外部情報が混入されており、 そこにカメラ
+                    設定や撮影環境の情報が記録されています。 あなたのシステムが
+                    <quote>libexif</quote>ライブラリを利用できるよう設定されて
+                    いない場合は (<acronym>GIMP</acronym>には同梱されて
+                    いません) 、 <acronym>GIMP</acronym>はこのExifデータを活用
                     できません。 libexifライブラリが導入されており<acronym>
                     GIMP</acronym>のビルド時にそのサポートを有効にしていたなら
-                    ば、 <acronym>EXIF</acronym>データを扱うことができ、
-                    <acronym>JPEG</acronym>ファイルを保存する際にはファイル内に
-                    そのデータが記録できます。 このとき<acronym>EXIF</acronym>
-                    データは一切変更されません (つまり一部の項目が無効に
-                    なります。) <acronym>GIMP</acronym>のビルド時にこのサポート
-                    を無効にしていた場合も、 <acronym>EXIF</acronym>データを
+                    ば、 Exifデータを扱うことができ、 <acronym>JPEG</acronym>
+                    ファイルを保存する際にはファイル内にそのデータが記録
+                    できます。 このときExifデータは一切変更されません (つまり
+                    一部の項目が無効になります。) <acronym>GIMP</acronym>の
+                    ビルド時にこのサポートを無効にしていた場合も、 Exifデータを
                     含んだ<acronym>JPEG</acronym>ファイルは支障なく開けますが、
-                    開いた画像を保存する際にファイル内に<acronym>EXIF</acronym>
+                    開いた画像を保存する際にファイル内にExif
                     データが残りません。
                   </para>
                 </listitem>
@@ -708,7 +711,7 @@
                     オプションは利用可能ですが、 いっそ無効にしましょう。
                     この利用法はあなたの既定の設定で最低限度の品質が保たれて
                     いることが前提になります。 原画に大きな変更を加えていない
-                    ので原画と同じ品質のまま保存したい--
+                    ので原画と同じ品質のまま保存したい&mdash;
                     このような場合にこのオプションを使ってください。
                   </para>
                 </listitem>
@@ -760,7 +763,7 @@
                   <para lang="ja">
                     人間の色覚は一様に可視光線全般に対して鈍感です。
                     この事実を利用し、 わずかに異なる色ならば同色である
-                    との判断で圧縮しています。 3つの形式から選択できます:
+                    との判断で圧縮しています。 3つの形式から選択できます。
                   </para>
                   <itemizedlist>
                     <listitem>
@@ -1162,7 +1165,7 @@
               method that is appropriate for your image:
             </para>
             <para lang="ja">
-              このオプションで画像にふさわしい圧縮方法が選択できます:
+              このオプションで画像にふさわしい圧縮方法が選択できます。
             </para>
             <itemizedlist>
               <listitem>

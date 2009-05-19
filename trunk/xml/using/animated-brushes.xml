@@ -5,7 +5,7 @@
   2009-02-17 j.h: reviewed for v2.6
   2007-05-08 Added Spanish translation by AntI
 -->
-<!--2009-05-14-->
+<!--2009-05-18-->
 <sect1 id="gimp-using-animated-brushes">
   <title lang="en">The GIH Dialog Box</title>
   <title lang="ja">GIHダイアログ</title>
@@ -33,14 +33,15 @@
   </para>
   <para lang="ja">
     アニメーションするブラシができたなら、 それを画像ウィンドウで表示したうえで
-    <acronym>GIH</acronym>形式でそれを保存することになります。 メニューより
+    <acronym>GIH</acronym>形式でそれを保存することになります。 画像ウィンドウ
+    のメニューより
     <menuchoice>
       <guimenu>ファイル(<accel>F</accel>)</guimenu>
       <guimenuitem>名前を付けて保存(<accel>A</accel>)...</guimenuitem>
     </menuchoice>
-    するときに拡張子 <filename>.gih</filename> をファイル名に付けてから、
-    <guibutton>保存(<accel>S</accel>)</guibutton> ボタンを押すと下図の
-    ようなウィンドウが現れます:
+    するときに拡張子 <filename class="extention">.gih</filename> をファイル名に
+    付けてから、<guibutton>保存(<accel>S</accel>)</guibutton> ボタンを押すと
+    下図のようなウィンドウが現れます。
   </para>
 
   <figure>
@@ -160,9 +161,9 @@
           ブラシの様々な相に割り当てることが可能です。
         </para>
         <para lang="ja">
-          例えば、 大きさが 100&#xd7;100 ピクセルで8つの相 (変化形) からなる
-          ブラシを作るとします。 この8相を 400&#xd7;200 ピクセルのレイヤーに
-          振り分けてもよいですし、 300&#xd7;300 ピクセルのレイヤーを用意して
+          例えば、 大きさが 100&times;100 ピクセルで8つの相 (変化形) からなる
+          ブラシを作るとします。 この8相を 400&times;200 ピクセルのレイヤーに
+          振り分けてもよいですし、 300&times;300 ピクセルのレイヤーを用意して
           1セル余らせる方法もあります。 前者は
           <simplelist type="horiz" columns="4">
           <member>1</member> <member>2</member> <member>3</member>
@@ -319,7 +320,8 @@
           から始まり、 同じレイヤーの第2のセル、 第2のレイヤーの第1のセル、 第2
           のレイヤーの第2のセル、 (中略)、 第4のレイヤーの第2のセルの順に進み
           ます。 仮に1層のレイヤーに置かれているセルが1個だけでも数個でもやはり
-          結果は同じです。 このスタックの様子は <filename>.gih</filename> 形式
+          結果は同じです。 このスタックの様子は 
+          <filename class="extention">.gih</filename> 形式
           の画像ファイルに保存したあとでレイヤーダイアログを見るとわかります。
         </para>
         <para lang="ja">
@@ -358,7 +360,7 @@
         <para lang="ja">
           各次元にそれぞれ桁数のように並びの数値を与えられるほかに、 これらには
           <guilabel>選択</guilabel> モードも与えられます。 使えるモードはつぎの
-          とおり:
+          とおり。
           <itemizedlist>
             <listitem>
               <para>
@@ -501,27 +503,30 @@
           <orderedlist>
             <listitem>
               <para>
-                拡張子 <filename>.gih</filename> をつけて保存する前に、
-                元の画像の全ての属性を保存するためにこの画像に拡張子
-                <filename>.xcf</filename> をつけて保存してください。
+                大きさが 30&times;30 ピクセルで塗りつぶし色を透明にした 
+                <acronym>RGB</acronym>画像を新規に用意します。 テキストツールで
+                テキストレイヤーを4層、 それぞれ <quote>1</quote>、
+                <quote>2</quote>、 <quote>3</quote>、 <quote>4</quote>と記入
+                 します。 背景レイヤーは削除してください。
               </para>
             </listitem>
             <listitem>
               <para>
-                元の画像の全ての属性を保存するためにこの画像に拡張子
-                <filename>.xcf</filename> をつけて保存したあとで、
-                拡張子 <filename>.gih</filename> をつけた別名でも保存します。
+                拡張子 <filename class="extention">.gih</filename> をつけて保存
+                する前に、 元の画像の全ての属性を保存するためにこの画像に拡張子
+                <filename class="extention">.xcf</filename> をつけて
+                保存してください。
               </para>
             </listitem>
             <listitem>
               <para>
                 <acronym>GIH</acronym>形式で保存するときにはまず<quote>
-                画像を保存 </quote>ダイアログが出ますから名前と保存先を指定して
+                画像を保存</quote>ダイアログが出ますから名前と保存先を指定して
                 ください。 次に<quote>ブラシパイプ形式で保存</quote>ダイアログ
                 が現れますから、 <guilabel>間隔</guilabel> は <userinput>100
                 </userinput> パーセントに、 <guilabel>説明</guilabel> には任意
                 の名前を、 <guilabel>セルサイズ</guilabel> は <userinput>30
-                </userinput> &#xd7; <userinput>30</userinput> のまま、
+                </userinput> &times; <userinput>30</userinput> のまま、
                 <guilabel>次元</guilabel> は <userinput>1</userinput> 次元に、
                 <guilabel>並び</guilabel> には <userinput>4</userinput> と
                 <guimenuitem>Incremental</guimenuitem> を指定してから、
@@ -533,10 +538,11 @@
               <para>
                 <acronym>GIMP</acronym>のブラシディレクトリに直接保存する機能が
                 うまくはたらかないときは、 後で個人用の<acronym>GIMP</acronym>
-                フォルダ内にある <filename>brushes</filename> フォルダに
-                <filename>.gih</filename> ファイルを移してください。 さて
-                ツールボックスに戻ったら、 ブラシアイコンをクリックして
-                ブラシダイアログを呼びだし、 ダイアログ下部の
+                フォルダ内にある <filename class="directory">brushes</filename>
+                フォルダに <filename class="extention">.gih</filename> ファイル
+                を移してください。 さてツールボックスに戻ったら、 ブラシ
+                アイコンをクリックしてブラシダイアログを呼びだし、 ダイアログ
+                下部の
                 <guiicon>
                   <inlinemediaobject>
                     <imageobject>
@@ -562,10 +568,11 @@
             </listitem>
             <listitem>
               <para>
-                保存しておいた <filename>.xcf</filename> 画像を読み戻してから、
-                今度は並びの選択に <guimenuitem>Random</guimenuitem> を選んで
-                <filename>.gih</filename> 形式で保存します。 すると描画される
-                数字は順不同になります。
+                保存しておいた <filename class="extention">.xcf</filename> 
+                画像を読み戻してから、 今度は並びの選択に 
+                <guimenuitem>Random</guimenuitem> を選んで
+                <filename class="extention">.gih</filename> 形式で保存します。
+                すると描画される数字は順不同になります。
                 <mediaobject>
                   <imageobject>
                     <imagedata format="PNG"
@@ -617,7 +624,7 @@
           are 4x2x2 = 16 cells. We need 16 images.
         </para>
         <para lang="ja">
-          さていよいよ3次元のアニメーションブラシをつくるところまで来ました:
+          さていよいよ3次元のアニメーションブラシをつくるところまで来ました。
           ブラシの方角によってブラシの刻印の向きを変えつつ左手と右手を交互に
           描き、 黒か青に無作為に色変りするブラシにします。
         </para>
@@ -625,14 +632,14 @@
           まずはじめにいくつの形象が必要になるかが問題になります。 第1次元 x は
           ブラシの方角 (4方向) のためにとっておきます。 第2次元 y は左手と右手
           の交替に、 第3次元 z は色変化に割り当てます。 このようなブラシは
-          3次元配列 myarray(4,2,2) として表せます:
+          3次元配列 myarray(4,2,2) として表せます。
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/using/3Dnum.png" format="PNG"/>
             </imageobject>
           </mediaobject>
           第1次元 x には4つの位があり、 第2次元 y には2つの位、 第3次元 z には
-          2つの位があります。 合計は 4&#xd7;2&#xd7;2 = 16 セルなので、 必要な
+          2つの位があります。 合計は 4&times;2&times;2 = 16 セルなので、 必要な
           形象は 16 枚です。
         </para>
         <orderedlist>
@@ -657,32 +664,33 @@
             </para>
             <para lang="ja">
               <emphasis>第1次元 x の形象を作成</emphasis>: 塗りつぶし色に透明を
-              指定した 30&#xd7;30 ピクセルの<acronym>RGB</acronym>画像を
+              指定した 30&#times;30 ピクセルの<acronym>RGB</acronym>画像を
               新たに用意します。 拡大ズーム表示を利用しながら指が上向きの左手を
               描いてください。 これを <filename>handL0k.xcf</filename> (左手、
               0度、 黒) の名前で保存します。
             </para>
             <para lang="ja">
-              レイヤーダイアログを開いて、 そのレイヤーの名前を
-              「<userinput>左手　0黒</userinput>」にします。 (レイヤー名欄を
-              ダブルクリックして直に書き直すか、 レイヤーメニューより
+              レイヤーダイアログを開いて、 そのレイヤーの名前を <quote>
+              <userinput>左手　0黒</userinput></quote>にします。 (レイヤー
+              名欄をダブルクリックして直に書き直すか、 レイヤーメニューより
               <guimenuitem>レイヤー名を変更(<accel>E</accel>)...</guimenuitem>
               と進んで<quote>レイヤー名の変更</quote>ダイアログ上で新しい名前に
               します)。
             </para>
             <para lang="ja">
               そのレイヤーを複製してください。 つぎに複製レイヤーだけを可視化し
-              活性化してから、 90° 回転をかけます (メニューより
+              活性化してから、 90° 回転をかけます (画像ウィンドウのメニューより
               <menuchoice>
                 <guimenu>レイヤー(<accel>L</accel>)</guimenu>
                 <guisubmenu>変換(<accel>T</accel>)</guisubmenu>
                 <guimenuitem>時計回りに 90 度回転(<accel>C</accel>)</guimenuitem>
               </menuchoice> )。
-              そのレイヤーの名前を「<userinput>左手 90黒</userinput>」とします。
+              そのレイヤーの名前を<quote><userinput>左手&nbsp;90黒</userinput>
+              </quote>とします。
             </para>
             <para lang="ja">
-              同様にして「<userinput>左手180黒</userinput>」と
-              「<userinput>左手-90黒</userinput>」も作ります。
+              同様にして<quote><userinput>左手180黒</userinput></quote>と
+              <quote><userinput>左手-90黒</userinput></quote>も作ります。
             </para>
           </listitem>
           <listitem>
@@ -712,9 +720,10 @@
               形象をつくりましょう。
             </para>
             <para lang="ja">
-              「<userinput>左手　0黒</userinput>」レイヤーを複製します。 複製
-              レイヤーのみ可視化して、 レイヤー名を「<userinput>右手　0黒
-              </userinput>」に変更します。 メニューより
+              <quote><userinput>左手　0黒</userinput></quote>レイヤーを複製
+              します。 複製レイヤーのみ可視化して、 レイヤー名を<quote>
+              <userinput>右手　0黒</userinput></quote>に変更します。 画像
+              ウィンドウのメニューより
               <menuchoice>
                 <guimenu>レイヤー(<accel>L</accel>)</guimenu>
                 <guisubmenu>変換(<accel>T</accel>)</guisubmenu>
@@ -722,14 +731,15 @@
               </menuchoice> します。
             </para>
             <para lang="ja">
-              同様に左手のレイヤーから相応する右手のレイヤーをつくってください。
+              同様に左手のレイヤーから相応する右手のレイヤーを作ってください。
             </para>
             <para lang="ja">
               時計回りの順にレイヤーを並び替え、 左手と右手が交互に現れるように
-              します。 つまり「<userinput>左手　0黒</userinput>」、
-              「<userinput>右手　0黒</userinput>」、 「<userinput>左手 90黒
-              </userinput>」、 「<userinput>右手 90黒</userinput>」、 中略、
-              「<userinput>右手-90黒</userinput>」と並ぶはずです。
+              します。 つまり<quote><userinput>左手　0黒</userinput></quote>、 
+              <quote><userinput>右手　0黒</userinput></quote>、 <quote>
+              <userinput>左手&nbsp;90黒</userinput></quote>、 <quote>
+              <userinput>右手&nbsp;90黒</userinput></quote>、 中略、 
+              <quote><userinput>右手-90黒</userinput></quote>と並ぶはずです。
             </para>
           </listitem>
           <listitem>
@@ -781,17 +791,17 @@
               しまいましょう。
             </para>
             <para lang="ja">
-              「<userinput>左手　0黒</userinput>」のレイヤーを選んでそれだけを
-              可視化します。 メニューより
+              <quote><userinput>左手　0黒</userinput></quote>のレイヤーを選んで
+              それだけを可視化します。 画像ウィンドウのメニューより
               <menuchoice>
                 <guimenu>画像(<accel>I</accel>)</guimenu>
                 <guimenuitem>キャンバスサイズの変更(<accel>V</accel>)...</guimenuitem>
               </menuchoice>
-              を使ってキャンバスの大きさを 60&#xd7;30 ピクセルに変更します。
+              を使ってキャンバスの大きさを 60&times;30 ピクセルに変更します。
             </para>
             <para lang="ja">
-              「<userinput>左手　0黒</userinput>」のレイヤーを複製して、 複製
-              レイヤーの掌を塗りつぶしツールで青くします。
+              <quote><userinput>左手　0黒</userinput></quote>のレイヤーを複製
+              して、 複製レイヤーの掌を塗りつぶしツールで青くします。
             </para>
             <para lang="ja">
               そうしたら移動ツールを起用してください。 ツールオプションの
@@ -800,20 +810,21 @@
               ながら正確に置いてください。
             </para>
             <para lang="ja">
-              つぎに「<userinput>左手　0黒</userinput>」レイヤーとその青コピーを
-              統合しなければなりません。 <acronym>GIMP</acronym>には2通りの方法
-              がありますのでお好きな手順をとってください。 ひとつめは、 青の
-              複製レイヤーをレイヤーダイアログ上で「<userinput>左手　0黒
-              </userinput>」のすぐ下に置いて、 レイヤーメニューから <guimenuitem>
+              つぎに<quote><userinput>左手　0黒</userinput></quote>レイヤーと
+              その青コピーを統合しなければなりません。 <acronym>GIMP</acronym>
+              には2通りの方法がありますのでお好きな手順をとってください。 
+              ひとつめは、 青の複製レイヤーをレイヤーダイアログ上で<quote>
+              <userinput>左手　0黒</userinput></quote>のすぐ下に置いて、 
+              レイヤーメニューから <guimenuitem>
               下のレイヤーと統合(<accel>W</accel>)</guimenuitem>する方法です。
-              もうひとつは「<userinput>左手　0黒</userinput>」レイヤーとその青い
-              複製レイヤーだけを可視化したうえで、 レイヤーメニューから
-              <guimenuitem>可視レイヤーの統合(<accel>V</accel>)...
-              </guimenuitem> とすると現れるダイアログで
-              <guimenuitem>対象レイヤーを内包するサイズ</guimenuitem> を選んで
-              実行します。 左側に黒の掌、 右側に青の掌が並んだ 60&#xd7;30
-              ピクセルのレイヤーができあがります。 その名前を「<userinput>左手　0
-              </userinput>」に変えてください。
+              もうひとつは<quote><userinput>左手　0黒</userinput></quote>
+              レイヤーとその青い複製レイヤーだけを可視化したうえで、 レイヤー
+              メニューから <guimenuitem>可視レイヤーの統合(<accel>V</accel>)...
+              </guimenuitem> とすると現れるダイアログで <guimenuitem>
+              対象レイヤーを内包するサイズ</guimenuitem> を選んで実行します。 
+              左側に黒の掌、 右側に青の掌が並んだ 60&times;30 ピクセルの
+              レイヤーができあがります。 その名前を<quote><userinput>左手　0
+              </userinput></quote>に変えてください。
             </para>
             <para lang="ja">
               他のレイヤーに対しても同じ手順を繰り返してください。
@@ -892,7 +903,7 @@
               90° の位をみると、 黄色で示した第2次元では <guimenuitem>
               incremental</guimenuitem> 選択によって左右の転換をしています。
               そして第3の次元では、 無作為に色を選択しています。
-              よって最終的にレイヤーの順序は次のようにしなければなりません:
+              よって最終的にレイヤーの順序は次のようにしなければなりません。
               <mediaobject>
                 <imageobject>
                     <imagedata format="PNG"
@@ -908,15 +919,15 @@
               Cell Size: 30x30 Number of cells:16 Dimensions: 3
             </para>
             <para lang="ja">
-              ほらね。 ブラシができました。 先に拡張子 <filename>.xcf
-              </filename> をつけて保存してから、 <acronym>GIH</acronym>形式では
-              <guilabel>間隔</guilabel> を <userinput>100</userinput>
-              パーセントに、 <guilabel>説明</guilabel> には <userinput>手
-              </userinput> を、 <guilabel>セルサイズ</guilabel> は <userinput>
-              30</userinput> &#xd7; <userinput>30</userinput> に、 <guilabel>
-              セル数</guilabel> が <userinput>16</userinput> で <userinput>3
-              </userinput> <guilabel>次元</guilabel> のブラシパイプとして保存
-              します。
+              ほらね。 ブラシができました。 先に拡張子 <filename 
+              class="extention">.xcf</filename> をつけて保存してから、 
+              <acronym>GIH</acronym>形式では <guilabel>間隔</guilabel> を 
+              <userinput>100</userinput> パーセントに、 <guilabel>説明
+              </guilabel> には <userinput>手</userinput> を、 <guilabel>
+              セルサイズ</guilabel> は <userinput>30</userinput> &times; 
+              <userinput>30</userinput> に、 <guilabel>セル数</guilabel> が 
+              <userinput>16</userinput> で <userinput>3</userinput> <guilabel>
+              次元</guilabel> のブラシパイプとして保存します。
             </para>
             <itemizedlist>
               <listitem>
@@ -949,9 +960,10 @@
               brush box. You can now use your brush.
             </para>
             <para lang="ja">
-              個人用の<acronym>GIMP</acronym>ブラシディレクトリに <filename>
-              .gih</filename> ファイルを置いてブラシダイアログで再読み込み
-              します。 その時点でこのブラシが使用できるようになりました。
+              個人用の<acronym>GIMP</acronym>ブラシディレクトリに <filename 
+              class="extention">.gih</filename> ファイルを置いて
+              ブラシダイアログで再読み込みします。 
+              その時点でこのブラシが使用できるようになりました。
             </para>
             <figure>
               <title lang="en">
@@ -959,7 +971,7 @@
                 with the brush:
               </title>
               <para lang="ja">
-                例題のブラシを用いて楕円選択の境界線を描画した結果を示す:
+                例題のブラシを用いて楕円選択の境界線を描画した結果を示す。
               </para>
               <mediaobject>
                 <imageobject>

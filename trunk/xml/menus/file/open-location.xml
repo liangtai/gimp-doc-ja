@@ -8,29 +8,45 @@
 -->
 <!-- open tasks:
  -->
+<!--2009-05-15-->
 <sect2 id="gimp-file-open-location">
-  <title>Open Location</title>
+  <title lang="en">Open Location</title>
+  <title lang="ja">場所を開く(<accel>L</accel>)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Open</secondary>
     <tertiary>Open location</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Open Location</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="ヒラク">開く</secondary>
+    <tertiary sortas="バショヲヒラク">場所を開く</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="バショヲヒラク">場所を開く</primary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Open Location</guimenuitem> dialog lets you load an
     image from a network location, specified by a URI, in any of the formats
     that <acronym>GIMP</acronym> supports.
   </para>
+  <para lang="ja">
+    <guimenuitem>場所を開く(<accel>L</accel>)...</guimenuitem> コマンドが開く
+    ダイアログでネットワーク上の位置が<acronym>URI</acronym>で指定でき、
+    <acronym>GIMP</acronym>がサポートするファイル形式の画像が開けます。
+  </para>
 
   <sect3>
-    <title>Activate Command</title>
+    <title lang="en">Activate Command</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access to this command from the Toolbox menubar or the
           image menubar through
           <menuchoice>
@@ -38,14 +54,23 @@
             <guimenuitem>Open Location…</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューから
+          <menuchoice>
+            <guimenu>ファイル(<accel>F</accel>)</guimenu>
+            <guimenuitem>場所を開く(<accel>L</accel>)...</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
 
   <sect3>
-    <title>Description of the dialog window</title>
+    <title lang="en">Description of the dialog window</title>
+    <title lang="ja">ダイアログウィンドウのご説明</title>
     <figure>
-      <title>The <quote>Open Location</quote> dialog window</title>
+      <title lang="en">The <quote>Open Location</quote> dialog window</title>
+      <title lang="ja"><quote>場所を開く</quote>ダイアログウィンドウ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -53,18 +78,19 @@
         </imageobject>
       </mediaobject>
     </figure>
-    <para>The most typical schemes to open images with are:</para>
+    <para lang="en">The most typical schemes to open images with are:</para>
+    <para lang="ja">画像を開く典型的な定式はつぎのとおりです。</para>
     <variablelist>
       <varlistentry>
         <term>file://</term>
         <listitem>
-          <para>to open an image from a local drive</para>
-          <para>
+          <para lang="en">to open an image from a local drive</para>
+          <para lang="en">
             You can omit the <quote>file://</quote> prefix and open images
             simply by putting an absolute or relative path and filename in
             here.
           </para>
-          <para>
+          <para lang="en">
             The default base directory for relative paths depends on your
             operating system. It is typically
             <filename>/home/&lt;username&gt;/</filename> on Linux,
@@ -74,31 +100,69 @@
             </filename> on Windows and
             <filename>/Users/&lt;username&gt;/</filename> on Mac OS X.
           </para>
+          <para lang="ja">
+            お使いのコンピュータに保管されている画像を開くときはこの語句と
+            ファイルのパス名をつなげて記入します。
+          </para>
+          <para lang="ja">
+            冒頭の<quote>file://</quote>は省略できます。
+            ファイルの経路名が絶対パスと相対パスのいずれでも画像が開けます。
+          </para>
+          <para lang="ja">
+            相対パス名の基点ディクトリはお使いのオペレーティングシステムに
+            よって異なります。 主な例では、 Unix系ならば <filename>
+            file:///home/&lt;ユーザ名&gt;/</filename> のような
+            ホームディレクトリが、 <productname>Windows</productname> ならば
+            <filename>C:\Documents&nbsp;and&nbsp;Settings\&lt;ユーザ名&gt;
+            \My&nbsp;Documents\My&nbsp;Images\</filename> が、 <productname>
+            Mac OS X</productname> ならば <filename>/Users/&lt;ユーザ名&gt;/
+            </filename> が典型的です。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>ftp://</term>
         <listitem>
-          <para>to open an image from a ftp server</para>
+          <para lang="en">to open an image from a ftp server</para>
+          <para lang="ja">
+            ftpサーバ上の画像ファイルを開くときはこの語句から記入します。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>http://</term>
         <listitem>
-          <para>to load an image from a website</para>
+          <para lang="en">to load an image from a website</para>
+          <para lang="ja">
+            ウェブサイト上の画像ファイルを開くときはこの語句から記入します。
+          </para>
           <tip>
-            <para>
+            <para lang="en">
               When you are visiting an Internet site, you can right-click on
               an image and choose <quote>Copy link address</quote>
               in the drop-down menu. Then paste it in the
               <quote>Open Location</quote> dialog to open it in GIMP.
             </para>
-            <para>
+            <para lang="en">
               Even if this command makes it very easy to grab images from
               websites:
               <emphasis>
                 Please respect the copyright! Images, even if published on the
                 Internet are not always free to be used for you.
+              </emphasis>
+            </para>
+            <para lang="ja">
+              インターネットのサイトを訪問したときに、 たいていのウェブブラウザ
+              は画像を <mousebutton>第2ボタン</mousebutton> でクリックすると、
+              ポップアップメニューが出てきて <guimenuitem>リンクの場所をコピー
+              </guimenuitem> のようなコマンドでその位置を取り込めるはずです。
+              その<acronym>URL</acronym>を<acronym>GIMP</acronym>の<quote>
+              場所を開く</quote>ダイアログに貼り付ければ画像が開きます。
+            </para>
+            <para lang="ja">
+              このようにインターネット上の画像も簡単にこのコマンドで取り込め
+              ますが、 <emphasis>著作権を尊重しましょう。 インターネット上に
+              公開されている画像でも全てがフリー素材だとは限りません。
               </emphasis>
             </para>
           </tip>
