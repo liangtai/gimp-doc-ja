@@ -8,20 +8,34 @@
   2006-07-27 en revised by scb
   2005-09-07 reviewed by axel.wernicke
 -->
+<!--2009-05-19-->
 <sect2 id="file-print-gimp">
-  <title>Print</title>
+  <title lang="en">Print</title>
+  <title lang="ja">印刷(<accel>P</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Printing</primary>
     <secondary>Print command</secondary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="インサツ">印刷</primary>
+    <secondary sortas="インサツコマンド">印刷コマンド</secondary>
+  </indexterm>
+
+  <para lang="en">
     Since the 2.4.0 release, <acronym>GIMP</acronym> has its own printing
     module. You can set page and image up. A preview button allows you to
     verify the result before printing.
   </para>
+  <para lang="ja">
+    2.4.0 以降、 <acronym>GIMP</acronym>に独自の印刷モジュールが付くようになり
+    ました。 ページと画像の設定ができます。
+    <guibutton>印刷プレビュー(<accel>V</accel>)</guibutton> ボタンをクリック
+    すれば印刷前に印刷物の仕上がりが確認できます。
+  </para>
   <figure>
-    <title>The <quote>Print</quote> dialog</title>
+    <title lang="en">The <quote>Print</quote> dialog</title>
+    <title lang="ja"><quote>印刷</quote>ダイアログ</title>
     <mediaobject>
       <imageobject>
         <imagedata fileref="images/menus/file-print-tab3.png" format="PNG"/>
@@ -29,15 +43,20 @@
     </mediaobject>
   </figure>
   <note>
-    <para>
+    <para lang="en">
       See <link linkend="gimp-using-photography-printing">Printing your
       photos</link>.
+    </para>
+    <para lang="ja">
+      <link linkend="gimp-using-photography-printing">写真を印刷</link> も
+      ご覧ください。
     </para>
   </note>
 
   <sect3>
-    <title>Activate Command</title>
-    <para>
+    <title lang="en">Activate Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <para lang="en">
       You can access to this command from the image menubar through
       <menuchoice>
         <guimenu>File</guimenu>
@@ -46,64 +65,133 @@
       or by using
       <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>.
     </para>
-  </sect3>
-
-  <sect3>
-    <title>Postscript and Ghostscript</title>
-      <para>
-        <acronym>GIMP</acronym> does not support
-        <link linkend="glossary-postscript">PostScript</link> for printing: it
-        depends on a powerful free software program called Ghostscript.
-      </para>
-      <para>
-        Linux distributions almost always come with Ghostscript already
-        installed (not necessarily the most recent version). For other
-        operating systems, you may have to install it yourself. Here are
-        instructions for installing it on Windows:
-      </para>
+    <para lang="ja">
       <itemizedlist>
         <listitem>
           <para>
-            Go to the Ghostscript project page on Sourceforge
-            <xref linkend="bibliography-online-ghostscript"/>.
-          </para>
-        </listitem>
-        <listitem>
-          <!--PENDING: replace <application> with <package> (DocBook 4.4)-->
-          <para>
-            Look for the package <application>gnu-gs</application> or
-            <application>ghostscript</application> (for non-commercial
-            use only) and go to the download section.
+            画像ウィンドウのメニューより
+            <menuchoice>
+              <guimenu>ファイル(<accel>F</accel>)</guimenu>
+              <guimenuitem>印刷(<accel>P</accel>)</guimenuitem>
+            </menuchoice>
           </para>
         </listitem>
         <listitem>
           <para>
-            Download one of the prepared Windows distributions, such as
-            <filename>gs650w32.exe</filename> or
-            <filename>gs700w32.exe</filename>.
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            Start the executable and follow the instructions of the
-            installation procedure.
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            Set the <envar>GS_PROG</envar> environment variable to the full
-            file name of the gswin32c binary  (e.g.
-            <filename>C:\gs\gsX.YY\bin\gswin32c.exe</filename>).
+            キーボードショートカット
+            <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>
           </para>
         </listitem>
       </itemizedlist>
-      <para>
-        Now you should be able to read PostScript files with
-        <acronym>GIMP</acronym>. Please note that you must not move the
-        Ghostscript directories once the installation is complete. The
-        installation creates registry entries which allow Ghostscript to find
-        its libraries. (These instructions courtesy of
-        http://www.kirchgessner.net.)
-      </para>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Postscript and Ghostscript</title>
+    <title lang="ja">
+      <productname>Postscript</productname> と 
+      <application>Ghostscript</application>
+    </title>
+    <para lang="en">
+      <acronym>GIMP</acronym> does not support
+      <link linkend="glossary-postscript">PostScript</link> for printing: it
+      depends on a powerful free software program called Ghostscript.
+    </para>
+    <para lang="en">
+      Linux distributions almost always come with Ghostscript already
+      installed (not necessarily the most recent version). For other
+      operating systems, you may have to install it yourself. Here are
+      instructions for installing it on Windows:
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>の印刷処理は 
+      <link linkend="glossary-postscript">PostScript</link> をサポートして
+      いません。 代わりに <application>Ghostscript</application> という強力な
+      フリーソフトウェアプログラムに依拠しています。
+    </para>
+    <para lang="ja">
+      <productname>Linux</productname> のディストリビューション最新版はいずれも
+      最初のセットアップで <application>Ghostscript</application> も組み込む
+      ようになっていますので特にあとから導入する必要はありません。 その他の
+      オペレーティングシステムは導入作業が必要なものが多いので、 とくに
+      <productname>Windows</productname> の導入方法を説明しましょう。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          Go to the Ghostscript project page on Sourceforge
+          <xref linkend="bibliography-online-ghostscript"/>.
+        </para>
+        <para lang="ja">
+          <citetitle>Sourceforge</citetitle> にある
+          <application>Ghostscript</application> プロジェクトのページに行きます
+          <xref linkend="bibliography-online-ghostscript"/> 。
+        </para>
+      </listitem>
+      <listitem>
+        <!--PENDING: replace <application> with <package> (DocBook 4.4)-->
+        <para lang="en">
+          Look for the package <application>gnu-gs</application> or
+          <application>ghostscript</application> (for non-commercial
+          use only) and go to the download section.
+        </para>
+        <para lang="ja">
+          <application>gnu-gs</application> パッケージか <application>
+          ghostscript</application> (非商用) パッケージのダウンロードページに
+          進みます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Download one of the prepared Windows distributions, such as
+          <filename>gs650w32.exe</filename> or
+          <filename>gs700w32.exe</filename>.
+        </para>
+        <para lang="ja">
+          <productname>Windows</productname> 用のインストールパッケージを
+          ダウンロードしてください。 例えば <filename>gs854w32.exe</filename>、
+          <filename>gs864w32.exe</filename>、
+          <filename>gs864w64.exe</filename> がダウンロードできます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Start the executable and follow the instructions of the
+          installation procedure.
+        </para>
+        <para lang="ja">
+          実行ファイルを起動してインストーラの画面に従ってください。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Set the <envar>GS_PROG</envar> environment variable to the full
+          file name of the gswin32c binary  (e.g.
+          <filename>C:\gs\gsX.YY\bin\gswin32c.exe</filename>).
+        </para>
+        <para lang="ja">
+          <filename>gswin32c.exe</filename> の保管場所までの経路名 (パス) を
+          環境変数 <envar>GS_PRG</envar> に代入してください。 例えば <filename>
+          SET GS_PRG=C:\gs\gs<replaceable>X.YY</replaceable>\bin\gswin32c.exe
+          </filename> とします。
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      Now you should be able to read PostScript files with
+      <acronym>GIMP</acronym>. Please note that you must not move the
+      Ghostscript directories once the installation is complete. The
+      installation creates registry entries which allow Ghostscript to find
+      its libraries. (These instructions courtesy of
+      http://www.kirchgessner.net.)
+    </para>
+    <para lang="ja">
+      以上で <productname>Postscript</productname> を<acronym>GIMP</acronym>で
+      扱えるようになります。 インストールが終わったあとで <application>
+      Ghostscript</application> のディレクトリを移動してはいけません。 一緒に
+      インストールされたライブラリがレジストリに登録されているためです。
+      (ここで紹介した方法は <ulink url="http://www.kirchgessner.net/">
+      http://www.kirchgessner.net</ulink> を参考にしました。)
+    </para>
   </sect3>
 </sect2>

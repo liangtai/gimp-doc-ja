@@ -10,7 +10,7 @@
   2006-02-26 j.h:  Added Right click -> Open location-Changed left pannel en;fr
   2005/10/18 zh_CN removed by romanofski - missing translation
 -->
-<!--2009-05-13-->
+<!--2009-05-15-->
 <sect2 id='gimp-file-open'>
   <title lang="en">開く(<accel>O</accel>)...</title>
 
@@ -120,7 +120,7 @@
           <guiicon>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="images/dialogs/ja/stock-gtk-edit-16.png"/>
+                <imagedata fileref="images/dialogs/stock-gtk-edit-16.png"/>
               </imageobject>
               <textobject>
                 <phrase>「ファイル名を入力」</phrase>
@@ -146,8 +146,8 @@
           along this path by clicking on an element.
         </para>
         <para lang="ja">
-          現在居るフォルダまでのパスが表示されます。 パスの各層はボタンになって
-          いて、 クリックするとその位置まで移動できます。
+          現在居るフォルダまでの経路名が表示されます。 経路名 (パス) の各層は
+          ボタンになっていて、 クリックするとその位置まで移動できます。
         </para>
       </listitem>
 
@@ -201,14 +201,14 @@
           the central pannel, and also remove them.
         </para>
         <para lang="ja">
-          この <guibutton>追加(<accel>A</accel>)</guibutton> ボタンをクリック
-          するか、 中央のパネルにあるどれかのフォルダを <mousebutton>第2ボタン
-          </mousebutton> でクリックすると出てくるメニューから <guimenuitem>
-          ブックマークへ追加(<accel>A</accel>)</guimenuitem> を選ぶと現在選択
-          されているフォルダがブックマークに追加されます。 ブックマークで不要な
-          フォルダはその項目をクリックして開いてから <guibutton>
-          削除(<accel>R</accel>)</guibutton> をクリックすればこのリストから削除
-          できます。
+          このブックマークにフォルダを追加するには、 中央パネルでフォルダを
+          選んでから <guibutton>追加(<accel>A</accel>)</guibutton> ボタンを
+          クリックするか、 そのフォルダを <mousebutton>第2ボタン</mousebutton> 
+          でクリックして出てきたメニューから <guimenuitem>
+          ブックマークへ追加(<accel>A</accel>)</guimenuitem> を選びます。
+          ブックマークで不要なフォルダはその項目をクリックして開いてから 
+          <guibutton>削除(<accel>R</accel>)</guibutton> をクリックすればリスト
+          上から削除できます。
         </para>
       </listitem>
 
@@ -258,6 +258,10 @@
           composition are displayed below the preview window.
         </para>
         <para lang="ja">
+          中央パネルで選ばれたファイルが画像ならばその見本が <guilabel>
+          プレビュー(<accel>P</accel>)</guilabel> パネルに表示されます。 画像が
+          <acronym>GIMP</acronym>で作成されたものならファイルの大きさや解像度、
+          画像構成がプレビュー画像より下に表示されます。
         </para>
 
         <tip>
@@ -266,6 +270,9 @@
             click on the <guilabel>Preview</guilabel> window to update it.
           </para>
           <para lang="ja">
+            画像を他のプログラムで変更した場合は、 <guilabel>
+            プレビュー(<accel>P</accel>)</guilabel> ウィンドウをクリックすれば
+            見本画像を更新できます。
           </para>
         </tip>
       </listitem>
@@ -280,8 +287,13 @@
           selected bookmark from the list.
         </para>
         <para lang="ja">
+          <guibutton>追加(<accel>A</accel>)</guibutton> ボタンをクリックすると
+          中央パネルで選択されているフォルダをブックマークに追加できます。
         </para>
         <para lang="ja">
+          ブックマークで不要なフォルダはそのフォルダを選択してから <guibutton>
+          削除(<accel>R</accel>)</guibutton> ボタンをクリックすれば削除
+          できます。
         </para>
       </listitem>
 
@@ -293,6 +305,12 @@
           a particular type of image (GIF, JPG, PNG ...).
         </para>
         <para lang="ja">
+          通常は中央パネルに並ぶファイルを<acronym>GIMP</acronym>で扱える画像に
+          限定できる <guimenuitem>すべての画像</guimenuitem> を選ばれていると
+          思います。 このほか <guimenuitem>すべてのファイル</guimenuitem> も
+          選べますし、 <acronym>GIF</acronym>画像や<acronym>JPEG</acronym>画像
+          や<acronym>PNG</acronym>画像のような何らかのファイル形式に絞って表示
+          させる方法もあります。
         </para>
       </listitem>
 
@@ -307,6 +325,12 @@
           you can set it by selecting it from the list.
         </para>
         <para lang="ja">
+          <guilabel>ファイルタイプを選択(<accel>T</accel>)</guilabel>: 
+          <acronym>GIMP</acronym>はファイル形式を自動判別できますので、 ここは
+          無視して構わない場合がほとんどです。 めったにないことですが、
+          ファイルの拡張子はおろかファイルに埋め込まれたマジック情報でさえも
+          <acronym>GIMP</acronym>がファイル形式を判定するのに不十分な場合が
+          あります。 そうなってしまうときにこのリストで指定できます。
         </para>
       </listitem>
     </orderedlist>

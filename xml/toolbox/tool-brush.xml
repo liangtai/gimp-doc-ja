@@ -2,6 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-04-29 ude: Moved Paint Mode examples to new sect3
   2008-09-25 aprokoudine reviwed 'ru'
   2008-06-01 ciampix reviewed for it
   2008-04-14 JPL reviewed for fr
@@ -19,6 +20,7 @@
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
+
   <indexterm lang="en">
     <primary>Paint Tools</primary>
   </indexterm>
@@ -33,6 +35,7 @@
     <primary>ツールボックス</primary>
     <secondary>ブラシツール</secondary>
   </indexterm>
+
   <figure>
     <title lang="en">The Paint Tools (Tools menu)</title>
     <title lang="ja">描画ツール (ツールメニュー)</title>
@@ -162,15 +165,19 @@
       </para>
     </listitem>
     <listitem>
-      <para lang="en">
-        the <link linkend="gimp-tool-convolve">Convolve tool</link>
-        blurs or sharpens;
-     </para>
+      <para>
+        the <link linkend="gimp-tool-heal">Heal tool</link> corrects small
+        defects;
+      </para>
       <para lang="ja">
         小さな欠点を直す<link linkend="gimp-tool-heal">修復ブラシ</link>、
       </para>
     </listitem>
     <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-convolve">Convolve tool</link>
+        blurs or sharpens;
+     </para>
       <para lang="ja">
         部分的にぼかし効果をかけるかコントラストを増す
         <link linkend="gimp-tool-convolve">ぼかし/シャープ</link>ツール、
@@ -353,8 +360,9 @@
 
     <para lang="en">
       Many tool options are shared by several brush tools: these are described
-      here. Options that apply onltool-options-brushcommony to one specific tool, or to a small number
-      of tools, are described in the sections devoted to those tools.
+      here. Options that apply onltool-options-brushcommony to one specific
+      tool, or to a small number of tools, are described in the sections
+      devoted to those tools.
     </para>
     <para lang="ja">
       大多数のツールオプションがいくつかのブラシツールで共有されています。
@@ -380,11 +388,12 @@
             for tools that can be thought of as adding color to the image:
             the Pencil, Paintbrush, Airbrush, Ink, and Clone tools. For the
             other brush tools, the option appears for the sake of
-            consistency but is always grayed out.  A list of modes can be
+            consistency but is always grayed out. A list of modes can be
             found in <xref linkend="gimp-concepts-layer-modes"/>.
           </para>
           <para lang="en">
-            In this list, some modes are particular:
+            In this list, some modes are particular and are described
+            <link linkend="gimp-paint-mode-examples">below</link>.
           </para>
           <para lang="ja">
             <guilabel>モード</guilabel>ドロップダウンリスト(引き出し排列)
@@ -402,295 +411,10 @@
             に関しては実例を挙げて説明されています。
           </para>
           <para lang="ja">
-            中にはこんな独特なものもあります:
+            中には
+            <link linkend="gimp-paint-mode-examples">後述</link> のような
+            独特なものもあります。
           </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Dissolve</guilabel>
-              </para>
-              <para lang="ja"><guilabel>ディザ合成</guilabel></para>
-              <figure>
-                <title lang="en">Dissolve mode example</title>
-                <title lang="ja">ディザ合成の例</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/toolbox/dissolve-mode-example.png"/>
-                  </imageobject>
-                  <caption>
-                    <para lang="en">
-                      Two brush-strokes made with the Airbrush, using the same
-                      fuzzy circular brush. Left: Normal mode. Right: Dissolve
-                      mode.
-                    </para>
-                    <para lang="ja">
-                      2つの描線はいずれも同じ<quote>Circle Fuzzy</quote>
-                      ブラシを用いエアブラシで描画。
-                      左が標準モード、 右がディザ合成モード。
-                    </para>
-                  </caption>
-                </mediaobject>
-              </figure>
-              <para lang="en"><!--Changed 2008-02-24-->
-                For any paint tool with  opacity less than 100%, this very
-                useful mode doesn't draw transparency but determines the
-                probability of applying paint. This gives nice patterns of
-                dots to paint-strokes or filling.
-              </para>
-              <para lang="ja">
-                不透明度を100%未満としたどんな描画ツールで描いても、
-                この大変便利なモードは透過表現によらない方法で描画を果たす
-                可能性を探ります。 つまり筆書きや塗りつぶしに対してすばらしい
-                点描による紋様を描きます。
-              </para>
-              <figure>
-                <title lang="en">Painting in Dissolve mode</title>
-                <title lang="ja">ディザ合成モードで描画</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/toolbox/mode-dissolve.png"/>
-                  </imageobject>
-                  <caption>
-                    <para lang="en">
-                      This image has only the background layer and no Alpha
-                      channel. The background color is sky blue. Three
-                      strokes with Pencil and various opacities: 100%, 50%,
-                      25%. Foreground color pixels are scattered along
-                      brushstroke.
-                    </para>
-                    <para lang="ja">
-                      この画像は背景レイヤーだけを用いて描かれ、 アルファ
-                      チャンネルは使用していない。 背景色は スカイブルー。
-                      鉛筆による描画を透過度を変えて3本: 右から100%、 50%、
-                      25%。 描画色の画素が描線内で拡散している。
-                    </para>
-                  </caption>
-                </mediaobject>
-              </figure>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Behind</guilabel>
-              </para>
-              <para lang="ja"><guilabel>後ろ</guilabel></para>
-              <indexterm lang="en">
-                <primary>Paint Modes</primary>
-                <secondary>Behind</secondary>
-              </indexterm>
-              <indexterm lang="en">
-                <primary>Behind (paint mode)</primary>
-              </indexterm>
-              <indexterm lang="ja">
-                <primary sortas="ビョウガモード">描画モード</primary>
-                <secondary sortas="ウシロ">後ろ</secondary>
-              </indexterm>
-              <indexterm lang="ja">
-                <primary sortas="ウシロ(ビョウガモード)">後ろ(描画モード)</primary>
-              </indexterm>
-              <figure>
-                <title lang="en">
-                  Example for layer mode <quote>Behind</quote>
-                </title>
-                <title lang="ja"><quote>後ろ</quote>モードのレイヤーの例</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/glossary/modes-normal2.png"/>
-                  </imageobject>
-                </mediaobject>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/glossary/modes-behind.png"/>
-                  </imageobject>
-                </mediaobject>
-              </figure>
-              <para lang="en">
-                This mode applies paint only to transparent areas of the
-                layer: the lower the opacity, the more paint is applied.
-                Thus, painting opaque areas has no effect; painting
-                transparent areas has the same effect as normal mode. The
-                result is always an increase in opacity. Of course none of
-                this is meaningful for layers that lack an alpha channel.
-              </para>
-              <para lang="en">
-                In the above example image, Wilber is on the top layer,
-                surrounded by transparency. The lower layer is solid light
-                blue. The Bucket Fill tool was used, with the
-                <guilabel>Fill Whole Selection</guilabel> option checked
-                and the entire layer was selected. A pattern was used to
-                paint with the Bucket Fill tool.
-              </para>
-              <para lang="ja">
-                このモードでは現在のレイヤーの透過部分にのみ描画できます:
-                不透明度が低いところほど強く描画されます。 つまり完全不透明
-                な部分には何も描画できませんが、 完全透過な部分での描画効果
-                は標準モードと同じです。 描画するほどにつねに不透明度が
-                増す結果になります。 当然アルファチャンネルの無いレイヤー
-                では何の意味もありません。
-              </para>
-              <para lang="ja">
-                上の例の図では最前面のレイヤーにウィルバー君が描かれ、
-                その周りは透明です。 その下のレイヤーは一様にライトブルーで
-                塗られています。 次にそのレイヤー全体を選択してから、
-                <guilabel>選択範囲を塗りつぶす</guilabel> オプション
-                が有効な状態で塗りつぶしツールを使いました。 塗りつぶしには
-                パターン(文様)を使用しています。
-              </para>
-              <figure>
-                <title lang="en">Painting in <quote>Behind</quote> mode</title>
-                <title lang="ja">後ろモードで描画</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/toolbox/mode-behind.png"/>
-                  </imageobject>
-                  <caption>
-                    <para lang="en">
-                      This image has two layers. The upper layer is active.
-                      Three brushtrokes with pencil, red color at 100%, 50%,
-                      25% : only transparent or semi-transparent pixels of
-                      the layer are painted.
-                    </para>
-                    <para lang="ja">
-                      この画像にはレイヤーが2層あり、 前面のレイヤーが実行状態
-                      にある。 予め青で横向きに2本の線が引かれている。次に
-                      透明度を100%、 50%、 25%と変えながら赤で鉛筆による
-                      描線をした: レイヤーの透明及び半透明な画素にのみ
-                      描画されている。
-                    </para>
-                  </caption>
-                </mediaobject>
-              </figure>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Color Erase</guilabel>
-              </para>
-              <para lang="ja">
-                <guilabel>色消しゴム</guilabel>
-              </para>
-              <indexterm lang="en">
-                <primary>Paint Modes</primary>
-                <secondary>Color Erase</secondary>
-              </indexterm>
-              <indexterm lang="en">
-                <primary>Color Erase (paint mode)</primary>
-              </indexterm>
-              <indexterm lang="ja">
-                <primary sortas="ビョウガモード">描画モード</primary>
-                <secondary sortas="イロケシゴム">色消しゴム</secondary>
-              </indexterm>
-              <indexterm lang="ja">
-                <primary sortas="イロケシゴム(ビョウガモード)">色消しゴム(描画モード)</primary>
-              </indexterm>
-              <figure>
-                <title lang="en">
-                  Example for layer mode <quote>Color erase</quote>
-                </title>
-                <title lang="ja">色消しゴムモードのレイヤーの例</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/glossary/modes-normal2.png"/>
-                  </imageobject>
-                </mediaobject>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/glossary/modes-colorerase.png"/>
-                  </imageobject>
-                </mediaobject>
-              </figure>
-              <para lang="en">
-                This mode erases the foreground color, replacing it with
-                partial transparency. It acts like the
-                <link linkend="plug-in-colortoalpha">Color to Alpha</link>
-                filter, applied to the area under the brushstroke. Note that
-                this only works on layers that possess an alpha channel;
-                otherwise, this mode is identical to Normal.
-              </para>
-              <para lang="en">
-                In the above example image, the color of the Bucket Fill tool
-                was white, so white parts of Wilber were erased and the blue
-                background shows through.
-              </para>
-              <para lang="en">
-                The next image has only one layer, the background layer.
-                Background color is sky blue. Three brushtrokes with
-                pencil:
-              </para>
-              <para lang="ja">
-                このモードは描画色を消去して不完全透明にします。 そのはたらきは
-                <link linkend="plug-in-colortoalpha">色を透明度に</link>
-                フィルタに似ており、 ブラシでなぞった部分に適用されます。
-                このモードはアルファチャンネルのあるレイヤーでのみ有効で、
-                無い場合は標準モードと同一であることにご注意ください。
-              </para>
-              <para lang="ja">
-                上の例の図では、 白色で塗りつぶしたところ、 ウィルバー君の
-                白い部分が消えて青い背景が透けて見えます。
-              </para>
-              <para lang="ja">
-                次の例の画像は1層のレイヤーだけ、 すなわち背景レイヤーだけを
-                持っています。 背景レイヤーはスカイブルーに塗られ、 描画色は
-                赤色です。 鉛筆による描線が3本あります:
-              </para>
-              <orderedlist lang="ja">
-                <listitem>
-                  <para lang="en">
-                    With the exact color of the blue area: only this
-                    blue color is erased.
-                  </para>
-                  <para lang="ja">
-                    青い部分に対応する色を適用: 青色だけが消えた。
-                  </para>
-                </listitem>
-                <listitem>
-                  <para lang="en">
-                    With the exact color of the red area. Only this
-                    red color is erased, whatever its transparency.
-                    Erased areas are made transparent.
-                  </para>
-                  <para lang="ja">
-                    赤い部分に対応する色を適用: 赤色だけがそのいずれの
-                    透明度でも消えた。 消去された部分は透明になった。
-                  </para>
-                </listitem>
-                <listitem>
-                  <para lang="en">
-                    With the sky blue color of the layer background:
-                    only this color is erased.
-                  </para>
-                  <para lang="ja">
-                    レイヤーの背景色に用いられているスカイブルーを適用:
-                    この色だけが消えた。
-                  </para>
-                </listitem>
-              </orderedlist>
-              <figure>
-                <title lang="en">
-                  Painting in <quote>Color Erase</quote> mode
-                </title>
-                <title lang="ja"><quote>色消しゴム</quote>モードで描画</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
-                      fileref="images/toolbox/mode-erase.png"/>
-                  </imageobject>
-                  <caption>
-                    <para lang="en">
-                      From left to right, stroked with blue, red and sky blue.
-                    </para> 
-                    <para lang="ja">左から順に、 青、 赤、 スカイブルーで描線。
-                    </para> 
-                  </caption>
-                </mediaobject>
-              </figure>
-            </listitem>
-          </itemizedlist>
         </listitem>
       </varlistentry>
 
@@ -1251,6 +975,329 @@
       </varlistentry>
     </variablelist>
   </sect3>
+
+  <sect3 id="gimp-paint-mode-examples">
+    <title lang="en">Paint Mode Examples</title>
+    <title lang="ja">描画モードの例</title>
+
+    <para lang="en">
+      The following examples demonstrate some of <acronym>GIMP</acronym>'s
+      paint modes:
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>の描画モードを使った例を以下に示します。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Dissolve</term>
+        <term lang="ja">ディザ合成</term>
+        <listitem>
+          <figure>
+            <title lang="en">Dissolve mode example</title>
+            <title lang="ja">ディザ合成の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/dissolve-mode-example.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Two brush-strokes made with the Airbrush, using the same
+                  fuzzy circular brush. Left: Normal mode. Right: Dissolve
+                  mode.
+                </para>
+                <para lang="ja">
+                  2つの描線はいずれも同じ<quote>Circle Fuzzy</quote>
+                  ブラシを用いエアブラシで描画。
+                  左が標準モード、 右がディザ合成モード。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            For any paint tool with  opacity less than 100%, this very
+            useful mode doesn't draw transparency but determines the
+            probability of applying paint. This gives nice patterns of
+            dots to paint-strokes or filling.
+          </para>
+          <para lang="ja">
+            不透明度を100%未満としたどんな描画ツールで描いても、
+            この大変便利なモードは透過表現によらない方法で描画を果たす
+            可能性を探ります。 つまり筆書きや塗りつぶしに対してすばらしい
+            点描による紋様を描きます。
+          </para>
+          <figure>
+            <title lang="en">Painting in Dissolve mode</title>
+            <title lang="ja">ディザ合成モードで描画</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/mode-dissolve.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  This image has only the background layer and no Alpha
+                  channel. The background color is sky blue. Three
+                  strokes with Pencil and various opacities: 100%, 50%,
+                  25%. Foreground color pixels are scattered along
+                  brushstroke.
+                </para>
+                <para lang="ja">
+                  この画像は背景レイヤーだけを用いて描かれ、 アルファ
+                  チャンネルは使用していない。 背景色は スカイブルー。
+                  鉛筆による描画を透過度を変えて3本: 右から100%、 50%、
+                  25%。 描画色の画素が描線内で拡散している。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Behind</term>
+        <term lang="ja">後ろ</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Paint Modes</primary>
+            <secondary>Behind</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Behind (paint mode)</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ビョウガモード">描画モード</primary>
+            <secondary sortas="ウシロ">後ろ</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ウシロ(ビョウガモード)">後ろ(描画モード)</primary>
+          </indexterm>
+          <figure>
+            <title lang="en">
+              Example for layer mode <quote>Behind</quote>
+            </title>
+            <title lang="ja"><quote>後ろ</quote>モードのレイヤーの例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-normal2.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Wilber over a blue background layer</para>
+                <para lang="ja">ウィルバーの背後に青い背景レイヤー</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-behind.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Filled with pattern</para>
+                <para lang="ja">パターンで埋め尽くし</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This mode applies paint only to transparent areas of the
+            layer: the lower the opacity, the more paint is applied.
+            Thus, painting opaque areas has no effect; painting
+            transparent areas has the same effect as normal mode. The
+            result is always an increase in opacity. Of course none of
+            this is meaningful for layers that lack an alpha channel.
+          </para>
+          <para lang="en">
+            In the above example image, Wilber is on the top layer,
+            surrounded by transparency. The lower layer is solid light
+            blue. The Bucket Fill tool was used, with the
+            <guilabel>Fill Whole Selection</guilabel> option checked
+            and the entire layer was selected. A pattern was used to
+            paint with the Bucket Fill tool.
+          </para>
+          <para lang="en">
+            The next image (below) has two layers. The upper layer is active.
+            Three brushtrokes with pencil, red color at 100%, 50%, 25%: only
+            transparent or semi-transparent pixels of the layer are painted.
+          </para>
+          <para lang="ja">
+            このモードでは現在のレイヤーの透過部分にのみ描画できます。
+            不透明度が低いところほど強く描画されます。 つまり完全不透明
+            な部分には何も描画できませんが、 完全透過な部分での描画効果
+            は標準モードと同じです。 描画するほどにつねに不透明度が
+            増す結果になります。 当然アルファチャンネルの無いレイヤー
+            では何の意味もありません。
+          </para>
+          <para lang="ja">
+            上の例の図では最前面のレイヤーにウィルバー君が描かれ、
+            その周りは透明です。 その下のレイヤーは一様にライトブルーで
+            塗られています。 次にそのレイヤー全体を選択してから、
+            <guilabel>選択範囲を塗りつぶす</guilabel> オプション
+            が有効な状態で塗りつぶしツールを使いました。 塗りつぶしには
+            パターン(文様)を使用しています。
+          </para>
+          <para lang="ja">
+            つぎの画像 (下図) には2つのレイヤーがあり、 上側が現在活性化して
+            います。 予め青で横向きに2本の線が引かれています。次に透明度を
+            100%、 50%、 25%と変えながら赤で鉛筆による描線をしました。 
+            レイヤーの透明及び半透明な画素にのみ描画されています。
+          </para>
+          <figure>
+            <title lang="en">Painting in <quote>Behind</quote> mode</title>
+            <title lang="ja">後ろモードで描画</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/mode-behind.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Painting with 100%, 50%, 25% transparency (from left to
+                  right)
+                </para>
+                <para lang="ja">
+                  左から順に透明度を100%、 50%、 25%と変えながら描線をした
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color Erase</term>
+        <term lang="ja">色消しゴム</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Paint Modes</primary>
+            <secondary>Color Erase</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Color Erase (paint mode)</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ビョウガモード">描画モード</primary>
+            <secondary sortas="イロケシゴム">色消しゴム</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="イロケシゴム(ビョウガモード)">
+              色消しゴム(描画モード)
+            </primary>
+          </indexterm>
+          <figure>
+            <title lang="en">
+              Example for layer mode <quote>Color erase</quote>
+            </title>
+            <title lang="ja">色消しゴムモードのレイヤーの例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-normal2.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Wilber over a blue background layer</para>
+                <para lang="ja">ウィルバーの背後に青い背景レイヤー</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-colorerase.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">White foreground color erased</para>
+                <para lang="ja">白の描画色が消された</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This mode erases the foreground color, replacing it with
+            partial transparency. It acts like the
+            <link linkend="plug-in-colortoalpha">Color to Alpha</link>
+            filter, applied to the area under the brushstroke. Note that
+            this only works on layers that possess an alpha channel;
+            otherwise, this mode is identical to Normal.
+          </para>
+          <para lang="en">
+            In the above example image, the color of the Bucket Fill tool
+            was white, so white parts of Wilber were erased and the blue
+            background shows through.
+          </para>
+          <para lang="en">
+            The next image has only one layer, the background layer.
+            Background color is sky blue. Three brushtrokes with
+            pencil:
+          </para>
+          <para lang="ja">
+            このモードは描画色を消去して不完全透明にします。 そのはたらきは
+            <link linkend="plug-in-colortoalpha">色を透明度に</link>
+            フィルタに似ており、 ブラシでなぞった部分に適用されます。
+            このモードはアルファチャンネルのあるレイヤーでのみ有効で、
+            無い場合は標準モードと同一であることにご注意ください。
+          </para>
+          <para lang="ja">
+            上の例の図では、 白色で塗りつぶしたところ、 ウィルバー君の
+            白い部分が消えて青い背景が透けて見えます。
+          </para>
+          <para lang="ja">
+            次の例の画像は1層のレイヤーだけ、 すなわち背景レイヤーだけを
+            持っています。 背景レイヤーはスカイブルーに塗られ、 描画色は
+            赤色です。 鉛筆による描線が3本あります。
+          </para>
+          <orderedlist lang="ja">
+            <listitem>
+              <para lang="en">
+                With the exact color of the blue area: only this blue color is
+                erased.
+              </para>
+              <para lang="ja">
+                青い部分に対応する色を適用: 青色だけが消えた。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                With the exact color of the red area. Only this red color is
+                erased, whatever its transparency. Erased areas are made
+                transparent.
+              </para>
+              <para lang="ja">
+                赤い部分に対応する色を適用: 赤色だけがそのいずれの
+                透明度でも消えた。 消去された部分は透明になった。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                With the sky blue color of the layer background: only this
+                color is erased.
+              </para>
+              <para lang="ja">
+                レイヤーの背景色に用いられているスカイブルーを適用:
+                この色だけが消えた。
+              </para>
+            </listitem>
+          </orderedlist>
+          <figure>
+            <title lang="en">
+              Painting in <quote>Color Erase</quote> mode
+            </title>
+            <title lang="ja"><quote>色消しゴム</quote>モードで描画</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/mode-erase.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Painted with 1. blue; 2. red; 3. background color
+                </para> 
+                <para lang="ja">
+                  1は青、 2は赤、 3は背景色で塗った
+                </para> 
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
   <sect3>
     <title lang="en">Further Information</title>
     <title lang="ja">さらなる情報</title>

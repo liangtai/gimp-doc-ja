@@ -1,19 +1,22 @@
+# liangtai <ss2pxd1c@yahoo.co.jp>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-Help 2.4.2\n"
 "POT-Creation-Date: 2009-04-19 10:08+0900\n"
-"PO-Revision-Date: 2009-02-19 01:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2009-05-19 15:44+0900\n"
+"Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/menus/file/save.xml:19(phrase) src/menus/file/save.xml:26(tertiary)
 #: src/menus/file/save.xml:29(primary) src/menus/file/save-as.xml:112(quote)
 #: src/menus/file/save-as.xml:117(quote)
 msgid "Save"
-msgstr ""
+msgstr "保存(<accel>S</accel>)"
 
 #: src/menus/file/save.xml:24(primary) src/menus/file/save-as.xml:28(primary)
 #: src/menus/file/save-as-template.xml:23(primary)
@@ -26,14 +29,14 @@ msgstr ""
 #: src/menus/file/new.xml:192(primary) src/menus/file/new.xml:323(primary)
 #: src/menus/file/create.xml:13(primary) src/menus/file/close.xml:23(primary)
 msgid "Image"
-msgstr ""
+msgstr "画像"
 
 #: src/menus/file/save.xml:25(secondary)
 #: src/menus/file/save-as.xml:29(secondary)
 #: src/menus/file/save-as-template.xml:24(secondary)
 #: src/menus/file/save-as-copy.xml:24(secondary)
 msgid "Save image"
-msgstr ""
+msgstr "画像を保存"
 
 #: src/menus/file/save.xml:32(para)
 msgid ""
@@ -45,6 +48,14 @@ msgid ""
 "the <guimenuitem>File Save</guimenuitem> dialog, so that you can choose the "
 "data format, the path and the filename of the new image file."
 msgstr ""
+"<guimenuitem>保存(<accel>S</accel>)</guimenuitem> コマンドはいま開いている"
+"活性画像をディスクに保存します。 既に保存されていた画像ならば現在の状態の"
+"版がそれまでの版に上書きされます。 まだ保存していなかった画像ならば、"
+" <guimenuitem>保存(<accel>S</accel>)</guimenuitem> コマンドは <guimenuitem>"
+"名前を付けて保存(<accel>A</accel>)...</guimenuitem> コマンドと同じはたらき"
+"をします。 つまりこのコマンドを実行すると<acronym>GIMP</acronym>は<quote>"
+"画像の保存</quote>ダイアログを開きますので、 ここでデータの形式や保管場所と"
+"ファイル名を決めましょう。"
 
 #: src/menus/file/save.xml:42(para)
 msgid ""
@@ -54,6 +65,13 @@ msgid ""
 "\">Save As</link> or <link linkend=\"gimp-file-save-a-copy\">Save A Copy</"
 "link>."
 msgstr ""
+"画像が既に保存されていたときはこのコマンドは自動的にその画像を同じ場所、 "
+"同じファイル名、 同じファイル形式、 同じオプションを選んで保存します。"
+" そのどれかを変更して保存したいときは、 "
+"<link linkend=\"gimp-file-save-as\">名前を付けて保存(<accel>A</accel>)..."
+"</link> コマンドか"
+" <link linkend=\"gimp-file-save-a-copy\">コピーを保存(<accel>Y</accel>)..."
+"</link> コマンドを使いましょう。"
 
 #: src/menus/file/save.xml:49(para)
 msgid ""
@@ -62,10 +80,17 @@ msgid ""
 "images</quote> option is checked in the <link linkend=\"gimp-prefs-"
 "environment\">Environment</link> page of the Preferences dialog."
 msgstr ""
+"新たに作成した画像や変更が加わった画像を保存しないまま、 その画像"
+"ウィンドウを閉じるか<acronym>GIMP</acronym>を終了しようとしたときは、 "
+"<acronym>GIMP</acronym>はその実行前に確認を求めます。 ただしこれは "
+"<link linkend=\"gimp-prefs-environment\">環境設定</link> ダイアログの"
+"<quote>環境</quote>のページで "
+"<guilabel>未保存の画像を閉じるときに確認(<accel>V</accel>)</guilabel> が"
+"有効になっている場合に限ります。"
 
 #: src/menus/file/save.xml:58(phrase)
 msgid "Activate the Dialog"
-msgstr ""
+msgstr "コマンドの呼び出し方"
 
 #: src/menus/file/save.xml:62(para)
 msgid ""
@@ -73,12 +98,19 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Save</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>保存(<accel>S</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/save.xml:68(para)
 msgid ""
 "or from the keyboard by using the shortcut <keycombo><keycap>Ctrl</"
 "keycap><keycap>S</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -86,18 +118,19 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/file-save-basic.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/file-save-basic.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/file/save-as.xml:121(None)
 msgid "@@image: 'images/menus/file-save.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/file-save.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/file/save-as.xml:25(phrase)
 #: src/menus/file/save-as.xml:30(tertiary)
 #: src/menus/file/save-as.xml:33(primary) src/menus/file/save-as.xml:85(quote)
 msgid "Save as"
-msgstr ""
+msgstr "名前を付けて保存(<accel>A</accel>)..."
 
 #: src/menus/file/save-as.xml:36(para)
 msgid ""
@@ -110,6 +143,15 @@ msgid ""
 "different file type, but you should avoid doing this unless absolutely "
 "necessary, to avoid confusion."
 msgstr ""
+"<guimenuitem>名前を付けて保存(<accel>A</accel>)...</guimenuitem> コマンドは"
+"<quote>画像の保存</quote>ダイアログを開きます。 下図に示すとおり、 その"
+"基本的な形状はファイルに名前をつける語句記入欄とその保管場所を選ぶのに"
+"使えるブックマークの引き出しリストでできています。 通常ファイルの形式は"
+"ファイル名に付けた拡張子で判定 ( <filename class=\"extension\">.jpg"
+"</filename> を付ければ<acronym>JPEG</acronym>形式のファイルに) されます。"
+" <guilabel>ファイルタイプを選択(<accel>T</accel>)</guilabel> を使えばその"
+"ファイル形式の標準的な拡張子とは別の名前をつけられますが、 無用な混乱を"
+"避けるため絶対に必要な場合を除きこの方法はおすすめできません。"
 
 #: src/menus/file/save-as.xml:48(para)
 msgid ""
@@ -119,6 +161,12 @@ msgid ""
 "and using bookmarks, in the <link linkend=\"gimp-using-fileformats\">Files</"
 "link> section."
 msgstr ""
+"ブックマークに入れていないディレクトリに保存したいときは <guilabel>他の"
+"フォルダ(<accel>B</accel>)</guilabel> をクリックしてください。 すると"
+"ダイアログの畳まれていた部分が拡がります。 その中身とブックマークの"
+"作成法や利用法については"
+" <link linkend=\"gimp-using-fileformats\">ファイル</link> の節に説明が"
+"あります。"
 
 #: src/menus/file/save-as.xml:56(para)
 msgid ""
@@ -126,6 +174,10 @@ msgid ""
 "any of the options, you can use the <link linkend=\"gimp-file-save\">Save</"
 "link> command instead."
 msgstr ""
+"以前に保存したことのある画像を保存するときにファイル名とオプションを"
+"そのままで変更したくない場合は代わりに"
+" <link linkend=\"gimp-file-save\">保存(<accel>S</accel>)</link> コマンドが"
+"使えます。"
 
 #: src/menus/file/save-as.xml:63(phrase)
 #: src/menus/file/save-as-template.xml:49(phrase)
@@ -136,7 +188,7 @@ msgstr ""
 #: src/menus/file/open-location.xml:30(title)
 #: src/menus/file/open-as-layer.xml:35(title)
 msgid "Activate Command"
-msgstr ""
+msgstr "コマンドの呼び出し方"
 
 #: src/menus/file/save-as.xml:67(para)
 msgid ""
@@ -144,16 +196,25 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Save as</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>名前を付けて保存(<accel>A</accel>)...</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/save-as.xml:75(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Shift</"
 "keycap><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo>"
+"<keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>S</keycap>"
+"</keycombo>"
 
 #: src/menus/file/save-as.xml:84(phrase)
 msgid "The Basic <placeholder-1/> Dialog"
-msgstr ""
+msgstr "<quote>画像の保存</quote>ダイアログの基本形"
 
 #: src/menus/file/save-as.xml:87(para)
 msgid ""
@@ -165,22 +226,32 @@ msgid ""
 "choose the image format, by selecting the file extension (e.g., .xcf or ."
 "png)."
 msgstr ""
+"<quote>画像の保存</quote>ダイアログの形状は[主に]2つの種類があります。"
+" 簡単な方はファイル名の記入欄とその保管場所を選ぶ機能だけでできています。"
+" ファイルを保存したいディレクトリがブックマークメニューにないときは、"
+" 記入欄に直接そのパスとファイル名をつなげて指定しても構いません。 あるいは"
+" <guilabel>別のフォルダ(<accel>B</accel>)</guilabel> の小さな三角形を"
+"クリックすれば大きなフォルダブラウザが拡がったもうひとつの形状に切り"
+"替わります。 さらに <guilabel>ファイルタイプを選択(<accel>T</accel>)"
+"</guilabel> の小さな三角形をクリックすればファイルの拡張子 (<filename "
+"class=\"extention\">.xcf</filename> や <filename class=\"extention\">.png"
+"</filename>) を指定すれば画像形式を選択できます。"
 
 #: src/menus/file/save-as.xml:100(quote)
 msgid "File Save"
-msgstr ""
+msgstr "画像の保存"
 
 #: src/menus/file/save-as.xml:99(phrase)
 msgid "The basic <placeholder-1/> dialog"
-msgstr ""
+msgstr "<placeholder-1/>ダイアログの基本形"
 
 #: src/menus/file/save-as.xml:111(phrase)
 msgid "The <placeholder-1/> Dialog with a Browser"
-msgstr ""
+msgstr "ブラウザを開いた<placeholder-1/>ダイアログ"
 
 #: src/menus/file/save-as.xml:116(phrase)
 msgid "The <placeholder-1/> Dialog (Browser)"
-msgstr ""
+msgstr "<placeholder-1/>ダイアログ (ブラウザ)"
 
 #: src/menus/file/save-as.xml:127(para)
 msgid ""
@@ -194,6 +265,27 @@ msgid ""
 "button. You can delete a bookmark by selecting it and clicking on the "
 "<guibutton>Remove</guibutton> button."
 msgstr ""
+"左の <guilabel>場所(<accel>P</accel>)</guilabel> パネルは2つの部分に"
+"分けてとらえてください。 上側の部分は今のユーザの基本ディレクトリと"
+"ディスク装置 (ドライブ) が並んでいます。これらはここで加工でき"
+"ません。 下側の部分はブックマーク (しおり) です。 ブックマークは追加"
+"と削除ができます。 ブックマークを追加するには中央のパネル"
+" <guiicon>"
+"<inlinemediaobject>"
+"<imageobject>"
+"<imagedata fileref=\"images/callouts/2.png\"/>"
+"</imageobject>"
+"<textobject><phrase>(2)</phrase></textobject>"
+"</inlinemediaobject>"
+"</guiicon>"
+" でディレクトリかファイルを探し出してクリックしてから左下の "
+"<guibutton>追加(<accel>A</accel>)</guibutton> ボタンをクリックして"
+"ください。 あるいは中央のパネルで選んだ項目を <mousebutton>第2ボタン"
+"</mousebutton> でクリックして出てくる脈絡メニューの <guimenuitem>"
+"ブックマークに追加(<accel>A</accel>)</guimenuitem> コマンドでも追加"
+"できます。 ブックマークから削除するにはそのブックマーク項目を"
+"クリックしてから <guibutton>削除(<accel>R</accel>)</guibutton> ボタン"
+"をクリックしてください。"
 
 #: src/menus/file/save-as.xml:142(para)
 msgid ""
@@ -203,12 +295,32 @@ msgid ""
 "you have selected by clicking on the <guibutton>Save</guibutton> button. "
 "Note that a double left click saves the file directly."
 msgstr ""
+"中央のパネルには現在のディレクトリ内のファイルやフォルダが列挙されて"
+"います。 ここでフォルダの項目をダブルクリックすればそのディレクトリに"
+"移動できます。 ファイルの項目はクリックするとファイル名記入欄"
+" <guiicon>"
+"<inlinemediaobject>"
+"<imageobject>"
+"<imagedata fileref=\"images/callouts/4.png\"/>"
+"</imageobject>"
+"<textobject><phrase>(4)</phrase></textobject>"
+"</inlinemediaobject>"
+"</guiicon> "
+"にその名前が表示されます。 つぎに <guibutton>保存(<accel>S</accel>)"
+"</guibutton> ボタンをクリックすれば保存できますが、 その前に名前を"
+"変更すれば別の名前で保存できます。 ちなみにファイルの項目をダブル"
+"クリックすれば直ちに保存できます。"
 
 #: src/menus/file/save-as.xml:150(para)
 msgid ""
 "You can right click on the middle panel to access the <emphasis>Show Hidden "
 "Files</emphasis> command."
 msgstr ""
+"お使いのオペレーティングシステムによってはある種のファイルや"
+"ディレクトリが主に保安上の理由で表示されないようになっています。 中央"
+"のパネルを <mousebutton>第2ボタン</mousebutton> でクリックすると出て"
+"くる脈絡メニューの <guimenuitem>隠しファイルも表示(<accel>H</accel>)"
+"</guimenuitem> を有効にすればこれらも表示されます。"
 
 #: src/menus/file/save-as.xml:156(para)
 msgid ""
@@ -216,16 +328,21 @@ msgid ""
 "if it is an image created by <acronym>GIMP</acronym>. File size, resolution "
 "and the image's composition are displayed below the preview window."
 msgstr ""
+"選択された画像は<acronym>GIMP</acronym>で扱える形式ならば <guilabel>"
+"プレビュー(<accel>E</accel>)</guilabel> パネルに見本画像ならびに"
+"ファイルの大きさと解像度や画像の構造の情報が表示されます。"
 
 #: src/menus/file/save-as.xml:163(para)
 msgid ""
 "If your image has been modified by another program, click on the preview to "
 "update it."
 msgstr ""
+"画像が他のプログラムで変更を受けたときはこのパネル内をクリックすれば"
+"更新できます。"
 
 #: src/menus/file/save-as.xml:169(para)
 msgid "Enter the filename of the new image file here."
-msgstr ""
+msgstr "ここで新しい画像のファイル名を入力します。"
 
 #: src/menus/file/save-as.xml:171(para)
 msgid ""
@@ -233,6 +350,10 @@ msgid ""
 "same filename to you. If you click on <emphasis>Save</emphasis>, the file is "
 "overwritten."
 msgstr ""
+"既に保存されている画像の名前を使い、 新たに作成した画像や他の画像"
+"を保存しようとすると<acronym>GIMP</acronym>は同名のファイルが"
+"あることを示唆します。 さらに <guibutton>保存(<accel>S</accel>"
+"</guibutton> をクリックするとそのファイルに上書きします。"
 
 #: src/menus/file/save-as.xml:180(para)
 msgid ""
@@ -240,12 +361,18 @@ msgid ""
 "provides a list of bookmarks for selecting a directory in which to save your "
 "file."
 msgstr ""
+"この引き出しリストは先に述べた基本形のダイアログでのみ利用できます。 "
+"ちなみにこのリストにはブックマークの内容が並び、 ファイルの保管場所は"
+"それらのうちのひとつから選べるようになっています。"
 
 #: src/menus/file/save-as.xml:187(para)
 msgid ""
 "Above the middle panel, the path of the current directory is displayed. You "
 "can navigate along this path by clicking on one of the buttons."
 msgstr ""
+"ファイルブラウザ部分の左上から現在のディレクトリまでを示すボタンが"
+"並んでいます。 いずれのボタンもクリックすればそのディレクトリに移れ"
+"ます。"
 
 #: src/menus/file/save-as.xml:194(para)
 msgid ""
@@ -253,6 +380,9 @@ msgid ""
 "create it by clicking on <guilabel>Create Folder</guilabel> and following "
 "the instructions."
 msgstr ""
+"まだ存在しないフォダに画像を保存したい場合には"
+" <guibutton>フォルダの作成(<accel>L</accel>)</guibutton> ボタンを"
+"クリックして案内に従えば作成できます。"
 
 #: src/menus/file/save-as.xml:201(para)
 msgid ""
@@ -260,6 +390,19 @@ msgid ""
 "that all images will be displayed in the middle panel, whatever their file "
 "type. By developing this list, you can choose to show only one type of file."
 msgstr ""
+"このメニューは規定では <guimenuitem>すべての画像</guimenuitem> を"
+"選んでいます。 このときは中央のパネル"
+" <guiicon>"
+"<inlinemediaobject>"
+"<imageobject>"
+"<imagedata fileref=\"images/callouts/2.png\"/>"
+"</imageobject>"
+"<textobject><phrase>(2)</phrase></textobject>"
+"</inlinemediaobject>"
+"</guiicon> "
+"で現在のディレクトリ内の全てのフォルダと全ての画像ファイルの名前が"
+"表示されるようになっています。 このリストを展開して表示したい画像"
+"ファイル形式を選べば表示を限定できます。"
 
 #: src/menus/file/save-as.xml:209(para)
 msgid ""
@@ -268,6 +411,12 @@ msgid ""
 "file type is determined by the extension you add to the name, for example, "
 "<quote>.jpg</quote> for JPEG format."
 msgstr ""
+"<guilabel>ファイルタイプを選択(<accel>T</accel>)</guilabel> では"
+"ファイルを保存するときのファイル形式を指定するようになっています。 "
+"<guilabel>拡張子で判別</guilabel> を選ぶとファイル名の拡張子に従い"
+"ファイル形式が定まります。 例えば <filename class=\"extension\">.jpg"
+"</filename> をつけたファイルは<acronym>JPEG</acronym>形式で保存"
+"されます。"
 
 #: src/menus/file/save-as.xml:217(para)
 msgid ""
@@ -275,22 +424,26 @@ msgid ""
 "channels, etc. — use \".xcf\" format, which is the <acronym>GIMP</acronym>'s "
 "native format."
 msgstr ""
+"画像の全ての構成物&ndash;レイヤーやチャンネルなど&ndash;を余さず"
+"保存するためには<acronym>GIMP</acronym>由来のファイル形式つまり"
+" <filename class=\"extention\">.xcf</filename> をつけたファイル名を"
+"使いましょう。"
 
 #: src/menus/file/save-as-template.xml:20(phrase)
 #: src/menus/file/save-as-template.xml:28(primary)
 #: src/menus/file/save-as-template.xml:32(secondary)
 msgid "Save as Template"
-msgstr ""
+msgstr "テンプレートとして保存(<accel>T</accel>)..."
 
 #: src/menus/file/save-as-template.xml:25(tertiary)
 msgid "Save as template"
-msgstr ""
+msgstr "テンプレートとして保存"
 
 #: src/menus/file/save-as-template.xml:31(primary)
 #: src/menus/file/new.xml:81(primary) src/menus/file/new.xml:93(term)
 #: src/menus/file/new.xml:98(quote)
 msgid "Template"
-msgstr ""
+msgstr "テンプレート(<accel>T</accel>)"
 
 #: src/menus/file/save-as-template.xml:35(para)
 msgid ""
@@ -303,6 +456,16 @@ msgid ""
 "linkend=\"gimp-template-dialog\">Templates</link> dialog to modify or delete "
 "templates."
 msgstr ""
+"<guimenuitem>テンプレートとして保存(<accel>A</accel>)...</guimenuitem> "
+"コマンドは現在の画像の大きさと解像度と色空間を基にテンプレートを作成"
+"します。 ダイアログが出てきますので作成されるテンプレートに名前を付けて"
+"保存すれば "
+"<link linkend=\"gimp-file-new\">新しい画像を作成</link> ダイアログでこの"
+"テンプレートが利用できます。 ここで既にあるテンプレート名を指定すると、 "
+"重複を避けるため<acronym>GIMP</acronym>は自動的にその名前のあとに番号を付加"
+"します。 これらのテンプレートは"
+" <link linkend=\"gimp-template-dialog\">テンプレート</link> ダイアログで変更も"
+"削除もできます。"
 
 #: src/menus/file/save-as-template.xml:53(para)
 msgid ""
@@ -310,15 +473,19 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Save as Template</"
 "guimenuitem></menuchoice>. There is no default keyboard shortcut."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>テンプレートとして保存(<accel>T</accel>)...</guimenuitem></menuchoice>"
 
 #: src/menus/file/save-as-copy.xml:20(phrase)
 msgid "Save a Copy"
-msgstr ""
+msgstr "コピーを保存(<accel>Y</accel>)..."
 
 #: src/menus/file/save-as-copy.xml:25(tertiary)
 #: src/menus/file/save-as-copy.xml:28(primary)
 msgid "Save a copy"
-msgstr ""
+msgstr "コピーを保存"
 
 #: src/menus/file/save-as-copy.xml:31(para)
 msgid ""
@@ -330,6 +497,14 @@ msgid ""
 "exit from <acronym>GIMP</acronym>, you are informed that the image is "
 "<quote>dirty</quote> and given an opportunity to save it."
 msgstr ""
+"<guimenuitem>コピーを保存(<accel>Y</accel>)...</guimenuitem> コマンドの機能"
+"は <guimenuitem>保存(<accel>S</accel>)</guimenuitem> コマンドが行うことと"
+"大差ありませんが、 ひとつ重要な違いがあります。 このコマンドは必ずファイル"
+"名を尋ねてその名前で画像を保存しますし、 元の活性画像には何も変更を加えず"
+"<quote>手付かず</quote>に改めることもありません。 つまりそのあとに画像を"
+"消そうとしたり<acronym>GIMP</acronym>の終了を指令すると、 <acronym>GIMP"
+"</acronym>は元の画像がまだ<quote>手付き</quote>のままであることを伝え"
+"元の画像の保存を促します。"
 
 #: src/menus/file/save-as-copy.xml:41(para)
 msgid ""
@@ -337,6 +512,8 @@ msgid ""
 "current state, but continue to work with the original file without "
 "interruption."
 msgstr ""
+"このコマンドは画像のいまの状態を別名で保存するのに役立ちます。 元の画像には"
+"何の変更も起こさず作業を続行できます。"
 
 #: src/menus/file/save-as-copy.xml:52(para)
 msgid ""
@@ -344,18 +521,23 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Save a Copy</guimenuitem></"
 "menuchoice>. There is no default keyboard shortcut."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>コピーを保存(<accel>Y</accel>)...</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/revert.xml:20(phrase)
 msgid "Revert"
-msgstr ""
+msgstr "復帰(<accel>V</accel>)"
 
 #: src/menus/file/revert.xml:24(secondary)
 msgid "Reload the image"
-msgstr ""
+msgstr "画像を再読み込み"
 
 #: src/menus/file/revert.xml:27(primary)
 msgid "Revert (command)"
-msgstr ""
+msgstr "復帰コマンド"
 
 #: src/menus/file/revert.xml:30(para)
 msgid ""
@@ -364,6 +546,11 @@ msgid ""
 "is, you or some application other than <acronym>GIMP</acronym> have modified "
 "the image file, in which case, the new contents are loaded."
 msgstr ""
+"<guimenuitem>復帰(<accel>R</accel>)</guimenuitem> コマンドはディスクから"
+"画像を再読み込みしますので、 画像は直前に保存したときの状態に戻ります。 "
+"ただしディスク上の内容を利用しますので、 作業中に<acronym>GIMP</acronym>"
+"以外のアプリケーションでこの画像を加工したりご自身で何か変更をファイルに"
+"加えた場合は新たな内容が読み込まれます。"
 
 #: src/menus/file/revert.xml:38(para)
 msgid ""
@@ -373,6 +560,11 @@ msgid ""
 "<acronym>GIMP</acronym> tries to protect you from losing your work in this "
 "way by asking you to confirm that you really want to revert the image."
 msgstr ""
+"ファイルを復帰する際<acronym>GIMP</acronym>は現在開かれている画像を閉じて"
+"しまってから新たに画像を読み込もうとします。 このため画像の復帰は取り消し"
+"が効かないうえ操作履歴は破棄され白紙に戻されます。 <acronym>GIMP"
+"</acronym>は画像の復帰を行う前にこの操作で失われる作業内容を示し実行する"
+"かどうか確認を求めます。"
 
 #: src/menus/file/revert.xml:54(para)
 msgid ""
@@ -380,14 +572,19 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Revert</guimenuitem></"
 "menuchoice>. There is no default keyboard shortcut."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>復帰(<accel>R</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/quit.xml:19(phrase)
 msgid "Quit"
-msgstr ""
+msgstr "終了(<accel>Q</accel>)"
 
 #: src/menus/file/quit.xml:23(primary)
 msgid "Quit GIMP"
-msgstr ""
+msgstr "終了"
 
 #: src/menus/file/quit.xml:25(para)
 msgid ""
@@ -400,6 +597,13 @@ msgid ""
 "are using a large part of the RAM on your system, it may take a little while "
 "for everything to shut down."
 msgstr ""
+"<guimenuitem>終了(<accel>Q</accel>)</guimenuitem> コマンドは全ての画像を"
+"閉じて<acronym>GIMP</acronym>を終了させます。 もし保存の済んでいない画像"
+" (つまり<quote>手付かず</quote>の標識が付いていない画像) がまだ残っている"
+"場合は、 終了する前にそれらの画像のリストが示されます。 そこで保存したい"
+"画像を選べますが、 終了を取り止めるボタンもあります。 ちなみに開いている"
+"画像が多数あったりシステムの<acronym>RAM</acronym>の大部分を消費していた"
+"ときは、 全ての撤収が完了するまで少し時間がかかります。"
 
 #: src/menus/file/quit.xml:43(para)
 msgid ""
@@ -407,12 +611,19 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>終了(<accel>Q</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/quit.xml:49(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Ctrl</keycap><keycap>Q</"
 "keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>"
 
 #: src/menus/file/quit.xml:55(para)
 msgid ""
@@ -421,12 +632,19 @@ msgid ""
 "main image window's titlebar. The location and appearance of this button are "
 "determined by the windowing system and the window manager."
 msgstr ""
+"<acronym>GIMP</acronym>が稼動できるほとんどのシステムでは画像"
+"ウィンドウのタイトルバーのどこかに<quote>閉じる</quote>ボタンが"
+"あって、 それをクリックしても画像が閉じられます。 このボタンの位置や"
+"容姿はお使いウィンドウシステムとウィンドウマネージャにより"
+"異なります。"
 
 #: src/menus/file/quit.xml:63(para)
 msgid ""
 "The <quote>Close</quote> button in the upper right corner of the Toolbox has "
 "the same action."
 msgstr ""
+"ツールボックスウィンドウの<quote>閉じる</quote>ボタンをクリック"
+"しても同じく<acronym>GIMP</acronym>を終了できます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -434,18 +652,19 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/file-print-tab3.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/file-print-tab3.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/file/print.xml:12(title)
 msgid "Print"
-msgstr ""
+msgstr "印刷(<accel>P</accel>)"
 
 #: src/menus/file/print.xml:15(primary)
 msgid "Printing"
-msgstr ""
+msgstr "印刷"
 
 #: src/menus/file/print.xml:16(secondary)
 msgid "Print command"
-msgstr ""
+msgstr "印刷コマンド"
 
 #: src/menus/file/print.xml:18(para)
 msgid ""
@@ -453,16 +672,22 @@ msgid ""
 "module. You can set page and image up. A preview button allows you to verify "
 "the result before printing."
 msgstr ""
+"2.4.0 以降、 <acronym>GIMP</acronym>に独自の印刷モジュールが付くようになり"
+"ました。 ページと画像の設定ができます。"
+" <guibutton>印刷プレビュー(<accel>V</accel>)</guibutton> ボタンをクリック"
+"すれば印刷前に印刷物の仕上がりが確認できます。"
 
 #: src/menus/file/print.xml:24(title)
 msgid "The <quote>Print</quote> dialog"
-msgstr ""
+msgstr "<quote>印刷</quote>ダイアログ"
 
 #: src/menus/file/print.xml:32(para)
 msgid ""
 "See <link linkend=\"gimp-using-photography-printing\">Printing your photos</"
 "link>."
 msgstr ""
+"<link linkend=\"gimp-using-photography-printing\">写真を印刷</link> も"
+"ご覧ください。"
 
 #: src/menus/file/print.xml:40(para)
 msgid ""
@@ -471,10 +696,29 @@ msgid ""
 "menuchoice>, or by using <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></"
 "keycombo>."
 msgstr ""
+"<itemizedlist>"
+"<listitem>"
+"<para>"
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>印刷(<accel>P</accel>)</guimenuitem>"
+"</menuchoice>"
+"</para>"
+"</listitem>"
+"<listitem>"
+"<para>"
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
+"</para>"
+"</listitem>"
+"</itemizedlist>"
 
 #: src/menus/file/print.xml:52(title)
 msgid "Postscript and Ghostscript"
 msgstr ""
+"<productname>Postscript</productname> と "
+"<application>Ghostscript</application>"
 
 #: src/menus/file/print.xml:53(para)
 msgid ""
@@ -482,6 +726,10 @@ msgid ""
 "\">PostScript</link> for printing: it depends on a powerful free software "
 "program called Ghostscript."
 msgstr ""
+"<acronym>GIMP</acronym>の印刷処理は "
+"<link linkend=\"glossary-postscript\">PostScript</link> をサポートして"
+"いません。 代わりに <application>Ghostscript</application> という強力な"
+"フリーソフトウェアプログラムに依拠しています。"
 
 #: src/menus/file/print.xml:58(para)
 msgid ""
@@ -490,12 +738,20 @@ msgid ""
 "may have to install it yourself. Here are instructions for installing it on "
 "Windows:"
 msgstr ""
+"<productname>Linux</productname> のディストリビューション最新版はいずれも"
+"最初のセットアップで <application>Ghostscript</application> も組み込む"
+"ようになっていますので特にあとから導入する必要はありません。 その他の"
+"オペレーティングシステムは導入作業が必要なものが多いので、 とくに"
+" <productname>Windows</productname> の導入方法を説明しましょう。"
 
 #: src/menus/file/print.xml:66(para)
 msgid ""
 "Go to the Ghostscript project page on Sourceforge <xref linkend="
 "\"bibliography-online-ghostscript\"/>."
 msgstr ""
+"<citetitle>Sourceforge</citetitle> にある"
+" <application>Ghostscript</application> プロジェクトのページに行きます"
+" <xref linkend=\"bibliography-online-ghostscript\"/> 。"
 
 #. PENDING: replace <application> with <package> (DocBook 4.4)
 #: src/menus/file/print.xml:73(para)
@@ -504,18 +760,25 @@ msgid ""
 "<application>ghostscript</application> (for non-commercial use only) and go "
 "to the download section."
 msgstr ""
+"<application>gnu-gs</application> パッケージか <application>"
+"ghostscript</application> (非商用) パッケージのダウンロードページに"
+"進みます。"
 
 #: src/menus/file/print.xml:80(para)
 msgid ""
 "Download one of the prepared Windows distributions, such as "
 "<filename>gs650w32.exe</filename> or <filename>gs700w32.exe</filename>."
 msgstr ""
+"<productname>Windows</productname> 用のインストールパッケージを"
+"ダウンロードしてください。 例えば <filename>gs854w32.exe</filename>、"
+" <filename>gs864w32.exe</filename>、"
+" <filename>gs864w64.exe</filename> がダウンロードできます。"
 
 #: src/menus/file/print.xml:87(para)
 msgid ""
 "Start the executable and follow the instructions of the installation "
 "procedure."
-msgstr ""
+msgstr "実行ファイルを起動してインストーラの画面に従ってください。"
 
 #: src/menus/file/print.xml:93(para)
 msgid ""
@@ -523,6 +786,10 @@ msgid ""
 "the gswin32c binary (e.g. <filename>C:\\gs\\gsX.YY\\bin\\gswin32c.exe</"
 "filename>)."
 msgstr ""
+"<filename>gswin32c.exe</filename> の保管場所までの経路名 (パス) を"
+"環境変数 <envar>GS_PRG</envar> に代入してください。 例えば <filename>"
+"SET GS_PRG=C:\\gs\\gs<replaceable>X.YY</replaceable>\\bin\\gswin32c.exe"
+"</filename> とします。"
 
 #: src/menus/file/print.xml:100(para)
 msgid ""
@@ -532,6 +799,12 @@ msgid ""
 "which allow Ghostscript to find its libraries. (These instructions courtesy "
 "of http://www.kirchgessner.net.)"
 msgstr ""
+"以上で <productname>Postscript</productname> を<acronym>GIMP</acronym>で"
+"扱えるようになります。 インストールが終わったあとで <application>"
+"Ghostscript</application> のディレクトリを移動してはいけません。 一緒に"
+"インストールされたライブラリがレジストリに登録されているためです。 "
+"(ここで紹介した方法は <ulink url=\"http://www.kirchgessner.net/\">"
+"http://www.kirchgessner.net</ulink> を参考にしました。)"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -539,6 +812,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/file-open-dialog.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/file-open-dialog.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -546,6 +820,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/folder-context-menu.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/folder-context-menu.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/file/open.xml:26(phrase) src/menus/file/open.xml:31(secondary)
 #: src/menus/file/open.xml:34(primary)
@@ -553,11 +828,11 @@ msgstr ""
 #: src/menus/file/open-location.xml:16(secondary)
 #: src/menus/file/open-as-layer.xml:16(secondary)
 msgid "Open"
-msgstr ""
+msgstr "開く(<accel>O</accel>)..."
 
 #: src/menus/file/open.xml:32(tertiary)
 msgid "Open an image"
-msgstr ""
+msgstr "画像を1枚開く"
 
 #: src/menus/file/open.xml:36(para)
 msgid ""
@@ -566,10 +841,16 @@ msgid ""
 "alternative, and sometimes more convenient, ways of opening files, see the "
 "<link linkend=\"gimp-using-fileformats\">Files</link> section."
 msgstr ""
+"<guimenuitem>開く(<accel>O</accel>)...</guimenuitem> コマンドはファイル"
+"ブラウザダイアログを開きますので、 ハードディスクなどの記憶装置や外部"
+"メディアに収められた画像から目当てのものを探し出して選んでください。 "
+"このほかにも、 ときとしてもっと簡単なファイルを開く方法があります。"
+" <link linkend=\"gimp-using-fileformats-opening\">ファイルの開き方</link> の節"
+"以降をご覧ください。"
 
 #: src/menus/file/open.xml:46(phrase)
 msgid "Activate Dialog"
-msgstr ""
+msgstr "ダイアログの呼び出し方"
 
 #: src/menus/file/open.xml:51(para)
 msgid ""
@@ -577,26 +858,35 @@ msgid ""
 "window through: <menuchoice><guimenu>File</guimenu><guimenuitem>Open</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューから"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>開く(<accel>F</accel>)...</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/open.xml:61(para)
 msgid ""
 "You can also open the Dialog by using the keyboard shortcut "
 "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
 
 #: src/menus/file/open.xml:71(phrase)
 msgid "File browsing"
-msgstr ""
+msgstr "ファイル縦覧"
 
 #: src/menus/file/open.xml:77(phrase)
 msgid "Open Dialog"
-msgstr ""
+msgstr "画像を開くダイアログ"
 
 #: src/menus/file/open.xml:87(para)
 msgid ""
 "This browser looks like other browsers and it is mostly self-explanatory. It "
 "has some particuliar features nevertheless."
 msgstr ""
+"このブラウザはよくあるファイルブラウザですからほとんど言葉通りのはたらき"
+"をします。 それに加えてつぎのような特徴的な機能があります。"
 
 #: src/menus/file/open.xml:93(para)
 msgid ""
@@ -607,12 +897,30 @@ msgid ""
 "auto-completed and a list of file names beginning with these letters will be "
 "displayed."
 msgstr ""
+"<guiicon>"
+"<inlinemediaobject>"
+"<imageobject>"
+"<imagedata fileref=\"images/dialogs/stock-gtk-edit-16.png\"/>"
+"</imageobject>"
+"<textobject>"
+"<phrase>「ファイル名を入力」</phrase>"
+"</textobject>"
+"</inlinemediaobject>"
+"</guiicon> アイコンボタンをクリックすると開きたい画像ファイル名のパス"
+"を直接入力できる <guilabel>場所(<accel>L</accel>)</guilabel> 文字入力"
+"欄が現れる状態に切り替わります。 パスを記入しなければ選択したファイル"
+"の名前が表示されます。 ファイル名の最初の文字を書くと自動補完が起こり"
+"現在のディレクトリ内にあるファイル名のうちその文字から始まるものが"
+"全て列挙されます。"
 
 #: src/menus/file/open.xml:101(para)
 msgid ""
 "The <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> key "
 "combination has the same action as this button."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
+" も同じく入力欄の有無を切り替えます。"
 
 #. 2
 #: src/menus/file/open.xml:108(para)
@@ -620,6 +928,8 @@ msgid ""
 "The path to the current folder is displayed. You can navigate along this "
 "path by clicking on an element."
 msgstr ""
+"現在居るフォルダまでの経路名が表示されます。 経路名 (パス) の各層は"
+"ボタンになっていて、 クリックするとその位置まで移動できます。"
 
 #. 3
 #: src/menus/file/open.xml:115(para)
@@ -628,6 +938,10 @@ msgid ""
 "new folder in the current folder. For some strange reason, this button is "
 "not always present and you can't remove this new folder."
 msgstr ""
+"<guibutton>フォルダを作成</guibutton> ボタンをクリックすると現在居る"
+"フォルダ内に新たなフォルダを追加できます。 よくわからない理由でこの"
+"ボタンはいつもあるとは限らないばかりか作ったフォルダを削除する機能も"
+"ありません。"
 
 #. 4
 #: src/menus/file/open.xml:124(para)
@@ -635,15 +949,17 @@ msgid ""
 "<guilabel>Search</guilabel>: this new option is not very handy. You can't "
 "set where to search."
 msgstr ""
+"<guilabel>検索</guilabel>: この新しいオプションはあまり使い易くあり"
+"ません。 探す範囲が指定できないのです。"
 
 #: src/menus/file/open.xml:128(para)
 msgid "<guilabel>Recently used</guilabel>: no comment."
-msgstr ""
+msgstr "<guilabel>最近使ったファイル</guilabel>: 何も言うことはありません。"
 
 #. 5
 #: src/menus/file/open.xml:134(para)
 msgid "Here, you can access to your main folders and to your store devices."
-msgstr ""
+msgstr "ここから主なフォルダや記憶デバイスに跳べます。"
 
 #. 6
 #: src/menus/file/open.xml:141(para)
@@ -652,6 +968,14 @@ msgid ""
 "guibutton> or the <guilabel>Add to Bookmarks</guilabel> option you get by "
 "right-clicking a folder in the central pannel, and also remove them."
 msgstr ""
+"このブックマークにフォルダを追加するには、 中央パネルでフォルダを"
+"選んでから <guibutton>追加(<accel>A</accel>)</guibutton> ボタンを"
+"クリックするか、 そのフォルダを <mousebutton>第2ボタン</mousebutton> "
+"でクリックして出てきたメニューから <guimenuitem>"
+"ブックマークへ追加(<accel>A</accel>)</guimenuitem> を選びます。"
+" ブックマークで不要なフォルダはその項目をクリックして開いてから "
+"<guibutton>削除(<accel>R</accel>)</guibutton> をクリックすればリスト"
+"上から削除できます。"
 
 #. 7
 #: src/menus/file/open.xml:150(para)
@@ -662,14 +986,22 @@ msgid ""
 "clicking on the <guibutton>Open</guibutton> button. A double left click "
 "opens the file directly. Please note that you can open image files only."
 msgstr ""
+"選ばれたフォルダの内容がここに表示されます。 フォルダとファイルが並"
+"んでいますが、 フォルダの項目をダブルクリックするとそのフォルダに移動"
+"できます。 ファイルの項目はクリックで選択してから <guibutton>"
+"開く(<accel>O</accel>)</guibutton> ボタンをクリックするか、 その"
+"ファイル項目をダブルクリックすれば開けます。 ただし画像ファイルしか"
+"開けません。"
 
 #: src/menus/file/open.xml:159(para)
 msgid "Right-clicking a folder name opens a context menu:"
 msgstr ""
+"中央パネル内のフォルダ項目を <mousebutton>第2ボタン</mousebutton> で"
+"クリックすると下図のような脈絡メニューが現れます。"
 
 #: src/menus/file/open.xml:165(phrase)
 msgid "The folder context menu"
-msgstr ""
+msgstr "フォルダの脈絡メニュー"
 
 #. 8
 #: src/menus/file/open.xml:177(para)
@@ -678,12 +1010,19 @@ msgid ""
 "If it is an image created by <acronym>GIMP</acronym>, file size, resolution "
 "and image composition are displayed below the preview window."
 msgstr ""
+"中央パネルで選ばれたファイルが画像ならばその見本が <guilabel>"
+"プレビュー(<accel>P</accel>)</guilabel> パネルに表示されます。 画像が"
+" <acronym>GIMP</acronym>で作成されたものならファイルの大きさや解像度、"
+" 画像構成がプレビュー画像より下に表示されます。"
 
 #: src/menus/file/open.xml:185(para)
 msgid ""
 "If your image has been modified by another program, click on the "
 "<guilabel>Preview</guilabel> window to update it."
 msgstr ""
+"画像を他のプログラムで変更した場合は、 <guilabel>"
+"プレビュー(<accel>P</accel>)</guilabel> ウィンドウをクリックすれば"
+"見本画像を更新できます。"
 
 #. 9
 #: src/menus/file/open.xml:193(para)
@@ -691,12 +1030,17 @@ msgid ""
 "By clicking the <guibutton>Add</guibutton> button, you add the selected "
 "folder to bookmarks."
 msgstr ""
+"<guibutton>追加(<accel>A</accel>)</guibutton> ボタンをクリックすると"
+"中央パネルで選択されているフォルダをブックマークに追加できます。"
 
 #: src/menus/file/open.xml:197(para)
 msgid ""
 "By clicking the <guibutton>Remove</guibutton>, you remove the selected "
 "bookmark from the list."
 msgstr ""
+"ブックマークで不要なフォルダはそのフォルダを選択してから <guibutton>"
+"削除(<accel>R</accel>)</guibutton> ボタンをクリックすれば削除"
+"できます。"
 
 #. 10
 #: src/menus/file/open.xml:204(para)
@@ -705,6 +1049,12 @@ msgid ""
 "guilabel>. You can also select <guilabel>All files</guilabel>. You can also "
 "limit yourself to a particular type of image (GIF, JPG, PNG ...)."
 msgstr ""
+"通常は中央パネルに並ぶファイルを<acronym>GIMP</acronym>で扱える画像に"
+"限定できる <guimenuitem>すべての画像</guimenuitem> を選ばれていると"
+"思います。 このほか <guimenuitem>すべてのファイル</guimenuitem> も"
+"選べますし、 <acronym>GIF</acronym>画像や<acronym>JPEG</acronym>画像"
+"や<acronym>PNG</acronym>画像のような何らかのファイル形式に絞って表示"
+"させる方法もあります。"
 
 #. 11
 #: src/menus/file/open.xml:213(para)
@@ -716,15 +1066,21 @@ msgid ""
 "<acronym>GIMP</acronym> the file type. If this happens, you can set it by "
 "selecting it from the list."
 msgstr ""
+"<guilabel>ファイルタイプを選択(<accel>T</accel>)</guilabel>: "
+"<acronym>GIMP</acronym>はファイル形式を自動判別できますので、 ここは"
+"無視して構わない場合がほとんどです。 めったにないことですが、 "
+"ファイルの拡張子はおろかファイルに埋め込まれたマジック情報でさえも"
+"<acronym>GIMP</acronym>がファイル形式を判定するのに不十分な場合が"
+"あります。 そうなってしまうときにこのリストで指定できます。"
 
 #: src/menus/file/open-recent.xml:20(phrase)
 #: src/menus/file/open-recent.xml:28(primary)
 msgid "Open Recent"
-msgstr ""
+msgstr "最近開いた画像ドキュメント(<accel>R</accel>)"
 
 #: src/menus/file/open-recent.xml:25(tertiary)
 msgid "Open recent"
-msgstr ""
+msgstr "最近開いた画像ドキュメント"
 
 #: src/menus/file/open-recent.xml:31(para)
 msgid ""
@@ -734,6 +1090,13 @@ msgid ""
 "dialog\">Document History dialog</link> at the bottom of the Open Recent "
 "submenu, if you cannot find your image."
 msgstr ""
+"<guisubmenu>最近開いた画像ドキュメント(<accel>R</accel>)</guisubmenu> "
+"サブメニューには<acronym>GIMP</acronym>で開いた画像ファイル名の最も最近の"
+"記録がリストになっています。 いずれの名前もクリックすれば再び開けます。 "
+"このリストに見つからないときは、 このメニューの最後の"
+" <guimenuitem>画像ドキュメント履歴(<accel>Y</accel>)</guimenuitem> を選んで"
+" <link linkend=\"gimp-document-dialog\">最近開いた画像ドキュメントダイアログ"
+"</link> で探してください。"
 
 #: src/menus/file/open-recent.xml:44(para)
 msgid ""
@@ -741,6 +1104,11 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Open Recent</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guisubmenu>最近開いた画像ドキュメント(<accel>R</accel>)</guisubmenu>"
+"</menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -748,15 +1116,16 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/file/open-location.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/file/open-location.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/file/open-location.xml:12(title)
 #: src/menus/file/open-location.xml:20(primary)
 msgid "Open Location"
-msgstr ""
+msgstr "場所を開く(<accel>L</accel>)..."
 
 #: src/menus/file/open-location.xml:17(tertiary)
 msgid "Open location"
-msgstr ""
+msgstr "場所を開く"
 
 #: src/menus/file/open-location.xml:23(para)
 msgid ""
@@ -764,6 +1133,9 @@ msgid ""
 "from a network location, specified by a URI, in any of the formats that "
 "<acronym>GIMP</acronym> supports."
 msgstr ""
+"<guimenuitem>場所を開く(<accel>L</accel>)...</guimenuitem> コマンドが開く"
+"ダイアログでネットワーク上の位置が<acronym>URI</acronym>で指定でき、 "
+"<acronym>GIMP</acronym>がサポートするファイル形式の画像が開けます。"
 
 #: src/menus/file/open-location.xml:33(para)
 msgid ""
@@ -771,32 +1143,41 @@ msgid ""
 "through <menuchoice><guimenu>File</guimenu><guimenuitem>Open Location…</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューから"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>場所を開く(<accel>L</accel>)...</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/open-location.xml:46(title)
 msgid "Description of the dialog window"
-msgstr ""
+msgstr "ダイアログウィンドウのご説明"
 
 #: src/menus/file/open-location.xml:48(title)
 msgid "The <quote>Open Location</quote> dialog window"
-msgstr ""
+msgstr "<quote>場所を開く</quote>ダイアログウィンドウ"
 
 #: src/menus/file/open-location.xml:56(para)
 msgid "The most typical schemes to open images with are:"
-msgstr ""
+msgstr "画像を開く典型的な定式はつぎのとおりです。"
 
 #: src/menus/file/open-location.xml:59(term)
 msgid "file://"
-msgstr ""
+msgstr "file://"
 
 #: src/menus/file/open-location.xml:61(para)
 msgid "to open an image from a local drive"
 msgstr ""
+"お使いのコンピュータに保管されている画像を開くときはこの語句と"
+"ファイルのパス名をつなげて記入します。"
 
 #: src/menus/file/open-location.xml:62(para)
 msgid ""
 "You can omit the <quote>file://</quote> prefix and open images simply by "
 "putting an absolute or relative path and filename in here."
 msgstr ""
+"冒頭の<quote>file://</quote>は省略できます。 "
+"ファイルの経路名が絶対パスと相対パスのいずれでも画像が開けます。"
 
 #: src/menus/file/open-location.xml:67(para)
 msgid ""
@@ -806,22 +1187,30 @@ msgid ""
 "\\My Images\\ </filename> on Windows and <filename>/Users/&lt;username&gt;/</"
 "filename> on Mac OS X."
 msgstr ""
+"相対パス名の基点ディクトリはお使いのオペレーティングシステムに"
+"よって異なります。 主な例では、 Unix系ならば <filename>"
+"file:///home/&lt;ユーザ名&gt;/</filename> のような"
+"ホームディレクトリが、 <productname>Windows</productname> ならば"
+" <filename>C:\\Documents&nbsp;and&nbsp;Settings\\&lt;ユーザ名&gt;"
+"\\My&nbsp;Documents\\My&nbsp;Images\\</filename> が、 <productname>"
+"Mac OS X</productname> ならば <filename>/Users/&lt;ユーザ名&gt;/"
+" </filename> が典型的です。"
 
 #: src/menus/file/open-location.xml:80(term)
 msgid "ftp://"
-msgstr ""
+msgstr "ftp://"
 
 #: src/menus/file/open-location.xml:82(para)
 msgid "to open an image from a ftp server"
-msgstr ""
+msgstr "ftpサーバ上の画像ファイルを開くときはこの語句から記入します。"
 
 #: src/menus/file/open-location.xml:86(term)
 msgid "http://"
-msgstr ""
+msgstr "http://"
 
 #: src/menus/file/open-location.xml:88(para)
 msgid "to load an image from a website"
-msgstr ""
+msgstr "ウェブサイト上の画像ファイルを開くときはこの語句から記入します。"
 
 #: src/menus/file/open-location.xml:90(para)
 msgid ""
@@ -829,6 +1218,12 @@ msgid ""
 "choose <quote>Copy link address</quote> in the drop-down menu. Then paste it "
 "in the <quote>Open Location</quote> dialog to open it in GIMP."
 msgstr ""
+"インターネットのサイトを訪問したときに、 たいていのウェブブラウザ"
+"は画像を <mousebutton>第2ボタン</mousebutton> でクリックすると、"
+" ポップアップメニューが出てきて <guimenuitem>リンクの場所をコピー"
+"</guimenuitem> のようなコマンドでその位置を取り込めるはずです。 "
+"その<acronym>URL</acronym>を<acronym>GIMP</acronym>の<quote>"
+"場所を開く</quote>ダイアログに貼り付ければ画像が開きます。"
 
 #: src/menus/file/open-location.xml:96(para)
 msgid ""
@@ -836,30 +1231,34 @@ msgid ""
 "<emphasis> Please respect the copyright! Images, even if published on the "
 "Internet are not always free to be used for you. </emphasis>"
 msgstr ""
+"このようにインターネット上の画像も簡単にこのコマンドで取り込め"
+"ますが、 <emphasis>著作権を尊重しましょう。 インターネット上に"
+"公開されている画像でも全てがフリー素材だとは限りません。"
+"</emphasis>"
 
 #: src/menus/file/open-as-layer.xml:13(title)
 msgid "Open as Layers"
-msgstr ""
+msgstr "レイヤーとして開く(<accel>E</accel>)"
 
 #: src/menus/file/open-as-layer.xml:17(tertiary)
 msgid "As layers"
-msgstr ""
+msgstr "レイヤーとして開く"
 
 #: src/menus/file/open-as-layer.xml:20(primary)
 msgid "Layer"
-msgstr ""
+msgstr "レイヤー"
 
 #: src/menus/file/open-as-layer.xml:21(secondary)
 msgid "Stack managing"
-msgstr ""
+msgstr "重ね方"
 
 #: src/menus/file/open-as-layer.xml:22(tertiary)
 msgid "Open image as layers"
-msgstr ""
+msgstr "画像をレイヤーとして開く"
 
 #: src/menus/file/open-as-layer.xml:25(primary)
 msgid "Open as layers"
-msgstr ""
+msgstr "レイヤーとして開く"
 
 #: src/menus/file/open-as-layer.xml:28(para)
 msgid ""
@@ -867,6 +1266,11 @@ msgid ""
 "linkend=\"gimp-file-open\">Open Image</link> dialog. The layers of the "
 "selected file are added to the current image as the top layers in the stack."
 msgstr ""
+"<guimenuitem>レイヤーとして開く(<accel>E</accel>)</guimenuitem> コマンドが"
+"開くダイアログは"
+" <link linkend=\"gimp-file-open\">画像を開く</link> ダイアログと同一です。"
+" 開かれた画像の全てのレイヤーが、 現在の画像のレイヤーより上に重ね合わされ"
+"ます。"
 
 #: src/menus/file/open-as-layer.xml:38(para)
 msgid ""
@@ -874,12 +1278,21 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Open as layers</"
 "guimenuitem></menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>レイヤーとして開く(<accel>E</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/open-as-layer.xml:47(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Ctrl</"
 "keycap><keycap>Alt</keycap><keycap>O</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo>"
+"<keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>O</keycap>"
+"</keycombo>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -887,6 +1300,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/dialogs/dialogs-new-image.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/dialogs/dialogs-new-image.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -895,6 +1309,8 @@ msgid ""
 "@@image: 'images/dialogs/dialogs-new-image-templates.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/dialogs/dialogs-new-image-templates.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -903,6 +1319,8 @@ msgid ""
 "@@image: 'images/dialogs/dialogs-new-image-advanced.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/dialogs/dialogs-new-image-advanced.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -911,6 +1329,8 @@ msgid ""
 "@@image: 'images/dialogs/dialogs-new-image-colorspace.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/dialogs/dialogs-new-image-colorspace.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -919,18 +1339,20 @@ msgid ""
 "@@image: 'images/dialogs/dialogs-new-image-fill.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/dialogs/dialogs-new-image-fill.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #: src/menus/file/new.xml:24(phrase) src/menus/file/new.xml:31(primary)
 msgid "New"
-msgstr ""
+msgstr "新しい画像(<accel>N</accel>)..."
 
 #: src/menus/file/new.xml:28(secondary)
 msgid "New image"
-msgstr ""
+msgstr "新しい画像"
 
 #: src/menus/file/new.xml:34(primary) src/menus/file/new.xml:71(quote)
 msgid "New Image"
-msgstr ""
+msgstr "新しい画像"
 
 #: src/menus/file/new.xml:36(para)
 msgid ""
@@ -938,10 +1360,13 @@ msgid ""
 "empty image and set its properties. The image is shown in a new image "
 "window. You may have more than one image on your screen at the same time."
 msgstr ""
+"このコマンドで呼び出した<quote>新しい画像を作成</quote>ダイアログを使えば"
+"新しい空の画像が作成でき、 その属性も設定できます。 できた画像は新たな画像"
+"ウィンドウで表示されます。 画面にはひとつならず複数の画像が同時に開けます。"
 
 #: src/menus/file/new.xml:44(phrase)
 msgid "Activate the command"
-msgstr ""
+msgstr "このコマンドの呼び出し方"
 
 #: src/menus/file/new.xml:48(para)
 msgid ""
@@ -949,32 +1374,40 @@ msgid ""
 "menubar through: <menuchoice><guimenu>File</guimenu><guimenuitem>New</"
 "guimenuitem></menuchoice>,"
 msgstr ""
+"&lt;!-- either the Toolbox menubar or --&gt;"
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>新しい画像(<accel>N</accel>)...</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/new.xml:58(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Ctrl</keycap><keycap>N</"
 "keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>"
 
 #: src/menus/file/new.xml:67(phrase)
 msgid "Basic Options"
-msgstr ""
+msgstr "基本のオプション"
 
 #: src/menus/file/new.xml:71(phrase) src/menus/file/new.xml:97(phrase)
 msgid "The <placeholder-1/> dialog"
-msgstr ""
+msgstr "<placeholder-1/>ダイアログ"
 
 #: src/menus/file/new.xml:82(secondary)
 msgid "Menu"
-msgstr ""
+msgstr "メニュー"
 
 #: src/menus/file/new.xml:86(secondary) src/menus/file/new.xml:90(primary)
 msgid "Image size"
-msgstr ""
+msgstr "画像の大きさ"
 
 #: src/menus/file/new.xml:87(tertiary)
 msgid "When creating"
-msgstr ""
+msgstr "作成当初"
 
 #: src/menus/file/new.xml:107(para)
 msgid ""
@@ -985,10 +1418,16 @@ msgid ""
 "use often and it does not appear on the list, you can create a new template, "
 "using the <link linkend=\"gimp-template-dialog\">Templates</link> dialog."
 msgstr ""
+"全部の値を手で入力しなくても、 テンプレートメニューからどれか定型を"
+"選ぶ方法があります。 ここには広く通用する画像の形式がいくつか入って"
+"いて、 画像の大きさや解像度などの値やコメントの雛形が利用できます。 "
+"画像作成でいつも使う定型設定がこのリストにない場合は、"
+" <link linkend=\"gimp-template-dialog\">テンプレート</link> ダイアログ"
+"を使えば新たに追加できます。"
 
 #: src/menus/file/new.xml:119(term)
 msgid "Image Size"
-msgstr ""
+msgstr "画像サイズ (キャンバスサイズ)"
 
 #: src/menus/file/new.xml:121(para)
 msgid ""
@@ -999,6 +1438,14 @@ msgid ""
 "can change in the <guilabel>Advanced Options</guilabel>), and by setting "
 "<quote>Dot for Dot</quote> in the <guimenu>View</guimenu> menu."
 msgstr ""
+"新しい画像については、 ここで <guilabel> 幅(<accel>W</accel>)"
+"</guilabel> と <guilabel>高さ(<accel>E</accel>)</guilabel> が設定"
+"できます。 規定の単位はピクセルですが、 すぐ隣りのメニューで他の"
+"単位にも切り替えられます。 ちなみにこのとき換算される大きさは"
+"X と Y の解像度 (<guilabel>詳細設定(<accel>A</accel>)</guilabel> で"
+"調節できます) によっても <guimenu>表示(<accel>V</accel>)</guimenu>"
+"メニューで<quote>点に点を対応させる</quote>を有効にするかどうかに"
+"よっても違いが出ます。"
 
 #: src/menus/file/new.xml:132(para)
 msgid ""
@@ -1008,6 +1455,12 @@ msgid ""
 "(or has been), then it is opened in another window, with the same size as "
 "the first image."
 msgstr ""
+"何も画像が開かれていない状態では空画像ウィンドウで<quote>新しい"
+"</quote>画像が開かれます。 &lt;!-- with the default size you have"
+"determined in <!--<a href\"FIXME\" ></a>-->Edit/Preferences/Default"
+"Image. --&gt; 何か他の画像を開いているときに (あるいは開いたあとで)"
+" <quote>新しい</quote>画像を開くときは、 その画像の大きさに適した"
+"大きさの新たな画像ウィンドウで開かれます。"
 
 #: src/menus/file/new.xml:141(para)
 msgid ""
@@ -1015,14 +1468,18 @@ msgid ""
 "large files with a high pixel density, <acronym>GIMP</acronym> will need a "
 "lot of time and memory for every function you apply to the image."
 msgstr ""
+"画像のいずれの画素もメモリ上に読み込まれる事実をいつも頭に置いて"
+"おいてください。 高いビット深度で巨大な画像を作成すると、 "
+"<acronym>GIMP</acronym>でその画像に操作をするたびに莫大な時間と"
+"メモリを消費します。"
 
 #: src/menus/file/new.xml:152(term)
 msgid "Portrait/Landscape buttons"
-msgstr ""
+msgstr "縦長/横長ボタン"
 
 #: src/menus/file/new.xml:155(primary)
 msgid "Portrait/Landscape mode"
-msgstr ""
+msgstr "縦長/横長モード"
 
 #: src/menus/file/new.xml:157(para)
 msgid ""
@@ -1033,14 +1490,20 @@ msgid ""
 "then these values are also exchanged. On the right of the dialog, image "
 "size, screen resolution and color space are displayed."
 msgstr ""
+"縦長と横長を切り替える2つのボタンが並んでいます。 これらのボタンは"
+"実質的には幅と高さを交換します。 (幅と高さが同じ場合はこれらの"
+"ボタンは灰色無効になります。) X と Y の解像度が異なる (<quote>"
+"詳細設定</quote>でそのようにも設定できます) 場合は解像度も交換"
+"されます。 ダイアログではその右側に画像の大きさと容量、 解像度と"
+"色空間が表示されます。"
 
 #: src/menus/file/new.xml:172(phrase)
 msgid "Advanced Options"
-msgstr ""
+msgstr "詳細設定(<accel>A</accel>)"
 
 #: src/menus/file/new.xml:176(phrase)
 msgid "New Image dialog (Advanced Options)"
-msgstr ""
+msgstr "<quote>新しい画像</quote>ダイアログの詳細設定部分"
 
 #: src/menus/file/new.xml:184(para)
 msgid ""
@@ -1048,18 +1511,21 @@ msgid ""
 "advanced <acronym>GIMP</acronym> users. You can display these options by "
 "clicking on the small triangle on the lower edge of the dialog window."
 msgstr ""
+"<guilabel>詳細設定(<accel>A</accel>)</guilabel> はもっと高度な<acronym>"
+"GIMP</acronym>ユーザ向けの内容です。 これらのオプションはダイアログの下"
+"寄りにある小さな三角形をクリックすると表示されます。"
 
 #: src/menus/file/new.xml:193(secondary) src/menus/file/new.xml:197(primary)
 msgid "Resolution"
-msgstr ""
+msgstr "解像度"
 
 #: src/menus/file/new.xml:194(tertiary) src/menus/file/new.xml:198(secondary)
 msgid "Setting when creating"
-msgstr ""
+msgstr "作成当初"
 
 #: src/menus/file/new.xml:201(term)
 msgid "X and Y resolution"
-msgstr ""
+msgstr "水平解像度(<accel>X</accel>); 垂直解像度(<accel>Y</accel>)"
 
 #: src/menus/file/new.xml:203(para)
 msgid ""
@@ -1069,6 +1535,11 @@ msgid ""
 "when it is printed. The X and Y resolution values can determine how pixels "
 "are translated into other measurement units, such as millimeters or inches."
 msgstr ""
+"<guilabel>水平解像度(<accel>X</accel>)</guilabel> と <guilabel>"
+"垂直解像度(<accel>Y</accel>)</guilabel> の入力欄に入れた値は主と"
+"して印刷に関係します。 画像の画素数を変えるのではなく、 印刷した"
+"ときの実測的な大きさが変わります。 いずれの解像度も画素数から"
+"ミリメートルやインチなどの距離単位に換算する土台になります。"
 
 #: src/menus/file/new.xml:213(para)
 msgid ""
@@ -1081,19 +1552,34 @@ msgid ""
 "<acronym>GIMP</acronym>. You can do this in the <link linkend=\"gimp-prefs-"
 "display\">Preferences</link> dialog."
 msgstr ""
+"画像の表示をいまの解像度に応じた大きさにするには、 画像ウィンドウ"
+"のメニューで"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>点に点を対応させる(<accel>D</accel>)</guimenuitem>"
+"</menuchoice> "
+"を無効にします。 さらに表示倍率を100%に設定すれば画像が正当な"
+"大きさの画面で表示されるはずです。 画面の正当な大きさの測定は通常"
+"<acronym>GIMP</acronym>を導入した時点で行なわれますが、 画像が"
+"正しい大きさで表示されていない場合には<acronym>GIMP</acronym>で"
+"画面の変数を調節すべきかもしれません。 その手続は"
+" <link linkend=\"gimp-prefs-display\">環境設定</link> ダイアログの"
+"<quote>ディスプレイ</quote>のページで行なえます。"
 
 #: src/menus/file/new.xml:230(term)
 msgid "Colorspace"
-msgstr ""
+msgstr "色空間(<accel>S</accel>)"
 
 #: src/menus/file/new.xml:234(phrase)
 msgid "Colorspace menu"
-msgstr ""
+msgstr "色空間メニュー"
 
 #: src/menus/file/new.xml:242(para)
 msgid ""
 "You can create the new image as either an RGB image or a grayscale image."
 msgstr ""
+"新しい画像は<acronym>RGB</acronym>かグレースケールのいずれかの"
+"モードで作成できます。"
 
 #: src/menus/file/new.xml:246(para)
 msgid ""
@@ -1101,6 +1587,9 @@ msgid ""
 "color system, which is the one used by your monitor or your television "
 "screen."
 msgstr ""
+"<guimenuitem><acronym>RGB</acronym>カラー</guimenuitem>: "
+"お使いのコンピュータ画面やテレビ画面でも利用されている赤緑青の"
+"3原色系で画像を作成します。"
 
 #: src/menus/file/new.xml:250(para)
 msgid ""
@@ -1110,6 +1599,11 @@ msgid ""
 "<acronym>GIMP</acronym> allows you to change an RGB image into grayscale, if "
 "you would like."
 msgstr ""
+"<guimenuitem>グレースケール</guimenuitem>: 白黒や灰色陰影のモードで"
+"画像が作成されます。 趣味でこのような白黒画像にするだけのためにこの"
+"モードがあるのではなく、 いくつかのプラグインがこの画像形式を必要と"
+"しています。 とはいえ<acronym>GIMP</acronym>なら<acronym>RGB"
+"</acronym>画像をグレースケールに変換する手段もあります。"
 
 #: src/menus/file/new.xml:257(para)
 msgid ""
@@ -1118,14 +1612,24 @@ msgid ""
 "To do that, use the <menuchoice><guimenu>Image</guimenu><guisubmenu>Mode</"
 "guisubmenu><guimenuitem>Indexed</guimenuitem></menuchoice> command."
 msgstr ""
+"このメニューから直にインデックス化カラー画像を作ることはできません"
+"が、 もちろん画像を作成したらあとからいつでもその画像をインデックス"
+"化モードに変換できます。 画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>画像(<accel>I</accel>)</guimenu>"
+"<guisubmenu>モード(<accel>M</accel>)</guisubmenu>"
+"<guimenuitem>インデックス(<accel>I</accel>)...</guimenuitem>"
+"</menuchoice> "
+"と進むと開かれる<quote>インデックスカラー変換</quote>ダイアログで"
+"実行してください。"
 
 #: src/menus/file/new.xml:270(term)
 msgid "Fill"
-msgstr ""
+msgstr "塗りつぶし色(<accel>F</accel>)"
 
 #: src/menus/file/new.xml:274(phrase)
 msgid "Fill menu"
-msgstr ""
+msgstr "塗りつぶし色メニュー"
 
 #: src/menus/file/new.xml:282(para)
 msgid ""
@@ -1134,22 +1638,30 @@ msgid ""
 "can find more information about doing that in the <link linkend=\"gimp-layer-"
 "dialog\">Layer dialog</link>."
 msgstr ""
+"ここで新しい画像の背景色を定められます。 もちろん後からでも画像の"
+"背景色は変更できます。 その方法については"
+" <link linkend=\"gimp-layer-dialog\">レイヤーダイアログ</link> で述べ"
+"ています。"
 
 #: src/menus/file/new.xml:291(para)
 msgid ""
 "Fill the image with the current <guilabel>Foreground color</guilabel>, shown "
 "in the Toolbox."
 msgstr ""
+"ツールボックスに示されている現在の <guimenuitem>描画色"
+"</guimenuitem> で画像を塗りつぶします。"
 
 #: src/menus/file/new.xml:297(para)
 msgid ""
 "Fill the image with the current <guilabel>Background color</guilabel>, shown "
 "in the Toolbox."
 msgstr ""
+"ツールボックスに示されている現在の <guimenuitem>背景色"
+"</guimenuitem> で画像を塗りつぶします。"
 
 #: src/menus/file/new.xml:303(para)
 msgid "Fill the image with <guilabel>White</guilabel>."
-msgstr ""
+msgstr "画像を <guimenuitem>白</guimenuitem> で塗りつぶします。"
 
 #: src/menus/file/new.xml:308(para)
 msgid ""
@@ -1158,11 +1670,15 @@ msgid ""
 "transparent. The transparent parts of the image are then displayed with a "
 "checkered pattern, to indicate the transparency."
 msgstr ""
+"画像に何も色を塗らず <guimenuitem>透明</guimenuitem> にします。"
+" このオプションを選ぶと画像にアルファチャンネルが追加され、 背景"
+"レイヤーは透明になります。 画像ウィンドウでは透過している部分が"
+"わかるようにするため[初期設定では]市松模様が透けて見えます。"
 
 #: src/menus/file/new.xml:320(term) src/menus/file/new.xml:324(secondary)
 #: src/menus/file/new.xml:327(primary)
 msgid "Comment"
-msgstr ""
+msgstr "コメント(<accel>N</accel>)"
 
 #: src/menus/file/new.xml:329(para)
 msgid ""
@@ -1170,18 +1686,29 @@ msgid ""
 "as a <quote>parasite</quote>, and is saved with the image by some file "
 "formats (PNG, JPEG, GIF)."
 msgstr ""
+"説明的な付記がここで書き込めます。 この文章は画像に<quote>"
+"パラサイト</quote>として埋め込まれ、 [<acronym>XCF</acronym>は無論]"
+"<acronym>PNG</acronym>や<acronym>JPEG</acronym>や<acronym>GIF"
+"</acronym>といったファイル形式で保存する場合に画像内に保存"
+"されます。 [<acronym>PNG</acronym>や<acronym>GIF</acronym>など一部"
+"のファイル形式はマルチバイト文字に対応していません。 このような形式"
+"で日本語文字を含んだ文を保存すると何の警告もなくコメント全文が"
+"削除されます。]"
 
 #: src/menus/file/new.xml:335(para)
 msgid ""
 "You can view and edit this comment in the <link linkend=\"gimp-image-"
 "properties\">Image Properties</link> dialog."
 msgstr ""
+"このコメントは"
+" <link linkend=\"gimp-image-properties\">画像の情報</link> "
+"ダイアログで閲覧と編集が可能です。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/file/create.xml:24(None)
 msgid "@@image: 'images/menus/file/create.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/file/create.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1190,6 +1717,8 @@ msgid ""
 "@@image: 'images/menus/file/create/screenshot.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/file/create/screenshot.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1197,22 +1726,23 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/file/create/scanner.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/file/create/scanner.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/file/create.xml:10(title)
 msgid "Create"
-msgstr ""
+msgstr "画像の作成"
 
 #: src/menus/file/create.xml:14(secondary)
 msgid "Acquire an image"
-msgstr ""
+msgstr "取り込み"
 
 #: src/menus/file/create.xml:17(primary)
 msgid "Acquire"
-msgstr ""
+msgstr "画像の取り込み"
 
 #: src/menus/file/create.xml:21(title)
 msgid "The <quote>Create</quote> submenu"
-msgstr ""
+msgstr "<quote>画像の作成</quote>サブメニュー"
 
 #: src/menus/file/create.xml:29(para)
 msgid ""
@@ -1220,17 +1750,23 @@ msgid ""
 "<acronym>GIMP</acronym> previous versions in the Toolbox Menu and contains a "
 "lot of logos, buttons, patterns..."
 msgstr ""
+"このメニュー項目は以前の版の<acronym>GIMP</acronym>でツールボックスメニュー"
+"バーにあった <guimenu>Acq<accel>u</accel>ire</guimenu> メニューの代わりに"
+"作られました。 ツールボックスメニューは他にもロゴ作成やボタン画像作成、 "
+"パターン生成をするたくさんのメニューがありました。"
 
 #: src/menus/file/create.xml:34(para)
 msgid ""
 "These commands vary somewhat, depending upon your system, since the "
 "<acronym>GIMP</acronym> makes calls to system functions."
 msgstr ""
+"これらのコマンドはシステムの機能を呼び出しますので、 お使いのシステムに"
+"よっていくぶんふるまいが異なります。"
 
 #. id="gimp-file-create-activate"
 #: src/menus/file/create.xml:40(title)
 msgid "Activate the Submenu"
-msgstr ""
+msgstr "サブメニューへの入り方"
 
 #: src/menus/file/create.xml:43(para)
 msgid ""
@@ -1238,22 +1774,33 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Create</guimenuitem></"
 "menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>画像の生成</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/create.xml:55(title)
 msgid "From Clipboard"
-msgstr ""
+msgstr "クリップボードから(<accel>C</accel>)"
 
 #: src/menus/file/create.xml:56(para)
 msgid ""
 "When you copy a selection, it goes into the clipboard. Then you can create a "
 "new image with it."
 msgstr ""
+"選択範囲を"
+" <link linkend=\"gimp-edit-copy\">コピー</link> すると写し取られた選択範囲は"
+"クリップボードに入ります。 これを利用して新しい画像が作成できます。"
 
 #: src/menus/file/create.xml:60(para)
 msgid ""
 "This command has the same action as the <link linkend=\"gimp-edit-paste-as-"
 "new\">Paste as new</link> command."
 msgstr ""
+"このコマンドは <guimenu>編集(<accel>E</accel>)</guimenu> メニューの"
+" <link linkend=\"gimp-edit-paste-as-new\">クリップボードから生成</link> "
+"コマンドと同じはたらきをします。"
 
 #: src/menus/file/create.xml:64(para)
 msgid ""
@@ -1265,28 +1812,37 @@ msgid ""
 "active window in the screen with its decorations and puts it in the "
 "clipboard."
 msgstr ""
+"キーボードの <keycap>Print Screen</keycap> キーを押すと画面の表示が画像と"
+"なってクリップボードに取り込まれます。 この機能は次に述べる"
+" <link linkend=\"plug-in-screenshot\">スクリーンショット</link> ダイアログで"
+" <guilabel>画面全体(<accel>S</accel>)</guilabel> のスクリーンショットを"
+"撮る機能と同じです。 <keycombo><keycap>Alt</keycap><keycap>Print Screen"
+"</keycap></keycap> キーの組み合わせなら活性ウィンドウだけをその装飾枠も"
+"含んだ表示から画像を作成しクリップボードに取り込みます。"
 
 #: src/menus/file/create.xml:76(title) src/menus/file/create.xml:79(primary)
 msgid "Screenshot"
-msgstr ""
+msgstr "スクリーンショット(<accel>S</accel>)..."
 
 #: src/menus/file/create.xml:83(title)
 msgid "The <quote>Screenshot</quote> window"
-msgstr ""
+msgstr "<quote>スクリーンショット</quote>ウィンドウ"
 
 #: src/menus/file/create.xml:92(para)
 msgid ""
 "The <guimenuitem>Screenshot</guimenuitem> command opens a dialog with two "
 "parts:"
 msgstr ""
+"<guimenuitem>スクリーンショット(<accel>S</accel>)...</guimenuitem>"
+" コマンドはダイアログを開きます。 ダイアログは2つの部分に分かれています。"
 
 #: src/menus/file/create.xml:99(term)
 msgid "Area"
-msgstr ""
+msgstr "取り込む範囲"
 
 #: src/menus/file/create.xml:103(term)
 msgid "Take a screenshot of a single window"
-msgstr ""
+msgstr "単一ウィンドウ(<accel>W</accel>)"
 
 #: src/menus/file/create.xml:105(para)
 msgid ""
@@ -1295,16 +1851,25 @@ msgid ""
 "guilabel> option is unchecked, the title bar and the blue frame around the "
 "image will be removed."
 msgstr ""
+"マウスポインタが照準点の姿になったら、 撮影したいウィンドウを"
+"クリックしてください。 新しい画像が作成され画像ウィンドウで"
+"開かれます。 このとき <guilabel>"
+"ウィンドウのデコレーションも含める(<accel>D</accel>)"
+"</guilabel> オプションにチェックが入っていない場合はタイトル"
+"バーやウィンドウ枠が除かれます。 [上図がその例です。]"
 
 #: src/menus/file/create.xml:115(term)
 msgid "Take a screenshot of the entire screen"
-msgstr ""
+msgstr "画面全体(<accel>S</accel>)"
 
 #: src/menus/file/create.xml:117(para)
 msgid ""
 "This is useful if you want to capture a pop menu. A delay is then necessary, "
 "so that you have time to pull the pop menu down."
 msgstr ""
+"これは吹き出しメニューなどポップアップするウィンドウを撮り"
+"込むときに役立ちます。 メニューなどを引き出す余裕の時間として"
+"<quote>待ち時間</quote>が必要になるはずです。"
 
 #: src/menus/file/create.xml:122(para)
 msgid ""
@@ -1313,10 +1878,14 @@ msgid ""
 "pointer is captured in a separate layer. So you can move it to another place "
 "in the image."
 msgstr ""
+"<guilabel>マウスポインタを含める<!--<accel>M</accel>)-->"
+"</guilabel> オプションを有効にするとマウスポインタの姿も撮り"
+"込まれます。 マウスポインタだけはもう1層のレイヤーになります"
+"ので、 あとから画像内で位置を変更できます。"
 
 #: src/menus/file/create.xml:131(term)
 msgid "Select a region to grab"
-msgstr ""
+msgstr "指定した範囲(<accel>R</accel>)"
 
 #: src/menus/file/create.xml:133(para)
 msgid ""
@@ -1324,10 +1893,14 @@ msgid ""
 "selection in the image window. This selection will be opened as a new image. "
 "Its size is adapted to the selection size."
 msgstr ""
+"マウスポインタが照準点の姿になったら、 画面上で任意の位置から"
+"クリックして曳くと矩形枠ができます。 マウスボタンを放したとき"
+"の矩形内の画面が撮り込まれ、 新しい画像ウィンドウで開かれ"
+"ます。"
 
 #: src/menus/file/create.xml:146(term)
 msgid "Delay"
-msgstr ""
+msgstr "取り込むまでの待ち時間"
 
 #: src/menus/file/create.xml:148(para)
 msgid ""
@@ -1335,19 +1908,24 @@ msgid ""
 "this delay. In the other cases, the mouse pointer turns to a cross after "
 "this delay."
 msgstr ""
+"画面全体のスクリーンショットを撮る場合は待ち時間が経過すると自動的"
+"に撮り込まれます。 それ以外の範囲を選んだときは待ち時間が経過すると"
+"マウスポインタが照準点の姿に変わります。"
 
 #: src/menus/file/create.xml:160(title)
 msgid "Image capture devices"
-msgstr ""
+msgstr "撮影・取り込みデバイス"
 
 #. <anchor id="twain-acquire"/>
 #: src/menus/file/create.xml:162(para)
 msgid "This item is present only if you have installed image capture devices."
 msgstr ""
+"この項目はスキャナやカメラなど撮影して画像を作成するデバイスをシステムに"
+"導入されている場合にのみ出現します。"
 
 #: src/menus/file/create.xml:167(title)
 msgid "Scanner and Camera"
-msgstr ""
+msgstr "スキャナとカメラ"
 
 #: src/menus/file/create.xml:175(para)
 msgid ""
@@ -1355,22 +1933,27 @@ msgid ""
 "here. Fortunately, their use is fairly intuitive. In the example shown, you "
 "can start a scanner or take an image with a webcam."
 msgstr ""
+"撮影ができるデバイスの種類はここで説明しきれないほど豊富にあります。 "
+"幸いどれもかなり直観的に使えます。 上の例図ではスキャナかウェブカムが"
+"利用できることがわかります。"
 
 #: src/menus/file/create.xml:184(title)
 msgid "Buttons, Logos, Patterns, Web Page Themes"
 msgstr ""
+"ボタン(<accel>B</accel>); ロゴ(<accel>L</accel>); "
+"パターン(<accel>P</accel>); Web ページテーマ(<accel>W</accel>)"
 
 #: src/menus/file/create.xml:185(para)
 msgid "An impressive list of script-fus. Have a look at it!"
-msgstr ""
+msgstr "以下はScript-Fuのありがたいリストです。 ともかく何があるか見てください。"
 
 #: src/menus/file/close.xml:19(phrase) src/menus/file/close.xml:27(primary)
 msgid "Close"
-msgstr ""
+msgstr "閉じる(<accel>C</accel>)"
 
 #: src/menus/file/close.xml:24(secondary)
 msgid "Close image"
-msgstr ""
+msgstr "画像を閉じる"
 
 #: src/menus/file/close.xml:29(para)
 msgid ""
@@ -1379,6 +1962,10 @@ msgid ""
 "image is in the main window, the image is closed but the window remains, "
 "empty."
 msgstr ""
+"<guimenuitem>閉じる(<accel>C</accel>)</guimenuitem> コマンドは活性レイヤー"
+"を閉じます。 その画像のウィンドウが主ウィンドウでなければ画像ウィンドウも"
+"閉じます。 その画像ウィンドウが主ウィンドウ[最後の唯一の画像ウィンドウ?]で"
+"あれば画像は閉じられてもウィンドウは無画像ウィンドウとして残ります。"
 
 #: src/menus/file/close.xml:35(para)
 msgid ""
@@ -1392,10 +1979,20 @@ msgid ""
 "slightest possibility that you will regret it, it can't hurt to save a copy "
 "as an <link linkend=\"glossary-xcf\">XCF</link> file."
 msgstr ""
+"画像を閉じる操作は取り消しが効きません。 いったん閉じてしまえばその画像の"
+"全ては去り、 操作履歴も消えます。 仮に画像が<quote>手付かず</quote>でない"
+"&mdash; つまり保存が済んでいない操作がまだ残っている場合、 本当に閉じて"
+"しまうつもりなのかを<acronym>GIMP</acronym>はユーザに尋ねます。 ちなみに"
+"画像は保存されればたとえそれが画像の情報を余さず保存するには不十分な"
+"ファイル形式によるものであっても手付かずの標識が付きますので、 画像を閉じる"
+"前に一度はこの画像に加える操作について検討してみると良いでしょう。 万が一"
+"にも後で何か不足が発生しては遅いとお考えの方は、 その懸念がない"
+" <link linkend=\"glossary-xcf\">XCF</link> ファイル形式でコピーをとって置き"
+"ましょう。"
 
 #: src/menus/file/close.xml:49(phrase) src/menus/file/close-all.xml:31(phrase)
 msgid "Activate the Command"
-msgstr ""
+msgstr "コマンドの呼び出し方"
 
 #: src/menus/file/close.xml:53(para)
 msgid ""
@@ -1403,12 +2000,19 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Close</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</span>)</guimenu>"
+"<guimenuitem>閉じる(<accel>C</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/close.xml:62(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Ctrl</keycap><keycap>W</"
 "keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
 
 #: src/menus/file/close.xml:68(para)
 msgid ""
@@ -1417,6 +2021,11 @@ msgid ""
 "image window titlebar. The location and appearance of this button are "
 "determined by the windowing system and the window manager."
 msgstr ""
+"<acronym>GIMP</acronym>が稼動できるほとんどのシステムでは画像"
+"ウィンドウのタイトルバーのどこかに<quote>閉じる</quote>ボタンが"
+"あって、 それをクリックしても画像が閉じられます。 このボタンの位置や"
+"容姿はお使いのウィンドウシステムとウィンドウマネージャにより"
+"異なります。"
 
 #: src/menus/file/close.xml:76(para)
 msgid ""
@@ -1424,16 +2033,22 @@ msgid ""
 "simply closes your image. However, if you close the Toolbox window by using "
 "the <quote>Close</quote> button, <acronym>GIMP</acronym> itself exits."
 msgstr ""
+"画像ウィンドウの<quote>閉じる</quote>ボタンは画像を閉じますが、 "
+"ツールボックスウィンドウで同じ操作をすると<acronym>GIMP</acronym>"
+"が終了します。"
 
 #: src/menus/file/close-all.xml:21(phrase)
 msgid "Close all"
-msgstr ""
+msgstr "すべて閉じる"
 
 #: src/menus/file/close-all.xml:23(para)
 msgid ""
 "This command closes all images you have opened. The main window remaining "
 "empty is that corresponding to the last opened image."
 msgstr ""
+"<guimenuitem>すべて閉じる</guimenuitem> コマンドは現在開かれている画像を"
+"全て閉じます。 ひとつだけ残された無画像ウィンドウは最後に閉じられた画像の"
+"ウィンドウに一致します。"
 
 #: src/menus/file/close-all.xml:35(para)
 msgid ""
@@ -1441,14 +2056,26 @@ msgid ""
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Close All</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>ファイル(<accel>F</accel>)</guimenu>"
+"<guimenuitem>すべて閉じる</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/file/close-all.xml:41(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Shift</"
 "keycap><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo>"
+"<keycap>Shift</keycap>"
+"<keycap>Ctrl</keycap>"
+"<keycap>W</keycap>"
+"</keycombo>"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: src/menus/file/close-all.xml:0(None)
 msgid "translator-credits"
-msgstr ""
+msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
+

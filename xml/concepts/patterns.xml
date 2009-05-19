@@ -2,6 +2,7 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-05-13 ude: added PAT caution (bug #573828)
   2009-02-17 j.h: revised for v2.6
   2008-04-05 Mr.Dust : reviewed and added 'ko'
   2007-09-15 AntI: Added 'es'
@@ -17,6 +18,7 @@
 <sect1 id="gimp-concepts-patterns">
   <title lang="en">Patterns</title>
   <title lang="en">パターン</title>
+
   <indexterm lang="en">
     <primary>Patterns</primary>
     <secondary>Introduction</secondary>
@@ -189,20 +191,47 @@
       <term>PAT</term>
       <listitem>
         <para lang="en">
-          The <filename>.pat</filename> format is used only by GIMP, so
-          you will not find patterns in this format unless they were
-          created specifically for GIMP.  You can, however, convert any
-          image into a <filename>.pat</filename> file by opening it in
-          GIMP and then saving it using a file name ending in
-          <filename>.pat</filename>.
+          The <filename class="extension">.pat</filename> format is used for
+          patterns which were created specifically for GIMP. You can convert
+          any image into a <filename class="extension">.pat</filename> file by
+          opening it in GIMP and then saving it using a file name ending in
+          <filename class="extension">.pat</filename>.
         </para>
         <para lang="ja">
-          <filename>.pat</filename> 形式は<acronym>GIMP</acronym>でのみ使える
-          種類ですから、 <acronym>GIMP</acronym>専用で作成されたものでなければ
-          この形式のパターンファイルに出会うことはないでしょう。 でも何か他の
-          画像を<acronym>GIMP</acronym>で読み込んでから拡張子 <filename>.pat
-          </filename> をつけて保存すればこの形式への変換ができます。
+          <filename>.pat</filename> 形式は<acronym>GIMP</acronym>専用で作成
+          されるパターンのためのファイル形式です。 何か他の画像を<acronym>GIMP
+          </acronym>で読み込んでから拡張子 <filename>.pat</filename> をつけて
+          保存すればこの形式への変換ができます。
         </para>
+        <caution>
+          <!-- see bug #573828 -->
+          <para lang="en">
+            Do not confuse <acronym>GIMP</acronym>-generated
+            <filename class="extension">.pat</filename> files with files
+            created by other programs (e.g.
+            <application>Photoshop</application>) &ndash; after all,
+            <filename class="extension">.pat</filename> is just a part of an
+            (arbitrary) file name.
+          </para>
+          <para lang="en">
+            (However, <acronym>GIMP</acronym> <emphasis>does</emphasis>
+            support <application>Photoshop</application>
+            <filename class="extension">.pat</filename> files until a certain
+            version.)
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>が作成する <filename class="extensions">.pat
+            </filename> ファイルと <application>Photoshop</application> の
+            ような他のプログラムが作成する同名のファイルとを混同しないよう
+            ご注意ください。 (勝手につけた) ただの拡張子です。 紛らわしいですが
+            無関係です。
+          </para>
+          <para lang="ja">
+            (しかし最新を除くある版までの <application>Photoshop</application>
+            の <filename class="extention">.pat</filename> ファイルなら
+            <acronym>GIMP</acronym>にサポートがあります。)
+          </para>
+        </caution>
       </listitem>
     </varlistentry>
     <varlistentry>
@@ -210,9 +239,11 @@
       <listitem>
         <para lang="en">
           Since GIMP 2.2 is the ability to use
-          <filename>.png</filename>,  <filename>.jpg</filename>,
-          <filename>.bmp</filename>, <filename>.gif</filename>, or
-          <filename>.tiff</filename> files as patterns.
+          <filename class="extension">.png</filename>,
+          <filename class="extension">.jpg</filename>,
+          <filename class="extension">.bmp</filename>,
+          <filename class="extension">.gif</filename>, or
+          <filename class="extension">.tiff</filename> files as patterns.
         </para>
         <para lang="ja">
           <acronym>GIMP</acronym> 2.2 以降は
@@ -280,7 +311,7 @@
       </imageobject>
       <caption>
         <para lang="en">
-          Examples of patterns created using six of the Pattern script-fu's
+          Examples of patterns created using six of the Pattern Script-Fu's
           that come with GIMP. Default settings were used for everything
           except size. (From left to right: 3D Truchet; Camouflage; Flatland;
           Land; Render Map; Swirly)
@@ -304,7 +335,8 @@
     Each of the scripts creates a new image filled with a particular type of
     pattern: a dialog pops up that allows you to set parameters controlling
     the details of the appearance. Some of these patterns are most useful for
-    cutting and pasting; others serve best as bumpmaps.
+    cutting and pasting; others serve best as
+    <link linkend="glossary-bumpmapping">bumpmaps</link>.
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>にはパターンを作成するスクリプトが数点ついてくるのも

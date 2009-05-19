@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2009-05-14-->
+<!--2009-05-18-->
 <sect1 id="gimp-using-paths">
   <title>
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -54,7 +54,7 @@
   <para lang="ja">
     パスとは (ベジエ曲線で知られる) 曲線のことです。 <acronym>GIMP</acronym>
     ならその習得も使用も難しくありません。 この概念や機構については用語集の
-    <link linkend="glossary-bezier-curve">ベジエ曲線</link>の項や
+    <link linkend="glossary-bezier-curve">ベジエ曲線</link> の項や
     ウィキペディアの
     <ulink url="http://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A">
     ベジエ曲線</ulink>にも書かれています。 このツールは手の込んだ形象を創造する
@@ -65,7 +65,7 @@
     <acronym>GIMP</acronym>の用語法では、 <quote>パスの境界線を描画する</quote>
     とはパスに (色、 幅、 文様などの) 具体的な姿を与えることを意味します。
   </para>
-  <para lang="ja">パスは主に2つの目的で使用されています:</para>
+  <para lang="ja">パスは主に2つの目的で使用されています。</para>
   <itemizedlist>
     <listitem>
       <para lang="en">A closed path can be converted into a selection.</para>
@@ -128,7 +128,7 @@
           </menuchoice>,
         </para>
         <para lang="ja">
-          メニューから
+          画像ウィンドウのメニューから
           <menuchoice>
             <guimenu>ツール(<accel>T</accel>)</guimenu>
             <guimenuitem>パス(<accel>H</accel>)</guimenuitem>
@@ -294,8 +294,8 @@
       パスはすべて一緒に保存されます。
       <link linkend="gimp-path-dialog">パスダイアログ</link>を使えば画像に収め
       られたパスの一覧を見回して選びだし、 さらに手を加えることも可能です。
-      パスを画像から他の画像へと移動させるには、 パスダイアログの
-      ポップアップメニューで写し取りと貼り付けをするか、 パスダイアログから
+      パスを画像から他の画像へと移動させるには、 パスダイアログの脈絡メニューで
+      写し取りと貼り付けをするか、 パスダイアログから
       アイコンを相手の画像ウィンドウ上に曳いて放ってください。
     </para>
     <para lang="ja">
@@ -338,7 +338,7 @@
       そのものと比較すればなおさらです。 <acronym>RAM</acronym>上でのパスは
       各アンカーとハンドルの座標を記録する分だけしかメモリを要求しないので、
       とても込み入ったパスでもたった1キロバイト程度のメモリ容量で十分です。
-      片や画像ならば20&#xd7;20ピクセルの<acronym>RGB</acronym>レイヤーでさえ
+      片や画像ならば20&times;20ピクセルの<acronym>RGB</acronym>レイヤーでさえ
       このメモリ量では足りません。 こうしたことから、 コンピュータシステム
       に大したストレスも伴わずに優に数百にものぼるパスを画像上にのせられます。
       (無論この作業があなたにもたらすストレスの量は別問題です。)
@@ -349,7 +349,7 @@
 
   <sect2>
     <title lang="en">Paths and Selections</title>
-    <title lang="ja">パスと選択領域</title>
+    <title lang="ja">パスと選択範囲</title>
     <para lang="en">
       GIMP lets you transform the selection for an image into a path; it also
       lets you transform paths into selections. For information about the
@@ -370,16 +370,18 @@
     <para lang="ja">
       <acronym>GIMP</acronym>では画像上の選択をパスに変換できます。 また
       パスから選択へも変換できます。 選択についての情報とその働きについては、
-      <link linkend="gimp-concepts-selection">選択</link>の節をご覧ください。
+      <link linkend="gimp-concepts-selection">選択</link> の節をご覧ください。
     </para>
     <para lang="ja">
       選択をパスに変換すると、 パスは点滅破線 (<quote>蟻の行進</quote>) に
-      沿ってひかれます。 ところが選択は二次元の構造を持っているのにパスは
-      一次元のため、 選択からパスへの変換にはどうしても情報の欠損が生じます。
-      実際に選択をパスに変換すると不完全選択な部分 (ぼかし) の情報は全て
-      失われます。 パスを選択に変換しなおすと、 一切か無かの選択になりますが、
-      これは<menuchoice><guilabel>選択(<accel>S</accel>)</guilabel>
-      <guilabel>境界を明確化(<accel>S</accel>)</guilabel></menuchoice>
+      沿ってひかれます。 ところが選択は二次元の構造を持っているのにパスは一次元
+      のため、 選択からパスへの変換にはどうしても情報の欠損が生じます。 実際に
+      選択をパスに変換すると不完全選択な部分 (ぼかし) の情報は全て失われます。 
+      パスを選択に変換しなおすと、 一切か無かの選択になりますが、 これは
+      <menuchoice>
+        <guimenu>選択(<accel>S</accel>)</guimenu>
+        <guimenuitem>境界を明確化(<accel>S</accel>)</guimenuitem>
+      </menuchoice>
       したのと同等です。
     </para>
   </sect2>
@@ -471,15 +473,15 @@
     </para>
     <para lang="ja">
       パスはその <emphasis>境界線を描画</emphasis> しなければ画素 (ピクセル)
-      には何の表象もありません。 そのコマンドはメニューから
+      には何の表象もありません。 そのコマンドは画像ウィンドウのメニューから
       <menuchoice>
         <guimenu>編集(<accel>E</accel>)</guimenu>
         <guimenuitem>パスの境界線を描画(<accel>K</accel>)...</guimenuitem>
       </menuchoice>
-     と進むか、 もしくはパスダイアログの右クリックメニューの
+      と進むか、 もしくはパスダイアログの脈絡メニューの
       <guimenuitem>パスの境界線を描画(<accel>K</accel>)...</guimenuitem>
       を選ぶ方法と、 パスツールのツールオプションダイアログ上で
-      <guilabel>パスの境界線を描画</guilabel>ボタンを押す方法があります。
+      <guilabel>パスの境界線を描画</guilabel> ボタンを押す方法があります。
     </para>
     <para lang="ja">
       いずれの方法も<quote>パスの境界線を描画</quote>に進めばダイアログが現れ、
@@ -555,7 +557,7 @@
     <para lang="ja">
       テキストツールで作られたテキストは、 テキストツールのツールオプションの
       <guibutton>テキストからパスを生成</guibutton> ボタンを使ってパスに転換 
-      できます。 次のようなさまざまな用途に便利です:
+      できます。 次のようなさまざまな用途に便利です。
     </para>
     <itemizedlist>
       <listitem>
@@ -638,7 +640,7 @@
       <acronym>SVG</acronym>パスを意識して行なわれたためです。) 互換性がある
       ことから、 <acronym>GIMP</acronym>のパスの情報を何ら損失することなく
       <acronym>SVG</acronym>ファイルへ保存することが可能です。
-      パスダイアログの右クリックメニューからこの機能が使えます。
+      パスダイアログの脈絡メニューからこの機能が使えます。
     </para>
     <para lang="ja">
       <acronym>SVG</acronym>ファイルを保存できるプログラムには、 <application>
@@ -648,7 +650,7 @@
       ファイルからパスを読み込めます。 こういったプログラムには<acronym>GIMP
       </acronym>よりずっと強力なパス操作ツールが備わっていますから、 この連携は
       うれしいものです。 <acronym>SVG</acronym>ファイルからのパスのインポートは
-      パスダイアログの右クリックメニューにあります。
+      パスダイアログの脈絡メニューにあります。
     </para>
     <para lang="ja">
       <acronym>SVG</acronym>形式はパスにとどまらず様々な多くの画像要素を

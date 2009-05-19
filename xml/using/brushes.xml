@@ -6,7 +6,7 @@
   2008-04-04 Mr.Dust : reviewed and added 'ko'
   2006-12-19 lexa: minor enhancements
 -->
-<!--2009-05-14-->
+<!--2009-05-18-->
 <sect1 id="gimp-using-brushes">
   <title lang="en">Adding New Brushes</title>
   <title lang="ja">ブラシの追加</title>
@@ -34,7 +34,7 @@
     載せられるように、 <acronym>GIMP</acronym>のブラシ検索パスに置きます。
     <quote>ブラシの再読み込み</quote>ボタンを押せばブラシのあるディレクトリ群で
     再度指標化されます。
-    <acronym>GIMP</acronym>が利用するブラシ用のファイル形式はつぎの3つです:
+    <acronym>GIMP</acronym>が利用するブラシ用のファイル形式はつぎの3つです。
   </para>
 
   <variablelist id="brushes-file-formats">
@@ -74,19 +74,22 @@
           the GIMP source distribution.
         </para>
         <para lang="ja">
-          <filename>.gbr</filename>(&quot;<emphasis>g</emphasis>imp
-          <emphasis>br</emphasis>ush&quot;) 形式は通常のブラシと色ものブラシに
-          使われています。 他の形式の画像、 たとえば他のプログラム用のブラシ
-          等も、 <acronym>GIMP</acronym>で開いて <filename>.gbr</filename>
-          で終わる名前で保存すれば、 <acronym>GIMP</acronym>用のブラシに
-          変換できます。 保存時にダイアログボックスが現れ、 ここでブラシ間隔の
-          初期値を設定できます。 <acronym>GBR</acronym>ファイル形式の仕様の
+          <filename class="extention">.gbr</filename>(&quot;<emphasis>g
+          </emphasis>imp <emphasis>br</emphasis>ush&quot;) 形式は通常のブラシと
+          色ものブラシに使われています。 他の形式の画像、 たとえば他の
+          プログラム用のブラシ等も、 <acronym>GIMP</acronym>で開いて <filename 
+          class="extention">.gbr</filename> で終わる名前で保存すれば、 
+          <acronym>GIMP</acronym>用のブラシに変換できます。 保存時にダイアログ
+          ボックスが現れ、 ここでブラシ間隔の初期値を設定できます。 
+          <acronym>GBR</acronym>ファイル形式の仕様の
           完全な解説が、 <acronym>GIMP</acronym>配布のソース内の
           <filename>devel-docs/gbr.txt</filename>にあります。
         </para>
         <figure>
           <title lang="en">Save a .gbr brush</title>
-          <title lang="ja"><filename>.gbr</filename> 形式でブラシを保存</title>
+          <title lang="ja">
+            <filename class="extention">.gbr</filename> 形式でブラシを保存
+          </title>
           <mediaobject>
             <imageobject>
               <imagedata format="PNG"
@@ -126,13 +129,13 @@
           distribution.
         </para>
         <para lang="ja">
-          <filename>.gih</filename> (&quot;<emphasis>g</emphasis>imp
-          <emphasis>i</emphasis>mage <emphasis>h</emphasis>ose&quot;)
-          形式はアニメーションするブラシに使われています。 複数層のレイヤー
-          からなる画像をもとに作られるブラシです。 レイヤーはそれぞれに複数の
-          ブラシ形状を格子状に整列して置けます。 <filename>.gih</filename>
-          ファイル形式で保存するときは、 ダイアログが出ますのでブラシの性質と
-          名前を記入しましょう。 次節
+          <filename class="extention">.gih</filename> (&quot;<emphasis>g
+          </emphasis>imp <emphasis>i</emphasis>mage <emphasis>h</emphasis>ose
+          &quot;) 形式はアニメーションするブラシに使われています。 複数層の
+          レイヤーからなる画像をもとに作られるブラシです。 レイヤーはそれぞれに
+          複数のブラシ形状を格子状に整列して置けます。 <filename 
+          class="extention">.gih</filename> ファイル形式で保存するときは、 
+          ダイアログが出ますのでブラシの性質と名前を記入しましょう。 次節
           <link linkend="gimp-using-animated-brushes">GIHダイアログ</link>
           に詳しい説明があります。 <acronym>GIH</acronym>ファイル形式はいくぶん
           込み入っています。 詳しい仕様の説明が<acronym>GIMP</acronym>配布
@@ -162,8 +165,8 @@
           in this format.
         </para>
         <para lang="ja">
-          <filename>.vbr</filename> 形式は媒介変数つきブラシ、
-          つまりブラシエディタで作られたブラシに使われています。
+          <filename class="extention">.vbr</filename> 形式は媒介変数つき
+          ブラシ、 つまりブラシエディタで作られたブラシに使われています。
           それ以外の方法でこの形式のファイルを入手しようとしても無意味です。
         </para>
       </listitem>
@@ -184,11 +187,12 @@
   <para lang="ja">
     追加したブラシを有効にするには<acronym>GIMP</acronym>が検索できるブラシ保管
     パスのフォルダにそのブラシを置きます。 初期設定ではブラシ検索パスには
-    フォルダが2つ登録されています。 それぞれ、 システムパス下の
-    <filename>brushes</filename> フォルダ--ユーザは手を加えられません--と、
-    個人用<acronym>GIMP</acronym>フォルダ下の<filename>brushes</filename>
-    フォルダです。 新たに作ったブラシ保管パスは環境設定ダイアログの
-    <link linkend='gimp-prefs-folders-data'>ブラシフォルダ</link> のページ上で
+    フォルダが2つ登録されています。 それぞれ、 システムパス下の <filename 
+    class="directory"> brushes</filename> フォルダ&mdash;ユーザは手を加え
+    られません&mdash;と、 個人用<acronym>GIMP</acronym>フォルダ下の<filename>
+    brushes</filename> フォルダです。 新たに作ったブラシ保管パスは<quote>
+    環境設定</quote>ダイアログの
+    <link linkend="gimp-prefs-folders-data">ブラシフォルダ</link> のページ上で
     ブラシ検索パスに追加登録できます。 <acronym>GBR</acronym>形式、
     <acronym>GIH</acronym>形式、 <acronym>VBR</acronym>形式のいずれの
     ブラシファイルもブラシ検索パスに保管すれば、ブラシダイアログの
@@ -204,8 +208,8 @@
       <filename>brushes</filename> folder.
     </para>
     <para lang="ja">
-      ブラシエディタで作成した媒介変数つきブラシは、 作成後に自動的に
-      個人用 <filename>brushes</filename> フォルダに保存されます。
+      ブラシエディタで作成した媒介変数つきブラシは、 作成後に自動的に個人用 
+      <filename class="directory">brushes</filename> フォルダに保存されます。
     </para>
   </note>
   <para lang="en">
