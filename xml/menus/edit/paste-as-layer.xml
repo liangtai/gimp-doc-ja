@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-01-06 j.h : Created
 -->
+<!--2009-05-23-->
 <sect3 id="gimp-edit-paste-as-new-layer">
-  <!--<sect3info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2712 $</revnumber>
-        <date>2009-01-06</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Created for v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect3info>-->
-  <title>
-    <phrase>Paste as New Layer</phrase>
+  <title lang="ja">
+    クリップボードから生成(<accel>P</accel>)... → レイヤー(<accel>L</accel>)
   </title>
-  <indexterm>
+
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Paste</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Paste</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Paste as New Layer</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="クリップボードカラレイヤーヲセイセイ">
+      クリップボードからレイヤーを生成
+    </primary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Paste As New Layer</guimenuitem> command creates a new
     layer in the active image and pastes the image data from the Clipboard
     into it. If the data are not rectangular or square in shape, any regions
@@ -37,19 +43,34 @@
     Alpha channel is automatically created). Of course, you have to Copy your
     selection before you use this command.
   </para>
+  <para lang="ja">
+    <guimenuitem>レイヤー(<accel>L</accel>)</guimenuitem> コマンドは活性画像に
+    新たなレイヤーを作成してクリップボードにある画像データをそこに貼り付け
+    ます。 データの形状が矩形以外の場合はアルファチャンネルが自動的に付加され
+    貼り付けられた画像の縁がキャンバスに届かず残される領域は透明になります。
+    もちろんこのコマンドを実行する前に選択範囲の画像を取り込んでおかなければ
+    なりません。
+  </para>
   <sect4>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Edit</guimenu>
             <guisubmenu>Paste as</guisubmenu>
             <guimenuitem>New Layer</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guisubmenu>クリップボードから生成(<accel>P</accel>)</guisubmenu>
+            <guimenuitem>レイヤー(<accel>L</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

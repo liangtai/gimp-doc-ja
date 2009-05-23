@@ -1,58 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-10-09 j.h : no change needed for v2.4
   2007-05-14 Added Spanish translation by AntI
 -->
+<!--2009-05-23-->
 <sect2 id="gimp-edit-copy-visible">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2701 $</revnumber>
-        <date>2009-01-02</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Updated to v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Copy Visible</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Copy Visible</title>
+  <title lang="ja">可視部分をコピー(<accel>V</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Copy</secondary>
     <tertiary>Copy visible layers</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Copy Visible</primary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Copy Visible (Layers)</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary>コピー</secondary>
+    <tertiary>可視レイヤーをコピー</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カシブブンヲコピー">可視部分をコピー</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カシレイヤーヲコピー">可視レイヤーをコピー</primary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Copy Visible</guimenuitem> command is similar to the
     <link linkend="gimp-edit-copy">Copy</link> command.  However, it does
     not just copy the contents of the current layer; it copies the contents
     of the visible layers (or the selection of the visible layers), that
     is, the ones that are marked with an <quote>eye</quote>.
   </para>
+  <para lang="ja">
+    <guimenuitem>可視部分をコピー(<accel>V</accel>)</guimenuitem> コマンドは
+    <link linkend="gimp-edit-copy">コピー</link> コマンドとよく似ています。
+    ただし現在活性化しているレイヤーの成分だけを取り込むのではなく全ての可視
+    レイヤーの成分 (もしくは可視レイヤーの選択範囲内の成分) をひとつの合成成分
+    として取り込みます。 可視レイヤーはレイヤーダイアログ上で<quote>目</quote>
+    のしるしが付いています。
+  </para>
   <note>
-    <para>
+    <para lang="en">
       Please note that the information about the layers is lost when the
       image data is put in the clipboard. When you later paste the
       clipboard contents, there is only one layer, which is the fusion of
       all the marked layers.
     </para>
+    <para lang="ja">
+      クリップボードに取り込まれた画像は各レイヤーの情報を失います。 あとで
+      クリップボードの画像成分を貼り付けるとき、 既にその内容は元の画像の可視
+      レイヤーの成分を合成した1層だけのレイヤーになっています。
+    </para>
   </note>
+
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy Visible</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Copy Visible</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guimenuitem>可視部分をコピー(<accel>V</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

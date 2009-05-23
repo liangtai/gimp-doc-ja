@@ -4,19 +4,33 @@
 <!-- section history:
   2007-10-10 j.h : updated en;fr to v2.4
 -->
+<!--2009-05-23-->
 <sect3 id="gimp-edit-paste-as-new">
-  <title>Paste as New Image</title>
+  <title lang="en">Paste as New Image</title>
+  <title lang="ja">
+    クリップボードから生成(<accel>P</accel>)... → 画像(<accel>N</accel>)
+  </title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Paste as</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Paste</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="クリップボードカラセイセイ">
+      クリップボードから生成
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Paste As New Image</guimenuitem> command creates a new
     image and pastes the image data from the Clipboard into it. If the data is
     not rectangular or square in shape, any regions outside the selection are
@@ -24,7 +38,7 @@
     you have to copy your selection before you use this command, so that you
     get an image with the same dimensions as the selection.
   </para>
-  <para>
+  <para lang="en">
     This command has the same action as the
     <menuchoice>
       <guimenu>File</guimenu>
@@ -32,18 +46,44 @@
       <guimenuitem>From Clipboard</guimenuitem>
     </menuchoice> command.
   </para>
+  <para lang="ja">
+    <guimenuitem>画像(<accel>N</accel>)</guimenuitem> コマンドは新たに画像を
+    作成してクリップボードにある画像データをそこに貼り付けます。 データの形状が
+    矩形以外の場合はアルファチャンネルが自動的に付加されデータの選択範囲外の
+    領域が透明になります。 もちろん選択範囲のとおりの形に画像を取り込むためには
+    このコマンドを実行する前に選択範囲を作ってその画像をコピーしておかなくては
+    なりません。
+  </para>
+  <para lang="ja">
+    このコマンドは
+    <menuchoice>
+      <guimenu>ファイル(<accel>F</accel>)</guimenu>
+      <guisubmenu>画像の生成</guisubmenu>
+      <guimenuitem>クリップボードから(<accel>C</accel>)</guimenuitem>
+    </menuchoice> 
+    コマンドと同じ作用をします。
+  </para>
 
   <sect4>
-    <title>Activate the Command</title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Edit</guimenu>
             <guisubmenu>Paste as</guisubmenu>
             <guimenuitem>New Image</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guisubmenu>クリップボードから生成(<accel>P</accel>)</guisubmenu>
+            <guimenuitem>画像(<accel>N</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

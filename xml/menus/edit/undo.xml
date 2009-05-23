@@ -5,7 +5,7 @@
   2007-05-14 Added Spanish translation by AntI
   2005-05-31 en Addition
 -->
-<!--2009-05-18-->
+<!--2009-05-19-->
 <sect2 id="gimp-edit-undo">
   <title lang="en">Undo</title>
   <title lang="ja">&hellip; を元に戻す(<accel>U</accel>)</title>
@@ -39,11 +39,27 @@
     be irretrievably lost.
   </para>
   <para lang="ja">
+    画像に描画もしくは加工をしたがこのまま残したくないという場合、 
+    <guimenuitem>&hellip; を元に戻す(<accel>U</accel>)</guimenuitem> コマンド 
+    (&hellip; は直前に実行した操作の名前が入ります) で直前に実行した操作を
+    取り消して一手前の状態に画像を戻します。 画像に施せるほとんどの操作がこの
+    方法で取り消せます (ただしスクリプトはこの機能を封じてしまうので除きます)。
+    深く数手にわたる取り消しもできますが、 その回数は 
+    <link linkend="gimp-prefs-environment">環境設定</link> ダイアログの<quote>
+    環境</quote>ページで定めた手数までの制限があります。 <acronym>GIMP
+    </acronym>の非常に高度な<quote>取り消し</quote>機構については 
+    <link linkend="gimp-concepts-undo">取り消し</link> の節で詳しく述べて
+    います。
   </para>
   <para lang="ja">
+    <quote>取り消</quote>された操作はすぐには失われません。
+    <link linkend="gimp-edit-redo">やり直し</link> により再度実行できます。
+    ただし他の操作を行なうとそれまでの<quote>やり直</quote>せる可能性が永遠に
+    失われます。
   </para>
   <sect3>
     <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -54,6 +70,11 @@
           </menuchoice>,
         </para>
         <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guimenuitem>&hellip; を元に戻す(<accel>U</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
       <listitem>
@@ -62,6 +83,8 @@
           <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>,
         </para>
         <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
         </para>
       </listitem>
       <listitem>
@@ -70,6 +93,8 @@
           History dialog.
         </para>
         <para lang="ja">
+          <link linkend="gimp-undo-dialog">操作履歴ダイアログ</link> で任意の
+          時点の項目をクリック
         </para>
       </listitem>
     </itemizedlist>

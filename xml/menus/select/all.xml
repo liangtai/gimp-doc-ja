@@ -1,49 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-01-10 j.h: reviewed for v2.6
   2007-05-12 Added Spanih translation by AntI
   2006-01-23 fr reviewed by j.h
   2005/09/17 reviewed; de added by axel.wernicke
 -->
+<!--2009-05-23-->
 <sect2 id="gimp-selection-all">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2704 $</revnumber>
-        <date>2006-08-14</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Select All</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Select All</title>
+  <title lang="ja">すべて選択(<accel>A</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary> Select All</secondary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>選択</primary>
+    <secondary>すべて選択</secondary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Select All</guimenuitem> command creates a new
     selection which contains everything on the current layer.
   </para>
+  <para lang="ja">
+    <guimenuitem>すべて選択(<accel>A</accel>)</guimenuitem> コマンドは活性
+    レイヤーの全面を完全選択する選択範囲を作成します。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Select</guimenu><guimenuitem>All</guimenuitem></menuchoice>,
+          <menuchoice>
+            <guimenu>Select</guimenu>
+            <guimenuitem>All</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>選択(<accel>S</accel>)</guimenu>
+            <guimenuitem>すべて選択(<accel>A</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or by using the keyboard shortcut
           <keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
           You can also access it with the
           <link linkend="gimp-selection-dialog">Selection Editor</link>.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-selection-dialog">選択範囲エディタ</link> の脈絡
+          メニューの <guimenuitem>すべて選択(<accel>A</accel>)</guimenuitem> か
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata
+                  fileref="images/menus/stock-selection-all-16.png"/>
+              </imageobject>
+              <textobject>
+                <phrase>「キャンバスサイズの選択範囲を作成」</phrase>
+              </textobject>
+            </inlinemediaobject>
+          </guiicon> アイコンボタン
         </para>
       </listitem>
     </itemizedlist>
