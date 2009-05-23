@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-01-07 j.h: copy-pasted from menus/xtns-module-manager.xml
   2008-05-06 ude: changed (help-)id [was: gimp-xtns-module-manager]
   2008-03-13 ude: enhanced dialog description
   2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
+<!--2009-05-22-->
 <sect2 id="gimp-module-dialog">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2701 $</revnumber>
-        <date>2008-03-13</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>The Module Manager</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">The Module Manager</title>
+  <title lang="ja">モジュール(<accel>M</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Module Manager</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>Module Manager</primary>
+  </indexterm>
+
+  <para lang="en">
     With the <guimenuitem>Module Manager</guimenuitem> command, you can show
     the various extension modules which are available and control which
     of them should be loaded. Modules perform functions such as choosing
@@ -32,34 +29,33 @@
     <acronym>GIMP</acronym>'s functional capabilities, its size in
     memory and its start-up time.
   </para>
+  <para lang="ja">
+    <guimenuitem>モジュール(<accel>M</accel>)</guimenuitem>
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Edit</guimenu>
             <guimenuitem>Modules</guimenuitem>
           </menuchoice>
         </para>
+        <para lang="ja">
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>
-        Description of the <quote>Module Manager</quote> Dialog
-      </phrase>
+    <title lang="en">
+      Description of the <quote>Module Manager</quote> Dialog
     </title>
     <figure>
-      <title>
-        <phrase>
-          The <quote>Module Manager</quote> dialog window
-        </phrase>
-      </title>
+      <title lang="en">The <quote>Module Manager</quote> dialog window</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/module-manager.png" format="PNG"/>
@@ -67,23 +63,21 @@
       </mediaobject>
     </figure>
     <variablelist>
-      <title>
-        <phrase>Modules list</phrase>
-      </title>
-      <para>
+      <title lang="en">Modules list</title>
+      <para lang="en">
         The scrolled window of the Module Manager shows the loadable modules.
       </para>
+      <para lang="ja">
+      </para>
       <varlistentry>
-        <term>
-          <phrase>Autoload</phrase>
-        </term>
+        <term lang="en">Autoload</term>
         <listitem>
-          <para>
+          <para lang="en">
             Clicking on the boxes in this column will check or uncheck the
             modules. The next time you start <acronym>GIMP</acronym>, any
             checked module will be loaded automatically.
           </para>
-          <para>
+          <para lang="en">
             You will notice the difference only when you try to use the
             modules. For example, there are several
             <link linkend="gimp-color-dialog">color selectors</link> to select
@@ -91,84 +85,86 @@
             modules and will only be available when you check the respective
             option in the module manager:
           </para>
+          <para lang="ja">
+          </para>
+          <para lang="ja">
+          </para>
           <figure>
-            <title>
-              <phrase>
-                Autoload example: Color selector modules
-              </phrase>
-            </title>
+            <title lang="en">Autoload example: Color selector modules</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/menus/module-manager-ex1.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/menus/module-manager-ex1.png"/>
               </imageobject>
               <caption>
-                <para>Color selector modules loaded</para>
+                <para lang="en">Color selector modules loaded</para>
               </caption>
             </mediaobject>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/menus/module-manager-ex2.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/menus/module-manager-ex2.png"/>
               </imageobject>
               <caption>
-                <para>Color selector modules not loaded</para>
+                <para lang="en">Color selector modules not loaded</para>
               </caption>
             </mediaobject>
           </figure>
-          <para>
+          <para lang="en">
             For automatically loaded modules, information about the selected
             module is displayed at the bottom of the dialog.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Module path</phrase>
-        </term>
+        <term lang="en">Module path</term>
         <listitem>
-          <para>
+          <para lang="en">
             In this column, the directory path for each module is shown.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
     </variablelist>
     <variablelist>
-      <title>
-        <phrase>Buttons</phrase>
-      </title>
+      <term lang="en">Buttons</term>
       <varlistentry>
-        <term>
-          <phrase>Query</phrase>
-        </term>
+        <term lang="en">Query</term>
         <listitem>
-          <para>
+          <para lang="en">
             This button is only visible, when the respective module has not
             been auto-loaded. When you click on the button, information about
             the selected module is displayed at the bottom of the dialog, and
             the button changes to <guibutton>Load</guibutton>.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <phrase>Load; Unload</phrase>
-        </term>
-        <listitem>
-          <para>
-            Loading modules manually does not work properly. The buttons are
-            useless (<quote>Unload</quote> is even disabled) and will probably
-            removed in future versions.
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Refresh</phrase>
-        </term>
+        <term lang="en">Load; Unload</term>
         <listitem>
-          <para>
+          <para lang="en">
+            Loading modules manually does not work properly. The buttons are
+            useless (<quote>Unload</quote> is even disabled) and will probably
+            removed in future versions.
+          </para>
+          <para lang="ja">
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Refresh</term>
+        <listitem>
+          <para lang="en">
             When you click on this button, the list of modules will be
             updated: modules no longer on disk will be removed, and new
             modules found will be added.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>

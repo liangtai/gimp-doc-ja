@@ -1,89 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-11-10 ciampix: added italian translation
   2007-10-15 ude: German translation
   2007-10-10 j.h : created
 -->
+<!--2009-05-23-->
 <sect3 id="script-fu-paste-as-pattern">
-  <!--<sect3info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2712 $</revnumber>
-        <date>2009-01-02</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Updated to v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect3info>-->
-  <title>
-    <phrase>Paste as New Pattern</phrase>
+  <title lang="en">Paste as New Pattern</title>
+  <title lang="ja">
+    クリップボードから生成(<accel>P</accel>)... →
+    新しいパターン(<accel>P</accel>)...
   </title>
-  <indexterm>
+
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Paste</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Paste</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Paste as new pattern</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="クリップボードカラパターンヲセイセイ">
+      クリップボードからパターンを生成
+    </primary>
+  </indexterm>
+
+  <para lang="en">
     This command opens a dialog window which allows you to name your new
     pattern. The pattern appears in the
     <link linkend="gimp-pattern-dialog">Patterns dialog</link>.
   </para>
+  <para lang="ja">
+    <guimenuitem>新しいパターン(<accel>P</accel>)...</guimenuitem> コマンドは
+    ダイアログを開きますので新たに作成されるパターンにつける名前とファイル名を
+    設定してください。 作成されたパターンは 
+    <link linkend="gimp-pattern-dialog">パターンダイアログ</link> に現れます。
+  </para>
+
   <sect4>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase>The <quote>New Pattern</quote>dialog</phrase>
+      <title lang="en">The <quote>New Pattern</quote>dialog</title>
+      <title lang="ja">
+        <quote>Script-Fu: 新しいパターン</quote>ダイアログの主要部
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/menus/edit-paste-new-pattern.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/menus/edit-paste-new-pattern.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>
-          <phrase>Pattern name</phrase>
-        </term>
+        <term lang="en">Pattern name</term>
+        <term lang="ja">パターン名</term>
         <listitem>
-          <para>
+          <para lang="en">
             <guilabel>Pattern name</guilabel> is the name as it will be in the
             Pattern Dialog.
+          </para>
+          <para lang="ja">
+            <guilabel>パターン名</guilabel> はパターンダイアログ上での名前
+            です。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>File name</phrase>
-        </term>
+        <term lang="en">File name</term>
+        <term lang="ja">ファイル名</term>
         <listitem>
-          <para>
+          <para lang="en">
             The new pattern is saved as <guilabel>File name</guilabel> (with
             extension <filename class="extension">.pat</filename>) in your
             personal <filename class="directory">patterns</filename> folder.
+          </para>
+          <para lang="ja">
+            新しくできたパターンは <guilabel>ファイル名</guilabel> (と拡張子 
+            <filename class="extention">.pat</filename>) の名前で個人用
+            <acronym>GIMP</acronym>ディレクトリの <filename class="directory">
+            patterns</filename> フォルダに保存されます。
           </para>
         </listitem>
       </varlistentry>
     </variablelist>
   </sect4>
+
   <sect4>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Edit</guimenu><guisubmenu>Paste as </guisubmenu><guimenuitem>New Pattern</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guisubmenu>Paste as </guisubmenu>
+            <guimenuitem>New Pattern</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guisubmenu>クリップボードから生成(<accel>P</accel>)...</guisubmenu>
+            <guimenuitem>新しいパターン(<accel>P</accel>)...</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

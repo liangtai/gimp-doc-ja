@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-11-22 AntI Updated es to 2.4
   2007-10-09 j.h rearranged en;fr options according to ude's suggestion
@@ -7,29 +8,26 @@
   2007-08-13 j.h Updated en;fr to v2.4. Copy Visible added
   2007-05-16 Added Spanish translation by AntI
 -->
+<!--2009-05-21-->
 <sect2 id="gimp-edit-buffer-dialog">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2701 $</revnumber>
-        <date>2009-01-07</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Updated to v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Buffers</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Buffers</title>
+  <title lang="ja">バッファ操作(<accel>B</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Buffers</primary>
     <secondary>Named Buffers: Cut/Copy/Paste</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>バッファ</primary>
+    <secondary>名前付きの切り取り/写し取り/貼り付け</secondary>
+  </indexterm>
+
   <figure>
-    <title>
-      <phrase>
-        The <quote>Buffer</quote> submenu of the <quote>Edit</quote>
-        menu</phrase>
+    <title lang="en">
+      The <quote>Buffer</quote> submenu of the <quote>Edit</quote> menu
+    </title>
+    <title lang="ja">
+      <quote>編集</quote>メニューの<quote>バッファ操作</quote>サブメニュー
     </title>
     <mediaobject>
       <imageobject>
@@ -37,81 +35,113 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     The commands in this submenu operate on
     <emphasis>named buffers</emphasis>. You can use the
     <link linkend="gimp-buffer-dialog">Buffers dialog</link>
     to view and manage any named buffers you have created.
   </para>
+  <para lang="ja">
+    このサブメニューの各コマンドは <emphasis>名前付きバッファ</emphasis> を
+    操作します。 名前付きバッファは複数作成できるので、 それらの管理と閲覧には
+    <link linkend="gimp-buffer-dialog">バッファダイアログ</link> をご利用
+    ください。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activate the Submenu</phrase>
-    </title>
+    <title lang="en">Activate the Submenu</title>
+    <title lang="ja">サブメニューへの入り方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this submenu from the image menubar through
           <menuchoice>
             <guimenu>Edit</guimenu>
             <guimenuitem>Buffer</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guisubmenu>バッファ操作(<accel>B</accel>)</guisubmenu>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Sub-menu entries</phrase>
-    </title>
+    <title lang="en">Sub-menu entries</title>
+    <title lang="ja">サブメニューの項目</title>
     <variablelist>
       <varlistentry>
-        <term>
-          <phrase>Cut Named</phrase>
-        </term>
+        <term lang="en">Cut Named</term>
+        <term lang="ja">名前付きで切り取り(<accel>T</accel>)...</term>
         <listitem>
-          <para>
+          <para lang="en">
             The <guimenuitem>Cut Named</guimenuitem> command cuts the
             content of the selection from the active layer in the usual way,
             but instead of storing the contents in the global clipboard, it
             stores it in a special buffer that you name using a pop-up
             dialog.
           </para>
+          <para lang="ja">
+            <guimenuitem>名前付きで切り取り(<accel>T</accel>)...</guimenuitem> 
+            コマンドも活性レイヤーから選択範囲の画像を切り取るところは同じ
+            ですが、 切り取られた画像成分は汎用クリップボードに置かずに特別な
+            バッファに収めるところが異なります。 このときダイアログが出て
+            きますので、 そこで名前を与えてください。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Copy Named</phrase>
-        </term>
+        <term lang="en">Copy Named</term>
+        <term lang="ja">名前付きでコピー(<accel>C</accel>)...</term>
         <listitem>
-          <para>
+          <para lang="en">
             The <guimenuitem>Copy Named</guimenuitem> command copies the
             contents of the selection from the active layer in the usual way,
             but instead of storing the content in the global clipboard, it
             stores it in a special buffer that you name using a pop-up
             dialog.
           </para>
+          <para lang="ja">
+            <guimenuitem>名前付きでコピー(<accel>C</accel>)...</guimenuitem> 
+            コマンドも活性レイヤーから選択範囲の画像を写し取るところは同じ
+            ですが、 写し取られた画像成分は汎用クリップボードに置かずに特別な
+            バッファに収めるところが異なります。 このときダイアログが出て
+            きますので、 そこで名前を与えてください。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Copy Visible Named</phrase>
+        <term lang="en">Copy Visible Named</term>
+        <term lang="ja">
+          レイヤー結合部分を名前付きでコピー(<accel>V</accel>)...
         </term>
         <listitem>
-          <para>
+          <para lang="en">
             The <guimenuitem>Copy Visible Named</guimenuitem> command copies
             the content of the selection from all the visible layers in the
             usual way, but instead of storing the content in the global
             clipboard, it stores it in a special buffer that you name using a
             pop-up dialog.
           </para>
+          <para lang="ja">
+            <guimenuitem>レイヤー結合部分を名前付きでコピー(<accel>V</accel>)...
+            </guimenuitem> コマンドも全ての可視レイヤーから選択範囲の画像を写し
+            取るところは同じですが、 写し取られた画像成分は汎用クリップボードに
+            置かずに特別なバッファに収めるところが異なります。 このとき
+            ダイアログが出てきますので、 そこで名前を与えてください。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Paste Named</phrase>
-        </term>
+        <term lang="en">Paste Named</term>
+        <term lang="ja">名前を選んで貼り付け(<accel>P</accel>)...</term>
         <listitem>
-          <para>
+          <para lang="en">
             The <guimenuitem>Paste Named</guimenuitem>
             command simply brings up the
             <link linkend="gimp-buffer-dialog">Buffers dialog</link>.
@@ -121,6 +151,20 @@
             <link linkend="gimp-buffer-paste-into">Paste Buffer Into</link>,
             or <link linkend="gimp-buffer-paste-as-new">Paste Buffer as
               New</link>.
+          </para>
+          <para lang="ja">
+            <guimenuitem>名前を選んで貼り付け(<accel>P</accel>)...
+            </guimenuitem> コマンドは単に 
+            <link linkend="gimp-buffer-dialog">バッファダイアログ</link> を
+            開きます。 このダイアログでバッファの一覧表からひとつをクリックして
+            選び、 ダイアログ底部に並ぶ
+            <link linkend="gimp-buffer-paste">選択したバッファを貼り付け
+            </link>、
+            <link linkend="gimp-buffer-paste-into">
+            選択したバッファを選択範囲内に貼り付け</link>、
+            <link linkend="gimp-buffer-paste-as-new">
+            選択したバッファで画像を生成</link> のいずれかのボタンをクリック
+            してください。
           </para>
         </listitem>
       </varlistentry>

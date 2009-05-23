@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-01-10 j.h: reviewed for v2.6
   2008-01-02 Added access through Selection Editor
@@ -8,60 +9,95 @@
   2006-01-28 en;fr reviewed by j.h
   2005/09/14 de created by axel.wernicke
 -->
+<!--2009-05-23-->
 <sect2 id="gimp-selection-invert">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2704 $</revnumber>
-        <date>2008-01-02</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark>Reviewed for v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Invert</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Invert</title>
+  <title lang="ja">選択範囲を反転(<accel>I</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Invert selection</secondary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="センタクヲハンテン">選択を反転</secondary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Invert</guimenuitem> command inverts the selection
     in the current layer. That means that all of the layer contents which
     were previously outside of the selection are now inside it, and vice
     versa. If there was no selection before, the command selects the
     entire layer.
   </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲を反転(<accel>I</accel>)</guimenuitem> コマンドは現在
+    活性化しているレイヤーの選択を反転します。 反転とは、 それまで選択範囲外に
+    あった画像成分が選択範囲に入り、 逆に範囲内の成分が範囲外になることです。 
+    全く選択範囲がないときにこのコマンドを実行するとレイヤー全体が選択される
+    ことになります。
+  </para>
   <warning>
-    <para>
+    <para lang="en">
       Do not confuse this command with the
       <link linkend="gimp-layer-invert">Invert colors</link> command.
     </para>
+    <para lang="ja">
+      このコマンドと
+      <link linkend="gimp-layer-invert">階調を反転</link> コマンドを混同しない
+      ように注意しましょう。
+    </para>
   </warning>
+
   <sect3>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Select</guimenu>
             <guimenuitem>Invert</guimenuitem>
           </menuchoice>.
         </para>
-      </listitem>
-      <listitem>
-        <para>
-          You can also use the keyboard shortcut
-          <keycombo><keycap>Ctrl</keycap><keycap>I</keycap></keycombo>,
+        <para lang="ja">
+          画像ウィンドウのメニューから
+          <menuchoice>
+            <guimenu>選択(<accel>S</accel>)</guimenu>
+            <guimenuitem>選択範囲を反転(<accel>I</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
       <listitem>
-        <para>
-          or click on the corresponding icon in the <link linkend="gimp-selection-dialog">Selection Editor</link>
+        <para lang="en">
+          You can also use the keyboard shortcut
+          <keycombo><keycap>Ctrl</keycap><keycap>I</keycap></keycombo>,
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>I</keycap></keycombo>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or click on the corresponding icon in the
+          <link linkend="gimp-selection-dialog">Selection Editor</link>
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-selection-dialog">選択範囲エディタ</link> の脈絡
+          メニューの <guimenuitem>選択範囲を反転(<accel>I</accel>)
+          </guimenuitem> か
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/menus/stock-invert-16.png"/>
+              </imageobject>
+              <textobject>
+                <phrase>「選択範囲を反転」</phrase>
+              </textobject>
+            </inlinemediaobject>
+          </guiicon> アイコンボタン
         </para>
       </listitem>
     </itemizedlist>

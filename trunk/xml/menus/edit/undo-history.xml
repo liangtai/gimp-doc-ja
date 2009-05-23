@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- Section history
   2007-05-14 Added Spanish translation by AntI
   2006-07-29 lexa: patch from julien that includes suggestions by Sally
 -->
+<!--2009-05-20-->
 <sect2 id="gimp-edit-undo-history">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2723 $</revnumber>
-        <date>2009-01-05</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Updated to v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Undo History</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Undo History</title>
+  <title lang="ja">操作履歴(<accel>H</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Undo History</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="ソウサリレキ">操作履歴</primary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Undo History</guimenuitem> command activates the
     <link linkend="gimp-undo-dialog">Undo History dialog</link>, which
     shows you thumbnails representing the operations you have done
     so far on the current image. This overview makes it easier for
     you to undo steps or to redo them.
   </para>
-  <para>
+  <para lang="en">
     Use the arrows for
     <link linkend="gimp-edit-undo">Undo</link> and
     <link linkend="gimp-edit-redo">Redo</link>, or simply click
@@ -39,20 +35,51 @@
     <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
     ten times.
   </para>
-  <para>
+  <para lang="en">
     The <quote>Clear undo History</quote> command may be useful if you are
     working on a complex image and you want to free some memory.
   </para>
+  <para lang="ja">
+    <guimenuitem>操作履歴(<accel>H</accel>)</guimenuitem> コマンドは
+    <link linkend="gimp-undo-dialog">操作履歴ダイアログ</link> を呼び出します。
+    このダイアログは現在活性化している画像に加えられたそれまでの操作を見本画像
+    つきで表示します。
+  </para>
+  <para lang="ja">
+    ダイアログ上では <keycap>上下</keycap> キーを使って 
+    <link linkend="gimp-edit-undo">取り消し</link> と 
+    <link linkend="gimp-edit-redo">やり直し</link> を進められるほか、 見本画像
+    をクリックしても画像がその時点の状態に戻ります。 この機能はまとめて数手
+    戻せるのでとくに難しい画像編集を行なうときに便利です。 仮に10手前の状態に
+    戻すにもダイアログを使うほうがキーボードショートカット
+    <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo> を10回繰り返す
+    よりも楽だからです。
+  </para>
+  <para lang="ja">
+    複雑な画像を扱っていてメモリを幾分開放したいときは、 <quote>操作履歴を消去
+    </quote>コマンドが便利です。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Edit</guimenu><guimenuitem>Undo History</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Undo History</guimenuitem>
+          </menuchoice>.
           There is no default keyboard shortcut.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guimenuitem>操作履歴(<accel>H</accel>)</guimenuitem>
+          </menuchoice> 。
+          初期設定ではキーボードショートカットがありません。
         </para>
       </listitem>
     </itemizedlist>

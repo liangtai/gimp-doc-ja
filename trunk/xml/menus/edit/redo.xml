@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- Section history:
   2007-10-10 j.h No change needed for v2.4
   2007-05-14 Added Spanish translation by AntI
 -->
+<!--2009-05-19-->
 <sect2 id="gimp-edit-redo">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2712 $</revnumber>
-        <date>2009-01-05</date>
-        <authorinitials>j.h</authorinitials>
-        <revremark> Updated to v2.6</revremark>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Redo</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Redo</title>
+  <title lang="ja">&hellip; をやり直す(<accel>R</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Redo</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="ヤリナオシ">やり直し</primary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Redo</guimenuitem> command reverses the effects of
     the <guimenuitem>Undo</guimenuitem> command.  Each
     <quote>Undo</quote> action can be reversed by a single
@@ -30,34 +26,66 @@
     only <quote>Redo</quote> an operation if the last action you did was
     an <quote>Undo</quote>.  If you perform any operation on the image
     after Undoing something, then the former Redo steps are lost, and
-    there is no way to recover them.  See the <link linkend="gimp-concepts-undo">Undoing</link> section for more
+    there is no way to recover them.  See the
+    <link linkend="gimp-concepts-undo">Undoing</link> section for more
     information.
   </para>
-  <para>
+  <para lang="en">
     To see the operations which you have done and undone, use the
     <link linkend="gimp-undo-dialog">Undo History</link> dialog.
   </para>
+  <para lang="ja">
+    <guimenuitem>&hellip; をやり直す(<accel>R</accel>)</guimenuitem> コマンドは
+    <guimenuitem>&hellip; を元に戻す(<accel>U</accel>)</guimenuitem> コマンドの
+    逆の効果があります。 いずれの<quote>取り消し</quote>操作もひとつずつ<quote>
+    やり直し</quote>操作でひっくり返せます。 <quote>取り消し</quote>と<quote>
+    やり直し</quote>はその間を交互に何度でも繰り返せます。 <quote>取り消し
+    </quote>のあとで他の操作を実行するとその先の<quote>やり直</quote>せることは
+    なくなり回復はできません。 より詳しい情報は 
+    <link linkend="gimp-concepts-undo">取り消し</link> の節をご覧ください。
+  </para>
+  <para lang="ja">
+    これまでに行なった操作と取り消された操作が 
+    <link linkend="gimp-undo-dialog">操作履歴ダイアログ</link> で見られます。
+  </para>
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Edit</guimenu><guimenuitem>Redo</guimenuitem></menuchoice>,
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Redo</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guimenuitem>&hellip; をやり直す(<accel>R</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           by using the keyboard shortcut
           <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo>,
         </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or by simply clicking on the status you want in the
           <link linkend="gimp-undo-dialog">Undo History dialog</link>.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-undo-dialog">操作履歴ダイアログ</link> で任意の
+          時点の項目をクリック
         </para>
       </listitem>
     </itemizedlist>
