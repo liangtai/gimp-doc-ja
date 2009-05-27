@@ -7,10 +7,11 @@
   2007-03-24 KoSt: added 'no'
   2006-11-01 lexa: made the file docbook compliant
 -->
-<!--2009-05-13-->
+<!--2009-05-25-->
 <sect2 id="gimp-prefs-image-window-title">
   <title lang="en">Image Window Title and Statusbar</title>
   <title lang="ja">画像ウィンドウのタイトルとステータスバー</title>
+
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Preferences</secondary>
@@ -82,8 +83,8 @@
       string</emphasis> in the entry area.  Here is how to understand
       a format string:  anything you type is shown exactly as you type
       it, with the exception of <emphasis>variables</emphasis>, whose
-      names all begin with "%".  Here is a list of the variables you
-      can use:
+      names all begin with <quote>%</quote>.  Here is a list of the variables
+      you can use:
     </para>
     <para lang="ja">
       数点のお仕着せな表現形式からひとつを選ぶか、 自分流の <emphasis>
@@ -99,14 +100,16 @@
       <segtitle lang="ja">意味</segtitle>
       <seglistitem>
         <seg>%f</seg>
-        <seg lang="en">Bare filename of the image, or "Untitled"</seg>
+        <seg lang="en">
+          Bare filename of the image, or <quote>Untitled</quote>
+        </seg>
         <seg lang="ja">
           画像ファイルの素の名前、 さもなくば<quote>名称未設定</quote>
         </seg>
       </seglistitem>
       <seglistitem>
         <seg>%F</seg>
-        <seg lang="en">Full path to file, or "Untitled"</seg>
+        <seg lang="en">Full path to file, or <quote>Untitled</quote></seg>
         <seg lang="ja">
           ファイル名をフルパスで、 さもなくば<quote>名称未設定</quote>
         </seg>
@@ -228,7 +231,7 @@
       </seglistitem>
       <seglistitem>
         <seg>%%</seg>
-        <seg lang="en">A literal "%" symbol</seg>
+        <seg lang="en">A literal <quote>%</quote> symbol</seg>
         <seg lang="ja">% 記号そのまま</seg>
       </seglistitem>
     </segmentedlist>

@@ -4,41 +4,68 @@
 <!-- section history:
     2009-01-11 j.h: created
 -->
+<!--2009-05-26-->
 <sect2 id="script-fu-distress-selection">
-  <title>Distort</title>
-  <indexterm>
+  <title lang="en">Distort</title>
+  <title lang="ja">選択範囲を歪める(<accel>D</accel>)...</title>
+
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Distort</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Distort Selection</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ユガメル">歪める</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイヲユガメル">選択範囲を歪める</primary>
+  </indexterm>
+
+  <para lang="en">
     The <quote>Distort</quote> command deforms the selection contour.
+  </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲を歪める(<accel>D</accel>)...</guimenuitem> コマンドは
+    選択範囲の輪郭線の形を崩すScript-Fuスクリプトです。
   </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menu bar through
           <menuchoice>
             <guimenu>Select</guimenu>
             <guimenuitem>Distort...</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>選択(<accel>S</accel>)</guimenu>
+            <guimenuitem>選択範囲を歪める(<accel>D</accel>)...</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
   </itemizedlist>
   </sect3>
 
   <sect3>
-    <title>
+    <title lang="en">
       Description of the <quote>Distort</quote> Dialog Window
     </title>
+    <title lang="ja">
+      <quote>Script-Fu: 選択範囲を歪める</quote>ダイアログのご説明
+    </title>
     <figure>
-      <title>
-        The <quote>Distort</quote> dialog
+      <title lang="en">The <quote>Distort</quote> dialog</title>
+      <title lang="ja">
+        <quote>Script-Fu: 選択範囲を歪める</quote>ダイアログ
       </title>
       <mediaobject>
         <imageobject>
@@ -47,44 +74,63 @@
       </mediaobject>
     </figure>
 
-    <para>
+    <para lang="en">
       This command has several options which allow to increase or reduce
       the deformation. It is not possible to foresee the result and you
       have to experiment.
     </para>
+    <para lang="ja">
+      このコマンドは崩し具合を増減するためのいろいろなオプションがついて
+      います。 予測不可能な効果が得られますからまずは試してみてください。
+    </para>
     <variablelist>
       <varlistentry>
-        <term>Threshold</term>
+        <term lang="en">Threshold</term>
+        <term lang="ja">しきい値</term>
         <listitem>
-          <para>
+          <para lang="en">
             A higher threshold shrinks the distorted selection. A lower
             threshold makes the selection bigger.
           </para>
+          <para lang="ja">
+            しきい値を大きくとると歪められた選択範囲は元の範囲より縮まります。
+            逆に小さくとると元の選択範囲より膨らみます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Spread</term>
+        <term lang="en">Spread</term>
+        <term lang="ja">拡散度</term>
         <listitem>
-          <para>
+          <para lang="en">
             A higher <quote>Spread</quote> increases the deformation.
           </para>
+          <para lang="ja">拡散度が大きいほど歪みが激しくなります。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Granularity</term>
+        <term lang="en">Granularity</term>
+        <term lang="ja">粒状度</term>
         <listitem>
-          <para>
+          <para lang="en">
             A higher <quote>Granularity</quote> increases the deformation.
           </para>
+          <para lang="ja">粒状度が大きいほど歪みが激しくなります。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Smooth</term>
+        <term lang="en">Smooth</term>
+        <term lang="ja">滑らかさ</term>
         <listitem>
-          <para>
+          <para lang="en">
             A higher <quote>Smooth</quote> decreases the deformation.
             You can <guilabel>Smooth horizontally</guilabel> and/or
             <guilabel>Vertically</guilabel>.
+          </para>
+          <para lang="ja">
+            滑らかさが増すほど歪みは穏やかになります。 
+            <guilabel>水平方向を滑らかに</guilabel> と
+            <guilabel>垂直方向をに滑らかに</guilabel> は併用できます。
           </para>
         </listitem>
       </varlistentry>
