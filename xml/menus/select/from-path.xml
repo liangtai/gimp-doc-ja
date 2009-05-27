@@ -10,32 +10,52 @@
   2005/05/27 changed en
 -->
 <sect2 id="gimp-path-selection-replace">
-  <title>From Path</title>
+  <title lang="en">From Path</title>
+  <title lang="ja">パスを選択範囲に(<accel>O</accel>)</title>
   <anchor id="gimp-selection-from-path"/>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Create a selection from Path</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="パスカラセイセイ">パスから生成</secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>From Path</guimenuitem> command transforms the current
     path into a selection. If the path is not closed, the command connects
     the two end points with a straight line. The original path is unchanged.
   </para>
+  <para lang="ja">
+    <guimenuitem>パスを選択範囲に(<accel>O</accel></guimenuitem> コマンドは現在
+    活性化しているパスから選択範囲を生成します。 パス成分が閉じていないときは
+    その両端を結ぶ直線を追加します。 元のパスは変更されません。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Select</guimenu><guimenuitem>From
-          Path</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>Select</guimenu>
+            <guimenuitem>From Path</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>選択(<accel>S</accel>)</guimenu>
+            <guimenuitem>パスを選択範囲に(<accel>O</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           In addition, you can click on the
           <guibutton>Path to Selection</guibutton> button
           <inlinemediaobject>
@@ -46,11 +66,30 @@
           </inlinemediaobject>
           in the Path dialog to access the command.
         </para>
+        <para lang="ja">
+          パスダイアログの脈絡メニューの <guimenuitem>
+          パスを選択範囲に(<accel>C</accel>)</guimenuitem> コマンドか
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/dialogs/stock-selection-16.png"/>
+              </imageobject>
+              <textobject>
+                <phrase>「パスから選択範囲を作成」</phrase>
+              </textobject>
+            </inlinemediaobject>
+          </guiicon> アイコンボタンをクリック
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           You can also use the keyboard shortcut
           <keycombo><keycap>Shift</keycap><keycap>V</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Shift</keycap><keycap>V</keycap></keycombo>
         </para>
       </listitem>
     </itemizedlist>

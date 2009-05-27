@@ -7,13 +7,23 @@
   2006-01-28 en;fr reviewed by j.h
   2005/09/12 reviewed; de added by axel.wernicke
 -->
+<!--2009-05-27-->
 <sect2 id="gimp-selection-to-path">
-  <title>To Path</title>
-  <indexterm>
+  <title lang="en">To Path</title>
+  <title lang="ja">選択範囲をパスに(<accel>P</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Transform selection to path</secondary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="センタクハンイヲパスニヘンカン">
+      選択範囲をパスに変換
+    </secondary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>To Path</guimenuitem> command converts a selection
     into a path. The image does not seem to change, but you can see the
     new path in the <link linkend="gimp-path-dialog">Paths Dialog</link>.
@@ -22,27 +32,51 @@
     find further information regarding paths in the
     <link linkend="gimp-path-dialog">Paths dialog</link> section.
   </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲をパスに(<accel>P</accel>)</guimenuitem> コマンドは
+    選択範囲をパスに変換します。 画像が変化したようには見えませんが、 
+    <link linkend="gimp-path-dialog">パスダイアログ</link> で新たにできたパスが
+    確認できます。 選択範囲の輪郭線を精密に扱うには 
+    <link linkend="gimp-tool-path">パスツール</link> をご利用ください。 パスに
+    そのものについてのより詳しい解説は 
+    <link linkend="gimp-using-paths">パス</link> の節をご覧ください。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menu bar through
           <menuchoice>
             <guimenu>Select</guimenu>
             <guimenuitem>To Path</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>選択(<accel>S</accel>)</guimenu>
+            <guimenuitem>選択範囲をパスに(<accel>P</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           You can also access it from the
           <link linkend="gimp-selection-dialog">Selection Editor</link> or
           from the <link linkend="gimp-path-dialog">Paths Dialog</link>
           which offers you a lot of
           <link linkend="advanced-settings-for-selection-to-path">Advanced
           Options</link>.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-selection-dialog">選択範囲エディタ</link> や
+          <link linkend="gimp-path-dialog">パスダイアログ</link> からも
+          このコマンドを呼び出せます。 後者ではこの処理に数多くの 
+          <link linkend="advanced-settings-for-selection-to-path">
+          高度なオプション</link> も指定できます。
         </para>
       </listitem>
     </itemizedlist>
