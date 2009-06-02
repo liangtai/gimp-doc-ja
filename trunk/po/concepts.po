@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-05-18 13:38+0900\n"
+"POT-Creation-Date: 2009-05-27 19:42+0900\n"
 "PO-Revision-Date: 2009-04-19 15:11+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -99,13 +99,13 @@ msgid ""
 msgstr ""
 "取り消しのしくみはその基礎を描画に置いています。 つまり、 <quote>操作履歴</"
 "quote>は画像の一部なのです。 この機能のためのメモリを、 <acronym>GIMP</"
-"acronym>は画像ごとに一定量割り当てています。 扱われるメモリの量は環境設定ダイ"
-"アログの <link linkend=\"gimp-prefs-environment\">環境</link> のページで調節"
-"できます。 特に重要な数量はつぎの2つです: <guilabel>操作履歴の最小エントリ数"
-"(<accel>U</accel>)</guilabel> の範囲で記録されたぶんの操作履歴に消費されるメ"
-"モリ量を<acronym>GIMP</acronym>は制限しません。 <guilabel>操作履歴のメモリサ"
-"イズ(<accel>M</accel>)</guilabel> を越えると<acronym>GIMP</acronym>は最も古い"
-"操作の記録から順に削除してゆきます。"
+"acronym>は画像ごとに一定量割り当てています。 扱われるメモリの量は<link "
+"linkend=\"gimp-prefs-environment\">環境設定</link> ダイアログの<quote>環境</"
+"quote>のページで調節できます。 特に重要な数量はつぎの2つです: <guilabel>操作"
+"履歴の最小エントリ数(<accel>U</accel>)</guilabel> の範囲で記録されたぶんの操"
+"作履歴に消費されるメモリ量を<acronym>GIMP</acronym>は制限しません。 <guilabel"
+">操作履歴のメモリサイズ(<accel>M</accel>)</guilabel> を越えると<acronym>GIMP"
+"</acronym>は最も古い操作の記録から順に削除してゆきます。"
 
 #: src/concepts/undo.xml:74(para)
 msgid ""
@@ -188,9 +188,10 @@ msgid ""
 msgstr ""
 "操作履歴は画像の一部ですが、 画像を閉じたときにそれらは開放され、 失われま"
 "す。 このため未保存の操作がある画像を閉じるさいに、 <acronym>GIMP</acronym>は"
-"本当に閉じてよいか必ず確認をとります。 (環境設定ダイアログの <link linkend="
-"\"gimp-prefs-environment\">環境</link> ページでこれを止めさせることができま"
-"す。 ただしそれが何を意味するのか充分認識したうえで行ってください。)"
+"本当に閉じてよいか必ず確認をとります。 (<link linkend=\"gimp-prefs-"
+"environment\">環境設定</link> ダイアログの<quote>環境</quote>ページでこれを止"
+"めさせることができます。 ただしそれが何を意味するのか充分認識したうえで行って"
+"ください。)"
 
 #: src/concepts/undo.xml:131(term)
 msgid "Reverting the image"
@@ -292,7 +293,6 @@ msgid "Screenshot of the Toolbox"
 msgstr "ツールボックスのスクリーンショット"
 
 #: src/concepts/toolbox.xml:31(para)
-#, fuzzy
 msgid ""
 "The Main Toolbox is the heart of GIMP. If you close it, you quit GIMP. Here "
 "is a quick tour of what you will find there."
@@ -389,8 +389,8 @@ msgid ""
 "Preferences</link> tab."
 msgstr ""
 "<quote>活性画像</quote>のプレビュー機能は初期設定では無効になっています。 こ"
-"れを使いたい場合は、 環境設定設定ダイアログの <link linkend=\"gimp-prefs-"
-"toolbox\">ツールオプション</link> タブのところで有効にできます。"
+"れを使いたい場合は、 <link linkend=\"gimp-prefs-toolbox\">環境設定</link> ダ"
+"イアログの<quote>ツールオプション</quote>ページで有効にできます。"
 
 #: src/concepts/toolbox.xml:102(para)
 msgid ""
@@ -403,12 +403,11 @@ msgstr ""
 "起動直後の<acronym>GIMP</acronym>は、いつも同じツール (絵筆) と色とブラシおよ"
 "びパターンを選ぶようになっています。 しかし前回<acronym>GIMP</acronym>を終了"
 "した際に使っていたツールと色とブラシとパターンをひきつづき使いたいという場合"
-"は、 環境設定ダイアログの <link linkend=\"gimp-prefs-input-devices\">入力デバ"
-"イス</link>のところで <guilabel>入力デバイスの設定を終了時に保存(<accel>S</"
-"accel>)</guilabel> の項を有効にしてください。"
+"は、 <link linkend=\"gimp-prefs-input-devices\">環境設定</link> ダイアログの"
+"<quote>入力デバイス</quote>のところで <guilabel>入力デバイスの設定を終了時に"
+"保存(<accel>S</accel>)</guilabel> の項を有効にしてください。"
 
 #: src/concepts/toolbox.xml:113(para)
-#, fuzzy
 msgid ""
 "You can get rid of the <quote>Wilber's eyes</quote> (replacing the old "
 "Toolbox menu) from the Toolbox by adding the following line to your "
@@ -419,10 +418,10 @@ msgstr ""
 "ツールボックス上部の空き地 (廃止されたツールボックスメニューがあった領域。 "
 "ウィルバーの目玉の絵があります) を削除する方法があります。 個人用"
 "<acronym>GIMP</acronym>ディレクトリ内の <filename>gimprc</filename> ファイル"
-"に <function>(toolbox-wilber no)</function> の行を追加してください。 この指示"
-"はツールボックスのみに適用されます。 画像ウィンドウ内にもウィルバーの目玉の絵"
-"が表示されることがありますが、 こちらは何も画像を開いていない時だけに限られて"
-"います。"
+"に <function>(toolbox-wilber&nbsp;no)</function> の行を追加してください。 こ"
+"の指示はツールボックスのみに適用されます。 画像ウィンドウ内にもウィルバーの目"
+"玉の絵が表示されることがありますが、 こちらは何も画像を開いていない時だけに限"
+"られています。"
 
 #: src/concepts/setup.xml:15(phrase)
 msgid "Starting GIMP the first time"
@@ -960,7 +959,6 @@ msgstr ""
 "利用できるスクリプトはもっと莫大な数にのぼります。"
 
 #: src/concepts/script-fu.xml:75(para)
-#, fuzzy
 msgid ""
 "If you have downloaded a script, copy or move it to your scripts directory. "
 "It can be found in the <link linkend=\"gimp-prefs-folders\">Preferences</"
@@ -970,22 +968,21 @@ msgstr ""
 "スクリプトをダウンロードしてきたら、 [圧縮されておれば解凍してから]個人用スク"
 "リプトフォルダに移動するかその複製を置きましよう。 ディレクトリの位置について"
 "は <link linkend=\"gimp-prefs-folders\">環境設定</link> ダイアログの "
-"<menuchoice>  <guimenu>フォルダ</guimenu>  <guimenuitem>スクリプト</"
+"<menuchoice><guimenu>フォルダ</guimenu><guimenuitem>スクリプト</"
 "guimenuitem></menuchoice> と辿った先のページでお確かめください。"
 
 #: src/concepts/script-fu.xml:86(para)
-#, fuzzy
 msgid ""
 "Do a refresh by using <menuchoice><guimenu>Filters</"
 "guimenu><guisubmenu>Script-Fu</guisubmenu><guimenuitem>Refresh Scripts</"
-"guimenuitem></menuchoice> from the toolbox. The script will now appear in "
-"one of your menus. If you don't find it, look for it under the root file "
+"guimenuitem></menuchoice> from the image menubar. The script will now appear "
+"in one of your menus. If you don't find it, look for it under the root file "
 "menu filters. If it doesn't appear at all, something was wrong with the "
 "script (e.g. it contains syntax errors)."
 msgstr ""
-"刷新のためメニューより <menuchoice>  <guimenu>フィルタ(<accel>R</accel>)</"
-"guimenu>  <guisubmenu>Script-Fu(<accel>S</accel>)</guisubmenu>  <guimenuitem>"
-"スクリプトを再読み込み(<accel>R</accel>)</guimenuitem> </menuchoice> を実行し"
+"刷新のためメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)</"
+"guimenu><guisubmenu>Script-Fu(<accel>S</accel>)</guisubmenu><guimenuitem>"
+"スクリプトを再読み込み(<accel>R</accel>)</guimenuitem></menuchoice> を実行し"
 "てください。 スクリプトがメニュー上に現れるはずです。  見付からないときは "
 "<guimenu>ファイル(<accel>F</accel>)</guimenu> メニュー内も探してみてくださ"
 "い。 それでも見付からない場合は何かスクリプトに問題 (例えば構文間違い) がある"
@@ -1020,14 +1017,13 @@ msgid "Standalone Script-Fus"
 msgstr "独立系Script-Fu"
 
 #: src/concepts/script-fu.xml:122(para)
-#, fuzzy
 msgid ""
 "You will find the standalone variants under <menuchoice><guimenu>File</"
 "guimenu><guisubmenu>Create</guisubmenu><guisubmenu>Type of Script</"
-"guisubmenu></menuchoice> in the main toolbox menu (see the figure below)."
+"guisubmenu></menuchoice> in the image menubar (see the figure below)."
 msgstr ""
 "独立系のScript-Fuは画像を生成するために使われるもので、 メニューを "
-"<menuchoice>  <guimenu>ファイル(<accel>F</accel>)</guimenu>  <guisubmenu>画像"
+"<menuchoice><guimenu>ファイル(<accel>F</accel>)</guimenu><guisubmenu>画像"
 "の生成</guisubmenu></menuchoice> と辿った先のサブメニューにまとまっています。"
 
 #: src/concepts/script-fu.xml:132(title)
@@ -1075,9 +1071,8 @@ msgstr "パターン"
 #: src/concepts/script-fu.xml:181(secondary)
 #: src/concepts/script-fu.xml:294(secondary)
 #: src/concepts/script-fu.xml:346(secondary)
-#, fuzzy
 msgid "Script-Fu-generated"
-msgstr "Script-Fu"
+msgstr "Script-Fu生成物"
 
 #: src/concepts/script-fu.xml:184(para)
 msgid ""
@@ -2096,7 +2091,6 @@ msgid "PAT"
 msgstr "PAT"
 
 #: src/concepts/patterns.xml:124(para)
-#, fuzzy
 msgid ""
 "The <filename class=\"extension\">.pat</filename> format is used for "
 "patterns which were created specifically for GIMP. You can convert any image "
@@ -2104,11 +2098,11 @@ msgid ""
 "GIMP and then saving it using a file name ending in <filename class="
 "\"extension\">.pat</filename>."
 msgstr ""
-"<filename>.pat</filename> 形式は<acronym>GIMP</acronym>でのみ使える種類ですか"
-"ら、 <acronym>GIMP</acronym>専用で作成されたものでなければこの形式のパターン"
-"ファイルに出会うことはないでしょう。 でも何か他の画像を<acronym>GIMP</"
-"acronym>で読み込んでから拡張子 <filename>.pat</filename> をつけて保存すればこ"
-"の形式への変換ができます。"
+"<filename class=\"extension\">.pat</filename> 形式は<acronym>GIMP</acronym>で"
+"のみ使える種類ですから、 <acronym>GIMP</acronym>専用で作成されたものでなけれ"
+"ばこの形式のパターンファイルに出会うことはないでしょう。 でも何か他の画像を"
+"<acronym>GIMP</acronym>で読み込んでから拡張子 <filename class=\"extension\">"
+".pat</filename> をつけて保存すればこの形式への変換ができます。"
 
 #. see bug #573828
 #: src/concepts/patterns.xml:133(para)
@@ -2131,16 +2125,17 @@ msgid "PNG, JPEG, BMP, GIF, TIFF"
 msgstr "PNG, JPEG, BMP, GIF, TIFF"
 
 #: src/concepts/patterns.xml:153(para)
-#, fuzzy
 msgid ""
 "Since GIMP 2.2 you can use <filename class=\"extension\">.png</filename>, "
 "<filename class=\"extension\">.jpg</filename>, <filename class=\"extension"
 "\">.bmp</filename>, <filename class=\"extension\">.gif</filename>, or "
 "<filename class=\"extension\">.tiff</filename> files as patterns."
 msgstr ""
-"<acronym>GIMP</acronym> 2.2 以降は <filename>.png</filename>、 <filename>."
-"jpg</filename>、 <filename>.bmp</filename>、 <filename>.gif</filename>、 "
-"<filename>.tiff</filename> 形式の各ファイルをパターンとして使えます。"
+"<acronym>GIMP</acronym> 2.2 以降は <filename class=\"extension\">.png</"
+"filename>、 <filename class=\"extension\">.jpg</filename>、 <filename "
+"class=\"extension\">.bmp</filename>、 <filename class=\"extension\">.gif</"
+"filename>、 <filename class=\"extension\">.tiff</filename> 形式の各ファイルを"
+"パターンとして使えます。"
 
 #: src/concepts/patterns.xml:165(para)
 msgid ""
@@ -2159,12 +2154,12 @@ msgstr ""
 "ターン用フォルダに入れてください。 初期設定では、 ユーザは改変できないシステ"
 "ム用の <filename>patterns</filename> フォルダと、 個人用の<acronym>GIMP</"
 "acronym>ディレクトリ内の <filename>patterns</filename> フォルダの2箇所が既に"
-"パターン用フォルダとして登録されています。 それ以外のフォルダを追加するには環"
-"境設定ダイアログの <link linkend=\"gimp-prefs-folders-data\">パターン用フォル"
-"ダ</link> のページで登録してください。 PAT形式のファイル (や<acronym>GIMP</"
-"acronym> 2.2 以降ならパターンに利用可能なその他の形式のファイル) はいずれもパ"
-"ターン用フォルダに入れておけば次の<acronym>GIMP</acronym>の起動時からパターン"
-"ダイアログの一覧に加わります。"
+"パターン用フォルダとして登録されています。 それ以外のフォルダを追加するには"
+"<link linkend=\"gimp-prefs-folders-data\">環境設定</link> ダイアログの<quote>"
+"パターン用フォルダ</quote>のページで登録してください。 PAT形式のファイル (や"
+"<acronym>GIMP</acronym> 2.2 以降ならパターンに利用可能なその他の形式のファイ"
+"ル) はいずれもパターン用フォルダに入れておけば次の<acronym>GIMP</acronym>の起"
+"動時からパターンダイアログの一覧に加わります。"
 
 #: src/concepts/patterns.xml:177(para)
 msgid ""
@@ -2189,7 +2184,6 @@ msgid "Pattern script examples"
 msgstr "パターン化スクリプトの例"
 
 #: src/concepts/patterns.xml:195(para)
-#, fuzzy
 msgid ""
 "Examples of patterns created using six of the Pattern Script-Fu's that come "
 "with GIMP. Default settings were used for everything except size. (From left "
@@ -2200,7 +2194,6 @@ msgstr ""
 "野地形図。 下段: 立体地形図; 地図; 渦巻。)"
 
 #: src/concepts/patterns.xml:204(para)
-#, fuzzy
 msgid ""
 "Also of interest are a set of pattern-generating scripts that come with "
 "GIMP: you can find them in the menu bar, through <menuchoice><guimenu>File</"
@@ -2213,12 +2206,13 @@ msgid ""
 msgstr ""
 "<acronym>GIMP</acronym>にはパターンを作成するスクリプトが数点ついてくるのも面"
 "白いところです。 それらはメニューより <menuchoice><guimenu>ファイル"
-"(<accel>F</accel>)</guimenu>  <guisubmenu>画像の作成</guisubmenu>  "
+"(<accel>F</accel>)</guimenu><guisubmenu>画像の作成</guisubmenu>"
 "<guisubmenu>パターン(<accel>P</accel>)</guisubmenu></menuchoice> と辿った先の"
 "サブメニューにあります。 これらのパターンはいずれも一定の様式のパターンで埋め"
 "尽くされた新たな画像を作成します。 作成時にはダイアログが現れ、 表現を詳細に"
 "調節できるようになっています。 切り取って貼り付けるのに向いているパターン"
-"と、 バンプマッピングに最適なパターンがあります。"
+"と、 <link linkend=\"glossary-bumpmapping\">バンプマッピング</link> に最適な"
+"パターンがあります。"
 
 #: src/concepts/patterns.xml:219(title)
 msgid "How to create new patterns"
@@ -2393,8 +2387,8 @@ msgstr ""
 "ム用の <filename>palettes</filename> フォルダに入っているパレットは、 いずれ"
 "も<acronym>GIMP</acronym>を起動したときに自動的に読み込まれ、 パレットダイア"
 "ログ上で列挙されます。 他のディレクトリをパレット用のフォルダとして検索対象に"
-"加えたいときは、 環境設定ダイアログの <link linkend=\"gimp-prefs-folders-data"
-"\">パレット用フォルダ</link> のページで追加登録してください。"
+"加えたいときは、 <link linkend=\"gimp-prefs-folders-data\">環境設定</link> ダ"
+"イアログの<quote>パレット用フォルダ</quote>のページで追加登録してください。"
 
 #: src/concepts/palettes.xml:116(para)
 msgid ""
@@ -2841,7 +2835,7 @@ msgstr "レイヤーの形式"
 #: src/concepts/layers.xml:233(primary) src/concepts/layers.xml:344(primary)
 #: src/concepts/layers.xml:348(primary)
 #: src/concepts/layer-modes.xml:23(primary)
-#: src/concepts/docks.xml:351(primary)
+#: src/concepts/docks.xml:358(primary)
 msgid "Layer"
 msgstr "レイヤー"
 
@@ -2900,7 +2894,7 @@ msgstr ""
 msgid "Visibility"
 msgstr "可視性"
 
-#: src/concepts/layers.xml:275(secondary) src/concepts/docks.xml:409(term)
+#: src/concepts/layers.xml:275(secondary) src/concepts/docks.xml:416(term)
 msgid "Icon"
 msgstr "アイコン"
 
@@ -2935,9 +2929,8 @@ msgid "Linkage to other layers"
 msgstr "レイヤーの連結"
 
 #: src/concepts/layers.xml:312(secondary)
-#, fuzzy
 msgid "Linkage"
-msgstr "言語"
+msgstr "連結"
 
 #: src/concepts/layers.xml:315(primary)
 msgid "Chain icon"
@@ -4247,14 +4240,13 @@ msgid "Grain merge"
 msgstr "微粒結合"
 
 #: src/concepts/layer-modes.xml:871(para)
-#, fuzzy
 msgid ""
 "There are two more layer modes, but these are available only for painting "
 "tools. See <link linkend=\"gimp-tool-painting-modes\">Painting Modes</link> "
 "for detailed information."
 msgstr ""
-"これ以外の2つのモードは描画ツール専用です。 詳しくは <xref linkend=\"gimp-"
-"tool-painting-modes\"/> をご覧ください。"
+"これ以外の2つのモードは描画ツール専用です。 詳しくは <link linkend=\"gimp-"
+"tool-painting-modes\">描画モード</link> をご覧ください。"
 
 #: src/concepts/layer-modes.xml:905(para)
 msgid ""
@@ -4479,7 +4471,6 @@ msgid "Multi layer example"
 msgstr "複数レイヤー複数モードの例"
 
 #: src/concepts/layer-modes.xml:1419(para)
-#, fuzzy
 msgid ""
 "<acronym>GIMP</acronym> also has similar modes which are used for the "
 "painting tools. These are the same twenty-one modes as the layer modes, plus "
@@ -4498,14 +4489,14 @@ msgstr ""
 "イヤーが<quote>下側のレイヤー I</quote>で、 そのツールで描かれる画素は<quote>"
 "上側のレイヤー M</quote>にあります。 これらのモードを使用するのに画像にはレイ"
 "ヤーがひとつあれば充分です。 任意の描画ツールで現在使用中のレイヤーに操作をす"
-"るのですから当然ですね。 追加の2つのモードの説明については次に示しておきま"
-"しょう。"
+"るのですから当然ですね。"
 
 #: src/concepts/layer-modes.xml:1430(para)
 msgid ""
 "See <xref linkend=\"gimp-paint-mode-examples\"/> for a description of the "
 "two additional painting modes."
-msgstr ""
+msgstr "別の2つの描画モードについては <link linkend=\"gimp-paint-mode-examples"
+"\"/> をご覧ください。"
 
 #: src/concepts/intro.xml:14(title) src/concepts/intro.xml:16(primary)
 msgid "Running GIMP"
@@ -4665,7 +4656,6 @@ msgstr ""
 "productname> と同じです。"
 
 #: src/concepts/intro.xml:102(para)
-#, fuzzy
 msgid ""
 "If you often change language, you can create a batch file. Open NotePad. "
 "Type the following commands (for french for instance): "
@@ -4677,15 +4667,12 @@ msgid ""
 msgstr ""
 "たびたび言語を変更する必要があるときは、バッチファイルの利用をおすすめしま"
 "す。メモ帳などのテキストエディタを開き、 たとえば以下のようなコマンドを記入し"
-"ます。<literallayout>\n"
-"              <userinput>\n"
-"                set lang=zh_TW.Big5\n"
-"                start GIMP-2.6.exe\n"
-"              </userinput>\n"
-"            </literallayout>この例では臺灣繁體字を選択しているのでファイル名"
-"を <filename>GIMP臺灣.bat</filename> のように (ファイル名はご自由に、 ただし"
-"拡張子 <filename>.bat</filename> は必須) して保存します。 そのショートカット"
-"を作成してデスクトップに置くのもよいでしょう。"
+"ます。<literallayout><userinput>set lang=zh_TW.Big5\n"
+"start GIMP-2.6.exe</userinput></literallayout> この例では臺灣繁體字を選択して"
+"いるのでファイル名を <filename>GIMP臺灣.bat</filename> のように (ファイル名は"
+"ご自由に、 ただし拡張子 <filename class=\"extension\">.bat</filename> は必須)"
+" して保存します。 そのショートカットを作成してデスクトップに置くのもよいでし"
+"ょう。"
 
 #: src/concepts/intro.xml:113(para)
 msgid ""
@@ -4713,7 +4700,6 @@ msgid "Another GIMP instance"
 msgstr "重複して<acronym>GIMP</acronym>を走らせるとき"
 
 #: src/concepts/intro.xml:138(para)
-#, fuzzy
 msgid ""
 "You can have a new GIMP instance by running the command line with the "
 "<userinput>-n</userinput> option: For example: <userinput>gimp-2.6</"
@@ -5031,7 +5017,6 @@ msgid "Image Window"
 msgstr "画像ウィンドウ"
 
 #: src/concepts/imagewindow.xml:21(primary)
-#, fuzzy
 msgid "Image windows"
 msgstr "画像ウィンドウ"
 
@@ -5041,10 +5026,9 @@ msgstr "解説"
 
 #: src/concepts/imagewindow.xml:25(primary)
 msgid "Status bar"
-msgstr "ステイタスバー"
+msgstr "ステータスバー"
 
 #: src/concepts/imagewindow.xml:26(secondary)
-#, fuzzy
 msgid "Image window"
 msgstr "画像ウィンドウ"
 
@@ -5078,7 +5062,7 @@ msgstr ""
 "<acronym>GIMP</acronym>を起動すると<quote>GNU Image Manipulating Program</"
 "quote>のタイトルのついた空のウィンドウが開きます。 画像を開くとすぐにそのウィ"
 "ンドウで表示され、 タイトルバーには画像に関する情報が <link linkend=\"gimp-"
-"prefs-dialog\">環境設定ダイアログ</link> で設定された通りの形式で表示されま"
+"prefs-dialog\">環境設定</link> ダイアログで設定された通りの形式で表示されま"
 "す。 画像はひとつ開くごとにひとつのウィンドウが割り当てられ表示されます。 (複"
 "数のウィンドウに同一の画像を表示させることもできなくはありませんが、 普通はし"
 "ないでしょう。) それでは一般的な画像ウィンドウについてその各部分の説明を手短"
@@ -5102,10 +5086,10 @@ msgstr ""
 "な情報を表示しています。 タイトルバーは<acronym>GIMP</acronym>由来ではなく"
 "ウィンドウシステムが提供するものなので、 その外観はオペレーティングシステムや"
 "ウィンドウマネージャ、 さらにはそのテーマ設定によって異なっています。 表示の"
-"内容は、 <link linkend=\"gimp-prefs-dialog\">環境設定ダイアログ</link>で調節"
+"内容は、 <link linkend=\"gimp-prefs-dialog\">環境設定</link> ダイアログで調節"
 "ができます。"
 
-#: src/concepts/imagewindow.xml:85(para)
+#: src/concepts/imagewindow.xml:84(para)
 msgid ""
 "Users with an Apple Macintosh and a one button mouse can use "
 "<keycombo><keycap>Ctrl</keycap><mousebutton>mousebutton</mousebutton></"
@@ -5117,34 +5101,35 @@ msgstr ""
 
 #. 2
 #: src/concepts/imagewindow.xml:78(para)
-#, fuzzy
 msgid ""
 "<emphasis>Image Menu:</emphasis> Directly below the emphasis bar appears the "
 "Image Menu (unless it has been suppressed). This menu gives you access to "
-"nearly every operation you can perform on an image. You can also get the "
-"Image Menu by right-clicking inside the image "
-"<placeholder-1/>, or by left-clicking on the little <quote>arrow</quote> "
-"symbol in the upper left corner, if for some reason you find one of these "
-"more convenient. More: most menu operations can also be activated from the "
-"keyboard, using Alt plus an <quote>accelerator</quote> key underlined in the "
-"menu emphasis. More: you can define your own custom shortcuts for menu "
-"actions, if you enable <link linkend=\"gimp-prefs-interface\"> Use Dynamic "
-"Keyboard Shortcuts</link> in the Preferences dialog."
+"nearly every operation you can perform on an image.You can also get the "
+"Image Menu by right-clicking inside the image <placeholder-1/>, or by left-"
+"clicking on the little <quote>arrow</quote> symbol in the upper left corner, "
+"if for some reason you find one of these more convenient. More: most menu "
+"operations can also be activated from the keyboard, using Alt plus an "
+"<quote>accelerator</quote> key underlined in the menu emphasis. More: you "
+"can define your own custom shortcuts for menu actions, if you enable <link "
+"linkend=\"gimp-prefs-interface\"> Use Dynamic Keyboard Shortcuts</link> in "
+"the Preferences dialog."
 msgstr ""
 "<emphasis>メニューバー:</emphasis> タイトルバーの真下にあるのがメニューバーで"
 "す (隠せます)。 このメニューには画像に対して行なうほとんど全ての操作が並んで"
-"います。 何かの事情のために、メニューは画像"
-"の上で右クリック <placeholder-1/> しても、あるいはウィンドウの左上隅の小さな "
-"<quote>矢印</quote>をクリックしても呼びだせるようになってます。 ついでにその"
-"1: メニューのほとんどの作業はキーボードでも進めることができます。 メニューに"
-"アンダーライン付きで書かれた <quote>アクセラレータ</quote> キーと "
-"<keycap>Alt</keycap> キーを組み合わせて下さい。 ついでにその2: メニューの作業"
-"に独自のショートカットを割り当てるには環境設定ダイアログの <link linkend="
-"\"gimp-prefs-interface\">ユーザインタフェース</link> のページで <guilabel>動"
-"的なキーボードショートカットを使用(<accel>D</accel>)</guilabel> を有効にして"
-"下さい。"
+"います。 何かの事情のために、メニューは画像の上で右クリック <placeholder-1/> "
+"しても、あるいはウィンドウの左上隅の小さな <quote>矢印</quote> <guiicon>"
+"<inlinemediaobject><imageobject><imagedata fileref=\"images/dialogs/stock-"
+"menu-right-12.png\"/></imageobject><textobject><phrase>「画像ウィンドウメニュ"
+"ー」</phrase></textobject></inlinemediaobject></guiicon> アイコンボタンをクリ"
+"ックしても呼びだせるようになってます。 ついでにその1: メニューのほとんどの作"
+"業はキーボードでも進めることができます。 メニューにアンダーライン付きで書かれ"
+"た<quote>アクセラレータ</quote>キーと <keycap>Alt</keycap> キーを組み合わせて"
+"下さい。 ついでにその2: メニューの作業に独自のショートカットを割り当てるには"
+"<link linkend=\"gimp-prefs-interface\">環境設定</link> ダイアログの<quote>ユ"
+"ーザーインタフェース</quote>のページで <guilabel>動的なキーボードショートカッ"
+"トを使用(<accel>D</accel>)</guilabel> を有効にして下さい。"
 
-#: src/concepts/imagewindow.xml:106(para)
+#: src/concepts/imagewindow.xml:105(para)
 msgid ""
 "<emphasis>Menu Button:</emphasis> Clicking on this little button gives you "
 "the Image Menu, except in a column instead of a row. Mnemonics users who "
@@ -5156,7 +5141,7 @@ msgstr ""
 "う記憶力にすぐれたユーザのためにメニューを<keycombo><keycap>Shift</"
 "keycap><keycap>F10</keycap></keycombo>キーで呼びだす方法があります。"
 
-#: src/concepts/imagewindow.xml:118(para)
+#: src/concepts/imagewindow.xml:117(para)
 msgid ""
 "<emphasis>Ruler:</emphasis> In the default layout, rulers are shown above "
 "and to the left of the image, indicating coordinates within the image. You "
@@ -5169,7 +5154,7 @@ msgstr ""
 "クセル) を単位としていますが、 単位を変えるには後で述べる単位設定で行ってくだ"
 "さい。"
 
-#: src/concepts/imagewindow.xml:126(para)
+#: src/concepts/imagewindow.xml:125(para)
 msgid ""
 "One of the most important uses of rulers is to create <emphasis>guides</"
 "emphasis>. If you click on a ruler and drag into the image display, a "
@@ -5182,7 +5167,7 @@ msgstr ""
 "確な位置決めがしやすくなります。 見当線は曳いて移動ができ、画像表示の外まで曳"
 "けば消去できます。"
 
-#: src/concepts/imagewindow.xml:138(para)
+#: src/concepts/imagewindow.xml:137(para)
 msgid ""
 "<emphasis>QuickMask Toggle:</emphasis> At the lower left corner of the image "
 "display is a small button that toggles on or off the Quick Mask, which is an "
@@ -5197,7 +5182,7 @@ msgstr ""
 "ください。"
 
 #. 6
-#: src/concepts/imagewindow.xml:148(para)
+#: src/concepts/imagewindow.xml:147(para)
 msgid ""
 "<emphasis>Pointer Coordinates:</emphasis> In the lower left corner of the "
 "window is a rectangular area used to show the current pointer coordinates "
@@ -5210,7 +5195,7 @@ msgstr ""
 "す)。 この表示は画像上にポインタがあるときに限ります。 定規と同じ単位です。"
 
 #. 7
-#: src/concepts/imagewindow.xml:158(para)
+#: src/concepts/imagewindow.xml:157(para)
 msgid ""
 "<emphasis>Units menu:</emphasis> By default, the units used for the rulers "
 "and several other purposes are pixels. You can change to inches, cm, or "
@@ -5226,7 +5211,7 @@ msgstr ""
 "合に画像表示の大きさがどう変わるかに注意してください: <link linkend=\"gimp-"
 "view-dot-for-dot\">点に点を対応させる</link> にさらに詳しい説明があります。)"
 
-#: src/concepts/imagewindow.xml:171(para)
+#: src/concepts/imagewindow.xml:170(para)
 msgid ""
 "<emphasis>Zoom button:</emphasis> There are a number of ways to zoom the "
 "image in or out, but this menu is perhaps the simplest. With GIMP-2.6 it is "
@@ -5236,7 +5221,7 @@ msgstr ""
 "ん用意されていますが、 このメニューが最も単純かもしれません。 <acronym>GIMP</"
 "acronym> 2.6 からは表示倍率が数値入力欄で直接指定できます。"
 
-#: src/concepts/imagewindow.xml:181(para)
+#: src/concepts/imagewindow.xml:180(para)
 msgid ""
 "<emphasis>Status Area:</emphasis> The Status Area appears below the image "
 "display. Most of the time, by default, it shows which part of the image is "
@@ -5252,7 +5237,7 @@ msgstr ""
 "ます。 時間を多く費す作業をしているときに、状態情報は一時的にその作業が何であ"
 "るかの表示に切り替わり、進捗を報告します。"
 
-#: src/concepts/imagewindow.xml:192(para)
+#: src/concepts/imagewindow.xml:191(para)
 msgid ""
 "Note that the amount of memory consumed by the image is quite different from "
 "the image file size. For instance, a 69.7Kb .PNG image will occupy 246Kb in "
@@ -5267,7 +5252,7 @@ msgstr ""
 "像のコピーを控えるためにメモリを使っています。"
 
 #. 10
-#: src/concepts/imagewindow.xml:204(para)
+#: src/concepts/imagewindow.xml:203(para)
 msgid ""
 "<emphasis>Cancel Button:</emphasis> At the lower right corner of the window "
 "the Cancel button appears temporarily. If you start a complex, time-"
@@ -5280,7 +5265,7 @@ msgstr ""
 "中に、 このボタンが現れますので、 途中だが止めたいという場合に押せば直ちに中"
 "止できます。"
 
-#: src/concepts/imagewindow.xml:213(para)
+#: src/concepts/imagewindow.xml:212(para)
 msgid ""
 "There are a few plug-ins that respond badly to being canceled, possibly "
 "leaving corrupted pieces of images behind."
@@ -5288,15 +5273,15 @@ msgstr ""
 "残念ながら中断するとまずいプラグインがまれにあり、 壊れた画像を残して終了する"
 "おそれがあります。"
 
-#: src/concepts/imagewindow.xml:223(primary)
+#: src/concepts/imagewindow.xml:222(primary)
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: src/concepts/imagewindow.xml:224(secondary)
+#: src/concepts/imagewindow.xml:223(secondary)
 msgid "Navigation button"
 msgstr "ナビゲーションボタン"
 
-#: src/concepts/imagewindow.xml:226(para)
+#: src/concepts/imagewindow.xml:225(para)
 msgid ""
 "<emphasis>Navigation control:</emphasis> This is a small cross-shaped button "
 "at the lower right corner of the image display. Clicking on it, and holding "
@@ -5320,7 +5305,7 @@ msgstr ""
 "navigation-dialog\">ナビゲーションダイアログ</link> を参考にしてください。) "
 "(3ボタンマウスをお使いの場合、中ボタンで曳くと画像上を巡れます。)"
 
-#: src/concepts/imagewindow.xml:243(para)
+#: src/concepts/imagewindow.xml:242(para)
 msgid ""
 "<emphasis>Inactive Padding Area:</emphasis> This padding area separates the "
 "active image display and the inactive padding area, so you're able to "
@@ -5331,7 +5316,7 @@ msgstr ""
 "がっており、 画像上とそれ以外を区別できます。 不活性区域はどんなフィルタも操"
 "作も受け付けません。"
 
-#: src/concepts/imagewindow.xml:253(para)
+#: src/concepts/imagewindow.xml:252(para)
 msgid ""
 "<emphasis>Image Display:</emphasis> The most important part of the image "
 "window is, of course, the image display or canvas. It occupies the central "
@@ -5346,7 +5331,7 @@ msgstr ""
 "の段階を調整する方法はいろいろありますが、 以下[?]に述べているズーム調整もそ"
 "のひとつです。"
 
-#: src/concepts/imagewindow.xml:266(para)
+#: src/concepts/imagewindow.xml:265(para)
 msgid ""
 "<emphasis>Image Window Resize Toggle:</emphasis> If this button is pressed, "
 "the image itself will be resized if the image window is resized."
@@ -6160,12 +6145,12 @@ msgstr ""
 "は不可視になっていますので、 活用するにはメニューより <menuchoice>  <guimenu>"
 "表示(<accel>V</accel>)</guimenu>  <guimenuitem>グリッドを表示(<accel>H</"
 "accel>)</guimenuitem></menuchoice> として切り替えてください。 この格子線は隠"
-"れていないでいつも出ていてほしいという場合は、 環境設定ダイアログの <link "
-"linkend=\"gimp-prefs-image-window-appearance\">  画像ウィンドウの表示形式</"
-"link> のページで <guilabel>グリッド(<accel>D</accel>)</guilabel> のところに"
-"チェックを入れればその既定のふるまいを変更できます。 (このページに同じものが2"
-"つあるのはノーマルモードとフルスクリーンモードで個別に設定できるようになって"
-"いるためです。)"
+"れていないでいつも出ていてほしいという場合は、 <link linkend=\"gimp-prefs-"
+"image-window-appearance\">環境設定</link> ダイアログの<quote>画像ウィンドウの"
+"表示形式</quote>のページで <guilabel>グリッド(<accel>D</accel>)</guilabel> の"
+"ところにチェックを入れればその既定のふるまいを変更できます。 (このページに同"
+"じものが2つあるのはノーマルモードとフルスクリーンモードで個別に設定できるよう"
+"になっているためです。)"
 
 #: src/concepts/grid-and-guides.xml:80(para)
 msgid ""
@@ -6181,12 +6166,12 @@ msgid ""
 msgstr ""
 "<acronym>GIMP</acronym>の導入時点の初期設定のグリッドの姿は、 黒い十字の印が"
 "格子の交点にのみ描かれ、 格子の間隔は縦横ともに10ピクセルです。 グリッドの既"
-"定形式は環境設定ダイアログの <link linkend=\"gimp-prefs-default-grid\">グリッ"
-"ド</link> のページで設定できます。 画像に対し個別に格子線の外観変更をしたい場"
-"合はメニューより <menuchoice>  <guimenu>画像(<accel>I</accel>)</guimenu>  "
-"<guimenuitem>グリッドの設定(<accel>R</accel>)...</guimenuitem></menuchoice> "
-"と進むと開かれる <link linkend=\"gimp-configure-grid-dialog\">グリッドの設定"
-"</link> ダイアログをお使いください。"
+"定形式は<link linkend=\"gimp-prefs-default-grid\">環境設定</link> ダイアログ"
+"の<quote>グリッド</quote>のページで設定できます。 画像に対し個別に格子線の外"
+"観変更をしたい場合はメニューより <menuchoice><guimenu>画像(<accel>I</accel>)"
+"</guimenu><guimenuitem>グリッドの設定(<accel>R</accel>)...</guimenuitem></"
+"menuchoice> と進むと開かれる <link linkend=\"gimp-configure-grid-dialog\">グ"
+"リッドの設定</link> ダイアログをお使いください。"
 
 #: src/concepts/grid-and-guides.xml:97(phrase)
 msgid "A different grid style"
@@ -6211,12 +6196,12 @@ msgstr ""
 "<guimenu>表示(<accel>V</accel>)</guimenu>  <guimenuitem>グリッドにスナップ"
 "(<accel>P</accel>)</guimenuitem></menuchoice> に切り替えてください。 すると画"
 "像内のポインタは格子線のいずれかの一定範囲内に近づくやいなやすっぱりとその線"
-"上に<quote>瞬間移動</quote>します。 このしきい値は環境設定ダイアログの <link "
-"linkend=\"gimp-prefs-tool-options\">ツールオプション</link> のページの<quote>"
-"スナップ距離</quote>を設定すれば調節できますが、 既定値の8ピクセルは多くの方"
-"にご満足いただけるものでしょう。 (格子線に吸い付く機能はグリッドが不可視で"
-"あっても何ら変わりなくはたらきます。 でもそのような使い方をする理由はなかなか"
-"見あたりません。)"
+"上に<quote>瞬間移動</quote>します。 このしきい値は<link linkend=\"gimp-prefs-"
+"tool-options\">環境設定</link> ダイアログの<quote>ツールオプション</quote>の"
+"ページで <guilabel>スナップ距離(<accel>S</accel>)</guilabel> を設定すれば調節"
+"できますが、 既定値の8ピクセルは多くの方にご満足いただけるものでしょう。 (格"
+"子線に吸い付く機能はグリッドが不可視であっても何ら変わりなくはたらきます。 で"
+"もそのような使い方をする理由はなかなか見あたりません。)"
 
 #: src/concepts/grid-and-guides.xml:130(phrase)
 msgid "Image with four guides"
@@ -6272,11 +6257,11 @@ msgid ""
 "Window Appearance</link> page of the Preferences dialog. Disabling \"Show "
 "guides\" is probably a bad idea, though, for the reason just given."
 msgstr ""
-"見当線の初期設定を変えたほうが良いとお考えならば環境設定ダイアログの<link "
-"linkend=\"gimp-prefs-image-window-appearance\"> 画像ウィンドウの表示形式</"
-"link> のページでそのふるまいの既定値を変更できます。 でも <guilabel>ガイド"
-"(<accel>G</accel>)</guilabel> の項を無効にするのは、 前述した理由からあまり良"
-"い考えとはいえません。"
+"見当線の初期設定を変えたほうが良いとお考えならば <link linkend=\"gimp-prefs-"
+"image-window-appearance\">環境設定</link> ダイアログの<quote>画像ウィンドウの"
+"表示形式</quote>のページでそのふるまいの既定値を変更できます。 でも <guilabel"
+">ガイド(<accel>G</accel>)</guilabel> の項を無効にするのは、 前述した理由から"
+"あまり良い考えとはいえません。"
 
 #: src/concepts/grid-and-guides.xml:176(para)
 msgid ""
@@ -6573,7 +6558,7 @@ msgstr ""
 "かのフォルダ内に入っていて、 <acronym>GIMP</acronym>を起動すると自動的に読み"
 "込まれます。 この2つのディレクトリ以外のフォルダでもグラデーションを検索させ"
 "るには、 <link linkend=\"gimp-prefs-folders-data\">環境設定</link> ダイアログ"
-"の左側の一覧から <menuchoice>  <guimenu>フォルダ</guimenu>  <guimenuitem>グラ"
+"の左側の一覧から <menuchoice><guimenu>フォルダ</guimenu><guimenuitem>グラ"
 "デーション</guimenuitem></menuchoice> をクリックして出てくるページでそのフォ"
 "ルダを追加してください。"
 
@@ -6774,7 +6759,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:220(None)
+#: src/concepts/docks.xml:227(None)
 msgid ""
 "@@image: 'images/using/dialog-highlight-imagemenu.png'; md5=THIS FILE "
 "DOESN'T EXIST"
@@ -6784,7 +6769,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:246(None)
+#: src/concepts/docks.xml:253(None)
 msgid ""
 "@@image: 'images/using/dialog-highlight-tabmenu.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -6794,13 +6779,13 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:261(None)
+#: src/concepts/docks.xml:268(None)
 msgid "@@image: 'images/using/tab-menu.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr "@@image: 'images/using/ja/tab-menu.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:303(None)
+#: src/concepts/docks.xml:310(None)
 msgid ""
 "@@image: 'images/using/tab-menu-add-tab.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -6808,7 +6793,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:359(None)
+#: src/concepts/docks.xml:366(None)
 msgid ""
 "@@image: 'images/using/tab-menu-preview-size.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -6818,7 +6803,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:389(None)
+#: src/concepts/docks.xml:396(None)
 msgid ""
 "@@image: 'images/using/tab-menu-tab-style.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -6838,16 +6823,15 @@ msgid "Dialogs"
 msgstr "ダイアログ"
 
 #: src/concepts/docks.xml:27(title)
-#, fuzzy
 msgid "Docking Areas"
 msgstr "合体領域"
 
 #: src/concepts/docks.xml:30(primary) src/concepts/docks.xml:111(primary)
-#: src/concepts/docks.xml:141(primary) src/concepts/docks.xml:202(primary)
-#: src/concepts/docks.xml:237(primary) src/concepts/docks.xml:273(primary)
-#: src/concepts/docks.xml:291(primary) src/concepts/docks.xml:315(primary)
-#: src/concepts/docks.xml:331(primary) src/concepts/docks.xml:365(primary)
-#: src/concepts/docks.xml:395(primary) src/concepts/docks.xml:466(primary)
+#: src/concepts/docks.xml:141(primary) src/concepts/docks.xml:209(primary)
+#: src/concepts/docks.xml:244(primary) src/concepts/docks.xml:280(primary)
+#: src/concepts/docks.xml:298(primary) src/concepts/docks.xml:322(primary)
+#: src/concepts/docks.xml:338(primary) src/concepts/docks.xml:372(primary)
+#: src/concepts/docks.xml:402(primary) src/concepts/docks.xml:473(primary)
 msgid "Docks"
 msgstr "ドック"
 
@@ -6912,19 +6896,18 @@ msgstr ""
 "かをクリックすると、 独立したウィンドウとして開かれます。"
 
 #: src/concepts/docks.xml:73(para)
-#, fuzzy
 msgid ""
 "Every dockable window has two types of docking areas: the docking bars and "
 "the docking-tab area. In an isolated window, the <emphasis>docking-tab area</"
 "emphasis> is the same as the drag handle area (see below). In a dock, the "
 "docking-tab area covers all the window."
 msgstr ""
-"孤立したウィンドウでは <emphasis>合体タブ領域</emphasis> は合体用持ち手の領"
-"域 (以下参照) と同じようになっています。 ドックにおいて合体タブは全てのウィン"
-"ドウを包括します。"
+"いずれのドッキング可能なダイアログも合体バーと合体タブ領域の2種類の合体用領域"
+"を備えています。 孤立したウィンドウの <emphasis>合体タブ領域</emphasis> は ("
+"下図に示した) 合体用持ち手の部分と同じですが、 ドックに入ると合体タブ領域はウ"
+"ィンドウ全体を包み込みます。"
 
 #: src/concepts/docks.xml:82(title)
-#, fuzzy
 msgid "The two docking types"
 msgstr "2種類の合体様式"
 
@@ -6941,7 +6924,6 @@ msgstr ""
 "る。"
 
 #: src/concepts/docks.xml:108(title)
-#, fuzzy
 msgid "Docking Bars"
 msgstr "合体バー"
 
@@ -6950,20 +6932,18 @@ msgid "Docking bars"
 msgstr "合体バー"
 
 #: src/concepts/docks.xml:115(para)
-#, fuzzy
 msgid ""
 "Each dockable window has two <emphasis>docking bars</emphasis>. These bars "
 "are thin gray bars, very unobtrusive and easy not to notice: most people "
 "don't realize that they exist until they are specifically pointed out."
 msgstr ""
-"ウィンドウの <emphasis>合体バー</emphasis> を強調した。 これらは非常に目立た"
-"ないなかなか気付かれにくい薄い灰色の桿なので、 ほとんどの方はこうして指摘する"
-"までそのような物の存在をご存じなかっただろう。"
+"ドッキング可能なウィンドウには2本の <emphasis>合体バー</emphasis> がついてい"
+"ます。 これらは非常に目立たないなかなか気付かれにくい薄い灰色の桿なので、 ほ"
+"とんどの方はこうして指摘するまでそのような物の存在をご存じなかったでしょう。"
 
 #: src/concepts/docks.xml:129(para)
-#, fuzzy
 msgid "A window with <emphasis>docking bars</emphasis> highlighted."
-msgstr "ドッキング可能なウィンドウ。 強調部分は合体用持ち手。"
+msgstr "ウィンドウの <emphasis>合体バー</emphasis> を強調した。"
 
 #: src/concepts/docks.xml:138(title)
 msgid "Docking Drag Handles"
@@ -7000,7 +6980,6 @@ msgstr ""
 "は、 単にこの持ち手部をクリックしたままで、 <placeholder-1/>"
 
 #: src/concepts/docks.xml:166(title)
-#, fuzzy
 msgid "A dockable window, with the drag handle area highlighted"
 msgstr "ドッキング可能なウィンドウ。 強調部分は合体用持ち手。"
 
@@ -7031,15 +7010,20 @@ msgstr ""
 "ウィンドウに新たなタブを追加したり、 ウィンドウから切り放したり削除したりする"
 "操作はタブメニューにもあります。 後で説明があります。"
 
-#: src/concepts/docks.xml:198(title)
+#: src/concepts/docks.xml:197(para)
+msgid ""
+"Pressing <keycap>TAB</keycap> toggles the visibility of all present docks."
+msgstr ""
+
+#: src/concepts/docks.xml:205(title)
 msgid "Image Menu"
 msgstr "画像メニュー"
 
-#: src/concepts/docks.xml:203(secondary)
+#: src/concepts/docks.xml:210(secondary)
 msgid "Auto button"
 msgstr "自動ボタン"
 
-#: src/concepts/docks.xml:205(para)
+#: src/concepts/docks.xml:212(para)
 msgid ""
 "Some docks contain an <emphasis>Image Menu</emphasis>: a menu listing all of "
 "the images open in GIMP, and displaying the name of the image whose "
@@ -7057,11 +7041,11 @@ msgstr ""
 "場合は、 つねに現在の<acronym>GIMP</acronym>で操作中の活性画像の名前をこのメ"
 "ニューが表示します。"
 
-#: src/concepts/docks.xml:216(title)
+#: src/concepts/docks.xml:223(title)
 msgid "A dock with an Image Menu highlighted"
 msgstr "ドック。 画像メニューを強調してある。"
 
-#: src/concepts/docks.xml:224(para)
+#: src/concepts/docks.xml:231(para)
 msgid ""
 "By default, a <quote>Layers, Channels, and Paths</quote> dock shows an Image "
 "Menu at the top, and other types of docks do not. You can always add or "
@@ -7075,19 +7059,19 @@ msgstr ""
 "ニューでドック上に表示したり隠したりできます。 (ただし、 ツールボックスを含む"
 "ドックには画像メニューを加えられません。)"
 
-#: src/concepts/docks.xml:234(title)
+#: src/concepts/docks.xml:241(title)
 msgid "Tab Menu"
 msgstr "タブメニュー"
 
-#: src/concepts/docks.xml:238(secondary)
+#: src/concepts/docks.xml:245(secondary)
 msgid "Tab menu"
 msgstr "タブメニュー"
 
-#: src/concepts/docks.xml:242(title)
+#: src/concepts/docks.xml:249(title)
 msgid "A dialog in a dock, with the Tab menu button highlighted"
 msgstr "ドック内のダイアログ。 そのタブメニューを強調してある。"
 
-#: src/concepts/docks.xml:250(para)
+#: src/concepts/docks.xml:257(para)
 msgid ""
 "In each dialog, you can access a special menu of tab-related operations by "
 "pressing the Tab Menu button, as highlighted in the figure on the right. "
@@ -7100,23 +7084,23 @@ msgstr ""
 "す。 メニューはその属するダイアログによって内容コマンドが少しづつ異なっていま"
 "すが、いずれも新規タブの生成および消去と分離の指示が含まれます。"
 
-#: src/concepts/docks.xml:258(title)
+#: src/concepts/docks.xml:265(title)
 msgid "Tab menu from the Layers dialog"
 msgstr "フォントダイアログにおけるタブメニュー"
 
-#: src/concepts/docks.xml:265(para)
+#: src/concepts/docks.xml:272(para)
 msgid "The Tab menu gives you access to the following commands:"
 msgstr "タブメニューで提供されるコマンドは次のとおり:"
 
-#: src/concepts/docks.xml:270(term)
+#: src/concepts/docks.xml:277(term)
 msgid "Context Menu"
 msgstr "脈絡メニュー(直接関連のあるメニュー)"
 
-#: src/concepts/docks.xml:274(secondary)
+#: src/concepts/docks.xml:281(secondary)
 msgid "Context menu"
 msgstr "脈絡メニュー(直接関連のあるメニュー)"
 
-#: src/concepts/docks.xml:276(para)
+#: src/concepts/docks.xml:283(para)
 msgid ""
 "At the top of each Tab menu is an entry that opens into the dialog's context "
 "menu, which contains operations specific to that particular type of dialog. "
@@ -7127,11 +7111,11 @@ msgstr ""
 "ニューが載っています。 たとえば、 パターンダイアログの脈絡メニューにはパター"
 "ンを操作する項目が揃っています。"
 
-#: src/concepts/docks.xml:287(term) src/concepts/docks.xml:292(secondary)
+#: src/concepts/docks.xml:294(term) src/concepts/docks.xml:299(secondary)
 msgid "Add Tab"
 msgstr "タブに追加(<accel>T</accel>)"
 
-#: src/concepts/docks.xml:294(para)
+#: src/concepts/docks.xml:301(para)
 msgid ""
 "This entry opens into a submenu allowing you to add a large variety of "
 "dockable dialogs as new tabs."
@@ -7139,19 +7123,19 @@ msgstr ""
 "この項目はドック入りが可能な数々のダイアログからどれかを選んで新たなタブとし"
 "て追加するためのサブメニューを呼びだします。"
 
-#: src/concepts/docks.xml:299(title)
+#: src/concepts/docks.xml:306(title)
 msgid "<quote>Add tab</quote> sub-menu"
 msgstr ""
 
-#: src/concepts/docks.xml:311(term)
+#: src/concepts/docks.xml:318(term)
 msgid "Close Tab"
 msgstr "タブを閉じる(<accel>C</accel>)"
 
-#: src/concepts/docks.xml:316(secondary)
+#: src/concepts/docks.xml:323(secondary)
 msgid "Close tab"
 msgstr "タブを閉じる"
 
-#: src/concepts/docks.xml:318(para)
+#: src/concepts/docks.xml:325(para)
 msgid ""
 "This entry closes the dialog. Closing the last dialog in a dock causes the "
 "dock itself to close. Choosing this menu entry has the same effect as "
@@ -7161,15 +7145,15 @@ msgstr ""
 "閉じられます。 このメニュー項目は <guibutton>タブを閉じる</guibutton> ボタン"
 "の機能と同等です。"
 
-#: src/concepts/docks.xml:327(term)
+#: src/concepts/docks.xml:334(term)
 msgid "Detach Tab"
 msgstr "タブを切り放す(<accel>D</accel>)"
 
-#: src/concepts/docks.xml:332(secondary)
+#: src/concepts/docks.xml:339(secondary)
 msgid "Detach tab"
 msgstr "タブを切り放す"
 
-#: src/concepts/docks.xml:334(para)
+#: src/concepts/docks.xml:341(para)
 msgid ""
 "This entry detaches the dialog from the dock, creating a new dock with the "
 "detached dialog as its only member. It has the same effect as dragging the "
@@ -7179,27 +7163,27 @@ msgstr ""
 "ドックをつくります。 このメニュー項目はタブをクリックしてドックの及ばないとこ"
 "ろまで曳き出すのと同じ効果があります。"
 
-#: src/concepts/docks.xml:344(term)
+#: src/concepts/docks.xml:351(term)
 msgid "Preview Size"
 msgstr "プレビューサイズ(<accel>P</accel>)"
 
-#: src/concepts/docks.xml:347(primary)
+#: src/concepts/docks.xml:354(primary)
 msgid "Previews"
 msgstr "プレビュー"
 
-#: src/concepts/docks.xml:348(secondary)
+#: src/concepts/docks.xml:355(secondary)
 msgid "Tab preview size"
 msgstr "サイズを変更"
 
-#: src/concepts/docks.xml:352(secondary) src/concepts/docks.xml:366(secondary)
+#: src/concepts/docks.xml:359(secondary) src/concepts/docks.xml:373(secondary)
 msgid "Preview size"
 msgstr "プレビューサイズ"
 
-#: src/concepts/docks.xml:355(title)
+#: src/concepts/docks.xml:362(title)
 msgid "Preview Size submenu of a Tab menu"
 msgstr "タブメニューよりプレビューサイズ-サブメニュー"
 
-#: src/concepts/docks.xml:368(para)
+#: src/concepts/docks.xml:375(para)
 msgid ""
 "Many, but not all, dialogs have Tab menus containing a <guilabel>Preview "
 "Size</guilabel> option, which opens into a submenu giving a list of sizes "
@@ -7215,20 +7199,19 @@ msgstr ""
 "絵で表されていますが、プレビューサイズとはこういった絵の大きさのことを指して"
 "います。 初期設定値は <guilabel>中間</guilabel> です。"
 
-#: src/concepts/docks.xml:382(term)
+#: src/concepts/docks.xml:389(term)
 msgid "Tab Style"
 msgstr "タブの見出し(<accel>T</accel>)"
 
-#: src/concepts/docks.xml:385(title)
+#: src/concepts/docks.xml:392(title)
 msgid "Tab Style submenu of a Tab menu"
 msgstr "タブメニューよりタブの見出し-サブメニュー"
 
-#: src/concepts/docks.xml:396(secondary)
+#: src/concepts/docks.xml:403(secondary)
 msgid "Tab style"
 msgstr "タブの見出し"
 
-#: src/concepts/docks.xml:398(para)
-#, fuzzy
+#: src/concepts/docks.xml:405(para)
 msgid ""
 "This entry is available when multiple dialogs are in the same dock: it opens "
 "into a submenu allowing you to choose how the tabs at the top will appear "
@@ -7240,15 +7223,15 @@ msgstr ""
 "gimp-dock-tab-style\" /> [= 上図])。 5つの選択肢がありますが、 その全てがどん"
 "なダイアログにでも適応できるのではありません。"
 
-#: src/concepts/docks.xml:411(para)
+#: src/concepts/docks.xml:418(para)
 msgid "This choice gives you an icon representing the dialog type."
 msgstr "ダイアログの種類を表すアイコンのみを表示します。"
 
-#: src/concepts/docks.xml:418(term)
+#: src/concepts/docks.xml:425(term)
 msgid "Current Status"
 msgstr "現在の状態(<accel>S</accel>)"
 
-#: src/concepts/docks.xml:420(para)
+#: src/concepts/docks.xml:427(para)
 msgid ""
 "This choice is only available for dialogs that allows you to select "
 "something, such as a brush, a pattern, a gradient, etc. It gives you a tab "
@@ -7257,19 +7240,19 @@ msgstr ""
 "これはブラシや文様 (パターン) やグラディエントのようなツールを選ぶダイアログ"
 "に対してのみ有効です。 選ばれたツールがタブの爪に表示されます。"
 
-#: src/concepts/docks.xml:429(term)
+#: src/concepts/docks.xml:436(term)
 msgid "Text"
 msgstr "文字(<accel>T</accel>)"
 
-#: src/concepts/docks.xml:431(para)
+#: src/concepts/docks.xml:438(para)
 msgid "This choice gives you a tab showing the dialog type in text."
 msgstr "これはダイアログの種類をタブの爪に文字で表わします。"
 
-#: src/concepts/docks.xml:438(term)
+#: src/concepts/docks.xml:445(term)
 msgid "Icon and Text"
 msgstr "アイコンと文字(<accel>C</accel>)"
 
-#: src/concepts/docks.xml:440(para)
+#: src/concepts/docks.xml:447(para)
 msgid ""
 "This choice gives you wider tabs, containing both an icon and the type of "
 "dialog in text."
@@ -7277,26 +7260,26 @@ msgstr ""
 "これはタブの爪を横長にとり、 そこにダイアログの種類を表すアイコンと文字の両方"
 "を表示します。"
 
-#: src/concepts/docks.xml:447(term)
+#: src/concepts/docks.xml:454(term)
 msgid "Status and Text"
 msgstr "状態と文字(<accel>A</accel>)"
 
-#: src/concepts/docks.xml:449(para)
+#: src/concepts/docks.xml:456(para)
 msgid ""
 "This choice, where available, shows the item currently selected, as well as "
 "the type of dialog."
 msgstr ""
 "これは現在選択されているツールとダイアログの種類を表す文字とを表示します。"
 
-#: src/concepts/docks.xml:461(term)
+#: src/concepts/docks.xml:468(term)
 msgid "View as List; View as Grid"
 msgstr "一覧で表示(<accel>L</accel>); 並べて表示(<accel>G</accel>)"
 
-#: src/concepts/docks.xml:467(secondary)
+#: src/concepts/docks.xml:474(secondary)
 msgid "View as List/Grid"
 msgstr "並べて表示 / 一覧で表示"
 
-#: src/concepts/docks.xml:469(para)
+#: src/concepts/docks.xml:476(para)
 msgid ""
 "These entries are shown in dialogs that allows you to select an item from a "
 "set: brushes, patterns, fonts, etc. You can choose whether to view the items "
@@ -7315,11 +7298,11 @@ msgstr ""
 "のダイアログは格子状に、 それ以外のほとんどのダイアログは縦排列にしてありま"
 "す。"
 
-#: src/concepts/docks.xml:484(term)
+#: src/concepts/docks.xml:491(term)
 msgid "Show Image Menu"
 msgstr "選択画像を表示(<accel>S</accel>)"
 
-#: src/concepts/docks.xml:486(para)
+#: src/concepts/docks.xml:493(para)
 msgid ""
 "This is a toggle. If it is checked, then an Image Menu is shown at the top "
 "of the dock. It is not available for dialogs docked below the Toolbox. Don't "
@@ -7331,11 +7314,11 @@ msgstr ""
 "ん。 画像表示ウィンドウの上部のメニューを指しているのではないことにご注意くだ"
 "さい。"
 
-#: src/concepts/docks.xml:496(term)
+#: src/concepts/docks.xml:503(term)
 msgid "Auto Follow Active Image"
 msgstr "アクティブな画像を自動的に追跡(<accel>F</accel>)"
 
-#: src/concepts/docks.xml:498(para)
+#: src/concepts/docks.xml:505(para)
 msgid ""
 "If this option is checked, the related dialog will be that of the current "
 "image and will change if you select another image. For example, if you have "
@@ -7837,12 +7820,10 @@ msgid "Display Calibration and Profiling"
 msgstr "ディスプレイ装置の測定とプロファイル作成"
 
 #: src/concepts/color-management.xml:157(primary)
-#, fuzzy
 msgid "Color management"
 msgstr "色管理"
 
 #: src/concepts/color-management.xml:160(primary)
-#, fuzzy
 msgid "Color profile"
 msgstr "カラープロファイル"
 
@@ -7977,9 +7958,9 @@ msgstr ""
 "ブラシは<link linkend=\"gimp-brush-dialog\">ブラシダイアログ</link> 上のアイ"
 "コンをひとつクリックして選びます。 <acronym>GIMP</acronym>で現在 <emphasis>使"
 "用中のブラシ</emphasis> はツールボックス下部のブラシ/パターン/グラディエント"
-"のところを見てもわかります。 (環境設定の <link linkend=\"gimp-prefs-toolbox"
-"\">ツールボックス</link> の項をご覧ください。) ブラシのところをクリックすれば"
-"直ちにブラシダイアログ上の作業に移ります。"
+"のところを見てもわかります。 (<link linkend=\"gimp-prefs-toolbox\">環境設定</"
+"link> ダイアログの<quote>ツールボックス</quote>のページをご覧ください。) ブラ"
+"シのところをクリックすれば直ちにブラシダイアログ上の作業に移ります。"
 
 #: src/concepts/brushes.xml:57(para)
 msgid ""
@@ -8204,10 +8185,10 @@ msgid "The standard windows of <acronym>GIMP</acronym>"
 msgstr ""
 
 #: src/concepts/basic-setup.xml:28(para)
-#, fuzzy
 msgid ""
 "The screenshot illustrates the standard windows of <acronym>GIMP</acronym>"
-msgstr "<placeholder-1/>の基本ウィンドウ群のスクリーンショット"
+msgstr "このスクリーンショットは<acronym>GIMP</acronym>の標準的ウィンドウの用"
+"例。"
 
 #: src/concepts/basic-setup.xml:36(para)
 msgid ""

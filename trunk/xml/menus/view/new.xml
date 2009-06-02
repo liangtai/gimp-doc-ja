@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-01-16 j.h: updated to v2.6
   2007-05-20 Added Spanish translation by AntI
   2005/10/24 reviewed; de added by axel.wernicke
 -->
+<!--2009-05-27-->
 <sect2 id="gimp-view-new">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2707 $</revnumber>
-        <date>2006-08-10</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>New View</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">New View</title>
+  <title lang="ja">新しいウィンドウ(<accel>N</accel>)</title>
+
+  <indexterm lang="en">
     <primary>New View</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="アタラシイウィンドウ">新しいウィンドウ</primary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>New View</guimenuitem> command creates a new image
     window for the current image, which you can set up differently from
     the existing display. You can create multiple views of any image, which
@@ -41,18 +38,38 @@
     you have made changes to the image which you have not yet saved, you
     are asked for confirmation.
   </para>-->
+  <para lang="ja">
+    <guimenuitem>新しいウィンドウ(<accel>N</accel>)</guimenuitem> コマンドは
+    現在活性化させている画像を別の新たなウィンドウに開き、 既に開いている表示
+    とは異なる見方を可能にします。 あらゆる画像がその表示を複数設けられます
+    (それぞれのタイトルに.1、 .2&hellip;と番号が振られます) が、 表示倍率などの
+    表示オプションだけが互いに異なる変化をつけられます。 表示方法以外の画像上の
+    変更をいずれかのウィンドウで行なうと同じ画像を扱う他の全てのウィンドウでも
+    その変更が反映されます。 新しいウィンドウを加えてもその画像が複数のファイル
+    に分かれるということではありません。 それらは同じ画像に対する別観点です。 
+    この機能の用途は例えば画像を高い表示倍率で数カ所並行して編集する場面が考え
+    られます。 さらに画像を標準の倍率で表示しておけばその成果も見て作業
+    できます。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>View</guimenu>
             <guimenuitem>New View</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>表示(<accel>V</accel>)</guimenu>
+            <guimenuitem>新しいウィンドウ(<accel>N</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>
