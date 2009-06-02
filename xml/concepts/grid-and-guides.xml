@@ -12,7 +12,7 @@
   2005-12-18 reviewed and added de translation by lexa
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--revision2800 2009-04-01-->
+<!--2009-06-01-->
 <sect1 id="gimp-concepts-image-grid">
   <title lang="en">Grids and Guides</title>
   <title lang="ja">グリッドとガイド</title>
@@ -37,7 +37,7 @@
     <secondary sortas="ガイカン">概観</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>ガイド</primary>
+    <primary sortas="ケントウセン">見当線</primary>
     <secondary sortas="ガイカン">概観</secondary>
   </indexterm>
 
@@ -121,9 +121,9 @@
         <guimenuitem>グリッドを表示(<accel>H</accel>)</guimenuitem>
       </menuchoice>
       として切り替えてください。 この格子線は隠れていないでいつも出ていてほしい
-      という場合は、 環境設定ダイアログの
-      <link linkend="gimp-prefs-image-window-appearance">
-        画像ウィンドウの表示形式</link> のページで <guilabel>
+      という場合は、 
+      <link linkend="gimp-prefs-image-window-appearance">環境設定</link>
+      ダイアログの<quote>画像ウィンドウの表示形式</quote>のページで <guilabel>
       グリッド(<accel>D</accel>)</guilabel> のところにチェックを入れればその
       既定のふるまいを変更できます。 (このページに同じものが2つあるのはノーマル
       モードとフルスクリーンモードで個別に設定できるようになっているためです。)
@@ -131,9 +131,10 @@
     <para lang="ja">
       <acronym>GIMP</acronym>の導入時点の初期設定のグリッドの姿は、 黒い十字の
       印が格子の交点にのみ描かれ、 格子の間隔は縦横ともに10ピクセルです。
-      グリッドの既定形式は環境設定ダイアログの
-      <link linkend="gimp-prefs-default-grid">グリッド</link> のページで設定
-      できます。 画像に対し個別に格子線の外観変更をしたい場合はメニューより
+      グリッドの既定形式は
+      <link linkend="gimp-prefs-default-grid">環境設定</link> ダイアログの
+      <quote>グリッド</quote>のページで設定できます。 
+      画像に対し個別に格子線の外観変更をしたい場合はメニューより
       <menuchoice>
         <guimenu>画像(<accel>I</accel>)</guimenu>
         <guimenuitem>グリッドの設定(<accel>R</accel>)...</guimenuitem>
@@ -177,12 +178,13 @@
       </menuchoice>
       に切り替えてください。 すると画像内のポインタは格子線のいずれかの一定
       範囲内に近づくやいなやすっぱりとその線上に<quote>瞬間移動</quote>します。
-      このしきい値は環境設定ダイアログの
-      <link linkend="gimp-prefs-tool-options">ツールオプション</link> のページ
-      の<quote>スナップ距離</quote>を設定すれば調節できますが、 既定値の8
-      ピクセルは多くの方にご満足いただけるものでしょう。 (格子線に吸い付く
-      機能はグリッドが不可視であっても何ら変わりなくはたらきます。 でもその
-      ような使い方をする理由はなかなか見あたりません。)
+      このしきい値は 
+      <link linkend="gimp-prefs-tool-options">環境設定</link> ダイアログの
+      <quote>ツールオプション</quote>のページで <guilabel>
+      スナップ距離(<accel>S</accel>)</guilabel> を設定すれば調節できますが、 
+      既定値の8ピクセルは多くの方にご満足いただけるものでしょう。 (格子線に
+      吸い付く機能はグリッドが不可視であっても何ら変わりなくはたらきます。 
+      でもそのような使い方をする理由はなかなか見あたりません。)
     </para>
   </sect2>
 
@@ -265,9 +267,10 @@
       何も起こらないというはめになるからです。
     </para>
     <para lang="ja">
-      見当線の初期設定を変えたほうが良いとお考えならば環境設定ダイアログの
-      <link linkend="gimp-prefs-image-window-appearance">画像ウィンドウの
-      表示形式</link> のページでそのふるまいの既定値を変更できます。 でも
+      見当線の初期設定を変えたほうが良いとお考えならば 
+      <link linkend="gimp-prefs-image-window-appearance">環境設定</link> 
+      ダイアログの<quote>画像ウィンドウの表示形式</quote>のページでそのふるまい
+      の既定値を変更できます。 でも 
       <guilabel>ガイド(<accel>G</accel>)</guilabel> の項を無効にするのは、
       前述した理由からあまり良い考えとはいえません。
     </para>

@@ -1,58 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2009-01-16 j.h: reviewed for v2.6
   2007-05-20 Added Spanish translation by AntI
   2005-10-23 reviewed; de added by axel.wernicke
 -->
+<!--2009-06-02-->
 <sect2 id="gimp-view-show-rulers">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2707 $</revnumber>
-        <date>2006-08-10</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Show Rulers</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Show Rulers</title>
+  <title lang="ja">ルーラーを表示(<accel>U</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Rulers</primary>
     <secondary>Show/Mask rulers</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Show Rulers</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="ジョウギ (ルーラー)">定規 (ルーラー)</primary>
+    <secondary sortas="ジョウギヲヒョウジ/ヒヒョウジ">
+      定規を表示/非表示
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ルーラーヲヒョウジ">ルーラーを表示</primary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Show Rulers</guimenuitem> command enables and disables
     displaying the rulers. It may be useful to disable them if you are
     working in <link linkend="gimp-view-fullscreen">full-screen mode</link>.
   </para>
-  <para>
+  <para lang="en">
     You can set the default for the rulers in the
     <link linkend="gimp-prefs-image-window">Image Window Appearance</link>
     dialog.
   </para>
+  <para lang="ja">
+    <guimenuitem>ルーラーを表示(<accel>U</accel>)</guimenuitem> コマンドは定規
+    (ルーラー) の表示と非表示を切り替えます。 非表示にすれば 
+    <link linkend="gimp-view-fullscreen">フルスクリーンモード(<accel>E</accel>)
+    </link> でさらにキャンバスを広くとれるので便利です。
+  </para>
+  <para lang="ja">
+    このコマンドで画像ウィンドウごとに指定するほかに、 
+    <link linkend="gimp-prefs-image-window">環境設定</link> ダイアログの
+    <quote>画像ウィンドウの表示形式</quote>のページの <guilabel>
+    ルーラー(<accel>R</accel>)</guilabel> チェックボックスでも指定が可能で、 
+    それが初期設定になります。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>View</guimenu>
             <guimenuitem>Show Rulers</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>表示(<accel>V</accel>)</guimenu>
+            <guimenuitem>ルーラーを表示(<accel>U</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or by using the keyboard shortcut
-          <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>.
+          <keycombo>
+            <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>R</keycap>
+          </keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo>
+            <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>R</keycap>
+          </keycombo>
         </para>
       </listitem>
     </itemizedlist>

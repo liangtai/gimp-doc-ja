@@ -1,27 +1,30 @@
+# liangtai <ss2pxd1c@yahoo.co.jp>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-Help 2.4.2\n"
-"POT-Creation-Date: 2009-05-19 11:22+0900\n"
-"PO-Revision-Date: 2009-02-04 00:32+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2009-05-27 19:45+0900\n"
+"PO-Revision-Date: 2009-06-02 21:56+0900\n"
+"Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/view/zoom.xml:23(None)
 msgid "@@image: 'images/menus/view-zoom.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/view-zoom.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/view/zoom.xml:11(title) src/menus/view/zoom.xml:14(primary)
 msgid "Zoom"
-msgstr ""
+msgstr "表示倍率(<accel>Z</accel>)"
 
 #: src/menus/view/zoom.xml:18(title)
 msgid "The <quote>Zoom</quote> submenu of the <quote>View</quote> menu"
-msgstr ""
+msgstr "<quote>表示</quote>メニューの<quote>表示倍率</quote>サブメニュー"
 
 #: src/menus/view/zoom.xml:27(para)
 msgid ""
@@ -34,6 +37,14 @@ msgid ""
 "affect the entire image. Please note that zooming is not undoable, since it "
 "does not affect the image data, only the way it is displayed."
 msgstr ""
+"<guisubmenu>表示倍率(<accel>Z</accel></guisubmenu> サブメニューには画像"
+"ウィンドウ内の画像の表示倍率を変えるいろいろな (ズーム) コマンドが入って"
+"います。 画像を大きく表示 (ズームイン) すると高い精度の作業がしやすくなり"
+"ますから画素 (ピクセル) 単位の画像加工や精密な選択に向いています。 その一方"
+"で画像を小さく表示 (ズームアウト) すれば画像の全体像の印象をつかんだり、 "
+"一部の変更が画像全体に及ぼす効果をはかり易くなります。 ちなみに表示倍率の"
+"変更は画像データに影響がなく表示方法だけが変わるので、 "
+"取り消し操作の対象外です。"
 
 #: src/menus/view/zoom.xml:39(para)
 msgid ""
@@ -42,6 +53,10 @@ msgid ""
 "statusbar\">status bar</link> is displayed), where several preset zoom "
 "levels are available."
 msgstr ""
+"$このサブメニューが提供する項目によらず、 他にも画像ウィンドウの ("
+" <link linkend=\"gimp-view-show-statusbar\">ステータスバー</link> を表示させ"
+"ておれば) 底部にあるズームボタンで定倍率を引き出しメニューから選んだり"
+"直接倍率を入力する方法があります。"
 
 #: src/menus/view/zoom.xml:45(para)
 msgid ""
@@ -50,10 +65,14 @@ msgid ""
 "linkend=\"gimp-tool-zoom\">Magnify</link> tool which lets you zoom a "
 "particular area of the image."
 msgstr ""
+"表示倍率を扱う設定は "
+"<link linkend=\"gimp-navigation-dialog\">ナビゲーションダイアログ</link> 上"
+"でも可能です。 画像の一部に焦点を合わせて表示倍率を変更できる "
+"<link linkend=\"gimp-tool-zoom\">ズーム</link> ツールもあります。"
 
 #: src/menus/view/zoom.xml:54(title)
 msgid "Activate the Submenu"
-msgstr ""
+msgstr "サブメニューへの入り方"
 
 #: src/menus/view/zoom.xml:57(para)
 msgid ""
@@ -63,20 +82,30 @@ msgid ""
 "quote> menu shows the current zoom factor, for example, <guilabel>Zoom (100%)"
 "</guilabel>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guisubmenu>表示倍率(<accel>Z</accel></guisubmenu>"
+"</menuchoice>"
+"。 ちなみに<quote>表示</quote>メニュー上では表示倍率がメニュー項目の"
+"名前の横で <guisubmenu>表示倍率 (現在 100%)(<accel>Z</accel>)"
+"</guisubmenu> のように表されます。"
 
 #: src/menus/view/zoom.xml:72(title)
 msgid "Contents of the <quote>Zoom</quote> submenu"
-msgstr ""
+msgstr "<quote>表示倍率</quote>サブメニューの目次"
 
 #: src/menus/view/zoom.xml:73(para)
 msgid ""
 "The various <quote>Zoom</quote> submenu commands are described below, along "
 "with their default keyboard shortcuts, if any."
 msgstr ""
+"これより<quote>表示倍率</quote>サブメニューのいろいろなコマンドについて"
+"説明します。 既定のキーボードショートカットがあれば合わせて紹介します。"
 
 #: src/menus/view/zoom.xml:79(term)
 msgid "Revert Zoom"
-msgstr ""
+msgstr "表示倍率 100パーセントに戻す(<accel>V</accel>)"
 
 #: src/menus/view/zoom.xml:82(para)
 msgid ""
@@ -86,10 +115,15 @@ msgid ""
 "you never changed the zoom factor of the active image, this entry is "
 "insensitive and grayed out."
 msgstr ""
+"(初期設定のショートカット: <keycap>`</keycap>) このコマンドは表示"
+"倍率を直前の値に戻します。 直前の倍率は <guimenuitem>表示倍率を"
+"100パーセントに戻す</guimenuitem> のようにメニュー項目上でも表示"
+"されています。 ただしもし一度たりともまだその画像の表示倍率を変更"
+"していなかった場合にはこのメニュー項目は灰色無効で利用できません。"
 
 #: src/menus/view/zoom.xml:93(term)
 msgid "Zoom Out"
-msgstr ""
+msgstr "縮小表示(<accel>O</accel>)"
 
 #: src/menus/view/zoom.xml:96(para)
 msgid ""
@@ -97,10 +131,13 @@ msgid ""
 "the zoom factor is decreased by about 30%. There is a minimum zoom level of "
 "0.39%."
 msgstr ""
+"(初期設定のショートカット: <keycap>-</keycap>) <quote>縮小表示"
+"</quote>コマンドは実行するたびに表示倍率をおよそ30%ずつ下げます。"
+" 最小倍率は0.39%です。"
 
 #: src/menus/view/zoom.xml:104(term)
 msgid "Zoom In"
-msgstr ""
+msgstr "拡大表示(<accel>I</accel>)"
 
 #: src/menus/view/zoom.xml:107(para)
 msgid ""
@@ -108,6 +145,9 @@ msgid ""
 "zoom factor is increased by about 30%. The maximum possible zoom level is "
 "25600%."
 msgstr ""
+"(初期設定のショートカット: <keycap>+</keycap>) <quote>拡大表示"
+"</quote>コマンドは実行するたびに表示倍率をおよそ30%ずつ上げます。"
+" 最大倍率は25600%です。"
 
 #: src/menus/view/zoom.xml:114(para)
 msgid ""
@@ -119,10 +159,20 @@ msgid ""
 "the help section for <link linkend=\"gimp-prefs-interface\">User Interface "
 "Preferences</link> for instructions."
 msgstr ""
+"<quote>拡大表示</quote>コマンドのキーボードショートカットは非常に"
+"よく使われそうな操作なのに[初期設定の]プラス記号は英語版の"
+"キーボードだと[日本語版も同じく] <keycap>Shift</keycap> キーも"
+"押さなくてはならず、 問題のある設定です。 (ヨーロッパでよく"
+"使われるキーボードにはあてはまりません。) 他のキーボードショート"
+"カットに替えたいときは<quote>動的なキーボードショートカット"
+"割り当て</quote>を利用するとよいでしょう。 詳しくは "
+"<link linkend=\"gimp-prefs-interface\">環境設定</link> ダイアログの"
+" <quote>ユーザーインタフェース</quote>のページの説明をご覧"
+"ください。"
 
 #: src/menus/view/zoom.xml:128(term)
 msgid "Fit Image in Window"
-msgstr ""
+msgstr "ウィンドウ内に全体を表示(<accel>F</accel>)"
 
 #: src/menus/view/zoom.xml:131(para)
 msgid ""
@@ -131,10 +181,15 @@ msgid ""
 "possible, while still keeping it completely within the window. There will "
 "usually be padding on two sides of the image, but not on all four sides."
 msgstr ""
+"(初期設定のショートカット: <keycombo><keycap>Shift</keycap>"
+"<keycap>Ctrl</keycap><keycap>E</keycap></keycombo>) このコマンドは"
+"画像の全体像が現在のウィンドウにすっぽり収まるようにしつつ目一杯"
+"大きな倍率で表示します。 たいていは上下もしくは左右に隙間が空きます"
+"が、 4辺全てがこの外周不活性区域で囲まれることはありません。"
 
 #: src/menus/view/zoom.xml:142(term)
 msgid "Fit Image to Window"
-msgstr ""
+msgstr "ウィンドウ内に最大表示<!--(<accel>L</accel>)-->"
 
 #: src/menus/view/zoom.xml:145(para)
 msgid ""
@@ -143,10 +198,16 @@ msgid ""
 "one dimension, but usually extends beyond the window borders in the other "
 "dimension."
 msgstr ""
+"このコマンドは外周不活性区域が塞がる大きさまで画像の表示倍率を"
+"上げます。 つまり縦横いずれかの方向では画像がウィンドウの大きさと"
+"ぴったり合いますがもう一方の方向では画像がウィンドウの枠をはみ出し"
+"ます。"
 
 #: src/menus/view/zoom.xml:154(term)
 msgid "A:B (X%)"
 msgstr ""
+"<replaceable>A</replaceable>:<replaceable>B</replaceable> "
+"(<replaceable>X</replaceable>%)"
 
 #: src/menus/view/zoom.xml:157(para)
 msgid ""
@@ -154,16 +215,22 @@ msgid ""
 "the menu labels gives a ratio, as well as a percentage value. The 100% zoom "
 "level has a simple keyboard shortcut: <keycap>1</keycap>."
 msgstr ""
+"これらのコマンドで整数比の定倍率が選べます。 各メニュー項目の名前は"
+"表示倍率の比と百分率を示しています。 100% (等倍) には単純明快な"
+"キーボードショートカット <keycap>1</keycap> (数字の一) がついて"
+"います。"
 
 #: src/menus/view/zoom.xml:166(term)
 msgid "Other"
-msgstr ""
+msgstr "その他 (現在 <replaceable>X</replaceable>%)(<accel>R</accel>)..."
 
 #: src/menus/view/zoom.xml:169(para)
 msgid ""
 "This command brings up a dialog which allows you to choose any zoom level "
 "you would like, within the range of 1:256 (0.39%) to 256:1 (25600%)."
 msgstr ""
+"このコマンドはダイアログを開きますので任意の表示倍率を指定してくだ"
+"さい。 指定できる範囲は 1:256 (0.39%) から 256:1 (25600%) です。"
 
 #: src/menus/view/zoom.xml:178(para)
 msgid ""
@@ -171,19 +238,24 @@ msgid ""
 "\"gimp-view-new\">New view</link> command. This allows you to see what is "
 "happening to the image at its normal size at the same time."
 msgstr ""
+"画素単位の精密な描画を行うときは "
+"<link linkend=\"gimp-view-new\">新しいウィンドウ(<accel>N</accel>)</link>"
+" コマンドを利用するとよいでしょう。 新たに開いたウィンドウで標準の"
+"表示倍率の画像を見ながら作業すれば画像に起きた変化が別の視点で同時に"
+"読み取れます。"
 
 #: src/menus/view/snap-to-path.xml:10(title)
 msgid "Snap to Active Path"
-msgstr ""
+msgstr "アクティブなパスにスナップ(<accel>O</accel>)"
 
 #: src/menus/view/snap-to-path.xml:14(primary)
 msgid "Path"
-msgstr ""
+msgstr "パス"
 
 #: src/menus/view/snap-to-path.xml:15(secondary)
 #: src/menus/view/snap-to-path.xml:18(primary)
 msgid "Snap to active path"
-msgstr ""
+msgstr "アクティブなパスにスナップ"
 
 #: src/menus/view/snap-to-path.xml:20(para)
 msgid ""
@@ -191,6 +263,10 @@ msgid ""
 "to pull on the next anchor point of the active path when it approaches. This "
 "is useful for accurate placement of image elements."
 msgstr ""
+"<guimenuitem>アクティブなパスにスナップ(<accel>O</accel>)</guimenuitem> "
+"コマンドでこのオプションを有効にすると、 現在活性化しているパスのいずれかの"
+"アンカーポイントに近づいた選択範囲やレイヤーが自動的にその上まで移動"
+"します。 画像の部品を正確に配置するときに役立ちます。"
 
 #: src/menus/view/snap-to-path.xml:27(title)
 #: src/menus/view/snap-to-guides.xml:38(phrase)
@@ -207,11 +283,11 @@ msgstr ""
 #: src/menus/view/show-guides.xml:40(phrase)
 #: src/menus/view/show-grid.xml:49(phrase) src/menus/view/new.xml:46(phrase)
 #: src/menus/view/navigwindow.xml:34(phrase)
-#: src/menus/view/fullscreen.xml:50(phrase)
+#: src/menus/view/fullscreen.xml:47(title)
 #: src/menus/view/dot-for-dot.xml:69(title)
 #: src/menus/view/display-filters.xml:28(title)
 msgid "Activating the Command"
-msgstr ""
+msgstr "コマンドの呼び出し方"
 
 #: src/menus/view/snap-to-path.xml:30(para)
 msgid ""
@@ -219,17 +295,22 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Snap to Path</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>アクティブなパスにスナップ(<accel>O</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/snap-to-guides.xml:19(phrase)
 #: src/menus/view/snap-to-guides.xml:23(secondary)
 #: src/menus/view/snap-to-guides.xml:26(primary)
 msgid "Snap to Guides"
-msgstr ""
+msgstr "ガイドにスナップ(<accel>A</accel>)"
 
 #: src/menus/view/snap-to-guides.xml:22(primary)
 #: src/menus/view/show-guides.xml:22(primary)
 msgid "Guides"
-msgstr ""
+msgstr "ガイド (見当線)"
 
 #: src/menus/view/snap-to-guides.xml:28(para)
 msgid ""
@@ -240,6 +321,15 @@ msgid ""
 "it when it approaches. This is enormously useful for accurate placement of "
 "image elements."
 msgstr ""
+"<guimenuitem>ガイドにスナップ(<accel>A</accel>)</guimenuitem> コマンドは"
+"ガイド (見当線) に近づいた物体を吸い付ける作用の有無を切り替えます。"
+" <quote>ガイドにスナップ</quote>が有効になっているとき ("
+" <link linkend=\"gimp-view-show-guides\">ガイドを表示(<accel>G</accel>)</link>"
+"を参照) ガイドがまるで磁石のような作用をします。 具体的には "
+"<link linkend=\"gimp-tool-move\">移動ツール</link> で動かしたレイヤーや"
+"選択範囲がガイド (見当線) に一定の範囲で近づくと輪郭線がその線上にぴったり"
+"合うように自動的に移動します。 画像の部品を正確に配置するときにすごく"
+"役立ちます。"
 
 #: src/menus/view/snap-to-guides.xml:42(para)
 msgid ""
@@ -247,17 +337,22 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Snap to Guides</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ガイドにスナップ(<accel>A</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/snap-to-grid.xml:19(phrase)
 #: src/menus/view/snap-to-grid.xml:23(secondary)
 #: src/menus/view/snap-to-grid.xml:26(primary)
 msgid "Snap to Grid"
-msgstr ""
+msgstr "グリッドにスナップ(<accel>P</accel>)"
 
 #: src/menus/view/snap-to-grid.xml:22(primary)
 #: src/menus/view/show-grid.xml:22(primary)
 msgid "Grid"
-msgstr ""
+msgstr "グリッド"
 
 #: src/menus/view/snap-to-grid.xml:28(para)
 msgid ""
@@ -268,6 +363,14 @@ msgid ""
 "when it approaches. This is enormously useful for accurate placement of "
 "image elements."
 msgstr ""
+"<guimenuitem>グリッドにスナップ(<accel>P</accel>)</guimenuitem> コマンドは"
+"グリッド (格子線) に近づいた物体を吸い付ける作用の有無を切り替えます。"
+" <quote>グリッドにスナップ</quote>が有効になっているとき ("
+" <link linkend=\"gimp-view-show-grid\">グリッドを表示(<accel>H</accel>)</link>"
+"を参照) グリッドがまるで磁石のような作用をします。 具体的には "
+"<link linkend=\"gimp-tool-move\">移動ツール</link> で動かしたレイヤーや"
+"選択範囲がグリッド (格子線) の交点に一定の範囲で近づくと点上に自動的に移動"
+"します。 画像の部品を正確に配置するときにすごく役立ちます。"
 
 #: src/menus/view/snap-to-grid.xml:42(para)
 msgid ""
@@ -275,20 +378,25 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Snap to Grid</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>グリッドにスナップ(<accel>P</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/snap-to-canvas.xml:10(title)
 msgid "Snap to Canvas"
-msgstr ""
+msgstr "画像の境界にスナップ(<accel>C</accel>)"
 
 #: src/menus/view/snap-to-canvas.xml:14(primary)
 #: src/menus/view/padding-color.xml:17(primary)
 msgid "Canvas"
-msgstr ""
+msgstr "キャンバス"
 
 #: src/menus/view/snap-to-canvas.xml:15(secondary)
 #: src/menus/view/snap-to-canvas.xml:18(primary)
 msgid "Snap to canvas"
-msgstr ""
+msgstr "画像の境界にスナップ"
 
 #: src/menus/view/snap-to-canvas.xml:21(para)
 msgid ""
@@ -296,6 +404,10 @@ msgid ""
 "to pull on the canvas edges when it approaches. This is useful for accurate "
 "placement of image elements."
 msgstr ""
+"<guimenuitem>画像の境界にスナップ(<accel>C</accel>)</guimenuitem> コマンド"
+"でこのオプションを有効にすると、 キャンバスの縁に近づいた選択範囲やレイヤー"
+"が自動的に境界線が揃う位置に移動します。 画像の部品を正確に配置するときに"
+"役立ちます。"
 
 #: src/menus/view/snap-to-canvas.xml:27(para)
 msgid ""
@@ -304,6 +416,13 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Canvas Size</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"キャンバスの境界線は普段画像の境界線にとけ込んでいます。 つまり画像と"
+"キャンバスが同じ大きさになっているからですが、 画像ウィンドウのメニューで"
+" <menuchoice>"
+"<guimenu>画像(<accel>I</accel>)</guimenu>"
+"<guimenuitem>キャンバスサイズの変更(<accel>V</accel>)...</guimenuitem>"
+"</menuchoice> "
+"と進めばキャンバスの大きさを変更できます。"
 
 #: src/menus/view/snap-to-canvas.xml:41(para)
 msgid ""
@@ -311,11 +430,16 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Snap to Canvas</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>画像の境界にスナップ(<accel>C</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/shrink-wrap.xml:19(phrase)
 #: src/menus/view/shrink-wrap.xml:22(primary)
 msgid "Shrink Wrap"
-msgstr ""
+msgstr "ウィンドウサイズを合わせる(<accel>W</accel>)"
 
 #: src/menus/view/shrink-wrap.xml:24(para)
 msgid ""
@@ -328,6 +452,16 @@ msgid ""
 "change</quote> options in the <link linkend=\"gimp-prefs-image-window"
 "\">Image Window</link> page of the Preferences dialog."
 msgstr ""
+"<guimenuitem>ウィンドウサイズを合わせる(<accel>W</accel>)</guimenuitem> "
+"コマンドは画像の現在の倍率による表示にちょうど合う大きさに画像ウィンドウを"
+"調整します。 ただし画像がコンピュータ画面からはみ出すようならばできるだけ"
+"画像の大部分が見えるようにウィンドウが拡大されます。 ちなみに "
+"<link linkend=\"gimp-prefs-image-window\">環境設定</link> ダイアログの"
+"<quote>画像ウィンドウ</quote>のページ上の <guilabel>"
+"ズーム時にウィンドウサイズを変更(<accel>Z</accel>)</guilabel> オプションと"
+" <guilabel>キャンバスサイズ変更時にウィンドウサイズを変更(<accel>S</accel>)"
+"</guilabel> オプションをともに有効にしておくと<acronym>GIMP</acronym>は"
+"自動的にこの調整を行います。"
 
 #: src/menus/view/shrink-wrap.xml:36(para)
 msgid ""
@@ -337,6 +471,10 @@ msgid ""
 "functionality described may be different on your computer, or in the worst "
 "case, might not be available at all."
 msgstr ""
+"ここで述べたウィンドウの挙動は<acronym>GIMP</acronym>自身が行うのではなく"
+"お使いのコンピュータで稼動しているウィンドウマネージャが担当します。 "
+"このためコンピュータによってはここでの説明と若干異なったり、 "
+"最悪の場合全く作用しないかもしれません。"
 
 #: src/menus/view/shrink-wrap.xml:50(para)
 msgid ""
@@ -344,25 +482,32 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Shrink Wrap</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ウィンドウサイズを合わせる(<accel>W</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/shrink-wrap.xml:59(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Ctrl</keycap><keycap>E</"
 "keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>"
 
 #: src/menus/view/show-statusbar.xml:19(phrase)
 #: src/menus/view/show-statusbar.xml:26(primary)
 msgid "Show Statusbar"
-msgstr ""
+msgstr "ステータスバーを表示(<accel>T</accel>)"
 
 #: src/menus/view/show-statusbar.xml:22(primary)
 msgid "Status bar"
-msgstr ""
+msgstr "ステータスバー"
 
 #: src/menus/view/show-statusbar.xml:23(secondary)
 msgid "Show/Hide status bar"
-msgstr ""
+msgstr "ステータスバーを表示/非表示"
 
 #: src/menus/view/show-statusbar.xml:28(para)
 msgid ""
@@ -370,12 +515,21 @@ msgid ""
 "displaying the status bar. It may be useful to disable it when you are "
 "working in <link linkend=\"gimp-view-fullscreen\">full-screen mode</link>."
 msgstr ""
+"<guimenuitem>ステータスバーを表示(<accel>T</accel>)</guimenuitem> コマンド"
+"はステータスバーの表示と非表示を切り替えます。 非表示にすれば "
+"<link linkend=\"gimp-view-fullscreen\">フルスクリーンモード(<accel>E</accel>)"
+"</link> でさらにキャンバスを広くとれるので便利です。"
 
 #: src/menus/view/show-statusbar.xml:34(para)
 msgid ""
 "You can set the default for the status bar in the <link linkend=\"gimp-prefs-"
 "image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ウィンドウごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"ステータスバー(<accel>T</accel>)</guilabel> チェックボックスでも指定が可能"
+"で、 それが初期設定になります。"
 
 #: src/menus/view/show-statusbar.xml:45(para)
 msgid ""
@@ -383,23 +537,28 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Statusbar</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ステータスバーを表示(<accel>T</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-selection.xml:19(phrase)
 #: src/menus/view/show-selection.xml:27(primary)
 msgid "Show Selection"
-msgstr ""
+msgstr "選択範囲の境界線を表示(<accel>S</accel>)"
 
 #: src/menus/view/show-selection.xml:22(primary)
 msgid "Selection"
-msgstr ""
+msgstr "選択範囲"
 
 #: src/menus/view/show-selection.xml:23(secondary)
 msgid "Selection boundary"
-msgstr ""
+msgstr "選択範囲の境界線"
 
 #: src/menus/view/show-selection.xml:24(tertiary)
 msgid "Show/Mask selection boundary"
-msgstr ""
+msgstr "境界線の表示/非表示"
 
 #: src/menus/view/show-selection.xml:29(para)
 msgid ""
@@ -408,12 +567,21 @@ msgid ""
 "Please note that the selection still exists, even if displaying this line is "
 "disabled."
 msgstr ""
+"<guimenuitem>選択範囲の境界線表示(<accel>S</accel>)</guimenuitem> コマンド"
+"は画像上の選択範囲を点滅破線<quote>蟻の行進</quote>で囲んで境界線を図示する"
+"かどうかを切り替えます。 この表示を無効にしても選択範囲は解消されず残ってい"
+"ます。"
 
 #: src/menus/view/show-selection.xml:35(para)
 msgid ""
 "You can set the default for displaying the selection in the <link linkend="
 "\"gimp-prefs-image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"選択範囲の境界線(<accel>E</accel>)</guilabel> チェックボックスでも指定が"
+"可能で、 それが初期設定になります。"
 
 #: src/menus/view/show-selection.xml:46(para)
 msgid ""
@@ -421,25 +589,32 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Selection</"
 "guimenuitem></menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>選択範囲の境界線表示(<accel>S</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-selection.xml:55(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Ctrl</keycap><keycap>T</"
 "keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>"
 
 #: src/menus/view/show-scrollbars.xml:19(phrase)
 #: src/menus/view/show-scrollbars.xml:26(primary)
 msgid "Show Scrollbars"
-msgstr ""
+msgstr "スクロールバーを表示(<accel>B</accel>)"
 
 #: src/menus/view/show-scrollbars.xml:22(primary)
 msgid "Scroll-bars"
-msgstr ""
+msgstr "スクロールバー"
 
 #: src/menus/view/show-scrollbars.xml:23(secondary)
 msgid "Show/Mask scrollbars"
-msgstr ""
+msgstr "スクロールバーを表示/非表示"
 
 #: src/menus/view/show-scrollbars.xml:28(para)
 msgid ""
@@ -447,12 +622,21 @@ msgid ""
 "displaying the scrollbars. It may be useful to disable them if you are "
 "working in <link linkend=\"gimp-view-fullscreen\">full-screen mode</link>."
 msgstr ""
+" <guimenuitem>スクロールバーを表示(<accel>B</accel>)</guimenuitem> コマンド"
+"はスクロールバーの表示と非表示を切り替えます。 非表示にすれば "
+"<link linkend=\"gimp-view-fullscreen\">フルスクリーンモード(<accel>E</accel>)"
+"</link> でさらにキャンバスを広くとれるので便利です。"
 
 #: src/menus/view/show-scrollbars.xml:34(para)
 msgid ""
 "You can set the default for the scrollbars in the <link linkend=\"gimp-prefs-"
 "image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ウィンドウごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window\">環境設定</link> ダイアログの"
+"<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"スクロールバー(<accel>B</accel>)</guilabel> チェックボックスでも指定が"
+"可能で、 それが初期設定になります。"
 
 #: src/menus/view/show-scrollbars.xml:45(para)
 msgid ""
@@ -460,14 +644,19 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Scrollbars</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>View</guimenu>"
+"<guimenuitem>スクロールバーを表示(<accel>B</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-sample-points.xml:20(phrase)
 msgid "Show Sample Points"
-msgstr ""
+msgstr "サンプルポイントを表示"
 
 #: src/menus/view/show-sample-points.xml:23(primary)
 msgid "Sample Points"
-msgstr ""
+msgstr "サンプルポイント"
 
 #: src/menus/view/show-sample-points.xml:25(para)
 msgid ""
@@ -476,6 +665,11 @@ msgid ""
 "pixels in the <link linkend=\"gimp-sample-point-dialog\">sample points "
 "dialog</link>."
 msgstr ""
+"<guimenuitem>サンプルポイントを表示</guimenuitem> コマンドは画像上に置いた"
+"サンプルポイントの表示と非表示を切り替えます。 サンプルポイントは画像上の"
+"(4箇所までの) 任意の画素の色情報を "
+"<link linkend=\"gimp-sample-point-dialog\">サンプルポイントダイアログ</link>"
+" で表示するために使われます。"
 
 #: src/menus/view/show-sample-points.xml:37(para)
 msgid ""
@@ -483,19 +677,24 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Sample Points</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>サンプルポイントを表示</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-rulers.xml:19(phrase)
 #: src/menus/view/show-rulers.xml:26(primary)
 msgid "Show Rulers"
-msgstr ""
+msgstr "ルーラーを表示(<accel>U</accel>)"
 
 #: src/menus/view/show-rulers.xml:22(primary)
 msgid "Rulers"
-msgstr ""
+msgstr "定規 (ルーラー)"
 
 #: src/menus/view/show-rulers.xml:23(secondary)
 msgid "Show/Mask rulers"
-msgstr ""
+msgstr "定規を表示/非表示"
 
 #: src/menus/view/show-rulers.xml:28(para)
 msgid ""
@@ -503,12 +702,21 @@ msgid ""
 "displaying the rulers. It may be useful to disable them if you are working "
 "in <link linkend=\"gimp-view-fullscreen\">full-screen mode</link>."
 msgstr ""
+"<guimenuitem>ルーラーを表示(<accel>U</accel>)</guimenuitem> コマンドは定規"
+"(ルーラー) の表示と非表示を切り替えます。 非表示にすれば "
+"<link linkend=\"gimp-view-fullscreen\">フルスクリーンモード(<accel>E</accel>)"
+"</link> でさらにキャンバスを広くとれるので便利です。"
 
 #: src/menus/view/show-rulers.xml:33(para)
 msgid ""
 "You can set the default for the rulers in the <link linkend=\"gimp-prefs-"
 "image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ウィンドウごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window\">環境設定</link> ダイアログの"
+"<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"ルーラー(<accel>R</accel>)</guilabel> チェックボックスでも指定が可能で、 "
+"それが初期設定になります。"
 
 #: src/menus/view/show-rulers.xml:44(para)
 msgid ""
@@ -516,25 +724,34 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Rulers</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ルーラーを表示(<accel>U</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-rulers.xml:53(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Shift</"
 "keycap><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo>"
+"<keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>R</keycap>"
+"</keycombo>"
 
 #: src/menus/view/show-menubar.xml:19(phrase)
 #: src/menus/view/show-menubar.xml:26(primary)
 msgid "Show Menubar"
-msgstr ""
+msgstr "メニューバーを表示(<accel>M</accel>)"
 
 #: src/menus/view/show-menubar.xml:22(primary)
 msgid "Menu-bar"
-msgstr ""
+msgstr "メニューバー"
 
 #: src/menus/view/show-menubar.xml:23(secondary)
 msgid "Show/Mask menu bar"
-msgstr ""
+msgstr "メニューバーを表示/非表示"
 
 #: src/menus/view/show-menubar.xml:28(para)
 msgid ""
@@ -544,12 +761,25 @@ msgid ""
 "menubar is not displayed, you can right-click on the image to access the "
 "menubar entries."
 msgstr ""
+"<guimenuitem>メニューバーを表示(<accel>M</accel>)</guimenuitem> コマンドは"
+"画像ウィンドウのメニューバーの表示と非表示を切り替えます。 非表示は "
+"<link linkend=\"gimp-view-fullscreen\">フルスクリーンモード(<accel>E</accel>)"
+"</link> のときに便利です。 メニューバーがなくても、 キャンバス上を "
+"<mousebutton>第2ボタン</mousebutton> でクリックするか、 キーボードショート"
+"カット <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo> を"
+"押すかあるいはウィンドウ左上隅の小さなメニューボタンをクリックすれば画像"
+"ウィンドウのメニューが呼び出せます。"
 
 #: src/menus/view/show-menubar.xml:35(para)
 msgid ""
 "You can set the default for the menubar in the <link linkend=\"gimp-prefs-"
 "image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ウィンドウごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"メニューバー(<accel>M</accel>)</guilabel> チェックボックスでも指定が可能"
+"で、 それが初期設定になります。"
 
 #: src/menus/view/show-menubar.xml:46(para)
 msgid ""
@@ -557,19 +787,24 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Menubar</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>メニューバーを表示(<accel>M</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-layer-boundary.xml:19(phrase)
 #: src/menus/view/show-layer-boundary.xml:26(primary)
 msgid "Show Layer Boundary"
-msgstr ""
+msgstr "レイヤーの境界線を表示(<accel>L</accel>)"
 
 #: src/menus/view/show-layer-boundary.xml:22(primary)
 msgid "Layer boundary"
-msgstr ""
+msgstr "レイヤーの境界線"
 
 #: src/menus/view/show-layer-boundary.xml:23(secondary)
 msgid "Show/mask layer boundary"
-msgstr ""
+msgstr "レイヤーの境界線を表示/非表示"
 
 #: src/menus/view/show-layer-boundary.xml:28(para)
 msgid ""
@@ -579,12 +814,22 @@ msgid ""
 "smaller than the image window. When the layer is the same size as the image "
 "window, the layer boundary is obscured by the image border."
 msgstr ""
+"<guimenuitem>レイヤーの境界線を表示(<accel>L</accel>)</guimenuitem> "
+"コマンドはレイヤーの境界線をキャンバス上で図示するため黄色い破線で"
+"とり囲むように表示するかどうかを切り替えます。 この破線はレイヤーが画像より"
+"も小さいときだけ見えるようになります。 レイヤーが画像と同じ大きさの場合は"
+"画像の境界線に重なり目立たなくなります。"
 
 #: src/menus/view/show-layer-boundary.xml:35(para)
 msgid ""
 "You can set the default for the layer boundary in the <link linkend=\"gimp-"
 "prefs-image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"レイヤーの境界線(<accel>L</accel>)</guilabel> チェックボックスでも指定が"
+"可能で、 それが初期設定になります。"
 
 #: src/menus/view/show-layer-boundary.xml:46(para)
 msgid ""
@@ -592,15 +837,20 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Layer Boundary</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>レイヤーの境界線を表示(<accel>L</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-guides.xml:19(phrase)
 #: src/menus/view/show-guides.xml:26(primary)
 msgid "Show Guides"
-msgstr ""
+msgstr "ガイドを表示(<accel>G</accel>)"
 
 #: src/menus/view/show-guides.xml:23(secondary)
 msgid "Show/Mask Guides"
-msgstr ""
+msgstr "見当線を表示/非表示"
 
 #: src/menus/view/show-guides.xml:28(para)
 msgid ""
@@ -608,12 +858,21 @@ msgid ""
 "displaying of <link linkend=\"glossary-guides\">Guides</link> in the image "
 "window."
 msgstr ""
+"<guimenuitem>ガイドを表示(<accel>G</accel>)</guimenuitem> コマンドは画像"
+"ウィンドウでの "
+"<link linkend=\"glossary-guides\">ガイド (見当線)</link> の表示の有無を切り"
+"替えます。"
 
 #: src/menus/view/show-guides.xml:33(para)
 msgid ""
 "You can set the default for the guides in the <link linkend=\"gimp-prefs-"
 "image-window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"ガイド(<accel>G</accel>)</guilabel> チェックボックスでも指定が可能で、 "
+"それが初期設定になります。"
 
 #: src/menus/view/show-guides.xml:44(para)
 msgid ""
@@ -621,21 +880,29 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Guides</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ガイドを表示(<accel>G</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/show-guides.xml:53(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Shift</"
 "keycap><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット"
+" <keycombo>"
+"<keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>"
 
 #: src/menus/view/show-grid.xml:19(phrase)
 #: src/menus/view/show-grid.xml:26(primary)
 msgid "Show Grid"
-msgstr ""
+msgstr "グリッドを表示(<accel>H</accel>)"
 
 #: src/menus/view/show-grid.xml:23(secondary)
 msgid "Show/Mask Grid"
-msgstr ""
+msgstr "グリッドを表示/非表示"
 
 #: src/menus/view/show-grid.xml:28(para)
 msgid ""
@@ -643,12 +910,22 @@ msgid ""
 "and disable displaying the grid. When you enable it, the grid overlays the "
 "image and makes it easier for you to line up selected image elements."
 msgstr ""
+"<guimenuitem>グリッドを表示(<accel>H</accel>)</guimenuitem> コマンドにより"
+"現在の画像のキャンバス上で "
+"<link linkend=\"gimp-concepts-image-grid\">グリッド (格子線)</link> の表示と"
+"非表示が切り替えられます。 表示を選択すると画像を覆うように升目模様が現れ、"
+"画像の部品が楽に整列できます。"
 
 #: src/menus/view/show-grid.xml:34(para)
 msgid ""
 "You can set the default for the grid in the <link linkend=\"gimp-prefs-image-"
 "window\">Image Window Appearance</link> dialog."
 msgstr ""
+"このコマンドで画像ごとに指定するほかに、 "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの <guilabel>"
+"グリッド(<accel>D</accel>)</guilabel> チェックボックスでも指定が可能で、 "
+"それが初期設定になります。"
 
 #: src/menus/view/show-grid.xml:40(para)
 msgid ""
@@ -656,6 +933,11 @@ msgid ""
 "link> command and the <link linkend=\"gimp-view-snap-to-grid\">Snap to Grid</"
 "link> command."
 msgstr ""
+"<link linkend=\"gimp-view-snap-to-grid\">"
+"グリッドにスナップ(<accel>P</accel>)</link> コマンドや "
+"<guimenu>画像(<accel>I</accel>)</guimenu> メニューの "
+"<link linkend=\"gimp-image-configure-grid\">"
+"グリッドの設定(<accel>R</accel>)...</link> コマンドも参考にしてください。"
 
 #: src/menus/view/show-grid.xml:53(para)
 msgid ""
@@ -663,6 +945,11 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Show Grid</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>グリッドを表示(<accel>H</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -670,36 +957,37 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/view-padding-color.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/view-padding-color.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/view/padding-color.xml:10(title)
 msgid "Padding Color"
-msgstr ""
+msgstr "キャンバス周辺の色(<accel>P</accel>)"
 
 #: src/menus/view/padding-color.xml:13(primary)
 #: src/menus/view/introduction.xml:20(quote)
 #: src/menus/view/introduction.xml:24(primary)
 msgid "View"
-msgstr ""
+msgstr "表示"
 
 #: src/menus/view/padding-color.xml:14(secondary)
 #: src/menus/view/padding-color.xml:25(secondary)
 msgid "Padding color of canvas"
-msgstr ""
+msgstr "キャンバス周辺の色"
 
 #: src/menus/view/padding-color.xml:18(secondary)
 #: src/menus/view/padding-color.xml:21(primary)
 msgid "Padding color"
-msgstr ""
+msgstr "周辺の色"
 
 #: src/menus/view/padding-color.xml:24(primary)
 #: src/menus/view/display-filters.xml:13(primary)
 #: src/menus/view/display-filters.xml:87(primary)
 msgid "Color"
-msgstr ""
+msgstr "色"
 
 #: src/menus/view/padding-color.xml:29(title)
 msgid "Contents of the <quote>Padding Color</quote> submenu"
-msgstr ""
+msgstr "<quote>キャンバス周辺の色</quote>サブメニューの目次"
 
 #: src/menus/view/padding-color.xml:36(para)
 msgid ""
@@ -710,10 +998,18 @@ msgid ""
 "padding color does not have any effect on the image itself. Please note that "
 "this color is not the same as the color used by the Fill tool."
 msgstr ""
+"画像の周りをとり囲むキャンバスを表す色は "
+"<guisubmenu>キャンバス周辺の色(<accel>P</accel>)</guisubmenu> コマンドで"
+"変更できます。 画像はキャンバス上に直接置かれています。 画像ウィンドウでは"
+"キャンバスは画像の外枠のように見えます。 キャンバスの色は画像自体には何の"
+"影響もないため、 ご自分の好みの色を使用されて構いません。 ちなみにこの色は"
+"<quote>塗りつぶし</quote>ツールで使われる "
+"<link linkend=\"gimp-toolbox-color-area\">描画色や背景色</link> とは無関係"
+"です。"
 
 #: src/menus/view/padding-color.xml:47(title)
 msgid "Activating the submenu"
-msgstr ""
+msgstr "サブメニューへの入り方"
 
 #: src/menus/view/padding-color.xml:50(para)
 msgid ""
@@ -721,52 +1017,70 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Padding Color</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guisubmenu>キャンバス周辺の色(<accel>P</accel>)</guisubmenu>"
+"</menuchoice>"
 
 #: src/menus/view/padding-color.xml:61(title)
 msgid "<quote>Padding Color</quote> Options"
-msgstr ""
+msgstr "<quote>キャンバス周辺の色</quote>のオプション"
 
 #: src/menus/view/padding-color.xml:64(term)
 msgid "From Theme"
-msgstr ""
+msgstr "テーマから(<accel>T</accel>)"
 
 #: src/menus/view/padding-color.xml:66(para)
 msgid ""
 "The color of the theme defined in <link linkend=\"gimp-prefs-theme"
 "\">Preferences Theme</link> is used."
 msgstr ""
+"<link linkend=\"gimp-prefs-theme\">環境設定</link> ダイアログの"
+"<quote>テーマ</quote>のページで選択したテーマに従って色が"
+"定まります。"
 
 #: src/menus/view/padding-color.xml:73(term)
 msgid "Light/Dark Check Color"
 msgstr ""
+"明るい市松模様の色(<accel>L</accel>); "
+"暗い市松模様の色(<accel>D</accel>)"
 
 #: src/menus/view/padding-color.xml:75(para)
 msgid ""
 "The check representing transparency, which is defined in <link linkend="
 "\"gimp-prefs-display\">Preferences Display</link> is used."
 msgstr ""
+"<link linkend=\"gimp-prefs-display\">環境設定</link> ダイアログの"
+"<quote>ディスプレイ</quote>のページの <guilabel>"
+"市松模様の表示方法(<accel>C</accel>)</guilabel> に基づく透明度が"
+"適用されます。"
 
 #: src/menus/view/padding-color.xml:83(term)
 msgid "Select Custom Color"
-msgstr ""
+msgstr "カスタムカラーを選択(<accel>C</accel>)..."
 
 #: src/menus/view/padding-color.xml:85(para)
 msgid "Opens the Color Selector window to let you choose a color to use."
-msgstr ""
+msgstr "色の変更ダイアログが開かれますので使用したい色を選択してください。"
 
 #: src/menus/view/padding-color.xml:91(term)
 msgid "As in Preferences"
-msgstr ""
+msgstr "デフォルト設定(<accel>P</accel>)"
 
 #: src/menus/view/padding-color.xml:93(para)
 msgid ""
 "The color selected in the <link linkend=\"gimp-prefs-image-window-appearance"
 "\">Image Window Appearance</link> is used."
 msgstr ""
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>の <guilabel>"
+"キャンバス周辺の表示モード(<accel>P</accel>)</guilabel> で指定して"
+"あった色がそのまま使用されます。"
 
 #: src/menus/view/new.xml:19(phrase) src/menus/view/new.xml:22(primary)
 msgid "New View"
-msgstr ""
+msgstr "新しいウィンドウ(<accel>N</accel>)"
 
 #: src/menus/view/new.xml:24(para)
 msgid ""
@@ -781,6 +1095,17 @@ msgid ""
 "working on individual pixels at a high zoom factor. You could then see the "
 "effects your changes would have on the image at a normal size."
 msgstr ""
+"<guimenuitem>新しいウィンドウ(<accel>N</accel>)</guimenuitem> コマンドは"
+"現在活性化させている画像を別の新たなウィンドウに開き、 既に開いている表示"
+"とは異なる見方を可能にします。 あらゆる画像がその表示を複数設けられます"
+"(それぞれのタイトルに.1、 .2&hellip;と番号が振られます) が、 表示倍率などの"
+"表示オプションだけが互いに異なる変化をつけられます。 表示方法以外の画像上の"
+"変更をいずれかのウィンドウで行なうと同じ画像を扱う他の全てのウィンドウでも"
+"その変更が反映されます。 新しいウィンドウを加えてもその画像が複数のファイル"
+"に分かれるということではありません。 それらは同じ画像に対する別観点です。 "
+"この機能の用途は例えば画像を高い表示倍率で数カ所並行して編集する場面が考え"
+"られます。 さらに画像を標準の倍率で表示しておけばその成果も見て作業"
+"できます。"
 
 #: src/menus/view/new.xml:50(para)
 msgid ""
@@ -788,6 +1113,11 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>New View</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>新しいウィンドウ(<accel>N</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -795,18 +1125,19 @@ msgstr ""
 msgid ""
 "@@image: 'images/using/stock-navigation-16.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/using/stock-navigation-16.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/view/navigwindow.xml:19(phrase)
 msgid "Navigation Window"
-msgstr ""
+msgstr "ナビゲーションウィンドウ(<accel>V</accel>)"
 
 #: src/menus/view/navigwindow.xml:22(primary)
 msgid "Navigation"
-msgstr ""
+msgstr "ナビゲーション"
 
 #: src/menus/view/navigwindow.xml:23(secondary)
 msgid "View Navigation window"
-msgstr ""
+msgstr "ナビゲーションウィンドウを表示"
 
 #: src/menus/view/navigwindow.xml:25(para)
 msgid ""
@@ -817,6 +1148,12 @@ msgid ""
 "the <link linkend=\"gimp-navigation-dialog\">Navigation dialog</link> "
 "chapter."
 msgstr ""
+"<guimenuitem>ナビゲーションウィンドウ(<accel>V</accel>)</guimenuitem> "
+"コマンドは "
+"<link linkend=\"gimp-navigation-dialog\">ナビゲーションダイアログ</link> を"
+"開きます。 そこでは表示倍率の調節や画像上で視野を移す操作が可能で、 "
+"簡単に画像上を経回ることができます。 詳しくは<quote>ナビゲーション"
+"ダイアログ</quote>の節をご覧ください。"
 
 #: src/menus/view/navigwindow.xml:38(para)
 msgid ""
@@ -824,30 +1161,35 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Navigation Window</"
 "guimenuitem></menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ナビゲーションウィンドウ(<accel>V</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/navigwindow.xml:47(para)
 msgid ""
 "You can also access it more rapidly by clicking on the <placeholder-1/> icon "
 "in the lower right corner of the image window."
-msgstr ""
+msgstr "画像ウィンドウの右下にある <placeholder-1/> アイコンボタンをクリックすればさらに手軽にナビゲートできます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/view/introduction.xml:33(None)
 msgid "@@image: 'images/menus/view.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/view.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/view/introduction.xml:19(phrase)
 msgid "Introduction to the <placeholder-1/> Menu"
-msgstr ""
+msgstr "<placeholder-1/>メニューのあらまし"
 
 #: src/menus/view/introduction.xml:25(secondary)
 msgid "Introduction"
-msgstr ""
+msgstr "あらまし"
 
 #: src/menus/view/introduction.xml:29(phrase)
 msgid "Contents of the View menu"
-msgstr ""
+msgstr "表示メニューの目次"
 
 #: src/menus/view/introduction.xml:37(para)
 msgid ""
@@ -855,19 +1197,22 @@ msgid ""
 "commands that affect the visibility or appearance of the image and various "
 "elements of the interface."
 msgstr ""
+"この節では <guimenu>表示(<accel>V</accel>)</guimenu> メニューを解説します。"
+" このメニューは画像およびさまざまなインターフェース部品の可視性や外観を変化"
+"させるコマンドで成り立っています。"
 
-#: src/menus/view/fullscreen.xml:19(phrase)
-#: src/menus/view/fullscreen.xml:23(secondary)
-#: src/menus/view/fullscreen.xml:26(primary)
+#: src/menus/view/fullscreen.xml:11(phrase)
+#: src/menus/view/fullscreen.xml:15(secondary)
+#: src/menus/view/fullscreen.xml:18(primary)
 msgid "Full Screen"
-msgstr ""
+msgstr "フルスクリーンモード(<accel>E</accel>)"
 
-#: src/menus/view/fullscreen.xml:22(primary)
+#: src/menus/view/fullscreen.xml:14(primary)
 #: src/menus/view/dot-for-dot.xml:13(primary)
 msgid "Display"
-msgstr ""
+msgstr "画面表示"
 
-#: src/menus/view/fullscreen.xml:28(para)
+#: src/menus/view/fullscreen.xml:20(para)
 msgid ""
 "The <guimenuitem>Fullscreen</guimenuitem> command enables and disables "
 "displaying the image window on the entire screen. When it is enabled, the "
@@ -877,31 +1222,57 @@ msgid ""
 "can set the default appearance for full-screen mode in the <link linkend="
 "\"gimp-prefs-image-window-appearance\">Preferences</link> menu."
 msgstr ""
+"<guimenuitem>フルスクリーンモード(<accel>E</accel>)</guimenuitem> コマンド"
+"は画像ウィンドウをコンピュータ画面いっぱいに拡げたり逆に元の状態に戻したり"
+"できます。 画像ウィンドウを画面全域に拡げても画像表示の倍率は変化しません。"
+" フルスクリーンモードでは画像メニューバーが表示されませんが、 画像上を"
+" <mousebutton>第2ボタン</mousebutton> でクリックすればメニューが呼び出せ"
+"ます。 フルスクリーンモードでの既定の外観は "
+"<link linkend=\"gimp-prefs-image-window-appearance\">環境設定</link> "
+"ダイアログの<quote>画像ウィンドウの表示形式</quote>ページで設定できます。"
 
-#: src/menus/view/fullscreen.xml:40(para)
+#: src/menus/view/fullscreen.xml:31(para)
+msgid ""
+"Pressing <keycap>TAB</keycap> key toggles the visibility of all present "
+"docks."
+msgstr ""
+"画像ウィンドウ上で <keycap>Tab</keycap> キーを押すたびにツールボックスと"
+"全てのドックは隠れた状態と開いた状態が切り替わります。"
+
+#: src/menus/view/fullscreen.xml:37(para)
 msgid ""
 "If you use <acronym>GIMP</acronym> on an Apple computer, full-screen mode "
 "may not work, since Apple doesn't provide the necessary functionality. "
 "Instead, you can maximize the image window by clicking on the "
 "<emphasis>Green Button</emphasis>, so the image occupies most of the screen."
 msgstr ""
+"<acronym>GIMP</acronym>を <productname>Apple コンピュータ</productname>"
+"で使用されている場合はフルスクリーンモードがはたらきません。 これは"
+"フルスクリーン化に必要な機能をアップル社が提供していないためです。 その"
+"かわり画像ウィンドウの <emphasis>緑のボタン</emphasis> をクリックすれば"
+"画像ウィンドウは画面上で最大限に拡がります。"
 
-#: src/menus/view/fullscreen.xml:54(para)
+#: src/menus/view/fullscreen.xml:50(para)
 msgid ""
 "You can access this command from the image menubar through "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></"
 "menuchoice>,"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>フルスクリーンモード(<accel>E</accel>)</guimenuitem>"
+"</menuchoice>"
 
-#: src/menus/view/fullscreen.xml:62(para)
+#: src/menus/view/fullscreen.xml:59(para)
 msgid "or by using the keyboard shortcut <keycap>F11</keycap>."
-msgstr ""
+msgstr "キーボードショートカット <keycap>F11</keycap>"
 
 #: src/menus/view/dot-for-dot.xml:10(title)
 #: src/menus/view/dot-for-dot.xml:14(secondary)
 #: src/menus/view/dot-for-dot.xml:17(primary)
 msgid "Dot for Dot"
-msgstr ""
+msgstr "点に点を対応させる(<accel>D</accel>)"
 
 #: src/menus/view/dot-for-dot.xml:20(para)
 msgid ""
@@ -911,36 +1282,45 @@ msgid ""
 "screen. If it is disabled, the image is displayed at its <quote>real</quote> "
 "size, the size it will have when it is printed."
 msgstr ""
+"<guimenuitem>点に点を対応させる(<accel>D</accel>)</guimenuitem> コマンドは"
+"<quote>点に点を対応させる</quote>モードの有効・無効を切り替えます。 これが"
+"有効 (チェックが入ります) かつ表示倍率が100%のときに、 画像の1画素が"
+"コンピュータ画面の1画素で表示されます。 これが無効な場合は[表示倍率が100%"
+"ならば]画像は実寸 (印刷物の大きさ) で画面上に表示されます。"
 
 #: src/menus/view/dot-for-dot.xml:27(para)
 msgid ""
 "The example below will illustrate this. Imagine the following image "
 "properties:"
-msgstr ""
+msgstr "この様子をつぎに示しました。 それぞれの画像の属性を想像してみてください。"
 
 #: src/menus/view/dot-for-dot.xml:33(para)
 msgid "Image size: 100x100 pixels"
-msgstr ""
+msgstr "画像の大きさ: 100&times;100ピクセル"
 
 #: src/menus/view/dot-for-dot.xml:36(para)
 msgid "Image resolution: 300dpi (dots per inch)"
-msgstr ""
+msgstr "画像の解像度: 300dpi (ドット毎インチ)"
 
 #: src/menus/view/dot-for-dot.xml:39(para)
 msgid ""
 "Image displayed with Zoom=100%, <quote>Dot for Dot</quote><emphasis>enabled</"
 "emphasis>: 100x100 pixels"
 msgstr ""
+"表示倍率100%、 <quote>点に点を対応させる</quote>を "
+"<emphasis>有効</emphasis> にした場合: 100&times;100 ピクセル"
 
 #: src/menus/view/dot-for-dot.xml:45(para)
 msgid ""
 "Image displayed with Zoom=100%, <quote>Dot for Dot</"
 "quote><emphasis>disabled</emphasis>:"
 msgstr ""
+"表示倍率100%、 <quote>点に点を対応させる</quote>を"
+" <emphasis>無効</emphasis> にした場合:"
 
 #: src/menus/view/dot-for-dot.xml:50(alt)
 msgid "$100pixels \\div 300dpi = \\frac{1}{3} inch \\approx 0.85cm$"
-msgstr ""
+msgstr "$$100ピクセル \\div 300dpi = {1 \\over 3} インチ \\approx 0.85cm$$"
 
 #: src/menus/view/dot-for-dot.xml:57(para)
 msgid ""
@@ -948,6 +1328,10 @@ msgid ""
 "the same as the screen resolution in the <link linkend=\"gimp-prefs-display"
 "\">Preferences menu</link>."
 msgstr ""
+"<quote>点に点を対応させる</quote>モードが適切にはたらけば、 "
+"<link linkend=\"gimp-prefs-display\">環境設定</link> ダイアログの<quote>"
+"ディスプレイ</quote>のページで調整できる画面の解像度と画像の解像度が同じに"
+"なるはずです。"
 
 #: src/menus/view/dot-for-dot.xml:62(para)
 msgid ""
@@ -955,6 +1339,9 @@ msgid ""
 "graphics. If you are working on images intended to be printed, you should "
 "disable Dot-for-Dot mode."
 msgstr ""
+"アイコンやウェブ用画像を作成するときはこのモードを有効にしたほうが良い"
+"でしょう。 印刷を前提にした画像を加工するときは<quote>点に点を対応させる"
+"</quote>モードを無効にすべきです。"
 
 #: src/menus/view/dot-for-dot.xml:72(para)
 msgid ""
@@ -962,6 +1349,11 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Dot for Dot</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>点に点を対応させる(<accel>D</accel>)</guimenuitem>"
+"</menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -969,6 +1361,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/display-filters.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/display-filters.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -977,6 +1370,8 @@ msgid ""
 "@@image: 'images/menus/display-filters-vision.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/display-filters-vision.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -984,6 +1379,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/protanopia-normal.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/protanopia-normal.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -991,6 +1387,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/menus/protanopia-filtered.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/protanopia-filtered.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -999,6 +1396,8 @@ msgid ""
 "@@image: 'images/menus/sight-defects_normal-view.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/sight-defects_normal-view.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1007,6 +1406,8 @@ msgid ""
 "@@image: 'images/menus/sight-defects_protanopia.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/sight-defects_protanopia.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1015,6 +1416,8 @@ msgid ""
 "@@image: 'images/menus/sight-defects_deuteranopia.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/sight-defects_deuteranopia.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1023,6 +1426,8 @@ msgid ""
 "@@image: 'images/menus/sight-defects_tritanopia.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/sight-defects_tritanopia.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1031,6 +1436,8 @@ msgid ""
 "@@image: 'images/menus/display-filters-gamma.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/display-filters-gamma.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1039,6 +1446,8 @@ msgid ""
 "@@image: 'images/menus/display-filters-contrast.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/display-filters-contrast.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1047,6 +1456,8 @@ msgid ""
 "@@image: 'images/menus/display-filters-colormanagement.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/menus/display-filters-colormanagement.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1055,14 +1466,16 @@ msgid ""
 "@@image: 'images/menus/display-filters-proof.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/menus/display-filters-proof.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #: src/menus/view/display-filters.xml:11(title)
 msgid "Display Filters"
-msgstr ""
+msgstr "ディスプレイフィルタ(<accel>F</accel>)..."
 
 #: src/menus/view/display-filters.xml:14(secondary)
 msgid "Color display"
-msgstr ""
+msgstr "色彩表示"
 
 #: src/menus/view/display-filters.xml:16(para)
 msgid ""
@@ -1075,6 +1488,15 @@ msgid ""
 "prints, controlling the color management but also simulation of color "
 "deficient vision."
 msgstr ""
+"<guimenuitem>ディスプレイフィルタ(<accel>F</accel>)...</guimenuitem> "
+"コマンドはダイアログウィンドウを開きます。 このウィンドウでディスプレイ"
+"フィルタとそのオプションの管理ができます。 ちなみにディスプレイフィルタは "
+"<guimenu>フィルタ(<accel>R</accel>)</guimenu> メニュー内のフィルタとは"
+"無関係です。 ディスプレイフィルタは画像の表示処理にのみ影響を及ぼし、 画像"
+"を加工することはありません。 ディスプレイフィルタは例えるならコンピュータ"
+"画面の前に掛けた大きな仕切りガラスです。 ソフトプルーフ (色校正) を経た印刷"
+"や色管理の調整に使うのはもちろん、 色覚障碍や特殊な発色環境を想定した色づけ"
+"にも便利に使えます。"
 
 #: src/menus/view/display-filters.xml:29(para)
 msgid ""
@@ -1082,14 +1504,19 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Display Filters…</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>表示(<accel>V</accel>)</guimenu>"
+"<guimenuitem>ディスプレイフィルタ(<accel>F</accel>)...</guimenuitem>"
+"</menuchoice>"
 
 #: src/menus/view/display-filters.xml:39(title)
 msgid "Description of the <quote>Display Filters</quote> Dialog"
-msgstr ""
+msgstr "<quote>カラーディスプレイフィルタ</quote>ダイアログのご説明"
 
 #: src/menus/view/display-filters.xml:41(title)
 msgid "The <quote>Configure Color Display Filters</quote> dialog"
-msgstr ""
+msgstr "<quote>カラーディスプレイフィルタの設定</quote>ダイアログ"
 
 #: src/menus/view/display-filters.xml:50(para)
 msgid ""
@@ -1104,30 +1531,43 @@ msgid ""
 "the two selectboxes, in the <guilabel>Configure Selected Filter</guilabel> "
 "area."
 msgstr ""
+"このダイアログには2つの小さな選択ボックスがあります。 左の選択ボックスは"
+" <guilabel>利用可能なフィルタ</guilabel> が一覧表で表示されています。 "
+"ここでフィルタの項目をクリックしてから右矢印 "
+"をクリックすれば右側の選択ボックスに加えられます。 右の <guilabel>"
+"アクティブなフィルタ</guilabel> 一覧表に加わったフィルタ項目にはそれぞれ"
+"チェックボックスが付いていて、 これが有効になると表示処理に適用されます。"
+" 右の選択ボックスで選択され強調表示されたフィルタ項目は左矢印 "
+"をクリックすれば撤去できます。 フィルタ項目はクリックすると両ボックスより"
+"下側にその名前やオプションが表示されます。"
 
 #: src/menus/view/display-filters.xml:65(para)
 msgid ""
 "<phrase>Simulation of deficient vision</phrase> (<xref linkend=\"gimp-"
 "deficient-vision\"/>; <xref linkend=\"gimp-gamma-dialog\"/>)"
 msgstr ""
+"特定の色覚を想定 (<xref linkend=\"gimp-deficient-vision\"/>、 "
+"<xref linkend=\"gimp-gamma-dialog\"/>)"
 
 #: src/menus/view/display-filters.xml:71(para)
 msgid ""
 "<phrase>Color Management</phrase> (<xref linkend=\"gimp-display-filter-color-"
 "management\"/>; <xref linkend=\"gimp-color-proof\"/>)"
 msgstr ""
+"色管理 (<xref linkend=\"gimp-display-filter-color-"
+"management\"/>、 <xref linkend=\"gimp-color-proof\"/>)"
 
 #: src/menus/view/display-filters.xml:77(para)
 msgid "<phrase>Others</phrase> (<xref linkend=\"gimp-contrast-dialog\"/>)"
-msgstr ""
+msgstr "その他 (<xref linkend=\"gimp-contrast-dialog\"/>)"
 
 #: src/menus/view/display-filters.xml:85(title)
 msgid "Color Deficient Vision"
-msgstr ""
+msgstr "色覚障害の視覚"
 
 #: src/menus/view/display-filters.xml:88(secondary)
 msgid "Deficient vision"
-msgstr ""
+msgstr "色覚障碍"
 
 #: src/menus/view/display-filters.xml:90(para)
 msgid ""
@@ -1137,24 +1577,29 @@ msgid ""
 "with different settings from yours. Some information might not even be "
 "visible."
 msgstr ""
+"作成した画像はできればたくさんの人々がさまざまなシステム上で見られること"
+"になるはずですしそうなってほしいと我々は願っています。 ところがお使いの"
+"コンピュータ画面上では素晴らしい出来に見えた画像が、 色覚に障碍のある方や"
+"何か異なる設定の画面で見ている方には多少異なる印象を与える可能性があり"
+"ます。 場合によっては画像の一部の情報が見えないかもしれません。"
 
 #: src/menus/view/display-filters.xml:98(title)
 msgid "Description of the <quote>Color Deficient Vision</quote> dialog"
-msgstr ""
+msgstr "<quote>色覚障害の視覚</quote>ダイアログのご説明"
 
 #: src/menus/view/display-filters.xml:109(title)
 #: src/menus/view/display-filters.xml:309(title)
 #: src/menus/view/display-filters.xml:349(title)
 msgid "Options"
-msgstr ""
+msgstr "オプション"
 
 #: src/menus/view/display-filters.xml:112(term)
 msgid "Color Deficiency Type"
-msgstr ""
+msgstr "色覚障害のタイプ(<accel>D</accel>)"
 
 #: src/menus/view/display-filters.xml:114(para)
 msgid "In this drop-down menu you can select from among:"
-msgstr ""
+msgstr "この引き出しメニューで以下に示す3つの障碍からひとつを選びます。"
 
 #: src/menus/view/display-filters.xml:121(para)
 msgid ""
@@ -1162,16 +1607,21 @@ msgid ""
 "linkend=\"glossary-colormodel\">RGB Color System</link>): <foreignphrase>an</"
 "foreignphrase>: negation; <foreignphrase>op</foreignphrase>: eye, vision."
 msgstr ""
+"加法混色モデルをなす<acronym>RGB</acronym> "
+"<link linkend=\"glossary-colormodel\">色モデル</link> の"
+"原色の順になっています。"
 
 #: src/menus/view/display-filters.xml:119(term)
 msgid "Protanopia<placeholder-1/> (insensitivity to red)"
-msgstr ""
+msgstr "第一色覚障害<placeholder-1/> (赤に無感覚)"
 
 #: src/menus/view/display-filters.xml:132(para)
 msgid ""
 "Protanopia is a visual deficiency of the color red. It's the well-known "
 "daltonism (red-green color blindness)."
 msgstr ""
+"第一色覚障害は赤色に対する色覚が弱いか失われています。 よく"
+"知られた紅緑色神異常という色覚異常です。"
 
 #: src/menus/view/display-filters.xml:136(para)
 msgid ""
@@ -1180,10 +1630,14 @@ msgid ""
 "blue. In addition, he has a loss of luminance perception and the hues shift "
 "toward the short wavelengths."
 msgstr ""
+"実際のところ第一色覚障害はそれよりも複雑なものです。 この"
+"障碍を持つ人はイエローと青の区別はできますが緑と赤が見分け"
+"られません。 加えて輝度に対する視覚が弱く、 色相は波長の"
+"短い方に遷移しています。"
 
 #: src/menus/view/display-filters.xml:146(term)
 msgid "Deuteranopia (insensivity to green)"
-msgstr ""
+msgstr "第二色覚障害 (緑に無感覚)"
 
 #: src/menus/view/display-filters.xml:148(para)
 msgid ""
@@ -1191,10 +1645,14 @@ msgid ""
 "is actually like protanopia, because the person has a loss of red and green "
 "perception, but he has no luminance loss or hue shift."
 msgstr ""
+"第二色覚障害は緑色に対する色覚が弱いか失われています。 赤と"
+"緑に対する知覚が比較的劣るところは第一色覚障害とまるで変わ"
+"りありませんが、 輝度視覚の劣化はなく色相の遷移も"
+"ありません。"
 
 #: src/menus/view/display-filters.xml:157(term)
 msgid "Tritanopia (insensitivity to blue)"
-msgstr ""
+msgstr "第三色覚障害 (青に無感覚)"
 
 #: src/menus/view/display-filters.xml:159(para)
 msgid ""
@@ -1202,18 +1660,21 @@ msgid ""
 "although he is still sensitive to red and green. He lacks some perception of "
 "luminance, and the hues shift toward the long wavelengths."
 msgstr ""
+"第三色覚障害は緑や赤の知覚はありますが青やイエローの識別に"
+"困難があります。 輝度に対する視覚が一部失われており、 色相"
+"は波長の長い方に遷移しています。"
 
 #: src/menus/view/display-filters.xml:174(title)
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: src/menus/view/display-filters.xml:176(title)
 msgid "Example of protanopia with some text"
-msgstr ""
+msgstr "文字にまつわる第一色覚異常の例"
 
 #: src/menus/view/display-filters.xml:184(para)
 msgid "Original image"
-msgstr ""
+msgstr "元の画像"
 
 #: src/menus/view/display-filters.xml:192(para)
 msgid ""
@@ -1221,36 +1682,39 @@ msgid ""
 "black (0,0,0) background. You have to change the text color. Daltonism "
 "occurs fairly frequently in the population."
 msgstr ""
+"ご覧のとおり赤に対する色覚障碍者は黒地 (0,0,0) に赤い (255,0,0) "
+"テキストが見えない。 文字色を変更する必要有り。 紅緑色神異常の"
+"人口は比較的多い。"
 
 #: src/menus/view/display-filters.xml:201(title)
 msgid "Examples of the three types of vision deficiencies in one image"
-msgstr ""
+msgstr "色覚障碍により同じ画像に3種類の見え方があることの例"
 
 #: src/menus/view/display-filters.xml:209(para)
 msgid "normal vision;"
-msgstr ""
+msgstr "標準的な色覚"
 
 #: src/menus/view/display-filters.xml:217(para)
 msgid "Protanopia;"
-msgstr ""
+msgstr "第一色覚異常"
 
 #: src/menus/view/display-filters.xml:225(para)
 msgid "deuteranopia; In deuteranopia, yellow is shifted toward red."
-msgstr ""
+msgstr "第二色覚異常。 イエローが赤にまで及ぶ。"
 
 #: src/menus/view/display-filters.xml:235(para)
 msgid ""
 "tritanopia; In tritanopia, green is slightly represented in the blue range."
-msgstr ""
+msgstr "第三色覚異常。 緑は僅かに青の帯域にかぶる。"
 
 #: src/menus/view/display-filters.xml:246(title)
 #: src/menus/view/display-filters.xml:248(primary)
 msgid "Gamma"
-msgstr ""
+msgstr "ガンマ値"
 
 #: src/menus/view/display-filters.xml:252(title)
 msgid "The <quote>Gamma</quote> dialog"
-msgstr ""
+msgstr "<quote>ガンマ値</quote>ダイアログ"
 
 #: src/menus/view/display-filters.xml:260(para)
 msgid ""
@@ -1262,6 +1726,13 @@ msgid ""
 "The <quote>Gamma</quote> Display Filter allows you to get an idea of the "
 "appearance of your image under these conditions."
 msgstr ""
+"電子的出力強度と色の明るさは必ずしも一致しません。 これはデバイス ("
+"カメラ、 スキャナ、 モニタなどの装置) に依存した関係であるためです。 "
+"<quote>ガンマ値</quote>はその一致をはかるために使われる係数です。 モニタ"
+"装置が極度に明るくなっていたり逆に明るさ不足になっていても、 表示した"
+"画像の暗く塗られた部分も明るく塗られた部分も見えるようにする必要が"
+"あるのです。 <quote>ガンマ値</quote>ディスプレイフィルタによりこのような"
+"状態で画像表示した様子を体験できます。"
 
 #: src/menus/view/display-filters.xml:271(para)
 msgid ""
@@ -1269,15 +1740,18 @@ msgid ""
 "the change the gamma within the image itself, you can find a description in "
 "<xref linkend=\"gimp-tool-levels\"/>."
 msgstr ""
+"お使いのディスプレイ装置のガンマ値を変更することなく画像のガンマ値を"
+"変更したい場合は、 "
+"<xref linkend=\"gimp-tool-levels\"/> ツールの説明をお読みください。"
 
 #: src/menus/view/display-filters.xml:280(title)
 #: src/menus/view/display-filters.xml:282(primary)
 msgid "Contrast"
-msgstr ""
+msgstr "コントラスト"
 
 #: src/menus/view/display-filters.xml:286(title)
 msgid "The <quote>Contrast</quote> dialog"
-msgstr ""
+msgstr "<quote>コントラスト</quote>ダイアログ"
 
 #: src/menus/view/display-filters.xml:294(para)
 msgid ""
@@ -1289,16 +1763,27 @@ msgid ""
 "deficiency in sensitivity to contrast: for example, they would have "
 "difficulties distinguishing spots on a dress."
 msgstr ""
+"ここで再び医学的な話をします。 <quote>コントラスト感度</quote>とは僅かな"
+"コントラストを判別するための視覚的能力のことです。 白内障 (水晶体が濁り、 "
+"網膜を通した光が拡散してしまうこと) や網膜症 (例えば糖尿病が原因で桿状体"
+"や角膜が破壊されてしまうこと) はコントラスト感度の障碍になります。 この"
+"ような方にとっては例えばドレスについた染みが見定めづらくなります。"
 
 #: src/menus/view/display-filters.xml:304(para)
 msgid ""
 "If you are interested in this subject, you can browse the Web for "
 "<quote>contrast sensitivity</quote>."
 msgstr ""
+"この問題に興味を抱かれた方は <emphasis>コントラスト感度</emphasis> を"
+"キーワードにしてウェブで "
+"<ulink  link=\"http://www.google.co."
+"jp/search?q=%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%B9%E3%83%88%E6%84%9F%E"
+"5%BA%A6&btnG=%E6%A4%9C%E7%B4%A2&hl=ja&lr=lang_ja&safe=off&num=20&sa=2\">検索<"
+"/ulink> してみてください。"
 
 #: src/menus/view/display-filters.xml:312(term)
 msgid "Contrast Cycles"
-msgstr ""
+msgstr "コントラストサイクル(<accel>Y</accel>)"
 
 #: src/menus/view/display-filters.xml:314(para)
 msgid ""
@@ -1310,19 +1795,26 @@ msgid ""
 "if you increase the luminosity value above 255, the complementary color "
 "appears."
 msgstr ""
+"<quote>コントラスト</quote>フィルタを通した画像はあたかも白内障に"
+"なってしまったかのような見え方をします。 あなたのお祖父さんや"
+"お祖母さんが見易い画像になるようコントラストを上げることになる"
+"でしょう。 <guilabel>コントラストサイクル(<accel>Y</accel>)"
+"</guilabel> を大幅に下げると大抵面白いことになります。 逆に上げる"
+"と副作用が出るので面白みがありません。 輝度の値を255より大きく"
+"すると補色が現れます。"
 
 #: src/menus/view/display-filters.xml:331(title)
 msgid "Color Management"
-msgstr ""
+msgstr "色管理"
 
 #: src/menus/view/display-filters.xml:333(primary)
 msgid "Color management"
-msgstr ""
+msgstr "色管理"
 
 #: src/menus/view/display-filters.xml:336(title)
 #: src/menus/view/display-filters.xml:381(title)
 msgid "The <quote>Color Proof</quote> dialog"
-msgstr ""
+msgstr "<quote>色管理</quote>ダイアログ"
 
 #: src/menus/view/display-filters.xml:343(para)
 msgid ""
@@ -1330,6 +1822,9 @@ msgid ""
 "window. To learn more about the color management in GIMP, please read <xref "
 "linkend=\"gimp-concepts-color-management\"/>."
 msgstr ""
+"このフィルタは画像ウィンドウごとに<acronym>GIMP</acronym>の色管理を実施"
+"できます。 <acronym>GIMP</acronym>の色管理についてもっと知りたい方は"
+" <xref linkend=\"gimp-concepts-color-management\"/> をご覧ください。"
 
 #: src/menus/view/display-filters.xml:350(para)
 msgid ""
@@ -1337,18 +1832,21 @@ msgid ""
 "GIMP preferences. You can find detailed information about this in <xref "
 "linkend=\"gimp-prefs-color-management\"/>."
 msgstr ""
+"<acronym>GIMP</acronym>の色管理の設定は全て "
+"<link linkend=\"gimp-prefs-color-management\">環境設定</link> ダイアログ"
+"の<quote>カラーマネジメント</quote> (色管理) のページで行います。"
 
 #: src/menus/view/display-filters.xml:359(title)
 msgid "Color Proof"
-msgstr ""
+msgstr "色合せ"
 
 #: src/menus/view/display-filters.xml:361(primary)
 msgid "Color proof"
-msgstr ""
+msgstr "色校正"
 
 #: src/menus/view/display-filters.xml:364(primary)
 msgid "Soft proof"
-msgstr ""
+msgstr "色合せ"
 
 #: src/menus/view/display-filters.xml:366(para)
 msgid ""
@@ -1358,6 +1856,12 @@ msgid ""
 "<quote>gamut</quote> is the color range of a system. <emphasis>Color "
 "Profiles</emphasis> allow you to compensate for these differences."
 msgstr ""
+"色を再現する空間はいろいろありますが、 色を無限に発色できるものは一つも"
+"ありません。 いずれの色空間でも多様な自然の色と同じ色が発色できる一方で"
+"一部の色は異なっています。"
+" <link linkend=\"glossary-gamut\">ガモット</link> とはある色空間の再現可能"
+"な色の領域のことです。 <emphasis>色プロファイル</emphasis> により両者の"
+"違いを埋め合わせできます。"
 
 #: src/menus/view/display-filters.xml:374(para)
 msgid ""
@@ -1366,14 +1870,17 @@ msgid ""
 "filter shows you how your image will look after a color profile has been "
 "applied."
 msgstr ""
+"画像にプロファイルを適用すれば画像を印刷する前から印刷結果と同じ色調で"
+"表示できるので便利です。 <quote>色合せ</quote>フィルタを使うとそのような"
+"色プロファイルを適用したときの画像の見え方がわかります。"
 
 #: src/menus/view/display-filters.xml:389(title)
 msgid "The <quote>Color Proof</quote> options"
-msgstr ""
+msgstr "<quote>色合せ</quote>オプション"
 
 #: src/menus/view/display-filters.xml:392(term)
 msgid "Profile"
-msgstr ""
+msgstr "プロファイル(<accel>P</accel>)"
 
 #: src/menus/view/display-filters.xml:394(para)
 msgid ""
@@ -1382,10 +1889,15 @@ msgid ""
 "list you might want to add it by selecting a file. This can be done by "
 "selecting the last entry of the list."
 msgstr ""
+"このオプションでプリンタの発色能力を疑似体験できる色プロファイル"
+"が選べます。 必要なプロファイルがこのリストになければそれを収めた"
+"ファイルを探し出しここに加えることになるでしょう。 メニューの"
+"最後の項目 <guimenuitem>カラープロファイルをディスクから選択..."
+"</guimenuitem> に進んでください。"
 
 #: src/menus/view/display-filters.xml:404(term)
 msgid "Intent"
-msgstr ""
+msgstr "方法(<accel>I</accel>)"
 
 #: src/menus/view/display-filters.xml:406(para)
 msgid ""
@@ -1395,18 +1907,26 @@ msgid ""
 "intents are described in detail in the glossary <xref linkend=\"glossary-"
 "rendering-intent\"/>."
 msgstr ""
+"このオプションでレンダリングインテントを選びます。 出力デバイスが"
+"再現できない色 (ガモット外の色) を要求されたときの対処法を決めた"
+"ものがレンダリングインテントです。 主に4種類あるその方法の違いは"
+" <xref linkend=\"glossary-rendering-intent\"/> で説明してあります。"
 
 #: src/menus/view/display-filters.xml:416(term)
 msgid "Black Point Compensation"
-msgstr ""
+msgstr "黒の生成(<accel>B</accel>)"
 
 #: src/menus/view/display-filters.xml:418(para)
 msgid ""
 "Black point compensation allows a better representaion of dark colors of "
 "your image when printing."
 msgstr ""
+"印刷物で暗い色を表現するときに黒を使って補うと良好な結果が"
+"得られます。"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: src/menus/view/display-filters.xml:0(None)
 msgid "translator-credits"
-msgstr ""
+msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
+
+
