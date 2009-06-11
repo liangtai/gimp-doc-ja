@@ -9,7 +9,7 @@
   2006-04-15 lexa: added de translatation and docbook compliance
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-05-14-->
+<!--2009-06-08-->
 <sect2 id="gimp-pattern-dialog">
   <title lang="en">Patterns Dialog</title>
   <title lang="ja">パターンダイアログ</title>
@@ -44,11 +44,11 @@
     <link linkend="gimp-edit-fill-pattern">Fill with pattern</link> command.
   </para>
   <para lang="en">
-    The Patterns dialog is used to select a pattern, by clicking on it in a
-    list or grid view: the selected pattern will then be shown in the
-    Brush/Pattern/Gradient area of the Toolbox. A few dozen more or less
-    randomly chosen patterns are supplied with GIMP, and you can easily add
-    new patterns of your own.
+    The <quote>Patterns</quote> dialog is used to select a pattern, by
+    clicking on it in a list or grid view: the selected pattern will then be
+    shown in the Brush/Pattern/Gradient area of the Toolbox. A few dozen more
+    or less randomly chosen patterns are supplied with GIMP, and you can
+    easily add new patterns of your own.
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>でいう <emphasis>パターン</emphasis> (文様) とは
@@ -121,11 +121,7 @@
         <para lang="en">
           from the Tab menu in any dockable dialog by clicking on
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> and selecting
           <menuchoice>
             <guimenu>Add Tab</guimenu>
@@ -135,11 +131,8 @@
         <para lang="ja">
           任意のドッキング可能なダイアログのアイコンボタン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
             <guimenu>タブに追加(<accel>A</accel>)</guimenu>
@@ -319,10 +312,6 @@
                   change, as soon as you hit return or move to a different
                   control, the name will revert back to its previous value.
                 </para>
-                <para lang="en">
-                  Everything else in the List view works the same way as it
-                  does in the Grid view.
-                </para>
                 <para lang="ja">
                   この表示ではパターンは升目状に並べられるのではなく縦一列に
                   列挙され、 それぞれの名前と大きさもあわせて表示されます。
@@ -337,6 +326,23 @@
                   は対象外です。 仮に変更の権限のないものの名前を編集しても、
                   これを確定しようとして <keycap>Return</keycap> キーを押したり
                   どこか他のところを触るとたちまち名前は元に戻されます。
+                </para>
+                <tip>
+                  <para lang="en">
+                    <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+                    opens a search field.
+                    See <xref linkend="gimp-dock-view-as-list" />
+                  </para>
+                  <para lang="j">
+                    キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+                    <keycap>F</keycap></keycombo> で検索窓が現れます。
+                    <link linkend="gimp-dock-view-as-list">
+                    一覧表ダイアログの検索窓</link> をご覧ください。
+                  </para>
+                </tip>
+                <para lang="en">
+                  Everything else in the List view works the same way as it
+                  does in the Grid view.
                 </para>
                 <para lang="ja">
                   一覧表でのそのほかの操作はいずれも升目状表示でするのと全く
@@ -488,8 +494,8 @@
       <secondary>クリップボードパターン</secondary>
     </indexterm>
     <para lang="en">
-      When you use the Copy or Cut command, a copy appears as a 
-      new pattern in the upper left corner of the Patterns dialog. 
+      When you use the Copy or Cut command, a copy appears as a
+      new pattern in the upper left corner of the Patterns dialog.
       This brush will persist until you use the Copy (or Cut) command again.
       It will disappear when you close GIMP.
     </para>

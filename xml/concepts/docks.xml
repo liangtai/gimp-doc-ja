@@ -377,8 +377,9 @@
       cannot add an Image Menu to the dock that contains the Toolbox.)
     </para>
     <para lang="ja">
-      &lt;!-- By default, a <quote>レイヤー、チャンネル、パス</quote> dock
-      shows an Image Menu at the top, and other types of docks do not. --&gt;
+      初期設定では<quote>レイヤー、チャンネル、パス</quote>の各ダイアログを
+      まとめたドックにはその最上部に画像メニューがついていて、 他のドックには
+      それがありません。
       画像メニューは後で述べる<guilabel>選択画像を表示(<accel>S</accel>)
       </guilabel> メニューでドック上に表示したり隠したりできます。 (ただし、
       ツールボックスを含むドックには画像メニューを加えられません。)
@@ -734,8 +735,9 @@
 
       <varlistentry>
         <term lang="en">View as List; View as Grid</term>
-        <term lang="ja">一覧で表示(<accel>L</accel>);
-          並べて表示(<accel>G</accel>)</term>
+        <term lang="ja">
+          一覧で表示(<accel>L</accel>); 並べて表示(<accel>G</accel>)
+        </term>
         <listitem>
           <anchor id="gimp-dock-view-as-list"/>
           <anchor id="gimp-dock-view-as-grid"/>
@@ -743,9 +745,17 @@
             <primary>Docks</primary>
             <secondary>View as List/Grid</secondary>
           </indexterm>
+          <indexterm lang="en">
+            <primary>List search field</primary>
+          </indexterm>
           <indexterm lang="ja">
             <primary>ドック</primary>
-            <secondary sortas="ナラベテヒョウジ/イチランデヒョウジ">並べて表示/一覧で表示</secondary>
+            <secondary sortas="ナラベテヒョウジ/イチランデヒョウジ">
+              並べて表示/一覧で表示
+            </secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ケンサクマド">検索窓</primary>
           </indexterm>
           <para lang="en">
             These entries are shown in dialogs that allows you to select an
@@ -768,6 +778,60 @@
             ブラシやパターンのダイアログは格子状に、
             それ以外のほとんどのダイアログは縦排列にしてあります。
           </para>
+          <tip>
+            <para lang="en">
+              When the treeview is <quote>as list</quote>, pressing
+              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+              (or <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>
+              it depends on your GTK+ keybindings), opens a text box, a
+              search field, where you can enter the first letter(s) of the
+              name of the item you want.
+            </para>
+            <para lang="ja">
+            項目が<quote>一覧で表示</quote>となっているときに、 キーボード
+            ショートカット <keycombo><keycap>Ctrl</keycap><keycap>F</keycap>
+            </keycombo> (<acronym>GTK+</acronym>のショートカット設定によっては
+            <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo> の場合
+            もあります) を使うと語句記入欄が現れます。 これは検索窓になっていて
+            入力された文字から始まる名前の項目へ即座に一覧表が繰り寄せ
+            られます。
+            </para>
+            <figure>
+              <title lang="en">The list search field</title>
+              <title lang="ja">検索窓</title>
+              <mediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                             fileref="images/using/list-search-field.png"/>
+                </imageobject>
+                <caption>
+                  <para lang="en">
+                    The list search field you get pressing Ctrl+F.
+                  </para>
+                  <para lang="ja">
+                    キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+                    <keycap>F</keycap></keycombo> で開かれた検索窓
+                  </para>
+                </caption>
+              </mediaobject>
+            </figure>
+            <para lang="en">
+              This search field lasts five seconds only if you do nothing.
+            </para>
+            <para lang="en">
+              This shortcut is also available for the treeview you get in
+              the <quote>Brush</quote>, <quote>Font</quote> or <quote>Pattern
+              </quote> option of several tools.
+            </para>
+            <para lang="ja">
+              この検索窓は何も操作がない時間が5秒を過ぎると自動的に
+              閉じられます。
+            </para>
+            <para lang="ja">
+              このショートカットが利用できるダイアログは<quote>ブラシ</quote>、
+              <quote>フォント</quote>、 <quote>パターン</quote>などです。
+            </para>
+          </tip>
         </listitem>
       </varlistentry>
 

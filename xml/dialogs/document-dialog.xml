@@ -9,7 +9,7 @@
   2006-04-29 lexa: minor changes to reach docbook compliance
   2006-02-29 Added Activate Dialog en;fr by j.h
 -->
-<!--2009-05-14-->
+<!--2009-06-08-->
 <sect2 id="gimp-document-dialog">
   <title lang="en">Document History Dialog</title>
   <title lang="ja">最近開いた画像ドキュメントダイアログ</title>
@@ -138,6 +138,39 @@
       The scroll bar allows you to browse all images you have opened before.
     </para>
     <para lang="en">
+      In the Tab menu for the <quote>Document History</quote> dialog, you can
+      choose between  <guimenuitem>View as Grid</guimenuitem> and
+      <guimenuitem>View as List</guimenuitem>.
+      In Grid mode, the ducuments are laid out in a rectangular array.
+      In List mode, they are lined up vertically, with each row showing
+      a thumbnail of the contents of the image, its name, and its pixel
+      dimensions.
+    </para>
+    <para lang="ja">
+      スクロールバーを動かして今までに扱った画像を探れます。
+    </para>
+    <para lang="ja">
+      <quote>最近開いた画像ドキュメント</quote>ダイアログのタブメニューで
+      <guimenuitem>一覧で表示(<accel>L</accel>)</guimenuitem> か <guimenuitem>
+      並べて表示(<accel>G</accel>)</guimenuitem> を切り替えられます。 <quote>
+      並べて表示</quote>の場合は開いたことのある画像の見本が升目状に並びます。
+      <quote>一覧で表示</quote>の場合はそのファイルが縦一列に列挙され、 
+      各段にその見本画像と名前とピクセル単位の大きさが表示されます。
+    </para>
+    <tip>
+      <para lang="en">
+        <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+        opens a search field.
+        See <xref linkend="gimp-dock-view-as-list" />
+      </para>
+      <para lang="j">
+        キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+        <keycap>F</keycap></keycombo> で検索窓が現れます。
+        <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+        </link> をご覧ください。
+      </para>
+    </tip>
+    <para lang="en">
       The <emphasis>Open the selected entry</emphasis>
       button allows you to open the image you have selected. With the
       <keycap>Shift</keycap> key pressed, it raises an image hidden behind
@@ -159,9 +192,6 @@
       case of change. With <keycap>Shift</keycap> key pressed, it acts on
       all previews. With <keycap>Ctrl</keycap> key pressed, previews that
       correspond to files that can't be found out, are deleted.
-    </para>
-    <para lang="ja">
-      スクロールバーを動かして今までに扱った画像を探れます。
     </para>
     <para lang="ja">
       <guiicon>

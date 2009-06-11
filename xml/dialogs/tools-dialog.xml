@@ -8,10 +8,10 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-30 replaced informalfigures by figures by lexa
 -->
-<!--2009-05-14-->
+<!--2009-06-08-->
 <sect2 id="gimp-tools-dialog">
-  <title lang="en">Tools Dialog</title>
-  <title lang="ja">ツールアイコンダイアログ</title>
+  <title lang="en"><quote>Tools</quote> Dialog</title>
+  <title lang="ja"><quote>ツールアイコン</quote>ダイアログ</title>
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Tools</secondary>
@@ -45,22 +45,22 @@
     </mediaobject>
   </figure>
   <para lang="en">
-    The Tools dialog is used mainly to control the appearance of the Toolbox.
-    It allows you to customize the set of tools for which icons are shown in
-    the Toolbox, and the order in which the icons are arranged. Probably the
-    most common use for it is to make the Color tools available directly from
-    the Toolbox. You can also use the Tools dialog to select a tool by
-    clicking on its symbol, but for this purpose you might as well just use
-    the Toolbox.
+    The <quote>Tools</quote> dialog is used mainly to control the appearance
+    of the Toolbox. It allows you to customize the set of tools for which
+    icons are shown in the Toolbox, and the order in which the icons are
+    arranged. Probably the most common use for it is to make the Color tools
+    available directly from the Toolbox. You can also use the Tools dialog to
+    select a tool by clicking on its symbol, but for this purpose you might
+    as well just use the Toolbox.
   </para>
   <para lang="ja">
-    ツールアイコンダイアログはツールボックスの外観を制御するのが主な用途です。
-    ツールボックスにどのツールアイコンを表示するかを指定したり、 その順序を
-    並べ直すことができます。 とくに色ツールのツールアイコンは初期設定ではツール
-    ボックスに並びませんので、 これらのツールをツールボックスで呼び出せるように
-    するのがおそらく最大の使用目的ではないでしょうか。 実はツールアイコン
-    ダイアログでもクリックすればツールを呼び出せるのですが、 むしろこの用途では
-    ツールボックスの方を利用されているかと思います。
+    <quote>ツールアイコン</quote>ダイアログはツールボックスの外観を制御するのが
+    主な用途です。 ツールボックスにどのツールアイコンを表示するかを指定したり、
+    その順序を並べ直すことができます。 とくに色ツールのツールアイコンは初期設定
+    ではツールボックスに並びませんので、 これらのツールをツールボックスで呼び
+    出せるようにするのがおそらく最大の使用目的ではないでしょうか。 実はツール
+    アイコンダイアログでもクリックすればツールを呼び出せるのですが、 むしろ
+    この用途ではツールボックスの方を利用されているかと思います。
   </para>
 
   <sect3>
@@ -103,11 +103,7 @@
         <para lang="en">
           from the Tab menu in any dockable dialog by clicking on
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> and selecting
           <menuchoice>
             <guimenu>Add Tab</guimenu>
@@ -117,11 +113,8 @@
         <para lang="ja">
           任意のドッキング可能なダイアログのボタンアイコン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
             <guimenu>タブに追加(<accel>A</accel>)</guimenu>
@@ -152,11 +145,24 @@
       があって、 これをクリックするとそのツールがツールボックスで表示されるか
       どうかを切り替えられます。
     </para>
+    <tip>
+      <para lang="en">
+        <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+        opens a search field.
+        See <xref linkend="gimp-dock-view-as-list" />
+      </para>
+      <para lang="j">
+        キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+        <keycap>F</keycap></keycombo> で検索窓が現れます。
+        <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+        </link> をご覧ください。
+      </para>
+    </tip>
   </sect3>
 
   <sect3>
-    <title lang="en">Using the Tools dialog</title>
-    <title lang="ja">ツールダイアログの利用法</title>
+    <title lang="en">Using the <quote>Tools</quote> dialog</title>
+    <title lang="ja"><quote>ツールアイコン</quote>ダイアログの利用法</title>
     <para lang="en">
       The most basic thing you can do is to select a tool by clicking on its
       icon: this has the same effect as clicking on an icon in the Toolbox.
@@ -164,23 +170,23 @@
       dialog are available only in List mode.
     </para>
     <para lang="en">
-      The most important function of the Tools dialog is to let you
-      choose which tools to make visible in the Toolbox, by toggling
+      The most important function of the <quote>Tools</quote> dialog is to
+      let you choose which tools to make visible in the Toolbox, by toggling
       the <quote>eye</quote> icons that appear on the left side of each row
       in List mode.  In particular, if you use the Color tools a lot, you may
       benefit from toggling visibility on for them here.
     </para>
     <para lang="en">
       You can also change the order of tools in the Toolbox, by clicking on
-      an item in the Tools dialog, in List mode, and dragging it up or down
-      in the list. If you screw things up, you can always press the
-      <quote>Reset</quote> button at the bottom of the dialog, to restore the
-      defaults for order and visibility.
+      an item in the <quote>Tools</quote> dialog, in List mode, and dragging
+      it up or down in the list. If you screw things up, you can always press
+      the <quote>Reset</quote> button at the bottom of the dialog, to restore
+      the defaults for order and visibility.
     </para>
     <para lang="en">
-      Right-clicking inside the dialog produces the Tools menu, which gives
-      you an alternative way of toggling visibility or restoring the
-      defaults.
+      Right-clicking inside the dialog produces the <quote>Tools</quote>
+      menu, which gives you an alternative way of toggling visibility or
+      restoring the defaults.
     </para>
     <para lang="ja">
       最も基本的な操作はツールのアイコンをクリックすることでしょう。 ツール
@@ -189,18 +195,19 @@
       で行なうには脈絡メニューを使いましょう。
     </para>
     <para lang="ja">
-      ツールアイコンダイアログの最も重要な用途がツールボックスにどのツールを
-      表示させるかの指定です。 <quote>一覧で表示</quote>の場合はそのツールの行
-      の<quote>目</quote>のアイコンをクリックして表示するかしないかを決めます。
-      <quote>並べて表示</quote>の場合はツールを選んでから脈絡メニューの
-      <guimenuitem>ツールボックスに表示(<accel>S</accel>)</guimenuitem> の
-      チェックボックスをクリックします。 色ツールを頻繁に使われる方はとくに
-      これらを可視に切り替えると好都合です。
+      <quote>ツールアイコン</quote>ダイアログの最も重要な用途がツールボックスに
+      どのツールを表示させるかの指定です。 <quote>一覧で表示</quote>の場合は
+      そのツールの行の<quote>目</quote>のアイコンをクリックして表示するか
+      しないかを決めます。<quote>並べて表示</quote>の場合はツールを選んでから
+      脈絡メニューの<guimenuitem>ツールボックスに表示(<accel>S</accel>)
+      </guimenuitem> のチェックボックスをクリックします。 色ツールを頻繁に
+      使われる方はとくにこれらを可視に切り替えると好都合です。
     </para>
     <para lang="ja">
-      ツールボックスに並ぶツールアイコンの順番も変更できます。 ツールアイコン
-      ダイアログでツールをクリックしたら、 <quote>一覧で表示</quote>モードなら
-      上か下の段に曳いてゆくと順序が変わります。 あるいはダイアログの下に並ぶ
+      ツールボックスに並ぶツールアイコンの順番も変更できます。 <quote>
+      ツールアイコン</quote>ダイアログでツールをクリックしたら、 <quote>
+      一覧で表示</quote>モードなら上か下の段に曳いてゆくと順序が変わります。 
+      あるいはダイアログの下に並ぶ
       <guiicon>
         <inlinemediaobject>
           <imageobject>

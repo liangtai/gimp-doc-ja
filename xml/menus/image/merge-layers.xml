@@ -1,158 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-11-27 j.h: updated to v2.4. "Discard invisible layers" option added
   2007-09-27 AntI: Added 'es'
   2007-03-13 alex falappa: added it translation
      2005/10/30 rewiewed, de added by axel.wernicke
 -->
+<!--2009-06-11-->
 <sect2 id="gimp-image-merge-layers">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2723 $</revnumber>
-        <date>2006-08-07</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Merge Visible Layers</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Merge Visible Layers</title>
+  <title lang="ja">可視レイヤーの統合(<accel>L</accel>)...</title>
+
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Stack managing</secondary>
     <tertiary>Merge visible layers</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Merge Visible Layers</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサネカタ">重ね方</secondary>
+    <tertiary sortas="カシレイヤーノトウゴウ">可視レイヤーの統合</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カシレイヤーノトウゴウ">可視レイヤーの統合</primary>
+  </indexterm>
+
+  <para lang="en">
     The <guimenuitem>Merge Visible Layers</guimenuitem> command merges
     the layers which are visible into a single layer. Visible layers are
     those which are indicated on the Layers dialog with an
     <quote>eye</quote> icon.
   </para>
+  <para lang="ja">
+    <guimenuitem>可視レイヤーの統合(<accel>L</accel>)...</guimenuitem> コマンド
+    は可視レイヤーを1層のレイヤーに統合します。 可視レイヤーは 
+    <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> の一覧表で
+    <quote>目</quote>のアイコンがついた項目として表されています。
+  </para>
   <note>
-    <para>
+    <para lang="en">
       With this command, the original visible layers disappear. With the
       <link linkend="gimp-layer-new-from-visible">New From
         Visible</link> command, a new layer is created at top of the
       stack and original visible layers persist.
     </para>
+    <para lang="ja">
+      このコマンドを実行したあとは元になった可視レイヤーが全て消去されます。 
+      <guimenu>レイヤー(<accel>L</accel>)</guimenu> メニューの 
+      <link linkend="gimp-layer-new-from-visible">
+      可視部分をレイヤーに(<accel>V</accel>)</link> コマンドであれば統合で作成
+      された新たなレイヤーが最前面に置かれ元のレイヤーはそのまま残されます。
+    </para>
   </note>
+
   <sect3>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Image</guimenu>
             <guimenuitem>Merge Visible Layers</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>Image</guimenu>
+            <guimenuitem>可視レイヤーの統合(<accel>L</accel>)...</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
            or by using the keyboard shortcut
           <keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+           キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo>
         </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>
-        Description of the <quote>Merge Visible Layers</quote> Dialog
-      </phrase>
+    <title lang="en">
+      Description of the <quote>Merge Visible Layers</quote> Dialog
+    </title>
+    <title lang="ja">
+      <quote>レイヤー統合の設定</quote>ダイアログのご説明
     </title>
     <figure>
-      <title>
-        <phrase>
-          The <quote>Merge Visible Layers</quote> Dialog
-        </phrase>
-      </title>
+      <title lang="en">The <quote>Merge Visible Layers</quote> Dialog</title>
+      <title lang="ja"><quote>レイヤー統合の設定</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
           <!--was: images/dialogs/dialogs-image-merge-visible.png-->
-          <imagedata fileref="images/menus/image-merge-visible.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/menus/image-merge-visible.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Final, Merged Layer should be:</term>
+        <term lang="en">Final, Merged Layer should be:</term>
+        <term lang="ja">統合されたレイヤーの大きさ</term>
         <listitem>
-          <para>
+          <para lang="en">
             Visible layers are the layers which are marked with an
             <quote>eye</quote> icon in the Layers dialog.
           </para>
+          <para lang="ja">
+            可視レイヤーはレイヤーダイアログの一覧表では<quote>目</quote>の
+            しるしのついた項目として表されています。
+          </para>
           <itemizedlist>
             <listitem>
-              <para><emphasis>Expanded as necessary</emphasis>:
+              <para lang="en">
+                <emphasis>Expanded as necessary</emphasis>:
                 The final layer is large enough to contain all of the
                 merged layers. Please note that a layer in
                 <acronym>GIMP</acronym> can be larger than the
                 image.
               </para>
+              <para lang="ja">
+                <guilabel>対象レイヤーを内包するサイズ</guilabel>: 生成される
+                レイヤーは元となるレイヤーの全てをすっぽり取り囲める大きさに
+                なります。 ちなみに<acronym>GIMP</acronym>のレイヤーは画像から
+                はみ出す大きさになることもありえます。
+              </para>
             </listitem>
             <listitem>
-              <para><emphasis>Clipped to image</emphasis>:
+              <para lang="en">
+                <emphasis>Clipped to image</emphasis>:
                 The final layer is the same size as the image. Remember
                 that layers in <acronym>GIMP</acronym> can be
                 larger than the image itself. Any layers in the image that
                 are larger than the image are clipped by this option.
               </para>
+              <para lang="ja">
+                <guilabel>キャンバスサイズ</guilabel>: 生成されるレイヤーは画像
+                と同じ大きさになります。 <acronym>GIMP</acronym>では画像よりも
+                大きなレイヤーもありうるということでしたから、 画像をはみ出した
+                レイヤーはこのオプションによって刈り揃えられます。
+              </para>
             </listitem>
             <listitem>
-              <para><emphasis>Clipped to bottom layer</emphasis>:
+              <para lang="en">
+                <emphasis>Clipped to bottom layer</emphasis>:
                 The final layer is the same size as the bottom layer. If
                 the bottom layer is smaller than some of the visible layers,
                 the final layer is clipped and trimmed to the size and
                 position of the bottom layer.
+              </para>
+              <para lang="ja">
+                <guilabel>対象の最背面レイヤーサイズ</guilabel>: 生成される
+                レイヤーは背景レイヤーと同じ大きさになります。 他の可視レイヤー
+                が背景レイヤーより大きかったりはみ出したりしている場合は刈り
+                揃えられてから統合され、 元の背景レイヤーと同じ大きさの新たな
+                レイヤーとなって最背面に置かれます。
               </para>
             </listitem>
           </itemizedlist>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Discard invisible layers</term>
+        <term lang="en">Discard invisible layers</term>
+        <term lang="ja">不可視レイヤーを削除(<accel>D</accel>)</term>
         <listitem>
-          <para>
+          <para lang="en">
             When this option is checked, non visible layers are removed from
             the layer stack.
           </para>
+          <para lang="ja">
+            このオプションを有効にすると、 レイヤーの重なりから不可視レイヤーが
+            削除されます。
+          </para>
           <figure>
-            <title>
-              <phrase><quote>Merge visible layers</quote> example
-              </phrase>
+            <title lang="en">
+              <quote>Merge visible layers</quote> example
             </title>
+            <title lang="ja"><quote>可視レイヤーの統合</quote>の例</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/menus/image-merge-visible-ex1.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/menus/image-merge-visible-ex1.png"/>
               </imageobject>
               <caption>
-                <para>Three layers; two are visible</para>
+                <para lang="en">Three layers; two are visible</para>
+                <para lang="ja">3層のレイヤー。 うち2層が可視。</para>
               </caption>
             </mediaobject>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/menus/image-merge-visible-ex2.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/menus/image-merge-visible-ex2.png"/>
               </imageobject>
               <caption>
-                <para><quote>Discard invisible layers</quote> unchecked
+                <para lang="en">
+                  <quote>Discard invisible layers</quote> unchecked
+                </para>
+                <para lang="ja">
+                  <quote>不可視レイヤーを削除</quote>無効
                 </para>
               </caption>
             </mediaobject>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/menus/image-merge-visible-ex3.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/menus/image-merge-visible-ex3.png"/>
               </imageobject>
               <caption>
-                <para><quote>Discard invisible layers</quote> checked
+                <para lang="en">
+                  <quote>Discard invisible layers</quote> checked
+                </para>
+                <para lang="ja">
+                  <quote>不可視レイヤーを削除</quote>有効
                 </para>
               </caption>
             </mediaobject>

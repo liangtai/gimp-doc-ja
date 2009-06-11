@@ -8,7 +8,7 @@
   2006-03.18 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-04-27-->
+<!--2009-06-08-->
 <sect2 id="gimp-undo-dialog">
   <title lang="en">Undo History Dialog</title>
   <title lang="ja">操作履歴ダイアログ</title>
@@ -93,11 +93,7 @@
         <para lang="en">
           from the Tab menu in any dockable dialog by clicking on
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> and selecting
           <menuchoice>
             <guimenu>Add Tab</guimenu>
@@ -107,11 +103,8 @@
         <para lang="ja">
           任意のドッキング可能なダイアログのアイコンボタン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
             <guimenu>タブに追加(<accel>A</accel>)</guimenu>
@@ -131,13 +124,26 @@
       in this way as much as you please, without losing any information or
       consuming any resources. In most cases, the changes are very fast.
     </para>
-    <para lang="en">At the bottom of the dialog are three buttons:</para>
     <para lang="ja">
       操作履歴の一覧表のどれかの項目をクリックするのが基本的な扱い方です。
       この方法は何ら情報を損失することも資源を浪費することもなく、
       いくらでも好きなだけ履歴上の様々な状態を遡ったり進んだりできます。
       操作の反応はほとんどいつも非常に高速です。
     </para>
+    <tip>
+      <para lang="en">
+        <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+        opens a search field.
+        See <xref linkend="gimp-dock-view-as-list" />
+      </para>
+      <para lang="j">
+        キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+        <keycap>F</keycap></keycombo> で検索窓が現れます。
+        <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+        </link> をご覧ください。
+      </para>
+    </tip>
+    <para lang="en">At the bottom of the dialog are three buttons:</para>
     <para lang="ja">
       ダイアログの底部に並ぶ3つのボタンについて見てゆきましょう。
     </para>
@@ -226,21 +232,19 @@
             使われることはないでしょう。
           </para>
           <note>
-            <para>
-              <phrase lang="en">
-                In a tab, this dialog is represented by
-              </phrase>
-              <phrase lang="ja">タブ化すると見出し爪には</phrase>
+            <para lang="en">
+              In a tab, this dialog is represented by
               <guiicon>
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata format="PNG"
+                <inlinegraphic
                       fileref="images/dialogs/stock-undo-history-16.png"/>
-                  </imageobject>
-                </inlinemediaobject>
               </guiicon>
-              <phrase lang="en">.</phrase>
-              <phrase lang="ja">が表示されます。</phrase>
+            </para>
+            <para lang="ja">
+              タブ化すると見出し爪には
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-undo-history-16.png"/>
+              </guiicon> が表示されます。
             </para>
           </note>
           <note>

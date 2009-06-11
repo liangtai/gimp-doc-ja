@@ -2,6 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-06-02 j.h: added Ctrl+F for search field in list
   2008-12-13 j.h: updated to v2.6 en;fr
   2007-12-13 ude: updated de; changed en layout
   2007-08-13 j.h added Copy Brush Location
@@ -12,7 +13,7 @@
   2006-02-24 Written Brush Editor en;fr by j.h
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-05-14-->
+<!--2009-06-08-->
 <sect2 id="gimp-brush-dialog">
   <title lang="en"><quote>Brushes</quote> Dialog</title>
   <title lang="ja"><quote>ブラシ</quote>ダイアログ</title>
@@ -48,7 +49,8 @@
     </mediaobject>
   </figure>
   <para lang="en">
-    The Brushes dialog is used to select a brush, for use with painting tools:
+    The <quote>Brushes</quote> dialog is used to select a brush, for use with
+    painting tools:
     see the <link linkend="gimp-concepts-brushes">Brushes</link>
     section for basic information on brushes and how they are used in GIMP.
     The dialog also gives you access to several functions for manipulating
@@ -325,6 +327,19 @@
               パターン、 グラデーションなどの資源については原則として変更不可
               です。 変更できるのは自作のものや自前のものだけです。
             </para>
+            <tip>
+              <para lang="en">
+                <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+                opens a search field.
+                See <xref linkend="gimp-dock-view-as-list" />
+              </para>
+              <para lang="j">
+                キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+                <keycap>F</keycap></keycombo> で検索窓が現れます。
+                <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+                </link> をご覧ください。
+              </para>
+            </tip>
           </listitem>
         </varlistentry>
       </variablelist>
@@ -673,13 +688,16 @@
       brush from a geometrical shape, a circle, a square, a diamond. This
       editor has several elements:
     </para>
-    <para lang="en"><emphasis>The dialog bar</emphasis>:
+    <para lang="en">
+      <emphasis>The dialog bar</emphasis>:
       As with all dialog windows, a click on the small triangle prompts a
       menu allowing you to set the aspect of the Brush Editor.
     </para>
-    <para lang="en"><emphasis>The title bar</emphasis>: To give a name to your brush.
+    <para lang="en">
+      <emphasis>The title bar</emphasis>: To give a name to your brush.
     </para>
-    <para lang="en"><emphasis>The preview area</emphasis>: Brush changes appear in real
+    <para lang="en">
+      <emphasis>The preview area</emphasis>: Brush changes appear in real
       time in this preview.
     </para>
     <para lang="ja">

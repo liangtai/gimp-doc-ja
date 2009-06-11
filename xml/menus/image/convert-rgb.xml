@@ -6,23 +6,37 @@
   2006-07-29 lexa: patch from julien that includes suggestions by Sally
   2005-10-25 created from image-mode.xml by axel.wernicke
 -->
+<!--2009-06-03-->
 <sect2 id="gimp-image-convert-rgb">
-  <title>RGB mode</title>
+  <title lang="en">RGB mode</title>
+  <title lang="ja">RGB(<accel>R</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>RGB</primary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Convert</secondary>
     <tertiary>To RGB mode</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Modes (color)</primary>
     <secondary>RGB</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>RGB</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="ヘンカン">変換</secondary>
+    <tertiary sortas="RGBモードニヘンカン">RGBモードに変換</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="モード (イロ)">モード (色)</primary>
+    <secondary>RGB</secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>RGB</guimenuitem> command converts your image to
     RGB mode. See the <link linkend="glossary-rgb">RGB</link> description in
     the Glossary for more information. Normally, you work in this mode,
@@ -31,18 +45,37 @@
     the image, you can no longer retrieve the RGB colors, so you should
     work on a copy of your image.
   </para>
+  <para lang="ja">
+    <guimenuitem>RGB(<accel>R</accel>)</guimenuitem> コマンドは画像を<acronym>
+    RGB</acronym>モードに変換します。 このモードについては用語集の 
+    <link linkend="glossary-rgb">RGB</link> の項に詳しく述べています。 普段は
+    コンピュータ画面に適したこのモードで作業してください。 <acronym>RGB
+    </acronym>モードから容易にグレースケールモードやインデックス化カラーモード
+    に変換できますが、 これらのモードで保存したファイルからは<acronym>RGB
+    </acronym>的な色がとり戻せませんので、 必要ならば別名ファイルに<acronym>RGB
+    </acronym>モードでも保存しておいてください。
+  </para>
 
   <sect3>
-    <title>Activating the command</title>
+    <title lang="en">Activating the command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menu bar through
           <menuchoice>
             <guimenu>Image</guimenu>
             <guisubmenu>Mode</guisubmenu>
             <guimenuitem>RGB</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像(<accel>I</accel>)</guimenu>
+            <guisubmenu>モード(<accel>M</accel>)</guisubmenu>
+            <guimenuitem>RGB(<accel>R</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

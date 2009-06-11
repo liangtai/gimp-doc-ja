@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-11-28 j.h: no change for v2.4
   2007-09-26 AntI: Added 'es'
   2005-01-07 en;fr reviewed by j.h
   2005/10/30 reviewed, de added by axel.wernicke
 -->
+<!--2009-06-07-->
 <sect2 id="gimp-image-print-size">
-  <title>
-    <phrase>Print Size</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Print Size</title>
+  <title lang="ja">印刷サイズ(<accel>P</accel>)...</title>
+
+  <indexterm lang="en">
     <primary>Printing</primary>
     <secondary>Printing size and resolution</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Resolution</primary>
     <secondary>Resolution when printing</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Image size</secondary>
     <tertiary>Printing size</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Print Size</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary sortas="インサツ">印刷</primary>
+    <secondary sortas="インサツブツノオオキサトカイゾウド">
+      印刷物の大きさと解像度
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カイゾウド">解像度</primary>
+    <secondary sortas="インサツブツノカイゾウド">印刷物の解像度</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="ガゾウノオオキサ">画像の大きさ</secondary>
+    <tertiary sortas="インサツブツノオオキサ">印刷物の大きさ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="インサツサイズ">印刷サイズ</primary>
+  </indexterm>
+
+  <para lang="en">
     You can use the <guimenuitem>Print Size</guimenuitem> dialog to change
     the <emphasis>dimensions of a printed image</emphasis> and its
     <emphasis>resolution</emphasis>. This command does not change the number
@@ -34,69 +55,104 @@
     to change the size of an image by resampling it, use the
     <link linkend="gimp-image-scale">Scale Image</link> command.)
   </para>
+  <para lang="ja">
+    <guimenuitem>印刷サイズ(<accel>P</accel>)...</guimenuitem> コマンドで呼び
+    出せる<quote>画像印刷解像度の設定</quote>ダイアログを用いて印刷物の 
+    <emphasis>寸法</emphasis> と <emphasis>解像度</emphasis> が変更できます。
+    このコマンドは画像の画素数 (ピクセル数) を変えることはなく、 画像の再標本化
+    も行ないません。 (再標本化によって画像の大きさを変更したいときは 
+    <link linkend="gimp-image-scale">画像の拡大・縮小(<accel>S</accel>)...
+    </link> コマンドか
+    <link linkend="gimp-tool-scale">拡大・縮小</link> ツールをご利用ください。)
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Dialog</phrase>
-    </title>
+    <title lang="en">Activating the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this dialog from the image menubar through
           <menuchoice>
             <guimenu>Image</guimenu>
             <guimenuitem>Print Size</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像(<accel>I</accel>)</guimenu>
+            <guimenuitem>印刷サイズ(<accel>P</accel>)...</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>
-        Options in the <quote>Print Size</quote> Dialog
-      </phrase>
+    <title lang="en">
+      Options in the <quote>Print Size</quote> Dialog
+    </title>
+    <title lang="ja">
+      <quote>画像印刷解像度の設定</quote>ダイアログのオプション
     </title>
     <figure>
-      <title>
-        <phrase>
-          The <quote>Print Size</quote> dialog
-        </phrase>
-      </title>
+      <title lang="en">The <quote>Print Size</quote> dialog</title>
+      <title lang="ja"><quote>画像印刷解像度の設定</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/menus/menus-image-print-size.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/menus/menus-image-print-size.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The output resolution determines the number of pixels used per unit
       length for the printed image. Do not confuse the output resolution
       with the printer resolution, which is expressed in dpi (dots per
       inch); several dots are used to print a pixel.
     </para>
-    <para>
+    <para lang="en">
       When the dialog is displayed, the resolution shown in the boxes is the
       resolution of the original image. If you increase the output
       resolution, the printed page will be smaller, since more pixels are
       used per unit of length. Conversely, and for the same reason,
       resizing the image modifies the resolution.
     </para>
-    <para>
+    <para lang="en">
       Increasing the resolution results in increasing the sharpness of the
       printed page. This is quite different from simply reducing the image
       size by scaling it, since no pixels (and no image information) are
       removed.
     </para>
+    <para lang="ja">
+      出力解像度とは印刷物の単位長さあたりの画素数を定義するものです。 プリンタ
+      の解像度と出力解像度を混同しないよう注意しましょう。 プリンタの解像度は
+      dpi[ドット毎インチ]で表わされ、 1画素に数ドットを割り当てることも
+      あります。
+    </para>
+    <para lang="ja">
+      このダイアログが開かれたはじめの段階で解像度の欄に表示されている値は元の
+      画像の解像度です。 出力解像度を大きくとると単位あたりの画素数が増すため
+      印刷物は小さくなります。 同じ理由から逆に印刷物の幅や高さを変えると
+      出力解像度も変化します。
+    </para>
+    <para lang="ja">
+      出力解像度を増やすにつれ印刷物の精度が上がります。 [印刷される画像は
+      縮まりますが]元の画像をただ縮小するのとは異なり画素は減りません (つまり
+      画像の情報が劣化しません)。
+    </para>
     <variablelist>
       <varlistentry>
-        <term>Width; Height</term>
+        <term lang="en">Width; Height</term>
+        <term lang="ja">幅(<accel>W</accel>); 高さ(<accel>E</accel>)</term>
         <listitem>
-          <para>
+          <para lang="en">
             You can set the printing Width and Height by using the
             text boxes. You can also choose the units for these values
             from the dropdown list.
           </para>
-          <para>
+          <para lang="en">
             As soon as you change the Width or the Height, the X and/or
             Y resolution values automatically change accordingly. If the
             two resolution values remain linked, the relationship of the
@@ -105,23 +161,48 @@
             of each other, simply click on the chain symbol to break the
             link.
           </para>
+          <para lang="ja">
+            印刷される画像の大きさはこの数値記入欄で指定できます。 引き出し
+            リストから他の単位も選択できます。
+          </para>
+          <para lang="ja">
+            印刷物の幅や高さを変更すると直ちに関連する水平解像度や垂直解像度が
+            相応の値に変化します。 両出力解像度の欄が鎖で繋がれているときは、
+            縦横比が保たれます。 この鎖のしるしをクリックすれば比例関係は断たれ
+            ますので縦と横で個別に解像度を指定できるようになります。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>X resolution; Y resolution</term>
+        <term lang="en">X resolution; Y resolution</term>
+        <term lang="ja">
+          水平解像度(<accel>X</accel>); 垂直解像度(<accel>Y</accel>)
+        </term>
         <listitem>
-          <para>
+          <para lang="en">
             You can set the resolution used to calculate the printed
             width and height from the physical size of the image, that is,
             the number of pixels in it.
           </para>
-          <para>
+          <para lang="en">
             Use the text boxes to change these resolution values.
             They can be linked to keep their relationship constant. The
             closed chain symbol between the two boxes indicates that the
             values are linked together. If you break the link by clicking
             on the chain symbol, you will be able to set the values
             independently of each other.
+          </para>
+          <para lang="ja">
+            印刷される画像の幅や高さを実際に算出するときに利用される実寸での
+            単位距離あたりの画素数をここで指定できます。
+          </para>
+          <para lang="ja">
+            このような出力解像度はそれぞれの数値記入欄に指定します。 縦横比が
+            保たれるようにするため両者は連結されています。 2つの記入欄の右側に
+            ある繋がった鎖のしるしは、 そこに記入される値が互いに繋がっている
+            ことを示しています。 このしるしをクリックすると切り離された鎖の
+            しるしに替わり、 2つの解像度が互いに無関係に変更できるようになり
+            ます。
           </para>
         </listitem>
       </varlistentry>

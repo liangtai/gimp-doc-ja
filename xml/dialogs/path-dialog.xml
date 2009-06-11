@@ -7,7 +7,7 @@
   2006-02-25 fixed invalid image reference
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-05-07-->
+<!--2009-06-08-->
 <sect2 id="gimp-path-dialog">
   <title lang="en"><quote>Paths</quote> Dialog</title>
   <title lang="ja"><quote>パス</quote>ダイアログ</title>
@@ -204,11 +204,11 @@
         <listitem>
           <para lang="en">
             An <quote>open eye</quote> icon if the path is visible, or a
-            blank space if it is not.  "Visible" means that a trace of the
-            path is drawn on the image display.  The path is not actually
-            shown in the image pixel data unless it has been stroked or
-            otherwise rendered.  Clicking in the eye-symbol-space toggles the
-            visibility of the path.
+            blank space if it is not.  <quote>Visible</quote> means that a
+            trace of the path is drawn on the image display.  The path is not
+            actually shown in the image pixel data unless it has been stroked
+            or otherwise rendered.  Clicking in the eye-symbol-space
+            toggles the visibility of the path.
           </para>
           <para lang="ja">
             <quote>開いた目</quote>のアイコンはパスが可視化されているときに
@@ -275,7 +275,7 @@
             The name of the path, which must be unique within the image.
             Double-clicking on the name will allow you to edit it. If the
             name you create already exists, a number will be appended (e.g.,
-            "#1") to make it unique.
+            <quote>#1</quote>) to make it unique.
           </para>
           <para lang="ja">
             パスの名前はその画像内で重複があってはいけません。 名前欄をダブル
@@ -624,8 +624,8 @@
         <listitem>
           <anchor id="gimp-path-duplicate"/>
           <para lang="en">
-            "Duplicate Path" creates a copy of the active path, assigns
-            it a unique name, adds it to the list in the Paths dialog,
+            <quote>Duplicate Path</quote> creates a copy of the active path,
+            assigns it a unique name, adds it to the list in the Paths dialog,
             and makes it the active path for the image.  The copy will
             be visible only if the original path was visible.
           </para>
@@ -694,12 +694,13 @@
             These commands all convert the active path into a selection, and
             then combine it with the existing selection in the specified
             ways.
-            ("Path to Selection" discards the existing selection and replaces
-            it with one formed from the path.) If necessary, any unclosed
-            components of the path are closed by connecting the last anchor
-            point to the first anchor point with a straight line. The
-            "marching ants" for the resulting selection should closely follow
-            the path, but don't expect the correspondence to be perfect.
+            (<quote>Path to Selection</quote> discards the existing selection
+            and replaces it with one formed from the path.) If necessary, any
+            unclosed components of the path are closed by connecting the last
+            anchor point to the first anchor point with a straight line. The
+            <quote>marching ants</quote> for the resulting selection should
+            closely follow the path, but don't expect the correspondence to
+            be perfect.
           </para>
           <para lang="ja">
             これらのコマンドはどれも活性パスを選択範囲に変換して、 その指示
@@ -761,7 +762,8 @@
                 <guiicon>
                   <inlinemediaobject>
                     <imageobject>
-                      <imagedata fileref="images/dialogs/stock-selection-to-path-16.png"/>
+                      <imagedata
+                      fileref="images/dialogs/stock-selection-to-path-16.png"/>
                     </imageobject>
                     <textobject>
                       <phrase>「選択範囲をパスに変換」</phrase>
@@ -784,8 +786,8 @@
           <para lang="en">
             <guilabel>Selection to Path</guilabel> creates a new path
             from the image's selection. In most cases the resulting path
-            will closely follow the "marching ants" of the selection,
-            but the correspondence will not usually be perfect.
+            will closely follow the <quote>marching ants</quote> of the
+            selection, but the correspondence will not usually be perfect.
           </para>
           <para lang="en">
             Converting a two-dimensional selection mask into a
@@ -985,11 +987,12 @@
         <listitem>
           <anchor id="gimp-path-import"/>
           <para lang="en">
-            "Import Path" creates a new path from an SVG file:  it pops
-            up a file chooser dialog that allows you to navigate to the
-            file.  See the <link linkend="gimp-concepts-paths">Paths</link>
-            section for information on SVG files and how they relate to
-            GIMP paths.
+            <guilabel>Import Path</guilabel> creates a new path from an SVG
+            file:
+            it pops up a file chooser dialog that allows you to navigate to
+            the file.  See the <link linkend="gimp-concepts-paths">Paths
+            </link> section for information on SVG files and how they relate
+            to GIMP paths.
           </para>
           <para lang="ja">
             <guimenuitem>パスをインポート(<accel>M</accel>)...</guimenuitem>
