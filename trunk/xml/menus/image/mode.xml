@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-04-01 KoSt: added 'no' translation
   2007-03-13 alex falappa: fixed links in it translation
   2005-10-29 de reviewed by axel.wernicke
 -->
+<!--2009-06-03-->
 <sect2 id="gimp-image-mode">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2708 $</revnumber>
-        <date>2006-08-07</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Mode</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Mode</title>
+  <title lang="ja">モード(<accel>M</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Modes (Colors)</primary>
     <secondary>Submenu</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Color modes</secondary>
     <tertiary>Menu</tertiary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="モード (イロ)">モード (色)</primary>
+    <secondary>サブメニュー</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="イロモード">色モード</secondary>
+    <tertiary>メニュー</tertiary>
+  </indexterm>
+
   <figure>
-    <title>
-      <phrase>
-        The <quote>Mode</quote> submenu of the <quote>Image</quote> menu
-      </phrase>
+    <title lang="en">
+      The <quote>Mode</quote> submenu of the <quote>Image</quote> menu
+    </title>
+    <title lang="ja">
+      <quote>画像</quote>メニューの<quote>モード</quote>サブメニュー
     </title>
     <mediaobject>
       <imageobject>
@@ -39,58 +43,87 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     The <guimenuitem>Mode</guimenuitem> submenu contains commands which
     let you change the color mode of the image. There are three modes.
   </para>
+  <para lang="ja">
+    <guisubmenu>モード(<accel>M</accel>)</guisubmenu> サブメニューのコマンドは
+    画像の色モードを変更します。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Submenu</phrase>
-    </title>
+    <title lang="en">Activating the Submenu</title>
+    <title lang="ja">サブメニューへの入り方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this submenu from the image menubar through
           <menuchoice>
             <guimenu>Image</guimenu>
             <guimenuitem>Mode</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像(<accel>I</accel>)</guimenu>
+            <guisubmenu>モード(<accel>M</accel>)</guisubmenu>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>
-        The Contents of the <quote>Mode</quote> Submenu
-      </phrase>
-    </title>
+    <title lang="en">The Contents of the <quote>Mode</quote> Submenu</title>
+    <title lang="ja"><quote>モード</quote>サブメニューの目次</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           <link linkend="gimp-image-convert-rgb">RGB</link>
         </para>
+        <para lang="ja">
+          <link linkend="gimp-image-convert-rgb">
+          モード(<accel>M</accel> → RGB(<accel>R</accel>)</link>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           <link linkend="gimp-image-convert-grayscale">Grayscale</link>
         </para>
-      </listitem>
-      <listitem>
-        <para>
-          <link linkend="gimp-image-convert-indexed">Indexed</link>
+        <para lang="ja">
+          <link linkend="gimp-image-convert-grayscale">
+          モード(<accel>M</accel> → グレースケール(<accel>G</accel>)</link>
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
+          <link linkend="gimp-image-convert-indexed">Indexed</link>
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-image-convert-indexed">
+          モード(<accel>M</accel>) → インデックス(<accel>I</accel>)...</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
           Assign Color Profile (see
           <link linkend="plug-in-icc-profile-set">Color management</link>)
         </para>
+        <para lang="ja">
+          カラープロファイルの指定(<accel>A</accel>)... (
+          <link linkend="plug-in-icc-profile-set">色管理</link> 参照)
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           Convert to Color Profile (see
           <link linkend="plug-in-icc-profile-apply">Color management</link>)
+        </para>
+        <para lang="ja">
+          カラープロファイルの変換(<accel>C</accel>)... (
+          <link linkend="plug-in-icc-profile-apply">色管理</link> 参照)
         </para>
       </listitem>
     </itemizedlist>

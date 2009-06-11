@@ -10,7 +10,7 @@
   2006-02-26 Several updates to v2.10 by j.h in en
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-05-14-->
+<!--2009-06-08-->
 <sect2 id="gimp-buffer-dialog">
   <title lang="en"><quote>Buffers</quote> Dialog</title>
   <title lang="ja"><quote>バッファ</quote>ダイアログ</title>
@@ -62,7 +62,9 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>バッファ</primary>
-    <secondary sortas="ナマエヲエランデハリツケ">名前を選んで貼り付け</secondary>
+    <secondary sortas="ナマエヲエランデハリツケ">
+      名前を選んで貼り付け
+    </secondary>
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="ナマエツキデキリトリ">名前付きで切り取り</primary>
@@ -300,7 +302,7 @@
       <guimenuitem>View as List</guimenuitem>.
       In Grid mode, the buffers are laid out in a rectangular array.
       In List mode, they are lined up vertically, with each row showing
-      a preview of the contents of the buffer, its name, and its pixel
+      a thumbnail of the contents of the buffer, its name, and its pixel
       dimensions.
     </para>
     <para lang="ja">
@@ -311,17 +313,28 @@
       <quote>一覧で表示</quote>の場合はバッファが縦一列に列挙され、 各段に
       その見本画像と名前とピクセル単位の大きさが表示されます。
     </para>
-    <note>
+    <tip>
       <para lang="en">
-        You can change the size of the buffer previews in the dialog using
-        the <quote>Preview Size</quote> submenu of the dialog's Tab menu.
+        <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+        opens a search field.
+        See <xref linkend="gimp-dock-view-as-list" />
       </para>
-      <para lang="ja">
-        バッファの見本画像の大きさはダイアログのタブメニューの
-        <guisubmenu>プレビューサイズ(<accel>P</accel>)</guisubmenu>
-        サブメニューで調節できます。
+      <para lang="j">
+        キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+        <keycap>F</keycap></keycombo> で検索窓が現れます。
+        <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+        </link> をご覧ください。
       </para>
-    </note>
+    </tip>
+    <para lang="en">
+      You can change the size of the buffer previews in the dialog using
+      the <quote>Preview Size</quote> submenu of the dialog's Tab menu.
+    </para>
+    <para lang="ja">
+      バッファの見本画像の大きさはダイアログのタブメニューの
+      <guisubmenu>プレビューサイズ(<accel>P</accel>)</guisubmenu>
+      サブメニューで調節できます。
+    </para>
 
     <sect4 id="gimp-buffer-dialog-buttons">
       <title lang="en">Buttons at the bottom</title>

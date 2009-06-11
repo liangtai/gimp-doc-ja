@@ -9,10 +9,10 @@
   2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2009-05-14-->
+<!--2009-06-08-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
-  <title lang="en">Gradients Dialog</title>
-  <title lang="ja">グラデーションダイアログ</title>
+  <title lang="en"><quote>Gradients</quote> Dialog</title>
+  <title lang="ja"><quote>グラデーション</quote>ダイアログ</title>
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Gradient Dialog</secondary>
@@ -39,9 +39,10 @@
     </mediaobject>
   </figure>
   <para lang="en">
-    The Gradients dialog offers a gradient palette which is used to select
-    a gradient -- a set of colors arranged in a linear scale -- for use
-    with the <link linkend="gimp-tool-blend">Blend tool</link> and numerous
+    The <quote>Gradients</quote> dialog offers a gradient palette which is
+    used to select a gradient -- a set of colors arranged in a linear
+    scale -- for use with the
+   <link linkend="gimp-tool-blend">Blend tool</link> and numerous
     other operations. It also gives you access to several functions for
     manipulating gradients.  You can select a gradient by clicking on it in
     the list: it will then be shown in the Brush/Pattern/Gradient area of
@@ -53,7 +54,8 @@
     section.
   </para>
   <para lang="ja">
-    グラデーションダイアログはグラデーションを目録から選べるしくみです。
+    <quote>グラデーション</quote>ダイアログはグラデーションを目録から選べる
+    しくみです。
     グラデーションとは直線状に並べられた様々な色や透明度の配色のことで、
     <link linkend="gimp-tool-blend">ブレンドツール</link> をはじめ数々の加工に
     利用されています。 このダイアログからグラデーションを操作する機能もいくつか
@@ -152,11 +154,8 @@
         <para lang="en">
           from the Tab menu in any dockable dialog by clicking on
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
+            <inlinegraphic
                 fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
           </guiicon> and selecting
           <menuchoice>
             <guimenu>Add Tab</guimenu>
@@ -166,11 +165,8 @@
         <para lang="ja">
           任意のドッキング可能なダイアログのボタンアイコン
           <guiicon>
-            <inlinemediaobject>
-              <imageobject><imagedata format="PNG"
-                fileref="images/dialogs/stock-menu-left-12.png"/>
-              </imageobject>
-            </inlinemediaobject>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
             <guimenu>タブに追加(<accel>A</accel>)</guimenu>
@@ -236,8 +232,8 @@
   </sect3>
 
   <sect3 id="gimp-gradient-dialog-using">
-    <title lang="en">Using the Gradients dialog</title>
-    <title lang="ja">グラデーションダイアログの利用法</title>
+    <title lang="en">Using the <quote>Gradients</quote> dialog</title>
+    <title lang="ja"><quote>グラデーション</quote>ダイアログの利用法</title>
     <para lang="en">
       The most basic, and most commonly used, operation with the dialog is
       simply to click on one of the gradients in the scrollable list, in order
@@ -285,11 +281,6 @@
             more usable default, the gradients are lined up vertically, with
             each row showing its name.
           </para>
-          <para lang="en">
-            In the Tab menu, the option <guilabel>Preview Size</guilabel>
-            allows you to adapt the size of gradient previews to your
-            liking.
-          </para>
           <para lang="ja">
             タブメニューで <guimenuitem>並べて表示(<accel>G</accel>)
             </guimenuitem> と <guimenuitem>一覧で表示(<accel>L</accel>)
@@ -298,6 +289,24 @@
             隣同士が視覚的に干渉してしまうので欲しいものを探すのはあまり楽では
             ありません。 既定で選ばれる<quote>一覧で表示</quote>の方がもっと
             便利で、 グラデーションは各行ごとに名前つきで表示されています。
+          </para>
+          <tip>
+            <para lang="en">
+              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+              opens a search field.
+              See <xref linkend="gimp-dock-view-as-list" />
+            </para>
+            <para lang="j">
+              キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+              <keycap>F</keycap></keycombo> で検索窓が現れます。
+              <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+              </link> をご覧ください。
+            </para>
+          </tip>
+          <para lang="en">
+            In the Tab menu, the option <guilabel>Preview Size</guilabel>
+            allows you to adapt the size of gradient previews to your
+            liking.
           </para>
           <para lang="ja">
             タブメニューの <guisubmenu>プレビューサイズ(<accel>P</accel>)
