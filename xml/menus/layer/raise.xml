@@ -6,16 +6,25 @@
   2007-02-22 KoSt: added no
   2005/11/11 split of from layer-stack.xml by axel.wernicke
 -->
+<!--2009-06-15-->
 <sect2 id="gimp-layer-raise">
-  <title>Raise Layer</title>
+  <title lang="en">Raise Layer</title>
+  <title lang="ja">レイヤーを前面へ(<accel>R</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Stack managing</secondary>
     <tertiary>Move current layer one position up</tertiary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサナリヲカンリ">重なりを管理</secondary>
+    <tertiary sortas="ゲンザイノレイヤーヲイチダンウエニイドウ">
+      現在のレイヤーを一段上に移動
+    </tertiary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Raise Layer</guimenuitem> command raises the active
     layer one position in the layer stack. If the active layer is
     already at the top or if there is only one layer, this menu entry is
@@ -23,23 +32,45 @@
     stack and it does not have an alpha channel, it cannot be raised until
     you add an alpha channel to it.
   </para>
+  <para lang="ja">
+    <guimenuitem>レイヤーを前面へ(<accel>R</accel>)</guimenuitem> コマンドは
+    現在活性化しているレイヤーをレイヤー積み重ねの順序において一段上の位置に
+    移動します。 ただし活性レイヤーが既に最前面に位置していたり、 もともと画像
+    に1層しかレイヤーがなかった場合は、 このメニュー項目は灰色無効となっていて
+    使用できません。 また、 活性レイヤーがレイヤー積み重ねの最背面に位置して
+    おりアルファチャンネルを持たないレイヤーであった場合は、 このレイヤーは
+    アルファチャンネルが追加されるまでは上層に移動できません。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Layer</guimenu>
+          <menuchoice>
+            <guimenu>Layer</guimenu>
             <guisubmenu>Stack</guisubmenu>
             <guimenuitem>Raise Layer</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>重なり(<accel>K</accel>)</guisubmenu>
+            <guimenuitem>レイヤーを前面へ(<accel>R</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or by clicking on the up-arrow icon at the bottom of the Layers
           dialog.
+        </para>
+        <para lang="ja">
+          レイヤーダイアログの上向き矢印アイコンボタンをクリック
         </para>
       </listitem>
     </itemizedlist>

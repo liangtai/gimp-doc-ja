@@ -11,22 +11,39 @@
      2006-07-28 note added
      2005-11-03 split of from menu-layer.xml by axel.wernicke
      -->
+<!--2009-06-13-->
 <sect2 id="gimp-layer-anchor">
-  <title>Anchor layer</title>
+  <title lang="en">Anchor layer</title>
+  <title lang="ja">レイヤーを固定(<accel>A</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Anchor the floating layer</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Anchor the floating selection</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Anchor Layer</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="フローティングレイヤーヲコテイ">
+      フローティングレイヤーを固定
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="フローティングセンタクハンイヲコテイ">
+      フローティング選択範囲を固定
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤーを固定</primary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     If you have created a floating selection, a temporary layer, called a
     <quote>floating layer</quote> or <quote>floating selection</quote>,
     is added to the layer stack. As long as the floating layer persists,
@@ -36,18 +53,33 @@
     If the image does not contain a floating selection, this menu entry is
     insensitive and grayed out.
   </para>
+  <para lang="ja">
+    <quote>フローティングレイヤー</quote>あるいは<quote>フローティング選択範囲
+    </quote>とも呼ばれる一時的レイヤーを作成すると、 これはレイヤーの積み重ねに
+    追加されます。 フローティングレイヤーがあるときはそれを対象にした操作しか
+    できません。 画像上のそれ以外のレイヤーで作業するには、 その前にフローティ
+    ングレイヤーを直前に活性化していたレイヤーに <guimenuitem>
+    レイヤーを固定(<accel>A</accel>)</guimenuitem> コマンドで<quote>固定
+    </quote>してやらねばなりません。 画像にフローティング選択範囲が無い場合は
+    このメニュー項目が灰色無効になっていて使用できません。
+  </para>
   <note>
-    <para>
+    <para lang="en">
       If there is an active selection tool, the mouse pointer is displayed
       with an anchor icon when it is outside of the selection.
+    </para>
+    <para lang="ja">
+      選択ツールを使用中ならばマウスポインタはフローティング選択範囲の領域外に
+      かざすと錨のしるしのついた姿に変化します。
     </para>
   </note>
 
   <sect3>
-    <title>Activate the Command</title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -55,11 +87,28 @@
           </menuchoice>, and from the local pop-up menu you get by
           right-clicking the Layer Dialog,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guimenuitem>レイヤーを固定(<accel>A</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="ja">
+          レイヤーダイアログの脈絡メニューより
+          <guimenuitem>レイヤーを固定(<accel>A</accel>)</guimenuitem>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
           or by using the keyboard shortcut
           <keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo>
         </para>
       </listitem>
     </itemizedlist>
@@ -67,28 +116,52 @@
 
   <!-- Mostly the same as in "menus/select/float.xml" -->
   <sect3>
-    <title>Alternative Ways of Anchoring a Floating Selection</title>
-    <para>There are more ways to anchor a floating selection:</para>
+    <title lang="en">Alternative Ways of Anchoring a Floating Selection</title>
+    <title lang="ja">フローティング選択範囲を固定するその他の方法</title>
+    <para lang="en">There are more ways to anchor a floating selection</para>
+    <para lang="ja">フローティング選択範囲の固定の仕方は他にもあります。</para>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can anchor the floating selection to the current layer the
           selection is originating by clicking anywhere on the image except on
           the floating selection.
         </para>
+        <para lang="ja">
+          画像上のフローティング選択範囲外の領域をどこでもクリックすればフロー
+          ティング選択範囲をそれが根付くべき現在のレイヤーに固定できます。
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           You can also anchor the floating selection to the current layer by
           clicking on the anchor button of the
           <link linkend="gimp-layer-dialog">Layers dialog</link>.
         </para>
+        <para lang="ja">
+          <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> の 
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/dialogs/stock-anchor-16.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          アイコンボタンをクリックしてもフローティング選択範囲を固定できます。
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           If you create a <link linkend="gimp-layer-new">New Layer</link>
           while there is a floating selection, the floating selection is
           anchored to this newly created layer.
+        </para>
+        <para lang="ja">
+          フローティング選択範囲があるときに 
+          <link linkend="gimp-layer-new">レイヤーの追加(<accel>N</accel>)...
+          </link> を実行すると、 そこで新たに作成されたレイヤーにフローティング
+          選択範囲が固定されます。
         </para>
       </listitem>
     </itemizedlist>

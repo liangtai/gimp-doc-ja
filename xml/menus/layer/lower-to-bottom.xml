@@ -6,27 +6,43 @@
   2007-03-12 Kolbjørn: added no translation
   2005/11/11 split of from layer-stack.xml by axel.wernicke
 -->
+<!--2009-06-15-->
 <sect2 id="gimp-layer-lower-to-bottom">
-  <title>Layer to Bottom</title>
+  <title lang="en">Layer to Bottom</title>
+  <title lang="ja">レイヤーを最背面へ(<accel>B</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Stack managing</secondary>
     <tertiary>Lower current layer to the bottom of stack</tertiary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサナリヲカンリ">重なりを管理</secondary>
+    <tertiary sortas="ゲンザイノレイヤーヲカサナリノサイカダンニイドウ">
+      現在のレイヤーを重なりの最下段に移動
+    </tertiary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Layer to bottom</guimenuitem> command lowers the active
     layer to the bottom of the layer stack. If the active layer is already
     at the bottom of the stack or if there is only one layer, this menu
     entry is insensitive and grayed out.
   </para>
+  <para lang="ja">
+    <guimenuitem>レイヤーを最背面へ(<accel>B</accel>)</guimenuitem> コマンドは
+    現在活性化しているレイヤーをレイヤー積み重ねの最下段に移動します。 ただし
+    活性レイヤーが既に最背面に位置していたり、 もともと画像に1層しかレイヤーが
+    なかった場合は、 このメニュー項目は灰色無効となって使用できません。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -34,11 +50,23 @@
             <guimenuitem>Layer to Bottom</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>重なり(<accel>K</accel>)</guisubmenu>
+            <guimenuitem>レイヤーを最背面へ(<accel>B</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or by pressing the <keycap>Shift</keycap> key and clicking on the
           down-arrow icon at the bottom of the Layers dialog.
+        </para>
+        <para lang="ja">
+          <keycap>Shift</keycap> キーを押しながレイヤーダイアログの下向き矢印
+          アイコンボタンをクリック
         </para>
       </listitem>
     </itemizedlist>
