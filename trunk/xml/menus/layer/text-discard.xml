@@ -6,56 +6,97 @@
   2007-04-09 de translation by ude
   2007-04-03 Created by j.h
 -->
+<!--2009-06-14-->
 <sect2 id="gimp-layer-text-discard">
-  <title>Discard Text Information</title>
+  <title lang="en">Discard Text Information</title>
+  <title lang="ja">文字情報の破棄(<accel>D</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Text</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Text</primary>
     <secondary>Discard information</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary>テキスト</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>テキスト</primary>
+    <secondary>文字情報の破棄</secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     This command belongs to a group of Text commands displayed only if a
     text layer is present.
   </para>
+  <para lang="ja">
+    <guimenuitem>文字情報の破棄(<accel>D</accel>)</guimenuitem> コマンドは
+    テキスト用コマンドのひとつで、 テキストレイヤーが画像にあるときのみ現れ
+    ます。
+  </para>
   <figure>
-    <title>
+    <title lang="en">
       The Discard Text command among text commands in the Layer menu
     </title>
+    <title lang="ja">レイヤーメニューのテキスト用コマンド</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
           fileref="images/menus/layer-text-commands.png"/>
       </imageobject>
+      <caption>
+        <para lang="ja">
+          <guimenuitem>文字情報の破棄(<accel>D</accel>)</guimenuitem> コマンド
+          はここに含まれる
+        </para>
+      </caption>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     When you add text to an image, <acronym>GIMP</acronym> adds specific
     informations. This command lets you discard these informations,
     transforming the current text layer into a normal bitmap layer. The
     reason to do that is not evident.
   </para>
-  <para>
+  <para lang="en">
     Note that this transformation of text into bitmap is automatically
     performed when you apply a graphic operation to the text layer. You can
     get text information back by undoing the operation which modified the
     text.
   </para>
+  <para lang="ja">
+    画像にテキストを貼り付けると、 <acronym>GIMP</acronym>はそのレイヤーに
+    特定の情報を付け加えます。 このコマンドはそのような情報を取り除いてしまい
+    現在テキストレイヤーとなっているレイヤーを通常のビットマップレイヤーに変換
+    します。 このような操作をする理由は不明です。
+  </para>
+  <para lang="ja">
+    ちなみにこのテキストをビットマップ化する変換はテキストレイヤーに画像処理的
+    な操作をすると自動的に実施されます。 でもテキストを変更したその操作を取り
+    消せばテキスト情報を復活できます。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
             <guimenuitem>Discard Text Information</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guimenuitem>文字情報の破棄(<accel>D</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

@@ -6,35 +6,58 @@
   2007-03-12 Kolbjørn: added no translation
   2005/11/11 de added; reviewed by axel.wernicke
 -->
+<!--2009-06-15-->
 <sect2 id="gimp-layer-top">
-  <title>Select Top Layer</title>
+  <title lang="en">Select Top Layer</title>
+  <title lang="ja">最前面のレイヤーを選択(<accel>T</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Stack managing</secondary>
     <tertiary>Select top layer</tertiary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサナリヲカンリ">重なりを管理</secondary>
+    <tertiary sortas="サイゼンメンノレイヤーヲセンタク">
+      最前面のレイヤーを選択
+    </tertiary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Select Top Layer</guimenuitem> command makes the top
     layer in the stack the active layer for the image and highlights it in
     the Layers dialog. If the active layer is already the top layer in the
     stack, this menu entry is insensitive and grayed out.
   </para>
+  <para lang="ja">
+    <guimenuitem>最前面のレイヤーを選択(<accel>T</accel>)</guimenuitem> 
+    コマンドはレイヤーの積み重ねの一番上 (最前面) のレイヤーをその画像の活性
+    レイヤーに選び、 レイヤーダイアログの一覧表ではそのレイヤー項目を強調表示
+    します。
+  </para>
   <note>
-    <para>
+    <para lang="en">
       Note that on a standard Windows-style English keyboard, the default
       keyboard shortcut <keycap>Home</keycap> does not refer to the key on
       the numeric keypad, but to the other <keycap>Home</keycap> key in
       the group of six keys to the left of the numeric keypad.
     </para>
+    <para lang="ja">
+      標準的な <productname>Windows</productname> 用101キーボードの <keycap>
+      Home</keycap> キーは常設のものの他に <keycap>NumberLock</keycap> を解除
+      した場合のnumパッド (数値入力専用のテンキー) の <keycap>7</keycap> キーに
+      も割り当てられていますが、  後者はこのコマンドの既定のショートカットキー
+      には使えません。
+    </para>
   </note>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -42,15 +65,29 @@
             <guimenuitem>Select Top Layer</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>重なり(<accel>K</accel>)</guisubmenu>
+            <guimenuitem>最前面のレイヤーを選択(<accel>T</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or by using the keyboard shortcut <keycap>Home</keycap>.
+        </para>
+        <para lang="j">
+          キーボードショートカット <keycap>Home</keycap>
         </para>
       </listitem>
     </itemizedlist>
-    <para>
+    <para lang="en">
       Or you simply click on the layer name in the Layers Dialog.
+    </para>
+    <para lang="ja">
+      レイヤーダイアログのレイヤー一覧表で任意のレイヤーをクリック
     </para>
   </sect3>
 </sect2>

@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-06-15 kost: added 'no'
   2008-06-07 ude: added 'de'
   2008-05-11 Created by j.h
 -->
+<!--2009-06-14-->
 <sect2 id="gimp-layer-text-commands">
-  <title>The Text Commands of the Layer Menu</title>
+  <title lang="en">The Text Commands of the Layer Menu</title>
+  <title lang="ja">レイヤーメニューのテキスト用コマンド</title>
 
-  <para>
+  <para lang="en">
     These commands are displayed only if a text layer is present.
   </para>
+  <para lang="ja">
+    これらのコマンドは画像にテキストレイヤーがある場合にのみ現れます。
+  </para>
   <figure>
-    <title>Text commands in the Layer menu</title>
+    <title lang="en">Text commands in the Layer menu</title>
+    <title lang="ja">レイヤーメニューのテキスト用コマンド</title>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="images/menus/layer-text-commands.png" format="PNG"/>
+        <imagedata format="PNG"
+          fileref="images/menus/layer-text-commands.png"/>
       </imageobject>
     </mediaobject>
   </figure>
 
   <sect3>
-    <title>The Text Commands</title>
+    <title lang="en">The Text Commands</title>
+    <title lang="ja">テキスト用コマンド</title>
     <itemizedlist>
       <listitem>
         <para><xref linkend="gimp-layer-text-discard"/></para>
@@ -33,19 +42,32 @@
         <para><xref linkend="text-along-path"/></para>
       </listitem>
       <listitem>
-        <indexterm>
+        <indexterm lang="en">
           <primary>Text to Selection</primary>
         </indexterm>
-        <para>
+        <indexterm lang="ja">
+          <primary sortas="テキストカラセンタクハンイ">
+            テキストから選択範囲
+          </primary>
+        </indexterm>
+
+        <para lang="en">
           In the <guilabel>Text to Selection</guilabel> drop-down list, the
           commands are identical to those of the Transparency sub-menu
           (in fact, the text is formed of areas of different transparency):
+        </para>
+        <para lang="ja">
+          <guisubmenu>テキストから選択範囲(<accel>X</accel>)</guisubmenu> サブ
+          メニューのコマンドは <guisubmenu>透明部分(<accel>A</accel>)
+          </guisubmenu> サブメニューのコマンドとよく似ています (つまり事実上、 
+          テキストの実体は透過効果の違いで表された領域であるということです)。
         </para>
         <itemizedlist>
           <listitem>
             <anchor id="gimp-layer-text-selection-replace"/>
             <formalpara>
-              <title>Text to Selection:</title>
+              <title lang="en">Text to Selection:</title>
+              <title lang="en">テキストを選択範囲に(<accel>T</accel>):</title>
               <para>
                 <xref linkend="gimp-layer-alpha-selection-replace"/>
               </para>
@@ -54,7 +76,8 @@
           <listitem>
             <anchor id="gimp-layer-text-selection-add"/>
             <formalpara>
-              <title>Add text to Selection:</title>
+              <title lang="en">Add text to Selection:</title>
+              <title lang="en">選択範囲に加える(<accel>D</accel>):</title>
               <para>
                 <xref linkend="gimp-layer-alpha-selection-add"/>
               </para>
@@ -63,7 +86,8 @@
           <listitem>
             <anchor id="gimp-layer-text-selection-subtract"/>
             <formalpara>
-              <title>Subtract text from Selection:</title>
+              <title lang="en">Subtract text from Selection:</title>
+              <title lang="ja">選択範囲から引く(<accel>S</accel>):</title>
               <para>
                 <xref linkend="gimp-layer-alpha-selection-subtract"/>
               </para>
@@ -72,7 +96,8 @@
           <listitem>
             <anchor id="gimp-layer-text-selection-intersect"/>
             <formalpara>
-              <title>Intersect text with Selection:</title>
+              <title lang="en">Intersect text with Selection:</title>
+              <title lang="ja">選択範囲との交わり(<accel>I</accel>):</title>
               <para>
                 <xref linkend="gimp-layer-alpha-selection-intersect"/>
               </para>
