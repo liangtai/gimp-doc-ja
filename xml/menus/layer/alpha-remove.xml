@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!--TODO es;ko;pl;ru New file-->
 <!-- section history:
   2009-01-25 j.h: v2.6 reviewed
@@ -8,47 +9,66 @@
   2008-06-07 ude: added German translation
   2008-05-13 Created by j.h
 -->
+<!--2009-06-18-->
 <sect2 id="gimp-layer-alpha-remove">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2723 $</revnumber>
-        <date>2008-05-13</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Remove Alpha Channel</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Remove Alpha Channel</title>
+  <title lang="ja">アルファチャンネルを削除(<accel>R</accel>)</title>
+
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Transparency managing</secondary>
     <tertiary>Remove Alpha Channel</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Remove Alpha channel</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="トウカコウカノカンリ">透過効果の管理</secondary>
+    <tertiary sortas="アルファチャンネルヲサクジョ">
+      アルファチャンネルを削除
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="アルファチャンネルヲサクジョ">
+      アルファチャンネルを削除
+    </primary>
+  </indexterm>
+
+  <para lang="en">
     This command removes the Alpha channel of the active layer, keeping the
     Apha channels of the other layers.
   </para>
-  <para>
+  <para lang="en">
     If the active layer is the background layer and if you have not added an
     Alpha channel before  (then the layer name is in bold letters in the
     Layer Dialog), the command is grayed out, inactive.
   </para>
-  <para>
+  <para lang="en">
     If the active layer is not the background layer, transparency is replaced
     with the background color of the Toolbox.
   </para>
+  <para lang="ja">
+    <guimenuitem>アルファチャンネルを削除(<accel>R</accel>)</guimenuitem> 
+    コマンドは活性レイヤーのアルファチャンネルを削除します。 他のレイヤーの
+    アルファチャンネルには何の変更もしません。
+  </para>
+  <para lang="ja">
+    背景レイヤーにアルファチャンネルがまだ無いとき (レイヤーダイアログの一覧表
+    ではそのレイヤー名が太字になっています) に、 活性レイヤーに背景レイヤーを
+    選んだ場合はこのコマンドは灰色無効になり使用できません。
+  </para>
+  <para lang="ja">
+    背景レイヤー以外のレイヤーを選んだ場合はツールボックスに表示されている
+    背景色で活性レイヤーの透過部分が置き換わります。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activate the Command</phrase>
-    </title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access to this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -57,6 +77,20 @@
           </menuchoice>,
           and from the local pop-up submenu you get by right-clicking the
           Layer Dialog.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>透明部分(<accel>A</accel>)</guisubmenu>
+            <guimenuitem>アルファチャンネルを削除(<accel>R</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="ja">
+          レイヤーダイアログの脈絡メニューより
+          <guimenuitem>アルファチャンネルを削除(<accel>R</accel>)</guimenuitem>
         </para>
       </listitem>
     </itemizedlist>

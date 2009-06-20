@@ -9,37 +9,68 @@
      2006-08-01 scb:revised 'en'
      2005/11/11 split of from layer-mask.xml by axel.wernicke
      -->
+<!--2009-06-19-->
 <sect2 id="gimp-layer-alpha-semi-flatten">
-  <title>Semi-flatten</title>
+  <title lang="en">Semi-flatten</title>
+  <title lang="ja">半統合(<accel>S</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Transparency managing</secondary>
     <tertiary>Preserve anti-aliasing</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Antialiasing</primary>
     <secondary>Preserve anti-aliasing</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary>透過効果の管理</secondary>
+    <tertiary sortas="インデックスカデモアンチエイリアス">
+      インデックス化でもアンチエイリアス
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="アンチエイリアスカ">アンチエイリアス化</primary>
+    <secondary sortas="インデックスカデモアンチエイリアス">
+      インデックス化でもアンチエイリアス
+    </secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Semi-Flatten</guimenuitem> command is described
     in the <link linkend="plug-in-semiflatten">Semi-flatten</link> filter
     chapter. The command is useful when you need an anti-aliased image with
     indexed colors and transparency.
   </para>
+  <para lang="ja">
+    <guimenuitem>半統合(<accel>S</accel>)</guimenuitem> コマンドについては 
+    <link linkend="plug-in-semiflatten">半統合(<accel>S</accel>)</link> 
+    フィルタの節で説明しています。 このコマンドはインデックス化カラー画像で
+    あたかも透過効果にアンチエイリアスがかかっているような効果を与えたいときに
+    重宝します。
+  </para>
 
   <sect3>
-    <title>Activate the Command</title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
             <guisubmenu>Transparency</guisubmenu>
             <guimenuitem>Semi-flatten</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>透明部分(<accel>A</accel>)</guisubmenu>
+            <guimenuitem>半統合(<accel>S</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

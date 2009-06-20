@@ -6,32 +6,51 @@
   2007-03-12 Kolbjørn: added no translation
   2005/11/15 split of from layer-mask.xml by axel.wernicke
 -->
+<!--2009-06-16-->
 <sect2 id="gimp-layer-mask-delete">
-  <title>Delete Layer Mask</title>
+  <title lang="en">Delete Layer Mask</title>
+  <title lang="ja">レイヤーマスクを削除(<accel>K</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Mask managing</secondary>
     <tertiary>Delete layer mask</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Masks</primary>
     <secondary>Layer mask</secondary>
     <tertiary>Delete</tertiary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="マスクノカンリ">マスクの管理</secondary>
+    <tertiary sortas="レイヤーマスクヲサクジョ">レイヤーマスクを削除</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>マスク</primary>
+    <secondary>レイヤーマスク</secondary>
+    <tertiary sortas="サクジョ">削除</tertiary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Delete Layer Mask</guimenuitem> command deletes the
     active layer's layer mask, without modifying the active layer itself. If
     the active layer does not have a layer mask, the menu entry is
     insensitive and grayed out.
   </para>
+  <para lang="ja">
+    <guimenuitem>レイヤーマスクを削除(<accel>K</accel>)</guimenuitem> コマンド
+    は活性レイヤーについているレイヤーマスクを削除しますが、 活性レイヤー自体
+    には変更を加えません。 ただし活性レイヤーにレイヤーマスクが無かったときは
+    このメニュー項目は灰色無効となっていて使用できません。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -39,11 +58,23 @@
             <guimenuitem>Delete Layer Mask</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>レイヤーマスク(<accel>M</accel>)</guisubmenu>
+            <guimenuitem>レイヤーマスクを削除(<accel>K</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or from the pop-up menu you get by right-clicking on the active
           layer in the Layers Dialog.
+        </para>
+        <para lang="en">
+          レイヤーダイアログの脈絡メニューより
+          <guimenuitem>レイヤーマスクを削除(<accel>K</accel>)</guimenuitem>
         </para>
       </listitem>
     </itemizedlist>
