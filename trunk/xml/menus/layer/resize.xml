@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-06-18 Added Spanish translation by AntI
   2007-03-12 Kolbjørn: added no translation
   2005/11/03 split of from menu-layer.xml by axel.wernicke
 -->
+<!--2009-06-19-->
 <sect2 id="gimp-layer-resize">
-  <!--<sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2733 $</revnumber>
-        <date>2006-08-16</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Layer Boundary Size</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Layer Boundary Size</title>
+  <title lang="ja">レイヤーサイズの変更(<accel>O</accel>)...</title>
+
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Size managing</secondary>
     <tertiary>Resize current layer but not its content</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer Boundary Size</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="オオキサノカンリ">大きさの管理</secondary>
+    <tertiary sortas="ナイヨウヲソノママニレイヤーノオオキサダケヘンコウ">
+      内容をそのままにレイヤーの大きさだけ変更
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="レイヤーサイズノヘンコウ">レイヤーサイズの変更</primary>
+  </indexterm>
+
+  <para lang="en">
     In <acronym>GIMP</acronym>, a layer is not always the same size
     as the image it belongs to. It might be smaller or it might be larger,
     in which case some parts of it are hidden. The
@@ -35,34 +39,49 @@
     changes the dimensions of the layer, but it does not
     <link linkend="gimp-layer-scale">scale</link> its contents.
   </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>ではレイヤーの大きさはそれが所属する画像の大きさと
+    必ずしも同じではありません。 キャンバスサイズより小さい場合も大きい場合も
+    あり、 ときにはそこに描かれた内容が隠れることさえあるのです。 <guimenuitem>
+    レイヤーサイズの変更(<accel>O</accel>)...</guimenuitem> コマンドは
+    ダイアログを開きますので、 活性レイヤーの新たな寸法を指定してください。 
+    このコマンドはレイヤーの大きさを変えますが描かれた内容は 
+    <link linkend="gimp-layer-scale">伸縮</link> させません。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
             <guimenuitem>Layer Boundary Size</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guimenuitem>レイヤーサイズの変更(<accel>O</accel>)...</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>
-        Description of the <quote>Layer Boundary Size</quote> dialog
-      </phrase>
+    <title lang="en">
+      Description of the <quote>Layer Boundary Size</quote> dialog
+    </title>
+    <title lang="ja">
+      <quote>レイヤーサイズの変更</quote>ダイアログのご説明
     </title>
     <figure>
-      <title>
-        <phrase>
-          The <quote>Layer Boundary Size</quote> Dialog
-        </phrase>
-      </title>
+      <title lang="en">The <quote>Layer Boundary Size</quote> Dialog</title>
+      <title lang="ja"><quote>レイヤーサイズの変更</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/layer-resize.png" format="PNG"/>
@@ -71,13 +90,17 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Layer Size</term>
+        <term lang="en">Layer Size</term>
+        <term lang="ja">レイヤーサイズ</term>
         <listitem>
           <variablelist>
             <varlistentry>
-              <term>Width; Height</term>
+              <term lang="en">Width; Height</term>
+              <term lang="ja">
+                幅(<accel>W</accel>); 高さ(<accel>E</accel>)
+              </term>
               <listitem>
-                <para>
+                <para lang="en">
                   When the dialog is displayed, the original dimensions of
                   the active layer are shown. You can change them by using
                   the two text boxes. If these boxes are linked together
@@ -85,17 +108,31 @@
                   maintained. If you break the chain by clicking on it, you
                   can set the dimensions independently of each other.
                 </para>
-                <para>
+                <para lang="en">
                   The default unit of measurement is pixels. You can change
                   this by using the drop-down menu. For instance, you might
                   use a <quote>%</quote> of the current size.
                 </para>
+                <para lang="ja">
+                  ダイアログが開いた直後はこれらの欄に活性レイヤーの元の寸法が
+                  示されます。 いずれの値も数値記入欄で変更できます。 両欄を
+                  結ぶ右側の鎖のしるしが繋がった姿のときはどちらかの値を変更
+                  すると縦横比を保つようにもう一方の値が自動的に変更されます。
+                  このしるしをクリックすると鎖は解かれ、 幅と高さを個別に指定
+                  できるようになります。
+                </para>
+                <para lang="ja">
+                  既定の単位はピクセルですが、 引き出しメニューで他の単位に
+                  切り替えられます。 たとえば元の大きさの百分率を <guimenuitem>
+                  パーセント</guimenuitem> を使って指定できます。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>X Offset; Y Offset</term>
+              <term lang="en">X Offset; Y Offset</term>
+              <term lang="ja">オフセット</term>
               <listitem>
-                <para>
+                <para lang="en">
                   By default, the resized layer is placed in the upper left
                   corner of the image. Here, you can set the offset of the
                   upper left corner of the layer relative to the same corner
@@ -103,6 +140,15 @@
                   but you can change it by using the drop-down menu. You can
                   also place the layer in the center of the image by
                   clicking on the <guibutton>Center</guibutton> button.
+                </para>
+                <para lang="ja">
+                  初期設定では大きさの変更されたレイヤーは画像の左上隅に合わせ
+                  て置かれます。 <guilabel><accel>X</accel></guilabel> と 
+                  <guilabel><accel>Y</accel></guilabel> の数値記入欄の値により
+                  画像の左上隅からレイヤーの左上隅までの相対位置をここで指定
+                  できます。 既定の単位はピクセルですが他の単位にも切り替え
+                  られます。 <guibutton>中央(<accel>E</accel>)</guibutton> 
+                  ボタンをクリックすればレイヤーを画像の中央に正確に置けます。
                 </para>
               </listitem>
             </varlistentry>

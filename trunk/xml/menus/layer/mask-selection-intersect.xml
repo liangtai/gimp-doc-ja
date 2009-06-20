@@ -8,21 +8,35 @@
   2006-08-16 scb:  revised 'en'
   2005/11/11 split of from layer-mask.xml by axel.wernicke
 -->
+<!--2009-06-17-->
 <sect2 id="gimp-layer-mask-selection-intersect">
-  <title>Intersect Layer Mask with Selection</title>
+  <title lang="en">Intersect Layer Mask with Selection</title>
+  <title lang="ja">選択範囲との交わり(<accel>I</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Mask managing</secondary>
     <tertiary>Intersect layer mask with selection</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Masks</primary>
     <secondary>Layer mask</secondary>
     <tertiary>Intersect with selection</tertiary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="マスクノカンリ">マスクの管理</secondary>
+    <tertiary sortas="レイヤーマスクトセンタクハンイトノマジワリ">
+      レイヤーマスクと選択範囲との交わり
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>マスク</primary>
+    <secondary>レイヤーマスク</secondary>
+    <tertiary sortas="センタクハンイトノマジワリ">選択範囲との交わり</tertiary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Intersect with Selection</guimenuitem> command converts
     the layer mask of the active layer into a selection. The intersection of
     this selection and the selection that is already active form the new
@@ -31,12 +45,22 @@
     feathered selections. The layer mask itself is not modified by this
     command.
   </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲との交わり(<accel>I</accel>)</guimenuitem> コマンドは
+    活性レイヤーのレイヤーマスクを選択範囲に変換し、 既に画像にある選択範囲と
+    これとの共通部分だけを選択範囲として画像に残します。 [選択範囲がなかった
+    場合は何も起こりません。] レイヤーマスクで白く表されている部分が選択範囲と
+    なり、 黒く塗られている部分は選択範囲外です。 灰色の部分はぼかしの入った
+    不完全選択に変換されます。 このコマンドはレイヤーマスク自体を加工することは
+    ありません。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -44,17 +68,31 @@
             <guimenuitem>Intersect with Selection</guimenuitem>
           </menuchoice>,
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>レイヤーマスク(<accel>M</accel>)</guisubmenu>
+            <guimenuitem>選択範囲との交わり(<accel>I</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
 
   <sect3>
-    <title>
+    <title lang="en">
       Illustration of Intersecting the Layer Mask with the Selection
     </title>
+    <title lang="ja">
+      レイヤーマスクと<quote>選択範囲との交わり</quote>を得る様子
+    </title>
     <figure>
-      <title>
+      <title lang="en">
         Illustration of Intersecting the Layer Mask with the Selection
+      </title>
+      <title lang="ja">
+        レイヤーマスクと<quote>選択範囲との交わり</quote>を得る様子
       </title>
       <mediaobject>
         <imageobject>
@@ -62,13 +100,21 @@
             fileref="images/menus/layer-mask-intersect.png"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             On the left, the original image with a selection. In the middle,
-            the Layers Dialog with a layer mask created with the
-            <quote>Layer's alpha channel</quote> option. On the right, the
-            result after applying <quote>Intersect Mask with Selection</quote>: the
+            the Layers Dialog with a layer mask created with the <quote>Layer's
+            alpha channel</quote> option. On the right, the result after
+            applying <quote>Intersect Mask with Selection</quote>: the
             selection of the non-transparent pixels of the active layer
             is the common part between the initial selection and the mask.
+          </para>
+          <para lang="ja">
+            左は元画像。 選択範囲がある。 中央はレイヤーダイアログの様子。 上の
+            活性レイヤーのレイヤーマスクは<quote>レイヤーのアルファチャンネル
+            </quote>初期化オプションによって追加されたもの。 右は <guimenuitem>
+            選択範囲との交わり(<accel>I</accel>)</guimenuitem> コマンドを適用
+            した結果。 活性レイヤーの完全透過でない部分の選択範囲はもとから
+            あった選択範囲とマスクから生成される。<!--???-->
           </para>
         </caption>
       </mediaobject>

@@ -6,37 +6,63 @@
   2007-03-12 Kolbjørn: added no translation
   2005/11/11 split of from layer-mask.xml by axel.wernicke
 -->
+<!--2009-06-19-->
 <sect2 id="gimp-layer-rotate-180">
-  <title>Rotate 180 degrees</title>
+  <title lang="en">Rotate 180 degrees</title>
+  <title lang="ja">180 度回転(<accel>1</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Transform</secondary>
     <tertiary>Rotation</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Rotation 180°</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="ヘンカン">変換</secondary>
+    <tertiary sortas="カイテン">回転</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="180ドカイテン">180°回転</primary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Rotate 180 degrees</guimenuitem> command rotates the
     active layer by 180° around the center of the layer, with no loss of
-    pixel data. The shape of the layer is not altered. Since the layers have "
-    a rectangular shape, a 180° rotation only invert them and they can't "
+    pixel data. The shape of the layer is not altered. Since the layers have
+    a rectangular shape, a 180° rotation only invert them and they can't
     extend beyond the image limits.
+  </para>
+  <para lang="ja">
+    <guimenuitem>180 度回転(<accel>1</accel>)</guimenuitem> コマンドは活性
+    レイヤーをその中心を回転軸として180度回転します。 画素の情報は失いません。 
+    レイヤーの形状にも変更はありません。 レイヤーは矩形ですから結果として垂直と
+    水平に反転したことになり、 画像の境界線からレイヤーがはみ出すことは
+    ありません。
   </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
             <guisubmenu>Transform</guisubmenu>
             <guimenuitem>Rotate 180 degrees</guimenuitem>
           </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>変換(<accel>T</accel>)</guisubmenu>
+            <guimenuitem>180 度回転(<accel>1</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

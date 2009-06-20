@@ -10,20 +10,36 @@
      2006-01-13 lexa: fixed error in de
      2005/11/11 split of from layer-mask.xml by axel.wernicke
      -->
+<!--2009-06-19-->
 <sect2 id="gimp-layer-alpha-selection-subtract">
-  <title>Subtract from Selection</title>
+  <title lang="en">Subtract from Selection</title>
+  <title lang="ja">選択範囲から引く(<accel>S</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Transparency managing</secondary>
     <tertiary>Subtract non-transparent pixels from selection</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>Subtract non-transparent pixels</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="トウカコウカノカンリ">透過効果の管理</secondary>
+    <tertiary sortas="フカンゼントウカナリョウイキヲセンタクハンイカラジョガイ">
+      不完全透過な領域を選択範囲から除外
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary>Subtract non-transparent pixels</secondary>
+    <tertiary sortas="フカンゼントウカナリョウイキヲジョガイ">
+      不完全透過な領域を除外
+    </tertiary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Subtract from Selection</guimenuitem> command
     creates a selection in the current layer from the Alpha Channel. Opaque
     pixels are fully selected, transparent pixels are unselected, and
@@ -31,11 +47,21 @@
     <emphasis>subtracted</emphasis> from the existing selection. The Alpha
     channel itself is not changed.
   </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲から引く(<accel>S</accel>)</guimenuitem> コマンドは
+    アルファチャンネルをもとに活性レイヤーに選択範囲を作成します。 不透明な画素
+    は完全に選択範囲となり、 透過している画素は選択範囲外となります。 不完全
+    透過な画素は部分選択に変換されます。 こうしてできた選択範囲が既存の選択範囲
+    から <emphasis>除外</emphasis> されます。 このコマンドはアルファチャンネル
+    自体を変更することはありません。
+  </para>
+
   <sect3>
-    <title>Activate the Command</title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -43,15 +69,24 @@
             <guimenuitem>Subtract from Selection</guimenuitem>
           </menuchoice>.
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>透明部分(<accel>A</accel>)</guisubmenu>
+            <guimenuitem>選択範囲から引く(<accel>S</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>Example</title>
+    <title lang="en">Example</title>
+    <title lang="ja">使用例</title>
     <figure>
-      <title>
-        Applying <quote>Subtract from Selection</quote>
-      </title>
+      <title lang="en">Applying <quote>Subtract from Selection</quote></title>
+      <title lang="ja"><quote>選択範囲から引く</quote>の適用</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/BBR.png" format="PNG"/>
@@ -62,9 +97,13 @@
           <imagedata fileref="images/menus/layer-alpha-sub.png" format="PNG"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             Non-transparent pixels of the active layer have been subtracted
             from the existing rectangular selection.
+          </para>
+          <para lang="ja">
+            もとからあった矩形の選択範囲から、 活性レイヤーの不透明な画素から
+            生成された選択範囲が引かれる。
           </para>
         </caption>
       </mediaobject>

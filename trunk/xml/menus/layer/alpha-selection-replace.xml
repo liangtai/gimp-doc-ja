@@ -10,20 +10,35 @@
      2006-01-13 lexa: fixed error in de
      2005/11/11 split of from layer-mask.xml by axel.wernicke
      -->
+<!--2009-06-18-->
 <sect2 id="gimp-layer-alpha-selection-replace">
-  <title>Alpha to Selection</title>
+  <title lang="en">Alpha to Selection</title>
+  <title lang="ja">不透明部分を選択範囲に(<accel>P</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Layer</primary>
     <secondary>Transparency managing</secondary>
     <tertiary>Selection according to opacity</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selection</primary>
     <secondary>According to opacity</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="トウカコウカノカンリ">透過効果の管理</secondary>
+    <tertiary sortas="フトウメイブブンヲセンタクハンイニ">
+      不透明部分を選択範囲に
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="フトウメイブブンヲセンタクハンイニ">
+      不透明部分を選択範囲に
+    </secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Alpha to Selection</guimenuitem> command creates a
     selection in the current layer from the alpha channel, which encodes
     transparency. Opaque areas are fully selected, transparent areas are
@@ -31,19 +46,33 @@
     <emphasis>replaces</emphasis> the existing selection. The alpha channel
     itself is not changed.
   </para>
-  <para>
+  <para lang="en">
     The other commands in this group of operations are similar,
     except that instead of completely replacing the existing selection with
     the selection produced from the alpha channel, they either add the two
     selections, subtract the alpha selection from the existing selection, or
     create a selection that is the intersection of the two.
   </para>
+  <para lang="ja">
+    <guimenuitem>不透明部分を選択範囲に(<accel>P</accel>)</guimenuitem> 
+    コマンドはアルファチャンネルの透明度をもとに活性レイヤー上に選択範囲を作成
+    します。 完全不透明な部分が完全選択となり、 完全透過している部分が選択範囲
+    外となります。 生成された選択範囲は既存の選択範囲に 
+    <emphasis>置き換</emphasis> わります。
+  </para>
+  <para lang="ja">
+    このコマンドを含むサブメニューには類似のコマンドがあり、 アルファチャンネル
+    から選択範囲を作成するまでは同じですが、 既存の選択範囲に置き換わるのでは
+    なく、 そこに加えたりそこから引いたりあるいは両者の共通部分を得たりする
+    方法で選択範囲を生成します。
+  </para>
 
   <sect3>
-    <title>Activate the Command</title>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Layer</guimenu>
@@ -51,20 +80,34 @@
             <guimenuitem>Alpha to Selection</guimenuitem>
           </menuchoice>
         </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+            <guisubmenu>透明部分(<accel>A</accel>)</guisubmenu>
+            <guimenuitem>不透明部分を選択範囲に(<accel>P</accel>)</guimenuitem>
+          </menuchoice>
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           or from the pop-up menu which appears when you right-click on the
           active layer in the Layer Dialog.
+        </para>
+        <para lang="ja">
+          レイヤーダイアログの脈絡メニューより
+          <guimenuitem>不透明部分を選択範囲に(<accel>P</accel>)</guimenuitem>
         </para>
       </listitem>
     </itemizedlist>
   </sect3>
 
   <sect3>
-    <title>Example</title>
+    <title lang="en">Example</title>
+    <title lang="ja">使用例</title>
     <figure>
-      <title>Applying <quote>Alpha to Selection</quote></title>
+      <title lang="en">Applying <quote>Alpha to Selection</quote></title>
+      <title lang="ja"><quote>不透明部分を選択範囲に</quote>を適用</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/BBR.png" format="PNG"/>
@@ -76,9 +119,13 @@
             fileref="images/menus/layer-alpha-replace.png"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             Non-transparent pixels of the active layer have replaced
             the existing rectangular selection.
+          </para>
+          <para lang="ja">
+            もとからあった矩形の選択範囲の代わりに活性レイヤーの不透明な画素
+            から選択範囲が生成される。
           </para>
         </caption>
       </mediaobject>
