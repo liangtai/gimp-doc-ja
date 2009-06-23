@@ -10,28 +10,42 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-25 de added by axel.wernicke
 -->
+<!--2009-06-20-->
 <sect2 id="plug-in-vinvert">
-  <title>Value Invert</title>
+  <title lang="en">Value Invert</title>
+  <title lang="ja">明度を反転(<accel>V</accel>)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Value Invert</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Value Invert</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="メイドヲハンテン">明度を反転</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="メイドヲハンテン">明度を反転</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Value invert</quote> filter</title>
+      <title lang="en">
+        Example for the <quote>Value invert</quote> filter
+      </title>
+      <title lang="ja"><quote>明度を反転</quote>フィルタの例</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/filters/examples/taj_orig.jpg"
             format="JPG"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -40,11 +54,12 @@
             format="JPG"/>
         </imageobject>
         <caption>
-          <para><quote>Value Invert</quote> applied</para>
+          <para lang="en"><quote>Value Invert</quote> applied</para>
+          <para lang="ja"><quote>明度を反転</quote>適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter inverts Value (luminosity) of the active layer or
       selection. Hue and Saturation will not be affected, although the
       color will sometimes be slightly different because of round-off
@@ -54,7 +69,7 @@
         <guimenuitem>Invert</guimenuitem>
       </menuchoice>.
     </para>
-    <para>
+    <para lang="en">
       Note that hue and saturation can be distorted quite a bit when
       applying twice this filter for colors with a high luminosity (for
       instance, HSV 102°,100%, 98%, a bright green, gives HSV 96°, 100%, 2%
@@ -62,17 +77,33 @@
       second application). Thus, you should not expect to be able to apply
       this filter twice in a row and get back the image you started with.
     </para>
+    <para lang="ja">
+      <guimenuitem>明度を反転(<accel>V</accel>)</guimenuitem> フィルタは
+      活性レイヤー上もしくは選択範囲内において画素の明度を反転します。 色相や
+      彩度は変更しませんが、 丸め誤差が原因で色が僅かに変わることもあります。
+      色相や彩度を反転させるなら<quote>色</quote>メニューの 
+      <link linkend="gimp-layer-invert">階調を反転(<accel>V</accel>)</link> 
+      コマンドをご利用ください。
+    </para>
+    <para lang="ja">
+      このフィルタを2度適用すると明度の高い色は色相や彩度が少しばかり歪みます。
+      (具体的には<acronym>HSV</acronym>の各値が102度、 100%、 98%の明るい緑色は
+      このフィルタを通すと<acronym>HSV</acronym>値が96度、 100%、 2%となり、 
+      さらにこのフィルタを適用すると96度、 100%、 98%に変わります。) 
+      このように、 反転フィルタを2度続けて繰り返しても元通りになるとは
+      限らないと思ってください。
+    </para>
     <figure>
-      <title>
-        <phrase>Example of using this filter twice</phrase>
-      </title>
+      <title lang="en">Example of using this filter twice</title>
+      <title lang="ja">このフィルタを2度繰り返したときの例</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/filters/examples/cosmos-1.png"
             format="PNG"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -81,7 +112,8 @@
             format="PNG"/>
         </imageobject>
         <caption>
-          <para>First application of the filter</para>
+          <para lang="en">First application of the filter</para>
+          <para lang="ja">フィルタ適用1回目</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -90,9 +122,12 @@
             format="PNG"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             Second application: the image is not exactly the same as the
             original one.
+          </para>
+          <para lang="ja">
+            フィルタ適用2回目。 画像は完全には元に戻らない。
           </para>
         </caption>
       </mediaobject>
@@ -100,13 +135,21 @@
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <para lang="en">
       You can access this command from the image menu bar through
       <menuchoice>
         <guimenu>Colors</guimenu>
         <guimenuitem>Value Invert</guimenuitem>
       </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guimenuitem>明度を反転(<accel>V</accel>)</guimenuitem>
+      </menuchoice>
     </para>
   </sect3>
 </sect2>

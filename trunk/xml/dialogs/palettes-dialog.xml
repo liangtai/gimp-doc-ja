@@ -11,7 +11,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-06-12-->
+<!--2009-06-23-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en"><quote>Palettes</quote> Dialog</title>
   <title lang="ja"><quote>パレット</quote>ダイアログ</title>
@@ -307,8 +307,8 @@
               </inlinemediaobject>
             </guiicon>
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-new">新しいパレット(<accel>N</accel>)
-            </link> をご覧ください。
+            <link linkend="gimp-palette-new">新しいパレット(N)</link> をご覧
+            ください。
           </para>
         </listitem>
       </varlistentry>
@@ -341,8 +341,8 @@
               </inlinemediaobject>
             </guiicon>
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-duplicate">
-            パレットの複製(<accel>U</accel>)</link> をご覧ください。
+            <link linkend="gimp-palette-duplicate">パレットの複製(U)</link> を
+            ご覧ください。
           </para>
         </listitem>
       </varlistentry>
@@ -375,8 +375,8 @@
               </inlinemediaobject>
             </guiicon>
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-delete">
-            パレットの削除(<accel>D</accel>)</link> をご覧ください。
+            <link linkend="gimp-palette-delete">パレットの削除(D)</link> を
+            ご覧ください。
           </para>
         </listitem>
       </varlistentry>
@@ -408,8 +408,8 @@
               </inlinemediaobject>
             </guiicon>
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-refresh">
-            パレットを再度読み込み(<accel>R</accel>)</link> をご覧ください。
+            <link linkend="gimp-palette-refresh">パレットを再度読み込み(R)
+            </link> をご覧ください。
           </para>
         </listitem>
       </varlistentry>
@@ -452,9 +452,7 @@
     <variablelist>
       <varlistentry>
         <term id="gimp-palette-edit" lang="en">Edit Palette</term>
-        <term id="gimp-palette-edit" lang="ja">
-          パレットの編集(<accel>E</accel>)...
-        </term>
+        <term id="gimp-palette-edit" lang="ja">パレットの編集(E)...</term>
         <listitem>
           <para lang="en">
             <quote>Edit Palette</quote> is an alternative way of activating the
@@ -484,9 +482,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-new" lang="en">New Palette</term>
-        <term id="gimp-palette-new" lang="ja">
-          新しいパレット(<accel>N</accel>)
-        </term>
+        <term id="gimp-palette-new" lang="ja">新しいパレット(N)</term>
         <listitem>
           <para lang="en">
             <quote>New Palette</quote> creates a new, untitled palette,
@@ -509,7 +505,7 @@
       <varlistentry>
         <term id="gimp-palette-import" lang="en">Import Palette</term>
         <term id="gimp-palette-import" lang="ja">
-          パレットをインポート(<accel>I</accel>)...
+          パレットをインポート(I)...
         </term>
         <listitem>
           <indexterm lang="en">
@@ -586,8 +582,8 @@
                   選んでください) のいずれかです。 <acronym>GIMP</acronym> 2.2
                   以降は <productname>Microsoft Windows</productname> 系の
                   アプリケーションで使用されている<acronym>RIFF</acronym>
-                  ファイル形式 (拡張子は <filename>.pal</filename>) も転用可能
-                  となりました。
+                  ファイル形式 (拡張子は <filename class="extension">.pal
+                  </filename>) も転用可能となりました。
                 </para>
                 <para lang="ja">
                   画像から転用する場合のつぎの2つのオプションは、 選ばれた
@@ -628,7 +624,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Palette name</term>
-              <term lang="ja">パレット名(<accel>N</accel>)</term>
+              <term lang="ja">パレット名(N)</term>
               <listitem>
                 <para lang="en">
                   You can give a name to the new palette here. If the name
@@ -644,7 +640,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Number of colors</term>
-              <term lang="ja">色数(<accel>U</accel>)</term>
+              <term lang="ja">色数(U)</term>
               <listitem>
                 <para lang="en">
                   Here you specify the number of colors in the palette. The
@@ -671,7 +667,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Columns</term>
-              <term lang="ja">列数(<accel>O</accel>)</term>
+              <term lang="ja">列数(O)</term>
               <listitem>
                 <para lang="en">
                   Here you specify the number of columns for the palette.
@@ -687,7 +683,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Interval</term>
-              <term lang="ja">間隔(<accel>N</accel>)</term>
+              <term lang="ja">間隔(N)</term>
               <listitem>
                 <para lang="en">
                   Even setting <quote>Number of colors</quote> to maximum, the
@@ -721,17 +717,15 @@
           </para>
           <para lang="ja">
             インポートされたパレットはパレットダイアログの一覧表に加えられ、
-            <acronym>GIMP</acronym>を終了するときに自動的に個人用 <filename>
-            palettes</filename> フォルダに保存されますから、 次回からも利用
-            できます。
+            <acronym>GIMP</acronym>を終了するときに自動的に個人用 
+            <filename class="directory">palettes</filename> フォルダに保存
+            されますから、 次回からも利用できます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-duplicate" lang="en">Duplicate Palette</term>
-        <term id="gimp-palette-duplicate" lang="ja">
-          パレットの複製(<accel>U</accel>)
-        </term>
+        <term id="gimp-palette-duplicate" lang="ja">パレットの複製(U)</term>
         <listitem>
           <para lang="en">
             Duplicate Palette creates a new palette by copying the palette
@@ -753,9 +747,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-merge" lang="en">Merge Palettes</term>
-        <term id="gimp-palette-merge" lang="ja">
-          パレットの統合(<accel>M</accel>)...
-        </term>
+        <term id="gimp-palette-merge" lang="ja">パレットの統合(M)...</term>
         <listitem>
           <para lang="en">
             Currently this operation is not implemented, and the menu entry
@@ -770,7 +762,7 @@
       <varlistentry>
         <term id="gimp-palette-location" lang="en">Copy Palette Location</term>
         <term id="gimp-palette-location" lang="ja">
-          パレットの場所をコピー(<accel>L</accel>)
+          パレットの場所をコピー(L)
         </term>
         <listitem>
           <para lang="en">
@@ -785,9 +777,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-delete" lang="en">Delete Palette</term>
-        <term id="gimp-palette-delete" lang="ja">
-          パレットの削除(<accel>D</accel>)
-        </term>
+        <term id="gimp-palette-delete" lang="ja">パレットの削除(D)</term>
         <listitem>
           <para lang="en">
             Delete Palette removes the palette from the <quote>Palettes
@@ -810,7 +800,7 @@
       <varlistentry>
         <term id="gimp-palette-refresh" lang="en">Refresh Palettes</term>
         <term id="gimp-palette-refresh" lang="ja">
-          パレットを再読み込み(<accel>R</accel>)
+          パレットを再読み込み(R)
         </term>
         <listitem>
           <para lang="en">
@@ -833,9 +823,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-offset" lang="en">Offset Palette...</term>
-        <term id="gimp-palette-offset" lang="ja">
-          色の順番をずらす(<accel>O</accel>)...
-        </term>
+        <term id="gimp-palette-offset" lang="ja">色の順番をずらす(O)...</term>
         <listitem>
           <para lang="en">This command opens a dialog window:</para>
           <para lang="ja">このコマンドはダイアログを開きます。</para>
@@ -897,7 +885,7 @@
           Palette to gradient
         </term>
         <term id="gimp-palette-to-gradient" lang="ja">
-          パレットをグラデーションに(<accel>G</accel>)
+          パレットをグラデーションに(G)
         </term>
         <listitem>
           <indexterm lang="en">
@@ -930,7 +918,7 @@
           Palette to Repeating Gradient
         </term>
         <term id="gimp-palette-to-repeat-gradient" lang="ja">
-          パレットを循環型グラデーションに(<accel>R</accel>)
+          パレットを循環型グラデーションに(R)
         </term>
         <listitem>
           <para lang="en">
@@ -980,7 +968,7 @@
       <varlistentry>
         <term id="gimp-palette-sort" lang="en">Sort Palette...</term>
         <term id="gimp-palette-sort" lang="ja">
-          パレットの並び替え<!--(<accel>S</accel>)...-->
+          パレットの並び替え<!--(S)...-->
         </term>
         <listitem>
           <para lang="en">
@@ -1280,8 +1268,8 @@
               ので、 選んだ色項目の色を変更できます。 ただし開いたパレットを
               改変する権限がないときはこのボタンは灰色無効になっています。
               (後述する) 脈絡メニューの
-              <link linkend="gimp-palette-editor-edit">
-              色の編集(<accel>E</accel>)...</link> をご覧ください。
+              <link linkend="gimp-palette-editor-edit">色の編集(E)...</link> を
+              ご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1305,7 +1293,7 @@
                 </inlinemediaobject>
               </guiicon> このアイコンボタンについては (後述する) 脈絡メニューの
               <link linkend="gimp-palette-editor-new">
-              描画色から新しい色(<accel>F</accel>)</link> をご覧ください。
+              描画色から新しい色(F)</link> をご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1328,8 +1316,8 @@
                   </textobject>
                 </inlinemediaobject>
               </guiicon> このアイコンボタンについては (後述する) 脈絡メニューの
-              <link linkend="gimp-palette-editor-delete">
-              色の削除(<accel>D</accel>)</link> をご覧ください。
+              <link linkend="gimp-palette-editor-delete">色の削除(D)</link> を
+              ご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1352,8 +1340,8 @@
                   </textobject>
                 </inlinemediaobject>
               </guiicon> このアイコンボタンについては (後述する) 脈絡メニューの
-              <link linkend="gimp-palette-editor-zoom-out">
-              縮小表示(<accel>O</accel>)</link> をご覧ください。
+              <link linkend="gimp-palette-editor-zoom-out">縮小表示(O)</link> 
+              をご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1376,8 +1364,8 @@
                   </textobject>
                 </inlinemediaobject>
               </guiicon> このアイコンボタンについては (後述する) 脈絡メニューの
-              <link linkend="gimp-palette-editor-zoom-out">
-              拡大表示(<accel>I</accel>)</link> をご覧ください。
+              <link linkend="gimp-palette-editor-zoom-out">拡大表示(I)</link> 
+              をご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1403,7 +1391,7 @@
                 </inlinemediaobject>
               </guiicon> このアイコンボタンについては (後述する) 脈絡メニューの
               <link linkend="gimp-palette-editor-zoom-all">
-              すべてを表示(<accel>A</accel>)</link> をご覧ください。
+              すべてを表示(A)</link> をご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1440,9 +1428,7 @@
     <variablelist>
       <varlistentry>
         <term id="gimp-palette-editor-edit" lang="en">Edit Color</term>
-        <term id="gimp-palette-editor-edit" lang="ja">
-          色の編集(<accel>E</accel>)...
-        </term>
+        <term id="gimp-palette-editor-edit" lang="ja">色の編集(E)...</term>
         <listitem>
           <para lang="en">
             <quote>Edit Color</quote> brings up a color editor that allows
@@ -1465,8 +1451,7 @@
           New Color from FG; New Color from BG
         </term>
         <term id="gimp-palette-editor-new" lang="ja">
-          描画色から新しい色(<accel>F</accel>);
-          背景色から新しい色(<accel>B</accel>)
+          描画色から新しい色(F); 背景色から新しい色(B)
         </term>
         <listitem>
           <para lang="en">
@@ -1483,9 +1468,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-editor-delete" lang="en">Delete Color</term>
-        <term id="gimp-palette-editor-delete" lang="ja">
-          色の削除(<accel>D</accel>)
-        </term>
+        <term id="gimp-palette-editor-delete" lang="ja">色の削除(D)</term>
         <listitem>
           <para lang="en">
             <quote>Delete Color</quote> removes the selected color entry
@@ -1502,9 +1485,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-editor-zoom-out" lang="en">Zoom Out</term>
-        <term id="gimp-palette-editor-zoom-out" lang="ja">
-          縮小表示(<accel>O</accel>)
-        </term>
+        <term id="gimp-palette-editor-zoom-out" lang="ja">縮小表示(O)</term>
         <listitem>
           <para lang="en">
             <quote>Zoom Out</quote> reduces the vertical scale of the
@@ -1517,9 +1498,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-editor-zoom-in" lang="en">Zoom In</term>
-        <term id="gimp-palette-editor-zoom-in" lang="ja">
-          拡大表示(<accel>I</accel>)
-        </term>
+        <term id="gimp-palette-editor-zoom-in" lang="ja">拡大表示(I)</term>
         <listitem>
           <para lang="en">
             <quote>Zoom In</quote> increases the vertical scale of the
@@ -1533,7 +1512,7 @@
       <varlistentry>
         <term id="gimp-palette-editor-zoom-all" lang="en">Zoom All</term>
         <term id="gimp-palette-editor-zoom-all" lang="ja">
-          すべてを表示(<accel>A</accel>)
+          すべてを表示(A)
         </term>
         <listitem>
           <para lang="en">
