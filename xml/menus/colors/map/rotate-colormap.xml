@@ -9,27 +9,43 @@
   2005-08-20 de added by axel.wernicke
   2005-08-30 de replaced informalfigure by axel.wernicke
 -->
+<!--2009-06-27-->
 <sect2 id="plug-in-rotate-colormap">
-  <title>Rotate Colors</title>
+  <title lang="en">Rotate Colors</title>
+  <title lang="ja">カラーマップ回転(R)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Rotate</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Rotate Colors</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="カイテン">回転</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロサクインカイテン">色索引回転</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Rotate Colors</quote> filter</title>
+      <title lang="en">
+        Example for the <quote>Rotate Colors</quote> filter
+      </title>
+      <title lang="ja"><quote>カラーマップ回転</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/filters/examples/taj_orig.jpg"
             format="JPG"/>
         </imageobject>
-        <caption><para>Original image</para></caption>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
@@ -37,20 +53,24 @@
             format="JPG"/>
         </imageobject>
         <caption>
-          <para>
-            Filter <quote>Rotate Colors</quote> applied
-          </para>
+          <para lang="en">Filter <quote>Rotate Colors</quote> applied</para>
+          <para lang="ja"><quote>カラーマップ回転</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Colormap Rotation lets you exchange one color range to another range.
+    </para>
+    <para lang="ja">
+      <guimenuitem>カラーマップ回転(<accel>R</accel>)...</guimenuitem> は色相環
+      上で指示されたある一定の範囲の色あいを別の範囲の色あいと交換します。
     </para>
   </sect3>
 
   <sect3>
-    <title>Activating the filter</title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
@@ -58,13 +78,25 @@
         <guimenuitem>Rotate Colors</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guisubmenu>マップ(<accel>M</accel>)</guisubmenu>
+        <guimenuitem>カラーマップ回転(<accel>R</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Main Options</title>
+    <title lang="en">Main Options</title>
+    <title lang="ja">主オプション</title>
     <figure>
-      <title>
+      <title lang="en">
         Main Options of the <quote>Color Map Rotation</quote> filter
+      </title>
+      <title lang="ja">
+        <quote>カラーマップ回転</quote>フィルタの主オプション
       </title>
       <mediaobject>
         <imageobject>
@@ -73,47 +105,83 @@
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       You have there two color circles, one for the <quote>From</quote>
       color range and the other for the <quote>To</quote> color range:
     </para>
+    <para lang="ja">
+      このタブには<quote>最初</quote>と<quote>宛</quote>の2つの色相環が
+      あります。
+    </para>
     <variablelist>
       <varlistentry>
-        <term>From</term>
+        <term lang="en">From</term>
+        <term lang="ja">最初</term>
         <listitem>
-          <para>
+          <para lang="en">
             The <guilabel>Color Circle</guilabel>: Two axis to define
             <quote>From</quote> range. The curved arrow in angle lets to
             recognise <quote>From</quote> axis and <quote>To</quote>
             axis of range. Click-drag these axis to change range.
           </para>
-          <para>
+          <para lang="en">
             <guilabel>Switch to Clockwise/Counterclockwise</guilabel>:
             Sets the direction the range is going.
           </para>
-          <para>
+          <para lang="en">
             <guilabel>Change Order of Arrows</guilabel>: Inverts From and
             To axis. This results in an important color change as colors
             in selection angle are different.
           </para>
-          <para>
+          <para lang="en">
             <guilabel>Select All</guilabel> selects the whole color
             circle.
           </para>
-          <para>
+          <para lang="en">
             <guilabel>From</guilabel> and <guilabel>To</guilabel> boxes
             display start axis and end axis positions (in rad/PI) which
             are limiting the selected color range. You can enter these
             positions manually or with help of arrow-heads.
           </para>
+          <para lang="ja">
+            <quote>色相環</quote>グラフには扇形がありその2本の軸が元色の範囲を
+            決めます。 中心付近にある曲がった矢印は元色の範囲の <guilabel>最初
+            </guilabel> と <guilabel>宛</guilabel> を示しています。 2本の軸は
+            いずれもクリックして曳けば範囲を変えられます。
+          </para>
+          <para lang="ja">
+            <guibutton>(反)時計周りに変更</guibutton>: 扇型の色範囲の方向を
+            逆転させます。 初期状態の方向は反時計回りなので、 このボタンは 
+            <guibutton>時計回りに変更</guibutton> になっています。
+          </para>
+          <para lang="ja">
+            <guibutton>矢印の場所を変更</guibutton>: 色範囲の <guilabel>最初
+            </guilabel> と <guilabel>宛</guilabel> は入れ替わり、 範囲を反転
+            して外側の色相を選びます。 この変更は扇型の色範囲内の色を全面的に
+            入れ替えます。
+          </para>
+          <para lang="ja">
+            <guibutton>すべて選択</guibutton> は色相環の全ての色を範囲内に
+            とります。
+          </para>
+          <para lang="ja">
+            <guilabel>最初</guilabel> と <guilabel>宛</guilabel> の数値記入欄は
+            扇型の範囲の開始角と終端角を (ラジアン/π) で表示しています。 直接
+            記入でも付属の小さな矢印の操作でも数値を変更できます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>To</term>
+        <term lang="en">To</term>
+        <term lang="ja">宛</term>
         <listitem>
-          <para>
+          <para lang="en">
             This section options are the same as <quote>From</quote> section
             ones.
+          </para>
+          <para lang="ja">
+            この区画のオプションの操作方法は <guilabel>最初</guilabel> の区画と
+            同じです。
           </para>
         </listitem>
       </varlistentry>
@@ -121,67 +189,103 @@
   </sect3>
 
   <sect3>
-    <title>Grey Options</title>
+    <title lang="en">Grey Options</title>
+    <title lang="ja">グレーオプション</title>
     <figure>
-      <title>Base image for Grey Options</title>
+      <title lang="en">Base image for Grey Options</title>
+      <title lang="ja">グレーオプションの例題用原画</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/colors-rotation-base.png"
-            format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/colors-rotation-base.png"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             Three sectors are defined for Red, Green and Blue with different
             saturations. Grey and White colors are represented (0% Sat).
+          </para>
+          <para lang="ja">
+            (3段階に) 彩度の異なる赤緑青付近の色と、 彩度0%の灰色、 白。
           </para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       In this tab, you can specify how to treat gray. By default, grey is not
       considered as a color and is not taken in account by the rotation. Here,
       you can convert slightly saturated colors into grey and you can also
       convert grey into color.
     </para>
+    <para lang="ja">
+      このタブはグレー (灰色) の扱い方を設定します。 初期設定ではグレーが色彩の
+      範囲外に置かれるのでカラーマップ回転の対象から外れてしまいます。 ここで
+      なら色が希薄で彩度がとても低い色を灰色に置き換えたり、 逆に灰色を色彩に
+      替えられます。
+    </para>
     <variablelist>
       <varlistentry>
-        <term>Grey Color Circle</term>
+        <term lang="en">Grey Color Circle</term>
+        <term lang="ja">グレー</term>
         <listitem>
-          <para>
+          <para lang="en">
             At center of this color circle is a small <quote>define
             circle</quote>. At center, it represents grey. If you increase
             grey threshold progressively, colors with saturation less than
             this threshold turn to grey.
           </para>
-          <para>
+          <para lang="en">
             Then, if you pan the define circle in the color circle, or if
             you use input boxes, you define
             <emphasis>Hue</emphasis> and <emphasis>
             Saturation</emphasis>. This color will replace all colors you
             have defined as grey. But result depends on Grey Mode too.
           </para>
+          <para lang="ja">
+            この色相環の中心には小さな<quote>定義円</quote>があります。 中心部
+            ではこれがグレーを表します。 <guilabel>グレーしきい値</guilabel> 
+            を増すにつれ、 それよりも低い彩度の色はグレーに置き換わります。
+          </para>
+          <para lang="ja">
+            定義円はクリックして曳くと移動でき、 <guilabel>色相</guilabel> と 
+            <guilabel>彩度</guilabel> の値が変わります。 またこれらの値は数値を
+            記入しても変更できます。 ここで設定した色が、 しきい値の範囲内の
+            グレーとみなされた色の代わりに置き換わります。 この色範囲については
+            <guilabel>グレーモード</guilabel> の設定にも依存します。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Grey Mode</term>
+        <term lang="en">Grey Mode</term>
+        <term lang="ja">グレーモード</term>
         <listitem>
-          <para>
+          <para lang="en">
             The radio buttons <emphasis>Treat As This
             </emphasis> and <emphasis>Change As This
             </emphasis> determine how your previous choices will be
             treated:
           </para>
+          <para lang="ja">
+            <guimenuitem>この色として扱う</guimenuitem> と <guimenuitem> 
+            この色にする</guimenuitem> の2つのラジオボタンでの選択によって、 
+            定義円の色と<quote>主オプション</quote>タブでの設定との連携に違いが
+            あります。
+          </para>
           <itemizedlist>
             <listitem>
-              <para>
+              <para lang="en">
                  With <emphasis>Change to this</emphasis>,
                  grey will take the color defined by the define circle
                  directly, without any rotation, whatever its position in
                  the color circle.
               </para>
+              <para lang="ja">
+                 <guimenuitem>この色として扱う</guimenuitem> を選ぶと定義円で
+                 選んだ色が色相環のどこであってもカラーマップ回転の影響を受けず
+                 直にその色を変換後の色として使います。
+              </para>
             </listitem>
             <listitem>
-              <para>
+              <para lang="en">
                  With <emphasis>Treat as this</emphasis>,
                  grey will take the color defined by the define circle
                  after rotation, according to <quote>From</quote> and
@@ -190,19 +294,35 @@
                  <quote>From</quote> sector, even if it is not visible in
                  Grey tab.
               </para>
+              <para lang="ja">
+                 <guimenuitem>この色にする</guimenuitem> を選ぶと、 定義円で
+                 選んだ色の代わりに<quote>主オプション</quote>の設定でその色が
+                 回転後に変化するであろう色をグレーの代わりに使います。 その
+                 ためこのオプションでは定義円で選ぶ色が<quote>
+                 主オプション</quote>の上側 <guilabel>最初</guilabel> の
+                 色範囲内の色でなければなりません。 <quote>グレーオプション
+                 </quote>タブから見えませんのでご不便をおかけします。
+              </para>
             </listitem>
           </itemizedlist>
           <figure>
-            <title>Grey Mode</title>
+            <title lang="en">Grey Mode</title>
+            <title lang="ja">グレーモード</title>
             <mediaobject>
               <imageobject>
                 <imagedata fileref="images/filters/changeto.png" format="PNG"/>
               </imageobject>
               <caption>
-                <para>
+                <para lang="en">
                   The small circle is on yellow and mode is <quote>Change to
                   this</quote>. <emphasis>Blue has changed to yellow. Note that
                   Grey and White did so too.</emphasis>
+                </para>
+                <para lang="ja">
+                  黄色い領域に小さな定義円があり、 グレーモードは <guimenuitem>
+                  この色にする</guimenuitem> だ。 <emphasis>肝心な点は原画で
+                  青系の正方形が回転後では黄色に変わり、 灰色と白の正方形も
+                  黄色に変わったことだ。</emphasis>
                 </para>
               </caption>
             </mediaobject>
@@ -210,27 +330,32 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Gray Threshold</term>
+        <term lang="en">Gray Threshold</term>
+        <term lang="ja">グレーしきい値</term>
         <listitem>
           <figure>
-            <title>
-              <phrase>Gray Threshold</phrase>
-            </title>
+            <title lang="en">Gray Threshold</title>
+            <title lang="ja">グレーしきい値</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
                   fileref="images/filters/examples/colors-map-rotation-threshold.png"/>
               </imageobject>
               <caption>
-                <para>
+                <para lang="en">
                   Grey-threshold is 0.25: the blue sector (sat 0.25) has
                   turned to Grey (Note that Grey and White, that are 0% Sat.,
                   are not concerned).
                 </para>
+                <para lang="ja">
+                  <quote>グレーしきい値</quote>の <guilabel>彩度</guilabel>
+                  を 0.25 に設定。 青系の正方形は彩度が25%だったのでグレーに
+                  変わる (灰色と白の正方形は彩度が0%だがここでは無関係)。
+                </para>
               </caption>
             </mediaobject>
           </figure>
-          <para>
+          <para lang="en">
             You specify there how much saturation will be considered grey.
             By increasing progressively saturation, you will see an
             enlarging circle in color circle and enlarging selected areas in
@@ -238,14 +363,27 @@
             black to white gradient,you can see enlarging color replacement
             as you increase threshold very slowly.
           </para>
+          <para lang="ja">
+            ここではどの程度まで彩度の低い色が灰色化の対象になるかを設定
+            します。 しきい値の <guilabel>彩度</guilabel> を上げてゆくにつれ、 
+            色相環の中心にあるしきい値の範囲を示す円が拡がってゆき、 見本画像の
+            下にある <guilabel>プレビュー自動更新</guilabel> にチェックを入れて
+            おけば見本画像でも色変化をする領域が拡がってゆきます。 つぎに示す
+            例ではしきい値を徐々に上げてゆくと黒から白のグラデーション画像で
+            色変わりがだんだんと拡がってゆくのがわかります。
+          </para>
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/filters/greythresh.png" format="PNG"/>
             </imageobject>
             <caption>
-              <para>
+              <para lang="en">
                 Black to White gradient, progressively filled with color, as
                 threshold increases.
+              </para>
+              <para lang="ja">
+                しきい値が増すにつれ黒と白のグラデーション画像がしだいに黄色く
+                塗りつぶされてゆく。
               </para>
             </caption>
           </mediaobject>
@@ -255,48 +393,75 @@
   </sect3>
 
   <sect3>
-    <title>Previews</title>
+    <title lang="en">Previews</title>
+    <title lang="ja">プレビュー</title>
     <variablelist>
       <varlistentry>
-        <term>Original and Rotated</term>
+        <term lang="en">Original and Rotated</term>
+        <term lang="ja">原画; 回転後</term>
         <listitem>
-          <para>
+          <para lang="en">
             The Original preview displays a thumbnail of the original image
             and the Rotated preview displays color changes interactively,
             before they are applied to the Image.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Continuous Update</term>
-        <listitem>
-          <para><guilabel>Continuous Update</guilabel> displays color changes
-            continuously in the Rotated preview.
+          <para lang="ja">
+            <guilabel>原画</guilabel> プレビューは現在の画像の縮小見本です。 
+            <guilabel>回転後</guilabel> プレビューはダイアログ内の操作を反映
+            した結果を実行前に見極めるための見本画像です。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Area</term>
+        <term lang="en">Continuous Update</term>
+        <term lang="ja">プレビュー自動更新</term>
         <listitem>
-          <para>
-            In this drop down list, you can select between
+          <para lang="en">
+            <guilabel>Continuous Update</guilabel> displays color changes
+            continuously in the Rotated preview.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー自動更新</guilabel> はダイアログ内での操作が
+            回転後プレビュー上で即座に反映し色の変化が絶え間なく現れる
+            ようにします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Area</term>
+        <term lang="ja">範囲</term>
+        <listitem>
+          <para lang="en">In this drop down list, you can select between</para>
+          <para lang="ja">
+            この引き出しリストではつぎのようなオプションが選択できます。
           </para>
           <itemizedlist>
             <listitem>
-              <para>
+              <para lang="en">
                 <guilabel>Entire Layer</guilabel>: works on the whole
                 layer (The image if there is no selection).
               </para>
-            </listitem>
-            <listitem>
-              <para>
-                <guilabel>Selection</guilabel>: displays selection only.
+              <para lang="ja">
+                <guilabel>レイヤー全体</guilabel>: レイヤーの全面が処理
+                されます。
               </para>
             </listitem>
             <listitem>
-              <para>
+              <para lang="en">
+                <guilabel>Selection</guilabel>: displays selection only.
+              </para>
+              <para lang="ja">
+                <guilabel>選択範囲</guilabel>: 選択範囲内の画像だけ表示します。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
                 <guilabel>Context</guilabel>: displays selection in image
                 context.
+              </para>
+              <para lang="ja">
+                <guilabel>状況に応じて</guilabel>: 画像の脈絡として選択範囲を
+                表示します。<!--???-->
               </para>
             </listitem>
           </itemizedlist>
@@ -306,12 +471,19 @@
   </sect3>
 
   <sect3 id="plug-in-rotate-colormap-units">
-    <title>Units</title>
-    <para>
+    <title lang="en">Units</title>
+    <title lang="ja">単位</title>
+    <para lang="en">
       You can select here the angle unit used to locate colors in the
       Hue/Saturation circle. This choice is valid only for the current filter
       session: don't click on Valid just after selecting unit, return to the
       wanted tab!
+    </para>
+    <para lang="ja">
+      このタブでは色相環で色相と彩度を定める角度の単位を設定します。 ここで指定
+      した単位はダイアログを閉じるまで有効です。 ここで単位を変更した直後に
+      <guibutton>OK(<accel>O</accel>)</guibutton> ボタンをクリックしないで
+      ください。 いったん操作中のタブに戻りましょう。
     </para>
   </sect3>
 </sect2>

@@ -12,7 +12,7 @@
   2006-02-08 added norwegian translation by KoSt
   2005-12-18 reviewed by lexa
 -->
-<!--2009-05-27-->
+<!--2009-06-23-->
 <sect2 id="gimp-concepts-docks">
   <title lang="en">Dialogs and Docking</title>
   <title lang="ja">ダイアログとその合体</title>
@@ -733,12 +733,11 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry id="gimp-dock-view-as-list">
         <term lang="en">View as List; View as Grid</term>
         <term lang="ja">一覧で表示(L); 並べて表示(G)</term>
         <listitem>
-          <anchor id="gimp-dock-view-as-list"/>
-          <anchor id="gimp-dock-view-as-grid"/>
+          <anchor id="gimp-dock-view-as-grid" xreflabel="View as Grid"/>
           <indexterm lang="en">
             <primary>Docks</primary>
             <secondary>View as List/Grid</secondary>
@@ -779,8 +778,8 @@
           <tip>
             <para lang="en">
               When the treeview is <quote>as list</quote>, pressing
-              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
-              (or <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>
+              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> (or
+              <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>,
               it depends on your GTK+ keybindings), opens a text box, a
               search field, where you can enter the first letter(s) of the
               name of the item you want.
@@ -794,42 +793,47 @@
               なっていて入力された文字から始まる名前の項目へ即座に一覧表が繰り
               寄せられます。
             </para>
-            <figure>
-              <title lang="en">The list search field</title>
-              <title lang="ja">検索窓</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                             fileref="images/using/list-search-field.png"/>
-                </imageobject>
-                <caption>
-                  <para lang="en">
-                    The list search field you get pressing Ctrl+F.
-                  </para>
-                  <para lang="ja">
-                    キーボードショートカット <keycombo><keycap>Ctrl</keycap>
-                    <keycap>F</keycap></keycombo> で開かれた検索窓
-                  </para>
-                </caption>
-              </mediaobject>
-            </figure>
-            <para lang="en">
-              This search field lasts five seconds only if you do nothing.
-            </para>
-            <para lang="en">
-              This shortcut is also available for the treeview you get in
-              the <quote>Brush</quote>, <quote>Font</quote> or <quote>Pattern
-              </quote> option of several tools.
-            </para>
-            <para lang="ja">
-              この検索窓は何も操作がない時間が5秒を過ぎると自動的に
-              閉じられます。
-            </para>
-            <para lang="ja">
-              このショートカットが利用できるダイアログは<quote>ブラシ</quote>、
-              <quote>フォント</quote>、 <quote>パターン</quote>などです。
-            </para>
+            <!-- IMHO colored blocks (like tips) should be short, so I
+                 moved the closing tag here - ude 2009-06-13 -->
           </tip>
+          <figure>
+            <title lang="en">The list search field</title>
+            <title lang="ja">検索窓</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/using/list-search-field.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  The list search field you get pressing
+                  <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>.
+                </para>
+                <para lang="ja">
+                  キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+                  <keycap>F</keycap></keycombo> で開かれた検索窓
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This search field lasts five seconds only if you do nothing.
+          </para>
+          <para lang="ja">
+            この検索窓は何も操作がない時間が5秒を過ぎると自動的に閉じられます。
+          </para>
+          <note>
+            <para lang="en">
+              The search field shortcut is also available for the treeview you
+              get in the <quote>Brush</quote>, <quote>Font</quote> or
+              <quote>Pattern</quote> option of several tools.
+            </para>
+            <para lang="ja">
+              いろいろなツールのダイアログ上の<quote>ブラシ</quote>、 
+              <quote>フォント</quote>、 <quote>パターン</quote>を選ぶオプション
+              の一覧表で検索窓を呼び出せるショートカットが利用できます。
+            </para>
+          </note>
         </listitem>
       </varlistentry>
 

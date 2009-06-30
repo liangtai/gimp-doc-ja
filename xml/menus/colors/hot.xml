@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-10-21 ude: moved here from filters/color/hot.xml ('en','de')
   2007-07-07 Added Spanish translation by AntI
@@ -9,101 +10,132 @@
   2005-08-26 de added by axel.wernicke
 -->
 <!--TODO es ru: update/review-->
+<!--2009-06-30-->
 <sect2 id="plug-in-hot">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2736 $</revnumber>
-        <date>2007-10-21</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Hot</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Hot</title>
+  <title lang="ja">ホット(H)...</title>
+
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Hot</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Hot</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary>ホット</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ホット</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
-    <para>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
       It identifies and modifies pixels which might cause problem when
       displayed onto PAL or NTSC TV screen.
     </para>
+    <para lang="ja">
+      <guimenuitem>ホット(<accel>H</accel>)...</guimenuitem> フィルタはテレビ
+      画面の<acronym>PAL</acronym>形式か<acronym>NTSC</acronym>形式で表示すると
+      問題が発生するおそれのある画素を特定し変更ができます。
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
         <guimenuitem>Hot</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guimenuitem>ホット(<accel>H</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Hot</quote> filter options</phrase>
-      </title>
+      <title lang="en"><quote>Hot</quote> filter options</title>
+      <title lang="ja"><quote>ホット</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/filters-color-hot.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-color-hot.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Mode</term>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
         <listitem>
-          <para>
-            You have to select the TV mode: PAL or NTSC.
+          <para lang="en">You have to select the TV mode: PAL or NTSC.</para>
+          <para lang="ja">
+            <guilabel>N<accel>T</accel>SC</guilabel> か <guilabel>
+            <accel>P</accel>AL</guilabel> のいずれかのテレビ信号方式を
+            選びます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Action</term>
+        <term lang="en">Action</term>
+        <term lang="ja">動作</term>
         <listitem>
-          <para>
-            You can select:
-          </para>
+          <para lang="en">You can select:</para>
+          <para lang="ja">つぎのいずれかをお選びください。</para>
           <itemizedlist>
             <listitem>
-              <para>
+              <para lang="en">
                 <guilabel>Reduce Luminency</guilabel>
               </para>
-            </listitem>
-            <listitem>
-              <para>
-                <guilabel>Reduce Saturation</guilabel>
+              <para lang="ja">
+                <guilabel>発光を減らす(<accel>L</accel>)</guilabel>
               </para>
             </listitem>
             <listitem>
-              <para><guilabel>Blacken</guilabel>: this will turn hot pixels to
+              <para lang="en">
+                <guilabel>Reduce Saturation</guilabel>
+              </para>
+              <para lang="ja">
+                <guilabel>彩度を減らす(<accel>S</accel>)</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Blacken</guilabel>: this will turn hot pixels to
                 black.
+              </para>
+              <para lang="ja">
+                <guilabel>黒くする(<accel>B</accel>)</guilabel>: 問題のある
+                画素を黒塗りにします。
               </para>
             </listitem>
           </itemizedlist>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Create a new layer</term>
+        <term lang="en">Create a new layer</term>
+        <term lang="ja">新規レイヤー作成(N)</term>
         <listitem>
-          <para>
+          <para lang="en">
             With this option, work will be performed on a new layer instead
             of the image. This will give you peace of mind!
+          </para>
+          <para lang="ja">
+            このオプションは画像で直に画素を変更せず新たにレイヤーをその画像に
+            作成して成果を記録します。 これなら安心ですね。
           </para>
         </listitem>
       </varlistentry>

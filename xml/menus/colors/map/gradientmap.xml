@@ -10,37 +10,54 @@
   2005-08-22 de added by axel.wernicke
   2005-08-30 de replaced informalfigure by axel.wernicke
 -->
+<!--2009-06-26-->
 <sect2 id="plug-in-gradmap">
-  <title>Gradient Map</title>
+  <title lang="en">Gradient Map</title>
+  <title lang="ja">グラデーションマップ(G)</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Map</secondary>
     <tertiary>Gradient Map</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Gradient Map</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary>マップ</secondary>
+    <tertiary>グラデーションマップ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>グラデーションマップ</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example of gradient map</title>
+      <title lang="en">Example of gradient map</title>
+      <title lang="ja">グラデーションマップの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
             fileref="images/filters/examples/gradmap-example.png"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             Example of Gradient Mapping.  Top: Original image.  Middle: a
             gradient.  Bottom: result of applying the gradient to the
             original image with the Gradient Map filter.
           </para>
+          <para lang="ja">
+            グラデーションマップ適用の例。 上図は元画像、 中央に
+            グラデーション、 下図は元画像にグラデーションマップフィルタを用いて
+            グラデーションをかけた結果。
+          </para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter uses the current gradient, as shown in the
       Brush/Pattern/Gradient area of the Toolbox, to recolor the active
       layer or selection of the image to which the filter is applied. To
@@ -54,17 +71,41 @@
       the right end color from the gradient. Intermediate values are set
       to the corresponding intermediate colors.
     </para>
+    <para lang="ja">
+      <guimenuitem>グラデーションマップ(<accel>G</accel>)</guimenuitem> 
+      フィルタは現在のグラデーション (ツールボックスの<quote>ブラシ/パターン/
+      グラデーション</quote>の区画で表示されています) を使って、 現在の画像で
+      活性化しているレイヤーか選択範囲にフィルタを適用して色を塗り直します。
+      この機能を利用する前に 
+      <link linkend="gimp-gradient-dialog">グラデーションダイアログ</link> で
+      グラデーションを選んでおいてください。 そうしたら画像のレイヤーを選んで
+      色を変えたいところに選択範囲を作成し、 フィルタを呼び出します。 この
+      フィルタにはダイアログがなく、 途中で入力を一切要求せずひとりでに処理を
+      完遂します。 変換のしくみは、 画像の色から強度 (0-255) を算出して最も暗い
+      画素にグラデーションの左端の色を、 最も明るい画素にグラデーションの右端の
+      色を与えるようになっています。  中間的な値にはレベルに合わせ
+      グラデーションの相応の位置の色を与えます。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
         <guisubmenu>Map</guisubmenu>
         <guimenuitem>Gradient Map</guimenuitem>
       </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guisubmenu>マップ(<accel>M</accel>)</guisubmenu>
+        <guimenuitem>グラデーションマップ(<accel>G</accel>)</guimenuitem>
+      </menuchoice>
     </para>
   </sect3>
 </sect2>
