@@ -1,13 +1,16 @@
+# liangtai <ss2pxd1c@yahoo.co.jp>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-04-19 10:07+0900\n"
-"PO-Revision-Date: 2009-02-19 01:33+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2009-06-28 06:22+0900\n"
+"PO-Revision-Date: 2009-06-24 04:11+0900\n"
+"Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -18,19 +21,19 @@ msgstr ""
 #: src/menus/colors/auto/c-astretch.xml:80(None)
 #: src/menus/colors/auto/autostretch-hsv.xml:66(None)
 msgid "@@image: 'images/menus/alice.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/alice.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/auto/white-balance.xml:95(None)
 msgid "@@image: 'images/menus/white-balance.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/white-balance.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/auto/white-balance.xml:24(phrase)
 #: src/menus/colors/auto/white-balance.xml:31(primary)
 #: src/menus/colors/auto/white-balance.xml:70(quote)
 msgid "White Balance"
-msgstr ""
+msgstr "ホワイトバランス(W)"
 
 #: src/menus/colors/auto/white-balance.xml:27(primary)
 #: src/menus/colors/auto/normalize.xml:27(primary)
@@ -39,11 +42,11 @@ msgstr ""
 #: src/menus/colors/auto/c-astretch.xml:26(primary)
 #: src/menus/colors/auto/autostretch-hsv.xml:26(primary)
 msgid "Colors"
-msgstr ""
+msgstr "色"
 
 #: src/menus/colors/auto/white-balance.xml:28(secondary)
 msgid "White balance"
-msgstr ""
+msgstr "ホワイトバランス"
 
 #: src/menus/colors/auto/white-balance.xml:33(para)
 msgid ""
@@ -59,12 +62,24 @@ msgid ""
 "<quote>Stretch Contrast</quote>, however, there may be hue shifts in the "
 "resulting image."
 msgstr ""
+"<guimenuitem>ホワイトバランス(<accel>W</accel>)</guimenuitem> コマンドは活性"
+"レイヤーの赤緑青の各色の分布をチャンネルごとに伸長させて色を調整します。この"
+"処理においては画像で使用されている全て色のうち発色している画素が総画素数の"
+"0.05%以下の色を削除し、代わりに近似色を割り当てる操作を赤緑青の各チャンネルご"
+"とに行います。こうしてできるだけ分布を拡げてゆきます。 ヒストグラムの両端の最"
+"外縁のめったに使われない (ものによってはゴミビット等も含む) 画素の色が、 ヒス"
+"トグラムの伸長において幅をきかせてしまい <link linkend=\"plug-in-c-astretch"
+"\">コントラスト伸長(S)</link> のときのように最高レベルと最低レベルの色に否定"
+"的な影響を及ぼすおそれがないところが長所です。 しかし<quote>コントラスト伸長"
+"</quote>と同じく調整後の画像に色相の遷移が起こるかもしれません。"
 
 #: src/menus/colors/auto/white-balance.xml:46(para)
 msgid ""
 "This command suits images with poor white or black. Since it tends to create "
 "pure white (and black), it may be useful e.g. to enhance photographs."
 msgstr ""
+"このコマンドは白や黒が乏しい画像にぴったりです。 真っ白や真っ黒が使われるよう"
+"になる傾向がありますから、 たとえば写真の修正などに有効です。"
 
 #: src/menus/colors/auto/white-balance.xml:51(para)
 msgid ""
@@ -72,6 +87,10 @@ msgid ""
 "If the image is Indexed or Grayscale, the menu item is insensitive and "
 "grayed out."
 msgstr ""
+"<guimenuitem>ホワイトバランス(<accel>W</accel>)</guimenuitem> コマンドは"
+"<acronym>RGB</acronym>画像のレイヤーで作動します。 画像の色がインデックス化さ"
+"れているものやグレースケールの場合は、 このメニュー項目は灰色無効となっていて"
+"使用できません。"
 
 #: src/menus/colors/auto/white-balance.xml:57(phrase)
 #: src/menus/colors/auto/normalize.xml:43(phrase)
@@ -79,7 +98,7 @@ msgstr ""
 #: src/menus/colors/auto/c-astretch.xml:59(phrase)
 #: src/menus/colors/auto/autostretch-hsv.xml:45(phrase)
 msgid "Activate the Command"
-msgstr ""
+msgstr "コマンドの呼び出し方"
 
 #: src/menus/colors/auto/white-balance.xml:61(para)
 msgid ""
@@ -87,12 +106,15 @@ msgid ""
 "<menuchoice><guimenu>Colors</guimenu><guisubmenu>Auto</"
 "guisubmenu><guimenuitem>White Balance</guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>自動調整(<accel>A</accel>)</guisubmenu><guimenuitem>ホワ"
+"イトバランス(<accel>W</accel>)</guimenuitem></menuchoice>"
 
 #: src/menus/colors/auto/white-balance.xml:70(phrase)
 #: src/menus/colors/auto/color-enhance.xml:58(phrase)
 #: src/menus/colors/auto/autostretch-hsv.xml:58(phrase)
 msgid "<placeholder-1/> example"
-msgstr ""
+msgstr "<placeholder-1/>の例"
 
 #: src/menus/colors/auto/white-balance.xml:75(phrase)
 #: src/menus/colors/auto/normalize.xml:60(phrase)
@@ -100,13 +122,14 @@ msgstr ""
 #: src/menus/colors/auto/c-astretch.xml:76(phrase)
 #: src/menus/colors/auto/autostretch-hsv.xml:62(phrase)
 msgid "Original image"
-msgstr ""
+msgstr "元画像"
 
 #: src/menus/colors/auto/white-balance.xml:82(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms before <quote>White "
 "Balance</quote>."
 msgstr ""
+"<quote>ホワイトバランス</quote>適用前の活性レイヤーとその赤緑青のヒストグラム"
 
 #: src/menus/colors/auto/white-balance.xml:91(phrase)
 #: src/menus/colors/auto/normalize.xml:76(phrase)
@@ -114,13 +137,15 @@ msgstr ""
 #: src/menus/colors/auto/c-astretch.xml:92(phrase)
 #: src/menus/colors/auto/autostretch-hsv.xml:78(phrase)
 msgid "Image after the command"
-msgstr ""
+msgstr "コマンド適用後の画像"
 
 #: src/menus/colors/auto/white-balance.xml:98(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms after <quote>White "
 "Balance</quote>. Poor white areas in the image became pure white."
 msgstr ""
+"<quote>ホワイトバランス</quote>適用後の活性レイヤーとその赤緑青のヒストグラ"
+"ム。 画像で白さの乏しかった部分が純白に変わった。"
 
 #: src/menus/colors/auto/white-balance.xml:103(para)
 #: src/menus/colors/auto/normalize.xml:90(para)
@@ -128,19 +153,20 @@ msgid ""
 "Histogram stretching creates gaps between the pixel columns, giving it a "
 "striped look."
 msgstr ""
+"ヒストグラムの伸長で画素の峰に隙間ができ、 バーコード模様のように見える。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/auto/normalize.xml:82(None)
 msgid "@@image: 'images/menus/normalize.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/normalize.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/auto/normalize.xml:24(phrase)
 #: src/menus/colors/auto/normalize.xml:28(secondary)
 #: src/menus/colors/auto/normalize.xml:31(primary)
 #: src/menus/colors/auto/normalize.xml:56(quote)
 msgid "Normalize"
-msgstr ""
+msgstr "正規化(N)"
 
 #: src/menus/colors/auto/normalize.xml:33(para)
 msgid ""
@@ -151,6 +177,12 @@ msgid ""
 "out. <quote>Normalize</quote> works on layers from RGB, Grayscale, and "
 "Indexed images."
 msgstr ""
+"<guimenuitem>正規化(<accel>N</accel>)</guimenuitem> コマンドは活性レイヤー上"
+"の最も暗い点が黒に、 最も明るい点を最大限明るくなるように明るさの値を拡大しま"
+"す。 色相は変えません。 色褪せた画像や薄暗い画像にはしばしば<quote>手ぶれ/ピ"
+"ント自動補正</quote>のような効果が現れます。 <quote>正規化</quote>プラグイン"
+"は<acronym>RGB</acronym>、 グレースケール、 インデックス化カラーのいずれの画"
+"像のレイヤーでも動作します。"
 
 #: src/menus/colors/auto/normalize.xml:47(para)
 msgid ""
@@ -158,34 +190,39 @@ msgid ""
 "<menuchoice><guimenu>Colors</guimenu><guisubmenu>Auto</"
 "guisubmenu><guimenuitem>Normalize</guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>自動調整(<accel>A</accel>)</guisubmenu><guimenuitem>正規"
+"化(<accel>N</accel>)</guimenuitem></menuchoice>"
 
 #: src/menus/colors/auto/normalize.xml:56(phrase)
 msgid "<placeholder-1/>Example"
-msgstr ""
+msgstr "<placeholder-1/>の例"
 
 #: src/menus/colors/auto/normalize.xml:67(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms before "
 "<quote>Normalize</quote>."
-msgstr ""
+msgstr "<quote>正規化</quote>適用前の活性レイヤーとその赤緑青のヒストグラム"
 
 #: src/menus/colors/auto/normalize.xml:85(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms after "
 "<quote>Normalize</quote>. The contrast is enhanced."
 msgstr ""
+"<quote>正規化</quote>適用後の活性レイヤーとその赤緑青のヒストグラム。 コント"
+"ラストが強調された。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/auto/equalize.xml:83(None)
 msgid "@@image: 'images/menus/equalize.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/equalize.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/auto/equalize.xml:14(title)
 #: src/menus/colors/auto/equalize.xml:17(secondary)
 #: src/menus/colors/auto/equalize.xml:20(primary)
 msgid "Equalize"
-msgstr ""
+msgstr "平滑化(E)"
 
 #: src/menus/colors/auto/equalize.xml:22(para)
 msgid ""
@@ -203,6 +240,18 @@ msgid ""
 "works on layers from RGB and Grayscale images. If the image is Indexed, the "
 "menu entry is insensitive and grayed out."
 msgstr ""
+"<guimenuitem>平滑化(<accel>E</accel>)</guimenuitem> コマンドは色の明るさをレ"
+"イヤー全体にわたって補正し、 ヒストグラムの明度チャンネルができるだけ平坦にな"
+"るように、 つまり全ての画素があらゆる明度のレベルに満遍なく同じ数だけ分布する"
+"ように調整します。 この様子は下図のヒストグラムでご覧ください。 あまり使われ"
+"ない色の画素に比べ頻出の色の画素は幅広く分散させています。 処理後の画像はかな"
+"りの変化が起きる可能性があります。 <quote>平滑化</quote>プラグインは或る時は"
+"画像のコントラストを程良く強調して今まで見えづらかった部分を明瞭にしてくれま"
+"すが、 時には画像の見栄えを悪くしてしまうかもしれません。 とても強力な処理を"
+"行ないますのでともかく1度は画像に適用してみてどうなるか試すとよいでしょう。 "
+"操作対象は<acronym>RGB</acronym>カラーまたはグレースケールのレイヤーです。 画"
+"像の色がインデックス化されているときはこのメニュー項目は灰色無効になっていて"
+"使用できません。"
 
 #: src/menus/colors/auto/equalize.xml:42(para)
 msgid ""
@@ -210,38 +259,44 @@ msgid ""
 "<menuchoice><guimenu>Colors</guimenu><guisubmenu>Auto</"
 "guisubmenu><guimenuitem>Equalize</guimenuitem></menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>自動調整(<accel>A</accel>)</guisubmenu><guimenuitem>平滑"
+"化(<accel>E</accel>)</guimenuitem></menuchoice>"
 
 #: src/menus/colors/auto/equalize.xml:52(para)
 msgid ""
 "or by using the keyboard shortcut <keycombo><keycap>Shift</"
 "keycap><keycap>Page_Down</keycap></keycombo>."
 msgstr ""
+"キーボードショートカット <keycombo><keycap>Shift</keycap><keycap>PageDown</"
+"keycap></keycombo>"
 
 #: src/menus/colors/auto/equalize.xml:62(title)
 msgid "<quote>Equalize</quote> example"
-msgstr ""
+msgstr "<quote>平滑化</quote>の例"
 
 #: src/menus/colors/auto/equalize.xml:72(para)
 msgid ""
 "The active layer and its Red, Green, Blue histograms before <quote>Equalize</"
 "quote>."
 msgstr ""
+"<quote>平滑化</quote>適用前の活性レイヤーとその赤緑青各色のヒストグラム"
 
 #: src/menus/colors/auto/equalize.xml:86(para)
 msgid "The active layer and its Red, Green, Blue histograms after treatment."
-msgstr ""
+msgstr "適用後の活性レイヤーとその赤緑青各色のヒストグラム"
 
 #: src/menus/colors/auto/equalize.xml:90(para)
 msgid ""
 "Histogram stretching creates gaps between pixel columns giving it a striped "
 "look."
-msgstr ""
+msgstr "ヒストグラムの拡張は色の分布に隙間を設け、 画素の峰が短冊状になる。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/auto/color-enhance.xml:84(None)
 msgid "@@image: 'images/menus/color-enhance.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/color-enhance.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/auto/color-enhance.xml:23(phrase)
 #: src/menus/colors/auto/color-enhance.xml:30(primary)
@@ -249,11 +304,11 @@ msgstr ""
 #: src/menus/colors/auto/color-enhance.xml:62(quote)
 #: src/menus/colors/auto/color-enhance.xml:79(quote)
 msgid "Color Enhance"
-msgstr ""
+msgstr "色強調(C)"
 
 #: src/menus/colors/auto/color-enhance.xml:27(secondary)
 msgid "Color enhance"
-msgstr ""
+msgstr "色強調"
 
 #: src/menus/colors/auto/color-enhance.xml:32(para)
 msgid ""
@@ -267,10 +322,19 @@ msgid ""
 "works on layers from RGB and Indexed images. If the image is Grayscale, the "
 "menu entry is insensitive and grayed out."
 msgstr ""
+"<guimenuitem>色強調(<accel>C</accel>)</guimenuitem> コマンドはレイヤー内で色"
+"の彩度の幅を膨らませます。 輝度と色相は変えません。 この処理のために色空間を"
+"<acronym>HSV</acronym>空間に変換し、 レイヤー全体から彩度の幅を測定してからで"
+"きるだけその幅を伸長します。 そのあと色空間を<acronym>RGB </acronym>空間に戻"
+"します。 操作の内容は <link linkend=\"plug-in-c-astretch\">コントラスト伸長"
+"(S)</link> に似ていますが、 このプラグインは作業を<acronym>HSV</acronym>色空"
+"間で行なうため色相が保たれるところが異なります。 このコマンドの対象は"
+"<acronym>RGB</acronym>色とインデックス化色の画像です。 画像の色がグレースケー"
+"ルの場合はこのメニュー項目は灰色無効となっていて使用できません。"
 
 #: src/menus/colors/auto/color-enhance.xml:45(phrase)
 msgid "Activate the command"
-msgstr ""
+msgstr "コマンドの呼び出し方"
 
 #: src/menus/colors/auto/color-enhance.xml:49(para)
 msgid ""
@@ -278,46 +342,51 @@ msgid ""
 "<menuchoice><guimenu>Colors</guimenu><guisubmenu>Auto</"
 "guisubmenu><guimenuitem>Color Enhance</guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>自動調整(<accel>A</accel>)</guisubmenu><guimenuitem>色強"
+"調(<accel>C</accel>)</guimenuitem></menuchoice>"
 
 #: src/menus/colors/auto/color-enhance.xml:62(phrase)
 msgid "<placeholder-1/> example (Original image)"
-msgstr ""
+msgstr "<placeholder-1/>の例 (コマンド適用後の画像)"
 
 #: src/menus/colors/auto/color-enhance.xml:70(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms before <quote>Color "
 "Enhance</quote>."
-msgstr ""
+msgstr "<quote>色強調</quote>適用前の活性レイヤーとその赤緑青のヒストグラム"
 
 #: src/menus/colors/auto/color-enhance.xml:79(phrase)
 msgid "<placeholder-1/> example (Image after the command)"
-msgstr ""
+msgstr "<placeholder-1/>の例 (コマンド適用後の画像)"
 
 #: src/menus/colors/auto/color-enhance.xml:87(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms after <quote>Color "
 "Enhance</quote>. The result may not always be what you expect."
 msgstr ""
+"<quote>色強調</quote>適用後の活性レイヤーとその赤緑青のヒストグラム。 予想通"
+"りの結果とならないこともよくある。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/auto/c-astretch.xml:96(None)
 msgid "@@image: 'images/menus/c-stretch.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/c-stretch.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/auto/c-astretch.xml:23(phrase)
 #: src/menus/colors/auto/c-astretch.xml:30(primary)
 #: src/menus/colors/auto/c-astretch.xml:72(quote)
 msgid "Stretch Contrast"
-msgstr ""
+msgstr "コントラスト伸長(S)"
 
 #: src/menus/colors/auto/c-astretch.xml:27(secondary)
 msgid "Stretch contrast"
-msgstr ""
+msgstr "コントラスト伸長"
 
 #: src/menus/colors/auto/c-astretch.xml:33(primary)
 msgid "Contrast"
-msgstr ""
+msgstr "コントラスト"
 
 #: src/menus/colors/auto/c-astretch.xml:35(para)
 msgid ""
@@ -335,6 +404,18 @@ msgid ""
 "remove an undesirable color tint from an image which should contain pure "
 "white and pure black."
 msgstr ""
+"<guimenuitem>コントラスト伸長(<accel>S</accel>)</guimenuitem> コマンドは活性"
+"レイヤーのヒストグラムの値を自動的に伸長します。 活性レイヤーのそれぞれのチャ"
+"ンネルで最大レベルと最小レベルの値を見付けだし、 それを使って赤緑青の各ヒスト"
+"グラムをコントラスト全開まで伸長させます。 明るい色はさらに明るく、暗い色はさ"
+"らに暗くしますのでコントラストが増します。 このコマンドはしばしば <link "
+"linkend=\"plug-in-normalize\">正規化(N)</link> コマンドとよく似た効果をもたら"
+"しますが、 当コマンドはレイヤーのそれぞれの色チャンネルごとに操作するところが"
+"異なります。 処理後はほとんどの画像に色の遷移が起こりますので期待外れの結果に"
+"終わることもあります。 <quote>コントラスト伸長</quote>は<acronym>RGB</"
+"acronym>、 グレースケール、 インデックス化カラーのいずれの画像のレイヤーでも"
+"動作します。 本来真っ白や真っ黒になるべき部分から邪魔な別の色のしみを取り除く"
+"用途にのみ<quote>コントラスト伸長</quote>をご利用ください。"
 
 #: src/menus/colors/auto/c-astretch.xml:51(para)
 msgid ""
@@ -342,6 +423,9 @@ msgid ""
 "\">Color Balance</link> command, but it does not reject any of the very dark "
 "or very bright pixels, so the white might be impure."
 msgstr ""
+"このコマンドは <link linkend=\"gimp-layer-white-balance\">ホワイトバランス(W)"
+"</link> コマンドとも似ていますが、 非常に暗い画素も非常に明るい画素も退けない"
+"ので白っぽい部分はあっても純白にならないことが多くあります。"
 
 #: src/menus/colors/auto/c-astretch.xml:63(para)
 msgid ""
@@ -349,16 +433,21 @@ msgid ""
 "<menuchoice><guimenu>Colors</guimenu><guisubmenu>Auto</"
 "guisubmenu><guimenuitem>Stretch Contrast</guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>自動調整(<accel>A</accel>)</guisubmenu><guimenuitem>コン"
+"トラスト伸長(<accel>S</accel>)</guimenuitem></menuchoice>"
 
 #: src/menus/colors/auto/c-astretch.xml:72(phrase)
 msgid "<placeholder-1/> Example"
-msgstr ""
+msgstr "<placeholder-1/>の例"
 
 #: src/menus/colors/auto/c-astretch.xml:83(para)
 msgid ""
 "The layer and its Red, Green and Blue histograms before <quote>Stretch "
 "Contrast</quote>."
 msgstr ""
+"<quote>コントラスト伸長</quote>適用前の活性レイヤーとその赤緑青のそれぞれのヒ"
+"ストグラム"
 
 #: src/menus/colors/auto/c-astretch.xml:99(para)
 msgid ""
@@ -367,28 +456,32 @@ msgid ""
 "histogram (255) because of a few very bright pixels, unlike <quote>White "
 "Balance</quote>."
 msgstr ""
+"<quote>コントラスト伸長</quote>適用後の活性レイヤーとその赤緑青のそれぞれのヒ"
+"ストグラム。 <quote>ホワイトバランス</quote>とは異なり非常に明るい画素が少な"
+"いので画素の尾根はヒストグラムの右端 (255) まで届かない。"
 
 #: src/menus/colors/auto/c-astretch.xml:106(para)
 msgid ""
 "Histogram stretching creates gaps between the pixel columns, giving it a "
 "stripped look."
 msgstr ""
+"ヒストグラムの伸長で画素の峰に隙間ができ、 バーコード模様のように見える。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/auto/autostretch-hsv.xml:82(None)
 msgid "@@image: 'images/menus/stretch-hsv.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
+msgstr "@@image: 'images/menus/stretch-hsv.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/auto/autostretch-hsv.xml:23(phrase)
 #: src/menus/colors/auto/autostretch-hsv.xml:30(primary)
 #: src/menus/colors/auto/autostretch-hsv.xml:58(quote)
 msgid "Stretch HSV"
-msgstr ""
+msgstr "HSV 伸長(H)"
 
 #: src/menus/colors/auto/autostretch-hsv.xml:27(secondary)
 msgid "Stretch colors in HSV space"
-msgstr ""
+msgstr "HSV色空間で色を伸長"
 
 #: src/menus/colors/auto/autostretch-hsv.xml:32(para)
 msgid ""
@@ -401,6 +494,14 @@ msgid ""
 "layers from RGB and Indexed images. If the image is Grayscale, the menu "
 "entry is insensitive and grayed out."
 msgstr ""
+"<guimenuitem>HSV 伸長(<accel>H</accel>)</guimenuitem> コマンドは <link "
+"linkend=\"plug-in-c-astretch\">コントラスト伸長(S)</link> と同じ操作を"
+"<acronym>RGB</acronym>色空間ではなく<acronym>HSV</acronym>色空間で行ないま"
+"す。 色相は変えません。 つまり彩度、 明度の各成分の分布をそれぞれ個別に伸長さ"
+"せるのです。 処理の成果はときおり良好なこともありますが、 たびたびちょっと変"
+"な具合になります。 <quote>HSV 伸長</quote>プラグインは<acronym>RGB</acronym>"
+"色とインデックス化色の画像のレイヤーで作動します。 画像がグレースケール色の場"
+"合はこのメニュー項目は灰色無効となっていて使用できません。"
 
 #: src/menus/colors/auto/autostretch-hsv.xml:49(para)
 msgid ""
@@ -408,20 +509,26 @@ msgid ""
 "<menuchoice><guimenu>Colors</guimenu><guisubmenu>Auto</"
 "guisubmenu><guimenuitem>Stretch HSV</guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>自動調整(<accel>A</accel>)</guisubmenu><guimenuitem>HSV "
+"伸長(<accel>H</accel>)</guimenuitem></menuchoice>"
 
 #: src/menus/colors/auto/autostretch-hsv.xml:69(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms before "
 "<quote>Stretch HSV</quote>."
 msgstr ""
+"<quote>HSV 伸長</quote>適用前の活性レイヤーとその赤緑青それぞれのヒストグラム"
 
 #: src/menus/colors/auto/autostretch-hsv.xml:85(para)
 msgid ""
 "The active layer and its Red, Green and Blue histograms after <quote>Stretch "
 "HSV</quote>. Contrast, luminosity and hues are enhanced."
 msgstr ""
+"<quote>HSV 伸長</quote>適用後の活性レイヤーとその赤緑青それぞれのヒストグラ"
+"ム。 コントラストと明度と色相が強調された。"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: src/menus/colors/auto/autostretch-hsv.xml:0(None)
 msgid "translator-credits"
-msgstr ""
+msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."

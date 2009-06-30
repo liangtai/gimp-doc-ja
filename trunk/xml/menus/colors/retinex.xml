@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-10-21 ude: moved here from filters/color/retinex.xml ('en','de')
   2007-10-09: updated italian by ciampix
@@ -10,53 +11,58 @@
   2005-11-26: created by julien hardelin.
 -->
 <!--TODO es it ru: update/review-->
+<!--2009-06-30-->
 <sect2 id="plug-in-retinex">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2736 $</revnumber>
-        <date>2007-10-21</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Retinex</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Retinex</title>
+  <title lang="ja">レティネックス(X)...</title>
+
+  <indexterm lang="en">
     <primary>Colors</primary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Retinex</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レティネックス</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase><quote>Retinex</quote> example</phrase>
-      </title>
+      <title lang="en"><quote>Retinex</quote> example</title>
+      <title lang="ja"><quote>レティネックス</quote>の使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/colors-retinex1.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/colors-retinex1.png"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/colors-retinex2.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/colors-retinex2.png"/>
         </imageobject>
         <caption>
-          <para><quote>Retinex</quote> filter applied.
+          <para lang="en">
+            <quote>Retinex</quote> filter applied.
             Note new details in the upper right corner.
+          </para>
+          <para lang="ja">
+            <quote>レティネックス</quote>フィルタ適用後。 右上付近の詳しさに
+            注目。
           </para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Retinex improves visual rendering of an image when lighting conditions
       are not good. While our eye can see colors correctly when light is low,
       cameras and video cams can't manage this well. The MSRCR (MultiScale
@@ -64,51 +70,80 @@
       Retinex filter, is inspired by the eye biological mechanisms to adapt
       itself to these conditions. Retinex stands for Retina + cortex.
     </para>
-    <para>
+    <para lang="en">
       Besides digital photography, Retinex algorithm is used to make the
       information in astronomical photos visible and detect, in medicine,
       poorly visible structures in X-rays or scanners.
     </para>
+    <para lang="ja">
+      <guimenuitem>レティネックス(<accel>X</accel>)...</guimenuitem> フィルタは
+      明るさの不十分な画像の見た目を改善する描画を行ないます。 光の乏しいところ
+      でもヒトの目は色を見分けられるのにカメラやビデオカメラはそれがちゃんと
+      処理できません。 レティネックスフィルタの根幹をなす<acronym>MSRCR
+      </acronym> (<foreignphrase>MultiScale Retinex with Color Restoration
+      </foreignphrase>) とはヒトの目がその場の状況に合わせる生物学的構造を
+      もっていることに着目したアルゴリズムです。 レティネックスは1971年に登場
+      した retina (網膜) と cortex (皮質) の合成語です。
+    </para>
+    <para lang="ja">
+      天文学用の可視情報や探査情報、 あるいは医学用のX線写真やスキャンで得た
+      なかなか見づらい構造を活用する目的でデジタル写真技術とともに
+      レティネックスアルゴリズムが利用されています。
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
         <guimenuitem>Retinex</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guimenuitem>レティネックス(<accel>X</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Retinex</quote> filter options</phrase>
+      <title lang="en"><quote>Retinex</quote> filter options</title>
+      <title lang="ja">
+        <quote>レティネックス</quote>フィルタのオプション
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-colors-retinex.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-colors-retinex.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       These options call for notions that only mathematicians and imagery
       engineers can understand. In actual practice, the user has to grope
       about for the best setting. However, the following explanations should
       help out the experimented GIMP user.
     </para>
+    <para lang="ja">
+      これらのオプションは数学者や形象技術者<!--???-->だけしか理解できない
+      思考回路を要求します。 実用的な面では、 最適な設定を模索していくしか他に
+      方法がありません。 それでもつぎの説明は試され済みの<acronym>GIMP
+      </acronym>ユーザにとっては役立つ情報だと思います。
+    </para>
     <variablelist>
       <varlistentry>
-        <term>
-          <phrase>Level</phrase>
-        </term>
+        <term lang="en">Level</term>
+        <term lang="ja">レベル(L)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here is what the plug-in author writes on his site
             <xref linkend="bibliography-online-plugin-retinex"/>:
             <quote>To characterize color variations and the lightor, we make
@@ -117,32 +152,57 @@
              values between min scale (sigma 2.0) and max (sigma equal to the
              image size)</quote>...
           </para>
+          <para lang="ja">
+            このプラグイン作者が自身のサイト
+            <xref linkend="bibliography-online-plugin-retinex"/>:
+            に書いたコメントはつぎのとおりです。 <quote>To characterize color
+            variations and the lightor, we make a difference between (gaussian)
+            filters responses at different scales. These parameters allow to
+            specify how to allocate scale values between min scale (sigma 2.0)
+            and max (sigma equal to the image size)</quote>...
+          </para>
           <variablelist>
             <varlistentry>
-              <term>Uniform</term>
+              <term lang="en">Uniform</term>
+              <term lang="ja">均一</term>
               <listitem>
-                <para>
+                <para lang="en">
                   Uniform tends to treat both low and high intensity areas
                   fairly.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Low</term>
-              <listitem>
-                <para>
-                  As a rule of thumb, low does <quote>flare up</quote>
-                  the lower intensity areas on the image.
+                <para lang="ja">
+                  <guimenuitem>均一</guimenuitem> は濃度の高いところも低い
+                  ところも公平に処理しようとします。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>High</term>
+              <term lang="en">Low</term>
+              <term lang="ja">低い</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  As a rule of thumb, low does <quote>flare up</quote>
+                  the lower intensity areas on the image.
+                </para>
+                <para lang="ja">
+                  原則として <guimenuitem>低い</guimenuitem> は画像の弱いところ
+                  を重点的に<quote>fire up させ</quote> (燃え上がらせ) ます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">High</term>
+              <term lang="ja">高い</term>
+              <listitem>
+                <para lang="en">
                   High tends to <quote>bury</quote> the lower intensity
                   areas in favor of a better rendering of the clearer areas
                   of the image.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>高い</guimenuitem> は画像の薄色の部分の描出を
+                  改善しようとするため弱い部分が<quote>埋没</quote>ぎみになる
+                  傾向があります。
                 </para>
               </listitem>
             </varlistentry>
@@ -150,42 +210,58 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Scale</phrase>
-        </term>
+        <term lang="en">Scale</term>
+        <term lang="ja">スケール(S)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Determines the depth of the Retinex scale. Minimum value is 16, a
             value providing gross, unrefined filtering. Maximum value is 250.
             Optimal and default value is 240.
           </para>
+          <para lang="ja">
+            レティネックスの深度を決めます。 最小値は16です。 この値でフィルタ
+            をかけると品のない粗野な仕上りになります。 最大値は250です。 初期値
+            には最適な240が選ばれています。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Scale division</phrase>
-        </term>
+        <term lang="en">Scale division</term>
+        <term lang="ja">スケール分割(S)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Determines the number of iterations in the multiscale Retinex
             filter. The minimum required, and the recommended value is three.
             Only one or two scale divisions removes the multiscale aspect and
             falls back to a single scale Retinex filtering. A value that is
             too high tends to introduce noise in the picture.
           </para>
+          <para lang="ja">
+            複数スケールのレティネックスフィルタの繰り返し回数を設定します。
+            できるだけ小さな値が望ましいため推奨値は3となっています。 ただし
+            1回や2回のスケール分割だけでは複数スケールの相が消されるので単数
+            スケールのレティネックスフィルタ処理に逆戻りしてしまいます。 逆に
+            高すぎる値を設定すると画像にノイズが入り込みます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Dynamic</phrase>
-        </term>
+        <term lang="en">Dynamic</term>
+        <term lang="ja">動的(D)</term>
         <listitem>
-          <para>
+          <para lang="en">
             As the MSR algorithm tends to make the image lighter, this slider
             allows you to adjust color saturation contamination around the
             new average color. A higher value means less color saturation.
             This is definitely the parameter you want to tweak for optimal
             results, because its effect is extremely image-dependent.
+          </para>
+          <para lang="ja">
+            <acronym>MSR</acronym>アルゴリズムは画像を明るくするきらいがある
+            ため、 このスライダで彩度のずれを平均的に調整できるようになって
+            います。 高い値を与えると彩度が落ちます。 このパラメータの効果は
+            画像にとりわけ強く依存しますので、 最適な結果をひねり出すのには
+            まさに欠かせない値です。
           </para>
         </listitem>
       </varlistentry>

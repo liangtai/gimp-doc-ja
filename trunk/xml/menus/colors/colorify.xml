@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-12-15 j.h: updated to v2.4 en;fr
   2007-10-21 ude: moved here from filters/color/colorify.xml ('en','de')
@@ -12,78 +13,89 @@
 -->
 <!--TODO es ru: update/review-->
 <!-- TODO all: Needs rewriting for v2.4? The options are different from those described. At last in my version of v2.4.6 (kost)-->
+<!--2009-06-28-->
 <sect2 id="plug-in-colorify">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2736 $</revnumber>
-        <date>2007-10-21</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Colorify</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Colorify</title>
+  <title lang="ja">単色塗り(C)...</title>
+
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Colorify</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Colorify</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="タンショクヌリ">単色塗り</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="タンショクヌリ">単色塗り</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          Example for the <quote>Colorify</quote> filter
-        </phrase>
-      </title>
+      <title lang="en">Example for the <quote>Colorify</quote> filter</title>
+      <title lang="ja"><quote>単色塗り</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/color-taj-colorify.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/color-taj-colorify.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Colorify</quote> applied</para>
+          <para lang="en">Filter <quote>Colorify</quote> applied</para>
+          <para lang="ja"><quote>単色塗り</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       It renders a greyscaled image like it is seen through a colored glass.
       This filter works only on images in RGB mode.
     </para>
+    <para lang="ja">
+      <guimenuitem>単色塗り(<accel>C</accel>)...</guimenuitem> プラグインは
+      色眼鏡で見たようなグレースケール風画像を描き出します。 このフィルタは
+      <acronym>RGB</acronym>モードの画像でのみ動作できます。
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
         <guimenuitem>Colorify</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guimenuitem>単色塗り(<accel>C</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Colorify</quote> filter options</phrase>
-      </title>
+      <title lang="en"><quote>Colorify</quote> filter options</title>
+      <title lang="ja"><quote>単色塗り</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/colors-colorify.png" format="PNG"/>
@@ -92,11 +104,17 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Color</term>
+        <term lang="en">Color</term>
+        <term lang="ja">色ボタン</term>
         <listitem>
-          <para>
+          <para lang="en">
             A color palette is available and you can select your own color
             by clicking on the <guilabel>Custom Color</guilabel> swatch.
+          </para>
+          <para lang="ja">
+            7つの原色パレットのほか、 <guilabel>カスタムカラー</guilabel> 
+            ボタンをクリックして出てくるダイアログを使えば任意の色が
+            選択できます。
           </para>
         </listitem>
       </varlistentry>

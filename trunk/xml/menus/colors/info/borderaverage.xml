@@ -17,27 +17,40 @@
   2005-08-24 de added by axel.wernicke
 -->
 <sect2 id="plug-in-borderaverage">
-  <title>Border Average</title>
+  <title lang="en">Border Average</title>
+  <title lang="ja">境界の平均色(B)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Border Average</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Border Average</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="キョウカイノヘイキンショク">境界の平均色</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キョウカイノヘイキンショク">境界の平均色</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Border Average</quote> filter</title>
+      <title lang="en">
+        Example for the <quote>Border Average</quote> filter
+      </title>
+      <title lang="ja"><quote>境界の平均色</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
             fileref="images/filters/examples/taj_orig.png"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -46,11 +59,12 @@
             fileref="images/filters/examples/color-taj-borderaverage.png"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Border Average</quote> applied</para>
         </caption>
+          <para lang="en">Filter <quote>Border Average</quote> applied</para>
+          <para lang="ja"><quote>境界の平均色</quote>フィルタ適用後</para>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This plug-in calculates the most often used color in a specified border
       of the the active layer or selection. It can gather similar colors
       together so that they become predominant. The calculated color becomes
@@ -60,11 +74,25 @@
       registered in Undo History and can't be deleted with Ctrl+Z : it
       doesn't modify the image.
     </para>
+    <para lang="ja">
+      <guimenuitem>境界の平均色(<accel>B</accel>)...</guimenuitem> プラグインは
+      活性レイヤーもしくは選択範囲の境界線付近の全ての色の使用頻度を集計し、 
+      ある程度似ている色を合算しながら最多数を占める色を求めます。 その平均的な
+      色が描画色となりツールボックスの色標識に表示されます。 このフィルタの
+      実用例としてはWeb用のページの背景色を設定する際にできるだけ画像の色と
+      境界線でなじむ色を見付けるのに役立つでしょう。 ちなみにこのフィルタによる
+      操作は画像を加工しないため、 操作履歴に記録されることはなく 
+      <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
+      のような取り消し操作で元に戻すことができません。 [なおこのフィルタは
+      <acronym>RGB</acronym>画像でのみ作動します。 画像がグレースケール色や
+      インデックス化色の場合はメニュー項目が灰色無効となって使用できません。]
+    </para>
   </sect3>
 
   <sect3>
-    <title>Activating the filter</title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
@@ -72,12 +100,24 @@
         <guimenuitem>Border Average</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guimenu>色の情報(<accel>N</accel>)</guimenu>
+        <guimenuitem>境界の平均色(<accel>B</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>Options of the <quote>Border Average Filter</quote></title>
+      <title lang="en">
+        Options of the <quote>Border Average Filter</quote>
+      </title>
+      <title lang="ja"><quote>境界の平均色</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -87,18 +127,25 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Border Size</term>
+        <term lang="en">Border Size</term>
+        <term lang="ja">境界サイズ</term>
         <listitem>
-          <para>
+          <para lang="en">
             You can set there the border <guilabel>Thickness</guilabel> in
             pixels.
+          </para>
+          <para lang="ja">
+            色を採取する外縁の <guilabel>太さ(<accel>T</accel>)</guilabel> を
+            設定します。 初期状態ではピクセル単位ですが引き出しメニューから他の
+            単位や割合にも切り替えられます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Number of Colors</term>
+        <term lang="en">Number of Colors</term>
+        <term lang="ja">色数</term>
         <listitem>
-          <para>
+          <para lang="en">
             The <guilabel>Bucket Size</guilabel> lets you control the number
             of colors considered as similar and counted with the same
             <quote>bucket</quote>. A low bucket size value (i.e. a high bucket
@@ -106,66 +153,87 @@
             average color. Note that better precision does not necessarily
             mean better results (see example below).
           </para>
+          <para lang="ja">
+            <guilabel>バケツサイズ(<accel>B</accel>)</guilabel> は合算の対象
+            となる同系色の色数に上限を設ける際に参考にされます。 バケツサイズ値
+            が低い (つまりバケツの数が多い) ときは平均的な色を適度な精密さで
+            算出できます。 ちなみに適度な精密さといっても良好な結果に必ずしも
+            結びつきません (つぎの例をご覧ください)。
+          </para>
         </listitem>
       </varlistentry>
     </variablelist>
   </sect3>
 
   <sect3>
-    <title>
+    <title lang="en">
       Examples illustrating the <quote>Border Average</quote> filter
     </title>
+    <title lang="ja">
+      <quote>境界の平均色</quote>フィルタの性質が現れる例
+    </title>
     <figure>
-      <title>Original image</title>
+      <title lang="en">元画像</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
             fileref="images/filters/examples/borderaverage.png"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             Original image: colors are pure Red (255;0;0), pure Blue
             (0;0;255), and different but similar kinds of Green
             ( 0;255;0 , 63;240;63 , 48;224;47 , 0;192;38 ).
+          </para>
+          <para lang="ja">
+            平均色抽出に供される例図。 使用された色は純赤 (255,0,0)、 純青
+            (0,0,255)、 ならびに緑系の4色 (0,255,0)、 (63,240,63)、 (48,224,47)
+            、 (0,192,38)。
           </para>
         </caption>
       </mediaobject>
     </figure>
     <figure>
-      <title><quote>Number of Colors</quote> is set to 8:</title>
+      <title lang="en"><quote>Number of Colors</quote> is set to 8:</title>
+      <title lang="ja"><quote>バケツサイズ値</quote>を8に設定</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
             fileref="images/filters/examples/borderaverage08.png"/>
         </imageobject>
         <caption>
-          <para>
-            The resulting color is a Red (254,2,2).
-          </para>
+          <para lang="en">The resulting color is a Red (254,2,2).</para>
+          <para lang="ja">結果として赤 (254,2,2) を得る</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The bucket size is low. So the bucket number is high. All color shades
       can be stored in different buckets. Here, the bucket containing red is
       the most filled. The resulting color is a nearly pure
       Red (254,2,2) and becomes the foreground color of the Toolbox.
-      </para>
+    </para>
+    <para lang="ja">
+      バケツサイズ値が低くなっています。 つまり多くのバケツを使っています。 
+      色が僅かでも異なれば別のバケツに収めることになります。 この例では赤を
+      収めたバケツがいちばんかさ高くなります。 結果として純赤にかなり近い色
+      (254,2,2) が選ばれツールボックスの描画色に設定されます。
+    </para>
     <figure>
-      <title><quote>Number of Colors</quote> is set to 64:</title>
+      <title lang="en"><quote>Number of Colors</quote> is set to 64:</title>
+      <title lang="ja"><quote>バケツサイズ値</quote>を64に設定</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
             fileref="images/filters/examples/borderaverage64.png"/>
         </imageobject>
         <caption>
-          <para>
-            The resulting color is Green (32,224,32).
-          </para>
+          <para lang="en">The resulting color is Green (32,224,32).</para>
+          <para lang="ja">結果として緑 (32,224,32) を得る</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Here the bucket size is high, the number of buckets low. Similar colors
       (here green) are stored in a same bucket. This <quote>green</quote>
       bucket is now the most filled.
@@ -176,6 +244,18 @@
       from 192 to 255, blue channels from 0 to 63. The resulting color is
       Green (32,224,32), which, for every channel, is the average between the
       limits of the channel range (63 + 0)/2, (255+192)/2 , (63+0)/2.
+    </para>
+    <para lang="ja">
+      バケツサイズ値が高くなったのでバケツの総数は減りました。 似た色 (ここでは
+      緑) は同じバケツに入ります。 すなわち<quote>緑系</quote>の色を収めた
+      バケツが最もかさ高くなります。 このバケツ内の色はいずれも8ビットコードで
+      見ると (00******,11******,00******) のようにはじめの2ビットが同じです。
+      残りの6ビットはどのチャンネルでも 000000 から 111111 (0から64) までの範囲
+      があります。 つまりこのバケツ内では赤のチャンネルなら 0 から 63 の範囲、
+      緑のチャンネルなら 192 から 255 の範囲、 青のチャンネルなら 0 か 63 の
+      範囲の値がありえます。 このようなチャンネル値の下限と上限の平均を求め、
+      赤 (63 + 0)/2、 緑 (255 + 192)/2、 青 (63 + 0)/2 から得た緑 (32,224,32)
+      が答えとなります。
     </para>
   </sect3>
 </sect2>

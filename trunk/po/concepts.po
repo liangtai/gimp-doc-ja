@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-06-12 07:14+0900\n"
+"POT-Creation-Date: 2009-06-30 17:31+0900\n"
 "PO-Revision-Date: 2009-06-12 10:55+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/concepts/undo.xml:12(phrase) src/concepts/concepts.xml:149(term)
+#: src/concepts/undo.xml:12(phrase) src/concepts/concepts.xml:148(term)
 msgid "Undoing"
 msgstr "取り消し"
 
@@ -29,12 +29,12 @@ msgid ""
 "shortcut, <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>."
 msgstr ""
 "<acronym>GIMP</acronym>では画像に対して行なった動作はほとんど何でも取り消せま"
-"す。 画像メニューで <menuchoice><guimenu>編集(<accel>E</accel>)</guimenu>"
-"<guimenuitem>... を元に戻す(<accel>U</accel>)</guimenuitem></menuchoice>(... "
-"は最後に行われた動作の具体的な名前です) とたどれば一番最近の動作が取り消され"
-"ます。 しかしこのコマンドはよく使われるので、 かわりにキーボードショートカッ"
-"ト <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo> を覚えておく"
-"とよいでしょう。"
+"す。 画像メニューで <menuchoice><guimenu>編集(<accel>E</accel>)</"
+"guimenu><guimenuitem>... を元に戻す(<accel>U</accel>)</guimenuitem></"
+"menuchoice>(... は最後に行われた動作の具体的な名前です) とたどれば一番最近の"
+"動作が取り消されます。 しかしこのコマンドはよく使われるので、 かわりにキー"
+"ボードショートカット <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></"
+"keycombo> を覚えておくとよいでしょう。"
 
 #: src/concepts/undo.xml:29(para)
 msgid ""
@@ -48,8 +48,8 @@ msgid ""
 "harm in it."
 msgstr ""
 "取り消しを取り消すことも可能です。 ある動作を取り消したあとで、 メニューで "
-"<menuchoice><guimenu>編集(<accel>E</accel>)</guimenu><guimenuitem>やり直"
-"す(<accel>R</accel>)</guimenuitem></menuchoice> と進むか、キーボードショート"
+"<menuchoice><guimenu>編集(<accel>E</accel>)</guimenu><guimenuitem>やり直す"
+"(<accel>R</accel>)</guimenuitem></menuchoice> と進むか、キーボードショート"
 "カット <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo> とすれば "
 "<emphasis>やり直す</emphasis> ことができます。 取り消しとやり直しを交互に使え"
 "ば、 ある動作の効果を確かめるのに便利です。 この動作は素早く、 操作履歴を変化"
@@ -422,69 +422,66 @@ msgstr ""
 "玉の絵が表示されることがありますが、 こちらは何も画像を開いていない時だけに限"
 "られています。"
 
-#: src/concepts/setup.xml:15(phrase)
+#: src/concepts/setup.xml:14(title)
 msgid "Starting GIMP the first time"
 msgstr "初めて<acronym>GIMP</acronym>を使うとき"
 
-#: src/concepts/setup.xml:18(primary)
+#: src/concepts/setup.xml:17(primary)
 msgid "Setup"
 msgstr "導入設営"
 
 #: src/concepts/setup.xml:20(para)
 msgid ""
-"The first time you run GIMP, it goes through a series of steps to set up "
-"options and directories. This process creates a subdirectory of your home "
+"When first run, GIMP performs a series of steps to configure options and "
+"directories. The configuration process creates a subdirectory in your home "
 "directory called <filename class=\"directory\">.gimp-2.6</filename>. All of "
-"the information about the choices you make here goes into that directory. If "
-"you later remove that directory, or rename it as something like <filename "
-"class=\"directory\">.gimp-2.6.bak</filename>, then the next time you start "
-"GIMP, it will go through the whole setup sequence again, creating a new "
-"<filename class=\"directory\">.gimp-2.6</filename> directory. You can "
-"exploit this if you want to explore the effect of different choices without "
-"destroying your existing installation, or if you have screwed things up so "
-"badly that your existing installation needs to be nuked."
+"the configuration information is stored in this directory. If you remove or "
+"rename the directory, GIMP will repeat the initial configuration process, "
+"creating a new <filename class=\"directory\">.gimp-2.6</filename> directory. "
+"Use this capability to explore different configuration options without "
+"destroying your existing installation, or to recover if your configuration "
+"files are damaged."
 msgstr ""
-"初めて<acronym>GIMP</acronym>を利用したときは、始めに装備調度とディレクトリ確"
-"保がなされます。この処置によりあなたのホームディレクトリにサブディレクトリ "
-"<filename class=\"directory\">.gimp-2.6</filename> が掘られます。 今後使用中"
-"に採った選択の情報が全てここに集約されます。 もしこのディレクトリを削除した"
-"り、 <filename class=\"directory\">.gimp-2.6.bak</filename> のような別名に変"
-"更したときは、この直後に<acronym>GIMP</acronym>を起動すれば再び初回処置が行わ"
-"れ、 <filename class=\"directory\">.gimp-2.6</filename> ディレクトリが作られ"
-"ます。 この後者の手法を用いれば、 以前の設定を崩さずに新たな選択の効果を試す"
-"ことが可能ですし、 あるいは設定を詰め込みすぎて困ったときに白紙に戻ってみるこ"
-"ともできます。"
+"初めて<acronym>GIMP</acronym>を利用したときは、 始めに装備とディレクトリの設"
+"定をすすめます。 この処置によりあなたのホームディレクトリに <filename class="
+"\"directory\">.gimp-2.6</filename> という名前のサブディレクトリが掘られま"
+"す。 設定した内容や情報はこのディレクトリに保管されます。 このディレクトリを"
+"削除したり、 別名に変更したときは、 次回の起動の際に<acronym>GIMP</acronym>は"
+"再び初回処置を行ない、 また新たに <filename class=\"directory\">.gimp-2.6</"
+"filename> ディレクトリが掘られます。 この手法を用いれば、 以前の設定を崩さず"
+"に新たな選択の効果を探検することが可能ですし、 あるいは設定ファイルが壊れてし"
+"まった場合に復帰するのにも役立ちます。"
 
-#: src/concepts/setup.xml:38(phrase)
+#: src/concepts/setup.xml:35(title)
 msgid "Finally . . ."
 msgstr "あと少し. . ."
 
-#: src/concepts/setup.xml:40(para)
+#. TODO: "Tip of the Day" is no longer displayed automatically, is it?
+#.          (ude 2009-06-29)
+#: src/concepts/setup.xml:39(para)
 msgid ""
-"Just a couple of suggestions before you start, though: First, when you run "
-"GIMP, by default it shows a \"tip\" each time it starts up. These tips tell "
-"you things that are very useful but not easy to learn by experimenting, so "
-"they are worth paying attention to. If you find it too distracting to look "
-"at them each time you start, you can disable them; but please go through "
-"them when you have the chance: for your convenience, you can read them at "
-"any time using the menu command <menuchoice><guimenu>Help</"
-"guimenu><guimenuitem>Tips</guimenuitem></menuchoice>. Second, if at some "
-"point you are trying to do something, and GIMP seems to have suddenly "
-"stopped functioning, the section <link linkend=\"gimp-using-getting-unstuck"
+"Just a couple of suggestions before you start, though: First, <acronym>GIMP</"
+"acronym> provides tips you can read at any time using the menu command "
+"<menuchoice><guimenu>Help</guimenu><guimenuitem>Tip of the Day</"
+"guimenuitem></menuchoice>. The tips provide information that is considered "
+"useful, but not easy to learn by experimenting; so they are worth reading. "
+"Please read the tips when you have the time. Second, if at some point you "
+"are trying to do something, and GIMP seems to have suddenly stopped "
+"functioning, the section <link linkend=\"gimp-using-getting-unstuck"
 "\">Getting Unstuck</link> may help you out. Happy Gimping!"
 msgstr ""
-"最後、起動までに二言つけくわえさせてください。まずひとつめ: "
-"<acronym>GIMP</acronym>を使うとデフォルトでは始めに<quote>今日の技</quote>が"
-"現れます。 今日の技は経験を詰むだけでは得難いがとても役に立つまめ知識が満載"
-"なので、 ぜひ読んでいただきたく思います。 とはいえ起動のたびに何度も見せられ"
-"てはかなわないという方のために、 これは中止できるようになっています。 しかし"
-"できれば一通りは目を通して下さい。メニューより <menuchoice><guimenu>ヘルプ"
-"(<accel>H</accel>)</guimenu><guimenuitem>今日の技(<accel>T</accel>)</"
+"最後、 起動までに二言つけくわえさせてください。まずひとつめ: <acronym>GIMP</"
+"acronym>を使うとデフォルトでは始めに<quote>今日の技</quote>が現れます。 今日"
+"acronym>は毎回起動時に<quote>今日の技</quote>を表示します。 今日の技は経験を"
+"詰むだけでは得難いがとても役に立つまめ知識が満載なので、 ぜひ読んでいただきた"
+"く思います。 起動のたびに表示してほしくない方は、 中止させても構いません。 し"
+"かしできれば一通りは目を通して下さい。 メニューより <menuchoice><guimenu>ヘル"
+"プ(<accel>H</accel>)</guimenu><guimenuitem>今日の技(<accel>T</accel>)</"
 "guimenuitem></menuchoice> と辿れば連続して読めるようになっています。ふたつめ"
-"に: 何か作業している最中に、 <acronym>GIMP</acronym>が突然動かなくなってしま"
-"ったときは、 <link linkend=\"gimp-using-getting-unstuck\">固まったときの対処"
-"</link> の節がお役に立てるかもしれません。 <emphasis>さあ Gimp で楽しもう!</"
-"emphasis>"
+"に: 何か作業している最中に、 <acronym>GIMP</acronym>が突然動かなくなってし"
+"まったときは、 <link linkend=\"gimp-using-getting-unstuck\">固まったときの対"
+"処</link> の節がお役に立てるかもしれません。 <emphasis>さあ Gimp で楽しもう!"
+"</emphasis>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -523,7 +520,7 @@ msgstr ""
 msgid "The Selection"
 msgstr "選択"
 
-#: src/concepts/selection.xml:21(primary) src/concepts/concepts.xml:117(term)
+#: src/concepts/selection.xml:21(primary) src/concepts/concepts.xml:116(term)
 msgid "Selections"
 msgstr "選択範囲"
 
@@ -710,12 +707,12 @@ msgid ""
 msgstr ""
 "選択はいつでもその境界をぼかすことができます。 つまり具体的には、 元は明瞭な"
 "線でできていた選択をあとからぼかせるということです。 その方法はメニューから "
-"<menuchoice><guimenu>選択(<accel>S</accel>)</guimenu><guimenuitem>境界を"
-"ぼかす(<accel>T</accel>)...</guimenuitem></menuchoice> に進んで実行です。 出"
-"てきたダイアログで線をぼかす量が調節できます。 その逆のこと、 つまりぼやけた"
-"輪郭線を一切か無かの明確なものに替えるには、 メニューから <menuchoice>  "
-"<guimenu>選択(<accel>S</accel>)</guimenu><guimenuitem>境界を明確化"
-"(<accel>S</accel>)</guimenuitem></menuchoice> を選んでください。"
+"<menuchoice><guimenu>選択(<accel>S</accel>)</guimenu><guimenuitem>境界をぼか"
+"す(<accel>T</accel>)...</guimenuitem></menuchoice> に進んで実行です。 出てき"
+"たダイアログで線をぼかす量が調節できます。 その逆のこと、 つまりぼやけた輪郭"
+"線を一切か無かの明確なものに替えるには、 メニューから <menuchoice>  <guimenu>"
+"選択(<accel>S</accel>)</guimenu><guimenuitem>境界を明確化(<accel>S</accel>)</"
+"guimenuitem></menuchoice> を選んでください。"
 
 #: src/concepts/selection.xml:158(para)
 msgid ""
@@ -759,18 +756,18 @@ msgid ""
 "activated : you can also use the command in the context menu that you get by "
 "right clicking on the selected layer in the layer dialog)."
 msgstr ""
-"複雑な選択の場合: フロート選択を <menuchoice><guimenu>選択(<accel>S</"
-"accel>)</guimenu><guimenuitem>選択範囲をフロート化(<accel>F</accel>)</"
-"guimenuitem></menuchoice> のコマンドで作成します。 できあがったレイヤーは"
-"<quote>フローティング選択範囲</quote>といいます。 レイヤーダイアログの"
-"<guilabel>不透明度</guilabel> スライダを動かして任意に不透明度を定めます。 そ"
-"の後は選択レイヤーを固定します。 選択範囲の外側にマウスポインタを移動すると錨"
-"のアイコンに替わるのでそこでクリックすればできます。 フローティング選択範囲は"
-"レイヤーダイアログから消え、 選択範囲はあるべき場所に落ち着き、 不完全透明に"
-"なっているはずです。 (上記の固定化の操作は選択ツールが実効状態の場合にしかで"
-"きません。 代わりにレイヤーダイアログにおいてその選択レイヤー上で右クリックす"
-"ると現れるメニューより <guilabel>レイヤーを固定(<accel>A</accel>)</guilabel> "
-"コマンドを使うという方法があります。)"
+"複雑な選択の場合: フロート選択を <menuchoice><guimenu>選択(<accel>S</accel>)"
+"</guimenu><guimenuitem>選択範囲をフロート化(<accel>F</accel>)</guimenuitem></"
+"menuchoice> のコマンドで作成します。 できあがったレイヤーは<quote>フローティ"
+"ング選択範囲</quote>といいます。 レイヤーダイアログの<guilabel>不透明度</"
+"guilabel> スライダを動かして任意に不透明度を定めます。 その後は選択レイヤーを"
+"固定します。 選択範囲の外側にマウスポインタを移動すると錨のアイコンに替わるの"
+"でそこでクリックすればできます。 フローティング選択範囲はレイヤーダイアログか"
+"ら消え、 選択範囲はあるべき場所に落ち着き、 不完全透明になっているはずです。 "
+"(上記の固定化の操作は選択ツールが実効状態の場合にしかできません。 代わりにレ"
+"イヤーダイアログにおいてその選択レイヤー上で右クリックすると現れるメニューよ"
+"り <guilabel>レイヤーを固定(<accel>A</accel>)</guilabel> コマンドを使うという"
+"方法があります。)"
 
 #: src/concepts/selection.xml:198(para)
 msgid ""
@@ -785,11 +782,11 @@ msgstr ""
 "この方法を頻繁に使われるのならば、 <keycombo><keycap>Ctrl</keycap><keycap>C</"
 "keycap></keycombo> で選択を写し取り、 <keycombo><keycap>Ctrl</"
 "keycap><keycap>V</keycap></keycombo> で貼り付ければフロート選択ができますか"
-"ら、 ここで不透明度を適正にして、 メニューから <menuchoice><guimenu>レイ"
-"ヤー(<accel>L</accel>)</guimenu><guimenuitem>レイヤーを追加(<accel>N</"
-"accel>)...</guimenuitem></menuchoice> することでフロート選択を新規のレイヤー"
-"にするのもよいでしょう。 <quote>レイヤーを追加</quote>コマンドに独自のショー"
-"トカットを与えれば、 全てをキーボードだけで処理できます。"
+"ら、 ここで不透明度を適正にして、 メニューから <menuchoice><guimenu>レイヤー"
+"(<accel>L</accel>)</guimenu><guimenuitem>レイヤーを追加(<accel>N</accel>)..."
+"</guimenuitem></menuchoice> することでフロート選択を新規のレイヤーにするのも"
+"よいでしょう。 <quote>レイヤーを追加</quote>コマンドに独自のショートカットを"
+"与えれば、 全てをキーボードだけで処理できます。"
 
 #: src/concepts/selection.xml:214(para)
 msgid ""
@@ -800,17 +797,17 @@ msgid ""
 "i-e paint it with transparency. Then Layer/Mask/Apply Layer Mask. See <xref "
 "linkend=\"gimp-layer-mask\"/>."
 msgstr ""
-"また別の方法: メニューから <menuchoice><guimenu>レイヤー(<accel>L</accel>)"
-"</guimenu><guimenuitem>レイヤーマスク(<accel>M</accel>)</guimenuitem>"
-"<guimenuitem>レイヤーマスクを追加(<accel>Y</accel>)...</guimenuitem></"
-"menuchoice> で出てきた<quote>レイヤーマスク追加</quote>ダイアログで "
-"<guilabel>レイヤーマスクの初期化方法</guilabel> に <guilabel>選択範囲"
+"また別の方法: メニューから <menuchoice><guimenu>レイヤー(<accel>L</accel>)</"
+"guimenu><guimenuitem>レイヤーマスク(<accel>M</accel>)</"
+"guimenuitem><guimenuitem>レイヤーマスクを追加(<accel>Y</accel>)...</"
+"guimenuitem></menuchoice> で出てきた<quote>レイヤーマスク追加</quote>ダイアロ"
+"グで <guilabel>レイヤーマスクの初期化方法</guilabel> に <guilabel>選択範囲"
 "(<accel>S</accel>)</guilabel> を選んで追加を実行します。 つぎはそこに、随意の"
 "不透明度を設定したブラシで黒く塗れば、 塗ったぶんだけ透明度が増します。 最後"
-"に <menuchoice><guimenu>レイヤー(<accel>L</accel>)</guimenu><guimenuitem>"
-"レイヤーマスク(<accel>M</accel>)</guimenuitem><guimenuitem>レイヤーマスクを"
-"適用(<accel>M</accel>)</guimenuitem></menuchoice> して終了です。 <xref "
-"linkend=\"gimp-layer-mask\" /> の節もご覧ください。"
+"に <menuchoice><guimenu>レイヤー(<accel>L</accel>)</guimenu><guimenuitem>レイ"
+"ヤーマスク(<accel>M</accel>)</guimenuitem><guimenuitem>レイヤーマスクを適用"
+"(<accel>M</accel>)</guimenuitem></menuchoice> して終了です。 <xref linkend="
+"\"gimp-layer-mask\" /> の節もご覧ください。"
 
 #: src/concepts/selection.xml:229(para)
 msgid ""
@@ -837,10 +834,10 @@ msgid ""
 "complete transparency to a selection and doesn't allow to enjoy the Opacity "
 "setting of the Fill tool."
 msgstr ""
-"最も単純なのは <menuchoice><guimenu>編集(<accel>E</accel>)</guimenu>"
-"<guimenuitem>消去(<accel>E</accel>)</guimenuitem></menuchoice> する方法で、 "
-"選択範囲が完全透過になるだけで塗りつぶしツールのような不透明度の調整の面白み"
-"がありません。"
+"最も単純なのは <menuchoice><guimenu>編集(<accel>E</accel>)</"
+"guimenu><guimenuitem>消去(<accel>E</accel>)</guimenuitem></menuchoice> する方"
+"法で、 選択範囲が完全透過になるだけで塗りつぶしツールのような不透明度の調整の"
+"面白みがありません。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1343,10 +1340,10 @@ msgstr ""
 "ないほど強力になった方法で選択を手懐けられます。 クイックマスクを起動するに"
 "は、 画像ウィンドウの左下にある赤枠印をクリックします。 このボタンは切り替え"
 "式で、 もう一度クリックすればもとの点滅破線のモードに戻ります。 そのほかにメ"
-"ニューで <menuchoice><guimenu>選択(<accel>S</accel>)</guimenu>"
-"<guimenuitem>クイックマスクの切り替え(<accel>Q</accel>)</guimenuitem></"
-"menuchoice> としてもクイックマスクになりますし、 ショートカット "
-"<keycombo><keycap>Shift</keycap><keycap>Q</keycap></keycombo> も使えます。"
+"ニューで <menuchoice><guimenu>選択(<accel>S</accel>)</guimenu><guimenuitem>ク"
+"イックマスクの切り替え(<accel>Q</accel>)</guimenuitem></menuchoice> としても"
+"クイックマスクになりますし、 ショートカット <keycombo><keycap>Shift</"
+"keycap><keycap>Q</keycap></keycombo> も使えます。"
 
 #: src/concepts/qmask.xml:63(para)
 msgid ""
@@ -1695,7 +1692,7 @@ msgstr ""
 "ることもあれば非常に難しいこともあります。 いずれにせよ最良と考えられている順"
 "路は2つあります。"
 
-#: src/concepts/plugins.xml:174(phrase) src/concepts/intro.xml:74(term)
+#: src/concepts/plugins.xml:174(phrase) src/concepts/intro.xml:76(term)
 msgid "Linux"
 msgstr "UNIXクローン"
 
@@ -1707,9 +1704,9 @@ msgid ""
 "<filename>Makefile</filename>."
 msgstr ""
 "大多数のプラグインは2つに分類できます。 片や配布されるソースコードがたったひ"
-"とつの <filename>.c</filename> ファイルだけのものと、 対して "
-"<filename>Makefile</filename> を含め複数のファイルを収めたディレクトリからな"
-"る配布形態をとる大きなものです。"
+"とつの <filename class=\"extension\">.c</filename> ファイルだけのものと、 対"
+"して <filename>Makefile</filename> を含め複数のファイルを収めたディレクトリか"
+"らなる配布形態をとる大きなものです。"
 
 #: src/concepts/plugins.xml:182(para)
 msgid ""
@@ -1727,11 +1724,11 @@ msgstr ""
 "command> <option>--install</option> <filename>borker.c</filename></"
 "userinput> というコマンドを走らせることだけです。 このコマンドでプラグインの"
 "コンパイルが行われ、 個人用プラグインのディレクトリ (初期設定どおりなら "
-"<filename>~/.gimp-2.6/plugins/</filename> ) にインストールされます。 これで次"
-"回の<acronym>GIMP</acronym>起動時よりこのプラグインが自動的に読み込まれるよう"
-"になります。 この作業はルートになる必要がありません。 むしろなってはいけませ"
-"ん。 ところでもしもプラグインのコンパイルに失敗してしまっても、 これを前向き"
-"にとらえて創造的になりましょう。"
+"<filename class=\"directory\">~/.gimp-2.6/plugins/</filename> ) にインストー"
+"ルされます。 これで次回の<acronym>GIMP</acronym>起動時よりこのプラグインが自"
+"動的に読み込まれるようになります。 この作業はルートになる必要がありません。 "
+"むしろなってはいけません。 ところでもしもプラグインのコンパイルに失敗してし"
+"まっても、 これを前向きにとらえて創造的になりましょう。"
 
 #: src/concepts/plugins.xml:193(para)
 msgid ""
@@ -1745,14 +1742,14 @@ msgid ""
 msgstr ""
 "プラグインのインストールができたとして、 どうすれば呼び出せるのでしょう。 ど"
 "このメニューに入るかはプラグイン自身が決定しますので、 その答えはプラグイン付"
-"属の文書 (もしあればの話です) を読むか、 メニューより <menuchoice><guimenu>"
-"ヘルプ(<accel>H</accel>)</guimenu><guimenuitem>プラグインブラウザ"
-"(<accel>P</accel>)</guimenuitem></menuchoice> と進んで<quote>プラグインブラウ"
-"ザ</quote>を開き、 プラグインの名前で <guilabel>検索(<accel>S</accel>)</"
-"guilabel> して <guilabel>ツリー表示</guilabel> のタブをご覧になって得てくださ"
-"い。 それでも依然として分からない場合は、 メニューをしらみつぶしに探すかソー"
-"スコードの登録動作部分 (例えば <function>gimp_install_procedure</function>) "
-"を見付けるかのどちらか簡単な方をするしかもう成す術がありません。"
+"属の文書 (もしあればの話です) を読むか、 メニューより <menuchoice><guimenu>ヘ"
+"ルプ(<accel>H</accel>)</guimenu><guimenuitem>プラグインブラウザ(<accel>P</"
+"accel>)</guimenuitem></menuchoice> と進んで<quote>プラグインブラウザ</quote>"
+"を開き、 プラグインの名前で <guilabel>検索(<accel>S</accel>)</guilabel> して "
+"<guilabel>ツリー表示</guilabel> のタブをご覧になって得てください。 それでも依"
+"然として分からない場合は、 メニューをしらみつぶしに探すかソースコードの登録動"
+"作部分 (例えば <function>gimp_install_procedure</function>) を見付けるかのど"
+"ちらか簡単な方をするしかもう成す術がありません。"
 
 #: src/concepts/plugins.xml:203(para)
 msgid ""
@@ -1856,7 +1853,7 @@ msgstr ""
 "なので誰でも自由に編集できますから、 是非ともあなたの経験に基づくアドバイスを"
 "書き加えて、 最新情報を保つことにご協力していただきたく思います。"
 
-#: src/concepts/plugins.xml:265(phrase) src/concepts/intro.xml:126(term)
+#: src/concepts/plugins.xml:265(phrase) src/concepts/intro.xml:129(term)
 msgid "Apple Mac OS X"
 msgstr "Apple Mac OS X"
 
@@ -2158,14 +2155,15 @@ msgstr ""
 "<acronym>GIMP</acronym>でパターンファイルを使えるようにするには、 まずその"
 "ファイルを<acronym>GIMP</acronym>がパターンを検索する場所として登録されたパ"
 "ターン用フォルダに入れてください。 初期設定では、 ユーザは改変できないシステ"
-"ム用の <filename>patterns</filename> フォルダと、 個人用の<acronym>GIMP</"
-"acronym>ディレクトリ内の <filename>patterns</filename> フォルダの2箇所が既に"
-"パターン用フォルダとして登録されています。 それ以外のフォルダを追加するには"
-"<link linkend=\"gimp-prefs-folders-data\">環境設定</link> ダイアログの<quote>"
-"パターン用フォルダ</quote>のページで登録してください。 PAT形式のファイル (や"
-"<acronym>GIMP</acronym> 2.2 以降ならパターンに利用可能なその他の形式のファイ"
-"ル) はいずれもパターン用フォルダに入れておけば次の<acronym>GIMP</acronym>の起"
-"動時からパターンダイアログの一覧に加わります。"
+"ム用の <filename class=\"directory\">patterns</filename> フォルダと、 個人用"
+"の<acronym>GIMP</acronym>ディレクトリ内の <filename class=\"directory"
+"\">patterns</filename> フォルダの2箇所が既にパターン用フォルダとして登録され"
+"ています。 それ以外のフォルダを追加するには<link linkend=\"gimp-prefs-"
+"folders-data\">環境設定</link> ダイアログの<quote>パターン用フォルダ</quote>"
+"のページで登録してください。 PAT形式のファイル (や<acronym>GIMP</acronym> "
+"2.2 以降ならパターンに利用可能なその他の形式のファイル) はいずれもパターン用"
+"フォルダに入れておけば次の<acronym>GIMP</acronym>の起動時からパターンダイアロ"
+"グの一覧に加わります。"
 
 #: src/concepts/patterns.xml:177(para)
 msgid ""
@@ -2388,13 +2386,14 @@ msgid ""
 msgstr ""
 "パレットエディタダイアログを使ってパレットを作成したあと、 <acronym>GIMP</"
 "acronym> を終了するとそれらは直ちに自動的に <acronym>GIMP</acronym>の個人用"
-"ディレクトリの <filename>palettes</filename> フォルダ内へ保存されます。 この"
-"ディレクトリ内や、 <acronym>GIMP</acronym>のインストール時に作成されたシステ"
-"ム用の <filename>palettes</filename> フォルダに入っているパレットは、 いずれ"
-"も<acronym>GIMP</acronym>を起動したときに自動的に読み込まれ、 パレットダイア"
-"ログ上で列挙されます。 他のディレクトリをパレット用のフォルダとして検索対象に"
-"加えたいときは、 <link linkend=\"gimp-prefs-folders-data\">環境設定</link> ダ"
-"イアログの<quote>パレット用フォルダ</quote>のページで追加登録してください。"
+"ディレクトリの <filename class=\"directory\">palettes</filename> フォルダ内へ"
+"保存されます。 このディレクトリ内や、 <acronym>GIMP</acronym>のインストール時"
+"に作成されたシステム用の <filename class=\"directory\">palettes</filename> "
+"フォルダに入っているパレットは、 いずれも<acronym>GIMP</acronym>を起動したと"
+"きに自動的に読み込まれ、 パレットダイアログ上で列挙されます。 他のディレクト"
+"リをパレット用のフォルダとして検索対象に加えたいときは、 <link linkend="
+"\"gimp-prefs-folders-data\">環境設定</link> ダイアログの<quote>パレット用フォ"
+"ルダ</quote>のページで追加登録してください。"
 
 #: src/concepts/palettes.xml:116(para)
 msgid ""
@@ -2406,12 +2405,12 @@ msgid ""
 "see what to do."
 msgstr ""
 "<acronym>GIMP</acronym>のパレットは専用のファイル形式で保存され、 その名前に"
-"は拡張子 <filename>.gpl</filename> が付きます。 内容は大変簡素な"
-"<acronym>ASCII</acronym>テキストのみによる形式なので、 仮に他所から取得したパ"
-"レットを <acronym>GIMP</acronym>用に使う要求が生じたとしても、 それを"
+"は拡張子 <filename class=\"extension\">.gpl</filename> が付きます。 内容は大"
+"変簡素な<acronym>ASCII</acronym>テキストのみによる形式なので、 仮に他所から取"
+"得したパレットを <acronym>GIMP</acronym>用に使う要求が生じたとしても、 それを"
 "<acronym>GIMP</acronym>用に転換する作業は大して難しくはならないでしょう。 ま"
-"ずはどれかひとつ <filename>.gpl</filename> 形式のファイルの中身を見てくださ"
-"い。何をすればよいか理解できるはずです。"
+"ずはどれかひとつ <filename class=\"extension\">.gpl</filename> 形式のファイル"
+"の中身を見てください。何をすればよいか理解できるはずです。"
 
 #: src/concepts/palettes.xml:127(phrase)
 msgid "Colormap"
@@ -2584,7 +2583,7 @@ msgid "Introduction to Layers"
 msgstr "レイヤーのあらまし"
 
 #: src/concepts/layers.xml:21(primary) src/concepts/layers.xml:311(primary)
-#: src/concepts/concepts.xml:82(term)
+#: src/concepts/concepts.xml:81(term)
 msgid "Layers"
 msgstr "レイヤー"
 
@@ -2778,10 +2777,10 @@ msgid ""
 "image."
 msgstr ""
 "最前面のレイヤーの左半分が透明になった (矩形選択してから <menuchoice>  "
-"<shortcut><keycap>Delete</keycap></shortcut><guimenu>編集(<accel>E</"
-"accel>)</guimenu><guimenuitem>消去(<accel>E</accel>)</guimenuitem></"
-"menuchoice> )。 第2のレイヤーの緑が透けて見える。 アルファチャンネルがまだ白"
-"いままなのは、 画像にはこの区画で不透明なレイヤーがあるためである。"
+"<shortcut><keycap>Delete</keycap></shortcut><guimenu>編集(<accel>E</accel>)</"
+"guimenu><guimenuitem>消去(<accel>E</accel>)</guimenuitem></menuchoice> )。 第"
+"2のレイヤーの緑が透けて見える。 アルファチャンネルがまだ白いままなのは、 画像"
+"にはこの区画で不透明なレイヤーがあるためである。"
 
 #: src/concepts/layers.xml:164(title)
 msgid "Alpha channel example: Two transparent layers"
@@ -2827,8 +2826,8 @@ msgid ""
 "part of the Alpha Channel thumbnail is black (transparent) in the Channel "
 "Dialog."
 msgstr ""
-"<menuchoice><guimenu>レイヤー(<accel>L</accel>)</guimenu><guimenuitem>透"
-"明部分(<accel>A</accel>)</guimenuitem><guisubmenu>アルファチャンネルを追加"
+"<menuchoice><guimenu>レイヤー(<accel>L</accel>)</guimenu><guimenuitem>透明部"
+"分(<accel>A</accel>)</guimenuitem><guisubmenu>アルファチャンネルを追加"
 "(<accel>H</accel>)</guisubmenu></menuchoice> コマンドを背景レイヤーに対して"
 "使った。 とうとうこの画像の左半分は完全に透過し、 画像が置かれたページの色が"
 "出ている。<!-- ?? --> アルファチャンネルの左部分は透明になり、 チャンネルダイ"
@@ -4531,29 +4530,28 @@ msgstr ""
 
 #: src/concepts/intro.xml:28(para)
 msgid ""
-"In most operating systems, you can set things up so that various types of "
-"image files are <quote>associated</quote> with GIMP, and cause it to start "
-"automatically when icons for them are double-clicked."
+"Most operating systems support file associations, which associates a class "
+"of files (as determined by their filename extension, such as .jpg) with a "
+"corresponding application (such as GIMP). When image files are properly "
+"<quote>associated</quote> to GIMP, you can double click on an image to open "
+"it in GIMP."
 msgstr ""
-"ほとんどのオペレーティングシステムでは、<acronym>GIMP</acronym>に対して画像"
-"ファイルを<quote>関連付け</quote>しておけば、 そのファイルのアイコンをダブル"
-"クリックするだけで起動できます。"
 
-#: src/concepts/intro.xml:35(title)
+#: src/concepts/intro.xml:37(title)
 msgid "Known Platforms"
 msgstr "動作可能な環境"
 
-#: src/concepts/intro.xml:36(para)
+#: src/concepts/intro.xml:38(para)
 msgid ""
 "The <acronym>GIMP</acronym> is the most widely supported image manipulation "
-"available today. The platforms that The <acronym>GIMP</acronym> is known to "
-"work on include:"
+"available today. The platforms on which <acronym>GIMP</acronym> is known to "
+"work include:"
 msgstr ""
 "<acronym>GIMP</acronym>は現在最も広くサポートされている画像操作ソフトです。"
 "<acronym>GIMP</acronym>は以下のプラットフォームで動作することが分かっていま"
-"す:"
+"す。"
 
-#: src/concepts/intro.xml:41(para)
+#: src/concepts/intro.xml:43(para)
 msgid ""
 "<productname><acronym>GNU</acronym>/Linux</productname>, <productname>Apple "
 "Mac OS X</productname>, <productname>Microsoft Windows</productname>, "
@@ -4575,9 +4573,9 @@ msgstr ""
 "<productname>IRIX</productname>、 <productname>OS/2</productname>、 "
 "<productname>BeOS</productname>。"
 
-#: src/concepts/intro.xml:54(para)
+#: src/concepts/intro.xml:56(para)
 msgid ""
-"The <acronym>GIMP</acronym> can easily be ported to other operating systems "
+"The <acronym>GIMP</acronym> is easily ported to other operating systems "
 "because of its source code availability. For further information visit the "
 "GIMP developers homepage. <xref linkend=\"bibliography-online-gimp-dev\"/>."
 msgstr ""
@@ -4585,53 +4583,49 @@ msgstr ""
 "からこそ可能なのです。 さらに詳しい情報は<acronym>GIMP</acronym>開発者のペー"
 "ジでご覧下さい <xref linkend=\"bibliography-online-gimp-dev\" />。"
 
-#: src/concepts/intro.xml:63(title)
+#: src/concepts/intro.xml:65(title)
 msgid "Language"
 msgstr "言語"
 
-#: src/concepts/intro.xml:65(primary)
+#: src/concepts/intro.xml:67(primary)
 msgid "Languages"
 msgstr "言語"
 
-#: src/concepts/intro.xml:67(para)
+#: src/concepts/intro.xml:69(para)
 msgid ""
-"All being well, GIMP detects the system language. This may fail on some "
-"machines and you may want use another language. It is possible to change the "
-"language:"
+"GIMP automatically detects and uses the system language. In the unlikely "
+"event that language detection fails, or if you just want to use a different "
+"language, you may do so:"
 msgstr ""
-"何も問題なければ、<acronym>GIMP</acronym>はシステムから適切な言語を選びだすは"
-"ずですが、マシンによっては違ったことになったり、そもそも別の言語で起動する必"
-"要に迫られることになるかもしれません。 言語は次のようにして変更できます:"
 
-#: src/concepts/intro.xml:76(para)
+#: src/concepts/intro.xml:78(para)
 msgid ""
 "<emphasis>In LINUX</emphasis>: in console mode, type <userinput>LANGUAGE=en "
 "gimp</userinput> or <userinput>LANG=en gimp</userinput> replacing en by fr, "
-"de, ... according to the language you want. Background: By using "
-"<userinput>LANGUAGE=en</userinput> you're setting an environment variable "
-"for the executed program <userinput>gimp</userinput> here."
+"de, ... according to the language you want. Background: Using "
+"<userinput>LANGUAGE=en</userinput> sets an environment variable for the "
+"executed program <userinput>gimp</userinput>."
 msgstr ""
-"<emphasis>LINUXの場合</emphasis>: コンソールのコマンドラインで、<userinput>"
-"LANGUAGE=<replaceable>ja_JP</replaceable> <command>gimp</command></userinput>"
-" あるいは <userinput>LANG=<replaceable>ja_JP</replaceable> <command>gimp</"
-"command></userinput> のように送ってください。 <literal>ja_JP</literal> のとこ"
-"ろは <literal>ja_JP.eucJP</literal>、 <literal>ja_JP.Shift_JIS</literal>、 <"
-"literal>ja_JP.UTF-8</literal> のように文字コードを明示したり (<userinput>LANG"
-"=</userinput> に限る)、 <literal>ar</literal>、 <literal>fa</literal>、 <"
-"literal>tr</literal> または <literal>en_GB</literal>、 <literal>pt_BR</"
-"literal>、 <literal>zh_CN</literal> のように言語を指定できます。 背景: <"
-"userinput>LANGUAGE=<replaceable>ja</replaceable></userinput> としたときそこで"
-"起動した <command>gimp</command> の環境変数のひとつが書き換わるしくみになって"
-"います。"
-"</para><para lang=\"ja\">"
-"<emphasis><acronym>BSD</acronym>系の場合</emphasis>: Linux の場合とほとんど"
-"同じです。"
+"<emphasis>LINUXの場合</emphasis>: コンソールのコマンドラインで、"
+"<userinput>LANGUAGE=<replaceable>ja_JP</replaceable> <command>gimp</"
+"command></userinput> あるいは <userinput>LANG=<replaceable>ja_JP</"
+"replaceable> <command>gimp</command></userinput> のように送ってください。 "
+"<literal>ja_JP</literal> のところは <literal>ja_JP.eucJP</literal>、 "
+"<literal>ja_JP.Shift_JIS</literal>、 <literal>ja_JP.UTF-8</literal> のように"
+"文字コードを明示したり (<userinput>LANG=</userinput> に限る)、 <literal>ar</"
+"literal>、 <literal>fa</literal>、 <literal>tr</literal> または "
+"<literal>en_GB</literal>、 <literal>pt_BR</literal>、 <literal>zh_CN</"
+"literal> のように言語を指定できます。 背景: "
+"<userinput>LANGUAGE=<replaceable>ja</replaceable></userinput> としたときそこ"
+"で起動した <command>gimp</command> の環境変数のひとつが書き換わるしくみになっ"
+"ています。</para><para lang=\"ja\"><emphasis><acronym>BSD</acronym>系の場合</"
+"emphasis>: Linux の場合とほとんど同じです。"
 
-#: src/concepts/intro.xml:88(term)
+#: src/concepts/intro.xml:90(term)
 msgid "Windows XP"
 msgstr "Windows XP / Windows Vista"
 
-#: src/concepts/intro.xml:90(para)
+#: src/concepts/intro.xml:92(para)
 msgid ""
 "<menuchoice><guimenu>Control Panel</guimenu><guisubmenu>System</"
 "guisubmenu><guisubmenu>Advanced</guisubmenu><guimenuitem>Environment</"
@@ -4647,28 +4641,28 @@ msgstr ""
 "辿り、 <guibutton>新規</guibutton>ボタンをクリック。 <quote>システム変数</"
 "quote>のところで、 変数名欄に <literal>LANG</literal> 、変数値欄に日本語なら"
 "ば <literal>ja</literal>、 外国語なら <literal>de</literal>、 <literal>fr</"
-"literal>、 <literal>it</literal> あるいは <literal>en_CA</literal>、 <literal"
-">ko_KR</literal> のような言語符号や、あるいは <literal>ja_JP.Shift_JIS</"
-"literal>、 <literal>ja_JP.UTF-8</literal> のように文字コードを明示した符号を"
-"記入します。 連続して3度<guibutton>OK</guibutton>ボタンを押すと完了です。"
-"</para><para lang=\"ja\">"
-"<emphasis>Windows Vista</emphasis> の場合: <menuchoice><guimenu>スタート</"
-"guimenu><guisubmenu>コントロールパネル</guisubmenu><guisubmenu>システムとメン"
-"テナンス</guisubmenu><guisubmenu>システム</guisubmenu><guimenuitem>システムの"
-"詳細設定</guimenuitem></menuchoice> に進むと<quote>管理者アカウントとパスワー"
-"ドの問い合わせ</quote> になるのでログインします。 そのあと、 <guimenuitem>環"
-"境変数(<accel>N</accel>)...</guimenuitem> のところで、 <guibutton>新規</"
-"guibutton> ボタンをクリック。 <quote>システム変数</quote>の記入のしかたは "
-"<productname>Windows XP</productname> と同じです。"
+"literal>、 <literal>it</literal> あるいは <literal>en_CA</literal>、 "
+"<literal>ko_KR</literal> のような言語符号や、あるいは <literal>ja_JP."
+"Shift_JIS</literal>、 <literal>ja_JP.UTF-8</literal> のように文字コードを明示"
+"した符号を記入します。 連続して3度<guibutton>OK</guibutton>ボタンを押すと完了"
+"です。</para><para lang=\"ja\"><emphasis>Windows Vista</emphasis> の場合: "
+"<menuchoice><guimenu>スタート</guimenu><guisubmenu>コントロールパネル</"
+"guisubmenu><guisubmenu>システムとメンテナンス</guisubmenu><guisubmenu>システ"
+"ム</guisubmenu><guimenuitem>システムの詳細設定</guimenuitem></menuchoice> に"
+"進むと<quote>管理者アカウントとパスワードの問い合わせ</quote> になるのでログ"
+"インします。 そのあと、 <guimenuitem>環境変数(<accel>N</accel>)...</"
+"guimenuitem> のところで、 <guibutton>新規</guibutton> ボタンをクリック。 "
+"<quote>システム変数</quote>の記入のしかたは <productname>Windows XP</"
+"productname> と同じです。"
 
-#: src/concepts/intro.xml:102(para)
+#: src/concepts/intro.xml:104(para)
 msgid ""
-"If you often change language, you can create a batch file. Open NotePad. "
-"Type the following commands (for french for instance): "
-"<literallayout><userinput>set lang=fr\n"
+"If you change languages often, you can create a batch file to change the "
+"language. Open NotePad. Type the following commands (for french for "
+"instance): <literallayout><userinput>set lang=fr\n"
 "start gimp-2.6.exe</userinput></literallayout> Save this file as "
 "<filename>GIMP-FR.BAT</filename> (or another name, but always with a "
-"<filename class=\"extension\">.BAT</filename> extension). Create shortcut "
+"<filename class=\"extension\">.BAT</filename> extension). Create a shortcut "
 "and drag it to your desktop."
 msgstr ""
 "たびたび言語を変更する必要があるときは、バッチファイルの利用をおすすめしま"
@@ -4680,153 +4674,144 @@ msgstr ""
 "須) して保存します。 そのショートカットを作成してデスクトップに置くのもよいで"
 "しょう。"
 
-#: src/concepts/intro.xml:113(para)
+#: src/concepts/intro.xml:116(para)
 msgid ""
 "Another possibility: <menuchoice><guimenu>Start</"
 "guimenu><guisubmenu>Programs</guisubmenu><guimenuitem>GTK Runtime "
 "Environment</guimenuitem></menuchoice> Then <guimenuitem>Select language</"
-"guimenuitem> and select the language you want in the dropping list that "
-"shows up."
+"guimenuitem> and select the language you want in the dropdown list."
 msgstr ""
 "別の方法: <guimenu>スタート</guimenu> メニューから <menuchoice>  <guisubmenu>"
 "プログラム</guisubmenu>  <guimenuitem>GTK ランタイム環境</guimenuitem></"
-"menuchoice> と進み、 <guimenuitem>言語を選択</guimenuitem> のところで現れる引"
-"き出しメニューで使いたい言語を選択します。"
+"menuchoice> と進み、 <guimenuitem>言語を選択</guimenuitem> の引き出しメニュー"
+"で使いたい言語を選択します。"
 
-#: src/concepts/intro.xml:128(para)
+#: src/concepts/intro.xml:131(para)
 msgid ""
-"Go to System Preferences, click on the International icon, and in the "
-"Language tab, the desired language should be the first in the list."
+"From System Preferences, click on the International icon. In the Language "
+"tab, the desired language should be the first in the list."
 msgstr ""
 "システム設定のウィンドウを開き、 国際化アイコンをクリックして言語タブをクリッ"
 "クします。 利用したい言語をリストの最上位に移動します。"
 
-#: src/concepts/intro.xml:136(term)
+#: src/concepts/intro.xml:139(term)
 msgid "Another GIMP instance"
 msgstr "重複して<acronym>GIMP</acronym>を走らせるとき"
 
-#: src/concepts/intro.xml:138(para)
+#: src/concepts/intro.xml:141(para)
 msgid ""
-"You can have a new GIMP instance by running the command line with the "
-"<userinput>-n</userinput> option: For example: <userinput>gimp-2.6</"
-"userinput> for GIMP in your language and <userinput>LANGUAGE=en gimp-2.6 -n</"
-"userinput> to have GIMP in English also. This is useful for translators."
+"Use <userinput>-n</userinput> to run multiple instances GIMP. For example, "
+"use <userinput>gimp-2.6</userinput> to start GIMP in the default system "
+"language, and <userinput>LANGUAGE=en gimp-2.6 -n</userinput> to start "
+"another instance of GIMP in English; this is very useful for translators."
 msgstr ""
-"コマンドラインで <option>-n</option> オプションをつけると、 重ねて新たな"
-"<acronym>GIMP</acronym>の実施ができます。 例えば、 先に普段の言語で "
-"<command>gimp-2.6</command> を起動し、 英語版の<acronym>GIMP</acronym>を "
-"<command>LANGUAGE=en gimp-2.6 -n</command> として起動するのです。 こうすると"
-"翻訳者も助かります。 <!--ja.poを見た方が素早く楽にできると思うけど...[訳者]--"
-">"
+"<acronym>GIMP</acronym>を複数同時に稼動させるには <option>-n</option> オプ"
+"ションを使います。 例えば、 先にシステムの普段の言語で<command>gimp-2.6</"
+"command> を起動し、 英語版の<acronym>GIMP</acronym>を "
+"<command>LANGUAGE=en&nbsp;gimp-2.6&nbsp;-n</command> として起動するのです。 "
+"こうすると翻訳者も助かります。>"
 
-#: src/concepts/intro.xml:151(title)
+#: src/concepts/intro.xml:154(title)
 msgid "Command Line Arguments"
 msgstr "コマンドラインでの変数一覧"
 
-#: src/concepts/intro.xml:153(primary)
+#: src/concepts/intro.xml:156(primary)
 msgid "Command line Arguments"
 msgstr "コマンドライン変数"
 
-#: src/concepts/intro.xml:155(para)
+#: src/concepts/intro.xml:158(para)
 msgid ""
-"Ordinarily you don't need to give any arguments when starting GIMP, but here "
-"is a list of some that may at one time or another be useful. This is not a "
-"complete list; on Unix systems you can get a complete list by running "
-"<userinput>man gimp</userinput> in a terminal window."
+"Although arguments are not required when starting GIMP, the most common "
+"arguments are shown below. On a Unix system, you can use <userinput>man "
+"gimp</userinput>for a complete list."
 msgstr ""
-"たいていの場合<acronym>GIMP</acronym>を起動する際オプション変数まで指定する必"
-"要はないと思われますが、いざというときのためにここにいくつか挙げておきましょ"
-"う。これで全てではありません。 Unix 風システムではターミナルウィンドウで"
-"<userinput>man gimp</userinput> とすれば、オプションの完全なリストを含むマ"
-"ニュアルが読めます。"
 
-#: src/concepts/intro.xml:162(para)
+#: src/concepts/intro.xml:163(para)
 msgid ""
-"To use the command line options, you have to put them in the command line "
-"which you use to start GIMP as <command>gimp-2.6 [OPTION...] [FILE|URI...]</"
-"command>."
+"Command line arguments must be in the command line that you use to start "
+"GIMP as <command>gimp-2.6 [OPTION...] [FILE|URI...]</command>."
 msgstr ""
-"コマンドラインオプションはコマンドライン上で <acronym>GIMP</acronym>を起動す"
-"る際に<command>gimp-2.6 [オプション...] [ファイル名|場所...]</command> のよう"
-"にコマンドの後にオプションをつづけてから送ります。"
+"コマンドライン変数は<acronym>GIMP</acronym>を起動するコマンドライン上で "
+"<command>gimp-2.6 [オプション...] [ファイル名|場所...]</command> のようにつけ"
+"てください。"
 
-#: src/concepts/intro.xml:169(term)
+#: src/concepts/intro.xml:170(term)
 msgid "-?, --help"
 msgstr "-?, --help"
 
-#: src/concepts/intro.xml:171(para)
+#: src/concepts/intro.xml:172(para)
 msgid "Display a list of all commandline options."
 msgstr "全てのコマンドラインオプションを表示。"
 
-#: src/concepts/intro.xml:175(term)
+#: src/concepts/intro.xml:176(term)
 msgid "--help-all"
 msgstr "--help-all"
 
-#: src/concepts/intro.xml:177(para)
+#: src/concepts/intro.xml:178(para)
 msgid "Show all help options."
 msgstr "全てのヘルプオプションを表示。"
 
-#: src/concepts/intro.xml:181(term)
+#: src/concepts/intro.xml:182(term)
 msgid "--help-gtk"
 msgstr "--help-gtk"
 
-#: src/concepts/intro.xml:183(para)
+#: src/concepts/intro.xml:184(para)
 msgid "Show GTK+ Options."
 msgstr "<acronym>GTK</acronym>+ のオプションを表示。"
 
-#: src/concepts/intro.xml:187(term)
+#: src/concepts/intro.xml:188(term)
 msgid "-v, --version"
 msgstr "-v, --version"
 
-#: src/concepts/intro.xml:189(para)
-msgid "Print the version of GIMP being used, and exit."
-msgstr "現在使用している<acronym>GIMP</acronym>の版を表示して終了。"
+#: src/concepts/intro.xml:190(para)
+msgid "Print the GIMP version and exit."
+msgstr "<acronym>GIMP</acronym>の版を表示して終了。"
 
-#: src/concepts/intro.xml:195(term)
+#: src/concepts/intro.xml:196(term)
 msgid "--license"
 msgstr "--license"
 
-#: src/concepts/intro.xml:197(para)
-msgid "Show license information and exit"
+#: src/concepts/intro.xml:198(para)
+msgid "Show license information and exit."
 msgstr "利用許諾契約に関する情報を表示して終了。"
 
-#: src/concepts/intro.xml:201(term)
+#: src/concepts/intro.xml:202(term)
 msgid "--verbose"
 msgstr "--verbose"
 
-#: src/concepts/intro.xml:203(para)
+#: src/concepts/intro.xml:204(para)
 msgid "Show detailed start-up messages."
 msgstr "起動過程での詳細報告を表示。"
 
-#: src/concepts/intro.xml:207(term)
+#: src/concepts/intro.xml:208(term)
 msgid "-n, --new-instance"
 msgstr "-n, --new-instance"
 
-#: src/concepts/intro.xml:209(para)
+#: src/concepts/intro.xml:210(para)
 msgid "Start a new GIMP instance."
 msgstr "重ねて新たに<acronym>GIMP</acronym>を起動。"
 
-#: src/concepts/intro.xml:213(term)
+#: src/concepts/intro.xml:214(term)
 msgid "-a, --as-new"
 msgstr "-a, --as-new"
 
-#: src/concepts/intro.xml:215(para)
+#: src/concepts/intro.xml:216(para)
 msgid "Open images as new."
 msgstr "画像を新規で開く。"
 
-#: src/concepts/intro.xml:219(term)
+#: src/concepts/intro.xml:220(term)
 msgid "-i, --no-interface"
 msgstr "-i, --no-interface"
 
-#: src/concepts/intro.xml:221(para)
+#: src/concepts/intro.xml:222(para)
 msgid "Run without a user interface."
 msgstr "ユーザインタフェースなしで起動。"
 
-#: src/concepts/intro.xml:225(term)
+#: src/concepts/intro.xml:226(term)
 msgid "-d, --no-data"
 msgstr "-d, --no-data"
 
-#: src/concepts/intro.xml:227(para)
+#: src/concepts/intro.xml:228(para)
 msgid ""
 "Do not load patterns, gradients, palettes, or brushes. Often useful in non-"
 "interactive situations where start-up time is to be minimized."
@@ -4834,19 +4819,20 @@ msgstr ""
 "パターン、 グラデーション、 パレット、 各種ブラシなどのデータを読み込まずに起"
 "動します。 起動時間を短縮する目的で非対話非相互の状態にするために使用します。"
 
-#: src/concepts/intro.xml:235(term)
+#: src/concepts/intro.xml:236(term)
 msgid "-f, --no-fonts"
 msgstr "-f, --no-fonts"
 
-#: src/concepts/intro.xml:237(para)
+#: src/concepts/intro.xml:238(para)
 msgid ""
-"Do not load any fonts. This option could be useful either for speeding up "
-"GIMP start-up for scripts that does not use fonts or to find malformed fonts "
-"related problems that could hang GIMP."
+"Do not load any fonts. This is useful to load GIMP faster for scripts that "
+"do not use fonts, or to find problems related to malformed fonts that hang "
+"GIMP."
 msgstr ""
 "フォントを読み込みません。 たとえばフォントを必要としないスクリプトを走らせる"
-"場合に<acronym>GIMP</acronym>起動時間の短縮が図れますし、 他にはフォントの欠"
-"陥が原因で<acronym>GIMP</acronym>が正常に起動しない場合にも有効です。"
+"場合に<acronym>GIMP</acronym>起動時間の短縮が図れますし、 <acronym>GIMP</"
+"acronym>を不正停止させるような欠陥のあるフォントに関わる問題を発見する用途に"
+"も使えます。"
 
 #: src/concepts/intro.xml:244(term)
 msgid "-s, --no-splash"
@@ -4912,7 +4898,7 @@ msgid "--system-gimprc=<replaceable>filename</replaceable>"
 msgstr "--system-gimprc=<replaceable>filename</replaceable>"
 
 #: src/concepts/intro.xml:288(para)
-msgid "Use an alternate system gimprc file"
+msgid "Use an alternate system gimprc file."
 msgstr ""
 "システム側の <filename>gimprc</filename> ファイルで別名のものを指定します。"
 
@@ -4924,8 +4910,8 @@ msgstr "-b, --batch=<replaceable>commands</replaceable>"
 msgid ""
 "Execute the set of commands non-interactively. The set of commands is "
 "typically in the form of a script that can be executed by one of the GIMP "
-"scripting extensions. When commands is <userinput>-</userinput>, the "
-"commands are read from standard input."
+"scripting extensions. When the command is <userinput>-</userinput>, commands "
+"are read from standard input."
 msgstr ""
 "コマンドの複合技を一気に無言で実行します。 実行は<acronym>GIMP</acronym>のス"
 "クリプト拡張機能が担うので、 コマンドの組み合わせをスクリプトファイル "
@@ -4937,14 +4923,18 @@ msgid "--batch-interpreter=<replaceable>proc</replaceable>"
 msgstr "--batch-interpreter=<replaceable>proc</replaceable>"
 
 #: src/concepts/intro.xml:308(para)
-msgid "The procedure to process batch commands with"
-msgstr "バッチコマンドを実行するプロシージャを指定します。"
+msgid ""
+"Specify the procedure to use to process batch commands. The default "
+"procedure is Script-Fu."
+msgstr ""
+"バッチコマンドを実行するプロシージャを指定します。 初期状態でのプロシージャは"
+"Script-Fuです。"
 
-#: src/concepts/intro.xml:312(term)
+#: src/concepts/intro.xml:313(term)
 msgid "--console-messages"
 msgstr "--console-messages"
 
-#: src/concepts/intro.xml:314(para)
+#: src/concepts/intro.xml:315(para)
 msgid ""
 "Do not popup dialog boxes on errors or warnings. Print the messages on the "
 "console instead."
@@ -4952,45 +4942,45 @@ msgstr ""
 "事故の発生や警告を表示するポップアップダイアログを出しません。 かわりにコン"
 "ソールにメッセージを表示します。"
 
-#: src/concepts/intro.xml:321(term)
+#: src/concepts/intro.xml:322(term)
 msgid "--pdb-compat-mode=<replaceable>mode</replaceable>"
 msgstr "--pdb-compat-mode=<replaceable>mode</replaceable>"
 
-#: src/concepts/intro.xml:323(para)
+#: src/concepts/intro.xml:324(para)
 msgid "PDB compatibility mode (off|on|warn)."
 msgstr "PDB互換モード (off|on|warn)。"
 
-#: src/concepts/intro.xml:327(term)
+#: src/concepts/intro.xml:328(term)
 msgid "--stack-trace-mode=<replaceable>mode</replaceable>"
 msgstr "--stack-trace-mode=<replaceable>mode</replaceable>"
 
-#: src/concepts/intro.xml:329(para)
-msgid "Debug in case of a crash (never|query|always)"
+#: src/concepts/intro.xml:330(para)
+msgid "Debug in case of a crash (never|query|always)."
 msgstr "クラッシュする原因を調べるためのデバッグ (never|query|always)。"
 
-#: src/concepts/intro.xml:333(term)
+#: src/concepts/intro.xml:334(term)
 msgid "--debug-handlers"
 msgstr "--debug-handlers"
 
-#: src/concepts/intro.xml:335(para)
+#: src/concepts/intro.xml:336(para)
 msgid "Enable non-fatal debugging signal handlers. Useful for GIMP debugging."
 msgstr ""
 "致命的でないデバッグ用シグナルハンドラを有効にします。 <acronym>GIMP</"
 "acronym>のデバッグ作業のためのものです。"
 
-#: src/concepts/intro.xml:340(term)
+#: src/concepts/intro.xml:341(term)
 msgid "--g-fatal-warnings"
 msgstr "--g-fatal-warnings"
 
-#: src/concepts/intro.xml:342(para)
+#: src/concepts/intro.xml:343(para)
 msgid "Make all warnings fatal. Useful for debug."
 msgstr "すべての警告を致命的とみなします。 デバッグ作業のためのものです。"
 
-#: src/concepts/intro.xml:346(term)
+#: src/concepts/intro.xml:347(term)
 msgid "--dump-gimprc"
 msgstr "--dump-gimprc"
 
-#: src/concepts/intro.xml:348(para)
+#: src/concepts/intro.xml:349(para)
 msgid ""
 "Output a gimprc file with default settings. Useful if you messed up the "
 "gimprc file."
@@ -4998,11 +4988,11 @@ msgstr ""
 "<filename>gimprc</filename> ファイルを出力します。 gimprc ファイルがもとで混"
 "乱したときに使えます。"
 
-#: src/concepts/intro.xml:353(term)
+#: src/concepts/intro.xml:354(term)
 msgid "--display=<replaceable>display</replaceable>"
 msgstr "--display=<replaceable>display</replaceable>"
 
-#: src/concepts/intro.xml:355(para)
+#: src/concepts/intro.xml:356(para)
 msgid "Use the designated X display (does not apply to all platforms)."
 msgstr ""
 "<productname>Xウィンドウシステム</productname>でのディスプレイ番号を指定しま"
@@ -5074,8 +5064,8 @@ msgstr ""
 "す。 (複数のウィンドウに同一の画像を表示させることもできますが、 普段からそう"
 "する必要はありません。) それでは一般的な画像ウィンドウについてその各部分の説"
 "明を手短にすすめてゆきましょう。 またこれらを隠すコマンドが画像ウィンドウの "
-"<link linkend=\"gimp-imagewindow-menus-view\">表示(V)</link> "
-"メニューにありますが、 少なくとも今はその必要はないでしょう。"
+"<link linkend=\"gimp-imagewindow-menus-view\">表示(V)</link> メニューにありま"
+"すが、 少なくとも今はその必要はないでしょう。"
 
 #. 1
 #: src/concepts/imagewindow.xml:65(para)
@@ -5431,8 +5421,8 @@ msgid ""
 "is located. It is not so convenient if you want to find the file on the "
 "basis of a thumbnail."
 msgstr ""
-"いちばん明確なのはメニューを使う方法でしょう。 <menuchoice><guimenu>ファイ"
-"ル(<accel>F</accel>)</guimenu><guimenuitem>開く(<accel>O</accel>)...</"
+"いちばん明確なのはメニューを使う方法でしょう。 <menuchoice><guimenu>ファイル"
+"(<accel>F</accel>)</guimenu><guimenuitem>開く(<accel>O</accel>)...</"
 "guimenuitem></menuchoice> と進みましょう。 ファイルを見回れる<quote>画像を開"
 "く</quote>ダイアログが出てきますので開きたいファイルを見つけ出してクリックし"
 "ます。 このやり方はファイル名もその場所も既に知っているものを開くのには都合が"
@@ -5454,15 +5444,15 @@ msgid ""
 msgstr ""
 "<quote>ファイル</quote>メニューその他でファイルを開いたとき、 <acronym>GIMP</"
 "acronym>はそのファイル形式を判定する必要に迫られます。 形式が多様であることに"
-"加え、 それを表す拡張子 (例: <filename>.jpg</filename>) に信頼が置けないの"
-"で、 <acronym>GIMP</acronym>が拡張子でファイルの形式をそのまま判断することは"
-"ありません。 システムごとに拡張子が異なったり、 機能追加でファイル名が変化す"
-"ることもあります。 さらに、 ファイル名から拡張子が省かれることもあるのが大き"
-"な理由です。 そこで<acronym>GIMP</acronym>は、 ファイルの中身を見て確かめてか"
-"ら形式を判断しようとします。 一般的に通用している画像ファイル形式のほとんど"
-"は、 その形式を認識させるための<quote>マジックヘッダ</quote>を持っています。 "
-"マジックでは判断がつかない限られた場合のために、 <acronym>GIMP</acronym>は拡"
-"張子を利用する余地を残しています。"
+"加え、 それを表す拡張子 (例: <filename class=\"extension\">.jpg</filename>) "
+"に信頼が置けないので、 <acronym>GIMP</acronym>が拡張子でファイルの形式をその"
+"まま判断することはありません。 システムごとに拡張子が異なったり、 機能追加で"
+"ファイル名が変化することもあります。 さらに、 ファイル名から拡張子が省かれる"
+"こともあるのが大きな理由です。 そこで<acronym>GIMP</acronym>は、 ファイルの中"
+"身を見て確かめてから形式を判断しようとします。 一般的に通用している画像ファイ"
+"ル形式のほとんどは、 その形式を認識させるための<quote>マジックヘッダ</quote>"
+"を持っています。 マジックでは判断がつかない限られた場合のために、 "
+"<acronym>GIMP</acronym>は拡張子を利用する余地を残しています。"
 
 #: src/concepts/images-loading.xml:53(title)
 msgid "The <quote>File Open</quote> dialog"
@@ -5566,10 +5556,10 @@ msgid ""
 "that allows you to enter (or paste) the <acronym>URI</acronym>."
 msgstr ""
 "画像を示すものがファイル名ではなく <acronym>URI</acronym> (例:ウェブアドレ"
-"ス) だったならば、 メニューを <menuchoice><guimenu>ファイル(<accel>F</"
-"accel>)</guimenu><guimenuitem>場所を開く(<accel>L</accel>)...</"
-"guimenuitem></menuchoice> と辿り、 出て来た小さなダイアログの書き込み欄に"
-"<acronym>URI</acronym>を直接打鍵するか貼り付けてください。"
+"ス) だったならば、 メニューを <menuchoice><guimenu>ファイル(<accel>F</accel>)"
+"</guimenu><guimenuitem>場所を開く(<accel>L</accel>)...</guimenuitem></"
+"menuchoice> と辿り、 出て来た小さなダイアログの書き込み欄に<acronym>URI</"
+"acronym>を直接打鍵するか貼り付けてください。"
 
 #: src/concepts/images-loading.xml:125(title)
 msgid "The <quote>Open Location</quote> dialog"
@@ -5593,10 +5583,10 @@ msgid ""
 "you want, and it will be opened."
 msgstr ""
 "開きたい画像が以前<acronym>GIMP</acronym>で作成されたものならば、 メニューの "
-"<menuchoice><guimenu>ファイル(<accel>F</accel>)</guimenu><guimenuitem>最"
-"近開いた画像ファイルを開く(<accel>R</accel>)</guimenuitem></menuchoice> のサ"
-"ブメニューにあるかもしれません。 見付からなければ <guimenuitem>画像ファイル履"
-"歴(<accel>Y</accel>)</guimenuitem> まで進み、 出てくるダイアログで探してみま"
+"<menuchoice><guimenu>ファイル(<accel>F</accel>)</guimenu><guimenuitem>最近開"
+"いた画像ファイルを開く(<accel>R</accel>)</guimenuitem></menuchoice> のサブメ"
+"ニューにあるかもしれません。 見付からなければ <guimenuitem>画像ファイル履歴"
+"(<accel>Y</accel>)</guimenuitem> まで進み、 出てくるダイアログで探してみま"
 "しょう。 このダイアログは開いた時が最も最近のものから順に画像ファイルを並べた"
 "もので、 それぞれに縮小見本画像がついています。 ここから一つだけ選ぶことがで"
 "き、 その画像が開かれます。 </para><figure lang=\"ja\">  <title lang=\"ja\">"
@@ -5678,8 +5668,8 @@ msgstr ""
 "アプリケーションによっては、 画像をクリップボードに写し取ることができるので "
 "(一部のシステムは<keycap>Print Screen</keycap>キーを押すだけでクリップボード"
 "に取り込めます) あとは<acronym>GIMP</acronym>の画像ウィンドウのメニューで "
-"<menuchoice><guimenu>ファイル(<accel>F</accel>)</guimenu><guisubmenu>画像"
-"の生成</guisubmenu><guimenuitem>クリップボードから(<accel>C</accel>)</"
+"<menuchoice><guimenu>ファイル(<accel>F</accel>)</guimenu><guisubmenu>画像の生"
+"成</guisubmenu><guimenuitem>クリップボードから(<accel>C</accel>)</"
 "guimenuitem></menuchoice> と進むか、 もしくは <menuchoice><guimenu>編集"
 "(<accel>E</accel>)</guimenu><guisubmenu>クリップボードから生成(<accel>P</"
 "accel>)</guisubmenu><guimenuitem>画像(<accel>N</accel>)</guimenuitem></"
@@ -5805,7 +5795,7 @@ msgstr ""
 msgid "Image Types"
 msgstr "画像の形式"
 
-#: src/concepts/image-types.xml:15(primary) src/concepts/concepts.xml:48(term)
+#: src/concepts/image-types.xml:15(primary) src/concepts/concepts.xml:47(term)
 msgid "Images"
 msgstr "画像"
 
@@ -6146,15 +6136,15 @@ msgid ""
 "and Fullscreen Mode.)"
 msgstr ""
 "画像にはどれもグリッドが備わっています。 常に存在するにもかかわらず初期設定で"
-"は不可視になっていますので、 活用するにはメニューより <menuchoice><guimenu>"
-"表示(<accel>V</accel>)</guimenu><guimenuitem>グリッドを表示(<accel>H</"
-"accel>)</guimenuitem></menuchoice> として切り替えてください。 この格子線は隠"
-"れていないでいつも出ていてほしいという場合は、 <link linkend=\"gimp-prefs-"
-"image-window-appearance\">環境設定</link> ダイアログの<quote>画像ウィンドウの"
-"表示形式</quote>のページで <guilabel>グリッド(<accel>D</accel>)</guilabel> の"
-"ところにチェックを入れればその既定のふるまいを変更できます。 (このページに同"
-"じものが2つあるのはノーマルモードとフルスクリーンモードで個別に設定できるよう"
-"になっているためです。)"
+"は不可視になっていますので、 活用するにはメニューより <menuchoice><guimenu>表"
+"示(<accel>V</accel>)</guimenu><guimenuitem>グリッドを表示(<accel>H</accel>)</"
+"guimenuitem></menuchoice> として切り替えてください。 この格子線は隠れていない"
+"でいつも出ていてほしいという場合は、 <link linkend=\"gimp-prefs-image-window-"
+"appearance\">環境設定</link> ダイアログの<quote>画像ウィンドウの表示形式</"
+"quote>のページで <guilabel>グリッド(<accel>D</accel>)</guilabel> のところに"
+"チェックを入れればその既定のふるまいを変更できます。 (このページに同じものが2"
+"つあるのはノーマルモードとフルスクリーンモードで個別に設定できるようになって"
+"いるためです。)"
 
 #: src/concepts/grid-and-guides.xml:80(para)
 msgid ""
@@ -6196,16 +6186,16 @@ msgid ""
 "to do this, though.)"
 msgstr ""
 "グリッドは図上の距離を測ったり位置関係を見るのに利用できるだけでなく、物体を"
-"ぴたりと升目に合わせる使い方もできます。 それにはメニューで <menuchoice>"
-"<guimenu>表示(<accel>V</accel>)</guimenu><guimenuitem>グリッドにスナップ"
-"(<accel>P</accel>)</guimenuitem></menuchoice> に切り替えてください。 すると画"
-"像内のポインタは格子線のいずれかの一定範囲内に近づくやいなやすっぱりとその線"
-"上に<quote>瞬間移動</quote>します。 このしきい値は<link linkend=\"gimp-prefs-"
-"tool-options\">環境設定</link> ダイアログの<quote>ツールオプション</quote>の"
-"ページで <guilabel>スナップ距離(<accel>S</accel>)</guilabel> を設定すれば調節"
-"できますが、 既定値の8ピクセルは多くの方にご満足いただけるものでしょう。 (格"
-"子線に吸い付く機能はグリッドが不可視であっても何ら変わりなくはたらきます。 で"
-"もそのような使い方をする理由はなかなか見あたりません。)"
+"ぴたりと升目に合わせる使い方もできます。 それにはメニューで "
+"<menuchoice><guimenu>表示(<accel>V</accel>)</guimenu><guimenuitem>グリッドに"
+"スナップ(<accel>P</accel>)</guimenuitem></menuchoice> に切り替えてください。 "
+"すると画像内のポインタは格子線のいずれかの一定範囲内に近づくやいなやすっぱり"
+"とその線上に<quote>瞬間移動</quote>します。 このしきい値は<link linkend="
+"\"gimp-prefs-tool-options\">環境設定</link> ダイアログの<quote>ツールオプショ"
+"ン</quote>のページで <guilabel>スナップ距離(<accel>S</accel>)</guilabel> を設"
+"定すれば調節できますが、 既定値の8ピクセルは多くの方にご満足いただけるもので"
+"しょう。 (格子線に吸い付く機能はグリッドが不可視であっても何ら変わりなくはた"
+"らきます。 でもそのような使い方をする理由はなかなか見あたりません。)"
 
 #: src/concepts/grid-and-guides.xml:130(phrase)
 msgid "Image with four guides"
@@ -6245,14 +6235,14 @@ msgid ""
 "time you try to create a guide and don't see anything happening."
 msgstr ""
 "格子線 (グリッド) と同じように見当線 (ガイド) にもポインタを吸い付かせられま"
-"す。 メニューで <menuchoice><guimenu>表示(<accel>V</accel>)</guimenu>"
-"<guimenuitem>ガイドにスナップ(<accel>A</accel>)</guimenuitem></menuchoice> を"
-"有効にしてください。 見当線の数が多過ぎて画像を見ての判断が難しくなった場合に"
-"は <menuchoice><guimenu>表示(<accel>V</accel>)</guimenu><guimenuitem>ガイ"
-"ドを表示(<accel>G</accel>)</guimenuitem></menuchoice> を切り替えて隠すとよい"
-"でしょう。 ただし隠すのは一時だけにした方がよいと言われています。 その理由は"
-"あとで見当線が欲しくなって追加しても見た目には何も起こらないというはめになる"
-"からです。"
+"す。 メニューで <menuchoice><guimenu>表示(<accel>V</accel>)</"
+"guimenu><guimenuitem>ガイドにスナップ(<accel>A</accel>)</guimenuitem></"
+"menuchoice> を有効にしてください。 見当線の数が多過ぎて画像を見ての判断が難し"
+"くなった場合には <menuchoice><guimenu>表示(<accel>V</accel>)</"
+"guimenu><guimenuitem>ガイドを表示(<accel>G</accel>)</guimenuitem></"
+"menuchoice> を切り替えて隠すとよいでしょう。 ただし隠すのは一時だけにした方が"
+"よいと言われています。 その理由はあとで見当線が欲しくなって追加しても見た目に"
+"は何も起こらないというはめになるからです。"
 
 #: src/concepts/grid-and-guides.xml:168(para)
 msgid ""
@@ -6378,15 +6368,15 @@ msgid ""
 "the intensity is 255, very light, replaced by the most right color of the "
 "gradient. See <xref linkend=\"plug-in-gradmap\"/> for more information."
 msgstr ""
-"現在このフィルタは <menuchoice><guimenu>色(<accel>C</accel>)</guimenu>"
-"<guisubmenu>マップ(<accel>M</accel>)</guisubmenu><guimenuitem>グラデーショ"
-"ンマップ(<accel>G</accel>)</guimenuitem></menuchoice> に置かれています。 この"
-"フィルタは画素の強度を読みとって現在活性化しているグラデーションから相応の位"
-"置の色に置き換えるしくみで画像に<quote>着色</quote>が可能となりました。  (強"
-"度0は最も暗い色をさし、 グラデーションの左端の色で置き換えられます。 強度が増"
-"すにつれ徐々に異なる色が与えられ、 一番明るい色をさす強度255の画素はグラデー"
-"ションの右端の色で置き換えられます。) より詳しくは <xref linkend=\"plug-in-"
-"gradmap\"/> をご覧ください。"
+"現在このフィルタは <menuchoice><guimenu>色(<accel>C</accel>)</"
+"guimenu><guisubmenu>マップ(<accel>M</accel>)</guisubmenu><guimenuitem>グラ"
+"デーションマップ(<accel>G</accel>)</guimenuitem></menuchoice> に置かれていま"
+"す。 このフィルタは画素の強度を読みとって現在活性化しているグラデーションから"
+"相応の位置の色に置き換えるしくみで画像に<quote>着色</quote>が可能となりまし"
+"た。  (強度0は最も暗い色をさし、 グラデーションの左端の色で置き換えられま"
+"す。 強度が増すにつれ徐々に異なる色が与えられ、 一番明るい色をさす強度255の画"
+"素はグラデーションの右端の色で置き換えられます。) より詳しくは <xref linkend="
+"\"plug-in-gradmap\"/> をご覧ください。"
 
 #: src/concepts/gradients.xml:75(para)
 msgid ""
@@ -6554,17 +6544,18 @@ msgid ""
 "\"gimp-prefs-folders-data\">Data Folders</link> pages of the Preferences "
 "dialog."
 msgstr ""
-"<acronym>GIMP</acronym>に同梱のグラデーションファイルはシステム用の"
-"<filename>gradients</filename> フォルダに入っています。 初期設定では、 自作の"
-"グラデーションファイルは個人用の<acronym>GIMP</acronym>ディレクトリ内の "
-"<filename>gradients</filename> フォルダに入れられます。 グラデーションファイ"
-"ル (拡張子 <filename>.ggr</filename> で終わる名前のファイル) はいずれもどちら"
-"かのフォルダ内に入っていて、 <acronym>GIMP</acronym>を起動すると自動的に読み"
-"込まれます。 この2つのディレクトリ以外のフォルダでもグラデーションを検索させ"
-"るには、 <link linkend=\"gimp-prefs-folders-data\">環境設定</link> ダイアログ"
-"の左側の一覧から <menuchoice><guimenu>フォルダ</guimenu><guimenuitem>グラデー"
-"ション</guimenuitem></menuchoice> をクリックして出てくるページでそのフォルダ"
-"を追加してください。"
+"<acronym>GIMP</acronym>に同梱のグラデーションファイルはシステム用の<filename "
+"class=\"directory\">gradients</filename> フォルダに入っています。 初期設定で"
+"は、 自作のグラデーションファイルは個人用の<acronym>GIMP</acronym>ディレクト"
+"リ内の <filename class=\"directory\">gradients</filename> フォルダに入れられ"
+"ます。 グラデーションファイル (拡張子 <filename class=\"extension\">.ggr</"
+"filename> で終わる名前のファイル) はいずれもどちらかのフォルダ内に入ってい"
+"て、 <acronym>GIMP</acronym>を起動すると自動的に読み込まれます。 この2つの"
+"ディレクトリ以外のフォルダでもグラデーションを検索させるには、 <link linkend="
+"\"gimp-prefs-folders-data\">環境設定</link> ダイアログの左側の一覧から "
+"<menuchoice><guimenu>フォルダ</guimenu><guimenuitem>グラデーション</"
+"guimenuitem></menuchoice> をクリックして出てくるページでそのフォルダを追加し"
+"てください。"
 
 #: src/concepts/gradients.xml:219(para)
 msgid ""
@@ -6578,9 +6569,9 @@ msgstr ""
 "ションファイルが読み込めるようになりました。 <acronym>SVG</acronym>形式はベク"
 "ター画像を扱う多くのプログラムで使われています。 <acronym>GIMP</acronym>に"
 "<acronym>SVG</acronym>形式のグラデーションファイルを読み込ませる方法はただ単"
-"にそのファイルを個人用の<acronym>GIMP</acronym>の <filename>gradients</"
-"filename> フォルダか、 あるいは検索パスに登録した他のフォルダに入れることだけ"
-"です。"
+"にそのファイルを個人用の<acronym>GIMP</acronym>の <filename class=\"directory"
+"\">gradients</filename> フォルダか、 あるいは検索パスに登録した他のフォルダに"
+"入れることだけです。"
 
 #: src/concepts/gradients.xml:227(para)
 msgid ""
@@ -6812,7 +6803,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/docks.xml:502(None)
+#: src/concepts/docks.xml:504(None)
 msgid ""
 "@@image: 'images/using/list-search-field.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -6839,7 +6830,7 @@ msgstr "合体領域"
 #: src/concepts/docks.xml:244(primary) src/concepts/docks.xml:280(primary)
 #: src/concepts/docks.xml:298(primary) src/concepts/docks.xml:322(primary)
 #: src/concepts/docks.xml:338(primary) src/concepts/docks.xml:372(primary)
-#: src/concepts/docks.xml:402(primary) src/concepts/docks.xml:473(primary)
+#: src/concepts/docks.xml:402(primary) src/concepts/docks.xml:472(primary)
 msgid "Docks"
 msgstr "ドック"
 
@@ -7066,8 +7057,8 @@ msgstr ""
 "初期設定では<quote>レイヤー、チャンネル、パス</quote>の各ダイアログをまとめた"
 "ドックにはその最上部に画像メニューがついていて、 他のドックにはそれがありませ"
 "ん。 画像メニューは後で述べる<guilabel>選択画像を表示(<accel>S</accel>)</"
-"guilabel> メニューでドック上に表示したり隠したりできます。 (ただし、 ツールボ"
-"ックスを含むドックには画像メニューを加えられません。)"
+"guilabel> メニューでドック上に表示したり隠したりできます。 (ただし、 ツール"
+"ボックスを含むドックには画像メニューを加えられません。)"
 
 #: src/concepts/docks.xml:241(title)
 msgid "Tab Menu"
@@ -7285,15 +7276,15 @@ msgstr ""
 msgid "View as List; View as Grid"
 msgstr "一覧で表示(L); 並べて表示(G)"
 
-#: src/concepts/docks.xml:474(secondary)
+#: src/concepts/docks.xml:473(secondary)
 msgid "View as List/Grid"
 msgstr "並べて表示 / 一覧で表示"
 
-#: src/concepts/docks.xml:476(primary)
+#: src/concepts/docks.xml:475(primary)
 msgid "List search field"
 msgstr "検索窓"
 
-#: src/concepts/docks.xml:477(para)
+#: src/concepts/docks.xml:476(para)
 msgid ""
 "These entries are shown in dialogs that allows you to select an item from a "
 "set: brushes, patterns, fonts, etc. You can choose whether to view the items "
@@ -7312,49 +7303,52 @@ msgstr ""
 "のダイアログは格子状に、 それ以外のほとんどのダイアログは縦排列にしてありま"
 "す。"
 
-#: src/concepts/docks.xml:489(para)
+#: src/concepts/docks.xml:488(para)
 msgid ""
 "When the treeview is <quote>as list</quote>, pressing "
 "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> (or "
-"<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo> it depends on "
+"<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>, it depends on "
 "your GTK+ keybindings), opens a text box, a search field, where you can "
 "enter the first letter(s) of the name of the item you want."
 msgstr ""
 "項目が<quote>一覧で表示</quote>となっているときに、 キーボードショートカット "
 "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> (<acronym>GTK+</"
 "acronym>のショートカット設定によっては <keycombo><keycap>Ctrl</"
-"keycap><keycap>S</keycap></keycombo>                の場合もあります) を使う"
-"と語句記入欄が現れます。 これは検索窓になっていて入力された文字から始まる名前"
-"の項目へ即座に一覧表が繰り寄せられます。"
+"keycap><keycap>S</keycap></keycombo> の場合もあります) を使うと語句記入欄が現"
+"れます。 これは検索窓になっていて入力された文字から始まる名前の項目へ即座に一"
+"覧表が繰り寄せられます。"
 
-#: src/concepts/docks.xml:498(title)
+#: src/concepts/docks.xml:500(title)
 msgid "The list search field"
 msgstr "検索窓"
 
-#: src/concepts/docks.xml:505(para)
-msgid "The list search field you get pressing Ctrl+F."
+#: src/concepts/docks.xml:507(para)
+msgid ""
+"The list search field you get pressing <keycombo><keycap>Ctrl</"
+"keycap><keycap>F</keycap></keycombo>."
 msgstr ""
 "キーボードショートカット <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></"
 "keycombo> で開かれた検索窓"
 
-#: src/concepts/docks.xml:511(para)
+#: src/concepts/docks.xml:514(para)
 msgid "This search field lasts five seconds only if you do nothing."
 msgstr "この検索窓は何も操作がない時間が5秒を過ぎると自動的に閉じられます。"
 
-#: src/concepts/docks.xml:514(para)
+#: src/concepts/docks.xml:518(para)
 msgid ""
-"This shortcut is also available for the treeview you get in the "
+"The search field shortcut is also available for the treeview you get in the "
 "<quote>Brush</quote>, <quote>Font</quote> or <quote>Pattern </quote> option "
 "of several tools."
 msgstr ""
-"このショートカットが利用できるダイアログは<quote>ブラシ</quote>、 <quote>フォ"
-"ント</quote>、 <quote>パターン</quote>などです。"
+"いろいろなツールのダイアログ上の<quote>ブラシ</quote>、 <quote>フォント</"
+"quote>、 <quote>パターン</quote>を選ぶオプションの一覧表で検索窓を呼び出せる"
+"ショートカットが利用できます。"
 
-#: src/concepts/docks.xml:524(term)
+#: src/concepts/docks.xml:528(term)
 msgid "Show Image Menu"
 msgstr "選択画像を表示(S)"
 
-#: src/concepts/docks.xml:526(para)
+#: src/concepts/docks.xml:530(para)
 msgid ""
 "This is a toggle. If it is checked, then an Image Menu is shown at the top "
 "of the dock. It is not available for dialogs docked below the Toolbox. Don't "
@@ -7366,11 +7360,11 @@ msgstr ""
 "ん。 画像表示ウィンドウの上部のメニューを指しているのではないことにご注意くだ"
 "さい。"
 
-#: src/concepts/docks.xml:536(term)
+#: src/concepts/docks.xml:540(term)
 msgid "Auto Follow Active Image"
 msgstr "アクティブな画像を自動的に追跡(F)"
 
-#: src/concepts/docks.xml:538(para)
+#: src/concepts/docks.xml:542(para)
 msgid ""
 "If this option is checked, the related dialog will be that of the current "
 "image and will change if you select another image. For example, if you have "
@@ -7409,26 +7403,23 @@ msgstr ""
 
 #: src/concepts/concepts.xml:37(para)
 msgid ""
-"This section is intended to give you a brief introduction to the basic "
-"concepts and terminology you will need to understand in order to make sense "
-"of the rest of the documentation. Everything here is explained in much "
+"This section provides a brief introduction to the basic concepts and "
+"terminology used in GIMP. The concepts presented here are explained in much "
 "greater depth elsewhere. With a few exceptions, we have avoided cluttering "
 "this section with a lot of links and cross-references: everything mentioned "
-"here is so high-level that you should easily be able to locate it in the "
-"index."
+"here is so high-level that you can easily locate it in the index."
 msgstr ""
 "この章は<acronym>GIMP</acronym>でつかわれる用語や概念の基本的なことがらを手短"
-"に紹介することに重点が置かれています。 これらは他の章を理解していただくのに欠"
-"かせません。 ただし折に触れてもっと詳しい説明もいたします。 またこの章におい"
-"ては相互参照やリンクでいっぱいになるのを (一部の例外を除き) あえて避けまし"
-"た。 しかし索引から容易に説明へ辿り着けるよう、 ここに挙げた内容はいずれも高"
-"度にまとめてあります。"
+"に紹介します。 これらは他の章を理解していただくのに欠かせません。 ただし折に"
+"触れてもっと詳しい説明もいたします。 またこの章においては相互参照やリンクで"
+"いっぱいになるのを (一部の例外を除き) あえて避けました。 しかし索引から容易に"
+"説明へ辿り着けるよう、 ここに挙げた内容はいずれも高度にまとめてあります。"
 
-#: src/concepts/concepts.xml:50(para)
+#: src/concepts/concepts.xml:49(para)
 msgid ""
-"Images are the basic entities that <acronym>GIMP</acronym> works with. "
-"Roughly speaking, an <quote>image</quote> corresponds to a single file, such "
-"as a TIFF or JPEG file. You can also think of an image as corresponding to a "
+"Images are the basic entities used by <acronym>GIMP</acronym>. Roughly "
+"speaking, an <quote>image</quote> corresponds to a single file, such as a "
+"TIFF or JPEG file. You can also think of an image as corresponding to a "
 "single display window, but this is not quite correct: it is possible to have "
 "multiple windows all displaying the same image. It is not possible to have a "
 "single window display more than one image, though, or for an image to have "
@@ -7442,15 +7433,15 @@ msgstr ""
 "の画像をひとつのウィンドウで表示することはできませんが、 ウィンドウ表示してい"
 "ない画像もありえます。"
 
-#: src/concepts/concepts.xml:60(para)
+#: src/concepts/concepts.xml:59(para)
 msgid ""
 "A <acronym>GIMP</acronym> image may be quite a complicated thing. Instead of "
-"thinking of it as something like a sheet of paper with a picture on it, you "
-"should think of it as more like a book, whose pages are called "
-"<quote>layers</quote> In addition to a stack of layers, a <acronym>GIMP</"
-"acronym> image may contain a selection mask, a set of channels, and a set of "
-"paths. In fact, <acronym>GIMP</acronym> provides a mechanism for attaching "
-"arbitrary pieces of data, called <quote>parasites</quote>, to an image."
+"thinking of it as something like a sheet of paper with a picture on it, "
+"think of it as more like a book, whose pages are called <quote>layers</"
+"quote>. In addition to a stack of layers, a <acronym>GIMP</acronym> image "
+"may contain a selection mask, a set of channels, and a set of paths. In "
+"fact, <acronym>GIMP</acronym> provides a mechanism for attaching arbitrary "
+"pieces of data, called <quote>parasites</quote>, to an image."
 msgstr ""
 "<acronym>GIMP</acronym>形式の画像はいくぶん複雑なものです。 たいていは画像を"
 "一枚の紙面に見立てるのが一般的ですが、 これは<quote>レイヤー</quote>と呼ばれ"
@@ -7460,27 +7451,27 @@ msgstr ""
 "てとらえる機構があり、 それらを画像の<quote>parasites (寄生体)</quote>と呼ん"
 "でいるのです。"
 
-#: src/concepts/concepts.xml:70(para)
+#: src/concepts/concepts.xml:69(para)
 msgid ""
 "In <acronym>GIMP</acronym>, it is possible to have many images open at the "
-"same time. If they are large, each image may use many megabytes of memory, "
-"but <acronym>GIMP</acronym> uses a sophisticated tile-based memory "
-"management system that allows it to handle even very large images "
-"gracefully. There are, however, limits, and having more memory available can "
-"help to improve the performance of the system."
+"same time. Although large images may use many megabytes of memory, "
+"<acronym>GIMP</acronym> uses a sophisticated tile-based memory management "
+"system that allows <acronym>GIMP</acronym> to handle very large images "
+"gracefully. There are limits, however, and having more memory available may "
+"improve system performance."
 msgstr ""
-"<acronym>GIMP</acronym>は複数の画像を同時に開いておくことが可能です。それぞれ"
-"が大きさによっては数メガバイトものメモリを占めるはずですが、 <acronym>GIMP</"
-"acronym>では精巧にタイル分割してメモリ管理を行うしくみがあり、 たいへん大きな"
-"画像でも流麗に扱えるようになっています。 無論これにも限界がありますが、 もっ"
-"と使えるメモリを増やせばシステムの処理能力は高まります。"
+"<acronym>GIMP</acronym>は複数の画像を同時に開いておくことが可能です。 大きな"
+"画像だと数メガバイトものメモリを占めるはずですが、 <acronym>GIMP</acronym>で"
+"は精巧にタイル分割してメモリ管理を行うしくみがあり、 たいへん大きな画像でも流"
+"麗に扱えるようになっています。 無論これにも限界がありますが、 もっと使えるメ"
+"モリを増やせばシステムの処理能力は高まります。"
 
-#: src/concepts/concepts.xml:84(para)
+#: src/concepts/concepts.xml:83(para)
 msgid ""
 "If an image is like a book, then a layer is like a page within the book. The "
-"simplest images only contain a single layer, and can be treated like single "
-"sheets of paper, but sophisticated <acronym>GIMP</acronym> users often deal "
-"with images containing many layers, even dozens of them. Layers need not be "
+"simplest images contain only a single layer, and can be treated like single "
+"sheets of paper. Sophisticated <acronym>GIMP</acronym> users often deal with "
+"images containing many layers, even dozens of them. Layers need not be "
 "opaque, and they need not cover the entire extent of an image, so when you "
 "look at an image's display, you may see more than just the top layer: you "
 "may see elements of many layers."
@@ -7492,23 +7483,23 @@ msgstr ""
 "体を覆う必要もないので、 画像を見たときそこには最前面だけでなくその背面のレイ"
 "ヤーの部品がいくつも見えているかもしれません。"
 
-#: src/concepts/concepts.xml:97(term)
+#: src/concepts/concepts.xml:96(term)
 msgid "Channels"
 msgstr "チャンネル"
 
-#: src/concepts/concepts.xml:99(para)
+#: src/concepts/concepts.xml:98(para)
 msgid ""
 "In <acronym>GIMP</acronym>, Channels are the smallest units of subdivision "
 "in the stack of layers from which the image is constructed. Every Channel in "
-"a layer has exactly the same size as the layer it belongs to and "
-"consequently consists of the same pixels. Every pixel can be regarded as a "
-"container which can be filled with a value ranging from 0 to 255. The exact "
-"meaning of this value depends on the type of channel, e.g. in the "
-"<acronym>RGB</acronym> color model the value in the <emphasis>R</emphasis>-"
-"channel means the amount of red which is added to the colour of the "
-"different pixels, in the selection channel the value denotes how strongly "
-"the pixels are selected and in the alpha channel the values denote how "
-"transparent the corresponding pixels are."
+"a layer has exactly the same size as the layer to which it belongs, and, "
+"consequently consists of the same number of pixels. Every pixel can be "
+"regarded as a container which can be filled with a value ranging from 0 to "
+"255.The exact meaning of this value depends on the type of channel, e.g. in "
+"the <acronym>RGB</acronym> color model the value in the <emphasis>R</"
+"emphasis>-channel means the amount of red which is added to the colour of "
+"the different pixels, in the selection channel, the value denotes how "
+"strongly the pixels are selected, and in the alpha channel the values denote "
+"how transparent the corresponding pixels are."
 msgstr ""
 "<acronym>GIMP</acronym>におけるチャンネルは、 画像を構成するレイヤーの重なり"
 "をさらに再分割した最も小さな単位です。 チャンネルはどれもそれが属するレイヤー"
@@ -7519,15 +7510,15 @@ msgstr ""
 "めたものであり、 選択チャンネルとは画素がどの程度の強度で選択されているかを表"
 "す値になり、 アルファチャンネルでの値は相対する画素の透明度を表すのです。"
 
-#: src/concepts/concepts.xml:119(para)
+#: src/concepts/concepts.xml:118(para)
 msgid ""
-"Often when you do something to an image, you only want a part of it to be "
+"Often when modify an image, you only want a part of the image to be "
 "affected. The <quote>selection</quote> mechanism makes this possible. Each "
 "image has its own selection, which you normally see as a moving dashed line "
 "separating the selected parts from the unselected parts (the so-called "
 "<quote>marching ants</quote> ). Actually this is a bit misleading: selection "
-"in <acronym>GIMP</acronym> is really graded, not all-or-nothing, and really "
-"the selection is represented by a full-fledged grayscale channel. The dashed "
+"in <acronym>GIMP</acronym> is graded, not all-or-nothing, and really the "
+"selection is represented by a full-fledged grayscale channel. The dashed "
 "line that you normally see is simply a contour line at the 50%-selected "
 "level. At any time, though, you can visualize the selection channel in all "
 "its glorious detail by toggling the <link linkend=\"gimp-image-window-qmask-"
@@ -7536,23 +7527,23 @@ msgstr ""
 "画像を扱う際、 その一部だけを対象とする場面は少なくありません。 <quote>選択</"
 "quote>のしくみはこのためにあります。 画像ごとにそれぞれ選択範囲ができ、 明滅"
 "する点線が選択範囲と非選択範囲とを分けているところが見てとれます。 ただし本当"
-"はこれで全てではありません。 実際<acronym>GIMP</acronym>の選択は一切か無かの"
-"二分論に留まらぬ高度なもので、 その実体はよく描き込まれたグレースケールチャン"
-"ネルなのです。 点線が示しているのは選択の強度が50%のレベルをなぞった単なる輪"
-"郭線にすぎません。 ですから逆に選択チャネルを可視化してそのすばらしい詳細を見"
-"たければ、 ただ <link linkend=\"gimp-image-window-qmask-button\">クイックマス"
-"ク</link> ボタンを押すだけでいつでも切り替わります。"
+"はこれで全てではありません。 <acronym>GIMP</acronym>の選択は一切か無かの二分"
+"論に留まらぬ高度なもので、 その実体はよく描き込まれたグレースケールチャンネル"
+"なのです。 点線が示しているのは選択の強度が50%のレベルをなぞった単なる輪郭線"
+"にすぎません。 ですから逆に選択チャネルを可視化してそのすばらしい詳細を見たけ"
+"れば、 ただ <link linkend=\"gimp-image-window-qmask-button\">クイックマスク</"
+"link> ボタンを押すだけでいつでも切り替わります。"
 
-#: src/concepts/concepts.xml:135(para)
+#: src/concepts/concepts.xml:134(para)
 msgid ""
 "A large component of learning how to use <acronym>GIMP</acronym> effectively "
 "is acquiring the art of making good selections—selections that contain "
 "exactly what you need and nothing more. Because selection-handling is so "
-"centrally important, <acronym>GIMP</acronym> gives you a large number of "
-"tools for doing it: an assortment of selection-making tools, a menu of "
-"selection operations, and the ability to switch to Quick Mask mode, in which "
-"you can treat the selection channel as though it were a color channel, "
-"thereby <quote>painting the selection</quote>."
+"centrally important, <acronym>GIMP</acronym> provides many tools for doing "
+"it: an assortment of selection-making tools, a menu of selection operations, "
+"and the ability to switch to Quick Mask mode, in which you can treat the "
+"selection channel as though it were a color channel, thereby <quote>painting "
+"the selection</quote>."
 msgstr ""
 "<acronym>GIMP</acronym>の扱い方の秘訣のほとんどは、 選択範囲をいかに思い描い"
 "たとおりに選択するかということと不可分です。 選択範囲のとりかたこそが重要なカ"
@@ -7561,7 +7552,7 @@ msgstr ""
 "に切り替えるボタン――このモードでは選択チャンネルがまるで色のチャンネルである"
 "かのように<quote>選択を描く</quote>ことも可能なのです。"
 
-#: src/concepts/concepts.xml:151(para)
+#: src/concepts/concepts.xml:150(para)
 msgid ""
 "When you make mistakes, you can undo them. Nearly everything you can do to "
 "an image is undoable. In fact, you can usually undo a substantial number of "
@@ -7590,22 +7581,22 @@ msgstr ""
 "じる</quote>があります。 このため<acronym>GIMP</acronym>では何かしら動作が加"
 "えられた画像を閉じる際には確認を求めるようにしています。)"
 
-#: src/concepts/concepts.xml:171(term)
+#: src/concepts/concepts.xml:170(term)
 msgid "Plug-ins"
 msgstr "プラグイン"
 
-#: src/concepts/concepts.xml:173(para)
+#: src/concepts/concepts.xml:172(para)
 msgid ""
-"Many, probably most, of the things you do to an image in <acronym>GIMP</"
+"Many, probably most, of the things that you do to an image in <acronym>GIMP</"
 "acronym> are done by the <acronym>GIMP</acronym> application itself. "
 "However, <acronym>GIMP</acronym> also makes extensive use of <quote>plug-"
 "ins</quote>, which are external programs that interact very closely with "
 "<acronym>GIMP</acronym>, and are capable of manipulating images and other "
 "<acronym>GIMP</acronym> objects in very sophisticated ways. Many important "
-"plug-ins come packaged together with <acronym>GIMP</acronym>, but there are "
-"also many available by other means. In fact, writing plug-ins (and scripts) "
-"is the easiest way for people not on the <acronym>GIMP</acronym> development "
-"team to add new capabilities to <acronym>GIMP</acronym>."
+"plug-ins are bundled with <acronym>GIMP</acronym>, but there are also many "
+"available by other means. In fact, writing plug-ins (and scripts) is the "
+"easiest way for people not on the <acronym>GIMP</acronym> development team "
+"to add new capabilities to <acronym>GIMP</acronym>."
 msgstr ""
 "画像を<acronym>GIMP</acronym>で加工するうえで、 大多数の工程は<acronym>GIMP</"
 "acronym>自身が行いますが、 さらに<acronym>GIMP</acronym>と密接に連携する"
@@ -7616,7 +7607,7 @@ msgstr ""
 "と大変そうですが、 実はプラグインを (スクリプトも) 書くのは簡単なので"
 "<acronym>GIMP</acronym>の開発スタッフでなくてもできてしまいます。"
 
-#: src/concepts/concepts.xml:187(para)
+#: src/concepts/concepts.xml:186(para)
 msgid ""
 "All of the commands in the Filters menu, and a substantial number of "
 "commands in other menus, are actually implemented as plug-ins."
@@ -7624,11 +7615,11 @@ msgstr ""
 "実際フィルタメニューの全コマンドと、 その他のメニューのかなりの数のコマンド"
 "が、 プラグインで実装されています。"
 
-#: src/concepts/concepts.xml:194(term)
+#: src/concepts/concepts.xml:193(term)
 msgid "Scripts"
 msgstr "スクリプト"
 
-#: src/concepts/concepts.xml:196(para)
+#: src/concepts/concepts.xml:195(para)
 msgid ""
 "In addition to plug-ins, which are programs written in the C language, GIMP "
 "can also make use of scripts. The largest number of existing scripts are "
@@ -8067,10 +8058,10 @@ msgid ""
 "get it in preview without it being necessary to restart GIMP."
 msgstr ""
 "このようなブラシの作り方: 拡大ズーム表示しながら小さな画像を描いて、 グレース"
-"ケールモードにします。 これを拡張子 <filename>.gbr</filename>の付いた名前で所"
-"定の位置に保存します。 ブラシダイアログの<quote>ブラシの再読み込み</quote>ボ"
-"タンをクリックすれば <acronym>GIMP</acronym>を再起動することなく新しいブラシ"
-"をプレビューできます。"
+"ケールモードにします。 これを拡張子 <filename class=\"extension\">.gbr</"
+"filename>の付いた名前で所定の位置に保存します。 ブラシダイアログの<quote>ブラ"
+"シの再読み込み</quote>ボタンをクリックすれば <acronym>GIMP</acronym>を再起動"
+"することなく新しいブラシをプレビューできます。"
 
 #: src/concepts/brushes.xml:95(term)
 msgid "Color brushes"
@@ -8220,7 +8211,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/concepts/basic-setup.xml:115(None)
+#: src/concepts/basic-setup.xml:116(None)
 msgid "@@image: 'images/using/tab-icon.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr "@@image: 'images/using/tab-icon.png'; md5=THIS FILE DOESN'T EXIST"
 
@@ -8253,8 +8244,7 @@ msgstr ""
 #: src/concepts/basic-setup.xml:41(para)
 msgid ""
 "<emphasis>The Main Toolbox:</emphasis> This is the heart of GIMP. It "
-"contains the highest level menu, plus a set of icon buttons that can be used "
-"to select tools, and more."
+"contains a set of icon buttons used to select tools, and more."
 msgstr ""
 "<emphasis>ツールボックス (道具箱):</emphasis> これが<acronym>GIMP</acronym>の"
 "心臓部です。 ここには選択ツールなどのアイコンボタンがずらりと並んでいます。"
@@ -8263,20 +8253,20 @@ msgstr ""
 msgid ""
 "<emphasis>Tool options:</emphasis> Docked below the main Toolbox is a Tool "
 "Options dialog, showing options for the currently selected tool (in this "
-"case, the Rectangle Select tool)."
+"case, the Smudge tool)."
 msgstr ""
 "<emphasis>ツールオプション:</emphasis> ツールボックスの下に合体しているのが"
 "ツール (画材) オプションを調整するダイアログです。 現在手にとっているツールの"
-"詳細が現れています(この例では矩形選択ツール)。"
+"詳細が現れています (この例ではブラシで描画ツール)。"
 
 #: src/concepts/basic-setup.xml:56(para)
 msgid ""
 "<emphasis>An image window:</emphasis> Each image open in GIMP is displayed "
-"in a separate window. A lot of images can be open at the same time, only "
-"limited by the system resources. Before you can do anything useful in GIMP, "
-"you need to have at least one image window open. The image window holds the "
-"Menu of the main commands of GIMP (File, Edit, Select...), which you can "
-"also get by right-clicking on the window."
+"in a separate window. Many images can be open at the same time, limited by "
+"only the system resources. Before you can do anything useful in GIMP, you "
+"need to have at least one image window open. The image window holds the Menu "
+"of the main commands of GIMP (File, Edit, Select...), which you can also get "
+"by right-clicking on the window."
 msgstr ""
 " <emphasis>画像ウィンドウ:</emphasis> <acronym>GIMP</acronym>は開いた画像をそ"
 "れぞれひとつづつウィンドウで表示します。 つまり同時に複数の画像を開けます"
@@ -8289,45 +8279,47 @@ msgstr ""
 #: src/concepts/basic-setup.xml:67(para)
 msgid ""
 "The <emphasis>Layers, Channels, Paths</emphasis> dock with the Layers Dialog "
-"open. This dialog window shows the layer structure of the currently active "
+"open; note that the <quote>dialogs</quote> in the <quote>dock</quote> are "
+"tabs. This dialog window shows the layer structure of the currently active "
 "image, and allows it to be manipulated in a variety of ways. It is possible "
 "to do a few very basic things without using the Layers dialog, but even "
 "moderately sophisticated GIMP users find it indispensable to have the Layers "
 "dialog available at all times."
 msgstr ""
-"<emphasis>レイヤー、テャンネル、パス:</emphasis>のドック。 レイヤーダイアログ"
-"が開かれています。 このダイアログウィンドウには、いま手掛けている画像のレイ"
-"ヤー構造が表示されており、ここでいろいろと操作できるようになっています。 基本"
-"的にレイヤーを使わずにできる作業も少しはありますが、 ちょっと<acronym>GIMP</"
-"acronym>に慣れてきたらもうレイヤーダイアログなしにはやっていけないと思うこと"
-"でしょう。"
+"<emphasis>レイヤー、チャンネル、パス:</emphasis>のドック。 レイヤーダイアログ"
+"が開かれています。 ちなみにダイアログはドックに入るとタブ化されます。 このダ"
+"イアログウィンドウには、いま手掛けている画像のレイヤー構造が表示されており、 "
+"ここでいろいろと操作できるようになっています。 基本的にレイヤーを使わずにでき"
+"る作業も少しはありますが、 ちょっと<acronym>GIMP</acronym>に慣れてきたらもう"
+"レイヤーダイアログなしにはやっていけないと思うことでしょう。"
 
-#: src/concepts/basic-setup.xml:78(para)
+#: src/concepts/basic-setup.xml:79(para)
 msgid ""
 "<emphasis>Brushes/Patterns/Gradients:</emphasis> The docked dialog below the "
-"layer dialog shows the dialogs for managing brushes, patterns and gradients."
+"layer dialog shows the dialogs (tabs) for managing brushes, patterns and "
+"gradients."
 msgstr ""
 "<emphasis>ブラシ/パターン/グラデーション:</emphasis>レイヤーダイアログの下に"
 "合体しているのはブラシ (穂先) とパターン (文様) とグラデーションを調節するダ"
-"イアログです。"
+"イアログ (のタブ) です。"
 
-#: src/concepts/basic-setup.xml:85(para)
+#: src/concepts/basic-setup.xml:86(para)
 msgid ""
 "This is a minimal setup. There are over a dozen other types of dialogs used "
 "by GIMP for various purposes, but users typically open them when they need "
 "them and close them when they are done. Knowledgeable users generally keep "
-"the Toolbox (with Tool Options) and Layers dialog around at all times. The "
+"the Toolbox (with Tool Options) and Layers dialog open at all times. The "
 "Toolbox is essential to many GIMP operations; in fact, if you close it, GIMP "
 "will exit after confirming that that is actually what you want to do. The "
 "Tool Options section is actually a separate dialog, shown docked to the Main "
 "Toolbox in the screenshot. Knowledgeable users almost always have it set up "
 "this way: it is very difficult to use tools effectively without being able "
-"to see how their options are set. The Layers dialog comes into play whenever "
-"you work with an image that has multiple layers: once you advance beyond the "
-"very most basic stages of GIMP expertise, this means <emphasis>almost "
-"always</emphasis>. And of course it helps to display the images you're "
-"editing on the screen; if you close the image window before saving your "
-"work, GIMP will ask you whether you want to close the file."
+"to see how their options are set. The Layers dialog comes into play when you "
+"work with an image with multiple layers: after you advance beyond the most "
+"basic stages of GIMP expertise, this means <emphasis>almost always</"
+"emphasis>. And of course it helps to display the images you're editing on "
+"the screen; if you close the image window before saving your work, GIMP will "
+"ask you whether you want to close the file."
 msgstr ""
 "ここでは最低限のものしか出ていません。 <acronym>GIMP</acronym>では目的にあわ"
 "せて十数種ものダイアログがありますが、 それが必要なときに開いて、 用が済んだ"
@@ -8337,74 +8329,71 @@ msgstr ""
 "ると、 本当に終了するのかどうか<acronym>GIMP</acronym>は確認を求めたうえで終"
 "了します。 ツールオプション区画はこの例ではツールボックスに合体させています"
 "が、 もともと別のダイアログです。 しかし要領のいいユーザはだいたいいつもこの"
-"形にしています。 ツール(画材)がどう調整されているか見ないで使いこなすのは無理"
-"なことですから。 レイヤーダイアログは画像を複数のレイヤーで扱う場合にのみ必要"
-"なものですが、 <acronym>GIMP</acronym>を使いはじめるとまもなく これも "
+"形にしています。 ツール (画材) がどう調整されているか見ないで使いこなすのは無"
+"理なことですから。 レイヤーダイアログは画像を複数のレイヤーで扱う場合にのみ必"
+"要なものですが、 <acronym>GIMP</acronym>を使いはじめるとまもなく これも "
 "<emphasis>ほぼ常備</emphasis> 品となることでしょう。 そしてもちろん、 加工中"
 "の画像を画面に出しておかねば何もできません。 作品を保存していないまま画像ウィ"
 "ンドウを閉じようとすると<acronym>GIMP</acronym>はこのファイルを閉じるのかどう"
 "か尋ねてきます。"
 
-#: src/concepts/basic-setup.xml:104(para)
+#: src/concepts/basic-setup.xml:105(para)
 msgid ""
-"If your GIMP layout gets trashed, fortunately your arrangement is pretty "
-"easy to recover by using <menuchoice><guimenu>Windows</"
-"guimenu><guisubmenu>Recently Closed Docks</guisubmenu></menuchoice> To add, "
-"close or detach a tab from a dock, click on <placeholder-1/> in the upper "
-"right corner of a dialog. This opens the Tab menu. Select <guimenuitem>Add "
-"Tab</guimenuitem>,<guimenuitem> Close Tab </guimenuitem> or "
-"<guimenuitem>Detach Tab</guimenuitem>."
+"If your GIMP layout is lost, your arrangement is easy to recover using "
+"<menuchoice><guimenu>Windows</guimenu><guisubmenu>Recently Closed Docks</"
+"guisubmenu></menuchoice> To add, close, or detach a tab from a dock, click "
+"<placeholder-1/> in the upper right corner of a dialog. This opens the Tab "
+"menu. Select <guimenuitem>Add Tab</guimenuitem>,<guimenuitem> Close Tab </"
+"guimenuitem>, or <guimenuitem>Detach Tab</guimenuitem>."
 msgstr ""
-"<acronym>GIMP</acronym>のダイアログを消してしまった時、 幸いにも "
-"<menuchoice><guimenu>ウィンドウ(<accel>W</accel>)</guimenu><guisubmenu>最"
-"近閉じたドック(<accel>R</accel>)</guisubmenu></menuchoice> と進めば簡単に配置"
-"を復元できます。 タブをドックに追加したりドックから外したり消したりするに"
-"は、 ダイアログの右上角の <placeholder-1/> をクリックします。 出てきたタブメ"
-"ニューで <guimenuitem>タブに追加(<accel>A</accel>)</guimenuitem>、 "
-"<guimenuitem>タブを閉じる(<accel>C</accel>)</guimenuitem>、 <guimenuitem>タブ"
-"を切り放す(<accel>T</accel>)</guimenuitem> のいずれかを選びます。"
+"<acronym>GIMP</acronym>のダイアログを消してしまっても <menuchoice><guimenu>"
+"ウィンドウ(<accel>W</accel>)</guimenu><guisubmenu>最近閉じたドック(<accel>R</"
+"accel>)</guisubmenu></menuchoice> と進めば簡単に配置を復元できます。 タブを"
+"ドックに追加したりドックから外したり消したりするには、 ダイアログの右上角の "
+"<placeholder-1/> をクリックします。 出てきたタブメニューで <guimenuitem>タブ"
+"に追加(<accel>A</accel>)</guimenuitem>、 <guimenuitem>タブを閉じる(<accel>C</"
+"accel>)</guimenuitem>、 <guimenuitem>タブを切り放す(<accel>T</accel>)</"
+"guimenuitem> のいずれかを選びます。"
 
-#: src/concepts/basic-setup.xml:124(para)
+#: src/concepts/basic-setup.xml:125(para)
 msgid ""
 "Unlike some other programs, GIMP does not give you the option of putting all "
 "your controls and image displays into a single comprehensive window. The "
 "GIMP developers have always felt that this is a poor way of working, because "
 "it forces the program to do the work of a dedicated window manager. Not only "
-"would this waste a lot of programmer time, it is almost impossible to do in "
-"a way that works correctly across all of the operating systems GIMP is "
-"intended to run on."
+"would this waste programmer time, it is almost impossible to do in a way "
+"that works correctly across all of the operating systems on which GIMP runs."
 msgstr ""
-"<acronym>GIMP</acronym>は他のソフトにあるような ひとつの大きな統合ウィンドウ"
-"にコントロール類や画像ディスプレイを押しこむ形態にする方法を提供していませ"
-"ん。 <acronym>GIMP</acronym>の開発者たちは、 これは下手なやり方だ、 ウィンド"
-"ウマネージャにまかされている仕事をわざわざプログラムにさせるなんて、といつも"
-"感じています。 そのためにプログラムを書くのは時間の浪費となるばかりか、 いろ"
-"いろなオペレーティングシステムで正しく稼動させることが著しく困難になってしま"
-"います。"
+"<acronym>GIMP</acronym>は他のソフトにあるようなひとつの大きな統合ウィンドウに"
+"コントロール類や画像ディスプレイを押しこむ形態にする方法を提供していません。 "
+"<acronym>GIMP</acronym>の開発者たちは、 これは下手なやり方だ、 ウィンドウマ"
+"ネージャにまかされている仕事をわざわざプログラムにさせるなんて、といつも感じ"
+"ています。 そのためにプログラムを書くのは時間の浪費となるばかりか、 いろいろ"
+"なオペレーティングシステムで正しく稼動させることが著しく困難になってしまいま"
+"す。"
 
-#: src/concepts/basic-setup.xml:134(para)
+#: src/concepts/basic-setup.xml:135(para)
 msgid ""
-"Earlier versions of GIMP (up to GIMP 1.2.5) were very profligate with "
-"dialogs: advanced users often had half a dozen or more dialogs open at once, "
-"scattered all over the screen and very difficult to keep track of. GIMP 2.0 "
-"is much better in this respect, because it allows dialogs to be docked "
-"together in a flexible way. (The Layers dialog in the screenshot actually "
-"contains four dialogs, represented by tabs: Layers, Channels, Paths, and "
-"Undo.) The system takes a little while to learn, but once you learn it, we "
-"hope that you will like it."
+"Earlier versions of GIMP (up to GIMP 1.2.5) used many dialogs: advanced "
+"users often had half a dozen or more dialogs open at once, scattered all "
+"over the screen and very difficult to track. GIMP 2.0 is much better in this "
+"respect, because it allows dialogs to be docked together in a flexible way. "
+"(The Layers dialog in the screenshot actually contains four dialogs, "
+"represented by tabs: Layers, Channels, Paths, and Undo.) The system takes a "
+"little while to learn, but once you learn it, we hope that you will like it."
 msgstr ""
 "古い版の<acronym>GIMP</acronym> (<acronym>GIMP</acronym>1.2.5以前) はダイアロ"
-"グの扱いにたいへん無駄がありました。 達人ともなると半ダースを越す数のダイアロ"
-"グをいっぺんに開いて作業しており、 画面が埋め尽くされそれぞれを追い掛けるのは"
-"非常に困難でした。 <acronym>GIMP</acronym>2.0からはこの点をよくふまえ、 ダイ"
-"アログを合体させる柔軟な方法を提供しました。 (スクリーンショットに見えるレイ"
-"ヤーダイアログは、 実際はレイヤー、チャンネル、パス、操作履歴の4つのダイアロ"
-"グからできており、 タブ化されています。) このしくみは慣れるまでに少々時間が要"
-"りますが、 きっと気にいって下さると思います。"
+"グを多く使いました。 達人ともなると半ダースを越す数のダイアログをいっぺんに開"
+"いて作業しており、 画面が埋め尽くされそれぞれを追い掛けるのは非常に困難でし"
+"た。 <acronym>GIMP</acronym>2.0からはこの点をよくふまえ、 ダイアログを合体さ"
+"せる柔軟な方法を提供しました。 (スクリーンショットに見えるレイヤーダイアログ"
+"は、 実際はレイヤー、チャンネル、パス、操作履歴の4つのダイアログからできてお"
+"り、 タブ化されています。) このしくみは慣れるまでに少々時間が要りますが、 "
+"きっと気にいって下さると思います。"
 
-#: src/concepts/basic-setup.xml:144(para)
+#: src/concepts/basic-setup.xml:145(para)
 msgid ""
-"The following sections will walk you through the components of each of the "
+"The following sections walk you through the components of each of the "
 "windows shown in the screenshot, explaining what they are and how they work. "
 "Once you have read them, plus the section describing the basic structure of "
 "GIMP images, you should have learned enough to use GIMP for a wide variety "
@@ -8424,36 +8413,39 @@ msgstr ""
 msgid "translator-credits"
 msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
 
-#~ msgid "About"
-#~ msgstr "要約"
-
-#~ msgid "Making selection transparent"
-#~ msgstr "選択範囲の透明化"
-
-#~ msgid "Making a selection transparent"
-#~ msgstr "選択範囲の透明化"
-
-#~ msgid "Link layers together"
-#~ msgstr "を連結"
-
-#~ msgid "In image window"
-#~ msgstr "画像ウィンドウ"
+#~ msgid ""
+#~ "In most operating systems, you can set things up so that various types of "
+#~ "image files are <quote>associated</quote> with GIMP, and cause it to "
+#~ "start automatically when icons for them are double-clicked."
+#~ msgstr ""
+#~ "ほとんどのオペレーティングシステムは、 ファイルの部類 (ファイル名の末尾に"
+#~ "ある <filename class=\"extension\">.jpg</filename> のような拡張子で判別さ"
+#~ "れます) ごとに対応できるアプリケーション (たとえば<acronym>GIMP</"
+#~ "acronym>) を関連づけるしくみをサポートしています。 適切に<acronym>GIMP</"
+#~ "acronym>に画像ファイルを<quote>関連づけ</quote>しておけば、 画像のアイコン"
+#~ "をダブルクリックするだけで<acronym>GIMP</acronym>で開けるようになります。"
 
 #~ msgid ""
-#~ "Every dockable window has two types of docking areas: the dock bars and "
-#~ "the docking-tab area."
+#~ "All being well, GIMP detects the system language. This may fail on some "
+#~ "machines and you may want use another language. It is possible to change "
+#~ "the language:"
 #~ msgstr ""
-#~ "いずれのドッキング可能なダイアログも合体バーと合体タブ領域の2種類の合体用"
-#~ "領域を備えています。"
+#~ "何も問題なければ、<acronym>GIMP</acronym>はシステムから適切な言語を選びだ"
+#~ "すはずですが、マシンによっては違ったことになったり、そもそも別の言語で起動"
+#~ "する必要に迫られることになるかもしれません。 言語は次のようにして変更でき"
+#~ "ます:[<acronym>GIMP</acronym>のメニューやダイアログはさまざまな国や民族の"
+#~ "言葉に翻訳されています。] <acronym>GIMP</acronym>はシステムで設定されてい"
+#~ "る言語を自動的に見付け出し使えるようにします。 めったにないことですが言語"
+#~ "を見付けるのに失敗する場合や、 システムとは別の言語を使用したい場合はつぎ"
+#~ "のようにしてください。"
 
-#~ msgid "Add tab"
-#~ msgstr "タブに追加"
-
-#~ msgid "<placeholder-1/> sub-menu"
-#~ msgstr "<placeholder-1/>サブメニュー"
-
-#~ msgid "color"
-#~ msgstr "色"
-
-#~ msgid "GIMP"
-#~ msgstr "GIMP"
+#~ msgid ""
+#~ "Ordinarily you don't need to give any arguments when starting GIMP, but "
+#~ "here is a list of some that may at one time or another be useful. This is "
+#~ "not a complete list; on Unix systems you can get a complete list by "
+#~ "running <userinput>man gimp</userinput> in a terminal window."
+#~ msgstr ""
+#~ "<acronym>GIMP</acronym>を起動する際オプション変数まで指定する必要はありま"
+#~ "せんが、 主だったものをここにいくつか挙げておきましょう。 Unix 風システム"
+#~ "では<userinput>man&nbsp;gimp</userinput>とすれば、 オプションの完全なリス"
+#~ "トを含むマニュアルが読めます。"

@@ -9,28 +9,42 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-26 de added by axel.wernicke
 -->
+<!--2009-06-28-->
 <sect2 id="plug-in-smooth-palette">
-  <title>Smooth Palette</title>
+  <title lang="en">Smooth Palette</title>
+  <title lang="ja">パレット生成(T)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Colors</primary>
     <secondary>Smooth Palette</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Smooth Palette</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="パレットセイセイ">パレット生成</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="パレットセイセイ">パレット生成</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Smooth Palette</quote> filter</title>
+      <title lang="en">
+        Example for the <quote>Smooth Palette</quote> filter
+      </title>
+      <title lang="ja"><quote>パレット生成</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -39,20 +53,29 @@
             fileref="images/filters/examples/color-taj-smoothpalette.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Smooth Palette</quote> applied</para>
+          <para lang="en">Filter <quote>Smooth Palette</quote> applied</para>
+          <para lang="ja"><quote>パレット生成</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       It creates a striped palette from colors in active layer or selection.
       The main purpose of this filter is to create color-maps to be used with
       the <link linkend="plug-in-flame">Flame</link> filter.
     </para>
+    <para lang="ja">
+      <guimenuitem>パレット生成(<accel>T</accel>)...</guimenuitem> プラグインは
+      活性レイヤーかその選択範囲から色を取り出して縞模様のパレット風<acronym>
+      RGB</acronym>画像を生成します。 このフィルタの主目的は 
+      <link linkend="plug-in-flame">炎</link> フィルタで使用できるカラーマップ
+      を作成することです。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Activating the filter</title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Colors</guimenu>
@@ -60,12 +83,21 @@
         <guimenuitem>Smooth Palette</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色(<accel>C</accel>)</guimenu>
+        <guisubmenu>画像の情報(<accel>N</accel>)</guisubmenu>
+        <guimenuitem>パレット生成(<accel>T</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">オプション</title>
     <figure>
-      <title><quote>Smooth Palette</quote> options</title>
+      <title lang="en"><quote>Smooth Palette</quote> options</title>
+      <title lang="ja"><quote>パレット生成</quote>のオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -75,21 +107,33 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Parameter Settings</term>
+        <term lang="en">Parameter Settings</term>
+        <term lang="ja">幅(W); 高さ(H)</term>
         <listitem>
-          <para>
+          <para lang="en">
             You can set palette dimensions for <guilabel>Width</guilabel> and
             <guilabel>Height</guilabel>. Dimensions are linked when chain is
             not broken. You can also select unit.
           </para>
+          <para lang="ja">
+            パレット画像の寸法を <guilabel>幅(<accel>W</accel>)</guilabel> と
+            <guilabel>高さ(<accel>H</accel>)</guilabel> で設定します。 縦横比を
+            保つには両欄を結ぶ鎖のしるしをクリックして繋げてください。 初期状態
+            ではピクセル単位ですが他の単位も選べます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Search Depth</term>
+        <term lang="en">Search Depth</term>
+        <term lang="ja">検索回数(S)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Increasing Search Depth (1 - 1024) will result in more shades in
             palette.
+          </para>
+          <para lang="ja">
+            検索回数 (1から1024まで) を増すとさらにパレットの微妙な色あいが
+            深まります。
           </para>
         </listitem>
       </varlistentry>
