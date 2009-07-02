@@ -2,12 +2,13 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-07-01 liangtai: deleted buttons that no longer exist
   2008-01-07 j.h: copy-pasted from menus/xtns-module-manager.xml
   2008-05-06 ude: changed (help-)id [was: gimp-xtns-module-manager]
   2008-03-13 ude: enhanced dialog description
   2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2009-06-22-->
+<!--2009-07-02-->
 <sect2 id="gimp-module-dialog">
   <title lang="en">The Module Manager</title>
   <title lang="ja">モジュール(M)</title>
@@ -16,7 +17,7 @@
     <primary>Module Manager</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Module Manager</primary>
+    <primary>モジュール</primary>
   </indexterm>
 
   <para lang="en">
@@ -30,11 +31,18 @@
     memory and its start-up time.
   </para>
   <para lang="ja">
-    <guimenuitem>モジュール(<accel>M</accel>)</guimenuitem>
+    <guimenuitem>モジュール(<accel>M</accel>)</guimenuitem> コマンドは利用可能
+    な拡張モジュールを表示し、 <acronym>GIMP</acronym>に読み込むべきものと
+    読み込ませないものを調整できるダイアログを開きます。 モジュールは色の選択や
+    フィルタの表示など、 いくつかの機能があります。 モジュールマネージャの設定
+    に変更を加えると、 次回<acronym>GIMP</acronym>の起動時に反映されます。 
+    いずれの変更も<acronym>GIMP</acronym>の機能上の制約や発展に影響し、 
+    メモリを占める容量や起動時の所要時間を増加・短縮します。
   </para>
 
   <sect3>
-    <title lang="en">Activate the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -45,6 +53,11 @@
           </menuchoice>
         </para>
         <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集(<accel>E</accel>)</guimenu>
+            <guimenuitem>モジュール(<accel>M</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>
@@ -54,8 +67,14 @@
     <title lang="en">
       Description of the <quote>Module Manager</quote> Dialog
     </title>
+    <title lang="ja">
+      <quote>モジュールマネージャ</quote>ダイアログのご説明
+    </title>
     <figure>
       <title lang="en">The <quote>Module Manager</quote> dialog window</title>
+      <title lang="ja">
+        <quote>モジュールマネージャ</quote>ダイアログのウィンドウ
+      </title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/module-manager.png" format="PNG"/>
@@ -64,13 +83,17 @@
     </figure>
     <variablelist>
       <title lang="en">Modules list</title>
+      <title lang="ja">モジュール一覧表</title>
       <para lang="en">
         The scrolled window of the Module Manager shows the loadable modules.
       </para>
       <para lang="ja">
+        モジュールマネージャの上部を占めるスクロール機能つきの一覧表は自在に
+        読み込めるモジュールを表示します。
       </para>
       <varlistentry>
         <term lang="en">Autoload</term>
+        <term lang="ja">自動読み込み</term>
         <listitem>
           <para lang="en">
             Clicking on the boxes in this column will check or uncheck the
@@ -86,11 +109,23 @@
             option in the module manager:
           </para>
           <para lang="ja">
+            このチェックボックスをクリックして読み込むべきモジュールを選別
+            します。 次回<acronym>GIMP</acronym>を起動したときにチェックの
+            入ったモジュールだけが自動的に読み込まれます。
           </para>
           <para lang="ja">
+            モジュールを使うときになってはじめてこの変化に気付かれること
+            でしょう。 例えば描画色と背景色を選択するときに使われる 
+            <link linkend="gimp-color-dialog">色を選択するダイアログ</link> 
+            にはさまざまな機能があります。 タブ化された色選択機能のいくつかは
+            モジュールマネージャで該当するモジュールに読み込みチェックを入れて
+            いる場合のみ利用できるようになっています。
           </para>
           <figure>
             <title lang="en">Autoload example: Color selector modules</title>
+            <title lang="en">
+              自動読み込みの使用例: カラーセレクタモジュール
+            </title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -98,6 +133,9 @@
               </imageobject>
               <caption>
                 <para lang="en">Color selector modules loaded</para>
+                <para lang="en">
+                  いくつかのカラーセレクタモジュールが読み込まれている
+                </para>
               </caption>
             </mediaobject>
             <mediaobject>
@@ -107,6 +145,9 @@
               </imageobject>
               <caption>
                 <para lang="en">Color selector modules not loaded</para>
+                <para lang="ja">
+                  いくつかのカラーセレクタモジュールが読み込まれていない
+                </para>
               </caption>
             </mediaobject>
           </figure>
@@ -115,49 +156,30 @@
             module is displayed at the bottom of the dialog.
           </para>
           <para lang="ja">
+            自動的に読み込まれたモジュールについてはダイアログで選択すれば
+            その情報がダイアログの下部に表示されます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Module path</term>
+        <term lang="ja">モジュールの場所</term>
         <listitem>
           <para lang="en">
             In this column, the directory path for each module is shown.
           </para>
           <para lang="ja">
+            この行には現在選択されているモジュールの保管場所が表示されます。
           </para>
         </listitem>
       </varlistentry>
     </variablelist>
     <variablelist>
       <term lang="en">Buttons</term>
-      <varlistentry>
-        <term lang="en">Query</term>
-        <listitem>
-          <para lang="en">
-            This button is only visible, when the respective module has not
-            been auto-loaded. When you click on the button, information about
-            the selected module is displayed at the bottom of the dialog, and
-            the button changes to <guibutton>Load</guibutton>.
-          </para>
-          <para lang="ja">
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Load; Unload</term>
-        <listitem>
-          <para lang="en">
-            Loading modules manually does not work properly. The buttons are
-            useless (<quote>Unload</quote> is even disabled) and will probably
-            removed in future versions.
-          </para>
-          <para lang="ja">
-          </para>
-        </listitem>
-      </varlistentry>
+      <term lang="ja">ボタン</term>
       <varlistentry>
         <term lang="en">Refresh</term>
+        <term lang="ja">更新(R)</term>
         <listitem>
           <para lang="en">
             When you click on this button, the list of modules will be
@@ -165,6 +187,9 @@
             modules found will be added.
           </para>
           <para lang="ja">
+            このボタンをクリックするとモジュールの一覧表が更新されます。 
+            ディスク上から削除されたモジュールの行は消え、 新たに発見された
+            モジュールは追加されます。
           </para>
         </listitem>
       </varlistentry>
