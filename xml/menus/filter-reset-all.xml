@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-06-20 Added Spanish translation by AntI
   2005/11/20 split off from menus-filter.xml; de created by axel.wernicke
 -->
+<!--2009-07-01-->
 <sect2 id="gimp-filter-reset-all">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-07-28</date>
-        <authorinitials>scb</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Reset All Filters</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Reset All Filters</title>
+  <title lang="ja">すべてのフィルタをリセット(F)</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Common functions</secondary>
     <tertiary>Reset all</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Reset All</primary>
   </indexterm>
-  <para>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>共通機能</secondary>
+    <tertiary>すべてのフィルタをリセット</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>すべてのフィルタをリセット</primary>
+  </indexterm>
+
+  <para lang="en">
     Normally, each time you run an interactive plug-in, its dialog is
     displayed with all of the settings initialized to the ones you used
     the last time you ran it. This may be a problem if you made a mistake
@@ -37,15 +39,38 @@
     dramatic step, it asks you to confirm that you really want to do it.
     Be careful: you cannot undo this command.
   </para>
+  <para lang="ja">
+    起用したあとも数値の調整などのやりとりが必要なプラグインはダイアログを
+    開き、 普通は以前利用したときの設定値を再現します。
+    ところが以前の操作で失敗していたなどの望ましくない設定だった場合、 初期設定
+    の値をちゃんと覚えていなければ適当な値に戻せなくなる問題が起きます。 これを
+    挽回するひとつの方法としては<acronym>GIMP</acronym>を終了してしまい再起動
+    すればたしかに初期設定に戻れますが、 そこまで抜本的にならずとも 
+    <guimenuitem>すべてのフィルタをリセット(<accel>F</accel>)</guimenuitem> 
+    コマンドを使う方法があります。 これは <emphasis>全て</emphasis> の
+    プラグインの設定値を初期状態に戻します。 これでも劇的な変化を生じる操作です
+    からコマンドを呼び出すと実行前にその意思の再確認が求められます。 この操作は
+    取り消せませんので慎重にご判断ください。
+  </para>
+
   <sect3>
-    <title>
-      <phrase>Activating the Command</phrase>
-    </title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
-          <menuchoice><guimenu>Filters</guimenu><guimenuitem>Reset all Filters</guimenuitem></menuchoice>.
+          <menuchoice>
+            <guimenu>Filters</guimenu>
+            <guimenuitem>Reset all Filters</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+            <guimenuitem>すべてのフィルタをリセット(<accel>F</accel>)</guimenuitem>
+          </menuchoice>
         </para>
       </listitem>
     </itemizedlist>

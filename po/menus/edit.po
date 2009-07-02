@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-06-28 06:23+0900\n"
-"PO-Revision-Date: 2009-05-23 15:58+0900\n"
+"POT-Creation-Date: 2009-07-02 08:07+0900\n"
+"PO-Revision-Date: 2009-07-02 08:40+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,6 @@ msgstr ""
 #: src/menus/edit/paste-as-new.xml:37(title)
 #: src/menus/edit/paste-as-layer.xml:42(phrase)
 #: src/menus/edit/paste-as-brush.xml:90(phrase)
-#: src/menus/edit/module-manager.xml:37(phrase)
 #: src/menus/edit/fill-pattern.xml:54(phrase)
 #: src/menus/edit/fill-fg.xml:51(phrase) src/menus/edit/fill-bg.xml:51(phrase)
 #: src/menus/edit/cut.xml:50(phrase) src/menus/edit/copy.xml:39(phrase)
@@ -82,7 +81,6 @@ msgstr "<placeholder-1/>ダイアログのご説明"
 
 #: src/menus/edit/units.xml:60(phrase)
 #: src/menus/edit/stroke-path.xml:65(phrase)
-#: src/menus/edit/module-manager.xml:59(phrase)
 msgid "The <placeholder-1/> dialog window"
 msgstr "<placeholder-1/>ダイアログのウィンドウ"
 
@@ -335,6 +333,7 @@ msgstr ""
 #: src/menus/edit/undo-history.xml:48(phrase)
 #: src/menus/edit/stroke-path.xml:42(phrase)
 #: src/menus/edit/redo.xml:42(phrase)
+#: src/menus/edit/module-manager.xml:28(title)
 #: src/menus/edit/copy-visible.xml:49(phrase)
 msgid "Activating the Command"
 msgstr "コマンドの呼び出し方"
@@ -390,8 +389,7 @@ msgstr ""
 
 #: src/menus/edit/stroke-selection.xml:36(para)
 msgid "This command is only active if the image has an active selection."
-msgstr ""
-"このコマンドは画像上で選択範囲が活性化しているときのみ利用可能になります。"
+msgstr "このコマンドは画像上で選択範囲が活性化しているときのみ利用可能になります。"
 
 #: src/menus/edit/stroke-selection.xml:46(para)
 msgid ""
@@ -1210,14 +1208,14 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/edit/module-manager.xml:65(None)
+#: src/menus/edit/module-manager.xml:53(None)
 msgid "@@image: 'images/menus/module-manager.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
 "@@image: 'images/menus/module-manager.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/edit/module-manager.xml:102(None)
+#: src/menus/edit/module-manager.xml:88(None)
 msgid ""
 "@@image: 'images/menus/module-manager-ex1.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -1225,23 +1223,21 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/edit/module-manager.xml:110(None)
+#: src/menus/edit/module-manager.xml:96(None)
 msgid ""
 "@@image: 'images/menus/module-manager-ex2.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
 "@@image: 'images/menus/module-manager-ex2.png'; md5=THIS FILE DOESN'T EXIST"
 
-#: src/menus/edit/module-manager.xml:20(phrase)
+#: src/menus/edit/module-manager.xml:11(title)
 msgid "The Module Manager"
 msgstr "モジュール(M)"
 
-#: src/menus/edit/module-manager.xml:23(primary)
-#: src/menus/edit/module-manager.xml:54(quote)
-#: src/menus/edit/module-manager.xml:60(quote)
+#: src/menus/edit/module-manager.xml:15(primary)
 msgid "Module Manager"
-msgstr ""
+msgstr "モジュール(M)"
 
-#: src/menus/edit/module-manager.xml:25(para)
+#: src/menus/edit/module-manager.xml:17(para)
 msgid ""
 "With the <guimenuitem>Module Manager</guimenuitem> command, you can show the "
 "various extension modules which are available and control which of them "
@@ -1251,38 +1247,59 @@ msgid ""
 "acronym>. These changes affect <acronym>GIMP</acronym>'s functional "
 "capabilities, its size in memory and its start-up time."
 msgstr ""
+"<guimenuitem>モジュール(<accel>M</accel>)</guimenuitem> コマンドは利用可能"
+"な拡張モジュールを表示し、 <acronym>GIMP</acronym>に読み込むべきものと"
+"読み込ませないものを調整できるダイアログを開きます。 モジュールは色の選択や"
+"フィルタの表示など、 いくつかの機能があります。 モジュールマネージャの設定"
+"に変更を加えると、 次回<acronym>GIMP</acronym>の起動時に反映されます。 "
+"いずれの変更も<acronym>GIMP</acronym>の機能上の制約や発展に影響し、 "
+"メモリを占める容量や起動時の所要時間を増加・短縮します。"
 
-#: src/menus/edit/module-manager.xml:41(para)
+#: src/menus/edit/module-manager.xml:33(para)
 msgid ""
 "You can access this command from the image menubar through "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Modules</guimenuitem></"
 "menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより"
+" <menuchoice>"
+"<guimenu>編集(<accel>E</accel>)</guimenu>"
+"<guimenuitem>モジュール(<accel>M</accel>)</guimenuitem>"
+"</menuchoice>"
 
-#: src/menus/edit/module-manager.xml:53(phrase)
-msgid "Description of the <placeholder-1/> Dialog"
-msgstr ""
+#: src/menus/edit/module-manager.xml:44(title)
+msgid "Description of the <quote>Module Manager</quote> Dialog"
+msgstr "<quote>モジュールマネージャ</quote>ダイアログのご説明"
 
-#: src/menus/edit/module-manager.xml:71(phrase)
+#: src/menus/edit/module-manager.xml:48(title)
+msgid "The <quote>Module Manager</quote> dialog window"
+msgstr "<quote>モジュールマネージャ</quote>ダイアログのウィンドウ"
+
+#: src/menus/edit/module-manager.xml:58(title)
 msgid "Modules list"
-msgstr ""
+msgstr "モジュール一覧表"
 
-#: src/menus/edit/module-manager.xml:73(para)
+#: src/menus/edit/module-manager.xml:61(para)
 msgid "The scrolled window of the Module Manager shows the loadable modules."
 msgstr ""
+"モジュールマネージャの上部を占めるスクロール機能つきの一覧表は自在に"
+"読み込めるモジュールを表示します。"
 
-#: src/menus/edit/module-manager.xml:78(phrase)
+#: src/menus/edit/module-manager.xml:65(term)
 msgid "Autoload"
-msgstr ""
+msgstr "自動読み込み"
 
-#: src/menus/edit/module-manager.xml:81(para)
+#: src/menus/edit/module-manager.xml:69(para)
 msgid ""
 "Clicking on the boxes in this column will check or uncheck the modules. The "
 "next time you start <acronym>GIMP</acronym>, any checked module will be "
 "loaded automatically."
 msgstr ""
+"このチェックボックスをクリックして読み込むべきモジュールを選別"
+"します。 次回<acronym>GIMP</acronym>を起動したときにチェックの"
+"入ったモジュールだけが自動的に読み込まれます。"
 
-#: src/menus/edit/module-manager.xml:86(para)
+#: src/menus/edit/module-manager.xml:74(para)
 msgid ""
 "You will notice the difference only when you try to use the modules. For "
 "example, there are several <link linkend=\"gimp-color-dialog\">color "
@@ -1290,69 +1307,57 @@ msgid ""
 "selectors are modules and will only be available when you check the "
 "respective option in the module manager:"
 msgstr ""
+"モジュールを使うときになってはじめてこの変化に気付かれること"
+"でしょう。 例えば描画色と背景色を選択するときに使われる "
+"<link linkend=\"gimp-color-dialog\">色を選択するダイアログ</link> "
+"にはさまざまな機能があります。 タブ化された色選択機能のいくつかは"
+"モジュールマネージャで該当するモジュールに読み込みチェックを入れて"
+"いる場合のみ利用できるようになっています。"
 
-#: src/menus/edit/module-manager.xml:96(phrase)
+#: src/menus/edit/module-manager.xml:83(title)
 msgid "Autoload example: Color selector modules"
-msgstr ""
+msgstr "自動読み込みの使用例: カラーセレクタモジュール"
 
-#: src/menus/edit/module-manager.xml:105(para)
+#: src/menus/edit/module-manager.xml:91(para)
 msgid "Color selector modules loaded"
-msgstr ""
+msgstr "いくつかのカラーセレクタモジュールが読み込まれている"
 
-#: src/menus/edit/module-manager.xml:113(para)
+#: src/menus/edit/module-manager.xml:99(para)
 msgid "Color selector modules not loaded"
-msgstr ""
+msgstr "いくつかのカラーセレクタモジュールが読み込まれていない"
 
-#: src/menus/edit/module-manager.xml:117(para)
+#: src/menus/edit/module-manager.xml:103(para)
 msgid ""
 "For automatically loaded modules, information about the selected module is "
 "displayed at the bottom of the dialog."
 msgstr ""
+"自動的に読み込まれたモジュールについてはダイアログで選択すれば"
+"その情報がダイアログの下部に表示されます。"
 
-#: src/menus/edit/module-manager.xml:125(phrase)
+#: src/menus/edit/module-manager.xml:110(term)
 msgid "Module path"
-msgstr ""
+msgstr "モジュールの場所"
 
-#: src/menus/edit/module-manager.xml:128(para)
+#: src/menus/edit/module-manager.xml:114(para)
 msgid "In this column, the directory path for each module is shown."
-msgstr ""
+msgstr "この行には現在選択されているモジュールの保管場所が表示されます。"
 
-#: src/menus/edit/module-manager.xml:136(phrase)
+#: src/menus/edit/module-manager.xml:121(title)
 msgid "Buttons"
-msgstr ""
+msgstr "ボタン"
 
-#: src/menus/edit/module-manager.xml:140(phrase)
-msgid "Query"
-msgstr ""
-
-#: src/menus/edit/module-manager.xml:143(para)
-msgid ""
-"This button is only visible, when the respective module has not been auto-"
-"loaded. When you click on the button, information about the selected module "
-"is displayed at the bottom of the dialog, and the button changes to "
-"<guibutton>Load</guibutton>."
-msgstr ""
-
-#: src/menus/edit/module-manager.xml:153(phrase)
-msgid "Load; Unload"
-msgstr ""
-
-#: src/menus/edit/module-manager.xml:156(para)
-msgid ""
-"Loading modules manually does not work properly. The buttons are useless "
-"(<quote>Unload</quote> is even disabled) and will probably removed in future "
-"versions."
-msgstr ""
-
-#: src/menus/edit/module-manager.xml:165(phrase)
+#: src/menus/edit/module-manager.xml:125(term)
 msgid "Refresh"
-msgstr ""
+msgstr "更新(R)"
 
-#: src/menus/edit/module-manager.xml:168(para)
+#: src/menus/edit/module-manager.xml:129(para)
 msgid ""
 "When you click on this button, the list of modules will be updated: modules "
 "no longer on disk will be removed, and new modules found will be added."
 msgstr ""
+"このボタンをクリックするとモジュールの一覧表が更新されます。 "
+"ディスク上から削除されたモジュールの行は消え、 新たに発見された"
+"モジュールは追加されます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1981,3 +1986,4 @@ msgstr ""
 #: src/menus/edit/buffer-dialog.xml:0(None)
 msgid "translator-credits"
 msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
+
