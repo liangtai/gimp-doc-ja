@@ -2,6 +2,8 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2009-07-09 ude: added scroll wheel tip (#585823),
+                  fixed "entering special chars" (#589532)
   2009-03-09 j.h: updated to v2.6
   2008-01-05 j.h: updated en;fr to v2.4.
   2007-06-04 kost: added 'no'
@@ -11,7 +13,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--2009-06-23-->
+<!--2009-07-10-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -53,9 +55,9 @@
     color and size of your text, and justify it, interactively.
   </para>
   <para lang="en">
-    A new possibility appeared with GIMP-2.6: click-dragging the
-    mouse pointer on the canvas draws a rectangular frame that you
-    can enlarge and move as you do with rectangular selections. The
+    A new possibility appeared with <acronym>GIMP</acronym>-2.6:
+    click-dragging the mouse pointer on the canvas draws a rectangular frame
+    that you can enlarge and move as you do with rectangular selections. The
     text you type in the Text Editor is displayed in this frame and
     automatically adapted to the frame size. You can adjust this frame
     whenever you like.
@@ -75,7 +77,7 @@
     この枠内に表示され、 枠の大きさにその文字が自動的に適合します。 <!--たぶん
     嘘-->この枠はいつでも調整できます。
   </para>
-  <figure>
+  <figure id="gimp-text-bounding-box">
     <title lang="en">Text tool bounding box</title>
     <title lang="ja">テキストツールの矩形枠</title>
     <mediaobject>
@@ -181,25 +183,74 @@
         <term lang="ja">フォント</term>
         <listitem>
           <para lang="en">
-            There are two ways of selecting fonts in GIMP. The first is from
-            the image Dialogs/Fonts menu. The second is with the Font selector
-            in this tool. Both methods select from the installed X fonts. When
-            you select a font it is interactively applied to your text.
+            Click on the fonts button <guibutton>A&alpha;</guibutton> to open
+            the font selector of this tool, which offers you a list of
+            installed X fonts.
           </para>
           <para lang="ja">
-            <acronym>GIMP</acronym>ではフォントを選択する方法が2通りあります。
-            ひとつめはメニューより
-            <menuchoice>
-              <guimenu>ウィンドウ(<accel>W</accel>)</guimenu>
-              <guisubmenu>ドッキング可能なダイアログ(<accel>D</accel>)</guisubmenu>
-              <guimenuitem>フォント(<accel>F</accel>)</guimenuitem>
-            </menuchoice> と辿って得られるダイアログで選ぶ方法です。 もうひとつ
-            はこのツールの <guilabel>フォント:</guilabel> セレクタを利用する
-            ことです。 いずれの手順でもシステムにインストールされているフォント
-            や、 <acronym>GIMP</acronym>のユーザディレクトリに追加したフォント
-            を使えます。 テキストレイヤーを活性化してフォントを変更すると直ちに
-            画像にもそのフォントが適用されます。
+            フォントボタン <guibutton>永</guibutton> をクリックすると簡易型
+            フォント選択ウィンドウが開きます。 ここからシステムにインストール
+            されているフォントや、 <acronym>GIMP</acronym>のユーザディレクトリ
+            に追加したフォントが選べます。
           </para>
+          <itemizedlist>
+            <para lang="en">
+              At the bottom of the font selector you find some icons which
+              act as buttoms for:
+            </para>
+            <para lang="ja">
+              フォント選択ウィンドウの底部のアイコンボタンでつぎの操作が
+              できます。
+            </para>
+            <listitem>
+              <para lang="en">resizing the font previews,</para>
+              <para lang="ja">フォント見本の大きさ変更</para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                selecting <emphasis>list view</emphasis> or <emphasis>grid
+                view</emphasis>,
+              </para>
+              <para lang="ja">
+                <emphasis>リストで表示</emphasis> か <emphasis>グリッドで表示
+                </emphasis> かを選択
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                opening the <link linkend="gimp-font-dialog">font
+                dialog</link>.
+              </para>
+              <para lang="ja">
+                <link linkend="gimp-font-dialog">フォントダイアログ</link> を
+                開く
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para lang="en">
+            Choose a font from the installed fonts. When you select a font it
+            is interactively applied to your text.
+          </para>
+          <para lang="ja">
+            インストールされているフォントからいずれかを選択します。 テキスト
+            レイヤーを活性化してからフォントを変更すると直ちに画像にもその
+            フォントが適用されます。
+          </para>
+          <tip>
+            <!--cf. bug #585823 (2009-06-15)-->
+            <para lang="en">
+              You can use the scroll wheel of your pointing device (usually
+              your mouse) on the fonts button in order to quickly change the
+              font of your text (move the pointer on the fonts button, and
+              don't click, just use the wheel button).
+            </para>
+            <para lang="ja">
+              ポインティングデバイス (マウスなど) についているスクロール
+              ホイールをフォントボタン上で回すとテキストに使われているフォント
+              を素早く変更できます (クリックする必要はなく、 マウス車だけを
+              使用します)。
+            </para>
+          </tip>
         </listitem>
       </varlistentry>
 
@@ -411,7 +462,9 @@
             <primary>Text along Path</primary>
           </indexterm>
           <indexterm lang="ja">
-            <primary sortas="パスニソッテテキストヲハイチ">パスに沿ってテキストを配置</primary>
+            <primary sortas="パスニソッテテキストヲハイチ">
+              パスに沿ってテキストを配置
+            </primary>
           </indexterm>
           <para lang="en">
             This option is enabled only if a
@@ -426,10 +479,10 @@
           <para lang="ja">
             このオプションは予め
             <link linkend="gimp-using-paths">パス</link> が描かれていることが
-            条件です。 文字を収めたテキストレイヤーを作ったら、 パスを作成するか
-            もしくは転換によって作成して活性化します。 もし既に作ったパスを
-            利用する場合は大抵が不可視になっていることが多いのでパスダイアログ
-            で可視化します。
+            条件です。 文字を収めたテキストレイヤーを作ったら、 パスを作成
+            するかもしくは転換によって作成して活性化します。 もし既に作った
+            パスを利用する場合は大抵が不可視になっていることが多いので
+            パスダイアログで可視化します。
           </para>
           <para lang="ja">
             ちなみにこのコマンドは<quote>レイヤー</quote>メニューにも現れます:
@@ -469,19 +522,19 @@
             text is bent along the path. Letters are represented with their
             outline. Each of them is a component of the new path which
             appears in the <link linkend="gimp-path-dialog">Path
-              dialog</link>. All path options should apply to this new path.
+            dialog</link>. All path options should apply to this new path.
           </para>
           <para lang="ja">
             もし既に書かれているテキストを利用するのなら、
-            <link linkend="gimp-layer-dialog">レイヤーダイアログ</link>
-            にてそのテキストレイヤーを活性化してください。 つづいてテキストツール
-            を呼び出してから画像ウィンドウのテキストをクリックしてください。
+            <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> にて
+            そのテキストレイヤーを活性化してください。 つづいてテキストツールを
+            呼び出してから画像ウィンドウのテキストをクリックしてください。
           </para>
           <para lang="ja">
-            ツールオプションの <guibutton>パスに沿ってテキストを配置</guibutton>
-            ボタンをクリックします。 するとテキストはパスに沿ってうねるように
-            綴られます。 それぞれの文字は輪郭だけが描かれています。 これらは
-            新たなパスの成分になっていて、
+            ツールオプションの <guibutton>パスに沿ってテキストを配置
+            </guibutton> ボタンをクリックします。 するとテキストはパスに沿って
+            うねるように綴られます。 それぞれの文字は輪郭だけが描かれています。
+            これらは新たなパスの成分になっていて、
             <link linkend="gimp-path-dialog">パスダイアログ</link> でも確認
             できます。 パスに適用できるオプションは全てこのパスにも適用
             できます。
@@ -508,7 +561,7 @@
         </listitem>
       </varlistentry>
       <varlistentry id="text-to-path">
-        <term lang="en">Create Path from Text</term>
+        <term lang="en">Path from Text</term>
         <term lang="ja">テキストからパスを作成</term>
         <listitem>
           <indexterm lang="en">
@@ -549,8 +602,8 @@
       <secondary sortas="ヘンシュウ">編集</secondary>
     </indexterm>
     <figure>
-      <title lang="en">The Text Editor options</title>
-      <title lang="ja">テキストエディタオプションダイアログ</title>
+      <title lang="en">The Text Editor</title>
+      <title lang="ja">テキストエディタダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -558,71 +611,150 @@
         </imageobject>
       </mediaobject>
     </figure>
+    <para lang="en">
+      This dialog window is opened when you click on the image with the Text
+      Tool. There, you can enter the text which shows up in real time in the
+      frame on top of the canvas.
+    </para>
+    <para lang="en">
+      You can correct the text you are writing and you can change the text
+      font with the Font Editor.
+    </para>
+    <para lang="en">
+      As soon as you start writing, a Text layer is created in the Layer
+      Dialog. On an image with such a layer (the image you are working on, or
+      a <filename class="extension">.xcf</filename> image), you can resume
+      text editing by activating this text layer then clicking on it (double
+      click). Of course, you can apply to this text layer the same functions
+      you use with other layers.
+    </para>
+    <para lang="en">
+      To add another text to your image click on a non-text layer: a new Text
+      Editor will appear and a new text layer will be created. To pass from a
+      text to another one activate the corresponding text layer and click on
+      it to activate the editor.
+    </para>
+    <para lang="ja">
+      このダイアログウィンドウはテキストツールで画像をクリックしたときに
+      開きます。 ここに書き込んだテキストは同時にキャンバス上のテキスト枠
+      の中にも表示されます。
+    </para>
+    <para lang="ja">
+      テキストレイヤーに書き込まれた文字はフォントエディタを通じていつでも
+      訂正可能ですし、 書体も変更できます。
+    </para>
+    <para lang="ja">
+      語句や文章を書き込み始めるとすぐにレイヤーダイアログにテキストレイヤー
+      が現れます。 こんなふうにレイヤーがある画像 (今実践されているのなら
+      その画像、 あるいは <filename>.xcf</filename> 画像) ならば、
+      テキストレイヤーを活性化してテキスト上でクリック (もしくはダブル
+      クリック) すればテキスト編集を再開できます。 もちろん他の一般の
+      レイヤーと同じように様々な機能を使ってテキストレイヤーを操作できます。
+    </para>
+    <para lang="ja">
+      他に新たなテキストを画像に貼り付けたいときはテキストレイヤーのない領域を
+      クリックしてください。 新たなテキストエディタが現れるとともに新しい
+      テキストレイヤーが画像に加わります。 どれかのテキストを扱っていたあとで
+      他のテキストの編集を行ないたい場合は、 そのテキストレイヤーを活性化した
+      うえでテキストの枠内をクリックしてテキストエディタを開きます。
+    </para>
+    <!--cf. bug #580532 (2009-06-15)-->
+    <para lang="en">
+      You can get Unicode characters with
+      <keycombo>
+        <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>U</keycap>
+      </keycombo>
+      plus hexadecimal Unicode code of the desired char, for example:
+    </para>
+    <para lang="ja">
+      ユニコードで文字をコード入力するには、 キーボードショートカット
+      <keycombo>
+        <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>U</keycap>
+      </keycombo>
+      を押してから引き出したい文字のコード番号を16進数で打鍵します。 例えば、 
+    </para>
+    <figure>
+      <title lang="en">Entering Unicode characters</title>
+      <title lang="ja">ユニコードで文字入力</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/enter-unicode-char1.png"/>
+        </imageobject>
+        <caption>
+          <para>
+            <keycombo>
+              <keycap>Ctrl</keycap>
+              <keycap>Shift</keycap>
+              <keycap>U</keycap>
+            </keycombo>
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/enter-unicode-char2.png"/>
+        </imageobject>
+        <caption>
+          <para>
+            <keycombo action="seq">
+              <keycap>4</keycap><keycap>7</keycap>
+            </keycombo>
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/enter-unicode-char3.png"/>
+        </imageobject>
+        <caption>
+          <para>
+            <keycap>Enter</keycap>
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Of course this feature is more useful for entering special (even exotic)
+      characters, provided that the required glyphs for these characters are
+      supplied by the selected font &mdash; only few fonts support Klingon.
+      ;-)
+    </para>
+    <para lang="ja">
+      ここではアルファベット入力の例でしたが、 もちろん特殊な文字も (外国語の
+      文字も) 引き出せます。 ただしその文字が入っているフォントを選択している
+      場合に限ります (クリンゴン語用の書体を収めたフォントもあるのだそうです)。
+    </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/enter-unicode-char4.png"/>
+      </imageobject>
+      <caption>
+        <para>
+          Unocode 0x47 (<quote>G</quote>), 0x2665, 0x0271, 0x03C0
+        </para>
+      </caption>
+    </mediaobject>
+
     <variablelist>
+      <title lang="en">The Text Editor options</title>
+      <title lang="ja">テキストエディタのオプション</title>
+      <varlistentry>
       <indexterm lang="en">
         <primary>Text</primary>
-        <secondary>Load text from file</secondary>
+        <secondary>Load from file</secondary>
       </indexterm>
       <indexterm lang="ja">
         <primary>テキスト</primary>
-        <secondary sortas="ファイルカラノテキストヨミコミ">ファイルからのテキスト読み込み</secondary>
+        <secondary sortas="ファイルカラヨミコミ">
+          ファイルから読み込み
+        </secondary>
       </indexterm>
       <varlistentry>
-        <term lang="en">Overview</term>
-        <term lang="ja">概観</term>
-        <listitem>
-          <para lang="en">
-            This dialog window is opened when you click on the image with the
-            Text Tool. There, you can enter the text which shows up in real
-            time in the frame on top of the canvas.
-          </para>
-          <para lang="en">
-            You can correct the text you are writing and you can change the
-            text font with the Font Editor.
-          </para>
-          <para lang="en">
-            As soon as you start writing, a Text layer is created in the Layer
-            Dialog. On an image with such a layer (the image you are working
-            on, or a .xcf image), you can resume text editing by activating
-            this text layer then clicking on it (double click). Of course,
-            you can apply to this text layer the same functions you use with
-            other layers.
-          </para>
-          <para lang="en">
-            To add another text to your image click on a non-text layer: a new
-            Text Editor will appear and a new text layer will be created. To
-            pass from a text to another one activate the corresponding text
-            layer and click on it to activate the editor.
-          </para>
-          <para lang="ja">
-            このダイアログウィンドウはテキストツールで画像をクリックしたときに
-            開きます。 ここに書き込んだテキストは同時にキャンバス上のテキスト枠
-            の中にも表示されます。
-          </para>
-          <para lang="ja">
-            テキストレイヤーに書き込まれた文字はフォントエディタを通じていつでも
-            訂正可能ですし、 書体も変更できます。
-          </para>
-          <para lang="ja">
-            語句や文章を書き込み始めるとすぐにレイヤーダイアログにテキストレイヤー
-            が現れます。 こんなふうにレイヤーがある画像 (今実践されているのなら
-            その画像、 あるいは <filename>.xcf</filename> 画像) ならば、
-            テキストレイヤーを活性化してテキスト上でクリック (もしくはダブル
-            クリック) すればテキスト編集を再開できます。 もちろん他の一般の
-            レイヤーと同じように様々な機能を使ってテキストレイヤーを操作できます。
-          </para>
-          <para lang="ja">
-            他に新たなテキストを画像に貼り付けたいときはテキストレイヤーのない
-            領域をクリックしてください。 新たなテキストエディタが現れるとともに
-            新しいテキストレイヤーが画像に加わります。 どれかのテキストを扱って
-            いたあとで他のテキストの編集を行ないたい場合は、 そのテキストレイヤー
-            を活性化したうえでテキストの枠内をクリックしてテキストエディタを
-            開きます。
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Load Text from File</term>
+        <term lang="en">Load Text from file</term>
         <term lang="ja">ファイルからテキストを読み込む</term>
         <listitem>
           <para lang="en">
@@ -640,7 +772,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Clear all Text</term>
+        <term lang="en">Clear all text</term>
         <term lang="ja">文面を消去</term>
         <listitem>
           <para lang="en">
@@ -655,7 +787,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">From Left to Right</term>
+        <term lang="en">From left to right</term>
         <term lang="ja">左から右への書式 <guilabel>LTR</guilabel></term>
         <listitem>
           <para lang="en">
@@ -671,7 +803,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">From Right to Left</term>
+        <term lang="en">From right to left</term>
         <term lang="ja">右から左への書式 <guilabel>RTL</guilabel></term>
         <listitem>
           <para lang="en">
@@ -699,7 +831,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Use Selected Font</term>
+        <term lang="en">Use Selected font</term>
         <term lang="ja">アクティブなフォントで表示(U)</term>
         <listitem>
           <para lang="en">
@@ -711,9 +843,7 @@
             使用しません。 使用するにはこのオプションにチェックを入れます。
           </para>
           <note>
-            <para lang="en">
-              See also <xref linkend="gimp-using-text"/>.
-            </para>
+            <para lang="en">See also <xref linkend="gimp-using-text"/>.</para>
             <para lang="ja">
               <xref linkend="gimp-using-text"/> もご覧ください。
             </para>
