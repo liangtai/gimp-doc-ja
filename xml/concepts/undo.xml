@@ -8,7 +8,7 @@
   2006-05-02 Dust: added Korean translation
   2006-02-25 lexa: added translation for de and made file docbook compliant
 -->
-<!--2009-07-02-->
+<!--2009-07-09-->
 <sect1 id="gimp-concepts-undo">
   <title lang="en">Undoing</title>
   <title lang="ja">取り消し</title>
@@ -78,18 +78,18 @@
       If you undo one or more actions and then operate on the image in any way
       except by using Undo or Redo, it will no longer be possible to redo
       those actions: they are lost forever. The solution to this, if it
-      creates a problem for you, is to duplicate the image and then operate on
-      the copy. ( <emphasis>Not</emphasis> the original, because the undo/redo
+      creates a problem for you, is to duplicate the image and then test on
+      the copy. ( Do <emphasis>Not</emphasis> test the original, because the
+      undo/redo
       history is not copied when you duplicate an image.)
     </para>
     <para lang="ja">
-      これまでの動作をひとつもしくは数手にわたって取り消したあとで、
-      取り消しややり直しではない何らかの新たな操作を画像に対し行なったときは、
-      それ以降の操作履歴は白紙に戻され、 やり直すことができなくなります。
-      それでは困る場合にこの問題に対処する方法は、 その時点の画像の複製をとり、
-      複製画像の上で新たな操作をすることです。 (原本で行なっては
-      <emphasis>いけません</emphasis>。
-      なぜならば画像を複製しても操作履歴までは写し取られないからです。)
+      これまでの動作をひとつもしくは数手にわたって取り消したあとで、 取り消しや
+      やり直しではない何らかの新たな操作を画像に対し行なったときは、 それ以降の
+      操作履歴は白紙に戻され、 やり直すことができなくなります。 それでは困る
+      場合にこの問題に対処する方法は、 その時点の画像の複製をとり、 複製画像の
+      上で試行することです。 (原本で行なっては <emphasis>いけません</emphasis>
+      。 なぜならば画像を複製しても操作履歴までは写し取られないからです。)
     </para>
   </caution>
   <para lang="en">
@@ -150,18 +150,17 @@
     </para>
   </note>
   <para lang="en">
-    The implementation of Undo by <acronym>GIMP</acronym> is rather
-    sophisticated. Many
+    <acronym>GIMP</acronym>'s implementation of Undo is rather sophisticated.
+    Many
     operations require very little Undo memory (e.g., changing visibility of a
     layer), so you can perform long sequences of them before they drop out of
-    the Undo History. Some operations (changing layer visibility is again an
-    example) are <emphasis>compressed</emphasis>,
+    the Undo History. Some operations, such as changing layer visibility,
+    are <emphasis>compressed</emphasis>,
     so that doing them several times in a row produces only a single point
     in the Undo History. However, there are other operations that may consume
-    a lot of undo memory. Most filters are examples of this: because they are
-    implemented by plug-ins, the <acronym>GIMP</acronym> core has no really
-    efficient way of
-    knowing what they have changed, so it has no way to implement Undo except
+    a lot of undo memory. Most filters are implemented by plug-ins, so the
+    <acronym>GIMP</acronym> core has no efficient way of
+    knowing what changed. As such, there is no way to implement Undo except
     by memorizing the entire contents of the affected layer before and after
     the operation. You might only be able to perform a few such operations
     before they drop out of the Undo History.
@@ -170,13 +169,13 @@
     <acronym>GIMP</acronym>の操作履歴のしくみはよく吟味して実装しました。
     大多数の操作はそのメモリ消費量が極めて小さくなっており (レイヤーの可視度の
     変更はその例です)、 操作履歴からこぼれ落ちるまでに相当な数の手数を
-    踏めます。 (レイヤーの可視度の変更も含め)ある種の操作は <emphasis>圧縮
+    踏めます。 レイヤーの可視度の変更のようなある種の操作は <emphasis>圧縮
     </emphasis> がかけられており、 何度も繰り返し操作しても操作履歴上ではほんの
     ひとかけらにしかなりません。 しかし操作履歴のメモリを多量に消費する操作も
-    あります。 大抵のフィルタ操作はこの例です。 フィルタはプラグインの一種で
-    あるため<acronym>GIMP</acronym>コアは当然それらの及ぼした影響を知る術を
-    持ちえませんので、 操作を受けたレイヤーの操作前後それぞれの全内容を
-    保存するほかに履歴を録る手段がないからです。 こういった操作については
+    あります。 大抵のフィルタはプラグインの一種であるため<acronym>GIMP
+    </acronym>コアは当然それらの及ぼした影響を知る術を
+    持ちえません。 こうしたことから、 操作を受けたレイヤーの操作前後それぞれの
+    全内容を保存するほかに履歴を録る手段がありません。 こういった操作については
     操作履歴からこぼれ落ちるまでに踏める手数はかなり少なくなります。
   </para>
 
@@ -185,7 +184,7 @@
     <title lang="ja">取り消しの効かない操作</title>
     <para lang="en">
       Most actions that alter an image can be undone. Actions that do not
-      alter the image generally cannot be. This includes operations such as
+      alter the image generally cannot be undone. Examples include
       saving the image to a file, duplicating the image, copying part of the
       image to the clipboard, etc. It also includes most actions that affect
       the image display without altering the underlying image data. The most
@@ -199,7 +198,7 @@
     </para>
     <para lang="ja">
       画像を変更する操作のほとんどは取り消せます。 それに対し画像の変更を
-      伴わない操作は一般的にはそれができません。 画像をファイルに保存したり、
+      伴わない操作は一般的には取り消せません。 画像をファイルに保存したり、
       画像の複製をとったり、 画像の一部をクリップボードに写し取ったりするのは
       後者にあたります。 また画像表示に対する操作のうち、 その画像データを
       変更しないものもほとんどがこちらに含まれます。 たとえばズーム操作が
@@ -207,7 +206,7 @@
       何も変更しませんが、 取り消せます。
     </para>
     <para lang="ja">
-      画像を変更するにもかかわらず取り消せない重大な操作が僅かに存在します:
+      画像を変更するにもかかわらず取り消せない重大な操作が僅かに存在します。
     </para>
     <variablelist>
       <varlistentry>
@@ -216,11 +215,11 @@
         <listitem>
           <para lang="en">
             The Undo History is a component of the image, so when the image is
-            closed and all of its resources are freed, the Undo History goes
-            along. Because of this, unless the image has not been modified
+            closed and all of its resources are freed, the Undo History is
+            gone. Because of this, unless the image has not been modified
             since the last time it was saved, <acronym>GIMP</acronym> always
-            asks you to confirm
-            that you really want to close it. (You can disable this in the
+            asks you to confirm that you really want to close the image.
+            (You can disable this in the
             <link linkend="gimp-prefs-environment">Environment</link>
             page of the Preferences dialog; if you do, you are assuming
             responsibility for thinking about what you are doing.)
@@ -239,12 +238,13 @@
         <term lang="en">Reverting the image</term>
         <term lang="ja">画像の復帰</term>
         <listitem>
-          <para lang="en"><quote>Reverting</quote>
-            means reloading the image from file. <acronym>GIMP</acronym>
-            actually implements this
+          <para lang="en">
+            <quote>Reverting</quote>
+            means reloading the image from the file.
+            <acronym>GIMP</acronym> actually implements this
             by closing the image and creating a new image, so the Undo History
             is lost as a consequence. Because of this, if the image is
-            unclean, <acronym>GIMP</acronym> always asks you to confirm that
+            unclean, <acronym>GIMP</acronym> asks you to confirm that
             you really want to revert the image.
           </para>
           <para lang="ja">
@@ -253,7 +253,7 @@
             画像を閉じてから新たに画像を起こす<!--原文:creating a new image-->
             ことで実装しており、 したがって操作履歴は失なわれます。 このような
             理由から、 画像が手付かずでないならば、 <acronym>GIMP</acronym>
-            は本当に画像を復帰してもよいか必ず確認をとります。
+            は本当に画像を復帰してもよいか確認をとります。
           </para>
         </listitem>
       </varlistentry>
@@ -301,8 +301,8 @@
       are all believed
       to be set up correctly, but obviously no guarantees can be given for
       plugins you obtain from other sources. Also, even if the code is
-      correct, canceling a plugin while it is running can sometimes leave the
-      Undo History corrupted, so it is best to avoid this unless you have
+      correct, canceling a plugin while it is running may corrupt the
+      Undo History, so it is best to avoid this unless you have
       accidentally done something whose consequences are going to be very
       harmful.
     </para>
@@ -316,7 +316,7 @@
       <acronym>GIMP</acronym>の公式配布物のプラグインは全て正当に組まれて
       いますが、 他所から手に入れられるプラグインは明らかにその保証がない
       ようです。 また、正しいコードで書かれたプラグインであっても、
-      プラグインが進行中に中止すると操作履歴が壊れることがたまにあり、
+      プラグインが進行中に中止すると操作履歴が壊れるおそれがありますので、
       プラグインを進行しつづけることが余程危険だという状況でない限り、
       途中で中止するのは避けたほうがよいでしょう。
     </para>

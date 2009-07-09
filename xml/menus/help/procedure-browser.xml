@@ -5,33 +5,59 @@
   2008-05-06 ude: changed (help-)id [was: gimp-xtns-procedure-browser]
   2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
+<!--2009-07-09-->
 <sect2 id="plug-in-dbbrowser">
-  <title>The Procedure Browser</title>
-  <indexterm>
+  <title lang="en">The Procedure Browser</title>
+  <title lang="ja">プロシージャブラウザ(B)</title>
+
+  <indexterm lang="en">
     <primary>Procedure</primary>
     <secondary>Browser</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Browser</primary>
     <secondary>Procedure</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>プロシージャ</primary>
+    <secondary>ブラウザ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ブラウザ</primary>
+    <secondary>プロシージャ</secondary>
+  </indexterm>
 
-  <para>
+  <para lang="en">
     The <guimenuitem>Procedure Browser</guimenuitem> command displays the
     procedures in the <link linkend="glossary-pdb">PDB</link>, the Procedure
     Database. These procedures are functions which are called by the scripts
     or plug-ins.
   </para>
+  <para lang="ja">
+    <guimenuitem>プロシージャブラウザ(<accel>B</accel>)</guimenuitem> 
+    コマンドはプロシージャデータベース 
+    <link linkend="glossary-pdb">PDB</link> に登録されたプロシージャ (手続き
+    命令) に関する情報を表示します。 ここに表示されるプロシージャはスクリプトや
+    プラグインから呼び出して利用できる機能です。
+  </para>
 
   <sect3>
-    <title>Activating the Command</title>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           You can access this command from the image menubar through
           <menuchoice>
             <guimenu>Help</guimenu>
             <guimenuitem>Procedure Browser</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ヘルプ(<accel>H</accel>)</guimenu>
+            <guimenuitem>プロシージャブラウザ(<accel>B</accel>)</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -39,12 +65,18 @@
   </sect3>
 
   <sect3>
-    <title>
+    <title lang="en">
       Description of the <quote>Procedure Browser</quote> dialog window
     </title>
+    <title lang="ja">
+      <quote>プロシージャブラウザ</quote>ダイアログウィンドウのご説明
+    </title>
     <figure>
-      <title>
+      <title lang="en">
         The <quote>Procedure Browser</quote> dialog window
+      </title>
+      <title lang="ja">
+        <quote>プロシージャブラウザ</quote>ダイアログのウィンドウ
       </title>
       <mediaobject>
         <imageobject>
@@ -53,7 +85,7 @@
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The figure above shows the <guilabel>Procedure Browser</guilabel>
       dialog window. If you click on an item in the scrolled list on the
       left, information about it is displayed on the right. You can also
@@ -63,6 +95,17 @@
       or search for one by its description by entering a search string in
       the <guilabel>Search:</guilabel> text box and clicking on the
       <guilabel>Search by Blurb</guilabel> button.
+    </para>
+    <para lang="ja">
+      上図は<quote>プロシージャブラウザ</quote>ダイアログウィンドウを示して
+      います。 左側の繰り寄せ可能なウィンドウ内の項目のどれかをクリックすると
+      右側の領域にその詳しい情報が表示されます。 プロシージャは要素を絞った
+      検索ができます。 引き出しリストから検索したい要素を特定し、 <guilabel>
+      検索(<accel>S</accel>):</guilabel> 記入欄に語句を書き込んでみてください。
+      &lt;!--and clicking on the <guilabel>Search by Name</guilabel> button,
+      or search for one by its description by entering a search string in
+      the <guilabel>検索(<accel>S</accel>):</guilabel> text box and clicking
+      on the <guilabel>Search by Blurb</guilabel> button.--&gt;
     </para>
   </sect3>
 </sect2>
