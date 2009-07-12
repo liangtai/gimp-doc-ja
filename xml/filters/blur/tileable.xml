@@ -9,53 +9,84 @@
   050930 de fixed figure issue by axel.wernicke
   051111 en;fr reviewed by julien hardelin
 -->
+<!--2009-09-12-->
 <sect2 id="script-fu-tile-blur">
-  <title>Tileable Blur</title>
+  <title lang="en">Tileable Blur</title>
+  <title lang="ja">タイル化可能ぼかし(T)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Blur</secondary>
     <tertiary>Tileable Blur</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Tileable Blur</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ボカシ">ぼかし</secondary>
+    <tertiary sortas="タイルカカノウボカシ">タイル化可能ぼかし</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="タイルカカノウボカシ">タイル化可能ぼかし</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Tileable</quote> filter</title>
+      <title lang="en">Example for the <quote>Tileable</quote> filter</title>
+      <title lang="ja">
+        <quote>タイル化可能ぼかし</quote>フィルタの使用例
+      </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original</para>
+          <para lang="en">Original</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/blur-taj-tblur.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/blur-taj-tblur.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Tileable Blur</quote> applied</para>
+          <para lang="en">Filter <quote>Tileable Blur</quote> applied</para>
+          <para lang="ja">
+            <quote>タイル化可能ぼかし</quote>フィルタ適用後
+          </para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This tool is used to soften tile seams in images used in tiled
       backgrounds. It does this by blending and blurring the boundary between
       images that will be next to each other after tiling.
     </para>
+    <para lang="ja">
+      <guimenuitem>タイル化可能ぼかし(<accel>T</accel>)...</guimenuitem> 
+      スクリプトは画像をタイル状に並べたときの継ぎ目が目立たなくなるよう画像の
+      4辺をぼかします。 ぼかし方はガウシアンぼかしと同じですが、 並べたときに
+      隣りあう2辺が互いに混ざりあうようにぼかしています。
+    </para>
     <tip>
-      <para>
+      <para lang="en">
         If you want to treat only images borders, you can't apply filter
         to the whole image. The solution to get the wanted effect is as
         follows:
       </para>
+      <para lang="ja">
+        タイル化する画像の縁だけをぼかしたい場合は、 このフィルタをそのまま
+        画像全体にかけるわけにはいきません。 つぎの手順を踏めばこの課題も処理
+        できます。
+      </para>
       <procedure>
         <step>
-          <para>
+          <para lang="en">
             Duplicate layer
             (<menuchoice>
               <guimenu>Layer</guimenu>
@@ -63,15 +94,27 @@
             </menuchoice>)
             and select it to work on it.
           </para>
-        </step>
-        <step>
-          <para>
-            Apply <quote>Tileable Blur</quote> filter with a 20 pixels radius
-            to this layer.
+          <para lang="ja">
+            画像の複製をとり (
+            <menuchoice>
+              <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+              <guimenuitem>レイヤーを複製(<accel>U</accel>)</guimenuitem>
+            </menuchoice> )、
+            加工対象にするためそのレイヤーを選んで活性化します。
           </para>
         </step>
         <step>
-          <para>
+          <para lang="en">
+            Apply <quote>Tileable Blur</quote> filter with a 20 pixels radius
+            to this layer.
+          </para>
+          <para lang="ja">
+            <quote>タイル化可能ぼかし</quote>フィルタを半径20ピクセルの設定で
+            このレイヤーに適用します。
+          </para>
+        </step>
+        <step>
+          <para lang="en">
             Select all
             (<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>) and
             reduce selection
@@ -81,29 +124,59 @@
             </menuchoice>)
             to create a border with the wanted width.
           </para>
+          <para lang="ja">
+            このレイヤー全体を選択 (
+            <keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>) 
+            してから、 ぼかした縁取りの幅を適当に残せるよう選択範囲を縮小 (
+            <menuchoice>
+              <guimenu>選択(<accel>S</accel>)</guimenu>
+              <guimenuitem>選択範囲を縮小(<accel>H</accel>)...</guimenuitem>
+            </menuchoice> )
+            します。
+          </para>
         </step>
         <step>
-          <para>
+          <para lang="en">
             Give a feathered border to the selection by using
             <menuchoice>
               <guimenu>Selection</guimenu>
               <guimenuitem>Feather</guimenuitem>
             </menuchoice>.
           </para>
-        </step>
-        <step>
-          <para>
-            Delete selection with
-            <keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo>.
+          <para lang="ja">
+            その選択範囲の輪郭をぼかします (
+            <menuchoice>
+              <guimenu>選択(<accel>S</accel>)</guimenu>
+              <guimenuitem>境界をぼかす(<accel>T</accel>)...</guimenuitem>
+            </menuchoice> )。
           </para>
         </step>
         <step>
-          <para>
+          <para lang="en">
+            Delete selection with
+            <keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo>.
+          </para>
+          <para lang="ja">
+            キーボードショートカット
+            <keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo>
+            で選択を解除します。
+          </para>
+        </step>
+        <step>
+          <para lang="en">
             Merge layers with
             <menuchoice>
               <guimenu>Layer</guimenu>
               <guimenuitem>Merge down</guimenuitem>
             </menuchoice>.
+          </para>
+          <para lang="ja">
+            両レイヤーを統合 (
+            <menuchoice>
+              <guimenu>レイヤー(<accel>L</accel>)</guimenu>
+              <guimenuitem>下のレイヤーと統合(<accel>W</accel>)</guimenuitem>
+            </menuchoice> )
+            します。
           </para>
         </step>
       </procedure>
@@ -111,8 +184,9 @@
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -120,12 +194,24 @@
         <guimenuitem>Tileable Blur</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu>
+        <guimenuitem>タイル化可能ぼかし(<accel>T</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Tileable Blur</quote> filter options</title>
+      <title lang="en"><quote>Tileable Blur</quote> filter options</title>
+      <title lang="ja">
+        <quote>タイル化可能ぼかし</quote>フィルタのオプション
+      </title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -135,38 +221,57 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Blur Radius</term>
+        <term lang="en">Blur Radius</term>
+        <term lang="ja">半径</term>
         <listitem>
-          <para>
+          <para lang="en">
             The bigger the radius, the more marked is the blur. By selecting
             <guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel>,
             you can make the horizontal and vertical borders tileable.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Blur vertically / horizontally</term>
-        <listitem>
-          <para>
-            These options are self-explanatory.
+          <para lang="ja">
+            <guilabel>半径</guilabel> を大きくするにつれぼかし具合が強く
+            なります。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Blur Type</term>
+        <term lang="en">Blur vertically / horizontally</term>
+        <term lang="ja">垂直ぼかし; 水平ぼかし</term>
         <listitem>
-          <para>Choose the algorithm to be applied:</para>
+          <para lang="en">
+            These options are self-explanatory.
+          </para>
+          <para lang="ja">
+            <guilabel>垂直ぼかし</guilabel> は画像の上下辺が、 
+            <guilabel>水平ぼかし</guilabel> は画像の左右辺がつながり易くなる
+            ようにします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Blur Type</term>
+        <term lang="ja">ぼかしタイプ</term>
+        <listitem>
+          <para lang="en">Choose the algorithm to be applied:</para>
+          <para lang="ja">適用されるアルゴリズムを選択します。</para>
           <variablelist>
             <varlistentry>
               <term>IIR</term>
               <listitem>
-                <para>for photographic or scanned images.</para>
+                <para lang="en">for photographic or scanned images.</para>
+                <para lang="ja">
+                  写真やスキャナで読み取った画像に向いています。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term>RLE</term>
               <listitem>
-                <para>for computer-generated images.</para>
+                <para lang="en">for computer-generated images.</para>
+                <para lang="ja">
+                  コンピュータで生成した画像に向いています。
+                </para>
               </listitem>
             </varlistentry>
           </variablelist>

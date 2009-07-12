@@ -9,27 +9,46 @@
   050930 de fixed figure issue by axel.wernicke
   051110 en;fr reviewed by julien hardelin
 -->
+<!--2009-07-11-->
 <sect2 id="plug-in-sel-gauss">
-  <title>Selective Gaussian Blur</title>
-  <indexterm>
+  <title lang="en">Selective Gaussian Blur</title>
+  <title lang="ja">選択的ガウシアンぼかし(S)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Blur</secondary>
     <tertiary>Selective Gaussian</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Selective Gaussian Blur</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ボカシ">ぼかし</secondary>
+    <tertiary sortas="センタクテキガウシアンボカシ">
+      選択的ガウシアンぼかし
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクテキガウシアンボカシ">
+      選択的ガウシアンぼかし
+    </primary>
+  </indexterm>
+
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>The Selective Gaussian Blur filter</title>
+      <title lang="en">The Selective Gaussian Blur filter</title>
+      <title lang="ja">選択的ガウシアンぼかしフィルタ</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/filters/examples/taj_orig.jpg"
             format="JPG"/>
         </imageobject>
         <caption>
-          <para>Original</para>
+          <para lang="en">Original</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -38,11 +57,12 @@
             format="JPG"/>
         </imageobject>
         <caption>
-          <para>Blur applied</para>
+          <para lang="en">Blur applied</para>
+          <para lang="ja">ぼかし適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Contrary to the other blur plug-ins, the Selective Gaussian Blur plug-in
       doesn't act on all pixels: blur is applied only if the difference
       between its value and the value of the surrounding pixels is less than a
@@ -51,10 +71,22 @@
       foreground subject will stand out better. This add a sense of depth to
       the image with only a single operation.
     </para>
+    <para lang="ja">
+      他のぼかしフィルタとは対照的に
+      <guimenuitem>選択的ガウシアンぼかし(<accel>S</accel>)...</guimenuitem> 
+      プラグインは満遍なく画像をぼかすことはありません。 画素にぼかしがかかる
+      のはその付近の画素の値との差が指定された最大デルタ値を下回る場合に
+      限ります。 つまりもともとコントラストが高い部分はデルタ値を上回ります
+      のでぼかしがかからずコントラストは保たれます。 背景だけぼかしをかけて
+      前面にある物体は良好に浮き立たせたい場合に使えます。 たった一度の処理で
+      画像に深みを与えられます。
+    </para>
   </sect3>
+
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -62,35 +94,57 @@
         <guimenuitem>Selective Gaussian Blur</guimenuitem>
       </menuchoice>
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu>
+        <guimenuitem>選択的ガウシアンぼかし(<accel>S</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
+
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
+      <title lang="en">
         <quote>Selective Gaussian</quote> filter parameters settings
+      </title>
+      <title lang="ja">
+        <quote>選択的ガウシアンぼかし</quote>フィルタのパラメータ設定
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/filters-blur-gaussselect.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-blur-gaussselect.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Blur Radius</term>
+        <term lang="en">Blur Radius</term>
+        <term lang="ja">ぼかし半径(B)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here you can set the blur intensity, in pixels.
           </para>
+          <para lang="ja">ぼかしの強度をピクセル単位で設定できます。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Max. Delta</term>
+        <term lang="en">Max. Delta</term>
+        <term lang="ja">最大Δ(M)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here you can set the maximum difference (0-255) between the
             pixel value and the surrounding pixel values. Above this Delta,
             blur will not be applied to that pixel.
+          </para>
+          <para lang="ja">
+            ぼかしをうける画素とその付近の画素の値の差の最大値を 0 から 255 の
+            範囲で設定します。 この微変量値デルタを越える画素にはぼかしが
+            かかりません。
           </para>
         </listitem>
       </varlistentry>

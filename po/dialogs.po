@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-07-09 19:38+0900\n"
-"PO-Revision-Date: 2009-07-09 21:03+0900\n"
+"POT-Creation-Date: 2009-07-12 22:15+0900\n"
+"PO-Revision-Date: 2009-07-12 22:53+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -651,7 +651,7 @@ msgstr ""
 #: src/dialogs/pointer-dialog.xml:68(None)
 #: src/dialogs/navigation-dialog.xml:66(None)
 #: src/dialogs/error-console.xml:52(None)
-#: src/dialogs/error-console.xml:132(None)
+#: src/dialogs/error-console.xml:128(None)
 msgid ""
 "@@image: 'images/dialogs/stock-menu-left-12.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -3089,14 +3089,12 @@ msgstr "パレットから作成"
 #: src/dialogs/palettes-dialog.xml:493(para)
 msgid ""
 "With this command, all the colors of the palette are used to form the "
-"current gradient which is saved in the Gradient Dialog. The number of colors "
-"in the palette seems to be limited to 21. Above this value, an error message "
-"is emitted."
+"current gradient which is saved in the Gradient Dialog. The created gradient "
+"is build with segments just as much as the number of colors on the given "
+"palette."
 msgstr ""
 "このコマンドを使うと現在のパレットの全ての色を用いてグラデーションが作成さ"
-"れ、 グラデーションダイアログで保存されます。 <!--パレットに置ける色数は21以"
-"下にしなければならないようです。 この値を越えるとエラーメッセージが出まし"
-"た。--> [グラデーションのセグメント数はパレットの色数分あります。]"
+"れ、 グラデーションダイアログで保存されます。 グラデーションのセグメント数はパレットの色数分あります。"
 
 #: src/dialogs/palettes-dialog.xml:502(term)
 msgid "Palette to Repeating Gradient"
@@ -3105,18 +3103,17 @@ msgstr "パレットを循環型グラデーションに(R)"
 #: src/dialogs/palettes-dialog.xml:506(para)
 msgid ""
 "This command creates a repeating gradient, using all the colors of the "
-"palette. Only the first color of the palette seems to be repeated. This "
-"gradient appears in the Gradient Dialog and becomes the current gradient. "
-"The number of colors in the palette seems to be limited to 20. Above this "
-"value, an error message is emitted."
+"palette. This gradient appears in the Gradient Dialog and becomes the "
+"current gradient. The gradient is created with segments one more than the "
+"number of colors on the given palette. The left side color at the leftmost "
+"segment will be the same color on the right side at the rightmost segment."
 msgstr ""
 "このコマンドはパレットの全ての色を用いて繰り返しのグラデーションを作成しま"
-"す。 <!--パレットの最初の色ばかりが繰り返されているようです。--> このグラデー"
+"す。 このグラデー"
 "ションはグラデーションダイアログに出現して現在の活性グラデーションになりま"
-"す。 <!--パレットに置ける色数は20以下にしなければならないようです。 この値を"
-"越えるとエラーメッセージが出ました。--> [グラデーションのセグメント数はパレッ"
+"す。 グラデーションのセグメント数はパレッ"
 "トの色数より1つ多い数です。 最も左端のセグメントの左端色と最も右端のセグメン"
-"トの右端色が同じになります。]"
+"トの右端色が同じになります。"
 
 #: src/dialogs/palettes-dialog.xml:515(title)
 msgid "<quote>Palette to repeating gradient</quote> examples"
@@ -7099,7 +7096,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/error-console.xml:121(None)
+#: src/dialogs/error-console.xml:117(None)
 msgid ""
 "@@image: 'images/dialogs/error-console-record.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -7165,7 +7162,7 @@ msgid "The <placeholder-1/> Dialog"
 msgstr "<placeholder-1/>ダイアログ"
 
 #: src/dialogs/error-console.xml:73(phrase)
-#: src/dialogs/error-console.xml:116(phrase)
+#: src/dialogs/error-console.xml:112(phrase)
 msgid "<placeholder-1/> Dialog window"
 msgstr "<placeholder-1/>ダイアログのウィンドウ"
 
@@ -7207,19 +7204,18 @@ msgstr ""
 "れば部分的に保存できます。"
 
 #: src/dialogs/error-console.xml:106(para)
-#: src/dialogs/error-console.xml:110(para)
 msgid ""
-"A dialog window <guilabel>Save Error Log to File </guilabel> lets you choose "
+"A dialog window <guilabel>Save Error Log to File</guilabel> lets you choose "
 "the name and the destination directory of this file:"
 msgstr ""
 "保存するファイルの名前と保管場所は、 <quote>エラー記録をファイルに保存</"
 "quote>ダイアログで指定してください。"
 
-#: src/dialogs/error-console.xml:116(quote)
+#: src/dialogs/error-console.xml:112(quote)
 msgid "Save Error Log to file"
 msgstr "エラー記録をファイルに保存"
 
-#: src/dialogs/error-console.xml:129(para)
+#: src/dialogs/error-console.xml:125(para)
 msgid ""
 "You will as well find these button actions in the dialog tab menu by "
 "clicking on <placeholder-1/>, or in the context menu you get by right-"
@@ -9894,72 +9890,3 @@ msgstr ""
 msgid "translator-credits"
 msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
 
-#~ msgid "<quote>Tools</quote> Dialog"
-#~ msgstr "<quote>ツールアイコン</quote>ダイアログ"
-
-#~ msgid "The <quote>Tools</quote> dialog"
-#~ msgstr "<quote>ツールアイコン</quote>ダイアログ"
-
-#~ msgid "Using the <quote>Tools</quote> dialog"
-#~ msgstr "<quote>ツールアイコン</quote>ダイアログの利用法"
-
-#~ msgid "<quote>Templates</quote> Dialog"
-#~ msgstr "<quote>テンプレート</quote>ダイアログ"
-
-#~ msgid "The <quote>Templates</quote> dialog"
-#~ msgstr "<quote>テンプレート</quote>ダイアログ"
-
-#~ msgid "Using the <quote>Templates</quote> dialog"
-#~ msgstr "<quote>テンプレート</quote>ダイアログの利用法"
-
-#~ msgid "<quote>Palettes</quote> Dialog"
-#~ msgstr "<quote>パレット</quote>ダイアログ"
-
-#~ msgid "<quote>Images</quote> Dialog"
-#~ msgstr "<quote>画像一覧</quote>ダイアログ"
-
-#~ msgid "Using the <quote>Images</quote> dialog"
-#~ msgstr "<quote>画像</quote>ダイアログの利用法"
-
-#~ msgid "<quote>Gradients</quote> Dialog"
-#~ msgstr "<quote>グラデーション</quote>ダイアログ"
-
-#~ msgid "<quote>Fonts</quote> Dialog"
-#~ msgstr "<quote>フォント</quote>ダイアログ"
-
-#~ msgid "The <quote>Fonts</quote> dialog"
-#~ msgstr "<quote>フォント</quote>ダイアログ"
-
-#~ msgid "<quote>Channels</quote> Dialog"
-#~ msgstr "チャンネルダイアログ"
-
-#~ msgid "<quote>Buffers</quote> Dialog"
-#~ msgstr "<quote>バッファ</quote>ダイアログ"
-
-#~ msgid "Using the <quote>Buffers</quote> dialog"
-#~ msgstr "<quote>バッファ</quote>ダイアログの利用法"
-
-#~ msgid "<quote>Brushes</quote> Dialog"
-#~ msgstr "<quote>ブラシ</quote>ダイアログ"
-
-#~ msgid "The <placeholder-1/> context menu"
-#~ msgstr "<placeholder-1/>の脈絡メニュー"
-
-#~ msgid ""
-#~ "As in every dialog that contains preview icons, you can control the "
-#~ "preview images in the tab menu. To get more informations about that topic "
-#~ "read <xref linkend=\"gimp-concepts-docks\"/>."
-#~ msgstr "<!--no use-->"
-
-#~ msgid "<quote>Paths</quote> Dialog"
-#~ msgstr "<quote>パス</quote>ダイアログ"
-
-#~ msgid ""
-#~ "From the <guilabel>Selection to Path</guilabel> button in the Tool "
-#~ "Options for the Path tool."
-#~ msgstr ""
-#~ "&lt;!--パスツールのツールオプションにある <guibutton>選択範囲をパスに</"
-#~ "guibutton> ボタン--&gt;"
-
-#~ msgid "The <placeholder-1/> dialog"
-#~ msgstr "<placeholder-1/>ダイアログ"

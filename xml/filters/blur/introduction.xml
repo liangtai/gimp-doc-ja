@@ -6,16 +6,23 @@
   2007-03-27 KoSt: added 'no'
   2005-08-18 de reviewed by axel.wernicke
 -->
+<!--2009-07-11-->
 <sect2 id="filters-blur-introduction">
-  <title>Introduction</title>
+  <title lang="en">Introduction</title>
+  <title lang="ja">あらまし</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Blur</secondary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ボカシ">ぼかし</secondary>
+  </indexterm>
 
   <figure>
-    <title>Original for demo</title>
+    <title lang="en">Original for demo</title>
+    <title lang="ja">実演用元画像</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -23,7 +30,7 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     This is a set of filters that blur images, or parts of them,
     in various ways.  If there is a selection, only the selected parts
     of an image will be blurred. There may, however, be some leakage
@@ -33,9 +40,19 @@
     examples:  most of the filters have parameter settings that allow
     you to vary the magnitude or type of blurring.
   </para>
+  <para lang="ja">
+    ここに挙げたフィルタはいずれも画像の全体もしくは部分にさまざまな方法で
+    ぼかしをかけます。 画像に選択範囲があればその範囲内でのみ画像にぼかしが
+    かかります。 しかしぼかしの境界線付近ではぼかしなしの部分の色がぼかしの
+    かかった部分に混ざり込むかもしれません。 このあとはそれぞれのフィルタの
+    使用例を載せますので、 どのぼかしフィルタを選ぶかの参考にしてください。
+    もちろんここに示したのはほんの一例に過ぎず、 ほとんどのフィルタはパラメータ
+    の設定によりぼかしの加減やぼかしの風合いがさまざまに変化します。
+  </para>
 
   <figure>
-    <title>Gaussian blur (radius 10)</title>
+    <title lang="en">Gaussian blur (radius 10)</title>
+    <title lang="ja">ガウシアンぼかし (半径 10)</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -43,16 +60,24 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     The most broadly useful of these is the Gaussian blur. (Don't let
     the word "Gaussian" throw you: this filter makes an image blurry
     in the most basic way.)  It has an efficient implementation that
     allows it to create a very blurry blur in a relatively short
     time.
   </para>
+  <para lang="ja">
+    いろんな場面で一番よく使えそうなのが <guimenuitem>
+    ガウシアンぼかし(<accel>G</accel>)...</guimenuitem> です。 (偉大な数学者
+    ガウスの名前が付いているけれど敬遠する必要はありません。 このフィルタは最も
+    基本的な方法で画像をぼかします。) しかも比較的短時間でたっぷりぼかせる
+    効果的な実装が施されています。
+  </para>
 
   <figure>
-    <title>Simple blur</title>
+    <title lang="en">Simple blur</title>
+    <title lang="ja">単なるぼかし</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -60,18 +85,30 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
-    If you only want to blur the image a little bit — to soften it, as it were — 
-    you might use the simple "Blur" filter. This filter runs automatically, 
-    without creating a dialog. The effect is subtle enough that you might not 
-    even notice it, but you can get a stronger effect by repeating it.  In GIMP 
-    2.0 the filter shows a dialog that allows you to set a "repeat count". If 
-    you want a strong blurring effect, this filter is too slow to be a good 
+  <para lang="en">
+    If you only want to blur the image a little bit — to soften it, as it were
+    - you might use the simple "Blur" filter. This filter runs automatically,
+    without creating a dialog. The effect is subtle enough that you might not
+    even notice it, but you can get a stronger effect by repeating it.  In GIMP
+    2.0 the filter shows a dialog that allows you to set a "repeat count". If
+    you want a strong blurring effect, this filter is too slow to be a good
     choice: use a Gaussian blur instead.
+  </para>
+  <para lang="ja">
+    ちょっとだけ画像をぼかしたい&mdash;そのままの状態で柔らかな雰囲気にしたい
+    &mdash;ときには単なる <guimenuitem>ぼかし(<accel>B</accel>)</guimenuitem>
+    フィルタを使ってみる価値があります。 このフィルタはダイアログがなく、 すぐ
+    自動的に実行します。 ぼかしをかけたことに気付かないぐらいのかすかな効果
+    しかありませんが、 繰り返すとどんどん強くぼやけてきます。 <acronym>GIMP
+    </acronym> 2.0 以降このフィルタは繰り返し回数をお知らせするウィンドウが
+    現れるようになりました。 とはいえ強くぼかすつもりで好みの状態までこの
+    フィルタを繰り返していてはおそらく時間がかかり過ぎます。 こんなときは代わり
+    にガウシアンぼかしを使うべきでしょう。
   </para>
 
   <figure>
-    <title>Selective blur</title>
+    <title lang="en">Selective blur</title>
+    <title lang="ja">選択的ガウシアンぼかし</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -79,7 +116,7 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     The Selective Blur filter allows you to set a threshold so that
     only pixels that are similar to each other are blurred together.
     It is often useful as a tool for reducing graininess in photos
@@ -89,9 +126,17 @@
     than a Gaussian blur, though, so you should not use it unless you
     really need the selectivity.
   </para>
+  <para lang="ja">
+    <guimenuitem>選択的ガウシアンぼかし(<accel>S</accel>)...</guimenuitem> 
+    フィルタはしきい値を設定して互いに類似した色の画素同士だけが混ざりあう
+    ぼかしを施します。 写真の粒度を減らす用途なら鋭い輪郭を保ったまま処理
+    できますので便利です。 (この例の画像では背景の粒度が減ったことに注目して
+    ください。) しかし実装上ガウシアンぼかしと比べると処理に随分時間がかかり
+    ますので、 選択的なぼかしが必要な場合だけこのフィルタを使うとよいでしょう。
+  </para>
 
   <figure>
-    <title>Pixelize</title>
+    <title lang="en">ピクセル化</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -99,25 +144,41 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     The Pixelize filter produces the well-known "Abraham Lincoln"
     effect by turning the image into a set of large square pixels.
     (The <link linkend="plug-in-oilify">Oilify</link> filter, in
     the Artistic Filters group, has a similar effect, but with
     irregular blobs instead of perfectly square pixels.)
   </para>
+  <para lang="ja">
+    <guimenuitem>ピクセル化(<accel>P</accel>)...</guimenuitem> フィルタは
+    いわゆるモザイク処理とかよく知られた<quote>エイブラハム・リンカーン</quote>
+    効果のことで、 画像を正方形の巨大な画素で表します。
+    (ちなみに芸術的効果フィルタの 
+    <link linkend="plug-in-oilify">油絵化(F)...</link> フィルタも元は同じ効果を
+    利用していて、 こちらはきっちり正方形の画素にせず不定形なかけらの寄り合わせ
+    で表現します。)
+  </para>
   <note>
-    <para>
+    <para lang="en">
       You can find a nice explanation of the Abraham Lincoln effect
       at <xref linkend="bibliography-online-bach"/>. You will see the
       Salvador Dali's painting <quote>Gala Contemplating the
       Mediterranean Sea</quote> turning to an Abraham Lincoln's portrait
       when looking at it from a distance.
     </para>
+    <para lang="ja">
+      <quote>エイブラハム・リンカーン</quote>効果については 
+      <xref linkend="bibliography-online-bach"/> がうまく説明しています。
+      サルバドール・ダリの<quote>地中海を見つめるガラ</quote>は遠くから見ると
+      エイブラハム・リンカーンの肖像が現れるしかけになっています。
+    </para>
   </note>
 
   <figure>
-    <title>Motion blur</title>
+    <title lang="en">Motion blur</title>
+    <title lang="ja">モーションぼかし</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -125,22 +186,37 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     The Motion Blur filter blurs in a specific direction at each point, which
     allows you to create a sense of motion: either linear, radial, or
     rotational.
   </para>
+  <para lang="ja">
+    <guimenuitem>モーションぼかし(<accel>M</accel>)...</guimenuitem> フィルタは
+    画像上の位置により定められた方向にぼかしをかけて動きのある絵にします。 
+    直線的一方向、 集中線、 回転の各効果から選べます。
+  </para>
 
-  <para>
+  <para lang="en">
     Finally, the Tileable Blur filter is really the same thing as a Gaussian
     blur, except that it wraps around the edges of an image to help you reduce
     edge effects when you create a pattern by tiling multiple copies of the
     image side by side.
   </para>
+  <para lang="ja">
+    最後の <guimenuitem>タイル化可能ぼかし(<accel>T</accel>)</guimenuitem> は
+    ガウシアンぼかしとまるで変わりませんが、 画像の外縁付近では反対側の辺と連続
+    したぼかしを行ないますので、 この画像をタイル状に並べて文様にするときに
+    継ぎ目が目立たなくなります。
+  </para>
   <note>
-    <para>
+    <para lang="en">
       Tileable Blur is actually implemented by a Script-Fu script that invokes
       the Gaussian blur plug-in.
+    </para>
+    <para lang="ja">
+      タイル化可能ぼかしの実体はガウシアンぼかしプラグインを利用するScript-Fu
+      です。
     </para>
   </note>
 </sect2>
