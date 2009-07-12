@@ -1,13 +1,16 @@
+# liangtai <ss2pxd1c@yahoo.co.jp>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-06-28 06:20+0900\n"
-"PO-Revision-Date: 2009-02-04 00:33+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2009-07-12 23:25+0900\n"
+"PO-Revision-Date: 2009-07-12 22:47+0900\n"
+"Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -18,6 +21,7 @@ msgstr ""
 msgid ""
 "@@image: 'images/filters/examples/taj_orig.jpg'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/taj_orig.jpg'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -26,6 +30,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-tblur.jpg'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-tblur.jpg'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -34,12 +40,14 @@ msgid ""
 "@@image: 'images/filters/filters-blur-tileable.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/filters-blur-tileable.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #: src/filters/blur/tileable.xml:13(title)
 #: src/filters/blur/tileable.xml:18(tertiary)
 #: src/filters/blur/tileable.xml:21(primary)
 msgid "Tileable Blur"
-msgstr ""
+msgstr "タイル化可能ぼかし(T)..."
 
 #: src/filters/blur/tileable.xml:16(primary)
 #: src/filters/blur/pixelise.xml:26(primary)
@@ -49,7 +57,7 @@ msgstr ""
 #: src/filters/blur/gauss.xml:27(primary)
 #: src/filters/blur/blur.xml:26(primary)
 msgid "Filters"
-msgstr ""
+msgstr "フィルタ"
 
 #: src/filters/blur/tileable.xml:17(secondary)
 #: src/filters/blur/pixelise.xml:27(secondary)
@@ -62,7 +70,7 @@ msgstr ""
 #: src/filters/blur/blur.xml:28(tertiary)
 #: src/filters/blur/blur.xml:31(primary)
 msgid "Blur"
-msgstr ""
+msgstr "ぼかし(B)"
 
 #: src/filters/blur/tileable.xml:25(title)
 #: src/filters/blur/pixelise.xml:35(phrase)
@@ -70,22 +78,22 @@ msgstr ""
 #: src/filters/blur/gauss_select.xml:23(title)
 #: src/filters/blur/gauss.xml:36(phrase) src/filters/blur/blur.xml:35(phrase)
 msgid "Overview"
-msgstr ""
+msgstr "概観"
 
 #: src/filters/blur/tileable.xml:27(title)
 msgid "Example for the <quote>Tileable</quote> filter"
-msgstr ""
+msgstr "<quote>タイル化可能ぼかし</quote>フィルタの使用例"
 
 #: src/filters/blur/tileable.xml:33(para)
 #: src/filters/blur/pixelise.xml:48(para)
 #: src/filters/blur/gauss_select.xml:32(para)
 #: src/filters/blur/gauss.xml:49(para) src/filters/blur/blur.xml:48(para)
 msgid "Original"
-msgstr ""
+msgstr "元画像"
 
 #: src/filters/blur/tileable.xml:41(para)
 msgid "Filter <quote>Tileable Blur</quote> applied"
-msgstr ""
+msgstr "<quote>タイル化可能ぼかし</quote>フィルタ適用後"
 
 #: src/filters/blur/tileable.xml:45(para)
 msgid ""
@@ -93,24 +101,35 @@ msgid ""
 "It does this by blending and blurring the boundary between images that will "
 "be next to each other after tiling."
 msgstr ""
+"<guimenuitem>タイル化可能ぼかし(<accel>T</accel>)...</guimenuitem> スクリプト"
+"は画像をタイル状に並べたときの継ぎ目が目立たなくなるよう画像の4辺をぼかしま"
+"す。 ぼかし方はガウシアンぼかしと同じですが、 並べたときに隣りあう2辺が互いに"
+"混ざりあうようにぼかしています。"
 
 #: src/filters/blur/tileable.xml:51(para)
 msgid ""
 "If you want to treat only images borders, you can't apply filter to the "
 "whole image. The solution to get the wanted effect is as follows:"
 msgstr ""
+"タイル化する画像の縁だけをぼかしたい場合は、 このフィルタをそのまま画像全体に"
+"かけるわけにはいきません。 つぎの手順を踏めばこの課題も処理できます。"
 
 #: src/filters/blur/tileable.xml:58(para)
 msgid ""
 "Duplicate layer (<menuchoice><guimenu>Layer</guimenu><guimenuitem>Duplicate "
 "Layer</guimenuitem></menuchoice>) and select it to work on it."
 msgstr ""
+"画像の複製をとり ( <menuchoice><guimenu>レイヤー(<accel>L</accel>)</"
+"guimenu><guimenuitem>レイヤーを複製(<accel>U</accel>)</guimenuitem></"
+"menuchoice> )、 加工対象にするためそのレイヤーを選んで活性化します。"
 
 #: src/filters/blur/tileable.xml:68(para)
 msgid ""
 "Apply <quote>Tileable Blur</quote> filter with a 20 pixels radius to this "
 "layer."
 msgstr ""
+"<quote>タイル化可能ぼかし</quote>フィルタを半径20ピクセルの設定でこのレイヤー"
+"に適用します。"
 
 #: src/filters/blur/tileable.xml:74(para)
 msgid ""
@@ -119,6 +138,10 @@ msgid ""
 "guimenu><guimenuitem>Shrink</guimenuitem></menuchoice>) to create a border "
 "with the wanted width."
 msgstr ""
+"このレイヤー全体を選択 (<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></"
+"keycombo>) してから、 ぼかした縁取りの幅を適当に残せるよう選択範囲を縮小 "
+"( <menuchoice><guimenu>選択(<accel>S</accel>)</guimenu><guimenuitem>選択範囲"
+"を縮小(<accel>H</accel>)...</guimenuitem></menuchoice> )します。"
 
 #: src/filters/blur/tileable.xml:86(para)
 msgid ""
@@ -126,18 +149,26 @@ msgid ""
 "<menuchoice><guimenu>Selection</guimenu><guimenuitem>Feather</guimenuitem></"
 "menuchoice>."
 msgstr ""
+"その選択範囲の輪郭をぼかします ( <menuchoice><guimenu>選択(<accel>S</accel>)"
+"</guimenu><guimenuitem>境界をぼかす(<accel>T</accel>)...</guimenuitem></"
+"menuchoice> )。"
 
 #: src/filters/blur/tileable.xml:95(para)
 msgid ""
 "Delete selection with <keycombo><keycap>Ctrl</keycap><keycap>K</keycap></"
 "keycombo>."
 msgstr ""
+"キーボードショートカット <keycombo><keycap>Ctrl</keycap><keycap>K</keycap></"
+"keycombo> で選択を解除します。"
 
 #: src/filters/blur/tileable.xml:101(para)
 msgid ""
 "Merge layers with <menuchoice><guimenu>Layer</guimenu><guimenuitem>Merge "
 "down</guimenuitem></menuchoice>."
 msgstr ""
+"両レイヤーを統合 ( <menuchoice><guimenu>レイヤー(<accel>L</accel>)</"
+"guimenu><guimenuitem>下のレイヤーと統合(<accel>W</accel>)</guimenuitem></"
+"menuchoice> )します。"
 
 #: src/filters/blur/tileable.xml:114(title)
 #: src/filters/blur/pixelise.xml:69(phrase)
@@ -145,7 +176,7 @@ msgstr ""
 #: src/filters/blur/gauss_select.xml:56(title)
 #: src/filters/blur/gauss.xml:74(phrase) src/filters/blur/blur.xml:76(phrase)
 msgid "Activate the filter"
-msgstr ""
+msgstr "フィルタの呼び出し方"
 
 #: src/filters/blur/tileable.xml:115(para)
 msgid ""
@@ -153,6 +184,9 @@ msgid ""
 "<menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</"
 "guisubmenu><guimenuitem>Tileable Blur</guimenuitem></menuchoice>."
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)"
+"</guimenu><guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu><guimenuitem>タイ"
+"ル化可能ぼかし(<accel>T</accel>)...</guimenuitem></menuchoice>"
 
 #: src/filters/blur/tileable.xml:126(title)
 #: src/filters/blur/pixelise.xml:78(phrase)
@@ -160,57 +194,59 @@ msgstr ""
 #: src/filters/blur/gauss_select.xml:67(title)
 #: src/filters/blur/gauss.xml:83(phrase)
 msgid "Options"
-msgstr ""
+msgstr "オプション"
 
 #: src/filters/blur/tileable.xml:128(title)
 msgid "<quote>Tileable Blur</quote> filter options"
-msgstr ""
+msgstr "<quote>タイル化可能ぼかし</quote>フィルタのオプション"
 
 #: src/filters/blur/tileable.xml:138(term)
 #: src/filters/blur/gauss_select.xml:80(term)
 #: src/filters/blur/gauss.xml:98(term)
 msgid "Blur Radius"
-msgstr ""
+msgstr "ぼかし半径(B)"
 
 #: src/filters/blur/tileable.xml:140(para)
 msgid ""
 "The bigger the radius, the more marked is the blur. By selecting "
 "<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel>, you can "
 "make the horizontal and vertical borders tileable."
-msgstr ""
+msgstr "<guilabel>半径</guilabel> を大きくするにつれぼかし具合が強くなります。"
 
 #: src/filters/blur/tileable.xml:148(term)
 msgid "Blur vertically / horizontally"
-msgstr ""
+msgstr "垂直ぼかし; 水平ぼかし"
 
 #: src/filters/blur/tileable.xml:150(para)
 msgid "These options are self-explanatory."
 msgstr ""
+"<guilabel>垂直ぼかし</guilabel> は画像の上下辺が、 <guilabel>水平ぼかし</"
+"guilabel> は画像の左右辺がつながり易くなるようにします。"
 
 #: src/filters/blur/tileable.xml:156(term)
 #: src/filters/blur/mblur.xml:112(term)
 msgid "Blur Type"
-msgstr ""
+msgstr "ぼかしタイプ"
 
 #: src/filters/blur/tileable.xml:158(para)
 msgid "Choose the algorithm to be applied:"
-msgstr ""
+msgstr "適用されるアルゴリズムを選択します。"
 
 #: src/filters/blur/tileable.xml:161(term)
 msgid "IIR"
-msgstr ""
+msgstr "IIR"
 
 #: src/filters/blur/tileable.xml:163(para)
 msgid "for photographic or scanned images."
-msgstr ""
+msgstr "写真やスキャナで読み取った画像に向いています。"
 
 #: src/filters/blur/tileable.xml:167(term)
 msgid "RLE"
-msgstr ""
+msgstr "RLE"
 
 #: src/filters/blur/tileable.xml:169(para)
 msgid "for computer-generated images."
-msgstr ""
+msgstr "コンピュータで生成した画像に向いています。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -219,6 +255,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-pixelise.jpg'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-pixelise.jpg'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -227,29 +265,31 @@ msgid ""
 "@@image: 'images/filters/filters-blur-pixelize.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/filters-blur-pixelize.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #: src/filters/blur/pixelise.xml:23(phrase)
 #: src/filters/blur/pixelise.xml:28(tertiary)
 #: src/filters/blur/pixelise.xml:31(primary)
 msgid "Pixelise"
-msgstr ""
+msgstr "ピクセル化(P)..."
 
 #: src/filters/blur/pixelise.xml:40(quote)
 #: src/filters/blur/pixelise.xml:82(quote)
 #: src/filters/blur/introduction.xml:94(title)
 msgid "Pixelize"
-msgstr ""
+msgstr "ピクセル化"
 
 #: src/filters/blur/pixelise.xml:39(phrase)
 #: src/filters/blur/gauss.xml:40(phrase)
 msgid "Example for the <placeholder-1/> filter"
-msgstr ""
+msgstr "<placeholder-1/>フィルタの使用例"
 
 #: src/filters/blur/pixelise.xml:56(para)
 #: src/filters/blur/gauss_select.xml:41(para)
 #: src/filters/blur/gauss.xml:57(para) src/filters/blur/blur.xml:56(para)
 msgid "Blur applied"
-msgstr ""
+msgstr "ぼかし適用後"
 
 #: src/filters/blur/pixelise.xml:60(para)
 msgid ""
@@ -258,6 +298,10 @@ msgid ""
 "trial. It is used for the <quote>Abraham Lincoln effect</quote>: see <xref "
 "linkend=\"bibliography-online-bach\"/>."
 msgstr ""
+"<guimenuitem>ピクセル化(<accel>P</accel>)...</guimenuitem> フィルタは画像を大"
+"きな単色の升目に塗り分けます。 テレビ報道で公判中の被告を隠すのに使われる効果"
+"によく似ています。 <quote>エイブラハム・リンカーン</quote>効果に使われていま"
+"す。 参考に <xref linkend=\"bibliography-online-bach\"/> をご覧ください。"
 
 #: src/filters/blur/pixelise.xml:71(para)
 msgid ""
@@ -265,45 +309,50 @@ msgid ""
 "<menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</"
 "guisubmenu><guimenuitem>Pixelise</guimenuitem></menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)"
+"</guimenu><guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu><guimenuitem>ピク"
+"セル化(<accel>P</accel>)...</guimenuitem></menuchoice>"
 
 #: src/filters/blur/pixelise.xml:82(phrase)
 #: src/filters/blur/mblur.xml:101(phrase)
 msgid "<placeholder-1/> filter options"
-msgstr ""
+msgstr "<placeholder-1/>フィルタのオプション"
 
 #: src/filters/blur/pixelise.xml:93(term)
 msgid "Pixel Width"
-msgstr ""
+msgstr "ピクセル幅(W)"
 
 #: src/filters/blur/pixelise.xml:95(para)
 msgid "Here you can set the desired width of the blocks."
-msgstr ""
+msgstr "升目の幅を指定できます。"
 
 #: src/filters/blur/pixelise.xml:101(term)
 msgid "Pixel Height"
-msgstr ""
+msgstr "ピクセル高(H)"
 
 #: src/filters/blur/pixelise.xml:103(para)
 msgid "Here you can set the height of the blocks."
-msgstr ""
+msgstr "升目の高さを指定できます。"
 
 #: src/filters/blur/pixelise.xml:107(term)
 msgid "Chain Button"
-msgstr ""
+msgstr "鎖アイコンボタン"
 
 #: src/filters/blur/pixelise.xml:109(para)
 msgid ""
 "If the chain is broken, you can set width and height separately. Otherwise, "
 "they are linked."
 msgstr ""
+"このしるしはクリックすると解けた鎖の姿と繋がった姿に交互に変わります。 解けた"
+"状態では高さと幅を個別に指定できます。 繋ぐと升目は正方形になります。"
 
 #: src/filters/blur/pixelise.xml:116(term)
 msgid "Unit Input Box"
-msgstr ""
+msgstr "単位選定メニュー"
 
 #: src/filters/blur/pixelise.xml:118(para)
 msgid "Here you can select the unit of measure for height and width."
-msgstr ""
+msgstr "高さと幅の寸法を表す単位をここで選択できます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -312,6 +361,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-mblur-linear.jpg'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-mblur-linear.jpg'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -320,6 +371,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-mblur-radial.jpg'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-mblur-radial.jpg'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -328,6 +381,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-mblur-zoom.jpg'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-mblur-zoom.jpg'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -335,37 +390,38 @@ msgstr ""
 msgid ""
 "@@image: 'images/filters/options-blur-mblur.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/options-blur-mblur.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/filters/blur/mblur.xml:22(phrase)
 #: src/filters/blur/mblur.xml:27(tertiary)
 #: src/filters/blur/mblur.xml:30(primary)
 #: src/filters/blur/mblur.xml:101(quote)
 msgid "Motion Blur"
-msgstr ""
+msgstr "モーションぼかし(M)..."
 
 #: src/filters/blur/mblur.xml:38(phrase)
 msgid "Starting example for Motion Blur filter"
-msgstr ""
+msgstr "モーションぼかしフィルタの起点画像"
 
 #: src/filters/blur/mblur.xml:47(para)
 msgid "Original image"
-msgstr ""
+msgstr "元画像"
 
 #: src/filters/blur/mblur.xml:55(para)
 msgid "Linear blur"
-msgstr ""
+msgstr "<quote>線形</quote>モーションぼかし"
 
 #: src/filters/blur/mblur.xml:61(phrase)
 msgid "Using example for Motion Blur filter"
-msgstr ""
+msgstr "モーションぼかしフィルタの使用例"
 
 #: src/filters/blur/mblur.xml:68(para)
 msgid "Radial blur"
-msgstr ""
+msgstr "<quote>半径</quote>(同心円状) モーションぼかし"
 
 #: src/filters/blur/mblur.xml:76(para)
 msgid "Zoom blur"
-msgstr ""
+msgstr "<quote>拡大</quote>モーションぼかし"
 
 #: src/filters/blur/mblur.xml:80(para)
 msgid ""
@@ -373,6 +429,12 @@ msgid ""
 "Linear, Radial, and Zoom movements. Each of these movements can be further "
 "adjusted, with Length, or Angle settings available."
 msgstr ""
+"<guimenuitem>モーションぼかし(<accel>M</accel>)...</guimenuitem> フィルタは動"
+"きのあるぼかしがかけれられます。 このフィルタには <guilabel>線形(<accel>L</"
+"accel>)</guilabel> と <guilabel>半径(<accel>R</accel>)</guilabel> と "
+"<guilabel>拡大(<accel>Z</accel>)</guilabel> の3種類の動きのあるぼかしがありま"
+"す。 動きの種類によりその程度や様態が <guilabel>長さ(<accel>E</accel>)</"
+"guilabel> か <guilabel>角度(<accel>A</accel>)</guilabel> で調節できます。"
 
 #: src/filters/blur/mblur.xml:90(para)
 msgid ""
@@ -380,10 +442,13 @@ msgid ""
 "<menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</"
 "guisubmenu><guimenuitem>Motion Blur</guimenuitem></menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)"
+"</guimenu><guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu><guimenuitem>モー"
+"ションぼかし(<accel>M</accel>)...</guimenuitem></menuchoice>"
 
 #: src/filters/blur/mblur.xml:116(term)
 msgid "Linear"
-msgstr ""
+msgstr "線形"
 
 #: src/filters/blur/mblur.xml:118(para)
 msgid ""
@@ -393,10 +458,16 @@ msgid ""
 "actual angle of the movement. Thus, a setting of 90 will produce a vertical "
 "blur, and a setting of 0 will produce a horizontal blur."
 msgstr ""
+"<guilabel>線形(<accel>L</accel>)</guilabel> は例えば水平方向のような単一の方"
+"向にぼかしをかけます。 このオプションに限って言えば <guilabel>長さ(<accel>E</"
+"accel>)</guilabel> が他のフィルタの<quote>半径</quote>のようなはたらきをしま"
+"す。 つまりこの値によってぼかしの強度が変化します。 <guilabel>角度(<accel>A</"
+"accel>)</guilabel> はぼかしの方向を決めます。 すなわち角度を 90 に設定すると"
+"垂直方向のぼかしとなり、 0 に設定すると水平方向のぼかしとなります。"
 
 #: src/filters/blur/mblur.xml:132(term)
 msgid "Radial"
-msgstr ""
+msgstr "半径 [正しくは同心円状]"
 
 #: src/filters/blur/mblur.xml:134(para)
 msgid ""
@@ -406,10 +477,16 @@ msgid ""
 "direction. The Radial motion blur is similar to the effect of a spinning "
 "object. The center of the spin in this case, is the center of the image."
 msgstr ""
+"<guilabel>半径(<accel>R</accel>)</guilabel> モーションぼかしは同心円状にぼか"
+"します。 <guilabel>長さ(<accel>E</accel>)</guilabel> の値はこの種のぼかしでは"
+"重要ではありません。 一方で <guilabel>角度(<accel>A</accel>)</guilabel> はぼ"
+"かし具合を設定する基本的な値です。 <quote>角度</quote>が大きいほど円の接線方"
+"向にぼかしが強くかかります。 同心円状モーションぼかしは回転体の効果によく似て"
+"います。 回転の軸はぼかしの中心に置かれます。"
 
 #: src/filters/blur/mblur.xml:148(term)
 msgid "Zoom"
-msgstr ""
+msgstr "拡大"
 
 #: src/filters/blur/mblur.xml:150(para)
 msgid ""
@@ -419,30 +496,41 @@ msgid ""
 "into the image. Length is the main setting here, and affects the amount of "
 "speed, as it were, toward the center of the image."
 msgstr ""
+"<guilabel>拡大(<accel>Z</accel>)</guilabel> モーションぼかしは画像上のぼかし"
+"の中心から拡散する方向にぼかします。 中心部は比較的穏かにぼかされますが、 中"
+"心を離れるにつれ中央から外周への方向に沿ってぼかしが強くかかります。 このオプ"
+"ションでぼかしをかけた画像は見る者に画像の方へつき進んでいるような印象を与え"
+"る集中線の効果を得ます。 主な設定値は <guilabel>長さ(<accel>E</accel>)</"
+"guilabel> で、 これがあたかも画像上のぼかしの中心へ進むスピード感のような効果"
+"を生みます。"
 
 #: src/filters/blur/mblur.xml:165(term)
 msgid "Blur settings"
-msgstr ""
+msgstr "ぼかしのパラメータ"
 
 #: src/filters/blur/mblur.xml:169(term)
 msgid "Length"
-msgstr ""
+msgstr "長さ(E)"
 
 #: src/filters/blur/mblur.xml:171(para)
 msgid "This slider controls the distance pixels are moved (1 - 256)"
 msgstr ""
+"<guilabel>長さ(<accel>E</accel>)</guilabel> スライダは 1 から256 の範囲で画素"
+"の移動距離をピクセル単位で指定します。"
 
 #: src/filters/blur/mblur.xml:178(term)
 msgid "Angle"
-msgstr ""
+msgstr "角度(A)"
 
 #: src/filters/blur/mblur.xml:180(para)
 msgid "As seen above, Angle slider effect depends on Blur type (0 - 360)."
 msgstr ""
+"前述のとおり、 <guilabel>角度(<accel>A</accel>)</guilabel> スライダはぼかしの"
+"種類によって役割が変わります。 設定できる値の範囲は 0 から 360 です。"
 
 #: src/filters/blur/mblur.xml:190(term)
 msgid "Blur Center"
-msgstr ""
+msgstr "ぼかしの中心"
 
 #: src/filters/blur/mblur.xml:192(para)
 msgid ""
@@ -451,6 +539,11 @@ msgid ""
 "instance, you set rotation center. With Zoom Type, vanishing point. This "
 "option is greyed out with Linear type."
 msgstr ""
+"このオプションでぼかしの始点を設定します。 [初期状態では画像の中心座標の値が"
+"入っています。] この始点とぼかしの効果の関係は<quote>ぼかしの種類</quote>で選"
+"んだ方法によって異なります。 例えば<quote>半径</quote>を選んだ場合はこの始点"
+"が回転の中心になります。 <quote>拡大</quote>を選んだ場合は消失点です。 "
+"<quote>線形</quote>を選ぶとこのオプションは灰色無効となります。"
 
 #: src/filters/blur/mblur.xml:199(para)
 msgid ""
@@ -459,6 +552,10 @@ msgid ""
 "you can see its coordinates in the lower left corner of the image window. "
 "Only copy them out into the input boxes."
 msgstr ""
+"ぼかしの中心には何らかの値を設定せねばなりません。 残念ながら画像上をクリック"
+"する設定方法がありません。 しかし画像上のマウスポインタの座標位置が常に画像"
+"ウィンドウの左下に表示されていますので、 適当な位置の座標をこれで探ってその値"
+"をオプションの数値記入欄に入れる方法があります。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -467,6 +564,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-demo-orig.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-demo-orig.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -475,6 +574,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-demo-gauss10.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-demo-gauss10.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -483,6 +584,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-demo-blur.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-demo-blur.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -491,6 +594,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-demo-selective.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-demo-selective.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -499,6 +604,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-demo-pixelize.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-demo-pixelize.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -507,14 +614,16 @@ msgid ""
 "@@image: 'images/filters/examples/blur-demo-mblur.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-demo-mblur.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #: src/filters/blur/introduction.xml:10(title)
 msgid "Introduction"
-msgstr ""
+msgstr "あらまし"
 
 #: src/filters/blur/introduction.xml:18(title)
 msgid "Original for demo"
-msgstr ""
+msgstr "実演用元画像"
 
 #: src/filters/blur/introduction.xml:26(para)
 msgid ""
@@ -526,10 +635,17 @@ msgid ""
 "are, of course, only examples: most of the filters have parameter settings "
 "that allow you to vary the magnitude or type of blurring."
 msgstr ""
+"ここに挙げたフィルタはいずれも画像の全体もしくは部分にさまざまな方法でぼかし"
+"をかけます。 画像に選択範囲があればその範囲内でのみ画像にぼかしがかかりま"
+"す。 しかしぼかしの境界線付近ではぼかしなしの部分の色がぼかしのかかった部分に"
+"混ざり込むかもしれません。 このあとはそれぞれのフィルタの使用例を載せますの"
+"で、 どのぼかしフィルタを選ぶかの参考にしてください。 もちろんここに示したの"
+"はほんの一例に過ぎず、 ほとんどのフィルタはパラメータの設定によりぼかしの加減"
+"やぼかしの風合いがさまざまに変化します。"
 
 #: src/filters/blur/introduction.xml:38(title)
 msgid "Gaussian blur (radius 10)"
-msgstr ""
+msgstr "ガウシアンぼかし (半径 10)"
 
 #: src/filters/blur/introduction.xml:46(para)
 msgid ""
@@ -538,10 +654,14 @@ msgid ""
 "way.) It has an efficient implementation that allows it to create a very "
 "blurry blur in a relatively short time."
 msgstr ""
+"いろんな場面で一番よく使えそうなのが <guimenuitem>ガウシアンぼかし(<accel>G</"
+"accel>)...</guimenuitem> です。 (偉大な数学者ガウスの名前が付いているけれど敬"
+"遠する必要はありません。 このフィルタは最も基本的な方法で画像をぼかします。) "
+"しかも比較的短時間でたっぷりぼかせる効果的な実装が施されています。"
 
 #: src/filters/blur/introduction.xml:55(title)
 msgid "Simple blur"
-msgstr ""
+msgstr "単なるぼかし"
 
 #: src/filters/blur/introduction.xml:63(para)
 msgid ""
@@ -553,10 +673,19 @@ msgid ""
 "you want a strong blurring effect, this filter is too slow to be a good "
 "choice: use a Gaussian blur instead."
 msgstr ""
+"ちょっとだけ画像をぼかしたい&mdash;そのままの状態で柔らかな雰囲気にしたい"
+"&mdash;ときには単なる <guimenuitem>ぼかし(<accel>B</accel>)</guimenuitem>フィ"
+"ルタを使ってみる価値があります。 このフィルタはダイアログがなく、 すぐ自動的"
+"に実行します。 ぼかしをかけたことに気付かないぐらいのかすかな効果しかありませ"
+"んが、 繰り返すとどんどん強くぼやけてきます。 <acronym>GIMP</acronym> 2.0 以"
+"降このフィルタは繰り返し回数をお知らせするウィンドウが現れるようになりまし"
+"た。 とはいえ強くぼかすつもりで好みの状態までこのフィルタを繰り返していてはお"
+"そらく時間がかかり過ぎます。 こんなときは代わりにガウシアンぼかしを使うべきで"
+"しょう。"
 
 #: src/filters/blur/introduction.xml:74(title)
 msgid "Selective blur"
-msgstr ""
+msgstr "選択的ガウシアンぼかし"
 
 #: src/filters/blur/introduction.xml:82(para)
 msgid ""
@@ -567,6 +696,12 @@ msgid ""
 "implementation is much slower than a Gaussian blur, though, so you should "
 "not use it unless you really need the selectivity."
 msgstr ""
+"<guimenuitem>選択的ガウシアンぼかし(<accel>S</accel>)...</guimenuitem> フィル"
+"タはしきい値を設定して互いに類似した色の画素同士だけが混ざりあうぼかしを施し"
+"ます。 写真の粒度を減らす用途なら鋭い輪郭を保ったまま処理できますので便利で"
+"す。 (この例の画像では背景の粒度が減ったことに注目してください。) しかし実装"
+"上ガウシアンぼかしと比べると処理に随分時間がかかりますので、 選択的なぼかしが"
+"必要な場合だけこのフィルタを使うとよいでしょう。"
 
 #: src/filters/blur/introduction.xml:102(para)
 msgid ""
@@ -576,6 +711,12 @@ msgid ""
 "a similar effect, but with irregular blobs instead of perfectly square "
 "pixels.)"
 msgstr ""
+"<guimenuitem>ピクセル化(<accel>P</accel>)...</guimenuitem> フィルタはいわゆる"
+"モザイク処理とかよく知られた<quote>エイブラハム・リンカーン</quote>効果のこと"
+"で、 画像を正方形の巨大な画素で表します。 (ちなみに芸術的効果フィルタの "
+"<link linkend=\"plug-in-oilify\">油絵化(F)...</link> フィルタも元は同じ効果を"
+"利用していて、 こちらはきっちり正方形の画素にせず不定形なかけらの寄り合わせで"
+"表現します。)"
 
 #: src/filters/blur/introduction.xml:110(para)
 msgid ""
@@ -584,16 +725,23 @@ msgid ""
 "painting <quote>Gala Contemplating the Mediterranean Sea</quote> turning to "
 "an Abraham Lincoln's portrait when looking at it from a distance."
 msgstr ""
+"<quote>エイブラハム・リンカーン</quote>効果については <xref linkend="
+"\"bibliography-online-bach\"/> がうまく説明しています。 サルバドール・ダリの"
+"<quote>地中海を見つめるガラ</quote>は遠くから見るとエイブラハム・リンカーンの"
+"肖像が現れるしかけになっています。"
 
 #: src/filters/blur/introduction.xml:120(title)
 msgid "Motion blur"
-msgstr ""
+msgstr "モーションぼかし"
 
 #: src/filters/blur/introduction.xml:128(para)
 msgid ""
 "The Motion Blur filter blurs in a specific direction at each point, which "
 "allows you to create a sense of motion: either linear, radial, or rotational."
 msgstr ""
+"<guimenuitem>モーションぼかし(<accel>M</accel>)...</guimenuitem> フィルタは画"
+"像上の位置により定められた方向にぼかしをかけて動きのある絵にします。 直線的一"
+"方向、 集中線、 回転の各効果から選べます。"
 
 #: src/filters/blur/introduction.xml:134(para)
 msgid ""
@@ -602,12 +750,17 @@ msgid ""
 "edge effects when you create a pattern by tiling multiple copies of the "
 "image side by side."
 msgstr ""
+"最後の <guimenuitem>タイル化可能ぼかし(<accel>T</accel>)</guimenuitem> はガウ"
+"シアンぼかしとまるで変わりませんが、 画像の外縁付近では反対側の辺と連続したぼ"
+"かしを行ないますので、 この画像をタイル状に並べて文様にするときに継ぎ目が目立"
+"たなくなります。"
 
 #: src/filters/blur/introduction.xml:141(para)
 msgid ""
 "Tileable Blur is actually implemented by a Script-Fu script that invokes the "
 "Gaussian blur plug-in."
 msgstr ""
+"タイル化可能ぼかしの実体はガウシアンぼかしプラグインを利用するScript-Fuです。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -616,6 +769,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-selective.jpg'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-selective.jpg'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -624,19 +779,21 @@ msgid ""
 "@@image: 'images/filters/filters-blur-gaussselect.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/filters-blur-gaussselect.png'; md5=THIS FILE "
+"DOESN'T EXIST"
 
 #: src/filters/blur/gauss_select.xml:13(title)
 #: src/filters/blur/gauss_select.xml:20(primary)
 msgid "Selective Gaussian Blur"
-msgstr ""
+msgstr "選択的ガウシアンぼかし(S)..."
 
 #: src/filters/blur/gauss_select.xml:17(tertiary)
 msgid "Selective Gaussian"
-msgstr ""
+msgstr "選択的ガウシアンぼかし"
 
 #: src/filters/blur/gauss_select.xml:25(title)
 msgid "The Selective Gaussian Blur filter"
-msgstr ""
+msgstr "選択的ガウシアンぼかしフィルタ"
 
 #: src/filters/blur/gauss_select.xml:45(para)
 msgid ""
@@ -648,6 +805,13 @@ msgid ""
 "subject will stand out better. This add a sense of depth to the image with "
 "only a single operation."
 msgstr ""
+"他のぼかしフィルタとは対照的に <guimenuitem>選択的ガウシアンぼかし(<accel>S</"
+"accel>)...</guimenuitem> プラグインは満遍なく画像をぼかすことはありません。 "
+"画素にぼかしがかかるのはその付近の画素の値との差が指定された最大デルタ値を下"
+"回る場合に限ります。 つまりもともとコントラストが高い部分はデルタ値を上回りま"
+"すのでぼかしがかからずコントラストは保たれます。 背景だけぼかしをかけて前面に"
+"ある物体は良好に浮き立たせたい場合に使えます。 たった一度の処理で画像に深みを"
+"与えられます。"
 
 #: src/filters/blur/gauss_select.xml:57(para)
 msgid ""
@@ -655,18 +819,21 @@ msgid ""
 "<menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</"
 "guisubmenu><guimenuitem>Selective Gaussian Blur</guimenuitem></menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)"
+"</guimenu><guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu><guimenuitem>選択"
+"的ガウシアンぼかし(<accel>S</accel>)...</guimenuitem></menuchoice>"
 
 #: src/filters/blur/gauss_select.xml:69(title)
 msgid "<quote>Selective Gaussian</quote> filter parameters settings"
-msgstr ""
+msgstr "<quote>選択的ガウシアンぼかし</quote>フィルタのパラメータ設定"
 
 #: src/filters/blur/gauss_select.xml:82(para)
 msgid "Here you can set the blur intensity, in pixels."
-msgstr ""
+msgstr "ぼかしの強度をピクセル単位で設定できます。"
 
 #: src/filters/blur/gauss_select.xml:88(term)
 msgid "Max. Delta"
-msgstr ""
+msgstr "最大Δ(M)"
 
 #: src/filters/blur/gauss_select.xml:90(para)
 msgid ""
@@ -674,6 +841,8 @@ msgid ""
 "the surrounding pixel values. Above this Delta, blur will not be applied to "
 "that pixel."
 msgstr ""
+"ぼかしをうける画素とその付近の画素の値の差の最大値を 0 から 255 の範囲で設定"
+"します。 この微変量値デルタを越える画素にはぼかしがかかりません。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -682,6 +851,8 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-gauss.jpg'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-gauss.jpg'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -689,12 +860,13 @@ msgstr ""
 msgid ""
 "@@image: 'images/filters/options-blur-gauss.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
+"@@image: 'images/filters/options-blur-gauss.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/filters/blur/gauss.xml:24(phrase)
 #: src/filters/blur/gauss.xml:29(tertiary)
 #: src/filters/blur/gauss.xml:32(primary) src/filters/blur/gauss.xml:41(quote)
 msgid "Gaussian Blur"
-msgstr ""
+msgstr "ガウシアンぼかし(G)..."
 
 #: src/filters/blur/gauss.xml:61(para)
 msgid ""
@@ -706,6 +878,16 @@ msgid ""
 "GIMP supports two implementations of Gaussian Blur: IIR G.B. and RLE G.B. "
 "They both produce the same results, but each one can be faster in some cases."
 msgstr ""
+"<guimenuitem>ガウシアンぼかし(<accel>G</accel>)...</guimenuitem> "
+"(<acronym>IIR</acronym>) プラグインは現在活性化しているレイヤーもしくは選択範"
+"囲の個々の画素に対し、 これに近接する画素のうちダイアログで指定された半径の範"
+"囲内の全ての画素の値から平均値を算出して値を置き換えます。 半径の値を大きくと"
+"ればさらに強くぼやけます。 半径を指定する際に鎖のしるしをクリックして解いてか"
+"ら互いに異なる値を与えると、 縦もしくは横により強くぼかしの方向づけができま"
+"す。 <acronym>GIMP</acronym>のガウシアンぼかしには<acronym>IIR</acronym>ガウ"
+"シアンぼかしと<acronym>RLE</acronym>ガウシアンぼかしの2種類の実装がありま"
+"す。 両者の効果にさほど違いはありませんが、 画像や設定値により処理速度に差が"
+"つくこともあります。"
 
 #: src/filters/blur/gauss.xml:76(para)
 msgid ""
@@ -713,14 +895,17 @@ msgid ""
 "<menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</"
 "guisubmenu><guimenuitem>Gaussian Blur</guimenuitem></menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)"
+"</guimenu><guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu><guimenuitem>ガウ"
+"シアンぼかし(<accel>G</accel>)...</guimenuitem></menuchoice>"
 
 #: src/filters/blur/gauss.xml:87(quote)
 msgid "Gaussian"
-msgstr ""
+msgstr "ガウシアンぼかし"
 
 #: src/filters/blur/gauss.xml:87(phrase)
 msgid "<placeholder-1/> filter parameters settings"
-msgstr ""
+msgstr "<placeholder-1/>フィルタのパラメータ設定"
 
 #: src/filters/blur/gauss.xml:100(para)
 msgid ""
@@ -728,10 +913,13 @@ msgid ""
 "vertical blur, you can give the effect of a motion blur. You can choose the "
 "unit with the drop list."
 msgstr ""
+"ここで定めた値がぼかしの強さを決めます。 水平と垂直のぼかし半径の値を違えると"
+"モーションぼかしのような効果が現れます。 半径の単位は引き出しリストから別の単"
+"位に変更できます。"
 
 #: src/filters/blur/gauss.xml:108(term)
 msgid "Blur Method"
-msgstr ""
+msgstr "ぼかしの種類"
 
 #: src/filters/blur/gauss.xml:110(para)
 msgid ""
@@ -739,6 +927,10 @@ msgid ""
 "quote>.This blur works best for large radius values and for images which are "
 "not computer generated."
 msgstr ""
+"<guilabel><accel>I</accel>IR</guilabel> は <foreignphrase>InfiniteImpulse "
+"Response</foreignphrase> (無限インパルス応答) の略です。 このぼかし方法は写真"
+"などコンピュータ生成でない画像において大きな半径を設定した場合に最高の仕上り"
+"が期待できます。"
 
 #: src/filters/blur/gauss.xml:114(para)
 msgid ""
@@ -746,6 +938,10 @@ msgid ""
 "Blur is best used on computer-generated images or those with large areas of "
 "constant intensity."
 msgstr ""
+"<guilabel><accel>R</accel>LE</guilabel> は <foreignphrase>Run-Length "
+"Encoding</foreignphrase> (連長圧縮) の略です。 <acronym>RLE</acronym>ガウシア"
+"ンぼかしの方法はコンピュータ生成画像や等質な強度の部分が広く分布する画像にお"
+"いて最高の仕上りが期待できます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -754,10 +950,12 @@ msgid ""
 "@@image: 'images/filters/examples/blur-taj-blur.jpg'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
+"@@image: 'images/filters/examples/blur-taj-blur.jpg'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #: src/filters/blur/blur.xml:39(phrase)
 msgid "The Blur filter applied to a photograph"
-msgstr ""
+msgstr "写真にぼかしフィルタを適用した様子"
 
 #: src/filters/blur/blur.xml:60(para)
 msgid ""
@@ -766,16 +964,23 @@ msgid ""
 "the present pixel value and the value of adjacent pixels and sets the "
 "present pixel to that average value."
 msgstr ""
+"<guimenuitem>ぼかし(<accel>B</accel>)</guimenuitem> フィルタはピンぼけ写真の"
+"ような効果があります。 このフィルタは画像上のある画素の値とその近隣の画素の値"
+"から平均値を算出し現在の画素の値に置き換える操作を全ての画素に対して行なうこ"
+"とでぼかし効果を得ます。"
 
 #: src/filters/blur/blur.xml:66(para)
 msgid "Filter advantage is its calculation speed. It suits big images."
 msgstr ""
+"このフィルタの利点は処理速度が高いことです。 大きな画像に向いています。"
 
 #: src/filters/blur/blur.xml:69(para)
 msgid ""
 "Filter disadvantage is that its action is hardly perceptible on big images, "
 "but very strong on small images."
 msgstr ""
+"このフィルタの欠点は大きな画像ほど[一度や二度の実行では]その効果がなかなか目"
+"立って現れてこないのに、 小さな画像では非常に強く効果が出ることです。"
 
 #: src/filters/blur/blur.xml:78(para)
 msgid ""
@@ -783,8 +988,11 @@ msgid ""
 "guimenu><guisubmenu>Blur</guisubmenu><guimenuitem>Blur</guimenuitem></"
 "menuchoice>"
 msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>フィルタ(<accel>R</accel>)"
+"</guimenu><guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu><guimenuitem>ぼか"
+"し(<accel>B</accel>)</guimenuitem></menuchoice>"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: src/filters/blur/blur.xml:0(None)
 msgid "translator-credits"
-msgstr ""
+msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."

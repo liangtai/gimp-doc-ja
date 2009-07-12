@@ -12,7 +12,7 @@
   2006-02-08 added norwegian translation by KoSt
   2005-12-18 reviewed by lexa
 -->
-<!--2009-07-09-->
+<!--2009-07-12-->
 <sect2 id="gimp-concepts-docks">
   <title lang="en">Dialogs and Docking</title>
   <title lang="ja">ダイアログとその合体</title>
@@ -920,13 +920,17 @@
             This is a toggle. If it is checked, then an Image Menu is shown at
             the top of the dock
             (see <xref linkend="figure-highlight-imagemenu"/>).
-            It is not available for dialogs docked below the Toolbox.
+            It is not available for dialogs docked below the Toolbox. This
+            option is interesting only if you have several open images on your
+            screen.
           </para>
           <para lang="ja">
             これは二者択一です。 チェックが入りのときは、 画像メニューが
             ドックの上部に置かれます (
             <xref linkend="figure-highlight-imagemenu"/> [=上図]参照)。
             ただしツールボックス下に合体したダイアログ上では指定できません。
+            このオプションは画面に複数の画像を開いている場合にだけ意味が
+            あります。
           </para>
         </listitem>
       </varlistentry>
@@ -936,18 +940,37 @@
         <term lang="ja">アクティブな画像を自動的に追跡(F)</term>
         <listitem>
           <para lang="en">
+            This option is also interesting only if you have several images
+            open on your screen. Then, the information displayed in a dock
+            is always that of the selected image in the Image Selection
+            drop-down list. If the <guilabel>Auto Follow Active Image
+            </guilabel> is disabled, the image can be selected only in the
+            Image Selection. If enabled, you  can also select it by
+            activating the image directly (clicking on its title bar).
+          </para>
+          <!--<para lang="en">
             <guilabel>Auto Follow Active Image</guilabel> controls how the
             Image Menu functions. If disabled, you must manually select the
             image in the Image menu. If enabled, however, the Image Menu
             changes to the Active Image when a new image is selected.
-          </para>
+          </para>-->
           <para lang="ja">
+            このオプションも画面に複数の画像を開いている場合にだけ意味が
+            あります。 このときには画像選択メニューに表示されている画像とドック
+            内の各ダイアログが表示している画像が常に同一です。 もし仮に
+            <guimenuitem>アクティブな画像を自動的に追跡(<accel>F</accel>)
+            </guimenuitem> を無効にしていたときは、 画像を選択できるのは画像
+            選択メニューだけになります。 もし有効ならば、 画像を直接活性化
+            (つまり画像ウィンドウのタイトルバーをクリック) しても画像を選択
+            できます。
+          </para>
+          <!--<para lang="ja">
             <guimenuitem>アクティブな画像を自動的に追跡(<accel>F</accel>)
             </guimenuitem> は画像選択メニューのはたらきを調節します。 無効に
             したときは適宜画像選択メニューで画像を選択しなければなりませんが、
             有効なときは別の画像を選ぶとすぐさま画像選択メニューの対象もこの
             活性画像に切り替わります。
-          </para>
+          </para>-->
         </listitem>
       </varlistentry>
     </variablelist>

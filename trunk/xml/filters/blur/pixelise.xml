@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-08-03 prokoudine: improved Russian content, added localized screenshot
   2007-03-30 KoSt: added 'no'
@@ -9,115 +10,146 @@
   051111 en;fr reviewed by julien hardelin
   05/11/23 fixed missing lang tag by axel wernicke
 -->
+<!--2009-07-12-->
 <sect2 id="plug-in-pixelize">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-10-23</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Pixelise</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Pixelise</title>
+  <title lang="ja">ピクセル化(P)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Blur</secondary>
     <tertiary>Pixelise</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Pixelise</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ボカシ">ぼかし</secondary>
+    <tertiary sortas="ピクセルカ">ピクセル化</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ピクセルカ">ピクセル化</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          Example for the <quote>Pixelize</quote> filter
-        </phrase>
-      </title>
+      <title lang="en">Example for the <quote>Pixelize</quote> filter</title>
+      <title lang="ja"><quote>ピクセル化</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original</para>
+          <para lang="en">Original</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/blur-taj-pixelise.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/blur-taj-pixelise.jpg"/>
         </imageobject>
         <caption>
-          <para>Blur applied</para>
+          <para lang="en">Blur applied</para>
+          <para lang="ja">ぼかし適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The Pixelize filter renders the image using large color blocks. It is
       very similar to the effect seen on television when obscuring a
       criminal during trial. It is used for the <quote>Abraham Lincoln
       effect</quote>: see <xref linkend="bibliography-online-bach"/>.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-      You can find this filter in the image menu through
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</guisubmenu><guimenuitem>Pixelise</guimenuitem></menuchoice>
+    <para lang="ja">
+      <guimenuitem>ピクセル化(<accel>P</accel>)...</guimenuitem> フィルタは画像
+      を大きな単色の升目に塗り分けます。 テレビ報道で公判中の被告を隠すのに
+      使われる効果によく似ています。 <quote>エイブラハム・リンカーン</quote>
+      効果に使われています。 参考に 
+      <xref linkend="bibliography-online-bach"/> をご覧ください。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image menu through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Blur</guisubmenu>
+        <guimenuitem>Pixelise</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu>
+        <guimenuitem>ピクセル化(<accel>P</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Pixelize</quote> filter options
-        </phrase>
-      </title>
+      <title lang="en"><quote>Pixelize</quote> filter options</title>
+      <title lang="ja"><quote>ピクセル化</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/filters-blur-pixelize.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-blur-pixelize.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Pixel Width</term>
+        <term lang="en">Pixel Width</term>
+        <term lang="ja">ピクセル幅(W)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here you can set the desired width of the blocks.
           </para>
+          <para lang="ja">升目の幅を指定できます。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Pixel Height</term>
+        <term lang="en">Pixel Height</term>
+        <term lang="ja">ピクセル高(H)</term>
         <listitem>
-          <para>Here you can set the height of the blocks.</para>
+          <para lang="en">Here you can set the height of the blocks.</para>
+          <para lang="ja">升目の高さを指定できます。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Chain Button</term>
+        <term lang="en">Chain Button</term>
+        <term lang="ja">鎖アイコンボタン</term>
         <listitem>
-          <para>
+          <para lang="en">
             If the chain is broken, you can set width and height separately.
             Otherwise, they are linked.
           </para>
+          <para lang="ja">
+            このしるしはクリックすると解けた鎖の姿と繋がった姿に交互に
+            変わります。 解けた状態では高さと幅を個別に指定できます。 繋ぐと
+            升目は正方形になります。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Unit Input Box</term>
+        <term lang="en">Unit Input Box</term>
+        <term lang="ja">単位選定メニュー</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here you can select the unit of measure for height and width.
           </para>
+          <para lang="ja">高さと幅の寸法を表す単位をここで選択できます。</para>
         </listitem>
       </varlistentry>
     </variablelist>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-08-01 prokoudine: added RU caption to the images
   2008-08-01 prokoudine: improved Russian content, added localized screenshot
@@ -10,55 +11,58 @@
   2005-11-10 en;fr reviewed by julien hardelin
   2005-09-30 de fixed figure issue by axel.wernicke
 -->
+<!--2009-07-11-->
 <sect2 id="plug-in-gauss">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-10-23</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Gaussian Blur</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Gaussian Blur</title>
+  <title lang="ja">ガウシアンぼかし(G)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Blur</secondary>
     <tertiary>Gaussian Blur</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Gaussian Blur</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ボカシ">ぼかし</secondary>
+    <tertiary sortas="ガウシアンボカシ">ガウシアンぼかし</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガウシアンボカシ">ガウシアンぼかし</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          Example for the <quote>Gaussian Blur</quote> filter
-        </phrase>
+      <title lang="en">
+        Example for the <quote>Gaussian Blur</quote> filter
       </title>
+      <title lang="ja"><quote>ガウシアンぼかし</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original</para>
+          <para lang="en">Original</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/blur-taj-gauss.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/blur-taj-gauss.jpg"/>
         </imageobject>
         <caption>
-          <para>Blur applied</para>
+          <para lang="en">Blur applied</para>
+          <para lang="ja">ぼかし適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The IIR Gaussian Blur plug-in acts on each pixel of the active layer or
       selection, setting its Value to the average of all pixel Values present
       in a radius defined in the dialog. A higher Value will produce a higher
@@ -68,53 +72,101 @@
       IIR G.B. and RLE G.B. They both produce the same results, but each one
       can be faster in some cases.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-      You can find this filter in the image menu under
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</guisubmenu><guimenuitem>Gaussian Blur</guimenuitem></menuchoice>
+    <para lang="ja">
+      <guimenuitem>ガウシアンぼかし(<accel>G</accel>)...</guimenuitem> (
+      <acronym>IIR</acronym>) プラグインは現在活性化しているレイヤーもしくは
+      選択範囲の個々の画素に対し、 これに近接する画素のうちダイアログで指定
+      された半径の範囲内の全ての画素の値から平均値を算出して値を置き換えます。
+      半径の値を大きくとればさらに強くぼやけます。 半径を指定する際に鎖のしるし
+      をクリックして解いてから互いに異なる値を与えると、 縦もしくは横により強く
+      ぼかしの方向づけができます。 <acronym>GIMP</acronym>のガウシアンぼかし
+      には<acronym>IIR</acronym>ガウシアンぼかしと<acronym>RLE</acronym>
+      ガウシアンぼかしの2種類の実装があります。 両者の効果にさほど違いは
+      ありませんが、 画像や設定値により処理速度に差がつくこともあります。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Blur</guisubmenu>
+        <guimenuitem>Gaussian Blur</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu>
+        <guimenuitem>ガウシアンぼかし(<accel>G</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">オプション</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Gaussian</quote> filter parameters settings
-        </phrase>
+      <title lang="en">
+        <quote>Gaussian</quote> filter parameters settings
+      </title>
+      <title lang="ja">
+        <quote>ガウシアンぼかし</quote>フィルタのパラメータ設定
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-blur-gauss.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-blur-gauss.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Blur Radius</term>
+        <term lang="en">Blur Radius</term>
+        <term lang="ja">ぼかし半径</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here you can set the blur intensity. By altering the ratio of
             horizontal to vertical blur, you can give the effect of a motion
             blur. You can choose the unit with the drop list.
           </para>
+          <para lang="ja">
+            ここで定めた値がぼかしの強さを決めます。 水平と垂直のぼかし半径の
+            値を違えるとモーションぼかしのような効果が現れます。 半径の単位は
+            引き出しリストから別の単位に変更できます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Blur Method</term>
+        <term lang="en">Blur Method</term>
+        <term lang="ja">ぼかしの種類</term>
         <listitem>
-          <para><guilabel>IIR</guilabel>: IIR stands for <quote>Infinite Impulse
+          <para lang="en">
+            <guilabel>IIR</guilabel>: IIR stands for <quote>Infinite Impulse
             Response</quote>.This blur works best for large radius values and
             for images which are not computer generated.
           </para>
-          <para><guilabel>RLE</guilabel>: RLE stands for run-length
+          <para lang="en">
+            <guilabel>RLE</guilabel>: RLE stands for run-length
             encoding. RLE Gaussian Blur is best used on
             computer-generated images or those with large areas of
             constant intensity.
+          </para>
+          <para lang="ja">
+            <guilabel><accel>I</accel>IR</guilabel> は <foreignphrase>Infinite
+            Impulse Response</foreignphrase> (無限インパルス応答) の略です。
+            このぼかし方法は写真などコンピュータ生成でない画像において大きな
+            半径を設定した場合に最高の仕上りが期待できます。
+          </para>
+          <para lang="ja">
+            <guilabel><accel>R</accel>LE</guilabel> は <foreignphrase>
+            Run-Length Encoding</foreignphrase> (連長圧縮) の略です。 <acronym>
+            RLE</acronym>ガウシアンぼかしの方法はコンピュータ生成画像や等質な
+            強度の部分が広く分布する画像において最高の仕上りが期待できます。
           </para>
         </listitem>
       </varlistentry>

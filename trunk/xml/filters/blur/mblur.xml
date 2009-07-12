@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-08-03 prokoudine: improved Russian content, added localized screenshot
   2007-03-29 KoSt: added 'no'
@@ -8,114 +9,142 @@
   050930 de fixed figure issue by axel.wernicke
   051111 en;fr reviewed by julien hardelin
 -->
+<!--2009-07-12-->
 <sect2 id="plug-in-mblur">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-10-23</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Motion Blur</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Motion Blur</title>
+  <title lang="ja">モーションぼかし(M)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Blur</secondary>
     <tertiary>Motion Blur</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Motion Blur</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ボカシ">ぼかし</secondary>
+    <tertiary sortas="モーションボカシ">モーションぼかし</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="モーションボカシ">モーションぼかし</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          Starting example for Motion Blur filter
-        </phrase>
-      </title>
+      <title lang="en">Starting example for Motion Blur filter</title>
+      <title lang="ja">モーションぼかしフィルタの起点画像</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/blur-taj-mblur-linear.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/blur-taj-mblur-linear.jpg"/>
         </imageobject>
         <caption>
-          <para>Linear blur</para>
+          <para lang="en">Linear blur</para>
+          <para lang="ja"><quote>線形</quote>モーションぼかし</para>
         </caption>
       </mediaobject>
     </figure>
     <figure>
-      <title>
-        <phrase>Using example for Motion Blur filter</phrase>
-      </title>
+      <title lang="en">Using example for Motion Blur filter</title>
+      <title lang="ja">モーションぼかしフィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/blur-taj-mblur-radial.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/blur-taj-mblur-radial.jpg"/>
         </imageobject>
         <caption>
-          <para>Radial blur</para>
+          <para lang="en">Radial blur</para>
+          <para lang="ja"><quote>半径</quote>(同心円状) モーションぼかし</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/blur-taj-mblur-zoom.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/blur-taj-mblur-zoom.jpg"/>
         </imageobject>
         <caption>
-          <para>Zoom blur</para>
+          <para lang="en">Zoom blur</para>
+          <para lang="ja"><quote>拡大</quote>モーションぼかし</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The Motion Blur filter creates a movement blur. The filter is capable of
       Linear, Radial, and Zoom movements. Each of these movements can be
       further adjusted, with Length, or Angle settings available.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-      You can find this filter in the image menu under
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Blur</guisubmenu><guimenuitem>Motion Blur</guimenuitem></menuchoice>
+    <para lang="ja">
+      <guimenuitem>モーションぼかし(<accel>M</accel>)...</guimenuitem> フィルタ
+      は動きのあるぼかしがかけれられます。 このフィルタには <guilabel>
+      線形(<accel>L</accel>)</guilabel> と <guilabel>半径(<accel>R</accel>)
+      </guilabel> と <guilabel>拡大(<accel>Z</accel>)</guilabel> の3種類の
+      動きのあるぼかしがあります。 動きの種類によりその程度や様態が <guilabel>
+      長さ(<accel>E</accel>)</guilabel> か <guilabel>角度(<accel>A</accel>)
+      </guilabel> で調節できます。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Blur</guisubmenu>
+        <guimenuitem>Motion Blur</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ぼかし(<accel>B</accel>)</guisubmenu>
+        <guimenuitem>モーションぼかし(<accel>M</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Motion Blur</quote> filter options
-        </phrase>
+      <title lang="en"><quote>Motion Blur</quote> filter options</title>
+      <title lang="ja">
+        <quote>モーションぼかし</quote>フィルタのオプション
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-blur-mblur.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-blur-mblur.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Blur Type</term>
+        <term lang="en">Blur Type</term>
+        <term lang="ja">ぼかしの種類</term>
         <listitem>
           <variablelist>
             <varlistentry>
-              <term>Linear</term>
+              <term lang="en">Linear</term>
+              <term lang="ja">線形</term>
               <listitem>
-                <para>
+                <para lang="en">
                   Is a blur that travels in a single direction,
                   horizontally, for example. In this case, Length means as
                   Radius in other filters:it represents the blur intensity.
@@ -124,14 +153,25 @@
                   will produce a vertical blur, and a setting of 0 will
                   produce a horizontal blur.
                 </para>
+                <para lang="ja">
+                  <guilabel>線形(<accel>L</accel>)</guilabel> は例えば水平方向
+                  のような単一の方向にぼかしをかけます。 このオプションに限って
+                  言えば <guilabel>長さ(<accel>E</accel>)</guilabel> が
+                  他のフィルタの<quote>半径</quote>のようなはたらきをします。
+                  つまりこの値によってぼかしの強度が変化します。 <guilabel>
+                  角度(<accel>A</accel>)</guilabel> はぼかしの方向を決めます。
+                  すなわち角度を 90 に設定すると垂直方向のぼかしとなり、 0 に
+                  設定すると水平方向のぼかしとなります。
+                </para>
               </listitem>
             </varlistentry>
           </variablelist>
           <variablelist>
             <varlistentry>
-              <term>Radial</term>
+              <term lang="en">Radial</term>
+              <term lang="ja">半径 [正しくは同心円状]</term>
               <listitem>
-                <para>
+                <para lang="en">
                   motion blur that creates a circular blur. The Length
                   slider is not important with this type of blur. Angle on
                   the other hand, is the primary setting that will affect
@@ -140,14 +180,25 @@
                   the effect of a spinning object. The center of the spin
                   in this case, is the center of the image.
                 </para>
+                <para lang="ja">
+                  <guilabel>半径(<accel>R</accel>)</guilabel> モーションぼかし
+                  は同心円状にぼかします。 <guilabel>長さ(<accel>E</accel>)
+                  </guilabel> の値はこの種のぼかしでは重要ではありません。 一方
+                  で <guilabel>角度(<accel>A</accel>)</guilabel> はぼかし具合を
+                  設定する基本的な値です。 <quote>角度</quote>が大きいほど円の
+                  接線方向にぼかしが強くかかります。 同心円状モーションぼかしは
+                  回転体の効果によく似ています。 
+                  回転の軸はぼかしの中心に置かれます。
+                </para>
               </listitem>
             </varlistentry>
           </variablelist>
           <variablelist>
             <varlistentry>
-              <term>Zoom</term>
+              <term lang="en">Zoom</term>
+              <term lang="jja">拡大</term>
               <listitem>
-                <para>
+                <para lang="en">
                   Produces a blur that radiates out from the center of the
                   image. The center of the image remains relatively calm,
                   whilst the outer areas become blurred toward the
@@ -156,30 +207,52 @@
                   here, and affects the amount of speed, as it were, toward
                   the center of the image.
                 </para>
+                <para lang="ja">
+                  <guilabel>拡大(<accel>Z</accel>)</guilabel> モーションぼかし
+                  は画像上のぼかしの中心から拡散する方向にぼかします。 中心部は
+                  比較的穏かにぼかされますが、 中心を離れるにつれ中央から外周へ
+                  の方向に沿ってぼかしが強くかかります。 このオプションでぼかし
+                  をかけた画像は見る者に画像の方へつき進んでいるような印象を
+                  与える集中線の効果を得ます。 主な設定値は <guilabel>
+                  長さ(<accel>E</accel>)</guilabel> で、 これがあたかも画像上の
+                  ぼかしの中心へ進むスピード感のような効果を生みます。
+                </para>
               </listitem>
             </varlistentry>
           </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Blur settings</term>
+        <term lang="en">Blur settings</term>
+        <term lang="ja">ぼかしのパラメータ</term>
         <listitem>
           <variablelist>
             <varlistentry>
-              <term>Length</term>
+              <term lang="en">Length</term>
+              <term lang="ja">長さ(E)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   This slider controls the distance pixels are moved (1 -
                   256)
+                </para>
+                <para lang="ja">
+                  <guilabel>長さ(<accel>E</accel>)</guilabel> スライダは 1 から
+                  256 の範囲で画素の移動距離をピクセル単位で指定します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Angle</term>
+              <term lang="en">Angle</term>
+              <term lang="ja">角度(A)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   As seen above, Angle slider effect depends on Blur type
                   (0 - 360).
+                </para>
+                <para lang="ja">
+                  前述のとおり、 <guilabel>角度(<accel>A</accel>)</guilabel> 
+                  スライダはぼかしの種類によって役割が変わります。 設定できる
+                  値の範囲は 0 から 360 です。
                 </para>
               </listitem>
             </varlistentry>
@@ -187,21 +260,37 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Blur Center</term>
+        <term lang="en">Blur Center</term>
+        <term lang="ja">ぼかしの中心</term>
         <listitem>
-          <para>
+          <para lang="en">
             With this option, you can set the starting point of movement.
             Effect is different according to the Blur Type you have selected.
             With Radial Type for instance, you set rotation center. With Zoom
             Type, vanishing point. This option is greyed out with Linear type.
           </para>
+          <para lang="ja">
+            このオプションでぼかしの始点を設定します。 [初期状態では画像の中心
+            座標の値が入っています。] この始点とぼかしの効果の関係は<quote>
+            ぼかしの種類</quote>で選んだ方法によって異なります。 例えば<quote>
+            半径</quote>を選んだ場合はこの始点が回転の中心になります。 <quote>
+            拡大</quote>を選んだ場合は消失点です。 <quote>線形</quote>を選ぶと
+            このオプションは灰色無効となります。
+          </para>
           <tip>
-            <para>
+            <para lang="en">
               You have to set the blur center coordinates. Unfortunately, you
               can't do that by clicking on the image. But, by moving mouse
               pointer on the image, you can see its coordinates in the lower
               left corner of the image window. Only copy them out into the
               input boxes.
+            </para>
+            <para lang="ja">
+              ぼかしの中心には何らかの値を設定せねばなりません。 残念ながら
+              画像上をクリックする設定方法がありません。 しかし画像上のマウス
+              ポインタの座標位置が常に画像ウィンドウの左下に表示されています
+              ので、 適当な位置の座標をこれで探ってその値をオプションの数値
+              記入欄に入れる方法があります。
             </para>
           </tip>
         </listitem>
