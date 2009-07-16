@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2009-05-18-->
+<!--2009-07-14-->
 <sect1 id="gimp-using-paths">
   <title>
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -36,12 +36,11 @@
     Paths are curves (known as Bézier-curves). In <acronym>GIMP</acronym> it's
     very easy to learn and to use them. To understand their concepts and
     mechanism you can go to the glossary
-    <link linkend="glossary-bezier-curve">Bézier-curve</link> or to Wikipedia
-    <ulink url="http://en.wikipedia.org/wiki/Bézier_curve">
-    http://en.wikipedia.org/wiki/Bézier_curve</ulink>. It is a very powerful
-    tool to design sophisticated forms. To use it in <acronym>GIMP</acronym>
-    you must operate by two successive ways: 1st Create the path and 2nd
-    Stroke path.
+    <link linkend="glossary-bezier-curve">B&eacute;zier-curve</link> or to
+    Wikipedia <xref linkend="bibliography-online-wkpd-bezier"/>.
+    It is a very powerful tool to design sophisticated forms. To use it in
+    <acronym>GIMP</acronym> you must operate by two successive ways: 1st
+    Create the path and 2nd Stroke path.
   </para>
   <para lang="en">
     According to the terminology used in <acronym>GIMP</acronym>,
@@ -55,11 +54,11 @@
     パスとは (ベジエ曲線で知られる) 曲線のことです。 <acronym>GIMP</acronym>
     ならその習得も使用も難しくありません。 この概念や機構については用語集の
     <link linkend="glossary-bezier-curve">ベジエ曲線</link> の項や
-    ウィキペディアの
-    <ulink url="http://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A">
-    ベジエ曲線</ulink>にも書かれています。 このツールは手の込んだ形象を創造する
-    ことにかけては非常に強力です。 <acronym>GIMP</acronym>ではパス操作の系統に
-    2段階あります: 第1はパスの作成で第2がパスの境界線を描画することです。
+    ウィキペディアのベジエ曲線 
+    <xref linkend="bibliography-online-wkpd-bezier"/> にも書かれています。
+    このツールは手の込んだ形象を創造することにかけては非常に強力です。
+    <acronym>GIMP</acronym>ではパス操作の系統に
+    2段階あります。 第1はパスの作成で第2がパスの境界線を描画することです。
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>の用語法では、 <quote>パスの境界線を描画する</quote>
@@ -195,11 +194,8 @@
       曲線の接線方向すら当初とは異なる向きに変えられるということです。
     </para>
     <figure>
-      <title lang="en">
-        Appearance of a path while it is being manipulated using the Path
-        tool.
-      </title>
-      <title lang="ja">パスツールで操作中のパスの様子</title>
+      <title lang="en">Appearance of a path while manipulated</title>
+      <title lang="ja">操作中のパスの様子</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -207,21 +203,25 @@
         </imageobject>
         <caption>
           <para lang="en">
-            Black squares are anchor points, the open circle is the selected
-            anchor, and the two open squares are its handles. Note that this
-            path has two components.
+            Appearance of a path while it is being manipulated using the Path
+            tool.
           </para>
-          <para lang="ja">
-            黒い正方形がアンカー (繋留) 点、 白抜きの円が活性化アンカー、
-            2つの白抜きの正方形がそのハンドル (把手) です。
-            この図では2本のパスがひかれています。
-          </para>
+          <para lang="ja">パスツールで操作中のパスの様子</para>
         </caption>
       </mediaobject>
     </figure>
+    <!--TRANSLATORS: check glossary.po for a translation of this para-->
     <para lang="en">
       Paths can be created and manipulated using the
       <link linkend="gimp-tool-path">Path tool</link>.
+      The image above shows a path which consists of two components, having
+      both straight and curved segments, being worked on with the Path tool.
+      Black squares are anchor points, the open circle indicates the selected
+      anchor and the two open squares are the two handles which are associated
+      with this anchor from the curves on either side of it.
+    </para>
+
+    <para lang="en">
       Paths, like layers and channels, are components of an image. When an
       image is saved in GIMP's native XCF file format, any paths it has are
       saved along with it. The list of paths in an image can be viewed and
@@ -288,11 +288,18 @@
     </para>
     <para lang="ja">
       パスの作成や操作には
-      <link linkend="gimp-tool-path">パスツール</link> が使えます。 パスは
-      レイヤーやチャンネルと同じく、 画像の一部です。 画像を<acronym>GIMP
+      <link linkend="gimp-tool-path">パスツール</link> が使えます。
+      上図には2つの成分からなるパスが描かれており、 両方とも直線や曲線の分節が
+      含まれています。 この作業もパスツールで行ないました。 黒い正方形は
+      アンカーポイントを、 ひとつだけある白丸は選択されたアンカーを表していて、
+      2つの白い正方形はアンカーから述びる2本の曲線のこの端点でのハンドルを
+      表しています。
+    </para>
+    <para lang="ja">
+      パスはレイヤーやチャンネルと同じく、 画像の一部です。 画像を<acronym>GIMP
       </acronym>由来の<acronym>XCF</acronym>ファイル形式で保存すれば、 画像上の
       パスはすべて一緒に保存されます。
-      <link linkend="gimp-path-dialog">パスダイアログ</link>を使えば画像に収め
+      <link linkend="gimp-path-dialog">パスダイアログ</link> を使えば画像に収め
       られたパスの一覧を見回して選びだし、 さらに手を加えることも可能です。
       パスを画像から他の画像へと移動させるには、 パスダイアログの脈絡メニューで
       写し取りと貼り付けをするか、 パスダイアログから
@@ -441,16 +448,22 @@
     <title lang="en">Stroking a Path</title>
     <title lang="ja">パスの境界線を描画</title>
     <figure>
-      <title lang="en">
-        The four paths from the top illustration, each stroked in a
-        different way.
-      </title>
-      <title lang="ja">前掲のパス4例の境界線をそれぞれ異なる方法で描画</title>
+      <title lang="en">Stroking paths</title>
+      <title lang="ja">パスの境界線を描画</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
             fileref="images/using/path-stroking-examples.png"/>
         </imageobject>
+        <caption>
+          <para lang="en">
+            The four paths from the top illustration, each stroked in a
+            different way.
+          </para>
+          <para lang="ja">
+            前掲のパス4例の境界線をそれぞれ異なる方法で描画
+          </para>
+        </caption>
       </mediaobject>
     </figure>
     <para lang="en">

@@ -15,7 +15,7 @@
                    examples and equations
   2006-09-06 scb: thorough review and/or rewrite of English
 -->
-<!--2009-06-23-->
+<!--2009-07-16-->
 <sect1 id="gimp-concepts-layer-modes">
   <title lang="en">Layer Modes</title>
   <title lang="ja">レイヤーのモード</title>
@@ -179,10 +179,25 @@
       corresponding color components together to form the
       <emphasis>E</emphasis> resulting pixel's color.
     </quote>
-    Pixel color components must always be between 0 and 255. Unless the
-    description below says otherwise, a negative color component is set to 0
-    and a color component larger than 255 is set to 255.
+    Pixel color components must always be between 0 and 255.
   </para>
+  <para lang="ja">
+    の意味は、 <quote>ある画素の色 <emphasis>E</emphasis> は、 上に重ねたマスク
+    のその位置の画素の色 <emphasis>M</emphasis> に、 同じ位置の下側にある
+    レイヤーの画素の色 <emphasis>I</emphasis> を加えたものである</quote>です。
+    画素の色はその値が 0 から 255 の範囲に常に入らなければなりません。
+  </para>
+  <note>
+    <!-- cf. bug #544965 (2008-07-27) -->
+    <para lang="en">
+      Unless the description below says otherwise, a negative color component
+      is set to 0 and a color component larger than 255 is set to 255.
+    </para>
+    <para lang="ja">
+      特に断わりのない限り、 計算で負の値が出れば 0 に直され、 255 を越えれば
+      255 になります。
+    </para>
+  </note>
   <para lang="en">
     The examples below show the effects of each of the modes.
   </para>
@@ -193,14 +208,6 @@
     two similar layers, where one is a copy of the other, but slightly
     modified (by being blurred, moved, rotated, scaled, color-inverted, etc.)
     and seeing what happens with the layer modes.
-  </para>
-  <para lang="ja">
-    の意味は、 <quote>ある画素の色 <emphasis>E</emphasis> は、 上に重ねたマスク
-    のその位置の画素の色 <emphasis>M</emphasis> に、 同じ位置の下側にある
-    レイヤーの画素の色 <emphasis>I</emphasis> を加えたものである</quote>です。
-    画素の色はその値が 0 から 255 の範囲に常に入らなければなりません。 ですから
-    特に断わりのない限り、 計算で負の値が出れば 0 に直され、 255 を越えれば 255
-    になります。
   </para>
   <para lang="ja">
     例図はそれぞれのモードによる効果を表しています。
@@ -261,7 +268,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Normal</guilabel>
+        <para lang="en">
+          <guilabel>Normal</guilabel>
           mode is the default layer mode. The layer on top covers the layers
           below it. If you want to see anything below the top layer when you
           use this mode, the layer must have some transparent areas.
@@ -315,8 +323,7 @@
             </imageobject>
             <caption>
               <para lang="en">
-                Both images are blended into each
-                other with the same
+                Both images are blended into each other with the same
                 intensity.
               </para>
               <para lang="ja">
@@ -340,7 +347,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Dissolve</guilabel>
+        <para lang="en">
+          <guilabel>Dissolve</guilabel>
           mode dissolves the upper layer into the layer beneath it by drawing
           a random pattern of pixels in areas of partial transparency. It is
           useful as a layer mode, but it is also often useful as a painting
@@ -446,7 +454,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Multiply</guilabel>
+        <para lang="en">
+          <guilabel>Multiply</guilabel>
           mode multiplies the pixel values of the upper layer with those of
           the layer below it and then divides the result by 255. The result is
           usually a darker image. If either layer is white, the resulting
@@ -529,7 +538,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Divide</guilabel>
+        <para lang="en">
+          <guilabel>Divide</guilabel>
           mode multiplies each pixel value in the lower layer by 256 and then
           divides that by the corresponding pixel value of the upper layer
           plus one. (Adding one to the denominator avoids dividing by zero.)
@@ -606,7 +616,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Screen</guilabel>
+        <para lang="en">
+          <guilabel>Screen</guilabel>
           mode inverts the values of each of the visible pixels in the two
           layers of the image. (That is, it subtracts each of them from 255.)
           Then it multiplies them together, divides by 255 and inverts
@@ -699,7 +710,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Overlay</guilabel>
+        <para lang="en">
+          <guilabel>Overlay</guilabel>
           mode inverts the pixel value of the lower layer, multiplies it by
           two times the pixel value of the upper layer, adds that to the
           original pixel value of the lower layer, divides by 255, and then
@@ -802,7 +814,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Dodge</guilabel>
+        <para lang="en">
+          <guilabel>Dodge</guilabel>
           mode multiplies the pixel value of the lower layer by 256, then
           divides that by the inverse of the pixel value of the top layer. The
           resulting image is usually lighter, but some colors may be inverted.
@@ -888,7 +901,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Burn</guilabel>
+        <para lang="en">
+          <guilabel>Burn</guilabel>
           mode inverts the pixel value of the lower layer, multiplies it by
           256, divides that by one plus the pixel value of the upper layer,
           then inverts the result. It tends to make the image darker, somewhat
@@ -980,7 +994,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Hard light</guilabel>
+        <para lang="en">
+          <guilabel>Hard light</guilabel>
           mode is rather complicated because the equation consists of two
           parts, one for darker colors and one for brighter colors. If the
           pixel color of the upper layer is greater than 128, the layers are
@@ -1017,10 +1032,10 @@
         </equation>
         <equation>
           <title lang="en">
-            Equation for layer mode <quote>Hard light</quote>, M  128
+            Equation for layer mode <quote>Hard light</quote>, M &le; 128
           </title>
           <title lang="ja">
-            レイヤーモード<quote>ハードライト</quote>の等式、 M ≦ 128 の場合
+            レイヤーモード<quote>ハードライト</quote>の等式、 M &le; 128 の場合
           </title>
           <alt role="latex">
         $$M \leq 128: E = \frac{I*M*2}{256}$$
@@ -1084,7 +1099,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Soft light</guilabel> is not related to
+        <para lang="en">
+          <guilabel>Soft light</guilabel> is not related to
           <quote>Hard light</quote> in anything but the name, but it
           does tend to make the edges softer and the colors not so
           bright. It is similar to <quote>Overlay</quote> mode. In some
@@ -1114,7 +1130,7 @@
             レイヤーモード<quote>スクリーン</quote>の等式
           </title>
           <alt role="latex">
-          $$R_{s} = \frac {255-((255-I)*(255-M))}{256}$$
+          $$R_{s} = 255 - \frac {(255-I)*(255-M)}{255}$$
             </alt>
           <graphic fileref="images/math/layer-mode-soft-light1.png"/>
         </equation>
@@ -1187,7 +1203,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Grain extract</guilabel>
+        <para lang="en">
+          <guilabel>Grain extract</guilabel>
           mode is supposed to extract the <quote>film grain</quote>
           from a layer to produce a new layer that is pure grain, but it can
           also be useful for giving images an embossed appearance. It
@@ -1359,7 +1376,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Difference</guilabel>
+        <para lang="en">
+          <guilabel>Difference</guilabel>
           mode subtracts the pixel value of the upper layer from that of the
           lower layer and then takes the absolute value of the result. No
           matter what the original two layers look like, the result looks
@@ -1444,7 +1462,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Addition</guilabel>
+        <para lang="en">
+          <guilabel>Addition</guilabel>
           mode is very simple. The pixel values of the upper and lower layers
           are added to each other. The resulting image is usually lighter. The
           equation can result in color values greater than 255, so some of the
@@ -1527,7 +1546,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Subtract</guilabel>
+        <para lang="en">
+          <guilabel>Subtract</guilabel>
           mode subtracts the pixel values of the upper layer from the pixel
           values of the lower layer. The resulting image is normally darker.
           You might get a lot of black or near-black in the resulting image.
@@ -1606,7 +1626,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guimenuitem>Darken only</guimenuitem>
+        <para lang="en">
+          <guimenuitem>Darken only</guimenuitem>
           mode compares each component of each pixel in the upper layer with
           the corresponding one in the lower layer and uses the smaller value
           in the resulting image. Completely white layers have no effect on
@@ -1689,7 +1710,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guimenuitem>Lighten only</guimenuitem>
+        <para lang="en">
+          <guimenuitem>Lighten only</guimenuitem>
           mode compares each component of each pixel in the upper layer with
           the corresponding one in the lower layer and uses the larger value
           in the resulting image. Completely black layers have no effect on
@@ -1769,7 +1791,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Hue</guilabel>
+        <para lang="en">
+          <guilabel>Hue</guilabel>
           mode uses the hue of the upper layer and the saturation and value of
           the lower layer to form the resulting image. However, if the
           saturation of the upper layer is zero, the hue is taken from the
@@ -1835,7 +1858,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Saturation</guilabel>
+        <para lang="en">
+          <guilabel>Saturation</guilabel>
           mode uses the saturation of the upper layer and the hue and value of
           the lower layer to form the resulting image.
         </para>
@@ -1896,7 +1920,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Color</guilabel>
+        <para lang="en">
+          <guilabel>Color</guilabel>
           mode uses the hue and saturation of the upper layer and the value of
           the lower layer to form the resulting image.
         </para>
@@ -1957,7 +1982,8 @@
             </caption>
           </mediaobject>
         </figure>
-        <para lang="en"><guilabel>Value</guilabel>
+        <para lang="en">
+          <guilabel>Value</guilabel>
           mode uses the value of the upper layer and the saturation and hue of
           the lower layer to form the resulting image. You can use this mode
           to reveal details in dark and light areas of an image without
