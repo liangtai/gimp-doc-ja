@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--2009-07-12-->
+<!--2009-07-14-->
 <glossary id="glossary">
   <title lang="en">Glossary</title>
   <title lang="ja">用語集</title>
@@ -41,23 +41,15 @@
       </para>
       <para lang="en">
         With some image
-        <link linkend="glossary-fileformat">file formats</link>,
-        you can only specify that a pixel is completely transparent or
-        completely opaque. Other file formats allow a variable level of
-        transparency.
+        <link linkend="glossary-fileformat">file formats</link>, you can only
+        specify that a pixel is completely transparent or completely opaque.
+        Other file formats allow a variable level of transparency.
       </para>
       <para lang="ja">
 アルファ値は画素の透明度を示します。 赤、 緑、 青の各値とは別に画素には
 アルファ値があります。 アルファ値が低くなるにつれその画素の色の可視度が
 強くなります。 アルファ値が 0 の画素は完全透過します。 アルファ値が 
 255 の画素は完全不透明です。
-      </para>
-      <para lang="ja">
-アルファだけをレイヤーごとにグレースケールとして表示するしくみは
-ありません。 チャンネルダイアログで見られるアルファチャンネルは[可視
-レイヤー]全部を合成した画像です。 仮にどこかの画素で1層のレイヤーだけが
-完全不透明で他のレイヤーは皆透明だったとすると、 アルファチャンネルは
-白で表わされます。
       </para>
       <para lang="ja">
 いくつかの画像用 
@@ -74,12 +66,12 @@
       <phrase lang="ja">アルファチャンネル</phrase>
     </glossterm>
     <glossdef>
-      <indexterm significance="normal" lang="en">
+      <indexterm lang="en">
         <primary>Transparency</primary>
         <secondary>Alpha channel</secondary>
       </indexterm>
-      <indexterm significance="normal" lang="en">
-        <primary>Alpha Channel</primary>
+      <indexterm lang="en">
+        <primary>Alpha channel</primary>
       </indexterm>
       <indexterm significance="normal" lang="ja">
         <primary sortas="トウカコウカ">透過効果</primary>
@@ -89,40 +81,37 @@
         <primary>アルファチャンネル</primary>
       </indexterm>
       <para lang="en">
-        An Alpha Channel represents the transparency of the image. Imagine
-        you can see through the image. This Alpha Channel is automatically
-        added to the image as soon as you add a second layer. You can see it
-        in the Channels Dialog. It gives the possibility to be transparent to
-        layers. But this possibility is not given to the background layer :
-        for this, you must use the <quote>Add an Alpha Channel</quote>
-        command.
+        An Alpha <link linkend="glossary-channels">channel</link> of a layer
+        is a grayscale image of the same size as the layer representing its
+        transparency. For each pixel the gray level (a value between 0 and
+        255) represents the pixels'
+        <link linkend="glossary-alpha">Alpha</link> value. An alpha channel
+        can make areas of the layer to appear partially transparent. That's
+        why the background layer has no alpha channel by default.
       </para>
       <para lang="en">
-        You can also consider that an Alpha channel, although not visible, is
-        added to every layer, except to the background layer. The image
-        Alpha channel is the sum of the Alpha channels of layers.
+        The image alpha channel, which is displayed in the channels dialog,
+        can be considered as the alpha channel of the final layer when all
+        layers have been merged.
       </para>
       <para lang="en">
-        See also <link linkend="alpha-channel-example">Alpha channel example
-        </link>. <!--In concepts/layers.xml-->
+        See also <xref linkend="alpha-channel-example"/>.
       </para>
       <para lang="ja">
-アルファチャンネルは画像の透明度を表します。 透けて見える画像を思い浮か
-べていただければ十分です。 アルファチャンネルは画像に2枚目のレイヤーを
-追加すると自動的に追加されます。 チャンネルダイアログでそれが分かり
-ます。 これでレイヤーが透過もできるようになります。 しかし背景レイヤー
-にだけはこの能力が自動付加されません。 可能にするには<quote>
-アルファチャンネルを追加</quote>コマンドを実行しなければなりません。
+レイヤーのアルファ 
+<link linkend="glossary-channels">チャンネル</link> はレイヤーと同じ
+寸法のグレースケール画像であり、 透明度の表現を担っています。 各画素
+ごとに灰色陰影 (0 から 255 の値をとります) がその画素の 
+<link linkend="glossary-alpha">アルファ</link> 値を表します。 アルファ
+チャンネルはレイヤー上に半透明な領域も表現できます。 そういうわけで
+背景レイヤーは初期状態ではアルファチャンネルなしとなっているのです。
       </para>
       <para lang="ja">
-アルファチャンネルは目に見えませんが背景レイヤーを除く全てのレイヤーに
-付加されています。 アルファチャンネルを可視化しているものがチャンネル
-ダイアログにありますが、 これは全てのレイヤーのアルファ値を合成して
-表示しています。
+チャンネルダイアログで表示されるアルファチャンネルは、 全てのレイヤー
+を統合した最終的なアルファチャンネルであるといえます。
       </para>
       <para lang="ja">
-<link linkend="alpha-channel-example">アルファチャンネルの例</link> 
-もご覧ください。
+<xref linkend="alpha-channel-example"/> もご覧ください。
       </para>
     </glossdef>
   </glossentry>
@@ -175,34 +164,34 @@
 
   <glossentry id="glossary-bezier-curve">
     <glossterm>
-      <phrase lang="en">Bezier curve</phrase>
+      <phrase lang="en">B&eacute;zier curve</phrase>
       <phrase lang="ja">ベジエ曲線</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
-        A spline is a curve which is defined mathematically and has a set
-        of control points. A Bezier spline is a cubic spline which has
-        four control points, where the first and last control points
-        (knots or anchors) are the endpoints of the curve and the inner
-        two control points (handles) determine the direction of the curve
-        at the endpoints.
+        A spline is a curve which is defined mathematically and has a set of
+        control points. A B&eacute;zier spline is a cubic spline which has
+        four control points, where the first and last control points (knots or
+        anchors) are the endpoints of the curve and the inner two control
+        points (handles) determine the direction of the curve at the
+        endpoints.
       </para>
       <para lang="en">
-        In the non-mathematical sense, a spline is a flexible strip of
-        wood or metal used for drawing curves. Using this type of spline
-        for drawing curves dates back to shipbuilding, where weights were
-        hung on splines to bend them. The outer control points of a
-        Bezier spline are similar to the places where the splines are
-        fastened down and the inner control points are where weights are
-        attached to modify the curve.
+        In the non-mathematical sense, a spline is a flexible strip of wood or
+        metal used for drawing curves. Using this type of spline for drawing
+        curves dates back to shipbuilding, where weights were hung on splines
+        to bend them. The outer control points of a B&eacute;zier spline are
+        similar to the places where the splines are fastened down and the
+        inner control points are where weights are attached to modify the
+        curve.
       </para>
       <para lang="en">
-        Bezier splines are only one way of mathematically representing
-        curves. They were developed in the 1960s by Pierre Bezier, who
+        B&eacute;zier splines are only one way of mathematically representing
+        curves. They were developed in the 1960s by Pierre B&eacute;zier, who
         worked for Renault.
       </para>
       <para lang="en">
-        Bezier curves are used in <acronym>GIMP</acronym> as component
+        B&eacute;zier curves are used in <acronym>GIMP</acronym> as component
         parts of <link linkend="glossary-path">Paths</link>.
       </para>
       <para lang="ja">
@@ -223,7 +212,7 @@
       </para>
       <para lang="ja">
 ベジエスプラインは曲線を数式で表現する唯一の方法です。 この技法はルノー
-社で働いていた技術者 Pierre Bézier 氏が1960年代に考案しました。
+社で働いていた技術者 Pierre B&eacute;zier 氏が1960年代に考案しました。
       </para>
       <para lang="ja">
 <acronym>GIMP</acronym>はベジエ曲線を 
@@ -238,42 +227,16 @@
         </mediaobject>
       </para>
       <para lang="en">
-        The image above shows a Bezier curve. Points P0 and P3 are points
-        on the Path, which are created by clicking with the mouse. Points
-        P1 and P2 are handles, which are automatically created by
-        <acronym>GIMP</acronym> when you click on the line between P0 and
-        P3 and stretch it. They change position when you stretch the
-        curve in different ways.
+        The image above shows a B&eacute;zier curve. Points P0 and P3 are
+        points on the Path, which are created by clicking with the mouse.
+        Points P1 and P2 are handles, which are automatically created by
+        <acronym>GIMP</acronym> when you stretch the line.
       </para>
       <para lang="ja">
 上図はベジエ曲線を描く様子を示しています。 点 P0 と P3 はパス上にあり、 
 それぞれマウスでクリックして置かれました。 点 P1 と P4 がハンドルで、 
-P0 と P3 の間のパス分節をクリックして曳き延ばすと<acronym>GIMP
-</acronym>は自動的にこれらを生成します。 この曲線をいろいろな方法を用いて
-曳き延ばすとハンドルの位置が変化します。
-      </para>
-      <para>
-        <mediaobject>
-          <imageobject>
-            <imagedata format="PNG"
-              fileref="images/using/path-with-anchors.png"/>
-          </imageobject>
-        </mediaobject>
-      </para>
-      <para lang="en">
-        The image above shows a path which consists of two components,
-        having both straight and curved segments, being worked on with the
-        <link linkend="gimp-tool-path">Path tool</link>. Here, the open
-        circle indicates the selected anchor and the two open squares are
-        the two handles which are associated with this anchor from the
-        curves on either side of it.
-      </para>
-      <para lang="ja">
-上図には2つの成分からなるパスが描かれており、 両方とも直線や曲線の分節
-が含まれています。 この作業は
-<link linkend="gimp-tool-path">パスツール</link> で行ないました。 
-ひとつだけある白丸は選択されたアンカーを表していて、 2つの白い正方形は
-そのアンカーから延びる2本の曲線のこの端点でのハンドルを表しています。
+パス分節をクリックして曳き延ばすと<acronym>GIMP</acronym>は自動的に
+これらを生成します。
       </para>
     </glossdef>
   </glossentry>
@@ -545,6 +508,7 @@ BMPはマイクロソフト社が発案した非圧縮の画像
         somewhat differently. See the <acronym>GIMP</acronym> documentation
         for your operating system for further information.
       </para>
+      <!--TODO: this para should go to concepts/using-->
       <para lang="en">
         The basic operations provided by the clipboard are
         <quote>Cut</quote>, <quote>Copy</quote>, and <quote>Paste</quote>.
@@ -956,23 +920,19 @@ DCF</acronym>の各標準規格のタグの間には大きな共通点があり�
       <phrase lang="ja">フェザリング</phrase>
     </glossterm>
     <indexterm significance="normal" lang="en">
-      <primary>Feathering selection border</primary>
+      <primary>Feathering</primary>
     </indexterm>
     <indexterm significance="normal" lang="ja">
-      <primary sortas="センタクハンイノキョウカイセンヲボカス">
-        選択範囲の境界線をぼかす
-      </primary>
+      <primary sortas="キョウカイセンヲボカス">境界線をぼかす</primary>
     </indexterm>
     <glossdef>
       <para lang="en">
-        <acronym>GIMP</acronym> uses the process of Feathering to make a
-        smooth transition between a region and the background by softly
-        blending the edges of the region.
+        The process of Feathering makes a smooth transition between a region
+        and the background by softly blending the edges of the region.
       </para>
       <para lang="ja">
-<acronym>GIMP</acronym>は画像上にある領域と背景との境界部分がなだらかに
-変化するようにその境界線を淡柔に背景へ調和させるためにフェザリング処理
-を利用しています。
+フェザリング処理の過程は画像上にある領域と背景との境界部分がなだらかに
+変化するようにその境界線を淡柔に背景へ調和させます。
       </para>
       <para lang="en">
         <mediaobject>
@@ -1283,11 +1243,13 @@ Louis Steinberg 氏による
         Interchange Format.  It is a
         <link linkend="glossary-fileformat">file format</link>
         with good, lossless compression for images with low
-        <link linkend="glossary-colordepth">color depth</link> (up to 256
-        different colors per image). Since GIF was developed, a new format called
-        <link linkend="file-png-save-defaults">Portable Network Graphics (PNG)
-        </link> has been developed, which is better than GIF in all respects,
-        with the exception of animations and some rarely-used features.
+        <link linkend="glossary-colordepth">color depth</link>
+        (up to 256 different colors per image). Since GIF was developed, a
+        new format called
+        <link linkend="file-png-save-defaults">Portable Network Graphics
+        (PNG)</link> has been developed, which is better than GIF in all
+        respects, with the exception of animations and some rarely-used
+        features.
       </para>
       <para lang="en">
         GIF was introduced by CompuServe in 1987. It became popular mostly
@@ -1409,8 +1371,9 @@ CompuServe社の著作権表示を添付しさえすれば方々のプログラ�
         system, TeX, or the X Window System. The missing parts were newly
         written from the ground up.
       </para>
-      <para lang="en"><acronym>GIMP</acronym>
-        (GNU Image Manipulation Program) is an official GNU application
+      <para lang="en">
+        <acronym>GIMP</acronym> (GNU Image Manipulation Program) is an
+        official GNU application
         <xref linkend="bibliography-online-wkpd-gnu"/>.
       </para>
       <para lang="ja">
@@ -1557,20 +1520,23 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
       <para lang="en">
         To create a guide, simply click on one of the rulers in the image
         window and pull out a guide, while holding the
-        <mousebutton moreinfo="none">mouse button</mousebutton> pressed. The guide is then
+        <mousebutton>mouse button</mousebutton> pressed. The guide is then
         displayed as a blue, dashed line, which follows the pointer. As soon
         as you create a guide, the <quote>Move</quote> tool is activated and
         the mouse pointer changes to the Move icon.
       </para>
       <para lang="en">
-        You can also create a guide with the <link linkend="gimp-image-guides-add">New Guide</link> command, which
-        allows you to precisely place the guide on the image, the <link linkend="gimp-image-guides-percent">New Guide (by Percent)</link>
-        command, or the <link linkend="gimp-image-guides-selection">New
-        Guides from Selection</link> command.
+        You can also create a guide with the
+        <link linkend="gimp-image-guides-add">New Guide</link> command, which
+        allows you to precisely place the guide on the image, the
+        <link linkend="gimp-image-guides-percent">New Guide (by Percent)</link>
+        command, or the
+        <link linkend="gimp-image-guides-selection">New Guides from Selection
+        </link> command.
       </para>
       <para lang="en">
         The behavior of the guides depends upon the
-        <guilabel moreinfo="none">Affect</guilabel> mode of the <quote>Move</quote> tool.
+        <guilabel>Affect</guilabel> mode of the <quote>Move</quote> tool.
         When <emphasis>Transform Layer</emphasis> mode is selected, the
         mouse pointer turns into a small hand as soon as it gets close to a
         guide. Then the guide is activated and it turns red, and you can
@@ -1857,9 +1823,8 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
       </para>
       <para lang="en">
         For information concerning creating an image hose, please see the
-        <link linkend="gimp-using-animated-brushes">Using Animated
-        Brushes</link> and <link linkend="gimp-using-brushes">Using
-        Brushes</link> sections.
+        <xref linkend="gimp-using-animated-brushes"/> and
+        <xref linkend="gimp-using-brushes"/>.
       </para>
       <para lang="ja">
 <acronym>GIMP</acronym>の散播式ブラシは複数の刻印をもつ特別な形式の
@@ -1875,8 +1840,8 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
       </para>
       <para lang="ja">
 散播式ブラシの作り方と使い方については
-<link linkend="gimp-using-animated-brushes">GIHダイアログ</link> と
-<link linkend="gimp-using-brushes">ブラシの追加</link> をご覧ください。
+<xref linkend="gimp-using-animated-brushes"/> と 
+<xref linkend="gimp-using-brushes"/> をご覧ください。
       </para>
     </glossdef>
   </glossentry>
@@ -2036,6 +2001,8 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
 補間方法からいずれかを選べるようになっています。 概して言えば品質が
 高いものほど補間処理に時間がかかります。 選べる方法はつぎのとおりです。
       </para>
+      <!--TODO: these details should better go to
+          src/toolbox/tool-transform.xml (transform tools - common features-->
       <itemizedlist>
         <listitem>
           <para lang="en">
@@ -2294,18 +2261,19 @@ Lとaとbの3つの値で色を表現します。 Lは明度成分&mdash;灰色�
         surrounds a selection. The line is animated, so it looks as if
         little ants are running around behind each other.
       </para>
-      <para lang="en">
-        You can disable the marching ants by unchecking the
-        <menuchoice moreinfo="none">
-          <guimenu moreinfo="none"><accel>V</accel>iew</guimenu>
-          <guimenuitem moreinfo="none">Show <accel>S</accel>election</guimenuitem>
-          </menuchoice>
-        option or by using the keyboard shortcut
-        <keycombo moreinfo="none"><keycap moreinfo="none">Ctrl</keycap><keycap moreinfo="none">T</keycap></keycombo>.
-      </para>
       <para lang="ja">
 蟻の行進とは選択範囲をとり囲む点滅破線をいい表した言葉です。 この線は
 まるで小さな蟻がぞろぞろと線上を廻る様子に似たアニメーションをします。
+      </para>
+      <!-- off-topic in a glossary
+      <para lang="en">
+        You can disable the marching ants by unchecking the
+        <menuchoice>
+          <guimenu>View</guimenu>
+          <guimenuitem>Show Selection</guimenuitem>
+          </menuchoice>
+        option or by using the keyboard shortcut
+        <keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>.
       </para>
       <para lang="ja">
 蟻の行進を表示させないようにするには画像ウィンドウのメニューで
@@ -2317,6 +2285,7 @@ Lとaとbの3つの値で色を表現します。 Lは明度成分&mdash;灰色�
 <keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>
 で切り替えてください。
       </para>
+      -->
     </glossdef>
   </glossentry>
 
@@ -2353,8 +2322,9 @@ Lとaとbの3つの値で色を表現します。 Lは明度成分&mdash;灰色�
       <para lang="ja">2つの型のマスクについて詳しくみてゆきましょう。</para>
       <itemizedlist>
         <listitem>
-          <para lang="en"><emphasis>Layer Mask</emphasis>
-            : Every layer can have its own mask. The layer mask represents the
+          <para lang="en">
+            <emphasis>Layer Mask</emphasis>:
+            Every layer can have its own mask. The layer mask represents the
             Alpha channel of the layer and allows you to manage its
             transparency. By painting on the layer mask, you can make parts of
             the layer opaque or transparent: painting with black makes the
@@ -2381,7 +2351,8 @@ Lとaとbの3つの値で色を表現します。 Lは明度成分&mdash;灰色�
           </para>
         </listitem>
         <listitem>
-          <para lang="en"><emphasis>Channel Mask</emphasis>, also called
+          <para lang="en">
+            <emphasis>Channel Mask</emphasis>, also called
             <emphasis>Selection Mask</emphasis>:
             Channel Masks determine the transparency of a selection. By
             painting on a Channel Mask with white, you remove the mask and
@@ -2389,14 +2360,14 @@ Lとaとbの3つの値で色を表現します。 Lは明度成分&mdash;灰色�
             This procedure lets you create a selection very precisely. You
             can also save your selections to a Channel Mask with the
             <link linkend="gimp-selection-to-channel">Save to Channel</link>
-             command. You can retrieve it later by using the
-             <quote>Channel to selection</quote> command from the
-             <link linkend="gimp-channel-menu">Channel menu</link>. Channel
-             masks are so important in <acronym>GIMP</acronym> that a
-             special type has been implemented: the
-             <link linkend="gimp-qmask">Quick mask</link>. See the
-             <link linkend="dialogs-selection-masks">Selection mask</link>
-             section for more details.
+            command. You can retrieve it later by using the
+            <quote>Channel to selection</quote> command from the
+            <link linkend="gimp-channel-menu">Channel menu</link>. Channel
+            masks are so important in <acronym>GIMP</acronym> that a
+            special type has been implemented: the
+            <link linkend="gimp-qmask">Quick mask</link>. See the
+            <link linkend="dialogs-selection-masks">Selection mask</link>
+            section for more details.
           </para>
           <para lang="ja">
 <emphasis>チャンネルマスク</emphasis>:
@@ -2423,20 +2394,20 @@ Lとaとbの3つの値で色を表現します。 Lは明度成分&mdash;灰色�
 
   <glossentry id="glossary-moire">
     <glossterm>
-      <phrase lang="en">Moiré Effect</phrase>
+      <phrase lang="en">Moir&eacute; Effect</phrase>
       <phrase lang="ja">モアレ現象</phrase>
     </glossterm>
     <indexterm significance="normal" lang="en">
-      <primary>Moiré</primary>
+      <primary>Moir&eacute;</primary>
     </indexterm>
     <indexterm significance="normal" lang="ja">
       <primary>モアレ</primary>
     </indexterm>
     <glossdef>
       <para lang="en">
-        The moiré effect (pronounce <quote>Moa-ray</quote>)is an unintended
-        pattern which appears when a regular pattern of grids or lines
-        interferes with another regular pattern placed over it. This can
+        The moir&eacute; effect (pronounce <quote>Moa-ray</quote>)is an
+        unintended pattern which appears when a regular pattern of grids or
+        lines interferes with another regular pattern placed over it. This can
         happen, for example, when you are scanning an image with a periodic
         structure (such as a checkered shirt or a half-toned image), scanning
         a digital image, taking a digital photograph of a periodic pattern,
@@ -3109,13 +3080,16 @@ Rendering Intent はつぎのとおりです。
         The combination of these two channels gives the secondary color,
         Magenta, which is the complementary color of Green.
       </para>
-      <para lang="en"><emphasis>Exercise</emphasis>
-        : You can check this out. Create a new image with only a white
+      <!-- this is definitely off-topic in a glossary!
+           TODO: move this para to somewhere else
+      <para lang="en">
+        <emphasis>Exercise</emphasis>:
+        You can check this out. Create a new image with only a white
         background (255R+255G+255B). Open the
-        <menuchoice moreinfo="none">
-          <guimenu moreinfo="none">Tools</guimenu>
-          <guisubmenu moreinfo="none">Color Tools</guisubmenu>
-          <guimenuitem moreinfo="none">Levels</guimenuitem>
+        <menuchoice>
+          <guimenu>Tools</guimenu>
+          <guisubmenu>Color Tools</guisubmenu>
+          <guimenuitem>Levels</guimenuitem>
         </menuchoice>
         dialog and select the Red channel. If necessary, check the preview
         box. Move the white slider to the left to decrease the Red value. You
@@ -3124,6 +3098,8 @@ Rendering Intent はつぎのとおりです。
         For practice, go backwards, add a color and try to guess what hue will
         appear.
       </para>
+      -->
+      <!-- probably this is off-topic too... -->
       <para lang="en">
         The <link linkend="gimp-tool-color-picker">Color Picker</link>
         tool lets you find out the RGB values of a pixel and the
@@ -3138,6 +3114,7 @@ Rendering Intent はつぎのとおりです。
 相対的な重みが増すからです。 例えば緑を減らすと赤と青が引き立ち
 ますが、 その2色の混色はマゼンタという2次色で、 緑の補色なのです。
       </para>
+      <!--
       <para lang="ja">
 <emphasis>やってみましょう実験学習</emphasis>: まず背景が白 
 (255R+255G+255B) の新しい画像を作成します。 つぎに画像ウィンドウの
@@ -3157,6 +3134,7 @@ Rendering Intent はつぎのとおりです。
 リセット(<accel>R</accel>)</guilabel> してから画像に何か色を塗って
 おき、 このスライダ調整でどんな色相が現れるか試してみましょう。
       </para>
+      -->
       <para lang="ja">
 <link linkend="gimp-tool-color-picker">スポイト</link> ツールを使うと
 ポインタをかざした位置の<acronym>RGB</acronym>値や画素の色の
