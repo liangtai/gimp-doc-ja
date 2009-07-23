@@ -2,27 +2,27 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2007-07-19 ude: changed id 'gimp-image-guides-percent' to
+                  'script-fu-guide-new-percent'
   2007-11-25 j.h: replaced coordinate origin, 'image' with 'canvas' en;fr
   2007-09-28 AntI: Added 'es'
   2007-03-12 alex falappa: added it translation
   2006-07-23 tip translated to en;fr from german by j.h
   2006-08-07 scb: 'en' review
-  2005/10/30 created from image-guides.xml by axel.wernicke
+  2005-10-30 created from image-guides.xml by axel.wernicke
 -->
 <!--2009-06-23-->
-<sect2 id="gimp-image-guides-percent">
+<sect2 id="script-fu-guide-new-percent">
   <title lang="en">New Guide (by Percent)</title>
   <title lang="ja">新規ガイド (パーセントで)(P)...</title>
 
   <indexterm lang="en">
     <primary>Guides</primary>
-    <secondary>Add a guide (by Percent)</secondary>
+    <secondary>Add by percent</secondary>
   </indexterm>
   <indexterm lang="ja">
     <primary sotas="ガイド (ケントウセン)">ガイド (見当線)</primary>
-    <secondary sortas="シンキガイド (パーセントデ)">
-      新規ガイド (パーセントで)
-    </secondary>
+    <secondary sortas="パーセントデツイカ">パーセントで追加</secondary>
   </indexterm>
 
   <para lang="en">
@@ -52,26 +52,22 @@
   <sect3>
     <title lang="en">Activate the Command</title>
     <title lang="ja">コマンドの呼び出し方</title>
-    <itemizedlist>
-      <listitem>
-        <para lang="en">
-          You can access this command from the image menubar through
-          <menuchoice>
-            <guimenu>Image</guimenu>
-            <guisubmenu>Guides</guisubmenu>
-            <guimenuitem>New Guide (by Percent)</guimenuitem>
-          </menuchoice>.
-        </para>
-        <para lang="ja">
-          画像ウィンドウのメニューより
-          <menuchoice>
-            <guimenu>画像(<accel>I</accel>)</guimenu>
-            <guisubmenu>ガイド(<accel>G</accel>)</guisubmenu>
-            <guimenuitem>新規ガイド (パーセントで)(<accel>P</accel>)...</guimenuitem>
-          </menuchoice>
-        </para>
-      </listitem>
-    </itemizedlist>
+    <para lang="en">
+      You can access this command from the image menubar through
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guisubmenu>Guides</guisubmenu>
+        <guimenuitem>New Guide (by Percent)</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>画像(<accel>I</accel>)</guimenu>
+        <guisubmenu>ガイド(<accel>G</accel>)</guisubmenu>
+        <guimenuitem>新規ガイド (パーセントで)(<accel>P</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
@@ -81,6 +77,16 @@
     <title lang="ja">
       <quote>Script-Fu: 新規ガイド (パーセントで)</quote>ダイアログのオプション
     </title>
+    <para lang="en">
+      When you select this menu item, a dialog opens, which allows you to set
+      the <guilabel>Direction</guilabel> and <guilabel>Position</guilabel>, by
+      percent, of the new guide.
+    </para>
+    <para lang="ja">
+      このメニュー項目を選ぶとダイアログが現れますので、 新たに追加するガイドの
+      <guilabel>方向</guilabel> と <guilabel>位置 (パーセントで指定)</guilabel>
+      を設定してください。
+    </para>
     <figure>
       <title lang="en">
         The <quote>New Guide (by Percent)</quote> Dialog
@@ -116,7 +122,7 @@
         <term lang="en">Position</term>
         <term lang="ja">位置 (パーセントで指定)</term>
         <listitem>
-          <para lang="en"><!--TODO it: replace 'image' with 'canvas'-->
+          <para lang="en">
             You can also choose the <guilabel>Position</guilabel> of the
             new guide. The coordinate origin is in the upper left corner of
             the canvas.

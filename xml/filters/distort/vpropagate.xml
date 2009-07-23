@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-08-13 ude: fixed description (bug #546324); re-arranged option list
   2007-08-15 Added Spanish translation by AntI
@@ -7,51 +8,60 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-10 de added by axel.wernicke
 -->
+<!--2009-07-23-->
 <sect2 id="plug-in-vpropagate">
+  <title lang="en">Value Propagate</title>
+  <title lang="en">明度伝搬(V)...</title>
 
-  <title>
-    Value Propagate
-  </title>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Value Propagate</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="メイドデンパン">明度伝搬</primary>
   </indexterm>
 
   <sect3>
-    <title>
-      Overview
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        Example for the Value Propagate filter
-      </title>
+      <title lang="en">Example for Value Propagate filter</title>
+      <title lang="ja">明度伝搬フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/distort-taj-vpropagate.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-vpropagate.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Value Propagate</quote> applied</para>
+          <para lang="en">Filter <quote>Value Propagate</quote> applied</para>
+          <para lang="ja"><quote>明度伝搬</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter works on color borders. It spreads pixels that differ in a
       specified way from their neighbouring pixels.
+    </para>
+    <para lang="ja">
+      <guimenuitem>明度伝搬(<accel>V</accel>)...</guimenuitem> フィルタは色の
+      境目に作用します。 特定の条件で画素が付近の画素と色の異なりが認められる
+      ときにその色が周囲を染めます。
     </para>
   </sect3>
 
   <sect3>
-    <title>
-      Activating the filter
-    </title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -59,103 +69,89 @@
         <guimenuitem>Value Propagate</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>変形(<accel>D</accel>)</guisubmenu>
+        <guimenuitem>明度伝搬(<accel>V</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>
-      Options
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <quote>Value propagate</quote> filter options
-      </title>
+      <title lang="en"><quote>Value propagate</quote> filter options</title>
+      <title lang="ja"><quote>明度伝搬</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-distort-vpropagate.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-distort-vpropagate.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             The result of your settings will appear in the Preview without
             affecting the image until you click on <guibutton>OK</guibutton>.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Mode</term>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
         <listitem>
           <variablelist>
-            <para>
+            <para lang="en">
               The examples will be about the following image:
             </para>
+            <para lang="ja">つぎの画像を用いた例で説明します。</para>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/examples/vpropag-base.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/vpropag-base.png"/>
               </imageobject>
             </mediaobject>
             <varlistentry>
-              <term>
-                More white (larger value)
-              </term>
+              <term lang="en">More white (larger value)</term>
+              <term lang="ja">より白く (明度大)(W)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   Pixels will be propagated from upper value pixels towards
                   lower value pixels. So bright areas will enlarge.
                 </para>
+                <para lang="ja">
+                  画素は最寄りのより明度が高い画素の色に染まります。 したがって
+                  明るい部分が拡がります。
+                </para>
                 <figure>
-                  <title>
-                    More white
-                  </title>
+                  <title lang="en">More white</title>
+                  <title lang="ja">より白く</title>
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag1.png" format="PNG"/>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag1.png"/>
                     </imageobject>
                     <caption>
-                      <para>
+                      <para lang="en">
                         Bright pixels have been propagated to dark pixels in
                         the four directions : top, bottom, right and left.
                         Filter applied several times to increase effect.
                       </para>
-                    </caption>
-                  </mediaobject>
-                </figure>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>
-                More black (smaller value)
-              </term>
-              <listitem>
-                <para>
-                  Pixels will be propagated from lower value pixels towards
-                  upper value pixels. So dark areas will enlarge.
-                </para>
-                <figure>
-                  <title>
-                    More black
-                  </title>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag2.png" format="PNG"/>
-                    </imageobject>
-                  </mediaobject>
-                </figure>
-                <figure>
-                  <title>
-                    To bottom only
-                  </title>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag2-bis.png" format="PNG"/>
-                    </imageobject>
-                    <caption>
-                      <para>
-                        The same as above with <guilabel>To bottom</guilabel>
-                        direction only checked.
+                      <para lang="ja">
+                        明るい画素が上下左右四方の暗い画素に伝搬した。 フィルタ
+                        は繰り返すほどに効果が増す。
                       </para>
                     </caption>
                   </mediaobject>
@@ -163,39 +159,97 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>
-                Middle value to peaks
-              </term>
+              <term lang="en">More black (smaller value)</term>
+              <term lang="ja">より黒く (明度小)(K)</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  Pixels will be propagated from lower value pixels towards
+                  upper value pixels. So dark areas will enlarge.
+                </para>
+                <para lang="ja">
+                  画素が最寄りのより明度の低い画素の色に染まります。 したがって
+                  暗い部分が拡がります。
+                </para>
+                <figure>
+                  <title lang="en">More black</title>
+                  <title lang="ja">より黒く</title>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag2.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </figure>
+                <figure>
+                  <title lang="en">To bottom only</title>
+                  <title lang="ja">下方向のみ</title>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag2-bis.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">
+                        The same as above with <guilabel>To bottom</guilabel>
+                        direction only checked.
+                      </para>
+                      <para lang="ja">
+                        方向は <guilabel>下へ(<accel>B</accel>)</guilabel> だけ
+                        を有効にした
+                      </para>
+                    </caption>
+                  </mediaobject>
+                </figure>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Middle value to peaks</term>
+              <term lang="ja">中間明度をピークに(F)</term>
+              <listitem>
+                <para lang="en">
                   On a border between the selected thresholds, the average of
                   both values is propagated.
                 </para>
+                <para lang="ja">
+                  色の境目で画素の値が上限下限のしきい値の範囲にあるときその
+                  上下の平均の値が伝搬されます。
+                </para>
                 <figure>
-                  <title>
-                    Middle value to peaks
-                  </title>
+                  <title lang="en">Middle value to peaks</title>
+                  <title lang="ja">中間明度をピークに</title>
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag3.png" format="PNG"/>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag3.png"/>
                     </imageobject>
                     <caption>
-                      <para>
+                      <para lang="en">
                         A thin border with a transitional color has been
                         added to objects. It is not visible around objects
                         with smoothed borders.
                       </para>
+                      <para lang="ja">
+                        色の境目では徐々に色が変わる部分が薄く形象の周りをとり
+                        囲むように描き加えられた。 もとから徐々に色変りする境目
+                        にはこの様子は見られない。
+                      </para>
                     </caption>
                   </mediaobject>
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag3-zoom.png" format="PNG"/>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag3-zoom.png"/>
                     </imageobject>
                     <caption>
-                      <para>
+                      <para lang="en">
                         Green area zoomed x800. A thin border (one pixel wide)
                         has been added. Its value is the average between grey
                         (90%) and green (78%) : (90 + 78) / 2 = 84.
+                      </para>
+                      <para lang="ja">
+                        緑色のところを800倍の倍率で表示。 細い縁取り (太さ1
+                        ピクセル) が描き加えられている。 この色の値は灰色 (90%)
+                        と緑 (78%) の平均値 (90+78)/2 = 84% になっている。
                       </para>
                     </caption>
                   </mediaobject>
@@ -203,24 +257,35 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>
-                Foreground to peaks
-              </term>
+              <term lang="en">Foreground to peaks</term>
+              <term lang="ja">前景をピークに(F)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   The propagated areas will be filled with the foreground
                   color of the toolbox.
                 </para>
+                <para lang="ja">
+                  伝搬する部分はツーボックスの色標識に示される描画色で塗り
+                  つぶされます。
+                </para>
+                <para lang="ja">
+                  つぎの例ではツールボックスの色標識に示される描画色は赤と
+                  します。 1ピクセル幅の細い赤の縁取りが形象につけ加わります。
+                  徐々に色変りする方の形象ではそのような縁取りが色変りの端に
+                  現れます。 この図では内側にも縁取りが現れます。 これは形象が
+                  小さいことで両端のなだらかな色変りの部分が重なり合ってしまう
+                  ことによる人工物現象です。
+                </para>
                 <figure>
-                  <title>
-                    Foreground to peaks
-                  </title>
+                  <title lang="en">Foreground to peaks</title>
+                  <title lang="ja">前景をピークに</title>
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag4.png" format="PNG"/>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag4.png"/>
                     </imageobject>
                     <caption>
-                      <para>
+                      <para lang="en">
                         In this example, the foreground color in Toolbox is
                         Red. A thin border, one pixel wide, red, is added
                         around objects. With smoothed objects, this border is
@@ -229,32 +294,8 @@
                         to the small size of the object which makes the
                         smoothing area of opposite sides to overlap.
                       </para>
-                    </caption>
-                  </mediaobject>
-                </figure>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>
-                Only foreground
-              </term>
-              <listitem>
-                <para>
-                  Only areas with the Toolbox Foreground color will propagate.
-                </para>
-                <figure>
-                  <title>
-                    Only foreground
-                  </title>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag5.png" format="PNG"/>
-                    </imageobject>
-                    <caption>
-                      <para>
-                        In this example, the foreground color in Toolbox is
-                        that of the green object. After applying filter
-                        several times, the green area is clearly enlarged.
+                      <para lang="ja">
+                        細い赤の縁取りが加わった。
                       </para>
                     </caption>
                   </mediaobject>
@@ -262,48 +303,99 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>
-                Only background
-              </term>
+              <term lang="en">Only foreground</term>
+              <term lang="ja">前景のみ(N)</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  Only areas with the Toolbox Foreground color will propagate.
+                </para>
+                <para lang="ja">
+                  ツールボックス描画色と同じ色の部分だけ伝搬します。
+                </para>
+                <figure>
+                  <title lang="en">Only foreground</title>
+                  <title lang="ja">前景のみ</title>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag5.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">
+                        In this example, the foreground color in Toolbox is
+                        that of the green object. After applying filter
+                        several times, the green area is clearly enlarged.
+                      </para>
+                      <para lang="ja">
+                        この例ではツールボックス描画色を緑の形象と同じ色に
+                        しておいた。 このフィルタを幾度か適用すると緑の部分が
+                        明らかに拡大しているのがわかる。
+                      </para>
+                    </caption>
+                  </mediaobject>
+                </figure>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Only background</term>
+              <term lang="ja">背景のみ(A)</term>
+              <listitem>
+                <para lang="en">
                   Only areas with the Background color will propagate.
+                </para>
+                <para lang="ja">
+                  ツールボックス背景色と同じ色の部分だけ伝搬します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>
-                More opaque / transparent
-              </term>
+              <term lang="en">More opaque / transparent</term>
+              <term lang="ja">より不透明に(E); より透明に(R)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   These commands work like More White and More Black. Opaque
                   (transparent) areas will be propagated over less opaque
                   (transparent) areas. These commands need an image with an
                   Alpha channel.
                 </para>
+                <para lang="ja">
+                  これらのオプションは <guilabel>より白く
+                  (明度大)(<accel>W</accel>)</guilabel> や <guilabel>より黒く
+                  (明度小)(<accel>K</accel>)</guilabel> と似たはたらきを
+                  します。 前者は透明度のより低い部分の色が高いほうに伝搬し、 
+                  後者は透明度のより高い部分が低い方を染めます。 いずれの
+                  オプションも画像にアルファチャンネルが必要です。
+                </para>
                 <figure>
-                  <title>
-                    More opaque
-                  </title>
+                  <title lang="en">More opaque</title>
+                  <title lang="ja">より不透明に</title>
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag6a.png" format="PNG"/>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag6a.png"/>
                     </imageobject>
                     <caption>
-                      <para>
+                      <para lang="en">
                         Original layer, with a transparent background.
+                      </para>
+                      <para lang="ja">
+                        元のレイヤー。 背景は透過している。
                       </para>
                     </caption>
                   </mediaobject>
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/filters/examples/vpropag6b.png" format="PNG"/>
+                      <imagedata format="PNG"
+                        fileref="images/filters/examples/vpropag6b.png"/>
                     </imageobject>
                     <caption>
-                      <para>
+                      <para lang="en">
                         Filter applied several times: the green, opaque, area
                         got increased.
+                      </para>
+                      <para lang="ja">
+                        幾度かフィルタを適用した。 緑色の不透明な部分が拡大
+                        している。
                       </para>
                     </caption>
                   </mediaobject>
@@ -314,59 +406,87 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Propagate</term>
+        <term lang="en">Propagate</term>
+        <term lang="ja">伝搬</term>
         <listitem>
           <variablelist>
             <varlistentry>
-              <term>Lower / Upper threshold</term>
+              <term lang="en">Lower / Upper threshold</term>
+              <term lang="ja">しきい値下限(H); しきい値上限(U)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   A pixel will be propagated (spread) if the difference in
                   value between the pixel and its neighbour is no smaller than
                   the lower threshold and no larger than the upper threshold.
                 </para>
+                <para lang="ja">
+                  周辺の画素の値と比較して <guilabel>
+                  しきい値下限(<accel>H</accel>)</guilabel> よりは大きく 
+                  <guilabel>しきい値上限(<accel>U</accel>)</guilabel> よりは
+                  小さな差異を画素の値がもつときは伝搬 (拡散) します。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Propagating rate</term>
+              <term lang="en">Propagating rate</term>
+              <term lang="ja">伝搬率(P)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   That's the propagating amount. The higher it will be the
                   more colored the propagation will be.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Propagating direction</term>
-              <listitem>
-                <para>
-                  You can select one or more directions.
+                <para lang="ja">
+                  伝搬する量です。 高い率を設定すれば一度のフィルタ適用で
+                  より多くの画素が染まります。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>
-                Propagating alpha channel
-              </term>
+              <term lang="en">Propagating direction</term>
+              <term lang="ja">上へ(T); 下へ(B); 左へ(E); 右へ(R)</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  You can select one or more directions.
+                </para>
+                <para lang="ja">
+                  ひとつまたはそれ以上の伝搬方向を指定します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Propagating alpha channel</term>
+              <term lang="ja">アルファチャンネルを伝搬(A)</term>
+              <listitem>
+                <para lang="en">
                   If checked, the pixel alpha value will be propagated,
                   otherwise the pixel will get the alpha of the neighbouring
                   pixels. This checkbox is only visible when the active layer
                   has an alpha channel.
                 </para>
+                <para lang="ja">
+                  このオプションを有効にすると、 画素のアルファ値が伝搬したり
+                  もしくは周辺の画素のアルファ値に染まったりします。 この
+                  チェックボックスのオプションはフィルタを呼び出した時点で
+                  活性レイヤーにアルファチャンネルがある場合のみ現れます。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>
-                Propagating value channel
-              </term>
+              <term lang="en">Propagating value channel</term>
+              <term lang="ja">明度チャンネルを伝搬</term>
               <listitem>
-                <para>
+                <para lang="en">
                   If checked, the pixel's color channels (gray channel on
                   grayscaled images) will be propagated. The option is
                   checked by default, of course. This checkbox too is only
                   visible when the active layer has an alpha channel.
+                </para>
+                <para lang="ja">
+                  このオプションを有効にすると、 画素の色チャンネル (グレー
+                  スケール画像なら明度チャンネル) が伝搬します。 もちろん初期
+                  状態ではこのオプションが有効になっています。 このチェック
+                  ボックスのオプションもフィルタを呼び出した時点で活性レイヤー
+                  にアルファチャンネルがある場合のみ出現します。
                 </para>
               </listitem>
             </varlistentry>

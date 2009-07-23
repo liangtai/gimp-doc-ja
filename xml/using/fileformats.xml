@@ -12,7 +12,7 @@
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2009-06-23-->
+<!--2009-07-22-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -334,8 +334,8 @@
                   <itemizedlist mark="opencircle">
                     <listitem>
                       <para lang="en">
-                        <guilabel>I don't care</guilabel>
-                        : you can use this option if all your layers are
+                        <guilabel>I don't care</guilabel>:
+                        you can use this option if all your layers are
                         opaque. Layers will overwrite what is beneath.
                       </para>
                       <para lang="ja">
@@ -346,8 +346,8 @@
                     </listitem>
                     <listitem>
                       <para lang="en">
-                        <guilabel>Cumulative Layers (combine)</guilabel>
-                        : previous frames will not be deleted when a new one
+                        <guilabel>Cumulative Layers (combine)</guilabel>:
+                        previous frames will not be deleted when a new one
                         is displayed.
                       </para>
                       <para lang="ja">
@@ -357,8 +357,8 @@
                     </listitem>
                     <listitem>
                       <para lang="en">
-                        <guilabel>One frame per layer (replace)</guilabel>
-                        : previous frames will be deleted before displaying a
+                        <guilabel>One frame per layer (replace)</guilabel>:
+                        previous frames will be deleted before displaying a
                         new frame.
                       </para>
                       <para lang="ja">
@@ -663,11 +663,10 @@
                 <term lang="ja">原画の品位設定を使用(U)</term>
                 <listitem>
                   <para lang="en">
-                    If a particular quality setting (or
-                    <quote>quantization table</quote>
-                    ) was attached to the image when it was loaded, then this
-                    option allows you to use them instead of the standard
-                    ones.
+                    If a particular quality setting (or <quote>quantization
+                    table</quote>) was attached to the image when it was
+                    loaded, then this option allows you to use them instead of
+                    the standard ones.
                   </para>
                   <para lang="en">
                     If you have only made a few changes to the image, then
@@ -760,12 +759,12 @@
                   <itemizedlist>
                     <listitem>
                       <para lang="en">
-                        <guilabel>1x1,1x1,1x1 (best quality)</guilabel>
-                        : preserves borders and contrasting colors, but
+                        <guilabel>1x1,1x1,1x1 (best quality)</guilabel>:
+                        preserves borders and contrasting colors, but
                         compression is less.
                       </para>
                       <para lang="ja">
-                        <guilabel>1x1,1x1,1x1 (最高品位)</guilabel> :
+                        <guilabel>1x1,1x1,1x1 (最高品位)</guilabel>:
                         境界部や対照色は保持されますが、 圧縮能力は下がります。
                       </para>
                     </listitem>
@@ -789,8 +788,8 @@
                     </listitem>
                     <listitem>
                       <para lang="en">
-                        <guilabel>2x2,1x1,1x1 (smallest file)</guilabel>
-                        : important compression; suits images with weak
+                        <guilabel>2x2,1x1,1x1 (smallest file)</guilabel>:
+                        important compression; suits images with weak
                         borders but tends to denature colors.
                       </para>
                       <para lang="ja">
@@ -823,8 +822,9 @@
                   </para>
                   <itemizedlist>
                     <listitem>
-                      <para lang="en"><guilabel>float</guilabel>
-                        : The float method is very slightly more accurate than
+                      <para lang="en">
+                        <guilabel>float</guilabel>:
+                        The float method is very slightly more accurate than
                         the integer method, but is much slower unless your
                         machine has very fast floating-point hardware. Also
                         note that the results of the floating-point method may
@@ -842,7 +842,8 @@
                       </para>
                     </listitem>
                     <listitem>
-                      <para lang="en"><guilabel>integer</guilabel>
+                      <para lang="en">
+                        <guilabel>integer</guilabel>
                         (the default): This method is faster than
                         <quote>float</quote>, but not as accurate.
                       </para>
@@ -853,8 +854,9 @@
                       </para>
                     </listitem>
                     <listitem>
-                      <para lang="en"><guilabel>fast integer</guilabel>
-                        : The fast integer method is much less accurate than
+                      <para lang="en">
+                        <guilabel>fast integer</guilabel>:
+                        The fast integer method is much less accurate than
                         the other two.
                       </para>
                       <para lang="ja">
@@ -1183,7 +1185,7 @@
                   <quote>Lempel-Ziv-Welch</quote>アルゴリズムを用いて圧縮
                   されます。 旧来からの方式ですが今でも効果的かつ高速です。
                   詳しい説明は
-                  <xref linkend="bibliography-online-wkpd-lzw" />にあります。
+                  <xref linkend="bibliography-online-wkpd-lzw" /> にあります。
                 </para>
               </listitem>
               <listitem>
@@ -1215,16 +1217,14 @@
                   compression algorithm that uses a combination of the LZ77
                   algorithm and Huffman coding. It is also used in Zip,
                   Gzip and PNG file formats. Source:
-                  <ulink url="http://en.wikipedia.org/wiki/Deflate">
-                  Wikipedia</ulink>.
+                  <xref linkend="bibliography-online-wkpd-deflate"/>.
                 </para>
                 <para lang="ja">
                   <guilabel>Deflate(<accel>D</accel>)</guilabel> : LZ77
                   アルゴリズムとハフマン符号化を併用した、 可逆的な圧縮
                   アルゴリズムです。 zlib、 ZIP、 GZIP、 7zなどの圧縮プログラム
                   や PNG ファイル形式に用いられています。 (出典:
-                  <ulink url="http://ja.wikipedia.org/wiki/Deflate">Wikipedia
-                  </ulink>)。
+                  <xref linkend="bibliography-online-wkpd-deflate"/>)。
                 </para>
               </listitem>
               <listitem>

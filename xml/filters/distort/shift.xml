@@ -1,60 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-08-12 Added Spanish translation by AntI
   2007-04-24 KoSt: added 'no'
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   050910 de added by axel.wernicke
 -->
+<!--2009-07-21-->
 <sect2 id="plug-in-shift">
-  <title>
-    Shift
-  </title>
-  <indexterm>
+  <title lang="en">Shift</title>
+  <title lang="ja">ずらし(S)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Distorts</secondary>
     <tertiary>Shift</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Shift</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary sortas="ズラシ">ずらし</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ズラシ">ずらし</primary>
   </indexterm>
 
   <sect3>
-    <title>
-      Overview
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        Example for the Shift filter
-      </title>
+      <title lang="en">Example for the Shift filter</title>
+      <title lang="ja">ずらしフィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/distort-taj-shift.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-shift.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Shift</quote> applied</para>
+          <para lang="en">Filter <quote>Shift</quote> applied</para>
+          <para lang="ja"><quote>ずらし</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       It shifts all pixel rows, horizontally or vertically, in the current
       layer or selection, on a random distance and within determined limits.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ずらし(<accel>S</accel>)...</guimenuitem> フィルタは活性
+      レイヤー内もしくはその選択範囲内の画素を無作為な距離にずらします。
+      距離の限界が設定できます。
     </para>
   </sect3>
 
   <sect3>
-    <title>
-      Activating the filter
-    </title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter through
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -62,52 +78,80 @@
         <guimenuitem>Sift</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>変形(<accel>D</accel>)</guisubmenu>
+        <guimenuitem>ずらし(<accel>S</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>
-      Options
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <quote>Shift</quote> filter options
-      </title>
+      <title lang="en"><quote>Shift</quote> filter options</title>
+      <title lang="ja"><quote>ずらし</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/filters-distort-shift.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-distort-shift.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             The result of your settings will appear in the Preview without
             affecting the image until you click on <guibutton>OK</guibutton>.
           </para>
+          <para lang="ja">
+            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>These options are self-explanatory:</term>
+        <term lang="en">These options are self-explanatory:</term>
+        <term lang="ja">オプションはいずれも言葉通りです。</term>
         <listitem>
-          <para>
+          <para lang="en">
             <guilabel>Shift Horizontally</guilabel>
           </para>
-          <para>
+          <para lang="en">
             <guilabel>Shift vertically</guilabel>
           </para>
-          <para>
+          <para lang="en">
             <guilabel>Shift Amount</guilabel>
+          </para>
+          <para lang="ja">
+            <guilabel>水平方向にずらす(<accel>H</accel>)</guilabel>
+          </para>
+          <para lang="ja">
+            <guilabel>垂直方向にずらす(<accel>V</accel>)</guilabel>
+          </para>
+          <para lang="ja"><!--no use-->
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Shift amount</term>
+        <term lang="en">Shift amount</term>
+        <term lang="ja">ずれの量(A)</term>
         <listitem>
-          <para>
+          <para lang="en">
             With this option, you can set the maximum shift, betwwen 1 and
             200 pixels, or in another unit of measurement.
+          </para>
+          <para lang="ja">
+            <guilabel>ずれの量(<accel>A</accel>)</guilabel> オプションはずれの
+            量の最大限度を 1 ピクセルから 200 ピクセルもしくはその他の単位で
+            指定します。
           </para>
         </listitem>
       </varlistentry>

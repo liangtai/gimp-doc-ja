@@ -5,55 +5,72 @@
   2008-06-09 ude: added 'de'
   2008-05-28 j.h: created
 -->
-<sect2 id="scrip-fu-erase-rows">
-  <title>
-    Erase Every Other Row
-  </title>
-  <indexterm>
+<!--2009-07-23-->
+<sect2 id="script-fu-erase-rows">
+  <title lang="en">Erase Every Other Row</title>
+  <title lang="ja">一行おきに消す(E)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Distorts</secondary>
     <tertiary>Erase Every Other Row</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Erase Every Other Row or Column</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary sortas="イチギョウオキニケス">一行おきに消す</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イチギョウオキニケス">一行おきに消す</primary>
   </indexterm>
 
   <sect3>
-    <title>
-      Overview
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-          Example for the <quote>Erase Every Other row</quote> filter
+      <title lang="en">
+        Example for the <quote>Erase Every Other row</quote> filter
       </title>
+      <title lang="ja"><quote>一行おきに消す</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_rows.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_rows.jpg"/>
         </imageobject>
         <caption>
-          <para><quote>Erase Every Other row</quote> applied</para>
+          <para lang="en"><quote>Erase Every Other row</quote> applied</para>
+          <para lang="ja"><quote>一行おきに消す</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter not only can erase each other row or column of the active
       layer but also can change them to the background color.
+    </para>
+    <para lang="ja">
+      <guimenuitem>一行おきに消す(<accel>E</accel>)...</guimenuitem> フィルタは
+      活性レイヤーの画素を縦横のいずれかの向きの一行おきに背景色で
+      置き換えるスクリプトです。
     </para>
   </sect3>
 
   <sect3>
-    <title>
-      Activating the filter
-    </title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -61,28 +78,42 @@
         <guimenuitem>Erase Every Other Row</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>変形(<accel>D</accel>)</guisubmenu>
+        <guimenuitem>一行おきに消す(<accel>E</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>
-      Options
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <quote>Erase Every Other row</quote> options
-      </title>
+      <title lang="en"><quote>Erase Every Other row</quote> options</title>
+      <title lang="ja"><quote>一行おきに消す</quote>のオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-distort-erase_rows.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-distort-erase_rows.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       These options are self-explanatory. Only one remark: if the active
       layer is the background layer and has an Alpha channel, erased rows or
       columns will be transparent. If it doesn't have an Alpha channel (then
       its name is in bold letters in the Layer Dialog), the Background color
       of the toolbox will be used.
+    </para>
+    <para lang="ja">
+      これらのオプションの意味はいずれも言葉通りです。 ただし一点だけ述べます。
+      もし活性レイヤーにアルファチャンネルがあれば消された行または桁は透過
+      します。 アルファチャンネルがない場合は (レイヤーダイアログ上ではレイヤー
+      名が太字で表示されます)、 ツールボックスの色標識に示される背景色が消され
+      た行に塗られます。
     </para>
   </sect3>
 </sect2>

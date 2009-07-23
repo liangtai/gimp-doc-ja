@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-07-02 08:08+0900\n"
-"PO-Revision-Date: 2009-07-02 08:50+0900\n"
+"POT-Creation-Date: 2009-07-23 14:40+0900\n"
+"PO-Revision-Date: 2009-07-23 17:12+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -753,43 +753,54 @@ msgstr ""
 msgid "Interpolation"
 msgstr "補完方法(N)"
 
-#: src/menus/layer/scale.xml:130(para)
+#: src/menus/layer/scale.xml:130(term)
+msgid "None"
+msgstr "補間しない"
+
+#: src/menus/layer/scale.xml:132(para)
 msgid ""
-"<guilabel>None</guilabel>: No interpolation is used. Pixels are simply "
-"enlarged or removed, as they are when zooming. This method is low in "
-"quality, but very fast."
+"No interpolation is used. Pixels are simply enlarged or removed, as they are "
+"when zooming. This method is low in quality, but very fast."
 msgstr ""
-"<guimenuitem>補完しない</guimenuitem>: 補完処理をしません。 あたかも表示倍率"
+"補完処理をしません。 あたかも表示倍率"
 "を変えるときのように画素が単純に引き伸ばされるか削除されます。 この処理による"
 "品質は低くなりますが非常に高い処理速度が出ます。"
 
-#: src/menus/layer/scale.xml:137(para)
-msgid ""
-"<guilabel>Linear</guilabel>: This method is a good compromise between speed "
-"and quality."
+#: src/menus/layer/scale.xml:140(term)
+msgid "Linear"
+msgstr "線形"
+
+#: src/menus/layer/scale.xml:142(para)
+msgid "This method is a good compromise between speed and quality."
 msgstr ""
-"<guimenuitem>線形</guimenuitem>: この方式は比較的高速ですが、 かなり良い結果"
+"この方式は比較的高速ですが、 かなり良い結果"
 "が出せます。"
 
-#: src/menus/layer/scale.xml:143(para)
-msgid ""
-"<guilabel>Cubic</guilabel>: This method takes a lot of time, but it produces "
-"the best results."
+#: src/menus/layer/scale.xml:149(term)
+msgid "Cubic"
+msgstr "キュービック"
+
+#: src/menus/layer/scale.xml:151(para)
+msgid "This method takes a lot of time, but it produces the best results."
 msgstr ""
-"<guimenuitem>キュービック</guimenuitem>: この処理は比較的多くの時間を費します"
+"この処理は比較的多くの時間を費します"
 "が、 最高の仕上りが得られます。"
 
-#: src/menus/layer/scale.xml:152(para)
+#: src/menus/layer/scale.xml:158(term)
+msgid "Sinc (Lanczos3)"
+msgstr "Sinc (Lanczos3)"
+
+#: src/menus/layer/scale.xml:163(para)
 msgid "Sinus cardinalis"
 msgstr "非正規化sinc関数"
 
-#: src/menus/layer/scale.xml:149(para)
+#: src/menus/layer/scale.xml:160(para)
 msgid ""
-"<guilabel>Sinc (Lanczos-3)</guilabel>: The Lanczos (pronounce "
-"<quote>lanzosh</quote>) method uses the Sinc<placeholder-1/> mathematical "
-"function to perform a high quality interpolation."
+"The Lanczos (pronounce <quote>lanzosh</quote>) method uses the "
+"Sinc<placeholder-1/> mathematical function to perform a high quality "
+"interpolation."
 msgstr ""
-"<guimenuitem>Sinc (Lanczos3)</guimenuitem>: 高品質な補完処理を行なうにはこの"
+"高品質な補完処理を行なうにはこの"
 "方式を選んでください。 これはSinc<placeholder-1/>関数に似た3次ランツォシュ窓"
 "関数を低域通過フィルタとして用いています。"
 
@@ -2178,10 +2189,9 @@ msgid ""
 msgstr ""
 "<guimenuitem>レイヤーマスクを適用(<accel>M</accel>)</guimenuitem> コマンドは"
 "レイヤーマスクをそのレイヤーに統合します。 レイヤーチャンネルに収められていた"
-"透過効果の情報はアルファチャンネルに移転され (レイヤーにアルファ"
-"チャンネルが無ければこのとき追加されます) レイヤーマスクは削除されます。 "
-"ただし活性レイヤーにレイヤーマスクがない場合はこのメニュー項目は灰色無効と"
-"なっていて使用で"
+"透過効果の情報はアルファチャンネルに移転され (レイヤーにアルファチャンネルが"
+"無ければこのとき追加されます) レイヤーマスクは削除されます。 ただし活性レイ"
+"ヤーにレイヤーマスクがない場合はこのメニュー項目は灰色無効となっていて使用で"
 "きません。 レイヤーマスクのさらに詳しい情報は <link linkend=\"gimp-layer-mask"
 "\">レイヤーにマスクを追加</link> ダイアログの節でご覧ください。"
 
@@ -2226,8 +2236,8 @@ msgstr ""
 "<guimenuitem>レイヤーマスクの追加(<accel>Y</accel>)...</guimenuitem> コマンド"
 "は活性レイヤーにレイヤーマスクを加えます。 このコマンドはダイアログを開きます"
 "ので、 レイヤーマスクの属性をここで初期化してください。 ただし活性レイヤーに"
-"既にレイヤーマスクがある場合は、 このメニュー項目は灰色無効となっていて使"
-"用できません。"
+"既にレイヤーマスクがある場合は、 このメニュー項目は灰色無効となっていて使用で"
+"きません。"
 
 #: src/menus/layer/mask-add.xml:30(para)
 msgid ""
