@@ -7,7 +7,7 @@
   2006-11-01 lexa: made the file docbook compliant
   2008-01-28 jpl: update text & images
 -->
-<!--2009-06-23 -->
+<!--2009-07-22 -->
 <sect2 id="gimp-prefs-tool-options">
   <title lang="en">Tool Options</title>
   <title lang="ja">ツールオプション</title>
@@ -139,49 +139,79 @@
         <listitem>
           <para lang="en">
             When you scale something, each pixel in the result is calculated
-            by interpolating several pixels in the source. This option
-            determines the default interpolation method: it can always be
-            changed, though, in the Tool Options dialog. There are three
-            choices:
-          </para>
-          <para lang="en">
-            <emphasis>None</emphasis> is fastest, but quite crude: you should
-            only consider using it if your machine is very seriously
-            speed-impaired.
-          </para>
-          <para lang="en"><emphasis>Linear</emphasis> is the default, and is good
-            enough for most purposes.
-          </para>
-          <para lang="en"><emphasis>Cubic</emphasis> is the best (although
-            it can actually look worse than Linear for some types of
-            images), but also the slowest.
+            by <link linkend="glossary-interpolation">interpolating</link>
+            several pixels in the source. This option determines the default
+            interpolation method: it can always be changed, though, in the
+            Tool Options dialog.
           </para>
           <para lang="ja">
             描画されたものを拡大もしくは縮小すると、 結果の画素はいずれも元画像
             のいくつかの画素を補間計算してつくられます。 このオプションは既定の
-            補間方法を定めますが、 拡大・縮小ツールではツールオプションの
+            <link linkend="glossary-interpolation">補間方法</link> を
+            定めますが、 拡大・縮小ツールではツールオプションの
             <guilabel>補間アルゴリズム</guilabel> で、 拡大・縮小ダイアログでは
-            <guilabel>補間方法</guilabel> でいつでも変更可能です。 4つの選択肢
-            があります。
+            <guilabel>補間方法</guilabel> でいつでも変更可能です。
           </para>
-          <para lang="ja">
-            <guimenuitem>補間しない</guimenuitem> は最速ですがどう見ても粗雑
-            です。 マシンの処理速度が深刻な被害を受けるというのであるときのみ、
-            これを考慮する価値があります。
-          </para>
-          <para lang="ja">
-            初期設定では <guimenuitem>線形</guimenuitem> を既定に据えています。
-            さまざまな用途に十分良い結果が出ます。
-          </para>
-          <para lang="ja">
-            最高なのは <guimenuitem>キュービック</guimenuitem> (ただし実際は
-            ある種の画像においては線形に劣ります) ですが、
-            処理が最も遅くなります。
-          </para>
-          <para lang="ja">
-            <guimenuitem>Sinc (Lanczos3)</guimenuitem> sinc関数に似た
-            3次ランツォシュ窓関数を低域通過フィルタとして用います。
-          </para>
+          <variablelist>
+            <para lang="en">There are four choices:</para>
+            <para lang="en">つぎの4つの選択肢があります。</para>
+            <varlistentry>
+              <term lang="en">None</term>
+              <term lang="ja">補間しない</term>
+              <listitem>
+                <para lang="en">
+                  This is the fastest method, but quite crude: you should
+                  only consider using it if your machine is very seriously
+                  speed-impaired.
+                </para>
+                <para lang="ja">
+                  これは最速ですがどう見ても粗雑です。 マシンの処理速度が
+                  深刻な被害を受けるというのであるときのみ、
+                  これを考慮する価値があります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Linear</term>
+              <term lang="ja">線形</term>
+              <listitem>
+                <para lang="en">
+                  This used to be the default, and is good enough for most
+                  purposes.
+                </para>
+                <para lang="ja">
+                  かつてはこの方法が初期設定になっていました。
+                  さまざまな用途に十分良い結果が出ます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Cubic</term>
+              <term lang="ja">キュービック</term>
+              <listitem>
+                <para lang="en">
+                  This is the best (although it can actually look worse
+                  than Linear for some types of images), but also the slowest.
+                  Since <acronym>GIMP</acronym> 2.6, this method is the
+                  default.
+                </para>
+                <para lang="ja">
+                  最高なのはこの方法  (ただし実際はある種の画像においては線形に
+                  劣ります) ですが、 処理が最も遅くなります。 <acronym>GIMP
+                  </acronym> 2.6 よりこの方法が規定に据えられています。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>Sinc (Lanczos3)</term>
+              <listitem>
+                <para lang="en">
+                  This method performs a high quality interpolation.
+                </para>
+                <para lang="ja">この方式は高品質な補間を行ないます。</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
     </variablelist>

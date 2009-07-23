@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--2009-07-14-->
+<!--2009-07-20-->
 <glossary id="glossary">
   <title lang="en">Glossary</title>
   <title lang="ja">用語集</title>
@@ -1514,49 +1514,9 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
         position a selection or a layer on the image. They do not appear when
         the image is printed.
       </para>
-      <!--TODO: a glossary entry should tell what a guide *is*, how to create
-                or use a guide should be described somewhere else!
-      -->
       <para lang="en">
-        To create a guide, simply click on one of the rulers in the image
-        window and pull out a guide, while holding the
-        <mousebutton>mouse button</mousebutton> pressed. The guide is then
-        displayed as a blue, dashed line, which follows the pointer. As soon
-        as you create a guide, the <quote>Move</quote> tool is activated and
-        the mouse pointer changes to the Move icon.
-      </para>
-      <para lang="en">
-        You can also create a guide with the
-        <link linkend="gimp-image-guides-add">New Guide</link> command, which
-        allows you to precisely place the guide on the image, the
-        <link linkend="gimp-image-guides-percent">New Guide (by Percent)</link>
-        command, or the
-        <link linkend="gimp-image-guides-selection">New Guides from Selection
-        </link> command.
-      </para>
-      <para lang="en">
-        The behavior of the guides depends upon the
-        <guilabel>Affect</guilabel> mode of the <quote>Move</quote> tool.
-        When <emphasis>Transform Layer</emphasis> mode is selected, the
-        mouse pointer turns into a small hand as soon as it gets close to a
-        guide. Then the guide is activated and it turns red, and you can
-        move the guide or delete it by moving it back into the ruler. If
-        <emphasis>Transform Selection</emphasis> mode is selected, you can
-        position a guide, but you cannot move it after that.
-      </para>
-      <para lang="en">
-        To make it easier for you to position image elements, you can
-        <quote>magnetize</quote> the guides with the
-        <link linkend="gimp-view-snap-to-guides">Snap to Guides</link>
-        command. You can remove the guides with the
-        <link linkend="gimp-image-guides-remove">Remove all guides</link>
-        command. You can enable and disable displaying the guides without
-        removing them by using the
-        <link linkend="gimp-view-show-guides">Show Guides</link> command.
-      </para>
-      <para lang="en">
-        For more information about guides, see the
-        <link linkend="gimp-concepts-image-grid">Grids and Guides</link>
+        For more information see
+        <xref linkend="gimp-concepts-image-grid"/>
         section.
       </para>
       <para lang="ja">
@@ -1565,45 +1525,9 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
 レイヤーや選択範囲を配置するときに威力を発揮します。 画像の印刷物には
 この線は現れません。
       </para>
-      <para lang="ja"><!--to be removed-->
-見当線を置くには、 画像ウィンドウの縦もしくは横の定規をクリックして
-画像内に曳き込みます。 現れた見当線は青色の破線で表示され、 曳いていく
-マウスポインタと連動しますのでどこかでマウスボタンを放してください。
-見当線を作成すると直ちに
-<xref linkend="gimp-tool-move"/> ツールが起用されます。
-      </para>
-      <para lang="ja"><!--to be removed-->
-<link linkend="gimp-image-guides-add">新規ガイド(G)...</link> コマンド
-を使っても見当線が置けます。 しかも画像上に精密に見当線を置くための 
-<link linkend="gimp-image-guides-percent">
-新規ガイド (パーセントで)(P)...</link> や、
-<link linkend="gimp-image-guides-selection">
-選択範囲から新規ガイド(S)</link> コマンドもあります。
-      </para>
       <para lang="ja">
-見当線の扱い方は
-<xref linkend="gimp-tool-move"/> ツールの <guilabel>移動対象
-</guilabel> モードに依存します。 <quote>レイヤー</quote>を移動対象に
-選んだときは、 マウスポインタを見当線にかざすとその姿が小さな掌の形に
-なります。 さらに見当線が活性化されて赤くなりますので、 クリックして
-曳くと移動でき、 定規の上まで曳けば消去できます。 <quote>選択範囲
-</quote>を移動対象に選んでいる場合は、 新たに見当線を作成できても
-いったん置くと移動ができません。
-      </para>
-      <para lang="ja">
-画像上の部品を一直線に配置するのなら、 
-<link linkend="gimp-view-snap-to-guides">ガイドにスナップ(A)</link> 
-を有効にしておくとそれらの部品が見当線に吸い付くようになるので
-便利です。 全ての見当線を消去するには
-<link linkend="gimp-image-guides-remove">すべてのガイドを削除(R)
-</link> をご利用ください。 見当線を消去せずに見えなくするには 
-<link linkend="gimp-view-show-guides">ガイドを表示(G)</link> コマンド
-をお使いください。
-      </para>
-      <para lang="ja">
-見当線についてのさらなる情報は、
-<link linkend="gimp-concepts-image-grid">グリッドとガイド</link> を
-参考にしてください。
+さらなる情報は 
+<xref linkend="gimp-concepts-image-guides"/> をご覧ください。
       </para>
     </glossdef>
   </glossentry>
@@ -1991,7 +1915,9 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
         pixels in the transformed image. <acronym>GIMP</acronym> offers
         three interpolation methods, which differ in quality and speed. In
         general, the better the quality, the more time the interpolation
-        takes. The methods are:
+        takes (see
+        <link linkend="gimp-tool-interpolation-methods">Interpolation
+        methods</link>).
       </para>
       <para lang="ja">
 補間とは中間値の算出を意味します。 デジタル画像を拡大 (<quote>デジタル
@@ -1999,70 +1925,20 @@ RGB</acronym>モードにするよりもファイル容量が小さくなりま�
 すると、 変換を受けた画像の画素の色を算出するために補間処理が
 行われます。 <acronym>GIMP</acronym>は処理速度と品質に違いがある3つの
 補間方法からいずれかを選べるようになっています。 概して言えば品質が
-高いものほど補間処理に時間がかかります。 選べる方法はつぎのとおりです。
+高いものほど補間処理に時間がかかります。 
+<link linkend="gimp-tool-interpolation-methods">補間方法</link> も
+ご覧ください。
       </para>
-      <!--TODO: these details should better go to
-          src/toolbox/tool-transform.xml (transform tools - common features-->
-      <itemizedlist>
-        <listitem>
-          <para lang="en">
-            <emphasis>None</emphasis> (sometimes called <quote>Nearest
-            Neighbor</quote>): The color of each pixel is copied from its
-            closest neighboring pixel in the original image. This often
-            results in aliasing (the <quote>stair-step</quote> effect) and a
-            coarse image, but it is the fastest method.
-          </para>
-          <para lang="ja">
-<quote>最近傍補間</quote>とも言います。 各画素の色は元画像で最も
-近くにある画素の色が使われます。 この方法はしばしばエイリアス化 
-(境界が<quote>ギザギザ</quote>になること) して画像が粗悪になり
-ますが、 処理時間は最短です。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en"><emphasis>Linear</emphasis> (sometimes called
-            <quote>Bilinear</quote>): The color of each pixel is computed as
-            the average color of the four closest pixels in the original
-            image. This gives a satisfactory result for most images and is a
-            good compromise between speed and quality.
-          </para>
-          <para lang="ja">
-<quote>双線形補間</quote>とも言います。 各画素の色は元画像において
-最近傍の4つの画素の色を平均したものです。 ほとんどの画像でこの方法
-は満足のいく仕上がりになりますから、 処理速度と品質の両面に折り
-合いをつける良い方法です。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en"><emphasis>Cubic</emphasis> (sometimes called
-            <quote>Bicubic</quote>): The color of each pixel is computed as
-            the average color of the eight closest pixels in the original
-            image. This usually gives the best result, but it naturally takes
-            more time.
-          </para>
-          <para lang="ja">
-<quote>双三次補間</quote>とも言います。 各画素の色は元画像において
-最近傍の8つの画素の色を平均したものです。 大抵の画像で最高の仕上
-がりが得られますが、 当然もっと処理に時間がかかります。
-          </para>
-        </listitem>
-      </itemizedlist>
-      <!-- please add Sinc (Lanczos3) -->
-      <para lang="en"><acronym>GIMP</acronym> uses interpolation when you
+      <para lang="en">
+        <acronym>GIMP</acronym> uses interpolation when you
         <link linkend="gimp-image-scale">Scale</link> an image,
         <link linkend="gimp-layer-scale">Scale</link> a layer, and when you
-        <link linkend="gimp-tools-transform">Transform</link> an image. You
-        can also set the default interpolation method in the
-        <link linkend="gimp-prefs-tool-options">Tools Options Preferences
-        </link> dialog.
+        <link linkend="gimp-tools-transform">Transform</link> an image.
       </para>
       <para lang="ja">
 <acronym>GIMP</acronym>が補間処理を実行するのは、 レイヤーや画像を
 <link linkend="gimp-image-scale">拡大・縮小</link> するときと、 画像を
 <link linkend="gimp-tools-transform">変換</link> するときです。 
-補間方法はそのつど指定できますが、 既定値を変更するには 
-<link linkend="gimp-prefs-tool-options">環境設定</link> ダイアログの
-<quote>ツールオプション</quote>のページで指定してください。
       </para>
     </glossdef>
   </glossentry>

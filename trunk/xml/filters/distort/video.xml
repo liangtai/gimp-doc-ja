@@ -1,59 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-08-12 Added Spanish translation by AntI
   2007-04-25 KoSt: added 'no'
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   050910 de added by axel.wernicke
 -->
+<!--2009-07-22-->
 <sect2 id="plug-in-video">
-  <title>
-    Video
-  </title>
-  <indexterm>
+  <title lang="en">Video</title>
+  <title lang="ja">ビデオ(D)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Distorts</secondary>
     <tertiary>Video</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Video</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ファイル</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary>ビデオ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ビデオ</primary>
   </indexterm>
 
   <sect3>
-    <title>
-      Overview
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-          Applying example for the <quote>Video</quote> filter
+      <title lang="en">
+        Applying example for the <quote>Video</quote> filter
       </title>
+      <title lang="ja"><quote>ビデオ</quote>フィルタの適用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/distort-taj-video.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-video.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Video</quote> applied</para>
+          <para lang="en">Filter <quote>Video</quote> applied</para>
+          <para lang="ja"><quote>ビデオ</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Apply low dot-pitch RGB simulation to the specified drawable.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ビデオ(<accel>D</accel>)...</guimenuitem> フィルタは指定
+      された描画対象を低率ドット<acronym>RGB</acronym>のような画像に替えます。
     </para>
   </sect3>
 
   <sect3>
-    <title>
-      Activating the filter
-    </title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter through
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -61,53 +78,79 @@
         <guimenuitem>Video</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>変形(<accel>D</accel>)</guisubmenu>
+        <guimenuitem>ビデオ(<accel>D</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>
-      Options
-    </title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <quote>Video</quote> filter options
-      </title>
+      <title lang="en"><quote>Video</quote> filter options</title>
+      <title lang="ja"><quote>ビデオ</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/filters-distort-video.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-distort-video.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">参考画像</term>
         <listitem>
-          <para>
+          <para lang="en">
             This preview is unusual: Changes appear always on the same image
             which is not yours.
           </para>
+          <para lang="ja">
+            このプレビュー画面は独特です。 オプションが反映するのは実際の画像
+            ではなくいつも狐の画像になっています。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>RGB Pattern Type</term>
+        <term lang="en">RGB Pattern Type</term>
+        <term lang="ja">ビデオパターン</term>
         <listitem>
-          <para>
+          <para lang="en">
             It would be rather difficult to describe what each pattern
             will render. It's best to see what they render in the Preview.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Additive</term>
-        <listitem>
-          <para>
-            Set whether the function adds the result to the original image.
+          <para lang="ja">
+            ここで個々のパターンの描画方法を説明するのはいささか面倒です。
+            ともかくサンプル画像を見て判断してください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Rotated</term>
+        <term lang="en">Additive</term>
+        <term lang="ja">付加的(A)</term>
         <listitem>
-          <para>Rotate the result by 90°.</para>
+          <para lang="en">
+            Set whether the function adds the result to the original image.
+          </para>
+          <para lang="ja">
+            このオプションを無効にすると生成された変換後の画像で元の画像が
+            置き換わります。 有効にすると変換後の画像が元画像に加算されます。 
+            これは元画像の上に変換後の画像を加算モードのレイヤーとして重ね
+            合わせ統合した結果とほぼ同じになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Rotated</term>
+        <term lang="ja">回転(R)</term>
+        <listitem>
+          <para lang="en">Rotate the result by 90°.</para>
+          <para lang="ja">パターンを90度回転して適用します。</para>
         </listitem>
       </varlistentry>
     </variablelist>
