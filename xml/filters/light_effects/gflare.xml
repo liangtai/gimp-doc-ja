@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-12-15 j.h: no change for v2.6
   2007-01-03 MikaS: updated 'fr'
@@ -12,51 +13,78 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-03 de added by axel.wernicke
 -->
+<!--2009-07-24-->
 <sect2 id="plug-in-gflare">
-  <title>Gradient Flare</title>
-  <indexterm>
+  <title lang="en">Gradient Flare</title>
+  <title lang="ja">グラデーションフレア(G)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Light and Shadow</secondary>
     <tertiary>Gradient Flare</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Gradient Flare</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary>グラデーションフレア</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>グラデーションフレア</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the Gradient Flare filter</title>
+      <title lang="en">Example for the Gradient Flare filter</title>
+      <title lang="ja">グラデーションフレアフィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/light-taj-gflare.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/light-taj-gflare.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Gradient Flare</quote> applied</para>
+          <para lang="en">Filter <quote>Gradient Flare</quote> applied</para>
+          <para lang="ja">
+            <quote>グラデーションフレア</quote>フィルタ適用後
+          </para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Gradient Flare effect reminds the effect you get when you take a
       photograph of a blinding light source, with a halo and radiations around
       the source.  The Gradient Flare image has three components:
       <emphasis>Glow</emphasis> which is the big central fireball,
       <emphasis>Rays</emphasis> and <emphasis>Second Flares</emphasis>
     </para>
+    <para lang="ja">
+      <guimenuitem>グラデーションフレア(<accel>G</accel>)...</guimenuitem> 
+      フィルタはちょうど被写体に眩しい光源が入っていてその周りに後光や放射光が
+      ついているように見せる効果があります。 グラデーションフレアのかかった画像
+      には中央で火の玉になる <emphasis>白熱光</emphasis> に、 <emphasis>光線
+      </emphasis> や <emphasis>二次閃光</emphasis> が加わった3つの成分が描かれ
+      ます。
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activating the filter</phrase>
-    </title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -64,23 +92,36 @@
         <guimenuitem>Gradient Flare</guimenuitem>
       </menuchoice>
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>照明と投影(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>グラデーションフレア(<accel>G</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
-    <para>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <para lang="en">
       The Settings tab allows you to set manually the parameters while the
       Selector tab let you choose presets in a list.
     </para>
+    <para lang="ja">
+    </para>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
         <listitem>
-          <para>
+          <para lang="en">
             When <guilabel>Auto Update Preview</guilabel> is checked,
             parameter setting results are interactively displayed in preview
             without modifying the image until you click on
             <guilabel>OK</guilabel> button.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
@@ -88,118 +129,155 @@
   </sect3>
 
   <sect3>
-    <title>Settings</title>
+    <title lang="en">Settings</title>
     <figure>
-      <title>
+      <title lang="en">
         <quote>Gradient Flare</quote> filter options (Settings)
+      </title>
+      <title lang="en">
+        <quote>グラデーションフレア</quote> filter options (Settings)
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/gflare-options-1.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/gflare-options-1.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Center</term>
+        <term lang="en">Center</term>
         <listitem>
-          <para>
+          <para lang="en">
             You can set there X and Y (pixels) coordinates of glint. The
             coordinate origin is at the upper left corner
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Parameters</term>
+        <term lang="en">Parameters</term>
         <listitem>
           <itemizedlist>
             <listitem>
-              <para><guilabel>Radius</guilabel>: The radius of the effect. Don't
+              <para lang="en">
+                <guilabel>Radius</guilabel>: The radius of the effect. Don't
                 be afraid to use the box with the digits instead the slider
                 which is a bit limited.
               </para>
-            </listitem>
-            <listitem>
-              <para><guilabel>Rotation</guilabel>: Turn the effect.
+              <para lang="ja">
               </para>
             </listitem>
             <listitem>
-              <para><guilabel>Hue Rotation</guilabel>: Change the tint (color)
+              <para lang="en">
+                <guilabel>Rotation</guilabel>: Turn the effect.
+              </para>
+              <para lang="ja">
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Hue Rotation</guilabel>: Change the tint (color)
                 of the effect.
               </para>
-            </listitem>
-            <listitem>
-              <para><guilabel>Vector Angle</guilabel>: Turn the Second flares.
+              <para lang="ja">
               </para>
             </listitem>
             <listitem>
-              <para><guilabel>Vector length</guilabel>: Vary the distance
+              <para lang="en">
+                <guilabel>Vector Angle</guilabel>: Turn the Second flares.
+              </para>
+              <para lang="ja">
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Vector length</guilabel>: Vary the distance
                 applied for the Second flares.
+              </para>
+              <para lang="ja">
               </para>
             </listitem>
           </itemizedlist>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Adaptive Supersampling</term>
+        <term lang="en">Adaptive Supersampling</term>
         <listitem>
-          <para>
+          <para lang="en">
             Settings of the anti-aliasing following parameters like Depth
             and Threshold.
           </para>
+          <para lang="ja">
+          </para>
         </listitem>
       </varlistentry>
     </variablelist>
   </sect3>
 
   <sect3>
-    <title>Selector</title>
+    <title lang="en">Selector</title>
     <figure>
-      <title>
+      <title lang="en">
         <quote>Gradient Flare</quote> filter options (Selector)
+      </title>
+      <title lang="ja">
+        <quote>グラデーションフレア</quote> filter options (Selector)
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/gflare-options-2.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/gflare-options-2.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       The Selector tab allows you to select a Gradient Flare pattern, to
       change it and save it.
     </para>
+    <para lang="ja">
+    </para>
     <variablelist>
       <varlistentry>
-        <term>New</term>
+        <term lang="en">New</term>
         <listitem>
-          <para>
+          <para lang="en">
             When you click on this button, you create a new Gradient Flare
             pattern.  Give it a name of your choice.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Edit</term>
-        <listitem>
-          <para>
-            This button brings up the Gradient Flare Editor (see below).
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Copy</term>
+        <term lang="en">Edit</term>
         <listitem>
-          <para>
+          <para lang="en">
+            This button brings up the Gradient Flare Editor (see below).
+          </para>
+          <para lang="ja">
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Copy</term>
+        <listitem>
+          <para lang="en">
             This button allows you to duplicate selected Gradient Flare
             pattern.  You can edit the copy without altering the original.
           </para>
+          <para lang="ja">
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Delete</term>
+        <term lang="en">Delete</term>
         <listitem>
-          <para>
+          <para lang="en">
             This button deletes the selected Gradient Flare pattern.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
@@ -207,65 +285,82 @@
   </sect3>
 
   <sect3>
-    <title>Gradient Flare Editor</title>
+    <title lang="en">Gradient Flare Editor</title>
     <variablelist>
       <varlistentry>
-        <term>General</term>
+        <term lang="en">General</term>
         <listitem>
           <figure>
-            <title>
-              <phrase><quote>Gradient Flare Editor</quote> options (General)
-              </phrase>
+            <title lang="en">
+              <quote>Gradient Flare Editor</quote> options (General)
+            </title>
+            <title lang="ja">
+              <quote>グラデーションフレアエディタ</quote> options (General)
             </title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/gflare-editor-1.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/gflare-editor-1.png"/>
               </imageobject>
             </mediaobject>
           </figure>
           <variablelist>
             <varlistentry>
-              <term>Glow Paint Options</term>
+              <term lang="en">Glow Paint Options</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
-                    <para><guilabel>Opacity</guilabel>: Slider and input box
+                    <para lang="en">
+                      <guilabel>Opacity</guilabel>: Slider and input box
                       allows you to reduce glow opacity (0-100).
+                    </para>
+                    <para lang="ja">
                     </para>
                   </listitem>
                   <listitem>
-                    <para><guilabel>Paint Mode</guilabel>: You can choose
+                    <para lang="en">
+                      <guilabel>Paint Mode</guilabel>: You can choose
                       between four modes:
+                    </para>
+                    <para lang="ja">
                     </para>
                     <itemizedlist>
                       <listitem>
-                        <para>
+                        <para lang="en">
                           <emphasis>Normal</emphasis>: In this mode, the
                           glow covers the image without taking into account
                           what is beneath.
                         </para>
+                        <para lang="ja">
+                        </para>
                       </listitem>
                       <listitem>
-                        <para>
+                        <para lang="en">
                           <emphasis>Addition</emphasis>: Pixel RGB values of
                           glow are added to RGB values of the corresponding
                           pixels in the image. Colors get lighter and white
                           areas may appear.
                         </para>
+                        <para lang="ja">
+                        </para>
                       </listitem>
                       <listitem>
-                        <para>
+                        <para lang="en">
                           <emphasis>Overlay</emphasis>: Light/Dark areas of
                           glow enhance corresponding light/dark areas of
                           image.
                         </para>
+                        <para lang="ja">
+                        </para>
                       </listitem>
                       <listitem>
-                        <para>
+                        <para lang="en">
                           <emphasis>Screen</emphasis>: Dark areas of image
                           are enlightened by corresponding light areas of
                           glow. Imagine two slides projected onto the same
                           screen.
+                        </para>
+                        <para lang="ja">
                         </para>
                       </listitem>
                     </itemizedlist>
@@ -274,18 +369,22 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Rays Paint Options</term>
+              <term lang="en">Rays Paint Options</term>
               <listitem>
-                <para>
+                <para lang="en">
                   Options are the same as for "Glow".
+                </para>
+                <para lang="ja">
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Second Flare Paint Options</term>
+              <term lang="en">Second Flare Paint Options</term>
               <listitem>
-                <para>
+                <para lang="en">
                   Options are the same as for "Glow".
+                </para>
+                <para lang="ja">
                 </para>
               </listitem>
             </varlistentry>
@@ -293,35 +392,44 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Glow</term>
+        <term lang="en">Glow</term>
         <listitem>
           <figure>
-            <title>
+            <title lang="en">
               <quote>Gradient Flare Editor</quote> options (Glow)
+            </title>
+            <title lang="ja">
+              <quote>グラデーションフレアエディタ</quote> options (Glow)
             </title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/gflare-editor-2.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/gflare-editor-2.png"/>
               </imageobject>
             </mediaobject>
           </figure>
           <variablelist>
             <varlistentry>
-              <term>Gradients</term>
+              <term lang="en">Gradients</term>
               <listitem>
-                <para>
+                <para lang="en">
                   By clicking on the rectangular buttons, you can develop a
                   long list of gradients. <quote>%</quote> gradients belong
                   to the Editor.
                 </para>
+                <para lang="ja">
+                </para>
                 <itemizedlist>
                   <listitem>
-                    <para><guilabel>Radial gradient</guilabel>: The selected
+                    <para lang="en">
+                      <guilabel>Radial gradient</guilabel>: The selected
                       gradient is drawn radially, from center to edge.
+                    </para>
+                    <para lang="ja">
                     </para>
                   </listitem>
                   <listitem>
-                    <para>
+                    <para lang="en">
                       <guilabel>Angular gradient</guilabel>: The selected
                       gradient develops around center, counter-clockwise,
                       starting from three o'clock if the
@@ -331,35 +439,49 @@
                       and colors are mixed according to CMYK color system
                       (that of your printer).
                     </para>
+                    <para lang="ja">
+                    </para>
                   </listitem>
                   <listitem>
-                    <para><guilabel>Angular size gradient</guilabel>: This is a
+                    <para lang="en">
+                      <guilabel>Angular size gradient</guilabel>: This is a
                       gradient of radius size which develops angularly. Radius
                       is controlled according to gradient Luminosity: if
                       luminosity is zero (black), the radius is 0%. If
                       luminosity is 100% (white), the radius is also 100%.
                     </para>
+                    <para lang="ja">
+                    </para>
                   </listitem>
                 </itemizedlist>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Parameters</term>
+              <term lang="en">Parameters</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
-                    <para><guilabel>Size (%)</guilabel>: Sets size (%) of glow
+                    <para lang="en">
+                      <guilabel>Size (%)</guilabel>: Sets size (%) of glow
                       (0-200).
                     </para>
-                  </listitem>
-                  <listitem>
-                    <para><guilabel>Rotation</guilabel>: Sets the origin of the
-                      angular gradient (-180 +180).
+                    <para lang="ja">
                     </para>
                   </listitem>
                   <listitem>
-                    <para><guilabel>Hue rotation</guilabel>: Sets glow color,
+                    <para lang="en">
+                      <guilabel>Rotation</guilabel>: Sets the origin of the
+                      angular gradient (-180 +180).
+                    </para>
+                    <para lang="ja">
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Hue rotation</guilabel>: Sets glow color,
                       according to the HSV color circle (-180 +180).
+                    </para>
+                    <para lang="ja">
                     </para>
                   </listitem>
                 </itemizedlist>
@@ -369,43 +491,55 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Rays</term>
+        <term lang="en">Rays</term>
         <listitem>
           <figure>
-            <title>
+            <title lang="en">
               <quote>Gradient Flare Editor</quote> options (Rays)
+            </title>
+            <title lang="ja">
+              <quote>グラデーションフレアエディタ</quote> options (Rays)
             </title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/gflare-editor-3.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/gflare-editor-3.png"/>
               </imageobject>
             </mediaobject>
           </figure>
           <variablelist>
             <varlistentry>
-              <term>Gradients</term>
+              <term lang="en">Gradients</term>
               <listitem>
-                <para>
+                <para lang="en">
                   The options are the same as for Glow.
+                </para>
+                <para lang="ja">
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Parameters</term>
+              <term lang="en">Parameters</term>
               <listitem>
-                <para>
+                <para lang="en">
                   The first three options are the same as in Glow. Two are
                   new:
                 </para>
                 <itemizedlist>
                   <listitem>
-                    <para><guilabel># of spikes</guilabel>: This option determines
+                    <para lang="en">
+                      <guilabel># of spikes</guilabel>: This option determines
                       the number of spikes (1-300) but also their texture.
+                    </para>
+                    <para lang="ja">
                     </para>
                   </listitem>
                   <listitem>
-                    <para><guilabel>Spike Thickness</guilabel>: When spikes get
+                    <para lang="en">
+                      <guilabel>Spike Thickness</guilabel>: When spikes get
                       wider (1-100), they look like flower petals
+                    </para>
+                    <para lang="ja">
                     </para>
                   </listitem>
                 </itemizedlist>
@@ -415,62 +549,78 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Second Flares</term>
+        <term lang="en">Second Flares</term>
         <listitem>
           <figure>
-            <title>
+            <title lang="en">
               <quote>Gradient Flare Editor</quote> options (Second Flares)
+            </title>
+            <title lang="ja">
+              <quote>グラデーションフレアエディタ</quote> options (Second Flares)
             </title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/gflare-editor-4.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/gflare-editor-4.png"/>
               </imageobject>
             </mediaobject>
           </figure>
           <variablelist>
             <varlistentry>
-              <term>Gradients</term>
+              <term lang="en">Gradients</term>
               <listitem>
-                <para>
+                <para lang="en">
                   The options are the same as for Glow.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Parameters</term>
-              <listitem>
-                <para>
-                  Options are the same as in Glow.
+                <para lang="ja">
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Shape of Second Flares</term>
+              <term lang="en">Parameters</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  Options are the same as in Glow.
+                </para>
+                <para lang="ja">
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Shape of Second Flares</term>
+              <listitem>
+                <para lang="en">
                   Second flares, these satellites of the main flare, may have
                   two shapes: <emphasis>Circle</emphasis> and
                   <emphasis>Polygon</emphasis>. You can set the
                   <emphasis>Number</emphasis> polygon sides. The option
                   accepts 1 side (!), not 2.
                 </para>
+                <para lang="ja">
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Random seed and Randomize</term>
+              <term lang="en">Random seed and Randomize</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
-                    <para><guilabel>Random Seed</guilabel>: The random generator
+                    <para lang="en">
+                      <guilabel>Random Seed</guilabel>: The random generator
                       will use this value as a seed to generate random
                       numbers. You can use the same value to repeat the same
                       <quote>random</quote> sequence several times.
                     </para>
+                    <para lang="ja">
+                    </para>
                   </listitem>
                   <listitem>
-                    <para><guilabel>Randomize</guilabel>: When you click on this
+                    <para lang="en">
+                      <guilabel>Randomize</guilabel>: When you click on this
                       button, you produce a random seed that will be used by
                       the random generator. It is each time different.
+                    </para>
+                    <para lang="ja">
                     </para>
                   </listitem>
                 </itemizedlist>
