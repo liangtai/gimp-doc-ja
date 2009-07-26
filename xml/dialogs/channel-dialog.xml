@@ -6,7 +6,7 @@
   2007-08-29 j.h : link to glossary Alpha Channel added en;fr
   2006-03-06 lexa: reviewed and made docbook compliant
 -->
-<!--2009-07-09-->
+<!--2009-07-27-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-channel-dialog">
   <title lang="en">Channels Dialog</title>
   <title lang="ja">チャンネルダイアログ</title>
@@ -696,8 +696,10 @@
               既存の選択範囲との合成が可能になります。
             </para>
             <itemizedlist>
-              <listitem id="gimp-channel-selection-add">
-                <para lang="en"><keycap>Shift</keycap>:
+              <listitem id="gimp-channel-selection-add"
+                xreflabel="Add to Selection">
+                <para lang="en">
+                  <keycap>Shift</keycap>:
                   the selection derived from a channel is added to the
                   previous active selection. The final selection is merged
                   from both.
@@ -707,8 +709,10 @@
                   されます。 できあがった選択範囲は両者の合成です。
                 </para>
               </listitem>
-              <listitem id="gimp-channel-selection-subtract">
-                <para lang="en"><keycap>Ctrl</keycap>:
+              <listitem id="gimp-channel-selection-subtract"
+                xreflabel="Subtract from Selection">
+                <para lang="en">
+                  <keycap>Ctrl</keycap>:
                   the final selection is the subtraction of selection derived
                   from a channel from the previously active one.
                 </para>
@@ -717,7 +721,8 @@
                   選択範囲が除外された選択範囲ができます。
                 </para>
               </listitem>
-              <listitem id="gimp-channel-selection-intersect">
+              <listitem id="gimp-channel-selection-intersect"
+                xreflabel="Intersect with Selection">
                 <para lang="en">
                   <keycombo>
                     <keycap>Shift</keycap><keycap>Ctrl</keycap>

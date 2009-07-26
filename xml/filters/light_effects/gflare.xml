@@ -13,7 +13,7 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-03 de added by axel.wernicke
 -->
-<!--2009-07-24-->
+<!--2009-07-25-->
 <sect2 id="plug-in-gflare">
   <title lang="en">Gradient Flare</title>
   <title lang="ja">グラデーションフレア(G)...</title>
@@ -75,9 +75,9 @@
       <guimenuitem>グラデーションフレア(<accel>G</accel>)...</guimenuitem> 
       フィルタはちょうど被写体に眩しい光源が入っていてその周りに後光や放射光が
       ついているように見せる効果があります。 グラデーションフレアのかかった画像
-      には中央で火の玉になる <emphasis>白熱光</emphasis> に、 <emphasis>光線
-      </emphasis> や <emphasis>二次閃光</emphasis> が加わった3つの成分が描かれ
-      ます。
+      には中央で火の玉になる <emphasis>輝き</emphasis> に、 <emphasis>光線
+      </emphasis> や <emphasis>二次フレア</emphasis> が加わった3つの成分が
+      描かれます。
     </para>
   </sect3>
 
@@ -109,11 +109,15 @@
       The Settings tab allows you to set manually the parameters while the
       Selector tab let you choose presets in a list.
     </para>
-    <para lang="ja">
+    <para thlang="ja">
+      パラメータの数々を手動で設定できる<quote>設定(S)</quote>タブと、 
+      プリセットリストから好みの設定構成を選べる<quote>選択(E)</quote>タブが
+      あります。
     </para>
     <variablelist>
       <varlistentry>
         <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
           <para lang="en">
             When <guilabel>Auto Update Preview</guilabel> is checked,
@@ -122,6 +126,10 @@
             <guilabel>OK</guilabel> button.
           </para>
           <para lang="ja">
+            <guilabel>プレビュー自動更新(<accel>U</accel>)</guilabel> 
+            オプションを有効にしておれば画像に実際にフィルタをかける前から
+            ダイアログ上で調節したとおりに即座に効果のようすが
+            見て分かるようになっています。
           </para>
         </listitem>
       </varlistentry>
@@ -130,12 +138,13 @@
 
   <sect3>
     <title lang="en">Settings</title>
+    <title lang="ja">設定(S)</title>
     <figure>
       <title lang="en">
         <quote>Gradient Flare</quote> filter options (Settings)
       </title>
       <title lang="en">
-        <quote>グラデーションフレア</quote> filter options (Settings)
+        <quote>グラデーションフレア</quote>フィルタのオプション (設定)
       </title>
       <mediaobject>
         <imageobject>
@@ -147,17 +156,23 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Center</term>
+        <term lang="ja">中央</term>
         <listitem>
           <para lang="en">
             You can set there X and Y (pixels) coordinates of glint. The
             coordinate origin is at the upper left corner
           </para>
           <para lang="ja">
+            閃光の中心座標の <guilabel><accel>X</accel></guilabel> と 
+            <guilabel><accel>Y</accel></guilabel> の値を定めます。 座標の原点は
+            レイヤーの左上隅です。 値の単位は初期設定ではピクセルですが、 
+            他の単位も引き出しメニューより選べます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Parameters</term>
+        <term lang="ja">パラメータ</term>
         <listitem>
           <itemizedlist>
             <listitem>
@@ -167,6 +182,8 @@
                 which is a bit limited.
               </para>
               <para lang="ja">
+                <guilabel>半径(<accel>R</accel>)</guilabel>: 輝き部分の半径
+                です。
               </para>
             </listitem>
             <listitem>
@@ -174,6 +191,8 @@
                 <guilabel>Rotation</guilabel>: Turn the effect.
               </para>
               <para lang="ja">
+                <guilabel>回転(<accel>T</accel>)</guilabel>: 輝き部分の
+                向きを回転します。 設定によっては二次フレアの分布も変化します。
               </para>
             </listitem>
             <listitem>
@@ -182,6 +201,8 @@
                 of the effect.
               </para>
               <para lang="ja">
+                <guilabel>色相回転(<accel>H</accel>)</guilabel>: 輝き部分の
+                色合いを変更できます。
               </para>
             </listitem>
             <listitem>
@@ -189,6 +210,8 @@
                 <guilabel>Vector Angle</guilabel>: Turn the Second flares.
               </para>
               <para lang="ja">
+                <guilabel>ベクトルの角度(<accel>A</accel>)</guilabel>: 二次
+                フレアの向きを回転します。
               </para>
             </listitem>
             <listitem>
@@ -197,6 +220,8 @@
                 applied for the Second flares.
               </para>
               <para lang="ja">
+                <guilabel>ベクトルの長さ(<accel>L</accel>)</guilabel>: 二次
+                フレアの広がりを調節します。
               </para>
             </listitem>
           </itemizedlist>
@@ -204,12 +229,16 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Adaptive Supersampling</term>
+        <term lang="ja">適応型スーパーサンプリング(D)</term>
         <listitem>
           <para lang="en">
             Settings of the anti-aliasing following parameters like Depth
             and Threshold.
           </para>
           <para lang="ja">
+            アンチエイリアス化のために <guilabel>最大深度(<accel>M</accel>)
+            </guilabel> と <guilabel>しきい値(<accel>T</accel>)</guilabel> を
+            設定します。
           </para>
         </listitem>
       </varlistentry>
@@ -218,12 +247,13 @@
 
   <sect3>
     <title lang="en">Selector</title>
+    <title lang="ja">選択(E)</title>
     <figure>
       <title lang="en">
         <quote>Gradient Flare</quote> filter options (Selector)
       </title>
       <title lang="ja">
-        <quote>グラデーションフレア</quote> filter options (Selector)
+        <quote>グラデーションフレア</quote>フィルタのオプション (選択)
       </title>
       <mediaobject>
         <imageobject>
@@ -237,42 +267,55 @@
       change it and save it.
     </para>
     <para lang="ja">
+      選択タブではグラデーションフレアの仕込み済みパターンが選べるとともに、
+      変更や保存も可能です。
     </para>
     <variablelist>
       <varlistentry>
         <term lang="en">New</term>
+        <term lang="ja">新規(N)</term>
         <listitem>
           <para lang="en">
             When you click on this button, you create a new Gradient Flare
             pattern.  Give it a name of your choice.
           </para>
           <para lang="ja">
+            このボタンをクリックすると新しいグラデーションフレアのパターンが
+            生成できます。 お好みの名前をつけてください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Edit</term>
+        <term lang="ja">編集(E)</term>
         <listitem>
           <para lang="en">
             This button brings up the Gradient Flare Editor (see below).
           </para>
           <para lang="ja">
+            このボタンはグラデーションフレアエディタダイアログ (後述) を
+            開きます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Copy</term>
+        <term lang="ja">コピー(C)</term>
         <listitem>
           <para lang="en">
             This button allows you to duplicate selected Gradient Flare
             pattern.  You can edit the copy without altering the original.
           </para>
           <para lang="ja">
+            選択したグラデーションフレアのパターンはこのボタンをクリックすると
+            複製されます。 こうすることで元のパターンには手をつけず複製を編集
+            できます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Delete</term>
+        <term lang="ja">削除(D)</term>
         <listitem>
           <para lang="en">
             This button deletes the selected Gradient Flare pattern.
@@ -286,16 +329,18 @@
 
   <sect3>
     <title lang="en">Gradient Flare Editor</title>
+    <title lang="ja">グラデーションフレアエディタ</title>
     <variablelist>
       <varlistentry>
         <term lang="en">General</term>
+        <term lang="ja">一般(G)</term>
         <listitem>
           <figure>
             <title lang="en">
               <quote>Gradient Flare Editor</quote> options (General)
             </title>
             <title lang="ja">
-              <quote>グラデーションフレアエディタ</quote> options (General)
+              <quote>グラデーションフレアエディタ</quote>オプション (一般)
             </title>
             <mediaobject>
               <imageobject>
@@ -307,6 +352,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Glow Paint Options</term>
+              <term lang="ja">輝き描画オプション</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
@@ -315,6 +361,9 @@
                       allows you to reduce glow opacity (0-100).
                     </para>
                     <para lang="ja">
+                      <guilabel>不透明度</guilabel>: スライダや数値記入欄の値を
+                      下げると不透明度を減らせ (透明度を増し) ます。 値は 0.0 
+                      から 100.0 の範囲で設定します。
                     </para>
                   </listitem>
                   <listitem>
@@ -323,6 +372,8 @@
                       between four modes:
                     </para>
                     <para lang="ja">
+                      <guilabel>描画モード</guilabel>: つぎの4つのモードから
+                      選べます。
                     </para>
                     <itemizedlist>
                       <listitem>
@@ -332,6 +383,9 @@
                           what is beneath.
                         </para>
                         <para lang="ja">
+                          <guimenuitem>標準</guimenuitem>: このモードは輝き部分
+                          をそのまま画像上に描くため、 背面側の画像に色が左右
+                          されません。
                         </para>
                       </listitem>
                       <listitem>
@@ -342,6 +396,10 @@
                           areas may appear.
                         </para>
                         <para lang="ja">
+                          <guimenuitem>加算</guimenuitem>: このモードでは輝き
+                          部分の<acronym>RGB</acronym>値と対応する下側の画像の
+                          画素の値が加算されます。 したがって色は明るくなり
+                          白くなった部分が現れます。
                         </para>
                       </listitem>
                       <listitem>
@@ -351,6 +409,9 @@
                           image.
                         </para>
                         <para lang="ja">
+                          <guimenuitem>オーバーレイ</guimenuitem>: 輝きの
+                          明るい部分と元画像の明るい部分、 輝きの暗い部分と
+                          元画像の暗い部分が重なると相互に強め合います。
                         </para>
                       </listitem>
                       <listitem>
@@ -361,6 +422,10 @@
                           screen.
                         </para>
                         <para lang="ja">
+                          <guimenuitem>スクリーン</guimenuitem>: 元画像の暗い
+                          部分に輝きの明るい部分が重なると明るくなります。 2つ
+                          の投影機が同じ1枚のスクリーンに画像を映している
+                          ところをご想像ください。
                         </para>
                       </listitem>
                     </itemizedlist>
@@ -370,22 +435,18 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Rays Paint Options</term>
+              <term lang="ja">光線描画オプション</term>
               <listitem>
-                <para lang="en">
-                  Options are the same as for "Glow".
-                </para>
-                <para lang="ja">
-                </para>
+                <para lang="en">Options are the same as for "Glow".</para>
+                <para lang="ja">輝き描画と同じオプションです。</para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Second Flare Paint Options</term>
+              <term lang="ja">二次フレア描画オプション</term>
               <listitem>
-                <para lang="en">
-                  Options are the same as for "Glow".
-                </para>
-                <para lang="ja">
-                </para>
+                <para lang="en">Options are the same as for "Glow".</para>
+                <para lang="ja">輝き描画と同じオプションです。</para>
               </listitem>
             </varlistentry>
           </variablelist>
@@ -393,13 +454,14 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Glow</term>
+        <term lang="ja">輝き(L)</term>
         <listitem>
           <figure>
             <title lang="en">
               <quote>Gradient Flare Editor</quote> options (Glow)
             </title>
             <title lang="ja">
-              <quote>グラデーションフレアエディタ</quote> options (Glow)
+              <quote>グラデーションフレアエディタ</quote>オプション (輝き)
             </title>
             <mediaobject>
               <imageobject>
@@ -411,6 +473,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Gradients</term>
+              <term lang="ja">グラデーション</term>
               <listitem>
                 <para lang="en">
                   By clicking on the rectangular buttons, you can develop a
@@ -418,6 +481,14 @@
                   to the Editor.
                 </para>
                 <para lang="ja">
+                  各オプションの引き出しメニューには現在<acronym>GIMP</acronym>
+                  で利用可能な全てのグラデーションと、 このエディタに属する
+                  <quote>%</quote>で始まる名前のグラデーションが並びます。 作業
+                  の途中で 
+                  <xref linkend="gimp-gradient-dialog"/> などからグラデーション
+                  を追加もしくは変更したときは、 このエディタ底部の <guibutton>
+                  グラデーションを再読み込み</guibutton> ボタンをクリックすれば
+                  新しいグラデーションも利用できるようになります。
                 </para>
                 <itemizedlist>
                   <listitem>
@@ -426,6 +497,8 @@
                       gradient is drawn radially, from center to edge.
                     </para>
                     <para lang="ja">
+                      <guilabel>半径方向グラデーション</guilabel>: 選ばれた
+                      グラデーションは同心円状に描かれます。
                     </para>
                   </listitem>
                   <listitem>
@@ -440,6 +513,13 @@
                       (that of your printer).
                     </para>
                     <para lang="ja">
+                      <guilabel>角度方向グラデーション</guilabel>: 選ばれた
+                      グラデーションは中心軸の周りを時計回りに、 始点は 
+                      <guilabel>回転</guilabel> パラメータを 0.0 とした場合なら
+                      3時の方向から順に描かれます。 半径方向と角度方向の
+                      グラデーションを併用すると乗算モードで合成されます。 
+                      つまり明るい部分が強調され、 (プリンタで使われる) 
+                      <acronym>CMYK</acronym>色空間に従って混色が行なわれます。
                     </para>
                   </listitem>
                   <listitem>
@@ -451,6 +531,10 @@
                       luminosity is 100% (white), the radius is also 100%.
                     </para>
                     <para lang="ja">
+                      <guilabel>角度方向大きさグラデーション</guilabel>: 回転
+                      するにつれ半径の長さがグラデーションの明度に従って変化
+                      します。 明度が 0% (黒) ならば半径は 0% です。 明度が 
+                      100% (白) なら半径は 100% です。
                     </para>
                   </listitem>
                 </itemizedlist>
@@ -458,6 +542,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Parameters</term>
+              <term lang="ja">パラメータ</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
@@ -466,6 +551,8 @@
                       (0-200).
                     </para>
                     <para lang="ja">
+                      <guilabel>大きさ (%)</guilabel>: 輝きの玉の大きさを 0.0% 
+                      から 200% の範囲で指定します。
                     </para>
                   </listitem>
                   <listitem>
@@ -474,6 +561,9 @@
                       angular gradient (-180 +180).
                     </para>
                     <para lang="ja">
+                      <guilabel>回転</guilabel>: 
+                      <guilabel>角度方向グラデーション</guilabel> の開始角度を 
+                      -180.0° から 180.0° の範囲で指定します。
                     </para>
                   </listitem>
                   <listitem>
@@ -482,6 +572,8 @@
                       according to the HSV color circle (-180 +180).
                     </para>
                     <para lang="ja">
+                      <guilabel>色相回転</guilabel>: 輝きの色を色相環での角度
+                      (-180.0° から 180.0°) で指定します。
                     </para>
                   </listitem>
                 </itemizedlist>
@@ -492,13 +584,14 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Rays</term>
+        <term lang="ja">光線(R)</term>
         <listitem>
           <figure>
             <title lang="en">
               <quote>Gradient Flare Editor</quote> options (Rays)
             </title>
             <title lang="ja">
-              <quote>グラデーションフレアエディタ</quote> options (Rays)
+              <quote>グラデーションフレアエディタ</quote>オプション (光線)
             </title>
             <mediaobject>
               <imageobject>
@@ -510,20 +603,28 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Gradients</term>
+              <term lang="ja">グラデーション</term>
               <listitem>
                 <para lang="en">
                   The options are the same as for Glow.
                 </para>
                 <para lang="ja">
+                  これらのオプションは<quote>輝き(L)</quote>タブの設定方法と
+                  同じです。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Parameters</term>
+              <term lang="ja">パラメータ</term>
               <listitem>
                 <para lang="en">
                   The first three options are the same as in Glow. Two are
                   new:
+                </para>
+                <para lang="ja">
+                  5つのスライダのうちはじめの3つは<quote>輝き(L)</quote>のもの
+                  と同じです。 残りの2つについて説明します。
                 </para>
                 <itemizedlist>
                   <listitem>
@@ -532,6 +633,9 @@
                       the number of spikes (1-300) but also their texture.
                     </para>
                     <para lang="ja">
+                      <guilabel>尖りの数</guilabel>: このオプションで飛び出る
+                      光線の本数を 1 から 300 までの範囲で指定し、 ひいては
+                      その風合いをも決定づけます。
                     </para>
                   </listitem>
                   <listitem>
@@ -540,6 +644,9 @@
                       wider (1-100), they look like flower petals
                     </para>
                     <para lang="ja">
+                      <guilabel>尖りの太さ</guilabel>: 光線を太くすると花びらの
+                      ように見えることでしょう。 値は 1.0 から 100.0 の範囲で
+                      指定します。
                     </para>
                   </listitem>
                 </itemizedlist>
@@ -550,13 +657,15 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Second Flares</term>
+        <term lang="ja">二次フレア(S)</term>
         <listitem>
           <figure>
             <title lang="en">
               <quote>Gradient Flare Editor</quote> options (Second Flares)
             </title>
             <title lang="ja">
-              <quote>グラデーションフレアエディタ</quote> options (Second Flares)
+              <quote>グラデーションフレアエディタ</quote>オプション 
+              (二次フレア)
             </title>
             <mediaobject>
               <imageobject>
@@ -568,26 +677,33 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Gradients</term>
+              <term lang="ja">グラデーション</term>
               <listitem>
                 <para lang="en">
                   The options are the same as for Glow.
                 </para>
                 <para lang="ja">
+                  これらのオプションは<quote>輝き(L)</quote>タブの設定方法と
+                  同じです。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Parameters</term>
+              <term lang="ja">パラメータ</term>
               <listitem>
                 <para lang="en">
                   Options are the same as in Glow.
                 </para>
                 <para lang="ja">
+                  これらのオプションは<quote>輝き(L)</quote>タブの設定方法と
+                  同じです。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Shape of Second Flares</term>
+              <term lang="ja">二次フレアの形状</term>
               <listitem>
                 <para lang="en">
                   Second flares, these satellites of the main flare, may have
@@ -597,11 +713,16 @@
                   accepts 1 side (!), not 2.
                 </para>
                 <para lang="ja">
+                  中央のフレアの衛星ともいえる二次フレアには <guilabel>円
+                  </guilabel> と <guilabel>多角形</guilabel> の2つの形状から
+                  いずれかを選べます。 多角形は角の数が設定できます。 2角形は
+                  ありませんが 1角形が受け入れられるのが驚きです。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Random seed and Randomize</term>
+              <term lang="ja">乱数種; 乱数化(R)</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
@@ -612,6 +733,10 @@
                       <quote>random</quote> sequence several times.
                     </para>
                     <para lang="ja">
+                      <guilabel>乱数種</guilabel>: <acronym>GIMP</acronym>
+                      が内部で利用する乱数発生プログラムはこの乱数種を使用して
+                      乱数を生成します。 同じ値を用いればいつも同じ<quote>乱数
+                      </quote>群を繰り返し得られます。
                     </para>
                   </listitem>
                   <listitem>
@@ -621,6 +746,9 @@
                       the random generator. It is each time different.
                     </para>
                     <para lang="ja">
+                      <guibutton>新しい種(N)</guibutton>: このボタンをクリック
+                      すると乱数発生プログラムで使う乱数種を作れます。 クリック
+                      するたびに異なる値が得られます。
                     </para>
                   </listitem>
                 </itemizedlist>
