@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-01-03 MikaS: updated 'fr'
   2007-08-31 AntI: added 'es'
@@ -8,138 +9,191 @@
   050830 de replaced informalfigure by axel.wernicke
   050904 de added by axel.wernicke
 -->
+<!--2009-07-27-->
 <sect2 id="plug-in-sparkle">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2007-01-03</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Sparkle</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Sparkle</title>
+  <title lang="ja">きらめき(S)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Light and Shadow</secondary>
     <tertiary>Sparkle</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Sparkle</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary sortas="キラメキ">きらめき</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キラメキ">きらめき</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>Applying example for the Sparkle filter</phrase>
-      </title>
+      <title lang="en">Applying example for the Sparkle filter</title>
+      <title lang="ja">きらめきフィルタの適用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/light-taj-sparkle.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/light-taj-sparkle.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Sparkle</quote> applied</para>
+          <para lang="en">Filter <quote>Sparkle</quote> applied</para>
+          <para lang="ja"><quote>きらめき</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter adds sparkles to your image. It uses the lightest points
       according to a threshold you have determined. It is difficult to foresee
       where sparkles will appear. But you can put white points on your image
       where you want sparkles to be.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-      This filter is found in the image window menu under
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Light and Shadow</guisubmenu><guimenuitem>Sparkle</guimenuitem></menuchoice>.
+    <para lang="ja">
+      <guimenuitem>きらめき(<accel>S</accel>)...</guimenuitem> フィルタは画像を
+      きらめかせます。 最も明るい点をしきい値の設定に従って画像に探し出し利用
+      します。 どこに光輝がほとばしるかは予想がつきません。 しかし画像上で
+      きらめきを起こしたい位置に白い点を置く手段があります。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Parameter Settings</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Light and Shadow</guisubmenu>
+        <guimenuitem>Sparkle</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>照明と投影(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>きらめき(<accel>S</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Parameter Settings</title>
+    <title lang="ja">パラメータ設定</title>
     <figure>
-      <title>
-        <phrase><quote>Sparkle</quote> filter options
-        </phrase>
-      </title>
+      <title lang="en"><quote>Sparkle</quote> filter options</title>
+      <title lang="ja"><quote>きらめき</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/filters-light-sparkle.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-light-sparkle.png"/>
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       Sliders and input boxes allow you to set values.
+    </para>
+    <para lang="ja">
+      スライダと数値記入欄で値を設定できます。 またオプションスイッチがいくつか
+      あります。
     </para>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Parameter setting results are interactively displayed in preview.
             Scroll bars allow you to move around the image.
           </para>
+          <para lang="ja">
+            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Luminosity Threshold</term>
+        <term lang="en">Luminosity Threshold</term>
+        <term lang="ja">光度閾値(T)</term>
         <listitem>
-          <para>
+          <para lang="en">
             The higher the threshold, the more areas are concerned by
             sparkling (0.0-0.1).
           </para>
+          <para lang="ja">
+            このしきい値を高くするにつれきらめきの起こりうる場所が多く
+            なります。 値は 0.000 から 1.000 までの範囲で指定してください。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Flare Intensity</term>
+        <term lang="en">Flare Intensity</term>
+        <term lang="ja">フレア強度(I)</term>
         <listitem>
-          <para>
+          <para lang="en">
             When this value increases, the central spot and rays widen
             (0.0-1.0).
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Spike Length</term>
-        <listitem>
-          <para>
-            This is ray length (1-100). When you reduce it, small spikes
-            decrease first.
+          <para lang="ja">
+            この値を増すと中央の照り返しと周りの光線が大きくなります。 値は
+            0.00 から 1.00 までの範囲で指定してください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Spike Points</term>
+        <term lang="en">Spike Length</term>
+        <term lang="ja">尖りの長さ(S)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            This is ray length (1-100). When you reduce it, small spikes
+            decrease first.
+          </para>
+          <para lang="ja">
+            これは光線の長さです。 値を減らすと小さな尖りから順に短くなって
+            ゆきます。 値は 1 から 100 の範囲で指定してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Spike Points</term>
+        <term lang="ja">尖りの数(I)</term>
+        <listitem>
+          <para lang="en">
             Number of starting points for spikes (0-16). It's the number of
             big spikes. There is the same number of small spikes. When
             number is odd, small spikes are opposite the big ones. When
             number is even, big spikes are opposite another big spike.
           </para>
+          <para lang="ja">
+            尖りの始点の数を 0 から 16 の範囲で指定してください。 これは大きな
+            尖りの本数です。 同じ数の小さな尖りもでてきます。 奇数に設定すると
+            大きな尖りからみて照り返し中心の反対側に小さな尖りが伸びます。
+            偶数に設定すると大きな尖りにはその反対側にも大きな尖りが伸びます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Spike Angle</term>
+        <term lang="en">Spike Angle</term>
+        <term lang="ja">尖りの角度 (-1: 乱数)(K)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This is angle of first big spike with horizontal (-1 +360). -1
             determines this value at random.  If a spot has several pixels
             within required threshold, each of them will generate a
@@ -147,81 +201,137 @@
             superimposed. With -1, each sparkle will have a random rotation
             resulting in numerous thin spikes.
           </para>
+          <para lang="ja">
+            これは一本目の尖り方向の角度を水平軸を基準に 0 から 360 の値で
+            設定します。 特別に -1 に設定するとその値は無作為に設定されます。
+            きらめきの発生点にしきい値の設定によれば複数の画素が該当する場合、
+            そのいずれからもきらめきが演出されます。 角度を正の数に設定して
+            おれば、 重なり合う場合もでてきます。 -1 に設定した場合はどの
+            きらめきの方向も無作為に決められ、 たくさんの太い尖りができます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Spike Density</term>
+        <term lang="en">Spike Density</term>
+        <term lang="ja">尖り密度(E)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This option determines the number of sparkles on your image. It
             indicates the percentage (0.0-1.0) of all possible sparkles that
             will be preserved.
           </para>
+          <para lang="ja">
+            このオプションはきらめきの濃さを 0.00 から 1.00 の範囲で設定
+            します。 値が大きくなるにつれぎらつきます。<!--原文破棄-->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Opacity</term>
+        <term lang="en">Opacity</term>
+        <term lang="ja">不透明度<!--(A)--></term>
         <listitem>
-          <para>
+          <para lang="en">
             When you decrease Opacity (0.0-1.0), sparkles become more
             transparent and the layer beneath becomes visible. If there is no
             other layer, sparkle saturation decreases.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Random Hue</term>
-        <listitem>
-          <para><!--How does the numbers influence the randomness? -->
-            This option should change sparkle hue at random... (0.0-1.0)
+          <para lang="ja">
+            不透明度を減らすときらめきの色が透過し始め、 下側のレイヤーの色が
+            見えてくるようになります。 下側に何もレイヤーがなければきらめきの
+            色の彩度が落ちてゆきます。 値は 0.00 から 1.00 の範囲で指定して
+            ください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Random Saturation</term>
+        <term lang="en">Random Hue</term>
+        <term lang="ja">乱数色相(R)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            <!--How does the numbers influence the randomness? -->
+            This option should change sparkle hue at random... (0.0-1.0)
+          </para>
+          <para lang="ja">
+            このオプションは無作為な色相変化の発生確率を設定します。 値は
+            0.00 から 1.00 の範囲で指定してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Random Saturation</term>
+        <term lang="ja">乱数彩度(M)</term>
+        <listitem>
+          <para lang="en">
             This option should change sparkle saturation at random...
             (0.0-1.0)
           </para>
+          <para lang="ja">
+            このオプションは無作為な彩度変化の発生確率を設定します。 値は
+            0.00 から 1.00 の範囲で指定してください。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Preserve Luminosity</term>
+        <term lang="en">Preserve Luminosity</term>
+        <term lang="ja">光度を保存する(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Gives to all central pixels the luminosity of the brightest pixel,
             resulting in increasing the whole sparkle luminosity.
           </para>
+          <para lang="ja">
+            きらめきの中心画素にそのきらめきの最も明るい画素の光度を与えます
+            ので、 結果的にはどのきらめきでも光度が増します。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Inverse</term>
+        <term lang="en">Inverse</term>
+        <term lang="ja">反転(V)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Instead of selecting brightest pixels in image, Sparkle will
             select the darkest ones, resulting in dark sparkles.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Add Border</term>
-        <listitem>
-          <para>
-            Instead of creating sparkles on brightest pixels, this option
-            creates an image border made up of numerous sparkles.
+          <para lang="ja">
+            画像から最も明るい画素を探す方法をとらず、 最も暗い画素を探し出して
+            きらめき処理をしますので、結果として暗いきらめきができます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Natural, Foreground, Background Colors</term>
+        <term lang="en">Add Border</term>
+        <term lang="ja">縁付加(D)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            Instead of creating sparkles on brightest pixels, this option
+            creates an image border made up of numerous sparkles.
+          </para>
+          <para lang="ja">
+            最も明るい画素にきらめきを発生させるのではなく、 画像の4辺を無数の
+            きらめきで縁取ります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Natural, Foreground, Background Colors</term>
+        <term lang="ja">自然色(N), 描画色(F), 背景色(B)</term>
+        <listitem>
+          <para lang="en">
             You can change there the color of central pixels. This color will
             be added in Screen mode (Multiply if Inverse is checked). You
             can select between <guilabel>Natural color</guilabel> (the color
             of the pixel in the image), <guilabel>Foreground color
             </guilabel> and <guilabel>Background color</guilabel>.
+          </para>
+          <para lang="ja">
+            きらめき中心の色をここで変更できます。 ここで選ばれた色は
+            スクリーンモードで描画 (<guilabel>反転(<accel>V</accel>)</guilabel>
+            を指定している場合は乗算モードで描画) されます。 元画像の明るい画素
+            の色をそのまま利用する <guilabel>自然色(<accel>N</accel>)
+            </guilabel> と、 ツールボックスの色標識で示されている 
+            <guilabel>描画色(<accel>F</accel>)</guilabel> と <guilabel>
+            背景色(<accel>B</accel>)</guilabel> のいずれかを選べます。
           </para>
         </listitem>
       </varlistentry>

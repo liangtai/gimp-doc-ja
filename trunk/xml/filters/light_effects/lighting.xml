@@ -10,29 +10,44 @@
   2005-09-03 de added by axel.wernicke
   2005-11-01 en;fr reviewed by julien hardelin
 -->
+<!--2009-07-27-->
 <sect2 id="plug-in-lighting">
-  <title>Lighting Effects</title>
+  <title lang="en">Lighting Effects</title>
+  <title lang="ja">ライト効果(L)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Light and Shadow</secondary>
     <tertiary>Lighting effects</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Lighting effects</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary sortas="ライトコウカ">ライト効果</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ライトコウカ">ライト効果</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>The same image, before and after applying Lighting filter</title>
+      <title lang="en">
+        The same image, before and after applying Lighting filter
+      </title>
+      <title lang="ja">ライト効果フィルタの適用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -41,20 +56,28 @@
             fileref="images/filters/examples/light-taj-lighting.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Lighting Effects</quote> applied</para>
+          <para lang="en">Filter <quote>Lighting Effects</quote> applied</para>
+          <para lang="ja"><quote>ライト効果</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter simulates the effect you get when you light up a wall with
       a spot. It doesn't produce any drop shadows and, of course, doesn't
       reveal any new details in dark zones.
     </para>
+    <para lang="ja">
+      <guimenuitem>ライト効果(<accel>L</accel>)...</guimenuitem> フィルタは壁を
+      スポットライトで照らしたような効果があります。 しかし照らし出された物体に
+      影がつくことはなく、 もちろん暗かったところが詳しく見えるようになったりも
+      しません。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -62,33 +85,61 @@
         <guimenuitem>Lighting Effects</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>照明と投影(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>ライト効果(<accel>L</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
-          <para>
+          <para lang="en">
             When <guilabel>Interactive</guilabel> is checked, parameter
             setting results are interactively displayed in preview without
             modifying the image until you click on <guilabel>OK</guilabel>
             button.
           </para>
-          <para>
+          <para lang="en">
             If <guilabel>Interactive</guilabel> is not checked, changes are
             displayed in preview only when you click on the
             <guilabel>Update</guilabel> button.
             This option is useful with a slow computer.
           </para>
+          <para lang="ja">
+            <guilabel>プレビュー自動更新(<accel>N</accel>)</guilabel> 
+            オプションを有効にしておれば画像に実際にフィルタをかける前から
+            ダイアログ上で調節したとおりに即座に効果のようすが見て分かる
+            ようになっています。
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー自動更新(<accel>N</accel>)</guilabel> 
+            オプションを無効にしているときはプレビュー画面に表示される内容は
+            <guibutton>更新(<accel>U</accel>)</guibutton> ボタンをクリックした
+            ときのままです。 低速なコンピュータに役立つオプションです。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>General Options</term>
+        <term lang="en">General Options</term>
+        <term lang="ja">オプション(T)</term>
         <listitem>
           <figure>
-            <title><quote>Lighting</quote> filter general options</title>
+            <title lang="en">
+              <quote>Lighting</quote> filter general options
+            </title>
+            <title lang="ja">
+              <quote>ライト効果</quote>フィルタの一般オプション
+            </title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -98,38 +149,56 @@
           </figure>
           <variablelist>
             <varlistentry>
-              <term>Transparent Background</term>
+              <term lang="en">Transparent Background</term>
+              <term lang="ja">透過背景(R)</term>
               <listitem>
-                <para>
+                <para lang="en">
                    Makes destination image transparent when bumpmap height
                    is zero (height is zero in black areas of the bumpmapped
                    image).
                 </para>
+                <para lang="ja">
+                  バンプマップの高さが 0 のときに宛先画像を透過させます
+                  (バンプマップ化画像の黒い部分が高さゼロです)。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Create New Image</term>
+              <term lang="en">Create New Image</term>
+              <term lang="ja">新規画像作成(A)</term>
               <listitem>
-                <para>
+                <para lang="en">
                    Creates a new image when applying filter.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>High Quality Preview</term>
-              <listitem>
-                <para>
-                   For quick CPU...
+                <para lang="ja">
+                 フィルタを実行すると活性レイヤーの複製に基づくフィルタ適用後
+                 の新たな画像を作成します。 元の画像に変化はありません。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Distance</term>
+              <term lang="en">High Quality Preview</term>
+              <term lang="ja">高品位プレビュー(O)</term>
               <listitem>
-                <para>
+                <para lang="en">For quick CPU...</para>
+                <para lang="ja">
+                  処理能力に余裕がある高速な<acronym>CPU</acronym>ならこの
+                  オプションも利用してみるとよいでしょう。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Distance</term>
+              <term lang="ja">距離</term>
+              <listitem>
+                <para lang="en">
                   You can specify the distance of the light source from the
                   center of the image with this slider. The range of values
                   is from 0.0 to 2.0.
+                </para>
+                <para lang="ja">
+                  画像の中心位置から光源までの距離をこのスライダや数値記入欄で
+                  設定できす。 0.0 から 2.0 までの範囲で指定してください。
                 </para>
               </listitem>
             </varlistentry>
@@ -137,10 +206,16 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Light</term>
+        <term lang="en">Light</term>
+        <term lang="ja">光源(L)</term>
         <listitem>
           <figure>
-            <title><quote>Light</quote> Options of the Lighting filter</title>
+            <title lang="en">
+              <quote>Light</quote> Options of the Lighting filter
+            </title>
+            <title lang="ja">
+              ライト効果フィルタの<quote>光源</quote>オプション
+            </title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -148,88 +223,162 @@
               </imageobject>
             </mediaobject>
           </figure>
-          <para>
+          <para lang="en">
             In this tab, you can set light parameters. With
             <guilabel>Light 1, 2,...6</guilabel>: You can create six light
             sources and work on each of them separately.
           </para>
+          <para lang="ja">
+            このタブでは光源のパラメータ設定ができます。 光源は 6 箇所設置可能
+            です。 <guimenuitem>光源 <replaceable>1, 2,&hellip;6</replaceable>
+            </guimenuitem> で指定した光源ごとに配置や光の調節を行ないます。
+          </para>
           <variablelist>
             <varlistentry>
-              <term>Light Type</term>
+              <term lang="en">Light Type</term>
+              <term lang="ja">光の形状</term>
               <listitem>
-                <para>
+                <para lang="en">
                   This filter provides several <guilabel>Light Types
                   </guilabel> in a drop-down list:
                 </para>
-                <para><emphasis>Point</emphasis>: displays a blue point at center
+                <para lang="en">
+                  <emphasis>Point</emphasis>: displays a blue point at center
                   of preview. You can click and drag it to move light all
                   over the preview.
                 </para>
-                <para><emphasis>Directional</emphasis>: the blue point is linked
+                <para lang="en">
+                  <emphasis>Directional</emphasis>: the blue point is linked
                   to preview center by a line which indicates the direction
                   of light.
                 </para>
-                <para><emphasis>None</emphasis>: This deletes the light source
+                <para lang="en">
+                  <emphasis>None</emphasis>: This deletes the light source
                   (light may persist...).
+                </para>
+                <para lang="ja">
+                  このフィルタでは光の差し方につぎのような <guilabel>種類
+                  </guilabel> があります。
+                </para>
+                <para lang="ja">
+                  <guimenuitem>点光源</guimenuitem> はプレビュー上では青い点で
+                  示されています。 これをクリックして曳けばプレビュー内のどこへ
+                  でも移動できます。
+                </para>
+                <para lang="ja">
+                  <guimenuitem>指向性光源</guimenuitem> はプレビュー上では青い
+                  点で示され、 そこからプレビューの中心まで光の方向を表す線が
+                  表示されています。 これをクリックして曳けばプレビュー内の
+                  どこへでも移動できますが、 光の方向を指す線は中央から離れ
+                  ません。
+                </para>
+                <para lang="ja">
+                  <guimenuitem>なし</guimenuitem> を選ぶと光源を消灯します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Light Source Color</term>
+              <term lang="en">Light Source Color</term>
+              <term lang="ja">光源の色</term>
               <listitem>
-                <para>
+                <para lang="en">
                   When you click on the color swatch, you bring a dialog up
                   where you can select the light source color.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Intensity</term>
-              <listitem>
-                <para>
-                  With this option, you can set light intensity.
+                <para lang="ja">
+                  <guilabel>色</guilabel> の色ボタンはクリックすると色の変更
+                  ダイアログが現れて光源の色を選択できます。 あるいは
+                  <quote>描画色/背景色</quote>ダイアログや
+                  ツールボックス底部にある色標識を
+                  クリックしてこのボタン上まで曳いて放っても色が変更できます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Position</term>
+              <term lang="en">Intensity</term>
+              <term lang="ja">光源の強度</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  With this option, you can set light intensity.
+                </para>
+                <para lang="ja">
+                  <guilabel>強度(<accel>I</accel>)</guilabel> で光源の強度を
+                  設定できます。 0.00 から 100.00 までの範囲で
+                  指定してください。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Position</term>
+              <term lang="ja">位置</term>
+              <listitem>
+                <para lang="en">
                   Determines the light point
                   position according to three coordinates: X coordinate for
                   horizontal position, Y for vertical position, Z for source
                   distance (the light darkens when distance increases). Values
                   are from -1 to +1.
                 </para>
+                <para lang="ja">
+                  <guimenuitem>点光源</guimenuitem> の位置を3次元座標で
+                  指定します。 水平方向に <guilabel><accel>X</accel></guilabel>
+                  軸、 垂直方向に <guilabel><accel>Y</accel></guilabel> 軸、
+                  さらに <guilabel><accel>Z</accel></guilabel> で光源と画像との
+                  距離 (距離が拡がれば光は暗くなります) を示します。 値の範囲は
+                  -1.00 から 1.00 です。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Direction</term>
+              <term lang="en">Direction</term>
+              <term lang="ja">方向</term>
               <listitem>
-                <para>
+                <para lang="en">
                   This option should allow you to fix the light direction in
                   its three <guilabel>X</guilabel>, <guilabel>Y</guilabel>
                   and <guilabel>Z</guilabel> coordinates.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Isolate</term>
-              <listitem>
-                <para>
-                  With this option, you can decide whether all light sources
-                  must appear in the Preview, or only the source you are
-                  working on.
+                <para lang="ja">
+                  <guimenuitem>指向性光源</guimenuitem> の方向を <guilabel>
+                  <accel>X</accel></guilabel>、 <guilabel><accel>Y</accel>
+                  </guilabel>、 <guilabel><accel>Z</accel></guilabel> の
+                  3次元ベクトルで指定します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Lighting Preset</term>
+              <term lang="en">Isolate</term>
+              <term lang="ja">単独(S)</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  With this option, you can decide whether all light sources
+                  must appear in the Preview, or only the source you are
+                  working on.
+                </para>
+                <para lang="ja">
+                  このオプションはプレビュー上で全ての光源からの照明を表示する
+                  か、 もしくは光源を選ぶ引き出しメニューで選ばれた光源の明り
+                  だけを表示するかを指定します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Lighting Preset</term>
+              <term lang="ja">ライトプリセット</term>
+              <listitem>
+                <para lang="en">
                   You can save your settings with the <guibutton>Save
                   </guibutton> and get them back later with the
                   <guibutton>Open</guibutton>.
+                </para>
+                <para lang="ja">
+                  光源設定の現在の内容が <guibutton>保存(<accel>S</accel>)
+                  </guibutton> ボタンをクリックすると保存でき、 <guibutton>
+                  開く(<accel>O</accel>)</guibutton> ボタンであとから読み込め
+                  ます。 ファイルの内容は単純な<acronym>ASCII</acronym>テキスト
+                  ファイルです。 ファイル名やとくに拡張子については何も規定が
+                  ありませんので御自由に名前をつけて任意のフォルダに保管
+                  してください。
                 </para>
               </listitem>
             </varlistentry>
@@ -237,12 +386,15 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Material</term>
+        <term lang="en">Material</term>
+        <term lang="ja">物質(M)</term>
         <listitem>
           <figure>
-            <title>
-              <phrase><quote>Material</quote> tab of the Lighting filter
-              </phrase>
+            <title lang="en">
+              <quote>Material</quote> tab of the Lighting filter
+            </title>
+            <title lang="ja">
+              ライト効果フィルタの<quote>物質</quote>タブ
             </title>
             <mediaobject>
               <imageobject>
@@ -251,56 +403,88 @@
               </imageobject>
             </mediaobject>
           </figure>
-          <para>
+          <para lang="en">
             These options don't concern light itself, but light reflected by
             objects.
           </para>
-          <para>
+          <para lang="en">
             Small spheres, on both ends of the input boxes, represent the
             action of every option, from its minimum (on the left) to its
             maximum (on the right). Help pop ups are more useful.
           </para>
+          <para lang="ja">
+            ここでのオプションは照明そのものではなく照らし出された物体からの
+            反射光に焦点を当てています。
+          </para>
+          <para lang="ja">
+            各数値記入欄の両端に描かれた小さな球体はそのオプションによる効果の
+            最小 (左側) と最大 (右側) を図示しています。 <!--いずれも値の範囲は
+            0.0 から G_MAXFLOAT までの範囲です。-->
+          </para>
           <variablelist>
             <varlistentry>
-              <term>Glowing</term>
+              <term lang="en">Glowing</term>
+              <term lang="ja">発色(G)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   With these option, you can set the amount of original
                   color to show where no direct light falls.
                 </para>
+                <para lang="ja">
+                  このオプションは直射光の当たらない部分に見える元の色の量を
+                  設定します。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Bright</term>
+              <term lang="en">Bright</term>
+              <term lang="ja">明るさ(B)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   With this option, you can set the intensity of original
                   color when hit directly by a light source.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Shiny</term>
-              <listitem>
-                <para>
-                  This option controls how intense the highlight will be.
+                <para lang="ja">
+                  このオプションは直射光の当たる部分に見える元の色の強さを設定
+                  します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Hell</term>
+              <term lang="en">Shiny</term>
+              <term lang="ja">輝き(S)</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  This option controls how intense the highlight will be.
+                </para>
+                <para lang="ja">
+                  このオプションは照り返しの強さを調節します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Hell</term>
+              <term lang="ja">光沢(P)</term>
+              <listitem>
+                <para lang="en">
                   With this option, higher values make the highlight more
                   focused.
                 </para>
+                <para lang="ja">
+                  このオプションでは高い値にするほど照り返しがまとまります。
+                  値を小さくし過ぎると全面的に照り返し色になってしまいます。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Metallic</term>
+              <term lang="en">Metallic</term>
+              <term lang="ja">メタリック(M)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   When this option is checked, surfaces look metallic.
+                </para>
+                <para lang="ja">
+                  このオプションを有効にすると金属光沢を演出します。
                 </para>
               </listitem>
             </varlistentry>
@@ -308,12 +492,15 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Bump Map</term>
+        <term lang="en">Bump Map</term>
+        <term lang="ja">バンプマップ(B)</term>
         <listitem>
           <figure>
-            <title>
-              <phrase><quote>Bumpmap</quote> options of the Lighting filter
-              </phrase>
+            <title lang="en">
+              <quote>Bumpmap</quote> options of the Lighting filter
+            </title>
+            <title lang="ja">
+              ライト効果フィルタの<quote>バンプマップ</quote>オプション
             </title>
             <mediaobject>
               <imageobject>
@@ -322,34 +509,50 @@
               </imageobject>
             </mediaobject>
           </figure>
-          <para>
+          <para lang="en">
             In this tab, you can set filter options that give relief to the
             image. See <link linkend="glossary-bumpmapping">Bumpmapping</link>.
           </para>
+          <para lang="ja">
+            このタブでは画像に起伏感をつけるオプションについて設定します。 
+            <link linkend="glossary-bumpmapping">バンプマップ処理</link> を参照
+            してください。
+          </para>
           <variablelist>
             <varlistentry>
-              <term>Enable Bump Mapping</term>
+              <term lang="en">Enable Bump Mapping</term>
+              <term lang="ja">バンプマップを使う(N)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   With this option, bright parts of the image will appear
                   raised and dark parts will appear depressed. The aspect
                   depends on the light source position.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Bump Map Image</term>
-              <listitem>
-                <para>
-                  You have to select there the grey-scale image that will
-                  act as a bump map.
+                <para lang="ja">
+                  このオプションを使うと画像が部分的に盛り上がり暗い部分が
+                  へこんだ感じに見えるようになります。 影のつき方は光源の
+                  位置によって変わります。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Curve</term>
+              <term lang="en">Bump Map Image</term>
+              <term lang="ja">バンプマップ画像(A)</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  You have to select there the grey-scale image that will
+                  act as a bump map.
+                </para>
+                <para lang="ja">
+                  バンプマップとして作用する画像をここで選択してください。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Curve</term>
+              <term lang="ja">カーブ(R)</term>
+              <listitem>
+                <para lang="en">
                   Four curve types are available:
                   <emphasis>Linear</emphasis>,
                   <emphasis>Logarithmic</emphasis>,
@@ -358,27 +561,34 @@
                   <link linkend="plug-in-bump-map">Bump Map</link> plug-in for
                   explanations.
                 </para>
+                <para lang="ja">
+                  カーブの形状を <guimenuitem>線形</guimenuitem>、
+                  <guimenuitem>対数型</guimenuitem>、 <guimenuitem>波状
+                  </guimenuitem>、 <guimenuitem>球面</guimenuitem> の4種類から
+                  選んでください。 カーブについては 
+                  <link linkend="plug-in-bump-map">バンプマップ</link> で説明
+                  してあります。
+                </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Maximum Height</term>
+              <term lang="en">Maximum Height</term>
+              <term lang="ja">最大の高さ(X)</term>
               <listitem>
-                <para>
-                  This is the maximum height of bumps.
-                </para>
+                <para lang="en">This is the maximum height of bumps.</para>
+                <para lang="ja">起伏の高さの最大限度です。</para>
               </listitem>
             </varlistentry>
           </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Environment Map</term>
+        <term lang="en">Environment Map</term>
+        <term lang="ja">環境マップ(E)</term>
         <listitem>
           <figure>
-            <title>
-              <phrase><quote>Environment map</quote> options
-              </phrase>
-            </title>
+            <title lang="en"><quote>Environment map</quote> options</title>
+            <title lang="ja"><quote>環境マップ</quote>オプション</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -388,25 +598,42 @@
           </figure>
           <variablelist>
             <varlistentry>
-              <term>Enable Environment Mapping</term>
+              <term lang="en">Enable Environment Mapping</term>
+              <term lang="ja">環境マップを使う(N)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   When you check this box, the following option is enabled:
+                </para>
+                <para lang="ja">
+                  このチェックボックスを入りにすると、 つぎのオプションが利用
+                  可能になります。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Environment Image</term>
+              <term lang="en">Environment Image</term>
+              <term lang="ja">環境画像(V)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   You have to select there a RGB image, present on your
                   screen. Please note that for this option to work you
                   should load another image with gimp
                   <emphasis>before</emphasis> using it.
                 </para>
-                <para>
+                <para lang="en">
                   An example can be found at
                   <xref linkend="bibliography-online-golden-text"/>.
+                </para>
+                <para lang="ja">
+                  このリストには画面に開いている<acronym>RGB</acronym>画像が
+                  一覧表になっていますのでどれかひとつを選んでください。
+                  ちなみにここで利用できる画像はこのフィルタを呼び出す 
+                  <emphasis>以前から</emphasis> 開いている画像だけです。
+                </para>
+                <para lang="ja">
+                  使用例は外部リンクになりますが、 
+                  <xref linkend="bibliography-online-golden-text"/> をご覧
+                  ください。
                 </para>
               </listitem>
             </varlistentry>
