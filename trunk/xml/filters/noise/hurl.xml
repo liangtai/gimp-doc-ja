@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-08-06 prokoudine: improved Russian content, added localized screenshot
   2007-04-07 KoSt: added 'no'
@@ -7,59 +8,65 @@
   050930 de replaced informalfigure by axel.wernicke
   050826 de added by axel.wernicke
 -->
+<!--2009-07-28-->
 <sect2 id="plug-in-randomize-hurl">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-11-15</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Hurl</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Hurl</title>
+  <title lang="ja">浴びせ(H)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Noise</secondary>
     <tertiary>Hurl</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Hurl</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>ノイズ</secondary>
+    <tertiary sortas="アビセ">浴びせ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="アビセ">浴びせ</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          Example for the <quote>Hurl</quote> filter
-        </phrase>
-      </title>
+      <title lang="en">Example for the <quote>Hurl</quote> filter</title>
+      <title lang="ja"><quote>浴びせ</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/noise-taj-hurl.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/noise-taj-hurl.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Hurl</quote> applied</para>
+          <para lang="en">Filter <quote>Hurl</quote> applied</para>
+          <para lang="ja"><quote>浴びせ</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+
+    <para lang="en">
       You can find this filter through
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Noise</guisubmenu><guimenuitem>Hurl</guimenuitem></menuchoice>.
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Noise</guisubmenu>
+        <guimenuitem>Hurl</guimenuitem>
+      </menuchoice>.
     </para>
-    <para>
+    <para lang="en">
       The Hurl filter changes each affected pixel to a random color, so it
       produces real <emphasis>random noise</emphasis>. All color channels,
       including an alpha channel (if it is present) are randomized. All
@@ -68,59 +75,75 @@
       layer or selection are affected, the percentage of affected pixels is
       determined by the <guilabel>Randomization (%)</guilabel> option.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ノイズ(<accel>N</accel>)</guisubmenu>
+        <guimenuitem>浴びせ(<accel>H</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+    </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Options</title>
     <figure>
-      <title>
-        <phrase><quote>Hurl</quote> options
-        </phrase>
-      </title>
+      <title lang="en"><quote>Hurl</quote> options</title>
+      <title lang="ja"><quote>浴びせ</quote> options</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-noise-hurl.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-noise-hurl.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Random Seed</term>
+        <term lang="en">Random Seed</term>
         <listitem>
-          <para>
+          <para lang="en">
             Controls randomness of hurl.  If the same random seed in the
             same situation is used, the filter produces exactly the same
             results. A different random seed produces different
             results. Random seed can be entered manually or generated
             randomly by pressing <guibutton>New Seed</guibutton> button.
           </para>
-          <para>
+          <para lang="en">
             When the <guilabel>Randomize</guilabel> option is checked, random
             seed cannot be entered manually, but is randomly generated each
             time the filter is run. If it is not checked, the filter remembers
             the last random seed used.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Randomization (%)</term>
-        <listitem>
-          <para>
-            This slider represents the percentage of pixels of the active
-            layer or selection which will be hurled. The higher value, the
-            more pixels are hurled.
+          <para lang="ja">
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Repeat</term>
+        <term lang="en">Randomization (%)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            This slider represents the percentage of pixels of the active
+            layer or selection which will be hurled. The higher value, the
+            more pixels are hurled.
+          </para>
+          <para lang="ja">
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Repeat</term>
+        <listitem>
+          <para lang="en">
             It represents the number of times the filter will be
             applied. In the case of the Hurl filter it is not very useful,
             because the same results can be obtained faster just by using a
             higher <guilabel>Randomization (%)</guilabel> value.
+          </para>
+          <para lang="ja">
           </para>
         </listitem>
       </varlistentry>

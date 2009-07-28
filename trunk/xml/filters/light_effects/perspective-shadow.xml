@@ -6,29 +6,44 @@
   2007-12-29 MikaS : added 'fr'
   2007-10-06 ude: created 'en','de'
 -->
+<!--2009-07-28-->
 <sect2 id="script-fu-perspective-shadow">
-  <title>Perspective</title>
+  <title lang="en">Perspective</title>
+  <title lang="ja">遠近法(P)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Light and Shadow</secondary>
     <tertiary>Perspective</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Perspective</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary sortas="エンキンホウ">遠近法</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="エンキンホウ">遠近法</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Perspective</quote> filter</title>
+      <title lang="en">
+        Example for the <quote>Perspective</quote> filter
+      </title>
+      <title lang="ja"><quote>遠近法</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/perspective-shadow-orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -37,25 +52,38 @@
             fileref="images/filters/examples/perspective-shadow-applied.jpg"/>
         </imageobject>
         <caption>
-          <para><quote>Perspective</quote> applied</para>
+          <para lang="en"><quote>Perspective</quote> applied</para>
+          <para lang="ja"><quote>遠近法</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter adds a perspective shadow to the selected region or
       alpha-channel as a layer below the active layer. You may select
       color, length and direction of the shadow as well as the distance of
       the horizon.
     </para>
-    <para>
+    <para lang="en">
       If necessary, the filter may resize the image. But it will not add a
       background to make the shadow visible.
+    </para>
+    <para lang="ja">
+      <guimenuitem>遠近法(<accel>P</accel>)...</guimenuitem> フィルタは選択範囲
+      もしくはアルファチャンネルの裏に遠近感のある影を作り、 活性レイヤーの
+      下側に新たなレイヤーとして加えるスクリプトです。 影の色と長さと方向
+      ならびに地平線からの距離を設定してください。
+    </para>
+    <para lang="ja">
+      必要とあればフィルタは画像の寸法を拡げます。 ただし影を見易くするには
+      背景側にレイヤーを置く必要がありますが、 このスクリプトは自動追加を行ない
+      ません。
     </para>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can access this filter in the image window menu through
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -63,12 +91,22 @@
         <guimenuitem>Perspective</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>照明と投影(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>遠近法(<accel>P</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Perspective</quote> options</title>
+      <title lang="en"><quote>Perspective</quote> options</title>
+      <title lang="ja"><quote>遠近法</quote>オプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -78,9 +116,10 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Angle</term>
+        <term lang="en">Angle</term>
+        <term lang="ja">角度</term>
         <listitem>
-          <para>
+          <para lang="en">
             The angle determines the direction of the shadow or the imaginary
             source of light, respectively. Values range from 0° to 180°,
             where 90° represents a light source just in front of the selection
@@ -89,15 +128,25 @@
             90°, it's the other way round. Tip: think of the slider's handle
             as source of light.
           </para>
+          <para lang="ja">
+            角度とは影の延びる方向を定め、 ひいては仮想光源を設定するもの
+            です。 値の範囲は 0° から 180° までで、 90° がちょうど選択範囲
+            もしくはレイヤーの真正面から照らす設定になります。 90° 未満の角度
+            にすると影は右側につきますので光源は左側ということになります。 90°
+            を越す角度ならその逆になります。 スライダの位置を光源の位置と
+            みなしてみると覚え易いでしょう。
+          </para>
           <figure>
-            <title><quote>Angle</quote> example</title>
+            <title lang="en"><quote>Angle</quote> example</title>
+            <title lang="ja"><quote>角度</quote>の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
                   fileref="images/filters/examples/perspective-shadow-angle15.png"/>
               </imageobject>
               <caption>
-                <para>Angle 15°</para>
+                <para lang="en">Angle 15°</para>
+                <para lang="ja">角度 15°</para>
               </caption>
             </mediaobject>
             <mediaobject>
@@ -106,7 +155,8 @@
                   fileref="images/filters/examples/perspective-shadow-default.png"/>
               </imageobject>
               <caption>
-                <para>Angle 45° (default)</para>
+                <para lang="en">Angle 45° (default)</para>
+                <para lang="ja">角度 45° (初期設定値)</para>
               </caption>
             </mediaobject>
             <mediaobject>
@@ -115,41 +165,59 @@
                   fileref="images/filters/examples/perspective-shadow-angle105.png"/>
               </imageobject>
               <caption>
-                <para>Angle 105° (90° + 15°)</para>
+                <para lang="en">Angle 105° (90° + 15°)</para>
+                <para lang="ja">角度 105° (90° + 15°)</para>
               </caption>
             </mediaobject>
           </figure>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Relative distance of horizon</term>
+        <term lang="en">Relative distance of horizon</term>
+        <term lang="ja">地平線の相対的な距離</term>
         <listitem>
-          <para>
+          <para lang="en">
             This option determines how far away the imaginary horizon is. The
             <guilabel>relative distance</guilabel> is the distance from the
             ground-line of the selection or layer, the <quote>unit</quote> of
             measurement is the height of the selection or layer.
           </para>
-          <para>
+          <para lang="en">
             Value range is from 0.1 to 24.1, where 24.1 means (nearly)
             <quote>infinite</quote>. Note that the <guilabel>relative length
             of shadow</guilabel> must not exceed the distance of horizon.
           </para>
+          <para lang="ja">
+            このオプションは仮想上の地平線との距離を定めます。 <guilabel>
+            地平線の相対的な距離</guilabel> の値には選択範囲もしくはレイヤーの
+            底辺から仮想地平線までの距離を示しますが、 その<quote>単位</quote>
+            は選択範囲もしくはレイヤーの高さとします。
+          </para>
+          <para lang="ja">
+            値の範囲は 0.1 から 24.1 までとなっており、 24.1 はほぼ<quote>
+            無限大</quote>を意味します。 ちなみに <guilabel>影の相対的な長さ
+            </guilabel> は <guilabel>地平線の相対的な距離</guilabel> を越えては
+            いけません。
+          </para>
           <figure>
-            <title><quote>Distance of horizon</quote> example</title>
+            <title lang="en"><quote>Distance of horizon</quote> example</title>
+            <title lang="ja"><quote>地平線までの距離</quote>の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
                   fileref="images/filters/examples/perspective-shadow-distance.png"/>
               </imageobject>
               <caption>
-                <para>
+                <para lang="en">
                   Angle = 45°. Distance = 2.4. Length = 1.8.
+                </para>
+                <para lang="ja">
+                  角度 = 45°、 相対的距離 = 2.4、 相対的長さ = 1.8
                 </para>
               </caption>
             </mediaobject>
           </figure>
-          <para>
+          <para lang="en">
             In the example above, the yellow area is the selection the filter
             is applied to. The blue line at the top represents the imaginary
             horizon. The angle between the selection's ground-line and the red
@@ -157,31 +225,51 @@
             the yellow selection. Extended to the horizon, the length is 2.4
             times the selection's height.
           </para>
+          <para lang="ja">
+            上図の例では黄色の部分がフィルタを適用した選択範囲です。 中央付近で
+            水平に延びる青色の線が仮想的な水平線です。 選択範囲の底辺と赤く
+            示された線との角度は 45° です。 赤い線の長さは黄色い選択範囲の
+            高さの 1.8 倍です。 選択範囲の底辺から仮想的水平線まではその距離が
+            選択範囲の高さの 2.4 倍です。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Relative length of shadow</term>
+        <term lang="en">Relative length of shadow</term>
+        <term lang="ja">影の相対的な長さ</term>
         <listitem>
-          <para>
+          <para lang="en">
             With this option you can set the length of shadow with respect to
             the height of the selection or layer. In the above example, the
             red line represents the length of shadow, its length is 1.8
             relative to the height of the yellow selection.
           </para>
-          <para>
+          <para lang="en">
             Value range is from 0.1 to 24.1, although the length of shadow
             must not exceed the <guilabel>relative distance of
             horizon</guilabel> - you can't go beyond the horizon.
           </para>
+          <para lang="ja">
+            このオプションでは影の長さを選択範囲あるいはレイヤーの高さに対する
+            比で設定できます。 上図の例では赤い線が影の長さを表しており、 黄色
+            い選択範囲の高さとの比が 1.8 倍の長さがあります。
+          </para>
+          <para lang="ja">
+            値の範囲は 0.1 から 24.1 までありますが、 この影の長さは絶対に 
+            <guilabel>地平線の相対的な距離</guilabel> を越してはなりません。
+            水平線は越えられないのです。
+          </para>
           <figure>
-            <title><quote>Length of Shadow</quote> example</title>
+            <title lang="en"><quote>Length of Shadow</quote> example</title>
+            <title lang="ja"><quote>影の長さ</quote>の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
                   fileref="images/filters/examples/perspective-shadow-default.png"/>
               </imageobject>
               <caption>
-                <para>Length = 1.0 (default)</para>
+                <para lang="en">Length = 1.0 (default)</para>
+                <para lang="ja">長さ = 1.0 (初期設定値)</para>
               </caption>
             </mediaobject>
             <mediaobject>
@@ -190,30 +278,40 @@
                   fileref="images/filters/examples/perspective-shadow-length15.png"/>
               </imageobject>
               <caption>
-                <para>Length = 1.5</para>
+                <para lang="en">Length = 1.5</para>
+                <para lang="ja">長さ = 1.5</para>
               </caption>
             </mediaobject>
           </figure>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Blur radius</term>
+        <term lang="en">Blur radius</term>
+        <term lang="ja">ぼかし半径</term>
         <listitem>
-          <para>
+          <para lang="en">
             After creating the shadow, a
-            <link linkend="plug-in-gauss">Gaussian blur</link> with the specified
-            radius is applied to the shadow layer, resulting in the realistic
-            appearance of the shadow.
+            <link linkend="plug-in-gauss">Gaussian blur</link> with the
+            specified radius is applied to the shadow layer, resulting in
+            the realistic appearance of the shadow.
+          </para>
+          <para lang="ja">
+            [描画対象の形に]影が作成されたあと、 影の描かれたレイヤー上では
+            ここで設定したぼかし半径の値を使って 
+            <link linkend="plug-in-gauss">ガウスぼかし</link> が施されますので
+            遠近法の影はより本物らしくなります。
           </para>
           <figure>
-            <title>Blur example</title>
+            <title lang="en">Blur example</title>
+            <title lang="ja">ぼかしの例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
                   fileref="images/filters/examples/perspective-shadow-default.png"/>
               </imageobject>
               <caption>
-                <para>Blur radius = 3 (default)</para>
+                <para lang="en">Blur radius = 3 (default)</para>
+                <para lang="ja">ぼかし半径 = 3 (初期設定値)</para>
               </caption>
             </mediaobject>
             <mediaobject>
@@ -222,26 +320,33 @@
                   fileref="images/filters/examples/perspective-shadow-noblur.png"/>
               </imageobject>
               <caption>
-                <para>Without blur (blur radius = 0)</para>
+                <para lang="en">Without blur (blur radius = 0)</para>
+                <para lang="ja">ぼかしなし (ぼかし半径 = 0)</para>
               </caption>
             </mediaobject>
           </figure>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Color</term>
+        <term lang="en">Color</term>
+        <term lang="ja">色</term>
         <listitem>
-          <para>
+          <para lang="en">
             Of course, the default color of the shadow is black. But a click
             on the button opens the the color selector, where you may select
             any other color.
           </para>
+          <para lang="ja">
+            当然のことながら既定の影の色は黒です。 でもこの色ボタンをクリック
+            すれば色変更ダイアログが現れて、 他の色も使えるようになっています。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Opacity</term>
+        <term lang="en">Opacity</term>
+        <term lang="ja">不透明度</term>
         <listitem>
-          <para>
+          <para lang="en">
             The shadow's opacity is the opacity of the new layer containing
             the shadow (see <xref linkend="gimp-layer-properties"/>). It
             defaults to 80%, but you may select any other value from 0 (full
@@ -249,12 +354,22 @@
             filter to an image you can change the opacity in the
             <link linkend="gimp-layer-dialog">layers dialog</link>.
           </para>
+          <para lang="ja">
+            影の不透明度はすなわち新たに作成され影が描かれたレイヤーの不透明度
+            のことです (
+            <xref linkend="gimp-layer-properties"/> を参照してください)。
+            初期値は 80% ですが 0% (完全透過) から 100% (完全不透明) までの範囲
+            で設定できます。 影の濃度はフィルタ適用後でも 
+            <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> で
+            影のレイヤーの不透明度を変えれば調節が可能であるということです。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Interpolation</term>
+        <term lang="en">Interpolation</term>
+        <term lang="ja">補間</term>
         <listitem>
-          <para>
+          <para lang="en">
             This drop-down list lets you choose the method of
             <link linkend="glossary-interpolation">interpolation</link> used
             when the shadow layer is transformed, for example rotated by the
@@ -263,31 +378,50 @@
             color of the shadow in some areas. <guilabel>Linear</guilabel> is
             a good choice.
           </para>
+          <para lang="ja">
+            この引き出しリストで選べる 
+            <link linkend="glossary-interpolation">補間</link> 方法は、 影が
+            描かれたレイヤーを所定の角度に回転させるなどの変換処理を行なうとき
+            に使われます。 <guimenuitem>補間しない</guimenuitem> を選ぶと通常は
+            エイリアスが発生してしまいますが、 何らかの補間方法を使うと影が
+            部分的に変色する可能性があります。 <guimenuitem>線形</guimenuitem>
+            がこのなかでは良策です。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Allow resizing</term>
+        <term lang="en">Allow resizing</term>
+        <term lang="ja">画像サイズ変更可</term>
         <listitem>
-          <para>
+          <para lang="en">
             If enabled, the filter will resize the image if that is needed to
             make place for the shadow.
           </para>
-          <para>
+          <para lang="en">
             In the example below, the yellow area is the active selection,
             background is light blue. The white area has been added after
             resizing to make the shadow visible.
           </para>
+          <para lang="ja">
+            このオプションを有効にするとスクリプトは影が落ちる領域を確保する
+            必要があるときに画像を拡張します。
+          </para>
+          <para lang="ja">
+            下図の例では黄色い領域を選択範囲として活性化させていて、 背景色は
+            ライトブルーに塗ってあります。 影が描画されるとそれが見えるように
+            白い部分が画像に追加されます (追加直後は白ではなく透明です)。
+          </para>
           <figure>
-            <title>
-              <phrase><quote>Allow resizing</quote> example</phrase>
-            </title>
+            <title lang="en"><quote>Allow resizing</quote> example</title>
+            <title lang="ja"><quote>画像サイズ変更可</quote>の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
                   fileref="images/filters/examples/perspective-shadow-resize.png"/>
               </imageobject>
               <caption>
-                <para>Allow resizing</para>
+                <para lang="en">Allow resizing</para>
+                <para lang="ja">画像サイズ変更可</para>
               </caption>
             </mediaobject>
             <mediaobject>
@@ -296,7 +430,8 @@
                   fileref="images/filters/examples/perspective-shadow-noresize.png"/>
               </imageobject>
               <caption>
-                <para>Don't allow resizing</para>
+                <para lang="en">Don't allow resizing</para>
+                <para lang="ja">画像サイズ変更不可</para>
               </caption>
             </mediaobject>
           </figure>
