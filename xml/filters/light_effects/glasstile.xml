@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-12-29 MikaS: updated 'fr'
   2007-12-25 ciampix: updated 'it'
@@ -10,110 +11,144 @@
   05-08-30 de replaced informalfigure by axel.wernicke
   05-09-03 de added by axel.wernicke
 -->
+<!--2009-07-28-->
 <sect2 id="plug-in-glasstile">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2006-11-29</date>
-        <authorinitials>j.h</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Glass Tile</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Glass Tile</title>
+  <title lang="ja">ガラスタイル(G)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Light and Shadow</secondary>
     <tertiary>Glass Tile</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Glass Tile</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary>ガラスタイル</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ガラスタイル</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          The same image, before and after applying glass tile effect.
-        </phrase>
+      <title lang="en">
+        The same image, before and after applying glass tile effect.
       </title>
+      <title lang="ja">ガラスタイルフィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/glass-taj-glass-tile.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/glass-taj-glass-tile.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Glass Tile</quote> applied</para>
+          <para lang="en">Filter <quote>Glass Tile</quote> applied</para>
+          <para lang="ja"><quote>ガラスタイル</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       After applying this filter, the active layer or selection is rendered
       as through a glass brick wall.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-       You can find this filter through
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Light and Shadow</guisubmenu><guimenuitem>Glass Tile</guimenuitem></menuchoice>
+    <para lang="ja">
+      <guimenuitem>ガラスタイル(<accel>G</accel>)...</guimenuitem> フィルタは
+      ガラス製ブロックを積んだ壁を通して見るような屈折変形を活性レイヤー
+      もしくはその選択範囲に加えます。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+       You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Light and Shadow</guisubmenu>
+        <guimenuitem>Glass Tile</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+       画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>照明と投影(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>ガラスタイル(<accel>G</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Glass Tile</quote> filter options
-        </phrase>
-      </title>
+      <title lang="en"><quote>Glass Tile</quote> filter options</title>
+      <title lang="ja"><quote>ガラスタイル</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-glass-tile.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-glass-tile.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Parameter setting results are interactively displayed in preview.
             Scroll bars allow you to move around the image.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Parameters setting</term>
+        <term lang="en">Parameters setting</term>
+        <term lang="ja">パラメータの設定</term>
         <listitem>
-          <para>
-            <itemizedlist>
-              <listitem>
-                <para><guilabel>Tile width</guilabel>: Sets tile width (10-50
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>Tile width</guilabel>: Sets tile width (10-50
                 pixels).
               </para>
-              </listitem>
-              <listitem>
-                <para><guilabel>Tile length</guilabel>: Sets tile length (10-50
+              <para lang="ja">
+                <guilabel>タイル幅(<accel>W</accel>)</guilabel> でブロックの
+                幅を 10 ピクセルから 50 ピクセルの範囲で設定してください。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Tile length</guilabel>: Sets tile length (10-50
                 pixels).
               </para>
-              </listitem>
-            </itemizedlist>
-          </para>
+              <para lang="ja">
+                <guilabel>タイル高(<accel>H</accel>)</guilabel> でブロックの
+                高さを 10 ピクセルから 50 ピクセルの範囲で設定してください。
+              </para>
+            </listitem>
+          </itemizedlist>
         </listitem>
       </varlistentry>
     </variablelist>
