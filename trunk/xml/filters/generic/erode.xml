@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-12-09 ude: moved "activate filter" paras to separate sect3
   2007-08-23 AntI: added 'es'
@@ -9,60 +10,103 @@
   050830 de replaced informalfigure by axel.wernicke
   050901 de added by axel.wernicke
 -->
+<!--2009-07-31-->
 <sect2 id="plug-in-erode">
-  <title>Erode</title>
-  <indexterm>
+  <title lang="en">Erode</title>
+  <title lang="ja">明るさの最大値(R)</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Generic</secondary>
     <tertiary>Erode</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Erode</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ハンヨウ">汎用</secondary>
+    <tertiary sortas="アカルサノサイダイチ">明るさの最大値</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="アカルサノサイダイチ">明るさの最大値</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Erode noise</title>
+      <title lang="en">Erode noise</title>
+      <title lang="ja">明るさの最大値フィルタでノイズを軽減</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/generic-taj-erode.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/generic-taj-erode.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Erode noise</quote> applied</para>
+          <para lang="en">Filter <quote>Erode noise</quote> applied</para>
+          <para lang="ja"><quote>明るさの最大値</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter widens and enhances bright areas of the active layer or
       selection.
     </para>
-    <para>
+    <para lang="en">
       For every image pixel, it brings the pixel Value (luminosity) into line
       with the upper value (the brightest) of the 8 neighbouring pixels (3x3
       matrix). So, a bright pixel is added around bright areas. An isolated
       pixel on a brighter background will be deleted. A larger bright area
       will dilate by one pixel in all directions.
     </para>
-    <para>
+    <para lang="en">
       On complex images, bright areas are widened and enhanced the same, and
       somewhat pixellated.
     </para>
-    <para>
+    <para lang="en">
       On a solid background, this filter can delete noise:
       <figure>
         <title><quote>Erode noise</quote> example</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/filters/examples/erode-noise.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/filters/examples/erode-noise.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+    </para>
+    <para lang="ja">
+      <guimenuitem>明るさの最大値(<accel>R</accel>)</guimenuitem> フィルタは
+      活性レイヤーもしくはその選択範囲の明るい部分を拡げ、 強調します。
+    </para>
+    <para lang="ja">
+      画像のどの画素でも、 その明度を周囲 3&times;3 の範囲の8つの画素のうち最も
+      明るい画素の値に一致させます。 そのため明るい画素が明るい領域に加わって
+      ゆきます。 しかし周りが明るいところの暗い画素は消えてしまいます。 大きめ
+      の明るい画素が1個の画素の全方向拡張により現れます。
+    </para>
+    <para lang="ja">
+      さらに込み入った画像では明るい領域が拡張され同一物で強調され何やら大粒の
+      画素のモザイクぼかしのようになります。
+    </para>
+    <para lang="ja">
+      背景が単色ならこのフィルタはノイズを取り除きます。
+      <figure>
+        <title><quote>明るさの最大値</quote>によるノイズ除去の例</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/examples/erode-noise.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -70,14 +114,23 @@
   </sect3>
 
   <sect3>
-    <title>Activating the filter</title>
-    <para>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
         <guisubmenu>Generic</guisubmenu>
         <guimenuitem>Erode</guimenuitem>
       </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>汎用(<accel>G</accel>)</guisubmenu>
+        <guimenuitem>明るさの最大値(<accel>R</accel>)</guimenuitem>
+      </menuchoice>
     </para>
   </sect3>
 </sect2>
