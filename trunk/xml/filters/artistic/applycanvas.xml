@@ -10,32 +10,52 @@
   2005-09-15 de added by axel.wernicke
 -->
 <sect2 id="plug-in-apply-canvas">
-  <title>Apply Canvas</title>
+  <title lang="en">Apply Canvas</title>
+  <title lang="ja">キャンバス地(A)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Artistic</secondary>
     <tertiary>Canvas effect</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Canvas</primary>
     <secondary>effect</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Canvas effect</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
+    <tertiary sortas="キャンバスヂ">キャンバス地</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>キャンバス</primary>
+    <secondary sortas="キジ">生地</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キャンバスヂ">キャンバス地</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the <quote>Apply Canvas</quote> filter</title>
+      <title lang="en">
+        Example for the <quote>Apply Canvas</quote> filter
+      </title>
+      <title lang="ja">
+        <quote>キャンバス地</quote>フィルタの使用例
+      </title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -44,19 +64,26 @@
             fileref="images/filters/examples/artistic-taj-applycanvas.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Apply Canvas</quote> applied</para>
+          <para lang="en">Filter <quote>Apply Canvas</quote> applied</para>
+          <para lang="ja"><quote>キャンバス地</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter applies a canvas-like effect to the current layer or
       selection. It textures the image as if it were an artist's canvas.
+    </para>
+    <para lang="ja">
+      <guimenuitem>キャンバス地(<accel>A</accel>)...</guimenuitem> フィルタは
+      活性レイヤーもしくはその選択範囲でキャンバス地のような効果をつけます。 
+      画家が使うキャンバス地に描いたように見えるような質感を画像に加えます。
     </para>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter through
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -64,12 +91,22 @@
         <guimenuitem>Apply Canvas...</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>芸術的効果(<accel>A</accel>)</guisubmenu>
+        <guimenuitem>キャンバス地(<accel>A</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Apply Canvas</quote> options</title>
+      <title lang="en"><quote>Apply Canvas</quote> options</title>
+      <title lang="ja"><quote>キャンバス地</quote>オプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -79,30 +116,47 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Your changes are displayed in this preview before being applied
             to your image.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Direction</term>
+        <term lang="en">Direction</term>
+        <term lang="ja">方向</term>
         <listitem>
-          <para>
+          <para lang="en">
             Direction sets the starting direction of the canvas render. You
             can also consider that this option gives you the position of the
             light source which lightens the canvas.
           </para>
+          <para lang="ja">
+            キャンバスの生地を描く端緒を設定します。 このオプションはさらに
+            灯光の射してくる方向をも決めます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Depth</term>
+        <term lang="en">Depth</term>
+        <term lang="ja">深度(D)</term>
         <listitem>
-          <para>
+          <para lang="en">
             The Depth slider controls the apparent depth of the rendered
             canvas effect from 1 (very flat) to 50 (very deep).
+          </para>
+          <para lang="ja">
+            <guilabel>深度(<accel>D</accel>)</guilabel> スライダはキャンバスの
+            織り目の起伏を調整します。 値は 1 (全く平坦) から 50 (深い起伏) 
+            までの範囲で指定てください。
           </para>
         </listitem>
       </varlistentry>

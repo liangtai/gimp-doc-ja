@@ -9,10 +9,12 @@
   050915 de added by axel.wernicke
   051107 small add in Overview by julien hardelin
 -->
+<!--2009-08-04-->
 <sect2 id="gimpressionist-size-map-editor">
-  <title>GIMPressionist - Size Map Editor</title>
+  <title lang="en">GIMPressionist - Size Map Editor</title>
+  <title lang="ja">GIMPressionist - サイズマップエディタ</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Artistic</secondary>
     <tertiary>GIMPressionist</tertiary>
@@ -20,22 +22,40 @@
   <indexterm>
     <primary>GIMPressionist</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
+    <tertiary>GIMPressionist</tertiary>
+  </indexterm>
 
   <sect3>
-    <title>Overview</title>
-    <para>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
       The Size-map editor is an annexe of the
       <link linkend="plug-in-gimpressionist">GIMPressionist</link>
       filter. You can get to it by clicking on the <guibutton>Edit</guibutton>
       button in the <quote>Size</quote> tab. With this editor, you can set the
       size that brush strokes given by filter will have.
     </para>
+    <para lang="ja">
+      サイズマップエディタは 
+      <link linkend="plug-in-gimpressionist">GIMPressionist</link> フィルタに
+      付属するダイアログです。 このフィルタのダイアログの<quote>サイズ</quote>
+      タブで <guibutton>編集(<accel>E</accel>)</guibutton> ボタンをクリック
+      すると呼び出せます。 このエディタではフィルタで使われる筆の太さを調整
+      できます。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Parameter Settings</title>
+    <title lang="en">Parameter Settings</title>
+    <title lang="ja">パラメータの設定</title>
     <figure>
-      <title>Size-map editor options</title>
+      <title lang="en">Size-map editor options</title>
+      <title lang="en">
+        <quote>サイズマップエディタ</quote>ダイアログのオプション
+      </title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -44,14 +64,19 @@
       </mediaobject>
     </figure>
     <variablelist>
-      <para>
+      <para lang="en">
         You can place one or several vectors. You can set their strength. They
         will act on the corresponding area of the image.
       </para>
+      <para lang="ja">
+        サイズマップベクトルをひとつだけでもいくつでも配置できます。 その強さを
+        調整してください。 置いたところと同じ画像上の部分に作用します。
+      </para>
       <varlistentry>
-        <term>Smvectors</term>
+        <term lang="en">Smvectors</term>
+        <term lang="ja">サイズマップベクトル</term>
         <listitem>
-          <para>
+          <para lang="en">
             In this window you can place your vectors. By clicking on
             the <guibutton>Add</guibutton> button, you add a vector at the
             center of the window, whereas clicking with the mouse
@@ -59,74 +84,135 @@
             click.  Vectors are red when selected, and gray when they are not,
             with a white point at tip.
           </para>
-          <para>
+          <para lang="en">
             Clicking with the mouse
             <mousebutton>Left&nbsp;Button</mousebutton> displaces the selected
             vector to the clicked point.
           </para>
-          <para>
+          <para lang="en">
             Clicking on the mouse
             <mousebutton>Right&nbsp;Button</mousebutton>, has no evident
             action.
           </para>
-          <para>
+          <para lang="en">
             Clicking on <guibutton>&lt;&lt;</guibutton> and
             <guibutton>&gt;&gt;</guibutton> buttons displaces focus from a
             vector to another.
           </para>
-          <para>
+          <para lang="en">
             The <guibutton>Kill</guibutton> button allows you to delete
             the selected vector.
           </para>
+          <para lang="ja">
+            左側の<quote>サイズマップベクトル</quote>と銘うった縮小画像上に
+            ベクトルを配置できます。 <guibutton>追加(<accel>D</accel>)
+            </guibutton> ボタンをクリックするとベクトルを新たに画像の中央に
+            追加できます。 またあるいは <mousebutton>中ボタン</mousebutton> で
+            クリックした場所に新たにベクトルを追加できます。 ベクトルは現在選択
+            されているものが赤い十字形で示され、 それ以外は中心点が白で灰色の
+            十字形で表されています。
+          </para>
+          <para lang="ja">
+            <mousebutton>第1ボタン</mousebutton> でクリックするとその位置へ
+            現在選択されているベクトルが移動します。
+          </para>
+          <para lang="ja">
+            <mousebutton>第2ボタン</mousebutton> でクリックしても何の変化も
+            ありません。
+          </para>
+          <para lang="ja">
+            <guibutton><accel>&lt;</accel>&lt;</guibutton> ボタンと 
+            <guibutton><accel>&gt;</accel>&gt;</guibutton> ボタンはクリック
+            すると現在選択されているベクトルが選択を解除され、 別のベクトルが
+            選択されます。
+          </para>
+          <para lang="ja">
+            <guibutton>削除(<accel>K</accel>)</guibutton> ボタンはクリック
+            すると現在選択されているベクトルを撤去します。
+          </para>
           <tip>
-            <para>
+            <para lang="en">
               With the scroll bar on the right of the Vectors panel, you can
               set the image brightness. This can be very useful if the image
               is very dark/bright and you can't see vectors well.
+            </para>
+            <para lang="ja">
+              <quote>サイズマップベクトル</quote>画面の右側についている
+              スクロールバーは、 この縮小見本画像の明るさを調整するためのもの
+              です。 画像が暗過ぎたり明る過ぎたりしてベクトル表示が見難くなって
+              いるときこの機能が役立ちます。
             </para>
           </tip>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
-          <para>
+          <para lang="en">
             This Preview gives you an idea of the action of the different
             vectors. The size of squares represent the size of the brushes and
             their strength.
           </para>
+          <para lang="ja">
+            <quote>プレビュー</quote>表示には無数のベクトルの強さをつかめる図が
+            示されています。 図上に並んだ正方形の大きさがブラシの太さと強さを
+            示します。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Size</term>
+        <term lang="en">Size</term>
+        <term lang="ja">サイズ(S)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Change the size of the brush strokes in the selected vector
             domain.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Strength</term>
-        <listitem>
-          <para>
-            This slider acts on the influence domain of the selected vector.
-            This influence lowers with distance.
+          <para lang="ja">
+            現在選択されているベクトルの強さを変更します。 この強さにより
+            付近を通るブラシの太さが決まります。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Strength Exp.</term>
+        <term lang="en">Strength</term>
+        <term lang="ja">強さ</term>
         <listitem>
-          <para>Change the exponent of the stroke.</para>
+          <para lang="en">
+            This slider acts on the influence domain of the selected vector.
+            This influence lowers with distance.
+          </para>
+          <para lang="ja">
+            <guilabel>強さ(<accel>T</accel>)</guilabel> スライダは現在選択
+            されているベクトルの強さを変えます。 強さが増すと
+            周囲のサイズマップがより遠くまで影響されます。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Voronoi</term>
+        <term lang="en">Strength Exp.</term>
+        <term lang="ja">強さ指数</term>
         <listitem>
-          <para>
+          <para lang="en">Change the exponent of the stroke.</para>
+          <para lang="ja">
+            <guilabel>強さ指数(<accel>R</accel>)</guilabel> スライダは
+            <emphasis>全て</emphasis> のベクトルの強さを変更しますので、 
+            結果的に全ての筆触をより強くします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Voronoi</term>
+        <term lang="ja">ボロノイ(V)</term>
+        <listitem>
+          <para lang="en">
             See <link linkend="gimpressionist-orient-map-editor">
             Orientation Map Editor</link> for an explanation.
+          </para>
+          <para lang="ja">
+            <link linkend="gimpressionist-orient-map-editor">方向マップエディタ
+            </link> の説明をご覧ください。
           </para>
         </listitem>
       </varlistentry>
