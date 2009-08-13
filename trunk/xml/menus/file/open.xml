@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                 "http://www.docbook.org/xml/4.3/docbookx.dtd">
@@ -10,7 +10,7 @@
   2006-02-26 j.h:  Added Right click -> Open location-Changed left pannel en;fr
   2005/10/18 zh_CN removed by romanofski - missing translation
 -->
-<!--2009-06-23-->
+<!--2009-08-09-->
 <sect2 id='gimp-file-open'>
   <title lang="en">Open</title>
   <title lang="ja">開く(O)...</title>
@@ -18,22 +18,19 @@
   <indexterm lang="en">
     <primary>Image</primary>
     <secondary>Open</secondary>
-    <tertiary>Open an image</tertiary>
   </indexterm>
   <indexterm lang="en"><primary>Open</primary></indexterm>
   <indexterm lang="ja">
     <primary sortas="ガゾウ">画像</primary>
     <secondary sortas="ヒラク">開く</secondary>
-    <tertiary sortas="ガゾウヲ1マイヒラク">画像を1枚開く</tertiary>
   </indexterm>
   <indexterm lang="ja"><primary sortas="ヒラク">開く</primary></indexterm>
 
   <para lang="en">
-    The <guimenuitem>Open</guimenuitem> command activates a dialog that
-    lets you load an
-    existing image from your hard-drive or an external medium.  For
-    alternative, and sometimes more convenient, ways of opening files,
-    see the <link linkend='gimp-using-fileformats'>Files</link> section.
+    The <guimenuitem>Open</guimenuitem> command activates a dialog that lets
+    you load an existing image from your hard-drive or an external medium.
+    For alternative, and sometimes more convenient, ways of opening files,
+    see the <link linkend="gimp-using-fileformats">Files</link> section.
   </para>
   <para lang="ja">
     <guimenuitem>開く(<accel>O</accel>)...</guimenuitem> コマンドはファイル
@@ -84,13 +81,14 @@
     <title lang="ja">ファイル縦覧</title>
 
     <figure>
-      <!--file-open-dialog.xcf.gz in src/images/menus-->
+      <!--OLD: file-open-dialog.xcf.gz in src/images/menus-->
+      <!--2.6: file-open.xcf.gz in src/images/menus-->
       <title lang="en">Open Dialog</title>
       <title lang="ja">画像を開くダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/menus/file-open-dialog.png"/>
+            fileref="images/menus/file/open.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -104,14 +102,10 @@
       をします。 それに加えてつぎのような特徴的な機能があります。
     </para>
     <orderedlist>
-      <listitem>
+      <listitem><!--1-->
         <para lang="en">
-          The <guibutton>Type a file name</guibutton> toggles between add
-          and remove the <guilabel>Location</guilabel> text box where you can
-          type a path to an image file. If you don't type any path, the
-          name of the selected file will be displayed. You can also type
-          the first letters of the name: it will be auto-completed and a list
-          of file names beginning with these letters will be displayed.
+          The button <guibutton>Type a file name</guibutton> toggles between
+          add and remove the <guilabel>Location</guilabel> text box.
         </para>
         <para lang="en">
           The <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>
@@ -129,10 +123,7 @@
             </inlinemediaobject>
           </guiicon> アイコンボタンをクリックすると開きたい画像ファイル名のパス
           を直接入力できる <guilabel>場所(<accel>L</accel>)</guilabel> 文字入力
-          欄が現れる状態に切り替わります。 パスを記入しなければ選択したファイル
-          の名前が表示されます。 ファイル名の最初の文字を書くと自動補完が起こり
-          現在のディレクトリ内にあるファイル名のうちその文字から始まるものが
-          全て列挙されます。
+          欄が現れる状態に切り替わります。
         </para>
         <para lang="ja">
           キーボードショートカット
@@ -143,16 +134,43 @@
 
       <listitem><!--2-->
         <para lang="en">
-          The path to the current folder is displayed. You can navigate
-          along this path by clicking on an element.
+          In the <guilabel>Location</guilabel> text box you can type a path to
+          an image file. If you don't type any path, the name of the selected
+          file will be displayed. Yo can also type the first letters of the
+          name: it will be auto-completed and a lost of file names beginning
+          with these letters will be displayed.
+        </para>
+        <para lang="en">
+          When you search for a file or directory using the
+          <guilabel>Search</guilabel> feature (see below, item 4), the label
+          changes to <guilabel>Search</guilabel> and you can enter the name in
+          this text box.
         </para>
         <para lang="ja">
-          現在居るフォルダまでの経路名が表示されます。 経路名 (パス) の各層は
-          ボタンになっていて、 クリックするとその位置まで移動できます。
+          <guilabel>場所(<accel>L</accel>)</guilabel> 記入欄でファイルの経路名
+          (パス) を指定できます。 パスを省略した場合は選んだファイルの名前が
+          表示されます。 また、 ファイル名の最初の数文字だけを記入する方法も
+          あります。 すかさず自動補完が作動し、 その文字に続く可能性のある
+          ファイル名が表示されます。
+        </para>
+        <para lang="ja">
+          <guilabel>検索</guilabel> 機能 (後述
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/callouts/4.png"/>
+              </imageobject>
+              <textobject><phrase>(4)</phrase></textobject>
+            </inlinemediaobject>
+          </guiicon>
+          ) を利用してファイルやディレクトリを探しているときは、 表題が 
+          <guilabel>検索(<accel>S</accel>)</guilabel> に切り替わり、
+          この記入欄に探したい名前を書き送ることになります。
         </para>
       </listitem>
 
-      <listitem><!--3-->
+      <!--
+      <listitem><!--OLD 3-->
         <para lang="en">
           <guibutton>Create a folder</guibutton> button: this button lets
           you add a new folder in the current folder. For some strange
@@ -161,33 +179,72 @@
         </para>
         <para lang="ja">
           <guibutton>フォルダを作成</guibutton> ボタンをクリックすると現在居る
-          フォルダ内に新たなフォルダを追加できます。 よくわからない理由でこの
-          ボタンはいつもあるとは限らないばかりか作ったフォルダを削除する機能も
-          ありません。
+          フォルダ内に新たなフォルダを追加できます。
+        </para>
+        XXX: Probably "Create folder" is only visible if you *save* a file
+        - using the the "Save Image" dialog.
+      </listitem>
+      -->
+
+      <listitem><!--3-->
+        <para lang="en">
+          The path to the current folder is displayed. You can navigate along
+          this path by clicking on an element.
+        </para>
+        <para lang="ja">
+          現在居るフォルダまでの経路名が表示されています。 経路名 (パス) の
+          各層はボタンになっていて、 クリックするとその位置まで移動できます。
         </para>
       </listitem>
 
       <listitem><!--4-->
         <para lang="en">
-          <guilabel>Search</guilabel>: this new option is not very handy.
-          You can't set where to search.
+          With <guilabel>Search</guilabel> you can look for a file (or
+          directory), even if you don't know the exact name of that file.
+          Click on <guilabel>Search</guilabel>, type a file name or just a
+          part of a file name in the text box above, and press
+          <keycap>Enter</keycap>. Then the central frame (7) will list all
+          files and directories of your home directory with names containing
+          the text you typed in. Unfortunately you can't restrict the results
+          to files of a specified type (10).
         </para>
         <para lang="en">
-          <guilabel>Recently used</guilabel>: no comment.
+          <guilabel>Recently used</guilabel> is self-explanatory.
         </para>
         <para lang="ja">
-          <guilabel>検索</guilabel>: この新しいオプションはあまり使い易くあり
-          ません。 探す範囲が指定できないのです。
+          <guilabel>検索</guilabel> 機能を使うと探したいファイル (または
+          ディレクトリ) の名前がうろ覚えでも検索できます。 <guilabel>検索
+          </guilabel> の行をクリックしたら、 上の記入欄にファイル名を全体
+          もしくは一部だけ書き込んで、 <keycap>Enter</keycap> キーを押します。
+          するとその語句を名前に持つファイルやディレクトリのうち現在居る
+          ディレクトリ内にあるものが中央部
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/callouts/7.png"/>
+              </imageobject>
+              <textobject><phrase>(7)</phrase></textobject>
+            </inlinemediaobject>
+          </guiicon>
+          に列挙されます。 残念ながらその出力結果はファイル形式
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/callouts/10.png"/>
+              </imageobject>
+              <textobject><phrase>(10)</phrase></textobject>
+            </inlinemediaobject>
+          </guiicon>
+          を絞って表示させることができません。
         </para>
         <para lang="ja">
-          <guilabel>最近使ったファイル</guilabel>: 何も言うことはありません。
+          <guilabel>最近使ったファイル</guilabel> 言葉通りです。
         </para>
       </listitem>
 
       <listitem><!--5-->
         <para lang="en">
-          Here, you can access to your main folders and to your store
-          devices.
+          Here, you can access to your main folders and to your store devices.
         </para>
         <para lang="ja">
           ここから主なフォルダや記憶デバイスに跳べます。
@@ -199,7 +256,7 @@
           Here, you can add bookmarks to folders, by using the
           <guibutton>Add</guibutton> or the <guilabel>Add to
           Bookmarks</guilabel> option you get by right-clicking a folder in
-          the central pannel, and also remove them.
+          the central panel, and also remove them.
         </para>
         <para lang="ja">
           このブックマークにフォルダを追加するには、 中央パネルでフォルダを
@@ -239,24 +296,26 @@
           クリックすると下図のような脈絡メニューが現れます。
         </para>
 
-        <figure>
-          <title lang="en">The folder context menu</title>
-          <title lang="ja">フォルダの脈絡メニュー</title>
+        <screenshot>
           <mediaobject>
             <imageobject>
               <imagedata format="PNG"
-                fileref='images/menus/folder-context-menu.png'/>
+                fileref='images/menus/file/open/folder-context-menu.png'/>
             </imageobject>
+            <caption>
+              <para lang="en">The folder context menu</para>
+              <para lang="ja">フォルダの脈絡メニュー</para>
+            </caption>
           </mediaobject>
-        </figure>
+        </screenshot>
       </listitem>
 
       <listitem><!--8-->
         <para lang="en">
-          The selected image is displayed in the <guilabel>Preview
-          </guilabel> window. If it is an image created by
-          <acronym>GIMP</acronym>, file size, resolution and image
-          composition are displayed below the preview window.
+          The selected image is displayed in the <guilabel>Preview</guilabel>
+          window. If it is an image created by <acronym>GIMP</acronym>, file
+          size, resolution and image composition are displayed below the
+          preview window.
         </para>
         <para lang="ja">
           中央パネルで選ばれたファイルが画像ならばその見本が <guilabel>
@@ -267,13 +326,12 @@
 
         <tip>
           <para lang="en">
-            If your image has been modified by another program,
-            click on the <guilabel>Preview</guilabel> window to update it.
+            If your image has been modified by another program, click on the
+            Preview window to update it.
           </para>
           <para lang="ja">
-            画像を他のプログラムで変更した場合は、 <guilabel>
-            プレビュー(<accel>P</accel>)</guilabel> ウィンドウをクリックすれば
-            見本画像を更新できます。
+            画像を他のプログラムで変更した場合は、 <quote>プレビュー(P)</quote>
+            ウィンドウをクリックすれば見本画像を更新できます。
           </para>
         </tip>
       </listitem>
@@ -317,8 +375,8 @@
 
       <listitem><!--11-->
         <para lang="en">
-          <guilabel>Determine File Type</guilabel>: In most cases you
-          don't need to pay any attention to this, because the
+          <guilabel>Select File Type</guilabel>: In most cases you
+          don't need to pay any attention to this, because
           <acronym>GIMP</acronym> can determine the file type
           automatically. In a few rare situations, neither the file
           extension nor internal information in the file are enough to tell

@@ -14,7 +14,7 @@
   2006-02-20 fixed #322305
   2005-11-30 replaced informalfigure by axel.wernicke
 -->
-<!--2009-06-23-->
+<!--2009-08-11-->
 <sect1 id="gimp-using-getting-unstuck">
   <title lang="en">Getting Unstuck</title>
   <title lang="ja">固まったときの対処</title>
@@ -42,8 +42,9 @@
     </para>
     <para lang="en">
       Well, hold on a second. This happens pretty frequently, even to people
-      who've used GIMP for a long time, but generally the cause is not so hard
-      to figure out (and fix) if you know what to look at. Lets be calm, and
+      who've used <acronym>GIMP</acronym> for a long time, but generally the
+      cause is not so hard
+      to figure out (and fix) if you know where to look at. Lets be calm, and
       go through a checklist that will probably get you GIMPing happily again.
     </para>
     <para lang="ja">
@@ -84,7 +85,8 @@
       </figure>
       <para lang="en"><emphasis>How to tell:</emphasis>
         If there is a floating selection, many actions are impossible
-        until it is anchored. To check, look at the Layers dialog (making
+        until the floating section is anchored.
+        To check, look at the Layers dialog (making
         sure it's set to the image you're working on) and see whether the
         top layer is called <quote>Floating Selection</quote>.
       </para>
@@ -98,7 +100,7 @@
       <para lang="ja">
         <emphasis>みわけかた:</emphasis>
         <link linkend="gimp-selection-float">フローティング (浮層) 選択範囲
-        </link> があると、これを固定するまでは実行できない操作がたくさん
+        </link> があると、 これを固定するまでは実行できない操作がたくさん
         あります。 確認のため、 レイヤーダイアログを見て (作業中の画像を扱って
         いる状態で)、 最前面のレイヤーが<quote>フローティング選択範囲</quote>に
         なっていないか確かめます。
@@ -142,7 +144,8 @@
         you realize it, probably, but to explain in any case: sometimes
         the flickering line that outlines the selection is annoying
         because it makes it hard to see important details of the image, so
-        GIMP gives you the option of hiding the selection, by unchecking
+        <acronym>GIMP</acronym> gives you the option of hiding the selection,
+        by unchecking
         <guimenuitem>Show Selection</guimenuitem>
         in the <guimenu>View</guimenu>
         menu. It is easy to forget that you have done this, though.
@@ -256,13 +259,13 @@
       </figure>
       <para lang="en"><emphasis>How to tell:</emphasis>
         The Layers dialog gives you ability to toggle the visibility of
-        each layer on or off. Look at the Layers dialog, and see whether
+        each layer on or off. Look at the Layers dialog, and see if
         the layer you are trying to act on is active (i.e., darkened) and
         has an eye symbol to the left of it. If not, this is your problem.
       </para>
       <para lang="en"><emphasis>How to fix:</emphasis>
         If your intended target layer is not active, click on it in the Layers
-        dialog to activate it. (If none of the layers there is active, the
+        dialog to activate it. (If none of the layers is active, the
         active drawable might be a channel -- you can look at the Channels tab
         in the Layers dialog to see. This does not change the solution,
         though.) If the eye symbol does not appear, click in the Layers dialog
@@ -276,17 +279,18 @@
         レイヤーダイアログでは個々のレイヤーの可視/不可視を切り替えることが
         できます。 レイヤーダイアログを見て、 描画されているレイヤー
         (強調されています) がどれかを探し、 その左に目のしるしがあるか
-        確かめてください。 なければ、それが原因です。
+        確かめてください。 なければ、 それが原因です。
       </para>
       <para lang="ja">
         <emphasis>対処法:</emphasis>
-        処理対象のレイヤーが無効だった場合は、 レイヤーダイアログでそのレイヤーを
-        クリックして有効にしてください。 (有効なレイヤーがまったく無ければ、
+        処理対象のレイヤーが無効だった場合は、 レイヤーダイアログでそのレイヤー
+        をクリックして有効にしてください。 (有効なレイヤーがまったく無ければ、
         描画領域はチャンネルかもしれませんので チャンネルダイアログを見て
-        ください。 解法は同じです。) レイヤーダイアログ上で目のしるしがなければ、
-        左端をクリックして切り替えてください。 これでレイヤーは可視化されます。
-        より詳しい説明が
-        <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> にあります。
+        ください。 解法は同じです。) レイヤーダイアログ上で目のしるしが
+        なければ、 左端をクリックして切り替えてください。 これでレイヤーは
+        可視化されます。 より詳しい説明が
+        <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> に
+        あります。
       </para>
     </sect3>
 
@@ -336,7 +340,8 @@
       <title lang="ja">レイヤーの領域外で作業している</title>
       <para lang="en">
         <emphasis>How to tell:</emphasis>
-        In GIMP, layers don't need to have the same dimensions as the
+        In <acronym>GIMP</acronym>, layers don't need to have the same
+        dimensions as the
         image: they can be larger or smaller. If you try to paint outside
         the borders of a layer, nothing happens. To see if this is
         happening, look for a black-and-yellow dashed rectangle that does

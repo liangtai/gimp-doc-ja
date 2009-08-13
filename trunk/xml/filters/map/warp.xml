@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-12-09 ude: moved "activate filter" paras to separate sect3
   2007-09-05 AntI: added 'es'
@@ -12,6 +13,7 @@
 -->
 <sect2 id="plug-in-warp">
   <title>Warp</title>
+
   <indexterm>
     <primary>Filters</primary>
     <secondary>Map</secondary>
@@ -36,7 +38,8 @@
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/example-map-warp1.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/example-map-warp1.png"/>
         </imageobject>
         <caption>
           <para>
@@ -52,7 +55,8 @@
       <title>With a non-linear gradient</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/example-map-warp2.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/example-map-warp2.png"/>
         </imageobject>
         <caption>
           <para>A non-linear gradient leads to curls.</para>
@@ -60,10 +64,11 @@
       </mediaobject>
     </figure>
     <figure>
-      <title>With a complex gradient: </title>
+      <title>With a complex gradient</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/example-map-warp3.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/example-map-warp3.png"/>
         </imageobject>
         <caption>
           <para>
@@ -79,10 +84,9 @@
       protect it against filter action.
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activating the filter</phrase>
-    </title>
+    <phrase>Activating the filter</phrase>
     <para>
       This filter is found in the image window menu under
       <menuchoice>
@@ -93,13 +97,15 @@
       This filter has no Preview.
     </para>
   </sect3>
+
   <sect3>
     <title>Options</title>
     <figure>
       <title>Warp filter options</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-map-warp.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-map-warp.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -151,14 +157,14 @@
             </listitem>
             <listitem>
               <para>
-                <guilabel>Black</guilabel>
-                : Emptying places are filled with black color.
+                <guilabel>Black</guilabel>:
+                Emptying places are filled with black color.
               </para>
             </listitem>
             <listitem>
               <para>
-                <guilabel>FG Color</guilabel>
-                : Emptying places are filled with the Foreground color of the
+                <guilabel>FG Color</guilabel>:
+                Emptying places are filled with the Foreground color of the
                 color area in Toolbox.
               </para>
             </listitem>
@@ -188,10 +194,11 @@
             the thinner the grain.
           </para>
           <figure>
-            <title>With a 3.00 dither size:</title>
+            <title>With a 3.00 dither size</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/examples/example-map-warp4.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/example-map-warp4.png"/>
               </imageobject>
             </mediaobject>
           </figure>
@@ -208,10 +215,11 @@
             Here is an example with a 10° angle and 6 iterations:
           </para>
           <figure>
-            <title>With a 10° angle and 6 iterations:</title>
+            <title>With a 10° angle and 6 iterations</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/examples/example-map-warp5.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/example-map-warp5.png"/>
               </imageobject>
               <caption>
                 <para>
@@ -239,14 +247,15 @@
             undergo all the strength of filter. Image areas corresponding
             to black parts of the map will be spared by filter.
             Intermediate grey levels will lessen filter action on
-            corresponding areas of the image. <guilabel>Use magnitude
-              map</guilabel> must be checked for that.
+            corresponding areas of the image. <guilabel>Use magnitude map
+            </guilabel> must be checked for that.
           </para>
           <figure>
             <title>Magnitude Map example:</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/examples/example-map-warp6.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/example-map-warp6.png"/>
               </imageobject>
               <caption>
                 <para>
@@ -276,7 +285,8 @@
       <varlistentry>
         <term>The Gradient Map</term>
         <listitem>
-          <para><emphasis>The gradient map</emphasis> is also a grayscaled map.
+          <para>
+            <emphasis>The gradient map</emphasis> is also a grayscaled map.
             Here, the displacement of pixels depends on the direction of
             grayscale transitions. The <guilabel>Gradient scale</guilabel>
             option lets you set how much the grayscale variations will
@@ -288,7 +298,8 @@
             <title>Gradient map example</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/examples/example-map-warp7.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/example-map-warp7.png"/>
               </imageobject>
               <caption>
                 <para>
@@ -311,7 +322,8 @@
             <title>Vector map example</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/filters/examples/example-map-warp8.png" format="PNG"/>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/example-map-warp8.png"/>
               </imageobject>
               <caption>
                 <para>

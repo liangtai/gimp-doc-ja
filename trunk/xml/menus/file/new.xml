@@ -11,14 +11,14 @@
   2006-06-17 added a para en;fr for default image size by j.h
   2005-09-03 de reviewed by axel.wernicke
 -->
-<!--2009-07-09-->
+<!--2009-08-09-->
 <sect2 id="gimp-file-new">
   <title lang="en">New</title>
   <title lang="ja">新しい画像(N)...</title>
 
   <indexterm lang="en">
     <primary>Image</primary>
-    <secondary>New image</secondary>
+    <secondary>New</secondary>
   </indexterm>
   <indexterm lang="en">
     <primary>New</primary>
@@ -28,7 +28,7 @@
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="ガゾウ">画像</primary>
-    <secondary sortas="アタラシイガゾウ">新しい画像</secondary>
+    <secondary sortas="シンキ">新規</secondary>
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="シンキ">新規</primary>
@@ -91,8 +91,8 @@
       <title lang="ja"><quote>新しい画像を作成</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
-          <imagedata format="PNG"
-            fileref="images/dialogs/dialogs-new-image.png"/>
+          <imagedata format="PNG" fileref="images/menus/file/new.png"/>
+          <!--was:  images/dialogs/dialogs-new-image.png-->
         </imageobject>
       </mediaobject>
     </figure>
@@ -131,8 +131,9 @@
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
-                  fileref="images/dialogs/dialogs-new-image-templates.png"/>
+                  fileref="images/menus/file/new/templates.png"/>
               </imageobject>
+              <!-- was:  images/dialogs/dialogs-new-image-templates.png-->
             </mediaobject>
           </figure>
           <para lang="en">
@@ -252,10 +253,11 @@
       <mediaobject>
         <imageobject>
           <!--<imagedata format="PNG"
-            fileref="images/dialogs/templates-edit-advanced.png"/>-->
+            fileref="images/dialogs/dialogs-templates-edit-advanced.png"/>-->
           <imagedata format="PNG"
-            fileref="images/dialogs/dialogs-new-image-advanced.png"/>
+            fileref="images/menus/file/new/advanced-dialog.png"/>
         </imageobject>
+        <!-- was: images/dialogs/dialogs-new-image-advanced.png-->
       </mediaobject>
     </figure>
     <para lang="en">
@@ -347,33 +349,57 @@
         <term lang="en">Colorspace</term>
         <term lang="ja">色空間(S)</term>
         <listitem>
-          <figure>
-            <title lang="en">Colorspace menu</title>
-            <title lang="ja">色空間メニュー</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/dialogs/dialogs-new-image-colorspace.png"/>
-              </imageobject>
-            </mediaobject>
-          </figure>
           <para lang="en">
-            You can create the new image as either an RGB image or a grayscale
+            You can create the new image in different
+            <link linkend="gimp-image-mode">color modes</link>, as either an
+            <link linkend="glossary-rgb">RGB</link> image or a grayscale
             image.
           </para>
-          <para lang="en">
-            <guilabel>RGB color</guilabel>: The image is created in the
-            Red, Green, Blue color system, which is the one used by
-            your monitor or your television screen.
+          <para lang="ja">
+            新しい画像は 
+            <link linkend="glossary-rgb">RGB</link> かグレースケールの何れかの
+            <link linkend="gimp-image-mode">色モード</link> で作成できます。
           </para>
-          <para lang="en">
-            <guilabel>Grayscale</guilabel>: The image is created in
-            black and white, with various shades of gray. Aside from
-            your artistic interests, this type of image may be
-            necessary for some plug-ins. Nevertheless, the
-            <acronym>GIMP</acronym> allows you to change an
-            RGB image into grayscale, if you would like.
-          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">RGB color</term>
+              <term lang="ja">RGBカラー</term>
+              <listitem>
+                <para lang="en">
+                  The image is created in the Red, Green, Blue color system,
+                  which is the one used by your monitor or your television
+                  screen.
+                </para>
+                <para lang="ja">
+                  お使いのコンピュータ画面やテレビ画面でも利用されている
+                  赤緑青の3原色系で画像を作成します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Grayscale</term>
+              <term lang="ja">グレースケール</term>
+              <listitem>
+                <para lang="en">
+                  The image is created in black and white, with various shades
+                  of gray. Aside from your artistic interests, this type of
+                  image may be necessary for some plug-ins. Nevertheless, the
+                  <acronym>GIMP</acronym> allows you to
+                  <link linkend="gimp-image-convert-grayscale">change an RGB
+                  image into grayscale</link>, if you would like.
+                </para>
+                <para lang="ja">
+                  白黒や灰色陰影のモードで画像が作成されます。 趣味でこのような
+                  白黒画像にするだけのためにこのモードがあるのではなく、 
+                  いくつかのプラグインがこの画像形式を必要としています。 
+                  とはいえ<acronym>GIMP</acronym>なら 
+                  <link linkend="gimp-image-convert-grayscale">
+                  <acronym>RGB</acronym>画像をグレースケールに変換</link> する
+                  手段もあります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
           <para lang="en">
             You cannot create an indexed image directly with this menu, but of
             course you can always convert the image to indexed mode after it
@@ -383,22 +409,6 @@
               <guisubmenu>Mode</guisubmenu>
               <guimenuitem>Indexed</guimenuitem>
             </menuchoice> command.
-          </para>
-          <para lang="ja">
-            新しい画像は<acronym>RGB</acronym>かグレースケールのいずれかの
-            モードで作成できます。
-          </para>
-          <para lang="ja">
-            <guimenuitem>RGBカラー</guimenuitem>:
-            お使いのコンピュータ画面やテレビ画面でも利用されている赤緑青の
-            3原色系で画像を作成します。
-          </para>
-          <para lang="ja">
-            <guimenuitem>グレースケール</guimenuitem>: 白黒や灰色陰影のモードで
-            画像が作成されます。 趣味でこのような白黒画像にするだけのためにこの
-            モードがあるのではなく、 いくつかのプラグインがこの画像形式を必要と
-            しています。 とはいえ<acronym>GIMP</acronym>なら<acronym>RGB
-            </acronym>画像をグレースケールに変換する手段もあります。
           </para>
           <para lang="ja">
             このメニューから直にインデックス化カラー画像を作ることはできません
@@ -418,48 +428,49 @@
         <term lang="en">Fill</term>
         <term lang="ja">塗りつぶし色(F)</term>
         <listitem>
-          <figure>
-            <title lang="en">Fill menu</title>
-            <title lang="ja">塗りつぶし色メニュー</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/dialogs/dialogs-new-image-fill.png"/>
-              </imageobject>
-            </mediaobject>
-          </figure>
           <para lang="en">
-            Here, you specify the background color that is used for
-            your new image. It is certainly possible to change the
-            background of an image later, too. You can find more information
-            about doing that in the
-            <link linkend="gimp-layer-dialog">Layer dialog</link>.
+            Here, you specify the background color that is used for your new
+            image. It is certainly possible to change the background of an
+            image later, too. You can find more information about doing that
+            in the <link linkend="gimp-layer-dialog">Layer dialog</link>.
           </para>
           <para lang="ja">
             ここで新しい画像の背景色を定められます。 もちろん後からでも画像の
-            背景色は変更できます。 その方法については
+            背景色は変更できます。 その方法については 
             <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> で述べ
             ています。
           </para>
           <itemizedlist>
+            <para lang="en">There are several choices:</para>
+            <para lang="ja">つぎのようにさまざまな方法があります。</para>
             <listitem>
               <para lang="en">
                 Fill the image with the current <guilabel>Foreground
                 color</guilabel>, shown in the Toolbox.
               </para>
+              <para lang="en">
+                Note that you can change the foreground color while the
+                <quote>New Image</quote> dialog window is open.
+              </para>
               <para lang="ja">
                 ツールボックスに示されている現在の <guimenuitem>描画色
                 </guimenuitem> で画像を塗りつぶします。
+              </para>
+              <para lang="ja">
+                ちなみにこの描画色は<quote>新しい画像</quote>ダイアログを開いて
+                いる間も変更できます。
               </para>
             </listitem>
             <listitem>
               <para lang="en">
                 Fill the image with the current <guilabel>Background
-                color</guilabel>, shown in the Toolbox.
+                color</guilabel>, shown in the Toolbox. (You can change the
+                background color too, while the dialog window is open.)
               </para>
               <para lang="ja">
                 ツールボックスに示されている現在の <guimenuitem>背景色
-                </guimenuitem> で画像を塗りつぶします。
+                </guimenuitem> で画像を塗りつぶします。 (背景色も同様に<quote>
+                新しい画像</quote>ダイアログを開いている最中でも変更できます。)
               </para>
             </listitem>
             <listitem>
@@ -472,17 +483,20 @@
             </listitem>
             <listitem>
               <para lang="en">
-                Fill the image with <guilabel>Transparency</guilabel>.
-                If you choose this option, the image is created
-                with an alpha channel and the background is transparent.
-                The transparent parts of the image are then displayed
-                with a checkered pattern, to indicate the transparency.
+                Fill the image with <guilabel>Transparency</guilabel>.  If you
+                choose this option, the image is created with an <link
+                linkend="glossary-alpha-channnel">alpha&nbsp;channel</link> and
+                the background is transparent.  The transparent parts of the
+                image are then displayed with a checkered pattern, to indicate
+                the transparency.
               </para>
               <para lang="ja">
                 画像に何も色を塗らず <guimenuitem>透明</guimenuitem> にします。
-                このオプションを選ぶと画像にアルファチャンネルが追加され、 背景
-                レイヤーは透明になります。 画像ウィンドウでは透過している部分が
-                わかるようにするため[初期設定では]市松模様が透けて見えます。
+                このオプションを選ぶと画像に 
+                <link linkend="glossary-alpha-channel">アルファチャンネル
+                </link> が追加され、 背景レイヤーは透明になります。 画像
+                ウィンドウでは透過している部分がわかるようにするため
+                [初期設定では]市松模様が透けて見えます。
               </para>
             </listitem>
           </itemizedlist>
@@ -508,17 +522,19 @@
           </indexterm>
           <para lang="en">
             You can write a descriptive comment here.  The text is
-            attached to the image as a <quote>parasite</quote>, and
-            is saved with the image by some file formats (PNG, JPEG, GIF).
+            attached to the image as a
+            <link linkend="glossary-parasite">parasite</link>, and is saved
+            with the image by some file formats (PNG, JPEG, GIF).
           </para>
           <para lang="ja">
-            説明的な付記がここで書き込めます。 この文章は画像に<quote>
-            パラサイト</quote>として埋め込まれ、 [<acronym>XCF</acronym>は無論]
-            <acronym>PNG</acronym>や<acronym>JPEG</acronym>や<acronym>GIF
-            </acronym>といったファイル形式で保存する場合に画像内に保存
-            されます。 [<acronym>PNG</acronym>や<acronym>GIF</acronym>など一部
-            のファイル形式はマルチバイト文字に対応していません。 このような形式
-            で日本語文字を含んだ文を保存すると何の警告もなくコメント全文が
+            説明的な付記がここで書き込めます。 この文章は画像に 
+            <link linkend="glossary-parasite">パラサイト</link> として埋め
+            込まれ、 [<acronym>XCF</acronym>は無論]<acronym>PNG</acronym>や
+            <acronym>JPEG</acronym>や<acronym>GIF</acronym>といったファイル形式
+            で保存する場合に画像内に保存されます。 
+            [<acronym>PNG</acronym>や<acronym>GIF</acronym>など一部のファイル
+            形式はマルチバイト文字に対応していません。 このような形式で
+            日本語文字を含んだ文を保存すると何の警告もなくコメント全文が
             削除されます。]
           </para>
           <note>

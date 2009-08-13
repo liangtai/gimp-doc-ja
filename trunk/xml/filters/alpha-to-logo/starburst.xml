@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-10-26 alex falappa: added 'it'
   2007-10-16 KoSt: added 'no'
   2007-10-15 ude: created 'en','de'
 -->
 <sect2 id="script-fu-starburst-logo-alpha">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2800 $</revnumber>
-        <date>2007-10-15</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Starburst</phrase>
-  </title>
+  <title>Starburst</title>
+
   <indexterm>
     <primary>Filters</primary>
     <secondary>Alpha to Logo</secondary>
@@ -26,19 +17,17 @@
   <indexterm>
     <primary>Starburst</primary>
   </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title>Overview</title>
     <figure>
       <title>
-        <phrase>
-          Example for the <quote>Starburst</quote> filter
-        </phrase>
+        Example for the <quote>Starburst</quote> filter
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/logo-starburst-applied.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/logo-starburst-applied.jpg"/>
         </imageobject>
         <caption>
           <para><quote>Starburst</quote> applied</para>
@@ -51,21 +40,24 @@
     </para>
     <para>
       It is derived from the <quote>Starburst</quote> script-fu
-      (<menuchoice><guimenu>File</guimenu><guisubmenu>Create</guisubmenu><guisubmenu>Logos</guisubmenu><guimenuitem>Starburst</guimenuitem></menuchoice>
-      in the image window),
-      which creates a logo from a text.
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>Starburst</guimenuitem>
+      </menuchoice>
+      in the image window), which creates a logo from a text.
     </para>
     <para>
       You can use this filter to create shapes filled with the above starburst
       motif:
     </para>
     <figure>
-      <title>
-        <phrase>Starburst script and filter</phrase>
-      </title>
+      <title>Starburst script and filter</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/starburst-script-fu.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/starburst-script-fu.jpg"/>
         </imageobject>
         <caption>
           <para>The <quote>Starburst</quote> Script-Fu script</para>
@@ -73,7 +65,8 @@
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/starburst-filter.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/starburst-filter.jpg"/>
         </imageobject>
         <caption>
           <para>The <quote>Starburst</quote> filter</para>
@@ -87,7 +80,8 @@
       </para>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/starburst-layers.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/starburst-layers.png"/>
         </imageobject>
         <caption>
           <para>
@@ -104,9 +98,10 @@
       <listitem>
         <para>
           The active layer was named layer #2 in the example above. It has
-          been filled with the <quote>Crack</quote> <link linkend="gimp-concepts-patterns">pattern</link>, so the content of
-          this layer doesn't matter. Only the active layer's alpha channel
-          does.
+          been filled with the <quote>Crack</quote>
+          <link linkend="gimp-concepts-patterns">pattern</link>, so the
+          content of this layer doesn't matter. Only the active layer's alpha
+          channel does.
         </para>
         <warning>
           <para>
@@ -129,26 +124,27 @@
       </listitem>
     </itemizedlist>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
+    <title>Activate the filter</title>
     <para>
       You can find this filter in the image window menu under
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Alpha to Logo</guisubmenu><guimenuitem>Starburst</guimenuitem></menuchoice>.
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Starburst</guimenuitem>
+      </menuchoice>.
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title>Options</title>
     <figure>
-      <title>
-        <phrase><quote>Starburst</quote> options</phrase>
-      </title>
+      <title><quote>Starburst</quote> options</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-logo-starburst.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-logo-starburst.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -168,8 +164,9 @@
         <term>Burst color</term>
         <listitem>
           <para>
-            This color will be passed to the <link linkend="plug-in-nova">Supernova</link> filter as the color of
-            the bursting star; it defaults to green. A click on the color
+            This color will be passed to the
+            <link linkend="plug-in-nova">Supernova</link> filter as the color
+            of the bursting star; it defaults to green. A click on the color
             swatch button brings up the color selector, where you can choose
             another color.
           </para>

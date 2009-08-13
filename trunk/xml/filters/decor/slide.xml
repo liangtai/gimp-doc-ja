@@ -1,64 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-10-11 KoSt: added 'no'
   2007-09-29 alex falappa: added 'it'
   2007-09-13 AntI: Added 'es'
   2007-09-10 ude: created en, de
 -->
+<!--2009-08-10-->
 <sect2 id="script-fu-slide">
-<!--  <sect2info>
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2007-09-10</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Slide</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Slide</title>
+  <title lang="ja">スライド(S)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Decor</secondary>
     <tertiary>Slide</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Slide</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ソウショク">装飾</secondary>
+    <tertiary>スライド</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>スライド</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase>
-          Example for the <quote>Slide</quote> filter
-        </phrase>
-      </title>
+      <title lang="en">Example for the <quote>Slide</quote> filter</title>
+      <title lang="ja"><quote>スライド</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/decor-taj-slide.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/decor-taj-slide.jpg"/>
         </imageobject>
         <caption>
-          <para><quote>Slide</quote> applied</para>
+          <para lang="en"><quote>Slide</quote> applied</para>
+          <para lang="ja"><quote>スライド</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter makes your image look like a slide, by adding a slide-film
       like black frame, sprocket holes, and labels.
     </para>
-    <para>
+    <para lang="en">
       If necessary, the image will be cropped to fit into an aspect ratio of
       width : height = 3:2. If image width is greater than image height,
       black frames will be added at the top and the bottom of the image, else
@@ -66,80 +68,136 @@
       the color as well as the font of the text appearing on the frames. The
       current background color will be used for drawing the holes.
     </para>
-    <para>
+    <para lang="en">
       The script only works on RGB and grayscale images that contain one
       layer. Otherwise the menu entry is insensitive and grayed out.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-      The filter is found in the image window menu under
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Decor</guisubmenu><guimenuitem>Slide</guimenuitem></menuchoice>.
+    <para lang="ja">
+      <guimenuitem>スライド(<accel>S</accel>)...</guimenuitem> フィルタは画像に
+      スライド映写機で使うような歯車穴が穿たれラベルがついた黒枠を加えて
+      スライド画像のように見せるスクリプトです。
+    </para>
+    <para lang="ja">
+      枠内の幅と高さの比は 3:2 に固定されているため必要ならば画像がその縦横比に
+      合うよう切り抜かれます。 画像の幅が高さ以上の場合は歯車穴のある黒枠が
+      画像の上下につけ加えられますが、 逆に下回る場合幅と高さの比が 2:3 となり
+      黒枠は画像の左右につけ加えられます。
+    </para>
+    <para lang="ja">
+      このスクリプトはレイヤーがただ1層だけの<acronym>RGB</acronym>もしくは
+      グレースケール画像でのみ作動します。 それ以外の画像に対してはこのメニュー
+      項目は灰色無効となって使用できません。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      The filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Decor</guisubmenu>
+        <guimenuitem>Slide</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>装飾(<accel>D</accel>)</guisubmenu>
+        <guimenuitem>スライド(<accel>S</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Slide</quote> options</phrase>
-      </title>
+      <title lang="en"><quote>Slide</quote> options</title>
+      <title lang="ja"><quote>スライド</quote>のオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-decor-slide.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-decor-slide.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Text</term>
+        <term lang="en">Text</term>
+        <term lang="ja">文字</term>
         <listitem>
-          <para>
+          <para lang="en">
             A short label that will be displayed in the top and bottom (or
             the left and right) of the frame. The text must be really short.
+          </para>
+          <para lang="ja">
+            枠の歯車穴のある上下の (あるいは左右の) 黒帯上に書かれる語句です。
+            長くなるとはみ出した文字が反対側から続きます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Number</term>
+        <term lang="en">数</term>
         <listitem>
-          <para>
+          <para lang="en">
             Here you may enter a text for simulating consecutive numbers. Two
             numbers will be displayed: this number and this number with the
             character <quote>A</quote> appended.
           </para>
+          <para lang="ja">
+            もとは続き番号の模倣を想定していましたが、 必ずしも数字である必要は
+            なく、 例えば<quote>2000-08-14</quote>でも<quote>その三</quote>でも
+            構いません。 この語句は2種類の表示が現れます。 そのままの表示が
+            2箇所と語尾に<quote>A</quote>を付加したものが1箇所です。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Font</term>
+        <term lang="en">Font</term>
+        <term lang="ja">フォント</term>
         <listitem>
-          <para>
+          <para lang="en">
             Clicking on this button opens the
             <link linkend="gimp-font-dialog">Font dialog</link>, where you
             can choose a font for the text on the frame.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Fontcolor</term>
-        <listitem>
-          <para>
-            Clicking on this button brings up a color selection dialog that
-            allows you to choose the color of the text.
+          <para lang="ja">
+            このボタンをクリックすると 
+            <link linkend="gimp-font-dialog">簡易フォントダイアログ</link> が
+            開かれ、 上で指定した語句を表示する書体を選択できます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Work on copy</term>
+        <term lang="en">Fontcolor</term>
+        <term lang="ja">フォント色</term>
         <listitem>
-          <para>
+          <para lang="en">
+            Clicking on this button brings up a color selection dialog that
+            allows you to choose the color of the text.
+          </para>
+          <para lang="ja">
+            この色だまりボタンをクリックすると色選択ダイアログが現れ文字や数を
+            表示する色を選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Work on copy</term>
+        <term lang="ja">コピーで作業する</term>
+        <listitem>
+          <para lang="en">
             If checked, the filter creates a new window containing a copy of
             the image with the filter applied. The original image remains
             unchanged.
+          </para>
+          <para lang="ja">
+            このオプションを有効にするとスクリプトは画像の複製をとって新たな
+            ウィンドウで開き、 その複製にフィルタを適用します。 元画像は変更を
+            受けません。
           </para>
         </listitem>
       </varlistentry>
