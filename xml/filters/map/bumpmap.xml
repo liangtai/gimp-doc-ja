@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-12-09 ude: moved "activate filter" paras to separate sect3
   2007-12-05 j.h: some more explanation after a message on a forum, en;fr
@@ -11,52 +12,57 @@
   2005-11-30 replaced informalfigure by axel.wernicke
   2005-09-30 created by julien hardelin
 -->
+<!--2009-08-11-->
 <sect2 id="plug-in-bump-map">
-<!--  <sect2info role="cvs">
-    <revhistory>
-      <revision>
-        <revnumber>$Revision: 2728 $</revnumber>
-        <date>2008-01-09</date>
-        <authorinitials>ude</authorinitials>
-      </revision>
-    </revhistory>
-  </sect2info>-->
-  <title>
-    <phrase>Bump Map</phrase>
-  </title>
-  <indexterm>
+  <title lang="en">Bump Map</title>
+  <title lang="ja">バンプマップ(B)...</title>
+
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Map</secondary>
     <tertiary>bump-map</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Bump Map</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>マップ</secondary>
+    <tertiary>バンプマップ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>バンプマップ</primary>
+  </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        <phrase><quote>bump-map</quote> example
-        </phrase>
-      </title>
+      <title lang="en"><quote>bump-map</quote> example</title>
+      <title lang="ja"><quote>バンプマップ</quote>の使用例</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/example-map-bumpmap.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/example-map-bumpmap.png"/>
         </imageobject>
         <caption>
-          <para>
+          <para lang="en">
             On the left, the original image that we want to emboss: a solid
             blue. In the middle, the bump map : a grayscale image, where
             black pixels will emboss backwards and white pixels will emboss
             forwards. On the right, the bump-mapped image. The filter adds a
             shadow effect.
           </para>
+          <para lang="ja">
+            左図は起伏をつける前の対象画像。 中央はバンプマップ。 黒いところ
+            ほど掘り下げ白いところほど盛り上げることを意図するグレースケール
+            画像である。 右図はバンプマップ後の対象画像。 フィルタは陰だけで
+            なく影もつけている。
+          </para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter creates a 3D effect by embossing an image (the card) and
       then mapping it to another image. Bump height depends on pixel
       luminosity and you can set light direction. See
@@ -64,168 +70,241 @@
       about embossing. You can bump map any type of image, unlike the Emboss
       filter.
     </para>
-  </sect3>
-  <sect3>
-    <title>
-      <phrase>Activate the filter</phrase>
-    </title>
-    <para>
-      This filter is found in the image window menu under
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Map</guisubmenu><guimenuitem>Bump Map</guimenuitem></menuchoice>.
+    <para lang="ja">
+      <guimenuitem>バンプマップ(<accel>B</accel>)...</guimenuitem> フィルタは
+      ある画像をカードに見立ててエンボス加工 (起伏をつけること) し、 他の画像に
+      貼り付けることで立体感の効果を生み出します。 起伏の高さは画素の光度で
+      決められ、 光の射す向きは調整可能です。 エンボス加工については 
+      <link linkend="plug-in-emboss">エンボス</link> フィルタのところで詳しく
+      解説しています。 画像の種類にエンボスフィルタのような制限はなく、 どんな
+      形式でもバンプマップ化して利用できます。
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Bump Map</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>マップ(<accel>M</accel>)</guisubmenu>
+        <guimenuitem>バンプマップ(<accel>B</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title>
-        <phrase><quote>Bump Map</quote> filter options
-        </phrase>
-      </title>
+      <title lang="en"><quote>Bump Map</quote> filter options</title>
+      <title lang="ja"><quote>バンプマップ</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-map-bumpmap.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-map-bumpmap.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Parameter setting results are interactively displayed in preview.
             Scroll bars allow you to move around the image.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Bump Map</phrase>
-        </term>
+        <term lang="en">Bump Map</term>
+        <term lang="ja">バンプマップ</term>
         <listitem>
-          <para>
+          <para lang="en">
             This drop-down list allows you to select the image that will be
             used as a map for bump-mapping. This list contains images that are
             present on your screen when you launch the filter. Images opened
             after starting filter are not present in this list.
           </para>
+          <para lang="ja">
+            <guilabel>バンプマップ(<accel>B</accel>)</guilabel> 引き出しリスト
+            からバンプマップ化して利用できるレイヤーを選んでください。 ここに
+            並ぶ画像はこのフィルタを呼び出した時点で<acronym>GIMP</acronym>が
+            画面上に開いている画像だけです。 フィルタを呼び出したあとで開いた
+            画像はこのリストに現れません。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Map Type</phrase>
-        </term>
+        <term lang="en">Map Type</term>
+        <term lang="ja">マップの種類(M)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This option allows you to define the method that will be used
             when creating the map image:
           </para>
+          <para lang="ja">
+            このオプションではマップ化画像を生成する過程で使われる処理方法を
+            つぎのなかから選べます。
+          </para>
           <itemizedlist>
             <listitem>
-              <para><guilabel>Linear</guilabel>: bump height is a direct
+              <para lang="en">
+                <guilabel>Linear</guilabel>: bump height is a direct
                 function of luminosity.
               </para>
-            </listitem>
-            <listitem>
-              <para><guilabel>Sinusoidal</guilabel>: bump height
-                is a sinusoidal function of luminosity.
+              <para lang="ja">
+                <guimenuitem>線形</guimenuitem>: 起伏の高さは光度と一次関数的な
+                比例関係になります。
               </para>
             </listitem>
             <listitem>
-              <para><guilabel>Spheric</guilabel>: bump height is
+              <para lang="en">
+                <guilabel>Sinusoidal</guilabel>: bump height
+                is a sinusoidal function of luminosity.
+              </para>
+              <para lang="ja">
+                <guimenuitem>波状</guimenuitem>: 起伏の高さは光度と正弦関数的な
+                関係になります。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Spheric</guilabel>: bump height is
                 a spheric function of luminosity.
+              </para>
+              <para lang="ja">
+                <guimenuitem>球面</guimenuitem>: 起伏の高さは光度と円の関数的な
+                関係になります。
               </para>
             </listitem>
           </itemizedlist>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Compensate for darkening</phrase>
-        </term>
+        <term lang="en">Compensate for darkening</term>
+        <term lang="ja">暗くならない様に補正する(M)</term>
         <listitem>
-          <para>
+          <para lang="en">
             Bump-mapping tends to darken image. You can compensate this
             darkening by checking this option.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <phrase>Invert bump-map</phrase>
-        </term>
-        <listitem>
-          <para>
-            Bright pixels default to bumps and dark pixels to hollows. You can
-            invert this effect by checking this option.
+          <para lang="ja">
+            バンプマップ処理は画像を暗くしがちです。 このオプションを有効に
+            すればそのような暗化を補正できます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Tile bump-map</phrase>
-        </term>
+        <term lang="en">Invert bump-map</term>
+        <term lang="ja">反転バンプマップ(N)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            Bright pixels default to bumps and dark pixels to hollows. You can
+            invert this effect by checking this option.
+          </para>
+          <para lang="ja">
+            既定なら明るい画素は盛り上げを、 暗い画素は掘り下げを意味します。
+            このオプションはその効果を逆転します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Tile bump-map</term>
+        <term lang="ja">タイルバンプマップ(T)</term>
+        <listitem>
+          <para lang="en">
             If you check this option, there will be no relief break if
             you use your image as a pattern for a web page: patterns will
             be placed side by side without any visible joins.
           </para>
+          <para lang="ja">
+            このオプションを有効にすると画像がウェブページなどで反復連続で
+            表示できるよう浮き彫りの断絶をなくします。 画像の縁の起伏は反対側の
+            辺とつながるようにつけられ、 並べても継ぎ目が目立ちません。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Azimut</phrase>
-        </term>
+        <term lang="en">Azimut</term>
+        <term lang="ja">方向(A)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This is about lighting according to the points of the compass
             (0 - 360). East (0°) is on the left. Increasing value goes
             counter-clockwise.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <phrase>Elevation</phrase>
-        </term>
-        <listitem>
-          <para>
-            That's height from horizon (0.50°), up to zenith (90°).
+          <para lang="ja">
+            このスライダで光の射してくる方角を 0.00° (右-東から) から 360.00°
+            (同) まで反時計回りの範囲で設定できます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Depth</phrase>
-        </term>
+        <term lang="en">Elevation</term>
+        <term lang="ja">持ち上げ(E)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            That's height from horizon (0.50°), up to zenith (90°).
+          </para>
+          <para lang="ja">
+            このスライダで光の射角を 0.50° (水平線上) から 90.00° (天頂) 
+            までの範囲で指定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Depth</term>
+        <term lang="ja">深度(D)</term>
+        <listitem>
+          <para lang="en">
             With this slider, you can vary bump height and hollow depth. The
             higher the value, the higher the difference between both. Values
             vary from 1 to 65.
           </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <phrase>X/Y offsets</phrase>
-        </term>
-        <listitem>
-          <para>
-            With this slider, you can adjust the map image position
-            compared with the image, horizontally (X) and/or vertically
-            (Y).
+          <para lang="ja">
+            このスライダで起伏の底部と頂部の高度差を設定できます。 値を高く
+            すれば起伏は大きくなります。 値の範囲は 1 から 65 までです。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Sea Level</phrase>
-        </term>
+        <term lang="en">X/Y offsets</term>
+        <term lang="ja">X オフセット(X); Y オフセット(Y)</term>
         <listitem>
-          <para>
+          <para lang="en">
+            With this slider, you can adjust the map image position
+            compared with the image, horizontally (X) and/or vertically
+            (Y).
+          </para>
+          <para lang="ja">
+            これらのスライダで対象画像からマップ化画像への相対位置を水平方向
+            (右に正) に <guilabel>X オフセット(<accel>X</accel>)</guilabel> 
+            で、 垂直方向 (下に正) に <guilabel>Y オフセット(<accel>Y</accel>)
+            </guilabel> で設定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sea Level</term>
+        <term lang="ja">水位(W)</term>
+        <listitem>
+          <para lang="en">
             If your image has transparent areas, they will be treated like
             dark areas and will appear as hollows after bump-mapping. With this
             slider, you can reduce hollows as if sea level was raising. This
@@ -234,16 +313,28 @@
             treated as bright areas, and then Sea Level slider will plane
             bumps down.
           </para>
+          <para lang="ja">
+            マップ化しておく画像に透過部分があると、 その部分は黒いと見做され
+            バンプマップ処理では掘り下げられることになります。 このスライダは
+            その穴にあたかも水を張ったかのように嵩上げします。 水位を最高の
+            255 に引き上げると穴は完全に消えます。 <guilabel>
+            反転バンプマップ(<accel>N</accel>)</guilabel> オプションを有効に
+            している場合は透過部分が明るい領域と見做され、 水位の値はその峰を
+            切り下げる役目になります。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>
-          <phrase>Ambient</phrase>
-        </term>
+        <term lang="en">Ambient</term>
+        <term lang="ja">飽和度(M)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This slider controls the intensity of ambient light. With high
             values, shadows will fade and relief lessen.
+          </para>
+          <para lang="ja">
+            このスライダは包み込むような光の強さを調節します。 高い値をとると
+            影が薄れ浮き彫りは減ります。
           </para>
         </listitem>
       </varlistentry>

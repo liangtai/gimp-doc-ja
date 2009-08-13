@@ -6,13 +6,13 @@
   2008-03-12 jpl : french update
 -->
 <sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-using-script-fu-tutorial">
-  <title>
-    <phrase>A Script-Fu Tutorial</phrase>
-  </title>
+  <title>A Script-Fu Tutorial</title>
+
   <indexterm>
     <primary>Script-Fu</primary>
     <secondary>Tutorial</secondary>
   </indexterm>
+
   <para>
     In this training course, we'll introduce you to the fundamentals of Scheme
     necessary to use Script-Fu, and then build a handy script that you can add
@@ -28,14 +28,11 @@
       Manual by Mike Terry.
     </para>
   </note>
+
   <sect2 id="gimp-using-script-fu-tutorial-scheme">
-    <title>
-      <phrase>Getting Acquainted With Scheme</phrase>
-    </title>
+    <title>Getting Acquainted With Scheme</title>
     <sect3>
-      <title>
-        <phrase>Let's Start Scheme'ing</phrase>
-      </title>
+      <title>Let's Start Scheme'ing</title>
       <para>The first thing to learn is that:</para>
       <para>
         <emphasis>
@@ -71,11 +68,10 @@
         mentioned.
       </para>
     </sect3>
+
     <sect3>
       <title>
-        <phrase>
-          Examples Of Prefix, Infix, And Postfix Notations
-        </phrase>
+        Examples Of Prefix, Infix, And Postfix Notations
       </title>
       <para>
         Here are some quick examples illustrating the differences between
@@ -100,13 +96,17 @@
         </listitem>
       </itemizedlist>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Practicing In Scheme</phrase>
-      </title>
+      <title>Practicing In Scheme</title>
       <para>
         Now, let's practice what we have just learned. Start up GIMP,
-        if you have not already done so, and choose <menuchoice><guimenu>Xtns</guimenu><guisubmenu>Script-Fu</guisubmenu><guimenuitem>Console</guimenuitem></menuchoice>. This will start
+        if you have not already done so, and choose
+        <menuchoice>
+          <guimenu>Xtns</guimenu>
+          <guisubmenu>Script-Fu</guisubmenu>
+          <guimenuitem>Console</guimenuitem>
+        </menuchoice>. This will start
         up the Script-Fu Console window, which allows us to work
         interactively in Scheme. In a matter of moments, the Script-Fu
         Console will appear:
@@ -128,13 +128,14 @@
       </para>
       <figure>
         <title>
-          <phrase>
+          <title>
             Use Script-Fu Console.
-          </phrase>
+          </title>
         </title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/using/script-fu-console.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/using/script-fu-console.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -150,10 +151,9 @@
         caution....
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Watch Out For Extra Parentheses</phrase>
-      </title>
+      <title>Watch Out For Extra Parentheses</title>
       <para>
         If you're like me, you're used to being able to use extra parentheses
         whenever you want to -- like when you're typing a complex mathematical
@@ -180,10 +180,9 @@
       </para>
       <programlisting>(+ 3 (+ 5 6) 7)</programlisting>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Make Sure You Have The Proper Spacing, Too</phrase>
-      </title>
+      <title>Make Sure You Have The Proper Spacing, Too</title>
       <para>
         If you are familiar with other programming languages, like C/C++, Perl
         or Java, you know that you don't need white space around mathematical
@@ -204,20 +203,18 @@
       </para>
     </sect3>
   </sect2>
+
   <sect2 id="gimp-using-script-fu-tutorial-identifier">
-    <title>
-      <phrase>Variables And Functions</phrase>
-    </title>
+    <title>Variables And Functions</title>
     <para>
       Now that we know that every Scheme statement is enclosed in parentheses,
       and that the function name/operator is listed first, we need to know how
       to create and use variables, and how to create and use functions. We'll
       start with the variables.
     </para>
+
     <sect3>
-      <title>
-        <phrase>Declaring Variables</phrase>
-      </title>
+      <title>Declaring Variables</title>
       <para>
         Although there are a couple of different methods for declaring
         variables, the preferred method is to use the let* construct. If
@@ -250,10 +247,9 @@
         prints the sum of the two variables.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>What Is A Local Variable?</phrase>
-      </title>
+      <title>What Is A Local Variable?</title>
       <para>
         You'll notice that we wrote the summation <code>(+ a b)</code> within
         the parens of the <code>let*</code> expression, not after it.
@@ -267,10 +263,9 @@
         statement; they are what programmers call local variables.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>The General Syntax Of <code>let*</code></phrase>
-      </title>
+      <title>The General Syntax Of <code>let*</code></title>
       <para>
         The general form of a <code>let*</code> statement is:
       </para>
@@ -285,10 +280,9 @@
         <code>let*</code> statement -- they're local variables.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>White Space</phrase>
-      </title>
+      <title>White Space</title>
       <para>
         Previously, we mentioned the fact that you'll probably want to use
         indentation to help clarify and organize your scripts. This is a good
@@ -301,10 +295,9 @@
         Script-Fu Console window.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Assigning A New Value To A Variable</phrase>
-      </title>
+      <title>Assigning A New Value To A Variable</title>
       <para>
         Once you've initialized a variable, you might need to change its value
         later on in the script. Use the set! statement to change the
@@ -319,16 +312,15 @@
       </para>
       <note>
         <para>
-          The <quote>\</quote> indicates that there is no line break. Ignore it (don't type
-          it in your Script-Fu console and don't hit Enter), just continue
-          with the next line.
+          The <quote>\</quote> indicates that there is no line break. Ignore
+          it (don't type it in your Script-Fu console and don't hit Enter),
+          just continue with the next line.
         </para>
       </note>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Functions</phrase>
-      </title>
+      <title>Functions</title>
       <para>
         Now that you've got the hang of variables, let's get to work with some
         functions. You declare a function with the following syntax:
@@ -350,7 +342,8 @@
         called. For example:
       </para>
       <programlisting>(define (AddXY inX inY) (+ inX inY) )</programlisting>
-      <para><varname>AddXY</varname> is the function's name and
+      <para>
+        <varname>AddXY</varname> is the function's name and
         <varname>inX</varname> and <varname>inY</varname>
         are the variables. This function takes its two parameters and adds
         them together.
@@ -381,18 +374,16 @@
       </itemizedlist>
     </sect3>
   </sect2>
+
   <sect2 id="gimp-using-script-fu-tutorial-lists">
-    <title>
-      <phrase>Lists, Lists And More Lists</phrase>
-    </title>
+    <title>Lists, Lists And More Lists</title>
     <para>
       We've trained you in variables and functions, and now enter the
       murky swamps of Scheme's lists.
     </para>
+
     <sect3>
-      <title>
-        <phrase>Defining A List</phrase>
-      </title>
+      <title>Defining A List</title>
       <para>
         Before we talk more about lists, it is necessary that you know
         the difference between atomic values and lists.
@@ -471,23 +462,21 @@
         <code>("The GIMP")</code>, the list <code>(1 2 3)</code>, etc.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>How To Think Of Lists</phrase>
-      </title>
+      <title>How To Think Of Lists</title>
       <para>
-        It's useful to think of lists as composed of a <quote>head</quote> and a
-        <quote>tail</quote>.
+        It's useful to think of lists as composed of a <quote>head</quote>
+        and a <quote>tail</quote>.
         The head is the first element of the list, the tail the rest of the
         list. You'll see why this is important when we discuss how to add to
         lists and how to access elements in the list.
       </para>
     </sect3>
+
     <sect3>
       <title>
-        <phrase>
-          Creating Lists Through Concatenation (The Cons Function)
-        </phrase>
+        Creating Lists Through Concatenation (The Cons Function)
       </title>
       <para>
         One of the more common functions you'll encounter is the cons
@@ -507,11 +496,10 @@
         you would expect.
       </para>
     </sect3>
+
     <sect3>
       <title>
-        <phrase>
-          Defining A List Using The <code>list</code> Function
-        </phrase>
+        Defining A List Using The <code>list</code> Function
       </title>
       <para>
         To define a list composed of literals or previously declared
@@ -537,10 +525,9 @@
         This code creates the list <code>(5 4 3 1 2 3)</code>.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Accessing Values In A List</phrase>
-      </title>
+      <title>Accessing Values In A List</title>
       <para>
         To access the values in a list, use the functions
         <code>car</code> and <code>cdr</code>,
@@ -549,11 +536,11 @@
         construct I mentioned earlier.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>The <code>car</code> Function</phrase>
-      </title>
-      <para><code>car</code> returns the first element of the list (the
+      <title>The <code>car</code> Function</title>
+      <para>
+        <code>car</code> returns the first element of the list (the
         head of the list). The list needs to be non-null. Thus, the
         following returns the first element of the list:
       </para>
@@ -561,11 +548,11 @@
       <para>which is:</para>
       <programlisting>"first"</programlisting>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>The <code>cdr</code> function</phrase>
-      </title>
-      <para><code>cdr</code> returns the rest of the list after the first element
+      <title>The <code>cdr</code> function</title>
+      <para>
+        <code>cdr</code> returns the rest of the list after the first element
         (the tail of the list). If there is only one element in the list, it
         returns an empty list.
       </para>
@@ -577,10 +564,9 @@
       <para>returns:</para>
       <programlisting>()</programlisting>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Accessing Other Elements In A List</phrase>
-      </title>
+      <title>Accessing Other Elements In A List</title>
       <para>
         OK, great, we can get the first element in a list, as well as
         the rest of the list, but how do we access the second, third
@@ -625,19 +611,17 @@
       </note>
     </sect3>
   </sect2>
+
   <sect2 id="gimp-using-script-fu-tutorial-first-script">
-    <title>
-      <phrase>Your First Script-Fu Script</phrase>
-    </title>
+    <title>Your First Script-Fu Script</title>
     <para>
       Do you not need to stop and catch your breath? No? Well then,
       let's proceed with your fourth lesson -- your first Script-Fu
       Script.
     </para>
+
     <sect3>
-      <title>
-        <phrase>Creating A Text Box Script</phrase>
-      </title>
+      <title>Creating A Text Box Script</title>
       <para>
         One of the most common operations I perform in GIMP is
         creating a box with some text in it for a web page, a logo or
@@ -658,10 +642,9 @@
         font, font size and text color.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Editing And Storing Your Scripts</phrase>
-      </title>
+      <title>Editing And Storing Your Scripts</title>
       <para>
         Up until now, we've been working in the Script-Fu Console. Now,
         however, we're going to switch to editing script text files.
@@ -682,10 +665,9 @@
         should place your personal scripts here.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>The Bare Essentials</phrase>
-      </title>
+      <title>The Bare Essentials</title>
       <para>
         Every Script-Fu script defines at least one function, which is the
         script's main function. This is where you do the work.
@@ -706,10 +688,9 @@
         fancy.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Naming Conventions</phrase>
-      </title>
+      <title>Naming Conventions</title>
       <para>
         Scheme's naming conventions seem to prefer lowercase letters with
         hyphens, which I've followed in the naming of the function. However,
@@ -726,10 +707,9 @@
         also helps distinguish them from plug-ins.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Registering The Function</phrase>
-      </title>
+      <title>Registering The Function</title>
       <para>
         Now, let's register the function with GIMP. This is done by
         calling the function <code>script-fu-register</code>. When
@@ -766,9 +746,18 @@
         If you save these functions in a text file with a
         <filename>.scm</filename> suffix
         in your script directory, then choose
-        <menuchoice><guimenu>Xtns</guimenu><guisubmenu>Script-Fu</guisubmenu><guimenuitem>Refresh Scripts</guimenuitem></menuchoice>,
+        <menuchoice>
+          <guimenu>Xtns</guimenu>
+          <guisubmenu>Script-Fu</guisubmenu>
+          <guimenuitem>Refresh Scripts</guimenuitem>
+        </menuchoice>,
         this new script will appear as
-        <menuchoice><guimenu> Xtns</guimenu><guisubmenu>Script-Fu</guisubmenu><guisubmenu>Text</guisubmenu><guimenuitem>Text Box</guimenuitem></menuchoice>.
+        <menuchoice>
+          <guimenu> Xtns</guimenu>
+          <guisubmenu>Script-Fu</guisubmenu>
+          <guisubmenu>Text</guisubmenu>
+          <guimenuitem>Text Box</guimenuitem>
+        </menuchoice>.
       </para>
       <para>
         If you invoke this new script, it won't do anything, of course, but
@@ -777,15 +766,17 @@
       </para>
       <para>
         Finally, if you invoke the Procedure Browser (
-        <menuchoice><guimenu> Xtns</guimenu><guimenuitem>Procedure Browser</guimenuitem></menuchoice>),
+        <menuchoice>
+          <guimenu> Xtns</guimenu>
+          <guimenuitem>Procedure Browser</guimenuitem>
+        </menuchoice>),
         you'll notice that our script now
         appears in the database.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Steps For Registering The Script</phrase>
-      </title>
+      <title>Steps For Registering The Script</title>
       <para>
         To register our script with GIMP, we call the function
         script-fu-register, fill in the seven required parameters and add our
@@ -793,9 +784,7 @@
         for each parameter.
       </para>
       <itemizedlist>
-        <title>
-          <phrase>The Required Parameters</phrase>
-        </title>
+        <title>The Required Parameters</title>
         <listitem>
           <para>
            The <emphasis>name</emphasis> of the function we
@@ -827,7 +816,12 @@
             the menu lists, menus and sub-menus. Thus, we registered our
             Text Box script in the Text menu of the Script-Fu menu of
             the Xtns menu of the toolbox (
-            <menuchoice><guimenu> Xtns</guimenu><guisubmenu>Script-Fu</guisubmenu><guisubmenu>Text</guisubmenu><guimenuitem>Text Box</guimenuitem></menuchoice> ).
+            <menuchoice>
+              <guimenu> Xtns</guimenu>
+              <guisubmenu>Script-Fu</guisubmenu>
+              <guisubmenu>Text</guisubmenu>
+              <guimenuitem>Text Box</guimenuitem>
+            </menuchoice> ).
           </para>
           <para>
             If you notice, the Text sub-menu in the Script-Fu menu wasn't
@@ -842,13 +836,12 @@
           </para>
         </listitem>
         <listitem>
-          <para><emphasis>Your name</emphasis> (the author of
-            the script).
+          <para>
+            <emphasis>Your name</emphasis> (the author of the script).
           </para>
         </listitem>
         <listitem>
-          <para><emphasis>Copyright</emphasis> information.
-          </para>
+          <para><emphasis>Copyright</emphasis> information.</para>
         </listitem>
         <listitem>
           <para>
@@ -867,20 +860,18 @@
         </listitem>
       </itemizedlist>
       <figure>
-        <title>
-          <phrase>The menu of our script.</phrase>
-        </title>
+        <title>The menu of our script.</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/using/script-fu-menu.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/using/script-fu-menu.png"/>
           </imageobject>
         </mediaobject>
       </figure>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Registering The Script's Parameters</phrase>
-      </title>
+      <title>Registering The Script's Parameters</title>
       <para>
         Once we have listed the required parameters, we then need to list the
         parameters that correspond to the parameters our script needs. When we
@@ -995,18 +986,16 @@
     </sect3>
     <xi:include href="script-fu-gui-api.xml"/>
   </sect2>
+
   <sect2 id="gimp-using-script-fu-tutorial-script">
-    <title>
-      <phrase>Giving Our Script Some Guts</phrase>
-    </title>
+    <title>Giving Our Script Some Guts</title>
     <para>
       Let us continue with our training and add some functionality to our
       script.
     </para>
+
     <sect3>
-      <title>
-        <phrase>Creating A New Image</phrase>
-      </title>
+      <title>Creating A New Image</title>
       <para>
         In the previous lesson, we created an empty function and registered it
         with GIMP. In this lesson, we want to provide functionality to our
@@ -1066,10 +1055,9 @@
         only one element in the list, so we need to get the head of the list.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Adding A New Layer To The Image</phrase>
-      </title>
+      <title>Adding A New Layer To The Image</title>
       <para>
         Now that we have an image, we need to add a layer to it. We'll
         call the <code>gimp-layer-new</code> function to create the
@@ -1114,16 +1102,19 @@
       </programlisting>
       <para>
         Save your work, select
-        <menuchoice><guimenu>Xtns</guimenu><guisubmenu>Script-Fu</guisubmenu><guimenuitem>Refresh Scripts</guimenuitem></menuchoice>,
+        <menuchoice>
+          <guimenu>Xtns</guimenu>
+          <guisubmenu>Script-Fu</guisubmenu>
+          <guimenuitem>Refresh Scripts</guimenuitem>
+        </menuchoice>,
         run the script and a new image should pop up. It will probably
         contain garbage (random colors), because we haven't erased
         it. We'll get to that in a second.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Adding The Text</phrase>
-      </title>
+      <title>Adding The Text</title>
       <para>
         Go ahead and remove the line to display the image (or comment
         it out with a ; as the first character of the line).
@@ -1200,10 +1191,9 @@
         Save your work, refresh the database and give your first script a run!
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Clearing The Dirty Flag</phrase>
-      </title>
+      <title>Clearing The Dirty Flag</title>
       <para>
         If you try to close the image created without first saving the file,
         GIMP will ask you if you want to save your work before you close the
@@ -1231,14 +1221,11 @@
       </para>
     </sect3>
   </sect2>
+
   <sect2 id="gimp-using-script-fu-tutorial-extending-text-box">
-    <title>
-      <phrase>Extending The Text Box Script</phrase>
-    </title>
+    <title>Extending The Text Box Script</title>
     <sect3>
-      <title>
-        <phrase>Handling Undo Correctly</phrase>
-      </title>
+      <title>Handling Undo Correctly</title>
       <para>
         When creating a script, you want to give your users the ability to
         undo their actions, should they make a mistake. This is easily
@@ -1260,10 +1247,9 @@
         Undoing a script works nearly flawlessly when using these functions.
       </para>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Extending The Script A Little More</phrase>
-      </title>
+      <title>Extending The Script A Little More</title>
       <para>
         Now that we have a very handy-dandy script to create text
         boxes, let's add two features to it:
@@ -1289,11 +1275,10 @@
         </listitem>
       </itemizedlist>
     </sect3>
+
     <sect3>
       <title>
-        <phrase>
-          Modifying The Parameters And The Registration Function
-        </phrase>
+        Modifying The Parameters And The Registration Function
       </title>
       <para>
         To let the user specify the amount of buffer, we'll add a parameter to
@@ -1360,10 +1345,9 @@
         (script-fu-menu-register "script-fu-text-box" "<Toolbox>/Xtns/Script-Fu/Text")
       ]]></programlisting>
     </sect3>
+
     <sect3>
-      <title>
-        <phrase>Adding The New Code</phrase>
-      </title>
+      <title>Adding The New Code</title>
       <para>
         We're going to add code in two places: right before we resize
         the image, and at the end of the script (to return the new
@@ -1433,14 +1417,11 @@
       </para>
     </sect3>
   </sect2>
+
   <sect2 id="gimp-using-script-fu-tutorial-result">
-    <title>
-      <phrase>Your script and its working</phrase>
-    </title>
+    <title>Your script and its working</title>
     <sect3>
-      <title>
-        <phrase>What you write</phrase>
-      </title>
+      <title>What you write</title>
       <para>Below the complete script:</para>
       <programlisting><![CDATA[
         (script-fu-register
@@ -1528,12 +1509,11 @@
     <sect3>
       <title>What you obtain</title>
       <figure>
-        <title>
-          <phrase>And the result on the screen.</phrase>
-        </title>
+        <title>And the result on the screen.</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/using/script-fu-screen.png" format="PNG"/>
+            <imagedata format="PNG"
+              fileref="images/using/script-fu-screen.png"/>
           </imageobject>
         </mediaobject>
       </figure>

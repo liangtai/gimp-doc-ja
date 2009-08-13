@@ -8,9 +8,8 @@
   2005/09/25 created by axel.wernicke
 -->
 <sect2 id="plug-in-spheredesigner">
-  <title>
-    <phrase>Sphere Designer</phrase>
-  </title>
+  <title>Sphere Designer</title>
+
   <indexterm>
     <primary>Filters</primary>
     <secondary>Render</secondary>
@@ -19,20 +18,18 @@
   <indexterm>
     <primary>Sphere Designer</primary>
   </indexterm>
+
   <sect3>
-    <title>
-      <phrase>Overview</phrase>
-    </title>
+    <title>Overview</title>
     <figure>
       <title>
-        <phrase>
-          The same image, before and after the application of
-          <quote>Sphere Designer</quote> filter.
-        </phrase>
+        The same image, before and after the application of
+        <quote>Sphere Designer</quote> filter.
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/taj_orig.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
           <para>Original image</para>
@@ -40,7 +37,8 @@
       </mediaobject>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/examples/render-taj-spheredesigner.jpg" format="JPG"/>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-spheredesigner.jpg"/>
         </imageobject>
         <caption>
           <para>Filter <quote>Sphere Designer</quote> applied</para>
@@ -52,27 +50,29 @@
       It replaces the original image.
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Activating Sphere Designer</phrase>
-    </title>
+    <title>Activating Sphere Designer</title>
     <para>
       You can find this filter through
-      <menuchoice><guimenu>Filters</guimenu><guisubmenu>Render</guisubmenu><guimenuitem>Sphere Designer</guimenuitem></menuchoice>.
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guimenuitem>Sphere Designer</guimenuitem>
+      </menuchoice>.
     </para>
   </sect3>
+
   <sect3>
-    <title>
-      <phrase>Options</phrase>
-    </title>
+    <title>Options</title>
     <figure>
       <title>
-        <phrase><quote>Sphere Designer</quote> filter parameters
-        </phrase>
+        <quote>Sphere Designer</quote> filter parameters
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/options-render-spheredesigner.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/options-render-spheredesigner.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -114,7 +114,8 @@
             <varlistentry>
               <term>Duplicate</term>
               <listitem>
-                <para><guilabel>Duplicate</guilabel>: Copies the selected texture
+                <para>
+                  <guilabel>Duplicate</guilabel>: Copies the selected texture
                   and adds the copy to the end of the list.
                 </para>
               </listitem>
@@ -148,13 +149,26 @@
               <listitem>
                 <para>
                   Determines the type of action on the sphere.
-                  <itemizedlist><listitem><para><guilabel>Texture</guilabel> covers the sphere with
+                  <itemizedlist>
+                    <listitem>
+                      <para>
+                        <guilabel>Texture</guilabel> covers the sphere with
                         a specific pattern.
-                      </para></listitem><listitem><para><guilabel>Bumpmap</guilabel> gives some relief to
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guilabel>Bumpmap</guilabel> gives some relief to
                         the texture.
-                      </para></listitem><listitem><para><guilabel>Light</guilabel> lets you set the
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guilabel>Light</guilabel> lets you set the
                         parameters of the light shining on the sphere.
-                      </para></listitem></itemizedlist>
+                      </para>
+                    </listitem>
+                  </itemizedlist>
                 </para>
               </listitem>
             </varlistentry>
