@@ -7,7 +7,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   050910 de added by axel.wernicke
 -->
-<!--2009-07-21-->
+<!--2009-08-21-->
 <sect2 id="plug-in-ripple">
   <title lang="en">Ripple</title>
   <title lang="ja">波紋(R)...</title>
@@ -206,8 +206,11 @@
             </listitem>
             <listitem>
               <para lang="en">
-                With <guilabel>Black</guilabel>, the missing pixels will be
-                replaced by black pixels.
+                With <guilabel>Blank</guilabel>, the missing pixels will be
+                replaced by black pixels, if the layer does not have an
+                Alpha channel. If an Alpah channel exsists in the layer,
+                transparent pixels replace the missing pixels after applying
+                this option.
               </para>
               <para lang="ja">
                 <guilabel>空白(<accel>B</accel>)</guilabel> の場合はレイヤーに
@@ -277,9 +280,9 @@
         <listitem>
           <para lang="en">
             The <guilabel>Phase shift</guilabel> is angle to delay the wave
-            (0-360 degree). Appling this filter again with the same setting but
-            Phase shift as 180 brings the once processed one back to be almost
-            similar image with the original.
+            (0-360 degree). Appling this filter again with the same setting
+            but Phase shift differs by 180 brings the once processed image
+            back to become almost similar to the first original image.
           </para>
           <para lang="ja">
             <guilabel>位相変位</guilabel> は角度を 0 から 360 までの範囲で
