@@ -8,29 +8,42 @@
   2005/09/21 created by axel.wernicke
   2005/10/14 en;fr by julien hardelin
 -->
+<!--2009-08-27-->
 <sect2 id="plug-in-checkerboard">
-  <title>Checkerboard</title>
+  <title lang="en">Checkerboard</title>
+  <title lang="ja">市松模様(C)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Render</secondary>
     <tertiary>Checkerboard</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Checkerboard</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary sortas="イチマツモヨウ">市松模様</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イチマツモヨウ">市松模様</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>Example for the Checkerboard filter</title>
+      <title lang="en">Example for the Checkerboard filter</title>
+      <title lang="ja">市松模様フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/render-checkerboard1.jpg"/>
         </imageobject>
         <caption>
-          <para>Filter <quote>Checkerboard</quote> applied</para>
+          <para lang="en">Filter <quote>Checkerboard</quote> applied</para>
+          <para lang="ja"><quote>市松模様</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -39,20 +52,27 @@
             fileref="images/filters/examples/render-checkerboard2.jpg"/>
         </imageobject>
         <caption>
-          <para>Psychobilly <quote>Checkerboard</quote></para>
+          <para lang="en">Psychobilly <quote>Checkerboard</quote></para>
+          <para lang="ja">歪みをいれた<quote>市松模様</quote></para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter creates a checkerboard pattern replacing the current layer
       content. Colors used for pattern are current Fore- and Back ground
       colors of toolbox.
     </para>
+    <para lang="ja">
+      <guimenuitem>市松模様(<accel>C</accel>)...</guimenuitem> フィルタは活性
+      レイヤーの内容を破棄しその上に市松模様を描きます。 ツールボックスの色標識
+      に示される描画色と背景色が用いられます。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Starting filter</title>
-    <para>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image menu through
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -61,12 +81,23 @@
         <guimenuitem>Checkerboard</guimenuitem>
       </menuchoice>
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>下塗り(<accel>R</accel>)</guisubmenu>
+        <guisubmenu>パターン(<accel>P</accel>)</guisubmenu>
+        <guimenuitem>市松模様(<accel>C</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Checkerboard</quote> filter options</title>
+      <title lang="en"><quote>Checkerboard</quote> filter options</title>
+      <title lang="ja"><quote>市松模様</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -76,19 +107,31 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Psychobilly</term>
+        <term lang="en">Psychobilly</term>
+        <term lang="ja">歪みをいれる(P)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This option gives an eiderdown look to the Checkerboard.
+          </para>
+          <para lang="ja">
+            原題がサイコビリー系と銘打たれたこのオプションを有効にすると、 
+            市松模様はダウン羽毛入りクッションをくるむ生地のように歪んで
+            見えます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Size</term>
+        <term lang="en">Size</term>
+        <term lang="ja">サイズ(S)</term>
         <listitem>
-          <para>
+          <para lang="en">
             With this option, you can set checkerboard square size, in
             pixels, or in your chosen unit by using the drop-down list.
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると市松模様の升目の寸法を設定できます。 
+            初期状態での単位はピクセルですが引き出しリストから他の単位も
+            選べます。
           </para>
         </listitem>
       </varlistentry>
