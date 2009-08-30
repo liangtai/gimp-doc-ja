@@ -7,7 +7,7 @@
                   and (help-)id [was: gimp-xtns-unit-editor]
   2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2009-08-17-->
+<!--2009-08-30-->
 <sect2 id="plug-in-unit-editor">
   <title lang="en">Units</title>
   <title lang="ja">単位の編集(N)</title>
@@ -18,15 +18,21 @@
   <indexterm lang="en">
     <primary>Unit Editor</primary>
   </indexterm>
+  <indexterm lang="en">
+    <primary>Units</primary>
+  </indexterm>
   <indexterm lang="ja">
     <primary sortas="スンポウノタンイ">寸法の単位</primary>
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="タンイノヘンシュウ">単位の編集</primary>
   </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="タンイ">単位</primary>
+  </indexterm>
 
   <para lang="en">
-    The <guimenuitem>Unit Editor</guimenuitem> command displays a dialog
+    The <guimenuitem>Units</guimenuitem> command displays a dialog
     which shows information about the units of measurement that are
     currently being used by <acronym>GIMP</acronym>. It also
     allows you to create new units which can be used by
@@ -72,7 +78,9 @@
       <title lang="ja"><quote>単位の編集</quote>ダイアログのウィンドウ</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/menus/unit-editor.png" format="PNG"/>
+          <!--OLD: images/menus/unit-editor.png-->
+          <imagedata format="PNG"
+            fileref="images/menus/edit/units.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -213,8 +221,14 @@
       <title lang="ja"><quote>新しい単位の定義</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/menus/unit-editor-new.png" format="PNG"/>
+          <!--OLD: images/menus/unit-editor-new.png-->
+          <imagedata format="PNG"
+            fileref="images/menus/edit/units-add-new.png"/>
         </imageobject>
+        <caption>
+          <para lang="en">Adding the new unit <quote>wilbers</quote></para>
+          <para lang="ja">新単位<quote>wilbers</quote>を創設</para>
+        </caption>
       </mediaobject>
     </figure>
     <para lang="en">
@@ -224,12 +238,12 @@
       fields on the dialog are described above.
     </para>
     <para lang="en">
-      If you click on the <guilabel>New</guilabel> button, the dialog looks
-      as shown. If you click on the <guilabel>Duplicate</guilabel> button,
-      the values initially displayed in the input fields of the dialog are
-      the values of the unit you have currently selected in the
-      <guilabel>Unit Editor</guilabel> dialog. You can then edit the values
-      to create your new unit.
+      If you click on the <guilabel>New</guilabel> button, most input fields
+      are empty. If you click on the <guilabel>Duplicate</guilabel> button,
+      the values initially displayed in the input fields of the dialog are the
+      values of the unit you have currently selected in the
+      <guilabel>Unit&nbsp;Editor</guilabel> dialog. You can then edit the
+      values to create your new unit.
     </para>
     <para lang="ja">
       このダイアログは<quote>単位の編集</quote>ダイアログの
