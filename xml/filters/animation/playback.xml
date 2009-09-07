@@ -8,33 +8,55 @@
                    description structure
   2006-12-27 created by j.h
 -->
+<!--2009-09-07-->
 <sect2 id="plug-in-playback">
-  <title>Playback</title>
+  <title lang="en">Playback</title>
+  <title lang="ja">再生(P)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Animation</secondary>
     <tertiary>Playback</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Animation</primary>
     <secondary>Playback</secondary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Playback</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>アニメーション</secondary>
+    <tertiary>動画再生</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>アニメーション</primary>
+    <secondary>動画再生</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>動画再生</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
-    <para>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
       This plug-in lets you play an animation from a multi-layers image (that
       could be saved in the GIF, MNG or even XCF format), to test it.
+    </para>
+    <para lang="ja">
+      <guimenuitem>再生(<accel>P</accel>)...</guimenuitem> プラグインを使うと
+      複数レイヤーで作られた動画、 つまり<acronym>GIF</acronym>形式や<acronym>
+      MNG</acronym>形式はもちろん<acronym>XCF</acronym>形式を含む動画ファイル
+      を試験的に再生します。
     </para>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter through
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -42,12 +64,22 @@
         <guimenuitem>Playback</guimenuitem>
       </menuchoice>
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>アニメーション(<accel>I</accel>)</guisubmenu>
+        <guimenuitem>再生(<accel>P</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Playback</quote> filter options</title>
+      <title lang="en"><quote>Playback</quote> filter options</title>
+      <title lang="ja"><quote>再生</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -55,46 +87,83 @@
         </imageobject>
       </mediaobject>
     </figure>
-    <para>This dialog has:</para>
+    <para lang="en">This dialog has:</para>
+    <para lang="ja">このダイアログの内容はつぎのとおりです。</para>
     <variablelist>
       <varlistentry>
-        <term>Preview</term>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
-          <para>
+          <para lang="en">
             This preview of the animation automatically fits the frame size.
             The number of the displayed frame is shown below the preview.
+          </para>
+          <para lang="ja">
+            動画プレビュー表示は動画の枠の大きさに自動的に合わせます。 
+            プレビュー表示より下にフレーム数が表示されます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Buttons</term>
+        <term lang="en">Buttons</term>
+        <term lang="ja">操作ボタン</term>
         <listitem>
-          <para>Three buttons are available:</para>
+          <para lang="en">Three buttons are available:</para>
+          <para lang="ja">4つのボタンがあります。</para>
           <variablelist>
             <varlistentry>
-              <term>Play/Stop</term>
+              <term lang="en">Play/Stop</term>
+              <term lang="ja">演奏(停止)</term>
               <listitem>
-                <para>
+                <para lang="en">
                   <guibutton>Play/Stop</guibutton>
                   to play or stop the animation.
                 </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term>Rewind</term>
-              <listitem>
-                <para>
-                  <guibutton>Rewind</guibutton>
-                  to re-launch the animation from start.
+                <para lang="ja">
+                  <guibutton>演奏</guibutton> ボタンで動画の再生を実行、 停止
+                  できます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term>Step</term>
+              <term lang="en">Rewind</term>
+              <term lang="ja">巻き戻し</term>
               <listitem>
-                <para>
+                <para lang="en">
+                  <guibutton>Rewind</guibutton>
+                  to re-launch the animation from start.
+                </para>
+                <para lang="ja">
+                  <guibutton>巻き戻し</guibutton> ボタンで動画再生を冒頭から
+                  始められます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Step</term>
+              <term lang="ja">コマ送り</term>
+              <listitem>
+                <para lang="en">
                   <guibutton>Step</guibutton> to play the animation step by
                   step.
+                </para>
+                <para lang="ja">
+                  <guibutton>コマ送り</guibutton> ボタンはクリックするたびに
+                  ひとコマずつ表示します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Detach</term>
+              <term lang="ja">分離</term>
+              <listitem>
+                <para lang="en">
+                  <guibutton>Detach</guibutton> to display the animation image
+                  separated, and the preview area become empty.
+                </para>
+                <para lang="ja">
+                  <guibutton>分離</guibutton> ボタンはプレビュー画面を空にし
+                  動画が枠なしで表示されます。
                 </para>
               </listitem>
             </varlistentry>

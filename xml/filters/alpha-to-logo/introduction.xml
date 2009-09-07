@@ -7,16 +7,23 @@
   2007-08-14 ude: created ('en','de')
 -->
 <sect2 id="filters-alpha-to-logo-introduction">
-  <title>Introduction</title>
+  <title lang="en">Introduction</title>
+  <title lang="ja">Introduction</title>
 
-  <indexterm>
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Introduction</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
     <primary>Filters</primary>
     <secondary>Alpha to Logo</secondary>
     <tertiary>Introduction</tertiary>
   </indexterm>
 
   <figure>
-    <title>The Alpha to Logo filters menu</title>
+    <title lang="en">The Alpha to Logo filters menu</title>
+    <title lang="ja">The Alpha to Logo filters menu</title>
     <mediaobject>
       <imageobject>
         <imagedata  format="PNG"
@@ -24,29 +31,33 @@
       </imageobject>
     </mediaobject>
   </figure>
-  <para>
+  <para lang="en">
     These filters correspond to the
     <link linkend="standalone-script-fu">logo-generating script-fu scripts
     </link>.
     They add all kinds of special effects to the alpha channel of the active
     layer (that is, to the pixels with a non-zero alpha value).
   </para>
+  <para lang="ja">
+  </para>
   <note>
-    <para>
+    <para lang="en">
       The menu items and the corresponding functions are enabled only if the
       active layer has an alpha channel. If you see that the menu items are
       grayed out, try to <link linkend="gimp-layer-alpha-add">add an alpha
       channel</link>.
     </para>
+    <para lang="ja">
+    </para>
   </note>
-  <para>
+  <para lang="en">
     The filter effect will always be applied according to the alpha values.
     The <link linkend="glossary-alpha">alpha</link> of any pixel has a value
     ranging from 0 (transparent) to 255 (fully opaque). It is possible to
     apply a filter only <emphasis>partially</emphasis> to some (or all) pixels
     by using alpha values from 1 to 254.
   </para>
-  <para>
+  <para lang="en">
     You will notice that this is similar to
     <link linkend="gimp-concepts-selection">selecting</link> pixels partially.
     In fact, internally these filters always create a
@@ -54,45 +65,62 @@
     alpha channel</link> by transferring the alpha values to the channel which
     represents the selection, and then work on the selection.
   </para>
+  <para lang="ja">
+  </para>
+  <para lang="ja">
+  </para>
   <orderedlist>
-    <title>
+    <title lang="en">
+      How to apply an <quote>Alpha to Logo</quote> filter to a selection?
+    </title>
+    <title lang="ja">
       How to apply an <quote>Alpha to Logo</quote> filter to a selection?
     </title>
     <listitem>
-      <para>
+      <para lang="en">
         If the active layer is the background layer, make sure that an
         alpha channel exists, otherwise
         <link linkend="gimp-layer-alpha-add">add an alpha channel</link>.
       </para>
+      <para lang="ja">
+      </para>
       <tip>
-        <para>
+        <para lang="en">
           If a layer name in the Layer Dialog is in bold, then this layer has
           no Alpha channel.
+        </para>
+        <para lang="ja">
         </para>
       </tip>
     </listitem>
     <listitem>
-      <para>
+      <para lang="en">
         Invert the selection:
         <menuchoice>
           <guimenu>Select</guimenu>
           <guimenuitem>Invert</guimenuitem>
         </menuchoice>.
       </para>
+      <para lang="ja">
+      </para>
     </listitem>
     <listitem>
-      <para>
+      <para lang="en">
         Remove the (inverted) selection:
         <menuchoice>
           <guimenu>Edit</guimenu>
           <guimenuitem>Clear</guimenuitem>
         </menuchoice>.
       </para>
+      <para lang="ja">
+      </para>
     </listitem>
     <listitem>
-      <para>
+      <para lang="en">
         Apply the <quote>Alpha to Logo</quote> filter (the filters ignore the
         selection, you don't need to re-invert the selection).
+      </para>
+      <para lang="ja">
       </para>
     </listitem>
   </orderedlist>

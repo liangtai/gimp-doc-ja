@@ -3,10 +3,10 @@
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-06-13 Added Spanish translation by AntI
-  2007-03-12 Kolbjørn: added no translation
+  2007-03-12 Kolbjorn: added no translation
   2005/11/16 split of from layer-transparency.xml by axel.wernicke
 -->
-<!--2009-06-23-->
+<!--2009-09-06-->
 <sect2 id="plug-in-threshold-alpha">
   <title lang="en">Threshold Alpha</title>
   <title lang="ja">アルファチャンネルしきい値(T)...</title>
@@ -100,23 +100,33 @@
           <para lang="en">
             You can set the transparency value to be used as a threshold by
             using the slider or by entering a value between 0 and 255 in
-            the input box. All transparency values below this threshold will
-            become opaque and all transparency values above it will become
-            completely transparent. The transition is abrupt.
+            the input box. All transparency values above this threshold will
+            become opaque and all transparency values below or equal to this
+            threshold will become completely transparent. The transition is
+            abrupt.
           </para>
           <para lang="ja">
             このスライダや数値記入欄を用いて0から255の範囲で透明度のしきい値を
-            設定できます。 透明度がこのしきい値以下の領域は完全不透明になり、 
-            しきい値より高い透明度の領域は完全透過します。 滑らかに変化していた
+            設定できます。 透明度がこのしきい値を上回る領域は完全不透明になり、 
+            しきい値以下の透明度の領域は完全透過します。 滑らかに変化していた
             透明度がぎくしゃくしたものになります。
           </para>
+          <note>
+            <para lang="en">
+              This command will never make completely transparent pixels
+              (alpha value = 0) opaque.
+            </para>
+            <para lang="ja">
+              このコマンドは完全透明な画素を不透明化できません。
+            </para>
+          </note>
           <figure>
             <title lang="en">Threshold Alpha example</title>
-            <title lang="ja">アルファテャンネル2階調化の例</title>
+            <title lang="ja">アルファチャンネル2階調化の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
-                  fileref="images/menus/threshold-alpha-ex1.png" />
+                  fileref="images/menus/layer/threshold-alpha-example.png" />
               </imageobject>
               <caption>
                 <para lang="en">A transparency gradient 0-255.</para>
@@ -126,11 +136,11 @@
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
-                  fileref="images/menus/threshold-alpha-ex2.png" />
+                  fileref="images/menus/layer/threshold-alpha-example3.png" />
               </imageobject>
               <caption>
-                <para lang="en">Threshold Alpha set to 92.</para>
-                <para lang="en">アルファチャンネルしきい値=92</para>
+                <para lang="en">Threshold set to 50, 127, 210.</para>
+                <para lang="en">しきい値を 50、 127、 210 に設定</para>
               </caption>
             </mediaobject>
           </figure>

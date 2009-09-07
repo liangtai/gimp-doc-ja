@@ -28,7 +28,7 @@
     variety of graphics file formats.  With the exception of
     <acronym>GIMP</acronym>'s native XCF file type, file handling is done by
     Plugins.  Thus, it is relatively easy to extend <acronym>GIMP</acronym>
-    to new file types when the need arises.
+    to support new file types when the need arises.
   </para>
   <para lang="en">
     Not all file types are equally good for all purposes. This part of the
@@ -100,8 +100,8 @@
       format capable of saving <emphasis>all</emphasis> of the information in
       an image, including layers, transparency, etc., is GIMP's native XCF
       format.   Every other format preserves some image properties and loses
-      others.  When you save an image, <acronym>GIMP</acronym> tries to let
-      you know about this, but basically it is up to you to understand the
+      others.  When you save an image, <acronym>GIMP</acronym> tries to warn
+      you, but it is up to you to understand the
       capabilities of the format you choose.
     </para>
     <para lang="ja">
@@ -116,8 +116,9 @@
       <emphasis>全て</emphasis> 保存できる形式は、 <acronym>GIMP</acronym>
       由来の<acronym>XCF</acronym>形式をおいて他にないということは重要です。 
       これ以外の形式はいずれも、 画像の属性を一定の範囲は保存できても一部は
-      失ないます。 画像を保存する際に<acronym>GIMP</acronym>はこの事実を知らせ
-      てきますが、 あなたの選択する形式の性能を理解するのはあなた次第です。
+      失ないます。 画像を保存する際に<acronym>GIMP</acronym>はこの事実を警告
+      しますが、 どんな形式を選びその形式がどんな性能かを理解するのは
+      あなた次第です。
     </para>
     <figure>
       <title lang="en">Example of an Export dialog</title>
@@ -132,23 +133,23 @@
     <para lang="en">
       As stated above, there is no file format, with the exception of GIMP's
       native <link linkend="glossary-xcf">XCF</link> format, that is capable
-      of storing all the data in a <acronym>GIMP</acronym>
-      image. When you ask to save an image in a format that will not
-      completely represent it, <acronym>GIMP</acronym>
-      notifies you of this, tells you what kind of information will be lost,
+      of storing all the information in a <acronym>GIMP</acronym>
+      image. When you ask to save an image in a format that will lose
+      information, <acronym>GIMP</acronym>
+      notifies, tells you what information will be lost,
       and asks you whether you would like to <quote>export</quote> the image
       in a form that the file type can handle. Exporting an image does not
-      modify the image itself, so you do not lose anything by doing this. See
+      modify the image itself, so you do not lose anything by exporting. See
       <link linkend="gimp-export-dialog">Export file</link>.
     </para>
     <para lang="ja">
-      先に述べたとおり、 <acronym>GIMP</acronym>で作成した画像を何のデータ損失
-      もなく保存できるファイル形式は、 <acronym>GIMP</acronym>由来の
+      先に述べたとおり、 <acronym>GIMP</acronym>で作成した画像情報を何の損失
+      もなく保存できるファイル形式は、 <acronym>GIMP</acronym>由来の 
       <link linkend="glossary-xcf">XCF</link> 形式を措いて他に全くありません。
-      いま保存しようとしている画像の内容を十全には再現できないファイル形式が
-      選択されているときには、 <acronym>GIMP</acronym>はそのことを伝えると
-      ともに、 どのような情報が損なわれるかを示し、 あわせてそのファイル形式に
-      合った画像に <quote>エクスポート</quote> (転換)するかどうか訊ねます。
+      画像の情報に損失がでるファイル形式が選択されているときには、 <acronym>
+      GIMP</acronym>はそのことを伝えるとともに、 どの情報が損なわれるかを示し、 
+      あわせてそのファイル形式に
+      合った画像に <quote>エクスポート</quote> (転換) するかどうか訊ねます。
       画像のエクスポートで元の画像そのものが変更されるものではありませんので、
       それが原因で何かを失なうおそれはありません。
       <link linkend="gimp-export-dialog">画像のエクスポート</link>
@@ -210,17 +211,17 @@
       </figure>
       <warning>
         <para lang="en">
-          Please note, that the GIF file format is incapable of storing some
-          rather basic image informations like
+          The GIF file format does not support some basic image
+          properties such as
           <emphasis>print resolution</emphasis>.
-          If you care for these properties, you should consider a different
+          If you care for these properties, use a different
           file format like PNG.
         </para>
         <para lang="ja">
           <acronym>GIF</acronym>形式は <emphasis>印字解像度</emphasis> のような
-          やや基本的な画像情報を保存できません。
+          基本的な画像情報をサポートしていません。
           そういった属性情報を扱いたいときは、 <acronym>PNG</acronym>などの
-          他のファイル形式を検討してください。
+          他のファイル形式で保存してください。
         </para>
       </warning>
       <variablelist>
@@ -233,16 +234,21 @@
                 <term lang="ja">インターレース(N)</term>
                 <listitem>
                   <para lang="en">
-                    When this option is checked, the image will be displayed
-                    progressively on the Web page. It was interesting when
-                    computers and modems were slow, as it allowed to stop
-                    loading an image of no interest.
+                    Checking interlace allow an image on a web page to be
+                    progressively displayed as it is downloaded.
+                    Progressive image display is useful with slow connection
+                    speeds, because you can stop an image that is of no
+                    interest; interlace is of less use today witho our
+                    faster connection speeds.
                   </para>
                   <para lang="ja">
-                    このオプションが有効のとき、 読み込みが終わるまで
-                    ウェブページで画像が漸進的に表示されます。
-                    そうするとコンピュータやモデムの処理速度が遅いときに、
-                    画像を表示し終える前に読み込みを中止できます。
+                    <guilabel>インターレース(<accel>N</accel>)</guilabel> 
+                    オプションを有効にすると、 ウェブページでダウンロード
+                    読み込みの最中から漸進的に表示できる画像になります。
+                    画像の漸進的表示はコンピュータやモデムの処理速度が遅いときに、
+                    画像を表示し終える前に読み込みを中止できるので便利でした。
+                    しかし今日の高速回線時代にこの機能はあまり役立たない技術と
+                    なりました。
                   </para>
                 </listitem>
               </varlistentry>
@@ -251,20 +257,18 @@
                 <term lang="ja">GIF コメント(G)</term>
                 <listitem>
                   <para lang="en">
-                    Beware of do not insert characters outside the ASCII
-                    range, because of the GIF format supports 7-bits ASCII
-                    texts only, that GIMP can't provide. If you insert
-                    inadvertently a non-ASCII char, the option will be
-                    automatically disabled.
+                    GIF comments support only 7-bit ASCII characters.
+                    If you use a character outside the 7-bit ASCII set,
+                    <acronym>GIMP</acronym> will save the image without
+                    a comment, and then inform you that the comment was not
+                    saved.
                   </para>
                   <para lang="ja">
-                    <acronym>ASCII</acronym>規格の範囲外の文字を挿入しない
-                    ようご注意下さい。 <acronym>GIF</acronym>形式は
-                    7ビット<acronym>ASCII</acronym>文字列のみをサポート
-                    するためですが、 <acronym>GIMP</acronym>は予め排除する
-                    しくみを備えておりません。 もしうっかり非
-                    <acronym>ASCII</acronym>文字を含んだ文字列を挿入すると、
-                    このオプションは自動的に無効とされます。
+                    <acronym>GIF</acronym>形式では7ビット<acronym>ASCII</acronym>
+                    文字列のみコメントに使えます。 もしうっかり7ビット<acronym>
+                    ASCII</acronym>文字集合以外の文字を入れてしまうと<acronym>
+                    GIMP</acronym>はコメント自体を削除して画像を保存し、 コメント
+                    は保存されなかったことを告げます。
                   </para>
                 </listitem>
               </varlistentry>
@@ -293,8 +297,8 @@
                 <term lang="ja">無限ループ(L)</term>
                 <listitem>
                   <para lang="en">
-                    When this option is checked the animation will start
-                    playing again repeatedly until you stop it.
+                    When this option is checked the animation will
+                    play repeatedly until you stop it.
                   </para>
                   <para lang="ja">
                     このオプションを有効にすると、 停止させるまで
@@ -307,7 +311,7 @@
                 <term lang="ja">指定しない場合のフレーム間の時間(D)</term>
                 <listitem>
                   <para lang="en">
-                    You can set the delay, in millisecondes, between frames
+                    You can set the delay, in milliseconds, between frames
                     if it has not been set before. In this case, you can
                     modify every delay in the Layer Dialog.
                   </para>
@@ -503,14 +507,16 @@
             <note>
               <para lang="en">
                 Please note, that the numbers for the JPEG quality level have
-                a different meaning. Saving with a level of 80 in GIMP is not
-                necessarily comparable with saving with a level of 80 in an
-                different application.
+                a different meaning in different applications.
+                Saving with a quality level of 80 in GIMP is not
+                necessarily comparable with saving with a quality level of
+                80 in a different application.
               </para>
               <para lang="ja">
-                <acronym>JPEG</acronym>の品質レベルの数値には別段の意味は
-                ありません。 仮に<acronym>GIMP</acronym>で80のレベルで
-                保存したとして、 別のアプリケーションで80のレベルで
+                <acronym>JPEG</acronym>の品質レベルの数値は<acronym>GIMP</acronym>
+                独自のもので他のアプリケーションにとっては意味がありません。 
+                仮に<acronym>GIMP</acronym>で80のレベルで保存したとして、 
+                別のアプリケーションで80のレベルで
                 保存したとしてもそこに必然的な共通性はありません。
               </para>
             </note>
@@ -523,7 +529,7 @@
             <para lang="en">
               Checking this option causes each change in quality (or any other
               JPEG parameter) to be shown in the image display. (This does not
-              alter the image, though: it reverts back to its original state
+              alter the image: the image reverts back to its original state
               when the JPEG dialog is closed.)
             </para>
             <para lang="ja">
@@ -541,7 +547,7 @@
             <para lang="en">
               Some information about the advanced settings:
             </para>
-            <para lang="ja">幾つかの詳細な設定情報:</para>
+            <para lang="ja">幾つかの詳細な設定情報</para>
             <variablelist>
               <varlistentry>
                 <term lang="en">Optimize</term>
@@ -549,11 +555,13 @@
                 <listitem>
                   <para lang="en">
                     If you enable this option, the optimization of entropy
-                    encoding parameters will be used.
+                    encoding parameters will be used. The result is typically
+                    a smaller file, but it takes more time to generate.
                   </para>
                   <para lang="ja">
-                    このオプションを有効にすると、
-                    エントロピー符号化による最適化が行なわれます。
+                    このオプションを有効にすると、 エントロピー符号化による最適化
+                    が行なわれます。 その結果は容量が小さくなるのが特徴ですが、 
+                    生成にはもっと時間がかかります。
                   </para>
                 </listitem>
               </varlistentry>
@@ -562,21 +570,24 @@
                 <term lang="ja">プログレッシブ(P)</term>
                 <listitem>
                   <para lang="en">
-                    With this option enabled the chunks of the image will be
-                    inserted in a certain order in the file. This is done with
-                    the intent to give a progressive refinement of the image
-                    appearance during a slow connection web download, similar
-                    and with the same purpose of the corresponding option
-                    present in the GIF format too. The downside of enabling
-                    this option is, that you get slightly larger files.
+                    With this option enabled, the image chunks are
+                    stored in the file in an order that allows
+                    progressive image refinement
+                    during a slow connection web download.
+                    The progressive option for JPEG has the same
+                    purpose as the interlace option for GIF.
+                    Unfortunately, the progressive option produces
+                    slightly larger JPEG files (than without the
+                    progressive option).
                   </para>
                   <para lang="ja">
                     このオプションが有効なときは、 ファイル内部で画像が分割
-                    され所定の順序で並べられます。 つまりウェブでの低速な
-                    ダウンロード環境において画像の表示を漸進的に達成するための
-                    しくみであり、 その目的と効果は<acronym>GIF</acronym>形式の
-                    それと同じです。 このオプションの弱点は、
-                    ファイルの容量が若干大きくなることです。
+                    され、 低速なネット回線でも画像が漸進的に表示できる順序に並べ
+                    替えられます。 <acronym>JPEG</acronym>のプログレッシブ
+                    オプションは<acronym>GIF</acronym>形式のインターレース
+                    オプションと同じ用途に使われます。 このオプションの弱点は、
+                    プログレッシブオプションなしと比べてファイルの容量が若干大きく
+                    なることです。
                   </para>
                 </listitem>
               </varlistentry>
@@ -592,53 +603,68 @@
                   </indexterm>
                   <para lang="en">
                     JPEG files from many digital cameras contain extra
-                    information, called EXIF data, which specifies camera
-                    settings and other information concerning the
-                    circumstances under which the image was created. GIMP's
-                    ability to handle EXIF data depends on whether the
-                    <quote>libexif</quote>
-                    library is available on your system; it is not
+                    information, called EXIF data.
+                    EXIF data provides information about the image such as
+                    camera make and model, image size, image date, etc.
+                    Although GIMP uses the <quote>libexif</quote> library to
+                    read and write EXIF data, the library is not
                     automatically packaged with GIMP. If GIMP was built with
                     libexif support, then EXIF data is preserved if you open a
                     JPEG file, work with the resulting image, and then save it
                     as JPEG. The EXIF data is not altered in any way when you
-                    do this (which means that some of its fields are no longer
-                    valid). If GIMP was not built with EXIF support, this does
-                    not prevent files with EXIF data from being opened, but it
-                    does mean that the EXIF data will not be present when the
-                    resulting image is later saved.
+                    do this. The EXIF data may indicate things such as image
+                    creation time and file name, which may no longer be
+                    correct. 
+                    If GIMP was not built with EXIF support, you can still
+                    open JPEG files containing EXIF data, but the EXIF data
+                    is ignored, and will not be saved when the resulting image
+                    is later saved.
                   </para>
                   <para lang="ja">
                     デジタルカメラの生成する<acronym>JPEG</acronym>には
-                    Exifデータと呼ばれる外部情報が混入されており、 そこにカメラ
-                    設定や撮影環境の情報が記録されています。 あなたのシステムが
-                    <quote>libexif</quote>ライブラリを利用できるよう設定されて
-                    いない場合は (<acronym>GIMP</acronym>には同梱されて
-                    いません) 、 <acronym>GIMP</acronym>はこのExifデータを活用
-                    できません。 libexifライブラリが導入されており<acronym>
-                    GIMP</acronym>のビルド時にそのサポートを有効にしていたなら
-                    ば、 Exifデータを扱うことができ、 <acronym>JPEG</acronym>
-                    ファイルを保存する際にはファイル内にそのデータが記録
-                    できます。 このときExifデータは一切変更されません (つまり
-                    一部の項目が無効になります。) <acronym>GIMP</acronym>の
+                    Exifデータと呼ばれる外部情報が混入されます。 Exifデータは
+                    カメラのメーカー名や型番、 画像の寸法、 撮影の日付などなど
+                    画像に関する情報を記録します。 <acronym>GIMP</acronym>は
+                    Exifデータを読み書きするために<quote>libexif</quote>
+                    ライブラリを利用しますが、 このライブラリは<acronym>GIMP
+                    </acronym>には同梱されていません。 libexifライブラリが導入
+                    されており<acronym>GIMP</acronym>のビルド時にそのサポートを
+                    有効にしていたならば、 Exifデータを扱うことができ、 <acronym>
+                    JPEG</acronym>ファイルを保存する際にはファイル内にその
+                    データが記録できます。 このときExifデータは一切変更されません。
+                    つまりExifデータが示す作成日付やファイル名などの一部の情報が
+                    不正なまま残されてしまいます。 <acronym>GIMP</acronym>の
                     ビルド時にこのサポートを無効にしていた場合も、 Exifデータを
                     含んだ<acronym>JPEG</acronym>ファイルは支障なく開けますが、
-                    開いた画像を保存する際にファイル内にExif
-                    データが残りません。
+                    そのあとこの画像を保存するとファイル内にExifデータが残りません。
                   </para>
                 </listitem>
               </varlistentry>
               <varlistentry>
-                <term lang="en">Save Preview</term>
+                <term lang="en">Save thumbnail</term>
                 <term lang="ja">サムネイルを保存(T)</term>
                 <listitem>
                   <para lang="en">
                     This option lets you save a thumbnail with the image.
+                    Many applications use the small thumbnail image as
+                    a quickly available small preview image.
                   </para>
                   <para lang="ja">
                     このオプションは画像の本体のほかにサムネイル画像をも
-                    ファイルに保存します。
+                    ファイルに保存します。 この小さなサムネイル画像は他の
+                    多くのアプリケーションが素早いプレビュー機能のために
+                    利用します。
                   </para>
+                  <note>
+                    <para lang="en">
+                      This option is present only if <acronym>GIMP</acronym>
+                      was built with EXIF support.
+                    </para>
+                    <para lang="ja">
+                      このオプションは<acronym>GIMP</acronym>をソースファイルから
+                      ビルドするときExifサポートを有効にしていた場合にのみ現れます。
+                    </para>
+                  </note>
                 </listitem>
               </varlistentry>
               <varlistentry>
@@ -646,11 +672,15 @@
                 <term lang="ja">XMP データを保存(X)</term>
                 <listitem>
                   <para lang="en">
-                    If you enable this option, the meta data of the image will
-                    be saved as <acronym>XMP</acronym>-structure within the
+                    XMP data is <quote>meta</quote> data about the image;
+                    it is a competing format with EXIF.
+                    If you enable this option, the meta data of the image is
+                    saved in an <acronym>XMP</acronym>-structure within the
                     file.
                   </para>
                   <para lang="ja">
+                    <acronym>XMP</acronym>データとは画像のメタ情報のことです。
+                    これはExifに競合する形式です。
                     このオプションを有効にすると、 画像のメタ情報がファイル内に
                     <acronym>XMP</acronym>構造体として保存されます。
                   </para>
@@ -714,13 +744,13 @@
                 <term lang="ja">スムージング(M)</term>
                 <listitem>
                   <para lang="en">
-                    Compression can create artefacts. By using this option,
+                    JPEG compression can create artefacts. By using this option,
                     you can smooth the image when saving, reducing them. But
                     your image becomes somewhat blurred.
                   </para>
                   <para lang="ja">
-                    圧縮で加工痕が残ることがあります。 このオプションを用いると
-                    これらの発生は抑えられ、 画像がなめらかになります。
+                    <acronym>JPEG</acronym>圧縮は加工痕を残すことがあります。 この
+                    オプションを用いるとその発生が抑えられ、 画像が滑らかになります。
                     しかし画像はいくぶんぼやけます。
                   </para>
                 </listitem>
@@ -730,14 +760,16 @@
                 <term lang="ja">リスタートマーカーを使用(R)</term>
                 <listitem>
                   <para lang="en">
-                    The image file can include some markers which allow to
-                    segment it. If loading this image in a Web page is broken
-                    off, loading can resume from the following marker.
+                    The image file can include markers which allow the image
+                    to be loaded as segments. If a connection is broken while
+                    loading the image in a web page,
+                    loading can resume from the next marker.
                   </para>
                   <para lang="ja">
-                    画像ファイルには内部に分割マーカーを挿入できます。
-                    ウェブページが読み込み中に壊れたときに、
-                    途中のマーカーを起点に読み込みを再開できます。
+                    このオプションを有効にすると画像ファイル内部に分割読み込みを
+                    可能にするマーカーを挿入できます。 ウェブページの画像を
+                    読み込んでいる最中に接続が中断しても、 
+                    あとで途中のマーカーを起点に読み込みを再開できます。
                   </para>
                 </listitem>
               </varlistentry>
@@ -746,55 +778,79 @@
                 <term lang="ja">サブサンプリング(B)</term>
                 <listitem>
                   <para lang="en">
-                    Human eye is not sensitive in the same way all over color
-                    spectrum. Compression can use this to consider as
-                    identical slightly different colors. Three methods are
-                    available :
+                    The human eye is not sensitive in the same way over
+                    the entire color spectrum. The compression
+                    can use this to treat slightly different colors
+                    that the eye preceives as very close, as identical
+                    colors. Three methods are available:
                   </para>
                   <para lang="ja">
-                    人間の色覚は一様に可視光線全般に対して鈍感です。
-                    この事実を利用し、 わずかに異なる色ならば同色である
-                    との判断で圧縮しています。 3つの形式から選択できます。
+                    人間の色覚は一様に可視光線全般に対して鈍感です。この
+                    オプションはわずかに異なる色ならばごく近くほとんど同色である
+                    とヒトの視覚が認識することを前提に圧縮します。 
+                    つぎの3つの形式から選択できます。
                   </para>
                   <itemizedlist>
                     <listitem>
                       <para lang="en">
                         <guilabel>1x1,1x1,1x1 (best quality)</guilabel>:
-                        preserves borders and contrasting colors, but
+                        Commonly referred to as (4:4:4), this produces
+                        the best quality,
+                        preserving borders and contrasting colors, but
                         compression is less.
                       </para>
                       <para lang="ja">
                         <guilabel>1x1,1x1,1x1 (最高品位)</guilabel>:
+                        (4:4:4) としてよく知られている最高品位の形式であり、
                         境界部や対照色は保持されますが、 圧縮能力は下がります。
                       </para>
                     </listitem>
                     <listitem>
                       <para lang="en">
-                        <guilabel>2x1,1x1,1x1 (4:2:2)</guilabel>
+                        <guilabel>2x1,1x1,1x1 (4:2:2)</guilabel>:
+                        This is the standard subsampling, which usually
+                        provides a good ratio between image quality and file
+                        size. There are situations, however, in which using no
+                        subsampling (4:4:4) provides a noticeable increase in
+                        the image quality; for example, when the image
+                        containing fine details such as text over a uniform
+                        background, or images with almost-flat colors.
                       </para>
                       <para lang="ja">
-                        <guilabel>2x1, 1x1, 1x1 (4:2:2)</guilabel>
-                         <!--: 水平偶数間引き -->
+                        <guilabel>2x1, 1x1, 1x1 (4:2:2)</guilabel>:
+                         この形式はほとんどの画像で品質とファイル容量の絶妙な
+                         バランスがとれる標準的なサブサンプリング法です。 しかし
+                         サブサンプリングを使わない方法 (4:4:4) の方が目に見えて
+                         画像品質が高い場合もあります。 例えば均一な地を背景に
+                         文字が書かれた画像や色変化が乏しい画像には不適です。
                       </para>
                     </listitem>
                     <listitem>
                       <para lang="en">
-                        <guilabel>1x2,1x1,1x1</guilabel>
+                        <guilabel>1x2,1x1,1x1</guilabel>:
+                        This is similar to
+                        (2x1,1x1,1x1) but the chroma sampling is in the
+                        horizontal direction rather than the vertical
+                        direction; as if someone rotated an image.
                       </para>
                       <para lang="ja">
-                        <guilabel>1x2,1x1,1x1</guilabel>
-                        <!--: 垂直偶数間引き -->
+                        <guilabel>1x2,1x1,1x1</guilabel>:
+                        この形式は <guilabel>2x1,1x1,1x1</guilabel> と似て
+                        いますが、 縦方向ではなく横方向の微妙な色変化をよく
+                        サンプリングできます。
                       </para>
                     </listitem>
                     <listitem>
                       <para lang="en">
                         <guilabel>2x2,1x1,1x1 (smallest file)</guilabel>:
-                        important compression; suits images with weak
+                        Commonly referred to as (4:1:1), this produces
+                        the smallest files. This suits images with weak
                         borders but tends to denature colors.
                       </para>
                       <para lang="ja">
-                        <guilabel>2x2,1x1,1x1 (最小ファイルサイズ)</guilabel> :
-                        重要な圧縮方法です。 境界のはっきりしない画像に向いて
+                        <guilabel>2x2,1x1,1x1 (最小ファイルサイズ)</guilabel>:
+                        この形式は (4:1:1) として知られ、 最もファイル容量を
+                        小さくできます。 境界のはっきりしない画像に向いて
                         いますが、 不自然な色が出る傾向があります。
                       </para>
                     </listitem>
@@ -872,7 +928,7 @@
                 <term lang="ja">コメント</term>
                 <listitem>
                   <para lang="en">
-                    In this text box, you can enter a comment which will be
+                    In this text box, you can enter a comment which is
                     saved with the image.
                   </para>
                   <para lang="ja">
@@ -924,17 +980,23 @@
       <variablelist>
         <varlistentry>
           <term lang="en">Interlacing</term>
-          <term lang="ja">インターレース (Adam7)</term>
+          <term lang="ja">インターレース (Adam7)(I)</term>
           <listitem>
             <para lang="en">
-              When this option is checked, the image is progressively
-              displayed on a Web page. So, slow computer users can stop
-              downloading if they are not interested.
+              Checking interlace allows an image on a web page to be
+              progressively displayed as it is downloaded.
+              Progressive image display is useful with slow connection
+              speeds, because you can stop an image that is of no
+              interest; interlace is of less use today with our faster
+              connection speeds.
             </para>
             <para lang="ja">
-              このオプションが入りのときは、 ウェブページ上で画像が
-              漸進的に表示されます。 すると低速なコンピュータ環境の
-              ユーザは途中で不要な画像の読み込みを中止できます。
+              <guilabel>インターレース (Adam7)(<accel>I</accel>)</guilabel> 
+              オプションを有効にすると、 画像はウェブページにダウンロード
+              されながら漸進的に表示されます。 画像の漸進的表示があれば
+              不要な画像しかないときはその途中で読み込みを停止できるため
+　　　　　　　低速回線で役立ちます。 しかし今日の高速回線においては
+              インターレース機能の利点はあまりありません。
             </para>
           </listitem>
         </varlistentry>
@@ -944,9 +1006,9 @@
           <listitem>
             <para lang="en">
               If your image has many transparency levels, the Internet
-              browsers which recognize only two levels, will use the
-              background color of your Toolbox instead. But Internet Explorer
-              up to version 6 did not use these informations.
+              browsers that recognize only two levels, will use the
+              background color of your Toolbox instead. Internet Explorer
+              up to version 6 did not use this information.
             </para>
             <para lang="ja">
               画像の透明度が大きく設定されている部分で、 透明度を2段階でしか
@@ -962,15 +1024,20 @@
           <term lang="ja">ガンマ値を保存(G)</term>
           <listitem>
             <para lang="en">
-              Informations about your monitor will be saved, so that the
-              image will be displayed in the same way on other computers,
-              provided that the display program supports these
-              informations, what is rarely the case.
+              Gamma correction is the ability to correct for
+              differences in how computers interpret color values.
+              This saves gamma information in the PNG that reflects
+              the current Gamma factor for your display. Viewers on
+              other computers can the compensate to ensure that the image
+              is not too dark or too bright.
             </para>
             <para lang="ja">
-              お使いのディスプレイモニタの情報を保存して、 他のコンピュータでも
-              同等に表示できるようにするしくみですが、 その情報を提供できる
-              ディスプレイプログラムはまだ少ししかありません。
+              ガンマ補正はコンピュータの表示装置によって起こる色の値の再現の
+              ずれを修正するしくみです。 このオプションを有効にすると<acronym>
+              PNG</acronym>画像に現在お使いのディスプレイモニタのガンマ値を
+              反映する情報を画像に保存します。 他のコンピュータの画像表示
+              プログラムはこれを利用すれば画像が明る過ぎたり暗過ぎたりしない
+              よう補正できます。
             </para>
           </listitem>
         </varlistentry>
@@ -978,14 +1045,28 @@
           <term lang="en">Save layer offset</term>
           <term lang="ja">レイヤーオフセットを保存(F)</term>
           <listitem>
+            <!-- Andrew Pitonyak (andrew@pitonyak.org)
+            verified this with Alexia Death (alexiadeath@gmail.com)
+            on August 17, 2009. -->
             <para lang="en">
-               No interest. Images with layers are flattened before saving
-               to PNG and layer offset is taken in account.
+               PNG supports an offset value called the
+               <quote>oFFs chunk</quote>, which provides position data.
+               Unfortunately, PNG offset support in <acronym>GIMP</acronym>
+               is broken, or at least is not compatible with other
+               applications,
+               and has been for a long time. Do not enable offsets,
+               let <acronym>GIMP</acronym> flatten the layers before
+               saving, and you will have no problems.
             </para>
             <para lang="ja">
-               無用。 複数のレイヤーからなる画像は<acronym>PNG</acronym>
-               に保存する際にレイヤーの統合がなされますが、 そこに
-               レイヤーオフセット値が与えられます。
+               <acronym>PNG</acronym>画像は位置データを示す<quote>oFFs
+               チャンク</quote>と名付けられたオフセット値を提供しています。
+               しかし残念ながら<acronym>GIMP</acronym>の<acronym>PNG
+               </acronym>オフセット値を扱う機能は壊れているのか他の
+               アプリケーションと互換性がないまま放置されています。 この
+               オプションは使わないようにしましょう。 使わない場合は
+               レイヤーが画像に複数あると<acronym>PNG</acronym>に保存する
+               前に統合が行なわれるということであり問題はありません。
             </para>
           </listitem>
         </varlistentry>
@@ -994,10 +1075,10 @@
           <term lang="ja">解像度を保存(R)</term>
           <listitem>
             <para lang="en">
-              Save the image resolution, in dpi (dot per inch).
+              Save the image resolution, in DPI (dots per inch).
             </para>
             <para lang="ja">
-              画像の解像度をdpi(ドット毎インチ)で記録します。
+              画像の解像度を<acronym>DPI</acronym> (ドット毎インチ) で記録します。
             </para>
           </listitem>
         </varlistentry>
@@ -1006,7 +1087,7 @@
           <term lang="ja">作成日時を保存(T)</term>
           <listitem>
             <para lang="en">
-              That will be the date of last saving.
+              Date the file was saved.
             </para>
             <para lang="ja">最終保存日時のことです。</para>
           </listitem>
@@ -1046,8 +1127,9 @@
           <listitem>
             <para lang="en">
               Since compression is not lossy, the only reason to use a
-              compression level less than 9 would be a too long time to
-              compress file on a slow computer. Nothing to fear from
+              compression level less than 9, is if it takes too long time to
+              compress a file on a slow computer.
+              Nothing to fear from
               decompression: it is as quick whatever the compression level.
             </para>
             <para lang="ja">
@@ -1059,23 +1141,29 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Save defaults</term>
+          <term lang="en">Save Defaults</term>
           <term lang="ja">既定値として保存</term>
           <listitem>
             <para lang="en">
-              If you click on this button, your settings will be saved and
-              can be used by other savings by clicking on the
-              <guibutton>Load defaults</guibutton>.
+              Click to save the current settings. Latter, you can use
+              <guibutton>Load Defaults</guibutton> to load the saved
+              settings.
             </para>
             <para lang="ja">
-              このボタンを押すと、 ここで設定した内容は保存され、 別の保存の
-              機会に <guibutton>既定値を読み込み(<accel>L</accel>)</guibutton>
-              ボタンを押すことでこの設定を再利用できます。
+              このボタンを押すと、 ここで設定した内容は保存されます。 あとで
+              <guibutton>既定値を読み込み(<accel>L</accel>)</guibutton> 
+              ボタンを押せばその設定が読み込まれ利用できます。
             </para>
           </listitem>
         </varlistentry>
       </variablelist>
       <note>
+        <para lang="en">
+          The PNG format supports indexed images. Using fewer colors,
+          therefore, results in a smaller file; this is especially useful
+          for creating web images;
+          see <xref linkend="gimp-image-convert-indexed"/>.
+        </para>
         <para lang="en">
           Computers work on 8 bits blocks named <quote>Byte</quote>.
           A byte allows 256 colors. Reducing the number of colors below 256
@@ -1089,14 +1177,14 @@
           Explorer, you can use the AlphaImageLoader DirectX filter in the
           code of your Web page. See Microsoft Knowledge Base
           <xref linkend="bibliography-online-microsoft-kb294714"/>.
-          Please note, that this should not be necessary for
+          Please note, that this is not necessary for
           InternetExplorer 7 and above.
         </para>
         <para lang="ja">
-          <acronym>PNG</acronym>形式はインデックスつき画像をサポートしている
-          ので、 ウェブ用になるべく軽量のファイルを作りたい場合には色数を
-          減らしてみるのもよい方法です。
-          <xref linkend="gimp-image-convert-indexed" />の節をご覧ください。
+          <acronym>PNG</acronym>形式はインデックスつき画像をサポートして
+          います。 それゆえ色数を減らしてファイルをなるべく軽量にできます。
+          とくにウェブ用画像を作るときこの方法は役立ちます。
+          <xref linkend="gimp-image-convert-indexed"/> の節をご覧ください。
         </para>
         <para lang="ja">
           コンピュータの内部は<quote>バイト</quote>と呼ばれる8ビット単位で作動
@@ -1111,9 +1199,9 @@
           <application>InternetExplorer</application>で<acronym>PNG</acronym>の
           透明効果を充分に表示させたいのならば、 <application>AlphaImageLoader
           DirectX フィルタ</application>をウェブページのコードに入れて
-          みましょう。 <productname>Microsoft</productname>サポートオンライン
-          <xref linkend="bibliography-online-microsoft-kb294714" /> をご覧
-          ください。 この措置は<application>InternetExplorer 7</application>
+          みましょう。 <productname>Microsoft</productname> サポートオンライン
+          <xref linkend="bibliography-online-microsoft-kb294714"/> をご覧
+          ください。 この措置は <application>InternetExplorer 7</application>
           には不要です。
         </para>
       </note>
@@ -1155,8 +1243,8 @@
           <term lang="ja">圧縮方法</term>
           <listitem>
             <para lang="en">
-              This option give you the opportunity to choose the compression
-              method that is appropriate for your image:
+              This option allows you to specify the algorithm used to
+              compress the image.
             </para>
             <para lang="ja">
               このオプションで画像にふさわしい圧縮方法が選択できます。
@@ -1164,33 +1252,33 @@
             <itemizedlist>
               <listitem>
                 <para lang="en">
-                  <guilabel>None</guilabel> : fast method, but resulting in
-                  a big file.
+                  <guilabel>None</guilabel>: is fast, and lossless, but the
+                  resulting file is very large.
                 </para>
                 <para lang="ja">
-                  <guilabel>圧縮しない(<accel>N</accel>)</guilabel>
-                  : 高速ですが大きなファイルができます。
+                  <guilabel>圧縮しない(<accel>N</accel>)</guilabel>:
+                  高速で損失もありませんが大きなファイルができます。
                 </para>
               </listitem>
               <listitem>
                 <para lang="en">
-                  <guilabel>LZW</guilabel> : The image will be compressed
+                  <guilabel>LZW</guilabel>: The image is compressed
                   using the <quote>Lempel-Ziv-Welch</quote> algorithm, a
-                  lossless compression technique. This is an old method,
-                  still efficient and fast. More informations at
+                  lossless compression technique. This is old, but
+                  efficient and fast. More informations at
                   <xref linkend="bibliography-online-wkpd-lzw"/>.
                 </para>
                 <para lang="ja">
-                  <guilabel>LZW</guilabel> : 画像は可逆的な圧縮技術である
+                  <guilabel>LZW</guilabel>: 画像は可逆的な圧縮技術である
                   <quote>Lempel-Ziv-Welch</quote>アルゴリズムを用いて圧縮
                   されます。 旧来からの方式ですが今でも効果的かつ高速です。
-                  詳しい説明は
-                  <xref linkend="bibliography-online-wkpd-lzw" /> にあります。
+                  詳しい説明は 
+                  <xref linkend="bibliography-online-wkpd-lzw"/> にあります。
                 </para>
               </listitem>
               <listitem>
                 <para lang="en">
-                  <guilabel>Pack Bits</guilabel> : is a fast, simple
+                  <guilabel>Pack Bits</guilabel>: is a fast, simple
                   compression scheme for run-length encoding of data. Apple
                   introduced the PackBits format with the release of
                   MacPaint on the Macintosh computer. A PackBits data
@@ -1199,7 +1287,7 @@
                   <xref linkend="bibliography-online-wkpd-packbits"/>)
                 </para>
                 <para lang="ja">
-                  <guilabel>Pack Bits</guilabel> : は高速で簡素な
+                  <guilabel>Pack Bits</guilabel> は高速で簡素な
                   連長圧縮法です。 <productname>Apple</productname> 社は
                   <productname>Macintosh</productname> コンピュータに
                   搭載する <application>MacPaint</application> の
@@ -1213,14 +1301,14 @@
               </listitem>
               <listitem>
                 <para lang="en">
-                  <guilabel>Deflate</guilabel>: It is a lossless data
+                  <guilabel>Deflate</guilabel>: is a lossless data
                   compression algorithm that uses a combination of the LZ77
                   algorithm and Huffman coding. It is also used in Zip,
                   Gzip and PNG file formats. Source:
                   <xref linkend="bibliography-online-wkpd-deflate"/>.
                 </para>
                 <para lang="ja">
-                  <guilabel>Deflate(<accel>D</accel>)</guilabel> : LZ77
+                  <guilabel>Deflate(<accel>D</accel>)</guilabel>: LZ77
                   アルゴリズムとハフマン符号化を併用した、 可逆的な圧縮
                   アルゴリズムです。 zlib、 ZIP、 GZIP、 7zなどの圧縮プログラム
                   や PNG ファイル形式に用いられています。 (出典:
@@ -1229,31 +1317,49 @@
               </listitem>
               <listitem>
                 <para lang="en">
-                  <guilabel>JPEG</guilabel>: this is a very good
+                  <guilabel>JPEG</guilabel>: is a very good
                   compression algorithm but lossy.
                 </para>
                 <para lang="ja">
-                  <guilabel>JPEG(<accel>J</accel>)</guilabel> :
+                  <guilabel>JPEG(<accel>J</accel>)</guilabel>:
                   不可逆的ですが優秀な圧縮アルゴリズムです。
                 </para>
               </listitem>
               <listitem>
-                <para lang="en"><guilabel>CCITT Group 3 fax</guilabel>;
-                  <guilabel>CCITT Group 4 fax</guilabel></para>
+                <para lang="en">
+                  <guilabel>CCITT Group 3 fax</guilabel>;
+                  <guilabel>CCITT Group 4 fax</guilabel> is a
+                  black and white format developed to transfer images by FAX.
+                </para>
                 <para lang="ja">
                   <guilabel>CCITT Group 3 fax</guilabel>;
-                  <guilabel>CCITT Group 4 fax</guilabel>
-                  : これらはバイナリ画像の圧縮に使われている
+                  <guilabel>CCITT Group 4 fax</guilabel>:
+                  これらは白と黒だけの画像の圧縮に使われている
                   アルゴリズムです。 ファクス通信に用いられています。
                 </para>
                 <note>
                   <para lang="en">
                     These options can only be selected, if the image is in
-                    indexed mode and reduced to two colors.
+                    indexed mode and reduced to two colors. Use
+                    <menuchoice>
+                      <guimenu>Image</guimenu>
+                      <guisubmenu>Mode</guisubmenu>
+                      <guimenuitem>Indexed</guimenuitem>
+                    </menuchoice>
+                    to convert the image to indexed. Be certain to check
+                    <quote>Use black and white (1-bit) palette</quote>.
                   </para>
                   <para lang="ja">
-                    この2つのオプションは、 画像が2色のみに
-                    インデックス化されている場合に有効です。
+                    この2つのオプションは、 画像が2色のみにインデックス化
+                    されている場合に有効です。 
+                    <menuchoice>
+                      <guimenu>画像(<accel>I</accel>)</guimenu>
+                      <guisubmenu>モード(<accel>M</accel>)</guisubmenu>
+                      <guimenuitem>インデックス(<accel>I</accel>)...</guimenuitem>
+                    </menuchoice>
+                    と進むと<quote>インデックスカラーに変換</quote>ダイアログが
+                    現れます。 <guilabel>白黒 ( 1-bit) パレットを使用</guilabel>
+                    を選べばこのオプションが使えます。
                   </para>
                 </note>
               </listitem>
@@ -1279,7 +1385,7 @@
           <term lang="ja">コメント</term>
           <listitem>
             <para lang="en">
-              In this text box, you can enter a comment which will be
+              In this text box, you can enter a comment that is
               associated with the image.
             </para>
             <para lang="ja">
