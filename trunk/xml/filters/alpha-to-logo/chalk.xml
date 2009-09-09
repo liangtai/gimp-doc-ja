@@ -6,31 +6,42 @@
   2007-10-15 KoSt: Added 'no'
   2007-10-11 ude: created 'en', 'de'
 -->
+<!--2009-09-08-->
 <sect2 id="script-fu-chalk-logo-alpha">
-  <title>Chalk</title>
+  <title lang="en">Chalk</title>
+  <title lang="ja">チョーク(C)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Alpha to Logo</secondary>
     <tertiary>Chalk</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Chalk</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary>チョーク</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>チョーク</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
-        Example for the <quote>Chalk</quote> filter
-      </title>
+      <title lang="en">Example for the <quote>Chalk</quote> filter</title>
+      <title lang="ja"><quote>チョーク</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/taj_orig.jpg"/>
         </imageobject>
         <caption>
-          <para>Original image</para>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -39,14 +50,15 @@
             fileref="images/filters/examples/logo-taj-chalk.jpg"/>
         </imageobject>
         <caption>
-          <para><quote>Chalk</quote> applied</para>
+          <para lang="en"><quote>Chalk</quote> applied</para>
+          <para lang="ja"><quote>チョーク</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter creates a chalk drawing effect for the active layer.
     </para>
-    <para>
+    <para lang="en">
       It is derived from the <quote>Chalk</quote> script
       (<menuchoice>
         <guimenu>File</guimenu>
@@ -56,60 +68,107 @@
       </menuchoice> in the image window),
       which creates a logo from a text of your choice, for instance:
     </para>
+    <para lang="ja">
+      <guimenuitem>チョーク(<accel>C</accel>)...</guimenuitem> フィルタは活性
+      レイヤーの画像を白墨で描いたような絵にします。
+    </para>
+    <para lang="ja">
+      このフィルタは与えられた文字を白墨で書いたように加工する<quote>チョーク
+      </quote>ロゴスクリプトから派生しました。
+      ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル(<accel>F</accel>)</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>チョーク(<accel>C</accel>)...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
           fileref="images/filters/examples/chalk-script-fu.png"/>
       </imageobject>
       <caption>
-        <para>The <quote>Chalk</quote> Script-Fu script.</para>
+        <para lang="en">The <quote>Chalk</quote> Script-Fu script.</para>
+        <para lang="ja"><quote>チョーク</quote>Script-Fuスクリプト</para>
       </caption>
     </mediaobject>
     <warning>
-      <para>
+      <para lang="en">
         The image will always be resized to the active layer's size.
+      </para>
+      <para lang="ja">
+        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
       </para>
     </warning>
     <itemizedlist>
-      <para>The <quote>Chalk</quote> filter</para>
+      <para lang="en">The <quote>Chalk</quote> filter</para>
+      <para lang="ja"><quote>チョーク</quote>フィルタは</para>
       <listitem>
-        <para>
+        <para lang="en">
           applies a <link linkend="plug-in-gauss">Gaussian blur</link> to the
           layer, <link linkend="plug-in-spread">spreads</link> the pixels, and
           <link linkend="plug-in-ripple">ripples</link> the layer
           horizontally and vertically,
         </para>
+        <para lang="ja">
+          <link linkend="plug-in-gauss">ガウスぼかし</link> をレイヤーに
+          かけ、 画素を 
+          <link linkend="plug-in-spread">拡散</link> させてから、 その
+          レイヤーを水平方向と垂直方向に 
+          <link linkend="plug-in-ripple">波紋</link> 化し、
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           extracts edges using the <link linkend="plug-in-sobel">Sobel</link>
           edge detect filter, and
         </para>
+        <para lang="ja">
+          <link linkend="plug-in-sobel">ソーベル</link> 輪郭抽出フィルタで
+          レイヤーから画像の輪郭を読み取り、
+        </para>
         <note>
-          <para>
+          <para lang="en">
             Sometimes the sobel edge detect produces some garbage at the
             image sides.
+          </para>
+          <para lang="ja">
+            ソーベル輪郭抽出プラグインはときおり画像の形に沿ってゴーストを
+            作ってしまいます。
           </para>
         </note>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           increases the luminosity
           <link linkend="gimp-tool-levels">level</link>.
         </para>
+        <para lang="ja">
+          <link linkend="gimp-tool-levels">レベルツール</link> で明度を
+          増します。
+        </para>
       </listitem>
     </itemizedlist>
-    <para>
+    <para lang="en">
       Unfortunately you cannot change the tool and filter options. But you may
       reproduce the process step by step using the methods listed above,
       varying the respective options. Then you just have to add a background
       layer filled with any color. That's all.
     </para>
+    <para lang="ja">
+      残念なことにこれらの作業過程で使われるツールのオプションがこのフィルタ
+      では指定できません。 したがってそういったオプションを変更するには代わり
+      に以上の工程を手作業で実行することになるでしょう。 その場合仕上げに
+      任意の色で塗りつぶした背景レイヤーを追加すればできあがりです。
+    </para>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -117,12 +176,22 @@
         <guimenuitem>Chalk</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ロゴ効果(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>チョーク(<accel>C</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Chalk</quote> option</title>
+      <title lang="en"><quote>Chalk</quote> option</title>
+      <title lang="ja"><quote>チョーク</quote>のオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -132,13 +201,19 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Background color</term>
+        <term lang="en">Background color</term>
+        <term lang="ja">背景色</term>
         <listitem>
-          <para>
+          <para lang="en">
             The background color is the color of the
             <quote>blackboard</quote> you are drawing on with chalk, and of
             course it's black. When you click on the color button, the color
             selector pops up and you may select any other color.
+          </para>
+          <para lang="ja">
+            背景色はちょうど白墨で板書される黒板の色といえます。 もちろん
+            初期設定は黒です。 色だまりボタンをクリックすれば色変更ダイアログ
+            が開かれて、 他の色も選択できます。
           </para>
         </listitem>
       </varlistentry>
