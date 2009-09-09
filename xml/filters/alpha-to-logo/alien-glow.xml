@@ -6,43 +6,63 @@
   2007-11-13 KoSt: added 'no'
   2007-11-11 ude: created 'en','de'
 -->
+<!--2009-09-08-->
 <sect2 id="script-fu-alien-glow-logo-alpha">
-  <title>Alien Glow</title>
+  <title lang="en">Alien Glow</title>
+  <title lang="ja">エイリアン発光(G)...</title>
 
-  <indexterm>
+  <indexterm lang="en">
     <primary>Filters</primary>
     <secondary>Alpha to Logo</secondary>
     <tertiary>Alien Glow</tertiary>
   </indexterm>
-  <indexterm>
+  <indexterm lang="en">
     <primary>Alien Glow</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary sortas="エイリアンハッコウ">エイリアン発光</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="エイリアンハッコウ">エイリアン発光</primary>
   </indexterm>
 
   <sect3>
-    <title>Overview</title>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
     <figure>
-      <title>
+      <title lang="en">
         Example for the <quote>Alien Glow</quote> filter
       </title>
+      <title lang="ja"><quote>エイリアン発光</quote>フィルタの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
             fileref="images/filters/examples/logo-alien-glow.jpg"/>
         </imageobject>
         <caption>
-          <para><quote>Alien Glow</quote> applied</para>
+          <para lang="en"><quote>Alien Glow</quote> applied</para>
+          <para lang="ja"><quote>エイリアン発光</quote>フィルタ適用後</para>
         </caption>
       </mediaobject>
     </figure>
-    <para>
+    <para lang="en">
       This filter adds an eerie glow around the active layer's alpha.
     </para>
+    <para lang="ja">
+      <guimenuitem>エイリアン発光(<accel>G</accel>)...</guimenuitem> フィルタ
+      は活性レイヤーのアルファ域の周囲に不気味な発光効果をつけます。
+    </para>
     <warning>
-      <para>
+      <para lang="en">
         The image will always be resized to the active layer's size.
       </para>
+      <para lang="ja">
+        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
+      </para>
     </warning>
-    <para>
+    <para lang="en">
       The filter is derived from the <quote>Alien Glow</quote> script
       (<menuchoice>
         <guimenu>File</guimenu>
@@ -52,55 +72,91 @@
       </menuchoice>
       in the image window), which creates the following text effect:
     </para>
+    <para lang="ja">
+      このフィルタはつぎの図のようなロゴ文字を作成する<quote>エイリアン発光
+      </quote>スクリプトから派生しました。
+      ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル(<accel>F</accel>)</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>エイリアン発光(<accel>G</accel>)...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
     <mediaobject>
       <imageobject>
         <imagedata format="JPG"
           fileref="images/filters/examples/alien-glow-script-fu.jpg"/>
       </imageobject>
       <caption>
-        <para>The <quote>Alien Glow</quote> Script-Fu script.</para>
+        <para lang="en">The <quote>Alien Glow</quote> Script-Fu script.</para>
+        <para lang="ja"><quote>エイリアン発光</quote>Script-Fuスクリプト</para>
       </caption>
     </mediaobject>
-    <para>
-      Reproducing this glow is easy:
-    </para>
+    <para lang="en">Reproducing this glow is easy:</para>
+    <para lang="ja">発光効果はつぎのような簡単な方法で再現できます。</para>
     <itemizedlist>
       <listitem>
-        <para>
+        <para lang="en">
           If necessary, create a
           <link linkend="gimp-layer-alpha-selection-replace">selection from
           the alpha channel</link> of the active layer.
         </para>
+        <para lang="ja">
+          活性レイヤーの選択範囲は必要なら 
+          <link linkend="gimp-layer-alpha-selection-replace">アルファチャンネル
+          から作成</link> します。
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           Fill the selection with the following
           <link linkend="gimp-tool-blend">Gradient Blend</link>: Shape =
           Shaped (spherical); Gradient = FG to BG (RGB), with FG = dark gray
           (79,79,79), BG = black.
         </para>
+        <para lang="ja">
+          描画色と背景色をそれぞれ暗灰色 (79,79,79) と黒に設定します。 
+          <link linkend="gimp-tool-blend">ブレンドツール</link> を呼び出し、 
+          <guilabel>形状</guilabel> に<quote>形状広がり (球面)</quote>を設定
+          して<quote>描画色から背景色 (RGB</quote>グラデーションを選択範囲の
+          全体にかけます。
+        </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           Create a <link linkend="gimp-layer-new">new layer</link>
           (<quote>Alien Glow</quote>) below.
           <link linkend="gimp-selection-grow">Extend</link> the selection
           slightly,
           <link linkend="gimp-selection-feather">feather</link> it,
-          and fill it with the <guilabel>Glow color</guilabel>.
+          and fill it with the <guilabel>Glow&nbsp;color</guilabel>.
+        </para>
+        <para lang="ja">
+          <quote>Alien Glow</quote>という名前の 
+          <link linkend="gimp-layer-new">新しいレイヤー</link> を下側に
+          追加します。 選択範囲は僅かにその大きさを 
+          <link linkend="gimp-selection-grow">広げ</link> てから 
+          <link linkend="gimp-selection-feather">境界をぼかし</link>、 
+          <guilabel>発光色</guilabel> で塗りつぶします。
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para lang="en">
           Create a new background layer filled with black.
+        </para>
+        <para lang="ja">
+          背景に黒く塗りつぶしたレイヤーを加えます。
         </para>
       </listitem>
     </itemizedlist>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
-    <para>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
       You can find this filter in the image window menu under
       <menuchoice>
         <guimenu>Filters</guimenu>
@@ -108,12 +164,22 @@
         <guimenuitem>Alien Glow</guimenuitem>
       </menuchoice>.
     </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
+        <guisubmenu>ロゴ効果(<accel>L</accel>)</guisubmenu>
+        <guimenuitem>エイリアン発光(<accel>G</accel>)...</guimenuitem>
+      </menuchoice>
+    </para>
   </sect3>
 
   <sect3>
-    <title>Options</title>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
-      <title><quote>Alien Glow</quote> options</title>
+      <title lang="en"><quote>Alien Glow</quote> options</title>
+      <title lang="ja"><quote>エイリアン発光</quote>のオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -123,27 +189,44 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term>Glow size (pixels * 4)</term>
+        <term lang="en">Glow size (pixels * 4)</term>
+        <term lang="ja">発光サイズ (ピクセル * 4)</term>
         <listitem>
-          <para>
+          <para lang="en">
             This is actually the font size option of the
-            <quote>Alien Glow</quote> Script-Fu script. However, two values
+            <quote>Alien&nbsp;Glow</quote> Script-Fu script. However, two values
             will be set in relation to this size: the glow will be enlarged by
-            <quote>Glow size</quote> / 30, and feather radius is
-            <quote>Glow size</quote> / 4. You should probably choose the
-            height of your objects for this option (ignore
-            <quote>pixels * 4</quote>).
+            <quote>Glow&nbsp;size</quote>&nbsp;/&nbsp;30, and feather radius is
+            <quote>Glow&nbsp;size</quote>&nbsp;/&nbsp;4. You should probably
+            choose the height of your objects for this option (ignore
+            <quote>pixels&nbsp;*&nbsp;4</quote>).
+          </para>
+          <para lang="ja">
+            このオプションの値を<quote>エイリアン発光</quote>Script-Fuスクリプト
+            は実際のところフォントの大きさを調整するために扱います。 ところが
+            大きさに関係する値は2つ派生します。 発光の部分は<quote><parameter>
+            発光サイズ</parameter></quote>の30分の1の大きさだけ拡げられ、 ぼかし
+            半径は<quote><parameter>発光サイズ</parameter></quote>の4分の1が
+            使われます。 つまりこのオプションは物体の高さを調節するのに
+            使えます。 表記上は<quote>(ピクセル * 4)</quote>となっていますが無視
+            してください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Glow color</term>
+        <term lang="en">Glow color</term>
+        <term lang="ja">発光色</term>
         <listitem>
-          <para>
+          <para lang="en">
             This is the color of the <quote>eerie</quote> glowing. Of course
             it defaults to green (63,252,0), but a click on the swatch
             button brings up the color selector where you can choose any
             color.
+          </para>
+          <para lang="ja">
+            <quote>不気味</quote>な光の色を指定します。 初期状態では明るい緑色
+            (63,252,0) ですが、 色だまりボタンをクリックすれば色変更ダイアログ
+            が現れて他の色も選べます。
           </para>
         </listitem>
       </varlistentry>

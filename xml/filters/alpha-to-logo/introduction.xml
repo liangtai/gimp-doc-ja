@@ -6,9 +6,10 @@
   2007-10-31 ude: added "apply to selection" procedure
   2007-08-14 ude: created ('en','de')
 -->
+<!--2009-09-07-->
 <sect2 id="filters-alpha-to-logo-introduction">
   <title lang="en">Introduction</title>
-  <title lang="ja">Introduction</title>
+  <title lang="ja">あらまし</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -16,14 +17,14 @@
     <tertiary>Introduction</tertiary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>Filters</primary>
-    <secondary>Alpha to Logo</secondary>
-    <tertiary>Introduction</tertiary>
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary sortas="アラマシ">あらまし</tertiary>
   </indexterm>
 
   <figure>
     <title lang="en">The Alpha to Logo filters menu</title>
-    <title lang="ja">The Alpha to Logo filters menu</title>
+    <title lang="ja"><quote>ロゴ効果</quote>フィルタメニュー</title>
     <mediaobject>
       <imageobject>
         <imagedata  format="PNG"
@@ -39,6 +40,10 @@
     layer (that is, to the pixels with a non-zero alpha value).
   </para>
   <para lang="ja">
+    これらのフィルタはいずれも 
+    <link linkend="standalone-script-fu">ロゴ生成Script-Fuスクリプト</link> 
+    に似たスクリプトがあります。 活性レイヤーのアルファチャンネルを読み、 
+    アルファ値が非 0 の画素にあらゆる種類の特殊効果を加えます。
   </para>
   <note>
     <para lang="en">
@@ -48,6 +53,12 @@
       channel</link>.
     </para>
     <para lang="ja">
+      どのメニュー項目も、 そして相応する機能も、 活性レイヤーにアルファ
+      チャンネルがあるときだけ利用可能になります。 メニュー項目が灰色無効に
+      なっている場合は 
+      <link linkend="gimp-layer-alpha-add">アルファチャンネルを追加</link> 
+      してください。
+      [また画像は<acronym>RGB</acronym>モードでなくてはなりません。]
     </para>
   </note>
   <para lang="en">
@@ -66,15 +77,25 @@
     represents the selection, and then work on the selection.
   </para>
   <para lang="ja">
+    フィルタの効果はアルファ値をもとに適用されます。 どの画素の 
+    <link linkend="glossary-alpha">アルファ</link> 値も透明 0 から完全不透明 
+    255 までの範囲にあります。 半透明を表すアルファ値 (1 から 254) を使って
+    一部もしくは全部の画素に<quote>生半可</quote>なフィルタ適用が可能です。
   </para>
   <para lang="ja">
+    これが画素の部分的な 
+    <link linkend="gimp-concepts-selection">選択</link> によく似ていることに
+    お気付きですか。 事実これらのフィルタは 
+    <link linkend="gimp-layer-alpha-selection-replace">アルファチャンネルから
+    選択範囲を生成</link> を実行して内部的にアルファ値を選択範囲が再現できる
+    チャンネルに変換し、 その選択範囲を加工します。
   </para>
   <orderedlist>
     <title lang="en">
       How to apply an <quote>Alpha to Logo</quote> filter to a selection?
     </title>
     <title lang="ja">
-      How to apply an <quote>Alpha to Logo</quote> filter to a selection?
+      選択範囲に<quote>ロゴ効果</quote>フィルタを適用する方法
     </title>
     <listitem>
       <para lang="en">
@@ -83,6 +104,10 @@
         <link linkend="gimp-layer-alpha-add">add an alpha channel</link>.
       </para>
       <para lang="ja">
+        活性レイヤーが背景レイヤーの場合はとくにアルファチャンネルが加わって
+        いるかどうか確かめてください。 なければ 
+        <link linkend="gimp-layer-alpha-add">アルファチャンネルを追加</link> 
+        してください。
       </para>
       <tip>
         <para lang="en">
@@ -90,6 +115,8 @@
           no Alpha channel.
         </para>
         <para lang="ja">
+          レイヤーダイアログではレイヤー名が太字表示ならばアルフャチャンネル
+          がないことを示しています。
         </para>
       </tip>
     </listitem>
@@ -102,6 +129,12 @@
         </menuchoice>.
       </para>
       <para lang="ja">
+        選択範囲を反転させます。 画像ウィンドウのメニューより
+        <menuchoice>
+          <guimenu>選択(<accel>S</accel>)</guimenu>
+          <guimenuitem>選択範囲を反転(<accel>I</accel>)</guimenuitem>
+        </menuchoice>
+        を実行してください。
       </para>
     </listitem>
     <listitem>
@@ -113,6 +146,13 @@
         </menuchoice>.
       </para>
       <para lang="ja">
+        その反転で得た選択範囲内の画像を消去します。 画像ウィンドウのメニュー
+        より
+        <menuchoice>
+          <guimenu>編集(<accel>E</accel>)</guimenu>
+          <guimenuitem>消去(<accel>E</accel>)</guimenuitem>
+        </menuchoice>
+        を実行してください。
       </para>
     </listitem>
     <listitem>
@@ -121,6 +161,8 @@
         selection, you don't need to re-invert the selection).
       </para>
       <para lang="ja">
+        任意の<quote>ロゴ効果</quote>フィルタを適用します。 フィルタは
+        選択範囲を無視しますので選択範囲を再度反転する必要はありません。
       </para>
     </listitem>
   </orderedlist>
