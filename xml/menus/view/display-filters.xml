@@ -8,7 +8,7 @@
   2007-03-18 ude: Re-arranged color proof options
   2005-12-21 julien: Created en;fr; the "profile" section needs more information
 -->
-<!--2009-06-23-->
+<!--2009-09-10-->
 <sect2 id="gimp-display-filter-dialog">
   <title lang="en">Display Filters</title>
   <title lang="ja">ディスプレイフィルタ(F)...</title>
@@ -85,7 +85,8 @@
       </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/menus/display-filters.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/menus/view/display-filters.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -118,7 +119,7 @@
         <para lang="en">
           <phrase>Simulation of deficient vision</phrase>
           (<xref linkend="gimp-deficient-vision"/>;
-          <xref linkend="gimp-gamma-dialog"/>)
+          <xref linkend="gimp-contrast-dialog"/>)
         </para>
         <para lang="ja">
           特定の色覚を想定 (<xref linkend="gimp-deficient-vision"/>、
@@ -138,7 +139,7 @@
       </listitem>
       <listitem>
         <para lang="en">
-          <phrase>Others</phrase> (<xref linkend="gimp-contrast-dialog"/>)
+          <phrase>Others</phrase> (<xref linkend="gimp-gamma-dialog"/>)
         </para>
         <para lang="ja">
           その他 (<xref linkend="gimp-contrast-dialog"/>)
@@ -182,7 +183,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/menus/display-filters-vision.png"/>
+        fileref="images/menus/view/display-filters/color-deficient-vision.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -230,6 +231,7 @@
                   <para lang="en">
                     Protanopia is a visual deficiency of the color red. It's
                     the well-known daltonism (red-green color blindness).
+                    Daltonism occurs fairly frequently in the population.
                   </para>
                   <para lang="en">
                     Protanopia is actually more complex than this; a person
@@ -240,7 +242,8 @@
                   </para>
                   <para lang="ja">
                     第一色覚障害は赤色に対する色覚が弱いか失われています。 よく
-                    知られた紅緑色神異常という色覚異常です。
+                    知られた紅緑色神異常という色覚異常です。 紅緑色神異常の人口
+                    は比較的多数あります。
                   </para>
                   <para lang="ja">
                     実際のところ第一色覚障害はそれよりも複雑なものです。 この
@@ -301,7 +304,7 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/protanopia-normal.png"/>
+             fileref="images/menus/view/display-filters/protanopia-normal.png"/>
           </imageobject>
           <caption>
             <para lang="en">Original image</para>
@@ -311,18 +314,24 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/protanopia-filtered.png"/>
+           fileref="images/menus/view/display-filters/protanopia-filtered.png"/>
           </imageobject>
           <caption>
-            <para lang="en">
+            <!--
               As you can see, a red-blind person cannot see the red (255,0,0)
               text on a black (0,0,0) background. You have to change the text
               color. Daltonism occurs fairly frequently in the population.
-            </para>
-            <para lang="ja">
               ご覧のとおり赤に対する色覚障碍者は黒地 (0,0,0) に赤い (255,0,0) 
               テキストが見えない。 文字色を変更する必要有り。 紅緑色神異常の
               人口は比較的多い。
+            -->
+            <para lang="en">
+              A red-blind person cannot see the red (255,0,0) text on a black
+              (0,0,0) background.
+            </para>
+            <para lang="ja">
+              赤に対する色覚障碍者は黒地 (0,0,0) に赤い (255,0,0) テキストが
+              見えない。
             </para>
           </caption>
         </mediaobject>
@@ -337,7 +346,7 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/sight-defects_normal-view.png"/>
+     fileref="images/menus/view/display-filters/sight-defects_normal-view.png"/>
           </imageobject>
           <caption>
             <para lang="en">normal vision; </para>
@@ -347,7 +356,7 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/sight-defects_protanopia.png"/>
+      fileref="images/menus/view/display-filters/sight-defects_protanopia.png"/>
           </imageobject>
           <caption>
             <para lang="en">Protanopia; </para>
@@ -357,11 +366,11 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/sight-defects_deuteranopia.png"/>
+    fileref="images/menus/view/display-filters/sight-defects_deuteranopia.png"/>
           </imageobject>
           <caption>
             <para lang="en">
-              deuteranopia; In deuteranopia, yellow is shifted toward red.
+              deuteranopia; in deuteranopia, yellow is shifted toward red.
             </para>
             <para lang="ja">第二色覚異常。 イエローが赤にまで及ぶ。</para>
           </caption>
@@ -373,7 +382,7 @@
           </imageobject>
           <caption>
             <para lang="en">
-              tritanopia; In tritanopia, green is slightly represented in the
+              tritanopia; in tritanopia, green is slightly represented in the
               blue range.
             </para>
             <para lang="ja">第三色覚異常。 緑は僅かに青の帯域にかぶる。</para>
@@ -401,7 +410,7 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/display-filters-gamma.png"/>
+              fileref="images/menus/view/display-filters/gamma.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -457,7 +466,7 @@
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/menus/display-filters-contrast.png"/>
+              fileref="images/menus/view/display-filters/contrast.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -533,12 +542,12 @@
     </indexterm>
 
     <figure>
-      <title lang="en">The <quote>Color Proof</quote> dialog</title>
+      <title lang="en">The <quote>Color Management</quote> dialog</title>
       <title lang="ja"><quote>色管理</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/menus/display-filters-colormanagement.png"/>
+            fileref="images/menus/view/display-filters/color-management.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -618,10 +627,11 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/menus/display-filters-proof.png"/>
+            fileref="images/menus/view/display-filters/color-proof.png"/>
         </imageobject>
       </mediaobject>
     </figure>
+
     <sect4>
       <title lang="en">The <quote>Color Proof</quote> options</title>
       <title lang="ja"><quote>色合せ</quote>オプション</title>
