@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -7,10 +7,10 @@
   2006-12-23 lexa: added de translation
   2005-11-15: created by julien hardelin
 -->
-<!--2009-08-21-->
+<!--2009-09-15-->
 <sect2 id="plug-in-papertile">
   <title lang="en">Paper Tile</title>
-  <title lang="ja">紙タイル(P)...</title>
+  <title lang="ja">紙タイル...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -62,7 +62,7 @@
       less, overlap or move apart. They can go out image borders a little.
     </para>
     <para lang="ja">
-      <guimenuitem>紙タイル(<accel>P</accel>)...</guimenuitem> フィルタは画像の
+      <guimenuitem>紙タイル...</guimenuitem> フィルタは画像の
       レイヤーもしくはその選択範囲を断片に切り分け、 位置や向きをずらして多かれ
       少なかれ互いに重なり合うような状態に描きます。 周辺部の断片は画像を少し
       はみ出します。
@@ -83,9 +83,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>マップ(<accel>M</accel>)</guisubmenu>
-        <guimenuitem>紙タイル(<accel>P</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>紙タイル...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -117,9 +117,9 @@
           </para>
           <para lang="ja">
             このフィルタは断片をずらす前に画像を断片に等分するので、 <guilabel>
-            <accel>X</accel></guilabel> は <guilabel>幅(<accel>W</accel>)
+            <accel>X</accel></guilabel> は <guilabel>幅
             </guilabel> と、 <guilabel><accel>Y</accel></guilabel> は 
-            <guilabel>高さ(<accel>H</accel>)</guilabel> と相互に連携して
+            <guilabel>高さ</guilabel> と相互に連携して
             います。 つまり水平方向 X や垂直方向 Y の分割数と断片の寸法の積が
             画像の大きさに近くなる値が現れます。
           </para>
@@ -137,7 +137,7 @@
                 of squares.
               </para>
               <para lang="ja">
-                <guilabel>最大(%)(<accel>M</accel>)</guilabel> は断片の辺の
+                <guilabel>最大(%)</guilabel> は断片の辺の
                 長さに対するずれの大きさの最大限度の割合です。
               </para>
             </listitem>
@@ -150,7 +150,7 @@
               </para>
               <para lang="ja">
                 断片は移動するので画像からはみ出します。 <guilabel>
-                回り込み(<accel>W</accel>)</guilabel> オプションを有効に
+                回り込み</guilabel> オプションを有効に
                 すると、 はみ出した部分が反対側の辺に現れるようになります。
               </para>
             </listitem>
@@ -177,7 +177,7 @@
                 section.
               </para>
               <para lang="ja">
-                <guilabel>背景(<accel>B</accel>)</guilabel>: 残っている画素を
+                <guilabel>背景</guilabel>: 残っている画素を
                 <guilabel>背景の種類</guilabel> で選ばれた色が置き換えます。
               </para>
             </listitem>
@@ -187,7 +187,7 @@
                 not taken into account and remaining pixels are kept.
               </para>
               <para lang="ja">
-                <guilabel>無視(<accel>I</accel>)</guilabel>: <guilabel>
+                <guilabel>無視</guilabel>: <guilabel>
                 背景の種類</guilabel> で選ばれた色は無視され、 元の画像が
                 そのまま垣間見えます。
               </para>
@@ -198,7 +198,7 @@
                 also.
               </para>
               <para lang="ja">
-                <guilabel>強制(<accel>F</accel>)</guilabel>: 残された画素も
+                <guilabel>強制</guilabel>: 残された画素も
                 切り取られます。
               </para>
             </listitem>
@@ -216,7 +216,7 @@
           </para>
           <para lang="ja">
             <guilabel>ピクセル断片</guilabel> で 
-            <guilabel>背景(<accel>B</accel>)</guilabel> を選んだときの断片の
+            <guilabel>背景</guilabel> を選んだときの断片の
             隙間から垣間見える背景の種類をつぎの6つの方法から選びます。
           </para>
           <itemizedlist>
@@ -226,7 +226,7 @@
                 transparent.
               </para>
               <para lang="ja">
-                <guilabel>透明(<accel>T</accel>)</guilabel>: 背景が透明に
+                <guilabel>透明</guilabel>: 背景が透明に
                 なります。
               </para>
             </listitem>
@@ -236,7 +236,7 @@
                 will be inverted (255-value in every color channel).
               </para>
               <para lang="ja">
-                <guilabel>反転画像(<accel>N</accel>)</guilabel>: 元画像を反転
+                <guilabel>反転画像</guilabel>: 元画像を反転
                 したものが垣間見えます。 反転は各色チャンネルごとに 255 との
                 差を算出して得ます。
               </para>
@@ -247,7 +247,7 @@
                 will be unchanged. The original image is the background.
               </para>
               <para lang="ja">
-                <guilabel>画像(<accel>A</accel>)</guilabel>: 元画像がそのまま
+                <guilabel>画像</guilabel>: 元画像がそのまま
                 背景に使われます。
               </para>
             </listitem>
@@ -257,7 +257,7 @@
                 will be replaced by the Foreground color of Toolbox.
               </para>
               <para lang="ja">
-                <guilabel>前景色(<accel>R</accel>)</guilabel>: 残った画素は
+                <guilabel>前景色</guilabel>: 残った画素は
                 ツールボックスの色標識で示される描画色で塗りつぶされます。
               </para>
             </listitem>
@@ -267,7 +267,7 @@
                 will be replaced by the Background color of Toolbox.
               </para>
               <para lang="ja">
-                <guilabel>背景色(<accel>K</accel>)</guilabel>: 残った画素は
+                <guilabel>背景色</guilabel>: 残った画素は
                 ツールボックスの色標識で示される背景色で塗りつぶされます。
               </para>
             </listitem>
@@ -279,7 +279,7 @@
                 background.
               </para>
               <para lang="ja">
-                <guilabel>ここで選択(<accel>E</accel>)</guilabel>: 色だまり
+                <guilabel>ここで選択</guilabel>: 色だまり
                 ボタンが示す色で背景が塗りつぶされます。 色だまりボタンを
                 クリックすると色変更ダイアログが現れ、 別の色も選べます。
               </para>
@@ -289,7 +289,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Centering</term>
-        <term lang="ja">中央寄せ(E)</term>
+        <term lang="ja">中央寄せ</term>
         <listitem>
           <para lang="en">
             If this option is checked, tiles will rather be gathered together

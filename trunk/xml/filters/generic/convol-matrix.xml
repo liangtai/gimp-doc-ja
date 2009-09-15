@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -10,10 +10,10 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-01 de added by axel.wernicke
 -->
-<!--2009-08-21-->
+<!--2009-09-15-->
 <sect2 id="plug-in-convmatrix">
   <title lang="en">Convolution Matrix</title>
-  <title lang="ja">コンボリューション行列(C)...</title>
+  <title lang="ja">コンボリューション行列...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -73,7 +73,7 @@
     </para>
     <para lang="ja">
       ここは数学者の独壇場です。 フィルタはほとんどがコンボリューション行列を
-      使用しています。 <guimenuitem>コンボリューション行列(<accel>C</accel>)...
+      使用しています。 <guimenuitem>コンボリューション行列...
       </guimenuitem> フィルタと想像力があればどんなフィルタも創れます。
     </para>
     <para lang="ja">
@@ -155,9 +155,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>汎用(<accel>G</accel>)</guisubmenu>
-        <guimenuitem>コンボリューション行列(<accel>C</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>汎用</guisubmenu>
+        <guimenuitem>コンボリューション行列...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -202,12 +202,12 @@
             任意の数値を入れてください。
           </para>
           <para lang="ja">
-            <guilabel>割る数(<accel>I</accel>)</guilabel>: 計算結果をこの数で
+            <guilabel>割る数</guilabel>: 計算結果をこの数で
             除算します。 1 は計算結果を変更しない値ですがめったに使われない
             でしょう。 行列の大きさである 9 や 25 は画素の値の平均で割ります。
           </para>
           <para lang="ja">
-            <guilabel>オフセット(<accel>F</accel>)</guilabel>: この値は除算の
+            <guilabel>オフセット</guilabel>: この値は除算の
             あとで加わります。 負の値が出てよい場合に便利です。 ここに負の値も
             設定できます。
           </para>
@@ -260,7 +260,7 @@
                 taken into account.
               </para>
               <para lang="ja">
-                <guilabel>拡張(<accel>X</accel>)</guilabel>: カーネルのはみ
+                <guilabel>拡張</guilabel>: カーネルのはみ
                 出した部分は無視されます。
               </para>
             </listitem>
@@ -271,7 +271,7 @@
                 one side reappear on the other side.
               </para>
               <para lang="ja">
-                <guilabel>回り込み(<accel>W</accel>)</guilabel>: カーネルのはみ
+                <guilabel>回り込み</guilabel>: カーネルのはみ
                 出した部分は反対側の縁の画素を読み取りますので、 一方の辺で
                 消えた画素がもう一方の辺で復活することになります。
               </para>
@@ -282,7 +282,7 @@
                 modified, but they are cropped.
               </para>
               <para lang="ja">
-                <guilabel>切抜き(<accel>P</accel>)</guilabel>: 画像の縁の画素は
+                <guilabel>切抜き</guilabel>: 画像の縁の画素は
                 変更されず切り抜かれます。
               </para>
             </listitem>
@@ -304,7 +304,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Normalise</term>
-        <term lang="ja">正規化(N)</term>
+        <term lang="ja">正規化</term>
         <listitem>
           <para lang="en">
             If this option is checked, The Divisor takes the result value of
@@ -324,7 +324,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Alpha weighting</term>
-        <term lang="ja">アルファ加重(L)</term>
+        <term lang="ja">アルファ加重</term>
         <listitem>
           <para lang="en">
             If this option is not checked, the filter doesn't take in account

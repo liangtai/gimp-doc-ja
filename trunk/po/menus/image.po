@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-08-21 05:40+0900\n"
+"POT-Creation-Date: 2009-09-15 04:07+0900\n"
 "PO-Revision-Date: 2009-08-19 13:45+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -33,10 +33,10 @@ msgstr "@@image: 'images/using/crop-zealous.png'; md5=THIS FILE DOESN'T EXIST"
 #: src/menus/image/zealous-crop.xml:12(title)
 #: src/menus/image/zealous-crop.xml:20(primary)
 msgid "Zealous Crop"
-msgstr "最小枠で切り抜き(Z)"
+msgstr "最小枠で切り抜き"
 
 #: src/menus/image/zealous-crop.xml:15(primary)
-#: src/menus/image/transform.xml:20(quote)
+#: src/menus/image/transform.xml:14(primary)
 #: src/menus/image/transform-guillotine.xml:14(primary)
 #: src/menus/image/print-size.xml:22(primary)
 #: src/menus/image/mode.xml:17(primary)
@@ -67,11 +67,11 @@ msgid ""
 "\"gimp-image-crop\">Autocrop</link> command, but it also crops the areas in "
 "the middle of the image which have the same color (at least, in principle)."
 msgstr ""
-"<guimenuitem>最小枠で切り抜き(<accel>Z</accel>)</guimenuitem> コマンドは単色"
+"<guimenuitem>最小枠で切り抜き</guimenuitem> コマンドは単色"
 "で塗られた部分を依代に画像を切り抜きます。 画像の外縁を切り抜くところは "
-"<link linkend=\"plug-in-autocrop\">画像の自動切り抜き(A)</link> コマンドと"
-"同じ作用をしますが、 ともかく原則的にはさらに画像の途中でも同じ色の部分が切り"
-"落とされます。"
+"<link linkend=\"plug-in-autocrop\">画像の自動切り抜き</link> コマンドと同"
+"じ作用をしますが、 ともかく原則的にはさらに画像の途中でも同じ色の部分が切り落"
+"とされます。"
 
 #: src/menus/image/zealous-crop.xml:31(para)
 msgid ""
@@ -79,7 +79,7 @@ msgid ""
 "layers, although it only analyzes the active layer. This may lead to a loss "
 "of information from the other layers."
 msgstr ""
-"<guimenuitem>最小枠で切り抜き(<accel>Z</accel>)</guimenuitem> コマンドは画像"
+"<guimenuitem>最小枠で切り抜き</guimenuitem> コマンドは画像"
 "に複数のレイヤーがあっても活性レイヤーを見ただけで画像全体を切り抜いてしまい"
 "ます。 他のレイヤーにあった情報が失われるおそれがあるのです。"
 
@@ -126,78 +126,75 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Zealous Crop</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>最小枠で切り抜き(<accel>Z</accel>)</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>最小枠で切り抜き</guimenuitem></"
 "menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/transform.xml:25(None)
+#: src/menus/image/transform.xml:28(None)
 msgid ""
-"@@image: 'images/menus/menus-image-transform.png'; md5=THIS FILE DOESN'T "
-"EXIST"
+"@@image: 'images/menus/image/transform.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/menus-image-transform.png'; md5=THIS FILE DOESN'T "
-"EXIST"
+"@@image: 'images/menus/image/transform.png'; md5=THIS FILE DOESN'T EXIST"
 
-#: src/menus/image/transform.xml:11(phrase)
-#: src/menus/image/transform.xml:14(primary)
-#: src/menus/image/transform.xml:19(quote)
-#: src/menus/image/transform.xml:52(quote)
+#: src/menus/image/transform.xml:11(title)
+#: src/menus/image/transform.xml:15(secondary)
+#: src/menus/image/transform.xml:18(primary)
 msgid "Transform"
-msgstr "変換(T)"
+msgstr "変換"
 
-#: src/menus/image/transform.xml:18(phrase)
-msgid "The <placeholder-1/> submenu of the <placeholder-2/> menu"
-msgstr "<placeholder-2/>メニューの<placeholder-1/>サブメニュー"
+#: src/menus/image/transform.xml:22(title)
+msgid "The <quote>Transform</quote> submenu of the <quote>Image</quote> menu"
+msgstr "<quote>画像</quote>メニューの<quote>変換</quote>サブメニュー"
 
-#: src/menus/image/transform.xml:29(para)
+#: src/menus/image/transform.xml:32(para)
 msgid ""
 "The items on the <guimenuitem>Transform</guimenuitem> submenu transform the "
 "image by flipping it, rotating it or cropping it."
 msgstr ""
-"<guisubmenu>変換(<accel>T</accel>)</guisubmenu> サブメニューは画像に反転、 回"
+"<guisubmenu>変換</guisubmenu> サブメニューは画像に反転、 回"
 "転、 切り抜きのいずれかの変換を加えるコマンドで成り立っています。"
 
-#: src/menus/image/transform.xml:35(phrase) src/menus/image/mode.xml:38(title)
+#: src/menus/image/transform.xml:38(title) src/menus/image/mode.xml:38(title)
 #: src/menus/image/guides.xml:37(title)
 msgid "Activating the Submenu"
 msgstr "サブメニューへの入り方"
 
-#: src/menus/image/transform.xml:39(para)
+#: src/menus/image/transform.xml:41(para)
 msgid ""
 "You can access this submenu from the image menubar through "
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Transform</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>変換(<accel>T</accel>)</guisubmenu></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>変換</guisubmenu></menuchoice>"
 
-#: src/menus/image/transform.xml:51(phrase)
-msgid "The Contents of the <placeholder-1/> Submenu"
-msgstr "<placeholder-1/>サブメニューの目次"
+#: src/menus/image/transform.xml:53(title)
+msgid "The Contents of the <quote>Transform</quote> Submenu"
+msgstr "<quote>変換</quote>サブメニューの目次"
 
-#: src/menus/image/transform.xml:55(para)
+#: src/menus/image/transform.xml:54(para)
 msgid ""
 "The <guimenuitem>Transform</guimenuitem> submenu has the following commands:"
 msgstr ""
-"<guisubmenu>変換(<accel>T</accel>)</guisubmenu> サブメニューにはつぎのコマン"
+"<guisubmenu>変換</guisubmenu> サブメニューにはつぎのコマン"
 "ドがあります。"
 
-#: src/menus/image/transform.xml:62(link)
+#: src/menus/image/transform.xml:61(link)
 #: src/menus/image/transform-flip.xml:11(title)
 msgid "Flip Horizontally; Flip Vertically"
-msgstr "水平反転(H); 垂直反転(V)"
+msgstr "水平反転; 垂直反転"
 
-#: src/menus/image/transform.xml:68(link)
+#: src/menus/image/transform.xml:67(link)
 msgid "Rotate 90° CW; Rotate 90° CCW; Rotate 180°"
-msgstr "時計回りに 90 度回転(C); 反時計回りに 90 度回転(w); 180 度回転(1)"
+msgstr "時計回りに 90 度回転; 反時計回りに 90 度回転; 180 度回転"
 
-#: src/menus/image/transform.xml:74(link)
+#: src/menus/image/transform.xml:73(link)
 #: src/menus/image/transform-guillotine.xml:11(title)
 #: src/menus/image/transform-guillotine.xml:18(primary)
 msgid "Guillotine"
-msgstr "ギロチン(G)"
+msgstr "ギロチン"
 
 #: src/menus/image/transform-rotate.xml:11(title)
 #: src/menus/image/transform-rotate.xml:16(primary)
@@ -215,8 +212,8 @@ msgid ""
 "rotate\">Rotate Tool</link>. You can also rotate a layer by using the <link "
 "linkend=\"gimp-layer-transform-menu\">Layer Transform</link> menu."
 msgstr ""
-"<guimenu>画像(<accel>I</accel>)</guimenu> メニューの <guisubmenu>変換"
-"(<accel>T</accel>)</guisubmenu> サブメニューには画像を時計回りもしくは反時計"
+"<guimenu>画像</guimenu> メニューの <guisubmenu>変換"
+"</guisubmenu> サブメニューには画像を時計回りもしくは反時計"
 "回りに90度回転させるコマンドや180度回転させるコマンドがあります。 これらのコ"
 "マンドは縦の画像を横に (あるいはその逆) するのに使えます。 回転は画像全体に作"
 "用します。 直角以外の角度に画像もしくはレイヤーあるいは選択範囲を回転させたい"
@@ -238,26 +235,26 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Transform</"
 "guisubmenu><guimenuitem>Rotate 90 degrees CW</guimenuitem></menuchoice>,"
 msgstr ""
-"<menuchoice><guimenu>画像(<accel>I</accel>)</guimenu><guisubmenu>変換"
-"(<accel>T</accel>)</guisubmenu><guimenuitem>時計回りに 90 度回転(<accel>C</"
-"accel>)</guimenuitem></menuchoice>"
+"<menuchoice><guimenu>画像</guimenu><guisubmenu>変換"
+"</guisubmenu><guimenuitem>時計回りに 90 度回転"
+"</guimenuitem></menuchoice>"
 
 #: src/menus/image/transform-rotate.xml:47(para)
 msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Transform</"
 "guisubmenu><guimenuitem>Rotate 90 degrees CCW</guimenuitem></menuchoice> and"
 msgstr ""
-"<menuchoice><guimenu>画像(<accel>I</accel>)</guimenu><guisubmenu>変換"
-"(<accel>T</accel>)</guisubmenu><guimenuitem>反時計回りに 90 度回転(<accel>w</"
-"accel>)</guimenuitem></menuchoice>"
+"<menuchoice><guimenu>画像</guimenu><guisubmenu>変換"
+"</guisubmenu><guimenuitem>反時計回りに 90 度回転"
+"</guimenuitem></menuchoice>"
 
 #: src/menus/image/transform-rotate.xml:56(para)
 msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Transform</"
 "guisubmenu><guimenuitem>Rotate 180°</guimenuitem></menuchoice>."
 msgstr ""
-"<menuchoice><guimenu>画像(<accel>I</accel>)</guimenu><guisubmenu>変換"
-"(<accel>T</accel>)</guisubmenu><guimenuitem>180 度回転(<accel>1</accel>)</"
+"<menuchoice><guimenu>画像</guimenu><guisubmenu>変換"
+"</guisubmenu><guimenuitem>180 度回転</"
 "guimenuitem></menuchoice>"
 
 #: src/menus/image/transform-guillotine.xml:15(secondary)
@@ -270,12 +267,12 @@ msgid ""
 "image, based on the image's guides. It cuts the image along each guide, "
 "similar to slicing documents in an office with a guillotine (paper cutter) "
 "and creates new images out of the pieces. For further information on guides, "
-"see the glossary entry for <link linkend=\"glossary-guides\">Guides</link>."
+"see <xref linkend=\"gimp-concepts-image-guides\"/>."
 msgstr ""
-"<guimenuitem>ギロチン(<accel>G</accel>)</guimenuitem> コマンドは画像を見当線 "
+"<guimenuitem>ギロチン</guimenuitem> コマンドは画像を見当線 "
 "(ガイド) に従って切り分けます。 これは事務用品の裁断器が文書を切るように見当"
-"線に沿ってすっぱりと切り分けて、 ばらばらになった断片のそれぞれが新たな画像と"
-"して作成されます。 見当線についての詳しい情報は、 用語集の <link linkend="
+"線に沿ってすっぱりと切り分けて、 ばらばらになった断片のそれぞれをもとに新たな"
+"画像を作成します。 見当線についての詳しい情報は、 用語集の <link linkend="
 "\"glossary-guides\">ガイド (見当線)</link> の項をご覧ください。"
 
 #: src/menus/image/transform-guillotine.xml:34(para)
@@ -284,9 +281,9 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Transform</"
 "guisubmenu><guimenuitem>Guillotine</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>変換(<accel>T</accel>)</guisubmenu><guimenuitem>ギロチン"
-"(<accel>G</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>変換</guisubmenu><guimenuitem>ギロチン"
+"</guimenuitem></menuchoice>"
 
 #: src/menus/image/transform-flip.xml:15(primary)
 msgid "Flip"
@@ -302,13 +299,13 @@ msgid ""
 "guimenu><guisubmenu>Transform</guisubmenu></menuchoice> menu or the <link "
 "linkend=\"gimp-tool-flip\">Flip Tool</link>."
 msgstr ""
-"絵札を返すように画像を反転するには <guimenuitem>水平反転(<accel>H</accel>)</"
-"guimenuitem> コマンドや <guimenuitem>垂直反転(<accel>V</accel>)</"
+"絵札を返すように画像を反転するには <guimenuitem>水平反転</"
+"guimenuitem> コマンドや <guimenuitem>垂直反転</"
 "guimenuitem> コマンドを使います。 これらのコマンドは画像を丸ごとひっくり返し"
 "ます。 選択範囲を反転させるには <link linkend=\"gimp-tool-flip\">鏡像反転ツー"
 "ル</link> をお使いください。 レイヤーを反転させるには画像ウィンドウメニュー"
-"の <menuchoice><guimenu>レイヤー(<accel>L</accel>)</guimenu><guisubmenu>変換"
-"(<accel>T</accel>)</guisubmenu></menuchoice> サブメニュー内にある同様なコマン"
+"の <menuchoice><guimenu>レイヤー</guimenu><guisubmenu>変換"
+"</guisubmenu></menuchoice> サブメニュー内にある同様なコマン"
 "ドか <link linkend=\"gimp-tool-flip\">鏡像反転ツール</link> をお使いくださ"
 "い。"
 
@@ -319,8 +316,8 @@ msgid ""
 "guisubmenu><guimenuitem>Flip Horizontally</guimenuitem></menuchoice>."
 msgstr ""
 "画像を左右に裏返すには画像ウィンドウのメニューより <menuchoice><guimenu>画像"
-"(<accel>I</accel>)</guimenu><guisubmenu>変換(<accel>T</accel>)</"
-"guisubmenu><guimenuitem>水平反転(<accel>H</accel>)</guimenuitem></menuchoice>"
+"</guimenu><guisubmenu>変換</"
+"guisubmenu><guimenuitem>水平反転</guimenuitem></menuchoice>"
 
 #: src/menus/image/transform-flip.xml:48(para)
 msgid ""
@@ -329,18 +326,20 @@ msgid ""
 "guisubmenu><guimenuitem>Flip Vertically</guimenuitem></menuchoice>."
 msgstr ""
 "画像の天地を返すには画像ウィンドウのメニューより <menuchoice><guimenu>画像"
-"(<accel>I</accel>)</guimenu><guisubmenu>変換(<accel>T</accel>)</"
-"guisubmenu><guimenuitem>垂直反転(<accel>V</accel>)</guimenuitem></menuchoice>"
+"</guimenu><guisubmenu>変換</"
+"guisubmenu><guimenuitem>垂直反転</guimenuitem></menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/scale.xml:69(None)
-msgid "@@image: 'images/dialogs/scale-image.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr "@@image: 'images/dialogs/scale-image.png'; md5=THIS FILE DOESN'T EXIST"
+#: src/menus/image/scale.xml:70(None)
+msgid ""
+"@@image: 'images/menus/image/scale-image.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr ""
+"@@image: 'images/menus/image/scale-image.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/scale.xml:11(title) src/menus/image/scale.xml:14(primary)
 msgid "Scale Image"
-msgstr "画像の拡大・縮小(S)..."
+msgstr "画像の拡大・縮小..."
 
 #: src/menus/image/scale.xml:17(para)
 msgid ""
@@ -349,7 +348,7 @@ msgid ""
 "changes the size of the contents of the image and resizes the canvas "
 "accordingly."
 msgstr ""
-"<guimenuitem>画像の拡大・縮小(<accel>S</accel>)...</guimenuitem> コマンドは画"
+"<guimenuitem>画像の拡大・縮小...</guimenuitem> コマンドは画"
 "像の縦と横のそれぞれの画素数を変更することで画像の大きさを物理的に増加もしく"
 "は減少させます。 拡大・縮小は画像の内容を変更して行われますのでキャンバスの大"
 "きさも変わります。"
@@ -372,7 +371,7 @@ msgid ""
 "layer-scale\">Scale Layer</link> command."
 msgstr ""
 "特定のレイヤーだけを拡大・縮小するには <link linkend=\"gimp-layer-scale\">レ"
-"イヤーの拡大縮小(S)...</link> コマンドをご利用ください。"
+"イヤーの拡大縮小...</link> コマンドをご利用ください。"
 
 #: src/menus/image/scale.xml:35(para)
 msgid ""
@@ -386,8 +385,8 @@ msgid ""
 "<acronym>GIMP</acronym> to crash or not perform well."
 msgstr ""
 "<link linkend=\"gimp-prefs-environment\">環境設定</link> ダイアログの<quote>"
-"環境</quote>のページで設定される <guilabel>新しい画像の最大サイズ(<accel>N</"
-"accel>)</guilabel> (初期設定値は64Mb) を上回る容量の画像を拡大の操作で生成す"
+"環境</quote>のページで設定される <guilabel>新しい画像の最大サイズ"
+"</guilabel> (初期設定値は64Mb) を上回る容量の画像を拡大の操作で生成す"
 "るおそれのあるときは、 実行前に警告があり、 確認を求められます。 このような操"
 "作でも問題が発生しなければよいのですが、 残念ながら大きな画像はたくさんの資源"
 "を要求しますし、 お使いのシステムの資源量を上回る巨大な画像ともなると"
@@ -400,8 +399,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Scale image</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>画像の拡大・縮小(<accel>S</accel>)...</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>画像の拡大・縮小...</guimenuitem></"
 "menuchoice>"
 
 #: src/menus/image/scale.xml:64(title)
@@ -412,11 +411,11 @@ msgstr "<quote>画像の拡大・縮小</quote>ダイアログ"
 msgid "The <quote>Scale Image</quote> dialog"
 msgstr "<quote>画像の拡大・縮小</quote>ダイアログ"
 
-#: src/menus/image/scale.xml:75(term)
+#: src/menus/image/scale.xml:77(term)
 msgid "Image Size"
 msgstr "画像サイズ (キャンバスサイズ)"
 
-#: src/menus/image/scale.xml:77(para)
+#: src/menus/image/scale.xml:79(para)
 msgid ""
 "You should keep in mind that an image can be located in one of four places: "
 "in the image file, in RAM after it has been loaded, on your screen when it "
@@ -432,7 +431,7 @@ msgstr ""
 "化することですから、 画像を収めるための<acronym>RAM</acronym>やファイルの容量"
 "に直接の影響があります。"
 
-#: src/menus/image/scale.xml:85(para)
+#: src/menus/image/scale.xml:87(para)
 msgid ""
 "However printing size also depends upon the resolution of the image, which "
 "essentially determines how many pixels there will be on each inch of paper. "
@@ -449,9 +448,9 @@ msgstr ""
 "があるときは <link linkend=\"gimp-image-print-size\">画像印刷解像度の設定</"
 "link> ダイアログをお使いください。 画面上の寸法は画素数のみならず画面の解像度"
 "や表示倍率、 さらには <link linkend=\"gimp-view-dot-for-dot\">点に点を対応さ"
-"せる(D)</link> オプションの扱いによっても変わります。"
+"せる</link> オプションの扱いによっても変わります。"
 
-#: src/menus/image/scale.xml:97(para)
+#: src/menus/image/scale.xml:99(para)
 msgid ""
 "If you enlarge an image beyond its original size, <acronym>GIMP</acronym> "
 "calculates the missing pixels by interpolation, but it does not add any new "
@@ -472,7 +471,7 @@ msgstr ""
 "い解像度にしておくに越したことはありません。 もともとラスター画像の引き伸ばし"
 "はうまくできないものなのです。"
 
-#: src/menus/image/scale.xml:109(para)
+#: src/menus/image/scale.xml:111(para)
 msgid ""
 "You may need to reduce your image if you intend to use it on a web page. You "
 "have to consider that most internet users have relatively small screens "
@@ -484,18 +483,18 @@ msgstr ""
 "面で見ているひともいます。 だいたい1024&times;768ピクセルかそれ以下の画面がま"
 "だ多く使われています。"
 
-#: src/menus/image/scale.xml:115(para)
+#: src/menus/image/scale.xml:117(para)
 msgid "Adding or removing pixels is called <quote>Resampling</quote>."
 msgstr ""
 "画素を加減する処理を<quote>再標本化</quote> (<foreignphrase>resampling</"
 "foreignphrase>) といいます。"
 
-#: src/menus/image/scale.xml:120(term) src/menus/image/print-size.xml:92(term)
+#: src/menus/image/scale.xml:122(term) src/menus/image/print-size.xml:85(term)
 #: src/menus/image/canvas-size.xml:68(term)
 msgid "Width; Height"
-msgstr "幅(W); 高さ(E)"
+msgstr "幅; 高さ"
 
-#: src/menus/image/scale.xml:122(para)
+#: src/menus/image/scale.xml:124(para)
 msgid ""
 "When you click on the <guimenuitem>Scale</guimenuitem> command, the dialog "
 "displays the dimensions of the original image in pixels. You can set the "
@@ -505,15 +504,15 @@ msgid ""
 "the same proportion to each other. If you break the chain by clicking on it, "
 "you can set them independently, but this will distort the image."
 msgstr ""
-"<guimenuitem>画像の拡大・縮小(<accel>S</accel>)...</guimenuitem> コマンドでこ"
+"<guimenuitem>画像の拡大・縮小...</guimenuitem> コマンドでこ"
 "のダイアログを呼び出した時点では画像の寸法がピクセル単位で表示されています。 "
-"これらの値を加減して <guilabel>幅(<accel>W</accel>)</guilabel> や <guilabel>"
-"高さ(<accel>E</accel>)</guilabel> を決めてゆきます。 両記入欄の右隣にある鎖の"
+"これらの値を加減して <guilabel>幅</guilabel> や <guilabel>"
+"高さ</guilabel> を決めてゆきます。 両記入欄の右隣にある鎖の"
 "しるしが連結した姿になっているときは幅と高さが連動して互いの比例関係 (縦横"
 "比) を維持します。 この鎖をクリックすると連結が解け、 幅と高さを個別に指定で"
 "きるようになりますが、 画像は歪みます。"
 
-#: src/menus/image/scale.xml:134(para)
+#: src/menus/image/scale.xml:136(para)
 msgid ""
 "However, you do not have to set the dimensions in pixels. You can choose "
 "different units from the drop-down menu. If you choose percent as the units, "
@@ -526,31 +525,31 @@ msgstr ""
 "もちろん寸法の設定に使える単位はピクセルに限りません。 記入欄の右隣の引き出し"
 "メニューで他の単位に換えて指定できます。 また百分率を単位に選べば元画像の大き"
 "さとの相対比率で大きさを設定できます。 インチやミリメートルのような実寸単位も"
-"利用できます。 しかしこのとき <guilabel>水平解像度(<accel>X</accel>)</"
-"guilabel> と <guilabel>垂直解像度(<accel>Y</accel>)</guilabel> に適切な値を設"
+"利用できます。 しかしこのとき <guilabel>水平解像度</"
+"guilabel> と <guilabel>垂直解像度</guilabel> に適切な値を設"
 "定しなければなりません。 この解像度をもとに実寸から画像の画素数による寸法への"
 "変換が行なわれるためです。"
 
-#: src/menus/image/scale.xml:148(term)
-#: src/menus/image/print-size.xml:111(term)
+#: src/menus/image/scale.xml:150(term)
+#: src/menus/image/print-size.xml:104(term)
 msgid "X resolution; Y resolution"
-msgstr "水平解像度(X); 垂直解像度(Y)"
+msgstr "水平解像度; 垂直解像度"
 
-#: src/menus/image/scale.xml:150(para)
+#: src/menus/image/scale.xml:152(para)
 msgid ""
 "You can set the printing resolution for the image in the <guilabel>X "
 "resolution</guilabel> and <guilabel>Y resolution</guilabel> fields. You can "
 "also change the units of measurement by using the drop-down menu."
 msgstr ""
-"画像印刷の解像度が <guilabel>水平解像度(<accel>X</accel>)</guilabel> と "
-"<guilabel>垂直解像度(<accel>Y</accel>)</guilabel> で設定できます。 寸法は引き"
+"画像印刷の解像度が <guilabel>水平解像度</guilabel> と "
+"<guilabel>垂直解像度</guilabel> で設定できます。 寸法は引き"
 "出しメニューで他の単位にも切り替えられます。"
 
-#: src/menus/image/scale.xml:163(term)
+#: src/menus/image/scale.xml:165(term)
 msgid "Quality"
 msgstr "品質"
 
-#: src/menus/image/scale.xml:165(para)
+#: src/menus/image/scale.xml:167(para)
 msgid ""
 "To change the image size, either some pixels have to be removed or new "
 "pixels must be added. The process you use determines the quality of the "
@@ -560,14 +559,14 @@ msgid ""
 msgstr ""
 "画像の大きさを変更すると画素の削除または追加のいずれかが必ず起こります。 その"
 "処理方法いかんで仕上がりの品質が変わってきます。 <guilabel>補完方法"
-"(<accel>N</accel>)</guilabel> の引き出しリストで拡大・縮小を受けた画像の画素"
+"</guilabel> の引き出しリストで拡大・縮小を受けた画像の画素"
 "の色を補完するのに使える処理方法が選択できます。"
 
-#: src/menus/image/scale.xml:174(term)
+#: src/menus/image/scale.xml:176(term)
 msgid "Interpolation"
-msgstr "補完方法(N)"
+msgstr "補完方法"
 
-#: src/menus/image/scale.xml:178(para)
+#: src/menus/image/scale.xml:180(para)
 msgid ""
 "<guilabel>None</guilabel>: No interpolation is used. Pixels are simply "
 "enlarged or removed, as they are when zooming. This method is low quality, "
@@ -577,7 +576,7 @@ msgstr ""
 "な画素の拡張や削除がなされるだけです。 この方式の品質は最低ですが非常に高い処"
 "理速度が出ます。"
 
-#: src/menus/image/scale.xml:185(para)
+#: src/menus/image/scale.xml:187(para)
 msgid ""
 "<guilabel>Linear</guilabel>: This method is relatively fast, but still "
 "provides fairly good results."
@@ -585,7 +584,7 @@ msgstr ""
 "<guilabel>線形</guilabel>: この方式は比較的高速ですが、 かなり良い結果が出せ"
 "ます。"
 
-#: src/menus/image/scale.xml:190(para)
+#: src/menus/image/scale.xml:192(para)
 msgid ""
 "<guilabel>Cubic</guilabel>: The method that produces the best results, but "
 "also the slowest method."
@@ -593,7 +592,7 @@ msgstr ""
 "<guilabel>キュービック</guilabel>: この処理は最高の仕上りが期待できますが、 "
 "処理に最も時間が掛かります。"
 
-#: src/menus/image/scale.xml:196(para)
+#: src/menus/image/scale.xml:198(para)
 msgid ""
 "<guilabel>Sinc (Lanczos 3)</guilabel>: New with GIMP-2.4, this method gives "
 "less blur in important resizings."
@@ -601,7 +600,7 @@ msgstr ""
 "<guilabel>Sinc (Lanczos 3)</guilabel>: <acronym>GIMP</acronym> 2.4 から登場し"
 "たこの方式は、 比較的ぼやけにくい卓越したリサイズを実現します。"
 
-#: src/menus/image/scale.xml:209(para)
+#: src/menus/image/scale.xml:211(para)
 msgid ""
 "See also the <link linkend=\"gimp-tool-scale\">Scale tool</link>, which lets "
 "you scale a layer, a selection or a path."
@@ -640,14 +639,14 @@ msgstr ""
 #: src/menus/image/properties.xml:10(title)
 #: src/menus/image/properties.xml:13(primary)
 msgid "Image Properties"
-msgstr "画像の情報(O)"
+msgstr "画像の情報"
 
 #: src/menus/image/properties.xml:16(para)
 msgid ""
 "The <quote>Image Properties</quote> command opens a window that shows lots "
 "of different information for the image."
 msgstr ""
-"<guimenuitem>画像の情報(<accel>O</accel>)</guimenuitem> コマンドは画像につい"
+"<guimenuitem>画像の情報</guimenuitem> コマンドは画像につい"
 "ての数多くの情報を網羅したウィンドウを開きます。"
 
 #: src/menus/image/properties.xml:25(para)
@@ -656,8 +655,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Image Properties</"
 "guimenuitem></menuchoice>,"
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>画像の情報(<accel>O</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>画像の情報</guimenuitem></menuchoice>"
 
 #: src/menus/image/properties.xml:34(para)
 msgid ""
@@ -693,6 +692,7 @@ msgstr ""
 "で示しています。"
 
 #: src/menus/image/properties.xml:68(term)
+#: src/menus/image/print-size.xml:23(secondary)
 msgid "Print size"
 msgstr "印刷サイズ"
 
@@ -828,40 +828,25 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/print-size.xml:67(None)
+#: src/menus/image/print-size.xml:60(None)
 msgid ""
-"@@image: 'images/menus/menus-image-print-size.png'; md5=THIS FILE DOESN'T "
-"EXIST"
+"@@image: 'images/menus/image/print-size.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/menus-image-print-size.png'; md5=THIS FILE DOESN'T "
-"EXIST"
+"@@image: 'images/menus/image/print-size.png'; md5=THIS FILE DOESN'T EXIST"
 
-#: src/menus/image/print-size.xml:11(phrase)
-#: src/menus/image/print-size.xml:27(primary)
-#: src/menus/image/print-size.xml:56(quote)
-#: src/menus/image/print-size.xml:62(quote)
+#: src/menus/image/print-size.xml:11(title)
+#: src/menus/image/print-size.xml:26(primary)
 msgid "Print Size"
-msgstr "印刷サイズ(P)..."
+msgstr "印刷サイズ..."
 
 #: src/menus/image/print-size.xml:14(primary)
+#: src/menus/image/print-size.xml:19(secondary)
 msgid "Printing"
 msgstr "印刷"
 
 #: src/menus/image/print-size.xml:15(secondary)
-msgid "Printing size and resolution"
-msgstr "印刷物の大きさと解像度"
-
-#: src/menus/image/print-size.xml:19(secondary)
-msgid "Resolution when printing"
-msgstr "印刷物の解像度"
-
-#: src/menus/image/print-size.xml:23(secondary)
-msgid "Image size"
-msgstr "画像の大きさ"
-
-#: src/menus/image/print-size.xml:24(tertiary)
-msgid "Printing size"
-msgstr "印刷物の大きさ"
+msgid "Size and resolution"
+msgstr "大きさと解像度"
 
 #: src/menus/image/print-size.xml:29(para)
 msgid ""
@@ -872,37 +857,37 @@ msgid ""
 "change the size of an image by resampling it, use the <link linkend=\"gimp-"
 "image-scale\">Scale Image</link> command.)"
 msgstr ""
-"<guimenuitem>印刷サイズ(<accel>P</accel>)...</guimenuitem> コマンドで呼び出せ"
+"<guimenuitem>印刷サイズ...</guimenuitem> コマンドで呼び出せ"
 "る<quote>画像印刷解像度の設定</quote>ダイアログを用いて印刷物の <emphasis>寸"
 "法</emphasis> と <emphasis>解像度</emphasis> が変更できます。 このコマンドは"
 "画像の画素数 (ピクセル数) を変えることはなく、 画像の再標本化も行ないませ"
 "ん。 (再標本化によって画像の大きさを変更したいときは <link linkend=\"gimp-"
-"image-scale\">画像の拡大・縮小(S)...</link> コマンドか <link linkend=\"gimp-"
+"image-scale\">画像の拡大・縮小...</link> コマンドか <link linkend=\"gimp-"
 "tool-scale\">拡大・縮小</link> ツールをご利用ください。)"
 
-#: src/menus/image/print-size.xml:39(phrase)
+#: src/menus/image/print-size.xml:39(title)
 msgid "Activating the Dialog"
 msgstr "ダイアログの呼び出し方"
 
-#: src/menus/image/print-size.xml:43(para)
+#: src/menus/image/print-size.xml:42(para)
 msgid ""
 "You can access this dialog from the image menubar through "
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Print Size</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>印刷サイズ(<accel>P</accel>)...</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>印刷サイズ...</guimenuitem></"
 "menuchoice>"
 
-#: src/menus/image/print-size.xml:55(phrase)
-msgid "Options in the <placeholder-1/> Dialog"
+#: src/menus/image/print-size.xml:54(title)
+msgid "Options in the <quote>Print Size</quote> Dialog"
 msgstr "<quote>画像印刷解像度の設定</quote>ダイアログのオプション"
 
-#: src/menus/image/print-size.xml:61(phrase)
-msgid "The <placeholder-1/> dialog"
-msgstr "<placeholder-1/>ダイアログ"
+#: src/menus/image/print-size.xml:56(title)
+msgid "The <quote>Print Size</quote> dialog"
+msgstr "<quote>画像印刷解像度の設定</quote>ダイアログ"
 
-#: src/menus/image/print-size.xml:71(para)
+#: src/menus/image/print-size.xml:64(para)
 msgid ""
 "The output resolution determines the number of pixels used per unit length "
 "for the printed image. Do not confuse the output resolution with the printer "
@@ -913,7 +898,7 @@ msgstr ""
 "像度と出力解像度を混同しないよう注意しましょう。 プリンタの解像度はdpi[ドット"
 "毎インチ]で表わされ、 1画素に数ドットを割り当てることもあります。"
 
-#: src/menus/image/print-size.xml:77(para)
+#: src/menus/image/print-size.xml:70(para)
 msgid ""
 "When the dialog is displayed, the resolution shown in the boxes is the "
 "resolution of the original image. If you increase the output resolution, the "
@@ -926,7 +911,7 @@ msgstr ""
 "さくなります。 同じ理由から逆に印刷物の幅や高さを変えると出力解像度も変化しま"
 "す。"
 
-#: src/menus/image/print-size.xml:84(para)
+#: src/menus/image/print-size.xml:77(para)
 msgid ""
 "Increasing the resolution results in increasing the sharpness of the printed "
 "page. This is quite different from simply reducing the image size by scaling "
@@ -936,7 +921,7 @@ msgstr ""
 "すが]元の画像をただ縮小するのとは異なり画素は減りません (つまり画像の情報が劣"
 "化しません)。"
 
-#: src/menus/image/print-size.xml:94(para)
+#: src/menus/image/print-size.xml:87(para)
 msgid ""
 "You can set the printing Width and Height by using the text boxes. You can "
 "also choose the units for these values from the dropdown list."
@@ -944,7 +929,7 @@ msgstr ""
 "印刷される画像の大きさはこの数値記入欄で指定できます。 引き出しリストから他の"
 "単位も選択できます。"
 
-#: src/menus/image/print-size.xml:99(para)
+#: src/menus/image/print-size.xml:92(para)
 msgid ""
 "As soon as you change the Width or the Height, the X and/or Y resolution "
 "values automatically change accordingly. If the two resolution values remain "
@@ -958,7 +943,7 @@ msgstr ""
 "この鎖のしるしをクリックすれば比例関係は断たれますので縦と横で個別に解像度を"
 "指定できるようになります。"
 
-#: src/menus/image/print-size.xml:113(para)
+#: src/menus/image/print-size.xml:106(para)
 msgid ""
 "You can set the resolution used to calculate the printed width and height "
 "from the physical size of the image, that is, the number of pixels in it."
@@ -966,7 +951,7 @@ msgstr ""
 "印刷される画像の幅や高さを実際に算出するときに利用される実寸での単位距離あた"
 "りの画素数をここで指定できます。"
 
-#: src/menus/image/print-size.xml:118(para)
+#: src/menus/image/print-size.xml:111(para)
 msgid ""
 "Use the text boxes to change these resolution values. They can be linked to "
 "keep their relationship constant. The closed chain symbol between the two "
@@ -983,14 +968,12 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/image/mode.xml:28(None)
-msgid ""
-"@@image: 'images/menus/menus-image-mode.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr ""
-"@@image: 'images/menus/menus-image-mode.png'; md5=THIS FILE DOESN'T EXIST"
+msgid "@@image: 'images/menus/image/mode.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr "@@image: 'images/menus/image/mode.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/mode.xml:10(title)
 msgid "Mode"
-msgstr "モード(M)"
+msgstr "モード"
 
 #: src/menus/image/mode.xml:13(primary)
 msgid "Modes (Colors)"
@@ -1017,7 +1000,7 @@ msgid ""
 "The <guimenuitem>Mode</guimenuitem> submenu contains commands which let you "
 "change the color mode of the image. There are three modes."
 msgstr ""
-"<guisubmenu>モード(<accel>M</accel>)</guisubmenu> サブメニューのコマンドは画"
+"<guisubmenu>モード</guisubmenu> サブメニューのコマンドは画"
 "像の色モードを変更します。"
 
 #: src/menus/image/mode.xml:41(para)
@@ -1026,8 +1009,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Mode</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>モード(<accel>M</accel>)</guisubmenu></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>モード</guisubmenu></menuchoice>"
 
 #: src/menus/image/mode.xml:53(title)
 msgid "The Contents of the <quote>Mode</quote> Submenu"
@@ -1037,46 +1020,46 @@ msgstr "<quote>モード</quote>サブメニューの目次"
 #: src/menus/image/convert-rgb.xml:13(primary)
 #: src/menus/image/convert-rgb.xml:22(secondary)
 msgid "RGB"
-msgstr "RGB(R)"
+msgstr "RGB"
 
 #: src/menus/image/mode.xml:62(link)
 #: src/menus/image/convert-grayscale.xml:17(primary)
 #: src/menus/image/convert-grayscale.xml:22(secondary)
 msgid "Grayscale"
-msgstr "グレースケール(G)"
+msgstr "グレースケール"
 
 #: src/menus/image/mode.xml:67(link)
 #: src/menus/image/convert-indexed.xml:20(secondary)
 msgid "Indexed"
-msgstr "インデックス(I)..."
+msgstr "インデックス..."
 
 #: src/menus/image/mode.xml:71(para)
 msgid ""
 "Assign Color Profile (see <link linkend=\"plug-in-icc-profile-set"
-"\">Color management</link>)"
+"\">Color?management</link>)"
 msgstr ""
-"<guimenuitem>カラープロファイルの指定(<accel>A</accel>)...</guimenuitem> "
+"<guimenuitem>カラープロファイルの指定...</guimenuitem> "
 "( <link linkend=\"plug-in-icc-profile-set\">色管理</link> 参照)"
 
 #: src/menus/image/mode.xml:77(para)
 msgid ""
 "Convert to Color Profile (see <link linkend=\"plug-in-icc-profile-apply"
-"\">Color management</link>)"
+"\">Color?management</link>)"
 msgstr ""
-"<guimenuitem>カラープロファイルの変換(<accel>C</accel>)...</guimenuitem> "
+"<guimenuitem>カラープロファイルの変換...</guimenuitem> "
 "( <link linkend=\"plug-in-icc-profile-apply\">色管理</link> 参照)"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/merge-layers.xml:68(None)
+#: src/menus/image/merge-layers.xml:69(None)
 msgid ""
-"@@image: 'images/menus/image-merge-visible.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/image/merge-visible.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/image-merge-visible.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/image/merge-visible.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/merge-layers.xml:123(None)
+#: src/menus/image/merge-layers.xml:124(None)
 msgid ""
 "@@image: 'images/menus/image-merge-visible-ex1.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -1086,7 +1069,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/merge-layers.xml:132(None)
+#: src/menus/image/merge-layers.xml:133(None)
 msgid ""
 "@@image: 'images/menus/image-merge-visible-ex2.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -1096,7 +1079,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/merge-layers.xml:143(None)
+#: src/menus/image/merge-layers.xml:144(None)
 msgid ""
 "@@image: 'images/menus/image-merge-visible-ex3.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -1107,7 +1090,7 @@ msgstr ""
 #: src/menus/image/merge-layers.xml:11(title)
 #: src/menus/image/merge-layers.xml:19(primary)
 msgid "Merge Visible Layers"
-msgstr "可視レイヤーの統合(L)..."
+msgstr "可視レイヤーの統合..."
 
 #: src/menus/image/merge-layers.xml:14(primary)
 #: src/menus/image/align-layers.xml:15(primary)
@@ -1129,7 +1112,7 @@ msgid ""
 "layers which are visible into a single layer. Visible layers are those which "
 "are indicated on the Layers dialog with an <quote>eye</quote> icon."
 msgstr ""
-"<guimenuitem>可視レイヤーの統合(<accel>L</accel>)...</guimenuitem> コマンドは"
+"<guimenuitem>可視レイヤーの統合...</guimenuitem> コマンドは"
 "可視レイヤーを1層のレイヤーに統合します。 可視レイヤーは <link linkend="
 "\"gimp-layer-dialog\">レイヤーダイアログ</link> の一覧表で<quote>目</quote>の"
 "アイコンがついた項目として表されています。"
@@ -1141,8 +1124,8 @@ msgid ""
 "new layer is created at top of the stack and original visible layers persist."
 msgstr ""
 "このコマンドを実行したあとは元になった可視レイヤーが全て消去されます。 "
-"<guimenu>レイヤー(<accel>L</accel>)</guimenu> メニューの  <link linkend="
-"\"gimp-layer-new-from-visible\">可視部分をレイヤーに(V)</link> コマンドであれ"
+"<guimenu>レイヤー</guimenu> メニューの  <link linkend="
+"\"gimp-layer-new-from-visible\">可視部分をレイヤーに</link> コマンドであれ"
 "ば統合で作成された新たなレイヤーが最前面に置かれ元のレイヤーはそのまま残され"
 "ます。"
 
@@ -1153,7 +1136,7 @@ msgid ""
 "guimenuitem></menuchoice>,"
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>Image</"
-"guimenu><guimenuitem>可視レイヤーの統合(<accel>L</accel>)...</guimenuitem></"
+"guimenu><guimenuitem>可視レイヤーの統合...</guimenuitem></"
 "menuchoice>"
 
 #: src/menus/image/merge-layers.xml:50(para)
@@ -1164,19 +1147,20 @@ msgstr ""
 "キーボードショートカット <keycombo><keycap>Ctrl</keycap><keycap>M</keycap></"
 "keycombo>"
 
-#: src/menus/image/merge-layers.xml:59(title)
-msgid "Description of the <quote>Merge Visible Layers</quote> Dialog"
+#. dialog title differs from command name (GIMP-2.6.7)
+#: src/menus/image/merge-layers.xml:60(title)
+msgid "Description of the <quote>Merge Layers</quote> Dialog"
 msgstr "<quote>レイヤー統合の設定</quote>ダイアログのご説明"
 
-#: src/menus/image/merge-layers.xml:63(title)
-msgid "The <quote>Merge Visible Layers</quote> Dialog"
+#: src/menus/image/merge-layers.xml:64(title)
+msgid "The <quote>Merge Layers</quote> Dialog"
 msgstr "<quote>レイヤー統合の設定</quote>ダイアログ"
 
-#: src/menus/image/merge-layers.xml:74(term)
+#: src/menus/image/merge-layers.xml:75(term)
 msgid "Final, Merged Layer should be:"
 msgstr "統合されたレイヤーの大きさ"
 
-#: src/menus/image/merge-layers.xml:76(para)
+#: src/menus/image/merge-layers.xml:77(para)
 msgid ""
 "Visible layers are the layers which are marked with an <quote>eye</quote> "
 "icon in the Layers dialog."
@@ -1184,7 +1168,7 @@ msgstr ""
 "可視レイヤーはレイヤーダイアログの一覧表では<quote>目</quote>のしるしのついた"
 "項目として表されています。"
 
-#: src/menus/image/merge-layers.xml:82(para)
+#: src/menus/image/merge-layers.xml:83(para)
 msgid ""
 "<emphasis>Expanded as necessary</emphasis>: The final layer is large enough "
 "to contain all of the merged layers. Please note that a layer in "
@@ -1195,7 +1179,7 @@ msgstr ""
 "<acronym>GIMP</acronym>のレイヤーは画像からはみ出す大きさになることもありえま"
 "す。"
 
-#: src/menus/image/merge-layers.xml:91(para)
+#: src/menus/image/merge-layers.xml:92(para)
 msgid ""
 "<emphasis>Clipped to image</emphasis>: The final layer is the same size as "
 "the image. Remember that layers in <acronym>GIMP</acronym> can be larger "
@@ -1207,7 +1191,7 @@ msgstr ""
 "うことでしたから、 画像をはみ出したレイヤーはこのオプションによって刈り揃えら"
 "れます。"
 
-#: src/menus/image/merge-layers.xml:100(para)
+#: src/menus/image/merge-layers.xml:101(para)
 msgid ""
 "<emphasis>Clipped to bottom layer</emphasis>: The final layer is the same "
 "size as the bottom layer. If the bottom layer is smaller than some of the "
@@ -1219,11 +1203,11 @@ msgstr ""
 "み出したりしている場合は刈り揃えられてから統合され、 元の背景レイヤーと同じ大"
 "きさの新たなレイヤーとなって最背面に置かれます。"
 
-#: src/menus/image/merge-layers.xml:112(term)
+#: src/menus/image/merge-layers.xml:113(term)
 msgid "Discard invisible layers"
-msgstr "不可視レイヤーを削除(D)"
+msgstr "不可視レイヤーを削除"
 
-#: src/menus/image/merge-layers.xml:114(para)
+#: src/menus/image/merge-layers.xml:115(para)
 msgid ""
 "When this option is checked, non visible layers are removed from the layer "
 "stack."
@@ -1231,19 +1215,19 @@ msgstr ""
 "このオプションを有効にすると、 レイヤーの重なりから不可視レイヤーが削除されま"
 "す。"
 
-#: src/menus/image/merge-layers.xml:119(title)
+#: src/menus/image/merge-layers.xml:120(title)
 msgid "<quote>Merge visible layers</quote> example"
 msgstr "<quote>可視レイヤーの統合</quote>の例"
 
-#: src/menus/image/merge-layers.xml:126(para)
+#: src/menus/image/merge-layers.xml:127(para)
 msgid "Three layers; two are visible"
 msgstr "3層のレイヤー。 うち2層が可視。"
 
-#: src/menus/image/merge-layers.xml:135(para)
+#: src/menus/image/merge-layers.xml:136(para)
 msgid "<quote>Discard invisible layers</quote> unchecked"
 msgstr "<quote>不可視レイヤーを削除</quote>無効"
 
-#: src/menus/image/merge-layers.xml:146(para)
+#: src/menus/image/merge-layers.xml:147(para)
 msgid "<quote>Discard invisible layers</quote> checked"
 msgstr "<quote>不可視レイヤーを削除</quote>有効"
 
@@ -1271,22 +1255,22 @@ msgid ""
 "affect the entire image in some way, not just the active layer or some other "
 "specific part of the image."
 msgstr ""
-"<guimenu>画像(<accel>I</accel>)</guimenu> メニューのコマンドの一部は画像全体"
+"<guimenu>画像</guimenu> メニューのコマンドの一部は画像全体"
 "に、 またほとんどは画像の活性レイヤーやその他指定された部分や機能に対して何ら"
 "かの効果を及ぼすもので成り立っています。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/image/guides.xml:27(None)
-msgid "@@image: 'images/menus/image-guides.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr "@@image: 'images/menus/image-guides.png'; md5=THIS FILE DOESN'T EXIST"
+msgid "@@image: 'images/menus/image/guides.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr "@@image: 'images/menus/image/guides.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/guides.xml:11(title) src/menus/image/guides.xml:14(primary)
 #: src/menus/image/guides.xml:18(secondary)
 #: src/menus/image/guides-remove.xml:16(primary)
 #: src/menus/image/guides-new-selection.xml:16(primary)
 msgid "Guides"
-msgstr "ガイド(G)"
+msgstr "ガイド"
 
 #: src/menus/image/guides.xml:22(title)
 msgid "The <quote>Guides</quote> options of the <quote>Image</quote> submenu"
@@ -1297,7 +1281,7 @@ msgid ""
 "The <guimenuitem>Guides</guimenuitem> submenu contains various commands for "
 "the creation and removal of guides."
 msgstr ""
-"<guisubmenu>ガイド(<accel>G</accel>)</guisubmenu> サブメニューはガイド (見当"
+"<guisubmenu>ガイド</guisubmenu> サブメニューはガイド (見当"
 "線) を置いたり除いたりできるさまざまなコマンドで成り立っています。"
 
 #: src/menus/image/guides.xml:40(para)
@@ -1306,8 +1290,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Guides</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>ガイド(<accel>G</accel>)</guisubmenu></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>ガイド</guisubmenu></menuchoice>"
 
 #: src/menus/image/guides.xml:52(title)
 msgid "The Contents of the <quote>Guides</quote> Submenu"
@@ -1317,12 +1301,12 @@ msgstr "<quote>ガイド</quote>サブメニューの目次"
 msgid ""
 "The <guilabel>Guides</guilabel> submenu contains the following commands:"
 msgstr ""
-"<guisubmenu>ガイド(<accel>G</accel>)</guisubmenu> サブメニューにはつぎのコマ"
+"<guisubmenu>ガイド</guisubmenu> サブメニューにはつぎのコマ"
 "ンドが入っています。"
 
 #: src/menus/image/guides-remove.xml:13(title)
 msgid "Remove all guides"
-msgstr "すべてのガイドを削除(R)"
+msgstr "すべてのガイドを削除"
 
 #: src/menus/image/guides-remove.xml:17(secondary)
 msgid "Remove"
@@ -1335,7 +1319,7 @@ msgid ""
 "way to remove them. This command is useful if you have positioned several "
 "guides."
 msgstr ""
-"<guimenuitem>すべてのガイドを削除(<accel>R</accel>)</guimenuitem> コマンドは"
+"<guimenuitem>すべてのガイドを削除</guimenuitem> コマンドは"
 "画像上の全ての見当線を解消します。 見当線はクリックして定規の上まで曳けば簡単"
 "に削除できます。 このコマンドが本領を発揮するのは画像に幾本も見当線を置いてい"
 "る場合でしょう。"
@@ -1346,28 +1330,26 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Guides</"
 "guisubmenu><guimenuitem>Remove all guides</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>ガイド(<accel>G</accel>)</guisubmenu><guimenuitem>すべて"
-"のガイドを削除(<accel>R</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>ガイド</guisubmenu><guimenuitem>すべて"
+"のガイドを削除</guimenuitem></menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/image/guides-new.xml:57(None)
 msgid ""
-"@@image: 'images/menus/menus-image-new-guide.png'; md5=THIS FILE DOESN'T "
-"EXIST"
+"@@image: 'images/menus/image/new-guide.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/menus-image-new-guide.png'; md5=THIS FILE DOESN'T "
-"EXIST"
+"@@image: 'images/menus/image/new-guide.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/guides-new.xml:13(title)
 msgid "New Guide"
-msgstr "新規ガイド(G)..."
+msgstr "新規ガイド..."
 
 #: src/menus/image/guides-new.xml:16(primary)
 #: src/menus/image/guides-new-percent.xml:18(primary)
 msgid "Guide"
-msgstr "ガイド(G)"
+msgstr "ガイド"
 
 #: src/menus/image/guides-new.xml:17(secondary)
 msgid "Add"
@@ -1377,7 +1359,7 @@ msgstr "新規"
 msgid ""
 "The <guimenuitem>New Guide</guimenuitem> command adds a guide to the image."
 msgstr ""
-"<guimenuitem>新規ガイド(<accel>G</accel>)...</guimenuitem> コマンドは画像に見"
+"<guimenuitem>新規ガイド...</guimenuitem> コマンドは画像に見"
 "当線を追加します。"
 
 #: src/menus/image/guides-new.xml:25(para)
@@ -1396,9 +1378,9 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Guides</"
 "guisubmenu><guimenuitem>New Guide</guimenuitem></menuchoice>"
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>ガイド(<accel>G</accel>)</guisubmenu><guimenuitem>新規ガ"
-"イド(<accel>G</accel>)...</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>ガイド</guisubmenu><guimenuitem>新規ガ"
+"イド...</guimenuitem></menuchoice>"
 
 #: src/menus/image/guides-new.xml:45(title)
 msgid "<quote>New Guide</quote> Options"
@@ -1411,7 +1393,7 @@ msgid ""
 "guilabel>, in pixels, of the new guide more precisely than by using click-"
 "and-drag."
 msgstr ""
-"<guimenuitem>新規ガイド(<accel>G</accel>)...</guimenuitem> コマンドを選ぶと現"
+"<guimenuitem>新規ガイド...</guimenuitem> コマンドを選ぶと現"
 "れるダイアログで、 新たに追加するガイドの <guilabel>方向</guilabel> と "
 "<guilabel>位置 (ピクセルで指定)</guilabel> の値を、 クリックして曳くよりも精"
 "密に設定できます。"
@@ -1449,7 +1431,7 @@ msgstr ""
 
 #: src/menus/image/guides-new-selection.xml:13(title)
 msgid "New Guides from Selection"
-msgstr "選択範囲から新規ガイド(S)"
+msgstr "選択範囲から新規ガイド"
 
 #: src/menus/image/guides-new-selection.xml:17(secondary)
 msgid "Add from selection"
@@ -1462,7 +1444,7 @@ msgid ""
 "current selection. If there is no selection in the current image, no guides "
 "are drawn."
 msgstr ""
-"<guimenuitem>選択範囲から新規ガイド(<accel>S</accel>)</guimenuitem> コマンド"
+"<guimenuitem>選択範囲から新規ガイド</guimenuitem> コマンド"
 "は現在活性化している選択範囲の最上部、 最下部、 左端、 右端のそれぞれの位置に"
 "4本の見当線を追加します。 画像に選択範囲がない場合は何も起こりません。"
 
@@ -1481,23 +1463,23 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Guides</"
 "guisubmenu><guimenuitem>New Guides from Selection</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>ガイド(<accel>G</accel>)</guisubmenu><guimenuitem>選択範"
-"囲から新規ガイド(<accel>S</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>ガイド</guisubmenu><guimenuitem>選択範"
+"囲から新規ガイド</guimenuitem></menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/image/guides-new-percent.xml:60(None)
 msgid ""
-"@@image: 'images/menus/image-new-guide-percent.png'; md5=THIS FILE DOESN'T "
+"@@image: 'images/menus/image/new-guide-percent.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
-"@@image: 'images/menus/image-new-guide-percent.png'; md5=THIS FILE DOESN'T "
+"@@image: 'images/menus/image/new-guide-percent.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 
 #: src/menus/image/guides-new-percent.xml:15(title)
 msgid "New Guide (by Percent)"
-msgstr "新規ガイド (パーセントで)(P)"
+msgstr "新規ガイド (パーセントで)"
 
 #: src/menus/image/guides-new-percent.xml:19(secondary)
 msgid "Add by percent"
@@ -1509,7 +1491,7 @@ msgid ""
 "to the image. The position of the guide is specified as a percentage of the "
 "canvas Height and Width."
 msgstr ""
-"<guimenuitem>新規ガイド (パーセントで)(<accel>P</accel>)...</guimenuitem> コ"
+"<guimenuitem>新規ガイド (パーセントで)...</guimenuitem> コ"
 "マンドは画像に見当線 (ガイド) を追加します。 見当線の位置はキャンバスの高さか"
 "幅の百分率で指定できます。"
 
@@ -1530,9 +1512,9 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Guides</"
 "guisubmenu><guimenuitem>New Guide (by Percent)</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>ガイド(<accel>G</accel>)</guisubmenu><guimenuitem>新規ガ"
-"イド (パーセントで)(<accel>P</accel>)...</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>ガイド</guisubmenu><guimenuitem>新規ガ"
+"イド (パーセントで)...</guimenuitem></menuchoice>"
 
 #: src/menus/image/guides-new-percent.xml:49(title)
 msgid "<quote>New Guide (by Percent)</quote> Options"
@@ -1563,7 +1545,7 @@ msgstr ""
 
 #: src/menus/image/flatten.xml:11(title)
 msgid "Flatten Image"
-msgstr "画像の統合(F)"
+msgstr "画像の統合"
 
 #: src/menus/image/flatten.xml:14(primary)
 #: src/menus/image/canvas-size.xml:145(term)
@@ -1587,7 +1569,7 @@ msgid ""
 "transparency. If there are any areas which are transparent through all of "
 "the layers of the original image, the background color is visible."
 msgstr ""
-"<guimenuitem>画像の統合(<accel>F</accel>)</guimenuitem> コマンドは画像上の全"
+"<guimenuitem>画像の統合</guimenuitem> コマンドは画像上の全"
 "てのレイヤーを1層にまとめ、 アルファチャンネルはあれば削除します。 統合後の画"
 "像はその前と見た目にはほとんど変化がありませんが、 透過効果を除く画像の内容の"
 "全てが1層のレイヤーに入っているところが異なります。 さらに元の画像で全レイ"
@@ -1609,12 +1591,12 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Flatten Image</"
 "guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>画像の統合(<accel>F</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>画像の統合</guimenuitem></menuchoice>"
 
 #: src/menus/image/fit-canvas-to-selection.xml:8(title)
 msgid "Fit Canvas to Selection"
-msgstr "キャンバスを選択範囲に合わせる(I)"
+msgstr "キャンバスを選択範囲に合わせる"
 
 #: src/menus/image/fit-canvas-to-selection.xml:11(primary)
 #: src/menus/image/fit-canvas-to-layers.xml:13(primary)
@@ -1635,7 +1617,7 @@ msgid ""
 "The <guimenuitem>Fit Canvas to Selection</guimenuitem> command adapts the "
 "canvas size to the size of the selection, in both width and height."
 msgstr ""
-"<guimenuitem>キャンバスを選択範囲に合わせる(<accel>I</accel>)</guimenuitem>コ"
+"<guimenuitem>キャンバスを選択範囲に合わせる</guimenuitem>コ"
 "マンドはキャンバスの大きさを選択範囲の幅と高さに揃えます。"
 
 #: src/menus/image/fit-canvas-to-selection.xml:24(title)
@@ -1650,13 +1632,13 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Fit Canvas to Selection</"
 "guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>キャンバスを選択範囲に合わせる(<accel>I</accel>)</"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>キャンバスを選択範囲に合わせる</"
 "guimenuitem></menuchoice>"
 
 #: src/menus/image/fit-canvas-to-layers.xml:10(title)
 msgid "Fit Canvas to Layers"
-msgstr "キャンバスをレイヤーに合わせる(I)"
+msgstr "キャンバスをレイヤーに合わせる"
 
 #: src/menus/image/fit-canvas-to-layers.xml:14(secondary)
 msgid "Fit canvas size to layers"
@@ -1672,7 +1654,7 @@ msgid ""
 "canvas size to the size of the largest layer in the image, in both width and "
 "height."
 msgstr ""
-"<guimenuitem>キャンバスをレイヤーに合わせる(<accel>I</accel>)</guimenuitem> "
+"<guimenuitem>キャンバスをレイヤーに合わせる</guimenuitem> "
 "コマンドはキャンバスの大きさを画像の各レイヤーの最大の幅と高さに合わせます。"
 
 #: src/menus/image/fit-canvas-to-layers.xml:25(para)
@@ -1694,13 +1676,13 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Fit Canvas to Layers</"
 "guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>キャンバスをレイヤーに合わせる(<accel>I</accel>)</"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>キャンバスをレイヤーに合わせる</"
 "guimenuitem></menuchoice>"
 
 #: src/menus/image/duplicate.xml:12(title)
 msgid "Duplicate"
-msgstr "複製(D)"
+msgstr "複製"
 
 #: src/menus/image/duplicate.xml:15(primary)
 msgid "Duplicate image"
@@ -1713,7 +1695,7 @@ msgid ""
 "and paths. The <acronym>GIMP</acronym> Clipboard and the History are not "
 "affected."
 msgstr ""
-"<guimenuitem>複製(<accel>D</accel>)</guimenuitem> コマンドは現在活性化してい"
+"<guimenuitem>複製</guimenuitem> コマンドは現在活性化してい"
 "る画像の全てのレイヤーとチャンネルとパスを文字通り複製して新たな画像を作成し"
 "ます。 このとき<acronym>GIMP</acronym>のクリップボードや操作履歴は変化しませ"
 "ん。"
@@ -1725,8 +1707,8 @@ msgid ""
 "menuchoice>, all changes are passed on the original image."
 msgstr ""
 "画像を複製することと画像を別のウィンドウでさらに開くことを混同しないよう注意"
-"しましょう。 <menuchoice><guimenu>表示(<accel>V</accel>)</"
-"guimenu><guimenuitem>新しいウィンドウ(<accel>N</accel>)</guimenuitem></"
+"しましょう。 <menuchoice><guimenu>表示</"
+"guimenu><guimenuitem>新しいウィンドウ</guimenuitem></"
 "menuchoice> コマンドで開いた新たな画像ウィンドウ上で行った操作は元画像にも及"
 "びます。"
 
@@ -1736,8 +1718,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Duplicate</guimenuitem></"
 "menuchoice>,"
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>複製(<accel>D</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>複製</guimenuitem></menuchoice>"
 
 #: src/menus/image/duplicate.xml:49(para)
 msgid ""
@@ -1749,7 +1731,7 @@ msgstr ""
 
 #: src/menus/image/crop.xml:12(title)
 msgid "Crop to Selection"
-msgstr "選択範囲で切り抜き(C)"
+msgstr "選択範囲で切り抜き"
 
 #: src/menus/image/crop.xml:17(tertiary)
 msgid "To selection"
@@ -1769,7 +1751,7 @@ msgid ""
 "area. If there is no selection for the image, the menu entry is disabled and "
 "grayed out."
 msgstr ""
-"<guimenuitem>選択範囲で切り抜き(<accel>C</accel>)</guimenuitem> コマンドは選"
+"<guimenuitem>選択範囲で切り抜き</guimenuitem> コマンドは選"
 "択範囲の最外縁から画像の縁まで完全非選択の短冊状の範囲が画像から切り取られま"
 "す。 不完全選択 (例えば選択範囲のぼかし) の部分は切り取られません。 選択範囲"
 "にぼかしが入っている場合は不完全選択の最外縁の外側で切り抜きが行なわれます。 "
@@ -1782,8 +1764,8 @@ msgid ""
 "use the <link linkend=\"gimp-layer-crop\">Crop Layer</link> command."
 msgstr ""
 "このコマンドは画像上の全てのレイヤーを切り抜きます。 現在活性化しているレイ"
-"ヤーだけを切り抜きたいときは <guimenu>レイヤー(<accel>L</accel>)</guimenu> メ"
-"ニューの <link linkend=\"gimp-layer-crop\">選択範囲で切り抜き(C)</link> コマ"
+"ヤーだけを切り抜きたいときは <guimenu>レイヤー</guimenu> メ"
+"ニューの <link linkend=\"gimp-layer-crop\">選択範囲で切り抜き</link> コマ"
 "ンドをお使いください。"
 
 #: src/menus/image/crop.xml:44(para)
@@ -1792,13 +1774,13 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Crop to Selection</"
 "guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>選択範囲で切り抜き(<accel>C</accel>)</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>選択範囲で切り抜き</guimenuitem></"
 "menuchoice>"
 
 #: src/menus/image/convert-rgb.xml:10(title)
 msgid "RGB mode"
-msgstr "RGB(R)"
+msgstr "RGB"
 
 #: src/menus/image/convert-rgb.xml:17(secondary)
 #: src/menus/image/convert-indexed.xml:15(secondary)
@@ -1826,7 +1808,7 @@ msgid ""
 "you can no longer retrieve the RGB colors, so you should work on a copy of "
 "your image."
 msgstr ""
-"<guimenuitem>RGB(<accel>R</accel>)</guimenuitem> コマンドは画像を"
+"<guimenuitem>RGB</guimenuitem> コマンドは画像を"
 "<acronym>RGB</acronym>モードに変換します。 このモードについては用語集の "
 "<link linkend=\"glossary-rgb\">RGB</link> の項に詳しく述べています。 普段はコ"
 "ンピュータ画面に適したこのモードで作業してください。 <acronym>RGB</acronym>"
@@ -1845,9 +1827,9 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Mode</"
 "guisubmenu><guimenuitem>RGB</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>モード(<accel>M</accel>)</guisubmenu><guimenuitem>RGB"
-"(<accel>R</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>モード</guisubmenu><guimenuitem>RGB"
+"</guimenuitem></menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1891,7 +1873,7 @@ msgstr ""
 
 #: src/menus/image/convert-indexed.xml:11(title)
 msgid "Indexed mode"
-msgstr "インデックス(I)..."
+msgstr "インデックス..."
 
 #: src/menus/image/convert-indexed.xml:16(tertiary)
 msgid "To indexed mode"
@@ -1907,7 +1889,7 @@ msgid ""
 "indexed mode. See <link linkend=\"glossary-colormodel\">indexed colors</"
 "link> in the Glossary for more information about Indexed Color Mode."
 msgstr ""
-"<guimenuitem>インデックス(<accel>I</accel>)...</guimenuitem> コマンドは画像を"
+"<guimenuitem>インデックス...</guimenuitem> コマンドは画像を"
 "インデックス化カラーモードに変換します。 詳しくは用語集の <link linkend="
 "\"glossary-colormodel\">インデックス化カラーモード</link> の項をご覧くださ"
 "い。"
@@ -1918,9 +1900,9 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Mode</"
 "guisubmenu><guimenuitem>Indexed</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>モード(<accel>M</accel>)</guisubmenu><guimenuitem>イン"
-"デックス(<accel>I</accel>)...</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>モード</guisubmenu><guimenuitem>イン"
+"デックス...</guimenuitem></menuchoice>"
 
 #: src/menus/image/convert-indexed.xml:50(title)
 #: src/menus/image/convert-indexed.xml:56(title)
@@ -1932,7 +1914,7 @@ msgid ""
 "The <guimenuitem>Indexed</guimenuitem> command opens the <guilabel>Convert "
 "Image to Indexed Colors</guilabel> dialog."
 msgstr ""
-"<guimenuitem>インデックス(<accel>I</accel>)...</guimenuitem> コマンドは"
+"<guimenuitem>インデックス...</guimenuitem> コマンドは"
 "<quote>インデックスカラーに変換</quote>ダイアログを開きます。"
 
 #: src/menus/image/convert-indexed.xml:65(term)
@@ -1951,7 +1933,7 @@ msgstr ""
 "<guilabel>最適パレットを生成</guilabel>: このオプションを選ぶと、 既定値なら"
 "<acronym>GIF</acronym>形式の従来からの最大色数256 [(画像にアルファチャンネル"
 "があるときは255)] 以内で一番画像に適したパレットを生成します。 <guilabel>最大"
-"色数(<accel>M</accel>)</guilabel> はそれよりも小さい値に変更可能ですが、 グラ"
+"色数</guilabel> はそれよりも小さい値に変更可能ですが、 グラ"
 "デーションのような滑らかな色変化のある場所では望ましくない結果になりがちで"
 "す。 こんなときはディザリングを併用するとある程度は望ましからざる効果を減らせ"
 "ます。"
@@ -2007,7 +1989,7 @@ msgid ""
 msgstr ""
 "色数の少ない画像をインデックス化カラーに変換すると実際は使われていない色がパ"
 "レットに含まれてしまうことがあります。 <guilabel>未使用の色をカラーマップから"
-"削除(<accel>R</accel>)</guilabel> オプションを有効にするとそのような色はパ"
+"削除</guilabel> オプションを有効にするとそのような色はパ"
 "レットから削除されます。"
 
 #: src/menus/image/convert-indexed.xml:117(term)
@@ -2049,7 +2031,7 @@ msgid ""
 "animations."
 msgstr ""
 "ディザリングフィルタは3種類あります。 <guimenuitem>なし</guimenuitem>を含め "
-"<guilabel>色ディザリング(<accel>D</accel>)</guilabel> ではそのいずれかか選べ"
+"<guilabel>色ディザリング</guilabel> ではそのいずれかか選べ"
 "ます。 どのフィルタがどんな効果を画像にもたらすかは予測がつきませんので、 全"
 "部のフィルタを試してその画像に最適なものを見付けるしかありません。 ただし "
 "<guimenuitem>ポジション</guimenuitem> フィルタはアニメーションできる画像によ"
@@ -2108,8 +2090,8 @@ msgid ""
 msgstr ""
 "<acronym>GIF</acronym>画像の透明度は1ビットに符号化されるので透過するかしない"
 "かのどちらかになります。  にもかかわらず半透明の偽装が可能な <guilabel>透明部"
-"分のディザリングを行う(<accel>T</accel>)</guilabel> オプションがあります。 た"
-"だしこれよりも <link linkend=\"plug-in-semiflatten\">半統合(S)</link> プラグ"
+"分のディザリングを行う</guilabel> オプションがあります。 た"
+"だしこれよりも <link linkend=\"plug-in-semiflatten\">半統合</link> プラグ"
 "インのほうがより良好な仕上がりになります。"
 
 #: src/menus/image/convert-indexed.xml:211(para)
@@ -2122,7 +2104,7 @@ msgstr ""
 
 #: src/menus/image/convert-grayscale.xml:9(title)
 msgid "Grayscale mode"
-msgstr "グレースケール(G)"
+msgstr "グレースケール"
 
 #: src/menus/image/convert-grayscale.xml:14(tertiary)
 msgid "To grayscale"
@@ -2137,7 +2119,7 @@ msgid ""
 "You can use the <guimenuitem>Grayscale</guimenuitem> command to convert your "
 "image to grayscale with 256 levels of gray, from 0 (black) to 255 (white)."
 msgstr ""
-"<guimenuitem>グレースケール(<accel>G</accel>)</guimenuitem> コマンドは、 0 "
+"<guimenuitem>グレースケール</guimenuitem> コマンドは、 0 "
 "(黒) から 255 (白) までの256階調の灰色濃淡からなるグレースケールに画像を変換"
 "します。"
 
@@ -2147,21 +2129,21 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guisubmenu>Mode</"
 "guisubmenu><guimenuitem>Grayscale</guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guisubmenu>モード(<accel>M</accel>)</guisubmenu><guimenuitem>グレー"
-"スケール(<accel>G</accel>)</guimenuitem></menuchoice>"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guisubmenu>モード</guisubmenu><guimenuitem>グレー"
+"スケール</guimenuitem></menuchoice>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/image/configure-grid.xml:53(None)
 msgid ""
-"@@image: 'images/menus/image-configure-grid.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/image/configure-grid.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/image-configure-grid.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/image/configure-grid.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/configure-grid.xml:11(title)
 msgid "Configure Grid"
-msgstr "グリッドの設定(R)..."
+msgstr "グリッドの設定..."
 
 #: src/menus/image/configure-grid.xml:15(primary)
 msgid "Grid"
@@ -2180,7 +2162,7 @@ msgid ""
 "the origin of the image, independently for the horizontal and vertical grid "
 "lines. You can choose one of five different grid styles."
 msgstr ""
-"<guimenuitem>グリッドの設定(<accel>R</accel>)...</guimenuitem> コマンドは"
+"<guimenuitem>グリッドの設定...</guimenuitem> コマンドは"
 "<quote>グリッドの調整</quote>ダイアログを呼び起こします。 ここでは画像上に表"
 "示して画像編集に利用できる <link linkend=\"gimp-concepts-image-grid\">グリッ"
 "ド</link> (格子線) の属性が設定できます。 <acronym>GIMP</acronym>では直交座標"
@@ -2194,8 +2176,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Configure Grid</"
 "guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>グリッドの設定(<accel>R</accel>)...</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>グリッドの設定...</guimenuitem></"
 "menuchoice>"
 
 #: src/menus/image/configure-grid.xml:45(title)
@@ -2216,12 +2198,12 @@ msgid ""
 "properties of the grid which is shown when you turn on the image grid."
 msgstr ""
 "<quote>画像のグリッドを調整</quote>ダイアログでは <link linkend=\"gimp-view-"
-"show-grid\">グリッドを表示(H)</link> を有効にしているときに画像上に表示される"
+"show-grid\">グリッドを表示</link> を有効にしているときに画像上に表示される"
 "グリッド (格子線) の属性を設定できます。"
 
 #: src/menus/image/configure-grid.xml:65(term)
 msgid "Line style"
-msgstr "線種(S)"
+msgstr "線種"
 
 #: src/menus/image/configure-grid.xml:69(term)
 msgid "Intersections (dots)"
@@ -2253,7 +2235,7 @@ msgid ""
 "This style shows dashed lines in the foreground color of the grid. If the "
 "lines are too close together, the grid won't look good."
 msgstr ""
-"これは格子線を <guilabel>描画色(<accel>F</accel>)</guilabel>で破線状に描きま"
+"これは格子線を <guilabel>描画色</guilabel>で破線状に描きま"
 "す。 しかし線と線の間隔が狭過ぎると見辛くなります。"
 
 #: src/menus/image/configure-grid.xml:97(term)
@@ -2265,8 +2247,8 @@ msgid ""
 "This style shows dashed lines, where the foreground and background colors of "
 "the grid alternate."
 msgstr ""
-"これは格子線を <guilabel>描画色(<accel>F</accel>)</guilabel> と <guilabel>背"
-"景色(<accel>B</accel>)</guilabel> が交互に現れる破線で表示します。"
+"これは格子線を <guilabel>描画色</guilabel> と <guilabel>背"
+"景色</guilabel> が交互に現れる破線で表示します。"
 
 #: src/menus/image/configure-grid.xml:106(term)
 msgid "Solid"
@@ -2275,12 +2257,12 @@ msgstr "実線"
 #: src/menus/image/configure-grid.xml:108(para)
 msgid "This style shows solid grid lines in the foreground color of the grid."
 msgstr ""
-"これは <guilabel>描画色(<accel>F</accel>)</guilabel> を用い実線で格子線を表示"
+"これは <guilabel>描画色</guilabel> を用い実線で格子線を表示"
 "します。"
 
 #: src/menus/image/configure-grid.xml:118(term)
 msgid "Foreground and Background colors"
-msgstr "描画色(F); 背景色(B)"
+msgstr "描画色; 背景色"
 
 #: src/menus/image/configure-grid.xml:120(para)
 msgid "Click on the color dwell to select a new color for the grid."
@@ -2303,7 +2285,7 @@ msgstr ""
 "格子で囲まれる升目の大きさはここで変更できます。 幅と高さそれぞれに2つずつ数"
 "値記入欄があり、 上のピクセル単位の長さと下の実寸 (単位は変更できます) は連動"
 "して変化します。 なおこの換算は <link linkend=\"gimp-image-print-size\">印刷"
-"サイズ(P)...</link> の水平解像度と垂直解像度に基づいて行なわれます。 さらに鎖"
+"サイズ...</link> の水平解像度と垂直解像度に基づいて行なわれます。 さらに鎖"
 "のしるしが連結の姿ならば幅と高さはその比を保って連動します。"
 
 #: src/menus/image/configure-grid.xml:139(title)
@@ -2391,7 +2373,7 @@ msgstr ""
 #: src/menus/image/canvas-size.xml:13(title)
 #: src/menus/image/canvas-size.xml:66(title)
 msgid "Canvas Size"
-msgstr "キャンバスサイズの変更(V)..."
+msgstr "キャンバスサイズの変更..."
 
 #: src/menus/image/canvas-size.xml:17(secondary)
 msgid "Canvas size"
@@ -2413,7 +2395,7 @@ msgid ""
 msgstr ""
 "<quote>キャンバス</quote>とは画像の可視領域のことです。 初期設定ではキャンバ"
 "スの大きさはレイヤーの大きさとぴったり一致しています。 <guimenuitem>キャンバ"
-"スサイズの変更(<accel>V</accel>)...</guimenuitem> コマンドはキャンバスを拡げ"
+"スサイズの変更...</guimenuitem> コマンドはキャンバスを拡げ"
 "たり狭めたりできるダイアログを開きます。 必要があればレイヤーの大きさもここで"
 "変更できます。 キャンバスを拡げると元の画像の回りに何もない領域ができます。 "
 "狭めると可視領域が切り詰められますが、 レイヤーは[オプション次第では]キャンバ"
@@ -2436,8 +2418,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Canvas Size</guimenuitem></"
 "menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>キャンバスサイズの変更(<accel>V</accel>)...</"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>キャンバスサイズの変更...</"
 "guimenuitem></menuchoice>"
 
 #: src/menus/image/canvas-size.xml:55(title)
@@ -2459,8 +2441,8 @@ msgid ""
 "changes a corresponding amount. If you break the Chain by clicking on it, "
 "you can set Width and Height separately."
 msgstr ""
-"キャンバスの大きさは <guilabel>幅(<accel>W</accel>)</guilabel> と <guilabel>"
-"高さ(<accel>E</accel>)</guilabel> をここで調節して指定します。 既定の単位はピ"
+"キャンバスの大きさは <guilabel>幅</guilabel> と <guilabel>"
+"高さ</guilabel> をここで調節して指定します。 既定の単位はピ"
 "クセルですが、 任意の単位に変更できるほか百分率により元の画像の大きさに対する"
 "比でも指定できます。 幅と高さの両数値記入欄の右隣に連結の鎖のしるしがあれ"
 "ば、 元画像の幅と高さの比が保たれます。 つまりどちらか一方の値を変更すると、 "
@@ -2495,8 +2477,8 @@ msgstr ""
 "見本画像内にその大きさを表す枠が反転色で表示されます。"
 
 #: src/menus/image/canvas-size.xml:104(term)
-msgid "X ; Y"
-msgstr "X ; Y"
+msgid "X?; Y"
+msgstr "X?; Y"
 
 #: src/menus/image/canvas-size.xml:115(para)
 msgid "by click-and-dragging the image,"
@@ -2551,14 +2533,14 @@ msgid ""
 msgstr ""
 "かつて<acronym>GIMP</acronym> 2.4 より前の版では、 <quote>キャンバスサイズの"
 "変更</quote>のときにレイヤーの大きさは変わりませんでした。 レイヤーの大きさ"
-"は <link linkend=\"gimp-layer-resize\">レイヤーサイズの変更(O)...</link> コマ"
+"は <link linkend=\"gimp-layer-resize\">レイヤーサイズの変更...</link> コマ"
 "ンドを使って変更する必要があったのです。 今では <guilabel>レイヤー</"
 "guilabel> オプションによりある程度はレイヤーの大きさを調節できます。 つぎに示"
 "す引き出しメニューでその幾通りかの方法から選んでください。"
 
 #: src/menus/image/canvas-size.xml:156(title)
 msgid "The Resize layers list"
-msgstr "キャンバスに合わせる(L)メニュー"
+msgstr "キャンバスに合わせるメニュー"
 
 #: src/menus/image/canvas-size.xml:166(para)
 msgid ""
@@ -2605,7 +2587,7 @@ msgstr ""
 
 #: src/menus/image/canvas-size.xml:208(term)
 msgid "Center"
-msgstr "中央(E)"
+msgstr "中央"
 
 #: src/menus/image/canvas-size.xml:210(para)
 msgid ""
@@ -2613,7 +2595,7 @@ msgid ""
 "canvas. When you click on the Center button, the offset values are "
 "automatically calculated and displayed in the text boxes."
 msgstr ""
-"<guibutton>中央(<accel>E</accel>)</guibutton> ボタンはキャンバスの中心に画像"
+"<guibutton>中央</guibutton> ボタンはキャンバスの中心に画像"
 "の中心を合わせるはたらきがあります。 このボタンをクリックするとオフセット値が"
 "自動的に算出され、 <guilabel><accel>X</accel></guilabel> と "
 "<guilabel><accel>Y</accel></guilabel> の数値記入欄にその値が表示されます。"
@@ -2624,7 +2606,7 @@ msgid ""
 "resized, but the pixel information and the drawing scale of the image are "
 "unchanged."
 msgstr ""
-"<guibutton>サイズ変更(<accel>R</accel>)</guibutton> ボタンをクリックすると"
+"<guibutton>サイズ変更</guibutton> ボタンをクリックすると"
 "キャンバスの大きさは変更されますが、 画素情報や画像の描画縮尺<!--???-->は変わ"
 "りません。"
 
@@ -2648,10 +2630,10 @@ msgstr ""
 "す。 それゆえこの部分はキャンバスの透過領域となり、 画像ウィンドウでは[初期設"
 "定の場合]市松模様で表示されます。 レイヤーが無いのですぐにはこの部分に描画が"
 "できません。 レイヤーを拡張させるには、 もともと1層のレイヤーで十分な場合は "
-"<link linkend=\"gimp-image-flatten\">画像の統合(F)</link> コマンドでレイヤー"
+"<link linkend=\"gimp-image-flatten\">画像の統合</link> コマンドでレイヤー"
 "をキャンバスと同じ大きさにできますが、 複数のレイヤーを扱っていて現在活性化し"
 "ているレイヤーだけをこの部分に拡張したい場合は <link linkend=\"gimp-layer-"
-"resize-to-image\">レイヤーをキャンバスに合わせる(I)</link> コマンドをお使いく"
+"resize-to-image\">レイヤーをキャンバスに合わせる</link> コマンドをお使いく"
 "ださい。 もちろんこの部分を含む新しいレイヤーを作成しても良いでしょう。 これ"
 "ならデジタルなパスパルトゥ (写真を挟める台紙が自由に貼りつけられるおおきめの"
 "透明板) のできあがりです。"
@@ -2694,7 +2676,7 @@ msgid ""
 "layer and yellow (background color in Toolbox) in the green background layer."
 msgstr ""
 "キャンバスの大きさを120&times;120ピクセルに変更した。 <guilabel>キャンバスに"
-"合わせる(<accel>L</accel>)</guilabel> オプションに <guimenuitem>すべてのレイ"
+"合わせる</guilabel> オプションに <guimenuitem>すべてのレイ"
 "ヤー</guimenuitem> を選んだので全レイヤーがキャンバスと同じ大きさに拡張され"
 "る。 元は何も塗られていなかった領域は、 薄紅色のレイヤーでは透明部分となり、 "
 "薄緑色のレイヤーでは黄色 (ツールボックスに示される背景色) に塗られる。"
@@ -2722,7 +2704,7 @@ msgstr ""
 "クして比例関係を解除し、 お好みの大きさにキャンバスを切り詰めます。 見本画像"
 "を移動して不要な映り込みが新しいキャンバスの枠でうまく切り落とせる場所を探っ"
 "たり、 キャンバスの大きさを再度調整してゆきます。 最後に <guibutton>サイズ変"
-"更(<accel>R</accel>)</guibutton> ボタンをクリックして確定です。"
+"更</guibutton> ボタンをクリックして確定です。"
 
 #: src/menus/image/canvas-size.xml:320(title)
 msgid "Cropped image"
@@ -2748,7 +2730,7 @@ msgstr "@@image: 'images/menus/autocrop-2.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/autocrop.xml:10(title)
 msgid "Autocrop Image"
-msgstr "画像の自動切り抜き(A)"
+msgstr "画像の自動切り抜き"
 
 #: src/menus/image/autocrop.xml:15(tertiary)
 #: src/menus/image/autocrop.xml:18(primary)
@@ -2762,7 +2744,7 @@ msgid ""
 "area that is all the same color, and then crops this area from the image, as "
 "if you had used the <link linkend=\"gimp-tool-crop\">Crop</link> tool."
 msgstr ""
-"<guimenuitem>画像の自動切り抜き(<accel>A</accel>)</guimenuitem> コマンドは画"
+"<guimenuitem>画像の自動切り抜き</guimenuitem> コマンドは画"
 "像の縁を切り詰めます。 活性レイヤー上で境界線に接する色と同じ色だけからなる最"
 "も太い外枠を切り出して <link linkend=\"gimp-tool-crop\">切り抜き</link> ツー"
 "ルがするように画像から削除します。"
@@ -2783,8 +2765,8 @@ msgid ""
 "<menuchoice><guimenu>Image</guimenu><guimenuitem>Autocrop Image</"
 "guimenuitem></menuchoice>."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>画像の自動切り抜き(<accel>A</accel>)</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>画像の自動切り抜き</guimenuitem></"
 "menuchoice>"
 
 #: src/menus/image/autocrop.xml:55(title)
@@ -2861,7 +2843,7 @@ msgstr "@@image: 'images/menus/alignVFBB+.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/image/align-layers.xml:12(title)
 msgid "Align Visible Layers"
-msgstr "可視レイヤーの整列(B)..."
+msgstr "可視レイヤーの整列..."
 
 #: src/menus/image/align-layers.xml:17(tertiary)
 #: src/menus/image/align-layers.xml:20(primary)
@@ -2877,11 +2859,11 @@ msgid ""
 "Clicking on <guimenuitem>Align Visible Layers</guimenuitem> displays a "
 "dialog which allows you to choose how the layers should be aligned."
 msgstr ""
-"<guimenuitem>可視レイヤーの整列(<accel>B</accel>)...</guimenuitem> コマンドに"
+"<guimenuitem>可視レイヤーの整列...</guimenuitem> コマンドに"
 "よって可視レイヤー (レイヤーダイアログ上では<quote>目</quote>のしるしがついて"
 "います) を極めて精密に配置できるようになります。 とくに小さなレイヤーを多く使"
 "うアニメーション作成で効果を発揮します。 <guimenuitem>可視レイヤーの整列"
-"(<accel>B</accel>)...</guimenuitem> コマンドを呼び出すとダイアログが現れ、 レ"
+"...</guimenuitem> コマンドを呼び出すとダイアログが現れ、 レ"
 "イヤーを揃える方式が選択できます。"
 
 #: src/menus/image/align-layers.xml:33(para)
@@ -2897,7 +2879,7 @@ msgstr ""
 "の重なりのうち最前面のレイヤーを整列の基準に据えていましたが、 "
 "<application><acronym>GIMP</acronym> 2</application> の初期設定ではそれがキャ"
 "ンバスの輪郭に変更されました。 代わりにこのダイアログの <guilabel>(不可視で"
-"も)一番下のレイヤーを基準に使う(<accel>U</accel>)</guilabel> オプションによっ"
+"も)一番下のレイヤーを基準に使う</guilabel> オプションによっ"
 "て、 最背面のレイヤーが、 たとえ不可視でも、 整列の基準に使えます。"
 
 #: src/menus/image/align-layers.xml:44(title)
@@ -2919,7 +2901,7 @@ msgstr ""
 "セル) に重ねられている。 赤の正方形が10&times;10ピクセル、 緑の矩形が"
 "10&times;20ピクセル、 黄色の矩形が20&times;10ピクセル。 背景レイヤー (青、 "
 "100&times;100ピクセル) はダイアログの <guilabel>可視でも一番下のレイヤーを無"
-"視する(<accel>I</accel>)</guilabel> オプションを有効にしているためこの操作の"
+"視する</guilabel> オプションを有効にしているためこの操作の"
 "対象外である。 ちなみに画像でのレイヤーの順序がキャンバス内の位置につられて実"
 "際の積み重ねの順序とは異なるように思えてしまうようだ。 例えばここでは黄色のレ"
 "イヤーは画像での見た目が一番上のようだが実際は手前から2層目である。"
@@ -2931,8 +2913,8 @@ msgid ""
 "guimenuitem></menuchoice>. There is no default keyboard shortcut. The dialog "
 "doesn't show up if the image holds a single layer only."
 msgstr ""
-"画像ウィンドウのメニューより <menuchoice><guimenu>画像(<accel>I</accel>)</"
-"guimenu><guimenuitem>可視レイヤーの整列(<accel>B</accel>)...</guimenuitem></"
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
+"guimenu><guimenuitem>可視レイヤーの整列...</guimenuitem></"
 "menuchoice> 。 初期設定ではキーボードショートカットがまだありません。 レイ"
 "ヤーが1層しかない画像でこのコマンドを呼び出してもダイアログは現れません。"
 
@@ -2946,7 +2928,7 @@ msgstr "<quote>可視レイヤーの整列</quote>ダイアログ"
 
 #: src/menus/image/align-layers.xml:96(term)
 msgid "Horizontal Style; Vertical Style"
-msgstr "水平方向スタイル(H); 垂直方向スタイル(V)"
+msgstr "水平方向スタイル; 垂直方向スタイル"
 
 #: src/menus/image/align-layers.xml:98(para)
 msgid ""
@@ -2976,12 +2958,12 @@ msgid ""
 "the bottom layer."
 msgstr ""
 "<guimenuitem>合わせる</guimenuitem>: 可視レイヤーは <guilabel>水平方向基準"
-"(<accel>R</accel>)</guilabel> や <guilabel>垂直方向基準(<accel>T</accel>)</"
+"</guilabel> や <guilabel>垂直方向基準</"
 "guilabel> で定められた筋に揃えられます。 仮に <guilabel>水平方向基準"
-"(<accel>R</accel>)</guilabel> に <guimenuitem>右端</guimenuitem> を選んだ"
+"</guilabel> に <guimenuitem>右端</guimenuitem> を選んだ"
 "ら、 レイヤーはキャンバスから消え去ってしまうでしょう。 でもキャンバスを拡張"
 "すればまた見えるところに入ります。 <guilabel>(不可視でも)一番下のレイヤーを基"
-"準に使う(<accel>U</accel>)</guilabel> オプションを有効にすると背景レイヤーの"
+"準に使う</guilabel> オプションを有効にすると背景レイヤーの"
 "左上隅に合わせてレイヤーが整列することになります。"
 
 #: src/menus/image/align-layers.xml:125(title)
@@ -3030,14 +3012,14 @@ msgid ""
 "corresponding edge of the bottom layer."
 msgstr ""
 "<guimenuitem>左から右へ順番に</guimenuitem>; <guimenuitem>上から下へ順番に</"
-"guimenuitem>: <guilabel>水平方向基準(<accel>R</accel>)</guilabel> や "
-"<guilabel>垂直方向基準(<accel>T</accel>)</guilabel> で指定したキャンバス上の"
+"guimenuitem>: <guilabel>水平方向基準</guilabel> や "
+"<guilabel>垂直方向基準</guilabel> で指定したキャンバス上の"
 "位置に可視レイヤーを揃えて配置します。 いずれのレイヤーも画像上で互いに重なり"
 "合わないよう規則正しく整列します。 層順で一番上 (最前面) のレイヤーが画像の最"
 "も左寄り (あるいは上側) に置かれ、 層順で一番下 (最背面) のレイヤーが最も右寄"
 "り (あるいは下側) に置かれます。 その他のレイヤーは順番に従い以上の2つのレイ"
 "ヤーの間に規則正しく置かれます。 <guilabel>(不可視でも)一番下のレイヤーを基準"
-"に使う(<accel>U</accel>)</guilabel> オプションを有効にしている場合は最背面の"
+"に使う</guilabel> オプションを有効にしている場合は最背面の"
 "レイヤーの所定の境界線やその延長線から順に可視レイヤーが整列します。"
 
 #: src/menus/image/align-layers.xml:201(title)
@@ -3053,7 +3035,7 @@ msgid ""
 "yellow layer is between the other two."
 msgstr ""
 "左から右へ水平方向に順序よく連ねる整列。 <guilabel>(不可視でも)一番下のレイ"
-"ヤーを基準に使う(<accel>U</accel>)</guilabel> オプションは無効。 全レイヤーの"
+"ヤーを基準に使う</guilabel> オプションは無効。 全レイヤーの"
 "最前面の層をなす緑色のレイヤーが先頭をきって最も左寄りに置かれた。 最背面の赤"
 "いレイヤーは右寄りに、 黄色のレイヤーはその間に置かれる。"
 
@@ -3097,4 +3079,37 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: src/menus/image/align-layers.xml:0(None)
 msgid "translator-credits"
-msgstr "島本良太 (SimaMoto,RyôTa) <liangtai.s4@gmail.com>, 2009."
+msgstr "島本良太 (SimaMoto,RyoTa) <liangtai.s4@gmail.com>, 2009."
+
+#~ msgid "The <placeholder-1/> submenu of the <placeholder-2/> menu"
+#~ msgstr "<placeholder-2/>メニューの<placeholder-1/>サブメニュー"
+
+#~ msgid "The Contents of the <placeholder-1/> Submenu"
+#~ msgstr "<placeholder-1/>サブメニューの目次"
+
+#~ msgid "Resolution when printing"
+#~ msgstr "印刷物の解像度"
+
+#~ msgid "Image size"
+#~ msgstr "画像の大きさ"
+
+#~ msgid "Printing size"
+#~ msgstr "印刷物の大きさ"
+
+#~ msgid "Options in the <placeholder-1/> Dialog"
+#~ msgstr "<quote>画像印刷解像度の設定</quote>ダイアログのオプション"
+
+#~ msgid "The <placeholder-1/> dialog"
+#~ msgstr "<placeholder-1/>ダイアログ"
+
+#~ msgid ""
+#~ "@@image: 'images/menus/menus-image-mode.png'; md5=THIS FILE DOESN'T EXIST"
+#~ msgstr ""
+#~ "@@image: 'images/menus/menus-image-mode.png'; md5=THIS FILE DOESN'T EXIST"
+
+#~ msgid ""
+#~ "@@image: 'images/menus/menus-image-new-guide.png'; md5=THIS FILE DOESN'T "
+#~ "EXIST"
+#~ msgstr ""
+#~ "@@image: 'images/menus/menus-image-new-guide.png'; md5=THIS FILE DOESN'T "
+#~ "EXIST"

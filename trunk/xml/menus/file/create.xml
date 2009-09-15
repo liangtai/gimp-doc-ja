@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -6,7 +6,7 @@
   2009-01-06 j.h: Improved "mouse pointer capture"
   2008-12-29 Created from menus/acquire.xml by j.h
 -->
-<!--2009-06-23-->
+<!--2009-09-12-->
 <sect2 id="gimp-file-create">
   <title lang="en">Create</title>
   <title lang="ja">画像の作成</title>
@@ -71,7 +71,7 @@
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>ファイル(<accel>F</accel>)</guimenu>
+            <guimenu>ファイル</guimenu>
             <guimenuitem>画像の生成</guimenuitem>
           </menuchoice>
         </para>
@@ -81,7 +81,7 @@
 
   <sect3 id="gimp-file-create-clipboard">
     <title lang="en">From Clipboard</title>
-    <title lang="ja">クリップボードから(C)</title>
+    <title lang="ja">クリップボードから</title>
     <para lang="en">
       When you copy a selection, it goes into the clipboard. Then you can
       create a new image with it.
@@ -105,24 +105,24 @@
       クリップボードに入ります。 これを利用して新しい画像が作成できます。
     </para>
     <para lang="ja">
-      このコマンドは <guimenu>編集(<accel>E</accel>)</guimenu> メニューの
+      このコマンドは <guimenu>編集</guimenu> メニューの
       <link linkend="gimp-edit-paste-as-new">画像をクリップボードから生成
       </link> コマンドと同じはたらきをします。
     </para>
     <para lang="ja">
-      キーボードの <keycap>Print Screen</keycap> キーを押すと画面の表示が画像と
-      なってクリップボードに取り込まれます。 この機能は次に述べる
+      キーボードの <keycap>Print&nbsp;Screen</keycap> キーを押すと画面の表示が
+      画像となってクリップボードに取り込まれます。 この機能は次に述べる
       <link linkend="plug-in-screenshot">スクリーンショット</link> ダイアログで
-      <guilabel>画面全体(<accel>S</accel>)</guilabel> のスクリーンショットを
-      撮る機能と同じです。 <keycombo><keycap>Alt</keycap><keycap>Print Screen
-      </keycap></keycap> キーの組み合わせなら活性ウィンドウだけをその装飾枠も
+      <guilabel>画面全体</guilabel> のスクリーンショットを撮る機能と同じ
+      です。 <keycombo><keycap>Alt</keycap><keycap>Print&nbsp;Screen
+      </keycap></keycombo> キーの組み合わせなら活性ウィンドウだけをその装飾枠も
       含んだ表示から画像を作成しクリップボードに取り込みます。
     </para>
   </sect3>
 
   <sect3 id="plug-in-screenshot">
     <title lang="en">Screenshot</title>
-    <title lang="ja">スクリーンショット(S)...</title>
+    <title lang="ja">スクリーンショット...</title>
 
     <indexterm lang="en">
       <primary>Screenshot</primary>
@@ -147,7 +147,7 @@
       dialog with two parts:
     </para>
     <para lang="ja">
-      <guimenuitem>スクリーンショット(<accel>S</accel>)...</guimenuitem>
+      <guimenuitem>スクリーンショット...</guimenuitem>
       コマンドはダイアログを開きます。 ダイアログは2つの部分に分かれています。
     </para>
 
@@ -159,7 +159,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Take a screenshot of a single window</term>
-              <term lang="ja">単一ウィンドウ(W)</term>
+              <term lang="ja">単一ウィンドウ</term>
               <listitem>
                 <para lang="en">
                   The mouse pointer becomes a cross. Click in the image window
@@ -172,7 +172,7 @@
                   マウスポインタが照準点の姿になったら、 撮影したいウィンドウを
                   クリックしてください。 新しい画像が作成され画像ウィンドウで
                   開かれます。 このとき <guilabel>
-                  ウィンドウのデコレーションも含める(<accel>D</accel>)
+                  ウィンドウのデコレーションも含める
                   </guilabel> オプションにチェックが入っていない場合はタイトル
                   バーやウィンドウ枠が除かれます。 [上図がその例です。]
                 </para>
@@ -180,7 +180,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Take a screenshot of the entire screen</term>
-              <term lang="ja">画面全体(S)</term>
+              <term lang="ja">画面全体</term>
               <listitem>
                 <para lang="en">
                   This is useful if you want to capture a pop menu. A delay is
@@ -199,7 +199,7 @@
                   <quote>待ち時間</quote>が必要になるはずです。
                 </para>
                 <para lang="ja">
-                  <guilabel>マウスポインタを含める<!--<accel>M</accel>)-->
+                  <guilabel>マウスポインタを含める
                   </guilabel> オプションを有効にするとマウスポインタの姿も撮り
                   込まれます。 マウスポインタだけはもう1層のレイヤーになります
                   ので、 あとから画像内で位置を変更できます。
@@ -208,7 +208,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Select a region to grab</term>
-              <term lang="ja">指定した範囲(R)</term>
+              <term lang="ja">指定した範囲</term>
               <listitem>
                 <para lang="en">
                   The mouse pointer becomes a cross. Click and drag to create
@@ -285,7 +285,7 @@
   <sect3>
     <title lang="en">Buttons, Logos, Patterns, Web Page Themes</title>
     <title lang="ja">
-      ボタン(B); ロゴ(L); パターン(P); Web ページテーマ(W)
+      ボタン; ロゴ; パターン; Web ページテーマ
     </title>
     <para lang="en">
       An impressive list of script-fus. Have a look at it!

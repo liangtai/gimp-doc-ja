@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -11,7 +11,7 @@
   2006-04-30 lexa: made almost docbook compliant and added german translation
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-08-17-->
+<!--2009-09-12-->
 <sect3 id="gimp-gradient-editor-dialog">
   <title lang="en">The Gradient Editor</title>
   <title lang="ja">グラデーションエディタ</title>
@@ -87,7 +87,7 @@
         <para lang="ja">
           一覧表で加工対象のグラデーションを <mousebutton>第2ボタン
           </mousebutton> クリックして出てきた脈絡メニューの <guimenuitem>
-          グラデーションの編集(<accel>E</accel>)...</guimenuitem> を選択
+          グラデーションの編集...</guimenuitem> を選択
         </para>
       </listitem>
       <listitem>
@@ -127,7 +127,7 @@
           </guiicon> をクリックして出てくるメニューより
           <menuchoice>
             <guisubmenu>グラデーション</guisubmenu>
-            <guimenuitem>グラデーションの編集(<accel>E</accel>)...</guimenuitem>
+            <guimenuitem>グラデーションの編集...</guimenuitem>
           <menuchoice>
         </para>
       </listitem>
@@ -330,9 +330,10 @@
                         <phrase>「保存」</phrase>
                       </textobject>
                     </inlinemediaobject>
-                  </guiicon> このアイコンボタンをクリックするとグラデーションが
-                  個人用 <filename>gradients</filename> フォルダに現在の状態で
-                  保存されます。 つまり次回から<acronym>GIMP</acronym>起動時に
+                  </guiicon> このアイコンボタンをクリックするとグラデーション
+                  が個人用 <filename class="directory">gradients</filename> 
+                  フォルダに現在の状態で保存されます。 
+                  つまり次回から<acronym>GIMP</acronym>起動時に
                   このグラデーションも自動的に読み込まれます。
                 </para>
               </listitem>
@@ -511,13 +512,13 @@
             描画色と背景色を用いるように変えられます。 こののち描画色と背景色が
             変化するたびこの終端の色も同時に変化しつづけます。 その反対に色を
             このままにしておくには <guimenuitem>
-            現在の色に固定(<accel>F</accel>)</guimenuitem> を選んでください。
+            現在の色に固定</guimenuitem> を選んでください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Left [Right] Endpoint's Color</term>
-        <term lang="ja">左終端色(E)...; 右終端色(I)...</term>
+        <term lang="ja">左終端色...; 右終端色...</term>
         <listitem>
           <anchor id="gimp-gradient-editor-left-color"/>
           <anchor id="gimp-gradient-editor-right-color"/>
@@ -538,7 +539,7 @@
             </para>
             <para lang="ja">
               このコマンドは前掲のメニューに連動しており、 その終端の色のタイプ
-              に <guimenuitem>現在の色に固定(<accel>F</accel>)</guimenuitem>
+              に <guimenuitem>現在の色に固定</guimenuitem>
               以外を選んでいるときは、 終端色を選ぶこのメニューは灰色無効に
               なります。
             </para>
@@ -547,7 +548,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Load Left [Right] Color From</term>
-        <term lang="en">左側の色の読み込み元(L); 右側の色の読み込み元(O)</term>
+        <term lang="en">左側の色の読み込み元; 右側の色の読み込み元</term>
         <listitem>
           <anchor id="gimp-gradient-editor-left-load"/>
           <anchor id="gimp-gradient-editor-right-load"/>
@@ -577,7 +578,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Left Neighbor's Right Endpoint</term>
-              <term lang="ja">左隣セグメントの右終端(L)</term>
+              <term lang="ja">左隣セグメントの右終端</term>
               <listitem>
                 <para lang="en">
                   This choice will cause the color of the right endpoint of
@@ -593,7 +594,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Right Endpoint</term>
-              <term lang="ja">右終端色(R)</term>
+              <term lang="ja">右終端色</term>
               <listitem>
                 <para lang="en">
                   This choice will cause the color of the right endpoint of
@@ -607,7 +608,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">FG/BG color</term>
-              <term lang="ja">描画色(F); 背景色(B)</term>
+              <term lang="ja">描画色; 背景色</term>
               <listitem>
                 <para lang="en">
                   This choice causes GIMP's current foreground or background
@@ -647,7 +648,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Save Left [Right] Color To</term>
-        <term lang="ja">左側の色の保存先(S); 右側の色の保存先(V)</term>
+        <term lang="ja">左側の色の保存先; 右側の色の保存先</term>
         <listitem>
           <anchor id="gimp-gradient-editor-left-save"/>
           <anchor id="gimp-gradient-editor-right-save"/>
@@ -668,7 +669,7 @@
       <title lang="ja">セグメント内での混色と色づけの機能</title>
       <varlistentry>
         <term lang="en">Blending Function for Segment</term>
-        <term lang="ja">選択範囲/セグメントに対する混色関数(B)</term>
+        <term lang="ja">選択範囲/セグメントに対する混色関数</term>
         <listitem>
           <anchor id="gimp-gradient-editor-blending"/>
           <figure>
@@ -695,7 +696,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Linear</term>
-              <term lang="ja">線形(L)</term>
+              <term lang="ja">線形</term>
               <listitem>
                 <para lang="en">
                   Default option. Color varies linearly from one endpoint of
@@ -709,7 +710,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Curved</term>
-              <term lang="ja">カーブ(C)</term>
+              <term lang="ja">カーブ</term>
               <listitem>
                 <para lang="en">
                   Gradient varies more quickly on ends of the range than on
@@ -723,7 +724,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Sinusoidal</term>
-              <term lang="ja">サインカーブ(S)</term>
+              <term lang="ja">サインカーブ</term>
               <listitem>
                 <para lang="en">
                   The opposite of the curved type. Gradients varies more
@@ -737,7 +738,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Spherical (increasing)</term>
-              <term lang="ja">球面 (増加)(N)</term>
+              <term lang="ja">球面 (増加)</term>
               <listitem>
                 <para lang="en">
                   Gradient varies more quickly on the left of the range than
@@ -750,7 +751,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Spherical (decreasing)</term>
-              <term lang="ja">球面 (減少)(D)</term>
+              <term lang="ja">球面 (減少)</term>
               <listitem>
                 <para lang="en">
                   Gradient varies more quickly on the right than on the left.
@@ -765,7 +766,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Coloring Type for Segment</term>
-        <term lang="ja">選択範囲/セグメントに対する色モデル(T)</term>
+        <term lang="ja">選択範囲/セグメントに対する色モデル</term>
         <listitem>
           <anchor id="gimp-gradient-editor-coloring"/>
           <figure>
@@ -785,9 +786,9 @@
           </para>
           <para lang="ja">
             このオプションでは選択範囲の中での色変化を <guimenuitem>
-            RGB(<accel>R</accel>)</guimenuitem>、 <guimenuitem>HSV 
-            (色相反時計回り)(<accel>C</accel>)</guimenuitem>、 <guimenuitem>HSV
-            (色相時計回り)(<accel>H</accel>)</guimenuitem> の3つの
+            RGB</guimenuitem>、 <guimenuitem>HSV 
+            (色相反時計回り)</guimenuitem>、 <guimenuitem>HSV
+            (色相時計回り)</guimenuitem> の3つの
             <link linkend="glossary-colormodel">色モデル</link>
             から指定できます。
           </para>
@@ -799,7 +800,7 @@
       <title lang="ja">セグメントを加工</title>
       <varlistentry>
         <term lang="en">Flip Segment</term>
-        <term lang="ja">選択範囲/セグメントを反転(F)</term>
+        <term lang="ja">選択範囲/セグメントを反転</term>
         <listitem>
           <anchor id="gimp-gradient-editor-flip"/>
           <para lang="en">
@@ -815,7 +816,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Replicate Segment</term>
-        <term lang="ja">選択範囲/セグメントを複製(R)...</term>
+        <term lang="ja">選択範囲/セグメントを複製...</term>
         <listitem>
           <anchor id="gimp-gradient-editor-replicate"/>
           <para lang="en">
@@ -832,7 +833,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Split Segment at Midpoint</term>
-        <term lang="ja">セグメント群/セグメントを中間点で分割(M)</term>
+        <term lang="ja">セグメント群/セグメントを中間点で分割</term>
         <listitem>
           <anchor id="gimp-gradient-editor-split-midpoint"/>
           <para lang="en">
@@ -848,7 +849,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Split Segment Uniformly</term>
-        <term lang="ja">セグメント群/セグメントを均等に分割(U)...</term>
+        <term lang="ja">セグメント群/セグメントを均等に分割...</term>
         <listitem>
           <anchor id="gimp-gradient-editor-split-uniform"/>
           <para lang="en">
@@ -865,7 +866,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Delete Segment</term>
-        <term lang="ja">選択範囲/セグメントを削除(D)</term>
+        <term lang="ja">選択範囲/セグメントを削除</term>
         <listitem>
           <anchor id="gimp-gradient-editor-delete"/>
           <para lang="en">
@@ -883,7 +884,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Re-center Segment's midpoint</term>
-        <term lang="ja">選択範囲/セグメントの中間点を中央に移動(C)</term>
+        <term lang="ja">選択範囲/セグメントの中間点を中央に移動</term>
         <listitem>
           <anchor id="gimp-gradient-editor-recenter"/>
           <para lang="en">
@@ -899,7 +900,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Re-distribute Handles in Segment</term>
-        <term lang="ja">選択範囲/セグメントの制御点を再分配(H)</term>
+        <term lang="ja">選択範囲/セグメントの制御点を再分配</term>
         <listitem>
           <anchor id="gimp-gradient-editor-redistribute"/>
           <para lang="en">
@@ -928,7 +929,7 @@
       </para>
       <varlistentry>
         <term lang="en">Blend Endpoints' Colors</term>
-        <term lang="ja">終端の色を混ぜる(N)</term>
+        <term lang="ja">終端の色を混ぜる</term>
         <listitem>
           <anchor id="gimp-gradient-editor-blend-color"/>
           <para lang="en">
@@ -944,7 +945,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Blend Endpoints' Opacity</term>
-        <term lang="ja">終端の不透明度を混ぜる(Y)</term>
+        <term lang="ja">終端の不透明度を混ぜる</term>
         <listitem>
           <anchor id="gimp-gradient-editor-blend-opacity"/>
           <para lang="en">
@@ -1040,7 +1041,7 @@
         <para lang="ja">
           新しいグラデーションを <mousebutton>第2ボタン</mousebutton> で
           クリックして脈絡メニューを呼び出し、 <guimenuitem>
-          セグメントを均等に分割(<accel>U</accel>)...</guimenuitem> を選んで
+          セグメントを均等に分割...</guimenuitem> を選んで
           ください。 出てきたダイアログに適当な数を入れましょう。
         </para>
         <figure>
@@ -1077,8 +1078,8 @@
         <para lang="ja">
           グラデーションを <mousebutton>第2ボタン</mousebutton> クリックして
           脈絡メニューを呼び出し、 選んでおいたセグメントもしくはセグメント群の
-          <guimenuitem>左終端色(<accel>E</accel>)...</guimenuitem> と
-          <guimenuitem>右終端色(<accel>I</accel>)...</guimenuitem> をそれぞれ
+          <guimenuitem>左終端色...</guimenuitem> と
+          <guimenuitem>右終端色...</guimenuitem> をそれぞれ
           指定します。
         </para>
         <figure>

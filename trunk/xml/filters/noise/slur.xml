@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -8,10 +8,10 @@
   050930 de replaced informalfigure by axel.wernicke
   050826 de added by axel.wernicke
 -->
-<!--2009-07-29-->
+<!--2009-09-15-->
 <sect2 id="plug-in-randomize-slur">
   <title lang="en">Slur</title>
-  <title lang="ja">ごまかす(S)...</title>
+  <title lang="ja">ごまかす...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -67,12 +67,12 @@
       option.
     </para>
     <para lang="ja">
-      <guimenuitem>ごまかす(<accel>S</accel>)...</guimenuitem> フィルタは画像が
+      <guimenuitem>ごまかす...</guimenuitem> フィルタは画像が
       あたかも溶解して底辺側にたれ下がるような効果を生みます。 ごまかす処理の
       対象となった画素は 80% の確率で上側の画素の値で置き換わります。 もしくは
       真上の画素の左隣か右隣の画素の値が使われます。 このような処理は
       活性レイヤーもしくはその選択範囲の全ての画素に及ぼすことができるほか、 
-      <guilabel>乱数度 (%)(<accel>A</accel>)</guilabel> オプションにより
+      <guilabel>乱数度 (%)</guilabel> オプションにより
       対象となる画素を減らして元画像の画素をある程度残すこともできます。
     </para>
   </sect3>
@@ -91,9 +91,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>ノイズ(<accel>N</accel>)</guisubmenu>
-        <guimenuitem>ごまかす(<accel>S</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ノイズ</guisubmenu>
+        <guimenuitem>ごまかす...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -114,7 +114,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Random Seed</term>
-        <term lang="ja">乱数種(R)</term>
+        <term lang="ja">乱数種</term>
         <listitem>
           <para lang="en">
             It controls randomness of slurring.  If the same random seed in
@@ -133,11 +133,11 @@
             ごまかす処理の不規則性を制御します。 同じ状況で同じ乱数種を用いると
             このフィルタは全く同じ結果を生みます。 乱数種が変われば結果も違う
             ものになります。 乱数種は数値記入欄で直に指定できるほか、 
-            <guibutton>新しい種(<accel>N</accel>)</guibutton> ボタンをクリック
+            <guibutton>新しい種</guibutton> ボタンをクリック
             して無作為に生成させる方法もあります。
           </para>
           <para lang="ja">
-            <guilabel>乱数化(<accel>R</accel>)</guilabel> オプションを有効に
+            <guilabel>乱数化</guilabel> オプションを有効に
             すると乱数種を直に指定できなくなりますが、 その代わりこのフィルタ
             を実行する度に新しい乱数種が自動生成されるようになります。 この
             オプションを無効にしている間は前回利用した乱数種が記憶されています
@@ -147,7 +147,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Randomization (%)</term>
-        <term lang="ja">乱数度 (%)(A)</term>
+        <term lang="ja">乱数度 (%)</term>
         <listitem>
           <para lang="en">
             This slider represents the percentage of pixels of the active
@@ -169,7 +169,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Repeat</term>
-        <term lang="ja">繰り返し(E)</term>
+        <term lang="ja">繰り返し</term>
         <listitem>
           <para lang="en">
             This slider represents the number of times the filter will be

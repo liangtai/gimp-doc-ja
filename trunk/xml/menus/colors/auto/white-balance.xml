@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-12-29 j.h: rev. v2.6
   2007-10-17 ude: moved here from menus/layer-white-balance.xml ('en','de')
   2007-06-08 Added Spanish translation by AntI
-  2007-03-12 Kolbjørn: added no translation
+  2007-03-12 Kolbjorn: added no translation
   2006-09-21 lexa: added de translation
   2006-08-08: created by scb; example by j.h
 -->
 <!-- id is still used by GIMP, do not change! -->
-<!--2009-08-18-->
+<!--2009-09-12-->
 <sect2 id="gimp-layer-white-balance">
   <title lang="en">White Balance</title>
-  <title lang="ja">ホワイトバランス(W)</title>
+  <title lang="ja">ホワイトバランス</title>
 
   <indexterm lang="en">
     <primary>Colors</primary>
@@ -55,14 +55,14 @@
     and grayed out.
   </para>
   <para lang="ja">
-    <guimenuitem>ホワイトバランス(<accel>W</accel>)</guimenuitem> コマンドは
+    <guimenuitem>ホワイトバランス</guimenuitem> コマンドは
     活性レイヤーの赤緑青の各色の分布をチャンネルごとに伸長させて色を調整
     します。この処理においては画像で使用されている全て色のうち発色している画素
     が総画素数の0.05%以下の色を削除し、代わりに近似色を割り当てる操作を赤緑青の
     各チャンネルごとに行います。こうしてできるだけ分布を拡げてゆきます。 
     ヒストグラムの両端の最外縁のめったに使われない (ものによってはゴミビット等
     も含む) 画素の色が、 ヒストグラムの伸長において幅をきかせてしまい 
-    <link linkend="plug-in-c-astretch">コントラスト伸長(S)</link> のときの
+    <link linkend="plug-in-c-astretch">コントラスト伸長</link> のときの
     ように最高レベルと最低レベルの色に否定的な影響を及ぼすおそれがないところが
     長所です。 しかし<quote>コントラスト伸長</quote>と同じく調整後の画像に色相
     の遷移が起こるかもしれません。
@@ -72,7 +72,7 @@
     ようになる傾向がありますから、 たとえば写真の修正などに有効です。
   </para>
   <para lang="ja">
-    <guimenuitem>ホワイトバランス(<accel>W</accel>)</guimenuitem> コマンドは
+    <guimenuitem>ホワイトバランス</guimenuitem> コマンドは
     <acronym>RGB</acronym>画像のレイヤーで作動します。 画像の色がインデックス化
     されているものやグレースケールの場合は、 このメニュー項目は灰色無効となって
     いて使用できません。
@@ -88,15 +88,15 @@
           <menuchoice>
             <guimenu>Colors</guimenu>
             <guisubmenu>Auto</guisubmenu>
-            <guimenuitem>White Balance</guimenuitem>
+            <guimenuitem>White Balance</guimenuitem>
           </menuchoice>.
         </para>
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>色(<accel>C</accel>)</guimenu>
-            <guisubmenu>自動調整(<accel>A</accel>)</guisubmenu>
-            <guimenuitem>ホワイトバランス(<accel>W</accel>)</guimenuitem>
+            <guimenu>色</guimenu>
+            <guisubmenu>自動調整</guisubmenu>
+            <guimenuitem>ホワイトバランス</guimenuitem>
           </menuchoice>
         </para>
       </listitem>

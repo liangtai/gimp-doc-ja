@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -14,10 +14,10 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-26 de added by axel.wernicke
 -->
-<!--2009-08-18-->
+<!--2009-09-21-->
 <sect2 id="plug-in-colors-channel-mixer">
   <title lang="en">Channel Mixer</title>
-  <title lang="ja">チャンネルミキサー(X)...</title>
+  <title lang="ja">チャンネルミキサー...</title>
 
   <indexterm lang="en">
     <primary>Colors</primary>
@@ -72,7 +72,7 @@
       with or without an alpha channel. It has monochrome mode and a preview.
     </para>
     <para lang="ja">
-      <guimenuitem>チャンネルミキサー(<accel>X</accel>)...</guimenuitem>
+      <guimenuitem>チャンネルミキサー...</guimenuitem>
       コマンドは<acronym>RGB</acronym>の3つの値を再配分します。 画像に
       アルファチャンネルがあってもなくても動作できます。 オプションにモノクロ
       モードとプレビューがあります。
@@ -93,9 +93,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>色(<accel>C</accel>)</guimenu>
-        <guisubmenu>色要素(<accel>O</accel>)</guisubmenu>
-        <guimenuitem>チャンネルミキサー(<accel>X</accel>)...</guimenuitem>
+        <guimenu>色</guimenu>
+        <guisubmenu>色要素</guisubmenu>
+        <guimenuitem>チャンネルミキサー...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -117,8 +117,8 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term lang="en">Output Channel</term>
-        <term lang="ja">出力レベル(U) [正しくは出力チャンネル]</term>
+        <term lang="en">Output channel</term>
+        <term lang="ja">出力チャンネル</term>
         <listitem>
           <para lang="en">
             From this menu you select the channel to mix to. Choices are
@@ -129,14 +129,14 @@
             再配分を受けるチャンネルをここで指定します。 <guimenuitem>
             赤チャンネル</guimenuitem>、 <guimenuitem>緑チャンネル
             </guimenuitem>、 <guimenuitem>青チャンネル</guimenuitem> の3つの
-            選択肢があります。 ただし <guilabel>モノクロ(<accel>M</accel>)
+            選択肢があります。 ただし <guilabel>モノクロ
             </guilabel> オプションが有効の場合はこの選択は無視されます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Red, Green, Blue</term>
-        <term lang="ja">赤(R); 緑(G); 青(B)</term>
+        <term lang="ja">赤; 緑; 青</term>
         <listitem>
           <para lang="en">
             These three sliders set the contribution of red, green or blue
@@ -156,7 +156,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Monochrome</term>
-        <term lang="ja">モノクロ(M)</term>
+        <term lang="ja">モノクロ</term>
         <listitem>
           <para lang="en">
             This option converts the RGB image into a gray-scale RGB image.
@@ -173,7 +173,7 @@
             他の方法に比べていちばん良好な仕上りが得られるからです (用語集の 
             <link linkend="glossary-graylevel">グレースケール</link> の項を参考
             にしてください)。 ここにチェックを入れているときだけは <guilabel>
-            出力レベル(<accel>U</accel>)</guilabel> セレクタが灰色無効となって
+            出力レベル</guilabel> セレクタが灰色無効となって
             使用できなくなります。
           </para>
           <note>
@@ -186,9 +186,9 @@
             <para lang="ja">
               ここで赤緑青の順に21%、 72%、 7%と設定すると 
               <menuchoice>
-                <guimenu>画像(<accel>I</accel>)</guimenu>
-                <guisubmenu>モード(<accel>M</accel>)</guisubmenu>
-                <guimenuitem>グレースケール(<accel>G</accel>)</guimenuitem>
+                <guimenu>画像</guimenu>
+                <guisubmenu>モード</guisubmenu>
+                <guimenuitem>グレースケール</guimenuitem>
               </menuchoice>
               と同等な明度の設定になります。 (<application><acronym>GIMP
               </acronym> 2.2</application> では30%、 59%、 11%の設定でした。)
@@ -198,7 +198,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Preserve Luminosity</term>
-        <term lang="ja">明度維持(L)</term>
+        <term lang="ja">明度維持</term>
         <listitem>
           <para lang="en">
             Calculations may result in too high values and an image too much
@@ -225,7 +225,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Open</term>
-        <term lang="ja">開く(O)</term>
+        <term lang="ja">開く</term>
         <listitem>
           <para lang="en">Load settings from a file.</para>
           <para lang="ja">設定ファイルを読み込みます。</para>
@@ -233,7 +233,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Save</term>
-        <term lang="ja">保存(S)</term>
+        <term lang="ja">保存</term>
         <listitem>
           <para lang="en">Save settings to a file.</para>
           <para lang="ja">現在の設定をファイルに保存します。</para>
@@ -241,7 +241,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Reset</term>
-        <term lang="ja">リセット(R)</term>
+        <term lang="ja">リセット</term>
         <listitem>
           <para lang="en">Set default settings.</para>
           <para lang="ja">初期状態に戻します。</para>
@@ -272,7 +272,7 @@
             Channel. Here is an example:
           </para>
           <para lang="ja">
-            <guilabel>モノクロ(<accel>M</accel></guilabel> モードを無効にして
+            <guilabel>モノクロ</guilabel> モードを無効にして
             いるときは<quote>出力チャンネル</quote>を選んでください。 その
             チャンネルがこのフィルタの操作対象になります。 ダイアログが開かれた
             当初は元の画像側の同じチャンネルの値が100%になっています。 これは
@@ -385,7 +385,7 @@
             command action is validated.
           </para>
           <para lang="ja">
-            <guilabel>モノクロ(<accel>M</accel>)</guilabel> を有効にすると
+            <guilabel>モノクロ</guilabel> を有効にすると
             プレビュー画面がグレースケールに変わりますが、 コマンドを実行する
             までは画像自体は依然として3つの色チャンネルを持つ<acronym>RGB
             </acronym>色です。
@@ -439,12 +439,12 @@
             (from the plug-in author himself).
           </para>
           <para lang="ja">
-            モノクロモードで <guilabel>明度維持(<accel>L</accel>)</guilabel> 
+            モノクロモードで <guilabel>明度維持</guilabel> 
             が作用する様子と留意点をプラグイン作者はつぎのように述べています。
             <quote>
               仮にスライダを赤75%、 緑75%、 青0%に操作したとしましょう。 
-              <guilabel>モノクロ(<accel>M</accel>)</guilabel> モードで 
-              <guilabel>明度維持(<accel>L</accel>)</guilabel> 無効とすると、 
+              <guilabel>モノクロ</guilabel> モードで 
+              <guilabel>明度維持</guilabel> 無効とすると、 
               結果の画像では75%+75%+0%=150%なのでどうしようもなく明るくなって
               しまいます。 例えば<acronym>RGB</acronym>値が(127,100,80)の画素は
               どのチャンネルにも 127&times;0.75 + 100&times;0.75 + 80&times;0 =
@@ -472,7 +472,7 @@
               よってその対象は異なります。 基本的には赤チャンネルはコントラスト
               の操作によくなじみます。 緑チャンネルは細部の印象を変える目的に、
               青チャンネルはノイズや粒度の変更によく適合します。 
-              <link linkend="plug-in-decompose-registered">チャンネル分解(D)...
+              <link linkend="plug-in-decompose-registered">チャンネル分解...
               </link> コマンドも使えます。
             </para>
           </note>

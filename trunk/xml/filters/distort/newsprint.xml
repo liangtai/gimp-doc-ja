@@ -7,10 +7,10 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-09 de added by axel.wernicke
 -->
-<!--2009-07-21-->
+<!--2009-09-15-->
 <sect2 id="plug-in-newsprint">
   <title lang="en">Newsprint</title>
-  <title lang="ja">新聞印刷(T)...</title>
+  <title lang="ja">新聞印刷...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -93,7 +93,7 @@
       white may be controlled.
     </para>
     <para lang="ja">
-      <guimenuitem>新聞印刷(<accel>T</accel>)...</guimenuitem> フィルタは団子状
+      <guimenuitem>新聞印刷...</guimenuitem> フィルタは団子状
       のドットを用いたディザリングにより画像を網点化します。 網点とは多段階の
       灰色陰影画像や色変化に連続性のあるカラー画像を、 ある種の印刷機や植字機の
       ような2階調デバイスをはじめとする色数の極めて限られたデバイスで描画する
@@ -124,7 +124,7 @@
     <para lang="ja">
       明らかに升目の区画を大きくとれば解像度はガタ落ちになります。 各区画に
       描かれる点は円形をしており、 大きくなると菱形になります。 形状の変化は
-      <guilabel>スポット形状(<accel>S</accel>)</guilabel> で制御できます。 
+      <guilabel>スポット形状</guilabel> で制御できます。 
       スポット形状をいろいろ使えば点の伸縮で真っ白から真っ黒まで各区画の表現を
       自在に制御できます。
     </para>
@@ -144,9 +144,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>変形(<accel>D</accel>)</guisubmenu>
-        <guimenuitem>新聞印刷(<accel>T</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>新聞印刷...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -167,7 +167,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Preview</term>
-        <term lang="ja">プレビュー(P)</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
           <para lang="en">
             All your setting changes will appear in the Preview without
@@ -178,7 +178,7 @@
             much slow.
           </para>
           <para lang="ja">
-            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            <guilabel>プレビュー</guilabel> オプションを有効
             にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て分かるようになっています。
             お使いのコンピュータが処理に時間を多く費すときはプレビューに
@@ -201,7 +201,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Input SPI</term>
-              <term lang="ja">入力 SPI(I)</term>
+              <term lang="ja">入力 SPI</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Input SPI</guilabel>
@@ -210,7 +210,7 @@
                   image's resolution.
                 </para>
                 <para lang="ja">
-                  <guilabel>入力 SPI(<accel>I</accel>)</guilabel>: 元画像の入力
+                  <guilabel>入力 SPI</guilabel>: 元画像の入力
                   解像度を標本密度<acronym>SPI</acronym>(<foreignphrase>Samples
                   Per Inch</foreignphrase>) で示します。
                   自動的に元画像の印刷解像度で初期化されます。
@@ -219,14 +219,14 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Output LPI</term>
-              <term lang="ja">出力 LPI(U)</term>
+              <term lang="ja">出力 LPI</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Output LPI</guilabel>: Desired output
                   resolution, in Lines Per Inch (LPI).
                 </para>
                 <para lang="ja">
-                  <guilabel>出力 LPI(<accel>U</accel>)</guilabel>: スクリーン
+                  <guilabel>出力 LPI</guilabel>: スクリーン
                   線数<acronym>LPI</acronym>(<foreignphrase>Lines Per Inch
                   </foreignphrase>) で出力解像度を調節します。
                 </para>
@@ -234,14 +234,14 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Cell Size</term>
-              <term lang="ja">セルサイズ(E)</term>
+              <term lang="ja">セルサイズ</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Cell Size</guilabel>: Resulting cell size, in
                   pixels.  Most often you will want to set this directly.
                 </para>
                 <para lang="ja">
-                  <guilabel>セルサイズ(<accel>E</accel>)</guilabel>: 区画の
+                  <guilabel>セルサイズ</guilabel>: 区画の
                   結果的な大きさをピクセル単位で指定します。 だいたいいつも
                   ここで直接設定されることになるでしょう。
                 </para>
@@ -257,7 +257,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Separate To RGB, CMYK, Intensity</term>
-              <term lang="ja">分離方法: RGB, CMYK, 強度(N)</term>
+              <term lang="ja">分離方法: RGB, CMYK, 強度</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Separate To RGB, CMYK, Intensity</guilabel>:
@@ -283,7 +283,7 @@
                   モードではまず内部的に<acronym>CMYK</acronym>色空間に転換され
                   各色チャンネルが個別に網点処理されたあとで最終的には<acronym>
                   RGB</acronym>画像に再統合されます。 <guilabel>
-                  強度(<accel>N</accel>)</guilabel> モードでは画像が内部的に
+                  強度</guilabel> モードでは画像が内部的に
                   グレースケール化されてから網点処理が行なわれ、 その結果が元の
                   画像のアルファチャンネルに転化されます。 この出力は特別な効果
                   にうまく使えそうですが、 最良な結果を出すには少し経験を必要と
@@ -294,34 +294,34 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Black Pullout (%)</term>
-              <term lang="ja">黒弱め (%)(L)</term>
+              <term lang="ja">黒弱め (%)</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Black Pullout (%)</guilabel> When doing
                   RGB-&gt;CMYK conversion, how much K (black) should be used?
                 </para>
                 <para lang="ja">
-                  <guilabel>Black Pullout (%)(<accel>L</accel>)</guilabel>: 
+                  <guilabel>黒弱め (%)</guilabel>: 
                   <acronym>RGB</acronym>から<acronym>CMYK</acronym>に空間の転換
                   をする場合にどの程度黒(K)を使うかを指定します。 100%で最も黒
                   が強くなります。 <guilabel><accel>R</accel>GB</guilabel> や 
-                  <guilabel>強度(<accel>N</accel>)</guilabel> を選んだ場合は
+                  <guilabel>強度</guilabel> を選んだ場合は
                   このオプションは灰色無効となって利用できません。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Lock Channels</term>
-              <term lang="ja">チャンネル固定(L)</term>
+              <term lang="ja">チャンネル固定</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Lock Channels</guilabel>: Make channel
                   modifications apply to all channels.
                 </para>
                 <para lang="ja">
-                  <guilabel>チャンネル固定(<accel>L</accel>)</guilabel> を有効
-                  にした場合、 整列する網点の <guilabel>角度(<accel>A</accel>)
-                  </guilabel> や <guilabel>スポット形状(<accel>S</accel>)
+                  <guilabel>チャンネル固定</guilabel> を有効
+                  にした場合、 整列する網点の <guilabel>角度
+                  </guilabel> や <guilabel>スポット形状
                   </guilabel> の設定をすると他の全てのチャンネルに変更が
                   及びます。 [角度の調節を行なうと網点が揃ってしまい合成黒が
                   目立ち過ぎる結果になるので注意しましょう。]
@@ -330,30 +330,30 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Factory Defaults</term>
-              <term lang="ja">初期値に戻す(F)</term>
+              <term lang="ja">初期値に戻す</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Factory Defaults</guilabel>: Restore the
                   default settings which should give pleasing results.
                 </para>
                 <para lang="ja">
-                  <guibutton>初期値に戻す(<accel>F</accel>)</guibutton> ボタン
-                  は <guilabel>角度(<accel>A</accel>)</guilabel> と <guilabel>
-                  スポット形状(<accel>S</accel>)</guilabel> の設定値を元に
+                  <guibutton>初期値に戻す</guibutton> ボタン
+                  は <guilabel>角度</guilabel> と <guilabel>
+                  スポット形状</guilabel> の設定値を元に
                   戻します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Angle</term>
-              <term lang="ja">角度(A)</term>
+              <term lang="ja">角度</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Angle</guilabel>: Cell grid angle for this
                   channel.
                 </para>
                 <para lang="ja">
-                  <guilabel>角度(<accel>A</accel>)</guilabel> とはスクリーン
+                  <guilabel>角度</guilabel> とはスクリーン
                   角度のことであり、 セルの整列方角を示しています。 0.0 が9時の
                   方向をさし、 時計回りに 360.0 までの角度の範囲で指定して
                   ください。
@@ -362,14 +362,14 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Spot Function</term>
-              <term lang="ja">スポット形状(S)</term>
+              <term lang="ja">スポット形状</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Spot Function</guilabel>: Spot function to
                   be used for this channel (see preview in blue cell-boxes).
                 </para>
                 <para lang="ja">
-                  <guilabel>スポット形状(<accel>S</accel>)</guilabel> もその
+                  <guilabel>スポット形状</guilabel> もその
                   チャンネルごとに設定できます (プレビューで青色区画の状態を
                   ご覧ください)。
                 </para>
@@ -403,7 +403,7 @@
           <variablelist>
             <varlistentry>
               <term lang="en">Oversample</term>
-              <term lang="ja">オーバーサンプル(V)</term>
+              <term lang="ja">オーバーサンプル</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Oversample</guilabel>: Number of subpixels to
@@ -412,7 +412,7 @@
                   very long filter runtimes!
                 </para>
                 <para lang="ja">
-                  <guilabel>オーバーサンプル(<accel>V</accel>)</guilabel>:
+                  <guilabel>オーバーサンプル</guilabel>:
                   出力側の画素の値を得るため標本にとられるサブピクセルの個数を
                   設定します。 1個に設定するとこの機能は無効です。 ご注意:
                   あまり大きな数を指定すると処理時間が非常に長くなります。

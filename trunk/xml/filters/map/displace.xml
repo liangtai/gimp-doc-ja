@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -15,10 +15,10 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-10-14 ceated by julien hardelin
 -->
-<!--2009-08-16-->
+<!--2009-09-15-->
 <sect2 id="plug-in-displace">
   <title lang="en">Displace</title>
-  <title lang="ja">ずらしマップ(D)...</title>
+  <title lang="ja">ずらしマップ...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -101,11 +101,11 @@
       </emphasis>. This filter allows interesting distortion effects.
     </para>
     <para lang="ja">
-      <guimenuitem>ずらしマップ(<accel>D</accel>)...</guimenuitem> フィルタは
+      <guimenuitem>ずらしマップ...</guimenuitem> フィルタは
       画像に対応する<quote>ずらしマップ</quote>を用いて画素ごとにずらし方を調節
       できます。 このフィルタは描画対象 (活性レイヤーや選択範囲) の画素を、 
-      同じ位置のずらしマップの画素の濃さに <guilabel>X ずらし(<accel>X</accel>)
-      </guilabel> や <guilabel>Y ずらし(<accel>Y</accel>)</guilabel> の値を乗算
+      同じ位置のずらしマップの画素の濃さに <guilabel>X ずらし
+      </guilabel> や <guilabel>Y ずらし</guilabel> の値を乗算
       した値に基づいて X 方向と Y 方向にそれぞれ移動させます。 <emphasis>X 方向
       と Y 方向のいずれのずらしマップも適用を受ける描画対象と同じ寸法でなければ
       なりません。</emphasis> [このフィルタはずらしマップに選ばれた画像を
@@ -128,9 +128,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>マップ(<accel>M</accel>)</guisubmenu>
-        <guimenuitem>ずらしマップ(<accel>D</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>ずらしマップ...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -151,13 +151,13 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Preview</term>
-        <term lang="ja">プレビュー(P)</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
           <para lang="en">
             Uncheck this option if your processor is slow.
           </para>
           <para lang="ja">
-            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            <guilabel>プレビュー</guilabel> オプションを有効
             にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て分かるようになっています。
             お使いのコンピュータが処理に時間を多く費すときはプレビューに
@@ -213,7 +213,7 @@
                 the opposite edge.
               </para>
               <para lang="ja">
-                <guilabel>回り込み(<accel>W</accel>)</guilabel>: この選択肢は
+                <guilabel>回り込み</guilabel>: この選択肢は
                 ずらされてはみ出した画素を反対側の縁で利用します。
               </para>
             </listitem>
@@ -225,7 +225,7 @@
                 image.
               </para>
               <para lang="ja">
-                <guilabel>ぼかす(<accel>S</accel>)</guilabel>: この選択肢は
+                <guilabel>ぼかす</guilabel>: この選択肢は
                 画素が去って空になった領域を付近の画素の色の延伸で補います。
               </para>
             </listitem>
@@ -236,7 +236,7 @@
                 with black.
               </para>
               <para lang="ja">
-                <guilabel>黒(<accel>B</accel>)</guilabel>: この選択肢は画素が
+                <guilabel>黒</guilabel>: この選択肢は画素が
                 去って空になった領域を黒く塗りつぶします。
               </para>
             </listitem>
@@ -287,7 +287,7 @@
       <variablelist>
         <varlistentry>
           <term lang="en">X/Y Displacements</term>
-          <term lang="ja">X ずらし(X); Y ずらし(Y)</term>
+          <term lang="ja">X ずらし; Y ずらし</term>
           <listitem>
             <para lang="en">
               If the respective option is activated, image pixels
@@ -340,8 +340,8 @@
               から 255 までなら左方向や上方向に画像の画素を移動させます。
             </para>
             <para lang="ja">
-              記入した <guilabel>X ずらし(<accel>X</accel>)</guilabel> 係数や
-              <guilabel>Y ずらし(<accel>Y</accel>)</guilabel> 係数はそのまま
+              記入した <guilabel>X ずらし</guilabel> 係数や
+              <guilabel>Y ずらし</guilabel> 係数はそのまま
               移動距離を示しているのではありません。 移動距離を求める計算式 
               <inlineequation>
                 <alt role="tex">
@@ -409,7 +409,7 @@
       <variablelist>
         <varlistentry>
           <term lang="en">Pinch</term>
-          <term lang="ja">ひねり(P)</term>
+          <term lang="ja">ひねり</term>
           <listitem>
             <para lang="en">
               If this option is activated, the radial coordinates (i.e. the
@@ -436,8 +436,8 @@
               128 から 255 までの値ならば対象レイヤーの画素は中心に近づきます。
             </para>
             <para lang="ja">
-              ここで設定した値とずらしマップとの関係は前述の<quote>X ずらし(X);
-              Y ずらし(Y)</quote>を参考にしてください。
+              ここで設定した値とずらしマップとの関係は前述の<quote>X ずらし;
+              Y ずらし</quote>を参考にしてください。
             </para>
             <para lang="ja">
               ずらしの規模は極点からの距離には関係なく、 どの画素も同程度の移動
@@ -471,7 +471,7 @@
         </varlistentry>
         <varlistentry>
           <term lang="en">Whirl</term>
-          <term lang="ja">回転(W)</term>
+          <term lang="ja">回転</term>
           <listitem>
             <para lang="en">
               If this option is activated, the angular coordinates of the
@@ -547,9 +547,9 @@
           その画像もしくはレイヤーの複製を作ります。 複製側を活性化して
           (画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>画像(<accel>I</accel>)</guimenu>
-            <guisubmenu>モード(<accel>M</accel>)</guisubmenu>
-            <guimenuitem>グレースケール(<accel>G</accel>)</guimenuitem>
+            <guimenu>画像</guimenu>
+            <guisubmenu>モード</guisubmenu>
+            <guimenuitem>グレースケール</guimenuitem>
           </menuchoice> で)
           グレースケール化します。 そこにお好みのグラデーションをつけます。
           これが対象画像と寸法が同じ <emphasis>ずらしマップ</emphasis> と
@@ -575,9 +575,9 @@
           対象画像もしくはレイヤーを活性化します。 そこに何かテキストを貼って 
           <emphasis>テキストレイヤー</emphasis> として加えます。 そのレイヤーを
           画像と同じ大きさにします。 やり方は、 画像ウィンドウのメニューの
-          <guimenu>画像(<accel>I</accel>)</guimenu> メニューからもしくは
+          <guimenu>画像</guimenu> メニューからもしくは
           レイヤーダイアログの脈絡メニューを呼び出して <guimenuitem>
-          レイヤーをキャンバスに合わせる(<accel>I</accel>)</guimenuitem> 
+          レイヤーをキャンバスに合わせる</guimenuitem> 
           コマンドを実行します。 ちなみにテキストレイヤーは文字と透明な背景で
           できており、 フィルタは完全透過ピクセルを移動しないため文字の画素
           だけがずらせます。
@@ -598,7 +598,7 @@
         <para lang="ja">
           テキストレイヤーを活性化させます。 ずらしマップフィルタを呼び出し、
           プレビュー画面を参考にしながらパラメータ、 とりわけ係数の調節を行い
-          ます。 <guibutton>OK(<accel>O</accel>)</guibutton> ボタンをクリック
+          ます。 <guibutton>OK</guibutton> ボタンをクリック
           して実行です。
         </para>
       </step>

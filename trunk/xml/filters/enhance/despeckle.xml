@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -8,10 +8,10 @@
   050930 de replaced informalfigure by axel.wernicke
   050830 de added by axel.wernicke
 -->
-<!--2009-7-13-->
+<!--2009-9-15-->
 <sect2 id="plug-in-despeckle">
   <title lang="en">Despeckle</title>
-  <title lang="ja">ノイズ除去(P)...</title>
+  <title lang="ja">ノイズ除去...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -35,12 +35,12 @@
     <title lang="ja">概観</title>
     <para lang="en">
       It is used to remove small defects due to dust, or scratches, on a
-      scanned image, and also moiré effect on image scanned from a magazine.
+      scanned image, and also moire effect on image scanned from a magazine.
       You ought to select isolated defects before applying this filter, in
       order to avoid unwanted changes in other areas of your image.
     </para>
     <para lang="ja">
-      <guimenuitem>ノイズ除去(<accel>P</accel>)...</guimenuitem> フィルタは
+      <guimenuitem>ノイズ除去...</guimenuitem> フィルタは
       スキャナでとり込んだ画像に付いてくるごみやかすり傷などの小さな傷みや、
       スキャナでとり込んだ雑誌の紙面画像にかかる 
       <link linkend="glossary-moire">モアレ</link> 現象を除去するのに使えます。
@@ -63,9 +63,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>強調(<accel>H</accel>)</guisubmenu>
-        <guimenuitem>ノイズ除去(<accel>P</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>強調</guisubmenu>
+        <guimenuitem>ノイズ除去...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -90,13 +90,13 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Preview</term>
-        <term lang="ja">プレビュー(P)</term>
+        <term lang="ja">プレビュー</term>
         <listitem>
           <para lang="en">
             Parameter setting results are interactively displayed in preview.
           </para>
           <para lang="ja">
-            <guilabel>プレビュー(<accel>P</accel>)</guilabel> オプションを有効
+            <guilabel>プレビュー/guilabel> オプションを有効
             にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て分かるようになっています。
           </para>
@@ -115,10 +115,10 @@
                 It renders a result smoother than with radius alone.
               </para>
               <para lang="ja">
-                <guilabel>適応的(<accel>A</accel>)</guilabel>: 画像もしくは
+                <guilabel>適応的</guilabel>: 画像もしくは
                 選択範囲の内容に最適な半径の値をヒストグラムを用いながら設定
                 します。 このオプションが有効な場合は <guilabel>
-                半径(<accel>R</accel>)</guilabel> スライダの値が無視されます。
+                半径</guilabel> スライダの値が無視されます。
                 半径を直に単独で設定するよりは滑らかな仕上がりになります。
               </para>
             </listitem>
@@ -128,7 +128,7 @@
                 which gets stronger.
               </para>
               <para lang="ja">
-                <guilabel>再帰的(<accel>E</accel>)</guilabel>: フィルタの実行を
+                <guilabel>再帰的</guilabel>: フィルタの実行を
                 繰り返しますので効果が強く出ます。
               </para>
             </listitem>
@@ -137,7 +137,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Radius</term>
-        <term lang="ja">半径(R)</term>
+        <term lang="ja">半径</term>
         <listitem>
           <para lang="en">
             <guilabel>Radius</guilabel>: Sets size of action window
@@ -146,7 +146,7 @@
             imperfections are removed.
           </para>
           <para lang="ja">
-            <guilabel>半径(<accel>R</accel>)</guilabel>: 作用窓の大きさを 1 
+            <guilabel>半径</guilabel>: 作用窓の大きさを 1 
             (3&times;3ピクセル) から 20 (41&times;41ピクセル) の範囲で設定
             します。 この窓が画像[の選択範囲]内を走り廻り、 窓に入った色を
             ならすことで画像の欠陥をとり除いてゆきます。
@@ -155,28 +155,28 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Black level</term>
-        <term lang="ja">黒レベル(B)</term>
+        <term lang="ja">黒レベル</term>
         <listitem>
           <para lang="en">
             <guilabel>Black level</guilabel>: Removes pixels darker
             than set value (0-255).
           </para>
           <para lang="ja">
-            <guilabel>黒レベル(<accel>B</accel>)</guilabel>: ここで設定した
+            <guilabel>黒レベル</guilabel>: ここで設定した
             値よりも暗い画素から色をとり除きます。 範囲は 0 から 255 です。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">White level</term>
-        <term lang="ja">白レベル(W)</term>
+        <term lang="ja">白レベル</term>
         <listitem>
           <para lang="en">
             <guilabel>White level</guilabel>: Removes pixels whiter
             than set value (0-255).
           </para>
           <para lang="ja">
-            <guilabel>白レベル(<accel>W</accel>)</guilabel>: ここで指定した
+            <guilabel>白レベル</guilabel>: ここで指定した
             値よりも明るい画素から色をとり除きます。 範囲は 0 か 255 です。
           </para>
         </listitem>

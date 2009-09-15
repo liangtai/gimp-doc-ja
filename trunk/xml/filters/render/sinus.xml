@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -6,10 +6,10 @@
   2005-12-08 <simplesect> replaced by <sect3> by lexa
   2005/09/21 de added by axel.wernicke
 -->
-<!--2009-08-27-->
+<!--2009-09-15-->
 <sect2 id="plug-in-sinus">
   <title lang="en">Sinus</title>
-  <title lang="ja">Sin 曲線(S)...</title>
+  <title lang="ja">Sin 曲線...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -70,14 +70,14 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>下塗り(<accel>R</accel>)</guisubmenu>
-        <guisubmenu>パターン(<accel>P</accel>)</guisubmenu>
-        <guimenuitem>Sin 曲線(<accel>S</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guisubmenu>パターン</guisubmenu>
+        <guimenuitem>Sin 曲線...</guimenuitem>
       </menuchoice>
     </para>
     <para lang="ja">
-      <guimenuitem>Sin 曲線(<accel>S</accel>)...</guimenuitem> フィルタは
+      <guimenuitem>Sin 曲線...</guimenuitem> フィルタは
       正弦曲線を基にした文様を作成し、 いくぶん波紋織の絹生地のように、 また
       ベニヤ板な見え方になったりもします。 <quote>色</quote>タブではこの
       プラグインが文様を描くのに使う相異なる2つの色を指定します。 この2色が
@@ -108,7 +108,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Settings tab</term>
-        <term lang="ja">設定(S)タブ</term>
+        <term lang="ja">設定タブ</term>
         <listitem>
           <variablelist>
             <varlistentry>
@@ -129,7 +129,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Complexity</term>
-              <term lang="ja">複雑度(M)</term>
+              <term lang="ja">複雑度</term>
               <listitem>
                 <para lang="en">
                   This controls how the two colors interact with each other
@@ -143,7 +143,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Random Seed</term>
-              <term lang="ja">乱数種(A)</term>
+              <term lang="ja">乱数種</term>
               <listitem>
                 <para lang="en">
                   <guilabel>Random Seed</guilabel> controls the random
@@ -161,15 +161,15 @@
                   checked, the filter remembers the last random seed used.
                 </para>
                 <para lang="ja">
-                  <guilabel>乱数種(<accel>A</accel>)</guilabel> はフィルタの
+                  <guilabel>乱数種</guilabel> はフィルタの
                   不規則なふるまいを制御します。 同じ乱数種を同じ条件下で使用
                   するとフィルタは全く同じ結果を生みます。 乱数種が異なれば
                   別の結果が出ます。 乱数種は数値記入欄から直接与えるほか、 
-                  <guibutton>新しい種(<accel>N</accel>)</guibutton> ボタンを
+                  <guibutton>新しい種</guibutton> ボタンを
                   クリックして無作為に発行させる方法もあります。
                 </para>
                 <para lang="ja">
-                  <guilabel>乱数化(<accel>R</accel>)</guilabel> オプションを
+                  <guilabel>乱数化</guilabel> オプションを
                   有効にすると乱数種の記入欄は灰色無効となって、 直接指定が
                   できなくなりますが、 代わりにフィルタを呼び出した時点で自動的
                   に乱数種が生成され利用されます。 無効にしておれば前回利用した
@@ -179,7 +179,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Force Tiling?</term>
-              <term lang="ja">強制的に並べる?(F)</term>
+              <term lang="ja">強制的に並べる?</term>
               <listitem>
                 <para lang="en">
                   If you check this, you'll get a pattern that can be
@@ -196,7 +196,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Ideal/Distorted</term>
-              <term lang="ja">典型(I), ゆがめる(D)</term>
+              <term lang="ja">典型, ゆがめる</term>
               <listitem>
                 <para lang="en">
                   This option gives additional control of the interaction
@@ -205,9 +205,9 @@
                 </para>
                 <para lang="ja">
                   これは使われる2つの色が互いに影響しあうときの処理を調整する
-                  付加的なオプションです。 <guilabel>ゆがめる(<accel>D</accel>)
+                  付加的なオプションです。 <guilabel>ゆがめる
                   </guilabel> を選んだ場合の2色間の相互作用は 
-                  <guilabel>典型(<accel>I</accel>)</guilabel> を選んだ場合に
+                  <guilabel>典型</guilabel> を選んだ場合に
                   比べより歪んだものになります。
                 </para>
               </listitem>
@@ -287,16 +287,16 @@
                   Sinusoidal.
                 </para>
                 <para lang="ja">
-                  波形を生成する関数には <guilabel>線形(<accel>I</accel>)
-                  </guilabel>、 <guilabel>双線型(<accel>N</accel>)</guilabel>、
-                  <guilabel>波状(<accel>U</accel>)</guilabel> のいずれかを
+                  波形を生成する関数には <guilabel>線形
+                  </guilabel>、 <guilabel>双線型</guilabel>、
+                  <guilabel>波状</guilabel> のいずれかを
                   選びます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term lang="en">Exponent</term>
-              <term lang="ja">指数(E)</term>
+              <term lang="ja">指数</term>
               <listitem>
                 <para lang="en">
                   The Exponent controls which of the two colors is
@@ -306,9 +306,9 @@
                   way around. A zero value is neutral.
                 </para>
                 <para lang="ja">
-                  <guilabel>指数(<accel>E</accel>)</guilabel> スライダは2色の
+                  <guilabel>指数</guilabel> スライダは2色の
                   うちどちらがどの程度優勢となるかを設定します。 この値を -7.5 
-                  にすると<quote>色(L)</quote>タブで指定した色のうち、 白黒なら
+                  にすると<quote>色</quote>タブで指定した色のうち、 白黒なら
                   黒が、 描画色と背景色なら描画色が、 色だまりボタンでは右側の
                   色が完全に画像を塗りつぶします。 逆にこの値を 7.5 とすると
                   もう一方の色が完全支配します。 値が 0.0 なら中立的に
