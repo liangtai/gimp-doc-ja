@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -6,10 +6,10 @@
    2008-06-07 ude: added new sections: Refresh, Console, Server
    2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2009-08-25-->
+<!--2009-09-12-->
 <sect2 id="gimp-filters-script-fu">
   <title lang="en">The <quote>Script-Fu</quote> Submenu</title>
-  <title lang="ja"><quote>Script-Fu(S)</quote>サブメニュー</title>
+  <title lang="ja"><quote>Script-Fu</quote>サブメニュー</title>
 
   <indexterm lang="en">
     <primary>Script-Fu</primary>
@@ -40,7 +40,7 @@
         -->
   </para>
   <para lang="ja">
-    <guisubmenu>Script-Fu(<accel>S</accel>)</guisubmenu> サブメニューには
+    <guisubmenu>Script-Fu</guisubmenu> サブメニューには
     Script-FuコンソールをはじめScript-Fu関連のコマンドが入っています。 
     <link linkend="gimp-concepts-script-fu">Script-Fu</link> は<acronym>GIMP
     </acronym>のコマンドを自動的に実行させるスクリプトを書くための言語の一種
@@ -61,8 +61,8 @@
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-            <guisubmenu>Script-Fu(<accel>S</accel>)</guisubmenu>
+            <guimenu>フィルタ</guimenu>
+            <guisubmenu>Script-Fu</guisubmenu>
           </menuchoice>
         </para>
       </listitem>
@@ -71,7 +71,7 @@
 
   <sect3 id="script-fu-refresh">
     <title lang="en">Refresh Scripts</title>
-    <title lang="ja">スクリプトを再読み込み(R)</title>
+    <title lang="ja">スクリプトを再読み込み</title>
     <para lang="en">
       You will need this command every time you add, remove, or change a
       Script-Fu script. The command causes the Script-Fus to be reloaded and
@@ -100,7 +100,7 @@
 
   <sect3 id="plug-in-script-fu-console">
     <title lang="en">Script-Fu Console</title>
-    <title lang="ja">Script-Fu コンソール(C)</title>
+    <title lang="ja">Script-Fu コンソール</title>
     <para lang="en">
       The Script-Fu console is a dialog window where you can interactively
       test Scheme commands.
@@ -149,7 +149,7 @@
       <title lang="ja">Script-Fuコンソールのボタン</title>
       <varlistentry>
         <term lang="en">Browse</term>
-        <term lang="ja">参照(B)...</term>
+        <term lang="ja">参照...</term>
         <listitem>
           <para lang="en">
             This button is next to the Scheme commands textbox. When
@@ -158,11 +158,11 @@
             up, with an additional button at the bottom of the window:
           </para>
           <para lang="ja">
-            <guibutton>参照(<accel>B</accel>)</guibutton> ボタンはScheme命令の
+            <guibutton>参照</guibutton> ボタンはScheme命令の
             記入欄の右隣にあります。 クリックすると 
             <link linkend="plug-in-dbbrowser">プロシージャブラウザ</link> が
             開かれます。 プロシージャブラウザには 
-            <guibutton>適用(<accel>A</accel>)</guibutton> ボタンがついています。
+            <guibutton>適用</guibutton> ボタンがついています。
           </para>
           <mediaobject>
             <imageobject>
@@ -184,7 +184,7 @@
             text box:
           </para>
           <para lang="ja">
-            プロシージャブラウザの <guibutton>適用(<accel>A</accel>)
+            プロシージャブラウザの <guibutton>適用
             </guibutton> ボタンをクリックすると、 ブラウザで選択した手続き命令
             のコードがコンソールのScheme命令記入欄に貼り付けられます。
           </para>
@@ -215,20 +215,20 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Close</term>
-        <term lang="ja">閉じる(C)</term>
+        <term lang="ja">閉じる</term>
         <listitem>
           <para lang="en">
             Pressing this button closes the  Script-Fu console.
           </para>
           <para lang="ja">
-            <guibutton>閉じる(<accel>C</accel>)</guibutton> ボタンをクリック
+            <guibutton>閉じる</guibutton> ボタンをクリック
             するとScript-Fuコンソールを閉じます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Clear</term>
-        <term lang="ja">クリア(C)</term>
+        <term lang="ja">クリア</term>
         <listitem>
           <para lang="en">
             Wenn you click on this button, the content of the main window will
@@ -236,17 +236,17 @@
             the <guilabel>Save</guilabel> command.
           </para>
           <para lang="ja">
-            <guibutton>クリア(<accel>C</accel>)</guibutton> ボタンをクリック
+            <guibutton>クリア</guibutton> ボタンをクリック
             すると、 主ウィンドウ部分から現在のコマンド出力の表示が消えます。
             ちなみにコンソール出力に表示された内容は <guibutton>
-            保存(<accel>S</accel>)</guibutton> していても一旦クリアすると
+            保存</guibutton> していても一旦クリアすると
             復元ができません。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Save</term>
-        <term lang="ja">保存(S)</term>
+        <term lang="ja">保存</term>
         <listitem>
           <para lang="en">
             This command lets you save the content of the main window, that is
@@ -254,7 +254,7 @@
             <quote><code>&gt;</code></quote>-characters).
           </para>
           <para lang="ja">
-            <guibutton>保存(<accel>S</accel>)</guibutton> コマンドは主
+            <guibutton>保存</guibutton> コマンドは主
             ウィンドウ、 つまりScript-Fuの出力表示の内容をそっくりそのまま (
             エコーバック行の<quote><code>&gt;</code></quote>記号も含め) 
             テキスト形式のファイルとして保存します。 ボタンをクリックすると
@@ -268,13 +268,13 @@
 
   <sect3 id="plug-in-script-fu-server">
     <title lang="en">Start Server</title>
-    <title lang="ja">サーバスタート(S)...</title>
+    <title lang="ja">サーバスタート...</title>
     <para lang="en">
       This command will start a server, which reads and executes Script-Fu
       (Scheme) statements you send him via a specified port.
     </para>
     <para lang="ja">
-      <guimenuitem>サーバスタート(<accel>S</accel>)...</guimenuitem> コマンドは
+      <guimenuitem>サーバスタート...</guimenuitem> コマンドは
       サーバプログラムを起動します。 起動時に指定したポートを介してサーバに
       Script-Fu命令 (Scheme言語のコード) を送ると解釈され実行されます。
     </para>

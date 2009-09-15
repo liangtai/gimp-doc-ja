@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -10,10 +10,10 @@
   2006-12-23 ude: added de translation
   2005-11-26: created by julien hardelin.
 -->
-<!--2009-06-30-->
+<!--2009-09-12-->
 <sect2 id="plug-in-retinex">
   <title lang="en">Retinex</title>
-  <title lang="ja">レティネックス(X)...</title>
+  <title lang="ja">レティネックス...</title>
 
   <indexterm lang="en">
     <primary>Colors</primary>
@@ -75,7 +75,7 @@
       poorly visible structures in X-rays or scanners.
     </para>
     <para lang="ja">
-      <guimenuitem>レティネックス(<accel>X</accel>)...</guimenuitem> フィルタは
+      <guimenuitem>レティネックス...</guimenuitem> フィルタは
       明るさの不十分な画像の見た目を改善する描画を行ないます。 光の乏しいところ
       でもヒトの目は色を見分けられるのにカメラやビデオカメラはそれがちゃんと
       処理できません。 レティネックスフィルタの根幹をなす<acronym>MSRCR
@@ -104,8 +104,8 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>色(<accel>C</accel>)</guimenu>
-        <guimenuitem>レティネックス(<accel>X</accel>)...</guimenuitem>
+        <guimenu>色</guimenu>
+        <guimenuitem>レティネックス...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -132,7 +132,7 @@
       help out the experimented GIMP user.
     </para>
     <para lang="ja">
-      これらのオプションは数学者や形象技術者<!--???-->だけしか理解できない
+      これらのオプションは数学者や医用画像処理の技術者だけしか理解できない
       思考回路を要求します。 実用的な面では、 最適な設定を模索していくしか他に
       方法がありません。 それでもつぎの説明は試され済みの<acronym>GIMP
       </acronym>ユーザにとっては役立つ情報だと思います。
@@ -140,7 +140,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Level</term>
-        <term lang="ja">レベル(L)</term>
+        <term lang="ja">レベル</term>
         <listitem>
           <para lang="en">
             Here is what the plug-in author writes on his site
@@ -152,13 +152,13 @@
              image size)</quote>...
           </para>
           <para lang="ja">
-            このプラグイン作者が自身のサイト
-            <xref linkend="bibliography-online-plugin-retinex"/>:
-            に書いたコメントはつぎのとおりです。 <quote>To characterize color
-            variations and the lightor, we make a difference between (gaussian)
-            filters responses at different scales. These parameters allow to
-            specify how to allocate scale values between min scale (sigma 2.0)
-            and max (sigma equal to the image size)</quote>...
+            このプラグイン作者が自身のサイト 
+            <xref linkend="bibliography-online-plugin-retinex"/>
+            でつぎのようなことを述べています。 <quote>色の変わりようと光源を
+            特定するためガウスフィルタを使い規模を違えて結果の差異を比較
+            します。 これらのパラメータは最小規模 (シグマ値が2.0) から
+            最大規模 (画像サイズと同じシグマ値) までの間でそれぞれのガウス
+            フィルタに与える規模の値をどのように置くかを決めます。</quote>...
           </para>
           <variablelist>
             <varlistentry>
@@ -185,7 +185,7 @@
                 </para>
                 <para lang="ja">
                   原則として <guimenuitem>低い</guimenuitem> は画像の弱いところ
-                  を重点的に<quote>fire up させ</quote> (燃え上がらせ) ます。
+                  を重点的に<quote>flare up させ</quote> (燃え上がらせ) ます。
                 </para>
               </listitem>
             </varlistentry>
@@ -210,7 +210,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Scale</term>
-        <term lang="ja">スケール(S)</term>
+        <term lang="ja">スケール</term>
         <listitem>
           <para lang="en">
             Determines the depth of the Retinex scale. Minimum value is 16, a
@@ -226,7 +226,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Scale division</term>
-        <term lang="ja">スケール分割(S)</term>
+        <term lang="ja">スケール分割</term>
         <listitem>
           <para lang="en">
             Determines the number of iterations in the multiscale Retinex
@@ -246,7 +246,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Dynamic</term>
-        <term lang="ja">動的(D)</term>
+        <term lang="ja">動的</term>
         <listitem>
           <para lang="en">
             As the MSR algorithm tends to make the image lighter, this slider

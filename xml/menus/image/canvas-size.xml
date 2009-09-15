@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -9,10 +9,10 @@
   2006-07-28 scb: revised 'en'
   2006-02-25 fixed invalid image reference
 -->
-<!--2006-06-23-->
+<!--2006-09-12-->
 <sect2 id="gimp-image-resize">
   <title lang="en">Canvas Size</title>
-  <title lang="ja">キャンバスサイズの変更(V)...</title>
+  <title lang="ja">キャンバスサイズの変更...</title>
 
   <indexterm lang="en">
     <primary>Image</primary>
@@ -48,7 +48,7 @@
   <para lang="ja">
     <quote>キャンバス</quote>とは画像の可視領域のことです。 初期設定では
     キャンバスの大きさはレイヤーの大きさとぴったり一致しています。 
-    <guimenuitem>キャンバスサイズの変更(<accel>V</accel>)...</guimenuitem> 
+    <guimenuitem>キャンバスサイズの変更...</guimenuitem> 
     コマンドはキャンバスを拡げたり狭めたりできるダイアログを開きます。 必要が
     あればレイヤーの大きさもここで変更できます。 キャンバスを拡げると元の画像の
     回りに何もない領域ができます。 狭めると可視領域が切り詰められますが、 
@@ -76,8 +76,8 @@
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>画像(<accel>I</accel>)</guimenu>
-            <guimenuitem>キャンバスサイズの変更(<accel>V</accel>)...</guimenuitem>
+            <guimenu>画像</guimenu>
+            <guimenuitem>キャンバスサイズの変更...</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -106,7 +106,7 @@
       <title lang="ja">キャンバスサイズ</title>
       <varlistentry>
         <term lang="en">Width; Height</term>
-        <term lang="ja">幅(<accel>W</accel>); 高さ(<accel>E</accel>)</term>
+        <term lang="ja">幅; 高さ</term>
         <listitem>
           <para lang="en">
             You can set the <guilabel>Width</guilabel> and the
@@ -130,8 +130,8 @@
             Size dialog</link>.
           </para>
           <para lang="ja">
-            キャンバスの大きさは <guilabel>幅(<accel>W</accel>)</guilabel> と 
-            <guilabel>高さ(<accel>E</accel>)</guilabel> をここで調節して指定
+            キャンバスの大きさは <guilabel>幅</guilabel> と 
+            <guilabel>高さ</guilabel> をここで調節して指定
             します。 既定の単位はピクセルですが、 任意の単位に変更できるほか
             百分率により元の画像の大きさに対する比でも指定できます。 幅と高さの
             両数値記入欄の右隣に連結の鎖のしるしがあれば、 元画像の幅と高さの
@@ -168,7 +168,7 @@
         表示されます。
       </para>
       <varlistentry>
-        <term>X ; Y</term>
+        <term>X; Y</term>
         <listitem>
           <para lang="en">
             The <guilabel>X</guilabel> and <guilabel>Y</guilabel> specify the
@@ -256,7 +256,7 @@
             かつて<acronym>GIMP</acronym> 2.4 より前の版では、 <quote>
             キャンバスサイズの変更</quote>のときにレイヤーの大きさは変わりま
             せんでした。 レイヤーの大きさは 
-            <link linkend="gimp-layer-resize">レイヤーサイズの変更(O)...</link>
+            <link linkend="gimp-layer-resize">レイヤーサイズの変更...</link>
             コマンドを使って
             変更する必要があったのです。 今では <guilabel>レイヤー</guilabel> 
             オプションによりある程度はレイヤーの大きさを調節できます。 つぎに
@@ -265,7 +265,7 @@
           <figure>
             <title lang="en">The Resize layers list</title>
             <title lang="ja">
-              キャンバスに合わせる(<accel>L</accel>)メニュー
+              キャンバスに合わせるメニュー
             </title>
             <mediaobject>
               <imageobject>
@@ -349,7 +349,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Center</term>
-        <term lang="ja">中央(E)</term>
+        <term lang="ja">中央</term>
         <listitem>
           <para lang="en">
             The <guilabel>Center</guilabel> button allows you to center the
@@ -358,7 +358,7 @@
             the text boxes.
           </para>
           <para lang="ja">
-            <guibutton>中央(<accel>E</accel>)</guibutton> ボタンはキャンバスの
+            <guibutton>中央</guibutton> ボタンはキャンバスの
             中心に画像の中心を合わせるはたらきがあります。 このボタンをクリック
             するとオフセット値が自動的に算出され、 <guilabel><accel>X</accel>
             </guilabel> と <guilabel><accel>Y</accel></guilabel> の数値記入欄に
@@ -391,7 +391,7 @@
         with a removable back for slipping in a photograph).
       </para>
       <para lang="ja">
-        <guibutton>サイズ変更(<accel>R</accel>)</guibutton> ボタンをクリック
+        <guibutton>サイズ変更</guibutton> ボタンをクリック
         するとキャンバスの大きさは変更されますが、 画素情報や画像の描画縮尺<!--
         ???-->は変わりません。
       </para>
@@ -402,11 +402,11 @@
         ウィンドウでは[初期設定の場合]市松模様で表示されます。 レイヤーが無い
         のですぐにはこの部分に描画ができません。 レイヤーを拡張させるには、 
         もともと1層のレイヤーで十分な場合は 
-        <link linkend="gimp-image-flatten">画像の統合(F)</link> 
+        <link linkend="gimp-image-flatten">画像の統合</link> 
         コマンドでレイヤーをキャンバスと同じ大きさにできますが、 複数のレイヤー
         を扱っていて現在活性化しているレイヤーだけをこの部分に拡張したい場合は 
         <link linkend="gimp-layer-resize-to-image">
-        レイヤーをキャンバスに合わせる(I)</link> コマンドを
+        レイヤーをキャンバスに合わせる</link> コマンドを
         お使いください。 もちろんこの部分を含む新しいレイヤーを作成しても良いで
         しょう。 これならデジタルなパスパルトゥ (写真を挟める台紙が自由に貼り
         つけられるおおきめの透明板) のできあがりです。
@@ -483,7 +483,7 @@
           </para>
           <para lang="ja">
             キャンバスの大きさを120&times;120ピクセルに変更した。 <guilabel>
-            キャンバスに合わせる(<accel>L</accel>)</guilabel> オプションに 
+            キャンバスに合わせる</guilabel> オプションに 
             <guimenuitem>すべてのレイヤー</guimenuitem> を選んだので全レイヤー
             がキャンバスと同じ大きさに拡張される。 元は何も塗られていなかった
             領域は、 薄紅色のレイヤーでは透明部分となり、 薄緑色のレイヤーでは
@@ -520,7 +520,7 @@
       クリックして比例関係を解除し、 お好みの大きさにキャンバスを切り詰めます。
       見本画像を移動して不要な映り込みが新しいキャンバスの枠でうまく切り落とせ
       る場所を探ったり、 キャンバスの大きさを再度調整してゆきます。 最後に
-      <guibutton>サイズ変更(<accel>R</accel>)</guibutton> ボタンをクリックして
+      <guibutton>サイズ変更</guibutton> ボタンをクリックして
       確定です。
     </para>
     <figure>
@@ -540,7 +540,7 @@
       <!--TODO: so "to crop an image" is not the answer?!-->
       <para lang="ja">
         <link linkend="gimp-tool-crop">切り抜きツール</link> のほうが使い易い
-        と思います。 [原文では、 使い道は切り抜きだけかとツッコミが入ります。]
+        と思います。 [原文では、 答えは切り抜きじゃなかったの？とツッコミが入ります。]
       </para>
     </note>
   </sect3>

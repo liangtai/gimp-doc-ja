@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -8,10 +8,10 @@
   050930 de replaced informalfigure by axel.wernicke
   050826 de added by axel.wernicke
 -->
-<!--2009-07-28-->
+<!--2009-09-15-->
 <sect2 id="plug-in-randomize-hurl">
   <title lang="en">Hurl</title>
-  <title lang="ja">浴びせ(H)...</title>
+  <title lang="ja">浴びせ...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -78,19 +78,19 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>ノイズ(<accel>N</accel>)</guisubmenu>
-        <guimenuitem>浴びせ(<accel>H</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ノイズ</guisubmenu>
+        <guimenuitem>浴びせ...</guimenuitem>
       </menuchoice>
     </para>
     <para lang="ja">
-      <guimenuitem>浴びせ(<accel>H</accel>)...</guimenuitem> フィルタは対象と
+      <guimenuitem>浴びせ...</guimenuitem> フィルタは対象と
       なった画素それぞれに不規則な色付けを行ないますので、 真の <emphasis>
       ランダムノイズ</emphasis> をもたらします。 全ての色チャンネルはもちろん、
       アルファチャンネル (あれば) も不規則変化をします。 各チャンネルのとりうる
       全ての値が等しい確率で散布されます。 元の値は考慮されません。 このような
       処理は活性レイヤーもしくはその選択範囲の全ての画素に及ぼすことができる
-      ほか、 <guilabel>乱数度 (%)(<accel>A</accel>)</guilabel> オプションにより
+      ほか、 <guilabel>乱数度 (%)</guilabel> オプションにより
       対象となる画素を減らして元画像の画素をある程度残すこともできます。
     </para>
   </sect3>
@@ -111,7 +111,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Random Seed</term>
-        <term lang="ja">乱数種(R)</term>
+        <term lang="ja">乱数種</term>
         <listitem>
           <para lang="en">
             Controls randomness of hurl.  If the same random seed in the
@@ -130,11 +130,11 @@
             浴びせ処理の不規則性を制御します。 同じ状況で同じ乱数種を用いると
             このフィルタは全く同じ結果を生みます。 乱数種が変われば結果も違う
             ものになります。 乱数種は数値記入欄で直に指定できるほか、 
-            <guibutton>新しい種(<accel>N</accel>)</guibutton> ボタンをクリック
+            <guibutton>新しい種</guibutton> ボタンをクリック
             して無作為に生成させる方法もあります。
           </para>
           <para lang="ja">
-            <guilabel>乱数化(<accel>R</accel>)</guilabel> オプションを有効に
+            <guilabel>乱数化</guilabel> オプションを有効に
             すると乱数種を直に指定できなくなりますが、 その代わりこのフィルタ
             を実行する度に新しい乱数種が自動生成されるようになります。 この
             オプションを無効にしている間は前回利用した乱数種が記憶されています
@@ -144,7 +144,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Randomization (%)</term>
-        <term lang="ja">乱数度 (%)(A)</term>
+        <term lang="ja">乱数度 (%)</term>
         <listitem>
           <para lang="en">
             This slider represents the percentage of pixels of the active
@@ -160,7 +160,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Repeat</term>
-        <term lang="ja">繰り返し(E)</term>
+        <term lang="ja">繰り返し</term>
         <listitem>
           <para lang="en">
             It represents the number of times the filter will be
@@ -169,10 +169,10 @@
             higher <guilabel>Randomization (%)</guilabel> value.
           </para>
           <para lang="ja">
-            <guilabel>繰り返し(<accel>E</accel>)</guilabel> 値はこのフィルタに
+            <guilabel>繰り返し</guilabel> 値はこのフィルタに
             よる処理を繰り返す回数です。 しかし浴びせフィルタに限ってはこの
             オプションはあまり使い勝手がよろしくありません。 その理由は同等な
-            結果を得る目的ならば <guilabel>乱数度 (%)(<accel>E</accel>)
+            結果を得る目的ならば <guilabel>乱数度 (%)
             </guilabel> を高く設定した方が早く済むからです。
           </para>
         </listitem>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -8,10 +8,10 @@
   050930 de replaced informalfigure by axel.wernicke
   050829 de added by axel.wernicke
 -->
-<!--2009-07-30-->
+<!--2009-09-15-->
 <sect2 id="plug-in-dog">
   <title lang="en">Difference of Gaussians</title>
-  <title lang="ja">ガウシアン差分(D)...</title>
+  <title lang="ja">ガウシアン差分...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -80,7 +80,7 @@
       the dark background, reversing them may actually improve the result.
     </para>
     <para lang="ja">
-      <guimenuitem>ガウシアン差分(<accel>D</accel>)...</guimenuitem> フィルタは
+      <guimenuitem>ガウシアン差分...</guimenuitem> フィルタは
       いわゆる<quote>ガウシアン差分</quote>アルゴリズムを用いて輪郭を読み解き
       ます。 このアルゴリズムはぼかし半径を違えた2種類のガウシアンぼかしを画像
       にかけて両者の差分をもとに結果を得ます。 この方法は加工画像に (おそらく
@@ -111,9 +111,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-        <guisubmenu>輪郭抽出(<accel>T</accel>)</guisubmenu>
-        <guimenuitem>ガウシアン差分(<accel>D</accel>)...</guimenuitem>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>輪郭抽出</guisubmenu>
+        <guimenuitem>ガウシアン差分...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -144,8 +144,8 @@
             smaller than Radius 1 will give better results.
           </para>
           <para lang="ja">
-            <guilabel>半径 1(<accel>R</accel>)</guilabel> と <guilabel>半径 
-            2(<accel>A</accel>)</guilabel> はガウシアンぼかしに用いられる半径
+            <guilabel>半径 1</guilabel> と <guilabel>半径 
+            2</guilabel> はガウシアンぼかしに用いられる半径
             です。 両者の関係で唯一の制限が両値は等しくなってはいけないことで
             あり、 等しくすると結果が空白画像になってしまいます。 スケッチ風の
             画像に仕上げたい場合は<quote>半径2</quote>を<quote>半径1</quote>
@@ -155,7 +155,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Normalize</term>
-        <term lang="ja">正規化(N)</term>
+        <term lang="ja">正規化</term>
         <listitem>
           <para lang="en">
             Checking this box causes the brightness range in the result to be
@@ -166,7 +166,7 @@
             except in terms of global contrast, though.)
           </para>
           <para lang="ja">
-            <guilabel>正規化(<accel>N</accel>)</guilabel> オプションを有効に
+            <guilabel>正規化</guilabel> オプションを有効に
             すると明暗の幅ができるだけ拡大した結果となりコントラストが強まり
             ます。 ちなみにプレビュー画面では画像の一部だけを表示しその範囲内で
             このオプションの模擬実演をするので、 実際の結果とは異なる場合が
@@ -176,7 +176,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Invert</term>
-        <term lang="ja">反転(I)</term>
+        <term lang="ja">反転</term>
         <listitem>
           <para lang="en">
             Checking this box inverts the result, so that you see dark edges
@@ -184,7 +184,7 @@
             drawing.
           </para>
           <para lang="ja">
-            <guilabel>反転(<accel>I</accel>)</guilabel> オプションを有効に
+            <guilabel>反転</guilabel> オプションを有効に
             すると結果の画像は反転されますので白い背景に濃い色の輪郭が描かれた
             画像になり、 まるで手描きの絵のようになります。
           </para>

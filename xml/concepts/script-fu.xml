@@ -11,7 +11,7 @@
   2006-01-05 fixed ambigous description of installing new script-fu
   scripts (#324309)
 -->
-<!--2009-08-25-->
+<!--2009-09-11-->
 <sect1 id="gimp-concepts-script-fu">
   <title lang="en">Using Script-Fu Scripts</title>
   <title lang="ja">Script-Fuスクリプトを使用</title>
@@ -166,11 +166,11 @@
         <para lang="ja">
           刷新のためメニューより
           <menuchoice>
-            <guimenu>フィルタ(<accel>R</accel>)</guimenu>
-            <guisubmenu>Script-Fu(<accel>S</accel>)</guisubmenu>
-            <guimenuitem>スクリプトを再読み込み(<accel>R</accel>)</guimenuitem>
+            <guimenu>フィルタ</guimenu>
+            <guisubmenu>Script-Fu</guisubmenu>
+            <guimenuitem>スクリプトを再読み込み</guimenuitem>
           を実行してください。 スクリプトがメニュー上に現れるはずです。
-          見付からないときは <guimenu>ファイル(<accel>F</accel>)</guimenu>
+          見付からないときは <guimenu>ファイル</guimenu>
           メニュー内も探してみてください。 それでも見付からない場合は何か
           スクリプトに問題 (例えば構文間違い) があるのです。
         </para>
@@ -215,7 +215,7 @@
           <para lang="ja">
             独立系のScript-Fuは画像を生成するために使われるもので、 メニューを
             <menuchoice>
-              <guimenu>ファイル(<accel>F</accel>)</guimenu>
+              <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
             </menuchoice>
             と辿った先のサブメニューにまとまっています。
@@ -251,8 +251,17 @@
             The figure below show where you can find them in the image-menu.
           </para>
           <para lang="ja">
+            メニューは再編されています。 [<acronym>GIMP</acronym> 2.4 からは]
+            色メニューができました。 色を扱うスクリプト、 例えば色相、 彩度、
+            光度などを調整するツールやフィルタなどがまとめて入っています。 
+            フィルタメニューとScript-Fuメニューは統合されて新フィルタメニュー
+            となり、 メニューの内訳も再編されました。 画像に依存する
+            プラグインやScript-Fuスクリプトは画像メニューの方に散って
+            ゆきました。 はじめはとっつきにくいかもしれませんが、 道理に
+            かなった配置ですからじきに慣れていただけると思います。
           </para>
           <para lang="ja">
+            下図は画像メニュー内に組み入れられたものを紹介しています。
           </para>
           <figure>
             <title lang="en">Where find Image-dependent scripts</title>
@@ -271,6 +280,7 @@
 
   <sect2 id="standalone-script-fu">
     <title lang="en">Standalone Scripts</title>
+    <title lang="ja">独立系スクリプト</title>
     <indexterm lang="en">
       <primary>Script-Fu</primary>
       <secondary>Standalone</secondary>
@@ -285,7 +295,7 @@
     </indexterm>
     <indexterm lang="ja">
       <primary>パターン</primary>
-      <secondary sortas="Script-Fuニヨル">Script-Fuによる</secondary>
+      <secondary sortas="Script-Fuセイセイブツ">Script-Fu生成物</secondary>
     </indexterm>
     <para lang="en">
       We will not try to describe every script in depth. Most Script-Fus are
@@ -293,27 +303,37 @@
       following types are installed by default:
     </para>
     <para lang="ja">
+      ここで全部のスクリプトについて個々に深入りして説明するつもりは
+      ありません。 大部分のScript-Fuは非常に理解し易くかつ使い易く作られて
+      います。 この説明文を執筆した時点では初期状態でつぎの種類の画像を作成
+      するものが導入されています。
     </para>
     <itemizedlist>
       <listitem>
         <para lang="en">Patterns</para>
+        <para lang="ja">パターン</para>
       </listitem>
       <listitem>
         <para lang="en">Web page themes</para>
+        <para lang="ja">Web ページテーマ</para>
       </listitem>
       <listitem>
         <para lang="en">Logos</para>
+        <para lang="ja">ロゴ</para>
       </listitem>
       <listitem>
         <para lang="en">Buttons</para>
+        <para lang="ja">ボタン</para>
       </listitem>
       <listitem>
         <para lang="en">Misc.</para>
+        <para lang="ja">その他いろいろ</para>
       </listitem>
     </itemizedlist>
     <variablelist>
       <varlistentry>
         <term lang="en">Patterns</term>
+        <term lang="ja">パターン</term>
         <listitem>
           <para lang="en">
             You will find all kinds of pattern-generating scripts here.
@@ -331,13 +351,26 @@
             10.
           </para>
           <para lang="ja">
+            ここにはパターンを生成するスクリプトの全種類が揃っています。 
+            だいたいどれもオプションでいろいろ変化がつけられるので自作
+            パターンを作るのにうってつけです。
           </para>
           <para lang="ja">
+            立体地形図スクリプトを見てみましょうか。 このスクリプトを使う
+            ときは地面の文様を作成するために画像の、 すなわちパターンのサイズ
+            を設定し、 不規則度の段階を指定してやる必要があります。 地面の
+            マップを生成するために使われる色はグラデーションから採られます。 
+            グラデーションは現在<acronym>GIMP</acronym>に読み込まれているもの
+            からどれかひとつを選んでください。 さらには詳細度を設定し、 島の
+            高さと海の深さを指定し、 縮尺を定めなくてはいけません。 縮尺は
+            この地形図に対する倍率なので、 普通の地図でいう 1:10 にするなら
+            X や Y の拡大縮小の値を 10 にすればよいわけです。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Web Page Themes</term>
+        <term lang="ja">Web ページテーマ</term>
         <listitem>
           <para lang="en">
             Here is clearly a practical use for scripts. By creating a script
@@ -357,10 +390,21 @@
             hints:
           </para>
           <para lang="ja">
+            これは間違いなく実践的なスクリプトの使い道です。 自作の修飾文字や
+            ロゴやボタンや矢印とかいろいろウェブ用に作成するのならスクリプト
+            を書けばどれも共通した形状に統一できます。 しかもそういった部品を
+            ひとつひとつ手作業で加工する手間が省けるので時間を大幅に節約
+            できます。
           </para>
           <para lang="ja">
+            Web ページテーマのサブメニューにクラシック Gimp.Org というテーマ
+            があるはずです。 ご自分なりのテーマを創成するにあたってはここの
+            スクリプトが上質のたたき台になります。 なかの値を書き換えてゆけば
+            あなたのウェブサイト専用のテーマのできあがりです。
           </para>
           <para lang="ja">
+            ここのスクリプトは大方がそのまま名前の通りのはたらきをしますが、
+            少しばかり使い方のヒントを書いておきます。
           </para>
           <itemizedlist>
             <listitem>
@@ -368,6 +412,8 @@
                 Leave all strange characters like ' and " intact.
               </para>
               <para lang="ja">
+                <quote>'</quote>や<quote>&quote;</quote>のような特殊文字は
+                そのまま加工せずにおくこと
               </para>
             </listitem>
             <listitem>
@@ -375,6 +421,7 @@
                 Make sure that the pattern specified in the script exists.
               </para>
               <para lang="ja">
+                スクリプトで利用するパターンが実在するか確かめること
               </para>
             </listitem>
             <listitem>
@@ -382,6 +429,7 @@
                 Padding refers to the amount of space around your text.
               </para>
               <para lang="ja">
+                パディングとはテキストまわりの空間のこと
               </para>
             </listitem>
             <listitem>
@@ -390,6 +438,7 @@
                 button.
               </para>
               <para lang="ja">
+                ベベルの値を高くとるとボタンの背丈を高く見せられる
               </para>
             </listitem>
             <listitem>
@@ -398,6 +447,8 @@
                 down.
               </para>
               <para lang="ja">
+                <guilabel>押したとき</guilabel> オプションはボタンが押された
+                ように見せるデザインになる
               </para>
             </listitem>
             <listitem>
@@ -407,6 +458,9 @@
                 as the web page background.
               </para>
               <para lang="ja">
+                背景が単色では困るときは <guilabel>背景消去</guilabel> を
+                有効にする。 単色の背景にする場合はウェブページの背景色と同色
+                になるよう気をつける
               </para>
             </listitem>
           </itemizedlist>
@@ -414,6 +468,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Logos</term>
+        <term lang="ja">ロゴ</term>
         <listitem>
           <indexterm lang="en">
             <primary>Script-Fu</primary>
@@ -429,7 +484,9 @@
           </indexterm>
           <indexterm lang="ja">
             <primary>ロゴ</primary>
-            <secondary sortas="Script-Fuニヨル">Script-Fuによる</secondary>
+            <secondary sortas="Script-Fuセイセイブツ">
+              Script-Fu生成物
+            </secondary>
           </indexterm>
           <para lang="en">
             Here you will find all kinds of logo-generating scripts. This is
@@ -440,6 +497,13 @@
             making a logo is more or less the same for all such scripts:
           </para>
           <para lang="ja">
+            ここにはロゴを作成する全種類のスクリプトが揃っています。 素敵な
+            ものができますが、 既にどこかで見たことがある<acronym>GIMP
+            </acronym>スクリプト製だとばれてしまい易いので使うときは気を
+            つけてください。 むしろこれらを元に手を加え思い通りのスクリプトを
+            書いてみることを検討されてはいかがでしょうか。 ロゴ作成スクリプト
+            のダイアログはどれも似たり寄ったりでつぎのような構成に
+            行き着きます。
           </para>
           <orderedlist>
             <listitem>
@@ -448,6 +512,7 @@
                 Frozenriver.
               </para>
               <para lang="ja">
+                文字記入欄には予めロゴ名を入れておきましょう。
               </para>
             </listitem>
             <listitem>
@@ -456,6 +521,8 @@
                 pixels.
               </para>
               <para lang="ja">
+                フォントサイズ数値記入欄にはロゴの大きさをピクセル単位で
+                書き込んでおきましょう。
               </para>
             </listitem>
             <listitem>
@@ -464,6 +531,8 @@
                 want to use for your logo.
               </para>
               <para lang="ja">
+                フォント名記入欄には自作のロゴに使いたいフォントの名前を
+                記入しておきましょう。
               </para>
             </listitem>
             <listitem>
@@ -472,6 +541,8 @@
                 button. This brings up a color dialog.
               </para>
               <para lang="ja">
+                ロゴの色を変更するには色だまりボタンをクリックすると現れる
+                色変更ダイアログで他の色を選びます。
               </para>
             </listitem>
             <listitem>
@@ -480,6 +551,8 @@
                 script run.
               </para>
               <para lang="ja">
+                現在実行中のコマンドを表示する欄を観察すれば現在走らせている
+                スクリプトの様子が分かります。
               </para>
             </listitem>
           </orderedlist>
@@ -487,6 +560,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Make Buttons</term>
+        <term lang="ja">ボタン</term>
         <listitem>
           <indexterm lang="en">
             <primary>Script-Fu</primary>
@@ -498,11 +572,13 @@
           </indexterm>
           <indexterm lang="ja">
             <primary>Script-Fu</primary>
-            <secondary>Button</secondary>
+            <secondary>ボタン</secondary>
           </indexterm>
           <indexterm lang="ja">
-            <primary>Button</primary>
-            <secondary sortas="Script-Fuニヨル">Script-Fuによる</secondary>
+            <primary>ボタン</primary>
+            <secondary sortas="Script-Fuセイセイブツ">
+              Script-Fu生成物
+            </secondary>
           </indexterm>
           <para lang="en">
             Under this headline you'll find two scripts that makes rectangular
@@ -513,11 +589,17 @@
             like.
           </para>
           <para lang="ja">
+            ボタンと銘打ったこのサブメニュー内には球形ボタンとシンプルな
+            ベベルつきボタンのスクリプトがありますが、 両者とも矩形のベベル
+            つきボタンであり、 縁が丸いか丸くないかが異なるだけです。 どちら
+            も数十のパラメータがあるうえほとんどが同じオプションです。 設定を
+            変えながらお好みのボタンを探ってください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Misc.</term>
+        <term lang="en">その他いろいろ</term>
         <listitem>
           <para lang="en">
             Under Misc. you'll find scripts that can be quite useful, but
@@ -538,8 +620,7 @@
 
   <sect2 id="image-independent-script-fu">
     <title lang="en">Image-Dependent Scripts</title>
-    <title lang="en">
-    </title>
+    <title lang="ja">画像に依存するScript-Fu</title>
     <para lang="en">
       Now, scripts and filters that perform operations on an existing image are
       accessible directly by the appropriate menu. For example, the script
@@ -570,12 +651,36 @@
       <filename class="extension">.gz</filename> ...).
     </para>
     <para lang="ja">
+      このたび既にある画像に加工を施すためのスクリプトやフィルタはその目的に
+      ふさわしいメニューからすぐ呼び出せるようになりました。 例えば 
+      <guimenuitem>新しいブラシ</guimenuitem> スクリプト 
+      (script-fu-paste-as-brush) は <guimenum>編集</guimenu> メニュー内の一員
+      となり、 
+      <menuchoice>
+        <guimenu>編集</guimenu>
+        <guimenuitem>クリップボードから生成...</guimenuitem>
+        <guimenuitem>新しいブラシ</guimenuitem>
+      </menuchoice>
+      という道理にかなった場所に収まりました。
     </para>
     <para lang="ja">
+      加えて <guimenu>色</guimenu> メニューが新たに創設され、 色にまつわる
+      スクリプト、 たとえば色相や色レベルを補正するツールなどがここにまとめ
+      られました。
     </para>
     <para lang="ja">
+      <guimenu>フィルタ</guimenu> メニューと <guimenu>Script-Fu</guimenu> 
+      メニューは統合されて新 <guimenu>フィルタ</guimenu> メニューとなり、 
+      メニューの内訳も再編されました。 プラグインとフィルタは操作法も目的も
+      さほど違いがないので、 この新メニューで併存させることになったのです。
     </para>
     <para lang="ja">
+      スクリプトを自前で追加したときだけ、 <guimenu>Script-Fu</guimenu> 
+      メニューが現れるかもしれません。 (例えば <productname>Linux
+      </productname> ディストリビュータが <filename class="extension">.deb
+      </filename> や <filename class="extension">.rpm</filename> や 
+      <filename class="extension">.gz</filename> などの形態で配布している
+      gimp-resynthesizer パッケージを導入するとそうなります。)
     </para>
   </sect2>
 </sect1>

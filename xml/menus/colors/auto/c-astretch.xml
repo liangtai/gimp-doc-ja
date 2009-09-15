@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -9,10 +9,10 @@
   2006-09-05 Example added by j.h; text revised by scb
   2005-11-11 split of from layer-colors.xml by axel.wernicke
 -->
-<!--2009-06-23-->
+<!--2009-09-12-->
 <sect2 id="plug-in-c-astretch">
   <title lang="en">Stretch Contrast</title>
-  <title lang="ja">コントラスト伸長(S)</title>
+  <title lang="ja">コントラスト伸長</title>
 
   <indexterm lang="en">
     <primary>Colors</primary>
@@ -58,12 +58,12 @@
     pixels, so the white might be impure.
   </para>
   <para lang="ja">
-    <guimenuitem>コントラスト伸長(<accel>S</accel>)</guimenuitem> コマンドは
+    <guimenuitem>コントラスト伸長</guimenuitem> コマンドは
     活性レイヤーのヒストグラムの値を自動的に伸長します。 活性レイヤーのそれぞれ
     のチャンネルで最大レベルと最小レベルの値を見付けだし、 それを使って赤緑青の
     各ヒストグラムをコントラスト全開まで伸長させます。 明るい色はさらに明るく、
     暗い色はさらに暗くしますのでコントラストが増します。 このコマンドはしばしば
-    <link linkend="plug-in-normalize">正規化(N)</link> コマンドとよく似た効果を
+    <link linkend="plug-in-normalize">正規化</link> コマンドとよく似た効果を
     もたらしますが、 当コマンドはレイヤーのそれぞれの色チャンネルごとに操作する
     ところが異なります。 処理後はほとんどの画像に色の遷移が起こりますので期待
     外れの結果に終わることもあります。 <quote>コントラスト伸長</quote>は
@@ -74,7 +74,7 @@
   </para>
   <para lang="ja">
     このコマンドは 
-    <link linkend="gimp-layer-white-balance">ホワイトバランス(W)</link> 
+    <link linkend="gimp-layer-white-balance">ホワイトバランス</link> 
     コマンドとも似ていますが、 非常に暗い画素も非常に明るい画素も退けないので
     白っぽい部分はあっても純白にならないことが多くあります。
   </para>
@@ -89,15 +89,15 @@
           <menuchoice>
             <guimenu>Colors</guimenu>
             <guisubmenu>Auto</guisubmenu>
-            <guimenuitem>Stretch Contrast</guimenuitem>
+            <guimenuitem>Stretch Contrast</guimenuitem>
           </menuchoice>.
         </para>
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>色(<accel>C</accel>)</guimenu>
-            <guisubmenu>自動調整(<accel>A</accel>)</guisubmenu>
-            <guimenuitem>コントラスト伸長(<accel>S</accel>)</guimenuitem>
+            <guimenu>色</guimenu>
+            <guisubmenu>自動調整</guisubmenu>
+            <guimenuitem>コントラスト伸長</guimenuitem>
           </menuchoice>
         </para>
       </listitem>

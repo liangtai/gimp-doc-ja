@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -8,7 +8,7 @@
   2006-05-02 Dust: added Korean translation
   2006-02-25 lexa: added translation for de and made file docbook compliant
 -->
-<!--2009-07-09-->
+<!--2009-09-12-->
 <sect1 id="gimp-concepts-undo">
   <title lang="en">Undoing</title>
   <title lang="ja">取り消し</title>
@@ -51,11 +51,11 @@
     <acronym>GIMP</acronym>では画像に対して行なった動作はほとんど何でも
     取り消せます。 画像メニューで
     <menuchoice>
-      <guimenu>編集(<accel>E</accel>)</guimenu>
-      <guimenuitem>... を元に戻す(<accel>U</accel>)</guimenuitem>
+      <guimenu>編集</guimenu>
+      <guimenuitem>&hellip; を元に戻す</guimenuitem>
     </menuchoice>
-    (... は最後に行われた動作の具体的な名前です) とたどれば一番最近の動作が
-    取り消されます。 しかしこのコマンドはよく使われるので、
+    (&hellip; は最後に行われた動作の具体的な名前です) とたどれば一番最近の
+    動作が取り消されます。 しかしこのコマンドはよく使われるので、
     かわりにキーボードショートカット
     <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
     を覚えておくとよいでしょう。
@@ -63,8 +63,8 @@
   <para lang="ja">
     取り消しを取り消すことも可能です。 ある動作を取り消したあとで、 メニューで
     <menuchoice>
-      <guimenu>編集(<accel>E</accel>)</guimenu>
-      <guimenuitem>やり直す(<accel>R</accel>)</guimenuitem>
+      <guimenu>編集</guimenu>
+      <guimenuitem>やり直す</guimenuitem>
     </menuchoice>
     と進むか、キーボードショートカット
     <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo> とすれば
@@ -129,10 +129,10 @@
     扱われるメモリの量は環境設定ダイアログの
     <link linkend="gimp-prefs-environment">環境</link> のページで調節できます。
     特に重要な数量はつぎの2つです:
-    <guilabel>操作履歴の最小エントリ数(<accel>U</accel>)</guilabel>
+    <guilabel>操作履歴の最小エントリ数</guilabel>
     の範囲で記録されたぶんの操作履歴に消費されるメモリ量を
     <acronym>GIMP</acronym>は制限しません。
-    <guilabel>操作履歴のメモリサイズ(<accel>M</accel>)</guilabel> を越えると
+    <guilabel>操作履歴のメモリサイズ</guilabel> を越えると
     <acronym>GIMP</acronym>は最も古い操作の記録から順に削除してゆきます。
   </para>
   <note>
@@ -145,7 +145,8 @@
     </para>
     <para lang="ja">
       操作履歴は画像の一部であると申しあげましたが、 <acronym>GIMP</acronym>
-      由来のXCF型式で画像を保存した場合でも、 画像の他の情報は保存されますが
+      由来の<acronym>XCF</acronym>型式で画像を保存した場合でも、 画像の他の
+      情報は保存されますが
       操作履歴だけは対象外です。 読み込み直した画像の操作履歴は白紙です。
     </para>
   </note>
