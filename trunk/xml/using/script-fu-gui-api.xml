@@ -5,7 +5,7 @@
   2008-03-12 jpl: fr & en update
   2007-11-27 ude: created (en,de)
 -->
-<!--2009-09-13-->
+<!--2009-09-16-->
 <sect3 id="gimp-using-script-fu-api">
   <title lang="en">
     The Script-Fu parameter API<footnote><para>
@@ -92,7 +92,7 @@
               <seglistitem>
                 <seg lang="en">value</seg>
                 <seg lang="en">Value print at the start.</seg>
-                <seg lang="ja"><replacable>value</replaceable></seg>
+                <seg lang="ja"><replaceable>value</replaceable></seg>
                 <seg lang="ja">当初の数値 デフォルト</seg>
               </seglistitem>
               <seglistitem>
@@ -223,21 +223,23 @@
             </para>
             <para lang="ja">
               <itemizedlist>
-                <acronym>GIMP</acronym>にはこの返し値を手軽に扱えるテキスト
-                処理プロシージャが2つ備わっています。
+                <para>
+                  <acronym>GIMP</acronym>にはこの返し値を手軽に扱えるテキスト
+                  処理プロシージャが2つ備わっています。
+                </para>
                 <listitem>
                   <para>
                     <code>
                       (gimp-text-fontname image drawable x-pos y-pos text
                       border antialias size unit font)
-                    <code>
+                    </code>
                   </para>
                 </listitem>
                 <listitem>
                   <para>
                     <code>
                       (gimp-text-get-extents-fontname text size unit font)
-                    <code>
+                    </code>
                   </para>
                 </listitem>
               </itemizedlist>
