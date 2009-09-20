@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2009-09-12-->
+<!--2009-09-20-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -23,7 +23,7 @@
     <acronym>GIMP</acronym>:
   </para>
   <para lang="ja">
-    既存の画像を<acronym>GIMP</acronym>にとりこむ方法はいくつかあります。
+    既存の画像を<acronym>GIMP</acronym>にとりこむ方法はいろいろあります。
   </para>
 
   <sect2 id="gimp-using-open-file">
@@ -53,9 +53,9 @@
       と進みましょう。 ファイルを見回れる<quote>画像を開く</quote>ダイアログが
       出てきますので開きたいファイルを見つけ出してクリックします。
       このやり方はファイル名もその場所も既に知っているものを開くのには都合が
-      よろしい。 しかし<quote>画像を開く</quote>ダイアログにはサムネイル表示が
-      あるのにも関わらず、 画像のサムネイルを見ながらファイルを探るには不便で
-      面倒です。
+      よろしい。 しかし<quote>画像を開く</quote>ダイアログにはサムネイル 
+      (縮小画像) 表示があるのにも関わらず、 画像のサムネイルを見ながらファイル
+      を探るには不便で面倒です。
     </para>
     <note>
       <para lang="en">
@@ -74,13 +74,14 @@
       <para lang="ja">
         ファイルを開くときは<acronym>GIMP</acronym>はそのファイル形式を判定し
         なければなりません。 形式が多様であることに加え、 残念ながらそれを表す
-        拡張子 (例: <filename>.jpg</filename>) に信頼が置けないので、 <acronym>
-        GIMP</acronym>が拡張子でファイルの形式をそのまま判断することは
-        ありません。 じっさいにシステムごとに拡張子が異なったり、 機能追加で
-        ファイル名が変化することもあるからです。 さらに、 ファイル名から拡張子
-        が省かれることもあるのが大きな理由です。 そこで<acronym>GIMP</acronym>
-        は、 ファイルの中身を見て確かめてから形式を判断しようとします。 一般的
-        に通用している画像ファイル形式のほとんどは、 その形式を認識させるための
+        拡張子 (例: <filename class="extension">.jpg</filename>) に信頼が
+        置けないので、 <acronym>GIMP</acronym>が拡張子でファイルの形式を
+        そのまま判断することはありません。 じっさいにシステムごとに拡張子が
+        異なったり、 機能追加でファイル名が変化することもあるからです。 
+        さらに、 ファイル名から拡張子が省かれることもあるのが大きな理由です。 
+        そこで<acronym>GIMP</acronym>は、 ファイルの中身を見て確かめてから形式
+        を判断しようとします。 一般的に通用している画像ファイル形式の
+        ほとんどは、 その形式を認識させるための
         <quote>マジックヘッダ</quote>を持っています。
         マジックでは判断がつかない限られた場合のために、
         <acronym>GIMP</acronym>は拡張子を利用する余地を残しています。
@@ -203,10 +204,10 @@
         GIMP</acronym>はファイルの本当の形式を推定できないかもしれません。
         必要ならダイアログの下部にある
         <guilabel>ファイルタイプを選択</guilabel>
-        オプションを引き出し、 手動でファイル形式を特定できます。 でも十中八九
+        オプションを引き出し、 手動でファイル形式を特定できます。 でも
         <acronym>GIMP</acronym>がその画像ファイルを読み込めなかった理由は、 
-        そのファイルが破損していたか、 もともとサポートされていなかった形式
-        だったと考えられます。
+        十中八九そのファイルが破損していたか、 もともとサポートされて
+        いなかった形式だったと考えられます。
       </para>
     </note>
   </sect2>
@@ -310,7 +311,7 @@
       ドキュメント履歴</guimenuitem> をクリックすれば、
       画像を開いた全ての履歴を最も最近のものから順に並べたウィンドウが出て
       きますので、 ここから一つだけ選んでください。 詳しい説明が
-      <xref linkend="gimp-document-dialog" /> にあります。
+      <xref linkend="gimp-document-dialog"/> にあります。
     </para>
   </sect2>
 

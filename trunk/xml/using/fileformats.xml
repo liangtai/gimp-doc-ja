@@ -12,7 +12,7 @@
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2009-09-10-->
+<!--2009-09-20-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -264,11 +264,11 @@
                     saved.
                   </para>
                   <para lang="ja">
-                    <acronym>GIF</acronym>形式では7ビット<acronym>ASCII</acronym>
-                    文字列のみコメントに使えます。 もしうっかり7ビット<acronym>
-                    ASCII</acronym>文字集合以外の文字を入れてしまうと<acronym>
-                    GIMP</acronym>はコメント自体を削除して画像を保存し、 コメント
-                    は保存されなかったことを告げます。
+                    <acronym>GIF</acronym>形式では7ビット<acronym>ASCII
+                    </acronym>文字列のみコメントに使えます。 もしうっかり7
+                    ビット<acronym>ASCII</acronym>文字集合以外の文字を入れて
+                    しまうと<acronym>GIMP</acronym>はコメント自体を削除して
+                    画像を保存し、 コメントは保存されなかったことを告げます。
                   </para>
                 </listitem>
               </varlistentry>
@@ -420,7 +420,7 @@
       </para>
       <para lang="ja">
         <acronym>JPEG</acronym>ファイルは通常 <filename class="extension">.jpg
-        </filename> か <filename class="extension">.JPG</filename> もしくは 
+        </filename> か <filename class="extension">.jpg</filename> もしくは 
         <filename class="extension">.jpeg</filename>
         のいずれかの拡張子を持っています。 画像を非常に効率的に圧縮しつつも
         画像の品質低下を最小限に抑える性能があり、 広範に使われています。
@@ -593,7 +593,7 @@
               </varlistentry>
               <varlistentry>
                 <term lang="en">Save EXIF data</term>
-                <term lang="ja">EXIF データを保存</term>
+                <term lang="ja">Exif データを保存</term>
                 <listitem>
                   <indexterm lang="en">
                     <primary>EXIF</primary>
@@ -629,14 +629,15 @@
                     ライブラリを利用しますが、 このライブラリは<acronym>GIMP
                     </acronym>には同梱されていません。 libexifライブラリが導入
                     されており<acronym>GIMP</acronym>のビルド時にそのサポートを
-                    有効にしていたならば、 Exifデータを扱うことができ、 <acronym>
-                    JPEG</acronym>ファイルを保存する際にはファイル内にその
-                    データが記録できます。 このときExifデータは一切変更されません。
-                    つまりExifデータが示す作成日付やファイル名などの一部の情報が
-                    不正なまま残されてしまいます。 <acronym>GIMP</acronym>の
-                    ビルド時にこのサポートを無効にしていた場合も、 Exifデータを
-                    含んだ<acronym>JPEG</acronym>ファイルは支障なく開けますが、
-                    そのあとこの画像を保存するとファイル内にExifデータが残りません。
+                    有効にしていたならば、 Exifデータを扱うことができ、 
+                    <acronym>JPEG</acronym>ファイルを保存する際にはファイル内
+                    にそのデータが記録できます。 このときExifデータは一切変更
+                    されません。 つまりExifデータが示す作成日付やファイル名
+                    などの一部の情報が不正なまま残されてしまいます。 <acronym>
+                    GIMP</acronym>のビルド時にこのサポートを無効にしていた場合
+                    も、 Exifデータを含んだ<acronym>JPEG</acronym>ファイルは
+                    支障なく開けますが、 そのあとこの画像を保存すると
+                    ファイル内にExifデータが残りません。
                   </para>
                 </listitem>
               </varlistentry>
@@ -661,8 +662,9 @@
                       was built with EXIF support.
                     </para>
                     <para lang="ja">
-                      このオプションは<acronym>GIMP</acronym>をソースファイルから
-                      ビルドするときExifサポートを有効にしていた場合にのみ現れます。
+                      このオプションは<acronym>GIMP</acronym>をソースファイル
+                      からビルドするときExifサポートを有効にしていた場合に
+                      のみ現れます。
                     </para>
                   </note>
                 </listitem>
@@ -729,8 +731,8 @@
                   </para>
                   <para lang="ja">
                     元の画像の品位設定よりもあなたの規定の品位設定のほうが
-                    優れている場合にも、 <guilabel>
-                    原画の品位設定を使用</guilabel>
+                    優れている場合にも 
+                    <guilabel>原画の品位設定を使用</guilabel>
                     オプションは利用可能ですが、 いっそ無効にしましょう。
                     この利用法はあなたの既定の設定で最低限度の品質が保たれて
                     いることが前提になります。 原画に大きな変更を加えていない
@@ -749,8 +751,9 @@
                     your image becomes somewhat blurred.
                   </para>
                   <para lang="ja">
-                    <acronym>JPEG</acronym>圧縮は加工痕を残すことがあります。 この
-                    オプションを用いるとその発生が抑えられ、 画像が滑らかになります。
+                    <acronym>JPEG</acronym>圧縮は加工痕を残すことがあります。 
+                    このオプションを用いるとその発生が抑えられ、 画像が
+                    滑らかになります。
                     しかし画像はいくぶんぼやけます。
                   </para>
                 </listitem>
@@ -766,8 +769,8 @@
                     loading can resume from the next marker.
                   </para>
                   <para lang="ja">
-                    このオプションを有効にすると画像ファイル内部に分割読み込みを
-                    可能にするマーカーを挿入できます。 ウェブページの画像を
+                    このオプションを有効にすると画像ファイル内部に分割読み込み
+                    を可能にするマーカーを挿入できます。 ウェブページの画像を
                     読み込んでいる最中に接続が中断しても、 
                     あとで途中のマーカーを起点に読み込みを再開できます。
                   </para>
@@ -786,8 +789,8 @@
                   </para>
                   <para lang="ja">
                     人間の色覚は一様に可視光線全般に対して鈍感です。この
-                    オプションはわずかに異なる色ならばごく近くほとんど同色である
-                    とヒトの視覚が認識することを前提に圧縮します。 
+                    オプションはわずかに異なる色ならばごく近くほとんど同色
+                    であるとヒトの視覚が認識することを前提に圧縮します。 
                     つぎの3つの形式から選択できます。
                   </para>
                   <itemizedlist>
@@ -888,7 +891,7 @@
                         methods should give the same results everywhere.
                       </para>
                       <para lang="ja">
-                        <guilabel>浮動小数</guilabel> :
+                        <guilabel>浮動小数</guilabel>:
                         浮動小数方式は極めて僅かながら整数方式よりも正確です。 
                         しかし浮動小数演算装置をもたないか低速なハードウェア上
                         ではたいへん処理が遅くなります。 またこのほかに
@@ -904,7 +907,7 @@
                         <quote>float</quote>, but not as accurate.
                       </para>
                       <para lang="ja">
-                        <guilabel>整数</guilabel> (初期設定) :
+                        <guilabel>整数</guilabel> (初期設定):
                         この方式は<quote>浮動小数</quote>より高速ですが、
                         正確さでは劣ります。
                       </para>
