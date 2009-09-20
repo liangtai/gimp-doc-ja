@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history
@@ -8,7 +8,7 @@
   2006-05-02 added Korean translation by Dust
   2005-12-18 reviewed and added rewrote de image explenation by lexa
 -->
-<!--2009-09-12-->
+<!--2009-09-20-->
 <sect1 id="gimp-concepts-image-types">
   <title lang="en">Image Types</title>
   <title lang="ja">画像の形式</title>
@@ -53,14 +53,14 @@
     ここでは<emphasis>画像</emphasis>のことを単体の表示ウィンドウや 
     <link linkend="file-jpeg-load">JPEG</link> のようなファイルに対応する存在
     とする考え方で話をすすめます。 ただし本来の<acronym>GIMP</acronym>の画像は
-    スタックやレイヤーをはじめ、 選択マスクやチャネル層群、 パスや操作履歴
+    重ね合わされたレイヤーをはじめ、 選択マスクやチャネル層群、 パスや操作履歴
     など、 様々な要素からなるもっと複雑な構造を持っています。 この章では
     <acronym>GIMP<acronym>画像の構成要素をひとつづつ詳しく見てゆき、 
     それらをどのように使ったらよいか説明します。
   </para>
   <para lang="ja">
-     画像の最も基本的な属性は<emphasis>モード</emphasis>です。 扱えるモードは
-     <acronym>RGB</acronym>、 グレースケール、 インデックスの3つです。
+     画像の最も基本的な属性は <emphasis>モード</emphasis> です。 扱えるモード
+     は <acronym>RGB</acronym>、 グレースケール、 インデックスの3つです。
      <acronym>RGB</acronym>とは赤緑青の頭文字からとられた言葉で、 画像の各点が
      <quote>赤色</quote>レベル、 <quote>緑色</quote>レベル、 <quote>青色
      </quote>レベルの3つで表せる状態を示しています。
@@ -72,7 +72,7 @@
   </para>
   <para lang="ja">
     グレースケール画像ではその各点が明度で表され、
-    その範囲は0(黒)から255(白)で中間色はさまざまな濃さの灰色です。
+    その範囲は0 (黒) から255 (白) で中間色はさまざまな濃さの灰色です。
   </para>
   <figure>
     <title lang="en">Components of the RGB and CMY Color Model</title>
@@ -204,10 +204,10 @@
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>では、それぞれの色チャンネルおよびアルファチャンネル
-    は0から255の範囲の値をとっています。 これはコンピュータ用語で深度8ビット
-    といいます。 デジタルカメラの機種によっては色チャンネルが深度16ビットの
-    ファイルを生成するものもあります。 <acronym>GIMP</acronym>でこのような
-    ファイルを読みこんだときは 解像度が落とされます。
+    は 0 から 255 の範囲の値をとっています。 これはコンピュータ用語で深度 8 
+    ビットといいます。 デジタルカメラの機種によっては色チャンネルが深度 16 
+    ビットのファイルを生成するものもあります。 <acronym>GIMP</acronym>でこの
+    ようなファイルを読みこんだときは解像度が落とされます。
     その場合の影響は人間の眼にはかなり微妙な違いにしか見えませんが、
     場合によりとくに広い範囲を極めてゆるやかな勾配でかけられた
     グラデーションの見え方ではその違いがばれるかもしれません。
@@ -308,9 +308,9 @@
     be regained by converting back in the other direction.
   </para>
   <para lang="ja">
-    第3の形式は<emphasis>インデックス</emphasis>つきの画像です。 このモードは
+    第3の形式は <emphasis>インデックス</emphasis> つきの画像です。 このモードは
     理解するのに少々骨が折れます。 インデックスつき画像では、 不連続で大抵
-    256色かそれ以下に限定された色数で描かれています。 これらの色は画像の
+    256 色かそれ以下に限定された色数で描かれています。 これらの色は画像の
     <quote>カラーマップ</quote>を構成しており、 画像の各点の色はすべて
     カラーマップからとられています。 インデックスつき画像は比較的メモリ消費量が
     少なくてすむというコンピュータにとって有利な点があり、 かつての暗黒時代
@@ -320,11 +320,11 @@
     インデックスつき画像のほうが実装しやすい画像処理がほんの数種類あります。)
   </para>
   <para lang="ja">(
-    <link linkend="file-gif-load">GIF</link> や
-    <link linkend="file-png-load">PNG</link> をふくめ) いくつかのよく使われる
+    <link linkend="file-gif-load">GIF</link> や 
+    <link linkend="file-png-load">PNG</link> などのようないくつかのよく使われる
     ファイル形式では、 <acronym>GIMP</acronym>で開いた画像をインデックスつき
     にして生成できます。 <acronym>GIMP</acronym>のインデックスつき画像の処理は
-    大多数のツールがその実力をあまり発揮できませんし、一部のものは全く作動
+    大多数のツールがその実力をあまり発揮できませんし、 一部のものは全く作動
     しません。 使える色数が少ないのが原因です。 ですから、
     むしろこういった処理の前に画像を
     <acronym>RGB</acronym>モードに変換しておくのが良策です。 必要があれば、
