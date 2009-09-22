@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-04-13 alex falappa: addet 'it' translation
+  2008-01-02 kost: added 'no'
+  2007-12-25 lexA: initial version for en and de
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-image-properties">
+  <title lang="en">Image Properties</title>
+  <title lang="ja">画像の情報</title>
+
+  <indexterm lang="en">
+    <primary>Image Properties</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウノジョウホウ">画像の情報</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <quote>Image Properties</quote> command opens a window that shows
+    lots of different information for the image.
+  </para>
+  <para lang="ja">
+    <guimenuitem>画像の情報</guimenuitem> コマンドは画像に
+    ついての数多くの情報を網羅したウィンドウを開きます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Image</guimenu>
+            <guimenuitem>Image Properties</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guimenuitem>画像の情報</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the keyboard shortcut
+          <keycombo><keycap>Alt</keycap><keycap>Return</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Alt</keycap><keycap>Return</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <para lang="en">The properties window is divided into three tabs.</para>
+    <para lang="ja">
+      <quote>画像の情報</quote>ウィンドウは3つのタブに分かれています。
+    </para>
+    <sect4>
+      <title lang="en"><quote>Properties</quote> tab</title>
+      <title lang="ja"><quote>プロパティ</quote>タブ</title>
+      <figure>
+        <title lang="en"><quote>Properties</quote> tab</title>
+        <title lang="ja"><quote>プロパティ</quote>タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/menus/image-properties.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Pixel dimensions</term>
+          <term lang="ja">ピクセル寸法</term>
+          <listitem>
+            <para lang="en">
+              Shows the image height and width in pixels, that is, the
+              <emphasis>physical</emphasis> size of the image.
+            </para>
+            <para lang="ja">
+              画像の幅と高さをピクセル単位で、 つまり <emphasis>物質的な
+              </emphasis> 大きさで示しています。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Print size</term>
+          <term lang="ja">印刷サイズ</term>
+          <listitem>
+            <para lang="en">
+              Shows the size the image will have when it is printed, in the
+              current units. This is the <emphasis>logical</emphasis> size of
+              the image. It depends upon the physical size of the image and
+              the screen resolution.
+            </para>
+            <para lang="ja">
+              印刷物での画像の寸法を現在使われている単位で表示しています。 
+              ただしこの画像の寸法は上記の物質的な大きさと画面の解像度により
+              算出された <emphasis>論理的な</emphasis> 値です。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Resolution</term>
+          <term lang="ja">解像度</term>
+          <listitem>
+            <para lang="en">
+              Shows the print resolution of the image in pixel per inch.
+            </para>
+            <para lang="ja">
+              画像の印刷解像度をドット毎インチで表示しています。 この値は
+              <link linkend="gimp-image-print-size">画像印刷解像度の設定</link>
+              ダイアログで変更できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Color space</term>
+          <term lang="ja">色空間</term>
+          <listitem>
+            <para lang="en">Shows the images color space.</para>
+            <para lang="ja">画像の色空間名を表示しています。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">File name</term>
+          <term lang="ja">ファイル名</term>
+          <listitem>
+            <para lang="en">
+              Path and name of the file that contains the image.
+            </para>
+            <para lang="ja">
+              画像を収めたファイルの保管場所 (パス名) とファイル名をつなげて
+              表示しています。 点々<quote>&hellip;</quote>で省略されている部分
+              はウィンドウを横に拡げると読めます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">File size</term>
+          <term lang="ja">ファイルサイズ</term>
+          <listitem>
+            <para lang="en">Size of the file that contains the image</para>
+            <para lang="ja">画像を収めたファイルの容量を表示しています。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">File type</term>
+          <term lang="ja">ファイル形式</term>
+          <listitem>
+            <para lang="en">Format of the file that contains the image</para>
+            <para lang="ja">
+              画像を収めたファイルの形式名を表示しています。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Size in memory</term>
+          <term lang="ja">メモリ中のサイズ</term>
+          <listitem>
+            <para lang="en">
+              RAM consumption of the loaded image including the images
+              journal.
+              This information is also displayed in the image window. The
+              size is quite different from the size of the file on disk.
+              That is because the displayed image is decompressed and
+              because <acronym>GIMP</acronym> keeps a copy of the image in
+              memory for Redo operations.
+            </para>
+            <para lang="ja">
+              画像の読み込みと操作履歴の記録のために費やされた<acronym>RAM
+              </acronym>容量が表示されています。 この情報は画像ウィンドウの
+              ステータスバーでも表示されます。 この値はファイルサイズとは
+              かなり異なります。 画面に画像を表示するときに圧縮を解いているのに
+              加え、 <acronym>GIMP</acronym>は<quote>やり直し</quote> (リドゥ) 
+              のために画像の複製もメモリ上に置くためです。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Undo steps</term>
+          <term lang="ja">アンドゥ回数</term>
+          <listitem>
+            <para lang="en">
+              Number of actions you have performed on the image, that you
+              can undo. You can see them in the
+              <link linkend="gimp-undo-dialog">Undo History</link> dialog.
+            </para>
+            <para lang="ja">
+              これまでに画像に加えた操作の取り消せる手数が表示されています。 
+              <link linkend="gimp-undo-dialog">操作履歴</link> ダイアログで
+              その様子がよく分かります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Redo steps</term>
+          <term lang="ja">リドゥ回数</term>
+          <listitem>
+            <para lang="en">
+              Number of actions you have undone, that you can redo.
+            </para>
+            <para lang="ja">
+              取り消された操作のうち<quote>やり直し</quote>が効く手数が表示
+              されています。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">
+            Number of pixels; Number of layers; Number of channels; Number
+            of paths
+          </term>
+          <term lang="ja">ピクセル数; レイヤー数; チャンネル数; パス数</term>
+          <listitem>
+            <para lang="en">Well counted!</para>
+            <para lang="ja">ちゃんと数えてありますよ!</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+    <sect4>
+      <title lang="en"><quote>Color profile</quote> tab</title>
+      <title lang="ja"><quote>カラープロファイル</quote>タブ</title>
+      <figure>
+        <title lang="en"><quote>Color profile</quote> tab</title>
+        <title lang="ja"><quote>カラープロファイル</quote>タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/menus/image-properties-profile.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        This tab contains the name of the color profile the image is loaded
+        into GIMP with. Default is the built-in <quote>sRGB</quote> profile.
+      </para>
+      <para lang="ja">
+        このタブでは画像とともに<acronym>GIMP</acronym>に読み込まれたカラー
+        プロファイルの名前が表示されます。 初期値は組込み<quote>sRGB</quote>
+        プロファイルです。
+      </para>
+    </sect4>
+    <sect4>
+      <title lang="en"><quote>Comments</quote> tab</title>
+      <title lang="ja"><quote>コメント</quote>タブ</title>
+      <figure>
+        <title lang="en"><quote>Comments</quote> tab</title>
+        <title lang="ja"><quote>コメント</quote>タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/menus/image-properties-comment.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        This tab allows you to view and edit a comment for the image.
+      </para>
+      <para lang="ja">
+        このタブで画像に埋め込むコメントが読め、 編集できます。
+        [未保存の変更がない画像に新たにコメントをここで書き加えても、 
+        <quote>手付き</quote>と認識されません。 おそらくバグです。]
+      </para>
+    </sect4>
+  </sect3>
+</sect2>

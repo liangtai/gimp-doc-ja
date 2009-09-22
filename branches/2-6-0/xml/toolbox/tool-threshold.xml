@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-11 j.h: revised for v2.6. Added Presets
+  2008-01-05 j.h: updated to v2.4
+  2007-06-06 kost: added 'no'
+  2007-04-15 Added Spanish translation by AntI
+  2007-04-10 de Threshold+Qmask translation by ude
+  2006-06-18 small tutorial Threshold+Qmask added by j.h
+  2005-12-06 replaced simplesect by sect3 by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  2005-08-07 de reviewed and restructured by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-threshold">
+  <title lang="en">Threshold</title>
+  <title lang="ja">しきい値</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Threshold</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Threshold</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="シキイチ">しきい値</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="シキイチ">しきい値</primary>
+  </indexterm>
+  <para lang="en">
+    The Threshold tool transforms the current layer or the selection into a
+    black and white image, where white pixels represent the pixels of the
+    image whose Value is in the threshold range, and black pixels represent
+    pixels with Value out of the threshold range.
+  </para>
+  <para lang="en">
+    You can use it to enhance a black and white image (a scanned text for
+    example) or to create selection masks.
+  </para>
+  <para lang="ja">
+    しきい値ツールは選択範囲あるいは活性レイヤーを白黒だけの画像に変換するための
+    もので、 しきい値の範囲内の値を持つ画素は白に、 しきい値の範囲外の値を持つ
+    画素が黒になります。
+  </para>
+  <para lang="ja">
+    白と黒の画像 (例えばスキャナで取りこんだ文面) を強める用途や、 選択マスク
+    を作る用途があります。 
+  </para>
+  <note>
+    <para lang="en">
+      As this tool creates a black and white image, the anti-aliasing of the
+      original image disappears. If this poses a problem, rather use the
+      <link linkend="gimp-tool-levels">Levels </link> tool.
+    </para>
+    <para lang="ja">
+      このツールは白と黒だけの画像を作るため、 元画像のアンチエイリアス効果は
+      失なわれます。 それが問題ならば代わりに
+      <link linkend="gimp-tool-levels">レベル</link> ツールをお使いください。
+    </para>
+  </note>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para>
+      There are different possibilities to activate the tool:
+    </para>
+    <para lang="ja">
+      <quote>しきい値</quote>ツールを起用する方法は2通りあります:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this tool from the image menu through
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Color Tools</guisubmenu>
+            <guimenuitem>Threshold,</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="en">
+          or through
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guimenuitem>Threshold</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>色ツール</guisubmenu>
+            <guimenuitem>しきい値...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guimenuitem>しきい値...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by clicking on the
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-threshold-22.png"/>
+          </guiicon>
+          icon in Toolbox if this tool has been installed in it. You can do
+          that through the <link linkend="gimp-tools-dialog">Tool dialog</link>.
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-threshold-22.png"/>
+          </guiicon>
+          。 但しこの色ツールをツールボックスに登録した場合に限ります。
+          <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link>
+          をご覧ください。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Threshold tool options</title>
+      <title lang="ja">
+        <quote>しきい値</quote>ツールのツールダイアログ
+        <!--とツールオプション-->
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tools-threshold.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-threshold.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Presets</term>
+        <term lang="ja">プリセット</term>
+        <listitem>
+          <para lang="en">
+            You can save the color settings of your image by clicking the
+            <guibutton>Add settings to favourites</guibutton> button
+            <guiicon>
+              <inlinegraphic
+                            fileref="images/toolbox/save-color-settings.png"/>
+            </guiicon>
+          </para>
+          <para lang="ja">
+            画像の色設定の内容は追加ボタン
+            <guiicon>
+              <inlinegraphic
+                            fileref="images/toolbox/save-color-settings.png"/>
+            </guiicon>
+            をクリックすればプリセット一覧に保存できます。
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/presets-menu-icon.png"/>
+            </guiicon>
+            ボタンをクリックするとつぎのメニューが呼び出されます。
+          </para>
+          <figure>
+            <title lang="en">Preset Menu</title>
+            <title lang="ja">プリセットメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/toolbox/presets-menu.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            which lets you <guilabel>Import Settings from File</guilabel> or
+            <guilabel>Export Settings to File</guilabel>,
+            and gives you access to the Manage Save Settings dialog:
+          </para>
+          <para lang="en">
+            このメニューでは <guimenuitem>設定をエクスポート
+            </guimenuitem> によって現在の設定を記憶させたり、 <guimenuitem>
+            設定をインポート</guimenuitem> によって他の画像の
+            処理などに使った設定を再利用できます。 記憶された設定の数々は
+            <guimenuitem>プリセットデータの編集...
+            </guimenuitem> に進むと出てくるつぎのダイアログで管理できます。
+            <!--<guimenuitem>プリセットデータの編集...
+            </guimenuitem>-->
+          </para>
+          <figure>
+            <title lang="en">Manage saved Settings Dialog</title>
+            <title lang="ja">
+              <quote>プリセットデータの編集</quote>ダイアログ
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                        fileref="images/toolbox/manage-saved-settings.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Threshold range</term>
+        <term lang="ja">しきい値とその範囲</term>
+        <listitem>
+          <para lang="en">
+            The Threshold tool provides a visual graph, a histogram, of the
+            intensity value of the active layer or selection. You can set the
+            threshold range either using the input boxes or clicking button 1
+            and dragging on the graph. It allows you to select a part of the
+            image with some intensity from a background with another
+            intensity. Pixels inside the range will be white, and the others
+            will be black. Adjust the range to get the selection you want in
+            white on black background.
+          </para>
+          <para lang="ja">
+            しきい値ツールは選択範囲あるいは活性レイヤーの強度を視覚化した
+            <xref linkend="glossary-histogram"/> と呼ばれる
+            グラフを提供します。 しきい値は入力欄に直接記入するか、 グラフ上を
+            <mousebutton>第1ボタン</mousebutton> でクリックして曳いて設定
+            します。 画像の一部の強度とその背景の強度の違いによってその部分を
+            選択できるようになっています。 しきい値より範囲内の画素は白くなり、
+            範囲外は黒となります。 黒地に白の選択部分が思い通りになるように
+            範囲を調整してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            The Preview toggle allows dynamic updating of the active layer or
+            selection while changes are made to the intensity level.
+          </para>
+          <para lang="ja">
+            <guimenuitem>プレビュー</guimenuitem>
+            の切り替えで選択範囲あるいは活性レイヤー上の強度レベルの変更は動的に
+            反映されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">
+      Using Threshold and Quick Mask to create a selection mask
+    </title>
+    <title lang="ja">
+      しきい値ツールとクイックマスクを用いた選択マスクの作成
+    </title>
+    <para lang="en">
+      That's not always the case, but an element you want to extract from
+      an image can stand out well against the background. In this case,
+      you can use the Threshold tool to select this element as a whole.
+      Grokking the GIMP described a method based on a channel mask, but now,
+      using the <link linkend="gimp-image-window-qmask-button">Quick mask
+      </link> is easier.
+    </para>
+    <para lang="ja">
+      必ずというほどではありませんが、 画像から何か部分的に切り出すときにその
+      部分が背景から浮き立っていることはよくあります。 その場合にしきい値ツール
+      を使えばこの部分は丸ごと選択できます。
+      <footnote>
+        <para>
+          <quote>Grokking the GIMP</quote>
+          <xref linkend="bibliography-online-grokking-gimp" />
+          ではチャンネルマスクを用いた方法を述べていますが、 今回は
+          <link linkend="gimp-image-window-qmask-button">クイックマスク</link>
+          を使うほうが簡単です。
+        </para>
+      </footnote>
+    </para>
+    <procedure>
+      <step>
+        <para lang="en">
+          First start decomposing you image into its RGB and HSV components by
+          using the <link linkend="plug-in-decompose-registered">Decompose</link> filter. A
+          new grey-scaled image is created and the components are displayed as
+          layers in the Layer Dialog. These layers come with a thumbnail but
+          it is too small for an easy study. You can, of course, increase the
+          size of this preview with the dialog menu (the small triangular
+          button), but playing with the <quote>eyes </quote> is more simple to
+          display the wanted layer in the decompose image. Select the layer
+          that isolates the element the best.
+        </para>
+        <para lang="ja">
+          まず始めは
+          <link linkend="plug-in-decompose-registered">チャンネル分解</link>
+          フィルタを用いて画像を<acronym>RGB</acronym>と<acronym>HSV</acronym>
+          に分解します。 すると新たにグレースケール画像が作られ、 それぞれの
+          色要素はレイヤーとなってレイヤーダイアログに並びます。 各レイヤーの
+          サムネイルが表示されますが学習に使うには小さ過ぎます。 もちろん
+          プレビューの大きさを変えるダイアログメニュー (小さな三角のボタン)
+          で大きくする方法がありますが、 むしろ<quote>眼</quote>の印を使う方が
+          画像の分解レイヤーを選んで見るには楽でしょう。 欲しい部分がうまく孤立
+          しているレイヤーを選びましょう。
+        </para>
+        <figure>
+          <title lang="en">
+            The original image, the decompose image and its Layer Dialog
+          </title>
+          <title lang="ja">
+            元の画像、 分解した画像とそのレイヤーダイアログ
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/threshold-orig.png"/>
+            </imageobject>
+          </mediaobject>
+          <mediaobject>
+            <imagedata format="PNG"
+              fileref="images/using/threshold-decomp.png"/>
+            </imageobject>
+          </mediaobject>
+          <mediaobject>
+            <imagedata format="PNG"
+              fileref="images/using/threshold-layers.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          Call the Threshold tool from the decompose image. By moving the
+          black cursor, fit threshold to isolate the best the element you want
+          to extract. This will probably not be perfect: we will enhance the
+          result with the selection mask we are going to create.
+        </para>
+        <para lang="ja">
+          分解した画像にてしきい値ツールを起用します。 ダイアグラムの黒い
+          カーソルを動かして、 切り出したい部分が適切に孤立するようにしきい値を
+          合わせます。 ただしこの作業で完璧にするのは無理でしょう。 得られた
+          結果の仕上げはつづいて作成する選択マスクを利用します。
+        </para>
+        <warning>
+          <para lang="en">
+            Make sure you have selected the right layer when you call the
+            Threshold tool: when it is opened, you can't change to another
+            layer.
+          </para>
+          <para lang="ja">
+            しきい値ツールを呼びだす際には最もふさわしいレイヤーを選んでおいて
+            ください。 ダイアログを開いている間は、 他のレイヤーには移れません。
+          </para>
+        </warning>
+        <figure>
+          <title lang="en">The selected layer after threshold fit</title>
+          <title lang="ja">
+            選ばれたレイヤーのしきい値を合わせた後の様子
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/using/threshold-fit.png" format="PNG"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                We got the best outline for our flower. There are several red
+                objects which we must remove.
+              </para>
+              <para lang="ja">
+                最もうまく花の輪郭を得た。 この後で除去しなければならない赤色の
+                部分がそこかしこにある。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          Make sure the image displaying the selected layer is active and
+          copy it to the clipboard with
+          <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          選ばれたレイヤーを表示している画像を確実に活性化してから、
+          <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> で
+          クリップボードに取り込みます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Now, make the original image active. Click on the
+          <guibutton>Quick Mask</guibutton> button at the bottom-left corner
+          of the image window: the image gets covered with a red (default)
+          translucent mask. This red color does not suit well to our image
+          with much red: go to the Channel Dialog, activate the
+          <quote>Quick mask</quote> channel and change this color with the
+          <guibutton>Edit Channel Attributes</guibutton>. Come back to the
+          original image. Press
+          <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> to
+          paste the previously copied layer.
+        </para>
+        <para lang="ja">
+          そうしたら元画像を活性化します。 画像ウィンドウの左下隅にある
+          <guibutton>クイックマスク</guibutton> ボタンをクリックしてください。
+          画像は半透明の赤 (初期設定) 色で覆われます。 元画像の赤にかぶって
+          しまうので赤は今回ふさわしくありません。 チャンネルダイアログを開き、
+          <quote>クイックマスク</quote>チャンネルを活性化させてから、 メニュー
+          より <guimenuitem>チャンネルプロパティを編集...
+          </guimenuitem> を辿るか、 チャンネルのプロパティを編集するボタン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/dialogs/stock-edit-16.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          をクリックしてダイアログを呼びだし、 色を変更してください。 さて元の
+          画像に戻ったら、 <keycombo><keycap>Ctrl</keycap><keycap>V</keycap>
+          </keycombo> で先ほど写し取っておいたレイヤーを貼り付けます。
+        </para>
+        <figure>
+          <title lang="en">The mask</title>
+          <title lang="ja">マスク</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" format="PNG"
+                fileref="images/using/threshold-mask.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          Voila. Your selection mask is ready: you can improve the selection
+          as usually. When the selection is ready, disable the Quick mask by
+          clicking again on its button: you will see the marching ants around
+          the selection.
+        </para>
+        <para lang="ja">
+          ほらこのとおり。 選択マスクの準備ができました。 選択範囲は普段通り
+          改良できます。 選択範囲が整ったら、 クイックマスクボタンをもう一度
+          押して解除してください。 選択範囲の輪郭には点滅破線が現れます。
+        </para>
+        <figure>
+          <title lang="en">The result</title>
+          <title lang="ja">結果</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/threshold-result.png"/>
+            </imageobject>
+          </mediaobject>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/threshold-selection.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          We used the Zoom to work at a pixel level, the Lasso to remove large
+          unwanted areas, the pencil (to get hard limits), black paint to
+          remove selected areas, white paint to add selected areas, especially
+          for stem.
+        </para>
+        <para lang="ja">
+          ズームツールを使って各画素が見えるまで拡大しましたし、 大きい不要な
+          部分はなげなわツールを使って取り除きました。 (曖昧さが無い)
+          鉛筆ツールを使って、 選択範囲を削るには黒色で、 選択範囲を足すには
+          白色で、 特に茎の部分を描画しなおしました。
+        </para>
+      </step>
+    </procedure>
+  </sect3>
+</sect2>

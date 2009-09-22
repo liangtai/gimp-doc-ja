@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-06-26 Added Spanish translation by AntI
+  2007-05-02 KoSt: added 'no'
+  2007-01-18 it added by alessandro falappa
+  2006-04-17 small spelling fix for german
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-09-15 de added by axel.wernicke
+  2005-11-07 small add in Overview by julien hardelin
+-->
+<!--2009-09-15-->
+<sect2 id="gimpressionist-orient-map-editor">
+  <title lang="en">GIMPressionist - Orientation Map Editor</title>
+  <title lang="ja">GIMPressionist - 方向マップエディタ</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Artistic</secondary>
+    <tertiary>GIMPressionist</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>GIMPressionist</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
+    <tertiary>GIMPressionist</tertiary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
+      The Orientation-map editor is an annexe of the
+      <link linkend="plug-in-gimpressionist">GIMPressionist</link> filter. You
+      can get to it by clicking on the <guibutton>Edit</guibutton> button
+      in the <quote>Orientation</quote> tab. With this editor, you can set
+      the direction that brush strokes given by filter will have.
+    </para>
+    <para lang="ja">
+      方向マップエディタは 
+      <link linkend="plug-in-gimpressionist">GIMPressionist</link> フィルタに
+      付属するダイアログです。 このフィルタのダイアログの<quote>方向</quote>
+      タブで <guibutton>編集</guibutton> ボタンをクリック
+      すると呼び出せます。 このエディタではフィルタで使われる筆の運ばれる方向を
+      調整できます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Parameter Settings</title>
+    <title lang="ja">パラメータの設定</title>
+    <figure>
+      <title lang="en">
+        Options of the <quote>Orientation-map Editor</quote> dialog
+      </title>
+      <title lang="ja">
+        <quote>方向マップエディタ</quote>ダイアログのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-artistic-gimpressionist-orientmap.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <para lang="en">
+        You can place one or several vectors. You can set their direction and
+        their strength. They will act on the corresponding area of the image.
+      </para>
+      <para lang="ja">
+        ベクトルをひとつだけでもいくつでも配置できます。 その方向と長さを調整
+        してください。 置いたところと同じ画像上の部分に作用します。
+      </para>
+      <varlistentry>
+        <term lang="en">Vectors</term>
+        <term lang="ja">ベクトル</term>
+        <listitem>
+          <para lang="en">
+            In the left windows (Vectors) you can manage your vectors. By
+            default, a vector is at center. Vectors are red when they are
+            active, and grey when they are not with a white point at tip.
+          </para>
+          <para lang="ja">
+            左側の<quote>ベクトル</quote>と銘うった縮小画像上でベクトルを操作
+            できます。 初期状態では中央にベクトルが置かれています。 ベクトルは
+            現在選択されているものが赤で示され、 それ以外は白いベクトル頭と灰色
+            のベクトル身で表されています。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                By clicking on the <guibutton>Add</guibutton> button, you add
+                a vector at center of the window, whereas clicking with the
+                mouse <mousebutton>Middle&nbsp;Button</mousebutton> puts it
+                where you click.
+              </para>
+              <para lang="ja">
+                <guibutton>追加</guibutton> ボタンをクリック
+                するとベクトルを新たに画像の中央に追加できます。 またあるいは
+                <mousebutton>中ボタン</mousebutton> でクリックした場所に新たに
+                ベクトルを追加できます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                Clicking with the mouse
+                <mousebutton>Left&nbsp;Button</mousebutton> displaces the
+                selected vector to the clicked point.
+              </para>
+              <para lang="ja">
+                <mousebutton>第1ボタン</mousebutton> でクリックするとその位置へ
+                現在選択されているベクトルが移動します。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                When clicking with the mouse
+                <mousebutton>Right&nbsp;Button</mousebutton>, the selected
+                vector points to where you have clicked.
+              </para>
+              <para lang="ja">
+                <mousebutton>第2ボタン</mousebutton> でクリックするとその方向へ
+                現在選択されているベクトルが向きを変えます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                Clicking on <guibutton>&lt;&lt;</guibutton> and
+                <guibutton>&gt;&gt;</guibutton> buttons displaces focus from a
+                vector to another.
+              </para>
+              <para lang="ja">
+                <guibutton><accel>&lt;</accel>&lt;</guibutton> ボタンと
+                <guibutton><accel>&gt;</accel>&gt;</guibutton> ボタンはクリック
+                すると現在選択されているベクトルが選択を解除され、 別のベクトル
+                が選択されます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                The <guilabel>Delete</guilabel> button allows you to delete
+                the selected vector.
+              </para>
+              <para lang="ja">
+                </guibutton>削除</guibutton> ボタンはクリック
+                すると現在選択されているベクトルを撤去します。
+              </para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <para lang="en">
+              With the scroll bar on the right of the Vectors panel, you can
+              set the image brightness. This can be very useful if the image
+              is very dark/bright and you can't see vectors well.
+            </para>
+            <para lang="ja">
+              <quote>ベクトル</quote>画面の右側についているスクロールバーは、
+              この縮小見本画像の明るさを調節するためのものです。 画像が暗過ぎ
+              たり明る過ぎたりしてベクトル表示が見難くなっているときこの機能が
+              役立ちます。
+            </para>
+          </tip>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            This Preview gives you an idea of the action of the various
+            vectors. The slider on the right border lets you change the
+            luminosity of this preview.
+          </para>
+          <para lang="ja">
+            <quote>プレビュー</quote>表示には無数のベクトルの向きをつかめる図が
+            示されています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Type</term>
+        <term lang="ja">種類</term>
+        <listitem>
+          <para lang="en">
+            You have there some types to arrange the brush strokes within the
+            selected vector domain. Describing them is difficult, but you can
+            see the result in the Preview.
+          </para>
+          <para lang="ja">
+            これら4つの種類は上で現在選択しているベクトルに関わる筆づかいを調整
+            します。 おのおのの特徴をここでは説明しませんが、 プレビュー画面で
+            その意味はご理解いただけると思います。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Voronoi</term>
+        <term lang="ja">ボロノイ</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Voronoi</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>ボロノイ</primary>
+          </indexterm>
+          <para lang="en">
+            A Voronoi's diagram consists in
+            partitioning a plane with n master points into n polygons
+            where each polygon has only one of these n master points and
+            where any given other point of the polygon is closer to the
+            master point than to any other. So each polygon limit is
+            midway between two master point. Here is an example of a
+            Voronoi's diagram:
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/voronoi.png"/>
+              </imageobject>
+            </mediaobject>
+            Here, when this option is checked, only the vector closest to
+            a given point of the image influences this point.
+          </para>
+          <para lang="ja">
+            ボロノイ図とはn個の点を任意に配置した平面を、 1個ずつその点 (母点) 
+            を内側に有するn個の多角形に分割し、 なおかつ多角形内のどんな位置も
+            他の母点よりは内包する唯一の母点との距離が最も短くなるようにその
+            多角形の境界線を設けた図のことです (ユークリッド平面の場合)。 
+            この場合多角形の辺はいずれも2つの母点の二等分線を通ることに
+            なります。 ここにボロノイ図の例をご覧ください。
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/voronoi.png"/>
+              </imageobject>
+            </mediaobject>
+            つまりこのオプションを有効にすると図上の点はいずれも最も近い
+            ただひとつのベクトルにのみ影響されることになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Angle</term>
+        <term lang="ja">角度</term>
+        <listitem>
+          <para lang="en">
+            Direction of the selected vector.
+            This slider has the same action as right-clicking (see above).
+          </para>
+          <para lang="ja">
+            現在選択されているベクトルの方向です。 このスライダの役目は
+            ベクトル図面 (前述) での <mousebutton>第2ボタン</mousebutton> 
+            クリックと同じです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Angle Offset</term>
+        <term lang="ja">角度オフセット</term>
+        <listitem>
+          <para lang="en">
+            This slider allows you to change the angle of ALL vectors.
+          </para>
+          <para lang="ja">
+            このスライダは <emphasis>全て</emphasis> のベクトルの角度を変更
+            します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Strength</term>
+        <term lang="ja">強さ</term>
+        <listitem>
+          <para lang="en">
+            This slider acts on the influence domain of the selected vector.
+            This influence lowers with distance. Strength is showed with the
+            vector length.
+          </para>
+          <para lang="ja">
+            <guilabel>強さ</guilabel> スライダは現在選択
+            されているベクトルの長さを変えます。  長さが増すと周囲の
+            方向マップがより強くより遠くまで影響されます。 ベクトル図面では
+            強さを長さで表示します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Strength Exp.</term>
+        <term lang="ja">強さ指数</term>
+        <listitem>
+          <para lang="en">
+            This slider acts on the length of ALL vectors, and so changes
+            the strength of all brush strokes.
+          </para>
+          <para lang="ja">
+            <guilabel>強さ指数</guilabel> スライダは
+            <emphasis>全て</emphasis> のベクトルの強さを変更しますので、 
+            結果的に全ての筆触をより長くします。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

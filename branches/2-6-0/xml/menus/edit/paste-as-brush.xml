@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-10 ciampix: added italian translation
+  2007-10-15 ude: German translation
+  2007-10-10 j.h : created
+-->
+<!--2009-09-12-->
+<sect3 id="script-fu-paste-as-brush">
+  <title lang="en">Paste as New Brush</title>
+  <title lang="ja"> クリップボードから生成... → 新しいブラシ...</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Paste</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Paste</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Paste as new brush</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="クリップボードカラブラシヲサクセイ">
+      クリップボードからブラシを生成
+    </primary>
+  </indexterm>
+
+  <para lang="en">
+    This command opens a dialog window which lets you name the new brush.
+    The brush appears in the <link linkend="gimp-brush-dialog">Brushes
+    dialog</link>.
+  </para>
+  <para lang="ja">
+    <guimenuitem>新しいブラシ...</guimenuitem> コマンドは
+    ダイアログを開きますので新たに作成されるブラシにつける名前とファイル名など
+    を設定してください。 作成されたブラシは 
+    <link linkend="gimp-brush-dialog">ブラシダイアログ</link> に現れます。
+  </para>
+
+  <sect4>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">The <quote>New Brush</quote>dialog</title>
+      <title lang="ja">
+        <quote>Script-Fu: 新しいブラシ</quote>ダイアログの主要部
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/edit-paste-new-brush.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Brush name</term>
+        <term lang="ja">ブラシ名</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Brush name</guilabel> is the name as it will be in
+            the <quote>Brushes</quote> Dialog.
+          </para>
+          <para lang="en">
+            <guilabel>ブラシ名</guilabel> は<quote>ブラシ</quote>ダイアログ上で
+            の名前です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">File name</term>
+        <term lang="ja">ファイル名</term>
+        <listitem>
+          <para lang="en">
+            The new brush is saved as <guilabel>File name</guilabel> (with
+            extension <filename class="extension">.gbr</filename>) in your
+            personal <filename class="directory">brushes</filename> folder.
+          </para>
+          <para lang="en">
+            新しくできたブラシは <guilabel>ファイル名</guilabel> (と拡張子 
+            <filename class="extension">.gbr</filename>) の名前で個人用
+            <acronym>GIMP</acronym>ディレクトリの <filename class="directory">
+            brushes</filename> フォルダに保存されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Spacing</term>
+        <term lang="ja">間隔</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Spacing</guilabel>: When the brush draws a line, it
+            actually stamps the brush icon repeatedly. If brush stamps are
+            very close, you get the impression of a solid line.
+          </para>
+          <para lang="en">
+            <guilabel>間隔</guilabel>: ブラシの描線は実際はブラシの刻印が繰り
+            返し並んで描かれています。 ブラシの刻印が互いに密着し重なると連続
+            した線に見えるようになります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect4>
+
+  <sect4>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guisubmenu>Paste as </guisubmenu>
+            <guimenuitem>New Brush</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="en">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guisubmenu>クリップボードから生成...</guisubmenu>
+            <guimenuitem>新しいブラシ...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect4>
+</sect3>

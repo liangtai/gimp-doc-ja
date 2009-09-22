@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-03-21 JPL  reviewed fr & en
+  2007-12-20  PP reviewed fr & en ; added section3 for tool manipulation
+  2007-10-05 lexa: reviewed de for GIMP 2.4
+  2007-08-11 added 'ko' contents by Mr.Dust
+  2007-06-02 KoSt: added 'no'
+  06-02-10 en;fr revised by j.h
+  05/10/14 reviewed by axel.wernicke
+  05/05/18 de reviewed by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-fuzzy-select">
+  <title lang="en">Fuzzy selection (Magic wand)</title>
+  <title lang="ja">ファジー選択 (魔法の杖; 自動選択)</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Fuzzy Selection</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Fuzzy selection</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Fuzzy Selection</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Magic Wand</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="ファジーセンタク">ファジー選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタク">選択</primary>
+    <secondary sortas="ファジーセンタク">ファジー選択</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ファジーセンタク">ファジー選択</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="マホウノツエ">魔法の杖</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ジドウセンタク">自動選択</primary>
+  </indexterm>
+  <figure>
+
+    <title lang="en">Magic Wand tool icon in the Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>ファジー選択</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/toolbox-wand.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Fuzzy Select (Magic Wand) tool is designed to select areas of the
+    current layer or image based on color similarity.
+  </para>
+  <para lang="en">
+    When using this tool, it is very important to pick the right starting
+    point. If you select the wrong spot, you might get something very
+    different from what you want, or even the opposite.
+  </para>
+  <para lang="en">
+    The Wand is a good tool for selecting objects with sharp edges. It is fun
+    to use, so beginners often start out using it a lot. You will probably
+    find, however, that the more you use it, the more frustrated you become
+    with the difficulty of selecting exactly what you want, no more, no less.
+    More experienced users find that the
+    <link linkend="gimp-tool-path">Path</link> and
+    <link linkend="gimp-tool-by-color-select">Color Select</link>
+    tools are often more efficient, and use the Wand less. Still, it is useful
+    for selecting an area within a contour, or touching up imperfect
+    selections. It often works very well for selecting a solid-colored (or nearly
+    solid-colored) background area.
+  </para>
+  <para lang="en">
+    Note that as the selected area expands outward from the center, it does
+    not only propagate to pixels that touch each other: it is capable of
+    jumping over small gaps, depending on <guilabel>Threshold</guilabel> option.
+    To increase/decrease Threshold, during the use of Fuzzy Selection, after the
+    first button-press, dragging the pointer downward (or to the right) or
+    upward (or to the left).
+  </para>
+  <para lang="ja">
+    ファジー選択ツール (魔法の杖、 自由選択ツール) は画像またはレイヤーから
+    同系色をもとに選択をとるためのものです。
+  </para>
+  <para lang="ja">
+    このツールを使う場合には最初の位置を決めることが極めて重要です。
+    変なところを選んでしまうとなかなか思ったとおりの範囲が作れないばかりか、
+    要らない部分が入ってしまうこともありえます。
+  </para>
+  <para lang="ja">
+    この杖は輪郭のはっきりした形象を選択するのに適したツールです。 使ってみれば
+    面白いこともあって、 初心者はたびたび連用しがちです。
+    でも思ったとおりに選択させるのは結構難しいので、 所詮使えば使うほど
+    いらいらが募るしろものだとも気付かれることでしょう。 熟練したユーザは
+    <link linkend="gimp-tool-path">パス</link> ツールとか
+    <link linkend="gimp-tool-by-color-select">色域選択</link> ツールのほうが
+    ずっと能率的にできると知っていて、 この杖はそんなには使いません。
+    それでも、 輪郭の内側を選択するとか選択の欠けたところを補うとかの作業
+    には便利です。 殊に単色(もしくはほぼ単色)な背景部分を選択するのなら
+    非常にうまくやりとげます。
+  </para>
+  <para lang="ja">
+    選択範囲は中心からみて膨らんでいるように見えますが、 となりあう画素
+    (ピクセル) が染まったからだけではありません。 <guilabel>しきい値</guilabel>
+    に基づいて小さな間隙を飛び越えてつながりあえるからです。 しきい値は
+    選択の起点をとったあとのファジー選択の最中にマウスポインタを下方向
+    (または右方向) に曳くと増加し、 上方向 (または左方向) に曳くと減少します。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access to the Magic Wand Tool in different ways:
+    </para>
+    <para lang="ja">
+      選択ツールを起用する方法はつぎのいずれかです:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          From the image menu bar
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Selection Tools</guisubmenu>
+            <guimenuitem>Fuzzy Select</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>選択ツール</guisubmenu>
+            <guimenuitem>ファジー選択</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by clicking on the tool icon
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rect-select-22.png"/>
+          </guiicon>
+          in the ToolBox,
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rect-select-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by using the keyboard shortcut <keycap>U</keycap>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット <keycap>U</keycap>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">修飾キー (初期設定)</title>
+    <para lang="en">
+      The Fuzzy Select tool does not have any special key modifiers, only the
+      ones that affect all selection tools in the same way. See
+      <xref linkend="gimp-tool-select"/> for help with these.
+    </para>
+    <para lang="ja">
+      ファジー選択に固有の修飾キーはありません。 選択ツールに共通のものなら
+      同じように使えます。 詳しくは
+      <link linkend="gimp-tool-select">選択ツール</link>をご覧ください。
+    </para>
+  </sect3>
+  <sect3>
+    <title lang="en">Tool handling</title>
+    <title lang="ja">ツールの操縦</title>
+    <figure>
+      <title lang="en">
+        Using Magic Wand tool: selected pixels are contiguous
+      </title>
+      <title lang="ja">魔法の杖ツールを使用</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/fuzzy-selection.png"/>
+        </imageobject>
+        <caption>
+          <para lang="ja">選択された画素は接しあっている</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      It starts selecting when you click at a spot in the image, and expands
+      outwards like water flooding low-lying areas, selecting contiguous
+      pixels whose colors are similar to the starting pixel. You can control
+      the threshold of similarity by dragging the mouse downward or to the
+      right: the farther you drag it, the larger you get the selected region.
+      And you can reduce the selection by dragging upwards or to the left.
+    </para>
+    <para lang="en">
+      To move the selection see
+      <link linkend="gimp-using-selections-moving">Moving selections</link>.
+      <!--(you can move the selection outline with the arrow keys, not with the
+      mouse...)-->
+    </para>
+    <para lang="ja">
+      はじめは画像上のクリックされた点から選択を開始し、 水が低いところへ
+      流れこむように、 最初の画素と類似色の隣りあった画素がつぎつぎ
+      と選択されてゆきます。 類似性のしきい値はマウスポインタを下方向
+      (または右方向) に曳いてゆくと増加し、 選択範囲が拡がります。
+      選択範囲を控え目にするのなら上方向 (または左方向) に曳いてゆきます。
+    </para>
+    <para lang="ja">
+      選択範囲を移動するのならば
+      <link linkend="gimp-using-selections-moving">選択領域の移動</link>
+      をご覧ください。
+    </para>
+  </sect3>
+  <sect3 id="tool-fuzzy-select-options">
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Tool Options for the Magic Wand tool</title>
+      <title lang="ja">
+        <quote>ファジー選択</quote>ツールのツールオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-wand.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      <xi:include href="about-common-select-options.xml"/>
+      <varlistentry>
+        <term lang="en">
+          Mode; Antialiasing; Feather edges
+        </term>
+        <term lang="ja">モード; アンチエイリアス; 境界をぼかす</term>
+        <listitem>
+          <para lang="en">Common select options.</para>
+          <para lang="ja">選択ツール共通のオプションです。</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para lang="en">
+      These options affect the way the Magic Wand expands the selection
+      out from the initial point.
+    </para>
+    <para lang="ja">
+      これらのオプションはファジー選択ツール(魔法の杖)が開始点から
+      選択範囲を拡げてゆく手段を左右します。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Select Transparent Areas</term>
+        <term lang="ja">透明部分も選択可</term>
+        <listitem>
+          <para lang="en">
+            This option gives the Magic Wand the ability to select areas
+            that are completely transparent. If this option is not
+            checked, transparent areas will never be included in the
+            selection.
+          </para>
+          <para lang="ja">
+            このオプションは魔法の杖が完全透明な領域をも選択する自由を与え
+            ます。 このオプションを無効にすると透過領域は全く選択されません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sample Merged</term>
+        <term lang="ja">レイヤー結合色</term>
+        <listitem>
+          <para lang="en">
+            This option becomes relevant when you have several layers in
+            your image, and the active layer is either semi-transparent
+            or is set to another Layer Mode than Normal. If this is the
+            case, the colors present in the layer will be different from
+            the colors in the composite image. If the
+            <quote>Sample Merged</quote>
+            option is unchecked, the wand will only react to the color
+            in the active layer when it creates a selection. If it is
+            checked it will react to the composite color of all visible
+            layers. For further information, see the glossary entry
+            <link linkend="glossary-samplemerge">Sample Merged</link>.
+          </para>
+          <para lang="ja">
+            このオプションは画像に複数のレイヤーがあって活性レイヤーが半透明か、
+            もしくは<quote>標準</quote>以外のレイヤーに定められている場合に
+            関わってきます。 この状態では現在のレイヤーの色と合成された画像の色
+            とが異なっているはずです。 <guilabel>レイヤー結合色</guilabel>
+            オプションが無効にされているときは現在活性化しているレイヤーの色だけ
+            を見て選択を作ります。 逆に有効であれば全ての可視レイヤーから
+            色を合成して判断します。 用語集の
+            <xref linkend="glossary-samplemerge" />の項に詳しく書かれています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Threshold</term>
+        <term lang="ja">しきい値</term>
+        <listitem>
+          <para lang="en">
+            This slider determines the range of colors that will be
+            selected at the moment you click the pointer on the initial
+            point, before dragging it: the higher the threshold, the
+            larger the resulting selection. After the first
+            button-press, dragging the pointer downward or to the right
+            will increase the size of the selection; dragging upward or
+            to the left will decrease it. Thus, you have the same set of
+            possibilities regardless of the Threshold setting: what
+            differs is the amount of dragging you have to do to get the
+            result you want.
+          </para>
+          <para lang="ja">
+            このスライダはマウスポインタで開始点をとった時点での選択対象となる
+            色の幅を示すもので、 マウスを曳くと変化します。 しきい値が高いほど
+            選択される範囲は大きくなります。 開始点をとった後で、 マウスを
+            下方向もしくは右方向に曳くと選択範囲の大きさが増します。 反対に
+            マウスを上方向もしくは左方向に曳くと大きさが減ります。 つまり
+            しきい値をこのスライダで設定しなくても同等に調節が可能だということ
+            です。 両者の違いは、 しきい値を大きくとるためにはマウスで曳く
+            方法でははるかに大幅なポインタ移動が必要になるということです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Selection by</term>
+        <term lang="ja">選択基準</term>
+        <listitem>
+          <para lang="en">
+            With this option you can choose which component of the image
+            GIMP shall use to calculate the similarity.
+          </para>
+          <para lang="en">
+            The components you can choose from are
+            <guimenuitem>Red</guimenuitem>,
+            <guimenuitem>Green</guimenuitem>,
+            <guimenuitem>Blue</guimenuitem>,
+            <guimenuitem>Hue</guimenuitem>,
+            <guimenuitem>Saturation</guimenuitem> and
+            <guimenuitem>Value</guimenuitem>.
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>が類似色を算出するために画像の
+            どの成分を根拠とするかをこのオプションで指定します。
+          </para>
+          <para lang="ja">
+            根拠となる成分を <guimenuitem>コンポジット</guimenuitem>、
+            <guimenuitem>赤</guimenuitem>、 <guimenuitem>緑</guimenuitem>、
+            <guimenuitem>青</guimenuitem>、 <guimenuitem>色相</guimenuitem>、
+            <guimenuitem>彩度</guimenuitem> からひとつ選びます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

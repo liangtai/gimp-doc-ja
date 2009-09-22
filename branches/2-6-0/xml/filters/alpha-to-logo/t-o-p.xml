@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-22 kost: added 'no'
+  2007-11-21 ude: created 'en','de'
+-->
+<!--2009-09-12-->
+<sect2 id="script-fu-t-o-p-logo-alpha">
+  <title lang="en">Particle Trace</title>
+  <title lang="ja">粒子の軌跡...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Particle Trace</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Particle Trace</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary sortas="リュウシノキセキ">粒子の軌跡</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="リュウシノキセキ">粒子の軌跡</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Examples for the <quote>Particle Trace</quote> filter
+      </title>
+      <title lang="ja"><quote>粒子の軌跡</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/t-o-p.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Particle Trace</quote> applied</para>
+          <para lang="ja"><quote>粒子の軌跡</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/t-o-p-edge.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Applied with <quote>Edge only</quote> option</para>
+          <para lang="ja"><quote>縁だけ</quote>オプション適用</para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      To get such images, open a new image with a transparent background,
+      create selections, fill them with any color, and apply filter.
+    </para>
+    <para lang="en">
+      This filter adds an effect, reminding of particle
+      traces in a bubble chamber of nuclear physics, to the active layer
+      alpha.
+    </para>
+    <para lang="ja">
+      このような画像を作るためにはまず背景が透明な画像を新たに作成し、 
+      この上に選択範囲をつくって何らかの色で塗りつぶしてからこのフィルタを
+      適用してください。
+    </para>
+    <para lang="ja">
+      <guimenuitem>粒子の奇跡...</guimenuitem> フィルタは
+      活性レイヤーのアルファ域に、 原子物理学の霧箱で撮影された粒子の軌跡を
+      思い起こさせるような効果をつけます。
+    </para>
+    <warning>
+      <para lang="en">
+        The image will always be resized to the active layer's size.
+      </para>
+      <para lang="ja">
+        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
+      </para>
+    </warning>
+    <para lang="en">
+      The filter is derived from the <quote>Particle Trace</quote> script
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>Particle Trace</guimenuitem>
+      </menuchoice>
+      in image window), which creates the following text effect:
+    </para>
+    <para lang="ja">
+      このフィルタはテキストをつぎに示すようなロゴに変える<quote>粒子の軌跡
+      </quote>ロゴスクリプトから派生しました。
+      ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ</guisubmenu>
+        <guimenuitem>粒子の軌跡...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="JPG"
+          fileref="images/filters/examples/t-o-p-script-fu.jpg"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          The <quote>Particle Trace</quote> Script-Fu script.
+        </para>
+        <para lang="ja">
+          <quote>粒子の軌跡</quote>Script-Fuロゴスクリプト
+        </para>
+      </caption>
+    </mediaobject>
+    <para lang="en">
+      The filter adds <link linkend="plug-in-rgb-noise">noise</link> to the
+      alpha and then turns the spots into
+      <link linkend="plug-in-sparkle">sparkles</link>. Then it adds a
+      <link linkend="gimp-selection-feather">feathered</link> white shadow.
+    </para>
+    <para lang="ja">
+      このフィルタはアルファ域に 
+      <link linkend="plug-in-rgb-noise">ノイズ</link> を加え、 出来た斑点を
+      <link linkend="plug-in-sparkle">きらめかせ</link> ます。 そこに境界が
+      <link linkend="gimp-selection-feather">ぼかされた</link> 白い影を
+      加えます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Particle Trace</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>粒子の奇跡...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Particle Trace</quote> options</title>
+      <title lang="ja"><quote>粒子の軌跡</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata  format="PNG"
+            fileref="images/filters/options-logo-t-o-p.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Border size (pixels)</term>
+        <term lang="ja">枠の大きさ (ピクセル)</term>
+        <listitem>
+          <para lang="en">
+            Actually this option is the text layer's border of the
+            <quote>Particle Trace</quote> Script-Fu Logo (hence the misleading
+            name). Here it determines the width of the white shadow's
+            <link linkend="gimp-selection-feather">feathering</link>.
+          </para>
+          <para lang="ja">
+            このオプションは元は<quote>粒子の軌跡</quote>Script-Fuロゴ
+            スクリプトのテキストレイヤー枠を設定していました。 そうした
+            理由から意味が通じませんが、 ここでは白い影の境界線を 
+            <link linkend="gimp-selection-feather">ぼかす</link> 幅を決める
+            ために利用しています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Hit rate</term>
+        <term lang="ja">ヒット率</term>
+        <listitem>
+          <para lang="en">
+            This option sets the amount of light points produced by the
+            <link linkend="plug-in-rgb-noise">Noise</link> filter and thus the
+            amount of points converted to
+            <link linkend="plug-in-sparkle">sparkles</link>. The value ranges
+            from from 0.0 to 1.0, but some values may be not useful:
+          </para>
+          <para lang="ja">
+            このオプションは 
+            <link linkend="plug-in-rgb-noise">ノイズ</link> フィルタが生成
+            する光点の数を設定します。 光点は 
+            <link linkend="plug-in-sparkle">きらめき</link> に変化します。 
+            値は 0.00 から 1.00 の範囲で指定できますが、 役に立たない値も
+            あります。
+          </para>
+          <figure>
+            <title lang="en"><quote>Hit rate</quote> examples</title>
+            <title lang="ja"><quote>ヒット率</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/t-o-p-hits10.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Hit rate 0.10</para>
+                <para lang="ja">ヒット率 = 0.10</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/t-o-p-hits25.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Hit rate 0.25</para>
+                <para lang="ja">ヒット率 = 0.25</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/t-o-p-hits40.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Hit rate 0.40</para>
+                <para lang="ja">ヒット率 = 0.40</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edge width</term>
+        <term lang="ja">縁の幅</term>
+        <listitem>
+          <para lang="en">
+            Along the edge of the alpha, a new area will be created with
+            radius <quote>Edge&nbsp;width</quote> (compare
+            <xref linkend="gimp-selection-border"/>). This area will also be
+            filled with the <quote>Base&nbsp;color</quote>, but will be a bit
+            darker.
+          </para>
+          <para lang="ja">
+            アルファ域の縁に沿って半径が<quote>縁の幅</quote>の新たな領域が
+            作成されます。 <quote>縁の幅</quote>は 
+            <xref linkend="gimp-selection-border"/> と比較してみてください。
+            この領域も<quote>基本色</quote>で塗りつぶされますが、 いくぶん
+            暗くされます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edge only</term>
+        <term lang="ja">縁だけ</term>
+        <listitem>
+          <para lang="en">
+            If checked, the filter effect will be applied to the edge of the
+            alpha channel only and the area of the alpha channel will be
+            cleared.
+          </para>
+          <para lang="ja">
+            このオプションを有効にするとフィルタの効果はアルファチャンネルの
+            縁のところだけに適用され、 アルファ域は消去されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Base color</term>
+        <term lang="ja">基本色</term>
+        <listitem>
+          <para lang="en">
+            This color is used to fill the area defined by the active layer's
+            alpha channel. It defaults to a very dark green. As usual,
+            clicking on the color swatch button opens a color selector where
+            you can choose any other color.
+          </para>
+          <para lang="ja">
+            この色は活性レイヤーのアルファチャンネルに描かれた領域を塗り
+            つぶすのに使われます。 初期設定ではごく濃い緑です。 ご多聞に
+            漏れずここにも色だまりボタンがありクリックすると現れる色変更
+            ダイアログで他の色も選べます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Background color</term>
+        <term lang="ja">背景色</term>
+        <listitem>
+          <para lang="en">
+            This color is used to fill a new background layer. Note that above
+            the background layer there is a white shadow layer which has
+            opacity set to 90%, so you will see the background color only
+            partially. If the <quote>Edge only</quote> option is enabled, the
+            area of the alpha channel will be cleared and you will see the
+            background color. Again, when you click on the color swatch
+            button, a color selector pops up where you can select any color.
+          </para>
+          <para lang="ja">
+            新たに作成される背景レイヤーはこの背景色で塗りつぶされます。 
+            ただしこの背景レイヤーの上に白い影のレイヤーがあり不透明度 90% に
+            設定されるため、 この背景色はほんの部分的にしか見えません。 
+            しかし <guilabel>縁だけ</guilabel> オプションを有効にしている
+            場合はアルファチャンネルに描かれた領域が消去されるためこの
+            背景色がよく見えるはずです。 ここでも色だまりボタンがありクリック
+            すれば色変更ダイアログが開かれて他の色も選べます。
+          </para>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/examples/t-o-p-layers.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                The active layer (top) and the filter layers below
+              </para>
+              <para lang="en">
+                最前面の活性レイヤーとその下のフィルタレイヤー
+              </para>
+            </caption>
+          </mediaobject>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+     2009-03-16 j.h Reviewed for v2.6
+     2008-04-07 JPL reviewed fr
+     2008-03-21 Mr.Dust : added korean contents
+     2008-25-01  PP reviewed for v2.4 ; options rebuilt
+     2007-10-07 lexa: reviewed de for GIMP 2.4
+     2007-06-17 kost: added norwegian
+     2007-01-06 lexa: enhanced docbook compliance
+     -->
+<!--2009-09-15-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-pencil">
+  <title lang="en">Pencil</title>
+  <title lang="ja">鉛筆で描画</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Pencil</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Pencil</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="エンピツデビョウガ">鉛筆で描画</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="エンピツデビョウガ">鉛筆で描画</primary>
+  </indexterm>
+  <figure>
+    <title lang="en">Pencil tool</title>
+    <title lang="ja">
+      ツールボックス上の<quote>鉛筆で描画</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/toolbox-pencil.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The Pencil tool is used to draw free hand lines with a hard edge. The
+    pencil and paintbrush are similar tools. The main difference between the
+    two tools is that although both use the same type of brush, the pencil
+    tool will not produce fuzzy edges, even with a very fuzzy brush. It does
+    not even do anti-aliasing.
+  </para>
+  <para lang="en">
+    Why would you want to work with such a crude tool? Perhaps the most
+    important usage is when working with very small images, such as icons,
+    where you operate at a high zoom level and need to get every pixel exactly
+    right. With the pencil tool, you can be confident that every pixel within
+    the brush outline will be changed in exactly the way you expect.
+  </para>
+  <para lang="ja">
+    <quote>鉛筆で描画</quote>ツールは固いもので描いたようなごつごつした線を
+    手書きで随意に描くためのものです。 鉛筆と絵筆はよく似たツールです。 両者の
+    主な違いは、 同じブラシを用いても、 鉛筆だけはその縁を一切ぼかさない
+    ことです。 ブラシの縁が既にぼやけていたとしてもそうなります。
+    アンチエイリアスもかかりません。
+  </para>
+  <para lang="ja">
+    ではいつそんな奇妙なツールを使うことがあるのでしょう。 想定できるのは
+    アイコンのような小さな画像を大きくズームして各々の画素 (ピクセル) まで
+    はっきりわかる場合の作業です。 鉛筆ツールならブラシの通った画素は全て着色
+    できるため狙ったとおりの作業ができるのです。
+  </para>
+
+  <tip>
+    <para lang="en">
+      If you want to draw straight lines with the Pencil (or any of several
+      other paint tools), click at the starting point, then hold down
+      <keycap>Shift</keycap> and click at the ending point.
+    </para>
+  </tip>
+  <tip>
+    <para lang="ja">
+      鉛筆で直線を引くときは (その他数種のブラシツールと同じく)、 始点を
+      クリックしたら <keycap>Shift</keycap> キーを押しながら終点をクリック
+      すればできます。
+    </para>
+  </tip>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="ja">
+      <quote>鉛筆で描画</quote>ツールを起用する方法はつぎのいずれかです:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          The Pencil Tool can be called from the image-menu:
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Paint Tools</guisubmenu>
+            <guimenuitem>Pencil</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>描画ツール</guisubmenu>
+            <guimenuitem>鉛筆で描画</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          The Tool can also be called by clicking the tool icon:
+          <guiicon>
+            <inlinegraphic fileref="images/toolbox/stock-tool-pencil-22.png"/>
+          </guiicon>
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon><inlinegraphic
+            fileref="images/toolbox/stock-tool-pencil-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by clicking on the <keycap>N</keycap> keyboard shortcut.
+        </para>
+        <para lang="ja">
+          キーボードショートカット <keycap>N</keycap>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">キー修飾 (初期設定)</title>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            This key changes the pencil to a
+            <link linkend="gimp-tool-color-picker">Color Picker</link>.
+          </para>
+          <para lang="ja">
+            このキーは鉛筆を
+            <link linkend="gimp-tool-color-picker">スポイト</link> に変身
+            させます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycap>Shift</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            This key places the pencil tool into straight
+            line mode. Holding <keycap>Shift</keycap> while clicking
+            <mousebutton>Button 1</mousebutton> will generate a straight
+            line. Consecutive clicks will continue drawing straight lines
+            that originate from the end of the last line.
+          </para>
+          <para lang="ja">
+            このキーによって鉛筆で直線が引ける態勢になります。
+            マウスの <mousebutton>第1ボタン</mousebutton> でクリックしている間
+            <keycap>Shift</keycap> キーを押し続けておれば直線が引けます。
+            さらにこのキーを押したままクリックをすれば先に引いた直線の終点を
+            始点とする直線を新たに引くことができ、 つぎつぎと繋げれられます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+        <title lang="en"><quote>Pencil</quote> Tool options</title>
+        <title lang="ja">
+          <quote>鉛筆で描画</quote>ツールのツールオプション
+        </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-pencil.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <xi:include href="about-common-options-display.xml"/>
+
+    <xi:include href="about-common-brush-options.xml"/>
+    <variablelist>
+      <varlistentry>
+        <term lang="ja">
+          モード; 不透明度; ブラシ; 拡大・縮小; ブラシ感度の調整;
+          フェードアウト; 揺らぎ; 重ね塗り; グラデーションで描画
+        </term>
+        <listitem>
+          <para lang="ja">
+            ブラシツール共通もしくは広く通用しているオプションです。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

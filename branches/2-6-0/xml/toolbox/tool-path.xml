@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-09-17 aprokoudine: fixed bugs
+  2008-01-11 j.h: updated to v2.4 'en;fr'
+  2007-06-04 kost: added 'no'
+  2007-06-14 alex falappa: updated italian translation
+  2007-04-29 lexa: enhanced docbook compliance
+  2007-02-23 note added to Key Modifiers by j.h
+  2006-06-07 added link to path concept by j.h
+  2006-02-15 en;fr revised by j.h
+  2005-12-06 replaced sect3 by sect3 by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  2005-08-14 de reviewed by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="gimp-tool-path">
+  <title lang="en">Paths</title>
+  <title lang="ja">パス</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Path</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Paths</primary>
+    <secondary>Tool</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Bezier's curve</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>パス</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>パス</primary>
+    <secondary>ツール</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ベジエキョクセン">ベジエ曲線</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Paths tool</title>
+    <title lang="ja">ツールボックス上の<quote>パス<quote>ツールアイコン</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/toolbox-path.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Paths tool allows to create complex selections called Bezier Curves, a
+    bit like Lasso but with all the adaptability of vectorial curves. You can
+    edit your curve, you can paint with your curve, or even save, import, and
+    export the curve. You can also use paths to create geometrical figures.
+    Paths have their own dialog box:
+    <link linkend="gimp-path-dialog">Dialog</link>.
+  </para>
+  <para lang="ja">
+    パスツールはベジエ曲線と呼ばれる複合した選択をつくるためのもので、 なげなわ
+    ツールにいくぶん似てはいますがこちらはベクトル式曲線を作成・操作する能力の
+    全てがあります。 このツールで曲線が描けるとともに、 その曲線に基づいて描画
+    が行なえますし、 保存はもちろん他形式への/からの転換もできます。 パスを
+    使って幾何学図形を作ることもできます。 パスのために
+    <link linkend="gimp-path-dialog">パスダイアログ</link> が用意されています。
+  </para>
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">You can get this tool in several ways:</para>
+    <para lang="en">
+      <quote>パス<quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the image menu through
+          <menuchoice>
+            <guimenu><accel>T</accel>ools</guimenu>
+            <guisubmenu><accel>P</accel>aths</guisubmenu>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>パス</guisubmenu>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking the tool icon:
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-path-22.png"/>
+          </guiicon>
+          in Toolbox,
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic fileref="images/toolbox/stock-tool-path-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the <keycap>B</keycap> keyboard shortcut.
+        </para>
+        <para lang="ja">
+          キーボードショートカット <keycap>B</keycap>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">キー修飾 (初期設定)</title>
+    <note>
+      <para lang="en">
+        Help messages pop up at the bottom of the image window to help you
+        about all these keys.
+      </para>
+      <para lang="ja">
+        これらのキー修飾についてはヘルプメッセージが画像ウィンドウの底部にある
+        ステータスバーに随時表示されます。
+      </para>
+    </note>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Shift</term>
+        <term lang="ja"><keycap>Shift</keycap></term>
+        <listitem>
+          <para lang="en">
+            This key has several functions depending on context. See Options
+            for more details.
+          </para>
+          <para lang="ja">
+            このキーには脈絡に沿ってさまざまな機能が付与されます。
+            詳細はツールオプションをご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Ctrl;Alt</term>
+        <term lang="ja"><keycap>Ctrl</keycap>; <keycap>Alt</keycap></term>
+        <listitem>
+          <para lang="en">
+            Three modes are available to work with the Paths tool:
+            <guilabel>Design</guilabel>,<guilabel>Edit</guilabel>
+            and <guilabel>Move</guilabel>.
+            <keycap>Ctrl</keycap> key toggles between Design and Edit.
+            <keycap>Alt</keycap> (or Ctrl+Alt) key toggles between Design and
+            Move.
+          </para>
+          <para lang="ja">
+            パスツールの作業モードは <guilabel>作成</guilabel>、
+            <guilabel>編集</guilabel>、 <guilabel>移動</guilabel> の3種類に
+            分かれます。 <keycap>Ctrl</keycap> キーを押すと作成モードから編集
+            モードに切り替わります。 <keycap>Alt</keycap> (あるいは
+            <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> )
+            を押すと作成モードから移動モードに切り替わります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Path</quote> tool options</title>
+      <title lang="ja"><quote>パス</quote>ツールのツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/path-tool-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Design Mode</term>
+        <term lang="ja">作成モード</term>
+        <listitem>
+          <para lang="en">
+            By default, this tool is in <guilabel>Design</guilabel> mode.
+            You draw the path by clicking successively. You can move
+            control points by clicking on them and dragging them. Between
+            control points are segments.
+          </para>
+          <para lang="ja">
+            このツールの既定モードは <guilabel>作成</guilabel> です。 つぎつぎ
+            と画像上をクリックしてパスを描いてゆきます。 置かれたコントロール
+            ポイントはクリックして曳けば移動できます。 各コントロールポイントの
+            間にあるのが分節です。
+          </para>
+          <para>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/tool-options/path-stroke.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Numbers are steps to draw a two segments straight path.
+                </para>
+                <para lang="ja">
+                  打たれた番号は2つの分節からなる直線パスを描く順序である。
+                </para>
+              </caption>
+            </mediaobject>
+          </para>
+          <para>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/tool-options/path-curve.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Curved segments are easily built by dragging a segment or a
+                  new node. Blue arrows indicate curve. Two little handles
+                  appear that you can drag to bend the curve.
+                </para>
+                <para lang="ja">
+                  曲がった分節を作るにはただその分節を曳くか新たなアンカーを
+                  曳けばよい。 青の矢印で曲がるところを指し示した。 2つの
+                  小さなハンドルが出現したので、 あとはそれを曳いても曲線を
+                  曲げ直せる。
+                </para>
+              </caption>
+            </mediaobject>
+          </para>
+          <tip>
+            <para lang="en">
+              To quickly close the curve, press <keycap>Ctrl</keycap>
+              key and click on the initial control point. In previous
+              versions, clicking inside a closed path converted it into
+              Selection. Now, you can use the <emphasis>Create
+              selection from path</emphasis> button or the <emphasis>
+              Path to Selection</emphasis> button in the Path Dialog.
+            </para>
+            <para lang="ja">
+              曲線を手早く閉じるには <keycap>Ctrl</keycap> キーを押しながら最初
+              に置いたアンカーをクリックします。 旧版の<acronym>GIMP</acronym>
+              では閉じたパスの内側をクリックすると選択範囲に変換されてしまい
+              ましたが、 今ではツールオプションや
+              <link linkend="gimp-path-dialog">パスダイアログ</link> の
+              <guibutton>パスを選択範囲に</guibutton>
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-selection-16.png"/>
+              </guiicon>
+              ボタンや <guibutton>パスの境界線を描画</guibutton>
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-path-stroke-16.png"/>
+              </guiicon>
+              ボタンが使えます。
+            </para>
+          </tip>
+          <para lang="en">Several functions are available with this mode:</para>
+          <para lang="ja">このモードでできる操作がいくつかあります:</para>
+          <para lang="en">
+            <emphasis>Add a new node</emphasis>:
+            If the active node (a small empty circle after clicking on a node)
+            is at the end of the path, the mouse pointer is a '+' sign and a new
+            node is created, linked to the previous one by a segment. If the
+            active node is on the path, the pointer is a square and you can
+            create a new component to the path. This new component is
+            independent from the other, but belongs to the path as you can see
+            on the Path dialog. Pressing <keycap>Shift</keycap>
+            forces the creation of a new component.
+          </para>
+          <para lang="en">
+            <emphasis>Move one or several nodes</emphasis>: On a node,
+            the mouse pointer becomes a 4-arrows cross. You can click
+            and drag it.
+            You can select several nodes by <keycap>Shift</keycap> and
+            click and move them by click and drag.
+            Pressing <keycombo><keycap>Ctrl</keycap><keycap>Alt
+            </keycap></keycombo> allows to move all the path, as a
+            selection.
+          </para>
+          <para lang="en">
+            <emphasis>Modify handles</emphasis>: you have to Edit a node
+            before. A handle appears. Drag it to bend the curve.
+            Pressing <keycap>Shift</keycap> toggles to symmetric handles.
+          </para>
+          <para lang="en">
+            <emphasis>Modify segment</emphasis>: When the mouse pointer
+            goes over a segment, it turns to a 4-arrows cross. Click-and-drag
+            it to bend the segment. As soon as you move, handles appear
+            at both ends of the segment. Pressing <keycap>Shift</keycap>
+            key toggles to symmetric handles.
+          </para>
+          <para lang="ja">
+            <emphasis>新たにアンカーを追加</emphasis>: パスの終端が活性アンカー
+            (クリックして白抜きの円となったアンカー) ならば、 マウスポインタは
+            右上に小さな十字<quote>+</quote>がついた姿になります。 このときに
+            任意の場所でクリックすればそこに新たにアンカーが設けられ、 先程の
+            アンカーとの間は分節で結ばれます。 パスのどこかに活性アンカーがある
+            状態では、 小さな正方形のついた姿のマウスポインタでクリックすれば
+            新たなパス成分を作り始められます。 この新しい成分はそれまでの成分と
+            は独立していますが、 同じパスとして同居していることはパスダイアログ
+            を見れば一目瞭然です。 <keycap>Shift</keycap> キーを押しながらでは
+            強制的に新しい成分が作られます。
+          </para>
+          <para lang="ja">
+            <emphasis>ひとつもしくは複数のアンカーを移動</emphasis>: アンカーの
+            上ではマウスポインタの右上に小さな四方矢印がつきます。 そのアンカー
+            はクリックして曳けば移動できます。 <keycap>Shift</keycap> キーを
+            押しながら続けざまにクリックしたアンカーは一挙に曳いて移動
+            できます。 <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap>
+            </keycombo> の組み合わせを押しながら曳けば (選択範囲の移動のように)
+            全面的にパスを移動できます。
+          </para>
+          <para lang="ja">
+             <emphasis>ハンドルを操作</emphasis>: まずはその前にアンカーの
+             編集を行なってください。 するとハンドルが現れますので、 これを
+             曳いて曲線の曲がり具合を調節してください。 <keycap>Shift</keycap>
+            キーを押しながら操作するとアンカーのもう一方の分節のハンドルと
+            点対称に動きます。
+          </para>
+          <para lang="ja">
+            <emphasis>パス分節の変形</emphasis>: 分節上にマウスポインタをかざ
+            すとその姿が右上に小さな四方矢印がついた形に変わります。 分節は
+            曳くと変形します。 移動と同時に、 分節の両端のアンカーにはそれぞれ
+            ハンドルが現れます。 ハンドルをクリックして曳くと分節が変形します。
+            <keycap>Shift</keycap> キーを押しながらハンドルを操作すると、
+            対になったハンドルと点対称に移動できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edit Mode</term>
+        <term lang="ja">編集モード</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Edit</guilabel> performs functions which are not
+            available in <guilabel>Design</guilabel> mode. With this
+            mode, you can work only on the existing path.  Outside, the
+            pointer is a small crossed circle (on the whole image if
+            there is no path!) and you can do nothing.
+          </para>
+          <para lang="en">
+            <emphasis>Add a segment between two nodes</emphasis>: Click
+            on a node at one end of the path to activate it. The pointer is
+            like a union symbol. Click on an other node to link both
+            nodes. This is useful when you have to link unclosed
+            components.
+          </para>
+          <para lang="en">
+            <emphasis>Remove a segment from a path</emphasis>: While pressing
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            key combination, point to a segment. Pointer turns to -.
+            Click to delete the segment.
+          </para>
+          <para lang="en">
+            <emphasis>Add a node to a path</emphasis>: point to a
+            segment. Pointer turns to +. Click where you want to place
+            the new control point.
+          </para>
+          <para lang="en">
+            <emphasis>Remove a node</emphasis>: While pressing
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>                key combination, point to a node. Pointer turns
+            to -. Click to delete the node.
+          </para>
+          <para lang="en">
+            <emphasis>Add a handle to a node</emphasis>: Point to a
+            node.  Pointer turns to a 4-arrow cross. Click the node: handle
+            appears if they have not been removed.  When there is one handle or
+            nothing, dragging the node provides a handle.  Two handles can
+            belong to a node.  By another way, if a node has merely one handle,
+            with pressing <keycap>Shift</keycap> key, drag the handle.  Then
+            a handle appears on the other side of it symmetrically.
+          </para>
+          <para lang="en">
+            <emphasis>Remove a handle from a node</emphasis>: While pressing
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            key combination, point to a handle. The pointer
+            doesn't turn to the expected - and remains a hand. Click
+            to delete the handle.
+          </para>
+          <para lang="ja">
+            <guilabel>編集</guilabel> モードは <guilabel>作成</guilabel> モード
+            ではできなかった処理をする機能があります。 このモードは既にある
+            パスに対してのみ操作が可能です。 パス上から離れたマウスポインタは
+            小さな斜線入りの円がついた姿になり、 このときは何の操作も
+            できません。
+          </para>
+          <para lang="ja">
+            <emphasis>2つの終端アンカーを繋ぐ分節を追加</emphasis>: パスの終端
+            アンカーをクリックして活性化します。 マウスポインタには小さな連結
+            のしるし (重なった2つの円) がつきます。 もう一方の終端アンカーを
+            クリックすると両者は連結されます。 閉じていない成分を繋ぎ合わせる
+            用途に向いています。
+          </para>
+          <para lang="ja">
+            <emphasis>パスから分節を削除</emphasis>:
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            の組み合わせを押しながらマウスポインタを分節にかざすと、 その姿に
+            小さなマイナス記号がつきます。 その分節はクリックすれば削除
+            できます。
+          </para>
+          <para lang="ja">
+            <emphasis>パスにアンカーを追加</emphasis>: 分節にマウスポインタを
+            かざすとその姿に小さなプラス記号がつきます。 その分節上の任意の位置
+            でクリックするとそこに新たなアンカーが置かれます。
+          </para>
+          <para lang="ja">
+            <emphasis>アンカーを削除</emphasis>:
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            の組み合わせを押しながらマウスポインタをアンカーにかざすと、
+            その姿に小さなマイナス記号がつきます。 そのアンカーはクリックすれば
+            削除できます。
+          </para>
+          <para lang="ja">
+            <emphasis>アンカーにハンドルを追加</emphasis>: アンカーの上では
+            マウスポインタの右上に小さな四方矢印がつきます。 アンカーをクリック
+            すると、 ハンドルが (削除されていなければ) 現れます。 もしひとつ
+            だけだったり全く無かった場合はアンカーを曳けばハンドルが現れます。
+            アンカーには2つまでハンドルがつけられます。 ハンドルがひとつだけの
+            場合には <keycap>Shift</keycap> キーを押しながらそのハンドルを
+            曳けばもう一方のハンドルが点対称の位置に現れます。
+          </para>
+          <para lang="ja">
+            <emphasis>アンカーからハンドルを削除</emphasis>:
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            の組み合わせを押しながらハンドルにマウスポインタをかざしてもその
+            姿に変化はありません。 そしてハンドルはクリックすれば削除されます。
+          </para>
+          <caution>
+            <para lang="en">
+              No warning before removing a node, a segment or a handle.
+            </para>
+            <para lang="ja">
+              アンカーや分節やハンドルを削除する際には何の警告もありません。
+              もちろんこれらの処理の<quote>取り消し</quote>に関しても同様です。
+            </para>
+          </caution>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Move Mode</term>
+        <term lang="ja">移動モード</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Move</guilabel> mode allows to move one or all
+            components of a path. Simply click on the path and drag it.
+          </para>
+          <para lang="en">
+            If you have several components, only the selected one is moved. If
+            you click and drag outside the path, all components are moved.
+            Pressing <keycap>Shift</keycap>
+            key toggles to move all components also.
+          </para>
+          <para lang="ja">
+            <guilabel>移動</guilabel> モードは1面のパスのひとつもしくは複数の
+            成分を移動するためのものです。 そのままパスをクリックして曳いて
+            ください。
+          </para>
+          <para lang="ja">
+            パスに複数の成分があるときは、 選択して活性化した成分だけが移動
+            します。 ただしパス上でない場所でクリックして曳くと全ての成分が移動
+            します。 <keycap>Shift</keycap> キーを押しながら曳いても全ての成分
+            を移動できます。
+          </para>
+          <note lang="ja">
+            <para lang="en">
+              If you want move several paths at once, chain them together at
+              Path Dialog.  Then use
+              <link linkend="gimp-tool-move">Move tool</link> with setting its
+              Transform option to Path.
+            </para>
+            <para lang="ja">
+              複数の面のパスを同時に移動したい場合は、 パスダイアログでそれらの
+              パスの連結をしてから、
+              <link linkend="gimp-tool-move">移動ツール</link> を用いて、
+              その移動対象にパスを選んで移動してください。
+            </para>
+          <note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Polygonal</term>
+        <term lang="ja">多角形</term>
+        <listitem>
+          <para lang="en">
+            With this option, segments are linear only. Handles are not
+            available and segments are not bent when moving them.
+          </para>
+          <para lang="ja">
+            このオプションを指定すると描ける分節は直線のみになります。
+            ハンドルは使えません。 分節を曳くと変形しないで移動をします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Create selection from path</term>
+        <term lang="ja">パスを選択範囲に</term>
+        <listitem>
+          <para lang="en">
+            This button allows creation of a selection that is based on
+            the path in its present state. This selection is marked with
+            the usual "marching ants". Note that the path is still present:
+            current tool is still path tool and you can modify this path without
+            modifying the selection that has become independent. If you
+            change tool, the path becomes invisible, but it persists in
+            Path Dialog and you can re-activate it.
+          </para>
+          <para lang="en">
+            If the path is not closed, GIMP will close it with a straight line
+            between both ends on each component.
+          </para>
+          <para lang="en">
+            As the help pop-up tells, pressing <keycap>Shift</keycap>
+            when clicking on the button will add the new selection to an
+            eventually pre-existent. Pressing the <keycap>Ctrl</keycap> will
+            subtract the selection from the pre-existent and the
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap></keycombo>
+            key combination will intersect the two selections.
+          </para>
+          <para lang="ja">
+            このボタンを押すとパスの現在の状態に基づいて選択範囲が作成
+            されます。 その選択範囲はおなじみの<quote>蟻の行進</quote>で
+            表されます。 ちなみにパスはまだ残っていますから、 パスツールを
+            ひきつづき用いてこのパスを加工できますし、 作られた選択範囲は独立
+            していますから連られて変形することはありません。 <!--別のツールを
+            呼び出したときは[既定の場合は]パスが見えなくなりますが、
+            パスダイアログ を見れば生き残っていることがわかります。 後で再び
+            活性化できます。-->
+          </para>
+          <para lang="ja">
+            閉じていないパスを変換した場合は、 各成分ごとに始点と終点が直線で
+            結ばれて閉じられます。
+          </para>
+          <!--<para lang="ja">
+            画像ウィンドウ下部でヘルプメッセージが示すとおり、
+            <keycap>Shift</keycap> キーを押しながらこのボタンを押せばそれまでの
+            選択範囲にこの新たに作られた選択範囲が加えられます。
+            <keycap>Ctrl</keycap> キーを押しながらならばそれまでの選択範囲から
+            この選択範囲が除外されます。 <keycombo><keycap>Shift</keycap>
+            <keycap>Ctrl</keycap></keycombo> の組み合わせとならば両選択範囲の
+            共通部分のみ残ります。
+          </para>-->
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Stroke path</term>
+        <term lang="ja">パスの境界線を描画</term>
+        <listitem>
+          <para lang="en">
+            In previous versions, you could access to this command
+            only by the Edit sub-menu in the Image Menu. Now you can
+            access to it also via this button. See
+            <link linkend="gimp-path-stroke">Stroke Path</link> and
+            <link linkend="gimp-using-paths">Stroke Path</link>.
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>の旧版では画像メニューの編集サブメニューを
+            通してしかこのコマンドを発することができませんでしたが、 今では
+            このボタンも使えます。
+            <link linkend="gimp-path-stroke">パスの境界線を描画</link>
+            もご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para lang="en">
+      See the <link linkend="gimp-concepts-paths"><quote>Path</quote>
+      </link>concept.
+    </para>
+    <para lang="ja">
+      <link linkend="gimp-concepts-paths"><quote>パス</quote></link> についての
+      概念もお読みください。
+    </para>
+  </sect3>
+</sect2>

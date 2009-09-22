@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2008-03-21 Mr.Dust: added 'ko'
+  2007-11-08 KoSt: added 'no'
+  2007-09-21 AntI: Added 'es'
+  2007-09-02 lexa: copied content from gimp.org as a start for 2.4 for en de
+  2007-09-02 lexa: moved 2.2 content to the appendix to make room for 2.4 news
+-->
+<!--2009-09-20-->
+<sect1 id="gimp-introduction-history-2-4">
+  <title lang="en">What's New in GIMP 2.4?</title>
+  <title lang="ja"><acronym>GIMP</acronym> 2.4 の新機能</title>
+
+  <variablelist>
+    <varlistentry>
+      <term lang="en">Refreshed Look</term>
+      <term lang="ja">外観の刷新</term>
+      <listitem>
+        <para lang="en">
+          A whole new default icon theme has been created for 2.4. The icons
+          comply with the Tango style guidelines so GIMP doesn't feel out of
+          place on any of the supported platforms. Regardless of whether you
+          run GIMP under Microsoft Windows, Mac OS X or Linux (GNOME, KDE or
+          Xfce), GIMP provides a polished, consistent look.
+        </para>
+        <para lang="ja">
+          2.4 から初期設定用のアイコンテーマが一新しました。 どのアイコンも
+          Tango スタイルガイドラインに準拠しており、 どんな実行環境に移っても
+          違和感なく操作できます。 <productname>Microsoft Windows
+          </productname>、 <productname>Mac OS X</productname>、 あるいは
+          <productname>Linux</productname> などでの<acronym>GNOME</acronym>や
+          <acronym>KDE</acronym>や Xfce など、 どこで実行していても<acronym>
+          GIMP</acronym>は洗練され統一された外観を提供します。
+        </para>
+        <figure>
+          <title lang="en">New Look of the toolbox in GIMP 2.4</title>
+          <title lang="ja">
+            <acronym>GIMP</acronym> 2.4 のツールボックスの新しい外観
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/24-refreshed-look.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          Additionally the icons also have enhanced usability on dark widget
+          themes, which is a common setting among digital artists.
+        </para>
+        <para lang="en">
+          For artists preferring more desaturated color theme for their icons
+          is an alternative icon theme available for download
+          <xref linkend="bibliography-online-jimmac01"/>.
+        </para>
+        <para lang="ja">
+          しかもアイコンテーマはデジタールアーティストの間でよく行なわれる暗い
+          ウィジェットテーマ上でも使い勝手が向上しました。
+        </para>
+        <para lang="ja">
+          さらに彩度の低いアイコンテーマを好む方は代替アイコンテーマが 
+          <xref linkend="bibliography-online-jimmac01"/> より入手できます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Scalable Brushes</term>
+      <term lang="ja">太さの変えられるブラシ</term>
+      <listitem>
+        <para lang="en">
+          The tool options now include a brush size slider that affects both
+          the parametric and bitmap brushes. This has been an oft-requested
+          feature from both digital painters and photo editors.
+        </para>
+        <para lang="ja">
+          ツールオプションにブラシのサイズを変えるスライダがついて、 
+          パラメータつきブラシとビットマップブラシの両方とも調節可能です。 
+          これはデジタル絵画と画像編集の両分野で最も多くリクエストが寄せられた
+          機能でした。
+        </para>
+        <figure>
+          <title lang="en">Scalable brushes in GIMP 2.4</title>
+          <title lang="ja">
+            <acronym>GIMP</acronym> 2.4 の太さが変えられるブラシ
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/24-scalable-brushes.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          Unlike previous versions of GIMP, regardless of whether you're using
+          a bitmap brush, parametric brush or even a picture tube (multiple
+          bitmaps), you can easily set the brush size with either the tool
+          options dock slider or an external device such as a MIDI slider or
+          knob or a USB device like the Griffin Powermate.
+        </para>
+        <para lang="ja">
+          これまでの版の<acronym>GIMP</acronym>とは異なり、 いま使っているのが
+          ビットマップブラシなのかパラメータつきブラシなのかひょっとすると
+          散播式ブラシ (複ビットマップ) なのかを何ら気にすることなくブラシの
+          大きさをツールオプションのスライダで調節できます。 あるいは<acronym>
+          MIDI</acronym>のスライダやノブ、 または Griffin Powermate のような
+          <acronym>USB</acronym>機器を用いても調節できます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Selection Tools</term>
+      <term lang="ja">選択ツール</term>
+      <listitem>
+        <para lang="en">
+          The selection tools have been rewritten from scratch to allow
+          resizing of existing selections. Additionally the rectangular
+          selection tool includes a setting for creating rounded corners as
+          this has been identified as a very common task among web designers.
+        </para>
+        <para lang="ja">
+          既にある選択範囲の大きさを変更できるよう選択ツールははじめから
+          書き直されました。 加えて矩形選択ツールには角を丸くする設定
+          オプションがつきました。 これはウェブデザイナの間では非常にあり
+          ふれた工夫だと思われていました。
+        </para>
+        <figure>
+          <title lang="en">Selection tools in GIMP 2.4</title>
+          <title lang="ja"><acronym>GIMP</acronym> 2.4 の選択ツール</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/24-selection-tools.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          The learning curve for the tools has been flattened as the key
+          functionality is available without obscure shortcuts that confused
+          GIMP beginners. Most of the existing shortcuts still work, but the
+          functionality is either available through the tool options or made
+          obsolete due to the interactive move and resize on canvas.
+        </para>
+        <para lang="en">
+          While the tools have been redesigned to make them easier to
+          understand for the newbies, all the former functionality is there.
+          You can still constrain aspect ratios or specific sizes.
+        </para>
+        <para lang="ja">
+          初心者を混乱させるもとだった分かりづらく隠れたショートカットが
+          なくても決め手となる機能が使えるようになったおかげでこれらのツールの
+          学習曲線は平坦なものになりました。 既にあったショートカットは
+          ほとんどが動作しますが、 そういった機能についてはツールオプション
+          上で利用可能なものもあれば、 キャンバス上で相互作用的に移動や
+          リサイズ操作できるようにするため廃止となったものもあります。
+        </para>
+        <para lang="ja">
+          初心者にも分かり易くなるようツールを再構築しましたが、 今まであった
+          機能はどれも残っています。 縦横比の強制や寸法の指定もひきつづき実行
+          できます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Foreground Select Tool</term>
+      <term lang="ja">前景抽出選択ツール</term>
+      <listitem>
+        <para lang="en">
+          Selecting individual objects on images is easier now with a new
+          <link linkend="gimp-tool-foreground-select">foreground select
+          tool</link>. It is done in two steps. First, you make select region
+          of interest which contains the entire object. Then you
+          paint over selected area with a brush, not crossing object窶冱 border.
+          Release mouse button when you窶决e done and look, if there are dark
+          blue spots on your objects. If there are some, paint with a brush
+          over them again and release to refine selection. When there are no
+          more blue areas inside the object, press Enter and there you have a
+          perfectly selected object.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-tool-foreground-select">前景抽出選択ツール
+          </link> が新たに加わったので、 画像に描かれた個々の物体を選択する
+          のが楽になりました。 使用には2段階あります。 まず物体を囲む大ざっぱ
+          な選択範囲をとります。 つぎに選択したい部分をはみ出ないよう注意
+          しながらブラシでなぞります。 なぞり終えてマウスボタンを放したら
+          物体以外の領域が濃い青で塗られますが、 抽出したい物体に青い斑点が
+          残っておればその部分もさらになぞり選択範囲から不純物を除きます。
+          物体上から青いところがなくなったら<keycap>Enter</keycap> キーを
+          押せば完璧に物体を抽出選択できています。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Align Tool</term>
+      <term lang="ja">整列ツール</term>
+      <listitem>
+        <para>
+          While GIMP has provided a grid and guideline functionality, the
+          actual alignment of objects had to be done manually. A new tool
+          comes at rescue <link linkend="gimp-tool-align">...</link>
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>には格子線や見当線の機能がありますが、 
+          そこでの実際の整列作業は手作業になります。 そこに手をさしのべたのが 
+          <link linkend="gimp-tool-align">整列ツール</link> です。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Changes in menus</term>
+      <term lang="ja">メニューの変更点</term>
+      <listitem>
+        <para lang="en">
+          Most notable is the new top-level Color menu that accumulates most
+          tools, plug-ins and scripts that adjust colors in RGB/Grayscale mode
+          and color palettes in Indexed mode. So now you can reach functions
+          like Levels or Curves much faster than before, unless you define
+          your own keyboard shortcuts for them using the improved keyboard
+          shortcuts manager.
+        </para>
+        <para lang="en">
+          In the new version of GIMP, some menu entries have changed their
+          names and position. It was done mostly to simplify learning curve
+          and improve user experience. After all, "HSV Noise" and "RGB Noise"
+          sound more meaningful than "Scatter HSV" and "Scatter RGB", don't
+          they? And status bar hints for all plug-ins and scripts are quite
+          helpful too.
+        </para>
+        <para lang="ja">
+          目玉としては上位に位置する色メニューに<acronym>RGB</acronym>および
+          グレースケールのモードの画像の色調整機能やインデックス化カラーの画像
+          のパレット操作をするほとんどのツール、 プラグイン、 スクリプトが集め
+          られたことです。 これらの機能にキーボードショートカットを設定されて
+          いたのなら話は別ですが、 レベルツールやカーブツールといった機能に
+          これまで以上に素早く辿りつけることになります。
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>の新しい版ではメニューの項目の一部が名前や
+          位置を変えました。 学習曲線をなだらかにし、 ユーザの熟練度を高める
+          のが主なねらいです。 要するに<quote>HSV ノイズ</quote>や<quote>RGB
+          ノイズ</quote>よりは<quote>HSV 拡散</quote>や<quote>RGB 拡散
+          </quote>の方が意味がよく通じるではありませんか。 他にもステータス
+          バーに表示されるプラグインやスクリプトの助言もしっかり役立ちます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Support for file formats</term>
+      <term lang="ja">各種ファイル形式のサポート</term>
+      <listitem>
+        <itemizedlist>
+          <listitem>
+            <para lang="en">Support for Photoshop ABR brush format;</para>
+            <para lang="ja">
+              <application>Photoshop</application> の<acronym>ARB</acronym>
+              ブラシ形式をサポート
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">Improved reading/writing EXIF in JPEG;</para>
+            <para lang="ja"><acronym>JPEG</acronym>のExif読み書きを改良</para>
+          </listitem>
+          <listitem>
+            <para lang="en">Importing clipping paths in TIFF;</para>
+            <para lang="ja">
+              <acronym>TIFF</acronym>のクリッピングパスを転用
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">Layer masks can be saved to PSD;</para>
+            <para lang="ja">レイヤーマスクを<acronym>PSD</acronym>に保存</para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              16/32 bit bitmaps and alpha-channel support in BMP;
+            </para>
+            <para lang="ja">
+              <acronym>BMP</acronym>で 16/32 ビットのビットマップや
+              アルファチャンネルをサポート
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              24 bit and Vista icons can be opened and saved.
+            </para>
+            <para lang="ja">
+              24 ビットアイコンと Vista アイコンの開覧、 保存
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Fullscreen Editing</term>
+      <term lang="ja">全画面で編集</term>
+      <listitem>
+        <para lang="en">
+          The fullscreen mode has been improved to not only allow getting a
+          full scale preview of the artwork, but also allow comfortable
+          editing. The artist has maximum screen estate available while all
+          functionality is quickly accessible by pressing the Tab key (toggles
+          visibility of all docks) when working fullscreen.
+        </para>
+        <para lang="en">
+          Whether painting or touching up photos, fullscreen editing keeps all
+          the distracting elements out of sight on a key press. It's like
+          observing stars in a field as opposed to a light-polluted city.
+        </para>
+        <para lang="ja">
+          フルスクリーンモードが改良され、 作品の全幅プレビューのみならず
+          快適な編集作業が可能になりました。 全画面表示のときは画面全部を占拠
+          できるうえ、 <keycap>Tab</keycap> キーを押すだけで全てのドックを隠し
+          たり呼び戻したりできるためどんな機能も起用は簡単です。 アーティストに
+          うれしい改良です。
+        </para>
+        <para lang="ja">
+          絵を描くときも写真を加工するときも、 全画面なのに気を散らせてしまう
+          部品を何もかもキーのひと押しで視界から除いて編集作業できます。 光害
+          に溢れた都会よりも平原に出たほうが星が観測し易いのに似た話です。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Color Management and Soft-proofing</term>
+      <term lang="ja">色管理とソフトプルーフ</term>
+      <listitem>
+        <para lang="en">
+          GIMP now provides full support for color profiles allowing precise
+          color modification throughout the whole
+          <quote>digital darkroom</quote> process.
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>は今回よりカラープロファイルを全面的に
+          サポートしましたので<quote>デジタル暗室</quote>の工程を通して精密に
+          色の変更が行なえます。
+        </para>
+        <figure>
+          <title lang="en">Color management in GIMP 2.4</title>
+          <title lang="ja"><acronym>GIMP</acronym> 2.4 の色管理</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/24-color-management.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">New Crop Tool</term>
+      <term lang="ja">新しくなった切り抜きツール</term>
+      <listitem>
+        <para lang="en">
+          Just like the selection tools, the new crop tool has been enhanced
+          since the last release. The resize handles actually resize the crop
+          rectangle instead of providing both resize and move functionality.
+          The tool behaves more naturally and consistently with other GIMP
+          tools. For details see <xref linkend="gimp-tool-crop"/>.
+        </para>
+        <para lang="en">
+          To move, simply drag the rectangle clicking within the area.
+          Resizing is possible in one or two axes at the same time dragging
+          the handle-bars on the sides and corners. The outside area is
+          darkened with a nice passepartout effect to better get the idea of
+          how the final crop will look like.
+        </para>
+        <para lang="ja">
+          ちょうど選択ツールと同様に、 切り抜きツールも前回の公開より強化
+          されました。 リサイズハンドルはかつて大きさの変更と移動の両方を
+          担っていたのを改め事実上切り抜き矩形の大きさを変える機能にしました。
+          ツールのふるまいが一層自然なものになり<acronym>GIMP</acronym>の他の
+          ツールと整合が取れました。 より詳しくは 
+          <xref linkend="gimp-tool-crop"/> ツールの節をご覧ください。
+        </para>
+        <para lang="ja">
+          移動するには単に切り抜き矩形の領域内をクリックして引けばよいのです。 
+          大きさの変更は各辺と4隅のハンドル部分のいずれかを曳くことで1辺
+          もしくは2辺同時に動かして行ないます。 領域外の周辺部を額の台紙の
+          ような暗い色にして切り抜き後の様子を分かり易くする効果もあります。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Red Eye Removal</term>
+      <term lang="ja">赤目除去</term>
+      <listitem>
+        <para lang="en">
+          While numerous red-eye workflows exist already, GIMP now features a
+          very convenient auto-magic filter to remove red eye from your shots.
+        </para>
+        <para lang="ja">
+          これまでの赤目のおびただしい工程を経て、 <acronym>GIMP</acronym>は
+          ここに、 写真から赤目を除去するとても便利な自動化マジックフィルタの
+          機能を加えました。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Healing Brush</term>
+      <term lang="ja">修復ブラシ</term>
+      <listitem>
+        <para lang="en">
+          The healing brush is a new tool, similar in the working of the
+          clone tool, that permits to quickly fix small defects or
+          imperfections due to scratching or dust. In fact the tool is smart
+          enough to being able to <emphasis>understand</emphasis> where and
+          how to modify an image to cure these defects based on image color
+          context.
+        </para>
+        <para lang="ja">
+          修復ブラシはスタンプツールのような動作をする新しいツールであり、 
+          写真の傷やごみなどのような画像の小さな瑕疵をたちまち除去できるように
+          なりました。 実際このツールは画像の色や内容をみて傷の手当をするには
+          どこをどのように処置すればよいか <emphasis>分かって</emphasis> いる
+          かのごとくきびきびとはたらきます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Perspective Clone</term>
+      <term lang="ja">遠近スタンプで描画</term>
+      <listitem>
+        <para lang="en">
+          Here is another clone-like new tool that is able to adapt the
+          destination geometry, instead of color as does the healing brush,
+          based on preselected distortion settings. As the name suggests,
+          perfect when copying images blocks with some type of prospective
+          changes.
+        </para>
+        <para lang="ja">
+          修復ブラシは色の扱いに特徴がありましたが、 もうひとつのスタンプ
+          ツールに似た新しいツールはあらかじめ設定した変形の方法に従い転写先
+          の幾何学的構図を変換して転写します。 名前が示すとおり画像の一部を
+          ある種の遠近法的変形をかけた形で完璧に複製します。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Lens Distortion</term>
+      <term lang="ja">レンズ補正</term>
+      <listitem>
+        <para lang="en">
+          A very common problem exposing itself especially when using cheaper
+          lenses is barrel distortion and vignetting. Luckily GIMP provides a
+          brand new filter to compensate for both problems. Saving
+          photographer's pocket is our mission!
+        </para>
+        <para lang="ja">
+          安物のレンズを使ったときはとくによく起こる非常にありふれた問題が
+          樽型変形やビニェット化です。 うれしいことに<acronym>GIMP</acronym>
+          にこの両方の問題を補正できる真新しいフィルタができました。 写真家の
+          ふところを守るのも我々の仕事です。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Various Other Improvements</term>
+      <term lang="ja">その他のいろいろな改良</term>
+      <listitem>
+        <para lang="en">
+          In addition to all the above, GIMP has been improved in other areas
+          such as:
+        </para>
+        <para lang="ja">
+          以上に加えさらに<acronym>GIMP</acronym>はつぎのような分野で改良が
+          行なわれました。
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para lang="en">
+              Better status information for tools in the window status bar.
+            </para>
+            <para lang="ja">
+              ウィンドウのステータスバーに表示されるツールの状態情報を改良。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Various speedups in composing functions and gradient drawing.
+            </para>
+            <para lang="ja">
+              作画機能やグラデーション描画を各所で高速化。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">Zoomable preview widget for plugins.</para>
+            <para lang="ja">
+              プラグイン用プレビューウィジェットにズーム機能。
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</sect1>

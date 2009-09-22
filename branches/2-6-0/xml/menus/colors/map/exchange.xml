@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-23 ude: moved here from filters/color/map/exchange.xml ('en','de')
+  2007-07-10 Added Spanish translation by AntI
+  2007-04-01 KoSt: added 'no' translation
+  2006-10-25: change in Preview by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050820 de added by axel.wernicke
+  050830 de replaced informalfigure by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="plug-in-exchange">
+  <title lang="en">Color Exchange</title>
+  <title lang="ja">色交換...</title>
+
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Exchange colors</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Color Exchange</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="イロコウカン">色交換</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロコウカン">色交換</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en"><quote>Color Exchange</quote> filter example</title>
+      <title lang="ja"><quote>色交換</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/color-taj-exchange.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter applied</para>
+          <para lang="ja">フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">This filter replaces a color with another one.</para>
+    <para lang="ja">
+      <guimenuitem>色交換...</guimenuitem> フィルタは活性
+      レイヤー上の選択範囲内で任意に指定した色を別の色に差し替えます。 選択範囲
+      がなければレイヤー全体が対象になります。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Colors</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Color Exchange</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>色交換...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">
+        Option of the <quote>Two color exchange</quote> filter
+      </title>
+      <title lang="ja">
+        <quote>特定の色を他の色に置き換える</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-colormap-exchange.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            In this preview, a part of the Image is displayed. A selection
+            smaller than preview will be complete in preview. A bigger one
+            will be cut out to be adapted to the preview.
+          </para>
+          <para lang="en">
+            If you middle-click inside preview , the clicked pixel color
+            will be selected and will appear as From Color.
+          </para>
+          <para lang="ja">
+            このプレビューは画像の一部を表示しています。 選択範囲がプレビュー
+            画面よりも小さければその全体像が表示されます。 大きくなれば
+            プレビュー画面からはみ出しますので付属のスクロールバーを操作して
+            見たい部分を繰り寄せてください。
+          </para>
+          <para lang="ja">
+            マウスに中ボタンが備わっておれば (マウスホイールと兼用の場合も
+            あります)、 プレビュー画面内で中ボタンクリックするとその位置の画素
+            の色が抽出され<quote>元色</quote>に採れます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">From color</term>
+        <term lang="ja">元色</term>
+        <listitem>
+          <para lang="en">
+            In this section, you can choose the color to be used to select
+            pixels that will be concerned by color exchange.
+          </para>
+          <para lang="en">
+            <guilabel>Three sliders for RVB colors</guilabel>: If you
+            have clicked on preview, they are automatically positioned.
+            But you can change them. Each slider acts on color intensity.
+            Input boxes and arrowheads work the same. Result is
+            interactively displayed in the From swatch box.
+          </para>
+          <para lang="en">
+            <guilabel>Three sliders for thresholds</guilabel>, for each
+            color. The higher the threshold, the more pixels will be
+            concerned. Result is interactively displayed in Preview.
+          </para>
+          <para lang="en">
+            <guilabel>Lock Thresholds</guilabel>: This option locks threshold
+            sliders which will act all the same.
+          </para>
+          <para lang="ja">
+            この区画で色交換の対象になる画素を選択するときの基準となる色が
+            指定できます。
+          </para>
+          <para lang="ja">
+            <guilabel>赤</guilabel>; <guilabel>
+            緑</guilabel>; <guilabel>青
+            </guilabel> スライダ: 中ボタンでプレビュー画面をクリックすれば
+            これらの値は自動的に設定されます。 しかし手動でも設定は可能です。
+            各スライダは色の濃度を示しています。 付属の数値記入欄や小さな上下
+            矢印でも調節できます。 ここでの操作は直ちにプレビュー画面内と元色
+            の見本ボタンに反映されます。
+          </para>
+          <para lang="ja">
+            <guilabel>赤しきい値</guilabel>;
+            <guilabel>緑しきい値</guilabel>;
+            <guilabel>青しきい値</guilabel>: しきい値が高く
+            なるにつれ交換対象の色が増えます。 ここでの操作も直ちにプレビュー
+            画面内に反映されます。
+          </para>
+          <para lang="ja">
+            <guilabel>しきい値固定</guilabel>: このオプション
+            を有効にすると全てのしきい値スライダが連動し同程度の変化をします。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">To color</term>
+        <term lang="ja">交換色</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Three cursors</guilabel> allow to select the color
+            that pixels will have. Result is displayed in swatch box and in
+            preview. You can also click on the color dwell to get a color
+            selector.
+          </para>
+          <para lang="ja">
+            <guilabel>赤</guilabel>; <guilabel>
+            緑</guilabel>; <guilabel>青
+            </guilabel> スライダで交換後の色を用意します。 ここでの調節は直ちに
+            プレビュー画面内と交換色の見本ボタンに反映されます。 見本ボタンを
+            クリックして<quote>色変更</quote>ダイアログを開きそこで色を指定する
+            方法もあります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

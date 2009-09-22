@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-04-05 Mr.Dust : reviewed and added 'ko'
+  2007-01-09 manuq: added es translation
+  2006-09-06 added norwegian translation by KoSt
+  2006-08-02 added italian translation by ciampix
+  2006-05-11 added Korean translation by Dust
+  2006-04-30 HdJ: Added dutch translation.
+  2006-03-05 Lexa: added german translation and made docbook compliant
+  2005-11-28 Lexa: replaced informalfigures by figures.
+  2005-05-09 nn: added french translation
+-->
+<!--2009-09-12-->
+<sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-concepts-palettes">
+  <title lang="en">Palettes</title>
+  <title lang="ja">パレット</title>
+  <indexterm lang="en">
+    <primary>Palette</primary>
+    <secondary>Introduction</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Color</primary>
+    <secondary>Palettes (color map)</secondary>
+  </indexterm>
+  <indexterm>
+    <primary lang="en">Indexed palette</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>パレット</primary>
+    <secondary sortas="アラマシ">あらまし</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary>パレット(カラーマップ)</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="インデックスツキパレット">
+      インデックスつきパレット
+    </primary>
+  </indexterm>
+
+  <para lang="en">
+    A <emphasis>palette</emphasis> is a set of discrete colors. In
+    <acronym>GIMP</acronym>, palettes are used mainly for two purposes:
+  </para>
+  <para lang="ja">
+    <emphasis>パレット</emphasis> とは[必ずしも]連続しないさまざまな色の
+    集合です。 <acronym>GIMP</acronym>はパレットを主に2つの用途に使います:
+  </para>
+  <itemizedlist>
+    <listitem>
+      <para lang="en">
+        They allow you to paint with a selected set of colors, in the same way
+        an oil painter works with colors from a limited number of tubes.
+      </para>
+      <para lang="ja">
+        一定数の選ばれた色だけを用いて描くようにすること。 あたかも限られた数の
+        チューブ入り油絵の具を使って絵を描くようなものです。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        They form the colormaps of indexed images. An indexed image can use a
+        maximum of 256 different colors, but these can be any colors. The
+        colormap of an indexed image is called an "indexed palette" in
+        <acronym>GIMP</acronym>.
+      </para>
+      <para lang="ja">
+        インデックス (色索引) つき画像のカラーマップのように。 インデックスつき
+        画像は使える色数が 256 までに制限されますが、 パレットは何色でも
+        入ります。 インデックスつき画像のカラーマップのことを<acronym>GIMP
+        </acronym>では<acronym>インデックスつきパレット</acronym>と呼んで
+        います。
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <para lang="en">
+    Actually neither of these functions fall very much into the mainstream of
+    <acronym>GIMP</acronym> usage: it is possible to do rather sophisticated
+    things in <acronym>GIMP</acronym>
+    without ever dealing with palettes. Still, they are something that an
+    advanced user should understand, and even a less advanced user may need to
+    think about them in some situations, as for example when working with GIF
+    files.
+  </para>
+  <para lang="ja">
+    実際のところいずれの用途も<acronym>GIMP</acronym>の使用目的の主流にはなり
+    そこねています。 パレットに頼らなくても洗練された方法をとることが
+    <acronym>GIMP</acronym>で可能だからです。 それでもまだ達人にとっては知って
+    おくべきものではありますが、 <acronym>GIF</acronym>ファイルを扱うときの
+    ようないくつかの事例においても思い出してみようとする達人が少ないことは事実
+    です。
+  </para>
+
+  <figure>
+    <title lang="en">The Palettes dialog</title>
+    <title lang="ja">パレットダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/palettes-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    When you install <acronym>GIMP</acronym>, it comes supplied with several
+    dozen predefined
+    palettes, and you can also create new ones. Some of the predefined
+    palettes are commonly useful, such as the <quote>Web</quote> palette,
+    which contains the set of colors considered <quote>web safe</quote>;
+    many of the palettes seem to have been chosen more or less whimsically.
+    You can access all of the available palettes using the
+    <link linkend="gimp-palette-dialog">Palettes dialog</link>.
+    This is also the starting point if you want to create a new palette.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>をインストールすると数十種類もの配色ずみパレットが
+    ついてきますし、 新規に追加もできます。 <quote>Webで安心</quote>を念頭に
+    置いた<quote>Web</quote>パレットのような配色ずみパレットは並程度には有益
+    ですが、 大多数のパレットは多かれ少なかれ気紛れに色を選んだように思えます。
+    利用可能なパレットは全て
+    <link linkend="gimp-palette-dialog">パレットダイアログ</link> を通して
+    扱います。 これは新たなパレットを作るときの出発点にもなります。
+  </para>
+
+  <figure>
+    <title lang="en">The Palette Editor</title>
+    <title lang="ja">パレットエディタダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/palette-editor.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    Double-clicking on a palette in the Palettes dialog brings up the
+    <link linkend="gimp-palette-editor-dialog">Palette Editor</link>,
+    showing the colors from the palette you clicked on. You can use this to
+    paint with the palette: clicking on a color sets <acronym>GIMP</acronym>'s
+    foreground to that
+    color, as shown in the Color Area of the Toolbox. Holding down the
+    <keycap>Ctrl</keycap> key while clicking, on the other hand, sets
+    <acronym>GIMP</acronym>'s
+    background color to the color you click on.
+  </para>
+  <para lang="en">
+    You can also, as the name implies, use the Palette Editor to change the
+    colors in a palette, so long as it is a palette that you have created
+    yourself. You cannot edit the palettes that are supplied with
+    <acronym>GIMP</acronym>;
+    however you can duplicate them and then edit the copies.
+  </para>
+  <para lang="en">
+    When you create palettes using the Palette Editor, they are automatically
+    saved as soon as you exit <acronym>GIMP</acronym>, in the
+    <filename>palettes</filename>
+    folder of your personal <acronym>GIMP</acronym> directory. Any palette
+    files in this
+    directory, or in the system <filename>palettes</filename>
+    directory created when <acronym>GIMP</acronym> is installed, are
+    automatically loaded and
+    shown in the Palettes dialog the next time you start
+    <acronym>GIMP</acronym>. You can also
+    add other folders to the palette search path using the
+    <link linkend="gimp-prefs-folders-data">Palette Folders</link>
+    page of the Preferences dialog.
+  </para>
+  <para lang="en">
+    <acronym>GIMP</acronym> palettes are stored using a special file format,
+    in files with the
+    extension <filename>.gpl</filename>.
+    It is a very simple format, and they are ASCII files, so if you happen
+    to obtain palettes from another source, and would like to use them in
+    <acronym>GIMP</acronym>, it probably won't be very hard to convert them:
+    just take a look at
+    any <filename>.gpl</filename> and you will see what to do.
+  </para>
+  <para lang="ja">
+    パレットダイアログのパレットをダブルクリックするとそのパレットの色を表示
+    する
+    <link linkend="gimp-palette-editor-dialog">パレットエディタ</link> ダイアログが
+    開きます。 これを使ってパレットによる絵が描けます。 クリックした色が
+    <acronym>GIMP</acronym>の描画色になり、 ツールボックスの色標識領域でも
+    表されます。 一方で <keycap>Ctrl</keycap> キーを押しながらクリックすると
+    その色が<acronym>GIMP</acronym>の背景色になります。
+  </para>
+  <para lang="ja">
+    パレットエディタダイアログはその名前のとおりパレット上の色を変更できます
+    (ただし自作のパレットに限ります)。 <acronym>GIMP</acronym>に同梱のパレット
+    は編集できませんが、 それらの複製を作って編集することは可能です。
+  </para>
+  <para lang="ja">
+    パレットエディタダイアログを使ってパレットを作成したあと、 <acronym>GIMP
+    </acronym> を終了するとそれらは直ちに自動的に <acronym>GIMP</acronym>
+    の個人用ディレクトリの <filename>palettes</filename> フォルダ内へ保存
+    されます。 このディレクトリ内や、 <acronym>GIMP</acronym>のインストール時に
+    作成されたシステム用の <filename>palettes</filename> フォルダに入っている
+    パレットは、 いずれも<acronym>GIMP</acronym>を起動したときに自動的に読み
+    込まれ、 パレットダイアログ上で列挙されます。 他のディレクトリをパレット用
+    のフォルダとして検索対象に加えたいときは、 環境設定ダイアログの
+    <link linkend="gimp-prefs-folders-data">パレット用フォルダ</link> のページ
+    で追加登録してください。
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>のパレットは専用のファイル形式で保存され、 その名前
+    には拡張子 <filename class="extension">.gpl</filename> が付きます。 内容は
+    大変簡素な<acronym>ASCII</acronym>テキストのみによる形式なので、 仮に他所
+    から取得したパレットを<acronym>GIMP</acronym>用に使う要求が生じたとしても、
+    それを<acronym>GIMP</acronym>用に転換する作業は大して難しくはならない
+    でしょう。 まずはどれかひとつ <filename class="extension">.gpl</filename> 
+    形式のファイルの中身を見てください。 何をすればよいか理解できるはずです。
+  </para>
+
+  <sect2>
+    <title lang="en">Colormap</title>
+    <title lang="ja">カラーマップ</title>
+    <para lang="en">
+      Confusingly, <acronym>GIMP</acronym> makes use of two types of palettes.
+      The more
+      noticeable are the type shown in the Palettes dialog: palettes that
+      exist independently of any image. The second type,
+      <emphasis>indexed palettes</emphasis>,
+      form the colormaps of indexed images. Each indexed image has its own
+      private indexed palette, defining the set of colors available in the
+      image: the maximum number of colors allowed in an indexed palette is
+      256. These palettes are called <quote>indexed</quote> because each
+      color is associated with an index number. (Actually, the colors in
+      ordinary palettes are numbered as well, but the numbers have no
+      functional significance.)
+    </para>
+    <para lang="ja">
+      ややこしいことに、 <acronym>GIMP</acronym>は2つの型のパレットを使い分けて
+      います。 一方のよく知られる型はパレットダイアログに出てくるものです。
+      これらのパレットは画像とは独立して存在しています。 第2の型は <emphasis>
+      インデックス化パレット</emphasis> といい、 インデックスつき画像の
+      カラーマップとしての役目があります。 インデックスつき画像はそれぞれに
+      固有のインデックス化パレットを持っており、 画像で使用される全ての色を
+      定義しています。 インデックス化パレットに加えられる色数は最大で 256 色
+      です。 このパレットが <quote>インデックス化</quote> と言われるのには、
+      それぞれの色に索引番号が付与されるという理由があります。 (実際には前者の
+      一般的なパレットの色にも通し番号が振られていますが、 こちらは機能的な意味
+      はありません。)
+    </para>
+    <figure>
+      <title lang="en">The Colormap dialog</title>
+      <title lang="ja">カラーマップダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/colormap-dialog.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The colormap of an indexed image is shown in the
+      <link linkend="gimp-indexed-palette-dialog">Indexed Palette dialog</link>,
+      which should not be confused with the Palettes dialog. The Palettes
+      dialog shows a list of all of the palettes available; the Colormap
+      dialog shows the colormap of the currently active image, if it is an
+      indexed image - otherwise it shows nothing.
+    </para>
+    <para lang="en">
+      You can, however, create an ordinary palette from the colors in an
+      indexed image&mdash;actually from the colors in any image. To do this,
+      choose <guimenuitem>Import Palette</guimenuitem>
+      from the right-click popup menu in the Palettes dialog: this pops up a
+      dialog that gives you several options, including the option to import
+      the palette from an image. (You can also import any of
+      <acronym>GIMP</acronym>'s gradients
+      as a palette.) This possibility becomes important if you want to create
+      a set of indexed images that all use the same set of colors.
+    </para>
+    <para lang="en">
+      When you convert an image into indexed mode, a major part of the process
+      is the creation of an indexed palette for the image. How this happens is
+      described in detail in <xref linkend="gimp-image-convert-indexed"/>.
+      Briefly, you have several methods to choose from, one of which is to
+      use a specified palette from the Palettes dialog.
+    </para>
+    <para lang="en">
+      Thus, to sum up the foregoing, ordinary palettes can be turned into
+      indexed palettes when you convert an image into indexed mode; indexed
+      palettes can be turned into ordinary palettes by importing them into the
+      Palettes dialog.
+    </para>
+    <para lang="ja">
+      インデックスつき画像のカラーマップは
+      <link linkend="gimp-indexed-palette-dialog">インデックス化パレットの
+      ダイアログ</link> で見られます。 パレットダイアログと混同しないように気を
+      つけましょう。 パレットダイアログは利用可能なパレットの一覧表です。
+      カラーマップダイアログは現在活性化している画像がインデックス化されている
+      画像であるときにそのカラーマップを表示します。 インデックス化されて
+      いなければ何も表示しません。
+    </para>
+    <para lang="ja">
+      しかしインデックスつき画像の色から (現実的にはどんな画像の色からも)
+      得た色で一般的なパレットを作成できます。 その方法は、 パレットダイアログ
+      の上で <mousebutton>第2ボタン</mousebutton> クリックすると現れるメニュー
+      で <guimenuitem>パレットをインポート...</guimenuitem>
+      を選択するのです。 出てきたダイアログにはいろいろオプションがありますが、
+      その中に画像からパレットを抽出するオプションがあります。 (<acronym>GIMP
+      </acronym>のグラデーションもパレットに抽出転換できます。) この能力が
+      インデックスつき画像を同じ配色で揃えることになった場合に重要になります。
+    </para>
+    <para lang="ja">
+      画像のモードをインデックスカラーの色空間に変換する際の処理のほとんどは、
+      その画像の色を収めるインデックス化パレットを作成するのに費されます。
+      <xref linkend="gimp-image-convert-indexed"/> で、 どんなことが起こって
+      いるのかを詳しく説明しています。 ほんの一部のご紹介になりますが、 例えば
+      パレットダイアログから選びだしたパレットをインデックス化に使う方法の
+      ようないろいろな選択肢を説明しています。
+    </para>
+    <para lang="ja">
+      以上をまとめると、 一般のパレットは画像の色空間をインデックスカラーに
+      変換する際にインデックス化パレットに転換できること、 インデックス化
+      パレットはパレットダイアログのメニューで一般のパレットに抽出転換できる
+      こと、 となります。
+    </para>
+    <figure>
+      <title lang="en">Colormap dialog (1) and Palette dialog (2)</title>
+      <title lang="ja">
+        カラーマップダイアログ (1) とパレットダイアログ (2)
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/palettes.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect2>
+</sect1>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-23 ude: moved here from filters/color/map/alienmap2.xml ('en','de')
+  2007-07-10 Added Spanish translation by AntI
+  2007-04-01 KoSt: added 'no' translation
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-08-20 de added by axel.wernicke
+  2005-09-30 de replaced informalfigure by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="plug-in-alienmap2">
+  <title lang="en">Alien Map</title>
+  <title lang="ja">エイリアンマップ...</title>
+
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Alien Map</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Alien Map</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary>エイリアンマップ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>エイリアンマップ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Alien Map filter example</title>
+      <title lang="ja">エイリアンマップフィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/color-taj-alien2.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter applied</para>
+          <para lang="ja">フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter renders very modified colors by applying trigonometric
+      functions. Alien Map can work on images having
+      <link linkend="glossary-colormodel">RGB and HSV</link> color models.
+    </para>
+    <para lang="ja">
+      このフィルタは三角関数を用いて画像の色をまるで別の色に置き換えます。
+      <guimenuitem>エイリアンマップ...</guimenuitem> は 
+      <link linkend="glossary-colormodel"><acronym>RGB</acronym>か<acronym>HSV
+      </acronym></link> 色モデルの画像でのみ作動します。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image window menu under
+      <menuchoice>
+        <guimenu>Colors</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Alien Map</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>エイリアンマップ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Options for the <quote>Alien Map</quote> filter</title>
+      <title lang="ja">
+        <quote>エイリアンマップ</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/colors-map-alienmap.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            This preview displays results of filter application interactively.
+          </para>
+          <para lang="ja">
+            縮小見本画像が表示されフィルタの設定操作を即座に反映します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
+        <listitem>
+          <para lang="en">
+            Radio buttons <guilabel>RGB Color Channel</guilabel> and
+            <guilabel>HSV Color Channel</guilabel>
+            let you select the color space you want to use.
+          </para>
+          <para lang="en">
+            Check boxes <guilabel>Modify ... Channel</guilabel> let you
+            select RGB/HSV Channel you want to work with.
+          </para>
+          <para lang="ja">
+            作業に使う色空間はラジオボタンで 
+            <guibutton>RGB カラーモデル</guibutton> と 
+            <guibutton>HSL カラーモデル</guibutton> から
+            いずれかを選んでください。
+          </para>
+          <para lang="ja">
+            右側に並ぶ <guilabel>&hellip;チャンネルを変更</guilabel> チェック
+            ボックスで操作対象に含めたいチャンネルを指定してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sliders</term>
+        <term lang="ja">6つのスライダ</term>
+        <listitem>
+          <para lang="en">
+            For each channel, you can set Frequency (0-5) and Phaseshift
+            (0-360) of sine-cosine functions, using either sliders or input
+            boxes and their arrowheads.
+          </para>
+          <para lang="en">
+            <guilabel>Frequency</guilabel> around 0.3 to 0.7 provides a
+            curve that is similar to the linear function (original image),
+            only darker or with more contrast. As you raise the frequency
+            level, you'll get an increasing variation in pixel
+            transformation, meaning that the image will get more and more
+            <quote>alien</quote>.
+          </para>
+          <para lang="en">
+            <guilabel>Phase</guilabel> alters the value transformation. 0
+            and 360 degrees are the same as a sine function and 90 is the
+            same as a cosine function. 180 inverts sine and 270 inverts
+            cosine.
+          </para>
+          <para lang="ja">
+            いずれのチャンネルでもスライダと数値記入欄やその小さな上下矢印を
+            操作して、 sin関数とcos関数の周波数 (0.00から5.00) や位相変位
+            (0.00から360.00) を設定できます。
+          </para>
+          <para lang="ja">
+            <guilabel>周波数</guilabel> をおよそ 0.3 から 0.7 に合わせると
+            サインカーブはほぼ直線的な関数曲線になり (つまり元画像とほぼ
+            同じ配色になり)、 暗さが増すかあるいはコントラストが強まるだけの
+            変化となります。 周波数を上げるにつれて画素の色変換が多彩になり
+            ますので、 画像はもっと<quote>エイリアン</quote>ぽくなります。
+          </para>
+          <para lang="ja">
+            <guilabel>位相変位</guilabel> は色変換をずらします。 0度と360度は
+            同一のsin関数です。 90度はcos関数です。 180度はsin関数の正負を反転
+            し、 270度はcos関数の正負を反転した形になります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-02-17: ude: renamed id: gimp-new-layer-dialog -> gimp-layer-new
+  2007-02-21: adde Norwegian by KoSt
+  2007-02-15: added Spanish translation by manuq
+  2005-11-03: split of from menu-layer.xml by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-layer-new">
+  <title lang="en">New Layer</title>
+  <title lang="ja">レイヤーを追加...</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Stack managing</secondary>
+    <tertiary>Create a new layer</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>New Layer</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサナリヲカンリ">重なりを管理</secondary>
+    <tertiary sortas="アタラシイレイヤーヲサクセイ">
+      新しいレイヤーを作成
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="レイヤーヲツイカ">レイヤーを追加</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>New Layer</guimenuitem> command adds a new, empty
+    layer to the layer stack of the image, just above the active layer.
+    The command displays a dialog in which you can specify the size of
+    the new layer.
+  </para>
+  <para lang="ja">
+    <guimenuitem>レイヤーを追加...</guimenuitem> コマンドは
+    新たに何も描かれていないレイヤーを画像のレイヤーの積み重ねに加え、 活性
+    レイヤーの手前に置きます。 コマンドを呼び出すとダイアログが現れ、 追加
+    されるレイヤーの大きさが設定できます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guimenuitem>New Layer</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>レイヤーを追加...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3 id="gimp-new-layer-dialog">
+    <title lang="en">Description of the <quote>New Layer</quote> Dialog</title>
+    <title lang="ja"><quote>新規レイヤー</quote>ダイアログのご説明</title>
+    <figure>
+      <title lang="en">The <quote>New Layer</quote> dialog</title>
+      <title lang="ja"><quote>新規レイヤー</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/dialogs-new-layer.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Under the title <quote>Create a new layer</quote> you can see the name
+      of the image for that you create this new layer and next to the title
+      a thumbnail of it. That is interesting to see if you have selected the
+      good image when there is more than one image open.
+    </para>
+    <para lang="ja">
+      <quote>新しいレイヤーを追加</quote>の表題より下にレイヤー追加の対象となる
+      画像の名前、 表題の右側には見本画像が表示されます。 複数の画像を同時に
+      開いている方はここを見れば目的の画像を扱っているかどうか確認できます。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Layer Name</term>
+        <term lang="ja">レイヤー名</term>
+        <listitem>
+          <para lang="en">
+            The name of the new layer. It does not have any functional
+            significance; it is simply a convenient way for you to remember
+            the purpose of the layer. The default name is <quote>New
+            Layer</quote>. If a layer with the name you choose already
+            exists, a number is automatically appended to it to make it
+            unique (e.g., <quote>New Layer#1</quote>) when you click on the
+            <guibutton>OK</guibutton> button.
+          </para>
+          <para lang="ja">
+            追加されるレイヤーの名前です。 名前自体には機能上の制約が一切あり
+            ません。 専らそのレイヤーの目的をわかりやすくするためにつければよい
+            のです。 [あとからレイヤーダイアログ上で変更できます。] 既定の名前
+            は<quote>新規レイヤー</quote>です。 ここで与えた名前のレイヤーが既
+            にこの画像に存在していた場合は、 <guibutton>OK
+            </guibutton> ボタンのクリックで確定ののち重複を避けるため新たな名前
+            のあとに自動的に番号が<quote>新規レイヤー#1</quote>のように
+            振られます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Width; Height</term>
+        <term lang="ja">幅; 高さ</term>
+        <listitem>
+          <para lang="en">
+            The dimensions of the new layer. When the dialog appears, the
+            values are initialized to the dimensions of the image. You can
+            change them by using the two text boxes. You can also change
+            the units in the pull-down menu to the right.
+          </para>
+          <para lang="ja">
+            追加されるレイヤーの寸法です。 ダイアログを呼び出したとき、 
+            これらの欄にははじめから画像の寸法が示されています。 数値記入欄の値
+            を変更すれば寸法が変えられます。 既定の単位はピクセルですが、 
+            右側にある引き出しメニューで他の単位にも切り替えられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Layer Fill Type</term>
+        <term lang="ja">レイヤー塗りつぶし方法</term>
+        <listitem>
+          <para lang="en">
+            There are four options for the solid color that fills the layer:
+            the current <guilabel>Foreground color</guilabel>,
+            the current <guilabel>Background color</guilabel>,
+            <guilabel>White</guilabel> and
+            <guilabel>Transparency</guilabel>.
+          </para>
+          <para lang="ja">
+            レイヤーを単色で塗りつぶすオプションは <guilabel>描画色</guilabel>
+            、 <guilabel>背景色</guilabel>、 <guilabel>白</guilabel>、
+            <guilabel>透明</guilabel> の4つです。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

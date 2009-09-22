@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-06-02 j.h fr renamed "repoussage" to "relief"
+  2007-08-12 Added Spanish translation by AntI
+  2007-04-23 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050905 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-emboss">
+  <title lang="en">Emboss</title>
+  <title lang="ja">エンボス...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Distorts</secondary>
+    <tertiary>Emboss</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Emboss</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary>エンボス</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>エンボス</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Applying example for the Emboss filter</title>
+      <title lang="ja">エンボスフィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-emboss.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Emboss</quote> applied</para>
+          <para lang="ja"><quote>エンボス</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      You can use it only with RGB images. If your image is grayscale, it
+      will be grayed out in the menu.
+    </para>
+    <para lang="en">
+      It stamps and carves the active layer or selection, giving it relief
+      with bumps and hollows. Bright areas are raised and dark ones are
+      carved. You can vary the lighting.
+    </para>
+    <para lang="ja">
+      このフィルタは<acronym>RGB</acronym>画像でのみ作動します。 画像がグレー
+      スケール色やインデックス化色の場合はこのメニュー項目が灰色無効となって
+      使用できなくなります。
+    </para>
+    <para lang="ja">
+      <guimenuitem>エンボス...</guimenuitem> フィルタは活性
+      レイヤーかその選択範囲をくぼみや盛り上がりのある浮き彫りのような陰影画に
+      彫刻します。 明るい部分が盛り上がり暗い部分が掘り下げられます。 照明を
+      調節できます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Distorts</guisubmenu>
+        <guimenuitem>Emboss</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>エンボス...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">オプション</title>
+    <figure>
+      <title lang="en"><quote>Emboss</quote> filter options</title>
+      <title lang="ja"><quote>エンボス</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/filters/emboss-options.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            All your setting changes will appear in the Preview without
+            affecting the image until you click on <guilabel>OK</guilabel>.
+            Don't keep <emphasis>Do Preview</emphasis> checked if your
+            computer is too much slow.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Function</term>
+        <term lang="ja">機能</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Bumpmap</guilabel>: Relief is smooth and colors are
+            preserved.
+          </para>
+          <para lang="en">
+            <guilabel>Emboss</guilabel>: It turns your image to grayscale
+            and relief is more marked, looking like metal.
+          </para>
+          <para lang="ja">
+            <guilabel>バンプマップ</guilabel>: 浮き彫りは
+            滑らかで、 色彩が残ります。
+          </para>
+          <para lang="ja">
+            <guilabel>エンボス</guilabel>: グレースケール風の
+            白黒灰色画像に変更され浮き彫りがより強くなります。 金属製品の風合い
+            です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Azimuth</term>
+        <term lang="ja">方向</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Azimuth</guilabel>: This is about lighting
+            according to the points of the compass (0 - 360). If you
+            suppose South is at the top of your image, then East (0°) is
+            on the left. Increasing value goes counter-clockwise.
+          </para>
+          <para lang="ja">
+            <guilabel>方向</guilabel>: 光の差してくる方向を
+            方位 (0 から 360) で示します。 右0°、 上90°、 下180°、 左270°です。
+            数値を増すと反時計回りに進みます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Elevation</term>
+        <term lang="ja">持ち上げ</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Elevation</guilabel>: That's height from
+            horizon (0°), in principle up to zenith (90°), but here up
+            to the opposite horizon (180°).
+          </para>
+          <para lang="ja">
+            <guilabel>持ち上げ</guilabel>: この値は水平線上
+            (0°) から天上 (90°) まで高さを設定できますが、 さらに進んで 180°
+            にすると逆の方角から照らすことになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Depth</term>
+        <term lang="ja">深度</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Depth</guilabel> Seems to be the distance of the
+            light source. Light decreases when value increases.
+          </para>
+          <para lang="ja">
+            <guilabel>深度</guilabel>: 光源からの距離のような
+            ものです。 値を増すと光量が減ります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

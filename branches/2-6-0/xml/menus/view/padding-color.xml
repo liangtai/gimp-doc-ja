@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-01-16 j.h: reviewed for v2.6
+  2007-05-22 Added Spanish translation by AntI
+  2005-10-24 reviewed; de added by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-view-padding-color">
+  <title lang="en">Padding Color</title>
+  <title lang="ja">キャンバス周辺の色</title>
+
+  <indexterm lang="en">
+    <primary>View</primary>
+    <secondary>Padding color of canvas</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Canvas</primary>
+    <secondary>Padding color</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Padding color</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Color</primary>
+    <secondary>Padding color of canvas</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ヒョウジ">表示</primary>
+    <secondary sortas="キャンバスシュウヘンノイロ">
+      キャンバス周辺の色
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>キャンバス</primary>
+    <secondary sortas="シュウヘンノイロ">周辺の色</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="シュウヘンノイロ">周辺の色</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="キャンバスシュウヘンノイロ">
+      キャンバス周辺の色
+    </secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">
+      Contents of the <quote>Padding Color</quote> submenu
+    </title>
+    <title lang="ja">
+      <quote>キャンバス周辺の色</quote>サブメニューの目次
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/menus/view/padding-color.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    You can change the color of the canvas which surrounds the image by
+    using the <guimenuitem>Padding Color</guimenuitem> command.  The canvas
+    is the surface the image lies on. It looks like a frame around the
+    image in the image window. This is just a matter of personal
+    preference, since the padding color does not have any effect on the
+    image itself. Please note that this color is not the same as the color
+    used by the Fill tool.
+  </para>
+  <para lang="ja">
+    画像の周りをとり囲むキャンバスを表す色は 
+    <guisubmenu>キャンバス周辺の色</guisubmenu> コマンドで
+    変更できます。 画像はキャンバス上に直接置かれています。 画像ウィンドウでは
+    キャンバスは画像の外枠のように見えます。 キャンバスの色は画像自体には何の
+    影響もないため、 ご自分の好みの色を使用されて構いません。 ちなみにこの色は 
+    <quote>塗りつぶし</quote>ツールで使われる 
+    <link linkend="gimp-toolbox-color-area">描画色や背景色</link> とは無関係
+    です。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the submenu</title>
+    <title lang="ja">サブメニューへの入り方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this submenu from the image menubar through
+          <menuchoice>
+            <guimenu>View</guimenu>
+            <guimenuitem>Padding Color</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>表示</guimenu>
+            <guisubmenu>キャンバス周辺の色</guisubmenu>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en"><quote>Padding Color</quote> Options</title>
+    <title lang="ja"><quote>キャンバス周辺の色</quote>のオプション</title>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">From Theme</term>
+        <term lang="ja">テーマから</term>
+        <listitem>
+          <para lang="en">
+            The color of the theme defined in
+            <link linkend="gimp-prefs-theme">Preferences Theme</link> is used.
+          </para>
+          <para lang="ja">
+            <link linkend="gimp-prefs-theme">環境設定</link> ダイアログの
+            <quote>テーマ</quote>のページで選択したテーマに従って色が
+            定まります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Light/Dark Check Color</term>
+        <term lang="ja">明るい市松模様の色; 暗い市松模様の色</term>
+        <listitem>
+          <para lang="en">
+            The check representing transparency, which is defined in
+            <link linkend="gimp-prefs-display">Preferences Display</link> is
+            used.
+          </para>
+          <para lang="ja">
+            <link linkend="gimp-prefs-display">環境設定</link> ダイアログの
+            <quote>ディスプレイ</quote>のページの <guilabel>
+            市松模様の表示方法</guilabel> に基づく透明度が
+            適用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Select Custom Color</term>
+        <term lang="ja">カスタムカラーを選択...</term>
+        <listitem>
+          <para lang="en">
+            Opens the Color Selector window to let you choose a color to use.
+          </para>
+          <para lang="ja">
+            色の変更ダイアログが開かれますので使用したい色を選択してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">As in Preferences</term>
+        <term lang="ja">デフォルト設定</term>
+        <listitem>
+          <para lang="en">
+            The color selected in the
+            <link linkend="gimp-prefs-image-window-appearance">Image Window
+            Appearance</link> is used.
+          </para>
+          <para lang="ja">
+            <link linkend="gimp-prefs-image-window-appearance">環境設定</link> 
+            ダイアログの<quote>画像ウィンドウの表示形式</quote>の <guilabel>
+            キャンバス周辺の表示モード</guilabel> で指定して
+            あった色がそのまま使用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

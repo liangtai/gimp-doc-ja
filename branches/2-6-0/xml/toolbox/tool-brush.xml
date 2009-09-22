@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-04-29 ude: Moved Paint Mode examples to new sect3
+  2008-09-25 aprokoudine reviwed 'ru'
+  2008-06-01 ciampix reviewed for it
+  2008-04-14 JPL reviewed for fr
+  2008-03-12 Mr.Dust : added 'ko'
+  2008-03-01 ude: updated 'de'
+  2007-12-01 PP  reviewed for fr
+  2007-11-11 KoSt: updated 'no'
+  2007-10-29 j.h: updated fr ; documented Scale, Jitter en;fr
+  2007-10-06 lexa: reviewed for GIMP 2.4 (de)
+  2007-06-15 kost: added norwegian
+  2006-02-05 fr revised by j.h
+  2005-05-20 de reviewed by axel.wernicke
+-->
+<!--2009-08-18-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
+  <title lang="en">Common Features</title>
+  <title lang="ja">共通機能</title>
+
+  <indexterm lang="en">
+    <primary>Paint Tools</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Toolbox</primary>
+    <secondary>Brush Tools</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ビョウガツール">描画ツール</primary>
+    </indexterm>
+  <indexterm lang="ja">
+    <primary>ツールボックス</primary>
+    <secondary>ブラシツール</secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">The Paint Tools (Tools menu)</title>
+    <title lang="ja">描画ツール (ツールメニュー)</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/brush-tools.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The GIMP Toolbox includes thirteen <quote>brush tools</quote>,
+    all grouped together at the bottom (in the default arrangement).
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>ツールボックスには13種類の<quote>ブラシツール</quote>    があり、 (初期設定での配置では) 底部寄りに全てまとまっています。
+  </para>
+  <figure>
+    <title>
+      <title lang="en">The Paint Tools (Tools Box)</title>
+      <title lang="ja">描画ツール (ツールボックス)</title>
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/brush-tools-box.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The feature they all have in common is that all of them are used by moving
+    the pointer across the image display, creating brush-strokes. Four of them
+  </para>
+  <para lang="ja">
+    以上のツールの共通点は、 マウスポインタを画面上で滑らせてブラシ描画を
+    行う機能です。 このうち、
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-pencil">Pencil</link>,
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-pencil">鉛筆で描画</link>、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-paintbrush">Paintbrush</link>,
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-paintbrush">ブラシで描画</link>、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-airbrush">Airbrush</link> and
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-airbrush">エアブラシで描画</link>、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-ink">Ink tool</link>
+      </para>
+      <para lang="ja"><link linkend="gimp-tool-ink">インクで描画</link></para>
+    </listitem>
+  </itemizedlist>
+
+  <para lang="en">
+    behave like the intuitive notion of "painting" with a brush. The others
+    use a brush to modify an image in some way rather than paint on it:
+  </para>
+  <para lang="ja">
+    の4つの筆触ツールはブラシで「塗る」直観通りのはたらきをします。 それ
+    以外のツールは塗るのとはまた違った方法でブラシによる画像の加工を行います。
+  </para>
+  <itemizedlist>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-bucket-fill">Bucket Fill</link> fills
+        with color or pattern;
+      </para>
+      <para lang="ja">
+        色や文様で <link linkend="gimp-tool-bucket-fill">塗りつぶす</link>
+        ツールや、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-blend">Gradient</link> fills with
+        gradients;
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-blend">グラデーション</link>をかけるツール、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-eraser">Eraser</link> erases;
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-eraser">消しゴム</link>ツール、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-clone">Clone tool</link> copies from a
+        pattern, or image;
+      </para>
+      <para lang="ja">
+        文様や画像片の写し(クローン)を
+        <link linkend="gimp-tool-clone">スタンプ</link> するツール、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-perspective-clone">Perspective
+          Clone</link> tool copies into a changed perspective;
+      </para>
+      <para lang="ja">
+        あるいは透視図法的な変換をする
+        <link linkend="gimp-tool-perspective-clone">遠近感のあるスタンプ
+        </link>、
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        the <link linkend="gimp-tool-heal">Heal tool</link> corrects small
+        defects;
+      </para>
+      <para lang="ja">
+        小さな欠点を直す<link linkend="gimp-tool-heal">修復ブラシ</link>、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-convolve">Convolve tool</link>
+        blurs or sharpens;
+     </para>
+      <para lang="ja">
+        部分的にぼかし効果をかけるかコントラストを増す
+        <link linkend="gimp-tool-convolve">ぼかし/シャープ</link>ツール、
+     </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-smudge">Smudge tool</link> smears;
+      </para>
+      <para lang="ja">
+        擦って色を不鮮明にする
+        <link linkend="gimp-tool-smudge">にじみ</link>ツール、
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        and the <link linkend="gimp-tool-dodge-burn">Dodge/Burn tool</link>
+        lightens or darkens.
+      </para>
+      <para lang="ja">
+        部分的に明るくしたり暗くするための
+        <link linkend="gimp-tool-dodge-burn">暗室 (覆い焼き/焼き込み)</link>
+        ツール。
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <para lang="en">
+    The advantages of using GIMP with a tablet instead of a mouse
+    probably show up more clearly for brush tools than anywhere else:
+    the gain in fine control is invaluable.  These tools also have
+    special <quote>Pressure sensitivity</quote> options that are only usable
+    with a tablet.
+  </para>
+  <para lang="en">
+    In addition to the more common <quote>hands-on</quote> method, it is
+    possible to apply brush tools in an automated way, by creating a
+    selection or path and then <quote>stroking</quote> it.  You can choose to
+    stroke with any of the brush tools, including nonstandard ones
+    such as the Eraser, Smudge tool, etc., and any options you set for
+    the tool will be applied.  See the section on <link linkend="gimp-selection-stroke">Stroking</link> for more information.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>でマウスではなくタブレットを使用した場合の利点が
+    最も強く現れる場面はおそらくブラシツールを使うときでしょう: 高感度
+    コントロールで得られる情報は他には替えがたいものです。 これらのツール
+    には特別にタブレットでのみ利用できる<quote>筆圧感知</quote>オプション
+    がついています。
+  </para>
+  <para lang="ja">
+    通常利用される<quote>受け渡し</quote>のしくみに加え、 ブラシツールを
+    利用するより自動化された連携があり、 選択ツールやパスツールが作った
+    <quote>境界線を 描画</quote>することができます。 ここで使うブラシツールは
+    どれでもよく、 消しゴムやにじみツールなど特異なものも使えます。 使える
+    オプションも同じです。 詳しくは <link linkend="gimp-selection-stroke">
+    境界線を描画</link> についての章をご覧ください。
+  </para>
+
+  <sect3 id="gimp-tools-brush-modifiers">
+    <title lang="en">Key modifiers</title>
+    <title lang="ja">キー修飾</title>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            Holding down the <keycap>Ctrl</keycap> key has a special effect
+            on every brush tool <!--except the ink tool-->. For the Pencil,
+            Paintbrush, Airbrush, Ink Tool, and Eraser tools, it
+            switches them into <quote>color picker</quote> mode, so that
+            clicking on an image pixel causes GIMP's foreground to be set
+            to the active layer's color at that point (or, for the Eraser,
+            GIMP's background color). For the Clone tool, the
+            <keycap>Ctrl</keycap> key switches it into a mode where
+            clicking sets the reference point for copying. For the Convolve
+            tool, the <keycap>Ctrl</keycap> key switches between blur and
+            sharpen modes; for the Dodge/Burn tool, it switches between
+            dodging and burning.
+          </para>
+          <para lang="ja">
+            どのブラシツールも <keycap>Ctrl</keycap> キーを押しながら
+            使うと特別な効果があります。 鉛筆、 絵筆、 エアブラシ、 インク、
+            消しゴムの各ツールは<quote>スポイト</quote>に変身し、
+            画像をクリックすると現在のレイヤーのその場所の画素 (ピクセル) から
+            色を拾い出して<acronym>GIMP</acronym>の描画色とします
+            (消しゴムだけは<acronym>GIMP</acronym>の背景色とします)。
+            <quote>スタンプで描画</quote>ツールでは <keycap>Ctrl</keycap>
+            キーを押している間にクリックした場所が参照始点になります。
+            <quote>ぼかし/シャープ</quote>ツールは <keycap>Ctrl</keycap>
+            キーを押すとぼかしモードから際立たせモードに切り替わります。
+            暗室ツールは覆い焼きから焼き込みにモードが交替します。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <keycap>Shift</keycap>
+        </term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Straight Line</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="チョクセン">直線</primary>
+          </indexterm>
+          <para lang="en">
+            Holding down the Shift key has the same effect on all brush tools:
+            it places the tool into <emphasis>straight line</emphasis>
+            mode. To create a straight line with any of the brush tools, first
+            click on the starting point, <emphasis>then</emphasis>
+            press the Shift key. As long as you hold it down, you will see a
+            thin line connecting the previously clicked point with the current
+            pointer location. If you click again, while continuing to hold
+            down the Shift key, a straight line will be rendered. You can
+            continue this process to create a series of connected line
+            segments.
+          </para>
+          <para lang="ja">
+            全てのブラシツールに同様の効果があるのが <keycap>Shift</keycap>
+            キーです。 <emphasis>直線</emphasis> が引けるモードに変わるのです。
+            どのブラシツールの場合も直線の引くにはまず始点をクリックして、
+            <emphasis>その後に</emphasis> <keycap>Shift</keycap> キーを
+            押します。 キーを押したままでポインタを移動すると始点と現在地
+            を繋ぐ細い線が示されます。 <keycap>Shift</keycap> キーを
+            押し続けながらそこで次の点を打つと、 直線が描かれます。
+            この動作を繰り返すと線分が繋がって描けます。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>Ctrl</keycap>
+          </keycombo>
+        </term>
+        <listitem>
+          <para lang="en">
+            Holding down both keys puts the tool into
+            <emphasis>constrained straight line</emphasis> mode.  This
+            is similar to the effect of the Shift key alone, except
+            that the orientation of the line is constrained to the
+            nearest multiple of 15 degrees.  Use this if you want to
+            create perfect horizontal, vertical, or diagonal lines.
+          </para>
+          <para lang="ja">
+            両方のキーを押した状態でのブラシツールは <emphasis>制限つきで
+            直線を</emphasis> 引くモードになります。 使い方は
+            <keycap>Shift</keycap> キー単独での方式と同じですが、
+            線の傾きは全方位を24分割した15度刻みの方向のうち最も近いもの
+            が選ばれます。 この制限は水平線や垂直線、 あるいは対角的な配置の
+            斜線を引くときに便利です。
+          </para>
+          <para lang="ja">
+            先に <keycap>Ctrl</keycap> キーを押すとスポイトツールに変身
+            するため、 同時押しの効果が現れないおそれがあります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="gimp-tool-brush-options">
+    <title lang="en">Tool Options</title>
+    <title lang="ja">ツールオプション</title>
+    <figure>
+      <title lang="en">Tool Options shared by all brush tools</title>
+      <title lang="ja">全てのブラシツールが共有するツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-brushcommon.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      Many tool options are shared by several brush tools: these are described
+      here. Options that apply only to one specific
+      tool, or to a small number of tools, are described in the sections
+      devoted to those tools.
+    </para>
+    <para lang="ja">
+      大多数のツールオプションがいくつかのブラシツールで共有されています。
+      ここでそれらのオプションについて説明します。 その他のオプションのうち
+      ツール個別で独自に持つものやごく一部で共有されているものは、
+      それぞれのツールの節の中で説明します。
+    </para>
+    <variablelist id="gimp-tool-painting-modes" xreflabel="Painting Modes">
+      <title lang="en">Paint Modes</title>
+      <title lang="ja">描画のモード</title>
+      <varlistentry>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
+        <listitem>
+          <para lang="en">
+            The Mode drop-down list provides a selection of paint
+            application modes. As with the opacity, the easiest way to
+            understand what the Mode setting does is to imagine that the
+            paint is actually applied to a layer above the layer you are
+            working on, with the layer combination mode in the Layers
+            dialog set to the selected mode. You can obtain a great variety
+            of special effects in this way. The Mode option is only usable
+            for tools that can be thought of as adding color to the image:
+            the Pencil, Paintbrush, Airbrush, Ink, and Clone tools. For the
+            other brush tools, the option appears for the sake of
+            consistency but is always grayed out. A list of modes can be
+            found in <xref linkend="gimp-concepts-layer-modes"/>.
+          </para>
+          <para lang="en">
+            In this list, some modes are particular and are described
+            <link linkend="gimp-paint-mode-examples">below</link>.
+          </para>
+          <para lang="ja">
+            <guilabel>モード</guilabel>ドロップダウンリスト(引き出し排列)
+            から描画の適用モードが選べます。 モードが果たす役割について理解
+            するには <guilabel>不透明度</guilabel> に対するのと同じく、
+            ちょうど画像の上に描画を実施するためのレイヤーが別にあって、
+            そのレイヤーが画像と結合する態勢(モード)をレイヤーダイアログで
+            指定するところを想像されると最も分かりやすいでしょう。
+            モード指定によって多彩な計り知れない特殊効果が得られます。
+            モードオプションが利用できるのは画像に色を描き加えるツール (鉛筆、
+            絵筆、 エアブラシ、 インク、 スタンプ) に限られます。
+            それ以外のブラシツールでは利用できませんが、 ダイアログの統一感
+            をはかる目的で灰色無効表示とされています。
+            <xref linkend="gimp-concepts-layer-modes" />
+            に関しては実例を挙げて説明しています。
+          </para>
+          <para lang="ja">
+            中には
+            <link linkend="gimp-paint-mode-examples">後述</link> のような
+            独特なものもあります。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Opacity</term>
+        <term lang="ja">不透明度</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Transparency</primary>
+            <secondary>Brush Opacity</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Opacity</primary>
+            <secondary>Brush</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="トウカコウカ">透過効果</primary>
+            <secondary sortas="ブラシノフトウメイド">
+              ブラシの不透明度
+            </secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="フトウメイド">不透明度</primary>
+            <secondary>ブラシ</secondary>
+          </indexterm>
+          <para lang="en">
+            The Opacity slider sets the transparency level for the brush
+            operation. To understand how it works, imagine that instead of
+            altering the active layer, the tool creates a transparent layer
+            above the active layer and acts on that layer. Changing Opacity in
+            the Tool Options has the same effect that changing opacity in the
+            Layers dialog would have in the latter situation. It controls the
+            <quote>strength</quote>
+            of all brush tools, not just those that paint on the active layer.
+            In the case of the Eraser, this can come across as a bit
+            confusing: it works out that the higher the <quote>opacity</quote>
+            is, the more transparency you get.
+          </para>
+          <para lang="ja">
+            不透明度スライダはブラシ操作での透明度レベルを設定します。
+            その効果を理解するには、 現在のレイヤーに直接描いているのではなく、
+            このツールによってその上に新たに透明なレイヤーが用意されていると
+            みなすことです。 ツールオプションで不透明度を変更したときの
+            効果は、 その仮のレイヤーの不透明度をレイヤーダイアログで変更する
+            のと同じです。 また現行レイヤーに描画するそれら<!-- what?-->に
+            とどまらず、 全てのブラシツールの<quote>強さ</quote>を
+            調節しています。 消しゴムツールに関して言えば少々混乱しそうです:
+            <quote>不透明度</quote>が高いほど、 このツールが消した部分の
+            透明感が増す結果になります。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Brush</term>
+        <term lang="ja">ブラシ</term>
+        <listitem>
+          <para lang="en">
+            The brush determines how much of the image is affected by the
+            tool, and how it is affected, when you trace out a brushstroke
+            with the pointer. GIMP allows you to use several different types
+            of brushes, which are described in the
+            <link linkend="gimp-concepts-brushes">Brushes</link>
+            section. The same brush choices are available for all brush tools
+            except the Ink tool, which uses a unique type of procedurally
+            generated brush. The colors of a brush only come into play for
+            tools where they are meaningful: the Pencil, Paintbrush, and
+            Airbrush tools. For the other brush tools, only the intensity
+            distribution of a brush is relevant.
+          </para>
+          <para lang="ja">
+            ブラシ選びが、ポインタを滑らせ描画する過程でツールが画像に
+            及ぼす大きさと刻印の内容を決めます。
+            <acronym>GIMP</acronym>で使えるブラシは様々な種類があります。
+            <link linkend="gimp-concepts-brushes">ブラシ</link> の節に
+            説明があります。 <quote>インクで描画</quote>ツールを除き、
+            どのツールに替えても同じブラシが選べます。 <quote> インクで描画
+            </quote>ツールはオプションでの調整を経て特別に構成されたブラシを
+            使用します。 色の現れ方がブラシと関わるのは鉛筆、絵筆、エアブラシ
+            の筆触ツールだけです。 それ以外のブラシツールではブラシの
+            強度分布しか関係しません。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Scale</term>
+        <term lang="ja">拡大・縮小</term>
+        <listitem>
+          <para lang="en">
+            This option lets you to modify precisely the size of the brush.
+            You can use the arrow keys to vary by ±0.01 or the Page-Up and
+            Page-Down keys to vary by ±0.05. You can obtain the same result if
+            you have correctly set your mouse-wheel in the Preferences. See
+            <link linkend="gimp-using-variable-size-brush">How to vary the
+            size a brush</link>
+          </para>
+          <para lang="ja">
+            このオプションでブラシの大きさを緻密に調整できます。
+            <keycap>上</keycap> <keycap>下</keycap> の各キーで&#xb1;0.01ずつ、
+            <keycap>PgUp</keycap> <keycap>PgDn</keycap> の各キーで&#xb1;0.05
+            ずつ変えられます。 マウス車での操作も<quote>環境設定</quote>
+            で正しく設定すれば利用できます。
+            <link linkend="gimp-using-variable-size-brush">ブラシの大きさの
+            変更方法</link> をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gimp-tool-brush-dynamics" xreflabel="Brush Dynamics">
+        <term lang="en">Brush Dynamics</term>
+        <term lang="ja">ブラシ感度の調整</term>
+        <listitem>
+          <figure>
+            <title lang="en">The Brush Dynamics check box.</title>
+            <title lang="ja">ブラシ感度の調整チェックボックス</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/toolbox/brush-dynamics.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            Brush dynamics let you map different brush parameters, commonly at
+            least size and opacity, to one or more of three input dynamics:
+            pressure, velocity and random. They are mostly used with tablets,
+            but Velocity and Random are also usable with a mouse. The
+            Ink tool, that supported velocity before, has been overhauled and
+            now handles velocity-dependent painting much better.
+          </para>
+          <para lang="en">
+            A new option has been added in stroking paths. Stoke Path and
+            Stroke Selection have now a check box for emulating brush
+            dynamics when you stroke using a paint tool. That means that when
+            you stoke, brush pressure and velocity are varying along the length
+            of the stroke. Pressure starts with zero, ramps up to full pressure
+            and then ramps down again to no pressure. Velocity starts from
+            zero and ramps up to full speed by the end of the stroke.
+          </para>
+          <para lang="en">
+            The Pressure Sensitivity section is only meaningful if you are
+            using a tablet:  it allows you to decide which aspects of the
+            tool's action should be affected by how hard you press the stylus
+            against the tablet.  The possibilities are
+            <guilabel>opacity</guilabel>, <guilabel>hardness</guilabel>,
+            <guilabel>rate</guilabel>, <guilabel>size</guilabel>, and
+            <guilabel>color</guilabel>.  They  work together:  you can enable
+            as many of them as you like.
+            For each tool, only the ones that are meaningful are listed.
+            Here is what they do:
+          </para>
+          <para lang="ja">
+            ブラシ感度の調整オプションは、 絶えず変化する圧力、 筆速、
+            不規則変化の3つの情報からひとつもしくは組み合わされた入力値を、
+            いろいろなブラシにまつわる変数、 少なくとも一般的にはその大きさや
+            透明度に振り分けて反映させるためのものです。 ほぼまちがいなく
+            タブレット用に使われますが、 筆速や不規則変化はマウスに対しても
+            有効です。 インクツールに関して言えば、 以前から筆速対応ができて
+            いましたが、 全面改修を行ないましたので筆速に依存する描画ももっと
+            うまくこなせるようになっています。
+          </para>
+          <para lang="ja">
+             <quote>パスの境界線を描画</quote>[のダイアログ]に新たなオプション
+             が加わりました。 <quote>パスの境界線を描画</quote>と<quote>
+             選択範囲の境界線を描画</quote>が描画ツールを使うときにブラシ感度の
+             変化を模倣する機能のチェックボックスができています。 それらの
+             輪郭線が伸びるにつれてブラシの圧力や筆速が変化しているとみなして
+             いるのです。 筆圧は 0 から開始し、 最大圧力まで駆け上がって再び
+             圧力無しまで減圧してゆきます。 筆速は 0 から加速を始め、 描線の
+             終端で最大速になります。
+          </para>
+          <para lang="ja">
+            筆圧感知の部門はタブレットを使用している場合に限り意味があります:
+            ここではタブレット板に尖筆を押しあてる強度などをツールのどの相と
+            結びつけるかを決めます。 <guilabel>不透明度</guilabel>、
+            <guilabel>強度</guilabel>、 <guilabel>割合</guilabel>、
+            <guilabel>大きさ</guilabel>、 <guilabel>色</guilabel>から選べます。
+            かけもちが可能なので、 任意に複数の相を有効にできます。
+            それぞれのツールごとに利用できる相だけを列挙しています。
+            各相のはたらきは以下のとおりです。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Opacity</term>
+              <term lang="ja">不透明度</term>
+              <listitem>
+                <para lang="en">
+                  The effect of this option is described above.
+                </para>
+                <para lang="ja">
+                  このオプションの効果は既に述べたとおりです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Hardness</term>
+              <term lang="ja">強度</term>
+              <listitem>
+                <para>
+                  This option applies to brushes with fuzzy edges. If it is
+                  enabled, the harder you press, the darker the fuzzy parts of
+                  the brush will appear.
+                </para>
+                <para lang="ja">
+                  このオプションは輪郭のぼやけたブラシに適用されます。
+                  オプションが有効ならば、 筆圧が強ければブラシの縁がより
+                  濃く出ます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Rate</term>
+              <term lang="ja">割合</term>
+              <listitem>
+                <para lang="en">
+                  This option applies to the Airbrush, Convolve tool, and
+                  Smudge tool, all of which have time-based effects. Pressing
+                  harder makes these tools act more rapidly.
+                </para>
+                <para lang="ja">
+                  このオプションは経過時間効果をもつツールであるエアブラシ、
+                  ぼかし/シャープ、 にじみの各ツールに適用されます。 強く
+                  押しあてるとツールが速く作動します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Size</term>
+              <term lang="ja">大きさ</term>
+              <listitem>
+                <para lang="en">
+                  This option applies to all of the pressure sensitive brush
+                  tools. If the option is checked, then pressing harder will
+                  increase the size of the area affected by the brush.
+                </para>
+                <para lang="ja">
+                  このオプションは感圧対応のブラシツール全てに適用できます。
+                  オプションが有効な場合は、 筆圧の強さでブラシの描く領域
+                  が拡がります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Color</term>
+              <term lang="ja">色</term>
+              <listitem>
+                <para lang="en">
+                  This option only applies to the painting tools: the Pencil,
+                  Paintbrush, and Airbrush; and only if you are using colors
+                  from a gradient. If these conditions are met, then pressing
+                  harder causes colors to be taken from higher in the
+                  gradient.
+                </para>
+                <para lang="ja">
+                  このオプションは鉛筆、 絵筆、 エアブラシの各描画ツールに
+                  対して、 <guilabel>グラデーションで描画</guilabel>
+                  オプションを利用している場合にのみ適用されます。 これらの
+                  条件が揃ったときに、 強く筆圧がかかるほどにグラディエント
+                  の高い方の色が使われます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Fade Out</term>
+        <term lang="ja">フェードアウト</term>
+        <listitem>
+          <para lang="en">
+            This option causes each stroke to fade out over the specified
+            distance. It is easiest to visual for painting tools, but applies
+            to all of the brush tools. It is equivalent to gradually reducing
+            the opacity along the trajectory of the stroke. Note that, if you
+            are using a tablet, this option does not change the effects of
+            brush pressure.
+          </para>
+          <para lang="ja">
+            このオプションによって一筆ごとに描線が所定の長さ以内で消え入ります。
+            特に筆触ツールでは視覚的にも分かり易いですが、 このオプションは
+            ブラシツールの全てに適用できます。 筆運びの軌道に沿って徐々に透明度
+            を増すのと同じです。 タブレットをお使いの場合、 このオプションでは
+            筆圧による効果は変化しないことにご注意ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Apply Jitter</term>
+        <term lang="ja">揺らぎ</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Jitter</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ユラギ">揺らぎ</primary>
+          </indexterm>
+          <para lang="en">
+            You know <quote>spacing</quote> in brush strokes: strokes are
+            made of successive brush marks which, when they are very near,
+            seem to draw a continuous line. Here, instead of being aligned
+            brush marks are scattered over a distance you can set with the
+            <guimenuitem>Quantity</guimenuitem> slider.
+          </para>
+          <para lang="ja">
+            ブラシ描画での<quote>間隔</quote>について思い出して下さい:
+            描線は次々と繰り出されるブラシの刻印で成り立っており、
+            互いの間隔が非常に狭ければ繋がった線の姿になります。 そこで、
+            <guimenuitem>量</guimenuitem> スライダを調節すれば、
+            整列していたブラシの刻印を散り散りに離すこともできます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Jitter</quote> example</title>
+            <title lang="ja"><quote>揺らぎ</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/menus/jitter.png" format="PNG"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From top to bottom: without jitter, jitter = 1, jitter = 4.
+                </para>
+                <para lang="ja">
+                  上から順に: 揺らぎ無し、 揺らぎ量 = 1、 揺らぎ量 = 4。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Incremental</term>
+        <term lang="ja">重ね塗り</term>
+        <listitem>
+          <para lang="en">
+            The Incremental check-box activates incremental mode for the tool.
+            If it is deactivated, the maximum effect of a single stroke is
+            determined by the opacity, and moving the brush repeatedly over
+            the same spot will not increase the effect beyond this limit. If
+            Incremental is active, each additional pass with the brush will
+            increase the effect, but the opacity can't exceed the opacity set
+            for the tool. This option is available for all brush tools except
+            those which have a <quote>rate</quote>
+            control, which automatically implies an incremental effect. See
+            also <xref linkend="gimp-concepts-layer-modes"/>.
+          </para>
+          <para lang="ja">
+            重ね塗りのチェックボックスを入りにするとそのツールは重ね塗りが
+            できる状態になります。 もし無効としていたならば、 一筆ごとの描画の
+            不透明度は決まっており、 同じ部分で繰り返しブラシを滑らせても
+            不透明度の限界を越えて塗色されることはありません。 重ね塗りを
+            有効にすると、 ブラシで上塗りするたびに描画効果が増します。
+            ただしツールに設定された不透明度を越すことはありません。
+            <quote>割合</quote>コントロールを備えたブラシは
+            自動的に重ね塗りの効果を実現していますが、
+            それらを除く全てのブラシでこのオプションが使えます。
+            <xref linkend="gimp-concepts-layer-modes" /> もご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry id="gimp-tool-painting-gradient">
+        <term lang="en">Color from Gradient</term>
+        <term lang="ja">グラデーションで描画</term>
+        <listitem>
+          <figure>
+            <title lang="en">Gradient options for painting tools.</title>
+            <title lang="ja">
+              筆触ツールの<quote>グラデーションで描画</quote>オプション
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/tool-options-paint-gradient.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            Instead of using the foreground color (as shown in the Color Area
+            of the Toolbox), by checking the "Use color from gradient" option
+            you can choose to paint with a gradient, giving colors that change
+            gradually along the brush trajectory. For basic information on
+            gradients, see the
+            <link linkend="gimp-concepts-gradients">Gradients</link> section.
+          </para>
+          <para lang="en">
+            You have several options to control what gradient is used and how
+            it is laid out:
+          </para>
+          <para lang="ja">
+            <guilabel>グラデーションで描画</guilabel>オプションを入りにすると、
+            (ツールボックスの色領域で表示されている) 描画色は使用されず、
+            グラデーションの色組成の順に従って筆運びの軌道に沿うように
+            徐々に色を変えて描画されます。 グラデーションの基礎的な情報は
+            <link linkend="gimp-concepts-gradients">グラデーション</link>
+            の節をご覧ください。
+          </para>
+          <para lang="ja">
+            使用されるグラデーションとその敷設方針を定めるオプションがあります:
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Gradient</term>
+              <term lang="ja">グラデーション</term>
+              <listitem>
+                <para lang="en">
+                  Here you see a display of the current gradient. Clicking on
+                  it brings up a Gradient Selector, which will allow you to
+                  choose a different gradient.
+                </para>
+                <para lang="ja">
+                  ここで現行のグラデーションを表示しています。 クリックすると
+                  グラデーションを選択するメニューが現れますので、
+                  使いたいグラデーションをここで選んでください。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Reverse</term>
+              <term lang="ja">反転</term>
+              <listitem>
+                <para lang="en">
+                  Normally a brushstroke starts with colors from the left side
+                  of the gradient, and progresses rightward. If "Reverse" is
+                  checked, the stroke starts with colors from the right side,
+                  and progresses leftward.
+                </para>
+                <para lang="ja">
+                  普通はグラデーションの左端の色から筆運びが始まり、
+                  右方向に色が移ってゆきます。 しかし <guiicon>
+                  <inlinemediaobject><phrase>反転</phrase></inlinemediaobject>
+                  </guiicon> ボタンで切り替えると
+                  右端の色から描線が始まり左方向に移ります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Length</term>
+              <term lang="ja">長さ</term>
+              <listitem>
+                <para lang="en">
+                  This option sets the distance corresponding to one complete
+                  cycle through the gradient colors. The default units are
+                  pixels, but you can choose a different unit from the
+                  adjoining Units menu.
+                </para>
+                <para lang="ja">
+                  このオプションはグラデーションの一周分を割り当てる描線の
+                  距離を定めます。 既定の単位はピクセルですが、 単位メニュー
+                  を用いて別の単位を選択できます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Repeat</term>
+              <term lang="ja">反復</term>
+              <listitem>
+                <figure>
+                  <title lang="en">
+                    Illustration of the effects of the three gradient-repeat
+                    options, for the <quote>Abstract 2</quote> gradient.
+                  </title>
+                  <title lang="ja">
+                    3つのグラデーション反復の例図、 <quote>Abstract 2</quote>
+                    グラデーションを使用。
+                  </title>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/tool-options/brush-gradient-normal.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="ja">
+                      <para lang="en">Abstract2 Gradient</para>
+                        <quote>Abstract 2</quote>グラデーション
+                      </para>
+                    </caption>
+                  </mediaobject>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/tool-options/brush-gradient-none.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">None</para>
+                      <para lang="ja">なし</para>
+                    </caption>
+                  </mediaobject>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                    fileref="images/tool-options/brush-gradient-sawtooth.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">Sawtooth</para>
+                      <para lang="ja">ノコギリ波</para>
+                    </caption>
+                  </mediaobject>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/tool-options/brush-gradient-triangular.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">Triangular</para>
+                      <para lang="ja">三角波</para>
+                    </caption>
+                  </mediaobject>
+                </figure>
+                <para lang="en">
+                  This option determines what happens if a brushstroke extends
+                  farther than the Length specified above. There are three
+                  possibilities:
+                </para>
+                <para lang="ja">
+                  このオプションは前述のように定めた長さを越して描線が
+                  なされたときの対応を定めます。 3つの選択肢があります:
+                </para>
+                <itemizedlist>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>None</guilabel> means that the color from the end of
+                      the gradient will be used throughout the remainder of the
+                      stroke;
+                    </para>
+                    <para lang="ja">
+                      <guimenuitem>なし</guimenuitem> の場合は
+                      グラデーションの終端の色が描線の最後まで続きます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Sawtooth wave</guilabel> means that the gradient will be
+                      restarted from the beginning, which will often produce a
+                      color discontinuity;
+                    </para>
+                    <para lang="ja">
+                      <guimenuitem>ノコギリ波</guimenuitem> の場合は
+                      グラデーションが始点に戻って繰り返されますが、
+                      色の不連続が起こりやすくなります。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Triangular wave</guilabel> means that the
+                      gradient will be traversed in reverse, afterwards bouncing
+                      back and forth until the end of the brushstroke.
+                    </para>
+                    <para lang="ja">
+                      <guimenuitem>三角波</guimenuitem> の場合は反転を交え、
+                      終点から始点へ、
+                      始点から終点へと描線が続くまで繰り返されます。
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="gimp-paint-mode-examples">
+    <title lang="en">Paint Mode Examples</title>
+    <title lang="ja">描画モードの例</title>
+
+    <para lang="en">
+      The following examples demonstrate some of <acronym>GIMP</acronym>'s
+      paint modes:
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>の描画モードを使った例を以下に示します。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Dissolve</term>
+        <term lang="ja">ディザ合成</term>
+        <listitem>
+          <figure>
+            <title lang="en">Dissolve mode example</title>
+            <title lang="ja">ディザ合成の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/dissolve-mode-example.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Two brush-strokes made with the Airbrush, using the same
+                  fuzzy circular brush. Left: Normal mode. Right: Dissolve
+                  mode.
+                </para>
+                <para lang="ja">
+                  2つの描線はいずれも同じ<quote>Circle Fuzzy</quote>
+                  ブラシを用いエアブラシで描画。
+                  左が標準モード、 右がディザ合成モード。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            For any paint tool with  opacity less than 100%, this very
+            useful mode doesn't draw transparency but determines the
+            probability of applying paint. This gives nice patterns of
+            dots to paint-strokes or filling.
+          </para>
+          <para lang="ja">
+            不透明度を100%未満としたどんな描画ツールで描いても、
+            この大変便利なモードは透過表現によらない方法で描画を果たす
+            可能性を探ります。 つまり筆書きや塗りつぶしに対してすばらしい
+            点描による紋様を描きます。
+          </para>
+          <figure>
+            <title lang="en">Painting in Dissolve mode</title>
+            <title lang="ja">ディザ合成モードで描画</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/mode-dissolve.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  This image has only the background layer and no Alpha
+                  channel. The background color is sky blue. Three
+                  strokes with Pencil and various opacities: 100%, 50%,
+                  25%. Foreground color pixels are scattered along
+                  brushstroke.
+                </para>
+                <para lang="ja">
+                  この画像は背景レイヤーだけを用いて描かれ、 アルファ
+                  チャンネルは使用していない。 背景色は スカイブルー。
+                  鉛筆による描画を透過度を変えて3本: 右から100%、 50%、
+                  25%。 描画色の画素が描線内で拡散している。
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Behind</term>
+        <term lang="ja">後ろ</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Paint Modes</primary>
+            <secondary>Behind</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Behind (paint mode)</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ビョウガモード">描画モード</primary>
+            <secondary sortas="ウシロ">後ろ</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ウシロ(ビョウガモード)">後ろ(描画モード)</primary>
+          </indexterm>
+          <figure>
+            <title lang="en">
+              Example for layer mode <quote>Behind</quote>
+            </title>
+            <title lang="ja"><quote>後ろ</quote>モードのレイヤーの例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-normal2.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Wilber over a blue background layer</para>
+                <para lang="ja">ウィルバーの背後に青い背景レイヤー</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/using/wiber-layers.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Layers dialog</para>
+                <para lang="ja">レイヤーダイアログ</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-behind.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Filled with pattern</para>
+                <para lang="ja">パターンで埋め尽くした</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This mode applies paint only to transparent areas of the
+            layer: the lower the opacity, the more paint is applied.
+            Thus, painting opaque areas has no effect; painting
+            transparent areas has the same effect as normal mode. The
+            result is always an increase in opacity. Of course none of
+            this is meaningful for layers that lack an alpha channel.
+          </para>
+          <para lang="en">
+            In the above example image, Wilber is on the top layer,
+            surrounded by transparency. The lower layer is solid light
+            blue. The Bucket Fill tool was used, with the
+            <guilabel>Fill Whole Selection</guilabel> option checked
+            and the entire layer was selected. A pattern was used to
+            paint with the Bucket Fill tool.
+          </para>
+          <para lang="en">
+            The next image (below) has two layers. The upper layer is active.
+            Three brushtrokes with pencil, red color at 100%, 50%, 25%: only
+            transparent or semi-transparent pixels of the layer are painted.
+          </para>
+          <para lang="ja">
+            このモードでは現在のレイヤーの透過部分にのみ描画できます。
+            不透明度が低いところほど強く描画されます。 つまり完全不透明
+            な部分には何も描画できませんが、 完全透過な部分での描画効果
+            は標準モードと同じです。 描画するほどにつねに不透明度が
+            増す結果になります。 当然アルファチャンネルの無いレイヤー
+            では何の意味もありません。
+          </para>
+          <para lang="ja">
+            上の例の図では最前面のレイヤーにウィルバー君が描かれ、
+            その周りは透明です。 その下のレイヤーは一様にライトブルーで
+            塗られています。 次にそのレイヤー全体を選択してから、
+            <guilabel>選択範囲を塗りつぶす</guilabel> オプション
+            が有効な状態で塗りつぶしツールを使いました。 塗りつぶしには
+            パターン(文様)を使用しています。
+          </para>
+          <para lang="ja">
+            つぎの画像 (下図) には2つのレイヤーがあり、 上側が現在活性化して
+            います。 予め青で横向きに2本の線が引かれています。次に透明度を
+            100%、 50%、 25%と変えながら赤で鉛筆による描線をしました。 
+            レイヤーの透明及び半透明な画素にのみ描画されています。
+          </para>
+          <figure>
+            <title lang="en">Painting in <quote>Behind</quote> mode</title>
+            <title lang="ja"><quote>後ろ</quote>モードで描画</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/mode-behind.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Painting with 100%, 50%, 25% transparency (from left to
+                  right)
+                </para>
+                <para lang="ja">
+                  左から順に透明度を100%、 50%、 25%と変えながら描線をした
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color Erase</term>
+        <term lang="ja">色消しゴム</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Paint Modes</primary>
+            <secondary>Color Erase</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Color Erase (paint mode)</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ビョウガモード">描画モード</primary>
+            <secondary sortas="イロケシゴム">色消しゴム</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="イロケシゴム(ビョウガモード)">
+              色消しゴム(描画モード)
+            </primary>
+          </indexterm>
+          <figure>
+            <title lang="en">
+              Example for layer mode <quote>Color erase</quote>
+            </title>
+            <title lang="ja">
+              <quote>色消しゴム</quote>モードのレイヤーの例
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-normal2.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Wilber over a blue background layer</para>
+                <para lang="ja">ウィルバーの背後に青い背景レイヤー</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/glossary/modes-colorerase.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">White foreground color erased</para>
+                <para lang="ja">白の描画色が消された</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This mode erases the foreground color, replacing it with
+            partial transparency. It acts like the
+            <link linkend="plug-in-colortoalpha">Color to Alpha</link>
+            filter, applied to the area under the brushstroke. Note that
+            this only works on layers that possess an alpha channel;
+            otherwise, this mode is identical to Normal.
+          </para>
+          <para lang="en">
+            In the above example image, the color of the Bucket Fill tool
+            was white, so white parts of Wilber were erased and the blue
+            background shows through.
+          </para>
+          <para lang="en">
+            This image below has only one layer, the background layer.
+            Background color is sky blue. Three brushtrokes with pencil:
+          </para>
+          <para lang="ja">
+            このモードは描画色を消去して不完全透明にします。 そのはたらきは
+            <link linkend="plug-in-colortoalpha">色を透明度に</link>
+            フィルタに似ており、 ブラシでなぞった部分に適用されます。
+            このモードはアルファチャンネルのあるレイヤーでのみ有効で、
+            無い場合は標準モードと同一であることにご注意ください。
+          </para>
+          <para lang="ja">
+            上の例の図では、 白色で塗りつぶしたところ、 ウィルバー君の
+            白い部分が消えて青い背景が透けて見えます。
+          </para>
+          <para lang="ja">
+            次の例の画像は1層のレイヤーだけ、 すなわち背景レイヤーだけを
+            持っています。 背景レイヤーはスカイブルーに塗られ、 描画色は
+            赤色です。 鉛筆による描線が3本あります。
+          </para>
+          <orderedlist lang="ja">
+            <listitem>
+              <para lang="en">
+                With the exact color of the blue area: only this blue color is
+                erased.
+              </para>
+              <para lang="ja">
+                青い部分に対応する色を適用: 青色だけが消えた。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                With the exact color of the red area. Only this red color is
+                erased, whatever its transparency. Erased areas are made
+                transparent.
+              </para>
+              <para lang="ja">
+                赤い部分に対応する色を適用: 赤色だけがそのいずれの
+                透明度でも消えた。 消去された部分は透明になった。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                With the sky blue color of the layer background: only this
+                color is erased.
+              </para>
+              <para lang="ja">
+                レイヤーの背景色に用いられているスカイブルーを適用:
+                この色だけが消えた。
+              </para>
+            </listitem>
+          </orderedlist>
+          <figure>
+            <title lang="en">
+              Painting in <quote>Color Erase</quote> mode
+            </title>
+            <title lang="ja"><quote>色消しゴム</quote>モードで描画</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/mode-erase.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Painted with 1. blue; 2. red; 3. background color
+                </para> 
+                <para lang="ja">
+                  1は青、 2は赤、 3は背景色で塗った
+                </para> 
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Further Information</title>
+    <title lang="ja">さらなる情報</title>
+    <para lang="en">
+      Advanced users may be interested to know that brush tools actually
+      operate at a sub-pixel level, in order to avoid producing jagged-looking
+      results. One consequence of this is that even if you work with a
+      hard-edged brush, such as one of the Circle brushes, pixels on the edge
+      of the brushstroke will only be partially affected. If you need to have
+      all-or-nothing effects (which may be necessary for getting a good
+      selection, or for cutting and pasting, or for operating pixel-by-pixel
+      at a high zoom level), use the Pencil tool, which makes all brushes
+      perfectly hard and disables sub-pixel anti-aliasing.
+    </para>
+    <para lang="ja">
+      先進的なユーザにとってはブラシツールがサブピクセルの細かさまで処理を
+      すすめて絵がギザギザになるのを防いでいることに興味を持たれるのでは
+      ないでしょうか。 その成果は例え仮に<quote>Circle</quote>ブラシ
+      のような縁のはっきりしたブラシを用いても、 描かれる線の画素には
+      部分的にしかブラシの縁の特徴は出ません。 もし一切か無かの効果
+      (選択範囲を作るときや取り込んで貼り付ける作業、 ズームを高くして
+      画素ごとに操作する場合で必要になるかもしれません)
+      を得たいならば、 鉛筆ツールを使いましょう。 どのブラシを選んでも
+      サブピクセル・アンチエイリアス効果を抑制し完全鮮鋭に描画できます。
+    </para>
+  </sect3>
+</sect2>

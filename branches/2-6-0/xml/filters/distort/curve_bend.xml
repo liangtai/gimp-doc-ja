@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-12 Added Spanish translation by AntI
+  2007-04-23 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050904 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-curve-bend">
+  <title lang="en">Curve Bend</title>
+  <title lang="ja">ひん曲げる...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Distorts</secondary>
+    <tertiary>Curve Bend</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Curve Bend</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>変形</secondary>
+    <tertiary>ひん曲げる</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ひん曲げる</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Applying example for the Curve Bend filter</title>
+      <title lang="ja">ひん曲げるフィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-curve-bend.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Curve Bend</quote> applied</para>
+          <para lang="ja"><quote>ひん曲げる</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter allows you to create a curve that will be used to distort
+      the active layer or selection. The distortion is applied gradually
+      from an image or selection border to the other.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ひん曲げる...</guimenuitem> フィルタは、 
+      曲線を描くとその線に沿って活性レイヤーもしくはその選択範囲を変形します。
+      画像か選択範囲のいずれかの辺から別の辺まで徐々に曲げる変形をします。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Distorts</guisubmenu>
+        <guimenuitem>Curve Bend</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>ひん曲げる...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Curve bend</quote> filter options</title>
+      <title lang="ja"><quote>ひん曲げる</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-distort-curvebend.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            The preview displays changes to image or selection without
+            modifying the image until you press <emphasis>OK</emphasis>.
+          </para>
+          <para lang="ja">
+            プレビュー画面は画像に実際にフィルタをかける前からダイアログ上で
+            調節したとおりの効果のようすを見るのに使われます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Preview Once</term>
+              <term lang="ja">プレビュー更新</term>
+              <listitem>
+                <para lang="en">
+                  This button allows you to update the preview each time you
+                  need it.
+                </para>
+                <para lang="ja">
+                  <guibutton>プレビュー更新</guibutton> 
+                  ボタンはいつでもクリックすればその時の設定に基づくプレビュー
+                  に更新します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Automatic Preview</term>
+              <term lang="ja">自動プレビュー</term>
+              <listitem>
+                <para lang="en">
+                  With this option, preview is changed in real time. This
+                  needs much calculation and may lengthen work. It is
+                  particularly evident when using "Rotation".
+                </para>
+                <para lang="ja">
+                  このオプションが有効になるとダイアログ内での操作が即座に
+                  プレビュー画像に反映されます。 計算が多くなるので処理に時間が
+                  かかるかもしれません。 特に <guilabel>回転
+                  </guilabel> 処理が加わると顕著になります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Options</term>
+        <term lang="ja">オプション</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Rotate</term>
+              <term lang="ja">回転</term>
+              <listitem>
+                <para lang="en">
+                  There, you can set the application angle of filter (0-360
+                  counter-clockwise). 0 is default setting: The curve will be
+                  applied from the upper border and/or from the lower. Set to
+                  90, it will be applied from left border and/or from the
+                  right  one.
+                </para>
+                <para lang="ja">
+                  ここでフィルタをかける角度を設定できます。 反時計回りに 0 
+                  から 360 までの範囲があります。 初期状態では 0.0 度になって
+                  います。 この場合、 曲げ操作は画像の上辺と下辺に適用
+                  されます。 90.0 度に設定すると左辺と右辺に適用されます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Smoothing and Antialiasing</term>
+              <term lang="ja">スムージング; 滑らかに</term>
+              <listitem>
+                <para lang="en">
+                  The distort process may create hard and stepped borders.
+                  These two options improve this aspect.
+                </para>
+                <para lang="ja">
+                  変形の過程で縁が階段状になってしまいます。 <guilabel>
+                  スムージング</guilabel> で線をなだらか
+                  にし、 <guilabel>滑らかに</guilabel> で線に
+                  アンチエイリアスをかけます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Work on Copy</term>
+              <term lang="ja">コピーを操作</term>
+              <listitem>
+                <para lang="en">
+                  This option creates a new layer called
+                  <quote>Curve_bend_dummy_layer_b</quote> which becomes the
+                  active layer, allowing you to see changes to your
+                  image in normal size without modifying the original image
+                  until you press the <guibutton>OK</guibutton> button.
+                </para>
+                <para lang="ja">
+                  このオプションは<quote>Curve_bend_dummylayer_b</quote>の名前
+                  がついた新たなレイヤーを作成して活性レイヤーとし、 そこに操作
+                  過程が反映されますので、 元のレイヤーの画像は変更されません。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Modify Curve</term>
+        <term lang="ja">カーブ変更</term>
+        <listitem>
+          <para lang="en">
+            In this grid, you have a marked horizontal line, with a node at
+            both ends, which represents by default the upper border of image.
+            If you click on this curve, a new node appears, that you can drag
+            to modify the curve as you want. You can create several nodes on
+            the curve.
+          </para>
+          <para lang="en">
+            You can have only two curves on the grid, one for the so named
+            "upper" border and the other for the so named "lower" border. You
+            can activate one of them by checking the
+            <emphasis>Upper</emphasis> or <emphasis>Lower</emphasis> radio
+            button.
+          </para>
+          <para lang="en">
+            If you use the <emphasis>Curve Type Free</emphasis> option, the
+            curve you draw will replace the active curve.
+          </para>
+          <para lang="ja">
+            この方眼図には一本の水平線が両端にノードを伴って描かれています。
+            初期状態では画像の上辺を示しています。 この線をクリックすると新たな
+            ノードが追加され、 それを曳けば自在に曲線が描けます。 いくつでも
+            ノードは追加できます。 [削除するには両端のいずれかのノード上まで
+            そこに近いノードを曳いてください。]
+          </para>
+          <para lang="ja">
+            この方眼図には上辺と下辺の2本だけ曲線が描けます。 一度に操作できる
+            曲線は一本だけなので、 <guilabel>上</guilabel>、
+            <guilabel>下</guilabel> のラジオボタンで
+            切り替えてください。
+          </para>
+          <para lang="ja">
+            <guilabel>カーブタイプ</guilabel> に 
+            <guilabel>自由</guilabel> を選択すると、 ノード
+            を操作するのではなくマウスポインタで直接なぞって線が描けます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Curve for Border</term>
+        <term lang="ja">曲げ操作する端</term>
+        <listitem>
+          <para lang="en">
+            There you can select whether the active curve must be applied to
+            the <emphasis>Superior (or left)</emphasis> or the
+            <emphasis>Inferior (or right)</emphasis> border, according to the
+            rotation.
+          </para>
+          <para lang="ja">
+            ここで操作対象の曲線を切り替えられます。 <guilabel>
+            上</guilabel> と <guilabel>上
+            </guilabel> のいずれかを選びますが、 その名前とは裏腹に
+            意味が回転操作によって変化します。
+          </para>
+          <caution>
+            <para lang="en">
+              Remember that the curve border depends on the rotation. For
+              example, with <emphasis>Rotate</emphasis> = 90° the upper curve
+              will actually be applied to the left border.
+            </para>
+            <para lang="ja">
+              ここで切り替えて選ばれる曲線は回転によって位置付けが異なります
+              のでお気を付けください。 例えば <guilabel>回転
+              </guilabel> に 90°を設定すると <guilabel>上
+              </guilabel> の曲線は実際は画像の左辺を表します。
+            </para>
+          </caution>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Curve Type</term>
+        <term lang="ja">カーブタイプ</term>
+        <listitem>
+          <para lang="en">
+            With the <emphasis>Smooth</emphasis>, you get automatically a well
+            rounded curve when you drag a node.
+          </para>
+          <para lang="en">
+            The <emphasis>Free</emphasis> option allows you to draw a curve
+            freely. It will replace the active curve.
+          </para>
+          <para lang="ja">
+            <guilabel>滑らか</guilabel> の場合はノードを操作
+            します。 曲線は自動的にノードに沿ってとてもなだらかに描かれます。
+          </para>
+          <para lang="ja">
+            <guilabel>自由</guilabel> の場合は方眼図上を
+            マウスでなぞります。 描かれた曲線が元あった曲線に置き換わります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Buttons</term>
+        <term lang="ja">ボタン類</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Copy</term>
+              <term lang="ja">コピー</term>
+              <listitem>
+                <para lang="en">
+                  Copy the active curve to the other border.
+                </para>
+                <para lang="ja">
+                  現在操作中の曲線と同じ形にもう一方の曲線を変更します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Mirror</term>
+              <term lang="ja">ミラー</term>
+              <listitem>
+                <para lang="en">
+                   Mirror the active curve to the other border.
+                </para>
+                <para lang="ja">
+                  現在操作中の曲線を垂直反転した形に
+                  もう一方の曲線を変更します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Swap</term>
+              <term lang="ja">入れ替え</term>
+              <listitem>
+                <para lang="en">
+                  Swap the <quote>superior</quote> and
+                  <quote>inferior</quote> curves.
+                </para>
+                <para lang="ja">上下の2本の曲線を交換します。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Reset</term>
+              <term lang="ja">リセット</term>
+              <listitem>
+                <para lang="en">Reset the active curve.</para>
+                <para lang="ja">現在操作中の曲線を水平線に戻します。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Open</term>
+              <term lang="ja">開く</term>
+              <listitem>
+                <para lang="en">
+                  Load the curve from a file.
+                </para>
+                <para lang="ja">
+                  曲線を保存したファイルが選べます。 選択されたファイルから
+                  曲線が読み込まれます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Save</term>
+              <term lang="ja">保存</term>
+              <listitem>
+                <para lang="en">
+                  Save the curve to a file.
+                </para>
+                <para lang="ja">
+                  ここで設定した現在の両曲線の形状をファイルに保存できます。
+                  拡張子は <filename class="extension">.points</filename>
+                  です。 ファイルの実体は膨大な数値を記録した<acronym>ASCII
+                  </acronym>テキストファイルです。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

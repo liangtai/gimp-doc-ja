@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-07-20 kost: added 'no'
+  2007-10-22 alex falappa: added 'it'
+  2007-10-09 ude: created 'en','de'
+-->
+<!--2009-09-15-->
+<sect2 id="script-fu-xach-effect">
+  <title lang="en">Xach-Effect</title>
+  <title lang="ja">Xach 効果...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Light and Shadow</secondary>
+    <tertiary>Xach-Effect</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Xach-Effect</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary sortas="Xach コウカ">Xach 効果</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="Xach コウカ">Xach 効果</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Xach-Effect</quote> filter
+      </title>
+      <title lang="ja"><quote>Xach 効果</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/light-taj-xach-effect.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Xach-Effect</quote> applied</para>
+          <para lang="ja"><quote>Xach 効果</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter adds a subtle translucent 3D effect to the selected region
+      or alpha channel. This 3D effect is achieved by
+    </para>
+    <para lang="en">
+      <guimenuitem>Xach 効果...</guimenuitem> フィルタは
+      ちょっとだけ半透明で立体的 (<acronym>3D</acronym>) に見える効果を選択範囲
+      もしくはアルファチャンネルに施すスクリプトです。
+      この三次元効果はつぎの手順で実現します。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          Highlighting the selection: a new layer (<quote>Highlight</quote>)
+          will be created above the active layer, filled with the highlight
+          color. Then a <link linkend="gimp-layer-mask">layer mask</link> will
+          be added to that layer making the unmasked pixel partially
+          transparent.
+        </para>
+        <para lang="en">
+          選択範囲を<quote>ハイライト</quote>します。 活性レイヤーの手前側に
+          <guilabel>ハイライト色</guilabel> (白) で塗られた<quote>Highlight
+          </quote>という名前のレイヤーを新たに作成したら、 半透明化するため 
+          <link linkend="gimp-layer-mask">レイヤーマスク</link> を加えてマスク
+          を薄めます。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/examples/xach-effect-layers.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Highlight layer with layer mask</para>
+            <para lang="ja">
+              レイヤーマスクつき<quote>Highlight</quote>レイヤー
+            </para>
+          </caption>
+        </mediaobject>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Painting the selection's left and top edges with the highlight
+          color: for that the <quote>Highlight</quote> layer will be extended
+          by one pixel left and up. These small areas will be opaque.
+        </para>
+        <para lang="en">
+          選択範囲の左辺と上辺を <guilabel>ハイライト色</guilabel> で塗ります。
+          このため<quote>Highlight</quote>レイヤーは左と上に1ピクセルずつ拡張
+          されます。 この細長い部分は不透明にします。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Creating a <link linkend="script-fu-drop-shadow">drop shadow</link>
+          at the bottom right side of the selection.
+        </para>
+        <para lang="en">
+          選択範囲の下辺と右辺には黒で 
+          <link linkend="script-fu-drop-shadow">ドロップシャドウ</link> を
+          施します。
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      You may vary these default settings, for example select different colors
+      for highlight or shadow and change amount and directions of offsets.
+    </para>
+    <para lang="en">
+      以上の例は初期設定そのままです。 例えばハイライト部分や影に他の色を使って
+      みたり、 オフセット値を変更して方向や量を変えてみるなどの設定が可能です。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      The filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Light and Shadow</guisubmenu>
+        <guimenuitem>Xach-Effect</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>照明と投影</guisubmenu>
+        <guimenuitem>Xach 効果...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <para lang="en">
+      There are two groups of options, each controlling the highlight or the
+      shadow, and a checkbox for the selection behaviour.
+    </para>
+    <para lang="ja">
+      このオプションはハイライト部分と影の部分のそれぞれの調節と選択範囲の扱い
+      についてのチェックボックスに大きく分けられます。
+    </para>
+    <figure>
+      <title lang="en"><quote>Xach-Effect</quote> options</title>
+      <title lang="ja"><quote>Xach 効果</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-light-xach-effect.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Highlight X/Y offset</term>
+        <term lang="ja">ハイライト X/Y オフセット</term>
+        <listitem>
+          <para lang="en">
+            The selection's left and top edge are painted with the highlight
+            color. The highlight offset is the size (width or height) of the
+            respective area. If offset is less than 0 (this is the default),
+            the left (X offset &lt; 0) or top (Y offset &lt; 0) area will be
+            colored. If offset is greater than 0, the right (X offset &gt; 0)
+            or bottom (Y offset &gt; 0) area will be painted.
+          </para>
+          <para lang="ja">
+            [負数を与えると]選択範囲の左辺と上辺がハイライト色で縁取られます。
+            ハイライトオフセットの値の絶対値が太さ (左辺の幅、 上辺の高さ) と
+            なります。 オフセット値が 0 未満 (初期値) のとき、 つまり
+            <guilabel>ハイライト X オフセット</guilabel> 値が負の数ならば左辺
+            が、 <guilabel>ハイライト Y オフセット</guilabel> 値が負の数ならば
+            上辺がそれぞれハイライト色で塗られます。 オフセット値が 0 より
+            大きいとき、 つまり X &gt; 0 ならば右辺が、 Y &gt; 0 ならば下辺が
+            ハイライト色で塗られます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Highlight color</term>
+        <term lang="ja">ハイライト色</term>
+        <listitem>
+          <para lang="en">
+            This is the color used to highlight the selected area. It defaults
+            to white, but clicking on the swatch button brings up a color
+            selector and you may select any other color.
+          </para>
+          <para lang="ja">
+            この色は選択範囲のハイライト化に使われます。 初期設定では白ですが、
+            色ボタンをクリックすると出てくる色変更ダイアログでどんな色にも
+            変えられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Highlight opacity</term>
+        <term lang="ja">ハイライト不透明度</term>
+        <listitem>
+          <para lang="en">
+            The selection will be covered by a partially transparent area
+            filled with the highlight color. This option lets you set the
+            level of transparency. Since a
+            <link linkend="gimp-layer-mask">layer mask</link> will be used,
+            the value ranges from 0 (full transparency) to 255 (full opacity).
+          </para>
+          <para lang="en">
+            The highlight opacity defaults to 66, which is equivalent to 26%.
+          </para>
+          <para lang="ja">
+            選択範囲は半透明なハイライト色の領域に覆われます。 このオプションは
+            その透明度を設定します。 この操作には 
+            <link linkend="gimp-layer-mask">レイヤーマスク</link> を利用します
+            ので、 値の範囲は 0 (完全透過) から 255 (完全不透明) までです。
+          </para>
+          <para lang="ja">
+            ハイライト不透明度の初期値は 66 です。 これは 26% に相当します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Drop shadow options</term>
+        <term lang="ja">ドロップシャドウのオプション</term>
+        <listitem>
+          <para lang="en">
+            These options work like the respective
+            <link linkend="script-fu-drop-shadow">Drop Shadow</link> options
+            (without resizing). Briefly:
+          </para>
+          <para lang="ja">
+            これらのオプションは 
+            <link linkend="script-fu-drop-shadow">ドロップシャドウ</link>
+            フィルタの同名のオプションと同じです (ドロップシャドウにある
+            レイヤーのサイズ変更オプションを除く)。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Drop shadow color</term>
+              <term lang="ja">ドロップシャドウ色</term>
+              <listitem>
+                <para lang="en">
+                  Click on the button to open a color selector.
+                </para>
+                <para lang="ja">
+                  この色ボタンをクリックすれば色変更ダイアログが現れます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Drop shadow opacity</term>
+              <term lang="ja">ドロップシャドウ不透明度</term>
+              <listitem>
+                <para lang="en">
+                  The opacity (0% - 100%) of the layer containing the shadow.
+                </para>
+                <para lang="ja">
+                  影が描かれるレイヤーの不透明度を 0% から 100% の範囲で指定
+                  します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Drop shadow blur radius</term>
+              <term lang="ja">ドロップシャドウぼかし半径</term>
+              <listitem>
+                <para lang="en">
+                  The radius used by the
+                  <link linkend="plug-in-gauss">Gaussian blur</link> filter,
+                  which will be applied to the shadow.
+                </para>
+                <para lang="ja">
+                  影を本物らしく見せるために 
+                  <link linkend="plug-in-gauss">ガウスぼかし</link> フィルタを
+                  かけますが、 その半径はこの値を使います。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Drop shadow X/Y offset</term>
+              <term lang="ja">ドロップシャドウ X/Y オフセット</term>
+              <listitem>
+                <para lang="en"><!--TODO check: is this correct English?-->
+                  Direction and amount, by which the shadow will be moved from
+                  the selection.
+                </para>
+                <para lang="ja">
+                  選択範囲の直下に描かれた影のレイヤーが移動する方向と距離を
+                  ここで設定します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Keep selection</term>
+        <term lang="ja">選択範囲を残す</term>
+        <listitem>
+          <para lang="en">
+            If checked, the active selection will remain active when the
+            filter has been applied.
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると、 フィルタ適用前に作成した選択範囲は
+            解除されずに残されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

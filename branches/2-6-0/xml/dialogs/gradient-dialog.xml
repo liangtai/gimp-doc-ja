@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-15 j.h: updated en;fr to v2.6
+  2008-02-22 j.h: added description for the four first gradients en;fr.
+  2008-01-18 ude: added v2.4. gradient menu options and screenshot
+  2007-09-30 j.h : revised en ;fr for v2.4. no change
+  2006-08-30 ciampix: added italian translation
+  2006-04-29 lexa: made file docbook compliant
+-->
+<!--2009-09-12-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
+  <title lang="en">Gradients Dialog</title>
+  <title lang="ja">グラデーションダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Gradient Dialog</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Gradient</primary>
+    <secondary>Dialog</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>グラデーションダイアログ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>グラデーション</primary>
+    <secondary>ダイアログ</secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">The screenshot illustrates the Gradients dialog</title>
+    <title lang="ja">グラデーションダイアログのスクリーンショット</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/gradient-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The <quote>Gradients</quote> dialog offers a gradient palette which is
+    used to select a gradient &mdash; a set of colors arranged in a linear
+    scale &mdash; for use with the
+   <link linkend="gimp-tool-blend">Blend tool</link> and numerous
+    other operations. It also gives you access to several functions for
+    manipulating gradients.  You can select a gradient by clicking on it in
+    the list: it will then be shown in the Brush/Pattern/Gradient area of
+    the Toolbox.  A few dozen nice gradients come pre-installed with GIMP.
+    You can create more using the
+    <link linkend="gimp-gradient-editor-dialog">Gradient Editor</link>.
+    General information about gradients and how they are used in GIMP can be
+    found in the <link linkend="gimp-concepts-gradients">Gradients</link>
+    section.
+  </para>
+  <para lang="ja">
+    <quote>グラデーション</quote>ダイアログはグラデーションを目録から選べる
+    しくみです。
+    グラデーションとは直線状に並べられた様々な色や透明度の配色のことで、
+    <link linkend="gimp-tool-blend">ブレンドツール</link> をはじめ数々の加工に
+    利用されています。 このダイアログからグラデーションを操作する機能もいくつか
+    呼び出せます。 グラデーションを選ぶには一覧表からどれかをクリックしてくだ
+    さい。 選ばれたものがツールボックスの<quote>ブラシ/パターン/グラデーション
+    </quote>の区画でも表示されます。 <acronym>GIMP</acronym>には良さそうな
+    グラデーションがいっぱい付いてきます。 そのうえ自作も可能にする
+    <link linkend="gimp-gradient-editor-dialog">グラデーションエディタ</link>
+    もあります。 グラデーションの一般的な情報とその使い方については
+    <link linkend="gimp-concepts-gradients">グラデーション</link>
+    の節をご覧ください。
+  </para>
+  <itemizedlist>
+    <para lang="en">
+      The first four gradients are particular: they reproduce the gradient
+      between Foreground and background colors of toolbox in different ways.
+    </para>
+    <para lang="ja">
+      一覧表の最初の4つのグラデーションは特別です。 ツールボックスに表示される
+      描画色と背景色を基にそれぞれ異なる方法で作成され、 再構成されています。
+    </para>
+    <listitem>
+      <para lang="en">
+        <guilabel>FG to BG (RGB)</guilabel>: default gradient, between the
+        Foreground and the background colors of the Toolbox, in the RGB mode.
+      </para>
+      <para lang="ja"><!--swapped. because of lang.-depend order-->
+        <guilabel>描画色から透明</guilabel>: 1色だけ (描画色) 使用し、 完全
+        不透明から完全透過まで徐々に変化がついています。 このグラデーションは
+        穏やかに混じりあうコラージュ作品や霧の効果に非常に役立ちます。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        <guilabel>FG to BG (HSV clock-wise/counter-clockwise Hue)</guilabel>:
+        all hues in the color circle between the Foreground and the
+        background color, clockwise or counter-clockwise.
+      </para>
+      <para lang="ja">
+        <guilabel>描画色から背景色 (HSV 時計回り/反時計回り)</guilabel>:
+        色相環の色を全て使い、 描画色と背景色の間を時計回りと反時計回りに
+        それぞれ切り出しました。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        <guilabel>FG to Transparent</guilabel>: only uses one color (the
+        Foreground color) from complete opacity to complete transparency.
+        This gradient is very useful when you work with softly blended
+        collages or fog effects.
+      </para>
+      <para lang="ja"><!--swapped. because of lang.-depend order-->
+        <guilabel>描画色から背景色 (RGB)</guilabel>:
+        既定で選ばれるのはこのグラデーションで、 <acronym>RGB</acronym>モードで
+        前景色から背景色までの変化です。
+      </para>
+    </listitem>
+  </itemizedlist>
+  <sect3 id="gimp-gradient-dialog-activate">
+    <title lang="en">Activating the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Gradients</quote> dialog is a dockable dialog; see the
+      section <xref linkend="gimp-concepts-docks"/>
+      for help on manipulating it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>グラデーション</quote>ダイアログはドッキング可能です。
+      その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from an image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Gradients</guimenuitem>
+          </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>グラデーション</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Gradients</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加</guimenu>
+            <guimenuitem>グラデーション</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Toolbox, by clicking on the current gradient in the
+          Brush/Pattern/Gradient area,
+        </para>
+        <para lang="ja">
+          ツールボックスの<quote>ブラシ/パターン/グラデーション</quote>の区画で
+          グラデーションの標識をクリック
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          From the image by using the <keycap>Ctrl+G</keycap> shortcut.
+        </para>
+        <para lang="ja">
+          画像ウィンドウでショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Gradients</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Gradients</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      <guimenu>ウィンドウ</guimenu> メニューでは
+      ダイアログがひとつだけの状態で開かれている場合に限り、
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 この場合には画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guimenuitem>グラデーション</guimenuitem>
+      </menuchoice>
+      と進めば<quote>グラデーション</quote>ダイアログを浮かび上がらせられます。
+      <!--<footnote>
+        <para>
+          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
+          <quote>グラデーション</quote>ダイアログウィンドウが単独で (例えば
+          <quote>グラデーション</quote>タブとなっていたダイアログが
+          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
+          [隠れて]いるときは、 画像メニューから
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guimenuitem>グラデーション</guimenuitem>
+          </menuchoice>
+          と進めばこのダイアログを浮かび上がらせられます。
+        </para>
+      </footnote>-->
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-gradient-dialog-using">
+    <title lang="en">Using the <quote>Gradients</quote> dialog</title>
+    <title lang="ja"><quote>グラデーション</quote>ダイアログの利用法</title>
+    <para lang="en">
+      The most basic, and most commonly used, operation with the dialog is
+      simply to click on one of the gradients in the scrollable list, in order
+      to make it GIMP's current gradient, which will then be used by any
+      operation that involves a gradient.
+    </para>
+    <para lang="en">
+      If you <emphasis>double-click</emphasis>
+      on a gradient, you open the Gradient Editor where you will be able to
+      edit its name. Note, however, that you are only allowed to change the
+      names of gradients that you have created yourself, not the ones that
+      come pre-installed with GIMP. If you try to rename a pre-installed
+      gradient, you will be able to edit the name, but as soon as you hit
+      return or click somewhere else, the name will revert to its original
+      value. It is a general rule that you cannot alter the resources that
+      GIMP pre-installs for you: brushes, patterns, gradients, etc; only ones
+      that you create yourself.
+    </para>
+    <para lang="ja">
+      このダイアログの最も基本的で普段最もよく行なわれる操作とは、 縦に長い
+      グラデーションの一覧表を繰って<acronym>GIMP</acronym>の現在の
+      グラデーションにしたいものを探し出しクリックすることです。 選ばれた
+      グラデーションはグラデーションを利用するあらゆる操作で使われます。
+    </para>
+    <para lang="ja">
+      グラデーション一覧表のどれかを <emphasis>ダブルクリック</emphasis> すると
+      その名前を変えられるグラデーションエディタが開かれます。 ただし変更できる
+      のは自前でインストールしたものに限られ、 <acronym>GIMP</acronym>と一緒に
+      提供されたグラデーションファイルは対象外です。 仮に変更の権限のないものの
+      名前を編集しても、 これを確定しようとして <keycap>Return</keycap> キーを
+      押したりどこか他のところを触るとたちまち名前は元に戻されます。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Grid/List modes</term>
+        <term lang="ja">升目表示と列挙表示</term>
+        <listitem>
+          <para lang="en">
+            In the Tab menu, you can choose between <guimenuitem>View as
+            Grid</guimenuitem> and <guimenuitem>View as List</guimenuitem>.
+            In Grid mode, the gradients are laid out in a rectangular
+            array.  They look quite dazzling when viewed this way, but it is
+            not very easy to pick the one you want, because of visual
+            interference from the neighboring ones.  In List mode, the
+            more usable default, the gradients are lined up vertically, with
+            each row showing its name.
+          </para>
+          <para lang="ja">
+            タブメニューで <guimenuitem>並べて表示
+            </guimenuitem> と <guimenuitem>一覧で表示
+            </guimenuitem> を切り替えられます。 <quote>並べて表示</quote>を選ぶ
+            とグラデーションは升目状に並べられます。 この表示は結構壮観ですが、
+            隣同士が視覚的に干渉してしまうので欲しいものを探すのはあまり楽では
+            ありません。 既定で選ばれる<quote>一覧で表示</quote>の方がもっと
+            便利で、 グラデーションは各行ごとに名前つきで表示されています。
+          </para>
+          <tip>
+            <para lang="en">
+              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+              opens a search field.
+              See <xref linkend="gimp-dock-view-as-list" />
+            </para>
+            <para lang="j">
+              キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+              <keycap>F</keycap></keycombo> で検索窓が現れます。
+              <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+              </link> をご覧ください。
+            </para>
+          </tip>
+          <para lang="en">
+            In the Tab menu, the option <guilabel>Preview Size</guilabel>
+            allows you to adapt the size of gradient previews to your
+            liking.
+          </para>
+          <para lang="ja">
+            タブメニューの <guisubmenu>プレビューサイズ
+            </guisubmenu> サブメニューでダイアログに表示されるグラデーション
+            見本をお好みの大きさに調節できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para lang="en">
+      The buttons at the bottom of the dialog allow you to operate on
+      gradients in several ways:
+    </para>
+    <para lang="ja">
+      このダイアログの底部に並ぶアイコンボタンはグラデーションを操作する
+      さまざまな機能があります。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Edit Gradient</term>
+        <term lang="ja">グラデーションの編集</term>
+        <listitem>
+          <para lang="en">
+            This button activates the
+            <link linkend="gimp-gradient-editor-dialog">Gradient Editor</link>.
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-gtk-edit-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「グラデーションを編集」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> このアイコンボタンは (後述する)
+            <link linkend="gimp-gradient-editor-dialog">グラデーションエディタ
+            </link> を呼び出します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">New Gradient</term>
+        <term lang="ja">新しいグラデーションを作成</term>
+        <listitem>
+          <anchor id="gimp-gradient-new"/>
+          <para lang="en">
+            This creates a new gradient, initialized as a simple grayscale,
+            and activates the Gradient Editor so that you can alter it.
+            Gradients that you create are automatically saved in the
+            <filename>gradients</filename>
+            folder of your personal GIMP directory, from which they are
+            automatically loaded when GIMP starts. (You can change this
+            folder, or add new ones, using the Preferences dialog.)
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-document-new-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「新しいグラデーションを作成」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            このアイコンボタンをクリックすると簡単なグレースケールで配色された
+            新たなグラデーションが追加され、 これを変更できるグラデーション
+            エディタが開かれます。 作成されたグラデーションは<acronym>GIMP
+            </acronym>の個人用ディレクトリ内の <filename>gradients</filename>
+            フォルダに自動的に保存され、 次回の<acronym>GIMP</acronym>起動時
+            から自動的に読み込まれるようになります。 (これらのフォルダは
+            <link linkend="gimp-prefs-folders-data">環境設定ダイアログ</link> の
+            <menuchoice>
+              <guimenu>フォルダ</guimenu>
+              <guimenuitem>グラデーション</guimenuitem>
+            </menuchoice>
+            のページで追加できます。)
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Duplicate Gradient</term>
+        <term lang="ja">グラデーションの複製</term>
+        <listitem>
+          <anchor id="gimp-gradient-duplicate"/>
+          <para lang="en">
+            This creates a copy of the currently selected gradient. You will
+            be able to edit the copy even if you cannot edit the original.
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-duplicate-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「グラデーションの複製」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            このアイコンボタンをクリックすると現在選択されているグラデーション
+            の複製がとられます。 元ファイルが書き込めなくても複製ならば編集
+            できるでしょう。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Delete Gradient</term>
+        <term lang="ja">グラデーションの削除</term>
+        <listitem>
+          <anchor id="gimp-gradient-delete"/>
+          <para lang="en">
+            This removes all traces of the gradient, if you have permission to
+            do so. It asks for confirmation before doing anything.
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-delete-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「グラデーションの削除」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            選択されているグラデーションファイルを削除できる権限をお持ちならば
+            このアイコンボタンをクリックすれば跡形もなく消去できます。 実行前に
+            確認が求められます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Refresh Gradients</term>
+        <term lang="ja">グラデーションを再度読み込み</term>
+        <listitem>
+          <anchor id="gimp-gradient-refresh"/>
+          <para lang="en">
+            If you add gradients to your personal
+            <filename>gradients</filename>
+            folder by some means other than this dialog, this button causes
+            the list to be reloaded, so that the new entries will be
+            available.
+          </para>
+          <para lang="ja">
+            グラデーションエディタを使わない何らかの方法で新たにグラデーション
+            ファイルを個人用 <filename>gradients</filename> フォルダなどに追加
+            したときは、
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-reload-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「グラデーションを再度読み込み」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            このボタンをクリックすればダイアログの一覧表が読み込み直されて、
+            新しいグラデーションも使えるようになります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para lang="en">
+      The functions performed by these buttons can also be accessed from the
+      dialog pop-up menu, activated by right-clicking anywhere in the
+      gradient list, or via <guisubmenu>Gradient Menu</guisubmenu> in the
+      Tab menu:
+    </para>
+    <para lang="ja">
+      これらのアイコンボタンでできる操作はこのダイアログのポップアップメニュー
+      にもあります。 このメニューを呼び出すにはグラデーションの一覧表のどこかを
+      <mousebutton>第2ボタン</mousebutton> でクリックするか、 タブメニューの
+      筆頭にある <guisubmenu>グラデーション</guisubmenu> サブメニューに進んで
+      ください。
+    </para>
+    <figure>
+      <title lang="en">The Gradients Menu</title>
+      <title lang="ja"><quote>グラデーション</quote>の脈絡メニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/gradient-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The gradient menu also gives you some additional functions:
+    </para>
+    <para lang="ja">
+      グラデーションダイアログのメニューには他にも項目があります。
+    </para>
+    <variablelist>
+      <varlistentry id="gimp-gradient-save-as-pov">
+        <term lang="en">Save as POV-Ray...</term>
+        <term lang="ja">POV-Ray 形式で保存...</term>
+        <listitem>
+          <para lang="en">
+            This allows you to save the gradient in the format used by
+            the <application>POV-Ray</application> 3D ray-tracing
+            program.
+          </para>
+          <para lang="ja">
+            グラデーションを <application><acronym>POV</acronym>-Ray
+            </application> (Persistence of Vision Raytracer) 3次元レイ
+            トレーシングプログラムのファイル形式で保存できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry id="gimp-gradient-copy-location">
+        <term lang="en">Copy Gradient Location</term>
+        <term lang="ja">グラデーションファイルの場所をコピー</term>
+        <listitem>
+          <para lang="en">
+            This command allows you to copy the gradient file location to
+            the clipboard. You can then use it in a text editor.
+          </para>
+          <para lang="ja">
+            この指令はグラデーションファイルの場所 (パスとファイル名) を
+            クリップボードに取り込みます。 テキストエディタなどで利用して
+            ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry id="script-fu-gradient-example">
+        <term lang="en">Custom Gradient...</term>
+        <term lang="ja">カスタムグラデーション...</term>
+        <listitem>
+          <para lang="en">
+            This command creates a sample image filled with the selected
+            gradient. You can select width and height of the image as well as
+            the gradient direction in the dialog window.
+          </para>
+          <para lang="ja">
+            この指令は現在選択されているグラデーションで塗りつぶされた資料用
+            画像を作成するスクリプトを起用します。 ダイアログウィンドウが現れ
+            ますのでグラデーションの向きや画像の幅と高さを指定してください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+  <xi:include href="gradient-editor-dialog.xml"/>
+</sect2>

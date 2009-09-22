@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-29 j.h: rev. 2.6. No change
+  2007-10-17 ude: moved here from menus/plug-in-c-astretch.xml ('en','de')
+  2007-06-09 Added Spanish translation by AntI
+  2007-02-22 KoSt: added no
+  2006-09-05 Example added by j.h; text revised by scb
+  2005-11-11 split of from layer-colors.xml by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="plug-in-c-astretch">
+  <title lang="en">Stretch Contrast</title>
+  <title lang="ja">コントラスト伸長</title>
+
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Stretch contrast</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Stretch Contrast</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Contrast</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="コントラストシンチョウ">コントラスト伸長</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="コントラストシンチョウ">コントラスト伸長</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>コントラスト</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Stretch Contrast</guimenuitem> command automatically
+    stretches the histogram values in the active layer. For each channel
+    of the active layer, it finds the minimum and maximum values and uses
+    them to stretch the Red, Green and Blue histograms to the full contrast
+    range. The bright colors become brighter and the dark colors become
+    darker, which increases the contrast.
+    This command produces a somewhat similar effect to the
+    <link linkend="plug-in-normalize">Normalize</link> command, except that
+    it works on each color channel of the layer individually. This usually
+    leads to color shifts in the image, so it may not produce the desired
+    result. <quote>Stretch Contrast</quote> works on layers of RGB,
+    Grayscale and Indexed images. Use <quote>Stretch Contrast</quote> only
+    if you want to remove an undesirable color tint from an image which
+    should contain pure white and pure black.
+  </para>
+  <para lang="en">
+    This command is also similar to the
+    <link linkend="gimp-layer-white-balance">Color Balance</link>
+    command, but it does not reject any of the very dark or very bright
+    pixels, so the white might be impure.
+  </para>
+  <para lang="ja">
+    <guimenuitem>コントラスト伸長</guimenuitem> コマンドは
+    活性レイヤーのヒストグラムの値を自動的に伸長します。 活性レイヤーのそれぞれ
+    のチャンネルで最大レベルと最小レベルの値を見付けだし、 それを使って赤緑青の
+    各ヒストグラムをコントラスト全開まで伸長させます。 明るい色はさらに明るく、
+    暗い色はさらに暗くしますのでコントラストが増します。 このコマンドはしばしば
+    <link linkend="plug-in-normalize">正規化</link> コマンドとよく似た効果を
+    もたらしますが、 当コマンドはレイヤーのそれぞれの色チャンネルごとに操作する
+    ところが異なります。 処理後はほとんどの画像に色の遷移が起こりますので期待
+    外れの結果に終わることもあります。 <quote>コントラスト伸長</quote>は
+    <acronym>RGB</acronym>、 グレースケール、 インデックス化カラーのいずれの
+    画像のレイヤーでも動作します。 本来真っ白や真っ黒になるべき部分から邪魔な
+    別の色のしみを取り除く用途にのみ<quote>コントラスト伸長</quote>をご利用
+    ください。
+  </para>
+  <para lang="ja">
+    このコマンドは 
+    <link linkend="gimp-layer-white-balance">ホワイトバランス</link> 
+    コマンドとも似ていますが、 非常に暗い画素も非常に明るい画素も退けないので
+    白っぽい部分はあっても純白にならないことが多くあります。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          This command can be accessed from an image menubar as
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guisubmenu>Auto</guisubmenu>
+            <guimenuitem>Stretch Contrast</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guisubmenu>自動調整</guisubmenu>
+            <guimenuitem>コントラスト伸長</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en"><quote>Stretch Contrast</quote> Example</title>
+    <title lang="ja"><quote>コントラスト伸長</quote>の例</title>
+    <figure>
+      <title lang="ja">Original image</title>
+      <title lang="en">元画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/alice.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The layer and its Red, Green and Blue histograms before
+            <quote>Stretch Contrast</quote>.
+          </para>
+          <para lang="ja">
+            <quote>コントラスト伸長</quote>適用前の活性レイヤーとその
+            赤緑青のそれぞれのヒストグラム
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Image after the command</title>
+      <title lang="ja">コマンド適用後の画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/c-stretch.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The layer and its Red and Green and Blue histograms after
+            <quote>Stretch Contrast</quote>.
+            The pixel columns do not reach the right end of the histogram
+            (255) because of a few very bright pixels, unlike
+            <quote>White Balance</quote>.
+          </para>
+          <para lang="en">
+            Histogram stretching creates gaps between the pixel columns,
+            giving it a stripped look.
+          </para>
+          <para lang="ja">
+            <quote>コントラスト伸長</quote>適用後の活性レイヤーとその赤緑青の
+            それぞれのヒストグラム。 <quote>ホワイトバランス</quote>とは異なり
+            非常に明るい画素が少ないので画素の尾根はヒストグラムの右端 (255) 
+            まで届かない。
+          </para>
+          <para lang="ja">
+            ヒストグラムの伸長で画素の峰に隙間ができ、 薄く切り刻まれたかの
+            ように見える。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

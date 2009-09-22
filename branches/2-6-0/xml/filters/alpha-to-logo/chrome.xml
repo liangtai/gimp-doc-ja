@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-08-25 kost: added 'no'
+  2008-08-24 ude: created ('en','de')
+-->
+<!--2009-09-12-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="script-fu-chrome-logo-alpha">
+  <title lang="en">Chrome</title>
+  <title lang="ja">クローム...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Chrome</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Chrome</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary>クローム</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>クローム</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="en">概観</title>
+    <figure>
+      <title lang="en">Example for the <quote>Chrome</quote> filter</title>
+      <title lang="ja"><quote>クローム</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/alpha-to-logo/chrome.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Chrome</quote> filter applied</para>
+          <para lang="ja"><quote>クローム</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/menus/file/create/logos/chrome.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Chrome</quote> logo</para>
+          <para lang="ja"><quote>クローム</quote>ロゴ</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter is derived from the <quote>Chrome</quote> logo script
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>Chrome</guimenuitem>
+      </menuchoice>
+      in the image window), which&mdash;according to the script author&mdash;
+      creates a <quote>simplistic, but cool, chromed logo</quote> (see above).
+    </para>
+    <para lang="en">
+      The filter adds this simple chrome effect to the alpha, that is the area
+      of the active layer defined by the non-transparent pixels (think of it
+      as a <quote>selection by visibility</quote>). The filter effect will
+      always be applied according to the alpha values.
+    </para>
+    <para lang="en">
+      Apparently the effect only looks <quote>cool</quote> when the filter is
+      applied to thin areas. For wide shapes you can try to increase the
+      <guilabel>Offset</guilabel> value; see the examples
+      <link linkend="script-fu-chrome-logo-alpha-offset">below</link>.
+    </para>
+    <para lang="ja">
+      このフィルタはスクリプト作者のことばを借りると<quote>簡潔ながら格好良い
+      クロームロゴ</quote> (上図参照) を作成する<quote>クローム</quote>ロゴ
+      スクリプトから派生しました。 ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ</guisubmenu>
+        <guimenuitem>クローム...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
+    <para lang="ja">
+      <guimenuitem>クローム...</guimenuitem> フィルタは
+      アルファ域に簡潔なクロームめっきの効果を与えます。 アルファ域とは活性
+      レイヤーでアルファチャンネルによって定まる不透明や半透明な領域のこと
+      であり、 可視性による選択範囲ととらえることもできます。 このフィルタの
+      効果はアルファ値によって適用が加減されます。
+    </para>
+    <para lang="ja">
+      このフィルタは狭い領域に適用すると<quote>冷たい</quote>印象しか出ない
+      ことは明らかです。 太くする方法として <guilabel>オフセット</guilabel> 
+      値を増してみてもよいでしょう。 
+      <link linkend="script-fu-chrome-logo-alpha-offset">後述</link> する例
+      もご覧ください。
+    </para>
+    <xi:include href="about-resizing-image.xml"/>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Chrome</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>クローム...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Chrome</quote> options</title>
+      <title lang="ja"><quote>クローム</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/alpha-to-logo/chrome-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry id="script-fu-chrome-logo-alpha-offset">
+        <term lang="en">Offset (pixels * 2)</term>
+        <term lang="ja">オフセット (ピクセル * 2)</term>
+        <listitem>
+          <para lang="en">
+            This option is used when creating the chrome effect and for
+            placing the drop shadow:
+          </para>
+          <para lang="ja">
+            このオプションの値はクローム効果を作成するときとドロップシャドウを
+            置くために使われます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Offset</quote> examples</title>
+            <title lang="ja"><quote>オフセット</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/alpha-to-logo/chrome-offs25.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Offset 25</para>
+                <para lang="ja">オフセット = 25</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/alpha-to-logo/chrome-offs50.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Offset 50</para>
+                <para lang="ja">オフセット = 50</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/alpha-to-logo/chrome-offs100.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Offset 100</para>
+                <para lang="ja">オフセット = 100</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            The filter creates a drop shadow in the shape of the alpha. This
+            shadow will be moved according to the specified offset in relation
+            to the alpha: by 40% of the offset to the right and by 30% offset
+            down. It will be
+            <link linkend="gimp-selection-feather">feathered</link> by 50%
+            of the offset value.
+          </para>
+          <para lang="en">
+            The chrome effect will be achieved using some temporary layers.
+            These layers are moved by the same amount (40% and 30% of the
+            specified offset) and are also feathered by 50% offset. So the
+            appearance of the alpha too is determined by the offset value.
+          </para>
+          <para lang="ja">
+            このフィルタはドロップシャドウをアルファ域の形に生成します。 
+            出来た影の移動距離はオフセット値から算出されます。 右方向には
+            オフセットの 40%、 下方向にはオフセットの 30% 移動します。 さらに
+            選択範囲はオフセットの 50% の半径で 
+            <link linkend="gimp-selection-feather">境界線がぼかされ</link> 
+            ます。
+          </para>
+          <para lang="ja">
+            クローム効果は一時的にレイヤーを生成して効果処理に利用します。 
+            こういったレイヤーについても同じ距離、 つまり指定されたオフセット
+            の 40% と 30% の距離を移動し、 オフセットの 50% の半径で境界線が
+            ぼかされます。 ですからアルファ域の見え方もオフセット値に左右
+            されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Background Color</term>
+        <term lang="ja">背景色</term>
+        <listitem>
+          <para lang="en">
+            This color is used to fill the background layer created by the
+            filter. It defaults to light gray. When you click on the color
+            button, a color selector pops up where you can select any other
+            color.
+          </para>
+          <para lang="ja">
+            スクリプトが生成する背景レイヤーはこの背景色で塗りつぶされます。 
+            初期状態では明るい灰色です。 色だまりボタンをクリックすると色変更
+            ダイアログが開かれて、 他の色も選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

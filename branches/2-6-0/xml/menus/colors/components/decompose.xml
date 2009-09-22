@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-29 j.h: rev. v2.6. No change
+  2008-02-29 lexa: fixed help-id and switched from filter to command
+  2007-11-29 ciampix: added italian translation
+  2007-11-24 j.h : updated to v2.4; "registration color" documented.
+  2007-10-20 ude: moved here from filters/color/decompose.xml ('en','de')
+  2007-07-06 Added Spanish translation by AntI
+  2007-04-05 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-11-28 en;fr reviewed by julien hardelin
+  2005-09-30 de replaced informalfigure by axel.wernicke
+  2005-08-25 de added by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="plug-in-decompose-registered">
+  <title id="plug-in-decompose" lang="en">Decompose</title>
+  <title id="plug-in-decompose" lang="ja">チャンネル分解...</title>
+
+  <indexterm>
+    <primary>CMYK</primary>
+  </indexterm>
+  <indexterm>
+    <primary>HSV</primary>
+  </indexterm>
+  <indexterm>
+    <primary>RGB</primary>
+  </indexterm>
+  <indexterm>
+    <primary>YUV</primary>
+  </indexterm>
+  <indexterm>
+    <primary>YCbCr</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Components</secondary>
+    <tertiary>Decompose</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Decompose</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Compose</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Channel</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Layer</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="イロヨウソ">色要素</secondary>
+    <tertiary sortas="チャンネルブンカイ">チャンネル分解</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="チャンネルブンカイ">チャンネル分解</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="チャンネルゴウセイ">チャンネル合成</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>チャンネル</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Decomposition to images (RGB)</title>
+      <title lang="ja">画像の分解 (<acronym>RGB</acronym>)</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/taj_orig_2.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/decompose-ex1.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Command <quote>Decompose</quote> applied (RGB decomposition) with
+            <guilabel>Decompose to layers</guilabel> unchecked.
+          </para>
+          <para lang="ja">
+            <guilabel>分解したチャンネルをレイヤーに展開
+            </guilabel> にチェックなし、 <acronym>RGB</acronym>分解で
+            <quote>チャンネル分解</quote>コマンドを適用
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Decomposition to layers (RVB)</title>
+      <title lang="ja">画像の分解 (<acronym>RGB</acronym>)</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/taj_orig_2.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/decompose-ex2.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Command <quote>Decompose</quote> applied (RGB decomposition) with
+            <guilabel>Decompose to layers</guilabel> checked.
+          </para>
+          <para lang="ja">
+            <guilabel>分解したチャンネルをレイヤーに展開
+            </guilabel> にチェックあり、 <acronym>RGB</acronym>分解で
+            <quote>チャンネル分解</quote>コマンドを適用
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This command separates the channels (RGB, HSV, CMYK...) of an image
+      into separated images or layers.
+    </para>
+    <para lang="ja">
+      <guimenuitem>チャンネル分解...</guimenuitem> コマンドは
+      画像をチャンネル (<acronym>RGB</acronym>、 <acronym>HSV</acronym>、 
+      <acronym>CMYK</acronym> &hellip;) に分解しそれらを元に複数の画像もしくは
+      複数のレイヤーからなる画像を生成します。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can find this command in the image window menu under
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guisubmenu>Components</guisubmenu>
+            <guimenuitem>Decompose…</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guisubmenu>色要素</guisubmenu>
+            <guimenuitem>チャンネル分解...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Decompose</quote> command options</title>
+      <title lang="ja">
+        <quote>チャンネル分解</quote>コマンドのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/colors-components-decompose.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <term lang="en">Extract Channels</term>
+      <term lang="ja">取り出すチャンネル</term>
+      <para lang="en">
+        Following options are described with
+        <link linkend="plug-in-decompose-to-layers">Decompose to
+        layers</link> checked.
+      </para>
+      <para lang="ja">
+        つぎのオプションについては 
+        <link linkend="plug-in-decompose-to-layers">
+        分解したチャンネルをレイヤーに展開</link> にチェックが入っていること
+        を想定して説明しています。
+      </para>
+      <varlistentry>
+        <term lang="en">Color model</term>
+        <term lang="ja">色モデル</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term>RGB</term>
+              <listitem>
+                <para lang="en">
+                  If the RGB radio button is clicked, a grey level image is
+                  created with three layers (Red, Green and Blue), and two
+                  channels (Grey and Alpha).
+                </para>
+                <para lang="en">
+                  This function is interesting when using Threshold tool. You
+                  can also perform operations like cutting, pasting or moving
+                  selections in a single RBG channel. You can use an
+                  extracted grayscale as a selection or mask by saving it in
+                  a channel (right-click&gt;Select&gt;Save to a channel).
+                </para>
+                <para lang="ja">
+                  <guimenuitem>RGB</guimenuitem> を選択すると赤緑青のそれぞれの
+                  チャンネルの値を示す灰色階調の3層のレイヤーとグレースケール
+                  およびアルファの2つのチャンネルが生成されます。
+                </para>
+                <para lang="ja">
+                  <link linkend="gimp-tool-threshold">しきい値</link> ツールと
+                  併用するとおもしろい機能をします。 また<acronym>RGB</acronym>
+                  チャンネルを表すどれかのレイヤーで選択範囲を切り取って
+                  貼り付けたり移動する操作もできます。 ほかにも引き出した
+                  グレースケールレイヤーを画像ウィンドウのメニューの
+                  <menuchoice>
+                    <guimenu>選択</guimenu>
+                    <guimenuitem>チャンネルに保存</guimenuitem>
+                  </menuchoice>
+                  コマンドでチャンネル化すれば選択範囲やマスクとして利用
+                  できます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>RGBA</term>
+              <listitem>
+                <para lang="en">
+                  If the RGBA radio button is clicked, a image is created
+                  similar at the RGB Decomposing with a additional Alpha
+                  layer filled with the transparencies values of the source
+                  image. Full transparent pixels are black and the full
+                  opaque pixels are white.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>RGBA</guimenuitem> を選ぶと画像は<acronym>RGB
+                  </acronym>分解されたチャンネルと元画像で透明度を表していた
+                  アルファ値が加わった4層のレイヤーが生成されます。 完全透明な
+                  画素は黒く、完全不透明な画素は白で表されています。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>HSV</term>
+              <listitem>
+                <para lang="en">
+                  This option decomposes image into three greyscaled layers,
+                  one for Hue, one for Saturation and another for Value.
+                </para>
+                <para lang="en">
+                  Although <guilabel>Hue</guilabel> is greyscaled, it does
+                  represent hues. In color circle, white and black are
+                  starting and arrival points and are superimposed. They
+                  represent Red color at top of circle. Grey intermediate
+                  levels are corresponding to intermediate hues on circle:
+                  dark grey to orange, mid grey to green and light grey to
+                  magenta.
+                </para>
+                <para lang="en">
+                  <guilabel>Saturation</guilabel> and
+                  <guilabel>Value</guilabel>: White is maximum Saturation
+                  (pure color) and maximum Value (very bright). Black is
+                  minimum Saturation (white) and minimum Value (black).
+                </para>
+                <para lang="ja">
+                  <guimenuitem>HSV</guimenuitem> オプションは元画像の色相と
+                  彩度と明度からなる3層のグレースケールレイヤーを生成します。
+                </para>
+                <para lang="ja">
+                  <guimenuitem>色相</guimenuitem> レイヤーもグレースケール化
+                  していますが、 これで色相を表しています。 白と黒は色相環で
+                  始点と終点であり重なっています。 その位置は赤色を示します。
+                  中間の灰色は色相環の途中の色を示し濃度により対応する色が
+                  異なります。 暗い灰色はオレンジ色を、 中間的な灰色は緑を、
+                  明るい灰色はマゼンタに相応します。
+                </para>
+                <para lang="ja">
+                  <guimenuitem>彩度</guimenuitem> と <guimenuitem>明度
+                  </guimenuitem> のレイヤーでは白が最大彩度 (純粋色) と最大明度
+                  (極端に明るい) を示します。 黒は最小彩度 (白) と最小明度 (黒)
+                  を示します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>HSL</term>
+              <listitem>
+                <para lang="en">
+                  This option is similar to <guilabel>HSV</guilabel>. Instead
+                  of the <emphasis>V</emphasis>alue, the third layer contains
+                  the image's <emphasis>L</emphasis> component.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>HSL</guimenuitem> オプションは <guimenuitem>HSV
+                  </guimenuitem> オプションに似ています。 しかし3層目のレイヤー
+                  は明度 (Value) の 代わりにL成分が元となっています。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>CMY</term>
+              <listitem>
+                <para lang="en">
+                  This option decomposes image into three greyscaled layers,
+                  one for Yellow, one for Magenta and another for Cyan.
+                </para>
+                <para lang="en">
+                  This option might be useful to transfer image into printing
+                  softwares with CMY capabilities.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>CMY</guimenuitem> オプションは画像をイエロー、 
+                  マゼンタ、 シアンの色成分を元に3層のグレースケールレイヤーを
+                  生成します。
+                </para>
+                <para lang="ja">
+                  このオプションは<acronym>CMY</acronym>が扱える印刷ソフト
+                  ウェアに画像を渡すときに使えそうです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>CMYK</term>
+              <listitem>
+                <para lang="en">
+                  This option is similar at the <guilabel>CMY Decomposing
+                  </guilabel> with an additional layer for Black.
+                </para>
+                <para lang="en">
+                  This option might be useful to transfer image into printing
+                  softwares with CMYK capabilities.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>CMYK</guimenuitem> オプションは <guimenuitem>CMY
+                  </guimenuitem> オプションと似ていますが、 黒のレイヤーが追加
+                  されます。
+                </para>
+                <para lang="ja">
+                  このオプションは<acronym>CMYK</acronym>が扱える印刷ソフト
+                  ウェアに画像を渡すときに使えそうです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Alpha</term>
+              <term lang="ja">アルファ</term>
+              <listitem>
+                <para lang="en">
+                  This option extracts the image transparency stored in the
+                  Alpha channel in
+                  <link linkend="gimp-channel-dialog">Channel dialog</link>
+                  in a separate image. The full transparent pixels are Black
+                  the full opaque pixels are white. The graytones are smooth
+                  transitions of the transparency in the source image.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>アルファ</guimenuitem> オプションは画像の
+                  アルファチャンネルに収められている透明度情報を元に
+                  グレースケール画像を生成します。 その内容は 
+                  <link linkend="gimp-channel-dialog">チャンネルダイアログ
+                  </link> の見本画像のように、 完全透明な画素を黒で、 
+                  完全不透明な画素を白で示します。 その中間は灰色になり、 その
+                  濃度で元画像の透明度の滑らかな変化を表します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>LAB</term>
+              <listitem>
+                <para lang="en">
+                  This option decomposes image into three greyscaled layers,
+                  layer <quote>L</quote> for Luminance, layer
+                  <quote>A</quote> for colors between green and red, layer
+                  <quote>B</quote> for colors between blue and yellow.
+                </para>
+                <para lang="en">
+                  The LAB Decomposing is a color model of the Luminance-Color
+                  family. A channel is used for the Luminosity while two other
+                  channels are used for the Colors.
+                  The LAB color model is used by Photoshop.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>LAB</guimenuitem> オプションは 
+                  <link linkend="glossary-lab">L*a*b*</link> 表色系のように
+                  元画像の光度を元にした <guimenuitem>L</guimenuitem> レイヤー
+                  と、 赤から緑の間の色を示す <guimenuitem>A</guimenuitem> 
+                  レイヤー、 青からイエローの間の色を示す 
+                  <guimenuitem>B</guimenuitem> レイヤーを生成します。
+                </para>
+                <para lang="ja">
+                  <quote>LAB</quote>分解は<quote>明るさ-色</quote>モデルの一種
+                  です。 ひとつのチャンネルで光度を示し残りの2つのチャンネルで
+                  色を示します。 <quote>L*a*b*</quote>色モデルは <application>
+                  Photoshop</application> で使用されています。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>YCbCr</term>
+              <listitem>
+                <para lang="en">
+                  In <acronym>GIMP</acronym> there is four YCbCr
+                  decompositions with different values.
+                  Each option decomposes image in three greyscaled layers, a
+                  layer for Luminance and two other for blueness and redness.
+                </para>
+                <para lang="en">
+                  The YCbCr color model also called YUV is now used for
+                  digital video (initially for PAL analog video). It's based
+                  on the idea that the human eye is most sensitive to
+                  luminosity, next to colors. The YCbCr Decomposing use a
+                  transformation matrix and the different options are
+                  different values recommended by ITU (International
+                  Telecommunication Union) applied to the matrix .
+                </para>
+                <para lang="ja">
+                  <acronym>GIMP</acronym>には <guimenuitem>YCbCr ITU R470
+                  </guimenuitem>、 <guimenuitem>YCbCr ITU R709</guimenuitem>、
+                  <guimenuitem>YCbCr ITU R470 256</guimenuitem>、 <guimenuitem>
+                  YCbCr ITU R709 256</guimenuitem> の4種類のチャンネル分解方法
+                  があります。 いずれのオプションも画像の明るさを元にした
+                  グレースケールレイヤーと、 青み、 赤みのそれぞれの色尺を元に
+                  した2層のグレースケールレイヤーを生成します。
+                </para>
+                <para lang="ja">
+                  <link linkend="glossary-ycbcr">YCbCr</link>色モデルは
+                  <acronym>YUV</acronym>色モデルの一種です。 <acronym>YUV
+                  </acronym>はデジタルビデオに利用されています (そのはじめは
+                  <acronym>PAL</acronym>アナログビデオでした)。 この色モデルは
+                  ヒトの目が明るさに最も敏感で、 次に色彩の認識が強いことが基に
+                  なっています。 YCbCr分解は変換行列を使用しますが、 4つの
+                  オプションの違いは<acronym>ITU</acronym> (<foreignphrase>
+                  International Telecommunication Union</foreignphrase>: 国際
+                  電気通信連合) が勧告した変換行列の分類に基づいています。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry id="plug-in-decompose-to-layers">
+        <term lang="en">Decompose to Layers</term>
+        <term lang="ja">分解したチャンネルをレイヤーに展開</term>
+        <listitem>
+          <para lang="en">
+            If this option is checked, a new grey-scaled image is created,
+            with each layer representing one of the channels of the selected
+            mode. If this option is not checked, every channel is represented
+            with a specific image automatically and clearly named in the name
+            bar.
+          </para>
+          <para lang="ja">
+            <guilabel>分解したチャンネルをレイヤーに展開
+            </guilabel> オプションにチェックを入れると、 いずれもグレースケール
+            画像が1つ作成され、 指定された色モデルのチャンネルはおのおのがその
+            画像のレイヤーになります。 このオプションのチェックを外した場合は
+            各チャンネルそれぞれを元にグレースケール画像が生成され、 元の
+            チャンネルがよくわかる名前が自動的にその画像ウィンドウのタイトルに
+            つけられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Foreground as registration color</term>
+        <term lang="ja">描画色領域を指定色で出力</term>
+        <listitem>
+          <para lang="en">
+            This option is for specialists. It is related to CMYK printing.
+            When checked, every pixel of the current foreground color will
+            be black in each component of the decomposed images/layers. This
+            allows you to make crop marks visible on all channels, providing
+            a useful reference for alignment. A thin cross printed in
+            registration black can also be used to check whether the printing
+            plates are lined up.
+          </para>
+          <para lang="ja">
+            [このオプション名は<acronym>GIMP</acronym>2.8より <guilabel>
+            描画色のピクセルをマーカーとして出力</guilabel>
+            に変更予定です。] このオプションはスペシャリストのために設けられ
+            ました。 <acronym>CMYK</acronym>印刷に関連があります。 ここを有効に
+            すると、 元画像で現在の描画色と同じ色をもつ画素がどの生成画像でも
+            黒く塗られます。 これはチャンネルを分解してできたそれぞれの画像
+            もしくはレイヤーに及びます。 この機能でどのチャンネルでも見える
+            しるしができますのでこれを基準に切り抜いて版を揃えるのに使えます。
+            登録した黒でトンボ印を印刷物に刷り込めば印刷原版の位置が揃って
+            いるかどうか検査するのに使えます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

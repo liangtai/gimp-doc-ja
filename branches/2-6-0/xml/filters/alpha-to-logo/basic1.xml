@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-12-17 kost: added 'no'
+  2007-12-15 ciampix: updated it
+  2007-11-30 ude: created ('en','de')
+-->
+<!--2009-09-12-->
+<sect2 id="script-fu-basic1-logo-alpha">
+  <title lang="en">Basic I</title>
+  <title lang="ja">基本 I...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Basic I</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Basic I</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary sortas="キホン I">基本 I</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キホン I">基本 I</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example for the <quote>Basic I</quote> filter</title>
+      <title lang="ja"><quote>基本 I</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/logo-basic1.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Basic I</quote> applied</para>
+          <para lang="ja"><quote>基本 I</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter adds a gradient effect to active layer alpha and adds a
+      shadow and a background.
+    </para>
+    <para lang="ja">
+      <guimenuitem>基本 I...</guimenuitem> フィルタは活性
+      レイヤーのアルファ域にグラデーション効果をかけ、 影をつけて背景を
+      加えます。
+    </para>
+    <warning>
+      <para lang="en">
+        The image will always be resized to the active layer's size.
+      </para>
+      <para lang="ja">
+        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
+      </para>
+    </warning>
+    <para lang="en">
+      The filter is derived from the <quote>Basic I</quote> logo script
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>Basic I</guimenuitem>
+      </menuchoice> in the image window),
+      which draws a specified text over a background with a gradient effect
+      and a drop shadow:
+    </para>
+    <para lang="ja">
+      このフィルタはグラデーション効果のかかったテキストを描き背景に影を
+      落とす<quote>基本 I</quote>スクリプトから派生しました。 
+      ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ</guisubmenu>
+        <guimenuitem>基本 I...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="JPG"
+          fileref="images/filters/examples/basic1-script-fu.jpg"/>
+      </imageobject>
+      <caption>
+        <para lang="en">The <quote>Basic I</quote> logo script.</para>
+        <para lang="ja"><quote>基本 I</quote>ロゴスクリプト</para>
+      </caption>
+    </mediaobject>
+    <itemizedlist>
+      <para lang="en">
+        You can reproduce the gradient effect manually by using the
+        <link linkend="gimp-tool-blend">Blend tool</link> with the following
+        options:
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-blend">ブレンドツール</link> をつぎの
+        オプションにして使っても同等なグラデーション効果が得られます。
+      </para>
+      <listitem>
+        <para lang="en"><guilabel>Mode</guilabel>: Multiply,</para>
+        <para lang="ja">
+          レイヤー<guilabel>モード</guilabel> は<quote>乗算</quote>にする。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          <guilabel>Gradient</guilabel>: FG to BG (RGB), where FG is white and
+          BG is black,
+        </para>
+        <para lang="ja">
+          <guilabel>グラデーション</guilabel> は<quote>描画色から背景色 (RGB)
+          </quote>にする。 ただし描画色は白、 背景色は黒にする。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en"><guilabel>Offset</guilabel>: 20,</para>
+        <para lang="ja">
+          <guilabel>オフセット</guilabel> は 20.0 にする。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en"><guilabel>Shape</guilabel>: Radial,</para>
+        <para lang="ja">
+          <guilabel>形状</guilabel> は<quote>放射状</quote>にする。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en"><guilabel>Dithering</guilabel>: checked.</para>
+        <para lang="ja">
+          <guilabel>ディザリング</guilabel> を有効にする。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Basic I</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>基本 I...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Basic I</quote> options</title>
+      <title lang="ja"><quote>基本 I</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-logo-basic1.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Background color</term>
+        <term lang="ja">背景色</term>
+        <listitem>
+          <para lang="en">
+            This color is used to fill the background layer created by the
+            filter. It defaults to white. When you click on the color swatch
+            button, a color selector pops up where you can select any other
+            color.
+          </para>
+          <para lang="ja">
+            フィルタはこの色で塗りつぶされた背景レイヤーを作成します。 初期
+            状態では白です。 色だまりボタンをクリックすると色変更ダイアログ
+            が開かれ、 他の色も選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Text color</term>
+        <term lang="ja">文字色</term>
+        <listitem>
+          <para lang="en">
+            The name of this option refers to the text color of the logo
+            script described above. Here this color - by default blue
+            (6,6,206) - sets the basic color of the gradient effect: it is the
+            color the alpha channel will be filled with before the gradient
+            effect will be applied.
+          </para>
+          <para lang="ja">
+            このオプションで<quote>文字</quote>とあるのは上述のロゴスクリプト
+            でロゴ文字の色に使われているからです。 この色はここでは
+            グラデーション効果の基本色になります。 初期設定では青い色 
+            (6,6,206) です。 アルファチャンネルはグラデーション効果をかけ
+            られる前にこの色で塗りつぶされます。<!--???-->
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-17 j.h: reviewed for v2.6
+  2008-04-04 Mr.Dust : reviewed and added 'ko'
+  2006-12-19 lexa: minor enhancements
+-->
+<!--2009-05-18-->
+<sect1 id="gimp-using-brushes">
+  <title lang="en">Adding New Brushes</title>
+  <title lang="ja">ブラシの追加</title>
+  <indexterm lang="en">
+    <primary>Brushes</primary>
+    <secondary>Add New</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ブラシ</primary>
+    <secondary sortas="シンキツイカ">新規追加</secondary>
+  </indexterm>
+
+  <para lang="en">
+    To add a new brush, after either creating or downloading it, you need to
+    save it in a format GIMP can use. The brush file needs to be placed in the
+    GIMP's brush search path, so that GIMP is able to index and display it in
+    the Brushes dialog. You can hit the <guibutton>Refresh</guibutton>
+    button, which reindexes the brush directory. GIMP uses three file formats
+    for brushes:
+  </para>
+  <para lang="ja">
+    ブラシを追加するには、 新たに作成したものであれダウンロードしてきたもの
+    であれ、 <acronym>GIMP</acronym>で使えるファイル形式で保存します。
+    ブラシファイルは<acronym>GIMP</acronym>が指標化してブラシダイアログに
+    載せられるように、 <acronym>GIMP</acronym>のブラシ検索パスに置きます。
+    <quote>ブラシの再読み込み</quote>ボタンを押せばブラシのあるディレクトリ群で
+    再度指標化されます。
+    <acronym>GIMP</acronym>が利用するブラシ用のファイル形式はつぎの3つです。
+  </para>
+
+  <variablelist id="brushes-file-formats">
+    <indexterm lang="en">
+      <primary>Brushes</primary>
+      <secondary>File formats</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ブラシ</primary>
+      <secondary sortas="ファイルケイシキ">ファイル形式</secondary>
+    </indexterm>
+    <varlistentry>
+      <term>GBR</term>
+      <listitem>
+        <indexterm>
+          <primary>GBR</primary>
+        </indexterm>
+        <indexterm lang="en">
+          <primary>Formats</primary>
+          <secondary>GBR</secondary>
+        </indexterm>
+        <indexterm lang="ja">
+          <primary sortas="ファイルケイシキ">ファイル形式</primary>
+          <secondary>GBR</secondary>
+        </indexterm>
+        <para lang="en">
+          The <filename>.gbr</filename> ("<emphasis>g</emphasis>imp
+          <emphasis>br</emphasis>ush") format is used for ordinary and
+          color brushes.  You can convert many other types of images,
+          including many brushes used by other programs, into GIMP
+          brushes by opening them in GIMP and saving them with file
+          names ending in <filename>.gbr</filename>.  This brings up a
+          dialog box in which you can set the default Spacing for the
+          brush.  A more complete description of the GBR file format
+          can be found in the file <filename>gbr.txt</filename> in the
+          <filename class="directory">devel-docs</filename> directory of
+          the GIMP source distribution.
+        </para>
+        <para lang="ja">
+          <filename class="extension">.gbr</filename>(&quot;<emphasis>g
+          </emphasis>imp <emphasis>br</emphasis>ush&quot;) 形式は通常のブラシと
+          色ものブラシに使われています。 他の形式の画像、 たとえば他の
+          プログラム用のブラシ等も、 <acronym>GIMP</acronym>で開いて <filename 
+          class="extension">.gbr</filename> で終わる名前で保存すれば、 
+          <acronym>GIMP</acronym>用のブラシに変換できます。 保存時にダイアログ
+          ボックスが現れ、 ここでブラシ間隔の初期値を設定できます。 
+          <acronym>GBR</acronym>ファイル形式の仕様の
+          完全な解説が、 <acronym>GIMP</acronym>配布のソース内の
+          <filename>devel-docs/gbr.txt</filename>にあります。
+        </para>
+        <figure>
+          <title lang="en">Save a .gbr brush</title>
+          <title lang="ja">
+            <filename class="extension">.gbr</filename> 形式でブラシを保存
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/file-gbr-save.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>GIH</term>
+      <listitem>
+        <indexterm>
+          <primary>GIH</primary>
+        </indexterm>
+        <indexterm lang="en">
+          <primary>Formats</primary>
+          <secondary>GIH</secondary>
+        </indexterm>
+        <indexterm lang="ja">
+          <primary sortas="ファイルケイシキ">ファイル形式</primary>
+          <secondary>GIH</secondary>
+        </indexterm>
+        <para lang="en">
+          The <filename>.gih</filename> ("<emphasis>g</emphasis>imp
+          <emphasis>i</emphasis>mage <emphasis>h</emphasis>ose") format
+          is used for animated brushes.  These brushes are constructed
+          from images containing multiple layers:  each layer may
+          contain multiple brush-shapes, arranged in a grid.  When you
+          save an image as a <filename>.gih</filename> file, a dialog
+          comes up that allows you to describe the format of the brush.
+          Look at <link linkend="gimp-using-animated-brushes">The GIH dialog
+          box</link> for more information about the dialog.  The GIH
+          format is rather complicated: a complete description can be
+          found in the file <filename>gih.txt</filename> in the
+          <filename>devel-docs</filename> directory of the GIMP source
+          distribution.
+        </para>
+        <para lang="ja">
+          <filename class="extension">.gih</filename> (&quot;<emphasis>g
+          </emphasis>imp <emphasis>i</emphasis>mage <emphasis>h</emphasis>ose
+          &quot;) 形式はアニメーションするブラシに使われています。 複数層の
+          レイヤーからなる画像をもとに作られるブラシです。 レイヤーはそれぞれに
+          複数のブラシ形状を格子状に整列して置けます。 <filename 
+          class="extension">.gih</filename> ファイル形式で保存するときは、 
+          ダイアログが出ますのでブラシの性質と名前を記入しましょう。 次節
+          <link linkend="gimp-using-animated-brushes">GIHダイアログ</link>
+          に詳しい説明があります。 <acronym>GIH</acronym>ファイル形式はいくぶん
+          込み入っています。 詳しい仕様の説明が<acronym>GIMP</acronym>配布
+          ソースの <filename>devel-docs</filename> ディレクトリ内のファイル
+          <filename>gih.txt</filename> にあります。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>VBR</term>
+      <listitem>
+        <indexterm>
+          <primary>VBR</primary>
+        </indexterm>
+        <indexterm lang="en">
+          <primary>Formats</primary>
+          <secondary>VBR</secondary>
+        </indexterm>
+        <indexterm lang="ja">
+          <primary sortas="ファイルケイシキ">ファイル形式</primary>
+          <secondary>VBR</secondary>
+        </indexterm>
+        <para lang="en">
+          The <filename>.vbr</filename> format is used for parametric
+          brushes, i. e., brushes created using the Brush Editor.
+          There is really no other meaningful way of obtaining files
+          in this format.
+        </para>
+        <para lang="ja">
+          <filename class="extension">.vbr</filename> 形式は媒介変数つき
+          ブラシ、 つまりブラシエディタで作られたブラシに使われています。
+          それ以外の方法でこの形式のファイルを入手しようとしても無意味です。
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para lang="en">
+    To make a brush available, place it in one of the folders in GIMP's brush
+    search path. By default, the brush search path includes two folders, the
+    system <filename>brushes</filename> folder, which you should not use or
+    alter, and the <filename>brushes</filename> folder inside your personal
+    GIMP directory. You can add new folders to the brush search path using the
+    <link linkend="gimp-prefs-folders-data">Brush Folders</link>
+    page of the Preferences dialog. Any GBR, GIH, or VBR file included in a
+    folder in the brush search path will show up in the Brushes dialog the
+    next time you start GIMP, or as soon as you press the
+    <guibutton>Refresh</guibutton> button in the Brushes dialog.
+  </para>
+  <para lang="ja">
+    追加したブラシを有効にするには<acronym>GIMP</acronym>が検索できるブラシ保管
+    パスのフォルダにそのブラシを置きます。 初期設定ではブラシ検索パスには
+    フォルダが2つ登録されています。 それぞれ、 システムパス下の <filename 
+    class="directory"> brushes</filename> フォルダ&mdash;ユーザは手を加え
+    られません&mdash;と、 個人用<acronym>GIMP</acronym>フォルダ下の<filename>
+    brushes</filename> フォルダです。 新たに作ったブラシ保管パスは<quote>
+    環境設定</quote>ダイアログの
+    <link linkend="gimp-prefs-folders-data">ブラシフォルダ</link> のページ上で
+    ブラシ検索パスに追加登録できます。 <acronym>GBR</acronym>形式、
+    <acronym>GIH</acronym>形式、 <acronym>VBR</acronym>形式のいずれの
+    ブラシファイルもブラシ検索パスに保管すれば、ブラシダイアログの
+    <quote>ブラシを再読み込み</quote>ボタンを押した直後からブラシダイアログ上に
+    並びますし、 新たにフォルダをブラシ検索パスに登録した場合は
+    その後に<acronym>GIMP</acronym>を再起動したときから、
+    ブラシダイアログ上で見られるようになります。
+  </para>
+  <note>
+    <para lang="en">
+      When you create a new parametric brush using the Brush Editor, it
+      is automatically saved in your personal
+      <filename>brushes</filename> folder.
+    </para>
+    <para lang="ja">
+      ブラシエディタで作成した媒介変数つきブラシは、 作成後に自動的に個人用 
+      <filename class="directory">brushes</filename> フォルダに保存されます。
+    </para>
+  </note>
+  <para lang="en">
+    There are a number of web sites with downloadable collections of GIMP
+    brushes. Rather than supplying a list of links that will soon be out of
+    date, the best advice is to do a search with your favorite search engine
+    for <quote>GIMP brushes</quote>.
+    There are also many collections of brushes for other programs with
+    painting functionality. Some can be converted easily into GIMP brushes,
+    some require special conversion utilities, and some cannot be converted at
+    all. Most fancy procedural brush types fall into the last category. If you
+    need to know, look around on the web, and if you don't find anything, look
+    for an expert to ask.
+  </para>
+  <para lang="ja">
+    既にネット上では<acronym>GIMP</acronym>用ブラシ集を公開配布するところが
+    たくさんあります。 そのサイトへのリンク集をここに載せてもすぐに古くなって
+    しまうので、 そのかわり、 <quote>GIMP brushes</quote>をお好みの検索サイトで
+    探してください。 他の描画機能つきソフトのためのブラシもたくさんありますが、
+    その一部は<acronym>GIMP</acronym>用ブラシに容易く変換できます。
+    それ以外にも特別なユーティリティを通せば変換できるものもありますが、
+    残念ながらどうしても利用できないものもあります。
+    面白いプロシージャブラシもほとんどが最後の範疇に入ってしまいます。
+    興味がある方はまずウェブで調べて、 どうしても見付からないときは
+    質問を受け付けてくれる達人を探してください。
+  </para>
+</sect1>

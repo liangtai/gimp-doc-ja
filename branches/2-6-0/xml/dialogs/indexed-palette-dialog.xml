@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-06-09 ude: updated, re-arranged menu options ('de')
+  2007-12-04 ude: updated 'de'
+  2007-11-08 KoSt: updated 'no'
+  2007-08-12 j.h: updated to v2.4 ; colormap submenu and a note added en;fr
+  2006-03-12 lexa: added german translation and made docbook compliant
+  2005-11-29 replaced informalfigures by figures by lexa
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-indexed-palette-dialog">
+  <title lang="en">Colormap Dialog</title>
+  <title lang="ja">カラーマップダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Colormap</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Colormap</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>カラーマップ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>カラーマップ</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">
+      An indexed image with 6 colors and its Colormap dialog
+    </title>
+    <title lang="ja">
+      6色のインデックス化画像とそのカラーマップダイアログ
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/dialogs/examples/cosmos-6.png"/>
+      </imageobject>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/dialogs/colormap-dialog.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Colormap (Indexed Palette is a better name) dialog allows you to edit
+    the colormap of an indexed image. (If the mode of the active image is RGB
+    or Grayscale instead of Indexed, the dialog is empty and unusable.) This
+    is a dockable dialog; see the section on
+    <link linkend="gimp-concepts-docks">Dialogs and Docking</link>
+    for help on manipulating it.
+  </para>
+  <para lang="ja">
+    カラーマップ (インデックス化パレットのほうが名前としてはふさわしいでしょう)
+    ダイアログはインデックス化画像のカラーマップを変更するのに使えます。 (もし
+    画像がインデックス化されておらず<acronym>RGB</acronym>やグレイスケールの
+    モードだった場合は、 このダイアログは空になり利用できません。)
+  </para>
+
+  <sect3 id="gimp-indexed-palette-dialog-activate">
+    <title lang="en">Activating the dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Colormap</quote> dialog is a dockable dialog; see the section
+      <xref linkend="gimp-concepts-docks"/> for help on manipulating it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      カラーマップダイアログはドッキング可能です。 その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from the image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Colormap</guimenuitem>
+          </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>カラーマップ</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Colormap</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのアイコンボタン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加</guimenu>
+            <guimenuitem>カラーマップ</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Colormap</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Colormap</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      <guimenu>ウィンドウ</guimenu> メニューでは
+      ダイアログがひとつだけの状態で開かれている場合に限り、
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 この場合には画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guimenuitem>カラーマップ</guimenuitem>
+      </menuchoice>
+      と進めば<quote>カラーマップ</quote>ダイアログを浮かび上がらせられます。
+      <!--<footnote>
+        <para>
+          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
+          <quote>カラーマップ</quote>ダイアログウィンドウが単独で (例えば
+          <quote>カラーマップ</quote>タブとなっていたダイアログが
+          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
+          [隠れて]いるときは、 画像メニューから
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guimenuitem>カラーマップ</guimenuitem>
+          </menuchoice>
+          と進めばこのダイアログを浮かび上がらせられます。
+        </para>
+      </footnote>-->
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-indexed-palette-dialog-colormaps">
+    <title lang="en">Colormaps and Indexed Images</title>
+    <title lang="ja">カラーマップとインデックス化カラー画像</title>
+    <para lang="en">
+      In an Indexed image, instead of being assigned a color directly (as
+      happens in RGB and Grayscale images), colors are assigned to pixels by
+      an indirect method, using a look-up table called a
+      <emphasis>colormap</emphasis>.
+    </para>
+    <para lang="en">
+      To determine the color that should be shown for that pixel, GIMP looks
+      up the index in the image's colormap. Each indexed image has its own
+      private colormap.  In GIMP, the maximum number of entries in a colormap
+      is 256. For a maximum-sized colormap, each index from 0 to 255 is
+      assigned an arbitrary RGB color. There are no rules restricting the
+      colors that can be assigned to an index or the order they appear in: any
+      index can be assigned any color.
+    </para>
+    <para lang="en"><!-- changed dithering to quantization, bug #356354 -->
+      It is important to realize that the colors in the colormap are the
+      <emphasis>only colors available</emphasis> for an indexed image (that
+      is, unless you add new colors to the colormap). This has a major effect
+      on many GIMP operations: for example, in a pattern fill, GIMP will
+      usually not be able to find exactly the right colors in the colormap, so
+      it will approximate them by using the nearest color available.  This is
+      sometimes referred to as
+      <link linkend="glossary-quantization">Quantization</link>.
+      If the colormap is too limited or poorly chosen, this can easily produce
+      very poor image quality.
+    </para>
+    <para lang="en">
+      The Colormap dialog allows you to alter the colormap for an image,
+      either by creating new entries, or by changing the colors for the
+      existing entries. If you change the color associated with a given index,
+      you will see the changes reflected throughout the image, as a color
+      shift for all pixels that are assigned that index. The entries are
+      numbered with 0 in the upper left corner, 1 to its right, etc.
+    </para>
+    <para lang="ja">
+      インデックス化された画像では、 各画素に直接色を与える方法 (つまり
+      <acronym>RGB</acronym>画像やグレースケール画像での方式) をとらず、 各画素
+      の色は <emphasis>カラーマップ</emphasis> と呼ばれる対照表を通して遠回しに
+      画素に与えられます。
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>は画素に表示する色を判定するときに画像のカラー
+      マップ[対照表]を見て、 その参照番号にある色を出します。 インデックス化
+      画像はそれぞれ固有のカラーマップを持っています。 <acronym>GIMP</acronym>
+      ではカラーマップに並べられる色数は最大で256色の制限があります。
+      カラーマップは最大色数ならば0から255までの索引番号のひとつひとつに任意の
+      <acronym>RGB</acronym>色が割り振られます。 対照表に登録できる色には何ら
+      制限はなく、 その順序も問いません。 どの索引番号にどの色を結び付けても
+      構わないのです。
+    </para>
+    <para lang="ja">
+      インデックス化カラー画像で <emphasis>使える</emphasis> 色はカラーマップに
+      <emphasis>登録されている色に限られる</emphasis> ことは重要ですので
+      しっかり理解してください (つまり使いたい色が他にあれば最大色数が許す
+      範囲で再登録すればよいとも言えます)。 この制約は<acronym>GIMP</acronym>で
+      の大多数の操作に大きな影響を及ぼします。 例えば、 パターンで埋め尽くそう
+      とするとほとんどの場合カラーマップには同等な色が見付からないので、
+      <acronym>GIMP</acronym>は一番近そうな色で近似を行ないます。 この処理に
+      <link linkend="glossary-quantization">量子化</link> を援用することも
+      よくあります。 カラーマップの制約が大きかったり色数が乏しいと仕上がりの
+      画質はほぼ確実に非常に貧相になります。
+    </para>
+    <para lang="ja">
+      カラーマップダイアログで画像のカラーマップを変更できます。 新たに登録項目
+      を作成したり既存の項目の色を別の色に変えたりします。 既に使用されている
+      参照番号に対する色を変更すると画像上にもその変更が反映され、 その色を参照
+      している全ての画素の色が一斉に入れ替わります。 ダイアログの色表では0番の
+      色が左上隅に、 1番の色がその右隣に&hellip;のように並んでいます。
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-indexed-palette-dialog-using">
+    <title lang="en">Using the Colormap dialog</title>
+    <title lang="ja">カラーマップダイアログの利用法</title>
+    <para lang="en">
+      Here are the operations you can perform using this dialog:
+    </para>
+    <para lang="ja">このダイアログを使うとできることはつぎのとおりです。</para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Click on a color entry</term>
+        <term lang="ja">色見出しをクリック</term>
+        <listitem>
+          <para lang="en">
+            This sets GIMP's foreground color to the color you click on, as
+            shown in the Toolbox color area. As a result, this color will be
+            used for the next painting operation you do.
+          </para>
+          <para lang="ja">
+            するとクリックした色が<acronym>GIMP</acronym>描画色 (ツールボックス
+            の色標識で表示されています) になります。 そのあとは塗色操作にこの色
+            が使えるようになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Ctrl-click on a color entry</term>
+        <term lang="ja">
+          <keycap>Ctrl</keycap> キーを押しながら色見出しをクリック
+        </term>
+        <listitem>
+          <para lang="en">
+            This sets GIMP's background color to the color you Ctrl-click on,
+            as shown in the Toolbox color area.
+          </para>
+          <para lang="ja">
+            するとクリックした色が<acronym>GIMP</acronym>背景色 (ツールボックス
+            の色標識で表示されています) になります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Double-click on a color entry</term>
+        <term lang="ja">色見出しをダブルクリック</term>
+        <listitem>
+          <para lang="en">
+            This sets GIMP's foreground color to the color you click on, and
+            also brings up a Color Editor that allows you to change that
+            colormap entry to a new color.
+          </para>
+          <para lang="ja">
+            するとクリックした色が<acronym>GIMP</acronym>描画色になり、 さらに
+            <quote>インデックスカラーの編集</quote>ダイアログが開かれてカラー
+            マップ上のその項目の色を別の色に変更できるようになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color index</term>
+        <term lang="ja">カラーインデックス</term>
+        <listitem>
+          <para lang="en">
+            You can select a different colormap entry by typing its index
+            here, or clicking the spinbutton to the right.
+          </para>
+          <para lang="ja">
+            <guilabel>カラーインデックス</guilabel> の数値欄に索引番号を記入
+            したりスピンボタンを操作して色見出しが指定できます。 そのほか
+            クリックで選択した色見出しの色の索引番号がこの数値欄に表示
+            されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">HTML-Notation</term>
+        <term lang="ja"><acronym>HTML</acronym> 表記</term>
+        <listitem>
+          <para lang="en">
+            This area shows a hex-code representation (such as is used in
+            HTML) for the color assigned to the currently selected colormap
+            entry. You can edit the color here, instead of using a Color
+            Editor, if you want to. See
+            <link linkend="glossary-html-notation">HTML notation</link>
+          </para>
+          <para lang="ja">
+            <guilabel>HTML 表記</guilabel> の数値欄は現在選択されている検索番号
+            に登録されている色を、 16進表記 (<acronym>HTML</acronym>で使われて
+            いるものと同じです) で表示します。 お望みならば色編集ダイアログを
+            呼び出さなくても直接<acronym>RGB</acronym>値をここに記入して色を
+            指定する方法がとれます。 用語集の
+            <link linkend="glossary-html-notation"><acronym>HTML</acronym> 
+            表記法</link> をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edit color</term>
+        <term lang="ja">色を編集</term>
+        <listitem>
+          <anchor id="gimp-indexed-palette-edit"/>
+          <para lang="en">
+            This button (in the lower left corner of the dialog) brings up a
+            Color Editor that allows you to change the color for the currently
+            selected colormap entry. The effect is similar to double-clicking
+            on the entry, except that it does not set GIMP's foreground color.
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-gtk-edit-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「色を編集」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            このボタン (ダイアログの左下にあります) をクリックすると<quote>
+            インデックスカラーの編集</quote>ダイアログが開かれ、 現在選択して
+            いるカラーマップの索引項目の色がそこで変更できます。 色見出しを
+            ダブルクリックしたときと似ていますが、 このボタンを使った場合は
+            <acronym>GIMP</acronym>描画色の変更はありません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Add color</term>
+        <term lang="ja">色を追加</term>
+        <listitem>
+          <anchor id="gimp-indexed-palette-add"/>
+          <para lang="en">
+            This button (in the lower right corner of the dialog) allows you
+            to add new colors to the colormap. If you click on the button, the
+            current foreground color, as shown in the Toolbox, will be tacked
+            on to the end of the colormap. If instead you hold down
+            <keycap>Ctrl</keycap> and click, the background color from the
+            Toolbox will be added. (If the colormap contains 256 entries, it
+            is full, and trying to add more will have no effect.)
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-gtk-add-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「色を追加」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            このボタン (ダイアログの右下にあります) でカラーマップに新たに色を
+            追加できます。 このボタンをクリックしたときの描画色 (ツールボックス
+            の色標識に表示されています) がカラーマップの最後尾に付け加えられ
+            ます。 一方でクリックする際に <keycap>Ctrl</keycap> キーを押して
+            いた場合は背景色が加えられます。 (ただしもしカラーマップに256色の
+            項目が既に登録されて満杯になっていたときは、 このボタンは灰色無効で
+            使用できません。)
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <tip>
+      <para lang="en">
+        If you make a mistake, you can undo it by focusing the pointer in
+        the image whose colormap you have changed, and then pressing
+        <keycap>Ctrl-Z</keycap> or choosing
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Undo</guimenuitem>
+        </menuchoice>
+        in the image menu.
+      </para>
+      <para lang="ja">
+        カラーマップダイアログでの作業も操作履歴に記録されますので、 何か失敗
+        したときはそのカラーマップに直接関わる画像を活性化してから、
+        <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
+        の組み合わせを押すか画像ウィンドウのメニューより
+        <menuchoice>
+          <guimenu>編集</guimenu>
+          <guimenuitem>&hellip; を元に戻す</guimenuitem>
+        </menuchoice>
+        (&hellip;には直前の操作の名前が入ります) を実行すれば取り消せます。
+      </para>
+    </tip>
+    <note>
+      <para lang="en">
+        This dialog provides the most commonly used methods for altering the
+        colormap for an indexed image. The color tools, such as
+        Brightness/Contrast, Hue/Saturation, etc, do not operate on indexed
+        images. There are a few plug-ins that do so, including the
+        <quote>Normalize</quote>, <quote>VColor Enhance</quote>, and
+        <quote>Stretch Contrast</quote> operations, and it is possible to
+        create others as well.
+      </para>
+      <para lang="ja">
+        このダイアログならインデックス化カラー画像のカラーマップを変更する通常
+        の処理はほとんどこなせます。 <quote>明るさ-コントラスト</quote>ツールや
+        <quote>色相-彩度</quote>ツールなどの色ツールではインデックス化画像の
+        加工ができません。 一方でプラグインのなかには<quote>正規化</quote>、
+        <quote>色強調</quote>、 <quote>コントラスト伸長</quote>をはじめ僅か
+        ですがインデックス化画像を操作できるものがあります。
+      </para>
+    </note>
+    <note>
+      <para lang="en">
+        If you paint an indexed image with a color which is not in the
+        Colormap, GIMP will use the most similar color of the Colormap.
+      </para>
+      <para lang="ja">
+        インデックス化カラー画像に塗った色がカラーマップになかった場合は、
+        <acronym>GIMP</acronym>はカラーマップにあるよく似た色を代わりに使って
+        発色させます。
+      </para>
+    </note>
+  </sect3>
+
+  <sect3 id="gimp-indexed-palette-dialog-submenu">
+    <title lang="en">The Colormap context menu</title>
+    <title lang="ja"><quote>カラーマップ</quote>の脈絡メニュー</title>
+    <para lang="en">
+      Right-clicking on a color in the Colormap selects this color and opens
+      a pop-up submenu:
+    </para>
+    <para lang="ja">
+      カラーマップダイアログの色見出しのいずれかをマウスで <mousebutton>
+      第2ボタン</mousebutton> クリックすると、 その色が選択されるとともに
+      サブメニューが開かれます。
+    </para>
+    <figure>
+      <title lang="en">The Colormap context menu</title>
+      <title lang="ja"><quote>カラーマップ</quote>の脈絡メニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+                     fileref="images/dialogs/colormap-contextmenu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Edit color</term>
+        <term lang="ja">色の編集...</term>
+        <listitem>
+          <para lang="en">
+            This command opens a color selector which allows you to modify
+            the color.
+          </para>
+          <para lang="ja">
+            このコマンドは色を探るダイアログを開きますから、 そこで現在選択して
+            いる索引番号に対する色を変更できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Add from FG</term>
+        <term lang="ja">描画色から色を追加</term>
+        <listitem>
+          <para lang="en">
+            This command is enabled only if the indexed palette contains less
+            than 256 colors. The background color of the Toolbox is appended
+            to the color map.
+          </para>
+          <para lang="ja">
+            このコマンドはインデックス化パレットの色数が256色に満たない場合に
+            のみ現れます。 ツールボックスでも表示されている背景色がカラーマップ
+            に付け加えられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Add from BG</term>
+        <term lang="ja">背景色から色を追加</term>
+        <listitem>
+          <para lang="en">
+            This command is enabled only if the indexed palette contains less
+            than 256 colors. The background color of the Toolbox is appended
+            to the color list.
+          </para>
+          <para lang="ja">
+            このコマンドはインデックス化パレットの色数が256色に満たない場合に
+            のみ現れます。 ツールボックスでも表示されている描画色がカラーマップ
+            に付け加えられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Rearrange Colormap</term>
+        <term lang="ja">インデックスカラーの並び替え...</term>
+        <listitem>
+          <para lang="en">
+            Rearrange Colormap: This command is described in
+            <xref linkend="plug-in-colormap-remap"/>.
+          </para>
+          <para lang="ja">
+            <xref linkend="plug-in-colormap-remap"/> に説明があります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

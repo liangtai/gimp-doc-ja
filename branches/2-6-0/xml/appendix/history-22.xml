@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2007-09-02 lexa: moved from introduction to make space for the 2.4 intro
+ -->
+<!--2009-09-19-->
+<sect1 id="gimp-introduction-history-2-2">
+  <title lang="en">What's New in GIMP 2.2?</title>
+  <title lang="ja"><acronym>GIMP</acronym> 2.2 の新機能</title>
+
+  <para lang="en">
+    Here is a brief summary of some of the most important new features
+    introduced in <acronym>GIMP</acronym>
+    2.2. There are many other smaller changes that long-time users will notice
+    and appreciate (or complain about!). There are also important changes at
+    the level of plug-in programming and script-fu creating that are not
+    covered here.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym> 2.2 より導入された最も重要な新機能のいくつかに
+    ついて手短に紹介します。 それ以外にも長い間ユーザが感知し注意をしてきた 
+    (あるいは指摘された) 小さな変更があります。 プラグインのプログラミングや
+    Script-Fuスクリプトの作成のレベルが変更されるという重大な変更があるの
+    ですがこれについては割愛させていただきます。
+  </para>
+  <variablelist>
+    <varlistentry>
+      <term lang="en">Interoperability and Standards Support</term>
+      <term lang="ja">相互運用性と標準のサポート</term>
+      <listitem>
+        <itemizedlist>
+          <listitem>
+            <para lang="en">
+              You can drag-and-drop or copy-and-paste image data from the
+              <acronym>GIMP</acronym> to
+              any application which supports image/png drops (currently
+              <application>Abiword</application> and
+              <application>Kword</application> at least) and image/xml+svg drops
+              (<application>Inkscape</application>
+              supports this one). So you can copy-and-paste curves into the
+              <acronym>GIMP</acronym>
+              from <application>Inkscape</application>, and then drag a
+              selection into <application>Abiword</application> to include it
+              inline in your document.
+            </para>
+            <para lang="ja">
+              ドラッグアンドドロップ (曳いて放つ) やコピーアンドペースト (
+              写し取って貼りつける、 コピペ) の操作で、 <acronym>GIMP
+              </acronym>の画像データを少なくとも <application>Abiword
+              </application> や <application>Kword</application> のような
+              <type>image/png</type> 型サポートのアプリケーションに落とし
+              込んだり、 <application>Inkspace</application> のような 
+              <type>image/xml+svg</type> 型サポートのアプリケーションに
+              落とし込んだりできるようになりました。 同じく <application>
+              Inkspcape</application> の曲線を<acronym>GIMP</acronym>に取り
+              込んだり、 選択範囲を <application>Abiword</application> まで
+              曳いて文書の文中に差し込んだりできます。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Patterns can now be any supported <classname>GtkPixbuf</classname>
+              format, including png, jpeg, xbm and others.
+            </para>
+            <para lang="ja">
+              パターンには <acronym>PNG</acronym>や<acronym>JPEG</acronym>や
+              <acronym>XBM</acronym>など<classname>GtkPixbuf</classname> が
+              サポートする全ての形式が使えます。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              <acronym>GIMP</acronym> can load gradients from SVG files, and
+              palettes from ACT and RIFF files.
+            </para>
+            <para lang="ja">
+              <acronym>SVG</acronym>ファイルを読み込んで<acronym>GIMP
+              </acronym>のグラデーションに、 <acronym>ACT</acronym>ファイルや
+              <acronym>RIFF</acronym>ファイルを読み込んでパレットにできます。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Drag-and-drop support has been extended. You can now drop
+              files and URIs onto an image window, where they will be opened
+              in the existing image as new layers.
+            </para>
+            <para lang="ja">
+              曳いて放つ動作 (ドラッグアンドドロップ) が拡張されました。 
+              ファイルや<acronym>URI</acronym>を画像ウィンドウに曳き込んで
+              開いたり、 開かれている画像のウィンドウに曳き込んでレイヤーと
+              して加えたりできます。
+            </para>
+            <note>
+              <para lang="en">
+                Please note, that Drag and Drop will not work for Apple Mac OS X
+                between GIMP and the finder. This is due to a lack of
+                functionality on Apples X11.app
+              </para>
+              <para lang="ja">
+                ただし <productname>Apple Mac OS X</productname> 上では
+                <acronym>GIMP</acronym>と <application>Finder</application> の
+                間ではドラッグアンドドロップがはたらきません。 これは Apple の
+                <application>X11.app</application> にその機能が無いためです。
+              </para>
+            </note>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Shortcut Editor</term>
+      <term lang="ja">ショートカットエディタ</term>
+      <listitem>
+        <para lang="en">
+          You can now edit your shortcuts in a dedicated dialog, as well as
+          continue to use the little-known dynamic shortcuts feature (which has
+          been there since 1.2).
+        </para>
+        <para lang="ja">
+          ショートカットが専用のダイアログで編集できるようになりました。 編集
+          には 1.2 以来少し知られた動的ショートカット割り付け機能もひきつづき
+          使えます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Plug-in Previews</term>
+      <term lang="ja">プラグイン用プレビュー</term>
+      <listitem>
+        <para lang="en">
+          We have provided a standard preview widget for plug-in authors which
+          greatly reduces the amount of code required to support previews. David
+          Odin has integrated this widget into all the current filters, so that
+          now many more filters in the <acronym>GIMP</acronym> include a preview
+          which updates in
+          real time, and the various previews behave much more consistently.
+        </para>
+        <para lang="ja">
+          プラグイン作者にとっては朗報な標準的プレビューウィジェットを用意
+          しました。 これでプレビューをサポートする分だけ必要なコードが減らせ
+          ます。 David Odin氏が現在提供されているフィルタの全てにこの
+          ウィジェットを統合させましたので、 <acronym>GIMP</acronym>のフィルタ
+          は設定を即座に反映するプレビューがついたプラグインがぐんと増え、 
+          いろいろなプレビューがなお一層統一感のある動作をするように
+          なりました。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Real-Time Previews of Transform Operations</term>
+      <term lang="ja">変換操作用の即時プレビュー</term>
+      <listitem>
+        <para lang="en">
+          The transform tools (shear, scale, perspective and rotate) can
+          now show a real-time preview of the result of the operation when
+          the tool is in <quote>Traditional</quote> mode.  Previously, only a
+          transforming grid was shown.
+        </para>
+        <para lang="ja">
+          剪断変形、 拡大・縮小、 遠近法、 回転の各変換ツールが<quote>伝統的
+          </quote>モードにすると変形操作の状況を即時プレビューに表示できます。
+          これまではグリッド (格子線) が変形する表示しかありませんでした。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">GNOME Human Interface Guide Conformance</term>
+      <term lang="ja">GNOME ヒューマンインタフェースのガイドラインに適合</term>
+      <listitem>
+        <para lang="en">
+          A lot of work has been done on making the <acronym>GIMP</acronym>'s
+          interface simpler and
+          more usable for newcomers. Most dialogs now follows the
+          <acronym>GNOME</acronym> HIG to
+          the best of our knowledge. In addition, dialogs have separated out or
+          removed many <quote>Advanced</quote> options, and replaced them with
+          sane defaults or hidden them in an expander.
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>のインタフェースをさらに簡素にするべく数多く
+          の工事が行なわれ、 <acronym>GIMP</acronym>が初めての人でももっと
+          使い易くなりました。 我々のあらん限りの知識を動員してほとんどの
+          ダイアログでこの<acronym>GNOME HIG</acronym>に準拠しました。 さらに
+          数々の<quote>高度な</quote>オプションをダイアログから分離もしくは
+          廃棄して変ではない初期設定値にしたり普段は隠すようにしました。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">GTK+ 2.4 Migration</term>
+      <term lang="ja"><acronym>GTK+</acronym> 2.4 に載せ替え</term>
+      <listitem>
+        <itemizedlist>
+          <listitem>
+            <para lang="en">
+              Menus use the <classname>GtkUIManager</classname> to
+              generate menu structure dynamically from XML data files.
+            </para>
+            <para lang="ja">
+              メニューには <classname>GtkUIManager</classname> を採用し
+              <acronym>XML</acronym>データファイルから動的にメニューを
+              構築させることにしました。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              A completely revamped File Chooser is used everywhere in the
+              <acronym>GIMP</acronym>
+              for opening or saving files. The best thing about it is that it
+              lets you create a set of <quote>bookmarks</quote>, making it
+              possible to
+              navigate quickly and easily to commonly used directories.
+            </para>
+            <para lang="ja">
+              ファイルの読み込みや保存を行なう<acronym>GIMP</acronym>の
+              あらゆる場面で使われるファイル選択ダイアログが徹底的に改造
+              されました。 この最大の長所が<quote>ブックマーク</quote>を
+              作成できることで、 簡単に手早くいつも使うディレクトリに導かせ
+              られます。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              <acronym>GIMP</acronym> now supports fancy ARGB cursors when they
+              are available on the system.
+            </para>
+            <para lang="ja">
+              装飾的な ARGB カーソルのサポートが実現し、 システムで利用可能に
+              なっておれば<acronym>GIMP</acronym>でも使えます。
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Basic Vector Support</term>
+      <term lang="ja">基本的なベクトルのサポート</term>
+      <listitem>
+        <para lang="en">
+          Using the GFig plug-in, the <acronym>GIMP</acronym> now supports the
+          basic functionality
+          of vector layers. The GFig plug-in supports a number of vector
+          graphics features such as gradient fills, Bezier curves and curve
+          stroking. It is also the easiest way to create regular or irregular
+          polygons in the <acronym>GIMP</acronym>. In the
+          <acronym>GIMP</acronym> 2.2, you can create GFig layers, and
+          re-edit these layers in GFig afterwards. This level of vector support
+          is still quite primitive, however, in comparison to dedicated
+          vector-graphics programs such as <application>Inkscape</application>.
+        </para>
+        <para lang="ja">
+          GFigプラグインを使って基本的なベクトルレイヤーの機能を<acronym>GIMP
+          </acronym>でサポートできました。 GFigプラグインはベクトル描画において
+          グラデーション塗りつぶしやベジエ曲線や曲線に沿った描線といった数々の
+          機能をサポートします。 正多角形や不規則な多角形を<acronym>GIMP
+          </acronym>で作成する一番簡単な方法にもなっています。 <acronym>GIMP
+          </acronym> 2.2 からはGFigで作ったレイヤーの図形はあとから再びGFigで
+          編集が可能になっています。 しかしベクトル描画に特化した 
+          <application>Inkscape</application> のようなプログラムに比べると
+          まだまだベクトルのサポートは極めて原始的な水準です。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Also . . .</term>
+      <term lang="ja">そのうえ . . .</term>
+      <listitem>
+        <para lang="en">
+          There are many other smaller user-visible features. A rapid-fire list
+          of some of those features is below.
+        </para>
+        <para lang="ja">
+          他にもユーザの目に見える小さな機能があります。 このあとはそんな機能を
+          矢継ぎ早に紹介しています。
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para lang="en">
+              It is now possible to run the <acronym>GIMP</acronym> in batch
+              mode without an X server.
+            </para>
+            <para lang="ja">
+              X サーバがなくてもバッチモードで<acronym>GIMP</acronym>を稼動
+              させられます。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              We have a <acronym>GIMP</acronym> binary
+              (<acronym>GIMP</acronym>-console) which is not linked to GTK+
+              at all.
+            </para>
+            <para lang="ja">
+              <acronym>GTK+</acronym>に全くリンクしない<acronym>GIMP</acronym>
+              バイナリ (<acronym>GIMP</acronym>コンソール) があります。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Improved interface for extended input devices
+            </para>
+            <para lang="ja">
+              拡張入力デバイスのインタフェースを改良しました。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Editable toolbox: You can now decide which tools should be shown
+              in the Toolbox, and their order. In particular, you can add any or
+              all of the Color Tools to the Toolbox if you wish to.
+            </para>
+            <para lang="ja">
+              編集可能なツールボックス&mdash;ツールボックスに載せるツール
+              アイコンを選べるようになり、 順序も指定できます。 特に色ツール
+              を一部もしくは全部ツールボックスに載せることも可能です。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Histogram overlays R, G and B histograms on the Value histogram, and
+              calculates the histogram only for the contents of the selection.
+            </para>
+            <para lang="ja">
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Shortcuts are now shared across all <acronym>GIMP</acronym> windows.
+            </para>
+            <para lang="ja">
+              ショートカットは全ての<acronym>GIMP</acronym>ウィンドウで共有
+              されます。
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</sect1>

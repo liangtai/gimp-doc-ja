@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-06-16 Added Spanish translation by AntI
+  2007-03-12 Kolbjorn: added no translation
+  2005/11/11 split of from layer-mask.xml by axel.wernicke
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-layer-offset">
+  <title lang="en">Offset</title>
+  <title lang="ja">オフセット...</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Transform</secondary>
+    <tertiary>Shift layer content</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Offset</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="ヘンカン">変換</secondary>
+    <tertiary sortas="レイヤーノナカミダケズラス">
+      レイヤーの中身だけずらす
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>オフセット</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Offset</guimenuitem> command shifts the
+    <emphasis>content</emphasis> of the active layer. Anything shifted
+    outside the layer boundary is cropped. This command displays
+    a dialog which allows you to specify how much to shift the layer and
+    how to fill the space that is left empty by shifting it.
+  </para>
+  <para lang="ja">
+    <guimenuitem>オフセット...</guimenuitem> コマンドは
+    レイヤーは動かさずその上に描かれたものをずらします。 レイヤーの境界線から
+    はみ出したものは切り捨てられるか反対側に回り込みます。 このコマンドは
+    ダイアログを開きますので、 活性レイヤー上で内容をずらす距離と空いた部分の
+    埋め合わせ方法を指定してください。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Transform</guisubmenu>
+            <guimenuitem>Offset</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guisubmenu>変換</guisubmenu>
+            <guimenuitem>オフセット...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the keyboard shortcut
+          <keycombo>
+            <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>O</keycap>
+          </keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo>
+            <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>O</keycap>
+          </keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Using the <quote>Offset</quote> Command</title>
+    <title lang="ja"><quote>オフセット</quote>コマンドの使用法</title>
+    <figure>
+      <title lang="en">The <quote>Offset</quote> dialog</title>
+      <title lang="ja"><quote>オフセット</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/dialogs-offset-layer.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Offset</term>
+        <term lang="ja">オフセット</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term>X; Y</term>
+              <listitem>
+                <para lang="en">
+                  With these two values, you specify how far the contents of
+                  the layer should be shifted in the horizontal (X) and
+                  vertical (Y) directions. You can enter the offsets in the
+                  text boxes. Positive values move the layer to the right
+                  and downward. The default unit is pixels, but you can
+                  choose a different unit of measurement with the drop-down
+                  menu. A unit of <quote>%</quote> is sometimes useful.
+                </para>
+                <para lang="ja">
+                  水平 X と垂直 Y の縦横2つの値でレイヤー上の内容のずらし距離を
+                  数値記入欄に示してください。 負の値なら右方向と下方向に移動
+                  です。 既定の単位はピクセルですが、 引き出しメニューで他の
+                  単位も使用できます。 <quote>%</quote>を単位とすると便利な場合
+                  があります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Offset by x/2, y/2</term>
+              <term lang="ja">オフセットを (x/2) と (y/2) に</term>
+              <listitem>
+                <para lang="en">
+                  With this button, you can automatically set the
+                  <guilabel>X</guilabel> and <guilabel>Y</guilabel> offsets
+                  so that the contents are shifted by exactly half the width
+                  and half the height of the image.
+                </para>
+                <para lang="ja">
+                  このボタンはレイヤー上の内容が幅の半分と高さの半分にちょうど
+                  ずれるように <guilabel><accel>X</accel></guilabel> と
+                  <guilabel><accel>Y</accel></guilabel> の値を自動調整します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edge Behavior</term>
+        <term lang="ja">境界部分の処理方法</term>
+        <listitem>
+          <para lang="en">
+            You can specify one of three ways to treat the areas left empty
+            when the contents of the layer are shifted:
+          </para>
+          <para lang="ja">
+            レイヤーの内容をずらしたあとに残される空いた領域を埋め合わせる方法
+            にはつぎの3つの選択肢があります。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <emphasis>Wrap around</emphasis>:
+                The empty space on one side of the layer is filled with the
+                part of the layer which is shifted out of the other side, so
+                none of the content is lost.
+              </para>
+              <para lang="ja">
+                <guilabel>はみ出し部分を回り込ませる
+                </guilabel>: レイヤーの空き領域にはもう一方の境界線よりはみ
+                出した部分が入ります。 描かれた内容が切り捨てられることは
+                ありません。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <emphasis>Fill with background color</emphasis>:
+                The empty space is filled with the background color, which
+                is shown in the Color Area of the Toolbox.
+              </para>
+              <para lang="ja">
+                <guilabel>背景色で塗りつぶす</guilabel>: 
+                レイヤーの空き領域はツールボックスの色標識に示される背景色で
+                塗りつぶされます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <emphasis>Make transparent</emphasis>:
+                The empty space is made transparent. If the layer does not
+                have an alpha channel, this choice is not available (grayed
+                out).
+              </para>
+              <para lang="ja">
+                <guilabel>透明にする</guilabel>: 空き領域は
+                完全透過になります。 ただしレイヤーにアルファチャンネルがない
+                場合はこの選択肢は灰色無効となり使用できません。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

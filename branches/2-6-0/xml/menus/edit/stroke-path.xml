@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- Section history:
+     2009-01-07 j.h: TODO link to Brush Dynamics (ex Jitter)
+  2007-10-14 j.h: rearranged according to v2.4
+  2007-05-14 Added Spanish translation by AntI
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-path-stroke">
+  <title lang="en">Stroke Path</title>
+  <title lang="ja">パスの境界線を描画...</title>
+
+  <indexterm lang="en">
+    <primary>Paths</primary>
+    <secondary>Stroke</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Stoke path</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>パス</primary>
+    <secondary sortas="キョウカイセンヲビョウガ">境界線を描画</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="パスノキョウカイセンヲビョウガ">
+      パスの境界線を描画
+    </primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Stroke Path</guimenuitem> command strokes a path in
+    the image. There are two ways you can stroke the path, either by using
+    a paint tool, or without using one. There are various options which you
+    can use to specify how this stroke should look.
+  </para>
+  <para lang="ja">
+    <guimenuitem>パスの境界線を描画</guimenuitem> コマンドは
+    画像上のパスに沿って描線を行ないます。 パスの境界線の描画には描画ツールを
+    用いる方法と用いない方法の2通りがあります。 描線の表現方法にはさまざまな
+    オプションがあります。
+  </para>
+  <note>
+    <para lang="en">
+      This command is active only if there is a path in your image.
+    </para>
+    <para lang="ja">
+      このコマンドは画像上でパスが活性化しているときのみ利用可能になります。
+    </para>
+  </note>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Stroke Path</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guimenuitem>パスの境界線を描画...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          You can also access it by clicking on the button with the same name
+          in the <link linkend="gimp-path-dialog">Path dialog</link>.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-path-dialog">パスダイアログ</link> からもこの
+          コマンドが呼びだせます。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Description of the Dialog Window</title>
+    <title lang="ja">ダイアログウィンドウのご説明</title>
+    <figure>
+      <title lang="en">
+        The <quote>Choose Stroke Style</quote> dialog window
+      </title>
+      <title lang="ja">
+        <quote>ストロークスタイルの選択</quote>ダイアログのウィンドウ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/edit/stroke-path.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The <guilabel>Choose Stroke Style</guilabel> dialog box allows you to
+      choose between stroking the path with the options you specify or
+      stroking it with a paint tool. If you stroke the path with a paint
+      tool, the current paint tool options are used to draw the stroke.
+    </para>
+    <para lang="ja">
+      <quote>ストロークスタイルの選択</quote>ダイアログではダイアログ上で描線の
+      形態をこと細かに指定する方法と、 描画ツールを使った描画を指定する方法の
+      いずれかが選択できます。 描画ツールを用いてパスを描画する場合は、 その
+      描画ツールのツールオプションが描線に使われます。
+    </para>
+    <variablelist>
+      <title lang="en">Stroke line</title>
+      <title lang="ja">線スタイルを設定して描画</title>
+      <para lang="en">
+        The stroke is drawn with the current foreground color,
+        set in the Toolbox. By clicking on the triangle next to
+        <guilabel>Line Style</guilabel> however, the dialog expands
+        and you can set several additional options:
+      </para>
+      <para lang="ja">
+        描線はツールボックスの塗色標識で示される現在の描画色で行われます。 
+        さらに <guilabel>線の種類</guilabel> の隣の小さな
+        三角形をクリックすると、 線の形態を指定する追加オプションが展開します。
+      </para>
+      <varlistentry>
+        <term lang="en">Line Width</term>
+        <term lang="ja">線の幅</term>
+        <listitem>
+          <para lang="en">
+            You can set the width of the stroke using the text box.
+            The default unit is pixels, but you can choose another
+            unit with the drop-down list button.
+          </para>
+          <para lang="ja">
+            線の幅はスピンボックスで指定します。 値の単位は初期設定では
+            ピクセルですが、 引き出しリストを操作して他の単位も選べます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Solid color / Pattern</term>
+        <term lang="ja">描画色, パターン</term>
+        <listitem>
+          <para lang="en">
+            You can choose whether the line is drawn in the
+            <emphasis>Solid</emphasis> or the
+            <emphasis>Pattern</emphasis>
+            style. Here, Solid and Pattern are distinct from the dash
+            pattern. If you select a Solid line with no dash pattern, an
+            unbroken line is drawn in the foreground color set in the
+            Toolbox. If you select a Patterned line with no dash
+            pattern, an unbroken line is drawn with the pattern set in
+            the Toolbox. If you select a line with a dash pattern, the
+            color or pattern is still determined by the foreground color
+            or pattern set in the Toolbox. That is, if you select a
+            marbled pattern and Patterned, dashed lines, the dashes are
+                  drawn in the marbled pattern
+          </para>
+          <para lang="ja">
+            描線は <guilabel>描画色</guilabel> で単色塗りとするか <guilabel>
+            パターン</guilabel> を貼るかのいずれかを選べます。 描画色とパターン
+            は <guilabel>破線のパターン</guilabel> とは別の概念ですので併用でき
+            ます。 <!--<quote>描画色</quote>で破線以外の描線を行うとツール
+            ボックスで示される描画色による途切れない線が描かれます。 <quote>
+            パターン</quote>で破線以外の描線を行うとツールボックスで示される
+            パターンによる途切れない線が描かれます。 破線パターンを指定した場合
+            もツールボックスで示される描画色かパターンが使われます。 つまり、 
+            ここでパターンを選択して大理石の文様を用い、 <quote>破線パターン
+            </quote>を指定すると、 大理石の文様による破線が描かれます。-->
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Line Style</term>
+        <term lang="ja">線の種類</term>
+        <listitem>
+          <para lang="en">
+            This drop-list brings some detailed options :
+          </para>
+          <para lang="ja">これを展開すると詳細なオプションが現れます。</para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>Cap Style</guilabel> : You can choose the shape of
+                the ends of an unclosed path,  which can be
+                <emphasis>Butt</emphasis>, <emphasis>Round</emphasis>
+                or <emphasis>Square</emphasis>.
+              </para>
+              <para lang="ja">
+                <guilabel>線のスタイル</guilabel>: 閉じてい
+                ないパスの線端を描く際の形状を <emphasis>鐓</emphasis>、 
+                <emphasis>丸め</emphasis>、 <emphasis>四角形</emphasis> から
+                選べます。
+                <!--<emphasis>端で止める</emphasis>、 
+                <emphasis>端を中心にして丸め</emphasis>、 
+                <emphasis>端を中心にして四角形</emphasis> -->
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Join Style</guilabel> :
+                You can choose the shape of the path corners by
+                clicking on <emphasis>Miter</emphasis>,
+                <emphasis>Round</emphasis> or <emphasis>Bevel</emphasis>.
+              </para>
+              <para lang="ja">
+                <guilabel>結合スタイル</guilabel>: ノード上の
+                パスの継ぎ目を描く際の形状を <emphasis>斜め継ぎ</emphasis>、
+                <emphasis>丸め</emphasis>、 <emphasis>面取り</emphasis> から
+                選べます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Miter limit</guilabel> :
+                When two segments of a path come together, the mitering of
+                the corner is determined by the Miter Limit. If the strokes
+                were wide, and no mitering were done, there would be pointed
+                ends sticking out at the corner. The Miter Limit setting
+                determines how the gap, formed when the outer edges of the
+                two lines are extended, will be filled. You can set it to a
+                value between 0.0 and 100.0, by using the slider or the
+                associated text box and its arrows.
+              </para>
+              <para lang="ja">
+                パスの各アンカー上で2つのパス分節を継ぎ合わせるときの<quote>
+                結合スタイル</quote>に斜め継ぎを選ぶと、 その形状は <guilabel>
+                斜め継ぎ限界</guilabel> で区別されます。 
+                ただし太い線で描画されているときは斜め継ぎは起こらず、 分節の
+                端部が角でつながります。 斜め継ぎ限界は2本のパス分節をなぞった
+                描線の輪郭がどの程度延長されその部分が充填されるかを規定
+                します。 0.0 から 100.0 の間の値をスライダやスピンボックスで
+                指定できます。
+              </para>
+              <figure>
+                <title lang="en">Example of miter limit</title>
+                <title lang="ja">斜め継ぎ限界の設定例</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/dialogs/examples/miter.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">Left: Limit=0; Right: Limit=5;</para>
+                    <para lang="ja">左: しきい値=0.0; 右: しきい値=5.0;</para>
+                  </caption>
+                </mediaobject>
+              </figure>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Dash Pattern</guilabel> :
+                On the pixel level, a dashed line is drawn as a series of
+                tiny boxes. You can modify the pattern of these boxes. The
+                black area with thin vertical lines represents the pixels of
+                the dash. If you click on a black pixel, you remove it from
+                the dash. If you click on a white pixel, you add it to the
+                dash. The gray areas indicate how the pattern will be
+                repeated when a dashed line is drawn.
+              </para>
+              <para lang="ja">
+                <guilabel>破線パターン</guilabel>: 細かく画素の視点で見ると破線
+                は小さな箱型の連続で描かれています。 このような箱型の連続形状が
+                調節できます。 ここの黒い線の領域は破線の実部を示していて、 線
+                の各画素の間には縦の白い細かな切れ目がついています。 黒の画素を
+                クリックすれば破線の途切れた部分に替わります。 白の画素を
+                クリックすれば破線の実部に替わります。 灰色の領域は破線パターン
+                の繰り返しの様子を示しています。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Dash Preset</guilabel> :
+                Instead of making your own dash pattern, you can choose
+                one from the drop-down box. This pattern will
+                then be displayed in the <guilabel>Dash pattern</guilabel>
+                area, so you can get an idea of how it will look.
+              </para>
+              <para lang="ja">
+                <guilabel>規定の破線</guilabel>: 破線パターン
+                を自作 (<guilabel>カスタム</guilabel>) する代わりにこの引き出し
+                リストから出来合いの破線形状を選択できます。 選ばれたパターンは
+                <guilabel>破線パターン</guilabel> のところで表示されますから、
+                どんな姿になっているかがよくわかるはずです。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Anti-aliasing</guilabel> :
+                Curved strokes or strokes drawn at an angle may look jagged
+                or stair-stepped. The anti-aliasing option smooths them
+                out.
+              </para>
+              <para lang="ja">
+                <guilabel>アンチエイリアス</guilabel>: 曲線の
+                パスや折れ曲がったパスを描画すると描線の縁がギザギザの階段状に
+                なってしまいますが、 アンチエイリアスオプションを有効にすれば
+                滑らかな輪郭になります。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Stroking with a Paint Tool</term>
+        <term lang="ja">ツールを使って描画</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Paint Tool</term>
+              <term lang="ja">描画ツール</term>
+              <listitem>
+                <para lang="en">
+                  You can select a paint tool to use to draw the stroke from
+                  the drop-down box. If you do that, the currently-selected
+                  options of the paint tool are used, rather than the settings
+                  in the dialog.
+                </para>
+                <para lang="ja">
+                  描線に使う描画ツールはこの引き出しリストから選べます。 ツール
+                  を選んだあとはこのダイアログで指定されたオプションではなく
+                  そのツールのツールオプションダイアログで選ばれたオプションが
+                  採用されます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Emulate Brush Dynamics</term>
+              <term lang="ja">ブラシ感度をエミュレート</term>
+              <listitem>
+                <para lang="en">
+                  See <link linkend="gimp-tool-brush-dynamics">Brush
+                  Dynamics</link>.
+                </para>
+                <para lang="ja">
+                  <link linkend="gimp-tool-brush-dynamics">ブラシ感度の調整
+                  </link> の項をご覧ください。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
