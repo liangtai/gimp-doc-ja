@@ -2,7 +2,7 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2009-02-19 j.h: revised for v2.6
+  2009-09-23 j.h: revised for v2.6
   2006-09-17 added norwegian translation by KoSt
   2006-05-02 added Korean translation by Dust
   2006-02-28 Added italian translation and fixed 'Shift' key meaning for
@@ -12,7 +12,7 @@
   2005-12-18 reviewed and added de translation by lexa
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-09-12-->
+<!--2009-09-23-->
 <sect1 id="gimp-concepts-image-grid-and-guides">
   <title lang="en">Grids and Guides</title>
   <title lang="ja">グリッドとガイド</title>
@@ -37,7 +37,7 @@
     <secondary sortas="ガイカン">概観</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary sortas="ケントウセン">見当線</primary>
+    <primary sortas="ケントウセン">ガイド</primary>
     <secondary sortas="ガイカン">概観</secondary>
   </indexterm>
 
@@ -282,18 +282,18 @@
       <acronym>GIMP</acronym>にはグリッドの他にももっと柔軟な位置合わせ支援の
       しくみがあります。 その名前を <emphasis>ガイド</emphasis> (見当線)
       といいます。 水平な線も垂直な線も画像ウィンドウの定規をクリックして画像
-      まで曳けば作れます。
+      までドラッグすれば作れます。
     </para>
     <para lang="ja">
-      見当線を置くには、 画像ウィンドウの縦もしくは横の定規をクリックして
-      画像内に曳き込みます。 現れた見当線は青色の破線で表示され、 曳いていく
+      ガイドを置くには、 画像ウィンドウの縦もしくは横の定規をクリックして
+      画像内にドラッグし込みます。 現れたガイドは青色の破線で表示され、 ドラッグしていく
       マウスポインタと連動しますのでどこかでマウスボタンを放してください。
-      見当線を作成すると直ちに
+      ガイドを作成すると直ちに
       <xref linkend="gimp-tool-move"/> ツールが起用されます。
     </para>
     <para lang="ja">
       <link linkend="script-fu-guide-new">新規ガイド...</link> コマンド
-      を使っても見当線が置けます。 しかも画像上に精密に見当線を置くための 
+      を使ってもガイドが置けます。 しかも画像上に精密にガイドを置くための 
       <link linkend="script-fu-guide-new-percent">
       新規ガイド (パーセントで)...</link> や、
       <link linkend="script-fu-guides-from-selection">選択範囲から新規ガイド
@@ -301,51 +301,51 @@
     </para>
     <para lang="ja">
       何本でも好きなだけ作れ、 位置もすべて意のままです。
-      作ってある見当線を移動するには、 移動ツールをツールボックスから (あるいは
-      <keycap>M</keycap> キーで) 起用してその線をクリックして曳けばできます。
-      見当線を削除するには画像よりも外側に曳いて移動すればよいだけです。
+      作ってあるガイドを移動するには、 移動ツールをツールボックスから (あるいは
+      <keycap>M</keycap> キーで) 起用してその線をクリックしてドラッグすればできます。
+      ガイドを削除するには画像よりも外側にドラッグして移動すればよいだけです。
       移動ツールでは<!-- <keycap>Shift</keycap> キーを押しながらだと-->ガイド
-      以外なら何でも移動できて見当線が整列補助に効果的に使えます。
+      以外なら何でも移動できてガイドが整列補助に効果的に使えます。
     </para>
     <para lang="ja">
-      見当線の扱い方は
+      ガイドの扱い方は
       <xref linkend="gimp-tool-move"/> ツールの <guilabel>移動対象
       </guilabel> モードに依存します。 <quote>レイヤー</quote>を移動対象に
-      選んだときは、 マウスポインタを見当線にかざすとその姿が小さな掌の形に
-      なります。 さらに見当線が活性化されて赤くなりますので、 クリックして
-      曳くと移動でき、 定規の上まで曳けば消去できます。 <quote>選択範囲
-      </quote>を移動対象に選んでいる場合は、 新たに見当線を作成できても
+      選んだときは、 マウスポインタをガイドにかざすとその姿が小さな掌の形に
+      なります。 さらにガイドが活性化されて赤くなりますので、 クリックして
+      ドラッグすると移動でき、 定規の上までドラッグすれば消去できます。 <quote>選択範囲
+      </quote>を移動対象に選んでいる場合は、 新たにガイドを作成できても
       いったん置くと移動ができません。
     </para>
     <para lang="ja">
-      格子線 (グリッド) と同じように見当線 (ガイド) にもポインタを吸い付かせ
+      格子線 (グリッド) と同じようにガイド (見当線) にもポインタを吸い付かせ
       られます。 メニューで
       <menuchoice>
         <guimenu>表示</guimenu>
         <guimenuitem>ガイドにスナップ</guimenuitem>
       </menuchoice>
-      を有効にしてください。 見当線の数が多過ぎて画像を見ての判断が難しくなった
+      を有効にしてください。 ガイドの数が多過ぎて画像を見ての判断が難しくなった
       場合には
       <menuchoice>
         <guimenu>表示</guimenu>
         <guimenuitem>ガイドを表示</guimenuitem>
       </menuchoice>
       を切り替えて隠すとよいでしょう。 ただし隠すのは一時だけにした方がよいと
-      言われています。 その理由はあとで見当線が欲しくなって追加しても見た目には
+      言われています。 その理由はあとでガイドが欲しくなって追加しても見た目には
       何も起こらないというはめになるからです。
     </para>
     <para lang="ja">
       画像上の部品を一直線に配置するのなら、 
       <link linkend="gimp-view-snap-to-guides">ガイドにスナップ</link> 
-      を有効にしておくとそれらの部品が見当線に吸い付くようになるので
-      便利です。 全ての見当線を消去するには
+      を有効にしておくとそれらの部品がガイドに吸い付くようになるので
+      便利です。 全てのガイドを消去するには
       <link linkend="gimp-image-guides-remove">すべてのガイドを削除
-      </link> をご利用ください。 見当線を消去せずに見えなくするには 
+      </link> をご利用ください。 ガイドを消去せずに見えなくするには 
       <link linkend="gimp-view-show-guides">ガイドを表示</link> コマンド
       をお使いください。
     </para>
     <para lang="ja">
-      見当線の初期設定を変えたほうが良いとお考えならば 
+      ガイドの初期設定を変えたほうが良いとお考えならば 
       <link linkend="gimp-prefs-image-window-appearance">環境設定</link> 
       ダイアログの<quote>画像ウィンドウの表示形式</quote>のページでそのふるまい
       の既定値を変更できます。 でも 
@@ -353,7 +353,7 @@
       前述した理由からあまり良い考えとはいえません。
     </para>
     <para lang="ja">
-      見当線をまとめて削除したいときには
+      ガイドをまとめて削除したいときには
       <menuchoice>
         <guimenu>画像</guimenu>
         <guisubmenu>ガイド</guisubmenu>
@@ -368,9 +368,9 @@
         guides to slice an image into a set of sub-images.
       </para>
       <para lang="ja">
-        見当線の別の利用法:
+        ガイドの別の利用法:
         <link linkend="plug-in-guillotine">ギロチン</link>
-        プラグインは見当線をもとに画像を切り分けて新たな画像を作成します。
+        プラグインはガイドをもとに画像を切り分けて新たな画像を作成します。
       </para>
     </note>
   </sect2>

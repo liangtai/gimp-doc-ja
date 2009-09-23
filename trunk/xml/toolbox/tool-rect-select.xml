@@ -12,7 +12,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050517 de reviewed by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2009-09-23-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-rect-select">
   <title lang="en">Rectangle Selection</title>
   <title lang="ja">矩形選択</title>
@@ -320,7 +320,7 @@
         <inlinegraphic
           fileref="images/toolbox/cross-pt.png" />
       </guiicon> 姿をしています。 画像上でクリックして
-      曳くと長方形 (もしくは正方形) が現れます。 マウスボタンを放すと点滅破線
+      ドラッグすると長方形 (もしくは正方形) が現れます。 マウスボタンを放すと点滅破線
       (<quote>蟻の行進</quote>) が選択範囲の輪郭を描きます。 選択の領域を
       始めから正確にとる必要はありません。 後で簡単に整形[や移動]ができます。
     </para>
@@ -343,12 +343,12 @@
       <guiicon>
         <inlinegraphic fileref="images/toolbox/corner-pt.png" />
       </guiicon>
-      姿です。 そこでクリックして曳けば選択範囲の形状を拡げたり縮めたりできま
+      姿です。 そこでクリックしてドラッグすれば選択範囲の形状を拡げたり縮めたりできま
       す。 上下左右の辺の中間部では、 ポインタは辺上にふさわしい姿に変わりま
       す。 例えば、 マウスポインタが左辺の中程にあるとき、 ポインタはこのような
       <guiicon>
         <inlinegraphic fileref="images/toolbox/side-pt.png" />
-      </guiicon> 姿です。 そこでクリックして曳けば辺が
+      </guiicon> 姿です。 そこでクリックしてドラッグすれば辺が
       動き、 選択範囲の辺の長さを伸縮できます。
     </para>
     <para lang="ja">
@@ -356,7 +356,7 @@
       <guiicon>
         <inlinegraphic fileref="images/toolbox/pointer.png" />
       </guiicon> (移動十字)になります。
-      そこでクリックして曳けば選択範囲全体を移動できます。
+      そこでクリックしてドラッグすれば選択範囲全体を移動できます。
     </para>
     <para lang="ja">
       なお、 <guilabel>選択範囲をハイライト表示</guilabel> オプション
@@ -474,7 +474,7 @@
             pressing the mouse button is used as center of the selected area.
           </para>
           <para lang="ja">
-            このオプションが有効なときはマウスで曳き始めた選択の始点が
+            このオプションが有効なときはマウスでドラッグし始めた選択の始点が
             選択領域の中心とされます。
           </para>
         </listitem>
@@ -587,16 +587,16 @@
 
       <varlistentry>
         <term lang="en">Guides</term>
-        <term lang="ja">見当 (ガイド)</term>
+        <term lang="ja">見当 (見当線)</term>
         <listitem>
           <indexterm lang="en">
             <primary>Guides</primary>
             <secondary>Selection guides</secondary>
           </indexterm>
           <indexterm lang="ja">
-            <primary sortas="ケントウセン">見当線</primary>
+            <primary sortas="ケントウセン">ガイド</primary>
             <secondary sortas="センタクハンイナイヲブンカツスルケントウセン">
-              選択範囲内を分割する見当線
+              選択範囲内を分割するガイド
             </secondary>
           </indexterm>
           <para lang="en">
@@ -606,7 +606,7 @@
           </para>
           <para lang="ja">
             このコンボメニューから分割の種類を選ぶと、 選択範囲内を分割する
-            見当線が現れますので、 選択範囲の <emphasis>写真の構図法</emphasis>
+            ガイドが現れますので、 選択範囲の <emphasis>写真の構図法</emphasis>
             に凖じた構図が作りやすくなります。
           </para>
           <variablelist>
@@ -630,7 +630,7 @@
                   area.
                 </para>
                 <para lang="ja">
-                  選択範囲の縦横の中心に見当線が引かれます。
+                  選択範囲の縦横の中心にガイドが引かれます。
                 </para>
               </listitem>
             </varlistentry>
@@ -643,7 +643,7 @@
                   selection.
                 </para>
                 <para lang="ja">
-                  選択範囲を3&#xd7;3等分するように見当線が引かれます。
+                  選択範囲を3&#xd7;3等分するようにガイドが引かれます。
                 </para>
               </listitem>
             </varlistentry>
@@ -656,7 +656,7 @@
                   sections.
                 </para>
                 <para lang="ja">
-                  このオプションでは見当線が黄金分割を示します。
+                  このオプションではガイドが黄金分割を示します。
                 </para>
               </listitem>
             </varlistentry>
