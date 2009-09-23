@@ -2,7 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2009-03-14 j.h: updated to v2.6. Added central cross in selections and using
+  2009-09-23 j.h: updated to v2.6. Added central cross in selections and using
   arrow keys.
   2008-01-18 ude: updated 'de'
   2008-01-11 j.h: updated to v2.4 'en;fr'
@@ -14,7 +14,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050526 de reviewed and restructured by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2009-09-23-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-move">
   <title lang="en">Move</title>
   <title lang="ja">移動</title>
@@ -49,7 +49,7 @@
     works also on texts.
   </para>
   <para lang="ja">
-    移動ツールはレイヤーや選択、 パス、 見当線を移動するためのものです。
+    移動ツールはレイヤーや選択、 パス、 ガイドを移動するためのものです。
     テキストも移動できます。
   </para>
 
@@ -114,7 +114,7 @@
           guide.
         </para>
         <para lang="ja">
-          見当線を作ったときは自動的に移動ツールが起用されます。
+          ガイドを作ったときは自動的に移動ツールが起用されます。
         </para>
         <note>
           <indexterm lang="en">
@@ -216,7 +216,7 @@
                   <guilabel>つかんだレイヤーまたはガイドを移動</guilabel>:
                   レイヤーを複数持つ画像の、 現在活性化しているレイヤーに属する要素
                   の上ではマウスポインタの姿が移動十字矢印に替わります。 その
-                  要素はクリックして曳けば移動できます。 もしポインタの姿に
+                  要素はクリックしてドラッグすれば移動できます。 もしポインタの姿に
                   小さな掌が加わっている場合 (つまりまだ活性レイヤーの部品を
                   <emphasis>何も</emphasis> つかんでいないことを表しています)
                   には、 代わりに不活性レイヤーを移動する可能性があります
@@ -224,7 +224,7 @@
                 </para>
                 <para lang="ja">
                   画像上にガイド (見当線) を置いていた場合は、 線上にマウス
-                  ポインタをかざすと線が赤色に変わります。 これは見当線が
+                  ポインタをかざすと線が赤色に変わります。 これはガイドが
                   活性化したことを示しており、 移動できます。
                 </para>
               </listitem>
@@ -262,7 +262,7 @@
                   選ばれています。 マウスポインタを
                   <link linkend="gimp-path-dialog-using">可視パス</link>に
                   かざすと、 その姿が小さな掌に替わります。
-                  このときマウスでクリックして曳けばパスを移動できます
+                  このときマウスでクリックしてドラッグすればパスを移動できます
                   (パスは移動の最中だけ活性化します)。
                 </para>
               </listitem>
@@ -327,7 +327,7 @@
           </para>
           <para lang="ja">
             移動対象が選択範囲の場合は、 キャンバス上ならばどこでクリックして
-            曳いても選択範囲の境界線を移動できます。 また <keycap>矢印</keycap>
+            ドラッグしても選択範囲の境界線を移動できます。 また <keycap>矢印</keycap>
             キーを使うと精密に選択範囲を移動できます。 このとき <keycap>Shift
             </keycap> キーを押しながらだと25ピクセル毎に移動します。
           </para>
@@ -339,7 +339,7 @@
               <guimenuitem>ガイドにスナップ</guimenuitem>
             </menuchoice> (あるいは
             <guimenuitem>グリッドにスナップ</guimenuitem> )
-            のオプションを有効にすると、 それらの見当線に吸い付きます。 これで
+            のオプションを有効にすると、 それらのガイドに吸い付きます。 これで
             選択範囲を揃えるのが楽になります。
           </para>
           <para lang="ja">
@@ -398,7 +398,7 @@
             <secondary>Move</secondary>
           </indexterm>
           <indexterm lang="ja">
-            <primary sortas="ケントウセン">見当線</primary>
+            <primary sortas="ケントウセン">ガイド</primary>
             <secondary sortas="イドウ">移動</secondary>
           </indexterm>
           <para lang="en">
@@ -409,10 +409,10 @@
             it.
           </para>
           <para lang="ja">
-            画像ウィンドウ辺上の定規から見当線を曳き出すと、 移動ツールが自動的
+            画像ウィンドウ辺上の定規からガイドをドラッグし出すと、 移動ツールが自動的
             に呼びだされます。 そのあと他のツールを使用したのなら、 移動ツール
-            はご自分で呼びだしてください。 マウスポインタを見当線の上にかざすと
-            見当線は赤色に変わりますので、 それをクリックして曳けば移動
+            はご自分で呼びだしてください。 マウスポインタをガイドの上にかざすと
+            ガイドは赤色に変わりますので、 それをクリックしてドラッグすれば移動
             できます。
           </para>
         </listitem>
