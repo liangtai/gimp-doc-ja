@@ -15,7 +15,7 @@
                    examples and equations
   2006-09-06 scb: thorough review and/or rewrite of English
 -->
-<!--2009-07-16-->
+<!--2009-09-24-->
 <sect1 id="gimp-concepts-layer-modes">
   <title lang="en">Layer Modes</title>
   <title lang="ja">レイヤーのモード</title>
@@ -281,7 +281,7 @@
           なりません。
         </para>
         <para lang="en">The equation is:</para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Normal</quote>
@@ -466,11 +466,12 @@
           <guimenuitem>乗算</guimenuitem> モードは上側のレイヤーの画素の値と
           その下側のレイヤーの画素の値の積を255で除算します。 結果として画像が
           暗くなる場合がほとんどです。 どちらかのレイヤーに純白があればその部分
-          はもう一方のレイヤーの色と同じになります (1 * I = I)。 どちらかの
-          レイヤーに黒があればその部分は完全な黒になります (0 * I = 0)。
+          はもう一方のレイヤーの色と同じになります (1 &times; I = I)。 
+          どちらかのレイヤーに黒があればその部分は完全な黒になります
+          (0 &times; I = 0)。
         </para>
         <para lang="en">The equation is:</para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Multiply</quote>
@@ -554,7 +555,7 @@
           ほとんどの画像は色が薄くなり、 ときには<quote>日焼け</quote>した
           ようにも見えます。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Divide</quote>
@@ -638,7 +639,7 @@
           何も変化しないことと、 レイヤーが白い場合には画像が白くなることです。
           画像の色は暗いところほど透明になります。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Screen</quote>
@@ -728,7 +729,7 @@
         </para>
         <para>
           <title lang="en">The equation is:</title>
-          <title lang="ja">等式はつぎのとおり:</title>
+          <title lang="ja">等式はつぎのとおり。</title>
           <footnote id="gimp-layer-mode-bug162395">
             <para lang="en">
               The equation is the *theoretical* equation. Due to
@@ -841,7 +842,7 @@
           レイヤーモードよりむしろ描画ツールでグレイスケール画像に対しての
           操作で真価を発揮します。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">Equation for layer mode <quote>Dodge</quote></title>
           <title lang="ja">レイヤーモード<quote>覆い焼き</quote>の等式</title>
@@ -929,7 +930,7 @@
           レイヤーモードよりむしろ描画ツールでグレイスケール画像に対しての
           操作で真価を発揮します。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">Equation for layer mode <quote>Burn</quote></title>
           <title lang="ja">レイヤーモード<quote>焼き込み</quote>の等式</title>
@@ -1010,9 +1011,9 @@
         <para lang="ja">
           <guimenuitem>ハードライト</guimenuitem> モードは明るい色用と暗い色用
           の2つの等式を扱うためちょっとややこしくなっています。 上側のレイヤー
-          の画素の値が128を越えておれば、 下に示した第1の数式をレイヤーの
-          合成処理に使います。 逆に上側のレイヤーの画素の値が128以下ならば、
-          両レイヤーの画素の値の積を2倍して256で割ります。 2枚の写真を合成する
+          の画素の値が 128 を越えておれば、 下に示した第1の数式をレイヤーの
+          合成処理に使います。 逆に上側のレイヤーの画素の値が 128 以下ならば、
+          両レイヤーの画素の値の積を2倍して 256 で割ります。 2枚の写真を合成する
           ときこのモードを使えば色が明るくなり形象の輪郭がはっきりします。
         </para>
         <para lang="ja">
@@ -1120,7 +1121,7 @@
         </para>
         <para lang="ja">
           この等式は複雑です。 <quote>スクリーン</quote>モードの結果
-          R<subscript>s</subscript> を使います:
+          R<subscript>s</subscript> を使います。
         </para>
         <equation>
           <title lang="en">
@@ -1217,9 +1218,9 @@
           フィルム粒子</quote>を抽出して純粒子からなる新たなレイヤーを生成する
           ことと想定<!--意味わからぬ-->できますが、 画像にエンボス加工を施した
           ようにする目的にも適います。 上側のレイヤーの画素の値を下側のレイヤー
-          の同じ位置の画素の値から引き、 128を加えます。
+          の同じ位置の画素の値から引き、 128 を加えます。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Grain extract</quote>
@@ -1306,13 +1307,13 @@
         </para>
         <para lang="en">The equation is:</para>
         <para lang="ja">
-          <guimenuitem>微粒結合</guimenuitem> モードは粒状レイヤー (おそらくは
-          <quote>微粒取り出し</quote>モードで作成されたもの) を上側のレイヤーに
+          <guimenuitem>微粒結合</guimenuitem> モードは粒状レイヤー (
+          <quote>微粒取り出し</quote>モードで作成できます) を上側のレイヤーに
           融合させ元のレイヤーの粒状性は残します。 ちょうど<quote>微粒取り出し
           </quote>モードの逆です。 上下の両レイヤーの画素の値の和から128を
           除算します。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Grain merge</quote>
@@ -1390,7 +1391,7 @@
           両レイヤーにどんな画像を使っても、 結果として得られる画像は風変りに
           なります。 画像を部分的に反転させる目的に向いています。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Difference</quote>
@@ -1476,7 +1477,7 @@
           薄くなります。 等式から導かれる色の値は255を越えることもあるため、
           薄い色は最大値255に定められているかもしれません。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Addition</quote>
@@ -1562,7 +1563,7 @@
           等式から導かれる値が負の色の値となることがあり、 暗い色は最低値の0に
           されているのかもしれません。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Subtraction</quote>
@@ -1640,7 +1641,7 @@
           何の変化も起きず、 真っ黒なレイヤーがあると結果の画像も真っ黒に
           なります。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Darken only</quote>
@@ -1723,7 +1724,7 @@
           値を比較して大きな値を結果の画像に使います。 真っ黒なレイヤーが
           あると何の変化も起きず、 真っ白なレイヤーがあると白い画像になります。
         </para>
-        <para lang="ja">等式はつぎのとおり:</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Lighten only</quote>
@@ -1801,7 +1802,7 @@
         <para lang="ja">
           <guimenuitem>色相</guimenuitem> モードは上側のレイヤーの色相と下側の
           レイヤーの彩度と明度を用いて結果の画像を構成します。 ただし上側の
-          レイヤーの彩度が0のとき、 下側のレイヤーから色相も使います。
+          レイヤーの彩度が 0 のとき、 下側のレイヤーから色相も使います。
         </para>
       </listitem>
     </varlistentry>
@@ -2053,6 +2054,6 @@
   </para>
   <para lang="ja">
     別の2つの描画モードについては
-    <link linkend="gimp-paint-mode-examples"/> をご覧ください。
+    <xref linkend="gimp-paint-mode-examples"/> をご覧ください。
   </para>
 </sect1>
