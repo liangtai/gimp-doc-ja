@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2009-09-23-->
+<!--2009-09-24-->
 <sect1 id="gimp-using-paths">
   <title>
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -420,22 +420,24 @@
       follow.
     </para>
     <para lang="ja">
-      <link linkend="gimp-tool-transform">変換ツール</link>のいずれも (回転、
-      拡大・縮小、 遠近法など) がツールオプションダイアログの
-      <guilabel>変換対象:</guilabel> オプションを定めればパスの操作を
-      できるようになっています。 強力な変換ツールの機能を直に利用して、
+      回転、拡大・縮小、 遠近法など、 どんな 
+      <link linkend="gimp-tool-transform">変換ツール</link> でも
+      ツールオプションダイアログの 
+      <guilabel>変換対象:</guilabel> オプションを定めればパス操作が
+      できるようになっています。 強力な変換ツールの機能を直に利用して、 
       画像上の他の構成要素に全く影響を与えずにパスの形状を変更できます。
     </para>
     <para lang="ja">
-      パスを変換対象と定められた変換ツールは、 初期設定では一面のパスにのみ
-      作用します: これは <emphasis>活性化パス</emphasis> としてパスダイアログで
-      目立つ表示がなされます。 変換作用を一面のパスに限らずに、 パスダイアログ
-      の<quote>アイテムの連結</quote>ボタンを使うことで数面のパスを同時に変化
-      させることも可能です。 変換アイテムの連結はパス同士だけではなくレイヤーや
-      チャンネルとも連係できます。 変換用に連結されている要素に変換作用を
-      及ぼすと、 連結されていたそれ以外の要素にも一緒に作用します。 ですから
-      例えば、 レイヤーとパスを同程度に拡大・縮小したいときは、 レイヤーダイアログ
-      でそのレイヤーの左隣をクリックして<quote>鎖</quote>のしるし
+      パスを変換対象にしたときの変換ツールは、 はじめ初期設定では一面のパスに
+      のみ作用します。 これをパスダイアログでは <emphasis>活性化パス</emphasis>
+      として目立たせて表示します。 変換作用を一面のパスに限らずに、 
+      パスダイアログの<quote>アイテムの連結</quote>ボタンを使うことで数面の
+      パスを同時に変化させることも可能です。 変換アイテムの連結はパス同士だけ
+      ではなくレイヤーやチャンネルとも連係できます。 変換用に連結されている
+      要素に変換作用を及ぼすと、 連結されていたそれ以外の要素にも一緒に作用
+      します。 ですから例えば、 レイヤーとパスを同程度に拡大・縮小したい
+      ときは、 レイヤーダイアログでそのレイヤーの左隣をクリックして
+      <quote>鎖</quote>のしるし
       <guiicon>
         <inlinegraphic fileref="images/dialogs/stock-vchain-24.png" />
       </guiicon>
@@ -486,7 +488,7 @@
     </para>
     <para lang="ja">
       パスはその <emphasis>境界線を描画</emphasis> しなければ画素 (ピクセル)
-      には何の表象もありません。 そのコマンドは画像ウィンドウのメニューから
+      には何も表せられません。 そのコマンドは画像ウィンドウのメニューから
       <menuchoice>
         <guimenu>編集</guimenu>
         <guimenuitem>パスの境界線を描画...</guimenuitem>
@@ -641,11 +643,12 @@
       entities, but it can load them as paths.
     </para>
     <para lang="ja">
-      <quote>Scalable Vector Graphics</quote>&mdash;略して<acronym>SVG
-      </acronym>は、 近年人気の高まってきた <emphasis>ベクター画像</emphasis>
-      のファイル形式であり、 解像度に依存しない形式で画素が表現される特徴が
-      あります。 この形式と対照的なのが <emphasis>ラスター画像</emphasis> で
-      あり、 整列したピクセルで画素が表現されています。 <acronym>GIMP</acronym>
+      <quote><foreignphrase>Scalable Vector Graphics</foreignphrase></quote>
+      &mdash;略して<acronym>SVG</acronym>は、 近年人気の高まってきた <emphasis>
+      ベクター画像</emphasis> のファイル形式であり、
+      解像度に依存しない形式で画素が表現される特徴があります。 
+      この形式と対照的なのが <emphasis>ラスター画像</emphasis> であり、 
+      整列したピクセルで画素が表現されています。 <acronym>GIMP</acronym>
       はラスター画像を主体にしたプログラムですが、 パスはベクター成分です。
     </para>
     <para lang="ja">

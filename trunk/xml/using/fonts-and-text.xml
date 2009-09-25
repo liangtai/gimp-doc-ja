@@ -287,7 +287,9 @@
         GIMP</acronym>のみならず全ての Windows アプリケーションでそのフォントを
         利用できるようになります。 <acronym>GIMP</acronym>専用で使いたい場合は
         そのフォントを <filename>C:\Documents&nbsp;and&nbsp;Settings\&lt;
-        あなたのユーザ名&gt;\.gimp-2.6\fonts</filename> に入れてください。
+        あなたのユーザ名&gt;\.gimp-2.6\fonts</filename> か <filename>
+        C:\Users\&lt;あなたのユーザ名&gt;\.gimp-2.6\fonts</filename> に入れて
+        ください。
       </para>
     </formalpara>
     <formalpara>
@@ -386,7 +388,8 @@
         が前提になっています。 何らかの理由でFontconfigの設定が初期設定とは
         異なる場合は、 <acronym>GIMP</acronym>が見つけ易い場所がどこかが問題に
         なります。 どんな場合でも、 <acronym>GIMP</acronym>の個人用ディレクトリ
-        の <filename>fonts</filename> フォルダならばうまくいきます。
+        の <filename class="directory">fonts</filename> フォルダならば
+        うまくいきます。
       </para>
     </note>
   </sect2>
@@ -439,7 +442,7 @@
       フォントにまつわるバグ報告は 2.0 版の発表以降版を重ねるごとに減ってきては
       いますが、 それでも<acronym>GIMP</acronym>2のバグ報告としては他の問題と
       比べるとより責任の重いものとなりつつあるようです。 寄せられる例の最多を
-      占めるのが壊れたフォントファイルを読み込んだFontconfigのトラブルに起因
+      占めるのが壊れたフォントファイルを読み込んだ Fontconfig のトラブルに起因
       する問題です。 起動時に<acronym>GIMP</acronym>がフォントディレクトリを
       検分していて異常終了するのならば、 最も良い解決法はFontconfigを 2.2.0
       以降の新しい版にアップグレードすることです。 それ以外の手っ取り早い対処
@@ -448,8 +451,8 @@
       これだとテキストツールが使えません。
     </para>
     <para lang="ja">
-      その他に、 文字配置情報 (character mapping) にUnicodeを使っていない
-      フォントをPango 1.2が読み込めない問題が分かっています。 (Pangoはテキスト
+      その他に、 文字配置情報 (character mapping) に Unicode を使っていない
+      フォントをPango 1.2 が読み込めない問題が分かっています。 (Pango はテキスト
       レイアウトライブラリで、 <acronym>GIMP</acronym>で使われています。)
       数多くの記号フォントがこの系統です。 システムによってはそのようなフォント
       を読み込むと<acronym>GIMP</acronym>が異常終了します。 Pangoを 1.4 以降の
@@ -459,7 +462,7 @@
     <para lang="ja">
       <acronym>GIMP</acronym>は壊れたフォントファイルに遭遇するとエラー
       メッセージを出します。 コンソールウィンドウが開かれてそこにメッセージが
-      書かれています。 しかしこれがWindowsのシステムでは幾度も混乱の種と
+      書かれています。 しかしこれが Windows のシステムでは幾度も混乱の種と
       なるのです。
       <emphasis>
         コンソールウィンドウを閉じてはいけません。 開いたままでも問題のない
