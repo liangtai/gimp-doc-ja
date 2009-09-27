@@ -6,7 +6,7 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2009-09-13-->
+<!--2009-09-27-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
@@ -95,25 +95,21 @@
         最もはじめに学んでほしいことは、
         <blockquote>
           <para>
-            <emphasis>
-              Scheme言語ではどんな構文も丸括弧 () でくくられること
-            </emphasis>
+            Scheme言語ではどんな構文も丸括弧 () でくくられること
           </para>
         </blockquote>
       </para>
-      <para lang="ja"><!--no use--></para>
+      <para lang="ja"><emphasis><!--no use--></emphasis></para>
       <para lang="ja">
         そのつぎに覚えてほしいことは、
         <blockquote>
           <para>
-            <emphasis>
-              関数名や演算子は常に括弧内の先頭に置かれ、 つづくパラメータが
-              その関数や演算子に渡されること
-            </emphasis>
+            関数名や演算子は常に括弧内の先頭に置かれ、 つづくパラメータが
+            その関数や演算子に渡されること
           </para>
-        </blockquote>
+        </blockquote> です。
       </para>
-      <para lang="ja">です。</para>
+      <para lang="ja"><emphasis><!--no use--></emphasis></para>
       <para lang="ja">
         もちろん括弧でくくられるのは関数だけにとどまりません。 リストと
         呼ばれる一連の項目の羅列も括弧でくくります。 これについてはあとで
@@ -131,9 +127,9 @@
               書くときその最初に置かなくてはならないこと
             </emphasis>
           </para>
-        </blockquote>
+        </blockquote> です。
       </para>
-      <para lang="ja">です。</para>
+      <para lang="ja"><emphasis><!--no use--></emphasis></para>
       <para lang="ja">
         こちらの規則は前置記法の考え方がわかればすんなり理解できると思います。
       </para>
@@ -826,7 +822,7 @@
       </para>
       <para lang="ja">
         リストを<quote>先頭</quote>と<quote>後続</quote>からできていると
-        とらえるのはうまい方法です。 先頭とはリストの最初の要素のことであり、
+        とらえるのがうまい考え方です。 先頭とはリストの最初の要素のことであり、
         後続はリストの残りの要素のことです。 リストから要素をとりだしたり
         加えたりする方法を学ぶなかでこうした捉え方の重要性が分かるはずです。
       </para>
@@ -996,9 +992,9 @@
         はい、 もう十分です。 リストから先頭の要素も後続の要素群も取り出せる
         ようになりました。 それではリストの2番目や3番目などほかの要素はどんな
         ふうにしたら取り出せるのでしょう。 ここで使える<quote>便利</quote>な
-        関数があります。 たとえば先頭の先頭を引き出すには <code>caadr</code>
-        が、 後続から後続の要素群を引き出すには <code>cddr</code> が使える
-        というふうになっています。
+        関数があります。 たとえば後続の先頭の先頭を引き出すには <code>caadr
+        </code> が、 後続から後続の要素群を引き出すには <code>cddr</code> が
+        使えるというふうになっています。
       </para>
       <para lang="ja">
         根本的に命名規則は簡単です。 a や d がそれぞれリストの先頭や後続を

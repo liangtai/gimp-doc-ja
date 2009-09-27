@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-03-12 jpl: fr & en update
   2007-11-27 ude: created (en,de)
 -->
-<!--2009-09-16-->
+<!--2009-09-27-->
 <sect3 id="gimp-using-script-fu-api">
   <title lang="en">
     The Script-Fu parameter API<footnote><para>
@@ -70,7 +70,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-ADJUSTMENT</function> _"<replaceable>label</replaceable>" '(<replaceable>value lower upper step_inc page_inc digits type</replaceable>)
+                <function>SF-ADJUSTMENT</function> "<replaceable>label</replaceable>" '(<replaceable>value lower upper step_inc page_inc digits type</replaceable>)
               </synopsis>
             </para>
             <segmentedlist>
@@ -83,10 +83,9 @@
               <seglistitem>
                 <seg lang="en">"label"</seg>
                 <seg lang="en">Text printed before the widget.</seg>
-                <seg lang="ja">_"<replaceable>label</replaceable>"</seg>
+                <seg lang="ja">"<replaceable>label</replaceable>"</seg>
                 <seg lang="ja">
                   ウィジェットの前に貼られる語句 
-                  (_記号でgettextを用いて訳語へ交換が可能になる)
                 </seg>
               </seglistitem>
               <seglistitem>
@@ -150,13 +149,13 @@
             <para lang="ja">ダイアログにカラーボタンを作成します。</para>
             <para lang="ja">
               <synopsis>
-                <function>SF-COLOR</function> _"<replaceable>label</replaceable>" '(<replaceable>red green blue</replaceable>)
+                <function>SF-COLOR</function> "<replaceable>label</replaceable>" '(<replaceable>red green blue</replaceable>)
               </synopsis>
             </para>
             <para lang="ja">もしくは</para>
             <para lang="ja">
               <synopsis>
-                <function>SF-COLOR</function> _"<replaceable>label</replaceable>" "<replaceable>color</replaceable>"
+                <function>SF-COLOR</function> "<replaceable>label</replaceable>" "<replaceable>color</replaceable>"
               </synopsis>
             </para>
             <segmentedlist>
@@ -169,10 +168,9 @@
               <seglistitem>
                 <seg lang="en">"label"</seg>
                 <seg lang="en">Text printed before the widget.</seg>
-                <seg lang="ja">_"<replaceable>label</replaceable>"</seg>
+                <seg lang="ja">"<replaceable>label</replaceable>"</seg>
                 <seg lang="ja">
                   ウィジェットの前に貼られる語句
-                   (_記号でgettextを用いて訳語へ置換が可能になる)
                 </seg>
               </seglistitem>
               <seglistitem>
@@ -252,7 +250,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-FONT</function> _"<replaceable>label</replaceable>" "<replaceable>fontname</replaceable>"
+                <function>SF-FONT</function> "<replaceable>label</replaceable>" "<replaceable>fontname</replaceable>"
               </synopsis>
             </para>
             <segmentedlist>
@@ -265,10 +263,9 @@
               <seglistitem>
                 <seg lang="en">"label"</seg>
                 <seg lang="en">Text printed before the widget.</seg>
-                <seg lang="ja">_"<replaceable>label</replaceable>"</seg>
+                <seg lang="ja">"<replaceable>label</replaceable>"</seg>
                 <seg lang="ja">
                   ウィジェットの前に貼られる語句
-                   (_記号でgettextを用いて訳語へ置換が可能になる)
                 </seg>
               </seglistitem>
               <seglistitem>
@@ -313,7 +310,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-BRUSH</function> _"<replaceable>label</replaceable>" '("<replaceable>Brush Name</replaceable>" <replaceable>opacity spacing mode</replaceable>)
+                <function>SF-BRUSH</function> "<replaceable>label</replaceable>" '("<replaceable>Brush Name</replaceable>" <replaceable>opacity spacing mode</replaceable>)
               </synopsis>
             </para>
             <para lang="ja">
@@ -322,10 +319,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -347,7 +343,7 @@
               </segmentedlist>
             </para>
             <para lang="ja">
-              例えば<quote>SF-BRUSH _"Brush" '("Circle (03)" 100 44 0)</quote>
+              例えば<quote>SF-BRUSH "Brush" '("Circle (03)" 100 44 0)</quote>
               として呼び出してダイアログで何も変更しなかった場合、 返ってくる
               パラメータは<quote><parameter>'("Circle (03)" 100 44 0)
               </parameter></quote>となります。
@@ -382,7 +378,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-PATTERN</function> _"<replaceable>label</replaceable>" "<replaceable>Pattern Name</replaceable>"
+                <function>SF-PATTERN</function> "<replaceable>label</replaceable>" "<replaceable>Pattern Name</replaceable>"
               </synopsis>
             </para>
             <para lang="ja">
@@ -391,10 +387,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -403,7 +398,7 @@
                 </seglistitem>
               </segmentedlist>
               スクリプトが呼び出されたときに返される値はパターンの名前をもつ
-              文字列変数です。 例えば<quote>SF-PATTERN _"Pattern" "Maple
+              文字列変数です。 例えば<quote>SF-PATTERN "Pattern" "Maple
               Leaves"</quote>として呼び出してダイアログで何も変更しなかった
               場合、 返ってくるパタメータは<quote><parameter>"Maple Leaves"
               </parameter></quote>となります。
@@ -441,7 +436,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-GRADIENT</function> _"<replaceable>label</replaceable>" "<replaceable>gradientname</replaceable>"
+                <function>SF-GRADIENT</function> "<replaceable>label</replaceable>" "<replaceable>gradientname</replaceable>"
               </synopsis>
             </para>
             <para lang="ja">
@@ -450,10 +445,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                    (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -463,7 +457,7 @@
               </segmentedlist>
               スクリプトが呼び出されたときに返される値はグラデーションの
               名前をもつ文字列変数です。 例えば<quote><code>SF-GRADIENT 
-              _"Gradient" "Deep Sea"</code></quote>として呼び出してダイアログ
+              "Gradient" "Deep Sea"</code></quote>として呼び出してダイアログ
               で何も変更しなかった場合、 返ってくるパタメータは<quote>
               <parameter>"Deep Sea"</parameter></quote>となります。
             </para>
@@ -497,7 +491,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-PALETTE</function> _"<replaceable>label</replaceable>" "<replaceable>Palette Name</replaceable>"
+                <function>SF-PALETTE</function> "<replaceable>label</replaceable>" "<replaceable>Palette Name</replaceable>"
               </synopsis>
             </para>
             <para lang="ja">
@@ -506,10 +500,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -520,7 +513,7 @@
             </para>
             <para lang="ja">
               スクリプトが呼び出されたときに返される値はパレットの名前をもつ
-              文字列変数です。 例えば<quote><code>SF-PALETTE _"Palette" 
+              文字列変数です。 例えば<quote><code>SF-PALETTE "Palette" 
               "Named Colors"</code></quote>として呼び出してダイアログで何も
               変更しなかった場合、 返ってくるパタメータは<quote><parameter>
               "Named Colors"</parameter></quote>となります。
@@ -556,7 +549,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-FILENAME</function> _"<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path/to/file.ext</replaceable>")
+                <function>SF-FILENAME</function> "<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path/to/file.ext</replaceable>")
               </synopsis>
             </para>
             <para lang="ja">
@@ -565,10 +558,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -608,7 +600,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-DIRNAME</function> _"<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path</replaceable>")
+                <function>SF-DIRNAME</function> "<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path</replaceable>")
               </synopsis>
             </para>
             <para lang="ja">
@@ -617,10 +609,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -661,7 +652,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-OPTION</function> _"<replaceable>label</replaceable>" '("<replaceable>option 1</replaceable>" "<replaceable>option 2</replaceable>" [... "<replaceable>option n</replaceable>"])
+                <function>SF-OPTION</function> "<replaceable>label</replaceable>" '("<replaceable>option 1</replaceable>" "<replaceable>option 2</replaceable>" [... "<replaceable>option n</replaceable>"])
               </synopsis>
             </para>
             <para lang="ja">
@@ -670,10 +661,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
@@ -726,7 +716,7 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-ENUM</function> _"<replaceable>label</replaceable>" '("<replaceable>enum type</replaceable>" "<replaceable>default choice</replaceable>")
+                <function>SF-ENUM</function> "<replaceable>label</replaceable>" '("<replaceable>enum type</replaceable>" "<replaceable>default choice</replaceable>")
               </synopsis>
             </para>
             <para lang="ja">
@@ -735,10 +725,9 @@
                 <segtitle>要素</segtitle>
                 <segtitle>説明</segtitle>
                 <seglistitem>
-                  <seg>_"<replaceable>label</replaceable>"</seg>
+                  <seg>"<replaceable>label</replaceable>"</seg>
                   <seg>
                     ウィジェットの前に貼られる語句
-                     (_記号でgettextを用いて訳語へ置換が可能になる)
                   </seg>
                 </seglistitem>
                 <seglistitem>
