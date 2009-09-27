@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -8,7 +8,7 @@
   2006-07-31 lexa: applied patch from hans de jonge
   2008-02-08 jpl: relecture et legeres corrections
 -->
-<!--2009-09-12-->
+<!--2009-09-26-->
 <sect1 id="gimp-concepts-plugins">
   <title lang="en">Plugins</title>
   <title lang="ja">プラグイン</title>
@@ -86,7 +86,7 @@
       <acronym>GIMP</acronym>には数十個のプラグインが配付版に入っていて、
       自動的に<acronym>GIMP</acronym>と一緒にインストールされます。 それらの
       ほとんどが <guimenu>フィルタ</guimenu> メニューから呼び
-      出せます (実はこのメニューの中身はいずれもプラグインです) が、
+      出せます (実はこのメニューの中身はいずれもプラグインかスクリプトです) が、
       数点ですが他のメニューに属するものもあります。 プラグインを使うといっても
       十中八九はプラグインであることに気付かないでしょう。 例えば色の自動調整
       フィルタの<quote>正規化</quote>コマンドは実際にはプラグインなのですが、
@@ -292,10 +292,10 @@
       全く必要ありません。 逆にご自身でダウンロードされたプラグインにはそれが
       必要です。 作業の順路はお使いの<acronym>OS</acronym>が何であるかや、
       プラグインの構成によっていくつかに分かれています。 <productname>Linux
-      </productname> をはじめ <productname>UNIX</productname> 系のシステムなら
-      新しいプラグインの導入は通常きわめて易しいものです。 <productname>Windows
-      </productname> では簡単にできることもあれば非常に難しいこともあります。
-      いずれにせよ最良と考えられている順路は2つあります。
+      </productname> をはじめ <productname>UNIX</productname> システム風の
+      システムなら新しいプラグインの導入は通常きわめて易しいものです。 
+      <productname>Windows</productname> では簡単にできることもあれば非常に
+      難しいこともあります。 いずれにせよ最良と考えられている順路は2つあります。
     </para>
     <sect3>
       <title lang="en">Linux</title>
@@ -397,9 +397,9 @@
       <para lang="ja">
         プラグインのなかには (とくに<acronym>GIMP</acronym>プラグイン用雛形を
         もとに作成されたものは) <acronym>GIMP</acronym>の個人用ディレクトリでは
-        なくシステム用のディレクトリに導入することを前提にしています。 これら
-        においては最後の導入の段階 (つまり <command>make install</command>
-        を実行する段階) でルートになって作業する必要があるでしょう。
+        なくシステム用のディレクトリに導入することを前提にしています。 導入作業
+        は最後の段階で <command>make install</command> を実行しますが、 この
+        ようなプラグインのときはルートになって作業する必要があるでしょう。
       </para>
       <para lang="ja">
         個人用のプラグインディレクトリに入れる場合で、 そのプラグインの名前と
@@ -444,7 +444,7 @@
       </para>
       <para lang="ja">
         <productname>Windows</productname> は <productname>UNIX</productname>
-        系のシステムと比べるとソフトウェアを構築するには随分と問題の多い環境
+        風のシステムと比べるとソフトウェアを構築するには随分と問題の多い環境
         です。 たとえば適切な <productname>Linux</productname>
         ディストリビューションならばいずれもコンパイル関係のツールが一式揃って
         いて、 その動作の状況はどれも非常によく似ているのに対し、 <productname>
@@ -457,7 +457,7 @@
         このことが<acronym>GIMP</acronym>プラグインと関わるとどういう意味がある
         かを、 ソフトウェア構築の環境が整っている場合とない場合に分けて見て
         ゆきましょう。 コンパイル環境がない場合はコンパイル済みのプラグイン
-        ソフトウェアを探す (もしくは誰かに頼んでコンパイルしてもらう) ことに
+        ソフトウェアを探か、 誰かに頼んでコンパイルしてもらうことに
         なります。 そのあとは個人用のプラグインディレクトリに収めれば完了です。
         ソフトウェア構築環境 (その目的からして<acronym>GIMP</acronym>をビルド
         できる環境とも言えます) がある場合には、 こういったことは既にかなりご
@@ -510,10 +510,11 @@
         手に入るということですので、 試してみてはいかかでしょうか。
       </para>
       <para lang="ja">
-        それとは逆にGIMP.appのような一発インストールが可能な<acronym>GIMP
-        </acronym>パッケージを好むユーザならば恐らくコンパイル済みのもの一本に
-        絞りたいのではないかと思います。 つまりプラグインの作者からコンパイル
-        済みのパッケージを入手できたらとの考えではないかと思うわけですが、
+        それとは逆に <application>GIMP.app</application> のような一発
+        インストールが可能な<acronym>GIMP</acronym>パッケージを好むユーザならば
+        恐らくコンパイル済みのもの一本に絞りたいのではないかと思います。 
+        つまりプラグインの作者からコンパイル済みのパッケージを入手できたら
+        との考えではないかと思うわけですが、
         この方法には賛成しかねます。 先に触れたパッケージマネージャがバイナリ
         実行ファイルをビルドする際に<acronym>GIMP</acronym>のインストールも
         実施するはめになるからです。<!--脈絡断絶？-->
