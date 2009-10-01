@@ -14,7 +14,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050526 de reviewed and restructured by axel.wernicke
 -->
-<!--2009-09-23-->
+<!--2009-09-30-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-move">
   <title lang="en">Move</title>
   <title lang="ja">移動</title>
@@ -60,7 +60,7 @@
       You can access to the Move Tool in different ways:
     </para>
     <para lang="ja">
-      移動ツールを起用する方法はさまざまです:
+      <quote>移動</quote>ツールを起用する方法はつぎのいずれかです。
     </para>
     <itemizedlist>
       <listitem>
@@ -134,21 +134,17 @@
             <menuchoice>
               <guimenu>Edit</guimenu>
               <guisubmenu>Preferences</guisubmenu>
-              <guisubmenu>Image?Windows</guisubmenu>
-              <guimenuitem>Space?Bar</guimenuitem>
+              <guisubmenu>Image Windows</guisubmenu>
+              <guimenuitem>Space Bar</guimenuitem>
             </menuchoice>.
           </para>
           <para lang="ja">
             <keycap>スペース</keycap> キーを押すと使用中のツールが一時的に移動
             ツールに変身する機能があります。 スペースキーを放すまで移動ツールの
             状態が続きます。 スペースキーを放すともとのツールに戻ります。 この
-            設定は<quote>環境設定</quote>ダイアログを画像ウィンドウのメニュー
-            より
-            <menuchoice>
-              <guimenu>編集</guimenu>
-              <guimenuitem>環境設定</guimenuitem>
-            </menuchoice>
-            と辿って呼びだし、 <quote>画像ウィンドウ</quote>のページの
+            設定は 
+            <link linkend="gimp-prefs-environment">環境設定</link> ダイアログの
+            <quote>画像ウィンドウ</quote>のページの 
             <guilabel>スペースキーが押されている時</guilabel> のオプションに
             <guimenuitem>移動ツールに切り替え</guimenuitem> を選んでください。
           </para>
@@ -165,8 +161,8 @@
       <title lang="ja"><quote>移動</quote>ツールのツールオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/toolbox/tool-options-move.png"
-            format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-move.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -194,8 +190,18 @@
         <term lang="ja">機能の切り替え (Shift)</term>
         <listitem>
           <para lang="ja">
-            <guiicon><inlinemediaobject><phrase>レイヤー</phrase>
-            </inlinemediaobject></guiicon> を対象とした移動ならば:
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                    fileref="images/dialogs/stock-layer-16.png">
+                </imageobject>
+                <textobject>
+                  <phrase>「レイヤー」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            <quote>レイヤー</quote>を対象とした移動ならば、
             <itemizedlist>
               <listitem>
               <para lang="en">
@@ -214,13 +220,14 @@
               </para>
                 <para lang="ja">
                   <guilabel>つかんだレイヤーまたはガイドを移動</guilabel>:
-                  レイヤーを複数持つ画像の、 現在活性化しているレイヤーに属する要素
-                  の上ではマウスポインタの姿が移動十字矢印に替わります。 その
-                  要素はクリックしてドラッグすれば移動できます。 もしポインタの姿に
-                  小さな掌が加わっている場合 (つまりまだ活性レイヤーの部品を
-                  <emphasis>何も</emphasis> つかんでいないことを表しています)
-                  には、 代わりに不活性レイヤーを移動する可能性があります
-                  (移動の最中は一時的にそのレイヤーが活性レイヤーとなります)。
+                  レイヤーを複数持つ画像の、 現在活性化しているレイヤーに属する
+                  要素の上ではマウスポインタの姿が移動十字矢印に替わります。 
+                  その要素はクリックしてドラッグすれば移動できます。 もし
+                  ポインタの姿に小さな掌が加わっている場合 (つまりまだ活性
+                  レイヤーの部品を <emphasis>何も</emphasis> つかんでいないこと
+                  を表しているとき) には、 代わりに不活性レイヤーを移動する
+                  可能性があります。 移動の最中は一時的にそのレイヤーが活性
+                  レイヤーとなります。
                 </para>
                 <para lang="ja">
                   画像上にガイド (見当線) を置いていた場合は、 線上にマウス
@@ -238,15 +245,25 @@
                 <para lang="ja">
                   <guilabel>アクティブなレイヤーを移動</guilabel>:
                   現在活性化しているレイヤーのみ移動できます。 これは透過部分を
-                  もつレイヤーを移動したいとき、 間違って他のレイヤーをつかむのを
-                  防げます。
+                  もつレイヤーを移動したいとき、 間違って他のレイヤーを
+                  つかむのを防げます。
                 </para>
               </listitem>
             </itemizedlist>
           <para lang="en">If Move is on <guiicon>Path</guiicon>:</para>
           <para lang="ja">
-            <guiicon><inlinemediaobject><phrase>パス</phrase>
-            </inlinemediaobject></guiicon> を対象とした移動ならば:
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                    fileref="images/dialogs/stock-path-16.png">
+                </imageobject>
+                <textobject>
+                  <phrase>「パス」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            <quote>パス</quote>を対象とした移動ならば、
           </para>
             <itemizedlist>
               <listitem>
@@ -259,11 +276,11 @@
               </para>
                 <para lang="ja">
                   <guilabel>つかんだパスを移動</guilabel>: 既定ではこちらが
-                  選ばれています。 マウスポインタを
-                  <link linkend="gimp-path-dialog-using">可視パス</link>に
-                  かざすと、 その姿が小さな掌に替わります。
-                  このときマウスでクリックしてドラッグすればパスを移動できます
-                  (パスは移動の最中だけ活性化します)。
+                  選ばれています。 マウスポインタを 
+                  <link linkend="gimp-path-dialog-using">可視パス</link> に
+                  かざすと、 その姿が小さな掌に替わります。 
+                  このときマウスでクリックしてドラッグすればパスを移動
+                  できます。 パスは移動の最中だけ活性化します。
                 </para>
               </listitem>
               <listitem>
@@ -274,8 +291,8 @@
               </para>
                 <para lang="ja">
                   <guilabel>アクティブなパスを移動</guilabel>: 現在活性化して
-                  いるパスだけを移動できます。 それ以外のパスは
-                  <link linkend="gimp-path-dialog">パスダイアログ</link>で
+                  いるパスだけを移動できます。 それ以外のパスは 
+                  <link linkend="gimp-path-dialog">パスダイアログ</link> で
                   活性化させることができます。
                 </para>
               </listitem>
@@ -327,9 +344,10 @@
           </para>
           <para lang="ja">
             移動対象が選択範囲の場合は、 キャンバス上ならばどこでクリックして
-            ドラッグしても選択範囲の境界線を移動できます。 また <keycap>矢印</keycap>
-            キーを使うと精密に選択範囲を移動できます。 このとき <keycap>Shift
-            </keycap> キーを押しながらだと25ピクセル毎に移動します。
+            ドラッグしても選択範囲の境界線を移動できます。 また <keycap>矢印
+            </keycap> キーを使うと精密に選択範囲を移動できます。 このとき 
+            <keycap>Shift</keycap> キーを押しながらだと 25 ピクセルごとに移動
+            します。
           </para>
           <para lang="ja">
             選択範囲を移動ツールで移動する際に、 選択範囲の中央には小さな十字の
@@ -384,7 +402,7 @@
             move, regardless of which layer is currently active.
           </para>
           <para lang="ja">
-          レイヤーが連結されている場合には (小さな鎖のしるしがついています)、
+          小さな鎖のしるしをつけてレイヤーを連結した場合には、
           不活性なレイヤーも含めて一緒に移動します。
         </para>
         </listitem>
@@ -409,11 +427,11 @@
             it.
           </para>
           <para lang="ja">
-            画像ウィンドウ辺上の定規からガイドをドラッグし出すと、 移動ツールが自動的
-            に呼びだされます。 そのあと他のツールを使用したのなら、 移動ツール
-            はご自分で呼びだしてください。 マウスポインタをガイドの上にかざすと
-            ガイドは赤色に変わりますので、 それをクリックしてドラッグすれば移動
-            できます。
+            画像ウィンドウ辺上の定規からガイドをドラッグして曳き出すと、 移動
+            ツールが自動的に呼びだされます。 そのあと他のツールを使用した
+            のなら、 移動ツールはご自分で呼びだしてください。 マウスポインタを
+            ガイドの上にかざすとガイドは赤色に変わりますので、 それをクリック
+            してドラッグすれば移動できます。
           </para>
         </listitem>
       </varlistentry>
@@ -437,7 +455,7 @@
             You can choose the path to be moved or move the active path.
           </para>
           <para lang="ja">
-            パスツールダイアログには独自の移動機能があります:
+            パスツールダイアログには独自の移動機能があります。
             <xref linkend="gimp-tool-path"/> をご覧ください。 もちろん移動
             ツールを使ってもパスを移動できます。 移動対象に<quote>パス</quote>
             を選んでください。 ちなみにパスは不可視になっていることがよく

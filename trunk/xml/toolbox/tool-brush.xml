@@ -16,7 +16,7 @@
   2006-02-05 fr revised by j.h
   2005-05-20 de reviewed by axel.wernicke
 -->
-<!--2009-08-18-->
+<!--2009-09-30-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
@@ -200,11 +200,10 @@
       <para lang="ja">
         部分的に明るくしたり暗くするための
         <link linkend="gimp-tool-dodge-burn">暗室 (覆い焼き/焼き込み)</link>
-        ツール。
+        ツール
       </para>
     </listitem>
   </itemizedlist>
-
   <para lang="en">
     The advantages of using GIMP with a tablet instead of a mouse
     probably show up more clearly for brush tools than anywhere else:
@@ -221,8 +220,9 @@
     the tool will be applied.  See the section on <link linkend="gimp-selection-stroke">Stroking</link> for more information.
   </para>
   <para lang="ja">
+    があります。 
     <acronym>GIMP</acronym>でマウスではなくタブレットを使用した場合の利点が
-    最も強く現れる場面はおそらくブラシツールを使うときでしょう: 高感度
+    最も強く現れる場面はおそらくブラシツールを使うときでしょう。 高感度
     コントロールで得られる情報は他には替えがたいものです。 これらのツール
     には特別にタブレットでのみ利用できる<quote>筆圧感知</quote>オプション
     がついています。
@@ -230,7 +230,7 @@
   <para lang="ja">
     通常利用される<quote>受け渡し</quote>のしくみに加え、 ブラシツールを
     利用するより自動化された連携があり、 選択ツールやパスツールが作った
-    <quote>境界線を 描画</quote>することができます。 ここで使うブラシツールは
+    <quote>境界線を描画</quote>することができます。 ここで使うブラシツールは
     どれでもよく、 消しゴムやにじみツールなど特異なものも使えます。 使える
     オプションも同じです。 詳しくは <link linkend="gimp-selection-stroke">
     境界線を描画</link> についての章をご覧ください。
@@ -264,8 +264,8 @@
             使うと特別な効果があります。 鉛筆、 絵筆、 エアブラシ、 インク、
             消しゴムの各ツールは<quote>スポイト</quote>に変身し、
             画像をクリックすると現在のレイヤーのその場所の画素 (ピクセル) から
-            色を拾い出して<acronym>GIMP</acronym>の描画色とします
-            (消しゴムだけは<acronym>GIMP</acronym>の背景色とします)。
+            色を拾い出して<acronym>GIMP</acronym>の描画色とします。 ただし
+            消しゴムツールだけは<acronym>GIMP</acronym>の背景色とします。
             <quote>スタンプで描画</quote>ツールでは <keycap>Ctrl</keycap>
             キーを押している間にクリックした場所が参照始点になります。
             <quote>ぼかし/シャープ</quote>ツールは <keycap>Ctrl</keycap>
@@ -331,7 +331,7 @@
             両方のキーを押した状態でのブラシツールは <emphasis>制限つきで
             直線を</emphasis> 引くモードになります。 使い方は
             <keycap>Shift</keycap> キー単独での方式と同じですが、
-            線の傾きは全方位を24分割した15度刻みの方向のうち最も近いもの
+            線の傾きは全方位を 24 分割した 15 度刻みの方向のうち最も近いもの
             が選ばれます。 この制限は水平線や垂直線、 あるいは対角的な配置の
             斜線を引くときに便利です。
           </para>
@@ -396,18 +396,18 @@
             <link linkend="gimp-paint-mode-examples">below</link>.
           </para>
           <para lang="ja">
-            <guilabel>モード</guilabel>ドロップダウンリスト(引き出し排列)
+            <guilabel>モード</guilabel>ドロップダウンリスト (引き出し排列)
             から描画の適用モードが選べます。 モードが果たす役割について理解
             するには <guilabel>不透明度</guilabel> に対するのと同じく、
             ちょうど画像の上に描画を実施するためのレイヤーが別にあって、
-            そのレイヤーが画像と結合する態勢(モード)をレイヤーダイアログで
+            そのレイヤーが画像と結合する態勢 (モード) をレイヤーダイアログで
             指定するところを想像されると最も分かりやすいでしょう。
             モード指定によって多彩な計り知れない特殊効果が得られます。
             モードオプションが利用できるのは画像に色を描き加えるツール (鉛筆、
             絵筆、 エアブラシ、 インク、 スタンプ) に限られます。
             それ以外のブラシツールでは利用できませんが、 ダイアログの統一感
             をはかる目的で灰色無効表示とされています。
-            <xref linkend="gimp-concepts-layer-modes" />
+            <xref linkend="gimp-concepts-layer-modes"/>
             に関しては実例を挙げて説明しています。
           </para>
           <para lang="ja">
@@ -459,9 +459,9 @@
             このツールによってその上に新たに透明なレイヤーが用意されていると
             みなすことです。 ツールオプションで不透明度を変更したときの
             効果は、 その仮のレイヤーの不透明度をレイヤーダイアログで変更する
-            のと同じです。 また現行レイヤーに描画するそれら<!-- what?-->に
-            とどまらず、 全てのブラシツールの<quote>強さ</quote>を
-            調節しています。 消しゴムツールに関して言えば少々混乱しそうです:
+            のと同じです。 このスライダは活性レイヤーに描画するブラシツール
+            だけでなく、 全てのブラシツールの<quote>強さ</quote>を
+            調節しています。 消しゴムツールに関して言えば少々混乱しそうです。
             <quote>不透明度</quote>が高いほど、 このツールが消した部分の
             透明感が増す結果になります。
           </para>
@@ -721,7 +721,7 @@
             <guimenuitem>Quantity</guimenuitem> slider.
           </para>
           <para lang="ja">
-            ブラシ描画での<quote>間隔</quote>について思い出して下さい:
+            ブラシ描画での<quote>間隔</quote>について思い出して下さい。
             描線は次々と繰り出されるブラシの刻印で成り立っており、
             互いの間隔が非常に狭ければ繋がった線の姿になります。 そこで、
             <guimenuitem>量</guimenuitem> スライダを調節すれば、
@@ -773,7 +773,7 @@
             <quote>割合</quote>コントロールを備えたブラシは
             自動的に重ね塗りの効果を実現していますが、
             それらを除く全てのブラシでこのオプションが使えます。
-            <xref linkend="gimp-concepts-layer-modes" /> もご覧ください。
+            <xref linkend="gimp-concepts-layer-modes"/> もご覧ください。
           </para>
         </listitem>
       </varlistentry>

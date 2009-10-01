@@ -11,7 +11,7 @@
   2005-12-06 replaced imformalfigure by figure by lexa
   2005-08-07 de reviewed by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2009-10-01-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-levels">
   <title lang="en">Levels</title>
   <title lang="ja">レベル</title>
@@ -71,8 +71,8 @@
   </para>
   <para lang="ja">
     レベルツールはしきい値ツールのヒストグラムに似た機能がありますが、 選択範囲
-    もしくは活性レイヤーの全てのチャンネルにおいて強度の範囲を変更できます。 この
-    ツールは画像を明るくしたり暗くしたりする用途のほか、 コントラストを変更
+    もしくは活性レイヤーの全てのチャンネルにおいて強度の範囲を変更できます。 
+    このツールは画像を明るくしたり暗くしたりする用途のほか、 コントラストを変更
     したり、 突出した色調を直す用途にも使えます。
   </para>
   <sect3>
@@ -133,7 +133,7 @@
             <inlinegraphic
               fileref="images/toolbox/stock-tool-levels-22.png"/>
           </guiicon>
-          。 但しこの色ツールをツールボックスに登録した場合に限ります。
+          。 但しこの色ツールをツールボックスに登録した場合に限ります。 
           <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link>
           をご覧ください。
         </para>
@@ -205,8 +205,6 @@
             処理などに使った設定を再利用できます。 記憶された設定の数々は
             <guimenuitem>プリセットデータの編集...
             </guimenuitem> に進むと出てくるつぎのダイアログで管理できます。
-            <!--<guimenuitem>プリセットデータの編集...
-            </guimenuitem>-->
           </para>
           <figure>
             <title lang="en">Manage saved Settings Dialog</title>
@@ -268,7 +266,7 @@
               <listitem>
                 <para>
                   <guilabel>明度</guilabel> は画像の全ての<acronym>RGB
-                  </acronym>チャンネル値を変更します: 画像は暗くなるか
+                  </acronym>チャンネル値を変更します。 画像は暗くなるか
                   もしくは明るくなります。
                 </para>
               </listitem>
@@ -330,7 +328,7 @@
             欠けていることがわかります。
           </para>
           <para lang="ja">
-            レベル範囲に変更を加える方法は3通りあります:
+            レベル範囲に変更を加える方法は3通りあります。
           </para>
           <itemizedlist mark="opencircle">
             <listitem>
@@ -363,13 +361,13 @@
                 中間的な色調 (ガンマ)、 白三角は明るい色調 (ハイライト)。
               </para>
               <para lang="ja">
-                黒のスライダは <emphasis>黒点</emphasis> を表します:
+                黒のスライダは <emphasis>黒点</emphasis> を表します。
                 このレベル値以下の画素は全て黒になります (色チャンネルを選んで
                 いる場合は無色、 アルファチャンネルを選んでいる場合は透過に
                 なるという意味です)。
               </para>
               <para lang="ja">
-                白のスライダは <emphasis>白点</emphasis> を表します:
+                白のスライダは <emphasis>白点</emphasis> を表します。
                 このレベル値以上の画素は全て白になります (色チャンネルを選んで
                 いる場合は発色が最大に、 アルファチャンネルを選んでいる場合は
                 不透明になるという意味です)。
@@ -385,9 +383,19 @@
               <para lang="ja">
                 2つの点眼器: これをクリックするとマウスポインタは目薬差しの姿に
                 なります。 そうして画像をクリックすればその位置に基づいて黒点
-                もしくは白点が決定されます。 例えば白点を決めるのは右側の
-                <guiicon><inlinemediaobject><phrase>白</phrase>
-                </inlinemediaobject></guiicon> い点眼器を使ったときです。
+                もしくは白点が決定されます。 例えば白点を決めるのは右側の白い
+                点眼器 
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                      fileref="images/dialogs/stock-color-picker-white-18.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>白</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> を使ったときです。
               </para>
             </listitem>
             <listitem>
@@ -657,11 +665,41 @@
             自動的に行ないます。
           </para>
           <para lang="ja">
-            3つの点眼器: この3つのボタンはそれぞれ <guiicon><inlinemediaobject>
-            <phrase>白</phrase></inlinemediaobject></guiicon>、 <guiicon>
-            <inlinemediaobject><phrase>灰</phrase></inlinemediaobject>
-            </guiicon>、 <guiicon><inlinemediaobject><phrase>黒</phrase>
-            </inlinemediaobject></guiicon> の点眼器です。 いずれのボタンも
+            3つの点眼器: 
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                      fileref="images/dialogs/stock-color-picker-white-18.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「白点眼器」</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> 
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                      fileref="images/dialogs/stock-color-picker-gray-18.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「灰点眼器」</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> 
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                      fileref="images/dialogs/stock-color-picker-black-18.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「黒点眼器」</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> 
+            の3つのボタンはそれぞれ白、 灰、 黒の点眼器です。 いずれのボタンも
             クリックすればマウスポインタがその種類に合う点眼器の姿になります。
             その次に画像をクリックすると、 選んだ点眼器によって
             <emphasis>白点</emphasis>、 <emphasis>黒点</emphasis>、 <emphasis>
@@ -766,9 +804,8 @@
             that the new level settings can be viewed straight away.
           </para>
           <para lang="ja">
-            <guimenuitem>プレビュー</guimenuitem> オプション
-            はレベル操作の変更結果を動的に反映させるもので、 新たなレベル設定が
-            即座に見られます。
+            <guilabel>プレビュー</guilabel> オプションはレベル操作の変更結果を
+            動的に反映させるもので、 新たなレベル設定が即座に見られます。
           </para>
         </listitem>
       </varlistentry>
@@ -810,11 +847,31 @@
             Linear buttons in the Levels dialog.
           </para>
           <para lang="ja">
-            この2つのオプションはレベルツールダイアログの <guiicon>
-            <inlinemediaobject><phrase>対数</phrase></inlinemediaobject>
-            </guiicon>
-            ボタンや <guiicon><inlinemediaobject><phrase>線形</phrase>
-            </inlinemediaobject></guiicon> ボタンと同じはたらきをします。
+            この2つのオプションはレベルツールダイアログの 
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                  fileref="images/dialogs/stock-histogram-logarithmic-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「対数」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            ボタンや 
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                  fileref="images/dialogs/stock-histogram-linear-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「線形」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            ボタンと同じはたらきをします。
           </para>
         </listitem>
       </varlistentry>
