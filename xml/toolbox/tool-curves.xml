@@ -12,7 +12,7 @@
   2005-12-01 informalfigure replaced by figure by lexa
   2005-08-08 de reviewed by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2009-10-01-->
 <sect2 id="gimp-tool-curves">
   <title lang="en">Curves</title>
   <title lang="ja">トーンカーブ</title>
@@ -50,7 +50,7 @@
     <title lang="en">Activate the Tool</title>
     <title lang="ja">呼び出し方</title>
     <para lang="en">You can get to this tool in several ways :</para>
-    <para lang="ja">このツールを起用する方法は2通りあります:</para>
+    <para lang="ja">このツールを起用する方法は2通りあります。</para>
     <itemizedlist>
       <listitem>
         <para lang="en">
@@ -178,8 +178,6 @@
             処理などに使った設定を再利用できます。 記憶された設定の数々は
             <guimenuitem>プリセットデータの編集...
             </guimenuitem> に進むと出てくるつぎのダイアログで管理できます。
-            <!--<guimenuitem>プリセットデータの編集...
-            </guimenuitem>-->
           </para>
           <figure>
             <title lang="en">Manage saved Settings Dialog</title>
@@ -267,7 +265,7 @@
           <para lang="en">
             This button deletes all changes made to the selected channel and
             returns to the values before modification.  It is different to
-            the other Reset button risides at the bottom of this Dialog;
+            the other Reset button resides at the bottom of this Dialog;
             this button can affect only one channel at once, other channels
             won't be reset simultaneously.
           </para>
@@ -313,9 +311,9 @@
                 <emphasis>水平勾配</emphasis>: これは入力側の色調の尺度を表して
                 います。 こちらも 0 (黒) から 255 (白) までの範囲で、 影から
                 ハイライトに相当します。 <!--この曲線を調節する際に、
-                これは2つに分割されており、 上部はレイヤーもしくは選択範囲の
-                <emphasis>色調の均衡線</emphasis> を表しています。-->
-                <!--全く意味がわからない-->
+                ここは2つに分割されており、 上部はレイヤーもしくは選択範囲の
+                <emphasis>色調の均衡</emphasis> を表しています。
+                [XXX:全く意味がわからない]-->
               </para>
             </listitem>
             <listitem>
@@ -409,7 +407,7 @@
                 られます。 <keycap>上下矢印</keycap> キーを使うと活性アンカーを
                 垂直に移動できます。 この方法でアンカーの位置を細かく調整
                 できます。 <keycap>Shift</keycap> キーを押しながらだと
-                15ピクセルずつの移動です。
+                15 ピクセルずつの移動です。
               </para>
               <para lang="ja">
                 2つのアンカーで <emphasis>色カーブの分節</emphasis> が定義
@@ -428,16 +426,15 @@
                 一方でキャンバス上では、 マウスポインタは点眼器の姿に変化して
                 います。 どこかの画素をクリックすれば、 曲線図表上に垂直線が
                 一本現れて、 選択されているチャンネルでの画素の値に位置します。
-                <keycombo><keycap>Shift</keycap><mousebutton>第1ボタンクリック
-                </mousebutton></keycombo> すると選択されているチャンネルの
-                曲線図表上に新たにアンカーが置かれます。 <keycombo><keycap>Ctrl
-                </keycap><mousebutton>第1ボタンクリック</mousebutton>
-                </keycombo> すると全てのチャンネル (アルファチャンネルはあれば
-                含まれます) の曲線図表上にアンカーが置かれます。 また、
-                画像上を曳いても垂直線は移動しますが、 <keycap>Shift</keycap>
-                キーを押しながら曳いたり <keycap>Ctrl</keycap> キーを押しながら
-                曳いた場合は、 マウスボタンを放したときに垂直線との交点に
-                アンカーが新たに置かれます。
+                <keycap>Shift</keycap> キーを押しながらクリックすると
+                選択されているチャンネルの
+                曲線図表上に新たにアンカーが置かれます。 <keycap>Ctrl</keycap>
+                キーを押しながら クリックすると全てのチャンネル (アルファ
+                チャンネルもあれば含む) の曲線図表上にアンカーが置かれます。 
+                また、 画像上をドラッグしても垂直線は移動しますが、 <keycap>
+                Shift</keycap> キーを押しながらドラッグしたり <keycap>Ctrl
+                </keycap> キーを押しながらドラッグした場合は、 マウスボタンを
+                放したときに垂直線との交点にアンカーが新たに置かれます。
               </para>
               <para lang="ja">
                 選択範囲もしくは活性レイヤーの選択されたチャンネルの
@@ -526,11 +523,31 @@
             Linear buttons in the Curves dialog.
           </para>
           <para lang="ja">
-            この2つのオプションはトーンカーブツールダイアログの <guiicon>
-            <inlinemediaobject><textobject><phrase>対数</phrase></textobject>
-            </inlinemediaobject><guiicon> ボタンや <guiicon><inlinemediaobject>
-            <textobject><phrase>線形</phrase></textobject></inlinemediaobject>
-            <guiicon> ボタンと同じはたらきをします。
+            この2つのオプションはトーンカーブツールダイアログの 
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                  fileref="images/dialogs/stock-histogram-logarithmic-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「対数」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            ボタンや 
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                  fileref="images/dialogs/stock-histogram-linear-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「線形」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            ボタンと同じはたらきをします。
           </para>
         </listitem>
       </varlistentry>
@@ -672,10 +689,11 @@
           各終点アンカーの上端を左寄りに、 下端を右寄りに移動することは、
           <link linkend="gimp-tool-levels">レベル</link> ツールで白スライダを
           左寄りに、 黒スライダを右寄りに移動するのと同じです。 白点よりも
-          大きな (=色カーブの平坦部の) 値の画素は全て白く (選んだチャンネルに
-          よっては、 より色が強く / より不透明に) なります。 黒点よりも小さな
-          (=色カーブの下側の平坦部の) 値の画素は全て黒く (真っ黒に /
-          完全透過に) なります。 色カーブの持ち上げられた部分の各点に対応する
+          大きな (=色カーブの平坦部の) 値の画素は全て白くなります。 (選んだ
+          チャンネルによっては、 より色が強く、 もしくはより不透明になります。)
+          黒点よりも小さな (=色カーブの下側の平坦部の) 値の画素は全て黒く
+          なります。 (同様に、 真っ黒に、 もしくは完全透過になります。) 色
+          カーブの持ち上げられた部分の各点に対応する
           画素は色が薄くなります。 反対に色カーブの引き下げられた部分の各点に
           対応する画素は暗くなります (緑の矢印)。 そうした全ての画素は出力側の
           色調範囲いっぱいに拡がって分布します。

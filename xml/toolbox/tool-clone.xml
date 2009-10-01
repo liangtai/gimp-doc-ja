@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -18,7 +18,7 @@
   2005-11-30 replaced informalfigure by figure by lexa
   2005-05-23 de reviewed by axel.wernicke
 -->
-<!--2009-09-23-->
+<!--2009-09-30-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-clone">
   <title lang="en">Clone</title>
   <title lang="ja">スタンプで描画 (クローン)</title>
@@ -121,12 +121,12 @@
     参照位置が転写元の画像の端部に達すると変化を止めてしまいます。
   </para>
   <para lang="ja">
-    <quote>スタンプで描画</quote>ツールは描画可能なもの全てから (すなわち
-    レイヤー、 マスク、 チャンネルのいずれからも) 他の描画対象に転写が
+    <quote>スタンプで描画</quote>ツールは描画可能なもの全てから、 すなわち
+    レイヤー、 マスク、 チャンネルのいずれからも他の描画対象に転写が
     できます。 クイックマスクモードにすれば選択マスクからさえも転写ができます。
-    これがもし転写を受ける画像の受けつけないはずの色を転写する場合 (例えば、
+    これがもし転写を受ける画像の受けつけないはずの色を転写する場合、 例えば
     <acronym>RGB</acronym>レイヤーからインデックスつきレイヤーやレイヤーマスク
-    へ転写するとき) には、 その色はできるだけ近い色に転換されます。
+    へ転写するときには、 その色はできるだけ近い色に転換されます。
   </para>
 
   <sect3>
@@ -220,9 +220,9 @@
           <para lang="ja">
             このキーは画像を元に転写をするときにその参照位置を定めるのに使い
             ます。 パターンを用いる場合には使いません。 画像のどのレイヤーから
-            でも、 それを活性化 (レイヤーダイアログで分かります) したうえで、
-            <keycap>Ctrl</keycap> キーを押しながらクリックすれば転写できます。
-            ツールオプションの <guilabel>位置合わせ</guilabel> が
+            でも、 それを活性化 (レイヤーダイアログでは強調表示される) した
+            うえで、 <keycap>Ctrl</keycap> キーを押しながらクリックすれば転写
+            できます。 ツールオプションの <guilabel>位置合わせ</guilabel> が
             <guimenuitem>なし</guimenuitem>、 <guimenuitem>揃える</guimenuitem>
             、 <guimenuitem>固定</guimenuitem> のいずれかであるならば、
             クリックした位置が転写の参照原点です。 この部分の画像情報が<quote>
@@ -318,16 +318,15 @@
                 </para>
                 <para lang="ja">
                   <guimenuitem>画像から</guimenuitem> を選んだときはこのツール
-                  で描く前に、
-                  転写元となるレイヤーの参照位置を<acronym>GIMP</acronym>に
-                  <keycombo><keycap>Ctrl</keycap><mousebutton>第1ボタン
-                  </mousebutton></keycombo> で教えなければなりません。
+                  で描く前に、 転写元となるレイヤーの参照位置を <keycap>Ctrl
+                  </keycap> キーを押しながらクリックして<acronym>GIMP</acronym>
+                  に教えなければなりません。
                 </para>
                 <para lang="ja">
-                  <guilabel>レイヤー結合色</guilabel>にチェックを入れておけば、
-                  転写される絵は <emphasis>見たまま</emphasis> に (レイヤーが
-                  複数ある画像は全てのレイヤーを通して採られた色を使うように)
-                  なります。 チェックを外すと、 選択されたレイヤー (活性
+                  <guilabel>レイヤー結合色</guilabel> にチェックを入れておけば、
+                  転写される絵は <emphasis>見たまま</emphasis> に、 そして
+                  レイヤーが複数ある画像は全てのレイヤーを通して採られた色を使う
+                  ようになります。 チェックを外すと、 選択されたレイヤー (活性
                   レイヤー) だけから転写します。 より詳しい情報が、 用語集の
                   <link linkend="glossary-samplemerge">レイヤー結合色</link>
                   の項目にあります。
@@ -487,8 +486,8 @@
                   押しながら新たな原点をクリックします。
                 </para>
                 <para lang="ja">
-                  下の例図では、 何れの新たな描線もそれ以前の描線と同じ間合いで
-                  参照しています。 すなわち最初の描線以降は転写の間合いを
+                  下の例図では、 いずれの新たな描線もそれ以前の描線と同じ間合い
+                  で参照しています。 すなわち最初の描線以降は転写の間合いを
                   測りません。 それから、 続く描線で参照が元画像から
                   はみ出すと、 画像が途切れてしまいます。
                 </para>
@@ -529,9 +528,9 @@
                 </para>
                 <para lang="ja">
                   <quote>登録されたもの</quote>のモードは他の位置合わせのモード
-                  とは異なります。 画像から写し取るときは元画像のレイヤーを
-                  <keycombo><keycap>Ctrl</keycap><mousebutton>第1ボタン
-                  </mousebutton></keycombo> で登録します。 すると転写を受ける
+                  とは異なります。 画像から写し取るときは <keycap>Ctrl</keycap>
+                  キーを押しながら元画像のレイヤーをクリックして登録します。 
+                  すると転写を受ける
                   レイヤーでの描画は元画像の画素と同じ位置で同じ座標の画素が
                   参照されます。 このしくみは同じ画像内のあるレイヤーから他の
                   レイヤーへ転写するのに便利です。
@@ -621,7 +620,7 @@
             不透明度は転写できません。 透明な画像から転写すると何も描画され
             ません。 不完全透過な画像から転写すると、 元画像の不透明度に従った
             効果が描画に及びます。 それでは不透明度を100%としてぼかしなしの
-            ブラシを使うとすると:
+            ブラシを使うとすると、
           </para>
           <itemizedlist>
             <listitem>
@@ -705,9 +704,9 @@
             描画</quote>ツールを起用して、 オプションはスタンプソースに
             <guimenuitem>画像から</guimenuitem> を、 位置合わせには
             <guimenuitem>登録したもの</guimenuitem> を選択しておきます。
-            <keycombo><keycap>Ctrl</keycap><mousebutton>第1ボタン</mousebutton>
-            </keycombo> でフィルタのかかった方のレイヤーを元画像として登録
-            したら、 複製元の画像上で描画します。 ポインタでドラッグしてなぞった
+            <keycap>Ctrl</keycap> キーを押しながらフィルタのかかった方のレイヤー
+            をクリックして元画像として登録してから、 複製元の画像上で描画
+            します。 ポインタでドラッグしてなぞった
             ところにフィルタのかかった画像が塗られます。
           </para>
         </listitem>
@@ -750,11 +749,10 @@
             そうしたら<quote>スタンプで描画</quote>ツールを起用して、 スタンプ
             ソースに <guimenuitem>画像から</guimenuitem> を、 位置合わせには
             <guimenuitem>登録したもの</guimenuitem> をそれぞれ指定します。
-            いずれかの画像のレイヤーをひとつ <keycombo><keycap>Ctrl</keycap>
-            <mousebutton>第1ボタン</mousebutton></keycombo> で参照元として
-            選び、 もう一方の画像上のレイヤーで描画作業をします。 この指定
-            如何で<quote>取り消しブラシ</quote>か<quote>やり直しブラシ</quote>
-            のいずれかになります。
+            いずれかの画像のレイヤーをひとつ <keycap>Ctrl</keycap> キーを押し
+            ながらクリックして参照元に選び、 もう一方の画像上のレイヤーで描画
+            作業をします。 <quote>取り消しブラシ</quote>になるか
+            <quote>やり直しブラシ</quote>になるかがこの指定で決まります。
           </para>
         </listitem>
       </varlistentry>

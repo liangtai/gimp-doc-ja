@@ -12,7 +12,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   2005-08-07 de reviewed and restructured by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2009-10-01-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-threshold">
   <title lang="en">Threshold</title>
   <title lang="ja">しきい値</title>
@@ -69,7 +69,7 @@
       There are different possibilities to activate the tool:
     </para>
     <para lang="ja">
-      <quote>しきい値</quote>ツールを起用する方法は2通りあります:
+      <quote>しきい値</quote>ツールを起用する方法は2通りあります。
     </para>
     <itemizedlist>
       <listitem>
@@ -201,8 +201,6 @@
             処理などに使った設定を再利用できます。 記憶された設定の数々は
             <guimenuitem>プリセットデータの編集...
             </guimenuitem> に進むと出てくるつぎのダイアログで管理できます。
-            <!--<guimenuitem>プリセットデータの編集...
-            </guimenuitem>-->
           </para>
           <figure>
             <title lang="en">Manage saved Settings Dialog</title>
@@ -253,7 +251,7 @@
             selection while changes are made to the intensity level.
           </para>
           <para lang="ja">
-            <guimenuitem>プレビュー</guimenuitem>
+            <fuilabel>プレビュー</guilabel>
             の切り替えで選択範囲あるいは活性レイヤー上の強度レベルの変更は動的に
             反映されます。
           </para>
@@ -283,9 +281,9 @@
       を使えばこの部分は丸ごと選択できます。
       <footnote>
         <para>
-          <quote>Grokking the GIMP</quote>
-          <xref linkend="bibliography-online-grokking-gimp" />
-          ではチャンネルマスクを用いた方法を述べていますが、 今回は
+          <quote>Grokking the GIMP</quote> 
+          <xref linkend="bibliography-online-grokking-gimp"/> 
+          ではチャンネルマスクを用いた方法を述べていますが、 今回は 
           <link linkend="gimp-image-window-qmask-button">クイックマスク</link>
           を使うほうが簡単です。
         </para>
@@ -306,12 +304,12 @@
         </para>
         <para lang="ja">
           まず始めは
-          <link linkend="plug-in-decompose-registered">チャンネル分解</link>
+          <link linkend="plug-in-decompose-registered">チャンネル分解</link> 
           フィルタを用いて画像を<acronym>RGB</acronym>と<acronym>HSV</acronym>
           に分解します。 すると新たにグレースケール画像が作られ、 それぞれの
           色要素はレイヤーとなってレイヤーダイアログに並びます。 各レイヤーの
           サムネイルが表示されますが学習に使うには小さ過ぎます。 もちろん
-          プレビューの大きさを変えるダイアログメニュー (小さな三角のボタン)
+          プレビューの大きさを変えるダイアログメニュー (小さな三角のボタン) 
           で大きくする方法がありますが、 むしろ<quote>眼</quote>の印を使う方が
           画像の分解レイヤーを選んで見るには楽でしょう。 欲しい部分がうまく孤立
           しているレイヤーを選びましょう。
@@ -394,7 +392,7 @@
           <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>.
         </para>
         <para lang="ja">
-          選ばれたレイヤーを表示している画像を確実に活性化してから、
+          選ばれたレイヤーを表示している画像を確実に活性化してから、 
           <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> で
           クリップボードに取り込みます。
         </para>
@@ -413,20 +411,20 @@
           paste the previously copied layer.
         </para>
         <para lang="ja">
-          そうしたら元画像を活性化します。 画像ウィンドウの左下隅にある
+          そうしたら元画像を活性化します。 画像ウィンドウの左下隅にある 
           <guibutton>クイックマスク</guibutton> ボタンをクリックしてください。
           画像は半透明の赤 (初期設定) 色で覆われます。 元画像の赤にかぶって
           しまうので赤は今回ふさわしくありません。 チャンネルダイアログを開き、
           <quote>クイックマスク</quote>チャンネルを活性化させてから、 メニュー
           より <guimenuitem>チャンネルプロパティを編集...
-          </guimenuitem> を辿るか、 チャンネルのプロパティを編集するボタン
+          </guimenuitem> を辿るか、 チャンネルのプロパティを編集するボタン 
           <guiicon>
             <inlinemediaobject>
               <imageobject>
                 <imagedata fileref="images/dialogs/stock-edit-16.png"/>
               </imageobject>
             </inlinemediaobject>
-          </guiicon>
+          </guiicon> 
           をクリックしてダイアログを呼びだし、 色を変更してください。 さて元の
           画像に戻ったら、 <keycombo><keycap>Ctrl</keycap><keycap>V</keycap>
           </keycombo> で先ほど写し取っておいたレイヤーを貼り付けます。
@@ -478,7 +476,7 @@
         </para>
         <para lang="ja">
           ズームツールを使って各画素が見えるまで拡大しましたし、 大きい不要な
-          部分はなげなわツールを使って取り除きました。 (曖昧さが無い)
+          部分はなげなわツールを使って取り除きました。 (曖昧さが無い) 
           鉛筆ツールを使って、 選択範囲を削るには黒色で、 選択範囲を足すには
           白色で、 特に茎の部分を描画しなおしました。
         </para>

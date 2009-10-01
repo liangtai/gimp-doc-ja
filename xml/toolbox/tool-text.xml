@@ -13,7 +13,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--2009-09-15-->
+<!--2009-10-01-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -102,8 +102,8 @@
     <guiicon>
       <inlinegraphic fileref="images/toolbox/stock-move-16.png"/>
     </guiicon>
-    の姿に変化します。 そこでクリックして曳けばこの枠とその内容が移動します
-    (テキストはマウスボタンを放すと現れます)。 テキストは枠内での同じ位置に
+    の姿に変化します。 そこでクリックして曳けばこの枠とその内容が移動します。
+    テキストはマウスボタンを放すと現れます。 テキストは枠内での同じ位置に
     有ります。
   </para>
 
@@ -247,8 +247,8 @@
             <para lang="ja">
               ポインティングデバイス (マウスなど) についているスクロール
               ホイールをフォントボタン上で回すとテキストに使われているフォント
-              を素早く変更できます (クリックする必要はなく、 マウス車だけを
-              使用します)。
+              を素早く変更できます。 この操作ではクリックする必要はなく、 
+              マウス車だけを使用します。
             </para>
           </tip>
         </listitem>
@@ -379,12 +379,9 @@
             selectable from the associated icons.
           </para>
           <para lang="ja">
-            文字列を <guiicon><inlinemediaobject><phrase>右揃え</phrase>
-            </inlinemediaobject></guiicon>、 <guiicon><inlinemediaobject>
-            <phrase>左揃え</phrase></inlinemediaobject></guiicon>、 <guiicon>
-            <inlinemediaobject><phrase>中央揃え</phrase></inlinemediaobject>
-            </guiicon>、 <guiicon><inlinemediaobject><phrase>均等割り</phrase>
-            </inlinemediaobject></guiicon> の4つの揃え方から選びます。
+            <quote>左揃え</quote>、 <quote>右揃え</quote>、 <quote>中央揃え
+            </quote>、 <quote>均等割り</quote>の4つのボタンから文字列の
+            揃え方を選びます。"
           </para>
         </listitem>
       </varlistentry>
@@ -671,7 +668,7 @@
       <keycombo>
         <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>U</keycap>
       </keycombo>
-      を押してから引き出したい文字のコード番号を16進数で打鍵します。 例えば、 
+      を押してから引き出したい文字のコード番号を 16 進数で打鍵します。 例えば、 
     </para>
     <figure>
       <title lang="en">Entering Unicode characters</title>
@@ -725,7 +722,8 @@
     <para lang="ja">
       ここではアルファベット入力の例でしたが、 もちろん特殊な文字も (外国語の
       文字も) 引き出せます。 ただしその文字が入っているフォントを選択している
-      場合に限ります (クリンゴン語用の書体を収めたフォントもあるのだそうです)。
+      場合に限ります。 クリンゴン語用の書体を収めたフォントはなかなかないです
+      から。
     </para>
     <mediaobject>
       <imageobject>
@@ -763,11 +761,19 @@
           </para>
           <para lang="ja">
             テキストはテキストファイルの内容を利用できます。 テキストエディタの
-            <guiicon><inlinemediaobject><phrase>開く</phrase>
-            </inlinemediaobject></guiicon> ボタンをクリックして
-            <quote>テキストファイル (UTF-8) を開く</quote>ダイアログから
-            ファイルを選んでください。 ファイル内の全てのテキストが
-            読み込まれます。
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                    fileref="images/dialogs/stock-fileopen-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>開く</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> ボタンをクリックして<quote>テキストファイル (UTF-8) 
+            を開く</quote>ダイアログからファイルを選んでください。 
+            ファイル内の全てのテキストが読み込まれます。
           </para>
         </listitem>
       </varlistentry>
@@ -780,8 +786,17 @@
             the image.
           </para>
           <para lang="ja">
-            <guiicon><inlinemediaobject><phrase>消去</phrase>
-            </inlinemediaobject></guiicon> ボタンを押すとテキストエディタ内の
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                    fileref="images/dialogs/stock-edit-clear-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>消去</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> ボタンを押すとテキストエディタ内の
             全ての文字と画像上の連関したテキストレイヤーの文字が消えます。
           </para>
         </listitem>
