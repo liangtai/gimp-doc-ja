@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -11,7 +11,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-09-12-->
+<!--2009-10-06-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -178,7 +178,7 @@
       パレットの <emphasis>名前</emphasis> をダブルクリックするとその名前が編集
       できます。 ただし変更できるのは自前で追加インストールしたものに限られ、
       <acronym>GIMP</acronym>と一緒に提供されたパレットファイルは対象外です。
-      仮に権限の無いものの名前を編集しても、 これを確定しようとして <keycap>
+      仮に権限の及ばないものの名前を編集しても、 これを確定しようとして <keycap>
       Return</keycap> キーを押したりどこか他のところに操作の焦点を移すと
       たちまち名前は元に戻されます。
     </para>
@@ -655,8 +655,8 @@
                 <para lang="ja">
                   ここでパレットに収められる色数を決めます。 既定数が 256 と
                   なっている理由は3つあります。 第1にどんなグラデーションにも
-                  相異なる色が256色入っています<!--理解できません-->。 第2に
-                  <acronym>GIF</acronym>ファイル形式は最大で256色が使えます。
+                  相異なる色が<!--少なくとも？--> 256 色入っています。 第2に
+                  <acronym>GIF</acronym>ファイル形式は最大で 256 色が使えます。
                   第3に<acronym>GIMP</acronym>のインデックス化カラー画像は相
                   異なる色が最大で256色使えるからです。 とはいえお好みで何色
                   でもここで指定できます。 <acronym>GIMP</acronym>は与えられた
@@ -697,7 +697,7 @@
                 </para>
                 <para lang="ja">
                   <guilabel>色数</guilabel> を最大にしても
-                  パレットに収められるのはせいぜい10000色です。 <acronym>RGB
+                  パレットに収められるのはせいぜい 10000 色です。 <acronym>RGB
                   </acronym>画像ははるかに多くの色数があります。 この
                   <guilabel>間隔</guilabel> を増やすとある
                   程度似た色はまとめられ、 より適切なパレットが作成できます。 
@@ -736,12 +736,12 @@
             Palettes dialog in future sessions.
           </para>
           <para lang="ja">
-            <quote>パレットの複製<quote>は現在選択されているパレットの写しを
-            とって新たなパレットを作成しパレット編集ダイアログを開きますので、
-            直ちにパレットが編集できます。 編集後の結果は<acronym>GIMP
-            </acronym>を終了する際に自動的に個人用 <filename>palettes
-            </filename> フォルダに保存されますから、 次回からもこのパレットが
-            利用できます。
+            <guimenuitem>パレットの複製</guimenuitem> は現在選択されている
+            パレットの写しをとって新たなパレットを作成しパレット編集ダイアログ
+            を開きますので、直ちにパレットが編集できます。 編集後の結果は
+            <acronym>GIMP</acronym>を終了する際に自動的に個人用 
+            <filename class="directory">palettes</filename> フォルダに保存
+            されますから、 次回からもこのパレットが利用できます。
           </para>
         </listitem>
       </varlistentry>
@@ -788,12 +788,12 @@
             yourself.
           </para>
           <para lang="ja">
-            <quote>パレットの削除</quote>は<quote>パレット</quote>ダイアログの
-            一覧表からパレットを消去するのみならずディスク上の保管場所からその
-            パレットファイルを削除します。 実行に移す前に本当に削除するつもり
-            なのかどうかの確認が求められます。 ちなみに<acronym>GIMP</acronym>
-            と一緒に付いてきたパレットはいずれもこの対象外で、 削除可能なのは
-            自前で追加したものに限られます。
+            <guimenuitem>パレットの削除</guimenuitem> は<quote>パレット</quote>
+            ダイアログの一覧表からパレットを消去するのみならずディスク上の
+            保管場所からそのパレットファイルを削除します。 実行に移す前に本当に
+            削除するつもりなのかどうかの確認が求められます。 ちなみに<acronym>
+            GIMP</acronym>と一緒に付いてきたパレットはいずれもこの対象外で、 
+            削除可能なのは自前で追加したものに限られます。
           </para>
         </listitem>
       </varlistentry>
@@ -812,12 +812,12 @@
             current session.
           </para>
           <para lang="ja">
-            <quote>パレットを再読み込み</quote>は検索対象パスに登録されている
-            パレットファイルの保管場所を読み込み直し、 新たに発見されたパレット
-            をパレットダイアログの一覧表に加えます。 何らかの手段で外部から入手
-            したパレットファイルを個人用パレットフォルダにコピーしたときに、
-            <acronym>GIMP</acronym>を再起動せずとも即座にそのパレットが利用可能
-            になる便利なボタンです。
+            <guimenuitem>パレットを再読み込み</guimenuitem> は検索対象パスに登録
+            されているパレットファイルの保管場所を読み込み直し、 新たに発見
+            されたパレットをパレットダイアログの一覧表に加えます。 何らかの手段
+            で外部から入手したパレットファイルを個人用パレットフォルダにコピー
+            したときに、<acronym>GIMP</acronym>を再起動せずとも即座にその
+            パレットが利用可能になる便利なボタンです。
           </para>
         </listitem>
       </varlistentry>
@@ -1435,11 +1435,11 @@
             be insensitive.
           </para>
           <para lang="ja">
-            <quote>色の編集</quote>は色の変更ダイアログを呼び出しますので、
-            選ばれたパレットの色項目の色をここで変更できます。 ただし開いている
-            パレットの改変権限がない場合 (つまり<acronym>GIMP</acronym>の導入時
-            についてきたシステム付属パレットを開いているとき) には、 この
-            メニュー項目は灰色無効になっています。
+            <guimenuitem>色の編集...</guimenuitem> は色の変更ダイアログを呼び
+            出しますので、 選ばれたパレットの色項目の色をここで変更できます。 
+            ただし開いているパレットの改変権限がない場合 (つまり<acronym>GIMP
+            </acronym>の導入時についてきたシステム付属パレットを開いているとき)
+            には、 このメニュー項目は灰色無効になっています。
           </para>
         </listitem>
       </varlistentry>
@@ -1457,9 +1457,9 @@
             the Toolbox), or the current background color.
           </para>
           <para lang="ja">
-            これらのコマンドはいずれもパレットに新しい色項目を作り、 現在の
-            <acronym>GIMP</acronym>の描画色や背景色 (ツールボックスの色標識の
-            領域に表示されています) をその新項目の色に使います。
+            これらのコマンドはいずれもパレットに新しい色項目を作り、 
+            (ツールボックスの色標識で表示されている) 現在の<acronym>GIMP
+            </acronym>の描画色や背景色をその新項目の色に使います。
           </para>
         </listitem>
       </varlistentry>
@@ -1474,9 +1474,9 @@
             menu entry will be insensitive.
           </para>
           <para lang="ja">
-            <quote>色の削除</quote>は現在選択している色項目をパレットから消去
-            します。 パレットの改変権限がないときはこのメニュー項目は灰色無効
-            になります。
+            <guimenuitem>色の削除</guimenuitem> は現在選択している色項目を
+            パレットから消去します。 パレットの改変権限がないときはこのメニュー
+            項目は灰色無効になります。
           </para>
         </listitem>
       </varlistentry>
@@ -1489,7 +1489,8 @@
             entries in the palette display.
           </para>
           <para lang="ja">
-            <quote>縮小表示</quote>はパレット表示部の升目の高さを低くします。
+            <guimenuitem>縮小表示</guimenuitem> はパレット表示部の升目を
+            低くします。
           </para>
         </listitem>
       </varlistentry>
@@ -1502,7 +1503,8 @@
             entries in the palette display.
           </para>
           <para lang="ja">
-            <quote>拡大表示</quote>はパレット表示部の升目の高さを増します。
+            <guimenuitem>拡大表示</guimenuitem> はパレット表示部の升目の高さを
+            増します。
           </para>
         </listitem>
       </varlistentry>
@@ -1518,8 +1520,8 @@
             display area.
           </para>
           <para lang="ja">
-            <quote>すべてを表示</quote>は全ての色項目が表示部に収まるように
-            パレット表示部の升目の高さを調節します。
+            <guimenuitem>すべてを表示</guimenuitem> は全ての色項目が表示部に
+            収まるようにパレット表示部の升目の高さを調節します。
           </para>
         </listitem>
       </varlistentry>
