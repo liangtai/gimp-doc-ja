@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -9,7 +9,7 @@
   2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2009-09-12-->
+<!--2009-10-06-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
   <title lang="en">Gradients Dialog</title>
   <title lang="ja">グラデーションダイアログ</title>
@@ -84,7 +84,7 @@
         <guilabel>FG to BG (RGB)</guilabel>: default gradient, between the
         Foreground and the background colors of the Toolbox, in the RGB mode.
       </para>
-      <para lang="ja"><!--swapped. because of lang.-depend order-->
+      <para lang="ja"><!--Swapped. This is lang.-depend order.-->
         <guilabel>描画色から透明</guilabel>: 1色だけ (描画色) 使用し、 完全
         不透明から完全透過まで徐々に変化がついています。 このグラデーションは
         穏やかに混じりあうコラージュ作品や霧の効果に非常に役立ちます。
@@ -109,7 +109,7 @@
         This gradient is very useful when you work with softly blended
         collages or fog effects.
       </para>
-      <para lang="ja"><!--swapped. because of lang.-depend order-->
+      <para lang="ja"><!--Swapped. This lang.-depend order.-->
         <guilabel>描画色から背景色 (RGB)</guilabel>:
         既定で選ばれるのはこのグラデーションで、 <acronym>RGB</acronym>モードで
         前景色から背景色までの変化です。
@@ -222,7 +222,7 @@
           <quote>グラデーション</quote>ダイアログウィンドウが単独で (例えば
           <quote>グラデーション</quote>タブとなっていたダイアログが
           <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
+          [隠れて]いるときは、 画像ウィンドウのメニューから
           <menuchoice>
             <guimenu>ウィンドウ</guimenu>
             <guimenuitem>グラデーション</guimenuitem>
@@ -264,9 +264,9 @@
       グラデーション一覧表のどれかを <emphasis>ダブルクリック</emphasis> すると
       その名前を変えられるグラデーションエディタが開かれます。 ただし変更できる
       のは自前でインストールしたものに限られ、 <acronym>GIMP</acronym>と一緒に
-      提供されたグラデーションファイルは対象外です。 仮に変更の権限のないものの
-      名前を編集しても、 これを確定しようとして <keycap>Return</keycap> キーを
-      押したりどこか他のところを触るとたちまち名前は元に戻されます。
+      提供されたグラデーションファイルは対象外です。 仮に変更の権限の及ばない
+      ものの名前を編集しても、 これを確定しようとして <keycap>Return</keycap> 
+      キーを押したりどこか他のところを触るとたちまち名前は元に戻されます。
     </para>
     <variablelist>
       <varlistentry>
@@ -381,10 +381,11 @@
             このアイコンボタンをクリックすると簡単なグレースケールで配色された
             新たなグラデーションが追加され、 これを変更できるグラデーション
             エディタが開かれます。 作成されたグラデーションは<acronym>GIMP
-            </acronym>の個人用ディレクトリ内の <filename>gradients</filename>
-            フォルダに自動的に保存され、 次回の<acronym>GIMP</acronym>起動時
-            から自動的に読み込まれるようになります。 (これらのフォルダは
-            <link linkend="gimp-prefs-folders-data">環境設定ダイアログ</link> の
+            </acronym>の個人用ディレクトリ内の <filename classs="directory">
+            gradients</filename>フォルダに自動的に保存され、 次回の<acronym>GIMP
+            </acronym>起動時から自動的に読み込まれるようになります。 (これらの
+            フォルダは 
+            <link linkend="gimp-prefs-folders-data">環境設定</link> ダイアログの
             <menuchoice>
               <guimenu>フォルダ</guimenu>
               <guimenuitem>グラデーション</guimenuitem>
@@ -461,8 +462,8 @@
           </para>
           <para lang="ja">
             グラデーションエディタを使わない何らかの方法で新たにグラデーション
-            ファイルを個人用 <filename>gradients</filename> フォルダなどに追加
-            したときは、
+            ファイルを個人用 <filename class="directory">gradients</filename> 
+            フォルダなどに追加したときは、
             <guiicon>
               <inlinemediaobject>
                 <imageobject>

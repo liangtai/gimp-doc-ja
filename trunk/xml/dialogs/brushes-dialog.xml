@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
@@ -13,7 +13,7 @@
   2006-02-24 Written Brush Editor en;fr by j.h
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-09-12-->
+<!--2009-10-06-->
 <sect2 id="gimp-brush-dialog">
   <title lang="en">Brushes Dialog</title>
   <title lang="ja">ブラシダイアログ</title>
@@ -211,7 +211,7 @@
           起用しているツールにのみ適用し、 他のツールで用いるブラシは変更しない
           設定も可能です。 より詳しくは
           <link linkend="gimp-prefs-tool-options">環境設定</link> ダイアログの
-          <quote>ツールオプション</quote>のページの節をご覧ください。
+          <quote>ツールオプション</quote>のページをご覧ください。
         </para>
       </listitem>
     </itemizedlist>
@@ -323,8 +323,8 @@
               ブラシの名前はダブルクリックすると編集ができます。 ただし名前を
               変更できるのは自作のブラシや自前でインストールしたものに限られ、
               <acronym>GIMP</acronym>同梱でインストールされたブラシは対象外
-              です。 仮に同梱版のブラシの名前を変えようとして、 確かに編集は
-              できますが確定しようとして <keycap>Return</keycap> キーを押したり
+              です。 仮に同梱版のブラシの名前を変えてみれば確かに編集はでき
+              ますが、 確定しようとして <keycap>Return</keycap> キーを押したり
               どこか他のところをクリックするとたちまち名前は元に戻されてしまい
               ます。 <acronym>GIMP</acronym>と同時にインストールされるブラシ、
               パターン、 グラデーションなどの資源については原則として変更不可
@@ -508,8 +508,8 @@
               このボタンをクリックすると新しい媒介変数つきブラシが境界にぼかし
               が入った丸い形に作られ、 これを編集できるようブラシエディタが
               開かれます。 この新しいブラシは自動的に個人用<acronym>GIMP
-              </acronym> ディレクトリ内の <filename>brushes</filename> フォルダ
-              に保存されます。
+              </acronym> ディレクトリ内の <filename class="directory">brushes
+              </filename> フォルダに保存されます。
             </para>
           </listitem>
         </varlistentry>
@@ -541,7 +541,8 @@
               利用できます。 ブラシの複製をとるとブラシエディタが開かれてその
               複製の加工ができるようになっています。 作成が済むと自動的にその
               ブラシファイルは個人用<acronym>GIMP</acronym>ディレクトリの
-              <filename>brushes</filename> フォルダに保存されます。
+              <filename class="directory">brushes</filename> フォルダに
+              保存されます。
             </para>
           </listitem>
         </varlistentry>
@@ -588,9 +589,10 @@
             </para>
             <para lang="ja">
               ブラシエディタで作成されたブラシファイルが自動的に保存される
-              個人用<acronym>GIMP</acronym>ディレクトリの <filename>brushes
-              </filename> フォルダをはじめ、 ブラシ検索パスに登録されたフォルダ
-              に何かブラシファイルを新たに収めたら、 
+              個人用<acronym>GIMP</acronym>ディレクトリの 
+              <filename class="directory">brushes</filename> フォルダをはじめ、
+              ブラシ検索パスに登録されたフォルダに何かブラシファイルを
+              新たに収めたら、 
               <guiicon>
                 <inlinemediaobject>
                   <imageobject>
@@ -708,9 +710,9 @@
     </para>
     <para lang="ja">
       ブラシエディタでは<acronym>GIMP</acronym>とともに提供されたブラシの
-      媒介変数を見られる (変更はできません) ほか、 円形、 正方形、 菱形のような
-      幾何学図形をもとにブラシの自作ができます。 このエディタの各部品を順に見て
-      ゆきましょう。
+      媒介変数を見られるほか (ただし変更はできない) 、 円形、 正方形、 菱形の
+      ような幾何学図形をもとにブラシの自作ができます。 このエディタの各部品を
+      順に見てゆきましょう。
     </para>
     <para lang="ja">
       <emphasis>ダイアログバー</emphasis>: 
