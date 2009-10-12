@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2008-05-06 ude: changed (help-)id [was: gimp-xtns-procedure-browser]
   2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2009-09-12-->
+<!--2009-10-11-->
 <sect2 id="plug-in-dbbrowser">
   <title lang="en">The Procedure Browser</title>
   <title lang="ja">プロシージャブラウザ</title>
@@ -89,23 +89,131 @@
       The figure above shows the <guilabel>Procedure Browser</guilabel>
       dialog window. If you click on an item in the scrolled list on the
       left, information about it is displayed on the right. You can also
-      search for a specific procedure by name by entering part or all of
-      the name of the procedure in the <guilabel>Search:</guilabel> text
-      box and clicking on the <guilabel>Search by Name</guilabel> button,
-      or search for one by its description by entering a search string in
-      the <guilabel>Search:</guilabel> text box and clicking on the
-      <guilabel>Search by Blurb</guilabel> button.
+      search for a specific procedure by querying the procedural database
+      with a regular expression on <guilabel>Search:</guilabel> text box:
     </para>
     <para lang="ja">
       上図は<quote>プロシージャブラウザ</quote>ダイアログウィンドウを示して
       います。 左側の繰り寄せ可能なウィンドウ内の項目のどれかをクリックすると
-      右側の領域にその詳しい情報が表示されます。 プロシージャは要素を絞った
-      検索ができます。 引き出しリストから検索したい要素を特定し、 <guilabel>
-      検索:</guilabel> 記入欄に語句を書き込んでみてください。
-      &lt;!--and clicking on the <guilabel>Search by Name</guilabel> button,
-      or search for one by its description by entering a search string in
-      the <guilabel>検索:</guilabel> text box and clicking
-      on the <guilabel>Search by Blurb</guilabel> button.--&gt;
+      右側の領域にその詳しい情報が表示されます。 プロシージャデータベースは
+      要素を絞った検索ができます。 引き出しリストから検索したい要素を特定し、 
+      <guilabel>検索:</guilabel> 記入欄に語句を書き込みます。 正規表現が
+      使えます。
     </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">by name</term>
+        <term lang="ja">名前で</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which have code names that contain
+            the part of name you entered.
+          </para>
+          <para lang="ja">
+            記入した語句の表現に合致するコード名をもつプロシージャが
+            列挙されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">by description</term>
+        <term lang="ja">説明で</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which have blurbs that contain
+            the word you entered.
+          </para>
+          <para lang="ja">
+            記入した語句を煽り文句に含んでいるプロシージャが列挙されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">by help</term>
+        <term lang="ja">ヘルプで</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which have additional information
+            text that contain the word you entered.
+          </para>
+          <para lang="ja">
+            記入した語句を追加情報に含んでいるプロシージャが列挙されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">by author</term>
+        <term lang="ja">著者で</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which created by the author
+            which has the part of name you entered.
+          </para>
+          <para lang="ja">
+            記入した語句を作者名に含んでいるプロシージャが列挙されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">by copyright</term>
+        <term lang="ja">著作権で</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which copyright are hold by
+            someone that have the part of name you entered.
+          </para>
+          <para lang="ja">
+            記入した語句を著作権者の表記に含むプロシージャが列挙されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">by date</term>
+        <term lang="ja">日付で</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which have date of year
+            that match the year you entered.
+          </para>
+          <para lang="ja">
+            記入した語句を日付の年に含むプロシージャが列挙されます。
+          </para>
+          <note>
+            <para lang="en">
+              This query processed with text but not date value, so
+              you cannot find some procedure entries even if their date
+              contains the year you entered. For example, a procedure
+              dated 2000-2005 does not match if you search
+              procedures with 2001, but it matches with 2000 or 2005.
+            </para>
+            <para lang="ja">
+              この検索は日付の数値ではなく数字のつきあわせで処理されるので、 
+              制作年に該当するプロシージャであっても検索もれとなるおそれが
+              あります。 例えば日付が 2000-2005 となっているプロシージャは 
+              2000 もしくは 2005 では検索に該当しますが 
+              2001 では引き当てられません。
+            </para>
+          </note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">by type</term>
+        <term lang="ja">型で</term>
+        <listitem>
+          <para lang="en">
+            Shows a list of procedures which have a one of four types:
+            <quote>Internam GIMP procedure</quote>, <quote>GIMP Plug-In
+            </quote>, <quote>GIMP Extension</quote>, or <quote>Temporary
+            Procedure</quote>.
+          </para>
+          <para lang="ja">
+            <quote>Internal GIMP procedure</quote> (l)、 <quote>GIMP 
+            Plug-In</quote> (-)、 <quote>GIMP Extension</quote> (x)、 
+            <quote>Temporary Procedure</quote> (y) の4つの型のいずれかに
+            該当するプロシージャが列挙されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
   </sect3>
 </sect2>
