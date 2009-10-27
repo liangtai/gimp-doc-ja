@@ -14,7 +14,7 @@
   2006-07-12 Added Korean Translation by Dust.
   2006-06-13 Added para about using arrow keys by j.h
 -->
-<!--2009-09-23-->
+<!--2009-10-27-->
 <sect1 id="gimp-using-selections">
   <title lang="en">Creating and Using Selections</title>
   <title lang="ja">選択範囲の作成と利用</title>
@@ -39,17 +39,17 @@
       <secondary sortas="イドウ">移動</secondary>
     </indexterm>
     <para lang="en">
-      Rectangular and elliptical selections show up in two modes. Default
-      mode is with handles. If you click the selection or press the
-      <keycap>Enter</keycap> key, you only get the dotted outline
-      (marching ants) and no handles. The other selection tools have
+      Rectangular and elliptical selections have two modes. The default
+      mode has handles on the selection. If you click the selection or
+      press the <keycap>Enter</keycap> key, the handles disappear leaving
+      only the dotted outline (marching ants). The other selection tools have
       different behaviour.
     </para>
     <para lang="ja">
-      矩形選択や楕円選択の見えかたは2つのモードがあります。 初期設定は
-      取っ手つきですが、 選択範囲内をクリックするか <keycap>Enter</keycap> 
-      キーを押すと点線の輪郭 (点滅破線) だけの表示になります。
-      この他の選択ツールはこのようなふるまいをしません。
+      矩形選択や楕円選択の見えかたは2つのモードがあります。 初期設定では
+      選択範囲に取っ手がつきますが、 選択範囲内をクリックするか <keycap>Enter
+      </keycap> キーを押すと取っ手が消えて点線の輪郭 (点滅破線) だけの表示に
+      なります。 この他の選択ツールはこのようなふるまいをしません。
     </para>
 
     <sect3>
@@ -59,22 +59,25 @@
       <title lang="ja">矩形選択と楕円選択の移動</title>
       <para lang="en">
         If you click-and drag a selection with handles, you move the
-        selection outline and you don't move the contents of rectangular or
+        selection outline, and you don't move the contents of rectangular or
         elliptic selections.
       </para>
       <para lang="en">
-        You can also use the
-        <link linkend="gimp-tool-move">Move </link> tool to move the selection
-        outline.
+        Select the
+        <link linkend="gimp-tool-move">Move</link> tool and set the options
+        to move the selection; the tool supports moving the selection, path,
+        or layer.
       </para>
       <para lang="ja">
-        選択範囲の把手をクリックしてドラッグすると、 選択範囲の境界線は移動しますが、
-        選択された矩形や楕円の内側の画像は移動しません。
+        選択範囲の取っ手をクリックしてドラッグすると、 選択範囲の境界線は移動
+        しますが、 選択された矩形や楕円の内側の画像は移動しません。
       </para>
       <para lang="ja">
-        選択範囲の輪郭線の移動には
-        <link linkend="gimp-tool-move">移動</link> ツールも使えます。
+        <link linkend="gimp-tool-move">移動</link> ツールは移動対象を選択範囲
+        にして使います。 このツールでは選択範囲、 パス、 レイヤーの移動が
+        できます。
       </para>
+
       <figure>
         <title lang="en">Moving selection outline</title>
         <title lang="ja">選択範囲の輪郭を移動</title>
@@ -85,28 +88,37 @@
         </mediaobject>
       </figure>
       <para lang="en">
-        You can also use <keycap>Alt</keycap> (or
-        <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> on some
-        systems) and the arrow keys to move the selection outline one by one
-        pixel. With
-        <keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo> and
-        arrow keys you can move it by 25 pixels steps.
+        Most systems support moving the selection using the arrow keys.
+        The precise behavior is system dependent. If the arrow keys do not
+        cause the selection to move, try hovering the mouse cursor over the
+        selection first. Press and hold the <keycap>Alt</keycap> (or
+        <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo>,
+        <keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo>, or
+        <keycap>Alt</keycap>). One combination may move the selection by one
+        pixel, and another by 25 pixels each step. Hover the mouse cursor over
+        a side or corner handle, and the arrow keys and combination can
+        change the size of the selection.
       </para>
       <para lang="en">
         If you click-and-drag the selection without handles, you create a new
         selection! To move the selection contents, you have to
       </para>
       <para lang="ja">
-        <keycombo><keycap>Ctrl</keycap><keycap>矢印</keycap></keycombo>
-        (システムによっては <keycombo><keycap>Ctrl</keycap>
-        <keycap>Alt</keycap><keycap>矢印</keycap></keycombo>) で選択範囲の
-        輪郭線を1ピクセルづつ移動できます。 <keycombo><keycap>Shift</keycap>
-        <keycap>Alt</keycap><keycap>矢印</keycap></keycombo>
-        では25ピクセルづつです。
+        大概のシステムでは矢印キーを使って選択範囲が移動できます。 ただし細かい
+        ところでシステムごとにその動作や使い方が違います。 矢印キーを操作しても
+        選択範囲が移動しないときはまず選択範囲上にマウスカーソルを置いて
+        ください。 ここで <keycap>Alt</keycap> キーを押したままにします。 
+        (システムによってはこれが <keycombo><keycap>Ctrl</keycap>
+        <keycap>Alt</keycap></keycombo> か <keycombo><keycap>Shift</keycap>
+        <keycap>Alt</keycap></keycombo> のような組み合わせだったりします。)
+        そのどれかと矢印キーを組み合わせた操作で選択範囲を 1 ピクセルずつ移動
+        ができ、 どれか他のの組み合わせで 25 ピクセルずつの移動ができます。 
+        選択範囲の辺や角の取っ手にマウスカーソルを置いてこのような操作をすると
+        選択範囲の大きさが変更できます。
       </para>
       <para lang="ja">
-        取っ手のない選択をドラッグして放った場合には、 新たな選択ができてしまいます。
-        選択範囲の内容の移動のしかたは、つぎの2通りがあります。
+        取っ手のない選択をドラッグして放った場合には、 新たな選択ができて
+        しまいます。 選択範囲の内容の移動のしかたは、つぎの2通りがあります。
       </para>
       <itemizedlist>
         <listitem>
@@ -115,11 +127,22 @@
             <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo>
             keys and click-and-drag the selection. This makes the original
             place empty. A floating selection is created.
+            The required key commands may differ on your system, look in the
+            status bar to see if another combination is specified; for
+            example,
+            <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap>
+            <keycap>Alt</keycap></keycombo>.
           </para>
           <para lang="ja">
             <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo>
-            を押したまま、 選択領域をクリックしてドラッグします。 もとの位置の画像は
-            空白になります。 フローティング選択領域が作られます。
+            を押したまま、 選択領域をクリックしてドラッグします。 もとの位置の
+            画像は空白になります。 フローティング選択領域が作られます。 この
+            ショートカットキーはお使いのシステムによっては別の組み合わせの
+            場合があります。 ステータスバーをご覧になり、 例えば 
+            <keycombo>
+              <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>Alt</keycap>
+            </keycombo>
+            のような他の組み合わせがないか確かめてみましょう。 
           </para>
           <figure>
               <title lang="en">
@@ -146,8 +169,8 @@
           </para>
           <para lang="ja">
             <keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo>
-            を押したまま、 選択領域をクリックしてドラッグすると、 もとの位置は空白に
-            なりません。 フローティング選択領域が作られます。
+            を押したまま、 選択領域をクリックしてドラッグすると、 もとの位置は
+            空白になりません。 フローティング選択領域が作られます。
           </para>
           <figure>
               <title lang="en">
@@ -168,18 +191,21 @@
       </itemizedlist>
       <note>
         <para lang="en">
-          On some systems, it's preferable to push first the
-          <keycap>Alt</keycap> key, otherwise if you push first the
-          <keycap>Shift</keycap> or <keycap>Ctrl</keycap> keys, GIMP will
-          fall over add/subtract to the current selection mode and after
+          On some systems, you must push <keycap>Alt</keycap> before
+          <keycap>Shift</keycap> or <keycap>Ctrl</keycap>. On these
+          systems, pressing <keycap>Shift</keycap> or <keycap>Ctrl</keycap>
+          first, causes GIMP to enter a mode that adds or subtract from the
+          current selection &mdash; after
           that, the <keycap>Alt</keycap> key is ineffective!
         </para>
         <para lang="ja">
-          システムによりますが、 キーの組み合わせは <keycap>Alt</keycap>
-          を先に押すほうがいいようです。 <keycap>Shift</keycap> や
-          <keycap>Ctrl</keycap> を先に押すと、 選択領域の追加/除外が行われて
-          いると<acronym>GIMP</acronym>が判断して、 後から押された
-          <keycap>Alt</keycap> を無視するおそれがあるためです。
+          システムに拠っては <keycap>Shift</keycap> キーや <keycap>Ctrl
+          </keycap> キーを押す前に <keycap>Alt</keycap> を押さなくては
+          なりません。 これは <keycap>Shift</keycap> や <keycap>Ctrl</keycap> 
+          を先に押すと、 システムが<acronym>GIMP</acronym>の態勢を既存の選択
+          範囲に選択範囲を追加もしくはそこから除外するモードに切り替えてしまう
+          ため、 後から押された <keycap>Alt</keycap> が無視されてしまう
+          からです。
         </para>
       </note>
     </sect3>
