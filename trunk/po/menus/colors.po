@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-10-27 15:15+0900\n"
+"POT-Creation-Date: 2009-11-05 08:50+0900\n"
 "PO-Revision-Date: 2009-10-29 07:24+09:00\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -70,8 +70,6 @@ msgstr "明度を反転"
 #: src/menus/colors/retinex.xml:17(primary)
 #: src/menus/colors/max_rgb.xml:16(primary)
 #: src/menus/colors/invert.xml:15(primary)
-#: src/menus/colors/introduction.xml:9(quote)
-#: src/menus/colors/introduction.xml:13(quote)
 #: src/menus/colors/hot.xml:16(primary)
 #: src/menus/colors/filterpack.xml:18(primary)
 #: src/menus/colors/colorify.xml:19(primary)
@@ -152,7 +150,7 @@ msgstr "フィルタ適用2回目。 画像は完全には元に戻らない。"
 #: src/menus/colors/max_rgb.xml:54(title)
 #: src/menus/colors/filterpack.xml:60(title)
 #: src/menus/colors/colortoalpha.xml:54(title)
-#: src/menus/colors/colorify.xml:56(title)
+#: src/menus/colors/colorify.xml:67(title)
 msgid "Activate the filter"
 msgstr "コマンドの呼び出し方"
 
@@ -327,7 +325,7 @@ msgstr ""
 #: src/menus/colors/max_rgb.xml:65(title) src/menus/colors/hot.xml:48(title)
 #: src/menus/colors/filterpack.xml:71(title)
 #: src/menus/colors/colortoalpha.xml:65(title)
-#: src/menus/colors/colorify.xml:67(title)
+#: src/menus/colors/colorify.xml:78(title)
 msgid "Options"
 msgstr "オプション"
 
@@ -463,8 +461,8 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/max_rgb.xml:70(None)
-msgid "@@image: 'images/menus/colors-maxRGB.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr "@@image: 'images/menus/colors-maxRGB.png'; md5=THIS FILE DOESN'T EXIST"
+msgid "@@image: 'images/menus/colors/maxRGB.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr "@@image: 'images/menus/colors/maxRGB.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/max_rgb.xml:13(title)
 #: src/menus/colors/max_rgb.xml:17(secondary)
@@ -577,14 +575,18 @@ msgstr "<quote>マップ</quote>サブメニュー"
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/invert.xml:61(None)
-msgid "@@image: 'images/menus/invert-1.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr "@@image: 'images/menus/invert-1.png'; md5=THIS FILE DOESN'T EXIST"
+msgid ""
+"@@image: 'images/menus/colors/invert-1.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr "" 
+"@@image: 'images/menus/colors/invert-1.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/invert.xml:69(None)
-msgid "@@image: 'images/menus/invert-2.png'; md5=THIS FILE DOESN'T EXIST"
-msgstr "@@image: 'images/menus/invert-2.png'; md5=THIS FILE DOESN'T EXIST"
+msgid ""
+"@@image: 'images/menus/colors/invert-2.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr ""
+"@@image: 'images/menus/colors/invert-2.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/invert.xml:12(title)
 #: src/menus/colors/invert.xml:16(secondary)
@@ -654,19 +656,19 @@ msgstr "階調の反転を実施した後"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/colors/introduction.xml:17(None)
+#: src/menus/colors/introduction.xml:14(None)
 msgid "@@image: 'images/menus/colors.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr "@@image: 'images/menus/colors.png'; md5=THIS FILE DOESN'T EXIST"
 
-#: src/menus/colors/introduction.xml:9(phrase)
-msgid "Introduction to the <placeholder-1/> Menu"
-msgstr "<placeholder-1/>メニューのあらまし"
+#: src/menus/colors/introduction.xml:8(title)
+msgid "Introduction to the <quote>Colors</quote> Menu"
+msgstr "<quote>色</quote>メニューのあらまし"
 
-#: src/menus/colors/introduction.xml:13(phrase)
-msgid "Contents of the <placeholder-1/> Menu"
-msgstr "<placeholder-1/>メニューの目次"
+#: src/menus/colors/introduction.xml:11(title)
+msgid "Contents of the <quote>Colors</quote> Menu"
+msgstr "<quote>色</quote>メニューの目次"
 
-#: src/menus/colors/introduction.xml:21(para)
+#: src/menus/colors/introduction.xml:18(para)
 msgid ""
 "This section describes the <menuchoice><guimenu>Colors</guimenu></"
 "menuchoice> menu, which contains commands that affect the color of the image."
@@ -805,50 +807,48 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/filterpack.xml:77(None)
 msgid ""
-"@@image: 'images/filters/options-color-filterpack.png'; md5=THIS FILE "
-"DOESN'T EXIST"
+"@@image: 'images/menus/colors/filterpack.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/filters/options-color-filterpack.png'; md5=THIS FILE "
-"DOESN'T EXIST"
+"@@image: 'images/menus/colors/filterpack.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/filterpack.xml:139(None)
 msgid ""
-"@@image: 'images/filters/filterpack-hue-options.png'; md5=THIS FILE DOESN'T "
+"@@image: 'images/menus/colors/filterpack-hue.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 msgstr ""
-"@@image: 'images/filters/filterpack-hue-options.png'; md5=THIS FILE DOESN'T "
+"@@image: 'images/menus/colors/filterpack-hue.png'; md5=THIS FILE DOESN'T "
 "EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/filterpack.xml:157(None)
 msgid ""
-"@@image: 'images/filters/filterpack-saturation-options.png'; md5=THIS FILE "
+"@@image: 'images/menus/colors/filterpack-saturation.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/filters/filterpack-saturation-options.png'; md5=THIS FILE "
+"@@image: 'images/menus/colors/filterpack-saturation.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/filterpack.xml:174(None)
 msgid ""
-"@@image: 'images/filters/filterpack-value-options.png'; md5=THIS FILE "
-"DOESN'T EXIST"
+"@@image: 'images/menus/colors/filterpack-value.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 msgstr ""
-"@@image: 'images/filters/filterpack-value-options.png'; md5=THIS FILE "
-"DOESN'T EXIST"
+"@@image: 'images/menus/colors/filterpack-value.png'; md5=THIS FILE DOESN'T "
+"EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/filterpack.xml:255(None)
 msgid ""
-"@@image: 'images/menus/colors-filterpack-advanced.png'; md5=THIS FILE "
+"@@image: 'images/menus/colors/filterpack-advanced.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/colors-filterpack-advanced.png'; md5=THIS FILE "
+"@@image: 'images/menus/colors/filterpack-advanced.png'; md5=THIS FILE "
 "DOESN'T EXIST"
 
 #: src/menus/colors/filterpack.xml:15(title)
@@ -1154,9 +1154,9 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/menus/colors/colortoalpha.xml:71(None)
 msgid ""
-"@@image: 'images/menus/colors-colortoalpha.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/colors/colortoalpha.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/colors-colortoalpha.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/colors/colortoalpha.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/colortoalpha.xml:16(title)
 msgid "Color to Alpha"
@@ -1200,7 +1200,6 @@ msgid "<quote>Color to Alfa</quote> command options"
 msgstr "<quote>色を透明度に</quote>コマンドのオプション"
 
 #: src/menus/colors/colortoalpha.xml:77(term)
-#: src/menus/colors/colorify.xml:78(term)
 msgid "Color"
 msgstr "色ボタン"
 
@@ -1238,11 +1237,11 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/colors/colorify.xml:72(None)
+#: src/menus/colors/colorify.xml:83(None)
 msgid ""
-"@@image: 'images/menus/colors-colorify.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/colors/colorify.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
-"@@image: 'images/menus/colors-colorify.png'; md5=THIS FILE DOESN'T EXIST"
+"@@image: 'images/menus/colors/colorify.png'; md5=THIS FILE DOESN'T EXIST"
 
 #: src/menus/colors/colorify.xml:16(title)
 #: src/menus/colors/colorify.xml:20(secondary)
@@ -1260,14 +1259,31 @@ msgstr "<quote>単色塗り</quote>フィルタの使用例"
 
 #: src/menus/colors/colorify.xml:49(para)
 msgid ""
-"It renders a greyscaled image like it is seen through a colored glass. This "
-"filter works only on images in RGB mode."
+"This filter renders a greyscaled image like it is seen through a colored "
+"glass."
 msgstr ""
-"<guimenuitem>単色塗り...</guimenuitem> プラグインは色眼鏡で見たようなグレース"
-"ケール風画像を描き出します。 このフィルタは<acronym>RGB</acronym>モードの画像"
-"でのみ動作できます。"
+"<guimenuitem>単色塗り...</guimenuitem> フィルタは色眼鏡で見たようなグレースケ"
+"ール風画像を描き出します。"
 
-#: src/menus/colors/colorify.xml:57(para)
+#: src/menus/colors/colorify.xml:53(para)
+msgid ""
+"For every pixel, the filter computes a weighted average value of the RGB "
+"channels (this is equivalent to <link linkend=\"gimp-tool-desaturate"
+"\">desaturating</link> the image based on <link linkend=\"gimp-tool-"
+"desaturate-luminosity\">Luminosity</link>). The resulted color is the "
+"product of this average value and the <quote>colorify color</quote>."
+msgstr ""
+"このフィルタはひとつひとつの画素について<acronym>RGB</acronym>の各値を読み取"
+"り、 ある比率での加重平均を算出します。 この比率は<quote>脱色</quote>ツールの"
+" <link linkend=\"gimp-tool-desaturate-luminosity\">明度</link> 脱色と同じもの"
+"です。 現われる色はこの加重平均値とここで選んだ<quote>単色</quote>の積です。"
+
+#: src/menus/colors/colorify.xml:61(para)
+msgid "Hence, this filter works only on images in RGB mode."
+msgstr ""
+"したがってこのフィルタは<acronym>RGB</acronym>モードの画像でのみ動作します。"
+
+#: src/menus/colors/colorify.xml:68(para)
 msgid ""
 "This filter is found in the image window menu under "
 "<menuchoice><guimenu>Colors</guimenu><guimenuitem>Colorify</guimenuitem></"
@@ -1276,17 +1292,27 @@ msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</guimenu><guimenuitem>単"
 "色塗り...</guimenuitem></menuchoice>"
 
-#: src/menus/colors/colorify.xml:69(title)
+#: src/menus/colors/colorify.xml:80(title)
 msgid "<quote>Colorify</quote> filter options"
 msgstr "<quote>単色塗り</quote>フィルタのオプション"
 
-#: src/menus/colors/colorify.xml:80(para)
+#: src/menus/colors/colorify.xml:87(para)
 msgid ""
-"A color palette is available and you can select your own color by clicking "
-"on the <guilabel>Custom Color</guilabel> swatch."
+"A color palette is available containing especially the <link linkend="
+"\"glossary-rgb\">RGB</link> colors Red, Green, Blue and the <link linkend="
+"\"glossary-cmyk\">CMY</link> colors Cyan, Magenta, Yellow."
 msgstr ""
-"7つの原色パレットのほか、 <guilabel>カスタムカラー</guilabel> ボタンをクリッ"
-"クして出てくるダイアログを使えば任意の色が選択できます。"
+"カラーパレットからは <link linkend=\"glossary-rgb\">RGB</link> 色の赤・緑・"
+"青や <link linkend=\"glossary-cmyk\">CMY</link> 色のシアン・マゼンタ・イエロ"
+"ーも選べます。"
+
+#: src/menus/colors/colorify.xml:92(para)
+msgid ""
+"You can select your own color by clicking on the <guilabel>Custom Color</"
+"guilabel> swatch."
+msgstr ""
+"<guilabel>カスタムカラー</guilabel> 色だまりボタンをクリックして出てくるダイ"
+"アログを使えば任意の色が選択できます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
