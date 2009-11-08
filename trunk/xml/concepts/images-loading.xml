@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2009-09-23-->
+<!--2009-11-08-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -276,9 +276,10 @@
       </menuchoice>
       サブメニューを使うと最も簡単に開けます。 見付からなければ <guimenuitem>
       画像ファイル履歴</guimenuitem> まで進み、 出てくる
-      ダイアログで探してみましょう。 このダイアログは開いた時が最も最近のもの
-      から順に画像ファイルを並べたもので、 それぞれに縮小見本画像がついて
-      います。 ここから一つだけ選ぶことができ、 その画像が開かれます。
+      <link linkend="gimp-document-dialog">ダイアログ</link> で探して
+      みましょう。 このダイアログは開いた時が最も近いものから順に
+      画像ファイルを並べたもので、 それぞれに縮小見本画像がついています。 
+      ここから一つだけ選ぶことができ、 その画像が開かれます。
     </para>
     <figure lang="ja">
       <title lang="en">Open Recent menu and Open Recent Dialog</title>
@@ -481,16 +482,16 @@
     </para>
     <para lang="ja">
       開きたいファイルのアイコンをクリックしたまま<acronym>GIMP</acronym>の
-      ツールボックスの上までドラッグしてくる方法があります。 また画像を現在<acronym>
-      GIMP</acronym>で開いている画像のウィンドウ上までドラッグして放つと、
-      新たなレイヤーとしてその画像に加えられます。
+      ツールボックスの上までドラッグしてくる方法があります。 また画像を現在
+      <acronym>GIMP</acronym>で開いている画像のウィンドウ上までドラッグして
+      放つと、 新たなレイヤーとしてその画像に加えられます。
     </para>
     <para lang="ja">
       アプリケーションの多くが画像をクリックしたまま<acronym>GIMP</acronym>の
       ツールボックスの上までドラッグしてくると開けるようになっています。 例えば
       <application>Firefox</application> のブラウザ画面にある画像ファイル項目を
-      クリックして<acronym>GIMP</acronym>のツールボックスまでドラッグして放つとその
-      画像が開けます。
+      クリックして<acronym>GIMP</acronym>のツールボックスまでドラッグして放つと
+      その画像が開けます。
     </para>
   </sect2>
 
@@ -535,10 +536,10 @@
         <guisubmenu>クリップボードから生成</guisubmenu>
         <guimenuitem>画像</guimenuitem>
       </menuchoice>
-      と進みます。 数多くのアプリケーションが、 画像をクリップボードに写し
-      取れるしくみが備わっていて、 つまりその画像をあとで<acronym>GIMP
-      </acronym>に取り込めます。 また数々のオペレーティングシステムが画面の表示
-      をクリップボードに写し取れます。 クリップボードに取り込む典型的な方法は 
+      と進みます。 数多くのアプリケーションに、 画像をクリップボードに写し
+      取れるしくみが備わっていますから、 あとで<acronym>GIMP</acronym>にその
+      画像を取り込めます。 また数々のオペレーティングシステムで画面の表示
+      がクリップボードに写し取れます。 クリップボードに取り込む典型的な方法は 
       <keycap>Print&nbsp;Screen</keycap> キーを押すだけでよく、 また組み合わせ 
       <keycombo>
         <keycap>Alt</keycap><keycap>Print&nbsp;Screen</keycap>
@@ -570,7 +571,7 @@
     <para lang="ja">
       <productname>UNIX</productname> 系のソフトで <application>gThumb
       </application> という名前の画像管理アプリケーションがあります。 優れた
-      画像縦覧機能から進めてもよいですが、 画像上で <mousebutton>第2ボタン
+      画像縦覧ソフトとして使えるだけでなく、 画像上で <mousebutton>第2ボタン
       </mousebutton> クリックすると出てくるメニューから <guimenuitem>
       他で開く...</guimenuitem> に進むと現れる<quote>画像を
       開く</quote>ダイアログで<acronym>GIMP</acronym>を選択して <guibutton>

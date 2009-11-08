@@ -8,7 +8,7 @@
   2006-07-31 lexa: applied patch from hans de jonge
   2008-02-08 jpl: relecture et legeres corrections
 -->
-<!--2009-09-26-->
+<!--2009-11-07-->
 <sect1 id="gimp-concepts-plugins">
   <title lang="en">Plugins</title>
   <title lang="ja">プラグイン</title>
@@ -77,17 +77,17 @@
       に挙げられます。 プラグインは<acronym>GIMP</acronym>の主幹
       アプリケーションの制御下で動作し、 両者は緊密に相互作用します。 ユーザが
       [手で]行う画像操作はほとんど何でもプラグインで実行できます。 小さな
-      プラグインのコードを書けば、 <acronym>GIMP</acronym>の中核を成す
+      プラグインのコードを書けば、 <acronym>GIMP</acronym>コアの
       膨大な数の複雑なコードに手をつけることなく、 簡単に機能を<acronym>GIMP
       </acronym>に追加できるところが強みです。 現に価値あるプラグインの大多数は
-      ほぼ100から200行のC言語ソースだけでできています。
+      ほぼ100行から200行のC言語ソースだけでできています。
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym>には数十個のプラグインが配付版に入っていて、
       自動的に<acronym>GIMP</acronym>と一緒にインストールされます。 それらの
       ほとんどが <guimenu>フィルタ</guimenu> メニューから呼び
       出せます (実はこのメニューの中身はいずれもプラグインかスクリプトです) が、
-      数点ですが他のメニューに属するものもあります。 プラグインを使うといっても
+      数点だけ他のメニューに属するものもあります。 プラグインを使うといっても
       十中八九はプラグインであることに気付かないでしょう。 例えば色の自動調整
       フィルタの<quote>正規化</quote>コマンドは実際にはプラグインなのですが、
       使っている人にそのことを伝えるものは何もありません。
@@ -105,7 +105,8 @@
       世界中の誰でも自作の<acronym>GIMP</acronym>プラグインを<acronym>GIMP
       </acronym> Plugin Registry や自身のウェブサイト上で公開できますし、 数
       有る有益なプラグインがそうしたところから手に入ります。 この使用のてびきの
-      どこかでもそんなプラグインのことに触れています。 しかし自由勝手さの反面で
+      どこかでもそんなプラグインのことに触れています。 しかし自由勝手さの
+      反面で、 
       ある程度の危険が伴います。 誰でもできるということは実質的な品質管理が
       行なわれないことを意味します。 <acronym>GIMP</acronym>同梱で配布される
       プラグインならば開発者によるテストと整調を経ていますが、 ダウンロードで
@@ -195,7 +196,7 @@
       あります。
     </para>
     <para lang="ja">
-      ひとつには通常プラグインは<acronym>GIMP</acronym>の中核と比較して頑丈には
+      ひとつには通常プラグインは<acronym>GIMP</acronym>コアと比較して頑丈には
       できていないといえます。 仮にも<acronym>GIMP</acronym>が異常終了するのは
       非常に深刻な事態です。 ユーザにとっても計り知れない災厄と頭痛が襲いかかる
       でしょう。 一方でプラグインが異常終了した場合にその結果は通常さほど酷くは
@@ -299,7 +300,7 @@
     </para>
     <sect3>
       <title lang="en">Linux</title>
-      <title lang="ja">UNIXクローン</title>
+      <title lang="ja">Linux など UNIX システム風のシステム</title>
       <para lang="en">
         Most plugins fall into two categories: small ones whose source
         code is distributed as a single .c file, and larger ones whose
@@ -353,9 +354,9 @@
       </para>
       <para lang="ja">
         大多数のプラグインは2つに分類できます。 片や配布されるソースコードは
-        たったひとつの <filename>.c</filename> ファイルだけのものと、 対して
-        <filename>Makefile</filename> を含め複数のファイルを収めたディレクトリ
-        からなる配布形態をとる大きなものです。
+        たったひとつの <filename class="extension">.c</filename> ファイルだけ
+        のものと、 対して <filename>Makefile</filename> を含め複数のファイルを
+        収めたディレクトリからなる配布形態をとる大きなものです。
       </para>
       <para lang="ja">
         例えば <filename>borker.c</filename> と名付けられた単一ファイルの
@@ -374,7 +375,7 @@
         プラグインのインストールができたとして、 どうすれば呼び出せるの
         でしょう。 どこのメニューに入るかはプラグイン自身が決定しますので、
         その答えはプラグイン付属の文書 (もしあればの話です) を読むか、
-        メニューより
+        画像ウィンドウメニューより
         <menuchoice>
           <guimenu>ヘルプ</guimenu>
           <guimenuitem>プラグインブラウザ</guimenuitem>
@@ -461,7 +462,7 @@
         なります。 そのあとは個人用のプラグインディレクトリに収めれば完了です。
         ソフトウェア構築環境 (その目的からして<acronym>GIMP</acronym>をビルド
         できる環境とも言えます) がある場合には、 こういったことは既にかなりご
-        存知のはずですから、 UNIX系の方法に従っていただくだけで十分です。
+        存知のはずですから、 Linux の方法に従っていただくだけで十分です。
       </para>
       <para lang="ja">
         構築環境の設営をしようとお考えでしかもその渦中に飛び込む勇気と覚悟を
@@ -553,7 +554,7 @@
       は複雑なプログラムですが、 開発チームはプラグインが書けるまでに学ぶべき
       ことの壁ができるだけなだらかになるように奮闘しています。 既に優れたてびき
       や例がありますし、 プラグインが<acronym>GIMP</acronym>と交信するための
-      ライブラリ (<quote>libgimp</quote>といいます) には十分に文書化された
+      ライブラリ (<quote>libgimp</quote>という) には十分に文書化された
       <acronym>API</acronym>があります。 優れたプログラマは既にあるプログラムを
       改変するところから学び、 ほんの一両日中のうちに何か面白いことができて
       しまう場合が少なくありません。

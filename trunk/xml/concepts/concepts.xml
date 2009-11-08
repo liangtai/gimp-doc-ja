@@ -12,7 +12,7 @@
              version of layers explanation
   2005-12-18 Lexa: reviewed and added de translation
 -->
-<!--2009-07-02-->
+<!--2009-11-08-->
 <sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-concepts-basic">
   <title lang="en">Basic Concepts</title>
   <title lang="ja">基本概念</title>
@@ -26,7 +26,7 @@
   <figure>
     <title lang="en">Wilber, the GIMP mascot</title>
     <title lang="ja">
-      <acronym>GIMP</acronym>のマスコットキャラクター Wilber (ウィルバー)君
+      <acronym>GIMP</acronym>のマスコットキャラクター Wilber (ウィルバー) 君
     </title>
     <mediaobject>
       <imageobject>
@@ -112,7 +112,7 @@
           たいていは画像を一枚の紙面に見立てるのが一般的ですが、
           これは<quote>レイヤー</quote>と呼ばれるページを重ねた
           一冊の本のようにとらえて下さい。<acronym>GIMP</acronym>形式では
-          選択マスクやチャネル群、 パス群がさらにこれに加わります。
+          選択マスクや数層のチャネル、 数面のパスがさらにこれに加わります。
           じっさい<acronym>GIMP</acronym>は画像に対するいろんな加工を
           ひとつひとつ情報の断片としてとらえる機構があり、 それらを
           画像の<quote>parasites(寄生体)</quote>と呼んでいるのです。
@@ -143,7 +143,7 @@
         </para>
         <para lang="ja">
           画像を本に例えれば、 レイヤーはそれぞれのページにあたります。
-          最も簡単な画像であればレイヤーはたった一層しかなく、 つまりは
+          最も簡単な画像であればレイヤーはたった1層しかなく、 つまりは
           紙が一枚あるだけといえます。 無論熟練した<acronym>GIMP</acronym>
           ユーザならば、 レイヤーが何層にも重なった画像を何十枚と扱うことに
           なるでしょう。レイヤーは不透明とは限らず、 しかも画像全体を覆う
@@ -177,7 +177,7 @@
           それが属するレイヤーと同じサイズをとり、 ひいては画素 (ピクセル)
           数も同じということです。 画素はひとつひとつが0から255の範囲で値をもつ
           容器といえます。 その値の意味を定めるのがチャネルの種類です。つまり
-          <acronym>RGB</acronym>(赤緑青)色型式での <emphasis>R</emphasis>-
+          <acronym>RGB</acronym> (赤・緑・青) 色型式での <emphasis>R</emphasis>-
           チャンネルとはおのおのの画素に収められた赤色だけをまとめたもの
           であり、 選択チャンネルとは画素がどの程度の強度で選択されている
           かを表す値になり、 アルファチャンネルでの値は相対する画素の
@@ -271,9 +271,9 @@
           一部の動作については極めてメモリの消費を小さくしています。 しかし
           莫大なメモリを履歴のために消費する動作もあります。 <acronym>GIMP
           </acronym>では一画像あたりの履歴用メモリの上限を設定できるように
-          してありますが、 そのままでも少なくとも2、3手まで戻れます。
+          してありますが、 そのままでも少なくとも2〜3手まで戻れます。
           (履歴の及ばない重大な動作に<quote>画像を閉じる</quote>があります。
-          このため<acronym>GIMP</acronym>では何かしら動作が加えられた画像を
+          このため<acronym>GIMP</acronym>では何かしら操作が加えられた画像を
           閉じる際には確認を求めるようにしています。)
         </para>
       </listitem>
