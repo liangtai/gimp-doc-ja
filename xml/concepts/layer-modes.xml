@@ -15,7 +15,7 @@
                    examples and equations
   2006-09-06 scb: thorough review and/or rewrite of English
 -->
-<!--2009-09-24-->
+<!--2009-11-07-->
 <sect1 id="gimp-concepts-layer-modes">
   <title lang="en">Layer Modes</title>
   <title lang="ja">レイヤーのモード</title>
@@ -182,10 +182,15 @@
     Pixel color components must always be between 0 and 255.
   </para>
   <para lang="ja">
-    の意味は、 <quote>ある画素の色 <emphasis>E</emphasis> は、 上に重ねたマスク
-    のその位置の画素の色 <emphasis>M</emphasis> に、 同じ位置の下側にある
-    レイヤーの画素の色 <emphasis>I</emphasis> を加えたものである</quote>です。
-    画素の色はその値が 0 から 255 の範囲に常に入らなければなりません。
+    の意味は、 
+    <blockquote>
+      <para>
+        ある画素の色 <emphasis>E</emphasis> は、 上に重ねたマスクのその位置の
+        画素の色 <emphasis>M</emphasis> に、 同じ位置の下側にあるレイヤーの
+        画素の色 <emphasis>I</emphasis> を加えたものである。
+      </para>
+    </blockquote>
+    です。 画素の色はその値が 0 から 255 の範囲に常に入らなければなりません。
   </para>
   <note>
     <!-- cf. bug #544965 (2008-07-27) -->
@@ -333,7 +338,8 @@
           </mediaobject>
           <mediaobject>
             <imageobject>
-              <imagedata format="JPG" fileref="images/using/layer-mode-dissolve-100.jpg"/>
+              <imagedata format="JPG"
+                fileref="images/using/layer-mode-dissolve-100.jpg"/>
             </imageobject>
             <caption>
               <para lang="en">
@@ -478,6 +484,7 @@
           </title>
           <title lang="ja">レイヤーモード<quote>乗算</quote>の等式</title>
           <alt role="latex">$$E = \frac {1}{255} (M * I)$$</alt>
+          <alt role="tex">$$E = {M I\over255}$$</alt>
           <graphic fileref="images/math/layer-mode-multiply.png" format="PNG"/>
         </equation>
         <para lang="en">
@@ -550,10 +557,10 @@
         </para>
         <para lang="ja">
           <guimenuitem>除算</guimenuitem> モードは下側のレイヤーの画素の値を
-          256倍したあとで上側のレイヤーの同じ位置の画素の値に1を加えた値で
-          除算します。 (1を加えるのは0で除算するのを避けるためです。 その結果、
-          ほとんどの画像は色が薄くなり、 ときには<quote>日焼け</quote>した
-          ようにも見えます。
+          256 倍したあとで上側のレイヤーの同じ位置の画素の値に 1 を加えた値で
+          除算します。 (1 を加えるのは 0 で除算するのを避けるためです。)
+          その結果、 ほとんどの画像は色が薄くなり、 ときには<quote>日焼け
+          </quote>したようにも見えます。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
         <equation>
@@ -562,6 +569,7 @@
           </title>
           <title lang="ja">レイヤーモード<quote>除算</quote>の等式</title>
           <alt role="latex">$$E = 256 \frac {I}{M + 1}$$</alt>
+          <alt role="tex">$$E = {256 I\over M + 1}$$</alt>
           <graphic fileref="images/math/layer-mode-divide.png" format="JPG"/>
         </equation>
       </listitem>
@@ -633,11 +641,11 @@
         <para lang="ja">
           <guimenuitem>スクリーン</guimenuitem> モードはまず画像の両レイヤーの
           可視画素の値を反転します。 (つまり各値は255との差に置き換わります。)
-          次に両値の積を255で除算した値を再び反転します。 その結果、 ほとんどの
-          画像は明るくなり、 ときには<quote>洗い晒し</quote>たようにも見えます。
-          このモードの例外は、 レイヤーが黒い場合にもう一方のレイヤーの色から
-          何も変化しないことと、 レイヤーが白い場合には画像が白くなることです。
-          画像の色は暗いところほど透明になります。
+          次に両値の積を 255 で除算した値を再び反転します。 その結果、 
+          ほとんどの画像は明るくなり、 ときには<quote>洗い晒し</quote>た
+          ようにも見えます。 このモードの例外は、 レイヤーが黒い場合にもう一方
+          のレイヤーの色から何も変化しないことと、 レイヤーが白い場合には画像が
+          白くなることです。 画像の色は暗いところほど透明になります。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
         <equation>
@@ -646,8 +654,9 @@
           </title>
           <title lang="ja">レイヤーモード<quote>スクリーン</quote>の等式</title>
           <alt role="latex">
-        $$E = 255 - \frac {(255-M)*(255-I)}{255}$$
+            $$E = 255 - \frac {(255-M)*(255-I)}{255}$$
           </alt>
+          <alt role="tex">$$E = 255 - {255-M)(255-I)\over 255}$$</alt>
           <graphic fileref="images/math/layer-mode-screen.png"/>
         </equation>
         <para lang="en">
@@ -757,7 +766,10 @@
             レイヤーモード<quote>オーバーレイ</quote>の等式
           </title>
           <alt role="latex">
-        $$E = \frac{1I}{255} * (I+ \frac{2M}{255} * (255 - I))$$
+            $$E = \frac{1I}{255} * (I+ \frac{2M}{255} * (255 - I))$$
+          </alt>
+          <alt role="tex">
+            $$E = {I\over 255} \left(I + {2M\over 255}(255 - I)\right)$$
           </alt>
           <graphic fileref="images/math/layer-mode-overlay.png"/>
         </equation>
@@ -847,6 +859,7 @@
           <title lang="en">Equation for layer mode <quote>Dodge</quote></title>
           <title lang="ja">レイヤーモード<quote>覆い焼き</quote>の等式</title>
           <alt role="latex">$$E = \frac{I*256}{(255-M)+1}$$</alt>
+          <alt role="tex">$$E = {256 I \over (255-M)+1}$$</alt>
           <graphic fileref="images/math/layer-mode-dodge.png"/>
         </equation>
       </listitem>
@@ -934,8 +947,8 @@
         <equation>
           <title lang="en">Equation for layer mode <quote>Burn</quote></title>
           <title lang="ja">レイヤーモード<quote>焼き込み</quote>の等式</title>
-          <alt role="latex">$$E = 255 - \frac{(255-I)*256}{M+1}$$
-          </alt>
+          <alt role="latex">$$E = 255 - \frac{(255-I)*256}{M+1}$$</alt>
+          <alt role="tex">$$E = 255 - {256(255-I) \over M+1}$$</alt>
           <graphic fileref="images/math/layer-mode-burn.png"/>
         </equation>
       </listitem>
@@ -1027,7 +1040,10 @@
             レイヤーモード<quote>ハードライト</quote>の等式、 M &gt; 128 の場合
           </title>
           <alt role="latex">
-        $$M &gt; 128: E = 255- \frac{(255-I)*(255-(2*(M-128)))}{256}$$
+            $$M &gt; 128: E = 255- \frac{(255-I)*(255-(2*(M-128)))}{256}$$
+          </alt>
+          <alt role="tex">
+            $$E = 255- {(255-I)\{255-2(M-128)\}\over 256}, \qquad M > 128$$
           </alt>
           <graphic fileref="images/math/layer-mode-hard-light1.png"/>
         </equation>
@@ -1038,9 +1054,8 @@
           <title lang="ja">
             レイヤーモード<quote>ハードライト</quote>の等式、 M &le; 128 の場合
           </title>
-          <alt role="latex">
-        $$M \leq 128: E = \frac{I*M*2}{256}$$
-          </alt>
+          <alt role="latex">$$M \leq 128: E = \frac{I*M*2}{256}$$</alt>
+          <alt role="tex">$$E = {2 M I \over 256},\qquad M \le 128$$</alt>
           <graphic fileref="images/math/layer-mode-hard-light2.png"/>
         </equation>
       </listitem>
@@ -1131,8 +1146,11 @@
             レイヤーモード<quote>スクリーン</quote>の等式
           </title>
           <alt role="latex">
-          $$R_{s} = 255 - \frac {(255-I)*(255-M)}{255}$$
-            </alt>
+            $$R_{s} = 255 - \frac {(255-I)*(255-M)}{255}$$
+          </alt>
+          <alt role="tex">
+            $$R_{s} = 255 - {(255-M)(255-I)\over 255}$$
+          </alt>
           <graphic fileref="images/math/layer-mode-soft-light1.png"/>
         </equation>
         <equation>
@@ -1143,8 +1161,11 @@
             レイヤーモード<quote>ソフトライト</quote>の等式
           </title>
           <alt role="latex">
-          $$E = \frac {((255-I)*M*I)+(I*R_{s})}{255}$$
-            </alt>
+            $$E = \frac {((255-I)*M*I)+(I*R_{s})}{255}$$
+          </alt>
+          <alt role="tex">
+            $$E = {(255-I)M + R_{s}\over 255}I$$
+          </alt>
           <graphic fileref="images/math/layer-mode-soft-light2.png"/>
         </equation>
       </listitem>
@@ -1313,7 +1334,7 @@
           </quote>モードの逆です。 上下の両レイヤーの画素の値の和から128を
           除算します。
         </para>
-        <para lang="ja">等式はつぎのとおり</para>
+        <para lang="ja">等式はつぎのとおり。</para>
         <equation>
           <title lang="en">
             Equation for layer mode <quote>Grain merge</quote>
@@ -1484,6 +1505,7 @@
           </title>
           <title lang="ja">レイヤーモード<quote>加算</quote>の等式</title>
           <alt role="latex">$$E = min( (M + I), 255)$$</alt>
+          <alt role="tex">$$E = min\bigl( (M + I), 255\bigr)$$</alt>
           <graphic fileref="images/math/layer-mode-addition.png"/>
         </equation>
         <para lang="en">
@@ -1570,6 +1592,7 @@
           </title>
           <title lang="ja">レイヤーモード<quote>減算</quote>の等式</title>
           <alt role="latex">$$E = max( (I - M),0)$$</alt>
+          <alt role="tex">$$E = max\bigl( (I - M),0\bigr)$$</alt>
           <graphic fileref="images/math/layer-mode-subtract.png"/>
         </equation>
       </listitem>

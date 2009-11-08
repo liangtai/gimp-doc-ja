@@ -8,7 +8,7 @@
   2006-05-02 added Korean translation by Dust
   2005-12-18 reviewed and added rewrote de image explenation by lexa
 -->
-<!--2009-09-20-->
+<!--2009-11-08-->
 <sect1 id="gimp-concepts-image-types">
   <title lang="en">Image Types</title>
   <title lang="ja">画像の形式</title>
@@ -53,8 +53,8 @@
     ここでは<emphasis>画像</emphasis>のことを単体の表示ウィンドウや 
     <link linkend="file-jpeg-load">JPEG</link> のようなファイルに対応する存在
     とする考え方で話をすすめます。 ただし本来の<acronym>GIMP</acronym>の画像は
-    重ね合わされたレイヤーをはじめ、 選択マスクやチャネル層群、 パスや操作履歴
-    など、 様々な要素からなるもっと複雑な構造を持っています。 この章では
+    重ね合わされたレイヤーをはじめ、 選択マスクや数層のチャンネル、 パスや
+    操作履歴など、 様々な要素からなるもっと複雑な構造を持っています。 この章では
     <acronym>GIMP<acronym>画像の構成要素をひとつづつ詳しく見てゆき、 
     それらをどのように使ったらよいか説明します。
   </para>
@@ -333,9 +333,10 @@
   <para lang="ja">
     <acronym>GIMP</acronym>で画像のモードを他のモードに変換するには、
     <guimenu>画像</guimenu>メニューの
-    <link linkend="gimp-image-mode">モード</link> コマンドを用いれば簡単です。
-    もちろん<acronym>RGB</acronym>からグレースケールやインデックスつきへ
-    のような一部の変換は、 とり戻すことの不可能な情報の欠損をもたらします。
+    <link linkend="gimp-image-mode">モード</link> 変換コマンドを用いれば
+    簡単です。 もちろん<acronym>RGB</acronym>からグレースケールやインデックス
+    つきへのような一部の変換は、 とり戻すことの不可能な情報の欠損を
+    もたらします。
   </para>
   <note>
     <para lang="en">

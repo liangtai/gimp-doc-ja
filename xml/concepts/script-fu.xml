@@ -11,7 +11,7 @@
   2006-01-05 fixed ambigous description of installing new script-fu
   scripts (#324309)
 -->
-<!--2009-09-26-->
+<!--2009-11-07-->
 <sect1 id="gimp-concepts-script-fu">
   <title lang="en">Using Script-Fu Scripts</title>
   <title lang="ja">Script-Fuスクリプトを使用</title>
@@ -96,7 +96,9 @@
       Script-Fu (Scheme言語の派生言語) だけが<acronym>GIMP</acronym>で使える
       スクリプト言語なのではありません。 しかし初期段階からインストールされて
       いるスクリプト言語はScript-Fuだけです。 他に利用できるスクリプト拡張には
-      PerlとTclがあります。 両拡張機能は<acronym>GIMP</acronym>の 
+      [Pythonと]PerlとTclがあります。<footnote><para>
+        実験段階ですがRuby拡張もあります。</para>
+      </footnote> 両拡張機能は<acronym>GIMP</acronym>の 
       <citetitle>Plugin Registry</citetitle>
       <xref linkend="bibliography-online-gimp-plugin-registry"/>
       からダウンロードしてください。
@@ -165,15 +167,16 @@
           the script (e.g. it contains syntax errors).
         </para>
         <para lang="ja">
-          刷新のためメニューより
+          刷新のため画像ウィンドウメニューより
           <menuchoice>
             <guimenu>フィルタ</guimenu>
             <guisubmenu>Script-Fu</guisubmenu>
             <guimenuitem>スクリプトを再読み込み</guimenuitem>
+          </menuchoice>
           を実行してください。 スクリプトがメニュー上に現れるはずです。
           見付からないときは <guimenu>ファイル</guimenu>
           メニュー内も探してみてください。 それでも見付からない場合は何か
-          スクリプトに問題が、 例えば構文間違いがあるのです。
+          スクリプトに問題 (例えば構文間違い) があるのです。
         </para>
       </step>
     </procedure>
@@ -513,7 +516,7 @@
                 Frozenriver.
               </para>
               <para lang="ja">
-                文字記入欄には予めロゴ名を入れておきましょう。
+                文字記入欄にはあらかじめロゴ名を入れておきましょう。
               </para>
             </listitem>
             <listitem>
@@ -612,6 +615,8 @@
             on the "shadow" checkbox. The last thing you have to select is
             background color, and the color of your sphere.
           </para>
+          <!-- This sub-menu doesn't exist on 2.6, so I don't know about
+           the Sphere script.-->
           <para lang="ja">
           </para>
         </listitem>
@@ -681,7 +686,9 @@
       </productname> ディストリビュータが <filename class="extension">.deb
       </filename> や <filename class="extension">.rpm</filename> や 
       <filename class="extension">.gz</filename> などの形態で配布している
-      gimp-resynthesizer パッケージを導入するとそうなります。)
+      gimp-resynthesizer 
+      <xref linkend="bibliography-online-plugin-resynthesizer"/>
+      パッケージを導入するとそうなります。)
     </para>
   </sect2>
 </sect1>
