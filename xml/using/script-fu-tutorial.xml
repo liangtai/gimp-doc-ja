@@ -6,7 +6,7 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2009-09-27-->
+<!--2009-11-11-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
@@ -459,7 +459,7 @@
 
     <sect3>
       <title lang="en">The General Syntax Of <code>let*</code></title>
-      <title lang="en"><code>let*</code> 構文の一般規則</title>
+      <title lang="ja"><code>let*</code> 構文の一般規則</title>
       <para lang="en">
         The general form of a <code>let*</code> statement is:
       </para>
@@ -949,7 +949,7 @@
 
     <sect3>
       <title lang="en">The <code>cdr</code> function</title>
-      <title lang="ja"><code>cdr</code> 関数</title>
+      <title lang="ja"><function>cdr</function> 関数</title>
       <para lang="en">
         <code>cdr</code> returns the rest of the list after the first element
         (the tail of the list). If there is only one element in the list, it
@@ -1252,11 +1252,11 @@
       </para>
       <para lang="ja">
         ではこの関数を<acronym>GIMP</acronym>に登録しましょう。 この操作には
-        <code>script-fu-register</code> という関数を起用します。 <acronym>
-        GIMP</acronym>はスクリプトを見るとこの関数を実行しプロシージャデータ
-        ベースに登録させます。 この関数の実行コードはスクリプトのどの位置に
-        置いても構いませんが、 私なら他のコードを全部書き終えたあとの最後に
-        置きます。
+        <function>script-fu-register</function> という関数を起用します。
+        <acronym>GIMP</acronym>はスクリプトを見るとこの関数を実行し
+        プロシージャデータベースに登録させます。 この関数の実行コードは
+        スクリプトのどの位置に置いても構いませんが、 私なら他のコードを全部
+        書き終えたあとの最後に置きます。
       </para>
       <para lang="ja">
         関数を登録している様子をつぎに示します。 パラメータに関してはまもなく
@@ -1449,8 +1449,8 @@
             定めます。 スクリプトの位置を Unix 風のパス表記で正確に指定して
             ください。 パスのはじめ (ルート) には <code>&lt;Image&gt;</code>
             が指定できます。 [かつてはツールボックスを表す <code>&lt;Toolbox
-            &gt;</code> も指定できました。 ツールボックスは廃止されたので、 
-            こちらは使わないほうが無難です。]
+            &gt;</code> も指定できました。 ツールボックスのメニューは
+            廃止されたので、 こちらは使わないほうが無難です。]
           </para>
           <para lang="ja">
             既存の画像を加工しないスクリプトを書いた場合 (このテキスト
@@ -1774,8 +1774,8 @@
       </para>
       <para lang="ja">
         新しい画像を作成するところから始めます。 <varname>theImage</varname>
-        という新しい変数を作り、 <code>gimp-image-new</code> という <acronym>
-        GIMP</acronym>の組み込み機能を実行して得た値を代入するのです。
+        という新しい変数を作り、 <function>gimp-image-new</function> という
+        <acronym>GIMP</acronym>の組み込み機能を実行して得た値を代入するのです。
       </para>
       <para lang="ja">
         プロシージャデータベースのブラウザによると、 <code>gimp-image-new
@@ -1871,8 +1871,8 @@
         variable declarations:
       </para>
       <para lang="ja">
-        画像ができたのでこんどはレイヤーを追加する必要があります。 <code>
-        gimp-layer-new</code> 関数を呼び出して先程作った画像のID番号を渡し、
+        画像ができたのでこんどはレイヤーを追加する必要があります。 <function>
+        gimp-layer-new</function> 関数を呼び出して先程作った画像のID番号を渡し、
         レイヤーを生成させます。 (ここからの説明では関数の中身を全部ここに
         掲載する代わりに、 追加される行だけを載せます。 最終的なスクリプトの
         全貌はこの演習の 
@@ -1979,8 +1979,8 @@
       <para lang="ja">
         画像にテキストを加える前に、 画像の背景色と描画色を設定してテキスト
         が読み取れる色づかいに設定しなくてはなりません。 これには 
-        <code>gimp-context-set-background</code> 関数と 
-        <code>gimp-context-set-foreground</code> 関数を使いましょう。
+        <function>gimp-context-set-background</function> 関数と 
+        <function>gimp-context-set-foreground</function> 関数を使いましょう。
       </para>
       <programlisting>
         (gimp-context-set-background '(255 255 255) )
@@ -2164,12 +2164,12 @@
       </para>
       <para lang="ja">
         スクリプトを作成すると、 取り消し機能をつけて失敗から戻れるように
-        したくなります。 これは簡単で、 画像を操作するコードを <code>
-        gimp-undo-push-group-start</code> と <code>gimp-undo-push-group-end
-        </code> の両関数で挟めばできます。 考え方としては画像上で行なわれる
-        操作の記録を開始し終了する時点を<acronym>GIMP</acronym>に知らせて、 
-        あとでその操作を取り消せるようにしている対の式だと見て間違い
-        ありません。 
+        したくなります。 これは簡単で、 画像を操作するコードを 
+        <function>gimp-undo-push-group-start</function> と
+        <function>gimp-undo-push-group-end</function> の両関数で挟めば
+        できます。 考え方としては画像上で行なわれる操作の記録を開始し終了する
+        時点を<acronym>GIMP</acronym>に知らせて、 あとでその操作を取り消せる
+        ようにしている対の式だと見て間違いありません。 
       </para>
       <para lang="ja">
         新しい画像を丸ごと生成するスクリプトならこの機能を使う意味が
