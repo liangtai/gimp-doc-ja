@@ -13,7 +13,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--2009-10-19-->
+<!--2009-11-15-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -190,7 +190,7 @@
           <para lang="ja">
             フォントボタン <guibutton>永</guibutton> をクリックすると簡易型
             フォント選択ウィンドウが開きます。 ここからシステムにインストール
-            されているフォントや、 <acronym>GIMP</acronym>のユーザディレクトリ
+            されているフォントや、 <acronym>GIMP</acronym>のフォントディレクトリ
             に追加したフォントが選べます。
           </para>
           <itemizedlist>
@@ -246,9 +246,9 @@
             </para>
             <para lang="ja">
               ポインティングデバイス (マウスなど) についているスクロール
-              ホイールをフォントボタン上で回すとテキストに使われているフォント
-              を素早く変更できます。 この操作ではクリックする必要はなく、 
-              マウス車だけを使用します。
+              ホイール (マウス車) をフォントボタン上で回すとテキストに
+              使われているフォントを素早く変更できます。 この操作では
+              クリックする必要はなく、 マウス車だけを使用します。
             </para>
           </tip>
         </listitem>
@@ -314,8 +314,8 @@
             アンチエイリアス処理は文字の筆画の縁や曲線をより滑らかに描きます。
             そのために縁の線をわずかにぼかしたりまとめたりしています。 この
             オプションは書体の描画表現を視覚的に向上させることが可能です。
-            ただし非<acronym>RGB</acronym>画像でアンチエイリアスを使用するには
-            経験を積む必要がありますのでご注意ください。
+            ただし非<acronym>RGB</acronym>色空間でアンチエイリアスを使用
+            するには経験を積む必要がありますのでご注意ください。
           </para>
         </listitem>
       </varlistentry>
@@ -351,7 +351,7 @@
               gradient or fill with a pattern.  Although this layer will
               enclose the specificity as a text layer temporally, you can
               re-edit this text by clicking this layer,
-              and this text will colored with black.
+              and this text will colored with the foreground color.
             </para>
             <para lang="ja">
               グラデーションやパターンを使って着色するときはレイヤーダイアログで
@@ -478,7 +478,7 @@
             <link linkend="gimp-using-paths">パス</link> が描かれていることが
             条件です。 文字を収めたテキストレイヤーを作ったら、 パスを作成
             するかもしくは転換によって作成して活性化します。 もし既に作った
-            パスを利用する場合は大抵が不可視になっていることが多いので
+            パスを利用する場合は不可視になっていることが多いので
             パスダイアログで可視化します。
           </para>
           <para lang="ja">
@@ -524,8 +524,8 @@
           <para lang="ja">
             もし既に書かれているテキストを利用するのなら、
             <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> にて
-            そのテキストレイヤーを活性化してください。 つづいてテキストツールを
-            呼び出してから画像ウィンドウのテキストをクリックしてください。
+            そのテキストレイヤーを活性化します。 つづいてテキストツールを
+            呼び出してから画像ウィンドウのテキストをクリックします。
           </para>
           <para lang="ja">
             ツールオプションの <guibutton>パスに沿ってテキストを配置
