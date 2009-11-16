@@ -6,7 +6,7 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2009-11-11-->
+<!--2009-11-16-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
@@ -40,12 +40,13 @@
   </para>
   <note>
     <para lang="en">
-      This section as adapted from a tutorial written for the GIMP 1 User
+      This section as adapted from a tutorial written for the
+      <application><acronym>GIMP</acronym> 1</application> User
       Manual by Mike Terry.
     </para>
     <para lang="ja">
-      この節は<acronym>GIMP</acronym>1用のユーザーマニュアルに掲載された
-      マイク・テリー氏著の演習 (日本語訳は 
+      この節は <application><acronym>GIMP</acronym> 1</application> 用の
+      ユーザーマニュアルに掲載されたマイク・テリー氏著の演習 (日本語訳は 
       <ulink url="http://www.geocities.jp/gimpfile/gum_jp/43.html">
       マイク・テリーのScript-Fu黒帯道場</ulink>) を再編成したものです。
     </para>
@@ -58,48 +59,16 @@
       <title lang="en">Let's Start Scheme'ing</title>
       <title lang="ja">Schemeをはじめよう</title>
       <para lang="en">The first thing to learn is that:</para>
-      <para lang="en">
-        <emphasis>
+      <para lang="ja">最もはじめに学んでほしいことは、</para>
+      <blockquote>
+        <para lang="en">
           Every statement in Scheme is surrounded by parentheses ().
-        </emphasis>
-      </para>
+        </para>
+        <para lang="ja">
+          Scheme言語ではどんな構文も丸括弧 () でくくられること
+        </para>
+      </blockquote>
       <para lang="en">The second thing you need to know is that:</para>
-      <para lang="en">
-        <emphasis>
-          The function name/operator is always the first item in the
-          parentheses, and the rest of the items are parameters to the
-          function.
-        </emphasis>
-      </para>
-      <para lang="en">
-        However, not everything enclosed in parentheses is a function -- they
-        can also be items in a list -- but we'll get to that later. This
-        notation is referred to as prefix notation, because the function
-        prefixes everything else. If you're familiar with postfix notation, or
-        own a calculator that uses Reverse Polish Notation (such as most HP
-        calculators), you should have no problem adapting to formulating
-        expressions in Scheme.
-      </para>
-      <para lang="en">The third thing to understand is that:</para>
-      <para lang="en">
-        <emphasis>
-          Mathematical operators are also considered functions, and thus are
-          listed first when writing mathematical expressions.
-        </emphasis>
-      </para>
-      <para lang="en">
-        This follows logically from the prefix notation that we just
-        mentioned.
-      </para>
-      <para lang="ja">
-        最もはじめに学んでほしいことは、
-        <blockquote>
-          <para>
-            Scheme言語ではどんな構文も丸括弧 () でくくられること
-          </para>
-        </blockquote>
-      </para>
-      <para lang="ja"><emphasis><!--no use--></emphasis></para>
       <para lang="ja">
         そのつぎに覚えてほしいことは、
         <blockquote>
@@ -109,7 +78,24 @@
           </para>
         </blockquote> です。
       </para>
-      <para lang="ja"><emphasis><!--no use--></emphasis></para>
+      <blockquote>
+        <para lang="en">
+          The function name/operator is always the first item in the
+          parentheses, and the rest of the items are parameters to the
+          function.
+        </para>
+        <para lang="ja"><!--no use--></para>
+      </blockquote>
+      <para lang="en">
+        However, not everything enclosed in parentheses is a function &mdash;
+        they can also be items in a list &mdash; but we'll get to that later.
+        This notation is referred to as prefix notation, because the function
+        prefixes everything else. If you're familiar with postfix notation, or
+        own a calculator that uses Reverse Polish Notation (such as most HP
+        calculators), you should have no problem adapting to formulating
+        expressions in Scheme.
+      </para>
+      <para lang="en">The third thing to understand is that:</para>
       <para lang="ja">
         もちろん括弧でくくられるのは関数だけにとどまりません。 リストと
         呼ばれる一連の項目の羅列も括弧でくくります。 これについてはあとで
@@ -122,14 +108,22 @@
         3つ目にご理解いただきたいことは、
         <blockquote>
           <para>
-            <emphasis>
-              算数で使われている演算子も関数の一種とみなされており、 数式を
-              書くときその最初に置かなくてはならないこと
-            </emphasis>
+            算数で使われている演算子も関数の一種とみなされており、 数式を
+            書くときその最初に置かなくてはならないこと
           </para>
         </blockquote> です。
       </para>
-      <para lang="ja"><emphasis><!--no use--></emphasis></para>
+      <blockquote>
+        <para lang="en">
+          Mathematical operators are also considered functions, and thus are
+          listed first when writing mathematical expressions.
+        </para>
+        <para lang="ja"><!--no use--></para>
+      </blockquote>
+      <para lang="en">
+        This follows logically from the prefix notation that we just
+        mentioned.
+      </para>
       <para lang="ja">
         こちらの規則は前置記法の考え方がわかればすんなり理解できると思います。
       </para>
@@ -139,23 +133,21 @@
       <title lang="en">
         Examples Of Prefix, Infix, And Postfix Notations
       </title>
-      <title lang="ja">
-        前置記法と中置記法と後置記法のそれぞれの例
-      </title>
+      <title lang="ja">前置記法と中置記法と後置記法のそれぞれの例</title>
       <para lang="en">
         Here are some quick examples illustrating the differences between
         <emphasis>prefix</emphasis>, <emphasis>infix</emphasis>, and
-        <emphasis>postfix</emphasis> notations. We'll add a 1 and 3 together:
+        <emphasis>postfix</emphasis> notations. We'll add a 1 and 23 together:
       </para>
       <para lang="ja">
         この例は <emphasis>前置</emphasis>、 <emphasis>中置</emphasis>、 
         <emphasis>後置</emphasis> のそれぞれの記法の違いをかいつまんで
-        際立たせてみました。 単純な1たす23の計算をしています。
+        際立たせてみました。 単純な 1 に 23 を足す計算をしています。
       </para>
       <itemizedlist>
         <listitem>
           <para lang="en">
-            Prefix notation: + 1 3 (the way Scheme will want it)
+            Prefix notation: + 1 23 (the way Scheme will want it)
           </para>
           <para lang="ja">
             前置記法では <userinput>+ 1 23</userinput> と書きます。 
@@ -164,7 +156,7 @@
         </listitem>
         <listitem>
           <para lang="en">
-            Infix notation: 1 + 3 (the way we "normally" write it)
+            Infix notation: 1 + 23 (the way we "normally" write it)
           </para>
           <para lang="ja">
             中置記法では <userinput>1 + 23</userinput> と書きます。 
@@ -173,11 +165,12 @@
         </listitem>
         <listitem>
           <para lang="en">
-            Postfix notation: 1 3 + (the way many HP calculators will want it)
+            Postfix notation: 1 23 + (the way many HP calculators will want it)
           </para>
           <para lang="ja">
-            後置貴方では <userinput>1 23 +</userinput> と書きます。 多数の
+            後置記法では <userinput>1 23 +</userinput> と書きます。 多数の
             <acronym>HP</acronym>社製電卓がこの方式です。
+            [1 に 23 を 足す という日本語文によく馴染む記法です。]
           </para>
         </listitem>
       </itemizedlist>
@@ -187,15 +180,15 @@
       <title lang="en">Practicing In Scheme</title>
       <title lang="ja">Schemeの練習</title>
       <para lang="en">
-        Now, let's practice what we have just learned. Start up GIMP,
-        if you have not already done so, and choose
+        Now, let's practice what we have just learned. Start up
+        <acronym>GIMP</acronym>, if you have not already done so, and choose
         <menuchoice>
           <guimenu>Filters</guimenu>
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>Console</guimenuitem>
-        </menuchoice>. This will start
-        up the Script-Fu Console window, which allows us to work
-        interactively in Scheme. In a matter of moments, the Script-Fu
+        </menuchoice>.
+        This will start up the Script-Fu Console window, which allows us to
+        work interactively in Scheme. In a matter of moments, the Script-Fu
         Console will appear:
       </para>
       <para lang="ja">
@@ -211,11 +204,12 @@
         <quote>Script-Fu コンソール</quote>が現れます。
       </para>
     </sect3>
+
     <sect3 id="gimp-using-script-fu-tutorial-console">
       <title lang="en">The Script-Fu Console Window</title>
       <title lang="ja">Script-Fuコンソールのウィンドウ</title>
       <para lang="en">
-        At the bottom of this window is an entry-field entitled
+        At the bottom of this window is an entry-field ought to be entitled
         <guilabel>Current Command</guilabel>.
         Here, we can test out simple Scheme commands interactively. Let's
         start out easy, and add some numbers:
@@ -246,7 +240,8 @@
         </mediaobject>
       </figure>
       <para lang="en">
-        Now, what if we wanted to add more than one number? The <quote>+</quote>
+        Now, what if we wanted to add more than one number? The
+        <quote>+</quote>
         function can take two or more arguments, so this is not a problem:
       </para>
       <para lang="ja">
@@ -257,9 +252,9 @@
       <programlisting>(+ 3 5 6)</programlisting>
       <para lang="en">This also yields the expected answer of 14.</para>
       <para lang="en">
-        So far, so good -- we type in a Scheme statement and it's executed
+        So far, so good &mdash; we type in a Scheme statement and it's executed
         immediately in the Script-Fu Console window. Now for a word of
-        caution....
+        caution&hellip;
       </para>
       <para lang="ja">この式も期待通りの答えとなる14を返します。</para>
       <para lang="ja">
@@ -274,7 +269,8 @@
       <title lang="ja">余計な括弧に注意しよう</title>
       <para lang="en">
         If you're like me, you're used to being able to use extra parentheses
-        whenever you want to -- like when you're typing a complex mathematical
+        whenever you want to &mdash; like when you're typing a complex
+        mathematical
         equation and you want to separate the parts by parentheses to make it
         clearer when you read it. In Scheme, you have to be careful and not
         insert these extra parentheses incorrectly. For example, say we wanted
@@ -298,7 +294,7 @@
       </para>
       <programlisting>(+ 3 (5 6) 7)</programlisting>
       <para lang="en">
-        However, this is incorrect -- remember, every statement in Scheme
+        However, this is incorrect &mdash; remember, every statement in Scheme
         starts and ends with parens, so the Scheme interpreter will think that
         you're trying to call a function named <quote>5</quote> in the second
         group of parens, rather than summing those numbers before adding them
@@ -377,7 +373,8 @@
       <title lang="ja">変数の定義</title>
       <para lang="en">
         Although there are a couple of different methods for declaring
-        variables, the preferred method is to use the let* construct. If
+        variables, the preferred method is to use the <command>let*</command>
+        construct. If
         you're familiar with other programming languages, this construct is
         equivalent to defining a list of local variables and a scope in which
         they're active. As an example, to declare two variables, a and b,
@@ -438,8 +435,9 @@
       <para lang="en">
         This is because the <code>let*</code>
         statement defines an area in your script in which the declared
-        variables are usable; if you type the (+ a b) statement after the
-        (let* ...) statement, you'll get an error, because the declared
+        variables are usable; if you type the <userinput>(+ a b)</userinput>
+        statement after the <userinput>(let* &hellip;)</userinput> statement,
+        you'll get an error, because the declared
         variables are only valid within the context of the <code>let*</code>
         statement; they are what programmers call local variables.
       </para>
@@ -473,10 +471,11 @@
           <replaceable>式</replaceable>)
       </programlisting>
       <para lang="en">
-        where variables are declared within parens, e.g., (a 2), and
+        where variables are declared within parens, e.g.,
+        <userinput>(a 2)</userinput>, and
         expressions are any valid Scheme expressions. Remember that the
         variables declared here are only valid within the
-        <code>let*</code> statement -- they're local variables.
+        <code>let*</code> statement &mdash; they're local variables.
       </para>
       <para lang="ja">
         となります。 <userinput>(a 2)</userinput> のようにして変数を括弧内で
@@ -492,7 +491,7 @@
       <para lang="en">
         Previously, we mentioned the fact that you'll probably want to use
         indentation to help clarify and organize your scripts. This is a good
-        policy to adopt, and is not a problem in Scheme -- white space is
+        policy to adopt, and is not a problem in Scheme &mdash; white space is
         ignored by the Scheme interpreter, and can thus be liberally applied
         to help clarify and organize the code within a script. However, if
         you're working in Script-Fu's Console window, you'll have to enter an
@@ -517,12 +516,12 @@
       <title lang="ja">新しい値を変数に代入</title>
       <para lang="en">
         Once you've initialized a variable, you might need to change its value
-        later on in the script. Use the set! statement to change the
-        variable's value:
+        later on in the script. Use the <code>set</code>! statement to change
+        the variable's value:
       </para>
       <para lang="ja">
         一度変数を初期化して使用したあとで、 スクリプト内で別の値を入れて使う
-        必要が生じるかもしれません。 そんなときは <code>set</code> の出番
+        必要が生じるかもしれません。 そんなときは <code>set!</code> の出番
         です。 変数の値を変更する構文はつぎのとおりです。
       </para>
       <programlisting lang="en">
@@ -541,9 +540,9 @@
       </para>
       <note>
         <para lang="en">
-          The <quote>\</quote> indicates that there is no line break. Ignore
-          it (don't type it in your Script-Fu console and don't hit Enter),
-          just continue with the next line.
+          The <quote><code>\</code></quote> indicates that there is no line
+          break. Ignore it (don't type it in your Script-Fu console and don't
+          hit <keycap>Enter</keycap>), just continue with the next line.
         </para>
         <para lang="ja">
           例題に<quote><code>\</code></quote>記号が書かれていることがあり
@@ -623,7 +622,8 @@
       <itemizedlist>
         <listitem>
           <para lang="en">
-            First, notice that the parameters don't have any "types" (that is,
+            First, notice that the parameters don't have any
+            <quote>types</quote> (that is,
             we didn't declare them as strings, or integers, etc.). Scheme is a
             type-less language. This is handy and allows for quicker script
             writing.
@@ -637,9 +637,10 @@
         </listitem>
         <listitem>
           <para lang="en">
-            Second, notice that we don't need to worry about how to "return"
-            the result of our function -- the last statement is the value
-            "returned" when calling this function. Type the function into the
+            Second, notice that we don't need to worry about how to
+            <quote>return</quote> the result of our function &mdash; the last
+            statement is the value <quote>returned</quote> when calling this
+            function. Type the function into the
             console, then try something like:
           </para>
           <para lang="ja">
@@ -676,7 +677,8 @@
       <para lang="en">
         You've already seen atomic values when we initialized
         variables in the previous lesson. An atomic value is a single
-        value. So, for example, we can assign the variable "x" the
+        value. So, for example, we can assign the variable
+        <quote><varname>x</varname></quote> the
         single value of 8 in the following statement:
       </para>
       <para lang="ja">
@@ -691,8 +693,8 @@
       <programlisting>(let* ( (x 8) ) x)</programlisting>
       <para lang="en">
         (We added the expression <varname>x</varname> at the end to print out
-        the value assigned to <varname>x</varname>-- normally you won't need
-        to do this. Notice how <code>let*</code> operates just like a
+        the value assigned to <varname>x</varname>&mdash;normally you won't
+        need to do this. Notice how <code>let*</code> operates just like a
         function: The value of the last statement is the value returned.)
       </para>
       <para lang="en">
@@ -705,7 +707,7 @@
         加えました。 これは変数 <varname>x</varname> に最終的に与えられた値を
         表示させるのが目的なのですが、 普段ははこんなことをしなくても
         済みます。 というのも <code>let*</code> でも最後の構文は得た値を返す
-        ようになっているためこの式自体が関数のように振舞えるからです。
+        ようになっているためこの式自体が関数のようにふるまえるからです。
       </para>
       <para lang="ja">
         変数は単なる値のみならず一連の他の値をまとめたリストを指す
@@ -736,7 +738,8 @@
       <para lang="en">
         When it replies with the value 8 it is informing you that
         <varname>x</varname> contains the atomic value 8. However,
-        when it replies with (1 3 5), it is then informing you that
+        when it replies with <computeroutput>(1 3 5)</computeroutput>, it is
+        then informing you that
         <varname>x</varname> contains not a single value, but a list
         of values. Notice that there are no commas in our declaration
         or assignment of the list, nor in the printed result.
@@ -754,7 +757,8 @@
       <programlisting>'(a b c)</programlisting>
       <para lang="en">
         where <varname>a</varname>, <varname>b</varname>, and
-        <varname>c</varname> are literals. We use the apostrophe (')
+        <varname>c</varname> are literals. We use the apostrophe
+        (<code>'</code>)
         to indicate that what follows in the parentheses is a list of
         literal values, rather than a function or expression.
       </para>
@@ -838,7 +842,7 @@
         function. It takes a value and places it to its second argument, a
         list. From the previous section, I suggested that you think of a list
         as being composed of an element (the head) and the remainder of the
-        list (the tail). This is exactly how cons functions -- it adds an
+        list (the tail). This is exactly how cons functions &mdash; it adds an
         element to the head of a list. Thus, you could create a list as
         follows:
       </para>
@@ -875,7 +879,7 @@
       <title lang="en"><code>list</code> 関数を使ってリストを定義</title>
       <para lang="en">
         To define a list composed of literals or previously declared
-        variables, use the list function:
+        variables, use the <function>list</function> function:
       </para>
       <para lang="ja">
         リテラルと予め定義しておいた変数を組み合わせて、 <function>list
@@ -915,7 +919,7 @@
       <title lang="ja">リスト内の値を引き出す</title>
       <para lang="en">
         To access the values in a list, use the functions
-        <code>car</code> and <code>cdr</code>,
+        <function>car</function> and <function>cdr</function>,
         which return the first element of the list and the rest of the list,
         respectively. These functions break the list down into the head::tail
         construct I mentioned earlier.
@@ -929,10 +933,10 @@
     </sect3>
 
     <sect3>
-      <title lang="en">The <code>car</code> Function</title>
-      <title lang="ja"><code>car</code> 関数</title>
+      <title lang="en">The <function>car</function> Function</title>
+      <title lang="ja"><function>car</function> 関数</title>
       <para lang="en">
-        <code>car</code> returns the first element of the list (the
+        <function>car</function> returns the first element of the list (the
         head of the list). The list needs to be non-null. Thus, the
         following returns the first element of the list:
       </para>
@@ -948,10 +952,11 @@
     </sect3>
 
     <sect3>
-      <title lang="en">The <code>cdr</code> function</title>
+      <title lang="en">The <function>cdr</function> function</title>
       <title lang="ja"><function>cdr</function> 関数</title>
       <para lang="en">
-        <code>cdr</code> returns the rest of the list after the first element
+        <function>cdr</function> returns the rest of the list after the first
+        element
         (the tail of the list). If there is only one element in the list, it
         returns an empty list.
       </para>
@@ -1007,8 +1012,8 @@
       <para lang="en">
         To get some practice with list-accessing functions, try typing in the
         following (except all on one line if you're using the console); use
-        different variations of car and cdr to access the different elements
-        of the list:
+        different variations of <function>car</function> and
+        <function>cdr</function> to access the different elements of the list:
       </para>
       <para lang="ja">
         リスト用引き出し関数の練習のためつぎのスクリプトを書いてみましょう。
@@ -1016,7 +1021,7 @@
         car</function> と <function>cdr</function> の両関数をいろいろ組み
         合わせてリスト内の要素群を取り出す式を作ってみましょう。
       </para>
-      <programlisting>
+      <programlisting lang="en">
         (let* (
                  (x  '( (1 2 (3 4 5) 6)  7  8  (9 10) )
                  )
@@ -1024,7 +1029,7 @@
               ; place your car/cdr code here
         )
       </programlisting>
-      <programlisting>
+      <programlisting lang="ja">
         (let* (
                  (x  '( (1 2 (3 4 5) 6)  7  8  (9 10) )
                  )
@@ -1044,13 +1049,13 @@
       </para>
       <note>
         <para lang="en">
-          In Scheme, a semicolon (";") marks a comment.  It, and
+          In Scheme, a semicolon (<code>;</code>) marks a comment.  It, and
           anything that follows it on the same line, are ignored by the
           script interpreter, so you can use this to add comments to jog
           your memory when you look at the script later.
         </para>
         <para lang="ja">
-          Scheme言語ではセミコロン<quote><code>;</code></quote>がコメントを
+          Scheme言語ではセミコロン (<code>;</code>) がコメントを
           表しています。 この記号とここから行の終わりまでは何を書いても
           スクリプトのインタープリタが無視しますので、 この方法でスクリプトに
           コメントをさしはさみ、 あとで読むときの記憶の助けに利用しましょう。
@@ -1064,7 +1069,7 @@
     <title lang="ja">はじめてのScript-Fuスクリプト</title>
     <para lang="en">
       Do you not need to stop and catch your breath? No? Well then,
-      let's proceed with your fourth lesson -- your first Script-Fu
+      let's proceed with your fourth lesson &mdash; your first Script-Fu
       Script.
     </para>
     <para lang="ja">
@@ -1076,7 +1081,7 @@
       <title lang="en">Creating A Text Box Script</title>
       <title lang="ja">テキストボックススクリプトを作成</title>
       <para lang="en">
-        One of the most common operations I perform in GIMP is
+        One of the most common operations I perform in <acronym>GIMP</acronym>
         creating a box with some text in it for a web page, a logo or
         whatever. However, you never quite know how big to make the
         initial image when you start out. You don't know how much
@@ -1121,19 +1126,21 @@
         however, we're going to switch to editing script text files.
       </para>
       <para lang="en">
-        Where you place your scripts is a matter of preference -- if you have
-        access to GIMP's default script directory, you can place your scripts
+        Where you place your scripts is a matter of preference &mdash; if you
+        have access to <acronym>GIMP</acronym>'s default script directory, you
+        can place your scripts
         there. However, I prefer keeping my personal scripts in my own script
         directory, to keep them separate from the factory-installed scripts.
       </para>
       <para lang="en">
-        In the <filename>.gimp-2.6</filename> directory that GIMP made
-        off of your home directory, you should find a directory called
-        <filename>scripts</filename>. GIMP will automatically look in
-        your <filename>.gimp-2.6</filename> directory for a scripts
-        directory, and add the
-        scripts in this directory to the Script-Fu database. You
-        should place your personal scripts here.
+        In the <filename class="directory">.gimp-2.6</filename> directory that
+        <acronym>GIMP</acronym> made off of your home directory, you should
+        find a directory called <filename class="directory">scripts</filename>.
+        <acronym>GIMP</acronym> will automatically look in your
+        <filename class="directory">.gimp-2.6</filename> directory for a
+        <filename class="directory">scripts</filename> directory, and add the
+        scripts in this directory to the
+        Script-Fu database. You should place your personal scripts here.
       </para>
       <para lang="ja">
         ここまで私たちは<quote>Script-Fu コンソール</quote>を使ってきました。
@@ -1186,8 +1193,8 @@
         Here, we've defined a new function called script-fu-text-box that
         takes four parameters, which will later correspond to some text, a
         font, the font size, and the text's color. The function is currently
-        empty and thus does nothing. So far, so good -- nothing new, nothing
-        fancy.
+        empty and thus does nothing. So far, so good &mdash; nothing new,
+        nothing fancy.
       </para>
       <para lang="ja">
         この式で <function>script-fu-text-box</function> という名前の関数を
@@ -1211,7 +1218,8 @@
         prefix "the" for variables defined within the script.
       </para>
       <para lang="en">
-        It's GIMP convention to name your script functions script-fu-abc,
+        It's <acronym>GIMP</acronym> convention to name your script functions
+        <function>script-fu-abc</function>,
         because then when they're listed in the procedural database, they'll
         all show up under script-fu when you're listing the functions. This
         also helps distinguish them from plug-ins.
@@ -1238,9 +1246,9 @@
       <title lang="en">Registering The Function</title>
       <title lang="ja">関数を登録</title>
       <para lang="en">
-        Now, let's register the function with GIMP. This is done by
-        calling the function <code>script-fu-register</code>. When
-        GIMP reads in a
+        Now, let's register the function with <acronym>GIMP</acronym>. This is
+        done by calling the function <function>script-fu-register</function>.
+        When <acronym>GIMP</acronym> reads in a
         script, it will execute this function, which registers the
         script with the procedural database. You can place this
         function call wherever you wish in your script, but I usually
@@ -1262,58 +1270,39 @@
         関数を登録している様子をつぎに示します。 パラメータに関してはまもなく
         説明します。
       </para>
-      <programlisting lang="en"><![CDATA[
-        (script-fu-register
-          "script-fu-text-box"                        ;func name
-          "Text Box"                                  ;menu label
-          "Creates a simple text box, sized to fit\
-            around the user's choice of text,\
-            font, font size, and color."              ;description
-          "Michael Terry"                             ;author
-          "copyright 1997, Michael Terry"             ;copyright notice
-          "October 27, 1997"                          ;date created
-          ""                     ;image type that the script works on
-          SF-STRING      "Text:"         "Text Box"   ;a string variable
-          SF-FONT        "Font:"         "Charter"    ;a font variable
-          SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
-                                                      ;a spin-button
-          SF-COLOR       "Color:"        '(0 0 0)     ;color variable
-        )
-        (script-fu-menu-register "script-fu-text-box" "<Toolbox>/Xtns/Script-Fu/Text")
-      ]]></programlisting>
-      <programlisting lang="ja"><![CDATA[
-        (script-fu-register
-          "script-fu-text-box"                        ;func name (関数名)
-          "Text Box"                                  ;menu label (メニュー項目名)
-          "Creates a simple text box, sized to fit\
-            around the user's choice of text,\
-            font, font size, and color."              ;description (説明)
-          "Michael Terry"                             ;author (作者)
-          "copyright 1997, Michael Terry"             ;copyright notice (著作権明示)
-          "October 27, 1997"                          ;date created (作成日)
-          ""                     ;image type that the script works on
-                                 ; (スクリプトが動作可能な画像形式)
-          SF-STRING      "Text"        "Text Box"     ;a string variable (文字列の変数)
-          SF-FONT        "Font"        "Charter"      ;a font variable (フォント名の変数)
-          SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
-                                                      ;a spin-button (スピンボタン)
-          SF-COLOR       "Color"       '(0 0 0)       ;color variable (色の変数)
-        )
-        (script-fu-menu-register "script-fu-text-box" "<Image>/File/Create/Text")
+      <programlisting><![CDATA[
+  (script-fu-register
+    "script-fu-text-box"                        ;func name
+    "Text Box"                                  ;menu label
+    "Creates a simple text box, sized to fit\
+      around the user's choice of text,\
+      font, font size, and color."              ;description
+    "Michael Terry"                             ;author
+    "copyright 1997, Michael Terry;\
+      2009, the GIMP Documentation Team"        ;copyright notice
+    "October 27, 1997"                          ;date created
+    ""                     ;image type that the script works on
+    SF-STRING      "Text"          "Text Box"   ;a string variable
+    SF-FONT        "Font"          "Charter"    ;a font variable
+    SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
+                                                ;a spin-button
+    SF-COLOR       "Color"         '(0 0 0)     ;color variable
+  )
+  (script-fu-menu-register "script-fu-text-box" "<Image>/File/Create/Text")
       ]]></programlisting>
       <para lang="en">
         If you save these functions in a text file with a
-        <filename>.scm</filename> suffix
+        <filename class="extension">.scm</filename> suffix
         in your script directory, then choose
         <menuchoice>
-          <guimenu>Xtns</guimenu>
+          <guimenu>Filters</guimenu>
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>Refresh Scripts</guimenuitem>
         </menuchoice>,
         this new script will appear as
         <menuchoice>
-          <guimenu> Xtns</guimenu>
-          <guisubmenu>Script-Fu</guisubmenu>
+          <guimenu>File</guimenu>
+          <guisubmenu>Create</guisubmenu>
           <guisubmenu>Text</guisubmenu>
           <guimenuitem>Text Box</guimenuitem>
         </menuchoice>.
@@ -1326,11 +1315,10 @@
       <para lang="en">
         Finally, if you invoke the Procedure Browser (
         <menuchoice>
-          <guimenu> Xtns</guimenu>
+          <guimenu>Help</guimenu>
           <guimenuitem>Procedure Browser</guimenuitem>
         </menuchoice>),
-        you'll notice that our script now
-        appears in the database.
+        you'll notice that our script now appears in the database.
       </para>
       <para lang="ja">
         以上の関数をテキストファイルにして <filename class="extension">.scm
@@ -1348,15 +1336,7 @@
           <guisubmenu>Text</guisubmenu>
           <guimenuitem>Text Box</guimenuitem>
         </menuchoice>
-        としてメニューに出現します。<footnote>
-          <para>
-            原文はツールボックスメニュー内の <guimenu>Xtns</guimenu> 以下に
-            スクリプトを置いていますが、 <acronym>GIMP</acronym> 2.6 で
-            ツールボックスメニューが廃止されたのでメニューの登録位置を
-            変えました。 <code>&lt;Image&gt;/File/Create/</code> の代わりに
-            <code>&lt;Image&gt;/Filters/Script-Fu/</code> としても
-            良いでしょう。
-          </para></footnote>
+        としてメニューに出現します。
       </para>
       <para lang="ja">
         この新しいスクリプトは実行しても何も起こりません。 もちろんメニューを
@@ -1379,10 +1359,10 @@
       <title lang="en">Steps For Registering The Script</title>
       <title lang="ja">スクリプトを登録するための工程</title>
       <para lang="en">
-        To register our script with GIMP, we call the function
-        script-fu-register, fill in the seven required parameters and add our
-        script's own parameters, along with a description and default value
-        for each parameter.
+        To register our script with <acronym>GIMP</acronym>, we call the
+        function <function>script-fu-register</function>, fill in the seven
+        required parameters and add our script's own parameters, along with a
+        description and default value for each parameter.
       </para>
       <para lang="ja">
         <acronym>GIMP</acronym>にスクリプトを登録するために登録関数 
@@ -1398,7 +1378,8 @@
             The <emphasis>name</emphasis> of the function we
             defined. This is the function called when our script is invoked
             (the entry-point into our script). This is necessary because we may
-            define additional functions within the same file, and GIMP needs to
+            define additional functions within the same file, and
+            <acronym>GIMP</acronym> needs to
             know which of these functions to call. In our example, we only
             defined one function, text-box, which we registered.
           </para>
@@ -1416,41 +1397,51 @@
             The <emphasis>location</emphasis> in the menu where
             the script will be inserted. The exact location of the script is
             specified like a path in Unix, with the root of the path being
-            either toolbox or right-click.
+            image menu as <code>&lt;Image&gt;</code>.<footnote><para>
+              Before version 2.6, <code>&lt;Toolbox&gt;</code> could be also
+              used, but now the toolbox menu is removed, so don't use it.
+              </para></footnote>
           </para>
           <para lang="en">
             If your script does not operate on an existing image (and thus
             creates a new image, like our Text Box script will), you'll want
-            to insert it in the toolbox menu -- this is the menu in GIMP's
-            main window (where all the tools are located: the selection tools,
-            magnifying glass, etc.).
+            to insert it in the image window menu, which you can access
+            through the image menu bar, by right-clicking the image window,
+            by clicking the menu button icon at the left-top corner of the
+            image window, or by pressing <keycap>F10</keycap>.
           </para>
-          <para lang="en"><!--FIXME: en needs a review-->
+          <para lang="en"><!--FIXME: en needs more review!-->
             If your script is intended to work on an image being edited,
-            you'll want to insert it in the menu that appears when you
-            right-click on an open image. The rest of the path points to
-            the menu lists, menus and sub-menus. Thus, we registered our
-            Text Box script in the Text menu of the Script-Fu menu of
-            the Xtns menu of the toolbox (
+            you'll want to insert it in the image window menu.
+            The rest of the path points to the menu lists, menus and sub-menus.
+            Thus, we registered our Text Box script in the
+            <guisubmenu>Text</guisubmenu> menu of the
+            <guisubmenu>Create</guisubmenu> menu of the <guimenu>File</guimenu>
+            menu.<footnote><para>
+              The original, written by Mike, says put the menu entry in the
+              Script-Fu menu of the <guimenu>Xtns</guimenu> menu at the
+              Toolbox, but since version 2.6, the Toolbox menu had been removed
+              and merged with the image window menubar.</para></footnote> (
             <menuchoice>
-              <guimenu> Xtns</guimenu>
-              <guisubmenu>Script-Fu</guisubmenu>
+              <guimenu>File</guimenu>
+              <guisubmenu>Create</guisubmenu>
               <guisubmenu>Text</guisubmenu>
               <guimenuitem>Text Box</guimenuitem>
             </menuchoice> ).
           </para>
           <para lang="en">
-            If you notice, the Text sub-menu in the Script-Fu menu wasn't
-            there when we began -- GIMP automatically creates any menus not
-            already existing.
+            If you notice, the Text sub-menu in the File/Create menu wasn't
+            there when we began &mdash; <acronym>GIMP</acronym> automatically
+            creates any menus not already existing.
           </para>
           <para lang="ja">
             スクリプトを挿入するメニュー内での <emphasis>位置</emphasis> を
             定めます。 スクリプトの位置を Unix 風のパス表記で正確に指定して
             ください。 パスのはじめ (ルート) には <code>&lt;Image&gt;</code>
-            が指定できます。 [かつてはツールボックスを表す <code>&lt;Toolbox
-            &gt;</code> も指定できました。 ツールボックスのメニューは
-            廃止されたので、 こちらは使わないほうが無難です。]
+            が指定できます。 <footnote><para>
+              バージョン 2.6 以前はツールボックスを表す <code>&lt;Toolbox&gt;
+              </code> も指定できました。 ツールボックスのメニューは廃止
+              されたので、 こちらは使わないほうが無難です。</para></footnote>
           </para>
           <para lang="ja">
             既存の画像を加工しないスクリプトを書いた場合 (このテキスト
@@ -1460,11 +1451,11 @@
               <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
             </menuchoice>
-            サブメニュー内に置きたいと考えるはずです。<footnote>
-              <para>
-                 原文はツールボックスメニューに置くよう勧めていますが、 同じ
-                 理由からここでも訳文で変更を加えています。
-              </para></footnote>
+            サブメニュー内に置きたいと考えるはずです。 このメニューは画像
+            ウィンドウのメニューバーから辿れるほか、 ウィンドウ上を 
+            <mousebutton>第2ボタン</mousebutton> でクリック、
+            もしくはウィンドウ左上隅の小さなメニューボタンアイコンをクリック、
+            あるいは <keycap>F10</keycap> キーを押せば呼びだせます。
           </para>
           <para lang="ja">
             それとは反対に画像を編集・加工する目的のスクリプトを書いた場合は
@@ -1475,7 +1466,12 @@
             から、 画像ウィンドウのメニューの <guimenu>ファイル</guimenu> 
             メニューの <guisubmenu>画像の生成</guisubmenu> サブメニューの中に
             <guisubmenu>Text</guisubmenu> サブメニューを設け、 このテキスト
-            ボックススクリプトをその中に収めることにしましょう。  つまり
+            ボックススクリプトをその中に収めることにしましょう。<footnote>
+            <para>
+              マイクテリー氏の原文はツールボックスメニュー内の 
+              <guimenu>Xtns</guimenu> 以下にスクリプトを置いていますが、 
+              <acronym>GIMP</acronym> 2.6 でツールボックスメニューが廃止され
+              画像ウィンドウメニューに統合されました。</para>つまり
             <menuchoice>
               <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
@@ -1528,7 +1524,8 @@
           <para lang="en">
             The <emphasis>types</emphasis> of images the script
             works on. This may be any of the following: RGB, RGBA, GRAY,
-            GRAYA, INDEXED, INDEXEDA. Or it may be none at all -- in our case,
+            GRAYA, INDEXED, INDEXEDA. Or it may be none
+            at all &mdash; in our case,
             we're creating an image, and thus don't need to define the type of
             image on which we work.
           </para>
@@ -1599,13 +1596,13 @@
           <tbody>
             <row>
               <entry>
-                <para lang="en">SF-IMAGE</para>
-                <para lang="ja"><type>SF-IMAGE</type></para>
+                <para><function>SF-IMAGE</function></para>
               </entry>
               <entry>
                 <para lang="en">
                   If your script operates on an open image, this should be the
-                  first parameter after the required parameters. GIMP will
+                  first parameter after the required parameters.
+                  <acronym>GIMP</acronym> will
                   pass in a reference to the image in this parameter.
                 </para>
                 <para lang="ja">
@@ -1621,22 +1618,22 @@
             </row>
             <row>
               <entry>
-                <para lang="en">SF-DRAWABLE</para>
-                <para lang="ja"><type>SF-DRAWABLE</type></para>
+                <para><function>SF-DRAWABLE</function></para>
               </entry>
               <entry>
                 <para lang="en">
                   If your script operates on an open image, this should be the
-                  second parameter after the SF-IMAGE param. It refers to the
-                  active layer. GIMP will pass in a reference to the active
-                  layer in this parameter.
+                  second parameter after the <function>SF-IMAGE</function>
+                  param. It
+                  refers to the active layer. <acronym>GIMP</acronym> will pass
+                  in a reference to the active layer in this parameter.
                 </para>
                 <para lang="ja">
                   既に開いてある画像を操作するためのスクリプトを作るときは、
-                  <type>SF-IMAGE</type> 型のパラメータのつぎにこのパラメータ
-                  を置かなくてはなりません。 これは活性レイヤーを参照します。
-                  <acronym>GIMP</acronym>は活性レイヤーを参照するための情報を
-                  このパラメータに乗せてスクリプトに渡します。
+                  <function>SF-IMAGE</function> 型のパラメータのつぎにこの
+                  パラメータを置かなくてはなりません。 これは活性レイヤーを
+                  参照します。 <acronym>GIMP</acronym>は活性レイヤーを参照する
+                  ための情報をこのパラメータに乗せてスクリプトに渡します。
                 </para>
               </entry>
               <entry>
@@ -1645,18 +1642,19 @@
             </row>
             <row>
               <entry>
-                <para lang="en">SF-VALUE</para>
-                <para lang="ja"><type>SF-VALUE</type></para>
+                <para><function>SF-VALUE</function></para>
               </entry>
               <entry>
                 <para lang="en">
                   Accepts numbers and strings. Note that quotes must be
-                  escaped for default text, so better use SF-STRING.
+                  escaped for default text, so better use
+                  <function>SF-STRING</function>.
                 </para>
                 <para lang="ja">
                   数値と文字列の両方を受け入れる型です。 初期設定のテキストを
                   渡すとき引用符をエスケープ処理しなければならなくなるので、 
-                  文字列には <type>SF-STRING</type> 型の方が適しています。
+                  文字列には <function>SF-STRING</function> 型の方が
+                  適しています。
                 </para>
               </entry>
               <entry>
@@ -1665,8 +1663,7 @@
             </row>
             <row>
               <entry>
-                <para lang="en">SF-STRING</para>
-                <para lang="ja"><type>SF-STRING</type></para>
+                <para><function>SF-STRING</function></para>
               </entry>
               <entry>
                 <para lang="en">Accepts strings.</para>
@@ -1678,8 +1675,7 @@
             </row>
             <row>
               <entry>
-                <para lang="en">SF-COLOR</para>
-                <para lang="ja"><type>SF-COLOR</type></para>
+                <para><function>SF-COLOR</function></para>
               </entry>
               <entry>
                 <para lang="en">
@@ -1695,8 +1691,7 @@
             </row>
             <row>
               <entry>
-                <para lang="en">SF-TOGGLE</para>
-                <para lang="ja"><function>SF-TOGGLE</function></para>
+                <para><function>SF-TOGGLE</function></para>
               </entry>
               <entry>
                 <para lang="en">
@@ -1734,27 +1729,30 @@
       <title lang="ja">新しい画像を生成</title>
       <para lang="en">
         In the previous lesson, we created an empty function and registered it
-        with GIMP. In this lesson, we want to provide functionality to our
-        script -- we want to create a new image, add the user's text to it and
-        resize the image to fit the text exactly.
+        with <acronym>GIMP</acronym>. In this lesson, we want to provide
+        functionality to our script &mdash; we want to create a new image,
+        add the user's text to it and resize the image to fit the text exactly.
       </para>
       <para lang="en">
         Once you know how to set variables, define functions and access list
-        members, the rest is all downhill -- all you need to do is familiarize
-        yourself with the functions available in GIMP's procedural database
-        and call those functions directly. So fire up the DB Browser and let's
-        get cookin'!
+        members, the rest is all downhill &mdash; all you need to do is
+        familiarize yourself with the functions available in
+        <acronym>GIMP</acronym>'s procedural database and call those functions
+        directly. So fire up the
+        <xref linkend="plug-in-dbbrowser"/> and let's get cookin'!
       </para>
       <para lang="en">
         Let's begin by making a new image. We'll create a new variable,
-        <varname>theImage</varname>, set to the result of calling GIMP's
-        built-in function <code>gimp-image-new</code>.
+        <varname>theImage</varname>, set to the result of calling
+        <acronym>GIMP</acronym>'s
+        built-in function <function>gimp-image-new</function>.
       </para>
       <para lang="en">
         As you can see from the DB Browser, the function
-        <code>gimp-image-new</code> takes three parameters -- the
+        <function>gimp-image-new</function> takes three parameters &mdash; the
         image's width, height and the type of image. Because we'll
-        later resize the image to fit the text, we'll make a 10x10 RGB
+        later resize the image to fit the text, we'll make a 10x10 pixels
+        <acronym>RGB</acronym>
         image. We'll store the image's width and sizes in some
         variables, too, as we'll refer to and manipulate them later in
         the script.
@@ -1778,8 +1776,8 @@
         <acronym>GIMP</acronym>の組み込み機能を実行して得た値を代入するのです。
       </para>
       <para lang="ja">
-        プロシージャデータベースのブラウザによると、 <code>gimp-image-new
-        </code> は画像の幅、 高さ、 型式の3つのパラメータをとります。 画像の
+        プロシージャデータベースのブラウザによると、 <function>gimp-image-new
+        </function> は画像の幅、 高さ、 型式の3つのパラメータをとります。 画像の
         大きさはあとでテキストに合わせて変更するので、 とりあえず 10&times;10
         ピクセルの<acronym>RGB</acronym>画像を作成させます。 画像の幅と高さ
         のパラメータやいくつかの変数はあとでスクリプトが操作するために参照
@@ -1824,24 +1822,26 @@
                                 ;we create later (あとで作成するつもり)
       </programlisting>
       <para lang="en">
-        Note: We used the value RGB to specify that the image is an RGB image.
-        We could have also used 0, but RGB is more descriptive when we glance
-        at the code.
+        Note: We used the value <code>RGB</code> to specify that the image
+        is an <acronym>RGB</acronym> image. We could have also used
+        <code>0</code>, but <acronym>RGB</acronym> is more descriptive
+        when we glance at the code.
       </para>
       <para lang="en">
         You should also notice that we took the head of the result of the
         function call. This may seem strange, because the database explicitly
-        tells us that it returns only one value -- the ID of the newly created
-        image. However, all GIMP functions return a list, even if there is
+        tells us that it returns only one value &mdash; the ID of the newly
+        created image. However, all <acronym>GIMP</acronym> functions return a
+        list, even if there is
         only one element in the list, so we need to get the head of the list.
       </para>
       <para lang="ja">
         <note>
           <para>
-            ここでは<acronym>RGB</acronym>画像を示すために <code><acronym>RGB
-            </acronym></code> という値を使いました。 代わりに <code>0</code> 
-            としても同じ結果になりますが、 コードを読む人にとっては<acronym>
-            RGB</acronym>と明示した方が説明的で理解し易くなります。
+            ここでは<acronym>RGB</acronym>画像を示すために <code>RGB</code> 
+            という値を使いました。 代わりに <code>0</code> としても同じ結果に
+            なりますが、 コードを読む人にとっては<acronym>RGB</acronym>
+            と明示した方が説明的で理解し易くなります。
           </para>
         </note>
       </para>
@@ -1860,7 +1860,7 @@
       <title lang="ja">画像に新しいレイヤーを追加</title>
       <para lang="en">
         Now that we have an image, we need to add a layer to it. We'll
-        call the <code>gimp-layer-new</code> function to create the
+        call the <function>gimp-layer-new</function> function to create the
         layer, passing
         in the ID of the image we just created. (From now on, instead
         of listing the complete function, we'll only list the lines
@@ -1937,7 +1937,7 @@
       <para lang="en">
         Save your work, select
         <menuchoice>
-          <guimenu>Xtns</guimenu>
+          <guimenu>Filters</guimenu>
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>Refresh Scripts</guimenuitem>
         </menuchoice>,
@@ -1963,7 +1963,7 @@
       <title lang="ja">テキストを追加</title>
       <para lang="en">
         Go ahead and remove the line to display the image (or comment
-        it out with a ; as the first character of the line).
+        it out with a (<code>;</code>) as the first character of the line).
       </para>
       <para lang="en">
         Before we add text to the image, we need to set the background
@@ -1973,8 +1973,8 @@
       </para>
       <para lang="ja">
         先に進みたいので先程画像を表示させるために追加した行を削除して
-        ください (もしくはその行の最初にセミコロン<quote><code>;</code>
-        </quote>を書き加えてコメントアウトしてください)。
+        ください。 (もしくはその行の最初にセミコロン (<code>;</code>)
+        を書き加えてコメントアウトしてください。)
       </para>
       <para lang="ja">
         画像にテキストを加える前に、 画像の背景色と描画色を設定してテキスト
@@ -2086,12 +2086,13 @@
       <title lang="ja"><quote>手付き</quote>フラグを解消</title>
       <para lang="en">
         If you try to close the image created without first saving the file,
-        GIMP will ask you if you want to save your work before you close the
+        <acronym>GIMP</acronym> will ask you if you want to save your work
+        before you close the
         image. It asks this because the image is marked as dirty, or unsaved.
         In the case of our script, this is a nuisance for the times when we
         simply give it a test run and don't add or change anything in the
-        resulting image -- that is, our work is easily reproducible in such a
-        simple script, so it makes sense to get rid of this dirty flag.
+        resulting image &mdash; that is, our work is easily reproducible in
+        such a simple script, so it makes sense to get rid of this dirty flag.
       </para>
       <para lang="en">
         To do this, we can clear the dirty flag after displaying the image:
@@ -2113,8 +2114,8 @@
         (gimp-image-clean-all theImage)
       </programlisting>
       <para lang="en">
-        This will set dirty count to 0, making it appear to be a "clean"
-        image.
+        This will set dirty count to 0, making it appear to be a
+        <quote>clean</quote> image.
       </para>
       <para lang="en">
         Whether to add this line or not is a matter of personal taste. I use
@@ -2146,12 +2147,12 @@
         When creating a script, you want to give your users the ability to
         undo their actions, should they make a mistake. This is easily
         accomplished by calling the functions
-        <code>gimp-undo-push-group-start</code>
-        and <code>gimp-undo-push-group-end</code>
+        <function>gimp-undo-push-group-start</function>
+        and <function>gimp-undo-push-group-end</function>
         around the code that manipulates the image. You can think of them as
-        matched statements that let GIMP know when to start and stop recording
-        manipulations on the image, so that those manipulations can later be
-        undone.
+        matched statements that let <acronym>GIMP</acronym> know when to start
+        and stop recording manipulations on the image, so that those
+        manipulations can later be undone.
       </para>
       <para lang="en">
         If you are creating a new image entirely, it doesn't make sense to use
@@ -2200,7 +2201,7 @@
         <listitem>
           <para lang="en">
             Currently, the image is resized to fit exactly around the
-            text -- there's no room for anything, like drop shadows or
+            text &mdash; there's no room for anything, like drop shadows or
             special effects (even though many scripts will automatically
             resize the image as necessary). Let's add a buffer around
             the text, and even let the user specify how much buffer to
@@ -2245,125 +2246,104 @@
         登録関数を変更します。
       </para>
       <programlisting lang="en">
-        (define (script-fu-text-box inTest inFont inFontSize inTextColor inBufferAmount)
-        (let*
-              (
-                 ; define our local variables
-                 ; create a new image:
-                 (theImageWidth  10)
-                 (theImageHeight 10)
-                 (theImage (car
-                                (gimp-image-new
-                                 theImageWidth
-                                 theImageHeight
-                                 RGB
-                                )
-                           )
-                 )
-                 (theText)          ;a declaration for the text
-                                    ;we create later
+  (define (script-fu-text-box inTest inFont inFontSize inTextColor inBufferAmount)
+  (let*
+        (
+           ; define our local variables
+           ; create a new image:
+           (theImageWidth  10)
+           (theImageHeight 10)
+           (theImage (car
+                          (gimp-image-new
+                           theImageWidth
+                           theImageHeight
+                           RGB
+                          )
+                     )
+           )
+           (theText)          ;a declaration for the text
+                              ;we create later
 
-                 (theBuffer)        ;<emphasis>added</emphasis>
+           (theBuffer)        ;<emphasis>added</emphasis>
 
-                 (theLayer
-                           (car
-                               (gimp-layer-new
-                                theImage
-                                theImageWidth
-                                theImageHeight
-                                RGB-IMAGE
-                                "layer 1"
-                                100
-                                NORMAL
-                               )
-                           )
-                 )
-              ) ;end of our local variables
+           (theLayer
+                     (car
+                         (gimp-layer-new
+                          theImage
+                          theImageWidth
+                          theImageHeight
+                          RGB-IMAGE
+                          "layer 1"
+                          100
+                          NORMAL
+                         )
+                     )
+           )
+        ) ;end of our local variables
 
-         <replaceable>[Code here]</replaceable>
-       )
+   <replaceable>[Code here]</replaceable>
+ )
       </programlisting>
       <programlisting lang="ja">
-        (define (script-fu-text-box inTest inFont inFontSize inTextColor inBufferAmount)
-        (let*
-              (
-                 ; define our local variables
-                 ; create a new image: (新しい画像を作る局所変数を定義する)
-                 (theImageWidth  10)
-                 (theImageHeight 10)
-                 (theImage (car
-                                (gimp-image-new
-                                 theImageWidth
-                                 theImageHeight
-                                 RGB
-                                )
-                           )
-                 )
-                 (theText)          ;a declaration for the text (テキストの定義)
-                                    ;we create later (あとで作成するつもり)
+  (define (script-fu-text-box inTest inFont inFontSize inTextColor inBufferAmount)
+  (let*
+        (
+           ; define our local variables
+           ; create a new image: (新しい画像を作る局所変数を定義する)
+           (theImageWidth  10)
+           (theImageHeight 10)
+           (theImage (car
+                          (gimp-image-new
+                           theImageWidth
+                           theImageHeight
+                           RGB
+                          )
+                     )
+           )
+           (theText)          ;a declaration for the text (テキストの定義)
+                              ;we create later (あとで作成するつもり)
 
-                 (theBuffer)        ;<emphasis>added</emphasis> (追加行)
+           (theBuffer)        ;<emphasis>added</emphasis> (追加行)
 
-                 (theLayer
-                           (car
-                               (gimp-layer-new
-                                theImage
-                                theImageWidth
-                                theImageHeight
-                                RGB-IMAGE
-                                "layer 1"
-                                100
-                                NORMAL
-                               )
-                           )
-                 )
-              ) ;end of our local variables
+           (theLayer
+                     (car
+                         (gimp-layer-new
+                          theImage
+                          theImageWidth
+                          theImageHeight
+                          RGB-IMAGE
+                          "layer 1"
+                          100
+                          NORMAL
+                         )
+                     )
+           )
+        ) ;end of our local variables
 
-         <replaceable>[Code here]</replaceable> (ここに中身のコードを書く)\n
-       )
+   <replaceable>[Code here]</replaceable> (ここに中身のコードを書く)\n
+ )
       </programlisting>
-      <programlisting lang="en"><![CDATA[
-        (script-fu-register
-          "script-fu-text-box"                        ;func name
-          "Text Box"                                  ;menu label
-          "Creates a simple text box, sized to fit\
-            around the user's choice of text,\
-            font, font size, and color."              ;description
-          "Michael Terry"                             ;author
-          "copyright 1997, Michael Terry"             ;copyright notice
-          "October 27, 1997"                          ;date created
-          ""                     ;image type that the script works on
-          SF-STRING      "Text:"         "Text Box"   ;a string variable
-          SF-FONT        "Font:"         "Charter"    ;a font variable
-          SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
-                                                      ;a spin-button
-          SF-COLOR       "Color:"        '(0 0 0)     ;color variable
-          SF-ADJUSTMENT  "Buffer amount" '(35 0 100 1 10 1 0)
-                                                      ;a slider
-        )
-        (script-fu-menu-register "script-fu-text-box" "<Toolbox>/Xtns/Script-Fu/Text")
-      ]]></programlisting>
-      <programlisting lang="ja"><![CDATA[
-        (script-fu-register
-          "script-fu-text-box"                        ;func name (関数名)
-          "Text Box"                                  ;menu label (メニュー項目)
-          "Creates a simple text box, sized to fit\
-            around the user's choice of text,\
-            font, font size, and color."              ;description (説明)
-          "Michael Terry"                             ;author (作者)
-          "copyright 1997, Michael Terry"             ;copyright notice (著作権明示)
-          "October 27, 1997"                          ;date created (作成日)
-          ""                     ;image type that the script works on
-                                 ; (スクリプトが動作可能な画像形式)
-          SF-STRING      "Text"          "Text Box"   ;a string variable (文字列の変数)
-          SF-FONT        "Font"          "Charter"    ;a font variable (フォント名の変数)
-          SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
-                                                      ;a spin-button (スピンボタン)
-          SF-COLOR       "Color"         '(0 0 0)     ;color variable (色の変数)
-          SF-ADJUSTMENT  "Buffer amount" '(35 0 100 1 10 1 0)
-                                                      ;a slider (スライダ)
-        )
-        (script-fu-menu-register "script-fu-text-box" "<Image>/File/Create/Text")
+      <programlisting><![CDATA[
+  (script-fu-register
+    "script-fu-text-box"                        ;func name
+    "Text Box"                                  ;menu label
+    "Creates a simple text box, sized to fit\
+      around the user's choice of text,\
+      font, font size, and color."              ;description
+    "Michael Terry"                             ;author
+    "copyright 1997, Michael Terry;\
+      2009, the GIMP Documentation Team"        ;copyright notice
+    "October 27, 1997"                          ;date created
+    ""                     ;image type that the script works on
+    SF-STRING      "Text"          "Text Box"   ;a string variable
+    SF-FONT        "Font"          "Charter"    ;a font variable
+    SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
+                                                ;a spin-button
+    SF-COLOR       "Color"         '(0 0 0)     ;color variable
+    SF-ADJUSTMENT  "Buffer amount" '(35 0 100 1 10 1 0)
+                                                ;a slider
+  )
+  (script-fu-menu-register "script-fu-text-box" "<Image>/Font/Create/Text")
       ]]></programlisting>
     </sect3>
 
@@ -2493,170 +2473,88 @@
       <title lang="ja">書いた成果</title>
       <para lang="en">Below the complete script:</para>
       <para lang="ja">スクリプトの完全版はつぎのとおりです。</para>
-      <programlisting lang="en"><![CDATA[
-        (script-fu-register
-                  "script-fu-text-box"                        ;func name
-                  "Text Box"                                  ;menu label
-                  "Creates a simple text box, sized to fit\
-                    around the user's choice of text,\
-                    font, font size, and color."              ;description
-                  "Michael Terry"                             ;author
-                  "copyright 1997, Michael Terry"             ;copyright notice
-                  "October 27, 1997"                          ;date created
-                  ""                     ;image type that the script works on
-                  SF-STRING      "Text:"         "Text Box"   ;a string variable
-                  SF-FONT        "Font:"         "Charter"    ;a font variable
-                  SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
-                                                              ;a spin-button
-                  SF-COLOR       "Color:"        '(0 0 0)     ;color variable
-                  SF-ADJUSTMENT  "Buffer amount" '(35 0 100 1 10 1 0)
-                                                              ;a slider
+      <programlisting><![CDATA[
+  (script-fu-register
+            "script-fu-text-box"                        ;func name
+            "Text Box"                                  ;menu label
+            "Creates a simple text box, sized to fit\
+              around the user's choice of text,\
+              font, font size, and color."              ;description
+            "Michael Terry"                             ;author
+            "copyright 1997, Michael Terry;\
+              2009, the GIMP Documentation Team"        ;copyright notice
+            "October 27, 1997"                          ;date created
+            ""                     ;image type that the script works on
+            SF-STRING      "Text"          "Text Box"   ;a string variable
+            SF-FONT        "Font"          "Charter"    ;a font variable
+            SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
+                                                        ;a spin-button
+            SF-COLOR       "Color"         '(0 0 0)     ;color variable
+            SF-ADJUSTMENT  "Buffer amount" '(35 0 100 1 10 1 0)
+                                                        ;a slider
+  )
+  (script-fu-menu-register "script-fu-text-box" "<Image>/File/Create/Text")
+  (define (script-fu-text-box inText inFont inFontSize inTextColor inBufferAmount)
+    (let*
+      (
+        ; define our local variables
+        ; create a new image:
+        (theImageWidth  10)
+        (theImageHeight 10)
+        (theImage)
+        (theImage
+                  (car
+                      (gimp-image-new
+                        theImageWidth
+                        theImageHeight
+                        RGB
+                      )
+                  )
         )
-        (script-fu-menu-register "script-fu-text-box" "<Toolbox>/Xtns/Script-Fu/Text")
-        (define (script-fu-text-box inText inFont inFontSize inTextColor inBufferAmount)
-          (let*
-            (
-              ; define our local variables
-              ; create a new image:
-              (theImageWidth  10)
-              (theImageHeight 10)
-              (theImage)
-              (theImage
-                        (car
-                            (gimp-image-new
-                              theImageWidth
-                              theImageHeight
-                              RGB
-                            )
-                        )
-              )
-              (theText)             ;a declaration for the text
-              (theBuffer)           ;create a new layer for the image
-              (theLayer
-                        (car
-                            (gimp-layer-new
-                              theImage
-                              theImageWidth
-                              theImageHeight
-                              RGB-IMAGE
-                              "layer 1"
-                              100
-                              NORMAL
-                            )
-                        )
-              )
-            ) ;end of our local variables
-            (gimp-image-add-layer theImage theLayer 0)
-            (gimp-context-set-background '(255 255 255) )
-            (gimp-context-set-foreground inTextColor)
-            (gimp-drawable-fill theLayer BACKGROUND-FILL)
-            (set! theText
-                          (car
-                                (gimp-text-fontname
-                                theImage theLayer
-                                0 0
-                                inText
-                                0
-                                TRUE
-                                inFontSize PIXELS
-                                "Sans")
-                            )
-              )
-            (set! theImageWidth   (car (gimp-drawable-width  theText) ) )
-            (set! theImageHeight  (car (gimp-drawable-height theText) ) )
-            (set! theBuffer (* theImageHeight (/ inBufferAmount 100) ) )
-            (set! theImageHeight (+ theImageHeight theBuffer theBuffer) )
-            (set! theImageWidth  (+ theImageWidth  theBuffer theBuffer) )
-            (gimp-image-resize theImage theImageWidth theImageHeight 0 0)
-            (gimp-layer-resize theLayer theImageWidth theImageHeight 0 0)
-            (gimp-layer-set-offsets theText theBuffer theBuffer)
-            (gimp-display-new theImage)
-            (list theImage theLayer theText)
-          )
+        (theText)             ;a declaration for the text
+        (theBuffer)           ;create a new layer for the image
+        (theLayer
+                  (car
+                      (gimp-layer-new
+                        theImage
+                        theImageWidth
+                        theImageHeight
+                        RGB-IMAGE
+                        "layer 1"
+                        100
+                        NORMAL
+                      )
+                  )
         )
-      ]]></programlisting>
-      <programlisting lang="ja"><![CDATA[
-        (script-fu-register
-                  "script-fu-text-box"                        ;func name (関数名)
-                  "Text Box"                                  ;menu label (メニュー項目)
-                  "Creates a simple text box, sized to fit\
-                    around the user's choice of text,\
-                    font, font size, and color."              ;description (説明)
-                  "Michael Terry"                             ;author (作者)
-                  "copyright 1997, Michael Terry"             ;copyright notice (著作権明示)
-                  "October 27, 1997"                          ;date created (作成日)
-                  ""                     ;image type that the script works on
-                                         ; (スクリプトが動作可能な画像形式)
-                  SF-STRING      "Text"          "Text Box"   ;a string variable (文字列の変数)
-                  SF-FONT        "Font"          "Charter"    ;a font variable (フォントの変数)
-                  SF-ADJUSTMENT  "Font size"     '(50 1 1000 1 10 0 1)
-                                                              ;a spin-button (スピンボタン)
-                  SF-COLOR       "Color"         '(0 0 0)     ;color variable (色の変数)
-                  SF-ADJUSTMENT  "Buffer amount" '(35 0 100 1 10 1 0)
-                                                              ;a slider (スライダ)
+      ) ;end of our local variables
+      (gimp-image-add-layer theImage theLayer 0)
+      (gimp-context-set-background '(255 255 255) )
+      (gimp-context-set-foreground inTextColor)
+      (gimp-drawable-fill theLayer BACKGROUND-FILL)
+      (set! theText
+                    (car
+                          (gimp-text-fontname
+                          theImage theLayer
+                          0 0
+                          inText
+                          0
+                          TRUE
+                          inFontSize PIXELS
+                          "Sans")
+                      )
         )
-        (script-fu-menu-register "script-fu-text-box" "<Image>/File/Create/Text")
-        (define (script-fu-text-box inText inFont inFontSize inTextColor inBufferAmount)
-          (let*
-            (
-              ; define our local variables
-              ; create a new image: (新しい画像を作る局所変数を定義する)
-              (theImageWidth  10)
-              (theImageHeight 10)
-              (theImage)
-              (theImage
-                        (car
-                            (gimp-image-new
-                              theImageWidth
-                              theImageHeight
-                              RGB
-                            )
-                        )
-              )
-              (theText)             ;a declaration for the text (テキストの定義)
-              (theBuffer)           ;create a new layer for the image
-              (theLayer             ; (画像に新たなレイヤーを作成)
-                        (car
-                            (gimp-layer-new
-                              theImage
-                              theImageWidth
-                              theImageHeight
-                              RGB-IMAGE
-                              "layer 1"
-                              100
-                              NORMAL
-                            )
-                        )
-              )
-            ) ;end of our local variables
-            (gimp-image-add-layer theImage theLayer 0)
-            (gimp-context-set-background '(255 255 255) )
-            (gimp-context-set-foreground inTextColor)
-            (gimp-drawable-fill theLayer BACKGROUND-FILL)
-            (set! theText
-                          (car
-                                (gimp-text-fontname
-                                theImage theLayer
-                                0 0
-                                inText
-                                0
-                                TRUE
-                                inFontSize PIXELS
-                                "Sans")
-                            )
-              )
-            (set! theImageWidth   (car (gimp-drawable-width  theText) ) )
-            (set! theImageHeight  (car (gimp-drawable-height theText) ) )
-            (set! theBuffer (* theImageHeight (/ inBufferAmount 100) ) )
-            (set! theImageHeight (+ theImageHeight theBuffer theBuffer) )
-            (set! theImageWidth  (+ theImageWidth  theBuffer theBuffer) )
-            (gimp-image-resize theImage theImageWidth theImageHeight 0 0)
-            (gimp-layer-resize theLayer theImageWidth theImageHeight 0 0)
-            (gimp-layer-set-offsets theText theBuffer theBuffer)
-            (gimp-display-new theImage)
-            (list theImage theLayer theText)
-          )
-        )
+      (set! theImageWidth   (car (gimp-drawable-width  theText) ) )
+      (set! theImageHeight  (car (gimp-drawable-height theText) ) )
+      (set! theBuffer (* theImageHeight (/ inBufferAmount 100) ) )
+      (set! theImageHeight (+ theImageHeight theBuffer theBuffer) )
+      (set! theImageWidth  (+ theImageWidth  theBuffer theBuffer) )
+      (gimp-image-resize theImage theImageWidth theImageHeight 0 0)
+      (gimp-layer-resize theLayer theImageWidth theImageHeight 0 0)
+      (gimp-layer-set-offsets theText theBuffer theBuffer)
+      (gimp-display-new theImage)
+      (list theImage theLayer theText)
+    )
+  )
       ]]></programlisting>
     </sect3>
 
