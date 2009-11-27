@@ -12,7 +12,7 @@
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2009-11-10-->
+<!--2009-11-25-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -218,7 +218,7 @@
           file format like PNG.
         </para>
         <para lang="ja">
-          <acronym>GIF</acronym>形式は <emphasis>印字解像度</emphasis> のような
+          <acronym>GIF</acronym>形式は <emphasis>印刷解像度</emphasis> のような
           基本的な画像情報をサポートしていません。
           そういった属性情報を扱いたいときは、 <acronym>PNG</acronym>などの
           他のファイル形式で保存してください。
@@ -495,11 +495,11 @@
             </para>
             <para lang="ja">
               画像を<acronym>JPEG</acronym>形式のファイルに保存するとき、
-              ダイアログが開かれ、 ここで画像の品質を0から100の範囲で指定できる
-              ようになっています。 しかし95以上の値は通常あまり有意義では
-              ありません。 普段は品質を想提値の85にすれば上等の結果を得られ
-              ますが、 画像の劣化をあまり目立たせない範囲でさらに相当低く品質を
-              下げられる場合も多くあります。
+              ダイアログが開かれ、 ここで画像の品質を 0 から 100 の範囲で
+              指定できるようになっています。 しかし 95 以上の値は通常あまり
+              有意義ではありません。 普段は品質を想提値の 85 にすれば上等の
+              結果を得られますが、 画像の劣化をあまり目立たせない範囲でさらに
+              相当低く品質を下げられる場合も多くあります。
               <quote>JPEG 形式で保存する</quote>ダイアログでは、
               <guilabel>画像ウィンドウでプレビュ</guilabel>
               を有効にすれば実際にスライダを動かして品質の変化とその効果を
@@ -516,8 +516,8 @@
               <para lang="ja">
                 <acronym>JPEG</acronym>の品質レベルの数値は<acronym>GIMP</acronym>
                 独自のもので他のアプリケーションにとっては意味がありません。 
-                仮に<acronym>GIMP</acronym>で80のレベルで保存したとして、 
-                別のアプリケーションで80のレベルで
+                仮に<acronym>GIMP</acronym>で 80 のレベルで保存したとして、 
+                別のアプリケーションで 80 のレベルで
                 保存したとしてもそこに必然的な共通性はありません。
               </para>
             </note>
@@ -560,9 +560,9 @@
                     a smaller file, but it takes more time to generate.
                   </para>
                   <para lang="ja">
-                    このオプションを有効にすると、 エントロピー符号化による最適化
-                    が行なわれます。 その結果は容量が小さくなるのが特徴ですが、 
-                    生成にはもっと時間がかかります。
+                    このオプションを有効にすると、 エントロピー符号化による
+                    最適化が行なわれます。 その結果は容量が小さくなるのが
+                    特徴ですが、 生成にはもっと時間がかかります。
                   </para>
                 </listitem>
               </varlistentry>
@@ -583,12 +583,12 @@
                   </para>
                   <para lang="ja">
                     このオプションが有効なときは、 ファイル内部で画像が分割
-                    され、 低速なネット回線でも画像が漸進的に表示できる順序に並べ
-                    替えられます。 <acronym>JPEG</acronym>のプログレッシブ
+                    され、 低速なネット回線でも画像が漸進的に表示できる順序に
+                    並べ替えられます。 <acronym>JPEG</acronym>のプログレッシブ
                     オプションは<acronym>GIF</acronym>形式のインターレース
                     オプションと同じ用途に使われます。 このオプションの弱点は、
-                    プログレッシブオプションなしと比べてファイルの容量が若干大きく
-                    なることです。
+                    プログレッシブオプションなしと比べてファイルの容量が若干
+                    大きくなることです。
                   </para>
                 </listitem>
               </varlistentry>
@@ -623,22 +623,22 @@
                   </para>
                   <para lang="ja">
                     デジタルカメラの生成する<acronym>JPEG</acronym>には
-                    Exifデータと呼ばれる外部情報が混入されます。 Exifデータは
+                    Exif データと呼ばれる外部情報が混入されます。 Exif データは
                     カメラのメーカー名や型番、 画像の寸法、 撮影の日付などなど
                     画像に関する情報を記録します。 <acronym>GIMP</acronym>は
                     Exifデータを読み書きするために<quote>libexif</quote>
                     ライブラリを利用しますが、 このライブラリは<acronym>GIMP
-                    </acronym>には同梱されていません。 libexifライブラリが導入
+                    </acronym>には同梱されていません。 libexif ライブラリが導入
                     されており<acronym>GIMP</acronym>のビルド時にそのサポートを
-                    有効にしていたならば、 Exifデータを扱うことができ、 
+                    有効にしていたならば、 Exif データを扱うことができ、 
                     <acronym>JPEG</acronym>ファイルを保存する際にはファイル内
-                    にそのデータが記録できます。 このときExifデータは一切変更
-                    されません。 つまりExifデータが示す作成日付やファイル名
+                    にそのデータが記録できます。 このとき Exif データは一切変更
+                    されません。 つまり Exif データが示す作成日付やファイル名
                     などの一部の情報が不正なまま残されてしまいます。 <acronym>
                     GIMP</acronym>のビルド時にこのサポートを無効にしていた場合
                     も、 Exifデータを含んだ<acronym>JPEG</acronym>ファイルは
                     支障なく開けますが、 そのあとこの画像を保存すると
-                    ファイル内にExifデータが残りません。
+                    ファイル内に Exif データが残りません。
                   </para>
                 </listitem>
               </varlistentry>

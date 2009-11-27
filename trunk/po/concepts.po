@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-11-23 01:40+0900\n"
-"PO-Revision-Date: 2009-11-23 01:50+09:00\n"
+"POT-Creation-Date: 2009-11-27 17:50+0900\n"
+"PO-Revision-Date: 2009-11-27 17:53+09:00\n"
 "Last-Translator: SimaMoto,RyôTa (島本良太) <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -464,14 +464,15 @@ msgid ""
 "installation, or to recover if your configuration files are damaged."
 msgstr ""
 "初めて<acronym>GIMP</acronym>を利用したときは、 始めに装備とディレクトリの設"
-"定をすすめます。 この処置によりあなたのホームディレクトリに <filename class="
-"\"directory\">.gimp-2.6</filename> という名前のサブディレクトリが掘られま"
-"す。 設定した内容や情報はこのディレクトリに保管されます。 このディレクトリを"
-"削除したり、 別名に変更したときは、 次回の起動の際に<acronym>GIMP</acronym>は"
-"再び初回処置を行ない、 また新たに <filename class=\"directory\">.gimp-2.6</"
-"filename> ディレクトリが掘られます。 この手法を用いれば、 以前の設定を崩さず"
-"に新たな選択の効果を探検することが可能ですし、 あるいは設定ファイルが壊れてし"
-"まった場合に復帰するのにも役立ちます。"
+"定が行なわれます。 この処置によりあなたのホームディレクトリに <filename "
+"class=\"directory\">.gimp-2.6</filename> という名前のサブディレクトリが掘られ"
+"ます。 設定した内容や情報はこのディレクトリに保管されます。 [そのため初回起動"
+"は通常よりも長く時間がかかります。] このディレクトリを削除したり、 別名に変更"
+"したときは、 次回の起動の際に<acronym>GIMP</acronym>は再び初回処置を行ない、 "
+"また新たに <filename class=\"directory\">.gimp-2.6</filename> ディレクトリが"
+"掘られます。 この手法を用いれば、 以前の設定を崩さずに新たな選択の効果を探検"
+"することが可能ですし、 あるいは設定ファイルが壊れてしまった場合に復帰するのに"
+"も役立ちます。"
 
 #: src/concepts/setup.xml:36(title)
 msgid "Finally . . ."
@@ -1579,11 +1580,12 @@ msgid ""
 msgstr ""
 "<acronym>GIMP</acronym>には数十個のプラグインが配付版に入っていて、 自動的に"
 "<acronym>GIMP</acronym>と一緒にインストールされます。 それらのほとんどが "
-"<guimenu>フィルタ</guimenu> メニューから呼び出せます (実はこのメニューの中身"
-"はいずれもプラグインです) が、 数点だけ他のメニューに属するものもあります。 "
-"プラグインを使うといっても十中八九はプラグインであることに気付かないでしょ"
-"う。 例えば色の自動調整フィルタの<quote>正規化</quote>コマンドは実際にはプラ"
-"グインなのですが、 使っている人にそのことを伝えるものは何もありません。"
+"<guimenu>フィルタ</guimenu> メニュー (実はこのメニューの中身はいずれもプラグ"
+"イン[もしくはスクリプト]) から呼び出せますが、 数点だけ他のメニューに属するも"
+"のもあります。 プラグインを使うといっても十中八九はプラグインであることに気付"
+"かないでしょう。 例えば色の自動調整フィルタの<quote>正規化</quote>コマンドは"
+"実際にはプラグインなのですが、 使っている人にそのことを伝えるものは何もありま"
+"せん。"
 
 #: src/concepts/plugins.xml:45(para)
 msgid ""
@@ -4279,11 +4281,11 @@ msgstr "レイヤーモード<quote>ハードライト</quote>の等式、 M &gt
 
 #: src/concepts/layer-modes.xml:686(alt)
 msgid ""
-"$$E = 255 - \\frac{\\{255 - 2\\times (M-128)\\}\\times (255 - I)}{256}, "
-"\\qquad M &gt; 128$$"
+"$$E = 255 - \\frac{\\big(255 - 2\\times (M-128)\\big)\\times (255 - I)} "
+"{256}, \\qquad M &gt; 128$$"
 msgstr ""
-"$$E = 255- {\\{255 - 2\\times(M-128)\\} \\times (255-I)\\over 256},\\qquad M"
-" > 128$$"
+"$$E = 255 - \\frac{\\big(255 - 2\\times (M-128)\\big)\\times (255 - I)} "
+"{256}, \\qquad M &gt; 128$$"
 
 #: src/concepts/layer-modes.xml:693(title)
 msgid "Equation for layer mode <quote>Hard light</quote>, M &le; 128"
@@ -4291,8 +4293,7 @@ msgstr "レイヤーモード<quote>ハードライト</quote>の等式、 M &le
 
 #: src/concepts/layer-modes.xml:696(alt)
 msgid "$$E = \\frac{2 \\times M \\times I}{256}, \\qquad M \\le 128$$"
-msgstr ""
-"$$E = {2 \\times M \\times I \\over 256},\\qquad M \\leq 128$$"
+msgstr "$$E = {2 \\times M \\times I \\over 256},\\qquad M \\leq 128$$"
 
 #: src/concepts/layer-modes.xml:705(term)
 #: src/concepts/layer-modes.xml:709(secondary)
@@ -4465,8 +4466,8 @@ msgid "Equation for layer mode <quote>Addition</quote>"
 msgstr "レイヤーモード<quote>加算</quote>の等式"
 
 #: src/concepts/layer-modes.xml:976(alt)
-msgid "$$E = min\\bigl( (M + I), 255\\bigr)$$"
-msgstr "$$E = min\\bigl( (M + I), 255\\bigr)$$"
+msgid "$$E = \\min\\bigl( (M + I), 255\\bigr)$$"
+msgstr "$$E = \\min\\bigl( (M + I), 255\\bigr)$$"
 
 #: src/concepts/layer-modes.xml:986(term)
 #: src/concepts/layer-modes.xml:990(secondary)
@@ -4496,8 +4497,8 @@ msgid "Equation for layer mode <quote>Subtraction</quote>"
 msgstr "レイヤーモード<quote>減算</quote>の等式"
 
 #: src/concepts/layer-modes.xml:1031(alt)
-msgid "$$E = max\\bigl( (I - M), 0\\bigr)$$"
-msgstr "$$E = max\\bigl( (I - M),0\\bigr)$$"
+msgid "$$E = \\max\\bigl( (I - M), 0\\bigr)$$"
+msgstr "$$E = \\max\\bigl( (I - M),0\\bigr)$$"
 
 #: src/concepts/layer-modes.xml:1038(term)
 #: src/concepts/layer-modes.xml:1042(secondary)
@@ -4526,8 +4527,8 @@ msgid "Equation for layer mode <quote>Darken only</quote>"
 msgstr "レイヤーモード<quote>比較(暗)</quote>の等式"
 
 #: src/concepts/layer-modes.xml:1082(alt)
-msgid "$$E = min(M, I)$$"
-msgstr "$$E = min(M, I)$$"
+msgid "$$E = \\min(M, I)$$"
+msgstr "$$E = \\min(M, I)$$"
 
 #: src/concepts/layer-modes.xml:1092(term)
 #: src/concepts/layer-modes.xml:1096(secondary)
@@ -4556,8 +4557,8 @@ msgid "Equation for layer mode <quote>Lighten only</quote>"
 msgstr "レイヤーモード<quote>比較(明)</quote>の等式"
 
 #: src/concepts/layer-modes.xml:1136(alt)
-msgid "$$E = max(M, I)$$"
-msgstr "$$E = max(M, I)$$"
+msgid "$$E = \\max(M, I)$$"
+msgstr "$$E = \\max(M, I)$$"
 
 #: src/concepts/layer-modes.xml:1146(term)
 #: src/concepts/layer-modes.xml:1150(secondary)
@@ -8248,6 +8249,7 @@ msgstr ""
 msgid "Applying the ICC-profile"
 msgstr "<acronym>ICC</acronym>プロファイルの適用"
 
+# XXX: I cannot recognize/translate the last phrase well.
 #: src/concepts/color-management.xml:117(para)
 msgid ""
 "When opening an image with an embedded color profile, <acronym>GIMP</"
