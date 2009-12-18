@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2009-12-07 22:30+0900\n"
-"PO-Revision-Date: 2009-12-07 22:33+09:00\n"
+"POT-Creation-Date: 2009-12-16 17:52+0900\n"
+"PO-Revision-Date: 2009-12-18 18:57+09:00\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -292,8 +292,8 @@ msgid ""
 "background around Wilber is shown."
 msgstr ""
 "<acronym>XCF</acronym>形式の画像は初期状態では背景レイヤーがついてきますがこ"
-"れは削除できます。<acronym>GIMP</acronym>にはグラデーション作成をサポートする"
-"標準的なフィルタが付属しています。 画像ウィンドウのメニューより "
+"れは削除できます。 <acronym>GIMP</acronym>にはグラデーション作成をサポートす"
+"る標準的なフィルタが付属しています。 画像ウィンドウのメニューより "
 "<menuchoice><guimenu>フィルタ</guimenu><guisubmenu>照明と投影</guisubmenu></"
 "menuchoice> サブメニュー内を探してみましょう。 ここはあなたの想像力次第で"
 "す。 アルファ透過の効果の実演として、 ウィルバー君の背後に後光をつけました。"
@@ -1422,7 +1422,7 @@ msgstr "@@image: 'images/using/select-move-3.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/selections.xml:183(None)
+#: src/using/selections.xml:206(None)
 msgid "@@image: 'images/using/rect+lasso-ex.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr "@@image: 'images/using/rect+lasso-ex.png'; md5=THIS FILE DOESN'T EXIST"
 
@@ -1619,32 +1619,72 @@ msgstr "選択範囲の加減"
 msgid "Add / Subtract selections"
 msgstr "選択範囲の加減"
 
+#: src/using/selections.xml:177(para)
+msgid ""
+"Replace is the most used selection mode. In replace mode, a selection "
+"replaces any existing selection."
+msgstr ""
+"置換が最もよく使われる選択のモードです。 置換モードでは既存の選択範囲が解消さ"
+"れ新たに作った選択範囲で置き換わります。"
+
+#: src/using/selections.xml:181(para)
+msgid ""
+"Add mode, causes new selections to be added to any existing selection. Press "
+"and hold the <keycap>Shift</keycap> key while making a selection to "
+"temporarily enter add mode."
+msgstr ""
+"追加モードは既存の選択範囲に新たに作成した選択範囲を足します。 "
+"<keycap>Shift</keycap> キーを押しながら選択範囲を作成するときも一時的な追加"
+"モードとなります。"
+
+#: src/using/selections.xml:186(para)
+msgid ""
+"Subtract mode, causes new selections to be removed from any existing "
+"selection. Press and hold the <keycap>Ctrl</keycap> key while making a "
+"selection to temporarily enter subtract mode."
+msgstr ""
+"除去モードは既存の選択範囲から新たに作成した選択範囲を引きます。 "
+"<keycap>Ctrl</keycap> キーを押しながら選択範囲を作成するときも一時的な除去"
+"モードとなります。"
+
+#: src/using/selections.xml:191(para)
+msgid ""
+"Intersect mode, causes areas in both the new and existing selection to "
+"become the new selection. Press and hold both the <keycap>Shift</keycap> and "
+"<keycap>Ctrl</keycap> key while making a selection to temporarily enter "
+"intersect mode."
+msgstr ""
+"交差モードは既存の選択範囲と新たに作成した選択範囲の共通部分だけが残ります。 "
+"<keycap>Shift</keycap> キーと <keycap>Ctrl</keycap> キーの両方を押しながら選"
+"択範囲を作成するときも一時的な交差モードとなります。"
+
 #: src/using/selections.xml:172(para)
 msgid ""
-"When drawing a selection, you can add a part of the image or subtract a part "
-"of the selection by holding the <keycap>Shift</keycap> or the <keycap>Ctrl</"
-"keycap> keyboard keys down:"
+"Tools have options that you can configure. Each selection tool allows you to "
+"set the selection mode. The following selection modes are supported: "
+"<placeholder-1/>"
 msgstr ""
-"選択範囲を描くときに、 <keycap>Shift</keycap> キーや <keycap>Ctrl</keycap> "
-"キーを押しながら行なうと選択範囲の画像の追加や削除ができます。"
+"ツールには大抵その振る舞いを調節するためのツールオプションが付いています。 選"
+"択ツールなら選択のモードが選べます。 次の種類の選択モードがあります。 "
+"<placeholder-1/>"
 
-#: src/using/selections.xml:179(title)
+#: src/using/selections.xml:202(title)
 msgid "Enlarging a rectangular selection with the Lasso"
 msgstr "自由選択ツールを使用して矩形選択範囲を拡張"
 
-#: src/using/selections.xml:187(para)
+#: src/using/selections.xml:210(para)
 msgid ""
-"A rectangular has been drawn. Then the Lasso is selected and a free hand "
-"selection is drawn, holding the <keycap>Shift</keycap> key down, including a "
-"part of the rectangular selection. As soon as you release the mouse button, "
-"both selections are added."
+"The figure shows an existing rectangular selection. Select the Lasso. While "
+"pressing the <keycap>Shift</keycap> key, make a free hand selection that "
+"includes the existing selection. Release the mouse button and areas are "
+"included in the selection."
 msgstr ""
-"矩形の選択範囲が既にできています。 自由選択ツールを起用してから、 "
-"<keycap>Shift</keycap> キーを押しながら手書きの選択範囲を矩形の選択範囲にかぶ"
-"るように描きました。 マウスボタンを放した途端、 両方の選択範囲が足し合わされ"
-"ました。"
+"この図では矩形の選択範囲が既にできています。 自由選択 (なげなわ) ツールを起用"
+"します。 <keycap>Shift</keycap> キーを押しながら矩形の選択範囲にかぶるように"
+"手書きの選択範囲を描きます。 マウスボタンを放せば、 両方の選択範囲が足し合わ"
+"されます。"
 
-#: src/using/selections.xml:194(para)
+#: src/using/selections.xml:217(para)
 msgid ""
 "To correct selection defects precisely, use the <link linkend=\"gimp-using-"
 "quickmask\">Quick Mask</link>."
@@ -1669,7 +1709,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/script-fu-tutorial.xml:1535(None)
+#: src/using/script-fu-tutorial.xml:1534(None)
 msgid ""
 "@@image: 'images/using/script-fu-screen.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -3220,7 +3260,7 @@ msgstr "説明"
 msgid "Example"
 msgstr "例"
 
-#: src/using/script-fu-tutorial.xml:918(constant)
+#: src/using/script-fu-tutorial.xml:918(type)
 msgid "SF-IMAGE"
 msgstr "SF-IMAGE"
 
@@ -3238,94 +3278,94 @@ msgstr ""
 msgid "3"
 msgstr "3"
 
-#: src/using/script-fu-tutorial.xml:934(constant)
+#: src/using/script-fu-tutorial.xml:934(type)
 msgid "SF-DRAWABLE"
 msgstr "SF-DRAWABLE"
 
 #: src/using/script-fu-tutorial.xml:937(para)
 msgid ""
 "If your script operates on an open image, this should be the second "
-"parameter after the <constant>SF-IMAGE</constant> param. It refers to the "
-"active layer. <acronym>GIMP</acronym> will pass in a reference to the active "
-"layer in this parameter."
+"parameter after the <type>SF-IMAGE</type> param. It refers to the active "
+"layer. <acronym>GIMP</acronym> will pass in a reference to the active layer "
+"in this parameter."
 msgstr ""
 "既に開いてある画像を操作するためのスクリプトを作るときは、 <constant>SF-"
 "IMAGE</constant> 型のパラメータのつぎにこのパラメータを置かなくてはなりませ"
 "ん。 これは活性レイヤーを参照します。 <acronym>GIMP</acronym>は活性レイヤーを"
 "参照するための情報をこのパラメータに乗せてスクリプトに渡します。"
 
-#: src/using/script-fu-tutorial.xml:946(para)
+#: src/using/script-fu-tutorial.xml:945(para)
 msgid "17"
 msgstr "17"
 
-#: src/using/script-fu-tutorial.xml:951(constant)
+#: src/using/script-fu-tutorial.xml:950(type)
 msgid "SF-VALUE"
 msgstr "SF-VALUE"
 
-#: src/using/script-fu-tutorial.xml:954(para)
+#: src/using/script-fu-tutorial.xml:953(para)
 msgid ""
 "Accepts numbers and strings. Note that quotes must be escaped for default "
-"text, so better use <constant>SF-STRING</constant>."
+"text, so better use <type>SF-STRING</type>."
 msgstr ""
 "数値と文字列の両方を受け入れる型です。 初期設定のテキストを渡すとき引用符をエ"
 "スケープ処理しなければならなくなるので、 文字列には <constant>SF-STRING</"
 "constant> 型の方が適しています。"
 
-#: src/using/script-fu-tutorial.xml:961(para)
+#: src/using/script-fu-tutorial.xml:960(para)
 msgid "42"
 msgstr "42"
 
-#: src/using/script-fu-tutorial.xml:966(constant)
+#: src/using/script-fu-tutorial.xml:965(type)
 msgid "SF-STRING"
 msgstr "SF-STRING"
 
-#: src/using/script-fu-tutorial.xml:969(para)
+#: src/using/script-fu-tutorial.xml:968(para)
 msgid "Accepts strings."
 msgstr "文字列を収める変数です。"
 
-#: src/using/script-fu-tutorial.xml:972(para)
+#: src/using/script-fu-tutorial.xml:971(para)
 msgid "\"Some text\""
 msgstr "\"Some text\""
 
-#: src/using/script-fu-tutorial.xml:977(constant)
-#: src/using/script-fu-gui-api.xml:88(constant)
+#: src/using/script-fu-tutorial.xml:976(type)
+#: src/using/script-fu-gui-api.xml:88(para)
 msgid "SF-COLOR"
 msgstr "SF-COLOR"
 
-#: src/using/script-fu-tutorial.xml:980(para)
+#: src/using/script-fu-tutorial.xml:979(para)
 msgid "Indicates that a color is requested in this parameter."
 msgstr "このパラメータが要求する色の情報を示します。"
 
-#: src/using/script-fu-tutorial.xml:985(para)
+#: src/using/script-fu-tutorial.xml:984(para)
 msgid "'(0 102 255)"
 msgstr "'(0 102 255)"
 
-#: src/using/script-fu-tutorial.xml:990(constant)
+#: src/using/script-fu-tutorial.xml:989(type)
 msgid "SF-TOGGLE"
 msgstr "SF-TOGGLE"
 
-#: src/using/script-fu-tutorial.xml:993(para)
+#: src/using/script-fu-tutorial.xml:992(para)
 msgid "A checkbox is displayed, to get a Boolean value."
 msgstr "真理2値をとるチェックボックスを表示します。"
 
-#: src/using/script-fu-tutorial.xml:998(para)
+#: src/using/script-fu-tutorial.xml:997(para)
 msgid "TRUE or FALSE"
 msgstr "有効なら TRUE、 無効なら FALSE"
 
-#: src/using/script-fu-tutorial.xml:1009(title)
+#: src/using/script-fu-tutorial.xml:1008(title)
 msgid "Giving Our Script Some Guts"
 msgstr "スクリプトを肉付け"
 
-#: src/using/script-fu-tutorial.xml:1010(para)
+#: src/using/script-fu-tutorial.xml:1009(para)
 msgid ""
 "Let us continue with our training and add some functionality to our script."
 msgstr "さあ訓練を続けましょう。 こんどはスクリプトに機能を加えます。"
 
-#: src/using/script-fu-tutorial.xml:1016(title)
+#: src/using/script-fu-tutorial.xml:1015(title)
 msgid "Creating A New Image"
 msgstr "新しい画像を生成"
 
-#: src/using/script-fu-tutorial.xml:1017(para)
+#: src/using/script-fu-tutorial.xml:1016(para)
 msgid ""
 "In the previous lesson, we created an empty function and registered it with "
 "<acronym>GIMP</acronym>. In this lesson, we want to provide functionality to "
@@ -3337,7 +3377,7 @@ msgstr ""
 "せ、 ユーザが指定するテキストを加えてテキストにぴったりな大きさに画像の寸法を"
 "調節させるつもりです"
 
-#: src/using/script-fu-tutorial.xml:1023(para)
+#: src/using/script-fu-tutorial.xml:1022(para)
 msgid ""
 "Once you know how to set variables, define functions and access list "
 "members, the rest is all downhill &mdash; all you need to do is familiarize "
@@ -3351,7 +3391,7 @@ msgstr ""
 "を直に呼び出すことがすべてです。 では早速 <xref linkend=\"plug-in-dbbrowser"
 "\"/> を立て上げてお料理しましょう。"
 
-#: src/using/script-fu-tutorial.xml:1031(para)
+#: src/using/script-fu-tutorial.xml:1030(para)
 msgid ""
 "Let's begin by making a new image. We'll create a new variable, "
 "<varname>theImage</varname>, set to the result of calling <acronym>GIMP</"
@@ -3361,7 +3401,7 @@ msgstr ""
 "しい変数を作り、 <function>gimp-image-new</function> という <acronym>GIMP</"
 "acronym>の組み込み機能を実行して得た値を代入するのです。"
 
-#: src/using/script-fu-tutorial.xml:1037(para)
+#: src/using/script-fu-tutorial.xml:1036(para)
 msgid ""
 "As you can see from the DB Browser, the function <function>gimp-image-new</"
 "function> takes three parameters &mdash; the image's width, height and the "
@@ -3377,7 +3417,7 @@ msgstr ""
 "かの変数はあとでスクリプトが操作するために参照する必要があるのでここで保管し"
 "ておきます。"
 
-#: src/using/script-fu-tutorial.xml:1047(programlisting)
+#: src/using/script-fu-tutorial.xml:1046(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3420,7 +3460,7 @@ msgstr ""
 "                               ;we create later (あとで作成するつもり)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1066(para)
+#: src/using/script-fu-tutorial.xml:1065(para)
 msgid ""
 "Note: We used the value <code>RGB</code> to specify that the image is an "
 "<acronym>RGB</acronym> image. We could have also used <code>0</code>, but "
@@ -3431,7 +3471,7 @@ msgstr ""
 "が、 コードを読む人にとっては<acronym>RGB</acronym>と明示した方が説明的で理解"
 "し易くなります。</para></note>"
 
-#: src/using/script-fu-tutorial.xml:1072(para)
+#: src/using/script-fu-tutorial.xml:1071(para)
 msgid ""
 "You should also notice that we took the head of the result of the function "
 "call. This may seem strange, because the database explicitly tells us that "
@@ -3446,11 +3486,11 @@ msgstr ""
 "ストにして返します。 ですからそのリストの先頭を引き出してやる必要があるので"
 "す。"
 
-#: src/using/script-fu-tutorial.xml:1083(title)
+#: src/using/script-fu-tutorial.xml:1082(title)
 msgid "Adding A New Layer To The Image"
 msgstr "画像に新しいレイヤーを追加"
 
-#: src/using/script-fu-tutorial.xml:1084(para)
+#: src/using/script-fu-tutorial.xml:1083(para)
 msgid ""
 "Now that we have an image, we need to add a layer to it. We'll call the "
 "<function>gimp-layer-new</function> function to create the layer, passing in "
@@ -3469,7 +3509,7 @@ msgstr ""
 "す。) これで使う予定の局所変数はすべて宣言し終えましたので、 変数宣言を示す括"
 "弧もここで閉じることにします。"
 
-#: src/using/script-fu-tutorial.xml:1096(programlisting)
+#: src/using/script-fu-tutorial.xml:1095(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3508,11 +3548,11 @@ msgstr ""
 "         ) ;end of our local variables (局所変数の終わり)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1113(para)
+#: src/using/script-fu-tutorial.xml:1112(para)
 msgid "Once we have the new layer, we need to add it to the image:"
 msgstr "新しいレイヤーができたので画像に加えなくてはなりません。"
 
-#: src/using/script-fu-tutorial.xml:1114(programlisting)
+#: src/using/script-fu-tutorial.xml:1113(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3523,7 +3563,7 @@ msgstr ""
 "        (gimp-image-add-layer theImage theLayer 0)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1117(para)
+#: src/using/script-fu-tutorial.xml:1116(para)
 msgid ""
 "Now, just for fun, let's see the fruits of our labors up until this point, "
 "and add this line to show the new, empty image:"
@@ -3531,12 +3571,12 @@ msgstr ""
 "さてここまでにスクリプトが実らせた果実の熟れ具合を見て楽しむために、 つぎの行"
 "を追加して新しい空の画像を表示させましょう。"
 
-#: src/using/script-fu-tutorial.xml:1121(programlisting)
+#: src/using/script-fu-tutorial.xml:1120(programlisting)
 #, no-wrap
 msgid "(gimp-display-new theImage)"
 msgstr "(gimp-display-new theImage)"
 
-#: src/using/script-fu-tutorial.xml:1122(para)
+#: src/using/script-fu-tutorial.xml:1121(para)
 msgid ""
 "Save your work, select <menuchoice><guimenu>Filters</"
 "guimenu><guisubmenu>Script-Fu</guisubmenu><guimenuitem>Refresh Scripts</"
@@ -3551,11 +3591,11 @@ msgstr ""
 "らけ (不規則な色) になっているでしょう。 消去の処理をしていないためです。 さ"
 "ああともう少しです。"
 
-#: src/using/script-fu-tutorial.xml:1136(title)
+#: src/using/script-fu-tutorial.xml:1135(title)
 msgid "Adding The Text"
 msgstr "テキストを追加"
 
-#: src/using/script-fu-tutorial.xml:1137(para)
+#: src/using/script-fu-tutorial.xml:1136(para)
 msgid ""
 "Go ahead and remove the line to display the image (or comment it out with a "
 "(<code>;</code>) as the first character of the line)."
@@ -3564,7 +3604,7 @@ msgstr ""
 "しくはその行の最初にセミコロン (<code>;</code>) を書き加えてコメントアウトし"
 "てください。)"
 
-#: src/using/script-fu-tutorial.xml:1141(para)
+#: src/using/script-fu-tutorial.xml:1140(para)
 msgid ""
 "Before we add text to the image, we need to set the background and "
 "foreground colors so that the text appears in the color the user specified. "
@@ -3575,7 +3615,7 @@ msgstr ""
 "background</function> 関数と <function>gimp-context-set-foreground</"
 "function> 関数を使いましょう。"
 
-#: src/using/script-fu-tutorial.xml:1147(programlisting)
+#: src/using/script-fu-tutorial.xml:1146(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3588,7 +3628,7 @@ msgstr ""
 "        (gimp-context-set-foreground inTextColor)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1151(para)
+#: src/using/script-fu-tutorial.xml:1150(para)
 msgid ""
 "With the colors properly set, let's now clean out the garbage currently in "
 "the image by filling the drawable with the background color:"
@@ -3596,7 +3636,7 @@ msgstr ""
 "色がうまく設定できたら、 描画対象を塗りつぶす方法で画像に溢れているゴミを一掃"
 "しましょう。"
 
-#: src/using/script-fu-tutorial.xml:1156(programlisting)
+#: src/using/script-fu-tutorial.xml:1155(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3607,11 +3647,11 @@ msgstr ""
 "        (gimp-drawable-fill theLayer BACKGROUND-FILL)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1159(para)
+#: src/using/script-fu-tutorial.xml:1158(para)
 msgid "With the image cleared, we're ready to add some text:"
 msgstr "画像が清められたらつぎはテキストの追加にとりかかります。"
 
-#: src/using/script-fu-tutorial.xml:1160(programlisting)
+#: src/using/script-fu-tutorial.xml:1159(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3644,7 +3684,7 @@ msgstr ""
 "        )\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1174(para)
+#: src/using/script-fu-tutorial.xml:1173(para)
 msgid ""
 "Although a long function call, it's fairly straightforward if you go over "
 "the parameters while looking at the function's entry in the DB Browser. "
@@ -3656,7 +3696,7 @@ msgstr ""
 "にここでは新しいテキストレイヤーを作成して変数 <varname>theText</varname> に"
 "代入しているのです。"
 
-#: src/using/script-fu-tutorial.xml:1181(para)
+#: src/using/script-fu-tutorial.xml:1180(para)
 msgid ""
 "Now that we have the text, we can grab its width and height and resize the "
 "image and the image's layer to the text's size:"
@@ -3664,7 +3704,7 @@ msgstr ""
 "さてテキストができましたので、 つぎはその幅と高さをつかめば画像とそのレイヤー"
 "の寸法をテキストの大きさに合わせられます。"
 
-#: src/using/script-fu-tutorial.xml:1185(programlisting)
+#: src/using/script-fu-tutorial.xml:1184(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3685,7 +3725,7 @@ msgstr ""
 "        (gimp-layer-resize theLayer theImageWidth theImageHeight 0 0)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1193(para)
+#: src/using/script-fu-tutorial.xml:1192(para)
 msgid ""
 "If you're like me, you're probably wondering what a drawable is when "
 "compared to a layer. The difference between the two is that a drawable is "
@@ -3699,12 +3739,12 @@ msgstr ""
 "で説明できます。 レイヤーは特定の描画対象だといえます。 ほとんどの場合その区"
 "別は重要ではありません。"
 
-#: src/using/script-fu-tutorial.xml:1201(para)
+#: src/using/script-fu-tutorial.xml:1200(para)
 msgid "With the image ready to go, we can now re-add our display line:"
 msgstr ""
 "画像の準備ができましたので、 また途中経過の表示の行を追加してもよいでしょう。"
 
-#: src/using/script-fu-tutorial.xml:1204(programlisting)
+#: src/using/script-fu-tutorial.xml:1203(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3715,17 +3755,17 @@ msgstr ""
 "        (gimp-display-new theImage)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1207(para)
+#: src/using/script-fu-tutorial.xml:1206(para)
 msgid "Save your work, refresh the database and give your first script a run!"
 msgstr ""
 "以上の工作を保存したらデータベースを読み込み直し、 できたばかりの<quote>はじ"
 "めてのスクリプト</quote>を作動させてみましょう。"
 
-#: src/using/script-fu-tutorial.xml:1213(title)
+#: src/using/script-fu-tutorial.xml:1212(title)
 msgid "Clearing The Dirty Flag"
 msgstr "<quote>手付き</quote>フラグを解消"
 
-#: src/using/script-fu-tutorial.xml:1214(para)
+#: src/using/script-fu-tutorial.xml:1213(para)
 msgid ""
 "If you try to close the image created without first saving the file, "
 "<acronym>GIMP</acronym> will ask you if you want to save your work before "
@@ -3743,13 +3783,13 @@ msgstr ""
 "ても起こりうる事例なので、 ここは<quote>手付き</quote>フラグを消すことを考え"
 "てみます。"
 
-#: src/using/script-fu-tutorial.xml:1224(para)
+#: src/using/script-fu-tutorial.xml:1223(para)
 msgid "To do this, we can clear the dirty flag after displaying the image:"
 msgstr ""
 "この目的のためには<quote>手付き</quote>フラグの解消を画像の表示後に行なえばよ"
 "ろしい。"
 
-#: src/using/script-fu-tutorial.xml:1227(programlisting)
+#: src/using/script-fu-tutorial.xml:1226(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3760,7 +3800,7 @@ msgstr ""
 "        (gimp-image-clean-all theImage)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1230(para)
+#: src/using/script-fu-tutorial.xml:1229(para)
 msgid ""
 "This will set dirty count to 0, making it appear to be a <quote>clean</"
 "quote> image."
@@ -3768,7 +3808,7 @@ msgstr ""
 "この処理は手付きの回数を 0 にするので結果的に画像が<quote>手付きなし</quote>"
 "となります。"
 
-#: src/using/script-fu-tutorial.xml:1234(para)
+#: src/using/script-fu-tutorial.xml:1233(para)
 msgid ""
 "Whether to add this line or not is a matter of personal taste. I use it in "
 "scripts that produce new images, where the results are trivial, as in this "
@@ -3780,15 +3820,15 @@ msgstr ""
 "かしスクリプトがとても複雑だったり、 既存の画像を加工するものならば、 おそら"
 "くこういった機能を使いたい理由がありません。"
 
-#: src/using/script-fu-tutorial.xml:1244(title)
+#: src/using/script-fu-tutorial.xml:1243(title)
 msgid "Extending The Text Box Script"
 msgstr "テキストボックススクリプトを拡張"
 
-#: src/using/script-fu-tutorial.xml:1246(title)
+#: src/using/script-fu-tutorial.xml:1245(title)
 msgid "Handling Undo Correctly"
 msgstr "取り消し機能の正しい取扱い"
 
-#: src/using/script-fu-tutorial.xml:1247(para)
+#: src/using/script-fu-tutorial.xml:1246(para)
 msgid ""
 "When creating a script, you want to give your users the ability to undo "
 "their actions, should they make a mistake. This is easily accomplished by "
@@ -3805,7 +3845,7 @@ msgstr ""
 "点を<acronym>GIMP</acronym>に知らせて、 あとでその操作を取り消せるようにして"
 "いる対の式だと見て間違いありません。"
 
-#: src/using/script-fu-tutorial.xml:1258(para)
+#: src/using/script-fu-tutorial.xml:1257(para)
 msgid ""
 "If you are creating a new image entirely, it doesn't make sense to use these "
 "functions because you're not changing an existing image. However, when you "
@@ -3815,17 +3855,17 @@ msgstr ""
 "なら既存の画像を変更しているわけではないからです。 しかし反対に既存の画像を変"
 "更するスクリプトならこの機能を使いたいのは当然です。"
 
-#: src/using/script-fu-tutorial.xml:1264(para)
+#: src/using/script-fu-tutorial.xml:1263(para)
 msgid "Undoing a script works nearly flawlessly when using these functions."
 msgstr ""
 "この両関数を使う限りスクリプトの動作の取り消しはほとんど完全無欠に行なえま"
 "す。"
 
-#: src/using/script-fu-tutorial.xml:1270(title)
+#: src/using/script-fu-tutorial.xml:1269(title)
 msgid "Extending The Script A Little More"
 msgstr "もう少しスクリプトを拡張"
 
-#: src/using/script-fu-tutorial.xml:1271(para)
+#: src/using/script-fu-tutorial.xml:1270(para)
 msgid ""
 "Now that we have a very handy-dandy script to create text boxes, let's add "
 "two features to it:"
@@ -3834,7 +3874,7 @@ msgstr ""
 "&supe; オテテミテテアテテゴッコ</para></footnote>スクリプトができているの"
 "で、 2つの機能を追加してやりましょう。"
 
-#: src/using/script-fu-tutorial.xml:1277(para)
+#: src/using/script-fu-tutorial.xml:1276(para)
 msgid ""
 "Currently, the image is resized to fit exactly around the text &mdash; "
 "there's no room for anything, like drop shadows or special effects (even "
@@ -3848,7 +3888,7 @@ msgstr ""
 "て、 しかもその幅をユーザがテキストの結果的な大きさに対する比率で指定できるよ"
 "うにします。"
 
-#: src/using/script-fu-tutorial.xml:1287(para)
+#: src/using/script-fu-tutorial.xml:1286(para)
 msgid ""
 "This script could easily be used in other scripts that work with text. Let's "
 "extend it so that it returns the image and the layers, so other scripts can "
@@ -3859,11 +3899,11 @@ msgstr ""
 "プトがこのスクリプトを呼び出して生成させた画像やレイヤーを利用できるように拡"
 "張しましょう。"
 
-#: src/using/script-fu-tutorial.xml:1298(title)
+#: src/using/script-fu-tutorial.xml:1297(title)
 msgid "Modifying The Parameters And The Registration Function"
 msgstr "パラメータと登録関数の変更"
 
-#: src/using/script-fu-tutorial.xml:1301(para)
+#: src/using/script-fu-tutorial.xml:1300(para)
 msgid ""
 "To let the user specify the amount of buffer, we'll add a parameter to our "
 "function and the registration function:"
@@ -3871,7 +3911,7 @@ msgstr ""
 "テキスト周りの余裕を設定できるよう、 メイン関数にパラメータを追加して登録関数"
 "を変更します。"
 
-#: src/using/script-fu-tutorial.xml:1305(programlisting)
+#: src/using/script-fu-tutorial.xml:1304(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3954,11 +3994,11 @@ msgstr ""
 " )\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1369(title)
+#: src/using/script-fu-tutorial.xml:1368(title)
 msgid "Adding The New Code"
 msgstr "新しいコードの追加"
 
-#: src/using/script-fu-tutorial.xml:1370(para)
+#: src/using/script-fu-tutorial.xml:1369(para)
 msgid ""
 "We're going to add code in two places: right before we resize the image, and "
 "at the end of the script (to return the new image, the layer and the text)."
@@ -3967,7 +4007,7 @@ msgstr ""
 "す。 後者はできたばかりの新しい画像とそのレイヤーとテキストを返すためのコード"
 "です。"
 
-#: src/using/script-fu-tutorial.xml:1375(para)
+#: src/using/script-fu-tutorial.xml:1374(para)
 msgid ""
 "After we get the text's height and width, we need to resize these values "
 "based on the buffer amount specified by the user. We won't do any error "
@@ -3981,7 +4021,7 @@ msgstr ""
 "が起きても深刻にはなりえず、 また余裕の量に 200% などという法外な値をユーザに"
 "指定させまいとする理由も見当たらないことから、 一切検査しません。"
 
-#: src/using/script-fu-tutorial.xml:1383(programlisting)
+#: src/using/script-fu-tutorial.xml:1382(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -3998,7 +4038,7 @@ msgstr ""
 "        (set! theImageWidth  (+ theImageWidth  theBuffer theBuffer) )\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1389(para)
+#: src/using/script-fu-tutorial.xml:1388(para)
 msgid ""
 "All we're doing here is setting the buffer based on the height of the text, "
 "and adding it twice to both the height and width of our new image. (We add "
@@ -4009,7 +4049,7 @@ msgstr ""
 "できた画像の高さや幅にそれぞれ2度ずつ加えていることだけです。 縦にも横にも2度"
 "ずつ加算している理由は、 余裕の幅をテキストの両側に加える必要があるからです。"
 
-#: src/using/script-fu-tutorial.xml:1395(para)
+#: src/using/script-fu-tutorial.xml:1394(para)
 msgid ""
 "Now that we have resized the image to allow for a buffer, we need to center "
 "the text within the image. This is done by moving it to the (x, y) "
@@ -4022,7 +4062,7 @@ msgstr ""
 "を移動すればよろしい。 この処理の行を画像とレイヤーのサイズ変更のあとに加えま"
 "した。"
 
-#: src/using/script-fu-tutorial.xml:1402(programlisting)
+#: src/using/script-fu-tutorial.xml:1401(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -4033,26 +4073,26 @@ msgstr ""
 "        (gimp-layer-set-offsets theText theBuffer theBuffer)\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1405(para)
+#: src/using/script-fu-tutorial.xml:1404(para)
 msgid ""
 "Go ahead and save your script, and try it out after refreshing the database."
 msgstr ""
 "ここまでできたらスクリプトを保存して、 データベースを読み込み直してから試して"
 "みましょう。"
 
-#: src/using/script-fu-tutorial.xml:1409(para)
+#: src/using/script-fu-tutorial.xml:1408(para)
 msgid ""
 "All that is left to do is return our image, the layer, and the text layer. "
 "After displaying the image, we add this line:"
 msgstr ""
 "もう残された課題は画像とレイヤーとテキストレイヤーの情報を返す処理だけです。"
 
-#: src/using/script-fu-tutorial.xml:1413(programlisting)
+#: src/using/script-fu-tutorial.xml:1412(programlisting)
 #, no-wrap
 msgid "(list theImage theLayer theText)"
 msgstr "(list theImage theLayer theText)"
 
-#: src/using/script-fu-tutorial.xml:1414(para)
+#: src/using/script-fu-tutorial.xml:1413(para)
 msgid ""
 "This is the last line of the function, making this list available to other "
 "scripts that want to use it."
@@ -4060,7 +4100,7 @@ msgstr ""
 "これが関数の最後に置かれる行です。 これで他のスクリプトから利用できるようにな"
 "ります。"
 
-#: src/using/script-fu-tutorial.xml:1418(para)
+#: src/using/script-fu-tutorial.xml:1417(para)
 msgid ""
 "To use our new text box script in another script, we could write something "
 "like the following:"
@@ -4068,7 +4108,7 @@ msgstr ""
 "他のスクリプトからテキストボックススクリプトを使う場合はつぎのようなコードを"
 "書くことになります。"
 
-#: src/using/script-fu-tutorial.xml:1422(programlisting)
+#: src/using/script-fu-tutorial.xml:1421(programlisting)
 #, no-wrap
 msgid ""
 "\n"
@@ -4093,27 +4133,27 @@ msgstr ""
 "        (gimp-image-flatten (car theResult))\n"
 "      "
 
-#: src/using/script-fu-tutorial.xml:1432(para)
+#: src/using/script-fu-tutorial.xml:1431(para)
 msgid "Congratulations, you are on your way to your Black Belt of Script-Fu!"
 msgstr "おめでとう。 あなたはScript-Fuの黒帯への道を進んでいますよ。"
 
-#: src/using/script-fu-tutorial.xml:1439(title)
+#: src/using/script-fu-tutorial.xml:1438(title)
 msgid "Your script and its working"
 msgstr "スクリプト作品とその稼動の様子"
 
-#: src/using/script-fu-tutorial.xml:1441(title)
+#: src/using/script-fu-tutorial.xml:1440(title)
 msgid "What you write"
 msgstr "書いた成果"
 
-#: src/using/script-fu-tutorial.xml:1442(para)
+#: src/using/script-fu-tutorial.xml:1441(para)
 msgid "Below the complete script:"
 msgstr "スクリプトの完全版はつぎのとおりです。"
 
-#: src/using/script-fu-tutorial.xml:1529(title)
+#: src/using/script-fu-tutorial.xml:1528(title)
 msgid "What you obtain"
 msgstr "得られるもの"
 
-#: src/using/script-fu-tutorial.xml:1531(title)
+#: src/using/script-fu-tutorial.xml:1530(title)
 msgid "And the result on the screen."
 msgstr "画面にはこんな成果が現れます。"
 
@@ -4138,7 +4178,7 @@ msgstr ""
 "配布されているテスト用スクリプト <filename>plug-ins/script-fu/scripts/test-"
 "sphere.scm</filename> にそういったパラメータの説明や使用例があります。"
 
-#: src/using/script-fu-gui-api.xml:41(constant)
+#: src/using/script-fu-gui-api.xml:41(para)
 msgid "SF-ADJUSTMENT"
 msgstr "SF-ADJUSTMENT"
 
@@ -4265,7 +4305,7 @@ msgstr "\"<replaceable>color</replaceable>\""
 msgid "Color name in CSS notatation."
 msgstr "<acronym>CSS</acronym>notatationの色名"
 
-#: src/using/script-fu-gui-api.xml:118(constant)
+#: src/using/script-fu-gui-api.xml:118(para)
 msgid "SF-FONT"
 msgstr "SF-FONT"
 
@@ -4317,7 +4357,7 @@ msgstr "\"<replaceable>fontname</replaceable>\""
 msgid "Name of the default font."
 msgstr "初期状態でのフォント名"
 
-#: src/using/script-fu-gui-api.xml:157(constant)
+#: src/using/script-fu-gui-api.xml:157(para)
 msgid "SF-BRUSH"
 msgstr "SF-BRUSH"
 
@@ -4367,7 +4407,7 @@ msgstr ""
 "タは<quote><parameter>'(\"Circle (03)\" 100 44 0)</parameter></quote>となりま"
 "す。"
 
-#: src/using/script-fu-gui-api.xml:181(constant)
+#: src/using/script-fu-gui-api.xml:181(para)
 msgid "SF-PATTERN"
 msgstr "SF-PATTERN"
 
@@ -4406,7 +4446,7 @@ msgstr ""
 "として呼び出してダイアログで何も変更しなかった場合、 返ってくるパタメータは"
 "<quote><parameter>\"Maple Leaves\"</parameter></quote>となります。"
 
-#: src/using/script-fu-gui-api.xml:200(constant)
+#: src/using/script-fu-gui-api.xml:200(para)
 msgid "SF-GRADIENT"
 msgstr "SF-GRADIENT"
 
@@ -4446,7 +4486,7 @@ msgstr ""
 "として呼び出してダイアログで何も変更しなかった場合、 返ってくるパタメータは"
 "<quote><parameter>\"Deep Sea\"</parameter></quote>となります。"
 
-#: src/using/script-fu-gui-api.xml:221(constant)
+#: src/using/script-fu-gui-api.xml:221(para)
 msgid "SF-PALETTE"
 msgstr "SF-PALETTE"
 
@@ -4486,7 +4526,7 @@ msgstr ""
 "quote>として呼び出してダイアログで何も変更しなかった場合、 返ってくるパタメー"
 "タは<quote><parameter>\"Named Colors\"</parameter></quote>となります。"
 
-#: src/using/script-fu-gui-api.xml:242(constant)
+#: src/using/script-fu-gui-api.xml:242(para)
 msgid "SF-FILENAME"
 msgstr "SF-FILENAME"
 
@@ -4526,7 +4566,7 @@ msgstr ""
 "スクリプトが呼び出されたときに返される値はファイルの名前と保管場所を記した文"
 "字列変数です。"
 
-#: src/using/script-fu-gui-api.xml:264(constant)
+#: src/using/script-fu-gui-api.xml:264(para)
 msgid "SF-DIRNAME"
 msgstr "SF-DIRNAME"
 
@@ -4558,7 +4598,7 @@ msgstr ""
 "segmentedlist> スクリプトが呼び出されたときに返される値はディレクトリ名とそれ"
 "までの筋道を記した文字列変数です。"
 
-#: src/using/script-fu-gui-api.xml:283(constant)
+#: src/using/script-fu-gui-api.xml:283(para)
 msgid "SF-OPTION"
 msgstr "SF-OPTION"
 
@@ -4600,7 +4640,7 @@ msgstr ""
 "が呼び出されたときに返される値はオプション項目の番号です。 最初のオプション"
 "が 0 番です。"
 
-#: src/using/script-fu-gui-api.xml:302(constant)
+#: src/using/script-fu-gui-api.xml:302(para)
 msgid "SF-ENUM"
 msgstr "SF-ENUM"
 
@@ -4638,8 +4678,8 @@ msgstr ""
 "れる値は扱われる列挙型での値です。"
 
 #: src/using/qmask.xml:11(phrase)
-msgid "Using the QuickMask"
-msgstr "クイックマスクを利用"
+msgid "Using QuickMask Mode"
+msgstr "クイックマスクのモードを利用"
 
 #: src/using/qmask.xml:14(primary)
 msgid "Masks"
@@ -4659,18 +4699,18 @@ msgstr "画像を開くか新たな創作を始めます。"
 
 #: src/using/qmask.xml:23(para)
 msgid ""
-"Activate the QuickMask using the left-bottom button in the image window. If "
+"Activate QuickMask mode using the left-bottom button in the image window. If "
 "a selection is present the mask is initialized with the content of the "
 "selection."
 msgstr ""
-"画像ウィンドウの左下のボタンを押してクイックマスクを活性化します。 既に選択が"
-"できていたならマスクはその形で初期化されます。"
+"画像ウィンドウの左下のボタンを押してクイックマスクのモードにします。 既に選択"
+"ができていたならマスクはその形で初期化されます。"
 
 #: src/using/qmask.xml:30(para)
 msgid ""
-"Choose any drawing tool. Paint on the Quick Mask using black color to remove "
-"selected areas and white color to add selected areas. You can use grey "
-"colors to get partially selected areas."
+"Choose any drawing tool. Paint on the QuickMask with black to remove "
+"selected areas, and paint with white to add selected areas. Use grey colors "
+"to partially select areas."
 msgstr ""
 "描画ツールならば何でもよいですが、 クイックマスクを黒く塗ればそこは選択から外"
 "され、 白く塗れば選択に加えられます。 灰色では不完全選択ができます。"
@@ -4678,15 +4718,15 @@ msgstr ""
 #: src/using/qmask.xml:35(para)
 msgid ""
 "You can also use selection tools and fill these selections with the Bucket "
-"Fill tool. This does not destroy the Qmask selections!"
+"Fill tool; this does not destroy the QuickMask selections!"
 msgstr ""
 "選択ツールで範囲を決めて塗りつぶしツールやブレンドツールで一括して塗ることも"
 "できます。 クイックマスク自体の選択が放棄されることはありません。"
 
 #: src/using/qmask.xml:41(para)
 msgid ""
-"Toggle off the QuickMask using the left-bottom button in the image window: "
-"the selection will be displayed with its marching ants."
+"Toggle QuickMask mode off using the left-bottom button in the image window: "
+"the selection will be displayed with marching ants."
 msgstr ""
 "画像ウィンドウの左下のボタンを切り替えればクイックマスクから戻ります。選択範"
 "囲は点滅破線となって表示されます。"
@@ -5938,13 +5978,13 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/paths.xml:60(None)
+#: src/using/paths.xml:59(None)
 msgid "@@image: 'images/using/path-examples.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr "@@image: 'images/using/path-examples.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/paths.xml:127(None)
+#: src/using/paths.xml:143(None)
 msgid ""
 "@@image: 'images/using/path-with-anchors.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -5952,7 +5992,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/paths.xml:270(None)
+#: src/using/paths.xml:283(None)
 msgid ""
 "@@image: 'images/using/path-stroking-examples.png'; md5=THIS FILE DOESN'T "
 "EXIST"
@@ -5962,7 +6002,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/paths.xml:305(None)
+#: src/using/paths.xml:318(None)
 msgid ""
 "@@image: 'images/menus/edit/stroke-path.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -5970,14 +6010,14 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/paths.xml:323(None)
+#: src/using/paths.xml:336(None)
 msgid "@@image: 'images/using/path-from-text.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
 "@@image: 'images/using/path-from-text.png'; md5=THIS FILE DOESN'T EXIST"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/using/paths.xml:334(None)
+#: src/using/paths.xml:347(None)
 msgid ""
 "@@image: 'images/using/path-text-stroked.png'; md5=THIS FILE DOESN'T EXIST"
 msgstr ""
@@ -5994,52 +6034,51 @@ msgstr "画像"
 
 #: src/using/paths.xml:27(para)
 msgid ""
-"Paths are curves (known as Bézier-curves). In <acronym>GIMP</acronym> it's "
-"very easy to learn and to use them. To understand their concepts and "
-"mechanism you can go to the glossary <link linkend=\"glossary-bezier-curve"
-"\">Bézier-curve</link> or to Wikipedia <xref linkend=\"bibliography-online-"
-"wkpd-bezier\"/>. It is a very powerful tool to design sophisticated forms. "
-"To use it in <acronym>GIMP</acronym> you must operate by two successive "
-"ways: 1st Create the path and 2nd Stroke path."
+"Paths are curves (known as Bézier-curves). Paths are easy to learn and use "
+"in <acronym>GIMP</acronym>. To understand their concepts and mechanism, look "
+"at the glossary <link linkend=\"glossary-bezier-curve\">Bézier-curve</link> "
+"or Wikipedia <xref linkend=\"bibliography-online-wkpd-bezier\"/>. The Paths "
+"tool is very powerful, allowing you to design sophisticated forms. To use "
+"the Paths tool in <acronym>GIMP</acronym>, you must first create a path, and "
+"then stroke the path."
 msgstr ""
 "パスとは (ベジエ曲線で知られる) 曲線のことです。 <acronym>GIMP</acronym>なら"
-"その習得も使用も難しくありません。 この概念や機構については用語集の <link "
+"その習得も使用も難しくありません。 考え方や仕組みについては用語集の <link "
 "linkend=\"glossary-bezier-curve\">ベジエ曲線</link> の項やウィキペディアのベ"
-"ジエ曲線 <xref linkend=\"bibliography-online-wkpd-bezier\"/> にも書かれていま"
-"す。 このツールは手の込んだ形象を創造することにかけては非常に強力です。 "
-"<acronym>GIMP</acronym>ではパス操作の系統に2段階あります。 第1はパスの作成で"
-"第2がパスの境界線を描画することです。"
+"ジエ曲線 <xref linkend=\"bibliography-online-wkpd-bezier\"/> に書かれていま"
+"す。 パスツールはとても強力なので手の込んだ形象も作れます。 <acronym>GIMP</"
+"acronym>のパスツールを使うには、 先にパスを作成してからその境界線を描画する手"
+"順を踏みます。"
 
 #: src/using/paths.xml:37(para)
 msgid ""
-"According to the terminology used in <acronym>GIMP</acronym>, <quote>Stroke "
-"path</quote> means here to apply a specific style to the path (color, width, "
-"pattern... )."
+"In <acronym>GIMP</acronym>, the term <quote>Stroke path</quote>, means to "
+"apply a specific style to the path (color, width, pattern... )."
 msgstr ""
 "<acronym>GIMP</acronym>の用語法では、 <quote>パスの境界線を描画する</quote>と"
 "はパスに色、 幅、 パターンなどの具体的な姿を与えることを意味します。"
 
-#: src/using/paths.xml:42(para)
-msgid "Paths are used for two main purposes:"
-msgstr "パスは主に2つの目的で使用されています。"
+#: src/using/paths.xml:41(para)
+msgid "A Path has two main purposes:"
+msgstr "パスは主に2つの目的があります。"
 
-#: src/using/paths.xml:47(para)
-msgid "A closed path can be converted into a selection."
-msgstr "閉じたパスは選択に転換できます。"
+#: src/using/paths.xml:46(para)
+msgid "You can convert a closed path to a selection."
+msgstr "閉じたパスが選択に転換できます。"
 
-#: src/using/paths.xml:50(para)
+#: src/using/paths.xml:49(para)
 msgid ""
-"An open or closed path can be <emphasis>stroked</emphasis>, that is, painted "
-"on the image, in a variety of ways."
+"Any path, open or closed, can be <emphasis>stroked</emphasis>; that is, "
+"painted on the image in a variety of ways."
 msgstr ""
-"開いたパスも閉じたパスも、 <emphasis>境界線を描画</emphasis> できます。 つま"
-"りそれらを多彩な手法で描画して画像に加えられるということです。"
+"開いたパスも閉じたパスも、 その <emphasis>境界線が描画</emphasis> できます。 "
+"つまりそれらを多彩な手法で描画して画像に加えられるということです。"
 
-#: src/using/paths.xml:57(title)
+#: src/using/paths.xml:56(title)
 msgid "Illustration of four different path creating"
 msgstr "パス作成の例4つ"
 
-#: src/using/paths.xml:63(para)
+#: src/using/paths.xml:62(para)
 msgid ""
 "Four examples of GIMP paths: one closed and polygonal; one open and "
 "polygonal; one closed and curved; one with a mixture of straight and curved "
@@ -6048,112 +6087,133 @@ msgstr ""
 "<acronym>GIMP</acronym>パスの4例: 閉じた多辺形、 開いた多辺形、 閉じた曲線、 "
 "直線と曲線の混成。"
 
-#: src/using/paths.xml:73(title)
-msgid "Path Creating"
+#: src/using/paths.xml:72(title)
+msgid "Path Creation"
 msgstr "パスの作成"
 
-#: src/using/paths.xml:74(para)
+#: src/using/paths.xml:73(para)
 msgid ""
-"At this step you can design a skeleton of wished form; this skeleton will be "
-"modified later by various ways. To do this you can go to <link linkend="
-"\"gimp-tool-path\">Paths</link>. A short example will be useful to "
-"understand the creating process."
+"Start by drawing the outline for your path; the outline can be modified "
+"later (see the <link linkend=\"gimp-tool-path\">Paths</link> tool). To "
+"start, select the Paths tool using one of the following methods:"
 msgstr ""
-"さてここからは、 思いどおりの姿の骨格を形作るところまで進みましょう。 あとで"
-"その骨格にさまざまな肉付けをしてゆきます。 このために <link linkend=\"gimp-"
-"tool-path\">パス</link> をひととおり見ておくと良いでしょう。 つぎの小さな例が"
-"作成手順の理解に役立つはずです。"
+"パスはとりあえず外形を描くところから始めましょう。 後からでも変形ができるため"
+"です。 (その方法は <link linkend=\"gimp-tool-path\">パス</link> ツールのとこ"
+"ろで述べています。) まずは次のいずれかの方法でパスツールを呼び出してくださ"
+"い。"
 
-#: src/using/paths.xml:82(para)
+#: src/using/paths.xml:81(para)
 msgid ""
-"In the image menu, click <menuchoice><guimenu>Tools</"
-"guimenu><guimenuitem>Path</guimenuitem></menuchoice>,"
+"Use <menuchoice><guimenu>Tools</guimenu><guimenuitem>Path</guimenuitem></"
+"menuchoice> from the image menu."
 msgstr ""
 "画像ウィンドウのメニューから <menuchoice><guimenu>ツール</"
 "guimenu><guimenuitem>パス</guimenuitem></menuchoice>"
 
 #: src/using/paths.xml:91(para)
 msgid ""
-"or on the relevant icon <guiicon><inlinegraphic fileref=\"images/toolbox/"
-"stock-tool-path-22.png\"/></guiicon> in toolbox,"
+"Use the relevant icon <guiicon><inlinegraphic fileref=\"images/toolbox/stock-"
+"tool-path-22.png\"/></guiicon> in toolbox."
 msgstr ""
 "ツールボックスのツールアイコン <guiicon><inlinegraphic fileref=\"images/"
 "toolbox/stock-tool-path-22.png\"/></guiicon>"
 
 #: src/using/paths.xml:99(para)
-msgid "or use hotkey <keycap>B</keycap>"
+msgid "Use the hotkey <keycap>B</keycap>"
 msgstr "キーボードショートカット <keycap>B</keycap>"
+
+#: src/using/paths.xml:98(listitem)
+msgid "<placeholder-1/>."
+msgstr "<placeholder-1/>."
 
 #: src/using/paths.xml:102(para)
 msgid ""
-"Your pointer changes into a pen feature with a curve beginning; if you left-"
-"click in the image you print a point (white inner circle with a black "
-"border); moving mouse and left-clicking again you create automatically a "
-"second point linked to previous one. You can carry on as often as you wish "
-"it to design a polyline, but to learn you need two points only. Now if you "
-"approach pointer close to segment ranging between the two points, the little "
-"<quote>+</quote> close to pointer changes into a cross (for moving). Now "
-"press down left button moving pointer to any side."
+"When the Paths tool is selected, the mouse cursor changes into a pointer "
+"(arrow) with a curve. Left click in the image to create the first point on "
+"the path. Move the mouse to a new point and left click the mouse to create "
+"another point linked to the previous point. Although you can create as many "
+"points as you desire, you only need two points to learn about Paths. While "
+"adding points, the mouse cursor has a little <quote>+</quote> next to the "
+"curve, which indicates that clicking will add a new point. When the mouse "
+"cursor is close to a line segment, the <quote>+</quote> changes into a cross "
+"with arrows; like the move tool."
 msgstr ""
-"するとマウスポインタが万年筆の姿になります。 曲線の始点は画像上で左クリックし"
-"た場所にでき、 そこに点 (黒縁白抜きの丸印) が現れます。 マウスを移動してから"
-"また左クリックすると、 第2の点ができて前の点と線で結ばれています。 打てば打つ"
-"ほどどこまでも線が繋がってゆきますが、 習得には始めの2点だけで充分です。 さて"
-"ポインタを2点間の線の中央に近づけると、 ポインタの右上にあった小さな十字"
-"<quote>+</quote>が四方矢印 (移動のしるし) に替わります。 そこで左マウスボタン"
-"を押したまま移動してみてください。"
+"パスツールを呼び出すとマウスポインタが矢印とうねった曲線からなる姿になりま"
+"す。 画像を左クリックしたところがパスの始点です。 次の点となる位置にマウスを"
+"移動してからまた左クリックすると、 第2の点ができて前の点と線で結ばれます。 打"
+"てば打つほどいくつも点が打てますが、 パスの習得には始めの2点だけで十分です。 "
+"点を置くとき曲線の先ではポインタのそばに小さな十字<quote>+</quote>が現れます"
+"が、 これはクリックすれば新たな点が追加できることを示しています。 一方で曲線"
+"の線分にポインタを近づけると、 ポインタの小さな十字<quote>+</quote>は移動ツー"
+"ルのような四方矢印に替わります。"
 
-#: src/using/paths.xml:113(para)
+#: src/using/paths.xml:119(para)
+msgid "The line segment bends and curves as it is pulled."
+msgstr "線分はつかんで引くにしたがって曲折します。"
+
+#: src/using/paths.xml:122(para)
 msgid ""
-"Then two events occur. One is a bending of the segment to the moving "
-"direction and this bending is proportional to displacement. The second "
-"reveals two segments ended with squares (named handles) at the two curve "
-"ends . If you place the mouse pointer on these squares it changes into a "
-"pointing finger. Now, if you click-and-drag you can see the consequence on "
-"the curve feature. By this mean you can change the starting curve "
-"orientation as well as its <quote>lengthening</quote> on modified side."
+"Each line segment has a start point and an end point that is clearly "
+"labeled. A <quote>direction line</quote> now projects from each end point "
+"for the line segment that was moved."
 msgstr ""
-"すると2つの反応が起きます。 まず一つめは、 ポインタをドラッグした方向に線が曲"
-"がり、 曲がり方は変位に比例します。 二つめは曲線の両端にそれぞれ接線が伸び、 "
-"その先にハンドルと呼ばれる正方形がついているのが見てとれます。 これらの正方形"
-"にポインタを近づけるとその右上のしるしが四方矢印に替わります。 早速それをク"
-"リックしてドラッグしてゆけば曲線の形がつられて反応します。 そこで気がついてほ"
-"しいことは、 はじめにドラッグした方面での<quote>伸び具合</quote>のみならず、 "
-"曲線の接線方向すら当初とは異なる向きに変えられるということです。"
+"どの線分にも始点と終点があり、 しるしがついてはっきりわかるようになっていま"
+"す。"
 
-#: src/using/paths.xml:124(title)
-msgid "Appearance of a path while being manipulated"
+#: src/using/paths.xml:114(para)
+msgid ""
+"Move the mouse cursor close to a line segment, left-click and drag the line "
+"segment. Two events occur. <placeholder-1/> The curved line segment leaves "
+"an end point in the same direction that the <quote>direction line</quote> "
+"leaves the end point. The length of the <quote>direction line</quote> "
+"controls how far the line segment projects along the <quote>direction line</"
+"quote> before curving toward the other end point. Each <quote>direction "
+"line</quote> has an empty square box (called a handle) on one end. Click and "
+"drag a handle to change the direction and length of a <quote>direction line</"
+"quote>."
+msgstr ""
+"ポインタを線分に近づけてクリックしその線分をドラッグしてください。 すると2つ"
+"の反応が起きます。 <placeholder-1/> 線分が曲線なら端点から伸びる<quote>接線</"
+"quote>の方向にパスの線が出ます。 <quote>接線</quote>を長くすればするほどパス"
+"の線分は接線に長く寄り添い、 もう一方の短点に向かう軌跡をとるのはその先で曲"
+"がってからになります。 どの<quote>接線</quote>もその端に白抜きの小さな四角形 "
+"(ハンドルという) がつきます。 ハンドルをクリックしてドラッグすると<quote>接線"
+"</quote>の長さや方向が変わります。"
+
+#: src/using/paths.xml:140(title)
+msgid "Appearance of a path while it is manipulated"
 msgstr "操作中のパスの様子"
 
-#: src/using/paths.xml:130(para)
-msgid "Appearance of a path while it is being manipulated using the Path tool."
-msgstr "パスツールで操作中のパスの様子"
+#: src/using/paths.xml:146(para)
+msgid ""
+"Appearance of a path while it is manipulated using the Path tool. The path "
+"is comprised of two components with both straight and curved segments."
+msgstr ""
+"パスツールで操作中のパスの様子。 図のパスには直線や曲線の入り混じった2本の成"
+"分がある。"
 
 #. TRANSLATORS: check glossary.po for a translation of this para
-#: src/using/paths.xml:138(para)
+#: src/using/paths.xml:155(para)
 msgid ""
 "Paths can be created and manipulated using the <link linkend=\"gimp-tool-path"
-"\">Path tool</link>. The image above shows a path which consists of two "
-"components, having both straight and curved segments, being worked on with "
-"the Path tool. Black squares are anchor points, the open circle indicates "
-"the selected anchor and the two open squares are the two handles which are "
-"associated with this anchor from the curves on either side of it."
+"\">Path tool</link>. Black squares are anchor points, the open circle "
+"indicates the selected anchor, and the two open squares are the handles "
+"associated with the selected anchor."
 msgstr ""
 "パスの作成や操作には <link linkend=\"gimp-tool-path\">パスツール</link> が使"
-"えます。 上図には2つの成分からなるパスが描かれており、 両方とも直線や曲線の分"
-"節が含まれています。 この作業もパスツールで行ないました。 黒い正方形はアン"
-"カーポイントを、 ひとつだけある白丸は選択されたアンカーを表していて、 2つの白"
-"い正方形はアンカーから述びる2本の曲線のこの端点でのハンドルを表しています。"
+"えます。 黒い正方形はアンカーポイントを、 ひとつだけある白丸は選択されたアン"
+"カーを表していて、 2つの白い正方形はそのアンカーから述びる2本の曲線のハンドル"
+"を表しています。"
 
-#: src/using/paths.xml:148(para)
+#: src/using/paths.xml:161(para)
 msgid ""
 "Paths, like layers and channels, are components of an image. When an image "
-"is saved in GIMP's native XCF file format, any paths it has are saved along "
-"with it. The list of paths in an image can be viewed and operated on using "
-"the <link linkend=\"gimp-path-dialog\">Paths dialog</link>. If you want to "
-"move a path from one image to another, you can do so by copying and pasting "
-"using the pop-up menu in the Paths dialog, or by dragging an icon from the "
-"Paths dialog into the destination image's window."
+"is saved in <acronym>GIMP</acronym>'s native XCF file format, any paths it "
+"has are saved with it. The list of paths in an image can be viewed and "
+"operated on using the <link linkend=\"gimp-path-dialog\">Paths dialog</"
+"link>. You can move move a path from one image to another by copying and "
+"pasting using the pop-up menu in the Paths dialog, or by dragging an icon "
+"from the Paths dialog into the destination image window."
 msgstr ""
 "パスはレイヤーやチャンネルと同じく、 画像の一部です。 画像を<acronym>GIMP</"
 "acronym>由来の<acronym>XCF</acronym>ファイル形式で保存すれば、 画像上のパスは"
@@ -6163,14 +6223,14 @@ msgstr ""
 "の脈絡メニューで写し取りと貼り付けをするか、 パスダイアログからアイコンを相手"
 "の画像ウィンドウ上にドラッグして放ってください。"
 
-#: src/using/paths.xml:159(para)
+#: src/using/paths.xml:172(para)
 msgid ""
-"GIMP paths belong to a mathematical type called <quote>Bezier paths</quote>. "
-"What this means in practical terms is that they are defined by "
-"<emphasis>anchors</emphasis> and <emphasis>handles</emphasis>. "
-"<quote>Anchors</quote> are points the path goes through. <quote>Handles</"
-"quote> define the direction of a path when it enters or leaves an anchor "
-"point: each anchor point has two handles attached to it."
+"<acronym>GIMP</acronym> paths belong to a mathematical type called "
+"<quote>Bezier paths</quote>. What this means in practical terms is that they "
+"are defined by <emphasis>anchors</emphasis> and <emphasis>handles</"
+"emphasis>. <quote>Anchors</quote> are points the path goes through. "
+"<quote>Handles</quote> define the direction of a path when it enters or "
+"leaves an anchor point: each anchor point has two handles attached to it."
 msgstr ""
 "<acronym>GIMP</acronym>のパスは数学でいうところの<quote>ベジエ曲線</quote>に"
 "属しています。 その語句の実践的な意味は、 この曲線が <emphasis>アンカー</"
@@ -6179,7 +6239,7 @@ msgstr ""
 "点に入って抜けるそれぞれのパスの方向を定めます。 アンカーひとつにつき2つのハ"
 "ンドルがついています。"
 
-#: src/using/paths.xml:168(para)
+#: src/using/paths.xml:181(para)
 msgid ""
 "Paths can be very complex. If you create them by hand using the Path tool, "
 "unless you are obsessive they probably won't contain more than a few dozen "
@@ -6193,7 +6253,7 @@ msgstr ""
 "スに変換するといった操作があるとたちまち数百、 数千ものアンカー点ができてしま"
 "います。"
 
-#: src/using/paths.xml:176(para)
+#: src/using/paths.xml:189(para)
 msgid ""
 "A path may contain multiple <emphasis>components</emphasis>. A "
 "<quote>component</quote> is a part of a path whose anchor points are all "
@@ -6206,7 +6266,7 @@ msgstr ""
 "とめてパスに含められることによって、 それを選択に変換したときに飛び地のある選"
 "択が作れます。"
 
-#: src/using/paths.xml:184(para)
+#: src/using/paths.xml:197(para)
 msgid ""
 "Each component of a path can be either <emphasis>open</emphasis> or "
 "<emphasis>closed</emphasis>: <quote>closed</quote> means that the last "
@@ -6221,7 +6281,7 @@ msgstr ""
 "quote>成分はいずれも終点から始点まで自動的に直線で結ばれ閉じられてから変換さ"
 "れます。"
 
-#: src/using/paths.xml:192(para)
+#: src/using/paths.xml:205(para)
 msgid ""
 "Path segments can be either straight or curved. A path all of whose segments "
 "are straight is called <quote>polygonal</quote>. When you create a path "
@@ -6236,7 +6296,7 @@ msgstr ""
 "という理由からです。 どこかのアンカー点のハンドルをドラッグすれば、 その成分"
 "に曲線ができます。"
 
-#: src/using/paths.xml:201(para)
+#: src/using/paths.xml:214(para)
 msgid ""
 "One nice thing about paths is that they are very light in terms of resource "
 "consumption, especially in comparison with images. Representing a path in "
@@ -6258,11 +6318,11 @@ msgstr ""
 "問題です。) パスに数千もの成分が含まれていたとしても、 やはり普通のレイヤーや"
 "チャンネルと比べれば資源消費量は微量です。"
 
-#: src/using/paths.xml:216(title)
+#: src/using/paths.xml:229(title)
 msgid "Paths and Selections"
 msgstr "パスと選択範囲"
 
-#: src/using/paths.xml:217(para)
+#: src/using/paths.xml:230(para)
 msgid ""
 "GIMP lets you transform the selection for an image into a path; it also lets "
 "you transform paths into selections. For information about the selection and "
@@ -6273,7 +6333,7 @@ msgstr ""
 "択へも変換できます。 選択についての情報とその働きについては、 <link linkend="
 "\"gimp-concepts-selection\">選択</link> の節をご覧ください。"
 
-#: src/using/paths.xml:223(para)
+#: src/using/paths.xml:236(para)
 msgid ""
 "When you transform a selection into a path, the path closely follows the "
 "<quote>marching ants</quote>. Now, the selection is a two-dimensional "
@@ -6292,11 +6352,11 @@ msgstr ""
 "guimenu><guimenuitem>境界を明確化</guimenuitem></menuchoice> したのと同等で"
 "す。"
 
-#: src/using/paths.xml:237(title)
+#: src/using/paths.xml:250(title)
 msgid "Transforming Paths"
 msgstr "パスの変換"
 
-#: src/using/paths.xml:238(para)
+#: src/using/paths.xml:251(para)
 msgid ""
 "Each of the Transform tools (Rotate, Scale, Perspective, etc) can be set to "
 "act specifically on paths, using the <quote>Affect:</quote> option in the "
@@ -6309,7 +6369,7 @@ msgstr ""
 "ツールの機能を直に利用して、 画像上の他の構成要素に全く影響を与えずにパスの形"
 "状を変更できます。"
 
-#: src/using/paths.xml:245(para)
+#: src/using/paths.xml:258(para)
 msgid ""
 "By default a Transform tool, when it is set to affect paths, only acts on a "
 "single path: the <emphasis>active path</emphasis> for the image, which is "
@@ -6337,20 +6397,20 @@ msgstr ""
 "拡大・縮小ツールでの変換対象がパスであってもレイヤーであっても、 もう一方にも"
 "変換が自動的に作用します。"
 
-#: src/using/paths.xml:264(title)
+#: src/using/paths.xml:277(title)
 msgid "Stroking a Path"
 msgstr "パスの境界線を描画"
 
-#: src/using/paths.xml:266(title)
+#: src/using/paths.xml:279(title)
 msgid "Stroking paths"
 msgstr "パスの境界線を描画"
 
-#: src/using/paths.xml:273(para)
+#: src/using/paths.xml:286(para)
 msgid ""
 "The four paths from the top illustration, each stroked in a different way."
 msgstr "前掲のパス4例の境界線をそれぞれ異なる方法で描画"
 
-#: src/using/paths.xml:280(para)
+#: src/using/paths.xml:293(para)
 msgid ""
 "Paths do not alter the appearance of the image pixel data unless they are "
 "<emphasis>stroked</emphasis>, using <menuchoice><guimenu>Edit</"
@@ -6366,7 +6426,7 @@ msgstr ""
 "ツールオプションダイアログ上で <guilabel>パスの境界線を描画</guilabel> ボタン"
 "を押す方法があります。"
 
-#: src/using/paths.xml:291(para)
+#: src/using/paths.xml:304(para)
 msgid ""
 "Choosing <quote>Stroke Path</quote> by any of these means brings up a dialog "
 "that allows you to control the way the stroking is done. You can choose from "
@@ -6378,11 +6438,11 @@ msgstr ""
 "画方法の設定ができます。 多彩な描線形状が選べるほか、 描画ツールはスタンプや"
 "にじみや消しゴムまで何でも使えます。"
 
-#: src/using/paths.xml:299(title)
+#: src/using/paths.xml:312(title)
 msgid "The <guilabel>Stroke Path</guilabel> dialog"
 msgstr "<quote>パスの境界線を描画</quote>ダイアログ"
 
-#: src/using/paths.xml:309(para)
+#: src/using/paths.xml:322(para)
 msgid ""
 "You can further increase the range of stroking effects by stroking a path "
 "multiple times, or by using lines or brushes of different widths. The "
@@ -6393,20 +6453,20 @@ msgstr ""
 "変えて重ねることもできます。 こんな風にすればおもしろい効果はほとんど無限にあ"
 "りそうです。"
 
-#: src/using/paths.xml:318(title)
+#: src/using/paths.xml:331(title)
 msgid "Paths and Text"
 msgstr "パスとテキスト"
 
-#: src/using/paths.xml:320(title)
+#: src/using/paths.xml:333(title)
 msgid "Text converted to a path"
 msgstr "パスに転換されたテキスト"
 
-#: src/using/paths.xml:326(para)
+#: src/using/paths.xml:339(para)
 msgid ""
 "Text converted to a path and then transformed using the Perspective tool."
 msgstr "パスに転換され、 遠近法ツールで変換されたテキスト。"
 
-#: src/using/paths.xml:337(para)
+#: src/using/paths.xml:350(para)
 msgid ""
 "The path shown above, stroked with a fuzzy brush and then gradient-mapped "
 "using the Gradient Map filter with the <quote>Yellow Contrast</quote> "
@@ -6415,7 +6475,7 @@ msgstr ""
 "承前、 ぼかし入りブラシで描画、 <quote>Yellow Contrast</quote>グラデーション"
 "を用いたグラディエントマップフィルタを適用。"
 
-#: src/using/paths.xml:345(para)
+#: src/using/paths.xml:358(para)
 msgid ""
 "A text item created using the Text tool can be transformed into a path using "
 "the <guibutton>Create path from text</guibutton> button in the Tool Options "
@@ -6425,11 +6485,11 @@ msgstr ""
 "<guibutton>テキストからパスを生成</guibutton> ボタンを使ってパスに転換できま"
 "す。 次のようなさまざまな用途に便利です。"
 
-#: src/using/paths.xml:353(para)
+#: src/using/paths.xml:366(para)
 msgid "Stroking the path, which gives you many possibilities for fancy text."
 msgstr "パスの境界線の描画機能を利用し、 テキスト装飾の可能性を広げること。"
 
-#: src/using/paths.xml:359(para)
+#: src/using/paths.xml:372(para)
 msgid ""
 "More importantly, transforming the text. Converting text into a path, then "
 "transforming the path, and finally either stroking the path or converting it "
@@ -6441,11 +6501,11 @@ msgstr ""
 "レイヤーの画素情報 (ピクセルデータ) を変換描画するよりも高品質に仕上りやす"
 "い。"
 
-#: src/using/paths.xml:371(title)
+#: src/using/paths.xml:384(title)
 msgid "Paths and <acronym>SVG</acronym> files"
 msgstr "パスと<acronym>SVG</acronym>ファイル"
 
-#: src/using/paths.xml:372(para)
+#: src/using/paths.xml:385(para)
 msgid ""
 "<acronym>SVG</acronym>, standing for <quote>Scalable Vector Graphics</"
 "quote>, is an increasingly popular file format for <emphasis>vector "
@@ -6461,7 +6521,7 @@ msgstr ""
 "あり、 整列したピクセルで画素が表現されています。 <acronym>GIMP</acronym>はラ"
 "スター画像を主体にしたプログラムですが、 パスはベクター成分です。"
 
-#: src/using/paths.xml:381(para)
+#: src/using/paths.xml:394(para)
 msgid ""
 "Fortunately, paths are represented in <acronym>SVG</acronym> files in almost "
 "exactly the same way they are represented in GIMP. (Actually fortune has "
@@ -6478,7 +6538,7 @@ msgstr ""
 "acronym>ファイルへ保存することが可能です。 パスダイアログの脈絡メニューからこ"
 "の機能が使えます。"
 
-#: src/using/paths.xml:390(para)
+#: src/using/paths.xml:403(para)
 msgid ""
 "It also means that GIMP can create paths from <acronym>SVG</acronym> files "
 "saved in other programs, such as <application>Inkscape</application> or "
@@ -6496,7 +6556,7 @@ msgstr ""
 "す。 <acronym>SVG</acronym>ファイルからのパスのインポートはパスダイアログの脈"
 "絡メニューにあります。"
 
-#: src/using/paths.xml:400(para)
+#: src/using/paths.xml:413(para)
 msgid ""
 "The <acronym>SVG</acronym> format handles many other graphical elements than "
 "just paths: among other things, it handles figures such as squares, "
@@ -6508,7 +6568,7 @@ msgstr ""
 "<acronym>GIMP</acronym> はこれらを成分として扱うことは一切できませんが、 パス"
 "としては読み込めます。"
 
-#: src/using/paths.xml:408(para)
+#: src/using/paths.xml:421(para)
 msgid ""
 "Creating paths is not the only thing GIMP can do with <acronym>SVG</acronym> "
 "files. It can also open <acronym>SVG</acronym> files as GIMP images, in the "

@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2009-11-10-->
+<!--2009-12-18-->
 <sect1 id="gimp-using-paths">
   <title>
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -33,50 +33,50 @@
   </indexterm>
 
   <para lang="en">
-    Paths are curves (known as Bezier-curves). In <acronym>GIMP</acronym> it's
-    very easy to learn and to use them. To understand their concepts and
-    mechanism you can go to the glossary
-    <link linkend="glossary-bezier-curve">B&eacute;zier-curve</link> or to
-    Wikipedia <xref linkend="bibliography-online-wkpd-bezier"/>.
-    It is a very powerful tool to design sophisticated forms. To use it in
-    <acronym>GIMP</acronym> you must operate by two successive ways: 1st
-    Create the path and 2nd Stroke path.
+    Paths are curves (known as Bezier-curves). Paths are easy to learn and use
+    in <acronym>GIMP</acronym>. To understand their concepts and
+    mechanism, look at the glossary
+    <link linkend="glossary-bezier-curve">B&eacute;zier-curve</link> or Wikipedia 
+    <xref linkend="bibliography-online-wkpd-bezier"/>.
+    The Paths tool is very powerful, allowing you to design sophisticated
+    forms. To use the Paths tool in <acronym>GIMP</acronym>, you must first
+    create a path, and then stroke the path.
   </para>
   <para lang="en">
-    According to the terminology used in <acronym>GIMP</acronym>,
-    <quote>Stroke path</quote> means here to apply a specific style to the
-    path (color, width, pattern... ).
+    In <acronym>GIMP</acronym>, the term <quote>Stroke path</quote>, means to
+    apply a specific style to the path (color, width, pattern... ).
   </para>
   <para lang="en">
-    Paths are used for two main purposes:
+    A Path has two main purposes:
   </para>
   <para lang="ja">
     パスとは (ベジエ曲線で知られる) 曲線のことです。 <acronym>GIMP</acronym>
-    ならその習得も使用も難しくありません。 この概念や機構については用語集の
+    ならその習得も使用も難しくありません。 考え方や仕組みについては用語集の
     <link linkend="glossary-bezier-curve">ベジエ曲線</link> の項や
     ウィキペディアのベジエ曲線 
-    <xref linkend="bibliography-online-wkpd-bezier"/> にも書かれています。
-    このツールは手の込んだ形象を創造することにかけては非常に強力です。
-    <acronym>GIMP</acronym>ではパス操作の系統に
-    2段階あります。 第1はパスの作成で第2がパスの境界線を描画することです。
+    <xref linkend="bibliography-online-wkpd-bezier"/> に書かれています。
+    パスツールはとても強力なので手の込んだ形象も作れます。
+    <acronym>GIMP</acronym>のパスツールを使うには、 先にパスを作成してからその
+    境界線を描画する手順を踏みます。
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>の用語法では、 <quote>パスの境界線を描画する</quote>
-    とはパスに (色、 幅、 文様などの) 具体的な姿を与えることを意味します。
+    とはパスに色、 幅、 パターンなどの具体的な姿を与えることを意味します。
   </para>
-  <para lang="ja">パスは主に2つの目的で使用されています。</para>
+  <para lang="ja">パスは主に2つの目的があります。</para>
   <itemizedlist>
     <listitem>
-      <para lang="en">A closed path can be converted into a selection.</para>
-      <para lang="ja">閉じたパスは選択に転換できます。</para>
+      <para lang="en">You can convert a closed path to a selection.</para>
+      <para lang="ja">閉じたパスが選択に転換できます。</para>
     </listitem>
     <listitem>
       <para lang="en">
-        An open or closed path can be <emphasis>stroked</emphasis>,
-        that is, painted on the image, in a variety of ways.
+        Any path, open or closed, can be <emphasis>stroked</emphasis>;
+        that is, painted on the image in a variety of ways.
       </para>
       <para lang="ja">
-        開いたパスも閉じたパスも、 <emphasis>境界線を描画</emphasis> できます。
+        開いたパスも閉じたパスも、 その <emphasis>境界線が描画</emphasis> 
+        できます。
         つまりそれらを多彩な手法で描画して画像に加えられるということです。
       </para>
     </listitem>
@@ -103,28 +103,29 @@
   </figure>
 
   <sect2 id="gimp-using-paths-creating">
-    <title lang="en">Path Creating</title>
+    <title lang="en">Path Creation</title>
     <title lang="ja">パスの作成</title>
     <para lang="en">
-      At this step you can design a skeleton of wished form; this skeleton
-      will be modified later by various ways. To do this you can go to
-      <link linkend="gimp-tool-path">Paths</link>.
-      A short example will be useful to understand the creating process.
+      Start by drawing the outline for your path; the outline
+      can be modified later (see the
+      <link linkend="gimp-tool-path">Paths</link> tool).
+      To start, select the Paths tool using one of the following methods:
     </para>
     <para lang="ja">
-      さてここからは、 思いどおりの姿の骨格を形作るところまで進みましょう。
-      あとでその骨格にさまざまな肉付けをしてゆきます。 このために
-      <link linkend="gimp-tool-path">パス</link>をひととおり見ておくと
-      良いでしょう。 つぎの小さな例が作成手順の理解に役立つはずです。
+      パスはとりあえず外形を描くところから始めましょう。 後からでも変形が
+      できるためです。 (その方法は 
+      <link linkend="gimp-tool-path">パス</link> ツールのところで述べています。)
+      まずは次のいずれかの方法でパスツールを呼び出してください。
     </para>
     <itemizedlist>
       <listitem>
         <para lang="en">
-          In the image menu, click
+          Use
           <menuchoice>
             <guimenu>Tools</guimenu>
             <guimenuitem>Path</guimenuitem>
-          </menuchoice>,
+          </menuchoice>
+          from the image menu.
         </para>
         <para lang="ja">
           画像ウィンドウのメニューから
@@ -136,10 +137,10 @@
       </listitem>
       <listitem>
         <para lang="en">
-          or on the relevant icon
+          Use the relevant icon
           <guiicon>
             <inlinegraphic fileref="images/toolbox/stock-tool-path-22.png"/>
-          </guiicon> in toolbox,
+          </guiicon> in toolbox.
         </para>
         <para lang="ja">
           ツールボックスのアイコン
@@ -149,52 +150,80 @@
         </para>
       </listitem>
       <listitem>
-        <para lang="en">or use hotkey <keycap>B</keycap></para>
+        <para lang="en">Use the hotkey <keycap>B</keycap>.</para>
         <para lang="ja">キーボードショートカット <keycap>B</keycap></para>
       </listitem>
     </itemizedlist>
     <para lang="en">
-      Your pointer changes into a pen feature with a curve beginning; if you
-      left-click in the image you print a point (white inner circle with a
-      black border); moving mouse and left-clicking again you create
-      automatically a second point linked to previous one. You can carry on as
-      often as you wish it to design a polyline, but to learn you need two
-      points only. Now if you approach pointer close to segment ranging
-      between the two points, the little <quote>+</quote>
-      close to pointer changes into a cross (for moving). Now press down left
-      button moving pointer to any side.
+      When the Paths tool is selected, the mouse cursor
+      changes into a pointer (arrow) with a curve.
+      Left click in the image to create the first point on the path. move
+      the mouse to a new point and left click the mouse to create another
+      point linked to the previous point. Although you can create as many
+      points as you desire, you only need two points to learn about Paths.
+      While adding points, the mouse cursor has a little <quote>+</quote>
+      next to the curve, which indicates that clicking will add a new
+      point. When the mouse cursor is close to a line segment, the
+      <quote>+</quote> changes into a cross with arrows; like the move tool.
     </para>
     <para lang="en">
-      Then two events occur. One is a bending of the segment to the moving
-      direction and this bending is proportional to displacement. The
-      second reveals two segments ended with squares (named handles) at the
-      two curve ends . If you place the mouse pointer on these squares it
-      changes into a pointing finger. Now, if you click-and-drag you can see
-      the consequence on the curve feature. By this mean you can change the
-      starting curve orientation as well as its <quote>lengthening</quote>
-      on modified side.
+      Move the mouse cursor close to a line segment, left-click and drag
+      the line segment. Two events occur.
+      <itemizedlist>
+        <listitem>
+          <para>The line segment bends and curves as it is pulled.</para>
+        </listitem>
+        <listitem>
+          <para>
+            Each line segment has a start point and an end point that is
+            clearly labeled. A <quote>direction line</quote> now
+            projects from each end point for the line segment that was
+            moved.
+          </para>
+        </listitem>
+      </itemizedlist>
+      The curved line segment leaves an end point in the same direction that
+      the <quote>direction line</quote> leaves the end point.
+      The length of the <quote>direction line</quote> controls how far the
+      line segment projects along the <quote>direction line</quote> before
+      curving toward the other end point.
+      Each <quote>direction line</quote> has an empty square box (called a
+      handle) on one end. Click and drag a handle to change the direction and
+      length of a <quote>direction line</quote>.
     </para>
     <para lang="ja">
-      するとマウスポインタが万年筆の姿になります。 曲線の始点は画像上で
-      左クリックした場所にでき、 そこに点(黒縁白抜きの丸印)が現れます。 マウス
-      を移動してからまた左クリックすると、 第2の点ができて前の点と線で結ばれて
-      います。 打てば打つほどどこまでも線が繋がってゆきますが、 習得には始めの
-      2点だけで充分です。 さてポインタを2点間の線の中央に近づけると、 ポインタ
-      の右上にあった小さな十字<quote>+</quote>が四方矢印 (移動のしるし) に
-      替わります。 そこで左マウスボタンを押したまま移動してみてください。
+      パスツールを呼び出すとマウスポインタが矢印とうねった曲線からなる姿になります。 
+      画像を左クリックしたところがパスの始点です。 次の点となる位置にマウスを
+      移動してからまた左クリックすると、 第2の点ができて前の点と線で結ばれます。 
+      打てば打つほどいくつも点が打てますが、 パスの習得には始めの2点だけで十分です。
+      点を置くとき曲線の先ではポインタのそばに小さな十字<quote>+</quote>が
+      現れますが、 これはクリックすれば新たな点が追加できることを示しています。
+      一方で曲線の線分にポインタを近づけると、 ポインタの小さな十字
+      <quote>+</quote>は移動ツールのような四方矢印に替わります。 
     </para>
     <para lang="ja">
-      すると2つの反応が起きます。 まず一つめは、 ポインタをドラッグした方向に
-      線が曲がり、 曲がり方は変位に比例します。 二つめは曲線の両端にそれぞれ
-      接線が伸び、 その先に (ハンドルと呼ばれる) 正方形がついているのが見て
-      とれます。 これらの正方形にポインタを近づけるとその右上のしるしが
-      四方矢印に替わります。 早速それをクリックしてドラッグしてゆけば曲線の
-      形がつられて反応します。 そこで気がついてほしいことは、
-      はじめにドラッグした方面での<quote>伸び具合</quote>のみならず、
-      曲線の接線方向すら当初とは異なる向きに変えられるということです。
+      ポインタを線分に近づけてクリックしその線分をドラッグしてください。
+      すると2つの反応が起きます。
+      <itemizedlist>
+        <listitem>
+          <para>線分はつかんで引くにしたがって曲折します。</para>
+        </listitem>
+        <listitem>
+          <para>
+            どの線分にも始点と終点があり、 しるしがついてはっきりわかるように
+            なっています。
+          </para>
+        </listitem>
+      </itemizedlist>
+      線分が曲線なら端点から伸びる<quote>接線</quote>の方向にパスの線が出ます。 
+      <quote>接線</quote>を長くすればするほどパスの線分は接線に長く寄り添い、 
+      もう一方の短点に向かう軌跡をとるのはその先で曲がってからになります。
+      どの<quote>接線</quote>もその端に白抜きの小さな四角形 (ハンドルという) 
+      がつきます。 ハンドルをクリックしてドラッグすると<quote>接線</quote>の
+      長さや方向が変わります。
     </para>
     <figure>
-      <title lang="en">Appearance of a path while manipulated</title>
+      <title lang="en">Appearance of a path while it is manipulated</title>
       <title lang="ja">操作中のパスの様子</title>
       <mediaobject>
         <imageobject>
@@ -203,37 +232,37 @@
         </imageobject>
         <caption>
           <para lang="en">
-            Appearance of a path while it is being manipulated using the Path
-            tool.
+            Appearance of a path while it is manipulated using the Path tool.
+            The path is comprised of two components with both straight and
+            curved segments.
           </para>
-          <para lang="ja">パスツールで操作中のパスの様子</para>
+          <para lang="ja">
+            パスツールで操作中のパスの様子。 図のパスには直線や曲線の入り混じった2本の
+            成分がある。
+          </para>
         </caption>
       </mediaobject>
     </figure>
     <!--TRANSLATORS: check glossary.po for a translation of this para-->
     <para lang="en">
       Paths can be created and manipulated using the
-      <link linkend="gimp-tool-path">Path tool</link>.
-      The image above shows a path which consists of two components, having
-      both straight and curved segments, being worked on with the Path tool.
-      Black squares are anchor points, the open circle indicates the selected
-      anchor and the two open squares are the two handles which are associated
-      with this anchor from the curves on either side of it.
+      <link linkend="gimp-tool-path">Path tool</link>. Black squares are
+      anchor points, the open circle indicates the selected anchor, and the
+      two open squares are the handles associated with the selected anchor.
     </para>
-
     <para lang="en">
       Paths, like layers and channels, are components of an image. When an
-      image is saved in GIMP's native XCF file format, any paths it has are
-      saved along with it. The list of paths in an image can be viewed and
-      operated on using the
+      image is saved in <acronym>GIMP</acronym>'s native XCF file format, any
+      paths it has are saved with it. The list of paths in an image can be
+      viewed and operated on using the
       <link linkend="gimp-path-dialog">Paths dialog</link>.
-      If you want to move a path from one image to another, you can do so by
+      You can move a path from one image to another by
       copying and pasting using the pop-up menu in the Paths dialog, or by
-      dragging an icon from the Paths dialog into the destination image's
+      dragging an icon from the Paths dialog into the destination image
       window.
     </para>
     <para lang="en">
-      GIMP paths belong to a mathematical type called
+      <acronym>GIMP</acronym> paths belong to a mathematical type called
       <quote>Bezier paths</quote>. What this means in practical terms is that
       they are defined by <emphasis>anchors</emphasis> and
       <emphasis>handles</emphasis>. <quote>Anchors</quote> are points the path
@@ -288,12 +317,9 @@
     </para>
     <para lang="ja">
       パスの作成や操作には
-      <link linkend="gimp-tool-path">パスツール</link> が使えます。
-      上図には2つの成分からなるパスが描かれており、 両方とも直線や曲線の分節が
-      含まれています。 この作業もパスツールで行ないました。 黒い正方形は
+      <link linkend="gimp-tool-path">パスツール</link> が使えます。 黒い正方形は
       アンカーポイントを、 ひとつだけある白丸は選択されたアンカーを表していて、
-      2つの白い正方形はアンカーから述びる2本の曲線のこの端点でのハンドルを
-      表しています。
+      2つの白い正方形はそのアンカーから延びる2本の曲線のハンドルを表しています。
     </para>
     <para lang="ja">
       パスはレイヤーやチャンネルと同じく、 画像の一部です。 画像を<acronym>GIMP

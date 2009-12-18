@@ -14,7 +14,7 @@
   2006-07-12 Added Korean Translation by Dust.
   2006-06-13 Added para about using arrow keys by j.h
 -->
-<!--2009-11-10-->
+<!--2009-12-18-->
 <sect1 id="gimp-using-selections">
   <title lang="en">Creating and Using Selections</title>
   <title lang="ja">選択範囲の作成と利用</title>
@@ -274,13 +274,73 @@
     </indexterm>
 
     <para lang="en">
-      When drawing a selection, you can add a part of the image
-      or subtract a part of the selection by holding the
-      <keycap>Shift</keycap> or the <keycap>Ctrl</keycap> keyboard keys down:
+      Tools have options that you can configure.
+      Each selection tool allows you to set the selection mode. The
+      following selection modes are supported:
+      <itemizedlist>
+        <listitem>
+          <para>
+            Replace is the most used selection mode. In replace mode,
+            a selection replaces any existing selection.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Add mode, causes new selection to be added to any existing
+            selection. Press and hold the <keycap>Shift</keycap> key while
+            making a selection to temporarily enter add mode.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Subtract mode, causes noew selections to be removed from any existing
+            selection. Press and hold the <keycap>Ctrl</keycap> key while
+            making a selection to temporarily enter subtract mode.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Intersect mode, causes areas in both the new and
+            existing selection to become the new selection.
+            Press and hold both the <keycap>Shift</keycap> and
+            <keycap>Ctrl</keycap> key while
+            making a selection to temporarily enter intersect mode.
+          </para>
+        </listitem>
+      </itemizedlist>
     </para>
     <para lang="ja">
-      選択範囲を描くときに、 <keycap>Shift</keycap> キーや <keycap>Ctrl
-      </keycap> キーを押しながら行なうと選択範囲の画像の追加や削除ができます。
+      ツールには大抵その振る舞いを調節するためのツールオプションが付いています。 
+      選択ツールなら選択のモードが選べます。 次の種類の選択モードがあります。
+      <itemizedlist>
+        <listitem>
+          <para>
+            置換が最もよく使われる選択のモードです。 置換モードでは既存の選択範囲が
+            解消され新たに作った選択範囲で置き換わります。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            追加モードは既存の選択範囲に新たに作成した選択範囲を足します。 
+            <keycap>Shift</keycap> キーを押しながら選択範囲を作成するときも
+            一時的な追加モードとなります。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            除去モードは既存の選択範囲から新たに作成した選択範囲を引きます。
+            <keycap>Ctrl</keycap> キーを押しながら選択範囲を作成するときも
+            一時的な除去モードとなります。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            交差モードは既存の選択範囲と新たに作成した選択範囲の共通部分だけが
+            残ります。 <keycap>Shift</keycap> キーと <keycap>Ctrl</keycap> 
+            キーの両方を押しながら選択範囲を作成するときも一時的な交差モードとなります。
+          </para>
+        </listitem>
+      </itemizedlist>
     </para>
 
     <figure>
@@ -294,16 +354,16 @@
       </mediaobject>
     </figure>
     <para lang="en">
-      A rectangular has been drawn. Then the Lasso is selected and a free hand
-      selection is drawn, holding the <keycap>Shift</keycap> key down,
-      including a part of the rectangular selection. As soon as you release the
-      mouse button, both selections are added.
+      The figure shows an existing rectangular selection.
+      Select the Lasso. While pressing the <keycap>Shift</keycap>
+      key, make a free hand selection that includes the existing selection.
+      Release the mouse button and areas are included in the selection.
     </para>
     <para lang="ja">
-      矩形の選択範囲が既にできています。 自由選択ツールを起用してから、
-      <keycap>Shift</keycap> キーを押しながら手書きの選択範囲を矩形の選択範囲に
-      かぶるように描きました。 マウスボタンを放した途端、 両方の選択範囲が
-      足し合わされました。
+      この図では矩形の選択範囲が既にできています。 自由選択 (なげなわ) ツールを
+      起用します。 <keycap>Shift</keycap> キーを押しながら矩形の選択範囲に
+      かぶるように手書きの選択範囲を描きます。 マウスボタンを放せば、 両方の選択範囲が
+      足し合わされます。
     </para>
     <note>
       <para lang="en">
