@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2009-12-27-->
+<!--2010-01-11-->
 <sect1 id="gimp-using-paths">
   <title>
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -295,24 +295,24 @@
       anchor point to the first anchor point with a straight line.
     </para>
     <para lang="en">
-      Path segments can be either straight or curved. A path all of whose
-      segments are straight is called <quote>polygonal</quote>.
-      When you create a path segment, it starts out straight, because the
-      handles for the anchor points are initially placed directly on top of
-      the anchor points, yielding handles of zero length, which produce
-      straight-line segments. You can make a segment curved by dragging a
-      handle away from one of the anchor points.
+      Path segments can be either straight or curved. A path is called
+      <quote>polygonal</quote> if all of its segments are straight.
+      A new path segment is always created straight; the handles for the
+      anchor points are directly on top of the anchor points, yielding
+      handles of zero length, which produces straight-line segments.
+      Drag a handle handle away from an anchor point to cause a segment
+      to curve.
     </para>
     <para lang="en">
-      One nice thing about paths is that they are very light in terms of
-      resource consumption, especially in comparison with images. Representing
-      a path in RAM only requires storing the coordinates of its anchors and
-      handles: 1K of memory is enough to hold quite a complex path, but not
-      enough to hold even a 20x20 pixel RGB layer. Therefore, it is quite
-      possible to have literally hundreds of paths in an image without putting
-      any significant stress of your system. (How much stress managing them
-      would put on <emphasis>you</emphasis>
-      is, of course, another question.) Even a path with thousands of segments
+      One nice thing about paths is that they are very few resources,
+      especially in comparison with images. Representing
+      a path in RAM requires storing only the coordinates of its anchors and
+      handles: 1K of memory is enough to hold a complex path, but not
+      enough to hold a 20x20 pixel RGB layer. Therefore, it is
+      possible to have literally hundreds of paths in an image without causing
+      any significant stress to your system; the amount of stress that
+      hundreds of paths might cause <emphasis>you</emphasis>, however,
+      is another question. Even a path with thousands of segments
       consumes minimal resources in comparison to a typical layer or channel.
     </para>
     <para lang="en">
@@ -358,23 +358,24 @@
       自動的に直線で結ばれ閉じられてから変換されます。
     </para>
     <para lang="ja">
-      パスの成分は直線にも曲線にもなります。 直線だけで構成された成分は
-      <quote>多辺形</quote>といいます。 パスの成分ができるときの始めは直線から
-      です。 これは当初はハンドルがアンカー点の真上に置かれていて
-      長さが0のため、 直線がひかれるという理由からです。
-      どこかのアンカー点のハンドルをドラッグすれば、 その成分に曲線ができます。
+      パスの成分は直線にも曲線にもなります。 成分が直線だけで構成されているパスは
+      <quote>多辺形</quote>といいます。 パスを作成するとき、 新たに追加される
+      成分はいつも直線です。 新設されたアンカー点のハンドルはアンカーの真上に
+      置かれた状態で現れるので、 ハンドルの長さが 0 となりますから直線の成分と
+      なるのです。 ハンドルをドラッグしてアンカー点から離すと、 その成分が曲線に
+      なります。
     </para>
     <para lang="ja">
-      パスの長所のひとつが[メモリ]資源の消費が極めて少ないことです。 画像
-      そのものと比較すればなおさらです。 <acronym>RAM</acronym>上でのパスは
+      パスの長所のひとつが[メモリ]資源をごく僅かしか使わずに済むことです。 画像
+      そのものと比較すればその差は歴然です。 <acronym>RAM</acronym>上でのパスは
       各アンカーとハンドルの座標を記録する分だけしかメモリを要求しないので、
       とても込み入ったパスでもたった1キロバイト程度のメモリ容量で十分です。
-      片や画像ならば20&times;20ピクセルの<acronym>RGB</acronym>レイヤーでさえ
-      このメモリ量では足りません。 こうしたことから、 コンピュータシステム
+      片や<acronym>RGB</acronym>画像ではたった 20&times;20 ピクセル大のレイヤー
+      でさえこのメモリ量では足りません。 こうしたことから、 コンピュータシステム
       に大したストレスも伴わずに優に数百にものぼるパスを画像上にのせられます。
-      (無論この作業があなたにもたらすストレスの量は別問題です。)
-      パスに数千もの成分が含まれていたとしても、
-      やはり普通のレイヤーやチャンネルと比べれば資源消費量は微量です。
+      もちろん数百ものパスを操る作業となれば人的なストレスの量は膨大ですが、
+      これは別問題です。 パスに数千もの成分が含まれていたとしても、
+      やはり普通のレイヤーやチャンネルと比べれば資源の消費は微量です。
     </para>
     <para lang="ja">
       パスの作成や操作には 
@@ -397,10 +398,10 @@
       Now, the selection is a two-dimensional entity, but a path is a
       one-dimensional entity, so there is no way to transform the selection
       into a path without losing information. In fact, any information about
-      partially selected areas (i.e., feathering) will be lost when the
+      partially selected areas (i.e., feathering) are lost when the
       selection is turned into a path. If the path is transformed back into a
-      selection, the result is an all-or-none selection, similar to what would
-      be obtained by executing "Sharpen" from the Select menu.
+      selection, the result is an all-or-none selection, similar to what is
+      obtained by executing "Sharpen" from the Select menu.
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym>では画像上の選択をパスに変換できます。 また
@@ -426,14 +427,16 @@
     <title lang="ja">パスの変換</title>
     <para lang="en">
       Each of the Transform tools (Rotate, Scale, Perspective, etc) can be set
-      to act specifically on paths, using the <quote>Affect:</quote> option
-      in the tool's Tool Options dialog. This gives you a powerful set of
+      to act on a layer, selection, or path. Select the transform tool in the
+      toolbox, then select layer, selection, or path for the
+      <quote>Transform:</quote> option in the tool's Tool Options
+      dialog. This gives you a powerful set of
       methods for altering the shapes of paths without affecting other
       elements of the image.
     </para>
     <para lang="en">
-      By default a Transform tool, when it is set to affect paths, only acts
-      on a single path: the <emphasis>active path</emphasis>
+      By default a Transform tool, when it is set to affect paths, acts on
+      only one path: the <emphasis>active path</emphasis>
       for the image, which is shown highlighted in the Paths dialog. You can
       make a transformation affect more than one path, and possibly other
       things as well, using the <quote>transform lock</quote> buttons in the
@@ -449,10 +452,10 @@
     </para>
     <para lang="ja">
       回転、拡大・縮小、 遠近法など、 どんな 
-      <link linkend="gimp-tool-transform">変換ツール</link> でも
-      ツールオプションダイアログの 
-      <guilabel>変換対象:</guilabel> オプションを定めればパス操作が
-      できるようになっています。 強力な変換ツールの機能を直に利用して、 
+      <link linkend="gimp-tool-transform">変換ツール</link> もレイヤーか選択範囲か
+      パスを操作できます。 ツールボックスでどれかの変換ツールを選んでから、 そのツールの
+      ツールオプションダイアログの <guilabel>変換対象:</guilabel> オプションでレイヤー
+      か選択範囲かパスのいずれかを指定します。 強力な変換ツールの機能を利用して、 
       画像上の他の構成要素に全く影響を与えずにパスの形状を変更できます。
     </para>
     <para lang="ja">
