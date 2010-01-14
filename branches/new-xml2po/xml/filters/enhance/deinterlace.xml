@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-19 AntI: added 'es'
+  2007-04-12 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050930 de replaced informalfigure by axel.wernicke
+  050830 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-deinterlace">
+  <title lang="en">Deinterlace</title>
+  <title lang="ja">インターレース除去...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Enhance</secondary>
+    <tertiary>Deinterlace</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Deinterlace</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="キョウチョウ">強調</secondary>
+    <tertiary sortas="インターレースジョキョ">インターレース除去</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="インターレースジョキョ">インターレース除去</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
+      Images captured by videocards, especially when fast movement is
+      recorded, may look blurred and stripped, with split objects. This is
+      due to how cameras work. They don't record 25 images per second, but 50,
+      with half vertical resolution. There are two interlaced images in one
+      frame. First line of first image is followed by first line of second
+      image followed by second line of first image... etc. So, if there have
+      been an important move between the two images, objects will appear
+      split, shifted, stripped.
+    </para>
+    <para lang="en">
+      The Deinterlace filter keeps only one of both images and replaces
+      missing lines by a gradient between previous and following lines. The
+      resulting image, or selection, will be somewhat blurred, but can be
+      improved by enhance filters
+    </para>
+    <para lang="en">
+      You can find interlaced images at
+      <xref linkend="bibliography-online-wkpd-deinterlace"/>.
+    </para>
+    <para lang="ja">
+      ビデオカードから取り込まれた画像のとくに速い動きをしていた被写体は
+      ぼかされ細切れの短冊状に映ります。 これはカメラワークのせいです。 垂直
+      解像度が秒速50フレームなのに一秒間に25フレームに満たない画像しか収録
+      せず、 1フレームにつきインターレース化した画像を2枚つくるのです。 画像上
+      の走査線は最初が第1の画像の最初の線で、 次が第2の画像の最初の線で、 その
+      次の線が第1の画像の2番目の線で&hellip;、 と続きます。 つまり2枚の画像の
+      間に肝心な動きが入り込むと、 動いた物体は短冊状に切り分けられてずれて
+      しまい細切れに見えるのです。
+    </para>
+    <para lang="ja">
+      <guimenuitem>インターレース除去...</guimenuitem> 
+      フィルタは両画像の片方だけを取り出し、 その画像の欠落している線は前後の線
+      の間のグラデーションで補います。 画像もしくはその選択範囲は結果として
+      いくぶんぼやけますか、 他の強調フィルタで修正するとよいでしょう。
+    </para>
+    <para lang="ja">
+      インターレース化した画像は 
+      <xref linkend="bibliography-online-wkpd-deinterlace"/> でご覧ください。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Enhance</guisubmenu>
+        <guimenuitem>Deinterlace</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>強調</guisubmenu>
+        <guimenuitem>インターレース除去...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Deinterlace filter options</title>
+      <title lang="ja">インターレース除去フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-enhance-deinterlace.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            When <guilabel>Do preview</guilabel> is checked, parameter
+            setting results are interactively displayed in preview.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Keep odd lines</guilabel> and <guilabel>Keep even
+            lines</guilabel>: One of them may render a better result.
+            You must try both.
+          </para>
+          <para lang="ja">
+            <guilabel>奇数ラインを残す</guilabel> と 
+            <guilabel>偶数ラインを残す)</guilabel> の両方を
+            試してみてより良い結果の出る方をご利用ください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Example</title>
+    <title lang="ja">例</title>
+    <figure>
+      <title lang="en">
+          Simple applying example for the Deinterlace filter
+      </title>
+      <title lang="ja">
+          インターレース除去フィルタの単純な適用例
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/interlaced.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Top: even lines pixels are shifted by one pixel to the right.
+            Bottom: one line is missing. These images are zoomed to show
+            pixels.
+          </para>
+          <para lang="ja">
+            上段: 偶数ラインの画素が1ピクセル右にずれている。 下段: 1ライン
+            欠けている。 この画像は画素がよく分かるよう拡大表示してある。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/deinterlaced-1.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            <quote>Keep even fields checked</quote>.
+            Top: odd lines have been shifted to the right, to align
+            themselves with the even lines. Bottom: the empty line has been
+            filled with red.
+          </para>
+          <para lang="ja">
+            <quote>偶数ラインを残す</quote>の場合。 上段: 奇数ラインが右に移り
+            偶数ラインに揃った。 下段: 欠けたラインが赤く塗りつぶされている。
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/deinterlaced-2.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            <quote>Keep odd fields</quote> checked.
+            Top: even lines have been shifted to the left, to align
+            themselves with the odd lines. Bottom: the empty line persists,
+            but joins up and down through a gradient.
+          </para>
+          <para lang="ja">
+            <quote>奇数ラインを残す</quote>の場合。 上段: 偶数ラインが左に移り
+            奇数ラインに揃った。 下段: 欠けたラインが残ったままだが付近に
+            グラデーションがかかり、 上下は揃った。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-04-04 j.h: fixed bug #577170
+  2008-03-01 ude: updated 'de' (added translated example)
+  2008-02-22 j.h: added example for new gradient en;fr
+  2007-10-05 KoSt: updated 'no'
+  2007-08-24 j.h: updated to v2.4 en;fr
+  2006-08-30 ciampix: added italian translation
+  2006-04-30 lexa: made almost docbook compliant and added german translation
+  2005-11-28 replaced informalfigures by figures by lexa
+-->
+<!--2009-10-06-->
+<sect3 id="gimp-gradient-editor-dialog">
+  <title lang="en">The Gradient Editor</title>
+  <title lang="ja">グラデーションエディタ</title>
+  <anchor id="gimp-gradient-edit"/>
+  <indexterm lang="en">
+    <primary>Gradient</primary>
+    <secondary>Editor</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>グラデーション</primary>
+    <secondary sortas="ヘンシュウ">編集</secondary>
+  </indexterm>
+  <figure>
+    <title lang="en">The gradient editor</title>
+    <title lang="ja">グラデーションエディタ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+                   fileref="images/dialogs/gradient-editor-dialog.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Gradient Editor allows you to edit the colors in a gradient. It can
+    only be used on gradients you have created yourself (or on a copy of a
+    system gradient), not on system gradients that come pre-installed with
+    GIMP. This is a sophisticated tool that may take a bit of effort to
+    understand. The concept behind it is that a gradient can be decomposed
+    into a series of adjoining <emphasis>segments</emphasis>,
+    with each segment consisting of a smooth transition from the color on
+    the left edge to the color on the right edge. The Gradient Editor allows
+    you to pack together any number of segments, with any colors you want for
+    the left and right edges of each segment, and with several options for the
+    shape of the transition from left to right.
+  </para>
+  <para lang="ja">
+    グラデーションエディタはグラデーションの配色を編集するためのものです。
+    ご自身で作られたグラデーションファイル (あるいはシステムが提供するものの
+    複製) を対象としており、 <acronym>GIMP</acronym>と一緒にインストールされた
+    システム付属のグラデーションファイルは編集できません。 このエディタは凝った
+    つくりの精巧なツールなので習得するまでにちょっと骨が折れます。 そのコツは
+    グラデーションをいくつかの <emphasis>セグメント</emphasis> (分節) の連なり
+    ととらえ、 それぞれの分節は左端の色から右端の色へ徐々に変化がついていると
+    考えることです。 グラデーションエディタではセグメントをいくつでも連ねられ、
+    各分節の左右の端の色にはどんな色も使えますし、 左から右への色変化の形状にも
+    さまざまな選択肢があります。
+  </para>
+
+  <sect4 id="gimp-gradient-editor-dialog-activate">
+    <title lang="en">How to Activate the Gradient Editor</title>
+    <title lang="ja">グラデーションエディタダイアログの呼び出し方</title>
+    <para lang="en">
+      You can activate the Gradient Editor in several ways:
+    </para>
+    <para lang="ja">
+      グラデーションエディタダイアログを起用する方法はつぎのいずれかです。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          by double-clicking on the gradient stripe in the Gradient dialog,
+        </para>
+        <para lang="ja">
+          グラデーションダイアログの一覧表で加工対象のグラデーションの見本を
+          ダブルクリック
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the context menu you get by right clicking on the selected
+          gradient name,
+        </para>
+        <para lang="ja">
+          一覧表で加工対象のグラデーションを <mousebutton>第2ボタン
+          </mousebutton> クリックして出てきた脈絡メニューの <guimenuitem>
+          グラデーションの編集...</guimenuitem> を選択
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by clicking on the <guibutton>Edit gradient</guibutton>
+          button in the Gradient Dialog,
+        </para>
+        <para lang="ja">
+          グラデーションダイアログの
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata
+                  fileref="images/dialogs/stock-gtk-edit-16.png"/>
+              </imageobject>
+              <textobject>
+                <phrase>「グラデーションを編集」</phrase>
+              </textobject>
+            </inlinemediaobject>
+          </guiicon> アイコンボタンをクリック
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Gradient Menu you get by clicking on
+          <guiicon>
+            <inlinegraphic
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon>
+          in the Gradient Dialog.
+        </para>
+        <para lang="ja">
+          グラデーションダイアログのタブメニューボタン
+          <guiicon>
+            <inlinegraphic
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックして出てくるメニューより
+          <menuchoice>
+            <guisubmenu>グラデーション</guisubmenu>
+            <guimenuitem>グラデーションの編集...</guimenuitem>
+          <menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4 id="gimp-gradient-editor-dialog-using">
+    <title lang="en">Display</title>
+    <title lang="ja">ウィンドウ詳説</title>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Name</term>
+        <term lang="ja">名前</term>
+        <listitem>
+          <para lang="en">
+            In the name area, you have the tab menu button (the small
+            triangle).
+          </para>
+          <para lang="ja">
+            最初の語句入力欄でグラデーションにつける名前を編集できます。
+            <!--原文破棄-->
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">The Gradient Preview Window </term>
+        <term lang="ja">グラデーションのプレビュー</term>
+        <listitem>
+          <para lang="en">
+            Below the name, you see the current result of your work if the
+            <guilabel>Instant update</guilabel> option is checked; else,
+            changes will appear only when you release the mouse button.
+          </para>
+          <para lang="en">
+            If you simply move the mouse pointer on this display, it works
+            somewhat as a color-picker. Values of the pointed pixel are
+            displayed in a rather odd way. <emphasis>Position</emphasis>
+            is a number given to 3 decimal places, from 0.000 on the left to
+            1.000 on the right of the whole gradient.
+            <emphasis>RGB, HSV, Intensity and Opacity</emphasis>
+            are also a ratio...
+          </para>
+          <para lang="en">
+            If you click-n-drag on display, then only position and RGB data
+            are displayed. But they are passed on to the Foreground color in
+            the Toolbox and to the four first gradients of the list (by
+            pressing the <keycap>Ctrl</keycap> key, the Color is sent to the
+            Background color of the Toolbox).
+          </para>
+          <para lang="ja">
+            名前の下の図面では <guilabel>即時更新</guilabel> が有効ならば作業の
+            成果が即座に反映され、 無効ならばマウスボタンを放した時に変更が
+            反映されます。
+          </para>
+          <para lang="ja">
+            マウスポインタは図面上にかざすと<quote>スポイトツール</quote>
+            のようなはたらきをします。 各地点でのピクセル情報はダイアログの下部
+            にやや変わった方法で表示されます。 <guilabel>位置</guilabel> は
+            小数点以下が3桁の数値で表され、 0.000 がグラデーションの左端を、
+            1.000 が右端を示します。 <guilabel>RGB</guilabel> は赤緑青の各要素
+            が (0 から 255 ではなく) 0.000 から 1.000 までの割合で表され、
+            <guilabel>HSV</guilabel> は色相と彩度を 0.000 から 1.000 の割合で、
+            明度は 0.0 から 100.0 の値で示されます。 <guilabel>輝度</guilabel>
+            と <guilabel>不透明度</guilabel> は 0.000 から 1.000 の範囲で示され
+            ます。
+          </para>
+          <para lang="ja">
+            図面上をクリックしてドラッグすると <guilabel>位置</guilabel> と 
+            <guilabel>RGB</guilabel> のみの表示になります。 この操作ではマウス
+            ポインタの位置の色がツールボックスにも示される描画色になり、 
+            グラデーションダイアログの一覧表の最初の4つのグラデーションはこの
+            色を基に再構成されます (<keycap>Ctrl</keycap> キーを押しながらだと
+            背景色が換わります)。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Range Selection/Control Sliders</term>
+        <term lang="ja">区間の選択と制御スライダ</term>
+        <listitem>
+          <para lang="en">
+            Below the gradient display, you see a set of black and white
+            triangles lined up in row which allow you to adjust endpoints
+            and midpoints in the gradient preview. A
+            <emphasis>segment</emphasis> is the space between two consecutive
+            <emphasis>black</emphasis> triangles. Inside each segment is a
+            white triangle, which is used to <quote>warp</quote> the colors
+            in the segment, in the same way that the middle slider
+            in the Levels tool warps the colors there. You can select a
+            segment by clicking between the two black triangles that define
+            it. It turns from white to blue. You can select a range of
+            segments by shift-clicking on them.
+            The selected range always consists of a set of
+            <emphasis>consecutive</emphasis>
+            segments, so if you skip over any when shift-clicking, they will
+            be included automatically. If <quote>Instant update</quote>
+            is checked, the display is updated immediately after any slider
+            movement; if it is unchecked, updates only occur when you release
+            the mouse button.
+          </para>
+          <para lang="en">
+            You can move sliders, segments and selections. If you simply
+            <emphasis>click-n-drag a slider</emphasis>,
+            you only move the corresponding transition. By
+            <emphasis>click-n-drag on a segment</emphasis>
+            you can move this segment up to the next triangle. By
+            <emphasis>Shift+click-n-drag on a segment/selection</emphasis>,
+            you can move this segment/selection and compress/ dilate next
+            segments.
+          </para>
+          <para lang="ja">
+            グラデーションの図面のすぐ下の帯には小さな白と黒の三角形があって、
+            これらを移動してグラデーションの終端と中間点が指定できます。
+            <emphasis>セグメント</emphasis> とは連続する2つの <emphasis>黒
+            </emphasis> い三角形で区切られた分節のことです。 どのセグメントにも
+            その中に白い三角形があり、 その移動がセグメントの色の変化位置を
+            <quote>逸らせる</quote>のに使えるところは<quote>レベル</quote>
+            ツールのダイアログで中間スライダポイントの果たす役目に近いものが
+            あります。 セグメントを選びとるにはその区切りとなる黒い三角形の間を
+            クリックしてください。 するとその区間が強調表示されます。 複数の
+            セグメントを連ねて選択するには <keycap>Shift</keycap> キーを押し
+            ながらクリックしてください。 同時に選択できるセグメントは<emphasis>
+            連続</emphasis> していなければならないため、 <keycap>Shift</keycap>
+            キーを押しながら隣り合わないセグメントを選ぶと両者の間のセグメント
+            も自動的に選択されます。 <guilabel>即時更新</guilabel> をチェック
+            するとスライダの移動につられて図面がすぐさま変化を反映します。
+            チェックが入っていないときはマウスボタンを放したときに変更が反映
+            されます。
+          </para>
+          <para lang="ja">
+            スライダやセグメントや選択対象を移動できます。 <emphasis>
+            直にスライダを</emphasis> クリックして曳けばその周囲の色変化が調節
+            できます。 <emphasis>セグメントを</emphasis> クリックして曳くと隣の
+            セグメントの白スライダまで移動できます。 <keycap>Shift</keycap>
+            キーを押しながらだとセグメントもしくは選択区間を移動できますが、
+            両隣のセグメントの一方を拡大させつつ一方が幅0になるまで
+            寄せられます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Scrollbar</term>
+        <term lang="ja">スクロールバー</term>
+        <listitem>
+          <para lang="en">
+            Below the sliders is a scrollbar. This only comes into play if you
+            zoom in using the buttons at the bottom.
+          </para>
+          <para lang="ja">
+            スライダが並ぶ帯の下にはスクロールバーがあります。 ダイアログ下部に
+            ある拡大ズーム表示ボタンを使ったときには繰り寄せが必要に
+            なるでしょう。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Feedback Area</term>
+        <term lang="ja">応答領域</term>
+        <listitem>
+          <para lang="en">
+            Below, a color swatch shows the color pointed by the mouse
+            cursor. Informations about this color and helpful hints or
+            feedback messages may appear here.
+          </para>
+          <para lang="ja">
+            その下にはマウスカーソルの位置の色を示す色見本があります。 また
+            この色に関する情報とためになるてびきや応答メッセージがここに表示
+            されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Buttons</term>
+        <term lang="ja">アイコンボタン</term>
+        <listitem>
+          <para lang="en">
+            At the bottom of the dialog appear five buttons:
+          </para>
+          <para lang="ja">ダイアログの底部には5つのボタンがあります。</para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Save</term>
+              <term lang="ja">保存</term>
+              <listitem>
+                <para lang="en">
+                  Clicking this button causes the gradient, in its current
+                  state, to be saved in your personal
+                  <filename>gradients</filename>
+                  folder, so that it will automatically be loaded the next
+                  time you start GIMP.
+                </para>
+                <para lang="ja">
+                  <guiicon>
+                    <inlinemediaobject>
+                      <imageobject>
+                        <imagedata
+                          fileref="images/dialogs/stock-save-16.png"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>「保存」</phrase>
+                      </textobject>
+                    </inlinemediaobject>
+                  </guiicon> このアイコンボタンをクリックするとグラデーション
+                  が個人用 <filename class="directory">gradients</filename> 
+                  フォルダに現在の状態で保存されます。 
+                  つまり次回から<acronym>GIMP</acronym>起動時に
+                  このグラデーションも自動的に読み込まれます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Revert</term>
+              <term lang="ja">復帰</term>
+              <listitem>
+                <para lang="en">
+                  Clicking this button undoes all of your editing. (However,
+                  at the time this is being written, this function is not yet
+                  implemented.)
+                </para>
+                <para lang="ja">
+                  <guiicon>
+                    <inlinemediaobject>
+                      <imageobject>
+                        <imagedata
+                          fileref="images/dialogs/stock-revert-16.png"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>「復帰」</phrase>
+                      </textobject>
+                    </inlinemediaobject>
+                  </guiicon> このアイコンボタンをクリックするとグラデーションに
+                  対する変更が全て取り消され[ることになる予定になってい]ます。
+                  (残念ながらこの機能は未完成ですので使用できません。)
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Zoom Out</term>
+              <term lang="ja">表示倍率を下げる</term>
+              <listitem>
+                <anchor id="gimp-gradient-editor-zoom-out"/>
+                <para lang="en">
+                  Clicking this button shrinks the gradient display
+                  horizontally.
+                </para>
+                <para lang="ja">
+                  <guiicon>
+                    <inlinemediaobject>
+                      <imageobject>
+                        <imagedata
+                          fileref="images/dialogs/stock-zoom-out-16.png"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>「表示倍率を下げる」</phrase>
+                      </textobject>
+                    </inlinemediaobject>
+                  </guiicon>
+                  このアイコンボタンをクリックすると図面が左右に縮小します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Zoom In</term>
+              <term lang="ja">表示倍率を上げる</term>
+              <listitem>
+                <anchor id="gimp-gradient-editor-zoom-in"/>
+                <para lang="en">
+                  Clicking this button expands the gradient display
+                  horizontally. You can then use the scrollbar to pan the
+                  display left or right.
+                </para>
+                <para lang="ja">
+                  <guiicon>
+                    <inlinemediaobject>
+                      <imageobject>
+                        <imagedata
+                          fileref="images/dialogs/stock-zoom-in-16.png"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>「表示倍率を上げる」</phrase>
+                      </textobject>
+                    </inlinemediaobject>
+                  </guiicon> このアイコンボタンをクリックするとグラデーションの
+                  図面が左右に拡大します。 ウィンドウからはみ出したところは
+                  スクロールバーを使って繰り寄せられます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Zoom All</term>
+              <term lang="ja">すべて表示されるように表示倍率を調整</term>
+              <listitem>
+                <anchor id="gimp-gradient-editor-zoom-all"/>
+                <para lang="en">
+                  Clicking this button resizes the display horizontally so
+                  that it fits precisely into the window.
+                </para>
+                <para lang="ja">
+                  <guiicon>
+                    <inlinemediaobject>
+                      <imageobject>
+                        <imagedata
+                          fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>
+                          「すべて表示されるように表示倍率を調整」
+                        </phrase>
+                      </textobject>
+                    </inlinemediaobject>
+                  </guiicon>
+                  このアイコンボタンをクリックすると図面は左右の大きさが調整
+                  され、 ウィンドウの枠内にぴたりと収まる倍率で表示されます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect4>
+
+  <sect4 id="gimp-gradient-editor-dialog-menu">
+    <title lang="en">The Gradient Editor pop-up Menu</title>
+    <title lang="ja">グラデーションエディタの脈絡メニュー</title>
+    <figure>
+      <title lang="en">The Gradient Editor pop-up menu</title>
+      <title lang="ja">グラデーションエディタの脈絡メニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/gradient-editor-popup-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      You can access the Gradient Editor menu either by right-clicking on the
+      gradient display, or by choosing the top item in the dialog's tab menu.
+      The menu allows you to edit endpoint's color (set the left and right
+      edge colors for each segment), blend colors, select a color model and
+      edit segments. This editor works only with custom gradients or a copy
+      of a system gradient.
+    </para>
+    <para lang="en">The following commands can be found in the menu:</para>
+    <para lang="ja">
+      グラデーションエディタの脈絡メニューを呼び出すにはこのダイアログの図面上
+      を <mousebutton>第2ボタン</mousebutton> でクリックするか、 タブメニューの
+      最初の項目を進んでください。 このメニューでは終端の色の編集 (各セグメント
+      の左端と右端の色の設定) や混色の編集ができ、 色モデルの選択とセグメントの
+      編集ができます。 このエディタが対象とするグラデーションファイルは自作や
+      自前のものと、 システム提供ファイルからの複製に限られます。
+    </para>
+    <para lang="en">つぎにメニューに並ぶ各項目を見てゆきましょう。</para>
+    <variablelist>
+      <title lang="en">Editing endpoint's color</title>
+      <title lang="ja">終端の色を編集</title>
+      <varlistentry>
+        <term lang="en">Left/Right color type</term>
+        <term lang="ja">左側の/右側の色のタイプ</term>
+        <listitem>
+          <para lang="en">This command opens a submenu:</para>
+          <para lang="ja">これはサブメニューがあります。</para>
+          <figure>
+            <title lang="en">The Left/Right color type sub-menu</title>
+            <title lang="ja">左側の/右側の色のタイプのサブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+            fileref="images/dialogs/gradient-editor-colortype-submenu.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This submenu allows you to select the endpoint color from the
+            toolbox foreground and background colors.
+            Whenever you change the foreground or background color, this
+            endpoint color may be changed as well. The alternative is to
+            select a <guimenuitem>Fixed</guimenuitem> endpoint color.
+          </para>
+          <para lang="ja">
+            このサブメニューで終端の色はツールボックスの色標識に表示される
+            描画色と背景色を用いるように変えられます。 こののち描画色と背景色が
+            変化するたびこの終端の色も同時に変化しつづけます。 その反対に色を
+            このままにしておくには <guimenuitem>
+            現在の色に固定</guimenuitem> を選んでください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Left [Right] Endpoint's Color</term>
+        <term lang="ja">左終端色...; 右終端色...</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-left-color"/>
+          <anchor id="gimp-gradient-editor-right-color"/>
+          <para lang="en">
+            These options allow you to choose a color for the respective
+            endpoint using a Color Editor.
+          </para>
+          <para lang="ja">
+            これらのオプションは色の変更ダイアログを開きますのでその終端の色を
+            指定してください。
+          </para>
+          <note>
+            <para lang="en">
+              This command is related to the previous one and becomes
+              inactive if you have selected any other value than
+              <guimenuitem>Fixed</guimenuitem> for the corresponding Left
+              [Right] Color Type.
+            </para>
+            <para lang="ja">
+              このコマンドは前掲のメニューに連動しており、 その終端の色のタイプ
+              に <guimenuitem>現在の色に固定</guimenuitem>
+              以外を選んでいるときは、 終端色を選ぶこのメニューは灰色無効に
+              なります。
+            </para>
+          </note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Load Left [Right] Color From</term>
+        <term lang="en">左側の色の読み込み元; 右側の色の読み込み元</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-left-load"/>
+          <anchor id="gimp-gradient-editor-right-load"/>
+          <figure>
+            <title lang="en">The <quote>Load Color From</quote> submenu</title>
+            <title lang="ja"><quote>色の読み込み元</quote>サブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+            fileref="images/dialogs/gradient-editor-colorfrom.png"/>
+              </imageobject>
+              <caption>
+                <para><quote>左側の色&hellip;</quote>の場合の例</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            These options give you a number of alternative ways of assigning
+            colors to the endpoints. From the submenu you can choose (assuming
+            we're dealing with the left endpoint):
+          </para>
+          <para lang="ja">
+            これらのオプションを使うと他にもいろいろな方法で終端の色を指定でき
+            ます。 このサブメニューで選べる読み込み元はつぎのとおりです。
+            (左側の終端の色について扱っているものとします。)
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Left Neighbor's Right Endpoint</term>
+              <term lang="ja">左隣セグメントの右終端</term>
+              <listitem>
+                <para lang="en">
+                  This choice will cause the color of the right endpoint of
+                  the segment neighboring on the left to be assigned to the
+                  left endpoint of the selected range.
+                </para>
+                <para lang="ja">
+                  ここを選ぶと現在選択している範囲の左終端の色に左隣の分節の
+                  右終端の色が使われます。 セグメントの境界が滑らかにつながり
+                  ます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Right Endpoint</term>
+              <term lang="ja">右終端色</term>
+              <listitem>
+                <para lang="en">
+                  This choice will cause the color of the right endpoint of
+                  the selected range to be assigned to the left endpoint.
+                </para>
+                <para lang="ja">
+                  ここを選ぶと現在選択している範囲の左終端の色が右終端の色と
+                  同じになります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">FG/BG color</term>
+              <term lang="ja">描画色; 背景色</term>
+              <listitem>
+                <para lang="en">
+                  This choice causes GIMP's current foreground or background
+                  color, as shown in the Toolbox, to be assigned to the
+                  endpoint. Note that changing foreground or background color
+                  later will not change the endpoint's color.
+                </para>
+                <para lang="ja">
+                  ここを選ぶとツールボックスにも示される<acronym>GIMP</acronym>
+                  の描画色や背景色がこの終端の色に使えます。 ちなみにこの後で
+                  描画色や背景色を変更してもここの終端色が変化するわけでは
+                  ありません。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">RGBA slots</term>
+              <term lang="ja"><acronym>RGBA</acronym>色の保存枠</term>
+              <listitem>
+                <para lang="en">
+                  At the bottom of the menu are
+                  10 <quote>memory slots</quote>. You can assign colors to
+                  them using the <quote>Save</quote> menu option described
+                  below. If you choose one of the slots, the color in it will
+                  be assigned to the endpoint.
+                </para>
+                <para lang="ja">
+                  このサブメニューの残りは10個の<quote>保存枠</quote>です。
+                  後述する <guisubmenu>色の保存先</guisubmenu> サブメニューで
+                  個々に色を割り当てられます。 ここで選んだ枠の色が終端色に
+                  使われます。 <!--セーブ数は10個-->
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Save Left [Right] Color To</term>
+        <term lang="ja">左側の色の保存先; 右側の色の保存先</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-left-save"/>
+          <anchor id="gimp-gradient-editor-right-save"/>
+          <para lang="en">
+            These options cause the color of the endpoint in question to be
+            assigned to the <quote>memory slot</quote> selected from the
+            submenu.
+          </para>
+          <para lang="ja">
+            この2つのサブメニューは現在その端点に使われている色を、
+            サブメニュー内で指定した<quote>保存枠</quote>にとりこみます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Blending and coloring functions for segment</title>
+      <title lang="ja">セグメント内での混色と色づけの機能</title>
+      <varlistentry>
+        <term lang="en">Blending Function for Segment</term>
+        <term lang="ja">選択範囲/セグメントに対する混色関数</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-blending"/>
+          <figure>
+            <title lang="en">The Blending Function submenu</title>
+            <title lang="ja">混色関数を選ぶサブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                fileref="images/dialogs/gradient-editor-blend.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This option determines the course of the transition from one
+            endpoint of the range (segment or selection) to the other, by
+            fitting the specified type of function to the endpoints and
+            midpoint of the range:
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲 (ひとつもしくは複数が連続するセグメント)
+            の一方の終端からもう一方の終端までの色の変化の様態を設定するための
+            もので、 終端と中間点にいずれかの関数が適用されます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Linear</term>
+              <term lang="ja">線形</term>
+              <listitem>
+                <para lang="en">
+                  Default option. Color varies linearly from one endpoint of
+                  the range to the other.
+                </para>
+                <para lang="ja">
+                  既定ではこの関数が選ばれています。 終端から終端までの色変化は
+                  直線的です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Curved</term>
+              <term lang="ja">カーブ</term>
+              <listitem>
+                <para lang="en">
+                  Gradient varies more quickly on ends of the range than on
+                  its middle.
+                </para>
+                <para lang="ja">
+                  漸進的な色変化は選択範囲の中程よりも両終端に近いところほど
+                  色変わりの度合いが大きくなります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Sinusoidal</term>
+              <term lang="ja">サインカーブ</term>
+              <listitem>
+                <para lang="en">
+                  The opposite of the curved type. Gradients varies more
+                  quickly on center of the range than on its ends.
+                </para>
+                <para lang="ja">
+                  カーブの関数とは対照的に漸進的な色変化は選択範囲の両終端より
+                  も中間点に近いところほど色変わりの度合いが大きくなります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Spherical (increasing)</term>
+              <term lang="ja">球面 (増加)</term>
+              <listitem>
+                <para lang="en">
+                  Gradient varies more quickly on the left of the range than
+                  on its right.
+                </para>
+                <para lang="ja">
+                  選択範囲の左側が右側よりも急激に色変わりします。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Spherical (decreasing)</term>
+              <term lang="ja">球面 (減少)</term>
+              <listitem>
+                <para lang="en">
+                  Gradient varies more quickly on the right than on the left.
+                </para>
+                <para lang="ja">
+                  選択範囲の右側が左側よりも急激に色変わりします。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Coloring Type for Segment</term>
+        <term lang="ja">選択範囲/セグメントに対する色モデル</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-coloring"/>
+          <figure>
+            <title lang="en">The Coloring Type submenu</title>
+            <title lang="ja">色モデルを選ぶサブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+           fileref="images/dialogs/gradient-editor-color.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This option gives you additional control of the type of transition
+            from one endpoint to the other: as a line either in RGB space or
+            in HSV space.
+          </para>
+          <para lang="ja">
+            このオプションでは選択範囲の中での色変化を <guimenuitem>
+            RGB</guimenuitem>、 <guimenuitem>HSV 
+            (色相反時計回り)</guimenuitem>、 <guimenuitem>HSV
+            (色相時計回り)</guimenuitem> の3つの
+            <link linkend="glossary-colormodel">色モデル</link>
+            から指定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Modifying segments</title>
+      <title lang="ja">セグメントを加工</title>
+      <varlistentry>
+        <term lang="en">Flip Segment</term>
+        <term lang="ja">選択範囲/セグメントを反転</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-flip"/>
+          <para lang="en">
+            This option does a right-to-left flip of the selected range
+            (segment or selection), flipping all colors and endpoint
+            locations.
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲 (ひとつもしくは複数が連続するセグメント)
+            の全ての色と終端の位置を左右反転して配置します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Replicate Segment</term>
+        <term lang="ja">選択範囲/セグメントを複製...</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-replicate"/>
+          <para lang="en">
+            This option splits the selected range (segment or selection) into
+            two parts, each of which is a perfect compressed copy of the
+            original range.
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲 (ひとつもしくは複数が連続するセグメント)
+            を2等分し、 元の範囲の内容の完全な複製を半分の幅に圧縮して2つ並べ
+            ます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Split Segment at Midpoint</term>
+        <term lang="ja">セグメント群/セグメントを中間点で分割</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-split-midpoint"/>
+          <para lang="en">
+            This option splits each segment in the selected range in into two
+            segments, splitting at the location of the white triangle.
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲のセグメントをそれぞれ2つずつに切り分け、
+            元のセグメントの白い三角形の位置が両分節の境界となるように
+            配置します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Split Segment Uniformly</term>
+        <term lang="ja">セグメント群/セグメントを均等に分割...</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-split-uniform"/>
+          <para lang="en">
+            This option is similar to the previous one, but it splits each
+            segment halfway between the endpoints, instead of at the white
+            triangle.
+          </para>
+          <para lang="ja">
+            このオプションは前項と似ていますが2つずつに切り分けられたセグメント
+            の境界は中間点の白三角形の位置ではなく範囲を2等分する中点に置かれ
+            ます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Delete Segment</term>
+        <term lang="ja">選択範囲/セグメントを削除</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-delete"/>
+          <para lang="en">
+            This option deletes all segments in the selected range, (segment
+            or selection) replacing them with a single black triangle at the
+            center, and enlarging the segments on both sides to fill the void.
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲 (ひとつもしくは複数が連続するセグメント)
+            内の全てのセグメントを消去し、 その代わりにこの範囲の中央に黒い
+            三角形をひとつだけ置き、 選択範囲の両隣のセグメントを拡大して空隙を
+            埋めます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Re-center Segment's midpoint</term>
+        <term lang="ja">選択範囲/セグメントの中間点を中央に移動</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-recenter"/>
+          <para lang="en">
+            This option moves the white triangle for each segment in the
+            selected range to a point halfway between the neighboring black
+            triangles.
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲内の全てのセグメントの白い三角形を
+            各セグメントの幅を2等分する中点の位置に移動します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Re-distribute Handles in Segment</term>
+        <term lang="ja">選択範囲/セグメントの制御点を再分配</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-redistribute"/>
+          <para lang="en">
+            This option causes the black and white triangles in the selected
+            range to be shifted so that the distances from one to the next are
+            all equal.
+          </para>
+          <para lang="ja">
+            このオプションは選択範囲内のセグメントの幅を均一にし、 各セグメント
+            の白三角形をその中点に移動します。 選択範囲内の黒と白の三角形の互い
+            の幅は等しくなります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Blending colors</title>
+      <title lang="ja">終端の色の調和</title>
+      <para lang="en">
+        These options are available only if more than one segment are
+        selected.
+      </para>
+      <para lang="ja">
+        この2つのオプションは複数の連続するセグメントを選択したときだけ利用
+        できます。
+      </para>
+      <varlistentry>
+        <term lang="en">Blend Endpoints' Colors</term>
+        <term lang="ja">終端の色を混ぜる</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-blend-color"/>
+          <para lang="en">
+            This option causes the colors at interior endpoints in the range
+            to be averaged, so that the transition from each segment to the
+            next is smooth.
+          </para>
+          <para lang="ja">
+            このオプションは隣り合う終端の色の平均をとって各終端の色を等しく
+            させ、 セグメントの境界が滑らかにつながるようにします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Blend Endpoints' Opacity</term>
+        <term lang="ja">終端の不透明度を混ぜる</term>
+        <listitem>
+          <anchor id="gimp-gradient-editor-blend-opacity"/>
+          <para lang="en">
+            This option does the same thing as the previous option, but with
+            opacity instead of color.
+          </para>
+          <para lang="ja">
+            このオプションは前項と同じことを色ではなく
+            透明度について実施します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <caution>
+      <para lang="en">
+        There is no <quote>undo</quote> available within the Gradient Editor,
+        so be careful!
+      </para>
+      <para lang="ja">
+        グラデーションエディタでの作業は<quote>取り消し</quote>が効きません。
+        十分お気をつけください。
+      </para>
+    </caution>
+  </sect4>
+
+  <sect4>
+    <title lang="en">Using example for the Gradient Editor</title>
+    <title lang="ja">グラデーションエディタの使用例</title>
+    <indexterm lang="en">
+      <primary>Tutorials</primary>
+      <secondary>New gradient</secondary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Gradient</primary>
+      <secondary>New gradient</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+      <secondary sortas="グラデーションノシンキサクセイ">グラデーションの新規作成</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>グラデーション</primary>
+      <secondary sortas="グラデーションノシンキサクセイ">グラデーションの新規作成</secondary>
+    </indexterm>
+    <para lang="en">
+      All these options can seem somewhat boring. Here is an example to clear
+      ideas:
+    </para>
+    <para lang="ja">
+      オプションの説明ばかりで少々うんざりされたかと思います。 ここはひとつ
+      使用例を見てすっきりさせましょう。
+    </para>
+    <orderedlist>
+      <listitem>
+        <para lang="en">
+          Open the Gradient Dialog. Click the
+          <guibutton>New Gradient</guibutton>. The Gradient Editor is opened
+          and shows a gradient from black to white.
+        </para>
+        <para lang="ja">
+          グラデーションダイアログを開いてください。 新しいグラデーションを作成
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata
+                  fileref="images/dialogs/stock-document-new-16.png"/>
+              </imageobject>
+              <textobject>
+                <phrase>「新しいグラデーションを作成」</phrase>
+              </textobject>
+            </inlinemediaobject>
+          </guiicon>
+          アイコンボタンをクリックします。 グラデーションエディタダイアログが
+          開かれ、 その図面領域に黒から白のグラデーションが表示されています。
+        </para>
+        <figure>
+          <title lang="en">New gradient</title>
+          <title lang="ja">新しいグラデーション</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                        fileref="images/dialogs/examples/new-gradient-1.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Right click in this new gradient and click the
+          <guilabel>Split Segment Uniformly</guilabel>. Fix the number of
+          segments you want.
+        </para>
+        <para lang="ja">
+          新しいグラデーションを <mousebutton>第2ボタン</mousebutton> で
+          クリックして脈絡メニューを呼び出し、 <guimenuitem>
+          セグメントを均等に分割...</guimenuitem> を選んで
+          ください。 出てきたダイアログに適当な数を入れましょう。
+        </para>
+        <figure>
+          <title lang="en">Gradient with three segments</title>
+          <title lang="ja">セグメントが3つあるグラデーション</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="images/dialogs/examples/new-gradient-2.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Every segment is limited with two black triangular sliders.
+                Click a segment to activate it. By pressing the
+                <keycap>Shift</keycap> key, you can select several contiguous
+                segments.
+              </para>
+              <para lang="ja">
+                各セグメントは黒の三角形スライダで区切られている。 三角形の間を
+                クリックしてセグメントを活性化しよう。 <keycap>Shift</keycap>
+                キーを押しながらなら連続して複数選べる。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          In the context menu you get by right-clicking in the gradient, set
+          <guilabel>Left Endpoint Color</guilabel> and
+          <guilabel>Right Endpoint Color</guilabel> for the selected segment
+          or segment group.
+        </para>
+        <para lang="ja">
+          グラデーションを <mousebutton>第2ボタン</mousebutton> クリックして
+          脈絡メニューを呼び出し、 選んでおいたセグメントもしくはセグメント群の
+          <guimenuitem>左終端色...</guimenuitem> と
+          <guimenuitem>右終端色...</guimenuitem> をそれぞれ
+          指定します。
+        </para>
+        <figure>
+          <title lang="en">First segment colored</title>
+          <title lang="ja">最初の色づけされたセグメント</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="images/dialogs/examples/new-gradient-3.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Red has been chosen for left endpoint and yellow for the right
+                enpoint.
+              </para>
+              <para lang="ja">
+                左終端に赤を、 右終端に黄色を選んだところ。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Go on the same way for other segments. Then use the
+          <guilabel>Blending functions for segment</guilabel> to achieve
+          various effects.
+        </para>
+        <para lang="ja">
+          他のセグメントにも同じ手順を踏んでください。 そのあとは<quote>
+          セグメントの色を調和させる機能</quote>を使っていろいろな効果を引き
+          だしましょう。
+        </para>
+      </listitem>
+    </orderedlist>
+  </sect4>
+</sect3>

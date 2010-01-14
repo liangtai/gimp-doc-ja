@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-08-28 ude: reviewed for v2.6
+  2009-07-01 liangtai: deleted buttons that no longer exist
+  2008-01-07 j.h: copy-pasted from menus/xtns-module-manager.xml
+  2008-05-06 ude: changed (help-)id [was: gimp-xtns-module-manager]
+  2008-03-13 ude: enhanced dialog description
+  2005-11-24 split of from menus-toolbox.xml by axel.wernicke
+-->
+<!--2009-11-04-->
+<sect2 id="gimp-module-dialog">
+  <title lang="en">The Module Manager</title>
+  <title lang="ja">モジュール</title>
+
+  <indexterm lang="en">
+    <primary>Module Manager</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>モジュール</primary>
+  </indexterm>
+
+  <para lang="en">
+    With the <guimenuitem>Modules</guimenuitem> command, you can show
+    the various extension modules which are available and control which
+    of them should be loaded. Modules perform functions such as choosing
+    colors and display filtering. Any changes you make to the settings with
+    the Module Manager command will take effect the next time you start
+    <acronym>GIMP</acronym>. These changes affect
+    <acronym>GIMP</acronym>'s functional capabilities, its size in
+    memory and its start-up time.
+  </para>
+  <para lang="ja">
+    <guimenuitem>モジュール</guimenuitem> コマンドは利用可能
+    な拡張モジュールを表示し、 <acronym>GIMP</acronym>に読み込むべきものと
+    読み込ませないものを調整できるダイアログを開きます。 モジュールは色の選択や
+    フィルタの表示など、 いくつかの機能があります。 モジュールマネージャの設定
+    に変更を加えると、 次回<acronym>GIMP</acronym>の起動時に反映されます。 
+    いずれの変更も<acronym>GIMP</acronym>の機能上の制約や発展に影響し、 
+    メモリを占める容量や起動時の所要時間を増加・短縮します。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Modules</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guimenuitem>モジュール</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">
+      Description of the <quote>Module Manager</quote> Dialog
+    </title>
+    <title lang="ja">
+      <quote>モジュールマネージャ</quote>ダイアログのご説明
+    </title>
+    <figure>
+      <title lang="en">The <quote>Module Manager</quote> dialog window</title>
+      <title lang="ja">
+        <quote>モジュールマネージャ</quote>ダイアログのウィンドウ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/edit/modules.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      The window of the Module Manager shows the loadable modules.
+    </para>
+    <para lang="en">
+      Clicking on the boxes in the first column of the modules list will check
+      or uncheck the modules. The next time you start <acronym>GIMP</acronym>,
+      any checked module will be loaded.
+    </para>
+    <para lang="en">
+      You will notice the difference only when you try to use the modules.
+      For example, there are several <link linkend="gimp-color-dialog">color
+      selectors</link> to select the foreground or background color. Some of
+      these selectors are modules and will only be available when you check
+      the respective option in the module manager:
+    </para>
+    <para lang="ja">
+      モジュールマネージャのウィンドウは自在に
+      読み込めるモジュールを表示します。
+    </para>
+    <para lang="ja">
+      最初のチェックボックスをクリックして読み込むべきモジュールを選別します。 
+      次回<acronym>GIMP</acronym>を起動したときにチェックの入ったモジュール
+      だけが読み込まれます。
+    </para>
+    <para lang="ja">
+      モジュールを使うときになってはじめてこの変化に気付かれることでしょう。 
+      例えば描画色と背景色を選択するときに使われる 
+      <link linkend="gimp-color-dialog">色を選択するダイアログ</link> には
+      さまざまな機能があります。 タブ化された色選択機能のいくつかは
+      モジュールマネージャで該当するモジュールに読み込みチェックを入れている
+      場合のみ利用できるようになっています。
+    </para>
+    <figure>
+      <title lang="en">Loaded modules examples: Color selector modules</title>
+      <title lang="ja">モジュール読み込みの例: カラーセレクタモジュール</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/edit/module-manager-ex1.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Color selector modules loaded</para>
+          <para lang="en">
+            いくつかのカラーセレクタモジュールが読み込まれている
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/edit/module-manager-ex2.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Color selector modules not loaded</para>
+          <para lang="ja">
+            いくつかのカラーセレクタモジュールが読み込まれていない
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      For loaded modules, information about the selected module is displayed
+      at the bottom of the dialog.
+    </para>
+    <para lang="en">
+      In the second column, for each loaded module the purpose of the module
+      is shown. For any module, that is not loaded, the directory path of this
+      module is shown.
+    </para>
+    <para lang="en">
+      When you click on the <guibutton>Refresh</guibutton> button, the list of
+      modules will be updated: modules no longer on disk will be removed, and
+      new modules found will be added.
+    </para>
+    <para lang="ja">
+      読み込まれたモジュールについてはダイアログで選択すれば
+      その情報がダイアログの下部に表示されます。
+    </para>
+    <para lang="ja">
+      第2の欄ではモジュールごとにモジュールの用途が表示されます。 読み込まれて
+      いないモジュールはいずれもモジュールの保管場所のディレクトリパスが表示
+      されます。
+    </para>
+    <para lang="ja">
+      <guibutton>更新</guibutton> アイコンボタンをクリックするとモジュールの
+      一覧表が更新されます。 ディスク上から削除されたモジュールの行は消え、 
+      新たに発見されたモジュールは追加されます。
+    </para>
+  </sect3>
+</sect2>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-06 AntI: Added "es"
+  2007-05-18 KoSt: added 'no'
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  2005/09/19 de added by axel.wernicke
+  2005/06/20 en updated - default color
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-grid">
+  <title lang="en">Grid</title>
+  <title lang="ja">グリッド...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Grid</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Grid</primary>
+    <secondary>Grid filter</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary>グリッド</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>グリッド</primary>
+    <secondary sortas="コウシセンヲエガク">格子線を描く</secondary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Applying example for the Grid filter</title>
+      <title lang="ja">グリッドフィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-grid.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Grid</quote> applied</para>
+          <para lang="ja"><quote>グリッド</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      It renders a Cartesian grid in the active layer, on top of the existing
+      contents. The width, spacing, offsets, and colors of the grid lines can
+      all be set by the user. By default, the lines are with the
+      <acronym>GIMP</acronym>'s foreground color. (Note: this plug-in
+      was used to create demonstration images for many of the other plug-ins.)
+    </para>
+    <para lang="ja">
+      <guimenuitem>グリッド...</guimenuitem> フィルタは活性
+      レイヤーに元から描かれている絵の上に、 格子線を描きます。 格子線の幅、 
+      格子の間隔、 最初の交点の位置 (オフセット)、 線の色がこのダイアログで
+      どれも設定できます。 初期状態ではツールボックスの色標識で示されている
+      背景色が格子線の色に使われます。 ちなみにこのプラグインの成果画像は
+      他のプラグインの説明に利用するために使われていました。
+    </para>
+    <tip>
+      <para lang="en">
+        If you set the grid line widths to 0, then only the intersections
+        will be drawn, as plus-marks.
+      </para>
+      <para lang="ja">
+        線の幅を 0 にすると交点を示す小さな十字だけが描かれます。
+      </para>
+    </tip>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guisubmenu>Pattern</guisubmenu>
+        <guimenuitem>Grid</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guisubmenu>パターン</guisubmenu>
+        <guimenuitem>グリッド...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Grid</quote> filter options</title>
+      <title lang="ja"><quote>グリッド</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-render-grid.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      There are separate options for controlling the horizontal grid
+      lines, vertical grid lines, and intersections.  By default, the
+      horizontal and vertical settings are locked together, so that
+      all changes are applied symmetrically.  If you want to change
+      just one of them, click on the <quote>chain</quote> symbol below it to
+      unlock them.  The results of changing the Intersection parameters are
+      rather complex.
+    </para>
+    <para lang="en">
+      Besides, for some options, you can select the unit of measurement
+      thanks to a drop-down list.
+    </para>
+    <para lang="ja">
+      横線と縦線と交点を別々に調整するオプションが並んでいます。 初期状態では
+      <guilabel>水平</guilabel> と <guilabel>垂直</guilabel> の設定項目は互いに
+      連結されていて、 全ての変更が対称的にゆきわたります。 どちらか一方だけ
+      変更したい場合は、 両者を繋ぐ<quote>鎖</quote>のアイコンをクリックして
+      解けた姿に替えてください。 <guilabel>交点</guilabel> のパラメータの変更は
+      結果がやや複雑になります。
+    </para>
+    <para lang="ja">
+      数値を記入するオプションには長さの単位を変更できる引き出しメニューが
+      それぞれついています。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Width</term>
+        <term lang="ja">幅</term>
+        <listitem>
+          <para lang="en">
+            Sets the widths of the horizontal or vertical grid
+            lines, or of the symbols drawn at their intersections.
+          </para>
+          <para lang="ja">
+            水平と垂直それぞれに格子線の幅を設定します。 交点については交差
+            部分に付加される線の長さが変わります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Spacing</term>
+        <term lang="ja">間隔</term>
+        <listitem>
+          <para lang="en">
+            Sets the distance between grid lines.
+            The <guilabel>Intersection</guilabel> parameter clears the space
+            between the intersection point and the end of the arms of the
+            intersection crosses.
+          </para>
+          <para lang="ja">
+            平行する格子線同士の間隔を設定します。 <guilabel>交点</guilabel> の
+            値は交点を井桁状に囲むように付加される線の内側の縁から格子線の中心
+            までの距離です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Offset</term>
+        <term lang="ja">オフセット</term>
+        <listitem>
+          <para lang="en">
+            Sets the offset for grid lines with respect to the upper left
+            corner. For intersections, sets the length of the arms of the
+            intersection crosses.
+          </para>
+          <para lang="ja">
+            画像の左上角を基準として格子線の最も左上の交点の座標を設定します。
+            交点に関しては交点を井桁状に囲むように付加される線の外側の縁から
+            格子線の中心までの距離を示します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color Selectors</term>
+        <term lang="ja">色だまりボタン</term>
+        <listitem>
+          <para lang="en">
+            These allow you to set the colors of the grid lines and
+            intersection marks.
+          </para>
+          <para lang="ja">
+            これらの色ボタンはクリックすると色変更ダイアログが開かれ格子線や
+            交点の周りに描かれる追加の線に別の色が選択できるようになって
+            います。 ちなみに線の交わる部分の色は混じらず、 交点の付加線、 
+            垂直線、 水平線の順位で優先して色が現れます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

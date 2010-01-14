@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-08-06 prokoudine: improved Russian content, added localized screenshot
+  2007-04-09 KoSt: added 'no'
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  050930 de replaced informalfigure by axel.wernicke
+  050826 de added by axel.wernicke
+-->
+<!--2009-11-22-->
+<sect2 id="plug-in-rgb-noise">
+  <title lang="en">RGB Noise</title>
+  <title lang="ja">RGB ノイズ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Noise</secondary>
+    <tertiary>RGB Noise</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>RGB Noise</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>ノイズ</secondary>
+    <tertiary>RGB ノイズ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>RGB ノイズ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example of applying the <quote>RGB Noise</quote> filter
+      </title>
+      <title lang="ja"><quote>RGB ノイズ</quote>フィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/noise-taj-scatter-rgb.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>RGB Noise</quote> applied</para>
+          <para lang="ja"><quote>RGB ノイズ</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The RGB Noise filter adds a normally distributed noise to a layer or a
+      selection. It uses the RGB color model to produce the noise (noise is
+      added to red, green and blue values of each pixel). A normal
+      distribution means, that only slight noise is added to the most pixels
+      in the affected area, while less pixels are affected by more extreme
+      values. (If you apply this filter to an image filled with a solid grey
+      color and then look at its histogram, you will see a classic bell-shaped
+      Gaussian curve.)
+    </para>
+    <para lang="en">
+      The result is very naturally looking noise.
+    </para>
+    <para lang="en">
+      This filter does not work with indexed images.
+    </para>
+    <para lang="ja">
+      <guimenuitem><accel>R</accel>GB ノイズ</guimenuitem> フィルタは正規分布
+      ノイズを活性レイヤーもしくはその選択範囲に加えます。 ノイズ発生の過程に
+      <acronym>RGB</acronym>色モデルが利用されます。 (それぞれの画素について赤
+      ・緑・青のそれぞれのチャンネルでノイズを加えています。) 正規分布という
+      ことは、 ほとんどの画素にはちょっとだけノイズがかかり、 激しいノイズが
+      かかる画素はほんの僅かになるといえます。 (例えばもし単色灰色で塗り
+      つぶされた画像にこのフィルタを適用したら、 ヒストグラムの曲線が典型的な
+      釣鐘形のガウス曲線に見えることでしょう。)
+    </para>
+    <para lang="ja">
+      ノイズがとても自然に見える仕上がりになります。
+    </para>
+    <para lang="ja">
+      このフィルタはインデックス化色の画像では作動しません。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Noise</guisubmenu>
+        <guimenuitem>RGB Noise</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ノイズ</guisubmenu>
+        <guimenuitem><accel>R</accel>GB ノイズ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>RGB Noise</quote> filter options</title>
+      <title lang="ja"><quote>RGB ノイズ</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-noise-rgb.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            This preview displays interactively changes before they are
+            applied to the image.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Correlated noise</term>
+        <term lang="ja">相関ノイズ</term>
+        <listitem>
+          <para lang="en">
+            Noise may be additive (uncorrelated) or multiplicative (correlated
+            - also known as speckle noise). When checked, every channel value
+            is multiplied by an normally distributed value. So the noise
+            depends on the channel values: a greater channel value leads to
+            more noise, while dark colors (small values) tend to remain dark.
+          </para>
+          <para lang="ja">
+            ノイズは相関化しなければ加算的に、 相関化すれば (<foreignphrase>
+            speckle</foreignphrase>[斑点]ノイズでも知られたように) 乗算的に
+            なります。 このオプションを有効にすると全てのチャンネルの値に
+            正規分布の倍率が掛けられます。 なのでノイズは元のチャンネル値に依存
+            します。 画素のチャンネル値が高ければノイズが大きく発生しますが、
+            暗い色 (低い値) の画素は暗いままになりがちです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Independent RGB</term>
+        <term lang="ja"><acronym>RGB</acronym> 独立</term>
+        <listitem>
+          <para lang="en">
+            When this radio button is checked, you can move each RGB slider
+            separately.  Otherwise, sliders R, G and B will be moved all
+            together. The same relative noise will then be added to all
+            channels in each pixel, so the hue of pixels does not change much.
+          </para>
+          <para lang="ja">
+            このオプションが有効な場合は<acronym>RGB</acronym>の3つのスライダを
+            別個に調整できます。 無効にすると <guilabel>赤
+            </guilabel>、 <guilabel>緑</guilabel>、
+            <guilabel>青</guilabel> のスライダは同時に動き
+            常に同じ値になります。 この場合相対的に等しいノイズが各画素の全ての
+            チャンネルに加わることになるため、 画素の色相はあまり変化しなく
+            なります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Red, Blue, Green and Alfa Sliders</term>
+        <term lang="ja">赤; 緑; 青; 透明度 スライダ</term>
+        <listitem>
+          <para lang="en">
+            These slidebars and adjacent input boxes allow to set noise level
+            (0.00 - 1.00) in each channel. Alpha channel is only present, if
+            your layer holds such a channel. In case of a grayscale image, a
+            <guilabel>Grey</guilabel>
+            is shown instead of color sliders.
+          </para>
+          <para lang="en">
+            The value set by these sliders actually determine the standard
+            deviation of the normal distribution of applied noise. The used
+            standard deviation is a half of the set value (where 1 is the
+            distance between the lowest and highest possible value in a
+            channel).
+          </para>
+          <para lang="ja">
+            <guilabel>赤</guilabel>、 <guilabel>
+            緑</guilabel>、 <guilabel>青
+            </guilabel> の3つのスライダとその隣の数値記入欄でチャンネルごとに
+            ノイズのレベルを 0.00 から 1.00 の範囲で設定できます。 <guilabel>
+            透明度</guilabel> チャンネルのスライダはレイヤー
+            にアルファチャンネルがあるときのみダイアログに現れます。 グレー
+            スケール画像でこのフィルタを呼び出したときは色のスライダの代わりに
+            <guilabel>グレー</guilabel> スライダが現れます。
+          </para>
+          <para lang="ja">
+            これらのスライダは具体的にはノイズをつけるときの正規分布における
+            標準偏差の値を設定しています。 使用される標準偏差は設定された値の
+            半分です (値の範囲 1.00 がチャンネルでとりうる最高値から最低値
+            までの幅に相当します)。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

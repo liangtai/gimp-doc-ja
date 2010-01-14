@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-23 ude: moved here from filters/color/map/sample_colorize.xml ('en','de')
+  2007-07-11 Added Spanish translation by AntI
+  2007-04-01 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-08-22 de added by axel.wernicke
+  2005-08-30 de replaced informalfigure by axel.wernicke
+-->
+<!--2009-11-05-->
+<sect2 id="plug-in-sample-colorize">
+  <title lang="en">Sample Colorize</title>
+  <title lang="ja">サンプル色付け...</title>
+
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Sample Colorize</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Sample Colorize</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="サンプルイロヅケ">サンプル色付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="サンプルイロヅケ">サンプル色付け</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Sample Colorize</quote> filter
+      </title>
+      <title lang="ja"><quote>サンプル色付け</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/color-taj-sample-colorize.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Sample Colorize</quote> applied</para>
+          <para lang="ja"><quote>サンプル色付け</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter allows you to colorize old black-and-white images by mapping
+      a color source image or a gradient against it.
+    </para>
+    <para lang="en">
+      <guimenuitem>サンプル色付け...</guimenuitem> フィルタは
+      かつての白黒写真のような画像に、 ソース画像に使われている色かもしくは
+      グラデーションの色をもとに着色します。
+    </para>
+    <caution>
+      <para lang="en">
+        Your gray-tone image must be changed to RGB before using this
+        filter (Image/Image&gt;Mode&gt;RGB).
+      </para>
+      <para lang="ja">
+        グレースケール画像の場合は予め 
+        <link linkend="gimp-image-convert-rgb">RGB</link> モードの画像に
+        変換しておいてください。
+      </para>
+    </caution>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Colors</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Sample Colorize</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>サンプル色付け...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">
+        Options of the <quote>Sample Colorize</quote> filter
+      </title>
+      <title lang="ja">
+        <quote>サンプル色付け</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/colors/map/samplecolorize.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The filter window is divided into two parts: Destination on the left,
+      Sampling on the right.
+    </para>
+    <para lang="en">
+      このフィルタのオプションウィンドウは左に色付け対象、 右に色の原本の2つの
+      区画に分かれています。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Destination, Sample</term>
+        <term lang="ja">ターゲット画像; ソース画像</term>
+        <listitem>
+          <para lang="en">
+            By default, displayed image previews reproduce the image you
+            invoked the filter from.
+          </para>
+          <para lang="en">
+            <guilabel>The sample</guilabel> can be the whole preview, or a
+            selection of this preview. With the drop list, you can select
+            another sample-image among the names of images present on
+            your screen when you called the filter. If you choose
+            <guilabel>From Gradient</guilabel> (or <guilabel>From Inverse
+            Gradient</guilabel>), the selected gradient in Gradient Dialog
+            (or its inverse) will be the sample. It will be displayed into
+            the gradient bar below the sample preview. The sampling preview
+            is greyed out and two cursors allow you to select the gradient
+            range that will be applied to the image or selection.
+          </para>
+          <para lang="en">
+            <guilabel>Destination</guilabel> is, by default, the source
+            image. The drop list displays the list of images present on your
+            screen when you evoked the filter and allow you to select
+            another destination image. If there is a selection in this
+            image, it will be gray-scaled, else the whole preview will be
+            gray-scaled.
+          </para>
+          <para lang="ja">
+            初期状態ではこのフィルタを呼び出した画像ウィンドウに表示されている
+            画像がターゲットに選ばれ見本画像として右側に表示されます。
+          </para>
+          <para lang="ja">
+            <guilabel>ソース画像</guilabel> では画像の全体像か選択範囲内の画像
+            が見本として表示されています。 引き出しリストにはこのフィルタを
+            呼び出した時点で<acronym>GIMP</acronym>が画面に開いている画像の名前
+            が並び、 ここから他の画像を標本に選ぶこともできます。 代わりに
+            <guimenuitem>グラデーションを使用</guimenuitem> (または
+            <guimenuitem>グラデーション (逆向き) を使用</guimenuitem>) を選ぶと
+            グラデーションダイアログ上で選択されたグラデーションの色が利用され
+            ます。 選ばれたグラデーションは見本画像の区画より下のスライダ部分に
+            表示されます。 見本画像の区画は灰色無効になり、 グラデーション見本
+            には2つの小さなスライダカーソルが現れ、 ターゲット画像もしくはその
+            選択範囲の着色に使われる色がその間に絞れます。
+          </para>
+          <para lang="ja">
+            <guilabel>ターゲット画像</guilabel> も初期状態ではソース画像[と同じ
+            ]です。 このフィルタを呼び出した時点で<acronym>GIMP</acronym>が画面
+            に開いている全ての画像の名前が引き出しリストにありますので、 ここ
+            から着色の対象になる画像を選べます。 この見本画像の区画では、 
+            色付け対象に選ばれた画像に選択範囲があればその範囲内が
+            グレースケール化されて表示され、 選択範囲がなければ画像全体が
+            グレースケール化されて表示されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Show Selection</term>
+        <term lang="ja">選択範囲を表示</term>
+        <listitem>
+          <para lang="en">
+            This option toggles between the whole image and the selection,
+            if it exists.
+          </para>
+          <para lang="ja">
+            このチェックボックスは選ばれた画像に選択範囲がある場合に選択範囲内
+            だけを表示する状態と画像全体を表示する状態を切り替えます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Show Colors</term>
+        <term lang="ja">色表示</term>
+        <listitem>
+          <para lang="en">
+            This option toggles between colors and gray-scale.
+          </para>
+          <para lang="ja">
+            このオプションはカラー表示と白黒表示を切り替えます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Get Sample Colors</term>
+        <term lang="ja">ソース色を取得</term>
+        <listitem>
+          <para lang="en">
+            When you click on this button, the gradient bar below the
+            sample preview displays colors of the sample. If your sample
+            holds few colors, transitions may be abrupt. Check
+            <guilabel>Smooth Sample Colors</guilabel> option to improve them.
+          </para>
+          <para lang="en">
+            <guilabel>Use Subcolors</guilabel> is more difficult to
+            understand. Let's say first that in a greyscale image there is
+            information only for Value (luminosity, more or less light). In a
+            RGB  image, each pixel has information for the three colors and
+            Value. So, pixels with different color may have the same Value.
+            If this option is checked, colors will be mixed and applied to
+            Destination pixels having that Value. If it is unchecked, then
+            the dominating color will be applied.
+          </para>
+          <para lang="ja">
+            このボタンをクリックすると見本画像の下のグラデーションバー (小さな
+            スライダが2つあります) にソース画像から採取された色が表示されます。
+            [画像が大きいときはしばらく時間がかかります。] 画像の色数が少ないと
+            このグラデーション表示でも色と色の間に断絶が起きます。 これを改善
+            する <guilabel>滑らかなサンプル</guilabel> オプションもご利用
+            ください。
+          </para>
+          <para lang="ja">
+            <guilabel>サブカラー使用</guilabel> は理解するのが難しいオプション
+            です。 まずグレースケール画像には明度 (光度とか明るさ) の情報しか
+            ありません。 <acronym>RGB</acronym>画像だとどの画素にも3つの原色と
+            明度の情報があります。 つまり色の違う画素でも明度が同じ場合もあり
+            えます。 このオプションにチェックを入れるとそうした色が混ぜ合わ
+            され、 ターゲット画像の同じ明度の画素にその色が付きます。 この
+            オプションのチェックを入れないときは多数派の色が使用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Out Levels</term>
+        <term lang="ja">出力レベル</term>
+        <listitem>
+          <para lang="en">
+            Two input boxes and two sliders act the same: they limit the
+            color range which will be applied to destination image. You can
+            choose this range accurately. Result appears interactively in
+            destination preview.
+          </para>
+          <para lang="ja">
+            2つの数値記入欄と2つの小さなスライダは同じはたらきをします。 両数値
+            がターゲット画像を着色する色の範囲を定めます。 0から255の範囲で任意
+            の精密な調節が可能です。 ここでの操作は即座にターゲット画像の見本に
+            反映されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">In Levels</term>
+        <term lang="ja">入力レベル</term>
+        <listitem>
+          <para lang="en">
+            Three input boxes and three sliders allow to fix importance of
+            dark tones, mid tones and light tones. Result appears
+            interactively in destination preview.
+          </para>
+          <para lang="ja">
+            3つの数値記入欄や3つの小さなスライダで暗い色調と中間の色調と明るい
+            色調の比重を調節できます。 ここでの操作は即座にターゲット画像の見本
+            に反映されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Hold Intensity</term>
+        <term lang="ja">強度保持</term>
+        <listitem>
+          <para lang="en">
+            If this option is checked, the average light intensity of
+            destination image will be the same as that of source image.
+          </para>
+          <para lang="ja">
+            このオプションにチェックを入れるとターゲット画像の明るさの度合い
+            の平均がソース画像のそれと同じに保たれます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Original Intensity</term>
+        <term lang="ja">オリジナル強度</term>
+        <listitem>
+          <para lang="en">
+            If this option is checked, the In levels intensity settings will
+            not be taken in account: original intensity will be preserved.
+          </para>
+          <para lang="ja">
+            このオプションにチェックを入れると入力レベルの強度設定が無視され
+            ます。 元の強度がそのまま利用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

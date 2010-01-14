@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2008-12-10 JPL: updated to v2.6
+  2008-06-04 prokoudine: fixes to Russian translation
+  2008-01-04 ude: replaced calloutlist with orderedlist
+  2007-01-29 fixed Korean translation by Dust
+  2006-07-15 spelling fixes for german
+  2006-05-24 added croatian translation by semka
+  2006-05-02 added Korean translation by Dust
+  2006-02-27 added norwegian by kolbjorn
+-->
+<!--2009-11-08-->
+<sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-concepts-usage">
+  <title lang="en">Main Windows</title>
+  <title lang="ja">主なウィンドウ</title>
+  <indexterm lang="en">
+    <primary>Basic Setup</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キホンノカマエ">基本の構え</primary>
+  </indexterm>
+  <figure>
+    <title lang="en">The standard windows of <acronym>GIMP</acronym></title>
+    <title lang="ja">
+      <acronym>GIMP</acronym>の基本ウィンドウ群
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/standard-setup.png" format="PNG"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          The screenshot illustrates the standard windows of
+          <acronym>GIMP</acronym>
+        </para>
+        <para lang="ja">
+          このスクリーンショットは<acronym>GIMP</acronym>の標準的ウィンドウの
+          用例。
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <orderedlist>
+    <para lang="en">
+      The screenshot above shows the most basic arrangement of
+      <acronym>GIMP</acronym> windows that can be used effectively.
+    </para>
+    <para lang="ja">
+      上図は<acronym>GIMP</acronym>の最も基本的な構成の
+      スクリーンショットです。 通常はこれらで充分です。
+    </para>
+    <listitem>
+      <para lang="en">
+        <emphasis>The Main Toolbox:</emphasis>
+        Contains a set of icon buttons used to select tools.
+        May also contain the foregroud and background colors;
+        brush, pattern, and Gradient; and an icon of the active image.
+        Use
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guisubmenu>Preferences</guisubmenu>
+          <guisubmenu>Toolbox</guisubmenu>
+        </menuchoice>
+        to enable, or disable the extra items.
+      </para>
+      <para lang="ja">
+        <emphasis>ツールボックス(道具箱):</emphasis>
+        ここにはツールを起用できるアイコンボタンがずらりと並んでいます。
+        その下に描画色と背景色の区画とブラシ/パターン/グラデーションの区画、
+        さらには活性画像を縮小したアイコンがあります。 下部の区画は 
+        <link linkend="gimp-prefs-toolbox">環境設定</link> ダイアログの<quote>
+        ツールボックス</quote>のページで表示と非表示の調整ができます。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        <emphasis>Tool options:</emphasis>
+        Docked below the main Toolbox is a Tool Options dialog, showing
+        options for the currently selected tool (in this case, the Smudge
+        tool).
+      </para>
+      <para lang="ja">
+        <emphasis>ツールオプション:</emphasis>
+        ツールボックスの下に合体しているのがツール (画材) オプションを調整する
+        ダイアログです。 現在手にとっているツールの詳細が現れています。
+        (この例ではブラシで描画ツール。)
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        <emphasis>An image window:</emphasis>
+        Each image open in <acronym>GIMP</acronym> is displayed in a separate
+        window. Many
+        images can be open at the same time, limited by only the system
+        resources. Before you can do anything useful in
+        <acronym>GIMP</acronym>, you need to
+        have at least one image window open. The image window holds the
+        Menu of the main commands of <acronym>GIMP</acronym> (File, Edit,
+        Select...), which you can also get by right-clicking on the window.
+      </para>
+      <para lang="ja">
+        <emphasis>画像ウィンドウ:</emphasis>
+        <acronym>GIMP</acronym>は開いた画像をそれぞれひとつづつウィンドウで
+        表示します。 つまり同時に複数の画像を開けますが、 その枚数は
+        システムの (メモリ) 資源に制限されます。 <acronym>GIMP</acronym>
+        で何か有益なことをするのなら、 まずは少なくともひとつの画像ウィンドウ
+        を開いておく必要があります。 画像ウィンドウには<acronym>GIMP</acronym>
+        の中心的コマンド群 (ファイルメニュー、編集メニュー、選択メニュー、 
+        &hellip;) からなるメニューがあり、 これはウィンドウ内を <mousebutton>
+        第2ボタン</mousebutton> でクリックしても呼びだせます。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        The <emphasis>Layers, Channels, Paths</emphasis> dock with the
+        Layers Dialog open; note that the <quote>dialogs</quote> in the
+        <quote>dock</quote> are tabs.
+        This dialog window shows the layer structure of the currently active
+        image, and allows it to be manipulated in a variety of ways. It is
+        possible to do a few very basic things without using the Layers
+        dialog, but even moderately sophisticated <acronym>GIMP</acronym>
+        users find it
+        indispensable to have the Layers dialog available at all times.
+      </para>
+      <para lang="ja">
+        <emphasis>レイヤー、テャンネル、パス:</emphasis> のドック。
+        レイヤーダイアログが開かれています。 ちなみにダイアログはドックに入ると
+        タブ化されます。
+        このダイアログウィンドウには、いま手掛けている画像のレイヤー構造が
+        表示されており、ここでいろいろと操作できるようになっています。
+        基本的にレイヤーを使わずにできる作業も少しはありますが、
+        ちょっと<acronym>GIMP</acronym>に慣れてきたら
+        もうレイヤーダイアログなしにはやっていけないと思うことでしょう。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        <emphasis>Brushes/Patterns/Gradients:</emphasis>
+        The docked dialog below the layer dialog shows the dialogs (tabs) for
+        managing brushes, patterns and gradients.
+      </para>
+      <para lang="ja">
+        <emphasis>ブラシ/パターン/グラデーション:</emphasis>
+        レイヤーダイアログの下に合体しているのはブラシ (穂先) とパターン (文様)
+        とグラデーションを調節するダイアログ (のタブ) です。
+      </para>
+    </listitem>
+  </orderedlist>
+  <para lang="en">
+    This is a minimal setup. There are over a dozen other types of dialogs
+    used by <acronym>GIMP</acronym> for various purposes, but users typically
+    open them when they need them and close them when they are done.
+    Knowledgeable users generally keep the Toolbox (with Tool Options) and
+    Layers dialog open at all times. The Toolbox is essential to many
+    <acronym>GIMP</acronym> operations; in fact, if
+    you close it, <acronym>GIMP</acronym> will exit after confirming that that
+    is actually what you want to do. The Tool Options section is actually
+    a separate dialog, shown
+    docked to the Main Toolbox in the screenshot. Knowledgeable users almost
+    always have it set up this way: it is very difficult to use tools
+    effectively without being able to see how their options are set. The
+    Layers dialog comes into play when you work with an image with
+    multiple layers: after you advance beyond the most basic stages of
+    <acronym>GIMP</acronym> expertise, this means
+    <emphasis>almost always</emphasis>.
+    And of course it helps to display the images you're editing on the screen;
+    if you close the image window before saving your work,
+    <acronym>GIMP</acronym> will ask you whether you want to close the file.
+  </para>
+  <para lang="ja">
+    ここでは最低限のものしか出ていません。 <acronym>GIMP</acronym>では目的に
+    あわせて十数種ものダイアログがありますが、 それが必要なときに開いて、
+    用が済んだら閉じればよいのです。 要領のいいユーザは普段ツールボックス
+    (とツールオプション) とレイヤーダイアログを出したままにしています。
+    ツールボックスは<acronym>GIMP</acronym>を使うほとんどの作業の要です。
+    実際これを閉じようとすると、 本当に終了するのかどうか
+    <acronym>GIMP</acronym>は確認を求めたうえで終了します。
+    ツールオプション区画はこの例ではツールボックスに合体させていますが、
+    もともと別のダイアログです。 しかし要領のいいユーザはだいたいいつも
+    この形にしています。 ツール(画材)がどう調整されているか見ないで
+    使いこなすのは無理なことですから。 レイヤーダイアログは画像を複数の
+    レイヤーで扱う場合にのみ必要なものですが、 <acronym>GIMP</acronym>を
+    使いはじめるとまもなく これも <emphasis>ほぼ常備</emphasis> 品と
+    なることでしょう。 そしてもちろん、 加工中の画像を画面に出しておかねば
+    何もできません。 作品を保存していないまま画像ウィンドウを閉じようとすると
+    <acronym>GIMP</acronym>はこのファイルを閉じるのかどうか尋ねてきます。
+  </para>
+  <note>
+    <para lang="en">
+      If your <acronym>GIMP</acronym> layout is lost, your arrangement
+      is easy to recover using
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guisubmenu>Recently Closed Docks</guisubmenu>
+      </menuchoice>
+      ; the Windows menu command is only available while an image is open.
+      To add, close, or detach a tab from a dock, click
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="images/using/tab-icon.png"/>
+          </imageobject>
+        </inlinemediaobject>
+      </guiicon>
+      in the upper right corner of a dialog. This opens the Tab menu. Select
+      <guimenuitem>Add Tab</guimenuitem>,<guimenuitem> Close Tab
+      </guimenuitem>, or <guimenuitem>Detach Tab</guimenuitem>.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>のダイアログを消してしまっても
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guisubmenu>最近閉じたドック</guisubmenu>
+      </menuchoice>
+      と進めば簡単に配置を復元できます。 <guimenu>ウィンドウ
+      </guimenu> メニューは少なくとも1つの画像を開いている場合のみ利用可能
+      です。 タブをドックに追加したりドックから外したり消したりするには、 
+      ダイアログの右上角の
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="images/dialogs/stock-menu-left-12.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>「タブメニューボタン」</phrase>
+          </textobject>
+        </inlinemediaobject>
+      <guiicon>
+      をクリックします。 出てきたタブメニューで
+      <guimenuitem>タブに追加</guimenuitem>、
+      <guimenuitem>タブを閉じる</guimenuitem>、
+      <guimenuitem>タブを切り放す</guimenuitem>
+      のいずれかを選びます。
+    </para>
+  </note>
+  <para lang="en">
+    <acronym>GIMP</acronym> does not support placing all controls and images
+    into a single comprehensive window. The consensus in the
+    <acronym>GIMP</acronym> community, is that
+    multiple windows offers a better user experience&mdash;and a
+    single window is difficult to tdo in a way that works correctly
+    across all of the operating systems on which
+    <acronym>GIMP</acronym> runs.
+  </para>
+  <para lang="en">
+    Earlier versions of <acronym>GIMP</acronym> (up to
+    <acronym>GIMP</acronym> 1.2.5) used many dialogs:
+    advanced users often had half a dozen or more dialogs open at
+    once, scattered all over the screen and very difficult to track.
+    <acronym>GIMP</acronym> 2.0 is much better in this respect, because it
+    allows dialogs to be
+    docked together in a flexible way. (The Layers dialog in the screenshot
+    actually contains four dialogs, represented by tabs: Layers, Channels,
+    Paths, and Undo.) The system takes a little while to learn, but once you
+    learn it, we hope that you will like it.
+  </para>
+  <para lang="en">
+    The following sections walk you through the components of each of the
+    windows shown in the screenshot, explaining what they are and how they
+    work. Once you have read them, plus the section describing the basic
+    structure of <acronym>GIMP</acronym> images, you should have learned
+    enough to use <acronym>GIMP</acronym> for a
+    wide variety of basic image manipulations. You can then look through the
+    rest of the manual at your leisure (or just experiment) to learn the
+    almost limitless number of more subtle and specialized things that are
+    possible. Have fun!
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>はひとつの大きな統合ウィンドウにコントロール類や画像
+    を配置する方法はサポートしていません。 <acronym>GIMP</acronym>コミュニティ
+    の一致した意見として複数のウィンドウの方が使う側にとって使い心地がよい
+    こと、 <acronym>GIMP</acronym>が動作できる全てのオペレーティングシステムで
+    正しく単一ウィンドウ化するのは困難であること、 が挙げられます。
+  </para>
+  <para lang="ja">
+    古い版の<acronym>GIMP</acronym> (<acronym>GIMP</acronym>1.2.5以前)
+    はダイアログを多く使いました。 達人ともなると半ダースを越す数のダイアログを
+    いっぺんに開いて作業しており、
+    画面が埋め尽くされそれぞれを追い掛けるのは非常に困難でした。
+    <acronym>GIMP</acronym>2.0からはこの点をよくふまえ、 ダイアログを合体
+    させる柔軟な方法を提供しました。 (スクリーンショットに見える
+    レイヤーダイアログは、 実際はレイヤー、チャンネル、パス、操作履歴の4つの
+    ダイアログからできており、 タブ化されています。) このしくみは慣れる
+    までに少々時間が要りますが、 きっと気にいって下さると思います。
+  </para>
+  <para lang="ja">
+    この先の節ではスクリーンショットに出てきたウィンドウのそれぞれの部品を
+    ひとつひとつ見てゆき、それらの名前や役割を説明します。 ひととおり目を
+    通したあとで<acronym>GIMP</acronym>画像の基本構造を解説した章を
+    押さえれば、<acronym>GIMP</acronym> の多様な基本操作は充分マスター
+    できています。 その後はこのてびきの残りを読んでいろいろ遊んでみたり
+    (試したり) しながら、 数えきれないほどの巧妙かつ高度な技を身に付けて
+    ゆきましょう。 さあ楽しもう！
+  </para>
+  <xi:include href="toolbox.xml"/>
+  <xi:include href="imagewindow.xml"/>
+  <xi:include href="docks.xml"/>
+</sect1>

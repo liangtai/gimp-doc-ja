@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-19 j.h: revised for v2.6
+  2006-09-17 added norwegian translation by KoSt
+  2006-05-02 added Korean translation by Dust
+  2006-02-28 Added italian translation and fixed 'Shift' key meaning for
+             guide move (en,it) by ciampix
+  2006-01-06 Activated dutch translation and replaces some
+             ' by " by HdJ
+  2005-12-18 reviewed and added de translation by lexa
+  2005-11-28 replaced informalfigures by figures by lexa
+-->
+<!--2009-11-08-->
+<sect1 id="gimp-concepts-image-grid-and-guides">
+  <title lang="en">Grids and Guides</title>
+  <title lang="ja">グリッドとガイド</title>
+  <indexterm lang="en">
+    <primary>Image</primary>
+    <secondary>Grid and guides</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Grid</primary>
+    <secondary>Overview</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Guides</primary>
+    <secondary>Overview</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="グリッドトガイド">グリッドとガイド</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>グリッド</primary>
+    <secondary sortas="ガイカン">概観</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ケントウセン">ガイド</primary>
+    <secondary sortas="ガイカン">概観</secondary>
+  </indexterm>
+
+  <para lang="en">
+    You will probably have it happen many times that you need to place
+    something in an image very precisely, and find that it is not easy to do
+    using a mouse. Often you can get better results by using the arrow keys on
+    the keyboard (which move the affected object one pixel at a time, or 25
+    pixels if you hold down the <keycap>Shift</keycap>
+    key), but <acronym>GIMP</acronym> also provides you with two other aids to
+    make positioning easier: grids and guides.
+  </para>
+  <para lang="ja">
+    画像上に何かを正確に配置する必要に迫られた経験が少からずあるかと思います
+    が、 そのときマウスで作業するのは簡単ではなかったでしょう。 こんなとき
+    キーボードの <keycap>上下左右</keycap> キーを使うとうまくできます。
+    (そのままなら 1 回押すごとに1ピクセルの移動、 <keycap>Shift</keycap> キー
+    との組み合わせなら 25 ピクセルごとの移動になります。) でも<acronym>GIMP
+    </acronym>には他にもグリッド (格子線) とガイド (見当線) という2種類の
+    配置作業を楽にしてくれるしくみがあります。
+  </para>
+  <figure>
+    <title lang="en">Image used for examples below</title>
+    <title lang="ja">以下の例に供される画像</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/wilber-simple-nogrid.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect2 id="gimp-concepts-image-grid">
+    <title lang="en">The Image Grid</title>
+    <title lang="ja">グリッド</title>
+    <figure>
+      <title lang="en">Image with default grid</title>
+      <title lang="ja">既定のグリッドを重ねた画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/wilber-simple-defaultgrid.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Each image has a grid. It is always present, but by default it is not
+      visible until you activate it by toggling
+      <menuchoice>
+        <guimenu>View</guimenu>
+        <guimenuitem>Show Grid</guimenuitem>
+      </menuchoice>
+      in the image menu. If you want grids to be present more often than not,
+      you can change the default behavior by checking "Show grid" in the
+      <link linkend="gimp-prefs-image-window-appearance">
+        Image Window Appearance
+      </link>
+      page of the Preferences dialog. (Note that there are separate settings
+      for Normal Mode and Fullscreen Mode.)
+    </para>
+    <para lang="en">
+      The default grid appearance, set up when you install
+      <acronym>GIMP</acronym>, consists of
+      plus-shaped black crosshairs at the grid line intersections, with grid
+      lines spaced every 10 pixels both vertically and horizontally. You can
+      customize the default grid using the
+      <link linkend="gimp-prefs-default-grid">Default Image Grid</link>
+      page of the Preferences dialog. If you only want to change the grid
+      appearance for the current image, you can do so by choosing
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guimenuitem>Configure Grid</guimenuitem>
+      </menuchoice>
+      from the image menu: this brings up the
+      <link linkend="gimp-configure-grid-dialog">Configure Grid</link> dialog.
+    </para>
+    <para lang="ja">
+      画像にはどれもグリッドが備わっています。 常に存在するにもかかわらず
+      初期設定では不可視になっていますので、 活用するには画像ウィンドウの
+      メニューより
+      <menuchoice>
+        <guimenu>表示</guimenu>
+        <guimenuitem>グリッドを表示</guimenuitem>
+      </menuchoice>
+      として切り替えてください。 この格子線は隠れていないでいつも出ていてほしい
+      という場合は、 
+      <link linkend="gimp-prefs-image-window-appearance">環境設定</link>
+      ダイアログの<quote>画像ウィンドウの表示形式</quote>のページで <guilabel>
+      グリッド</guilabel> のところにチェックを入れればその
+      既定のふるまいを変更できます。 (このページに同じものが2つあるのはノーマル
+      モードとフルスクリーンモードで個別に設定できるようになっているためです。)
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>の導入時点の初期設定のグリッドの姿は、 黒い十字の
+      印が格子の交点にのみ描かれ、 格子の間隔は縦横ともに 10 ピクセルです。
+      グリッドの既定形式は 
+      <link linkend="gimp-prefs-default-grid">環境設定</link> ダイアログの
+      <quote>グリッド</quote>のページで設定できます。 画像に対し個別に格子線の
+      外観変更をしたい場合は画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guimenuitem>グリッドの設定...</guimenuitem>
+      </menuchoice> と進むと開かれる 
+      <link linkend="gimp-configure-grid-dialog">グリッドの設定</link> 
+      ダイアログをお使いください。
+    </para>
+    <figure>
+      <title lang="en">A different grid style</title>
+      <title lang="ja">グリッドの変装</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/wilber-simple-othergrid.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Not only can a grid be helpful for judging distances and spatial
+      relationships, it can also permit you to align things exactly with
+      the grid, if you toggle
+      <menuchoice>
+        <guimenu>View</guimenu>
+        <guimenuitem>Snap to Grid</guimenuitem>
+      </menuchoice>
+      in the image menu:  this causes the pointer to "warp" perfectly to
+      any grid line located within a certain distance.  You can
+      customize the snap distance threshold by setting "Snap distance"
+      in the <link linkend="gimp-prefs-tool-options">Tool Options</link>
+      page of the Preferences dialog, but most people seem to be happy
+      with the default value of 8 pixels.  (Note that it is perfectly
+      possible to snap to the grid even if the grid is not visible.  It
+      isn't easy to imagine why you might want to do this, though.)
+    </para>
+    <para lang="ja">
+      グリッドは図上の距離を測ったり位置関係を見るのに利用できるだけでなく、
+      物体をぴたりと升目に合わせる使い方もできます。 それにはメニューで
+      <menuchoice>
+        <guimenu>表示</guimenu>
+        <guimenuitem>グリッドにスナップ</guimenuitem>
+      </menuchoice>
+      に切り替えてください。 すると画像内のポインタは格子線のいずれかの一定
+      範囲内に近づくやいなやすっぱりとその線上に<quote>瞬間移動</quote>します。
+      このしきい値は 
+      <link linkend="gimp-prefs-tool-options">環境設定</link> ダイアログの
+      <quote>ツールオプション</quote>のページで <guilabel>
+      スナップ距離</guilabel> を設定すれば調節できますが、 
+      既定値の 8 ピクセルは多くの方にご満足いただけるものでしょう。 (格子線に
+      吸い付く機能はグリッドが不可視であっても何ら変わりなくはたらきます。 
+      でもそのような使い方をする理由はなかなか見あたりません。)
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-concepts-image-guides">
+    <title lang="en">Guides</title>
+    <title lang="ja">ガイド</title>
+    <figure>
+      <title lang="en">Image with four guides</title>
+      <title lang="ja">ガイドが4本ある画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/wilber-simple-guides.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      In addition to the image grid, <acronym>GIMP</acronym> also gives you a
+      more flexible type of positioning aid: <emphasis>guides</emphasis>.
+      These are horizontal or vertical lines you can temporarily display on
+      image while you are working on it.
+    </para>
+    <para lang="en">
+      To create a guide, simply click on one of the rulers in the iamge window
+      and pull out a guide, while holding the
+      <mousebutton>mouse&nbsp;button</mousebutton> pressed. The guide is then
+      displayed as a blue, dashed line, which follows the pointer. As soon as
+      you create a guide, the <quote>Move</quote> tool is activated and the
+      mouse pointer canges to the Move icon.
+    </para>
+    <para lang="en">
+      You can also create a guide with the
+      <link linkend="script-fu-guide-new">New Guide</link> command, which
+      allows you to precisely place the guide on the image, the
+      <link linkend="script-fu-guide-new-percent">New Guide (by
+      Percent)</link> command, or the
+      <link linkend="script-fu-guides-from-selection">New Guides from
+      Selection</link> command.
+    </para>
+    <para lang="en">
+      You can create as many guides as you like, positioned wherever you like.
+      To move a guide after you have created it, activate the Move tool in the
+      Toolbox (or press the <keycap>M</keycap> key), you can then click and
+      drag a guide. To delete a guide, simply drag it outside the image.
+      Holding down the <keycap>Shift</keycap> key, you can move everything but
+      a guide, using the guides as an effective alignment aid.
+    </para>
+    <para lang="en">
+      The behavior of the guides depends upon the <guilabel>Move</guilabel>
+      (Affect) mode of the <quote>Move</quote> tool. When
+      <emphasis>Layer</emphasis> mode is selected, the mouse pointer turns
+      into a small hand as soon as it gets close to a guide. Then the guide is
+      activated and it turns red, and you can move the guide or delete it by
+      moving it back into the ruler. If <emphasis>Selection</emphasis> mode is
+      selected, you can position a guide, but you cannot move it after that.
+    </para>
+    <para lang="en">
+      As with the grid, you can cause the pointer to snap to nearby
+      guides, by toggling
+      <menuchoice>
+        <guimenu>View</guimenu>
+        <guimenuitem>Snap to Guides</guimenuitem>
+      </menuchoice>
+      in the image menu. If you have a number of guides and they are
+      making it difficult for you to judge the image properly, you can
+      hide them by toggling
+      <menuchoice>
+        <guimenu>View</guimenu>
+        <guimenuitem>Show Guides</guimenuitem>
+      </menuchoice>.
+      It is suggested that you only do this momentarily, otherwise you
+      may get confused the next time you try to create a guide and
+      don't see anything happening.
+    </para>
+    <para lang="en">
+      If it makes things easier for you, you can change the default behavior
+      for guides in the
+      <link linkend="gimp-prefs-image-window-appearance">Image Windows
+      Appearance</link> page of the Preferences dialog. Disabling
+      <guilabel>Show&nbsp;guides</guilabel> is probably a bad idea, though,
+      for the reason just given.
+    </para>
+    <para lang="en">
+       You can remove the guides with the
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guisubmenu>Guides</guisubmenu>
+        <guimenuitem>Remove all Guides</guimenuitem>
+      </menuchoice>
+      command.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>にはグリッドの他にももっと柔軟な位置合わせ支援の
+      しくみがあります。 その名前を <emphasis>ガイド</emphasis> (見当線)
+      といいます。 水平な線も垂直な線も画像ウィンドウの定規をクリックして画像
+      までドラッグすれば作れます。
+    </para>
+    <para lang="ja">
+      ガイドを置くには、 画像ウィンドウの縦もしくは横の定規をクリックして
+      画像内にドラッグし込みます。 現れたガイドは青色の破線で表示され、 
+      ドラッグしていくマウスポインタと連動しますのでどこかでマウスボタンを
+      放してください。 ガイドを作成すると直ちに 
+      <xref linkend="gimp-tool-move"/> ツールが起用されます。
+    </para>
+    <para lang="ja">
+      <link linkend="script-fu-guide-new">新規ガイド...</link> コマンド
+      を使ってもガイドが置けます。 しかも画像上に精密にガイドを置くための 
+      <link linkend="script-fu-guide-new-percent">
+      新規ガイド (パーセントで)...</link> や、
+      <link linkend="script-fu-guides-from-selection">選択範囲から新規ガイド
+      </link> コマンドもあります。
+    </para>
+    <para lang="ja">
+      ガイドは何本でも好きなだけ作れ、 位置もすべて意のままです。
+      作ってあるガイドを移動するには、 移動ツールをツールボックスから (あるいは 
+      <keycap>M</keycap> キーで) 起用してその線をクリックしてドラッグすれば
+      できます。 ガイドを削除するには画像よりも外側にドラッグして移動すればよい
+      だけです。 
+      移動ツールでは<!-- <keycap>Shift</keycap> キーを押しながらだと-->ガイド
+      以外なら何でも移動できてガイドが整列補助に効果的に使えます。
+    </para>
+    <para lang="ja">
+      ガイドの扱い方は
+      <xref linkend="gimp-tool-move"/> ツールの <guilabel>移動対象
+      </guilabel> モードに依存します。 <quote>レイヤー</quote>を移動対象に
+      選んだときは、 マウスポインタをガイドにかざすとその姿が小さな掌の形に
+      なります。 さらにガイドが活性化されて赤くなりますので、 クリックして
+      ドラッグすると移動でき、 定規の上までドラッグすれば消去できます。 
+      <quote>選択範囲</quote>を移動対象に選んでいる場合は、 新たにガイドを
+      作成できてもいったん置くと移動ができません。
+    </para>
+    <para lang="ja">
+      格子線 (グリッド) と同じようにガイド (見当線) にもポインタを吸い付かせ
+      られます。 メニューで
+      <menuchoice>
+        <guimenu>表示</guimenu>
+        <guimenuitem>ガイドにスナップ</guimenuitem>
+      </menuchoice>
+      を有効にしてください。 ガイドの数が多過ぎて画像を見ての判断が難しくなった
+      場合には
+      <menuchoice>
+        <guimenu>表示</guimenu>
+        <guimenuitem>ガイドを表示</guimenuitem>
+      </menuchoice>
+      を切り替えて隠すとよいでしょう。 ただし隠すのは一時だけにした方がよいと
+      言われています。 その理由はあとでガイドが欲しくなって追加しても見た目には
+      何も起こらないというはめになるからです。
+    </para>
+    <para lang="ja">
+      画像上の部品を一直線に配置するのなら、 
+      <link linkend="gimp-view-snap-to-guides">ガイドにスナップ</link> 
+      を有効にしておくとそれらの部品がガイドに吸い付くようになるので
+      便利です。 全てのガイドを消去するには
+      <link linkend="gimp-image-guides-remove">すべてのガイドを削除
+      </link> をご利用ください。 ガイドを消去せずに見えなくするには 
+      <link linkend="gimp-view-show-guides">ガイドを表示</link> コマンド
+      をお使いください。
+    </para>
+    <para lang="ja">
+      ガイドの初期設定を変えたほうが良いとお考えならば 
+      <link linkend="gimp-prefs-image-window-appearance">環境設定</link> 
+      ダイアログの<quote>画像ウィンドウの表示形式</quote>のページでそのふるまい
+      の既定値を変更できます。 でも 
+      <guilabel>ガイド</guilabel> の項を無効にするのは、
+      前述した理由からあまり良い考えとはいえません。
+    </para>
+    <para lang="ja">
+      ガイドをまとめて削除したいときには
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guisubmenu>ガイド</guisubmenu>
+        <guimenuitem>すべてのガイドを削除</guimenuitem>
+      </menuchoice>
+      コマンドをご利用ください。
+    </para>
+    <note>
+      <para lang="en">
+        Another use for guides:  the
+        <link linkend="plug-in-guillotine">Guillotine</link> plugin can use
+        guides to slice an image into a set of sub-images.
+      </para>
+      <para lang="ja">
+        ガイドの別の利用法:
+        <link linkend="plug-in-guillotine">ギロチン</link>
+        プラグインはガイドをもとに画像を切り分けて新たな画像を作成します。
+      </para>
+    </note>
+  </sect2>
+</sect1>

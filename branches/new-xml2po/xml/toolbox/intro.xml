@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-12-01 up to v2.4 fr; en by PP
+  2007-05-29 KoSt: added 'no'
+  2006-09-26 added Korean contents by Mr.Dust
+  2006-01-29 added sect1info
+  2005-11-27 fixed fr lang tag by lexa
+  2005-11-26 fixed images and tips structure by romanofski
+  2005-05-15 de reviewed by axel.wernicke
+-->
+<!--2009-09-29-->
+<sect1 id="gimp-toolbox-introduction">
+  <title lang="en">The Toolbox</title>
+  <title lang="ja">ツールボックス</title>
+  <indexterm lang="en">
+    <primary>Toolbox</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツールボックス</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ドウグバコ">道具箱</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <acronym>GIMP</acronym>
+    provides a comprehensive toolbox in order to quickly perform basic tasks
+    such as making selections or drawing paths. The many tools contained
+    within The <acronym>GIMP</acronym>'s toolbox are discussed in detail here.
+  </para>
+  <para lang="en">
+    (In case you're curious, in GIMP lingo a "tool" is a way of acting on an
+    image that requires access to its display, either to let you indicate what
+    you want to do by moving the pointer around inside the display, or to show
+    you interactively the results of changes that you have made. But if you
+    want to think of a tool as a saw, and an image as a piece of wood, it
+    probably won't do you a great deal of harm.)
+  </para>
+  <para lang="en">
+    GIMP has a diverse assortment of tools that let you perform a large
+    variety of tasks. The tools can be thought of as falling into five
+    categories: <emphasis>Selection tools</emphasis>,
+    which specify or modify the portion of the image that will be affected
+    by subsequent actions; <emphasis>Paint tools</emphasis>,
+    which alter the colors in some part of the image;
+    <emphasis>Transform tools</emphasis>, which alter the geometry of the
+    image; <emphasis>Color tools</emphasis>, which alter the distribution of
+    colors across the entire image; and <emphasis>Other tools</emphasis>,
+    which don't fall into the other four categories.
+  </para>
+  <para lang="en">
+    Most tools can be activated by clicking on an icon in the Toolbox.
+    Some, however (namely, the Color tools), are accessible only via
+    the menus, either as
+    <menuchoice>
+      <guimenu>Colors</guimenu>
+    </menuchoice>
+    or as
+    <menuchoice>
+      <guimenu>Tools</guimenu>
+      <guisubmenu>Colors</guisubmenu>
+    </menuchoice>.
+    Every tool, in fact, can be activated from the <emphasis>Tools</emphasis>
+    menu; also, every tool can be activated from the keyboard using an
+    accelerator key.
+  </para>
+  <para lang="en">
+    In the default setup, created when GIMP is first installed, not all tools
+    show icons in the Toolbox: the Color tools are omitted. You can customize
+    the set of tools that are shown in the Toolbox using the
+    <link linkend="gimp-tools-dialog">Tools dialog</link>.
+    There are two reasons you might want to do this: first, if you only
+    rarely use a tool, it might be easier to find the tools you want if the
+    distracting icon is removed; second, if you use the Color tools a lot, you
+    might find it convenient to have icons for them easily available. In any
+    case, regardless of the Toolbox, you can always access any tool at any
+    time using the <guimenu>Tools</guimenu> menu from an image menubar.
+  </para>
+  <para lang="en">
+    The shape of the cursor changes when it is inside an image, to one that
+    indicates which tool is active (if in <guimenu>Preferences</guimenu> you have
+    set
+    <menuchoice>
+      <guimenu>Image Windows</guimenu>
+      <guisubmenu>Mouse Pointers</guisubmenu>
+      <guimenuitem>Pointer mode</guimenuitem>
+      <guimenuitem>Tool icon</guimenuitem>
+    </menuchoice>).
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>には完全なツールボックスがあり、 選択範囲をとったり
+    パスをひいたりするような基本的な操作を素早くこなせます。
+    ここでは<acronym>GIMP</acronym>のツールボックスに載っている
+    たくさんのツールについて吟味します。
+  </para>
+  <para lang="ja">
+    (知識欲旺盛な方向け: <acronym>GIMP</acronym>の用語法ではツールとは
+    ディスプレイ表示を通して画像を扱う方法のうち、 マウスポインタを画面上で
+    動かして意図を示す必要のあるものと、 加工の効果を見ながら行えるものを
+    指します。 しかしツールをのこぎりに、 画像を一種の材木と捉えて
+    考えてみても、 大してまずいことにもならないでしょう。)
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>は様々な用途に対応する多種多様なツールを
+    備えています。 ツールを分類すると、
+    画像を加工する前にその対象となる部分を指定し調整するための
+    <emphasis>選択ツール</emphasis>、 画像を部分的に着色し、
+    あるいは色を変える <emphasis>描画ツール</emphasis>、
+    画像を幾何学的に変形する <emphasis>変換ツール</emphasis>、
+    画像全体の色の配分を変える <emphasis>色ツール</emphasis>、
+    以上4つの範疇にあてはまらない <emphasis>その他のツール</emphasis>
+    の5つの範疇に振り分けられます。
+  </para>
+  <para lang="ja">
+    ほとんどのツールはツールボックスのアイコンをクリックすれば起用できます。
+    対して一部のツール (初期設定なら色ツール) はメニューを通してのみ起用
+    できます。 呼び出し方はメニューより
+    <menuchoice>
+      <guimenu>ツール</guimenu>
+      <guimenuitem>色ツール</guimenuitem>
+    </menuchoice>
+    と辿った先のサブメニュー、 もしくは <guimenu>色</guimenu>
+    メニューのサブメニューを起用です。 結局のところ、全てのツールは 
+    <guimenu>ツール</guimenu> 
+    メニューから起用できますし、 いずれの呼び出しもキーボードショートカットが
+    あります。
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>を初めてインストールした時点での初期設定では、
+    全てのツールがツールボックス上でアイコン化されているわけではありません。
+    色ツールは省かれています。 ツールボックスに載せるツールは
+    <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link>で
+    選定できます。 ここで調整すると助かる理由は2つあるでしょう。 第一に、
+    ツールを頻繁には使わないけれど、 イザというときアイコンを見付けやすい
+    ように目障りなアイコンは片付けておきたいとき、 第二に、 カラーツールを
+    頻繁に使うので、 すぐに利用しやすいと都合がよいとき。 どちらにしても、
+    ツールボックスの内容にかかわらず <guimenu>ツール
+    </guimenu> メニューを通せばいつでもどんなツールも呼びだせます。
+  </para>
+  <para lang="ja">
+    カーソルの形状は画像上で様々に変化し、 現在起用しているツールが何かを
+    示しています。 この設定は 
+    <link linkend="gimp-prefs-image-window">環境設定</link> ダイアログの<quote>
+    画像ウィンドウ</quote>のページで
+    <menuchoice>
+      <guisubmenu>マウスポインタ</guisubmenu>
+      <guimenuitem>ポインタのモード</guimenuitem>
+    </menuchoice>
+    に <guimenuitem>ツールアイコン</guimenuitem> を指定している場合に限ります。
+  </para>
+
+  <sect2 id="gimp-tool-options-dialog">
+    <title lang="en">Tool Options</title>
+    <title lang="ja">ツールオプション</title>
+    <figure>
+      <title lang="en">
+        Tool Options dialog for the Rectangle Select tool.
+      </title>
+      <title lang="ja">矩形選択ツールのときのツールオプションダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-rectsel.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      If you have things set up like most people do, activating a tool causes
+      its Tool Options dialog to appear below the Toolbox. If you don't have
+      things set up this way, you probably should: it is very difficult to use
+      tools effectively without being able to manipulate their options.
+    </para>
+    <para lang="ja">
+      ほとんど皆がしているような設定にしておれば、 ツールを起用したときに
+      ツールボックスの下にツールオプションダイアログが現れます。 違う設定を
+      されていた方もおそらくそうなるようにせざるを得なくなるでしょう。
+      オプションを操作できない状態でツールを使いこなすのは大変難しいことです。
+    </para>
+    <tip>
+      <para lang="en">
+        The Tool Options appear beneath the Toolbox in the default
+        setup.  If you lose it somehow, you can get it back by creating
+        a new Tool Options dialog using
+        <menuchoice>
+          <guimenu>File</guimenu>
+          <guisubmenu>Dialogs</guisubmenu>
+          <guimenuitem>Tool Options</guimenuitem>
+        </menuchoice>
+        and then docking it below the Toolbox.  See the section on
+        <link linkend="gimp-concepts-docks">Dialogs and Docking</link> if you
+        need help.
+      </para>
+      <para lang="ja">
+        初期設定ではツールオプションがツールボックスの下に現れるように
+        なっています。 不意にそれを閉じてしまった場合は、 次の方法で戻せます。
+        メニューより
+        <menuchoice>
+          <guimenu>ウィンドウ</guimenu>
+          <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+          <guimenuitem>ツールオプション</guimenuitem>
+        </menuchoice> と辿ればツールオプションダイアログが現れますから、
+        ツールボックスの下に連接してください。 その方法は
+        <link linkend="gimp-concepts-docks">ダイアログとその連接</link>
+        の節にあります。
+      </para>
+    </tip>
+    <para lang="en">
+      Each tool has its own specific set of options. The choices you make for
+      them are kept throughout the session, until you change them. In fact,
+      the tool options are maintained from session to session. The persistance
+      of tool options across sessions can sometimes be an annoying nuisance: a
+      tool behaves very strangely, and you can't figure out why until you
+      remember that you were using some unusual option the last time you
+      worked with it, two weeks ago.
+    </para>
+    <para lang="en">
+      At the bottom of the Tool Options dialog appear four buttons:
+    </para>
+    <para lang="ja">
+      ツールはそれぞれに定められるオプションがあります。 選んだオプションは
+      変更するまでは作業中もひきつづき有効です。 具体的には、 前の作業で
+      使ったオプションが次の作業にひきつがれるのです。 このような作業間の
+      ツールオプションの継続性はしばしば迷惑な事態をひきおこします。
+      あるツールが非常に奇妙な動作をするのですが、 理由がなかなか分かりません。
+      ようやく気付いたのは、 2週間前の作業でこのツールのオプションに
+      並はずれた値を設定していたことだった、 などという事態です。
+    </para>
+    <para lang="ja">ツールオプションダイアログの底部には4つのボタンがあります:
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/reg-button.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          <phrase lang="en">Save Options to</phrase>
+          <phrase lang="ja">オプションをファイルに保存...</phrase>
+        </term>
+        <listitem>
+          <para lang="en">
+            This button allows you to save the settings for the current tool,
+            so that you can restore them later. It brings up a small dialog
+            allowing you to give a name to the array of saved options. When
+            you Restore options, only saved sets for the active tool are
+            shown, so you need not worry about including the name of the tool
+            when you assign a name here.
+          </para>
+          <para lang="ja">
+            このボタンは現在使用中のツールの設定を後で使えるように保存します。
+            小さなダイアログが現れ、 保存される一揃いのオプションにつけたい
+            名前をここに記入します。
+            保存されたオプションを復帰させる際には、 現在使用しているツール
+            に関わりのあるファイルのみ列挙されることから、 ファイルに与える
+            名前にはツール名を明記しなくても大丈夫です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/resto-button.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          <phrase lang="en">Restore Options</phrase>
+          <phrase lang="ja">オプションをファイルから読み込む...</phrase>
+        </term>
+        <listitem>
+          <para lang="en">
+            This button allows you to restore a previously saved set of
+            options for the active tool. If no option-sets have ever been
+            saved for the active tool, the button will be insensitive.
+            Otherwise, clicking it will bring up a menu showing the names of
+            all saved option sets: choosing a menu entry will apply those
+            settings.
+          </para>
+          <para lang="ja">
+            このボタンは保存してあった一まとまりのオプションを現在使用中の
+            ツールに読み込ませます。 まだ一件も現在使用中のツールの
+            オプション群を保存していないときは、 このボタンは灰色無効に
+            なっています。 逆に有効になっているときクリックすると、 
+            保存されている全てのオプションの名前が並ぶメニューが出てきます。
+            メニューからひとつを選ぶと設定に反映されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/del-button.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          <phrase lang="en">Delete Options</phrase>
+          <phrase lang="ja">保存したオプションの削除...</phrase>
+        </term>
+        <listitem>
+          <para lang="en">
+            This button allows you to delete a previously saved set of options
+            for the active tool. If no option-sets have ever been saved for
+            the active tool, the button will be insensitive. Otherwise,
+            clicking it will bring up a menu showing the names of all saved
+            option sets: choosing a menu entry will delete those settings.
+          </para>
+          <para lang="ja">
+            このボタンは保存してあった現在使用中のツールに関連のある
+            オプションの一組を削除します。 まだ一件も現在使用中のツールの
+            オプション群を保存していないときは、 このボタンは灰色無効に
+            なっています。 逆に有効になっているときクリックすると、 
+            保存されている全てのオプション群の名前が並ぶメニューが出てきます。
+            メニューからひとつを選ぶとその設定が削除されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/reset-button.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          <phrase lang="en">Reset Options</phrase>
+          <phrase lang="ja">
+            このツールオプションをリセット;
+            Shift すべてのツールオプションをリセット
+          </phrase>
+        </term>
+        <listitem>
+          <para lang="en">
+            This button resets the options for the active tool to their
+            default values.
+          </para>
+          <para lang="ja">
+            このボタンは現在使用中のツールもしくは全てのツールに初期設定値を
+            読み込ませます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>

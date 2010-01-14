@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-06-11 j.h: cleared up mess in images
+  2008-12-16 j.h: Updated en;fr to v2.6
+  2008-04-20 j.h: deleted reference to MSIE in all languages
+  2008-03-17 ude: fixed/moved help-ids
+  2007-09-03 j.h : Revised en;fr for v2.4 : no change
+  2007-08-19 alex falappa: added italian translation
+  2006-12-26 Created by j.h
+-->
+<!--2009-11-15-->
+<sect2 id="gimp-export-dialog">
+  <title lang="en">Export File</title>
+  <title lang="ja">ファイルのエクスポート</title>
+  <indexterm lang="en">
+    <primary>Export File</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ファイルノエクスポート">ファイルのエクスポート</primary>
+  </indexterm>
+  <anchor id="gimp-export-confirm-dialog" xreflabel="Export File"/>
+  <para lang="en">
+    The <quote>Export file</quote> is opened when you try to save a file in
+    a format which does not support several layers or transparency.
+  </para>
+  <para lang="ja">
+    <quote>ファイルのエクスポート</quote>ダイアログは、 画像をある種のファイル
+    に保存しようとしたときに、 そのファイル形式が複数のレイヤー構造や透明効果を
+    受け入れないものである場合に出てきます。
+  </para>
+  <variablelist>
+    <title lang="en">The file format does not support animation</title>
+    <title lang="ja">アニメーション機能のないファイル形式</title>
+    <varlistentry>
+      <term>Portable Network Graphics (PNG)</term>
+      <listitem>
+        <indexterm>
+          <primary>PNG</primary>
+        </indexterm>
+        <indexterm>
+          <primary>.png</primary>
+        </indexterm>
+        <figure>
+          <title lang="en">Export PNG file dialog</title>
+          <title lang="ja"><acronym>PNG</acronym>ファイル形式に変換</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/dialogs/export-file-png.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          The PNG format, a lossless format, supports transparency but
+          doesn't support animation. So, you only can <guilabel>Flatten
+          image</guilabel>, i.e merge layers into a single one,
+          according to the mode you have selected for the image.
+        </para>
+        <para lang="ja">
+          <acronym>PNG</acronym>ファイル形式は画質の劣化がなく透明度も扱えます
+          が、 アニメーション機能がありません。 [レイヤーも扱えません。]
+          ですから、 複数のレイヤーがあるときはそれらを全て統合する <guilabel>
+          画像の統合</guilabel> か、 選択的に統合する <guilabel>
+          可視レイヤーの統合</guilabel> のどちらかを選ばなくてはなりません。
+          またそのとき画像の色空間モードにより、 まとめられて1層になった
+          レイヤーのモードが決まります。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>JPEG File Interchange Format (JFIF, JPEG)</term>
+      <listitem>
+        <indexterm>
+          <primary>JPG</primary>
+        </indexterm>
+        <indexterm>
+          <primary>JPEG</primary>
+        </indexterm>
+        <indexterm>
+          <primary>.jpg</primary>
+        </indexterm>
+        <figure>
+          <title lang="en">Export JPEG file dialog</title>
+          <title lang="ja"><acronym>JPEG</acronym>ファイル形式に変換</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="JPG"
+                fileref="images/dialogs/export-file-jpeg.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          The JPEG format, a compression format with loss, doesn't support
+          animation nor transparency. The file will be flattened and
+          transparency will be replaced with the background color of Toolbox.
+        </para>
+        <para lang="ja">
+          <acronym>JPEG</acronym>ファイル形式は画質の劣化がある圧縮形式で、
+          アニメーション機能や透過効果はありません。 レイヤーは統合され、
+          透過部分はツールボックスに示される背景色で置き換えられます。
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <variablelist>
+    <title lang="en">The file format supports animation</title>
+    <title lang="ja">アニメーション機能があるファイル形式</title>
+    <varlistentry>
+      <term>Multiple-Image Network Graphics (MNG)</term>
+      <listitem>
+        <indexterm>
+          <primary>MNG</primary>
+        </indexterm>
+        <indexterm>
+          <primary>.mng</primary>
+        </indexterm>
+        <figure>
+          <title lang="en">Export MNG File Dialog</title>
+          <title lang="ja"><acronym>MNG</acronym>ファイル形式に変換</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="JPG"
+                         fileref="images/dialogs/export-file-mng.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en"><!--changed 2008-03-17-->
+          The MNG format is an animation format and supports 256 transparency
+          levels (which, at last, are recognized by Internet Explorer 7). The
+          dialog offers two options. Select <guilabel>Save as
+          animation</guilabel>, since <guilabel>Flatten Image</guilabel> does
+          not make sense here. Note that MNG images are not recognized by
+          <acronym>GIMP</acronym>.
+        </para>
+        <para lang="ja">
+          <acronym>MNG</acronym>ファイル形式はアニメーション用の形式で、 256
+          階調の透明度を扱えます。 (ようやく最近になって <application>Internet
+          Exploer 7</application> で認識されるようになりました。) この
+          ダイアログには2つの選択肢があります。 <guilabel>画像の統合</guilabel>
+          を選んでしまうとこのファイル形式の意味がないので、 <guilabel>
+          アニメーションとして保存</guilabel> を選ぶことになるでしょう。
+          ちなみに<acronym>MNG</acronym>画像は<acronym>GIMP</acronym>で認識
+          されませんのでご注意ください。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term lang="en">Graphics Interchange Format (GIF)</term>
+      <listitem>
+        <indexterm>
+          <primary>GIF</primary>
+        </indexterm>
+        <indexterm>
+          <primary>.gif</primary>
+        </indexterm>
+        <figure>
+          <title lang="en">Export GIF File Dialog</title>
+          <title lang="ja"><acronym>GIF</acronym>ファイル形式に変換</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="images/dialogs/export-file-gif.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para lang="en">
+          The GIF format, less sophisticated than the MNG format, supports 256
+          colors and 2 transparency levels only.
+        </para>
+        <para lang="en">
+          The dialog offers you either <guilabel>Flatten Image</guilabel>
+          or <guilabel>Save as animation</guilabel>. See the glossary
+          (<xref linkend="glossary-gif"/>) for more details about the GIF
+          format.
+        </para>
+        <para lang="en">
+          If you have not transformed your image into a 256 colors indexed
+          image before, this dialog will ask you choose between
+          <guilabel>Convert to grayscale</guilabel> and
+          <guilabel>Convert to indexed using default settings</guilabel>.
+          Be careful: an indexed image undergoes a severe loss of colors and
+          the added palette can give it a size bigger and a quality less than
+          if it was saved as JPEG.
+        </para>
+        <para lang="ja">
+          <acronym>GIF</acronym>ファイル形式は<acronym>MNG</acronym>形式ほど
+          高度ではなく、 色数に 256 色までの制限があり、 透過効果は2階調しか
+          ありません。
+        </para>
+        <para lang="ja">
+          このダイアログではまず <guilabel>画像の統合</guilabel> により一枚絵に
+          するか、 <guilabel>アニメーションとして保存</guilabel> するかを決め
+          ます。 <acronym>GIF</acronym>ファイル形式についての詳しい説明は
+          <link linkend="glossary-gif">用語集</link> をご覧ください。
+        </para>
+        <para lang="ja">
+          画像がまだ 256 色にインデックス化されていないときは、 このダイアログで
+          <guilabel>既定値でインデックス画像に自動変換する</guilabel> か、
+          <guilabel>グレースケールに変換</guilabel> するかのどちらかを選択でき
+          ます。 [自動変換ではなくインデックス化の様々なオプションを活用したい
+          ときは、 一旦この保存作業を中止してから画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guisubmenu>モード</guisubmenu>
+            <guimenuitem>インデックス...</guimenuitem>
+          </menuchoice>
+          でインデックス化カラーモードに変換して、 保存してください。]
+          <emphasis>ご注意</emphasis>: インデックス化画像はフルカラーに比べ色の
+          劣化が大きいこと、 インデックス化パレットの付加により一定のファイル
+          サイズ増加が見込まれること、 <acronym>JPEG</acronym>ファイル形式に
+          比べ画質が劣ることをご承知おきください。
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</sect2>

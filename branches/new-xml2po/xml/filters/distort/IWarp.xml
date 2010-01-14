@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-19 alex falappa: enabled and reviewed italian translation
+  2007-08-13 Added Spanish translation by AntI
+  2007-04-24 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050904 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-iwarp">
+  <title lang="en">IWarp</title>
+  <title lang="ja">対話的歪め...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Distorts</secondary>
+    <tertiary>IWarp</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>IWarp</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary sortas="タイワテキユガメ">対話的歪め</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="タイワテキユガメ">対話的歪め</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Applying example for the IWarp filter</title>
+      <title lang="ja">対話的歪めフィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-iwarp.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>IWarp</quote> applied</para>
+          <para lang="ja"><quote>対話的歪め</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter allows you to deform interactively some parts of the image
+      and, thanks to its Animate option, to create the elements of a fade
+      in/fade out animation between the original image and the deformed one,
+      that you can play and use in a Web page.
+    </para>
+    <para lang="en">
+      To use it, first select a deform type then click on the Preview and drag
+      the mouse pointer.
+    </para>
+    <para lang="ja">
+      <guimenuitem>対話的歪め...</guimenuitem> フィルタは
+      相互対話的に画像を変形させられます。 さらにアニメーションオプションを
+      使えば元画像から変形後の画像までの間にフェードインやフェードアウトする
+      部品を作成でき、 ウェブページに活用できます。
+    </para>
+    <para lang="ja">
+      このプラグインを使う際には先に変形方法を選択してからプレビュー画面を
+      マウスでクリックし曳いてください。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Distort</guisubmenu>
+        <guimenuitem>Iwarp</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>対話的歪め...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <para lang="en">
+      The options of this filter are so numerous that they come in two tabs.
+      The first tab contains general options. The second tab holds animation
+      options.
+    </para>
+    <para lang="ja">
+      このフィルタのオプションはいろいろたくさんありますので2つのタブに分かれて
+      います。 最初のタブは全般的なオプションが入っています。 2番目のタブは
+      アニメーション用のオプションです。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Settings</term>
+        <term lang="ja">設定</term>
+        <listitem>
+          <figure>
+            <title lang="en">
+              <quote>IWarp</quote> filter options (Settings tab)
+            </title>
+            <title lang="ja">
+              <quote>対話的歪め</quote>フィルタのオプション (設定タブ)
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/filters-distort-iwarp.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            The Settings tab allows you to set parameters which will affect
+            the preview you are working on. So, you can apply different deform
+            modes to different parts of the preview.
+          </para>
+          <para lang="ja">
+            設定タブではプレビュー画面で加工をすすめながらさまざまなパラメータ
+            を調節できます。 つまりプレビュー画面で加工中に歪めモードや
+            パラメータをいろいろ切り替えて重ねて適用できるということです。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">プレビュー</term>
+              <listitem>
+                <para lang="en">
+                  Here, the Preview is your work space: You click on the
+                  Preview and drag mouse pointer. The underlying part of image
+                  will be deformed according to the settings you have chosen.
+                  If your work is not convenient, press the
+                  <emphasis>Reset</emphasis> button.
+                </para>
+                <para lang="ja">
+                  このプレビュー画面が作業場になります。 画面をクリックして
+                  曳いてください。 画像のなぞられた部分が現在の歪めモードと
+                  パラメータに従って加工されます。 作業内容が都合悪くなった
+                  ときは <guibutton>リセット</guibutton> 
+                  ボタンで加工前の状態に戻せます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Deform Mode</term>
+              <term lang="ja">歪めモード</term>
+              <listitem>
+                <itemizedlist>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Move</guilabel>: Allows you to
+                      <emphasis>stretch</emphasis> parts of the image.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>移動</guilabel> モードは
+                      画像を部分的に伸ばしたり縮めたりできます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Remove</guilabel>: This remove the distortion
+                      where you drag the mouse pointer, partially or
+                      completely. This allows you to avoid pressing Reset
+                      button, working on the whole image. Be careful when
+                      working on an animation: this option will affect one
+                      frame only.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>ゆがみを直す</guilabel> 
+                      モードはポインタでなぞった部分の歪みを徐々に
+                      とり除きます。 これにより 
+                      <guibutton>リセット</guibutton> ボタン
+                      を使わなくても部分的に画像を元に戻せます。 ただし動画化の
+                      作業をされているときはご注意ください。 
+                      このモードは1フレームだけしか作用しません。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Grow</guilabel>: This option inflates the
+                      pointed pattern.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>広げる</guilabel> モードは
+                      なぞった部分をふくらませます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Shrink</guilabel>: Self explanatory.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>すぼめる</guilabel> モードは
+                      なぞった部分をすぼめます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Swirl CCW </guilabel>: Create a vortex counter
+                      clockwise.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>左回りの渦巻</guilabel> 
+                      モードはなぞった位置を中心として反時計回りの渦巻状に画像
+                      を歪めます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Swirl CW </guilabel>: Create a
+                      vortex clockwise.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>右回りの渦巻</guilabel> 
+                      モードはなぞった位置を中心として時計回りの渦巻状に画像を
+                      歪めます。
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Deform Radius</term>
+              <term lang="ja">ゆがめる半径</term>
+              <listitem>
+                <para lang="en">
+                  Defines the radius, in pixels (5-100), of the filter action
+                  circle around the pixel pointed by the mouse.
+                </para>
+                <para lang="ja">
+                  ブラシの大きさのようになぞった部分のフィルタが及ぶ幅をここで
+                  設定します。 値は半径で示し、 単位はピクセル、 範囲は 5 から
+                  100 です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Deform Amount</term>
+              <term lang="ja">ゆがめる量</term>
+              <listitem>
+                <para lang="en">
+                  Sets how much out of shape your image will be put (0.0-1.0).
+                </para>
+                <para lang="ja">
+                  ひと撫でする間にどれほど歪めるかをここで設定します。 範囲は 
+                  0.0 から 1.0 です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Bilinear</term>
+              <term lang="ja">双線型</term>
+              <listitem>
+                <para lang="en">
+                  This option smooths the IWarp effect.
+                </para>
+                <para lang="ja">
+                  このオプションは歪め効果を滑らかに仕上げます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Adaptive Supersample</term>
+              <term lang="ja">適応型スーパーサンプリング</term>
+              <listitem>
+                <para lang="en">
+                  This option renders a better image at the cost of increased
+                  calculation.
+                </para>
+                <para lang="en">
+                  <guilabel>Max Depth</guilabel>: this value limits the maximum
+                  sampling iterations performed on each pixel.
+                </para>
+                <para lang="en">
+                  <guilabel>Threshold</guilabel>: when the value difference
+                  between a pixel and the adjacent ones exceeds this threshold
+                  a new sampling iteration is performed on the pixel.
+                </para>
+                <para lang="ja">
+                  <xref link="glossary-supersampling"/> を行なって画像加工を
+                  より高品質にしますが、 計算処理が増大します。
+                  適応型とは色変化のある部分に集中して色標本抽出の細分化を
+                  繰り返すスーパーサンプリングの技法です。
+                </para>
+                <para lang="ja">
+                  <guilabel>最大深度</guilabel> は色の違いを
+                  見極めるために標本抽出を繰り返す限度を設定します。
+                </para>
+                <para lang="ja">
+                  <guilabel>しきい値</guilabel> は繰り返しの
+                  前提となる色の値の相似と相違の区切りを指定します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Animate</term>
+        <term lang="ja">動画化</term>
+        <listitem>
+          <figure>
+            <title lang="en">
+              <quote>IWarp</quote> filter options (Animation tab)
+            </title>
+            <title lang="ja">
+              <quote>対話的歪め</quote>フィルタのオプション (動画化タブ)
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/iwarp-options-2.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This tab allows to generate several intermediate images between
+            the  original image and the final deformation of this image. You
+            can play this animation thanks to the
+            <link linkend="plug-in-playback">Playback</link> plug-in.
+          </para>
+          <para lang="ja">
+            元画像から最終的な歪んだ画像までの間を変遷する様子を描くいくつかの
+            画像をこのタブ上で作成できます。 作成した動画は 
+            <link linkend="plug-in-playback">動画再生</link> プラグインで鑑賞
+            できます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Number of Frames</term>
+              <term lang="ja">フレーム数</term>
+              <listitem>
+                <para lang="en">
+                  That's the number of images in your animation (2-100). These
+                  frames are stored as layers attached to your image. Use the
+                  XCF format when saving it.
+                </para>
+                <para lang="ja">
+                  この数値は動画のコマ数です。 設定可能な範囲は 2 コマから 100 
+                  コマです。 作成されたコマは画像にレイヤーとして追加されます。
+                  <acronym>XCF</acronym>形式が保存ファイルに使えます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Reverse</term>
+              <term lang="ja">逆転</term>
+              <listitem>
+                <para lang="en">
+                  This option plays the animation backwards.
+                </para>
+                <para lang="ja">
+                  このオプションは動画を逆再生します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Ping-Pong</term>
+              <term lang="ja">ピンポン</term>
+              <listitem>
+                <para lang="en">
+                  When the animation ends one way, it goes backwards.
+                </para>
+                <para lang="ja">
+                  動画の最後のコマに達すると逆再生します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

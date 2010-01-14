@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-09 ude: moved "activate filter" paras to separate sect3;
+             use Norwegian example images for other languages too
+  2007-09-04 AntI: added 'es'
+  2007-05-07 KoSt: added 'no'
+  2006-12-20: added German translation by ude
+  2005-11-14: created by julien hardelin
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-illusion">
+  <title lang="en">Illusion</title>
+  <title lang="ja">幻...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Map</secondary>
+    <tertiary>Illusion</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Illusion</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>マップ</secondary>
+    <tertiary sortas="マボロシ">幻</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="マボロシ">幻</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">幻</title>
+      <title lang="ja">幻フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/kvitveis-orig.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/kvitveis-illusion.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Fractal Trace</quote> applied</para>
+          <para lang="ja"><quote>幻</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      With this filter, your image (active layer or selection) looks like
+      a kaleidoscope. This filter duplicates your image in many copies, more
+      or less dimmed and split, and puts them around the center of the image.
+    </para>
+    <para lang="ja">
+      <guimenuitem>幻...</guimenuitem> フィルタは活性レイヤー
+      もしくはその選択範囲の画像を万華鏡のように加工します。 このフィルタは画像
+      の複製を多数作成して切り刻んだり多少陰らせてから画像の中央をとり囲むよう
+      に配置します。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+          <guisubmenu>Map</guisubmenu>
+          <guimenuitem>Illusion</guimenuitem>
+        </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+          <guisubmenu>マップ</guisubmenu>
+          <guimenuitem>幻...</guimenuitem>
+        </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Illusion</quote> filter options</title>
+      <title lang="ja"><quote>幻</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-map-illusion.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Divisions</term>
+        <term lang="ja">分割</term>
+        <listitem>
+          <para lang="en">
+            That's the number of copies you want to apply to image. This
+            value varies from -32 to 64. Negative values invert
+            kaleidoscope rotation.
+          </para>
+          <para lang="ja">
+            この数値は画像につけ加えたい複製の数です。 -32 から 64 までの範囲で
+            指定します。 負の値は万華鏡効果の回転の剥きを逆転します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">モード 1, モード 2</term>
+        <listitem>
+          <para lang="en">
+            You have two arrangement modes for copies in image:
+          </para>
+          <figure>
+          <para lang="ja">
+            画像上にその複製の断片を配置する方法にはつぎの2通りがあります。
+          </para>
+          <figure>
+            <title lang="en">
+              From left to right: original image, mode 1, mode 2, with
+              Divisions=4
+            </title>
+            <title lang="ja">
+              幻フィルタのモードの例 (分割を 4 に設定)
+              <!--左から順に、 元画像、 モード 1、 モード 2
+              (いずれも分割を 4 に設定)-->
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/map-illusiona.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Original image</para>
+                <para lang="ja">元画像</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/map-illusionb.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">mode 1</para>
+                <para lang="ja">モード 1</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/map-illusionc.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">mode 2</para>
+                <para lang="ja">モード 2</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

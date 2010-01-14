@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-21 j.h: revised for v2.6
+  2008-04-03 Mr.Dust : added 'ko'
+  2007-05-14 j.h added "Make a solid BG transparent"
+  2007-04-04 alex falappa: fixes in italian language
+  2006-09-06 added norwegian translation by KoSt
+  2006-07-23 manuelq: added spanish translation
+  2006-05-02 Dust: added Korean translation
+  2006-03-31 j.h: changed "making a selection transparent"
+  2006-01-13 lexa: added translation for de an made file docbook compliant
+  2005-11-28 lexa: replaced informalfigures by figures
+  050905: Added Making a selection semi-transparente
+-->
+<!--2009-11-07-->
+<sect1 id="gimp-concepts-selection">
+  <title lang="en">The Selection</title>
+  <title lang="ja">選択</title>
+
+  <indexterm lang="en">
+    <primary>Selections</primary>
+    <secondary>Concepts</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ガイネン">概念</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>クイックマスク</primary>
+  </indexterm>
+
+  <para lang="en">
+    Often when you operate on an image, you only want part of it to be
+    affected. In <acronym>GIMP</acronym>, you make this happen by
+    <emphasis>selecting</emphasis>
+    that part. Each image has a <emphasis>selection</emphasis>
+    associated with it. Most, but not all, <acronym>GIMP</acronym> operations
+   act only on the selected portions of the image.
+  </para>
+  <para lang="ja">
+    画像の加工をする際に、 部分的に限定して操作したい場合がよくあります。
+    <acronym>GIMP</acronym>ではその部分を <emphasis>選択</emphasis> することで
+    作業をすすめます。 どんな画像もこの意味での <emphasis>選択範囲</emphasis>
+    をひとつ持っています。 <acronym>GIMP</acronym>の操作はほとんど全て
+    画像の選択領域に対してのみ及ぼされます。
+  </para>
+  <figure>
+    <title lang="en">How would you isolate the tree?</title>
+    <title lang="ja">どうすればこの樹を単独にできるか?</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/fog-tree-example.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    There are many, many situations where creating just the right selection is
+    the key to getting the result you want, and often it is not easy to
+    do. For example, in the above image, suppose I want to cut the tree out
+    from its background, and paste it into a different image. To do
+    this, I need to create a selection that contains the tree and nothing but
+    the tree. It is difficult because the tree has a complex shape, and
+    in several spots is hard to distinguish from the objects behind it.
+  </para>
+  <para lang="ja">
+    いかに的確に選択をするかが結果を大きく左右するとの事例は枚挙に暇が
+    ありませんが、 なかなか容易くは為し得ません。 例えば上図の画像の問いには、
+    背景を残し中央の樹を切り取って、 別の画像に樹のほうを貼りつけようかと
+    思っています。 この作戦では樹の部分だけを選択しなければなりません。
+    そこが難しいところで、 樹の形は複雑ですしところどころ背景の物体と
+    見分けがつかなくなっています。
+  </para>
+  <figure>
+    <title lang="en">Selection shown as usual with dashed line.</title>
+    <title lang="ja">普段、 選択範囲を示すのは破線だ。</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/select-outline.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    Now here is a very important point, and it is crucial to understand this.
+    Ordinarily when you create a selection, you see it as a dashed line
+    enclosing a portion of the image. The common, not entirely accurate,
+    idea you could get from this, is that
+    the selection is a sort of container, with the selected parts of the image
+    inside, and the unselected parts outside. Although this concept of
+    selection is okay for many purposes, it is not really correct.
+  </para>
+  <para lang="en">
+    Actually the selection is implemented as a <emphasis>channel</emphasis>.
+    In terms of its internal structure, it is identical to the red, green,
+    blue, and alpha channels of an image. Thus, the selection has a value
+    defined at each pixel of the image, ranging between 0 (unselected) and 255
+    (fully selected). The advantage of this approach is that it allows some
+    pixels to be <emphasis>partially selected</emphasis>,
+    by giving them intermediate values between 0 and 255. As you will see,
+    there are many situations where it is desirable to have smooth transitions
+    between selected and unselected regions.
+  </para>
+  <para lang="en">
+    What, then, is the dashed line that appears when you create a selection?
+  </para>
+  <para lang="en">
+    The dashed line is a <emphasis>contour line</emphasis>, dividing areas
+    that are more
+    than half selected from areas that are less than half selected.
+  </para>
+  <para lang="ja">
+    さてここからが大変重要なところですが、 理解するまでにはちょっと骨が
+    折れます。 通常は選択範囲をとると、 その領域は画像上では破線で囲われて
+    見えています。 これを見れば選択とは境界線により区切られた、
+    内側の選択範囲と外側の非選択範囲をつくるというのがおおよその考え方でしょう。
+    この概念はたしかにさまざまな場面で有効ですが、 実際は不正確です。
+  </para>
+  <para lang="ja">
+    選択の実装は具体的には <emphasis>チャンネル</emphasis> が使われています。
+    内部構造的には、 選択は赤緑青およびアルファチャンネルとは別に設けられます。
+    そして画像の各画素 (ピクセル) ごとに、 0 (非選択) から255 (完全選択) までの
+    値を定めることで選択は成り立っています。 こうしたやり方が有利なのは、
+    画素によっては0でも255でもない中間の値をとることで <emphasis>不完全選択
+    </emphasis>が可能になるからです。 今後は選択と非選択の間のゆるやかな変化を
+    必要とする場面にたびたび遭遇することになるでしょう。
+  </para>
+  <para lang="ja">
+    では一体、 選択範囲をつくったときにできる点線は何なのでしょう。
+  </para>
+  <para lang="ja">
+    答えは <emphasis>等高線</emphasis> です。 この点線は
+    選択の比率の値が半分以上の領域と半分未満の領域との境目を示しています。
+  </para>
+  <figure>
+    <title lang="en">Same selection in QuickMask mode.</title>
+    <title lang="ja">クイックマスクモードでの同じ選択範囲</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/select-outline-qmask.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    When looking at the dashed line that represents the selection, always
+    remember that the line tells only part of the story. If you
+    want to see the selection in complete detail, the easiest way is to click
+    the QuickMask button in the lower left corner of the image window. This
+    causes the selection to be shown as a translucent overlay atop the image.
+    Selected areas are unaffected; unselected areas are reddened. The more
+    completely selected an area is, the less red it appears.
+  </para>
+  <para lang="en">
+    Many operations work differently in QuickMask mode, as mentioned in the
+    <link linkend="gimp-image-window-qmask-overview">QuickMask overview</link>.
+    Use the QuickMask button in the lower left corner of the image window to
+    toggle QuickMask mode on and off.
+  </para>
+  <para lang="ja">
+    これからは選択を示す破線を見るたびに、 それが真実の一端に過ぎないということ
+    を常に意識していただきたいと思います。 選択を完全に詳しく見るために、
+    <xref linkend="gimp-image-window-qmask-button"/> が用意されています。
+    これは画像ウィンドウの左下にあるクイックマスクボタンを押すだけですので
+    とても簡単ですね。 選択は画像上の透明な覆いとして表示されます。
+    選択範囲は透過して見え、 非選択範囲は赤くなります。
+    選択の度合いが強いほど赤色が薄くなっています。
+  </para>
+  <para lang="ja">
+    クイックマスクを有効にしているときは 
+    <link linkend="gimp-image-window-qmask-overview">クイックマスクの概観
+    </link> でわかるように数多くの操作が普段と異なるものになります。 画像
+    ウィンドウの左下隅のクイックマスクボタンをクリックするとクイックマスク
+    のモードと通常のモードを交互に切り替えられます。
+  </para>
+  <figure>
+    <title lang="en">Same selection in QuickMask mode after feathering.</title>
+    <title lang="ja">境界をぼかしたあとのクイックマスクモードの様子</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/using/select-outline-qmask-feather.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect2>
+    <title lang="en">Feathering</title>
+    <title lang="ja">境界のぼかし</title>
+    <para lang="en">
+      With the default settings, the basic selection tools, such as the
+      Rectangle Select tool, create sharp selections. Pixels inside the dashed
+      line are fully selected, and pixels outside completely unselected. You
+      can verify this by toggling QuickMask: you see a clear rectangle with
+      sharp edges, surrounded by uniform red. 
+      Use the <quote>Feather edges</quote> checkbox in the Tool Options to
+      toggle between graduated selections and sharp selections.
+      The feather radius, which
+      you can adjust, determines the distance over which the transition
+      occurs.
+    </para>
+    <para lang="en">
+      If you are following along, try this with the Rectangle Select tool,
+      and then toggle QuickMask. You will see that the clear rectangle has
+      a fuzzy edge.
+    </para>
+    <para lang="en">
+      Feathering is particularly useful when you are cutting and pasting, so
+      that the pasted object blends smoothly and unobtrusively with its
+      surroundings.
+    </para>
+    <para lang="en">
+      It is possible to feather a selection at any time, even if it
+      was originally created as a sharp selection. Use
+      <menuchoice>
+        <guimenu>Select</guimenu>
+        <guimenuitem>Feather</guimenuitem>
+      </menuchoice>
+      from the image menu to open the Feather Selection dialog.
+      Set the feather radius and click OK.
+      This brings up a dialog that allows you to set the feather radius. Use
+      <menuchoice>
+        <guimenu>Select</guimenu>
+        <guimenuitem>Sharpen</guimenuitem>
+      </menuchoice>
+      do the opposite&mdash;sharpen a graduated selection into an
+      all-or-nothing selection&mdash;.
+    </para>
+    <para lang="ja">
+      矩形選択をはじめとする基本的な選択ツールは、 初期設定では明確な選択範囲を
+      つくります。 破線の内側の画素は完全選択がなされ、 外側は全くの非選択
+      です。 クイックマスクに切り替えて確かめてみましょう。 くっきりとした
+      境目がある明瞭な矩形が現れ、 一様な赤の領域で囲まれています。 
+      ツールオプションの <guilabel>境界をぼかす</guilabel> という
+      チェックボックスを使うとなだらかな選択とくっきりした選択を切り替え
+      られます。 ぼかしの <guilabel>半径</guilabel> は
+      漸進変化の始めと終わりの間の距離を定めるもので、 調節できます。
+    </para>
+    <para lang="ja">
+      演習を実践されているのならば、 矩形選択ツールで試してみて、
+      クイックマスクに切り替えてみましょう。 点線では矩形ではっきりしていた
+      選択範囲の境界線が曖昧なものであることがわかります。
+    </para>
+    <para lang="ja">
+      切り取って貼り付ける作業には境界をぼかす方法がうってつけです。
+      貼り付けられた部品が目立たずなめらかににその背後と溶け合います。
+    </para>
+    <para lang="ja">
+      選択はいつでもその境界をぼかすことができます。 つまり具体的には、 元は
+      明瞭な線でできていた選択をあとからぼかせるということです。 その方法は
+      画像ウィンドウのメニューから
+      <menuchoice>
+        <guimenu>選択</guimenu>
+        <guimenuitem>境界をぼかす...</guimenuitem>
+      </menuchoice>
+      に進んで実行です。 出てきたダイアログで線をぼかす量が調節できます。
+      その逆に画像ウィンドウのメニューから
+      <menuchoice>
+        <guimenu>選択</guimenu>
+        <guimenuitem>境界を明確化</guimenuitem>
+      </menuchoice>
+      を選ぶと<quote>ぼやけた輪郭線を一切か無かの明確なものに替える</quote>
+      操作ができます。
+    </para>
+    <note>
+      <para lang="en">
+        For technically oriented readers: feathering works by applying a
+        Gaussian blur to the selection channel, with the specified blurring
+        radius.
+      </para>
+      <para lang="ja">
+        技術的な話題ですが、 境界のぼかしは
+        <link linkend="plug-in-gauss">ガウスぼかし</link> を使用しており、
+        与えられた量をぼかし半径として選択チャンネルに作用させています。
+      </para>
+    </note>
+  </sect2>
+
+  <sect2>
+    <title lang="en">Making a Selection Partially Transparent</title>
+    <title lang="ja">不完全透過な選択の作成</title>
+    <para lang="en">
+      You can set layer opacity, but you cannot do that directly for a
+      selection. It is quite useful to make the image of a glass
+      transparent. Use the following methods to set the layer opacity:
+    </para>
+    <para lang="ja">
+      レイヤーは透明度を設定できますが、 選択は同じようにはできません。
+      しかしガラスのような透明の画像が作れたら非常に便利です。
+      レイヤーの不透明度の設定はつぎのような手順でできます。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          For simple selections, use the Eraser tool with the desired opacity.
+        </para>
+        <para lang="ja">
+          単純な選択であれば、 消しゴムツールを使います。
+          不透明度はお好みで調節してください。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          For complex selections: use
+          <menuchoice>
+            <guimenu>Selection</guimenu>
+            <guimenuitem>Floating</guimenuitem>
+          </menuchoice>
+          to create a floating selection. This creates a new layer with
+          the selection called <quote>Floating Selection</quote>.
+
+          Set the opacity slider in the Layer Dialog to the desired opacity.
+          Then anchor the selection: outside the selection, the mouse pointer
+          includes an anchor. When you click while the mouse pointer includes
+          the anchor, the floating selection
+          disappears from the Layer Dialog and the selection is at the right
+          place and partially transparent (anchoring works this way only if a
+          selection tool is activated : you can also use the Anchor Layer
+          command in the context menu by right clicking on the selected layer
+          in the layer dialog).
+        </para>
+        <para lang="en">
+          And, if you use this function frequently:
+          <keycombo action="press">
+            <keycap>Ctrl</keycap>
+            <keycap>C</keycap>
+          </keycombo> to copy the selection,
+          <keycombo action="press">
+            <keycap>Ctrl</keycap>
+            <keycap>V</keycap>
+          </keycombo> to paste the clipboard as a floating selection, and
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guimenuitem>New Layer</guimenuitem>
+          </menuchoice> to turn the selection into a new layer.
+          You can adjust the opacity before, or after creating the new layer.
+        </para>
+        <para lang="ja">
+          複雑な選択の場合、 フロート選択を画像ウィンドウメニューの
+          <menuchoice>
+            <guimenu>選択</guimenu>
+            <guimenuitem>選択範囲をフロート化</guimenuitem>
+          </menuchoice>
+          コマンドで作成します。 できあがったレイヤーは
+          <quote>フローティング選択範囲</quote>といいます。 レイヤーダイアログ
+          の <guilabel>不透明度</guilabel> スライダを動かして任意に不透明度を
+          定めます。 その後は選択レイヤーを固定します。 選択範囲の外側に
+          マウスポインタを移動すると錨のアイコンに替わるのでそこでクリック
+          すればできます。 フローティング選択領域はレイヤーダイアログから消え、
+          選択範囲はあるべき場所に落ち着き、 不完全透明になっているはずです。
+          (上記の固定化の操作は選択ツールが現在活性化している場合にしか
+          できません。
+          代わりにレイヤーダイアログにおいてその選択レイヤー上を <mousebutton>
+          第2ボタン</mousebutton> でクリックすると現れるメニューより 
+          <guilabel>レイヤーを固定</guilabel> 
+          コマンドを使うという方法があります。)
+        </para>
+        <para lang="ja">
+          この方法を頻繁に使われるのならば、
+          <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>
+          で選択を写し取り、
+          <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>
+          で貼り付ければフローティング選択範囲ができますから、
+          画像ウィンドウのメニューから
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>レイヤーを追加...</guimenuitem>
+          </menuchoice>
+          すればフローティング選択範囲を新規のレイヤーにできます。 この
+          レイヤーの新規作成の前でもあとでもレイヤーの不透明度が調節できます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Another way: use
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Mask</guisubmenu>
+            <guimenuitem>Add Layer mask</guimenuitem>
+          </menuchoice>
+          to add a layer mask to the layer with the
+          selection, initializing it with the selection. Then use a brush with
+          the desired opacity to paint the selection with black, i-e paint it
+          with transparency. Then Layer/Mask/Apply Layer Mask. See
+          <xref linkend="gimp-layer-mask"/>.
+        </para>
+        <para lang="ja">
+          また別の方法では、 画像ウィンドウメニューから
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>レイヤーマスク</guimenuitem>
+            <guimenuitem>レイヤーマスクを追加...</guimenuitem>
+          </menuchoice>
+          で出てきた<quote>レイヤーマスク追加</quote>ダイアログで
+          <guilabel>レイヤーマスクの初期化方法</guilabel> に
+          <guilabel>選択範囲</guilabel> を選んで追加を実行
+          します。 つぎはそこに、任意の不透明度を設定したブラシで黒く塗れば、
+          塗ったぶんだけ透明度が増します。 最後に
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>レイヤーマスク</guimenuitem>
+            <guimenuitem>レイヤーマスクを適用</guimenuitem>
+          </menuchoice> して終了です。
+          <xref linkend="gimp-layer-mask"/> の節もご覧ください。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          To <emphasis>make the solid background of an image
+          transparent</emphasis>, add an Alpha channel, and use the Magic
+          Wand to select the background. Then, with the Color Picker
+          tool to select the background color, which becomes the foreground
+          color in Toolbox. Use the Bucket Fill tool with the selected color.
+          Set the Bucket Fill mode to <quote>Color Erase</quote>, which erases
+          pixels with the selected color; other pixels are partially erased
+          and their color is changed.
+        </para>
+        <para lang="en">
+          The simplest method is to use
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Clear</guimenuitem>
+          </menuchoice>,
+          which gives complete transparency to a selection.
+        </para>
+        <para lang="ja">
+          <emphasis>画像の背景を一様に透明化</emphasis> したいときは、
+          アルファチャンネルを追加してから
+          <xref linkend="gimp-tool-fuzzy-select"/> で背景を選択します。つづいて
+          <xref linkend="gimp-tool-color-picker"/> で背景色を取り込むと
+          ツールボックスでは現在の描画色として示されます。 取り込んだ色に対して
+          <xref linkend="gimp-tool-bucket-fill"/> ツールを使います。
+          <guilabel>色消しゴム</guilabel> モードにすると描画色に指定された色の
+          画素は消され、 その他の画素は不完全に消去されるため色が変化します。
+        </para>
+        <para lang="ja">
+          最も単純なのは
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guimenuitem>消去</guimenuitem>
+          </menuchoice>
+          する方法で、 選択範囲が完全透過になります。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+</sect1>

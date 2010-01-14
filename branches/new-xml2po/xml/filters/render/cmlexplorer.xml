@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-27 ude: use <simplesect> (rather than nested <variablelist>)
+             for option tabs
+  2007-11-04 AntI: Added "es"
+  2007-05-16 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-10-07 en;fr by j.h
+  2005-09-21 created by axel.wernicke
+-->
+<!--2009-12-19-->
+<sect2 id="plug-in-cml-explorer">
+  <title lang="en">CML Explorer</title>
+  <title lang="ja"><acronym>CML</acronym> エクスプローラ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>CML Explorer</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>CML Explorer</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary>CML エクスプローラ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>CML エクスプローラ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>CML Explorer</quote> filter
+      </title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの使用例
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata  format="JPG"
+            fileref="images/filters/examples/render-taj-cmlexplorer.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Filter <quote>CML Explorer</quote> applied with default options
+          </para>
+          <para lang="ja">
+            <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+            適用例 (初期値)
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter is the king of texture creating filters. It is extremely
+      efficient but very complex. It uses a mathematical method named Cellular
+      Automata <xref linkend="bibliography-online-wkpd-cellular-automata"/>.
+    </para>
+    <para lang="ja">
+      <guimenuitem>CML エクスプローラ...</guimenuitem> 
+      フィルタは質感表現の王者です。 極めて有能ですがとても複雑です。 この
+      プラグインは生成過程にセルラオートマタ (セルオートマトン) 
+      <xref linkend="bibliography-online-wkpd-cellular-automata"/> という計算
+      方法を用いています。 <acronym>CML</acronym>は <foreignphrase>Coupled Map 
+      Lattice</foreignphrase> (結合写像格子) の略です。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter from the image menu through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guisubmenu>Pattern</guisubmenu>
+        <guimenuitem>CML Explorer</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guisubmenu>パターン</guisubmenu>
+        <guimenuitem>CML エクスプローラ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+
+    <simplesect>
+      <title lang="en">General Options</title>
+      <title lang="ja">オプションの全体像と共通オプション</title>
+      <para lang="en">
+        Filter options are distributed among
+        <guilabel>Hue</guilabel>,<guilabel>Saturation</guilabel>,
+        <guilabel>Value</guilabel>, <guilabel>Advanced</guilabel>,
+        <guilabel>others</guilabel> and <guilabel>Misc.ops</guilabel>
+        tabs.  Some more options are available. They will be described
+        in following section.
+      </para>
+      <para lang="ja">
+        このフィルタのオプションは大部分が <guilabel>色相
+        </guilabel>、 <guilabel>彩度</guilabel>、 <guilabel>
+        明度</guilabel>、 <guilabel>詳細
+        </guilabel>、 <guilabel>その他</guilabel>、 
+        <guilabel>その他の操作</guilabel> の各タブに分かれて
+        います。 タブの外にある共通オプションについてはつぎのとおりです。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Preview</term>
+          <term lang="ja">プレビュー</term>
+          <listitem>
+            <para lang="en">
+              This filter offers you a Preview where you can see the
+              result of your settings before they are applied to the
+              image.
+            </para>
+            <para lang="ja">
+              このフィルタはプレビュー画面がありますので、 実際にフィルタを
+              かける前からダイアログ上で調節したとおりに即座に効果のようすが
+              見て分かるようになっています。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">New seed; Fix seed; Random seed</term>
+          <term lang="ja">新しい種; 固定種; 乱数種</term>
+          <listitem>
+            <para lang="en">
+              Random plays a large part in creating patterns. With these
+              options, you can influence the way random is generated. By
+              clicking on the <guibutton>New seed</guibutton> button, you
+              can force random to use a new source of random. The preview
+              will show you the result.
+              <guibutton>Fix seed</guibutton> lets you keep the same seed
+              and so to reproduce the same effect with the filter.
+              <guibutton>Random seed</guibutton> generates a random seed
+              at random.
+            </para>
+            <para lang="ja">
+              乱数が模様の作成に大きな役割を果たしています。 これらのボタンの
+              どれもが乱数発生に関わります。 <guibutton>新しい種</guibutton>
+              ボタンをクリックすると乱数発生源を新たにし、 その乱数を使うように
+              します。 プレビュー画面にはその成果がすぐ現れます。 <guibutton>
+              固定種</guibutton> ボタンをクリックすると乱数種に同じ値を使い
+              続けるようにしますので、 フィルタは同一の効果を繰り返し発揮
+              します。 <guibutton>乱数種</guibutton> ボタンをクリックすると
+              無作為に新たな乱数種を発生します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Open; Save</term>
+          <term lang="ja">開く; 保存</term>
+          <listitem>
+            <para lang="en">
+              With these both command buttons you can save pattern
+              settings in a file, and to get them back later.
+            </para>
+            <para lang="ja">
+              この一組のボタンを使えば、 模様を描く設定内容をファイルに収め、 
+              あとで読み込んで再利用できます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </simplesect>
+
+    <simplesect>
+      <title lang="en"><quote>CML Explorer</quote> filter options(Hue)</title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+        オプション (色相)
+      </title>
+      <figure>
+        <title lang="en">Hue tab</title>
+        <title lang="ja">色相タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/options-render-cmlexplorer1.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        This filter works in the
+        <link linkend="glossary-hsv">HSV</link> color model. In this tab, you
+        can set options for Hue.
+      </para>
+      <para lang="ja">
+        このフィルタは 
+        <link linkend="glossary-hsv">HSV</link> 色モデルで作動します。 この
+        タブでは色相に関するオプションを設定できます。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Function type</term>
+          <term lang="ja">関数の種類</term>
+          <listitem>
+            <para lang="en">
+              In this drop-down list, you can select the method that
+              will be used to treat the current layer. These methods
+              are:
+            </para>
+            <para lang="ja">
+              この引き出しリストから、 レイヤー上で行なわれる処理の方法が選べ
+              ます。 つぎのいずれかを指定してください。
+            </para>
+            <itemizedlist>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Keep image's values</guilabel>: With this
+                  option, image hue values will be kept.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>画像の値を保持</guimenuitem> オプションを選ぶと
+                  元の画像の色相の値が保たれます。
+                </para>
+              </listitem>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Keep the first value</guilabel>: With this
+                  option, starting color will be standard cyan.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>最初の値を保持</guimenuitem> オプションを選ぶと
+                  最初の色は標準的なシアンになります。
+                </para>
+              </listitem>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Fill with k parameter</guilabel>,
+                  <guilabel>k{x(1-x)}^p</guilabel>,
+                  <guilabel>k{x(1-x)}^p stepped</guilabel>,
+                  <guilabel>kx^p</guilabel>,
+                  <guilabel>kx^p stepped</guilabel>,
+                  <guilabel>k(1-x^p)</guilabel>,
+                  <guilabel>k(1-x^p) stepped</guilabel>: pattern look
+                  will depend on <parameter>k</parameter> that you will
+                  set later in options.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>パラメータ k で塗る</guimenuitem>、 
+                  <guimenuitem>k{x(1-x)}^p</guimenuitem> と 
+                  <guimenuitem>段階化 k{x(1-x)}^p</guimenuitem>、 
+                  <guimenuitem>kx^p</guimenuitem> と 
+                  <guimenuitem>段階化 kx^p</guimenuitem>、 
+                  <guimenuitem>k(1-x^p)</guimenuitem> と 
+                  <guimenuitem>段階化 k(1-x^p)</guimenuitem> はいずれも後述する
+                  パラメータ<quote><parameter>k</parameter></quote>[と乗数
+                  <quote><parameter>p</parameter></quote>]の値によって
+                  パターンの見た目が決まります。
+                  なお<quote><parameter>x</parameter></quote>とは色相の値を 
+                  256 で除算した値 (0.0 から 1.0 まで) です。
+                </para>
+              </listitem>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Delta function</guilabel>,
+                  <guilabel>Delta function stepped</guilabel>: FIXME
+                </para>
+                <para lang="ja">
+                  <guimenuitem>デルタ関数</guimenuitem> と 
+                  <guimenuitem>段階化デルタ関数</guimenuitem>: FIXME
+                </para>
+              </listitem>
+              <listitem>
+                <para lang="en">
+                  <guilabel>sin^p based Function</guilabel>,
+                  <guilabel>sin^p stepped</guilabel>: These options
+                  create wave-like patterns, like aurora borealis or
+                  curtain folds.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>sin^p 型関数</guimenuitem> と 
+                  <guimenuitem>段階化 sin^p</guimenuitem> オプションは極地の
+                  オーロラやカーテンのひだのような波形パターンを生成します。
+                </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Composition</term>
+          <term lang="ja">合成</term>
+          <listitem>
+            <para lang="en">
+              Here, these options concern Hue. You can select:
+            </para>
+            <para lang="en">
+              <guilabel>None</guilabel>, <guilabel>Max(x, -)</guilabel>,
+              <guilabel>Max(x+d, -)</guilabel>,
+              <guilabel>Max(x-d, -)</guilabel>,
+              <guilabel>Min(x, -)</guilabel>,
+              <guilabel>Min(x+d, -)</guilabel>,
+              <guilabel>Min(x-d, -)</guilabel>,
+              <guilabel>Max(x+d, -), (x &lt; 0,5)</guilabel>,
+              <guilabel>Max(x+d, -), (0,5 &lt; x)</guilabel>,
+              <guilabel>Max(x-d, -), (x &lt; 0,5)</guilabel>,
+              <guilabel>Max(x-d, -), (0,5 &lt; x)</guilabel>,
+              <guilabel>Min(x+d, -), (x &lt; 0,5)</guilabel>,
+              <guilabel>Min(x+d, -), (0,5 &lt; x)</guilabel>,
+              <guilabel>Min(x-d, -), (x &lt; 0,5)</guilabel> and
+              <guilabel>Min(x-d, -), (0,5 &lt; x)</guilabel>.
+            </para>
+            <para lang="en">
+              A book could be filled with results of all these
+              functions. Please, experiment!
+            </para>
+            <para lang="ja">
+              これらのオプションは色相を基に合成を行ないます。 つぎのいずれかを
+              選んでください。 <quote><parameter>x</parameter></quote>は色相の
+              値を 256 で除算したもの (0.0 から 1.0 まで) であり、 <quote>d
+              </quote>は 256 分の 1 です。 <quote><parameter>x</parameter>
+              </quote>の値そのものかもしくは<quote>d</quote>を加減した値と、 
+              先に選んだ関数により得られた値との大小比較を行なって、 大きい方の
+              値Maxか小さい方の値Minをとります。
+            </para>
+            <para lang="ja">
+              <guimenuitem>なし</guimenuitem> は先に選んだ関数により得られた値
+              をそのまま使います。  <guimenuitem>Max(x, -)</guimenuitem> から 
+              <guimenuitem>Max(x+d, -)</guimenuitem>、 
+              <guimenuitem>Max(x-d, -)</guimenuitem>、 
+              <guimenuitem>Min(x, -)</guimenuitem>、 
+              <guimenuitem>Min(x+d, -)</guimenuitem>、 
+              <guimenuitem>Min(x-d, -)</guimenuitem> まではいずれも大小比較を
+              します。 また<quote><parameter>x</parameter></quote>の値により
+              <guimenuitem>Max(x+d, -), (x &lt; 0.5)</guimenuitem> から 
+              <guimenuitem>Max(x+d, -), (0.5 &lt; x)</guimenuitem>、 
+              <guimenuitem>Max(x-d, -), (x &lt; 0.5)</guimenuitem>、 
+              <guimenuitem>Max(x-d, -), (0.5 &lt; x)</guimenuitem>、 
+              <guimenuitem>Min(x+d, -), (x &lt; 0.5)</guimenuitem>、 
+              <guimenuitem>Min(x+d, -), (0.5 &lt; x)</guimenuitem>、 
+              <guimenuitem>Min(x-d, -), (x &lt; 0.5)</guimenuitem>、 
+              <guimenuitem>Min(x-d, -), (0.5 &lt; x)</guimenuitem> までは
+              条件付きで大小比較を行ないます。
+            </para>
+            <para lang="ja">
+              これらの関数の組み合わせ全ての結果を載せるとなると一冊の本が
+              できあがってしまうことになりますので、 申し分けありませんが
+              ご自分でその効果を確かめてください。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Misc. Arrange</term>
+          <term lang="ja">その他のアレンジ</term>
+          <listitem>
+            <para lang="en">
+              This drop-down list offers you some other parameters:
+            </para>
+            <para lang="en">
+              <guilabel>Standard</guilabel>,
+              <guilabel>Use average value</guilabel>,
+              <guilabel>Use reverse value</guilabel>,
+              <guilabel>With random power (0,10)</guilabel>,
+              <guilabel>With random power (0,1)</guilabel>,
+              <guilabel>with gradient power (0,1)</guilabel>,
+              <guilabel>Multiply rand. value (0,1)</guilabel>,
+              <guilabel>Multiply rand. value (0,2)</guilabel>,
+              <guilabel>Multiply gradient (0,1)</guilabel> and
+              <guilabel>With p and random (0,1)</guilabel>.
+            </para>
+            <para lang="en">
+              Also a book would be necessary to explain all
+              possibilities of these parameters.
+            </para>
+            <para lang="ja">
+              この引き出しリストにはつぎのような他のパラメータがあります。
+            </para>
+            <para lang="ja">
+              <guimenuitem>標準</guimenuitem> から 
+              <guimenuitem>平均値を使う</guimenuitem>、 
+              <guimenuitem>逆数を使う</guimenuitem><!--1の補数-->、 
+              <guimenuitem>(0,10) の乱数乗する</guimenuitem>、 
+              <guimenuitem>(0,1) の乱数乗する</guimenuitem>、 
+              <guimenuitem>(0,1) の傾斜乗する</guimenuitem>、 
+              <guimenuitem>(0,1) の乱数倍する</guimenuitem>、 
+              <guimenuitem>(0,2) の乱数倍する</guimenuitem>、 
+              <guimenuitem>(0,1) の傾斜倍する</guimenuitem>、 
+              <guimenuitem>p と (0,1) の乱数で</guimenuitem> までの10種類です。
+            </para>
+            <para lang="ja">
+              これらのパラメータの効果を全て説明するにもやはり一冊の本が必要に
+              なります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Use cyclic range</term>
+          <term lang="ja">回帰値域を使う</term>
+          <listitem>
+            <para>//TODO</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Mod. rate</term>
+          <term lang="ja">変化度</term>
+          <listitem>
+            <para lang="en">
+              With this slider and the input box, you can set
+              modification rate from 0.0 to 1.0. Low value results in a
+              lined pattern.
+            </para>
+            <para lang="ja">
+              このスライダや付属する数値記入欄は 0.0 から 1.0 までの範囲で
+              変化の割合を設定します。 低い値にすると線状のパターンができます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Env. sensitivity</term>
+          <term lang="ja">環境感度</term>
+          <listitem>
+            <para lang="en">
+              Value is from 0.0 to 1.0
+            </para>
+            <para lang="ja">
+              このスライダの値は 0.0 から 1.0 までの範囲があります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Diffusion dist.</term>
+          <term lang="ja">拡散域</term>
+          <listitem>
+            <para lang="en">
+              Diffusion distance: from 2 to 10.
+            </para>
+            <para lang="ja">
+              このスライダの値は 2 から 10 までの範囲があります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en"># of subranges</term>
+          <term lang="ja">サブレンジ数</term>
+          <listitem>
+            <para lang="en">
+              Number of sub-rangers: from 1 to 10.
+            </para>
+            <para lang="ja">
+              このスライダの値は 1 から 10 までの範囲があります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">(P)ower factor</term>
+          <term lang="ja">乗数 p</term>
+          <listitem>
+            <para lang="en">
+              With this option you can influence the
+              <guilabel>Function types</guilabel> using the
+              <parameter>p</parameter> parameter. Value from 0.0 to 10.0.
+            </para>
+            <para lang="ja">
+              このオプションの値が前述の <guilabel>関数の種類</guilabel> で
+              選んだ関数に影響するパラメータ<quote><parameter>p</parameter>
+              </quote>です。 このスライダの値は 0.0 から 10.0 までの
+              範囲があります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">k Parameter</term>
+          <term lang="ja">パラメータ k</term>
+          <listitem>
+            <para lang="en">
+              With this option you can influence the
+              <guilabel>Function types</guilabel> using the
+              <parameter>k</parameter> parameter. Value from 0.0 to 10.0.
+            </para>
+            <para lang="ja">
+              このオプションの値が前述の <guilabel>関数の種類</guilabel> で
+              選んだ関数に影響するパラメータ<quote><parameter>k</parameter>
+              </quote>です。 このスライダの値は 0.0 から 10.0 までの
+              範囲があります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Range low</term>
+          <term lang="ja">値域下限</term>
+          <listitem>
+            <para lang="en">
+              Set lower limit of hue that will be used for calculation.
+              values vary from 0.0 to 1.0.
+            </para>
+            <para lang="ja">
+              計算に用いられる色相の値の下限です。 値は 0.0 から 1.0 までの範囲
+              です。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Range high</term>
+          <term lang="ja">値域上限</term>
+          <listitem>
+            <para lang="en">
+              Set the upper limit of hue that will be used for
+              calculation. Variations are from 0.0 to 1.0.
+            </para>
+            <para lang="ja">
+              計算に用いられる色相の値の上限です。 値は 0.0 から 1.0 までの範囲
+              です。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Plot a graph of the settings</term>
+          <term lang="ja">設定のグラフを描く</term>
+          <listitem>
+            <para lang="en">
+              By clicking on this large button, you can open a window
+              that displays the graph of hue present settings.
+            </para>
+            <para lang="ja">
+              この横長な大きいボタンをクリックすると設定に基づく色相の
+              出現程度をグラフ化したウィンドウが現れます。
+            </para>
+            <figure>
+              <title lang="en">Function graph of present settings</title>
+              <title lang="ja">現在の設定を反映する関数化グラフ</title>
+              <mediaobject>
+                <imageobject>
+                  <imagedata  format="PNG"
+                    fileref="images/filters/options-render-cmlexplorer1a.png"/>
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </simplesect>
+
+    <simplesect>
+      <title lang="en">
+        <quote>CML Explorer</quote> filter options(Saturation)
+      </title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+        オプション (彩度)
+      </title>
+      <figure>
+        <title lang="en">Saturation tab</title>
+        <title lang="ja">彩度タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata  format="PNG"
+              fileref="images/filters/options-render-cmlexplorer2.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        In this tab, you can set how Saturation component of the HSV
+        color model will be used in pattern calculation.
+      </para>
+      <para lang="en">
+        These options are similar to Hue tab options.
+      </para>
+      <para lang="ja">
+        このタブでは<acronym>HSV</acronym>色モデルの彩度要素をパターン描画計算
+        にどのように利用するかを設定します。
+      </para>
+      <para lang="ja">
+        これらのオプションは<quote>色相</quote>タブと似ています。
+      </para>
+    </simplesect>
+
+    <simplesect>
+      <title lang="en">
+        <quote>CML Explorer</quote> filter options (Value)
+      </title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+        オプション (明度)
+      </title>
+      <figure>
+        <title lang="en">Value tab</title>
+        <title lang="ja">明度タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/options-render-cmlexplorer3.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        In this tab, you can set how the Value (Luminosity) component of
+        the HSV color model will be used in pattern calculation.
+      </para>
+      <para lang="en">
+        These options are similar to Hue tab options.
+      </para>
+      <para lang="ja">
+        このタブでは<acronym>HSV</acronym>色モデルの明度要素をパターン描画計算
+        にどのように利用するかを設定します。
+      </para>
+      <para lang="ja">
+        これらのオプションは<quote>色相</quote>タブと似ています。
+      </para>
+    </simplesect>
+
+    <simplesect>
+      <title lang="en">
+        <quote>CML Explorer</quote> filter options (Advanced)
+      </title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+        オプション (詳細)
+      </title>
+      <figure>
+        <title lang="en">Advanced tab</title>
+        <title lang="ja">詳細タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata  format="PNG"
+              fileref="images/filters/options-render-cmlexplorer4.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        These tab settings apply to the three HSV channels.
+      </para>
+      <para lang="ja">
+        このタブでは<acronym>HSV</acronym>色モデルの3つのチャンネルごとに
+        感度と変化の割合や幅の絞りを調節します。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Channel Sensitivity</term>
+          <term lang="ja">チャンネル感度</term>
+          <listitem>
+            <para>// TODO</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Mutation rate</term>
+          <term lang="ja">変化度</term>
+          <listitem>
+            <para>// TODO</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Mutation distance</term>
+          <term lang="ja">変化域</term>
+          <listitem>
+            <para>//TODO</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </simplesect>
+
+    <simplesect>
+      <title lang="en">
+        <quote>CML Explorer</quote> filter options (Others)
+      </title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+        オプション (その他)
+      </title>
+      <figure>
+        <title lang="en">Others tab</title>
+        <title lang="ja">その他タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata  format="PNG"
+              fileref="images/filters/options-render-cmlexplorer5.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        In this tab, you can find various parameters about image display
+        and random intervention.
+      </para>
+      <para lang="ja">
+        このタブは画像表示に関するいろいろなパラメータと、 乱数に干渉する
+        パラメータを調節するところです。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Initial value</term>
+          <term lang="ja">初期値</term>
+          <listitem>
+            <para>// TODO</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Zoom factor</term>
+          <term lang="ja">拡大スケール</term>
+          <listitem>
+            <para>// TODO</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Start offset</term>
+          <term lang="ja">開始オフセット</term>
+          <listitem>
+            <para>// TODO</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Seed of random</term>
+          <term lang="ja">乱数の種</term>
+          <listitem>
+            <para>// TODO</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </simplesect>
+
+    <simplesect>
+      <title lang="en">
+        <quote>CML Explorer</quote> filter options (Misc.ops)
+      </title>
+      <title lang="ja">
+        <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
+        オプション (その他の操作)
+      </title>
+      <figure>
+        <title lang="en">Miscellaneous options tab</title>
+        <title lang="ja">その他の操作タブ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/options-render-cmlexplorer6.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        In this tab you can find various options about copy and loading.
+      </para>
+      <para lang="ja">
+        このタブでは<quote>色相</quote>、 <quote>彩度</quote>、 <quote>
+        明度</quote>のタブで相互に設定値を転写する操作と、 設定ファイルから
+        転写先を変更して読み込む操作ができます。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Copy settings</term>
+          <term lang="ja">設定をコピー</term>
+          <listitem>
+            <para lang="en">
+              These options allow you to transfer information from
+              one of the HSV channel to another one.
+            </para>
+            <para lang="ja">
+              これらのオプションは<acronym>HSV</acronym>のいずれかのチャンネル
+              から他のチャンネルへ設定値をやりとりします。 <guilabel>
+              コピー元チャンネル</guilabel> と <guilabel>コピー先チャンネル</guilabel> を
+              それぞれ選んで <guibutton>パラメータをコピーする</guibutton> 
+              ボタンをクリックすると転写が実行されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Selective load setting</term>
+          <term lang="ja">選択可能な設定読み込み</term>
+          <listitem>
+            <para lang="en">
+              With the <guibutton>Open</guibutton> button of this
+              filter,  you can load previously loaded settings. If you
+              don't want to load all of them, you can select a source
+              and a destination channel here.
+            </para>
+            <para lang="ja">
+              このフィルタでは <guibutton>開く</guibutton> 
+              ボタンをクリックするとダイアログが開かれ、 以前に設定したときの
+              設定内容を記録した設定ファイルがあれば選択して読み込めます。 
+              しかしそのまま全部読み込まず一部だけ利用したいときは、 ここで元
+              チャンネルと読み込み先チャンネルを指定して読み込めます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </simplesect>
+  </sect3>
+</sect2>
