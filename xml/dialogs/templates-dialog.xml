@@ -10,7 +10,7 @@
   2005-11-29 replaced informalfigures by figures by lexa
   2005-05-19 created by j.h
 -->
-<!--2009-10-06-->
+<!--2010-01-17-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-template-dialog">
   <title lang="en">Templates Dialog</title>
   <title lang="ja">テンプレートダイアログ</title>
@@ -196,7 +196,11 @@
           <term lang="ja">選択したテンプレートで新しい画像を生成</term>
           <listitem>
             <para lang="en">
-              Clicking on this button opens the
+              Clicking on
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/stock-image-16.png"/>
+              </guiicon>
+              this button opens the
               <link linkend="gimp-file-new">Create a new image</link>
               on the model of the selected template.
             </para>
@@ -222,7 +226,11 @@
           <term lang="ja">新しいテンプレートを作成</term>
           <listitem>
             <para lang="en">
-              Clicking on this button opens the
+              Clicking on
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+              </guiicon>
+              this button opens the
               <link linkend="edit-template-dialog">New template</link>
               dialog, identical to the Edit Template dialog, that we will see
               below.
@@ -251,7 +259,12 @@
           <term lang="ja">選択したテンプレートを複製</term>
           <listitem>
             <para lang="en">
-              Clicking on this button opens the Edit Template dialog that we
+              Clicking on
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-duplicate-16.png"/>
+              </guiicon>
+              this button opens the Edit Template dialog that we
               are going to study now.
             </para>
             <para lang="ja">
@@ -276,7 +289,11 @@
           <term lang="ja">選択したテンプレートを編集</term>
           <listitem>
             <para lang="en">
-              Clicking on this button opens the
+              Clicking on
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+              </guiicon>
+              this button opens the
               <link linkend="edit-template-dialog">Edit Template</link>
               dialog.
             </para>
@@ -315,13 +332,27 @@
                   </textobject>
                 </inlinemediaobject>
               </guiicon>
-              Every templates are stored in a <filename>templaterc</filename>
-              file at your personal directory. If you want to restore some
-              deleted templates, you can copy or append template entries to
-              your file from the master <filename>templaterc<filename> file
-              resides at the <filename class="directory">etc/gimp/2.0</filename>
-              directory of the <acronym>GIMP</acronym>'s system folder.
             </para>
+            <tip>
+              <para lang="en">
+                Every templates are stored in a <filename>templaterc</filename>
+                file at your personal <acronym>GIMP</acronym> directory.
+                If you want to restore some deleted templates, you can copy or
+                append template entries to your file from the master
+                <filename>templaterc</filename> file at the
+                <filename class="directory">etc/gimp/2.0</filename> directory
+                of the <acronym>GIMP</acronym>'s system folder.
+              </para>
+              <para lang="ja">
+                テンプレートはすべて個人用<acronym>GIMP</acronym>ディレクトリの
+                <filename>templaterc</filename> ファイルに保存されています。
+                消したテンプレートを再び蘇らせるには、 マスターの
+                <filename>templaterc</filename> ファイルが<acronym>GIMP</acronym>
+                システムフォルダ内の <filename class="directory">etc/gimp/2.0
+                </filename> 以下にありますので、 そのままコピーするかそこから必要な
+                テンプレート項目をコピーして個人用のファイルに加える方法があります。
+              </para>
+            </tip>
           </listitem>
         </varlistentry>
       </variablelist>

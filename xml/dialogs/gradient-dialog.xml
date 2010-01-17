@@ -9,7 +9,7 @@
   2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2009-11-15-->
+<!--2010-01-17-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
   <title lang="en">Gradients Dialog</title>
   <title lang="ja">グラデーションダイアログ</title>
@@ -188,7 +188,8 @@
       </listitem>
       <listitem>
         <para lang="en">
-          From the image by using the <keycap>Ctrl+G</keycap> shortcut.
+          From the image by using the
+          <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo> shortcut.
         </para>
         <para lang="ja">
           画像ウィンドウでショートカット
@@ -332,6 +333,9 @@
         <term lang="ja">グラデーションの編集</term>
         <listitem>
           <para lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon>
             This button activates the
             <link linkend="gimp-gradient-editor-dialog">Gradient Editor</link>.
           </para>
@@ -358,10 +362,13 @@
         <listitem>
           <anchor id="gimp-gradient-new"/>
           <para lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
             This creates a new gradient, initialized as a simple grayscale,
             and activates the Gradient Editor so that you can alter it.
             Gradients that you create are automatically saved in the
-            <filename>gradients</filename>
+            <filename class="directory">gradients</filename>
             folder of your personal GIMP directory, from which they are
             automatically loaded when GIMP starts. (You can change this
             folder, or add new ones, using the Preferences dialog.)
@@ -370,8 +377,7 @@
             <guiicon>
               <inlinemediaobject>
                 <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-document-new-16.png"/>
+                  <imagedata fileref="images/dialogs/dialogs-icon-new.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>「新しいグラデーションを作成」</phrase>
@@ -400,6 +406,10 @@
         <listitem>
           <anchor id="gimp-gradient-duplicate"/>
           <para lang="en">
+            <guiicon>
+              <inlinegraphic
+                fileref="images/dialogs/stock-duplicate-16.png"/>
+            </guiicon>
             This creates a copy of the currently selected gradient. You will
             be able to edit the copy even if you cannot edit the original.
           </para>
@@ -427,6 +437,10 @@
         <listitem>
           <anchor id="gimp-gradient-delete"/>
           <para lang="en">
+            <guiicon>
+              <inlinegraphic
+                fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
             This removes all traces of the gradient, if you have permission to
             do so. It asks for confirmation before doing anything.
           </para>
@@ -435,7 +449,7 @@
               <inlinemediaobject>
                 <imageobject>
                   <imagedata
-                    fileref="images/dialogs/stock-delete-16.png"/>
+                    fileref="images/dialogs/dialogs-icon-delete.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>「グラデーションの削除」</phrase>
@@ -455,10 +469,13 @@
           <anchor id="gimp-gradient-refresh"/>
           <para lang="en">
             If you add gradients to your personal
-            <filename>gradients</filename>
-            folder by some means other than this dialog, this button causes
-            the list to be reloaded, so that the new entries will be
-            available.
+            <filename class="directory">gradients</filename>
+            folder by some means other than this dialog,
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            this button causes the list to be reloaded, so that the new
+            entries will be available.
           </para>
           <para lang="ja">
             グラデーションエディタを使わない何らかの方法で新たにグラデーション

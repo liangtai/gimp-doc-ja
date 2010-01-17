@@ -14,7 +14,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050526 de reviewed and restructured by axel.wernicke
 -->
-<!--2009-11-015-->
+<!--2009-11-17-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-move">
   <title lang="en">Move</title>
   <title lang="ja">移動</title>
@@ -191,6 +191,12 @@
         <term lang="en">Tool toggle (Shift)</term>
         <term lang="ja">機能の切り替え (Shift)</term>
         <listitem>
+          <para lang="en">
+            If Move is on <quote>Layer</quote>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-layer-16.png"/>
+            </guiicon>
+          </para>
           <para lang="ja">
             <guiicon>
               <inlinemediaobject>
@@ -204,55 +210,61 @@
               </inlinemediaobject>
             </guiicon> 
             <quote>レイヤー</quote>を対象とした移動ならば、
-            <itemizedlist>
-              <listitem>
-              <para lang="en">
-                <guilabel>Pick a layer or guide</guilabel>: On an image with
-                several layers, the mouse pointer turns to a crosshair when it
-                goes over an element belonging to the current layer.  Then you
-                can click-and-drag it. If the mouse pointer has a small hand
-                shape (showing that you do <emphasis>not</emphasis> pick an
-                element of the active layer), you will move a non-active layer
-                instead (it becomes the active layer while moving).
+          </para>
+          <itemizedlist>
+            <listitem>
+            <para lang="en">
+              <guilabel>Pick a layer or guide</guilabel>: On an image with
+              several layers, the mouse pointer turns to a crosshair when it
+              goes over an element belonging to the current layer.  Then you
+              can click-and-drag it. If the mouse pointer has a small hand
+              shape (showing that you do <emphasis>not</emphasis> pick an
+              element of the active layer), you will move a non-active layer
+              instead (it becomes the active layer while moving).
+            </para>
+            <para lang="en">
+              If a guide exists on your image, it will turn to red when the
+              mouse pointer goes over. Then it is activated and you can move
+              it.
+            </para>
+            <para lang="ja">
+              <guilabel>つかんだレイヤーまたはガイドを移動</guilabel>:
+              レイヤーを複数持つ画像の、 現在活性化しているレイヤーに属する
+              要素の上ではマウスポインタの姿が移動十字矢印に替わります。 
+              その要素はクリックしてドラッグすれば移動できます。 もし
+              ポインタの姿に小さな掌が加わっている場合 (つまりまだ活性
+              レイヤーの部品を <emphasis>何も</emphasis> つかんでいないこと
+              を表しているとき) には、 代わりに不活性レイヤーを移動する
+              可能性があります。 移動の最中は一時的にそのレイヤーが活性
+              レイヤーとなります。
+            </para>
+            <para lang="ja">
+              画像上にガイド (見当線) を置いていた場合は、 線上にマウス
+              ポインタをかざすと線が赤色に変わります。 これはガイドが
+              活性化したことを示しており、 移動できます。
               </para>
-              <para lang="en">
-                If a guide exists on your image, it will turn to red when the
-                mouse pointer goes over. Then it is activated and you can move
-                it.
-              </para>
-                <para lang="ja">
-                  <guilabel>つかんだレイヤーまたはガイドを移動</guilabel>:
-                  レイヤーを複数持つ画像の、 現在活性化しているレイヤーに属する
-                  要素の上ではマウスポインタの姿が移動十字矢印に替わります。 
-                  その要素はクリックしてドラッグすれば移動できます。 もし
-                  ポインタの姿に小さな掌が加わっている場合 (つまりまだ活性
-                  レイヤーの部品を <emphasis>何も</emphasis> つかんでいないこと
-                  を表しているとき) には、 代わりに不活性レイヤーを移動する
-                  可能性があります。 移動の最中は一時的にそのレイヤーが活性
-                  レイヤーとなります。
-                </para>
-                <para lang="ja">
-                  画像上にガイド (見当線) を置いていた場合は、 線上にマウス
-                  ポインタをかざすと線が赤色に変わります。 これはガイドが
-                  活性化したことを示しており、 移動できます。
-                </para>
-              </listitem>
-              <listitem>
+            </listitem>
+            <listitem>
               <para lang="en">
                 <guilabel>Move the active layer</guilabel>: Only the current
                 layer will be moved. This may be useful if you want to move a
                 layer with transparent areas, where you can easily pick the
                 wrong layer.
               </para>
-                <para lang="ja">
-                  <guilabel>アクティブなレイヤーを移動</guilabel>:
-                  現在活性化しているレイヤーのみ移動できます。 これは透過部分を
-                  もつレイヤーを移動したいとき、 間違って他のレイヤーを
-                  つかむのを防げます。
-                </para>
-              </listitem>
-            </itemizedlist>
-          <para lang="en">If Move is on <guiicon>Path</guiicon>:</para>
+              <para lang="ja">
+                <guilabel>アクティブなレイヤーを移動</guilabel>:
+                現在活性化しているレイヤーのみ移動できます。 これは透過部分を
+                もつレイヤーを移動したいとき、 間違って他のレイヤーを
+                つかむのを防げます。
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para lang="en">
+            If Move is on <quote>Path</quote>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-path-16.png"/>
+            </guiicon>
+          </para>
           <para lang="ja">
             <guiicon>
               <inlinemediaobject>
@@ -267,8 +279,8 @@
             </guiicon> 
             <quote>パス</quote>を対象とした移動ならば、
           </para>
-            <itemizedlist>
-              <listitem>
+          <itemizedlist>
+            <listitem>
               <para lang="en">
                 <guilabel>Pick a path</guilabel>: That's the default option.
                 The mouse pointer turns to a small hand when it goes over a
@@ -276,30 +288,29 @@
                 Then you can move this path by click-and-dragging it (it will
                 be the active path while moving).
               </para>
-                <para lang="ja">
-                  <guilabel>つかんだパスを移動</guilabel>: 既定ではこちらが
-                  選ばれています。 マウスポインタを 
-                  <link linkend="gimp-path-dialog-using">可視パス</link> に
-                  かざすと、 その姿が小さな掌に替わります。 
-                  このときマウスでクリックしてドラッグすればパスを移動
-                  できます。 パスは移動の最中だけ活性化します。
-                </para>
-              </listitem>
-              <listitem>
+              <para lang="ja">
+                <guilabel>つかんだパスを移動</guilabel>: 既定ではこちらが
+                選ばれています。 マウスポインタを 
+                <link linkend="gimp-path-dialog-using">可視パス</link> に
+                かざすと、 その姿が小さな掌に替わります。 
+                このときマウスでクリックしてドラッグすればパスを移動
+                できます。 パスは移動の最中だけ活性化します。
+              </para>
+            </listitem>
+            <listitem>
               <para lang="en">
                 <guilabel>Move the active path</guilabel>: Only the current
                 path will be moved. You can change the current path in the
                 <link linkend="gimp-path-dialog">Path Dialog</link>.
               </para>
-                <para lang="ja">
-                  <guilabel>アクティブなパスを移動</guilabel>: 現在活性化して
-                  いるパスだけを移動できます。 それ以外のパスは 
-                  <link linkend="gimp-path-dialog">パスダイアログ</link> で
-                  活性化させることができます。
-                </para>
-              </listitem>
-            </itemizedlist>
-          </para>
+              <para lang="ja">
+                <guilabel>アクティブなパスを移動</guilabel>: 現在活性化して
+                いるパスだけを移動できます。 それ以外のパスは 
+                <link linkend="gimp-path-dialog">パスダイアログ</link> で
+                活性化させることができます。
+              </para>
+            </listitem>
+          </itemizedlist>
         </listitem>
       </varlistentry>
     </variablelist>
