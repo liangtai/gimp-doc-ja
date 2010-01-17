@@ -11,7 +11,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-10-06-->
+<!--2010-01-17-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -259,6 +259,9 @@
         <term lang="ja">パレットの編集</term>
         <listitem>
           <para lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-gtk-edit-16.png"/>
+            </guiicon>
             This button brings up the
             <link linkend="gimp-palette-editor-dialog">Palette Editor</link>.
           </para>
@@ -292,14 +295,18 @@
             <secondary sortas="アタラシイパレット">新しいパレット</secondary>
           </indexterm>
           <para lang="en">
-            See <link linkend="gimp-palette-new">New Palette</link>.
+            About
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
+            this icon button, see
+            <link linkend="gimp-palette-new">New Palette</link>.
           </para>
           <para lang="ja">
             <guiicon>
               <inlinemediaobject>
                 <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-document-new-16.png"/>
+                  <imagedata fileref="images/dialogs/dialogs-icon-new.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>「新しいパレットを作成」</phrase>
@@ -325,8 +332,12 @@
             <secondary sortas="フクセイ">複製</secondary>
           </indexterm>
           <para lang="en">
-            See <link linkend="gimp-palette-duplicate">Duplicate
-            Palette</link>.
+            About
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
+            </guiicon>
+            this icon button, see
+            <link linkend="gimp-palette-duplicate">Duplicate Palette</link>.
           </para>
           <para lang="ja">
             <guiicon>
@@ -359,8 +370,13 @@
             <secondary sortas="サクジョ">削除</secondary>
           </indexterm>
           <para lang="en">
-            See <link linkend="gimp-palette-delete">Delete
-            Palette</link>.
+            About
+            <guiicon>
+              <inlinegraphic
+                fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            this icon button, see
+            <link linkend="gimp-palette-delete">Delete Palette</link>.
           </para>
           <para lang="ja">
             <guiicon>
@@ -393,7 +409,12 @@
             <secondary sortas="サイドヨミコミ">再度読み込み</secondary>
           </indexterm>
           <para lang="en">
-            See <link linkend="gimp-palette-refresh">Refresh Palettes</link>.
+            About
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            this icon button, see
+            <link linkend="gimp-palette-refresh">Refresh Palettes</link>.
           </para>
           <para lang="ja">
             <guiicon>
@@ -459,6 +480,9 @@
             <link linkend="gimp-palette-editor-dialog">Palette Editor</link>:
             it can also be activated by double-clicking on a palette in the
             Palettes dialog, or by pressing the <quote>Edit Palette</quote>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon>
             button at the bottom of the dialog.
           </para>
           <para lang="ja">
@@ -1085,6 +1109,9 @@
       <para lang="en">
         The Palette Editor is only accessible from the Palettes dialog: you
         can activate it by double-clicking on a palette, or by pressing the
+        <guiicon>
+          <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+        </guiicon>
         <quote>Edit Palette<quote> button at the bottom, or by choosing
         <quote>Edit Palette<quote> from the <quote>Palettes</quote> Menu.
       </para>
@@ -1193,11 +1220,15 @@
           <term lang="ja">保存</term>
           <listitem>
             <para lang="en">
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/stock-save-16.png"/>
+              </guiicon>
               This button causes the palette to be saved in your personal
-              <filename>palettes</filename> folder.  It would be saved
-              automatically when GIMP exits in any case, but you might want
-              to use this button if you are concerned that GIMP might crash
-              in the meantime.
+              <filename class="diarectory">palettes</filename> folder.  It
+              would be saved automatically when <acronym>GIMP</acronym> exits
+              in any case, but you might want to use this button if you are
+              concerned that <acronym>GIMP</acronym> might crash in the
+              meantime.
             </para>
             <para lang="ja">
               <guiicon>
@@ -1223,6 +1254,9 @@
           <term lang="ja">復帰</term>
           <listitem>
             <para lang="en">
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/stock-revert-16.png"/>
+              </guiicon>
               This operation has not yet been implemented.
             </para>
             <para lang="ja">
@@ -1245,6 +1279,9 @@
           <term lang="ja">色の編集</term>
           <listitem>
             <para lang="en">
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+              </guiicon>
               Pops up a color editor allowing you to alter the color.  If
               the palette is one you aren't allowed to alter, this button
               will be insensitive. See
@@ -1275,7 +1312,12 @@
           <term lang="ja">現在の描画色を追加</term>
           <listitem>
             <para lang="en">
-              See <link linkend="gimp-palette-editor-new">below</link>
+              About
+              <guiicon>
+                <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+              </guiicon>
+              this icon button, see
+              <link linkend="gimp-palette-editor-new">below</link>.
             </para>
             <para lang="ja">
               <guiicon>
@@ -1299,7 +1341,13 @@
           <term lang="ja">色の削除</term>
           <listitem>
             <para lang="en">
-              See <link linkend="gimp-palette-editor-delete">below</link>
+              About
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/dialogs-icon-delete.png"/>
+              </guiicon>
+              this icon button, see
+              <link linkend="gimp-palette-editor-delete">below</link>.
             </para>
             <para lang="ja">
               <guiicon>
@@ -1323,7 +1371,13 @@
           <term lang="ja">表示倍率を下げて縮小表示</term>
           <listitem>
             <para lang="en">
-              See <link linkend="gimp-palette-editor-zoom-out">below</link>
+              About
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-zoom-out-16.png"/>
+              </guiicon>
+              this icon button, see
+              <link linkend="gimp-palette-editor-zoom-out">below</link>.
             </para>
             <para lang="ja">
               <guiicon>
@@ -1347,7 +1401,13 @@
           <term lang="ja">表示倍率を上げて拡大表示</term>
           <listitem>
             <para lang="en">
-              See <link linkend="gimp-palette-editor-zoom-in">below</link>
+              About
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-zoom-in-16.png"/>
+              </guiicon>
+              this icon button, see
+              <link linkend="gimp-palette-editor-zoom-in">below</link>.
             </para>
             <para lang="ja">
               <guiicon>
@@ -1371,7 +1431,13 @@
           <term lang="ja">すべて表示されるように表示倍率を調整</term>
           <listitem>
             <para lang="en">
-              See <link linkend="gimp-palette-editor-zoom-all">below</link>
+              About
+              <guiicon>
+                <inlinegraphic
+                  fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
+              </guiicon>
+              this icon button, see
+              <link linkend="gimp-palette-editor-zoom-all">below</link>.
             </para>
             <para lang="ja">
               <guiicon>

@@ -9,7 +9,7 @@
   2006-04-15 lexa: added de translatation and docbook compliance
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2009-10-06-->
+<!--2010-01-17-->
 <sect2 id="gimp-pattern-dialog">
   <title lang="en">Patterns Dialog</title>
   <title lang="ja">パターンダイアログ</title>
@@ -31,7 +31,7 @@
   </indexterm>
 
   <para lang="en">
-    In GIMP, a <emphasis>pattern</emphasis>
+    In <acronym>GIMP</acronym>, a <emphasis>pattern</emphasis>
     is a small image used to fill areas by placing copies of side by side. See
     the <link linkend="gimp-concepts-patterns">Patterns</link>
     section for basic information on patterns and how they can be created and
@@ -359,7 +359,11 @@
         <listitem>
           <anchor id="gimp-pattern-delete"/>
           <para lang="en">
-            Pressing this button removes the pattern from the list and causes
+            Pressing
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            this button removes the pattern from the list and causes
             the file representing it to be deleted from disk. Note that you
             cannot remove any of the patterns that are supplied with GIMP and
             installed in the system <filename>patterns</filename>
@@ -393,7 +397,11 @@
         <listitem>
           <anchor id="gimp-pattern-refresh"/>
           <para lang="en">
-            Pressing this button causes GIMP to rescan the folders in your
+            Pressing
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            this button causes GIMP to rescan the folders in your
             pattern search path, adding any newly discovered patterns to the
             list. This button is useful if you add new patterns to a folder,
             and want to make them available without having to restart GIMP.
@@ -424,7 +432,11 @@
         <listitem>
           <anchor id="gimp-pattern-open-as-image"/>
           <para lang="en">
-            If you click on this button, the current pattern is opened in a
+            If you click on
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-fileopen-16.png"/>
+            </guiicon>
+            this button, the current pattern is opened in a
             new image window. So, you can edit it. But if you try to save it
             with the <quote>.pat</quote>, even with a new name, you will bang
             into a <quote>Denied permission </quote> problem because this
