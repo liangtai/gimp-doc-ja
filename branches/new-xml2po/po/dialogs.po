@@ -1857,12 +1857,12 @@ msgid ""
 "Clicking in the chain-symbol-space toggles the transform-lock status of the "
 "path."
 msgstr ""
-"<quote>鎖</quote>の印はパスが組み合わせ変形になっているときに目の印の欄の右隣"
-"に現れ、 個別に変形できるときは消えています。 <quote>組み合わせ変形</quote>と"
-"はレイヤーやチャンネルなどの描画対象からなるひとつのまとまりに加わることをさ"
-"しており、 そのいずれかが拡大・縮小や回転などの変形を受けると連結された他の描"
-"画対象がすべて同時に変形されるようになっています。 鎖の印の欄をクリックすれば"
-"パスの組み合わせ変形の状態が切り替わります。"
+"<quote>鎖</quote>の印はパスが組み合わせ変形対象になっているときに目の印の欄の"
+"右隣に現れ、 個別に変形できるときは消えています。 <quote>組み合わせ変形対象"
+"</quote>とはレイヤーやチャンネルなどの描画対象からなるひとつのまとまりに加わ"
+"ることをさしており、 そのいずれかが拡大・縮小や回転などの変形を受けると連結さ"
+"れた他の描画対象がすべて同時に変形されるようになっています。 鎖の印の欄をクリ"
+"ックすればパスの組み合わせ変形の状態が切り替わります。"
 
 #: src/dialogs/path-dialog.xml:151(term)
 #: src/dialogs/channel-dialog.xml:244(term)
@@ -2396,12 +2396,12 @@ msgstr ""
 "保存するファイルの名前と保管場所を指定してください。 またこのパスは "
 "<guimenuitem>パスをインポート...</guimenuitem> コマンドを使えばあとから"
 "<acronym>GIMP</acronym>画像に取り込むことも可能です。 パスを保存するファイル"
-"形式は<acronym>SVG</acronym>です。 これはつまりこうして保存したパスが "
-"<application>Sodipodi</application> や <application>Inkscape</application> の"
-"ようなベクタ画像プログラムに読み込んで使えることを意味します。 <link linkend="
-"\"gimp-concepts-paths\">パス</link> の節に<acronym>SVG</acronym>ファイル形式"
-"の情報と<acronym>GIMP</acronym>パスとの関係について述べていますのでご覧くださ"
-"い。"
+"形式は<acronym>SVG</acronym>です。 これはつまりこうしておけば保存した"
+"パスが <application>Sodipodi</application> や <application>Inkscape"
+"</application> のようなベクタ画像プログラムに読み込んで使えるのです。 <link "
+"linkend=\"gimp-concepts-paths\">パス</link> の節に<acronym>SVG</acronym>ファ"
+"イル形式の情報と<acronym>GIMP</acronym>パスとの関係について述べていますのでご覧"
+"ください。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -4875,8 +4875,8 @@ msgid ""
 "This command is enabled only if the indexed palette contains less than 256 "
 "colors. The background color of the Toolbox is appended to the color map."
 msgstr ""
-"このコマンドはインデックス化パレットの色数が256色に満たない場合にのみ現れま"
-"す。 ツールボックスでも表示されている背景色がカラーマップに付け加えられます。"
+"このコマンドはインデックス化パレットの色数が 256 色に満たない場合にのみ現れ"
+"ます。 ツールボックスでも表示されている背景色がカラーマップに付け加えられます。"
 
 #: src/dialogs/indexed-palette-dialog.xml:288(term)
 msgid "Add from BG"
@@ -5085,7 +5085,13 @@ msgstr ""
 
 #: src/dialogs/images-dialog.xml:159(para)
 msgid "This button is not working."
-msgstr "この機能は未完成のため使用できません。"
+msgstr ""
+"&lt;!--この機能は使用できません。--&gt; This command works only on a image "
+"without any window.  Though images can be opened by the New "
+"Window command, if the image has been already loaded without window by a "
+"primitive procedure command (such as <function>gimp-image-new</function>, "
+"<function>file-png-load</function>, etc.), it can not be unloaded even if "
+"its windows are closed to the last.  Then use this command to close it."
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
