@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-14 j.h: updated to v2.6. Added central cross in selections and using
+  arrow keys.
+  2008-01-18 ude: updated 'de'
+  2008-01-11 j.h: updated to v2.4 'en;fr'
+  2007-06-13 kost: added 'no'
+  2007-04-17 Adde Spanish translation by AntI
+  2006-06-14 warning added in Affect section by j.h
+  2006-02-15 en;fr revised by j.h; added section for Default Behaviour
+  2005-12-06 replaced simplesect by sect3 by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  050526 de reviewed and restructured by axel.wernicke
+-->
+<!--2009-11-17-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-move">
+  <title lang="en">Move</title>
+  <title lang="ja">移動</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Move</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Move</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="イドウ">移動</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イドウ">移動</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">The Move tool in Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>移動</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/toolbox-move.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Move Tool is used to move layers, selections, paths or guides. It
+    works also on texts.
+  </para>
+  <para lang="ja">
+    移動ツールはレイヤーや選択、 パス、 ガイドを移動するためのものです。
+    テキストも移動できます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access to the Move Tool in different ways:
+    </para>
+    <para lang="ja">
+      <quote>移動</quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          From the image menu bar
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Transform Tools</guisubmenu>
+            <guimenuitem>Move</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>変換ツール</guisubmenu>
+            <guimenuitem>移動</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking the tool icon:
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-move-22.png"/>
+          </guiicon>.
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-move-22.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By using the keyboard shortcut <keycap>M</keycap>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット <keycap>M</keycap>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          The Move tool is automatically activated when you create a
+          guide.
+        </para>
+        <para lang="ja">
+          ガイドを作ったときは自動的に移動ツールが起用されます。
+        </para>
+        <note>
+          <indexterm lang="en">
+            <primary>Space bar</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>スペースキー</primary>
+            <secondary sortas="イドウツールニキリカエ">
+              移動ツールに切り替え
+            </secondary>
+          </indexterm>
+          <para lang="en">
+            Holding down the <keycap>space</keycap> bar changes the active
+            tool to Move temporarily. The Move tool remains active as long as
+            the space bar is held down. The original tool is reactivated
+            after releasing the space bar. This behaviour exists only if the
+            <guilabel>Switch to Move tool</guilabel> option is
+            enabled in
+            <menuchoice>
+              <guimenu>Edit</guimenu>
+              <guisubmenu>Preferences</guisubmenu>
+              <guisubmenu>Image Windows</guisubmenu>
+              <guimenuitem>Space Bar</guimenuitem>
+            </menuchoice>.
+          </para>
+          <para lang="ja">
+            <keycap>スペース</keycap> キーを押すと使用中のツールが一時的に移動
+            ツールに変身する機能があります。 スペースキーを放すまで移動ツールの
+            状態が続きます。 スペースキーを放すともとのツールに戻ります。 この
+            設定は 
+            <link linkend="gimp-prefs-environment">環境設定</link> ダイアログの
+            <quote>画像ウィンドウ</quote>のページの 
+            <guilabel>スペースキーが押されている時</guilabel> のオプションに
+            <guimenuitem>移動ツールに切り替え</guimenuitem> を選んでください。
+          </para>
+        </note>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Move Tool options</title>
+      <title lang="ja"><quote>移動</quote>ツールのツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-move.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="about-common-options-display.xml"/>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Move</term>
+        <term lang="ja">移動対象</term>
+        <listitem>
+          <xi:include href="about-common-transform-options.xml"/>
+          <para lang="en">
+            Keep in mind that your Move choice persists after quitting the
+            tool.
+          </para>
+          <para lang="ja">
+            移動対象として選んだオプションは移動ツールを終了しても保持される
+            ことを忘れないでください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Tool toggle (Shift)</term>
+        <term lang="ja">機能の切り替え (Shift)</term>
+        <listitem>
+          <para lang="en">
+            If Move is on <quote>Layer</quote>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-layer-16.png"/>
+            </guiicon>
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                    fileref="images/dialogs/stock-layer-16.png">
+                </imageobject>
+                <textobject>
+                  <phrase>「レイヤー」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            <quote>レイヤー</quote>を対象とした移動ならば、
+          </para>
+          <itemizedlist>
+            <listitem>
+            <para lang="en">
+              <guilabel>Pick a layer or guide</guilabel>: On an image with
+              several layers, the mouse pointer turns to a crosshair when it
+              goes over an element belonging to the current layer.  Then you
+              can click-and-drag it. If the mouse pointer has a small hand
+              shape (showing that you do <emphasis>not</emphasis> pick an
+              element of the active layer), you will move a non-active layer
+              instead (it becomes the active layer while moving).
+            </para>
+            <para lang="en">
+              If a guide exists on your image, it will turn to red when the
+              mouse pointer goes over. Then it is activated and you can move
+              it.
+            </para>
+            <para lang="ja">
+              <guilabel>つかんだレイヤーまたはガイドを移動</guilabel>:
+              レイヤーを複数持つ画像の、 現在活性化しているレイヤーに属する
+              要素の上ではマウスポインタの姿が移動十字矢印に替わります。 
+              その要素はクリックしてドラッグすれば移動できます。 もし
+              ポインタの姿に小さな掌が加わっている場合 (つまりまだ活性
+              レイヤーの部品を <emphasis>何も</emphasis> つかんでいないこと
+              を表しているとき) には、 代わりに不活性レイヤーを移動する
+              可能性があります。 移動の最中は一時的にそのレイヤーが活性
+              レイヤーとなります。
+            </para>
+            <para lang="ja">
+              画像上にガイド (見当線) を置いていた場合は、 線上にマウス
+              ポインタをかざすと線が赤色に変わります。 これはガイドが
+              活性化したことを示しており、 移動できます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Move the active layer</guilabel>: Only the current
+                layer will be moved. This may be useful if you want to move a
+                layer with transparent areas, where you can easily pick the
+                wrong layer.
+              </para>
+              <para lang="ja">
+                <guilabel>アクティブなレイヤーを移動</guilabel>:
+                現在活性化しているレイヤーのみ移動できます。 これは透過部分を
+                もつレイヤーを移動したいとき、 間違って他のレイヤーを
+                つかむのを防げます。
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para lang="en">
+            If Move is on <quote>Path</quote>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-path-16.png"/>
+            </guiicon>
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata format="PNG"
+                    fileref="images/dialogs/stock-path-16.png">
+                </imageobject>
+                <textobject>
+                  <phrase>「パス」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon> 
+            <quote>パス</quote>を対象とした移動ならば、
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>Pick a path</guilabel>: That's the default option.
+                The mouse pointer turns to a small hand when it goes over a
+                <link linkend="gimp-path-dialog-using">visible path</link>.
+                Then you can move this path by click-and-dragging it (it will
+                be the active path while moving).
+              </para>
+              <para lang="ja">
+                <guilabel>つかんだパスを移動</guilabel>: 既定ではこちらが
+                選ばれています。 マウスポインタを 
+                <link linkend="gimp-path-dialog-using">可視パス</link> に
+                かざすと、 その姿が小さな掌に替わります。 
+                このときマウスでクリックしてドラッグすればパスを移動
+                できます。 パスは移動の最中だけ活性化します。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Move the active path</guilabel>: Only the current
+                path will be moved. You can change the current path in the
+                <link linkend="gimp-path-dialog">Path Dialog</link>.
+              </para>
+              <para lang="ja">
+                <guilabel>アクティブなパスを移動</guilabel>: 現在活性化して
+                いるパスだけを移動できます。 それ以外のパスは 
+                <link linkend="gimp-path-dialog">パスダイアログ</link> で
+                活性化させることができます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Summary of Move tool actions</title>
+    <title lang="ja">移動ツールの動作のまとめ</title>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Moving a selection</term>
+        <term lang="ja">選択範囲を移動</term>
+        <listitem>
+          <para lang="en">
+            The Move tool allows to move the selection outline only. If the
+            Move Mode is <quote>Layer</quote>, you must hold down
+            <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> keys.
+          </para>
+          <para lang="en">
+            If the Move Mode is Selection, you can click-and-drag any point in
+            canvas to move the selection outline. You can also use the arrow
+            keys to move selections precisely. Then, holding down the <keycap>
+            Shift</keycap> key moves then by increments of 25 pixels.
+          </para>
+          <para lang="en">
+            When you move a selection with the Move tool, the center of the
+            selection is marked with a small cross. This cross and selection
+            boundaries snap to guides or grid if the
+            <menuchoice>
+              <guimenu>View</guimenu>
+              <guimenuitem>Snap to Guides (or Grid)</guimenuitem>
+            </menuchoice>
+            option is checked: this makes aligning selections easier.
+          </para>
+          <para lang="en">
+            See <link linkend="gimp-using-selections-moving">Moving
+            selections</link> for other possibilities.
+          </para>
+          <para lang="ja">
+            移動ツールは選択範囲の輪郭だけを移動できます。 移動対象が
+            <quote>レイヤー</quote>の場合は、
+            <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo>
+            キーを押しながら行います。
+          </para>
+          <para lang="ja">
+            移動対象が選択範囲の場合は、 キャンバス上ならばどこでクリックして
+            ドラッグしても選択範囲の境界線を移動できます。 また <keycap>矢印
+            </keycap> キーを使うと精密に選択範囲を移動できます。 このとき 
+            <keycap>Shift</keycap> キーを押しながらだと 25 ピクセルごとに移動
+            します。
+          </para>
+          <para lang="ja">
+            選択範囲を移動ツールで移動する際に、 選択範囲の中央には小さな十字の
+            印がつきます。 選択範囲の境界線やこの十字は、 メニューで
+            <menuchoice>
+              <guimenu>表示</guimenu>
+              <guimenuitem>ガイドにスナップ</guimenuitem>
+            </menuchoice> (あるいは
+            <guimenuitem>グリッドにスナップ</guimenuitem> )
+            のオプションを有効にすると、 それらのガイドに吸い付きます。 これで
+            選択範囲を揃えるのが楽になります。
+          </para>
+          <para lang="ja">
+            これ以外の移動方法は
+            <link linkend="gimp-using-selections-moving">選択範囲の移動</link>
+            をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Moving a layer</term>
+        <term lang="ja">レイヤーを移動</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Layer</primary>
+            <secondary>Move</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>レイヤー</primary>
+            <secondary sortas="イドウ">移動</secondary>
+          </indexterm>
+          <para lang="en">
+            The Move Mode must be <quote>Layer</quote>. Then you can choose
+            between <guilabel>Move the Active Layer</guilabel> and, if you
+            have one or more layers, <guilabel>Point to Layer (or
+            Guide)</guilabel>.
+          </para>
+          <para lang="ja">
+            移動対象を<quote>レイヤー</quote>にしてください。 そうしたら
+            <guilabel>アクティブなレイヤーを移動</guilabel> を選択するか、
+            またはレイヤーが1層だけの場合でも複数ある場合でも <guilabel>
+            つかんだレイヤーまたはガイドを移動</guilabel> が選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Moving Grouped Layers</term>
+        <term lang="ja">連結された複数のレイヤーを移動</term>
+        <listitem>
+          <para lang="en">
+            If layers are grouped (with the little chain symbol) they will all
+            move, regardless of which layer is currently active.
+          </para>
+          <para lang="ja">
+          小さな鎖のしるしをつけてレイヤーを連結した場合には、
+          不活性なレイヤーも含めて一緒に移動します。
+        </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="ja">ガイド (見当線) を移動</term>
+        <term lang="en">Moving a guide</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Guide</primary>
+            <secondary>Move</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ケントウセン">ガイド</primary>
+            <secondary sortas="イドウ">移動</secondary>
+          </indexterm>
+          <para lang="en">
+            When you pull a guide from a ruler, the Move tool is automatically
+            activated. That's not the case after using another tool, and you
+            have to activate it by yourself. When the mouse pointer goes over a
+            guide, this guide turns to red and you can click-and-drag to move
+            it.
+          </para>
+          <para lang="ja">
+            画像ウィンドウ辺上の定規からガイドをドラッグして曳き出すと、 移動
+            ツールが自動的に呼びだされます。 そのあと他のツールを使用した
+            のなら、 移動ツールはご自分で呼びだしてください。 マウスポインタを
+            ガイドの上にかざすとガイドは赤色に変わりますので、 それをクリック
+            してドラッグすれば移動できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry lang="ja">
+        <term>Moving a path</term>
+        <term lang="en">パスを移動</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Path</primary>
+            <secondary>Move</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>パス</primary>
+            <secondary sortas="イドウ">移動</secondary>
+          </indexterm>
+          <para lang="en">
+            The Path Tool dialog has its own moving function: see
+            <xref linkend="gimp-tool-path"/>. But you can also use the Move
+            Tool. The Move Mode must be set to <quote>Path</quote>. Note that
+            the path becomes invisible; make it visible in the Path Dialog.
+            You can choose the path to be moved or move the active path.
+          </para>
+          <para lang="ja">
+            パスツールダイアログには独自の移動機能があります。
+            <xref linkend="gimp-tool-path"/> をご覧ください。 もちろん移動
+            ツールを使ってもパスを移動できます。 移動対象に<quote>パス</quote>
+            を選んでください。 ちなみにパスは不可視になっていることがよく
+            ありますので、 パスダイアログで可視化してしてください。 移動したい
+            パスを選ぶと活性化しますのでそのパスを移動できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Moving a text</term>
+        <term lang="ja">テキストを移動</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Text</primary>
+            <secondary>Move</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>テキスト</primary>
+            <secondary sortas="イドウ">移動</secondary>
+          </indexterm>
+          <para lang="en">
+            Every text has its own layer and can be moved as layers. See
+            <xref linkend="gimp-tool-text"/>.
+          </para>
+          <para lang="ja">
+            テキストはそれぞれがレイヤーになっていますので、 レイヤーと同じ
+            移動方法をとります。
+            <xref linkend="gimp-tool-text"/> をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

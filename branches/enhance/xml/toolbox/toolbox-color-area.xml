@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-15 j.h: added tip , added D shortcut, documented XDS 'en;fr'
+  2007-06-03 KoSt: added 'no'
+  2006-02-06 new section for Active Image added by j.h
+  2005-12-07 replaced <simplesect> by <sect2> by lexa
+  2005-11-30 replaced informalfigure by figure by lexa
+  2005-08-18 de reviewed by axel.wernicke
+  2005-09-04 add en;fr in swap-colors by j.hardelin
+-->
+<!--2009-10-01-->
+<sect1 id="gimp-toolbox-areas">
+  <title lang="en">Color and Indicator Area</title>
+  <title lang="ja">色と標識の区画</title>
+
+  <sect2 id="gimp-toolbox-color-area">
+    <title lang="en">Color Area</title>
+    <title lang="ja">色の区画</title>
+
+    <indexterm lang="en">
+      <primary>Toolbox</primary>
+      <secondary>Color Area</secondary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Color Area</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Foreground color</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Background color</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ツールボックス</primary>
+      <secondary sortas="イロノクカク">色の区画</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="イロノクカク">色の区画</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ビョウガショク">描画色</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ハイケイショク">背景色</primary>
+    </indexterm>
+    <figure>
+      <title lang="en">Color area in the Toolbox Palette</title>
+      <title lang="ja">ツールボックスパレットの色の区画</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/toolbox-palette.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Color area</term>
+        <term lang="ja">色の区画</term>
+        <listitem>
+          <para lang="en">
+            This area shows GIMP's basic palette, consisting of two colors,
+            the Foreground and Background, used for painting, filling, and
+            many other operations. Clicking on either of the color displays
+            brings up a Color Editor dialog, which permits you to change it.
+          </para>
+          <para lang="ja">
+            この区画は描画色と背景色の2色だけの、 <acronym>GIMP</acronym>の
+            基本的なパレットであり、 描いたり塗ったりいろいろな用途に
+            使われます。 2色のどちらもクリックすれば
+            <quote>描画色を/背景色を変更</quote>ダイアログが開かれて
+            その色を変更できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Default colors</term>
+        <term lang="ja">既定色</term>
+        <listitem>
+          <anchor id="gimp-toolbox-default-colors"/>
+          <para lang="en">
+            Clicking on this small symbol resets the Foreground and Background
+            colors to black and white, respectively. Pressing the
+            <keycap>D</keycap> key has the same effect.
+          </para>
+          <para lang="ja">
+            この小さな白黒のしるしを押すと、 予想どおり描画色と背景色がそれぞれ
+            白と黒にリセットされます。 <keycap>D</keycap> キーを押しても同じ
+            効果があります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Swap FG/BG colors</term>
+        <term lang="ja">描画色と背景色を交換</term>
+        <listitem>
+          <anchor id="gimp-toolbox-swap-colors"/>
+          <para lang="en">
+            Clicking on the small curved line with two arrowheads causes
+            the Foreground and Background colors to be swapped. Pressing the
+            <keycap>X</keycap> key has the same effect.
+          </para>
+          <para lang="ja">
+            小さな曲がった両頭の矢印をクリックすると描画色と背景色が交換
+            されます。 <keycap>X</keycap> キーを押しても同じ効果があります。
+          </para>
+          <tip>
+            <para lang="en">
+              You can click-and-drag one of these colors directly into a layer:
+              it will fill the whole layer.
+            </para>
+            <para lang="ja">
+              これらの色見本をクリックしてレイヤー上までドラッグして放って
+              みましょう。 するとレイヤー全体が塗りつぶされます。
+            </para>
+          </tip>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="gimp-toolbox-indicator-area">
+    <title lang="en">Indicator Area</title>
+    <title lang="ja">標識の区画</title>
+
+    <indexterm lang="en">
+      <primary>Toolbox</primary>
+      <secondary>Indicator Area</secondary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Brushes</primary>
+      <secondary>Toolbox Indicator Area</secondary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Patterns</primary>
+      <secondary>Toolbox Indicator Area</secondary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Gradient</primary>
+      <secondary>Toolbox Indicator Area</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ツールボックス</primary>
+      <secondary>標識の区画</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ブラシ</primary>
+      <secondary sortas="ツールボックスノヒョウシキノクカク">
+        ツールボックスの標識の区画
+      </secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>パターン</primary>
+      <secondary sortas="ツールボックスノヒョウシキノクカク">
+        ツールボックスの標識の区画
+      </secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>グラデーション</primary>
+      <secondary sortas="ツールボックスノヒョウシキノクカク">
+        ツールボックスの標識の区画
+      </secondary>
+    </indexterm>
+
+    <figure>
+      <title lang="en">Active tool indicator area</title>
+      <title lang="ja">現在の主なツールの状態を示す区画</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/toolbox-bpg.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This part of the Toolbox shows the currently selected brush, pattern,
+      and gradient. Clicking on any of them brings up a dialog that allows you
+      to change it.
+    </para>
+    <para lang="ja">
+      ツールボックスのこの部分では現在使われているブラシ、 パターン、
+      グラデーションが表示されています。 いずれもクリックすればその選択を
+      変更できます。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-toolbox-image-area">
+    <title lang="en">Active image Area</title>
+    <title lang="ja">現在の画像の区画</title>
+    <indexterm lang="en">
+      <primary>Toolbox</primary>
+      <secondary>Active image area</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>ツールボックス</primary>
+      <secondary sortas="ゲンザイノガゾウノクカク">現在の画像の区画</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">Current image in the toolbox</title>
+      <title lang="ja">ツールボックス上に示された現在活性化している画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/toolbox-image.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      A thumbnail of the active image can be displayed in this area if the
+      <quote>Display Active Image</quote> option is checked in
+      Preferences/Toolbox. If you click on this thumbnail, the
+      <quote>Images</quote> dialog is opened, useful if you have many
+      images on your screen. You can also click and drag this thumbnail to an
+      enabled XDS<footnote><para>
+        See <xref linkend="bibliography-online-xds"/>.
+      </para></footnote>
+      file manager to directly save the corresponding image; this opens a
+      dialog where you can enter a name for the image:
+    </para>
+    <para lang="ja">
+      <link linkend="gimp-prefs-toolbox">環境設定</link> ダイアログの<quote>
+      ツールボックス</quote>のページで <guilabel>アクティブな画像</guilabel> 
+      オプションを有効にしておれば、 この区画に現在活性化している画像の
+      縮尺見本画像 (サムネイル) が表示されます。 この縮尺見本をクリックすれば
+      <quote>画像</quote>ダイアログが開かれます。 このダイアログは複数の画像を
+      開いているときに重宝なものです。 この見本画像をクリックして
+      <acronym>XDS</acronym><footnote>
+        <para>
+          <xref linkend="bibliography-online-xds"/> をご覧ください。
+          <productname>X Window System</productname> 上の規格です。
+        </para></footnote>
+      可能なファイルマネージャまでドラッグして放つと、 その画像を直に
+      保存できます。 この画像につける名前を入力できるダイアログが提供されます。
+    </para>
+    <figure>
+      <title lang="en">A Direct Save Protocol (XDS) dialog</title>
+      <title lang="ja">Direct Save Protocol (XDS) 対応のダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/toolbox/XDS.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect2>
+</sect1>

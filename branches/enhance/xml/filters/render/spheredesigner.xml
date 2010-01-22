@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-05-18 KoSt: added 'no'
+  2007-05-01 <guilabel> deleted in all paragraphs (en,fr,it,ru) as already
+  done in the de language, by ciampix
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  2005/09/25 created by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-spheredesigner">
+  <title lang="en">Sphere Designer</title>
+  <title lang="ja">球面デザイナ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Sphere Designer</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Sphere Designer</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary sortas="キュウメンデザイナ">球面デザイナ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キュウメンデザイナ">球面デザイナ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        The same image, before and after the application of
+        <quote>Sphere Designer</quote> filter.
+      </title>
+      <title lang="ja"><quote>球面デザイナ</quote>フィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-spheredesigner.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Sphere Designer</quote> applied</para>
+          <para lang="ja"><quote>球面デザイナ</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter creates a three dimensional sphere with different textures.
+      It replaces the original image.
+    </para>
+    <para lang="ja">
+      <guimenuitem>球面デザイナ...</guimenuitem> フィルタは
+      立体的な球体画像を異なる質感で描きます。 呼び出し元のレイヤーの画像は
+      置き換わります。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating Sphere Designer</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guimenuitem>Sphere Designer</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guimenuitem>球面デザイナ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Sphere Designer</quote> filter parameters</title>
+      <title lang="ja"><quote>球面デザイナ</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-render-spheredesigner.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">プレビュー画面</term>
+        <listitem>
+          <para lang="en">
+            All your setting changes will appear in the Preview without
+            affecting the image until you click on <guilabel>OK</guilabel>.
+            Note that the preview displays the whole image, even if the
+            final result will concern a selection. Click the button
+            <emphasis>Update Preview</emphasis> to see the result of the
+            current settings.
+          </para>
+          <para lang="ja">
+            ダイアログ内で行なったどんな設定変更も 
+            <guilabel>OK</guilabel> ボタンで実行する前から
+            プレビュー画面で確認できます。 ちなみにプレビュー画面はたとえ選択
+            範囲内だけフィルタが適用されるとしても画像の全体像を表示します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Textures</term>
+        <term lang="ja">レイヤー</term>
+        <listitem>
+          <para lang="en">
+            The list of textures applied to the sphere. There textures are
+            applied in the order listed. Each item shows the type and the
+            name of the texture.
+          </para>
+          <para lang="ja">
+            この表は球体につけるテクスチャの順序を示しています。 それぞれ項目の
+            名前がテクスチャの種類と名称を表しています。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">New</term>
+              <term lang="ja">新規</term>
+              <listitem>
+                <para lang="en">
+                  Creates a new texture and adds it to the end of the
+                  list. The name and the features of this new texture are
+                  the ones which are displayed in the Texture Properties
+                  area, but you can change them by operating in this area,
+                  provided that your new texture is highlighted.
+                </para>
+                <para lang="ja">
+                  <guibutton>新規</guibutton> ボタンは新たな
+                  テクスチャを生成して上記リストに加えます。 新しいテクスチャの
+                  名前と機能は <guilabel>属性</guilabel> のところで指定した内容
+                  になっていて、 一覧表をクリックして選択した項目はここで変更
+                  できます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Duplicate</term>
+              <term lang="ja">複製</term>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Duplicate</guilabel>: Copies the selected texture
+                  and adds the copy to the end of the list.
+                </para>
+                <para lang="ja">
+                  <guibutton>複製</guibutton> ボタンを
+                  クリックすると一覧表で選択されているテクスチャの複製が
+                  追加されます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Delete</term>
+              <term lang="ja">削除</term>
+              <listitem>
+                <para lang="en">
+                  Deletes the selected texture from the list.
+                </para>
+                <para lang="ja">
+                  <guibutton>削除</guibutton> ボタンを
+                  クリックすると一覧表で選択されているテクスチャの項目が
+                  撤去されます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Open/Save</term>
+              <term lang="ja">開く; 保存</term>
+              <listitem>
+                <para lang="en">
+                  Allows to save current settings or load previously saved
+                  settings.
+                </para>
+                <para lang="ja">
+                  <guibutton>保存</guibutton> ボタンを
+                  クリックすると現在のダイアログ上の設定値が名前をつけて
+                  ファイルに保存できます。 <guibutton>開く
+                  </guibutton> ボタンをクリックすると保存された設定情報を
+                  読み込んで再び利用できます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Texture properties</term>
+        <term lang="ja">属性</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Type</term>
+              <term lang="ja">種類</term>
+              <listitem>
+                <para lang="en">
+                  Determines the type of action on the sphere.
+                  <itemizedlist>
+                    <listitem>
+                      <para>
+                        <guilabel>Texture</guilabel> covers the sphere with
+                        a specific pattern.
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guilabel>Bumpmap</guilabel> gives some relief to
+                        the texture.
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guilabel>Light</guilabel> lets you set the
+                        parameters of the light shining on the sphere.
+                      </para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+                <para lang="ja">
+                  球面での使われ方を定めます。
+                  <itemizedlist>
+                    <listitem>
+                      <para>
+                        <guimenuitem>テクスチャ</guimenuitem> にすると選ばれた
+                        テクスチャが球面を覆います。
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guimenuitem>バンプ</guimenuitem> の場合は選ばれた
+                        テクスチャをバンプマップ化して球面を加工します。
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guimenuitem>光源</guimenuitem> を選んだあとは球面を
+                        照らす光のパラメータを設定してください。
+                      </para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Texture</term>
+              <term lang="ja">テクスチャ</term>
+              <listitem>
+                <para lang="en">
+                  Determines the pattern used by the texture type. If the
+                  texture applies to light then the light is distorted by
+                  this texture as if it was going through this texture
+                  before falling onto the sphere. If the texture applies to
+                  the texture itself, the texture is applied directly to
+                  the sphere. The following options are available:
+                  <quote>Solid</quote>, <quote>Checker</quote>,
+                  <quote>Marble</quote>, <quote>Lizard</quote>,
+                  <quote>Phong</quote>, <quote>Noise</quote>,
+                  <quote>Wood</quote>, <quote>Spiral</quote> and
+                  <quote>Spots</quote>.
+                </para>
+                <para lang="ja">
+                  種類にテクスチャを選んだときはここでその種類を指定します。 
+                  種類に光源を選んだときは光があたかもこのテクスチャを透過した
+                  かような散乱や投影をして球面に当たります。 テクスチャが
+                  テクスチャ自身に適用するときはテクスチャを球面に直接適用
+                  します。<!--???--> 選べるオプションは、 <guimenuitem>ソリッド
+                  </guimenuitem>、 <guimenuitem>市松模様</guimenuitem>、
+                  <guimenuitem>マーブル</guimenuitem>、 <guimenuitem>トカゲ皮革
+                  </guimenuitem>、 <guimenuitem>フォン</guimenuitem>、
+                  <guimenuitem>ノイズ</guimenuitem>、 <guimenuitem>木目
+                  </guimenuitem>、 <guimenuitem>螺旋</guimenuitem>、
+                  <guimenuitem>斑点</guimenuitem> の 9 種類あります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Colors</term>
+              <term lang="ja">カラー</term>
+              <listitem>
+                <para lang="en">
+                  Sets the two colors to be used for a texture. By pressing
+                  the color button a color selection dialog appears.
+                </para>
+                <para lang="ja">
+                  テクスチャを描くのに使われる 2 色を指定します。 色だまり
+                  ボタンをクリックすると色変更ダイアログが現れて他の色が選択
+                  できるほか、 ツールボックスや<quote>描画色/背景色</quote>
+                  ダイアログにある色標識をクリックしてこのボタン上まで曳いて
+                  放つ方法でも色が変更できます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Scale</term>
+              <term lang="ja">拡大縮小</term>
+              <listitem>
+                <para lang="en">
+                  Determines the size of separate elements composing the
+                  texture. For example, for the <quote>Checker</quote>
+                  texture this parameter determines the size of black and
+                  white squares.  Value range is from 0 to 10.
+                </para>
+                <para lang="ja">
+                  テクスチャを構成する細分化された要素の大きさを設定します。 
+                  例えば <guimenuitem>市松模様</guimenuitem> テクスチャの場合は
+                  2 色の升目のそれぞれの大きさを指定するパラメータとなります。
+                  値の範囲は 0.0 から 10.0 までです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Turbulence</term>
+              <term lang="ja">乱れ</term>
+              <listitem>
+                <para lang="en">
+                  Determines the degree of texture distortion before
+                  applying the texture to the sphere. Value range is from 0
+                  to 10. With values of up to 1.0 you can still make out
+                  the undistorted patterns; beyond that the texture
+                  gradually turns into noise.
+                </para>
+                <para lang="ja">
+                  球面にテクスチャを貼りつける前に処理される歪め効果の程度を
+                  設定します。 値の範囲は 0.0 から 10.0 までです。 まだ 1.0 
+                  以下の値ならパターンは歪みません。 この値を上回るとテクスチャ
+                  は徐々にノイズ化してゆきます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Amount</term>
+              <term lang="ja">量</term>
+              <listitem>
+                <para lang="en">
+                  Determines the degree of influence the texture has on the
+                  final result. Value range is from 0 to 1. With the value
+                  of 0 the texture does not affect the result.
+                </para>
+                <para lang="ja">
+                  最終的にテクスチャが影響を及ぼす程度を設定します。 値の範囲は
+                  0.00 から 1.00 までです。 値を 0.00 にするとテクスチャが効果
+                  に反映されません。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Exponent</term>
+              <term lang="ja">ベキ指数</term>
+              <listitem>
+                <para lang="en">
+                  With the Wood texture, this options gives an aspect of
+                  venetian blind, more or less open.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>木目</guimenuitem> テクスチャの場合にこの
+                  オプションが連子窓の開き具合を制御します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Texture Transformations</term>
+        <term lang="ja">変換</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Scale X/Y/Z</term>
+              <term lang="ja">拡大縮小 X/Y/Z</term>
+              <listitem>
+                <para lang="en">
+                  Determines the degree of stretching/compression of the
+                  texture on the sphere along the three directions. The
+                  value range is from 0 to 10.
+                </para>
+                <para lang="ja">
+                  球面上で 3 つの次元方向にテクスチャを拡大縮小する程度を設定
+                  します。 値の範囲は 0.00 から 10.00 までです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Rotate X/Y/Z</term>
+              <term lang="ja">回転 X/Y/Z</term>
+              <listitem>
+                <para lang="en">
+                  Determines the amount of a turn of the texture on the
+                  sphere around the three axes.  The value range is from 0
+                  to 360.
+                </para>
+                <para lang="ja">
+                  球面上で 3 つの次元軸まわりにテクスチャを回転させる角度を
+                  設定します。 値の範囲は 0.0 から 360.0 までです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Position X/Y/Z</term>
+              <term lang="ja">位置 X/Y/Z</term>
+              <listitem>
+                <para lang="en">
+                  Determines the position of the texture relative to the
+                  sphere. When type is Light, this parameter refers to the
+                  position of the light floodlighting the sphere.
+                </para>
+                <para lang="ja">
+                  球面上でのテクスチャの相対位置を設定します。 種類に 
+                  <guimenuitem>光源</guimenuitem> を選んでいるときは球面を
+                  照らす明りの位置を示すパラメータです。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Reset</term>
+        <term lang="ja">リセット</term>
+        <listitem>
+          <para lang="en">
+            Sets all parameters to the default values.
+          </para>
+          <para lang="ja">
+            <guibutton>リセット</guibutton> ボタンは現在の
+            設定情報を初期値に戻します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

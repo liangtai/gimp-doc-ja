@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-10 j.h: no change for v2.4
+  2007-05-14 Added Spanish translation by AntI
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-edit-paste-into">
+  <title lang="en">Paste Into</title>
+  <title lang="ja">選択範囲内に貼り付け</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Paste</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Paste</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Paste Into</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ハリツケ">貼り付け</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイナイニハリツケ">
+      選択範囲内に貼り付け
+  </primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Paste Into</guimenuitem> command acts in a similar way
+    to the <guimenuitem>Paste</guimenuitem> command. The primary difference
+    becomes apparent if there is a selection within the canvas. Unlike the
+    <quote>Paste</quote> command, which simply centers the pasted image
+    data over the selection and replaces the selection with its own,
+    <quote>Paste Into</quote> clips the pasted image data by the existing
+    selection. The new selection can be moved as usual, but it is always
+    clipped by the original selection area.
+  </para>
+  <para lang="en">
+    If no selection exists, the <quote>Paste Into</quote> command places
+    the data from the Clipboard into the center of the canvas, as the
+    <quote>Paste</quote> command does.
+  </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲内に貼り付け</guimenuitem> コマンド
+    は <guimenuitem>貼り付け</guimenuitem> コマンドと同じよう
+    に作用します。 主な違いはキャンバスに選択範囲があるときに顕れます。 選択
+    範囲を中心点として画像データがそのまま貼り付けられる<quote>貼り付け</quote>
+    コマンドとは異なり、 <quote>選択範囲内に貼り付け</quote>コマンドは選択範囲
+    の形に画像データを切り抜いて貼り付けます。 新たにできた選択範囲の内容は普段
+    通り移動可能ですが、 元の選択範囲の領域で常に切り取られます。
+  </para>
+  <para lang="ja">
+    選択範囲がない場合に<quote>選択範囲内に貼り付け</quote>コマンドを実行すると
+    <quote>貼り付け</quote>コマンドと同様にクリップボードからのデータは
+    キャンバスの中央に置かれます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Paste Into</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guimenuitem>選択範囲内に貼り付け</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>

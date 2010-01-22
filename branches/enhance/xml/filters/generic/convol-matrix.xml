@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-09 ude: moved "activate filter" paras to separate sect3
+  2008-06-01 j.h: adopted 'de' example.
+  2007-08-23 AntI: added 'es'
+  2007-04-17 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-08-30 de replaced informalfigure by axel.wernicke
+  2005-09-01 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-convmatrix">
+  <title lang="en">Convolution Matrix</title>
+  <title lang="ja">コンボリューション行列...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Generic</secondary>
+    <tertiary>Convolution Matrix</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Convolution Matrix</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ハンヨウ">汎用</secondary>
+    <tertiary sortas="コンボリューションギョウレツ">
+      コンボリューション行列
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="コンボリューションギョウレツ">
+      コンボリューション行列
+    </primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
+      Here is a mathematician's domain. Most of filters are using convolution
+      matrix. With the Convolution Matrix filter, if the fancy takes you, you
+      can build a custom filter.
+    </para>
+    <para lang="en">
+      What is a convolution matrix? It's possible to get a rough idea of it
+      without using mathematical tools that only a few ones know. Convolution
+      is the treatment of a matrix by another one which is called
+      <quote>kernel</quote>.
+    </para>
+    <para lang="en">
+      The Convolution Matrix filter uses a first matrix which is the Image to
+      be treated. The image is a bi-dimensional collection of pixels in
+      rectangular coordinates. The used kernel depends on the effect you want.
+    </para>
+    <para lang="en">
+      GIMP uses 5x5 or 3x3 matrices. We will consider only 3x3 matrices, they
+      are the most used and they are enough for all effects you want. If all
+      border values of a kernel are set to zero, then system will consider it
+      as a 3x3 matrix.
+    </para>
+    <para lang="en">
+      The filter studies successively every pixel of the image. For each of
+      them, which we will call the <quote>initial pixel</quote>, it
+      multiplies the value of this pixel and values of the 8 surrounding
+      pixels by the kernel corresponding value. Then it adds the results,
+      and the initial pixel is set to this final result value.
+    </para>
+    <para lang="en">
+      A simple example:
+    </para>
+    <para lang="ja">
+      ここは数学者の独壇場です。 フィルタはほとんどがコンボリューション行列を
+      使用しています。 <guimenuitem>コンボリューション行列...
+      </guimenuitem> フィルタと想像力があればどんなフィルタも創れます。
+    </para>
+    <para lang="ja">
+      コンボリューション (二次元畳み込み) 行列とは何なのでしょう。 数学の小道具
+      をちょっとばかり知っていただければ大まかな理解が可能です。
+      コンボリューションとは行列式を
+      <quote>カーネル</quote>と呼ばれる別の行列式で処理することです。
+    </para>
+    <para lang="ja">
+      コンボリューション行列フィルタは<quote>像</quote>を処理する最初の行列を
+      使います。 像とは画素を縦横の座標に並べた2次元の集合です。 ほしい効果に
+      よって利用されるカーネルは異なります。
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>では 5&times;5 行列か 3&times;3 行列が使われます。
+      ここでの説明は専ら 3&times;3 行列のみ扱いますが、 これは最もよく用いられ
+      ているうえお望みの効果をこなすのに充分なものだからです。 ダイアログでは
+      5&times;5 行列の記入欄がありますが、 外縁の枠を全て 0 に設定すれば自動的
+      にこれを 3&times;3 行列であると見做します。
+    </para>
+    <para lang="ja">
+      画像でフィルタはそのあらゆる画素についてつぎつぎと検討します。 そのときの
+      画素を<quote>初期画素</quote>と呼び毎回この画素とその周りの8つの画素の値
+      に対しカーネルの相応する値との積をそれぞれ得ます。 それらの値の合計が
+      初期画素の最終的な値となります。
+    </para>
+    <para lang="ja">
+      つぎに簡単な例をご紹介します。
+    </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/filters/examples/convolution-calculate.png"/>
+      </imageobject>
+    </mediaobject>
+    <para lang="en">
+      On the left is the image matrix: each pixel is marked with its value.
+      The initial pixel has a red border. The kernel action area has a green
+      border. In the middle is the kernel and, on the right is the convolution
+      result.
+    </para>
+    <para lang="en">
+      Here is what happened: the filter read successively, from left to right
+      and from top to bottom, all the pixels of the kernel action area. It
+      multiplied the value of each of them by the kernel corresponding value
+      and added results. The initial pixel has become 42:
+      (40*0)+(42*1)+(46*0) + (46*0)+(50*0)+(55*0) + (52*0)+(56*0)+(58*0) = 42.
+      (the filter doesn't work on the image but on a copy). As a graphical
+      result, the initial pixel moved a pixel downwards.
+    </para>
+    <para lang="ja">
+      この図の左にあるのが画像の行列です。 各画素の値が書き込まれています。
+      初期画素は赤枠で囲ってあります。 カーネルによる処理が及ぶのは緑の枠で
+      囲ってある画素です。 右にあるのがコンボリューションによる結果です。
+    </para>
+    <para lang="ja">
+      この計算で何が起きているかご説明いたしましょう。 フィルタはカーネルの作用
+      領域の全ての画素を左から右へ上から下へ順番に読みとります。 カーネルに相応
+      する部分の値とそれぞれ掛け合わされそれらの和を求めます。 初期画素は 
+      (40&times;0)+(42&times;1)+(46&times;0) + 
+      (46&times;0)+(50&times;0)+(55&times;0) + 
+      (52&times;0)+(56&times;0)+(58&times;0) = 42 となります。 (このフィルタは
+      元画像に直接作用せずその複製に結果を記録します)。 画像のほうでは初期画素
+      が1ピクセル下に移動しました。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Generic</guisubmenu>
+        <guimenuitem>Convolution Matrix</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>汎用</guisubmenu>
+        <guimenuitem>コンボリューション行列...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Convolution matrix</quote> options</title>
+      <title lang="ja">
+        <quote>コンボリューション行列</quote>のオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-generic-convolution.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Matrix</term>
+        <term lang="ja">行列</term>
+        <listitem>
+          <para lang="en">
+            This is the 5x5 kernel matrix: you enter wanted values directly
+            into boxes.
+          </para>
+          <para lang="en">
+            <guilabel>Divisor</guilabel>: The result of previous calculation
+            will be divided by this divisor. You will hardly use 1, which
+            lets result unchanged, and 9 or 25 according to matrix size,
+            which gives the average of pixel values.
+          </para>
+          <para lang="en">
+            <guilabel>Offset</guilabel>: this value is added to the division
+            result. This is useful if result may be negative. This offset may
+            be negative.
+          </para>
+          <para lang="ja">
+            これは 5&times;5 行列を表しています。 それぞれの数値記入欄に直接
+            任意の数値を入れてください。
+          </para>
+          <para lang="ja">
+            <guilabel>割る数</guilabel>: 計算結果をこの数で
+            除算します。 1 は計算結果を変更しない値ですがめったに使われない
+            でしょう。 行列の大きさである 9 や 25 は画素の値の平均で割ります。
+          </para>
+          <para lang="ja">
+            <guilabel>オフセット</guilabel>: この値は除算の
+            あとで加わります。 負の値が出てよい場合に便利です。 ここに負の値も
+            設定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Border</term>
+        <term lang="ja">境界</term>
+        <listitem>
+          <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/filters-convolution-milord.png"/>
+              </imageobject>
+            </inlinemediaobject>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/filters-convolution-extend.png"/>
+              </imageobject>
+            </inlinemediaobject>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/filters-convolution-wrap.png"/>
+              </imageobject>
+            </inlinemediaobject>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/filters-convolution-crop.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </para>
+          <para lang="en">Source, Extend, Wrap, Crop</para>
+          <para lang="en">
+            When the initial pixel is on a border, a part of kernel is out of
+            image. You have to decide what filter must do:
+          </para>
+          <para lang="ja">左から順に、 元画像、 拡張、 回り込み、 切抜き</para>
+          <para lang="ja">
+            初期画素が画像の縁にあるとカーネルの一部が画像からはみ出してしまい
+            ます。 このときフィルタはどうすべきかを設定します。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>Extend</guilabel>: this part of kernel is not
+                taken into account.
+              </para>
+              <para lang="ja">
+                <guilabel>拡張</guilabel>: カーネルのはみ
+                出した部分は無視されます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Wrap</guilabel>: this part of kernel will study
+                pixels of the opposite border, so pixels disappearing from
+                one side reappear on the other side.
+              </para>
+              <para lang="ja">
+                <guilabel>回り込み</guilabel>: カーネルのはみ
+                出した部分は反対側の縁の画素を読み取りますので、 一方の辺で
+                消えた画素がもう一方の辺で復活することになります。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Crop</guilabel>: Pixels on borders are not
+                modified, but they are cropped.
+              </para>
+              <para lang="ja">
+                <guilabel>切抜き</guilabel>: 画像の縁の画素は
+                変更されず切り抜かれます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Channels</term>
+        <term lang="ja">チャンネル</term>
+        <listitem>
+          <para lang="en">
+            You can select there one or several channels the filter will work
+            with.
+          </para>
+          <para lang="ja">
+            ここでフィルタの操作対象に一つ乃至は複数のチャンネルを選べます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Normalise</term>
+        <term lang="ja">正規化</term>
+        <listitem>
+          <para lang="en">
+            If this option is checked, The Divisor takes the result value of
+            convolution. If this result is equal to zero (it's not possible
+            to divide by zero), then a 128 offset is applied. If it is
+            negative (a negative color is not possible), a 255 offset is
+            applied (inverts result).
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると<quote>割る数</quote>は算出数に応じた
+            値がとられます。 ただしその値が 0 になった場合は (0 では除算でき
+            ません)、 オフセット値に 128 が設定されます。 負の数となるときは
+            (負の数の色はありません)、 オフセットに 255 が設定され (反転した
+            結果になり) ます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Alpha weighting</term>
+        <term lang="ja">アルファ加重</term>
+        <listitem>
+          <para lang="en">
+            If this option is not checked, the filter doesn't take in account
+            transparency and this may be cause of some artefacts when
+            blurring.
+          </para>
+          <para lang="ja">
+            このオプションを無効にするとこのフィルタは透明度を考慮しませんが、
+            ぼかしがかかったときに加工痕が現れるおそれがあります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Examples</title>
+    <title lang="ja">使用例</title>
+    <para lang="en">
+      Design of kernels is based on high levels mathematics. You can find
+      ready-made kernels on the Web. Here are a few examples:
+    </para>
+    <para lang="ja">
+      カーネル行列の設計は高度な数学の裏打ちがあります。 出来合いのものがウェブ
+      上で見付かるはずです。 それらの例を少しばかりご覧ください。
+    </para>
+    <figure>
+      <title lang="en">Sharpen</title>
+      <title lang="ja">シャープ化</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/convolution-sharpen.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+         fileref="images/filters/examples/generic-taj-convmatrix-sharpen.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Blur</title>
+      <title lang="ja">ぼかし</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/convolution-blur.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/generic-taj-convmatrix-blur.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Edge enhance</title>
+      <title lang="ja">輪郭強調</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/convolution-edge.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+    fileref="images/filters/examples/generic-taj-convmatrix-edge-enhance.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Edge detect</title>
+      <title lang="ja">輪郭抽出</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/convolution-edge-detect1.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+     fileref="images/filters/examples/generic-taj-convmatrix-edge-detect.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Emboss</title>
+      <title lang="ja">エンボス加工</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/convolution-emboss.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+          fileref="images/filters/examples/generic-taj-convmatrix-emboss.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-15 j.h: updated en;fr to v2.6
+  2007-09-25 AntI: Added 'es'
+  2007-09-03 j.h : reviewed en;fr for v2.4. No change.
+-->
+<!--2010-01-17-->
+<sect2 id="gimp-font-dialog">
+  <title lang="en">Fonts Dialog</title>
+  <title lang="ja">フォントダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Fonts</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Fonts</primary>
+    <secondary>Dialog</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>フォント</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フォント</primary>
+    <secondary>ダイアログ</secondary>
+  </indexterm>
+  <figure>
+    <title lang="en">The Fonts dialog</title>
+    <title lang="ja">フォントダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/fonts-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The <quote>Fonts</quote> dialog is used for selecting fonts for the
+    <link linkend="gimp-tool-text">Text tool</link>.
+    It also allows you to refresh the list of available fonts, if you add
+    new ones to your system while GIMP is running.
+  </para>
+  <para lang="ja">
+    フォントダイアログは
+    <link linkend="gimp-tool-text">テキストツール</link> で使用するフォントを
+    選ぶために使われます。 その他には<acronym>GIMP</acronym>を実行中にシステム
+    に新しくフォントを追加した場合に、 利用可能なフォントの一覧表を読み込み直す
+    機能があります。
+  </para>
+
+  <sect3 id="gimp-font-dialog-activate">
+    <title lang="en">Activating the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Fonts</quote> dialog is a dockable dialog; see the section
+      <xref linkend="gimp-concepts-docks"/> for help on manipulating it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>フォント</quote>ダイアログはドッキング可能です。
+      その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from an image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Fonts</guimenuitem>
+          </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>フォント</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Fonts</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加</guimenu>
+            <guimenuitem>フォント</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tool Options for the Text tool. If you click on the
+          <quote>Font</quote> button, a Font-selector pops up. In the lower
+          right corner is a button that, if pressed, brings up the
+          <quote>Fonts</quote> dialog.
+        </para>
+        <para lang="ja">
+          テキストツールのツールオプションから。 <guilabel>フォント:</guilabel>
+          のボタンをクリックすると簡易フォント選択ダイアログが出てきます。 その
+          右下のアイコンボタン <!--ICON
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/dialogs/stock-----16.png"/>
+              </imageobject>
+              <textobject>
+                <phrase>「フォント選択ダイアログを開く」</phrase>
+              </textobject>
+            </inlinemediaobject>
+          </guiicon>-->
+          をクリックすると<quote>フォント</quote>ダイアログが開きます。
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Fonts</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Fonts</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      <guimenu>ウィンドウ</guimenu> メニューでは
+      ダイアログがひとつだけの状態で開かれている場合に限り、
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 この場合には画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guimenuitem>フォント</guimenuitem>
+      </menuchoice>
+      と進めば<quote>フォント</quote>ダイアログを浮かび上がらせられます。
+      <!--<footnote>
+        <para>
+          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
+          <quote>フォント</quote>ダイアログウィンドウが単独で (例えば<quote>
+          フォント</quote>タブとなっていたダイアログが
+          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
+          [隠れて]いるときは、 画像メニューから
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guimenuitem>フォント</guimenuitem>
+          </menuchoice>
+          と進めばこのダイアログを浮かび上がらせられます。
+        </para>
+      </footnote>-->
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-font-dialog-using">
+    <title lang="en">Using the Fonts dialog</title>
+    <title lang="ja"><quote>フォント</quote>ダイアログの利用法</title>
+    <para lang="en">
+      The most basic thing you can do is to select a font by clicking on it:
+      this font will then be used by the Text tool. If instead of clicking and
+      releasing, you hold down the left mouse button with the pointer
+      positioned over the font example (<quote>Aa</quote>), a window showing
+      a larger text example will pop up (<quote>Pack my box with five dozen
+      liquor jugs.</quote>).
+    </para>
+    <para lang="ja">
+      最も基本的な使い方は一覧表からフォントをクリックして選択することです。
+      こうして選ばれたフォントはテキストツールで利用できます。 フォントの見本
+      (日本語ならば<quote>永</quote>字、 主なアルファベット書体ならば<quote>Aa
+      </quote>) をクリックしてマウスボタンを押したままでしばらく待つと、 
+      より大きな文例<quote>Pack my box with five dozen liquor jugs.</quote>が
+      表示されます。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Grid/List modes</term>
+        <term lang="ja">升目表示と列挙表示</term>
+        <listitem>
+          <figure>
+            <title lang="en">The Fonts dialog</title>
+            <title lang="ja">フォントダイアログ</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/dialogs/fonts-grid-dialog.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Dialog in Grid View</para>
+                <para lang="ja">並べて表示</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/dialogs/fonts-dialog.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Dialog in List View</para>
+                <para lang="ja">一覧で表示</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <tip>
+            <para lang="en">
+              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+              opens a search field.
+              See <xref linkend="gimp-dock-view-as-list" />
+            </para>
+            <para lang="j">
+              キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+              <keycap>F</keycap></keycombo> で検索窓が現れます。
+              <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+              </link> をご覧ください。
+            </para>
+          </tip>
+          <para lang="en">
+            In the Tab menu for the Fonts dialog, you can choose between
+            <guimenuitem>View as Grid</guimenuitem> and
+            <guimenuitem>View as List</guimenuitem>.
+            In Grid mode, the fonts are laid out in a rectangular array. In
+            List mode, they are lined up vertically, with each row showing an
+            example of the appearance of the font (<quote>Aa</quote>),
+            followed by the name of the font.
+          </para>
+          <para lang="ja">
+            フォントダイアログのタブメニューで <guimenuitem>
+            並べて表示</guimenuitem> と <guimenuitem>
+            一覧で表示</guimenuitem> を切り替えられます。
+            <quote>並べて表示</quote>の場合はフォントの見本が升目状に並びます。
+            <quote>一覧で表示</quote>の場合もフォントの見本 (ほとんどの日本語
+            文字は<quote>永</quote>字、 アルファベットならば<quote>Aa</quote>
+            などの表示) が各段にひとつずつ表示され、 その横にフォント名が
+            記載されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry id="gimp-font-refresh">
+        <term lang="en">Refresh font list</term>
+        <term lang="ja">フォントを再読み込み</term>
+        <listitem>
+          <para lang="en">
+            Pressing
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            the button at the bottom of the dialog causes the system
+            font list to be rescanned. This may be useful if you add new fonts
+            while GIMP is running, and want to make them accessible for the
+            Text tool. You can also cause the font list to be rescanned by
+            right-clicking in the font display, and selecting <quote>Rescan
+            Font List</quote> from the menu that pops up (it is actually the
+            only option in the menu).
+          </para>
+          <para lang="ja">
+            ダイアログの底部中央にある
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/dialogs/stock-reload-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「フォント一覧の再スキャン」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            アイコンボタンをクリックすると、 システム上のフォントの目録を再走査
+            します。 <acronym>GIMP</acronym>を実行中にフォントを追加して
+            テキストツールですぐ使いたいときにこのボタンが役に立ちます。 この
+            機能はフォントの一覧表示を <mousebutton>第2ボタン</mousebutton>
+            クリックするか、 ダイアログのタブメニューより最初の項目を進むと
+            出てくる脈絡メニューの <guimenuitem>
+            フォント一覧の再スキャン</guimenuitem> を選んでも
+            実行できます。
+          </para>
+          <tip>
+            <para lang="en">
+              You can change the size of the font previews in the dialog using
+              the <quote>Preview Size</quote> submenu of the dialog's Tab menu.
+            </para>
+            <para lang="ja">
+              フォントの書体見本の大きさはダイアログのタブメニューの
+              <guisubmenu>プレビューサイズ</guisubmenu>
+              サブメニューで調節できます。
+            </para>
+          </tip>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

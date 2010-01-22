@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-01-18 lexa: further enhancements to filter description for en, de
+  2007-12-27 lexa: reviewed for color management enhancements
+  2007-05-22 Added Spanish translation by AntI
+  2007-03-18 ude: Re-arranged color proof options
+  2005-12-21 julien: Created en;fr; the "profile" section needs more information
+-->
+<!--2009-10-03-->
+<sect2 id="gimp-display-filter-dialog">
+  <title lang="en">Display Filters</title>
+  <title lang="ja">ディスプレイフィルタ...</title>
+
+  <indexterm lang="en">
+    <primary>Color</primary>
+    <secondary>Color display</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="シキサイヒョウジ">色彩表示</secondary>
+  </indexterm>
+
+  <para lang="en">
+    This command shows a dialog window when executed. This window can be used
+    to manage the display filters and their options. Display filters are not
+    to be confused with the filters in the <guimenu>filters</guimenu>-menu.
+    Display filters do not alter the image data, but only one display of it.
+    You can image display filters like big panes before your screen. They
+    change your perception of the image. This can be useful for things like
+    soft proofing prints, controlling the color management but also simulation
+    of color deficient vision.
+  </para>
+  <para lang="ja">
+    <guimenuitem>ディスプレイフィルタ...</guimenuitem> 
+    コマンドはダイアログウィンドウを開きます。 このウィンドウでディスプレイ
+    フィルタとそのオプションの管理ができます。 ちなみにディスプレイフィルタは 
+    <guimenu>フィルタ</guimenu> メニュー内のフィルタとは
+    無関係です。 ディスプレイフィルタは画像の表示処理にのみ影響を及ぼし、 画像
+    を加工することはありません。 ディスプレイフィルタは例えるならコンピュータ
+    画面の前に掛けた大きな仕切りガラスです。 ソフトプルーフ (色校正) を経た印刷
+    や色管理の調整に使うのはもちろん、 色覚障碍や特殊な発色環境を想定した色づけ
+    にも便利に使えます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>View</guimenu>
+            <guimenuitem>Display Filters…</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>表示</guimenu>
+            <guimenuitem>ディスプレイフィルタ...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">
+      Description of the <quote>Display Filters</quote> Dialog
+    </title>
+    <title lang="ja">
+      <quote>カラーディスプレイフィルタ</quote>ダイアログのご説明
+    </title>
+
+    <figure>
+      <title lang="en">
+        The <quote>Configure Color Display Filters</quote> dialog
+      </title>
+      <title lang="ja">
+        <quote>カラーディスプレイフィルタの設定</quote>ダイアログ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/view/display-filters.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This dialog has two small selectboxes. The left selectbox displays the
+      <guilabel>Available Filters</guilabel>. You can move a filter to the
+      right selectbox by selecting it and clicking on the
+      <guibutton>right arrow</guibutton> button. The
+      <guilabel>Active Filters</guilabel> window on the right displays
+      filters you have chosen and which will be applied if the adjacent box
+      is checked. You can move filters from the right selectbox to the left
+      selectbox by using the <guibutton>left arrow</guibutton> button. If you
+      select a filter by clicking on its name, its options are displayed
+      below the two selectboxes, in the
+      <guilabel>Configure Selected Filter</guilabel> area.
+    </para>
+    <para lang="ja">
+      このダイアログには2つの小さな選択ボックスがあります。 左の選択ボックスは
+      <guilabel>利用可能なフィルタ</guilabel> が一覧表で表示されています。 
+      ここでフィルタの項目をクリックしてから右矢印 
+      をクリックすれば右側の選択ボックスに加えられます。 右の <guilabel>
+      アクティブなフィルタ</guilabel> 一覧表に加わったフィルタ項目にはそれぞれ
+      チェックボックスが付いていて、 これが有効になると表示処理に適用されます。
+      右の選択ボックスで選択され強調表示されたフィルタ項目は左矢印 
+      をクリックすれば撤去できます。 フィルタ項目はクリックすると両ボックスより
+      下側にその名前やオプションが表示されます。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          <phrase>Simulation of deficient vision</phrase>
+          (<xref linkend="gimp-deficient-vision"/>;
+          <xref linkend="gimp-contrast-dialog"/>)
+        </para>
+        <para lang="ja">
+          特定の色覚を想定 (<xref linkend="gimp-deficient-vision"/>、
+          <xref linkend="gimp-contrast-dialog"/>)
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          <phrase>Color Management</phrase>
+          (<xref linkend="gimp-display-filter-color-management"/>;
+          <xref linkend="gimp-color-proof"/>)
+        </para>
+        <para lang="ja">
+          色管理 (<xref linkend="gimp-display-filter-color-management"/>、
+          <xref linkend="gimp-color-proof"/>)
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          <phrase>Others</phrase> (<xref linkend="gimp-gamma-dialog"/>)
+        </para>
+        <para lang="ja">
+          その他 (<xref linkend="gimp-gamma-dialog"/>)
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3 id="gimp-deficient-vision">
+    <title lang="en">Color Deficient Vision</title>
+    <title lang="ja">色覚障害の視覚</title>
+
+    <indexterm lang="en">
+      <primary>Color</primary>
+      <secondary>Deficient vision</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="イロ">色</primary>
+      <secondary sortas="シキカクショウガイ">色覚障碍</secondary>
+    </indexterm>
+
+    <para lang="en">
+      The images you create, we hope, will be seen by many people on many
+      different systems. The image which looks so wonderful on your screen may
+      look somewhat different to people with sight deficiencies or on a screen
+      with different settings from yours. Some information might not even be
+      visible.
+    </para>
+    <para lang="ja">
+      作成した画像はできればたくさんの人々がさまざまなシステム上で見られること
+      になるはずですしそうなってほしいと我々は願っています。 ところがお使いの
+      コンピュータ画面上では素晴らしい出来に見えた画像が、 色覚に障碍のある方や
+      何か異なる設定の画面で見ている方には多少異なる印象を与える可能性があり
+      ます。 場合によっては画像の一部の情報が見えないかもしれません。
+    </para>
+    <figure>
+      <title lang="en">
+        Description of the <quote>Color Deficient Vision</quote> dialog
+      </title>
+      <title lang="en"><quote>色覚障害の視覚</quote>ダイアログのご説明</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+        fileref="images/menus/view/display-filters/color-deficient-vision.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <sect4>
+      <title lang="en">Options</title>
+      <title lang="ja">オプション</title>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Color Deficiency Type</term>
+          <term lang="ja">色覚障害のタイプ</term>
+          <listitem>
+            <para lang="en">
+              In this drop-down menu you can select from among:
+            </para>
+            <para lang="ja">
+              この引き出しメニューで以下に示す3つの障碍からひとつを選びます。
+            </para>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">
+                  Protanopia<footnote>
+                    <para>
+                      Greek:
+                      <foreignphrase>proto</foreignphrase>: first (color in
+                      the <link linkend="glossary-colormodel">RGB Color
+                      System</link>):
+                      <foreignphrase>an</foreignphrase>: negation;
+                      <foreignphrase>op</foreignphrase>: eye, vision.
+                    </para>
+                  </footnote> (insensitivity to red)
+                </term>
+                <term lang="ja">
+                  第一色覚障害
+                  <footnote>
+                    <para>
+                      加法混色モデルをなす<acronym>RGB</acronym> 
+                      <link linkend="glossary-colormodel">色モデル</link> の
+                      原色の順になっています。
+                    </para>
+                  </footnote>
+                  (赤に無感覚)
+                </term>
+                <listitem>
+                  <para lang="en">
+                    Protanopia is a visual deficiency of the color red. It's
+                    the well-known daltonism (red-green color blindness).
+                    Daltonism occurs fairly frequently in the population.
+                  </para>
+                  <para lang="en">
+                    Protanopia is actually more complex than this; a person
+                    with this problem cannot see either red or green, although
+                    he is still sensitive to yellow and blue. In addition, he
+                    has a loss of luminance perception and the hues shift
+                    toward the short wavelengths.
+                  </para>
+                  <para lang="ja">
+                    第一色覚障害は赤色に対する色覚が弱いか失われています。 よく
+                    知られた紅緑色神異常という色覚異常です。 紅緑色神異常の人口
+                    は比較的多数あります。
+                  </para>
+                  <para lang="ja">
+                    実際のところ第一色覚障害はそれよりも複雑なものです。 この
+                    障碍を持つ人はイエローと青の区別はできますが緑と赤が見分け
+                    られません。 加えて輝度に対する視覚が弱く、 色相は波長の
+                    短い方に遷移しています。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Deuteranopia (insensitivity to green)</term>
+                <term lang="ja">第二色覚障害 (緑に無感覚)</term>
+                <listitem>
+                  <para lang="en">
+                    With deuteranopia, the person has a deficiency in green
+                    vision. Deuteranopia is actually like protanopia, because
+                    the person has a loss of red and green perception, but he
+                    has no luminance loss or hue shift.
+                  </para>
+                  <para lang="ja">
+                    第二色覚障害は緑色に対する色覚が弱いか失われています。 赤と
+                    緑に対する知覚が比較的劣るところは第一色覚障害とまるで変わ
+                    りありませんが、 輝度視覚の劣化はなく色相の遷移も
+                    ありません。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Tritanopia (insensitivity to blue)</term>
+                <term lang="ja">第三色覚障害 (青に無感覚)</term>
+                <listitem>
+                  <para lang="en">
+                    With tritanopia, the person is deficient in blue and
+                    yellow perception, although he is still sensitive to red
+                    and green. He lacks some perception of luminance, and the
+                    hues shift toward the long wavelengths.
+                  </para>
+                  <para lang="ja">
+                    第三色覚障害は緑や赤の知覚はありますが青やイエローの識別に
+                    困難があります。 輝度に対する視覚が一部失われており、 色相
+                    は波長の長い方に遷移しています。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+
+    <sect4>
+      <title lang="en">Examples</title>
+      <title lang="ja">例</title>
+
+      <figure>
+        <title lang="en">Example of protanopia</title>
+        <title lang="ja">第一色覚異常の例</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+             fileref="images/menus/view/display-filters/protanopia-normal.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Original image</para>
+            <para lang="ja">元の画像</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+           fileref="images/menus/view/display-filters/protanopia-filtered.png"/>
+          </imageobject>
+          <caption>
+            <!--
+              As you can see, a red-blind person cannot see the red (255,0,0)
+              text on a black (0,0,0) background. You have to change the text
+              color. Daltonism occurs fairly frequently in the population.
+              ご覧のとおり赤に対する色覚障碍者は黒地 (0,0,0) に赤い (255,0,0) 
+              テキストが見えない。 文字色を変更する必要有り。 紅緑色神異常の
+              人口は比較的多い。
+            -->
+            <para lang="en">
+              A red-blind person cannot see the red (255,0,0) text on a black
+              (0,0,0) background.
+            </para>
+            <para lang="ja">
+              赤に対する色覚障碍者は黒地 (0,0,0) に赤い (255,0,0) テキストが
+              見えない。
+            </para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <figure>
+        <title lang="en">
+          Examples of the three types of vision deficiencies in one image
+        </title>
+        <title lang="ja">
+          色覚障碍により同じ画像に3種類の見え方があることの例
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+     fileref="images/menus/view/display-filters/sight-defects_normal-view.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">normal vision</para>
+            <para lang="ja">標準的な色覚</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+      fileref="images/menus/view/display-filters/sight-defects_protanopia.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Protanopia</para>
+            <para lang="ja">第一色覚異常</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+    fileref="images/menus/view/display-filters/sight-defects_deuteranopia.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              Deuteranopia; in deuteranopia, yellow is shifted toward red.
+            </para>
+            <para lang="ja">第二色覚異常。 イエローが赤にまで及ぶ。</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/menus/sight-defects_tritanopia.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              Tritanopia; in tritanopia, green is slightly represented in the
+              blue range.
+            </para>
+            <para lang="ja">第三色覚異常。 緑は僅かに青の帯域にかぶる。</para>
+          </caption>
+        </mediaobject>
+      </figure>
+    </sect4>
+  </sect3>
+
+  <sect3 id="gimp-gamma-dialog">
+    <title lang="en">Gamma</title>
+    <title lang="ja">ガンマ値</title>
+
+    <indexterm lang="en">
+      <primary>Gamma</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガンマチ">ガンマ値</primary>
+    </indexterm>
+
+    <para>
+      <figure>
+        <title lang="en">The <quote>Gamma</quote> dialog</title>
+        <title lang="ja"><quote>ガンマ値</quote>ダイアログ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/menus/view/display-filters/gamma.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+    </para>
+    <para lang="en">
+      The correspondence between electrical intensity and color brightness
+      is not exact and it depends upon the device (the camera, the scanner,
+      the monitor, etc.). <quote>Gamma</quote> is a coefficient used to
+      correct this correspondence. Your image must be visible in both dark
+      and bright areas, even if it is displayed on a monitor with too much
+      luminence or not enough. The <quote>Gamma</quote> Display Filter
+      allows you to get an idea of the appearance of your image under these
+      conditions.
+    </para>
+    <para lang="ja">
+      電子的出力強度と色の明るさは必ずしも一致しません。 これはデバイス (
+      カメラ、 スキャナ、 モニタなどの装置) に依存した関係であるためです。 
+      <quote>ガンマ値</quote>はその一致をはかるために使われる係数です。 モニタ
+      装置が極度に明るくなっていたり逆に明るさ不足になっていても、 表示した
+      画像の暗く塗られた部分も明るく塗られた部分も見えるようにする必要が
+      あるのです。 <quote>ガンマ値</quote>ディスプレイフィルタによりこのような
+      状態で画像表示した様子を体験できます。
+    </para>
+    <tip>
+      <para lang="en">
+        In case you want not only to change the gamma of the current display,
+        but the change the gamma within the image itself, you can find a
+        description in <xref linkend="gimp-tool-levels"/>.
+      </para>
+      <para lang="ja">
+        お使いのディスプレイ装置のガンマ値を変更することなく画像のガンマ値を
+        変更したい場合は、 
+        <xref linkend="gimp-tool-levels"/> ツールの説明をお読みください。
+      </para>
+    </tip>
+  </sect3>
+
+  <sect3 id="gimp-contrast-dialog">
+    <title lang="en">Contrast</title>
+    <title lang="ja">コントラスト</title>
+
+    <indexterm lang="en">
+      <primary>Contrast</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>コントラスト</primary>
+    </indexterm>
+
+    <para>
+      <figure>
+        <title lang="en">The <quote>Contrast Management</quote> dialog</title>
+        <title lang="ja"><quote>コントラスト</quote>ダイアログ</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/menus/view/display-filters/contrast.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+    </para>
+    <para lang="en">
+      Here, we are back in the medical domain.
+      <quote>Contrast Sensitivity</quote>
+      is the capacity of the visual system to distinguish slight differences
+      in contrast. Some people with cataracts (which means that the lens has
+      opaque crystals that scatter light over the retina) or retinal disease
+      (for instance, due to diabetes, which destroys the rods and cones) have
+      a deficiency in sensitivity to contrast: for example, they would have
+      difficulties distinguishing spots on a dress.
+    </para>
+    <para lang="en">
+      If you are interested in this subject, you can browse the Web for
+      <quote>contrast sensitivity</quote>.
+    </para>
+    <para lang="ja">
+      ここで再び医学的な話をします。 <quote>コントラスト感度</quote>とは僅かな
+      コントラストを判別するための視覚的能力のことです。 白内障 (水晶体が濁り、
+      網膜を通した光が拡散してしまうこと) や網膜症 (例えば糖尿病が原因で桿状体
+      や角膜が破壊されてしまうこと) はコントラスト感度の障碍になります。 この
+      ような方にとっては例えばドレスについた染みが見定めづらくなります。
+    </para>
+    <para lang="ja">
+      この問題に興味を抱かれた方は <emphasis>コントラスト感度</emphasis> を
+      キーワードにしてウェブで 
+      <ulink url="http://www.google.co.jp/search?q=%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%B9%E3%83%88%E6%84%9F%E5%BA%A6&btnG=%E6%A4%9C%E7%B4%A2&hl=ja&lr=lang_ja&safe=off&num=20&sa=2">検索</ulink> してみてください。
+    </para>
+    <sect4>
+      <title lang="en">Options</title>
+      <title lang="ja">オプション</title>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Contrast Cycles</term>
+          <term lang="ja">コントラストサイクル</term>
+          <listitem>
+            <para lang="en">
+              With the <quote>Contrast</quote>
+              Filter, you can see the image as if you were suffering from
+              cataracts. You may have to increase the contrast of the image so
+              that your grandmother can see it well. In most cases, only very
+              low values of the <guilabel>Contrast Cycles</guilabel>
+              parameter are of interest. Higher values create a side-effect
+              which doesn't interest us here: if you increase the luminosity
+              value above 255, the complementary color appears.
+            </para>
+            <para lang="ja">
+              <quote>コントラスト</quote>フィルタを通した画像はあたかも白内障に
+              なってしまったかのような見え方をします。 あなたのお祖父さんや
+              お祖母さんが見易い画像になるようコントラストを上げることになる
+              でしょう。 <guilabel>コントラストサイクル
+              </guilabel> を大幅に下げると大抵面白いことになります。 逆に上げる
+              と副作用が出るので面白みがありません。 輝度の値を255より大きく
+              すると補色が現れます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+  </sect3>
+
+  <sect3 id="gimp-display-filter-color-management">
+    <title lang="en">Color Management</title>
+    <title lang="ja">色管理</title>
+
+    <indexterm lang="en">
+      <primary>Color management</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="イロカンリ">色管理</primary>
+    </indexterm>
+
+    <figure>
+      <title lang="en">The <quote>Color Management</quote> dialog</title>
+      <title lang="ja"><quote>色管理</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/view/display-filters/color-management.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter allows to enable the GIMP color management for each image
+      window. To learn more about the color management in GIMP, please read
+      <xref linkend="gimp-concepts-color-management"/>.
+    </para>
+    <para lang="ja">
+      このフィルタは画像ウィンドウごとに<acronym>GIMP</acronym>の色管理を実施
+      できます。 <acronym>GIMP</acronym>の色管理についてもっと知りたい方は
+      <xref linkend="gimp-concepts-color-management"/> をご覧ください。
+    </para>
+    <sect4>
+      <title lang="en">Options</title>
+      <title lang="ja">オプション</title>
+      <para lang="en">
+        All the customizing for the color management in GIMP has to be done
+        in the GIMP preferences. You can find detailed information about
+        this in <xref linkend="gimp-prefs-color-management"/>.
+      </para>
+      <para lang="ja">
+        <acronym>GIMP</acronym>の色管理の設定は全て 
+        <link linkend="gimp-prefs-color-management">環境設定</link> ダイアログ
+        の<quote>カラーマネジメント</quote> (色管理) のページで行います。
+      </para>
+    </sect4>
+  </sect3>
+
+  <sect3 id="gimp-color-proof">
+    <title lang="en">Color Proof</title>
+    <title lang="ja">色合せ</title>
+
+    <indexterm lang="en">
+      <primary>Color proof</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Soft proof</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="イロコウセイ">色校正</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="イロアワセ">色合せ</primary>
+    </indexterm>
+
+    <para lang="en">
+      The various systems for reproducing colors cannot represent the
+      infinity of colors available. Even if there are many colors in
+      common between the various systems and nature, some of the colors
+      will not be the same. The <quote>gamut</quote> is the color range of
+      a system. <emphasis>Color Profiles</emphasis> allow you to compensate
+      for these differences.
+    </para>
+    <para lang="en">
+      Before you print an image, it may be useful for you to see if you
+      will get the result you want by applying a profile. The <quote>Color
+      Proof</quote> filter shows you how your image will look after a color
+      profile has been applied.
+    </para>
+    <para lang="ja">
+      色を再現する空間はいろいろありますが、 色を無限に発色できるものは一つも
+      ありません。 いずれの色空間でも多様な自然の色と同じ色が発色できる一方で
+      一部の色は異なっています。
+      <link linkend="glossary-gamut">ガモット</link> とはある色空間の再現可能
+      な色の領域のことです。 <emphasis>色プロファイル</emphasis> により両者の
+      違いを埋め合わせできます。
+    </para>
+    <para lang="ja">
+      画像にプロファイルを適用すれば画像を印刷する前から印刷結果と同じ色調で
+      表示できるので便利です。 <quote>色合せ</quote>フィルタを使うとそのような
+      色プロファイルを適用したときの画像の見え方がわかります。
+    </para>
+    <figure>
+      <title lang="en">The <quote>Color Proof</quote> dialog</title>
+      <title lang="ja"><quote>色合せ</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/view/display-filters/color-proof.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <sect4>
+      <title lang="en">The <quote>Color Proof</quote> options</title>
+      <title lang="ja"><quote>色合せ</quote>オプション</title>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Profile</term>
+          <term lang="ja">プロファイル</term>
+          <listitem>
+            <para lang="en">
+              This option allows to select a color profile that is used to
+              simulate the color abilities of the printer. If the desired
+              profile is not shown in the list you might want to add it by
+              selecting a file. This can be done by selecting the last entry
+              of the list.
+            </para>
+            <para lang="ja">
+              このオプションでプリンタの発色能力を疑似体験できる色プロファイル
+              が選べます。 必要なプロファイルがこのリストになければそれを収めた
+              ファイルを探し出しここに加えることになるでしょう。 メニューの
+              最後の項目 <guimenuitem>カラープロファイルをディスクから選択...
+              </guimenuitem> に進んでください。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Intent</term>
+          <term lang="ja">方法</term>
+          <listitem>
+            <para lang="en">
+              With this option you can select the rendering intent, which is
+              the method used to determine how colors that can't be reproduced
+              by a device (<quote>are out of gamut</quote>) should be handled.
+              The different rendering intents are described in detail in the
+              glossary <xref linkend="glossary-rendering-intent"/>.
+            </para>
+            <para lang="ja">
+              このオプションでレンダリングインテントを選びます。 出力デバイスが
+              再現できない色 (ガモット外の色) を要求されたときの対処法を決めた
+              ものがレンダリングインテントです。 主に4種類あるその方法の違いは
+              <xref linkend="glossary-rendering-intent"/> で説明してあります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Black Point Compensation</term>
+          <term lang="ja">黒の生成</term>
+          <listitem>
+            <para lang="en">
+              Black point compensation allows a better representaion of
+              dark colors of your image when printing.
+            </para>
+            <para lang="ja">
+              印刷物で暗い色を表現するときに黒を使って補うと良好な結果が
+              得られます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+  </sect3>
+</sect2>

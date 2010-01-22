@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-19 j.h: revised for v2.6
+  2007-08-27 lexa: replaced list by sect3
+  2007-04-24 Added Spanish translation by AntI
+  2007-02-21 lexa: changed top level from chapter to sect1
+  2006-08-18 added norwegian translation by KoSt
+  2006-06-19 added italian translation by ciampix
+  2006-05-15 HdJ: Added dutch translation.
+  2006-05-13 added Korean translation by Dust
+  2006-03-10 changed structure
+  2006-02-20 fixed #322305
+  2005-11-30 replaced informalfigure by axel.wernicke
+-->
+<!--2009-09-20-->
+<sect1 id="gimp-using-getting-unstuck">
+  <title lang="en">Getting Unstuck</title>
+  <title lang="ja">固まったときの対処</title>
+  <indexterm lang="en">
+    <primary>GIMP</primary>
+    <secondary>Getting Unstuck</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>GIMP</primary>
+    <secondary sortas="カタマッタトキノタイショ">固まったときの対処</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <secondary sortas="ムハンノウ">無反応</secondary>
+  </indexterm>
+
+  <sect2 id="gimp-using-getting-unstuck-general">
+    <title lang="en">Stuck!</title>
+    <title lang="ja">反応しなくなった!</title>
+    <para lang="en">
+      All right, okay: you're stuck. You're trying to use one of the tools on
+      an image, and nothing is happening, and nothing you try makes any
+      difference. Your fists are starting to clench, and your face is starting
+      to feel warm. Are you going to have to kill the program, and lose all
+      your work? This sucks!
+    </para>
+    <para lang="en">
+      Well, hold on a second. This happens pretty frequently, even to people
+      who've used <acronym>GIMP</acronym> for a long time, but generally the
+      cause is not so hard
+      to figure out (and fix) if you know where to look at. Lets be calm, and
+      go through a checklist that will probably get you GIMPing happily again.
+    </para>
+    <para lang="ja">
+      了解しました。 おまかせください。 動かなくなったのですね。 画像にツールで
+      何かの操作をしたら、 全然反応がなくなって、 しかも何をやっても変化しなく
+      なったのでしょう。 あなたの手首は硬ばりだし、
+      額には脂汗が浮かんで&hellip;。 もしやプログラムを強制終了しようかと
+      思ってませんか？ それまでの成果は無駄になってしまうのに。 駄目じゃん。
+    </para>
+    <para lang="ja">
+      まずは一回深呼吸です。 実は<acronym>GIMP</acronym>を長年使っている人にも
+      たびたびこういったことが起こっているのですが、 見方を変えるとその
+      原因をつきとめたり (修繕したり) するのは案外簡単な場合が多いのです。
+      落ち着いて、 つぎの点検項目をじっくりたどれば必ずや
+      楽しい<acronym>GIMP</acronym>の時間が戻ってきます。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-using-getting-unstuck-common-causes">
+    <title lang="en">Common Causes of GIMP Non-Responsiveness</title>
+    <title lang="ja">
+      <acronym>GIMPが</acronym>反応しなくなるほとんどの理由
+    </title>
+    <sect3>
+      <title lang="en">There is a floating selection</title>
+      <title lang="ja">フローティング (浮層) 選択範囲がある</title>
+      <figure>
+        <title lang="en">Layers dialog showing a floating selection.</title>
+        <title lang="ja">
+          フローティング選択範囲があることを示すレイヤーダイアログ
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/unstuck-floating-sel.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en"><emphasis>How to tell:</emphasis>
+        If there is a floating selection, many actions are impossible
+        until the floating section is anchored.
+        To check, look at the Layers dialog (making
+        sure it's set to the image you're working on) and see whether the
+        top layer is called <quote>Floating Selection</quote>.
+      </para>
+      <para lang="en"><emphasis>How to solve:</emphasis>
+        Either anchor the floating selection, or convert it into an
+        ordinary (non-floating) layer. If you need help on how to do this,
+        see <link linkend="glossary-floatingselection">
+          Floating Selections
+        </link>.
+      </para>
+      <para lang="ja">
+        <emphasis>みわけかた:</emphasis>
+        <link linkend="gimp-selection-float">フローティング (浮層) 選択範囲
+        </link> があると、 これを固定するまでは実行できない操作がたくさん
+        あります。 確認のため、 レイヤーダイアログを見て (作業中の画像を扱って
+        いる状態で)、 最前面のレイヤーが<quote>フローティング選択範囲</quote>に
+        なっていないか確かめます。
+      </para>
+      <para lang="ja">
+        <emphasis>対処法:</emphasis>
+        フローティング選択範囲を固定するか、 もしくはそれを通常の
+        (浮いていない) レイヤーに転換します。 よくわからない方は
+        <link linkend="gimp-layer-anchor">レイヤーを固定</link>
+        をご覧ください。
+      </para>
+    </sect3>
+
+    <sect3>
+      <title lang="en">The selection is hidden</title>
+      <title lang="ja">選択範囲が隠されている</title>
+      <figure>
+        <title lang="en">Unstuck show selection menu</title>
+        <title lang="ja">
+          <quote>選択範囲の境界線を表示</quote>メニューで対処
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/unstuck-show-selection-menu.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              In the View menu, make sure that "Show Selection" is checked.
+            </para>
+            <para lang="ja">
+              <guilabel>表示</guilabel>メニューの
+              <guilabel>選択範囲の境界線を表示</guilabel>
+              が入りになっていることを確かめます。
+            </para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <para lang="en"><emphasis>How to tell:</emphasis>
+        If this is the problem, merely reading this will already have made
+        you realize it, probably, but to explain in any case: sometimes
+        the flickering line that outlines the selection is annoying
+        because it makes it hard to see important details of the image, so
+        <acronym>GIMP</acronym> gives you the option of hiding the selection,
+        by unchecking
+        <guimenuitem>Show Selection</guimenuitem>
+        in the <guimenu>View</guimenu>
+        menu. It is easy to forget that you have done this, though.
+      </para>
+      <para lang="en"><emphasis>How to fix:</emphasis> If this
+        hasn't rung any bells, it isn't the problem, and if it has,
+        you probably know how to fix it, because it doesn't happen
+        unless you explicitly tell it to; but anyway:  just go to
+        the <guimenu>View</guimenu> menu for the image and, if
+        <guimenuitem>Show Selection</guimenuitem> is
+        unchecked, click on it..
+      </para>
+      <para lang="ja">
+        これが問題になるそもそもの原因は、 ここを読んでいる時点まではいろいろ
+        他の問題は思い付きはしても、 まさかここが関係するとはなかなか察知
+        しづらいからではないでしょうか。 選択範囲を示す点滅破線はしばしば
+        画像の重要な細部を見えづらくしてしまう難点があるため、
+        <acronym>GIMP</acronym>では
+        <guimenu>表示</guimenu>メニューの
+        <guimenuitem>選択範囲の境界線を表示</guimenuitem>
+        のチェックを外せば選択範囲の線を隠せるようになっています。
+        ところがその後で忘れてしまいやすいのです。
+      </para>
+      <para lang="ja">
+        <emphasis>対処法:</emphasis>
+        これが何ら警鐘を鳴らすものではないのなら、 もともと問題でもありません。
+        これが問題だと思わなければよいだけの話になります。 その逆の場合も、
+        すでにあなたはもうどうすれば良いかご存知です。 でも一応申し上げますが、
+        <guimenu>表示</guimenu>メニューを開き、
+        <guimenuitem>選択範囲の境界線を表示</guimenuitem>
+        のチェックが外れていたらクリックして入れてください。
+      </para>
+    </sect3>
+
+    <sect3>
+      <title lang="en">You are acting outside of the selection</title>
+      <title lang="ja">選択範囲の外で作業している</title>
+      <figure>
+        <title lang="en">Unstuck select all</title>
+        <title lang="ja"><quote>すべて選択</quote>で対処</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/unstuck-select-all.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              Click <quote>All</quote>
+              in the Select menu to make sure that everything is selected.
+            </para>
+            <para lang="ja">
+              選択範囲を全域にするため <guimenu>選択
+              </guimenu>メニューの <guimenuitem>すべて選択
+              </guimenuitem> をクリックする。
+            </para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <para lang="en"><emphasis>How to fix:</emphasis>
+        If doing this has destroyed a selection that you wanted to keep, hit
+        Ctrl-Z (undo) a couple of times to restore it, and then we'll figure
+        out what the problem is. There are a couple of possibilities. If you
+        couldn't see any selection, there may have been a very tiny one, or
+        even one that contained no pixels. If this was the case, it surely is
+        not a selection that you wanted to keep, so why have you gotten this
+        far in the first place? If you can see a selection but thought you
+        were inside it, it might be inverted from what you think. The easiest
+        way to tell is to hit the Quick Mask button: the selected area will be
+        clear and the unselected area will be masked. If this was the problem,
+        then you can solve it by toggling Quick Mask off and choosing Invert
+        in the <guimenu>Select</guimenu> menu.
+      </para>
+      <para lang="ja">
+        <emphasis>対処法:</emphasis> 全域選択でせっかくできていた選択範囲が
+        壊れてしまったのでしたら、 もとに戻るまで
+        <keycombo><keycap>CTRL</keycap><keycap>Z</keycap></keycombo> (取り消し)
+        を数回繰り返してから問題解決に入りましょう。 考えられる原因はいくつか
+        あります。 もし選択範囲がどこにも見当たらないときは、 選択範囲が極めて
+        小さく、ときには1ピクセルも含んでいないようなものになっている可能性が
+        あります。 この場合、残しておきたいようなものではないでしょうから、
+        もとに戻す必要はありませんね。 もし選択範囲が見えていて作業もその
+        範囲内でしているはずだという場合は、 選択範囲が反転している可能性が
+        あります。 クイックマスクボタンを押すのがいちばん簡単なみわけかたです。
+        選択範囲は透明ですが非選択範囲にはマスクが掛かっています。
+        原因がこのとおりならば、クイックマスクを解除してから
+        <guimenu>選択</guimenu> メニューより <guimenuitem>
+        選択範囲を反転</guimenuitem> してください。
+      </para>
+    </sect3>
+
+    <sect3>
+      <title lang="en">The active drawable is not visible</title>
+      <title lang="ja">描画中の領域が不可視である</title>
+      <figure>
+        <title lang="en">Unstuck layer invisibility</title>
+        <title lang="ja">不可視レイヤーに対処</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/unstuck-layers-dialog-invislayer.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              Layers dialog with visibility off for the active layer.
+            </para>
+            <para lang="ja">
+              描画中のレイヤーが不可視になっていることを示すレイヤーダイアログ。
+            </para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <para lang="en"><emphasis>How to tell:</emphasis>
+        The Layers dialog gives you ability to toggle the visibility of
+        each layer on or off. Look at the Layers dialog, and see if
+        the layer you are trying to act on is active (i.e., darkened) and
+        has an eye symbol to the left of it. If not, this is your problem.
+      </para>
+      <para lang="en"><emphasis>How to fix:</emphasis>
+        If your intended target layer is not active, click on it in the Layers
+        dialog to activate it. (If none of the layers is active, the
+        active drawable might be a channel -- you can look at the Channels tab
+        in the Layers dialog to see. This does not change the solution,
+        though.) If the eye symbol does not appear, click in the Layers dialog
+        at the left edge to toggle it: this should make the layer visible. See
+        the Help section for the
+        <link linkend="gimp-layer-dialog">Layers Dialog</link>
+        if you need more help.
+      </para>
+      <para lang="ja">
+        <emphasis>みわけかた:</emphasis>
+        レイヤーダイアログでは個々のレイヤーの可視/不可視を切り替えることが
+        できます。 レイヤーダイアログを見て、 描画されているレイヤー
+        (強調されています) がどれかを探し、 その左に目のしるしがあるか
+        確かめてください。 なければ、 それが原因です。
+      </para>
+      <para lang="ja">
+        <emphasis>対処法:</emphasis>
+        処理対象のレイヤーが無効だった場合は、 レイヤーダイアログでそのレイヤー
+        をクリックして有効にしてください。 (有効なレイヤーがまったく無ければ、
+        描画領域はチャンネルかもしれませんので チャンネルダイアログを見て
+        ください。 解法は同じです。) レイヤーダイアログ上で目のしるしが
+        なければ、 左端をクリックして切り替えてください。 これでレイヤーは
+        可視化されます。 より詳しい説明が
+        <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> に
+        あります。
+      </para>
+    </sect3>
+
+    <sect3>
+      <title lang="en">The active drawable is transparent</title>
+      <title lang="ja">描画中の領域が透明になっている</title>
+      <figure>
+        <title lang="en">Unstuck layer transparency</title>
+        <title lang="ja">レイヤーの不透明度に対処</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+            fileref="images/using/unstuck-layers-dialog-transparentlayer.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              Layers dialog with opacity set to zero for the active layer.
+            </para>
+            <para lang="ja">
+              作業中のレイヤーの不透明度がゼロであることを示すレイヤーダイアログ
+            </para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        When the opacity is set 0 on the layer, you cannot see anything which
+        you draw.  Look the <guilabel>Opacity</guilabel> slider,
+        and see which side the slider placed at.  If it is at the leftmost side,
+        that is your problem.
+      </para>
+      <para lang="en">
+        <emphasis>How to fix:</emphasis> Move the slider.
+      </para>
+      <para lang="ja">
+        <emphasis>みわけかた:</emphasis>
+        不透明度が0のレイヤー上ではどんな描画をしても何も表示されません。
+        レイヤーダイアログ上部の <guilabel>不透明度</guilabel> スライダを
+        見てください。 もし最左端にあれば、 それが原因です。
+      </para>
+      <para lang="ja">
+        <emphasis>対処法:</emphasis>スライダを動かします。
+      </para>
+    </sect3>
+
+    <sect3>
+      <title lang="en">You are trying to act outside the layer</title>
+      <title lang="ja">レイヤーの領域外で作業している</title>
+      <para lang="en">
+        <emphasis>How to tell:</emphasis>
+        In <acronym>GIMP</acronym>, layers don't need to have the same
+        dimensions as the
+        image: they can be larger or smaller. If you try to paint outside
+        the borders of a layer, nothing happens. To see if this is
+        happening, look for a black-and-yellow dashed rectangle that does
+        not enclose the area you're trying to draw at.
+      </para>
+      <para lang="en">
+        <emphasis>How to fix:</emphasis>
+        You need to enlarge the layer. There are two commands at the bottom of
+        the Layer menu that will let you do this: Layer to Image Size, which
+        sets the layer bounds to match the image borders; and Layer Boundary
+        Size, which brings up a dialog that allows you to set the layer
+        dimensions to whatever you please.
+      </para>
+      <para lang="ja">
+        <emphasis>みわけかた:</emphasis>
+        <acronym>GIMP</acronym>ではレイヤーが画像と同じ大きさである必要は
+        ありません。 はみ出すような大きいものでも、 一部だけの小さなものでも、
+        ずれていてもよいのです。 レイヤーの境界線より外側で作業しても何も
+        起きません。 この事態をみわけるには、 黒と黄色の点線で区切られた
+        矩形領域をさがしだし、 その内側で作業しているのかどうか確かめるのです。
+      </para>
+      <para lang="ja">
+        レイヤーを大きくします。 <guimenuitem>レイヤー
+        </guimenuitem>メニューの下のほうにある2つの操作がどちらもこの問題を解決
+        します。 <guimenuitem>レイヤーをキャンバスに合わせる
+        </guimenuitem>: レイヤーの範囲を画像の大きさと同じにします。
+        <guimenuitem>レイヤーの拡大・縮小...</guimenuitem>:
+        ダイアログが開き、 レイヤーの大きさを自由に変えられます。
+      </para>
+    </sect3>
+
+    <sect3>
+      <title lang="en">The image is in indexed color mode.</title>
+      <title lang="ja">画像がインデックスカラーのモードになっている</title>
+      <para lang="en">
+        <emphasis>How to tell:</emphasis><acronym>GIMP</acronym> can handle
+        three different color modes:
+        <link linkend="glossary-colormodel">RGB(A), Indexed and Grayscale</link>.
+        The indexed colormode uses a colormap,
+        where all used colors on the image are indexed. The
+        <link linkend="gimp-tool-color-picker">color picker</link> in
+        <acronym>GIMP</acronym> however, let you choose RGB colors.
+        That means, if you try to paint with a different color than
+        it is indexed in the colormap, you end up in very
+        undetermined results (e.g. it paints with the wrong color or
+        you can't paint).
+      </para>
+      <para lang="en">
+        <emphasis>How to fix:</emphasis> Always use the
+        RGB Color mode to paint on images. You can verify and select
+        another color mode from the
+        <link linkend="gimp-image-mode">Mode</link> menuitem in the
+        <guimenu>Image</guimenu> menu.
+      </para>
+      <para lang="ja">
+        <emphasis>みわけかた:</emphasis>
+        <acronym>GIMP</acronym>は3つの異なる色のモード
+        <link linkend="glossary-colormodel">RGB(A)とインデックスと
+        グレースケール</link> を扱えます。 インデックスカラーのモードは
+        カラーマップを使用しており、 画像のすべての色は色目録から
+        とられています。 しかし<acronym>GIMP</acronym>の
+        <link linkend="gimp-tool-color-picker">スポイト</link>は
+        <acronym>RGB</acronym>カラーのモードを前提にした仕様で色を抽出します。
+        要するに、 カラーマップの目録外の色で描こうとすると、
+        (変な色がついたり、 何も描けなかったり) おかしな結果になるのです。
+      </para>
+      <para lang="ja">
+        <emphasis>対処法:</emphasis>
+        画像を描画するときは常に<acronym>RGB</acronym>モードを使用します。
+        <guimenu>画像</guimenu>メニューの
+        <link linkend="gimp-image-mode">モード</link> を見れば現在のモードを
+        確認でき、 ここで他のモードに変換することもできます。
+      </para>
+    </sect3>
+  </sect2>
+</sect1>

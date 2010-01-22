@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-03-18 JPL : read & update french
+  2007-12-22  PP rewiewed fr ; added figure
+  2007-10-05 lexa: added figure and reviewed de for GIMP 2.4
+  2007-07-20 ko : added contents by Mr.Dust
+  2007-06-02 KoSt: added 'no'
+  2006-07-24 lexa: enhanced docbook compliance
+  2006-06-15 en;fr: changed Ctrl and Shift sections by j.h
+  2006-02-17 en;fr: added section for Space bar by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-05-16 de reviewed by axel.wernicke
+-->
+<!--2009-11-15-->
+<sect2 id="gimp-tool-select">
+  <title lang="en">Common Features</title>
+  <title lang="ja">共通機能</title>
+
+  <indexterm lang="en">
+    <primary>Selections</primary>
+    <secondary>Common Features</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタク">選択</primary>
+    <secondary sortas="キョウツウキノウ">共通機能</secondary>
+  </indexterm>
+  <figure>
+    <title lang="en">The Selection tools</title>
+    <title lang="ja">選択ツール</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/selection-tools.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    Selection tools are designed to select regions from images or layers so
+    you can work on them without affecting the unselected areas. Each tool has
+    its own individual properties, but the selection tools also share a number
+    of options and features in common. These common features are described
+    here; the variations are explained in the following sections for each tool
+    specifically. If you need help with what a <quote>selection</quote>
+    is in GIMP, and how it works, see
+    <link linkend="gimp-concepts-selection">Selection</link>.
+  </para>
+  <para lang="en">There are seven selection tools:</para>
+  <para lang="ja">
+    選択ツールは活性レイヤーから領域を選択して、 何かの加工が非選択範囲に
+    及ばないようにすることを想定して作られました。 ツールはそれぞれ個性が
+    ありますが、 選択ツール全体では数多くの機能とオプションが共有されています。
+    ここではその共通機能について述べています。 個別の説明は次の節から
+    ツールごとに述べます。 <acronym>GIMP</acronym>における<quote>選択</quote>
+    そのものの意味や働きについて知りたい方は、
+    <link linkend="gimp-concepts-selection">選択</link> をご覧ください。
+  </para>
+  <para lang="ja">選択ツールは7種類あります。</para>
+  <itemizedlist>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-rect-select">Rectangle Select</link>;
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-rect-select">矩形選択</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-ellipse-select">Ellipse Select</link>;
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-ellipse-select">楕円選択</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the
+        <link linkend="gimp-tool-free-select">Free Select (the Lasso)</link>;
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-free-select">自由選択 (なげなわ)</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-fuzzy-select">
+        Select Contiguous Regions (the Magic Wand)
+        </link>;
+      <para lang="ja">
+        <link linkend="gimp-tool-fuzzy-select">ファジー選択
+        (魔法の杖; 隣接領域選択)</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-by-color-select">Select by Color</link>;
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-by-color-select">色域選択</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the <link linkend="gimp-tool-iscissors">
+        Select Shapes from Image (Intelligent Scissors)
+        </link> and
+      <para lang="ja">
+        <link linkend="gimp-tool-iscissors">電脳はさみ (形象選択)</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
+        the
+        <link linkend="gimp-tool-foreground-select">Foreground Select</link>.
+      </para>
+      <para lang="ja">
+        <link linkend="gimp-tool-foreground-select">前景抽出選択</link>
+      </para>
+    </listitem>
+  </itemizedlist>
+  <para lang="en">
+    In some ways the Path tool can also be thought of as a selection tool: any
+    closed path can be converted into a selection. It also can do a great deal
+    more, though, and does not share the same set of options with the other
+    selection tools.
+  </para>
+  <para lang="ja">
+    使い方によってはパスツールも選択ツールの一種だといえます。 閉じたパスは
+    選択に転換できるからです。 とは言ってもそれだけに限らない膨大な能力が
+    パスツールにはありますし、 どの選択ツールともオプションを共有していません。
+  </para>
+
+  <sect3 id="gimp-tools-select-modifiers">
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">修飾キー (初期設定)</title>
+    <para lang="en">
+      The behavior of selection tools is modified if you hold down the
+      <keycap>Ctrl</keycap>, <keycap>Shift</keycap>, and/or
+      <keycap>Alt</keycap> keys while you use them.
+    </para>
+    <para lang="ja">
+      選択ツールの動作は修飾キー <keycap>Ctrl</keycap> や 
+      <keycap>Shift</keycap> や <keycap>Alt</keycap> のひとつまたは複数の
+      組み合わせとともに使うと変化します。
+    </para>
+    <note>
+      <para lang="en">
+        Advanced users find the modifier keys very valuable, but novice users
+        often find them confusing. Fortunately, it is possible for most
+        purposes to use the Mode buttons (described below) instead of modifier
+        keys.
+      </para>
+      <para lang="ja">
+        修飾キーは達人にとってはとても価値のあるものですが、 慣れない
+        人にとってはたびたび混乱させるしろものです。 でも安心してください。
+        修飾キーを使わなくても (後で述べる) モードボタンを利用すれば
+        ほとんどの作業が同様に行えます。
+      </para>
+    </note>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            When creating a selection, holding down the
+            <keycap>Ctrl</keycap> key can have two different actions
+            according to the way you use it:
+          </para>
+          <para lang="ja">
+            <keycap>Ctrl</keycap> キーを押しながら
+            する範囲の選択には2通りの動作の異なる技があります。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                Holding down the key <emphasis>while drawing</emphasis>
+                the selection toggles the <quote>Expand from center</quote>
+                option.
+              </para>
+              <para lang="ja">
+                矩形選択や楕円選択で
+                <emphasis>範囲を描いている途中から</emphasis> 
+                <keycap>Ctrl</keycap> キーを押すと、 押している間は 
+                <guilabel>中央から拡げる</guilabel> オプションがはたらきます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                If you hold down the <keycap>Ctrl</keycap> key
+                <emphasis>before drawing a selection</emphasis>, this new
+                selection switches to the Subtract mode. So, this new
+                selection will be subtracted from an existing one as soon as
+                you release the click, as far as they have common pixels.
+              </para>
+              <para lang="ja">
+                <emphasis>選択範囲を描く前から</emphasis> 
+                <keycap>Ctrl</keycap> キーを押し続けると、 この新たな選択は 
+                <guilabel>選択範囲から引く</guilabel> モードとなります。
+                つまり、 マウスボタンを放した途端、 でき上がった選択範囲と
+                それまでの選択範囲との共通の画素 (ピクセル) があれば
+                それらが選択範囲から除かれます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycap>Alt</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            Holding <keycap>Alt</keycap> will allow movement of the
+            current selection (only its frame, not its content). If the
+            whole image is moved instead of the selection only, try
+            <keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo>.
+            Note that the <keycap>Alt</keycap> key is sometimes intercepted by
+            the windowing system (meaning that GIMP never knows that it was
+            pressed), so this may not work for everybody.
+          </para>
+          <para lang="ja">
+            <keycap>Alt</keycap> ボタンを押している間は 
+            (画像内容ではなく枠だけ) 選択範囲が移動します。 ただしもし
+            選択範囲のみならず画像全体が移動する場合は、 代わりに 
+            <keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo> 
+            を利用してください。 しかしウィンドウシステムが <keycap>Alt
+            </keycap> キーを奪うことがたまに見受けられます。 要するに<acronym>
+            GIMP</acronym>はそのキーが押されたことを知り得ませんので、 この
+            組み合わせは誰でも使えるものではないことをご了承ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycap>Shift</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            When creating a selection, holding down the
+            <keycap>Shift</keycap> key can have two different actions
+            according to the way you use it:
+          </para>
+          <para lang="ja">
+            <keycap>Shift</keycap> キーを押しながら
+            する範囲の選択には2通りの動作の異なる技があります。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                If you hold down the key <emphasis>before
+                  clicking</emphasis> to start the selection, this
+                selection will be in <emphasis>Addition</emphasis>
+                mode as long as you press the key.
+              </para>
+              <para lang="ja">
+                選択範囲を作り始めるときの <emphasis>クリックをする前に
+                </emphasis> <keycap>Shift</keycap> キーを押していると、 
+                キーを放すまでにできる選択範囲は 
+                <emphasis>追加</emphasis> モードになります。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                If you hold down the <keycap>Shift</keycap> key
+                <emphasis>after clicking</emphasis> to start the selection,
+                the effect will depend on the tool you are using: for
+                example, the selection will be a square with the
+                Rectangle Select tool.
+              </para>
+              <para lang="ja">
+                選択範囲を作り始めるときの <emphasis>クリックをした後に
+                </emphasis> <keycap>Shift</keycap> キーを押したときは、 
+                ツールごとに異なる効果を得られます。 例えば矩形選択ツールで
+                作られる選択領域は正方形になります。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>Shift</keycap>
+          </keycombo>
+        </term>
+        <listitem>
+          <para lang="en">
+            Using
+            <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap></keycombo>
+            together can do a variety of things, depending on which tool is
+            used. Common to all selection tools is that the selection mode
+            will be switched to intersection, so that after the operation is
+            finished, the selection will consist of the intersection of the
+            region traced out with the pre-existing selection. It is an
+            exercise for the reader to play with the various combinations
+            available when performing selections while holding
+            <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap></keycombo>
+            and releasing either both or either prior to releasing the
+            <mousebutton>mouse button</mousebutton>.
+          </para>
+          <para lang="ja">
+            それぞれのツールごとに、 同時押し 
+            <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap></keycombo> 
+            は多様な効果をもたらします。 どの選択ツールでも共通してこの
+            組み合わせは交差モードに替わります。 すなわち新たに作られた
+            選択範囲とそれまでの分の共通部分だけが選択範囲として残されます。 
+            選択範囲をとる際の <mousebutton>マウスボタン</mousebutton> と、
+            同時もしくは前もって 
+            <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap></keycombo> 
+            を押し続けていたり放したりといった様々な組み合わせについては
+            読者への宿題にします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Key modifiers to move selections</term>
+        <term lang="ja">選択範囲を移動するための修飾キー</term>
+        <listitem>
+          <para lang="en">
+            <keycombo>
+              <keycap>Ctrl</keycap>
+              <keycap>Alt</keycap>
+              <keycap>Click-and-drag</keycap>
+            </keycombo> and
+            <keycombo>
+              <keycap>Shift</keycap>
+              <keycap>Alt</keycap>
+              <keycap>Click-and-drag</keycap>
+            </keycombo> are used to move
+            selections.
+            See <link linkend="gimp-using-selections-moving">Moving
+            selections</link>
+          </para>
+          <para lang="ja">
+            <keycombo>
+              <keycap>Ctrl</keycap><keycap>Alt</keycap>
+              <mousebutton>クリックしてドラッグする</mousebutton>
+            </keycombo> 動作や 
+            <keycombo>
+              <keycap>Shift</keycap><keycap>Alt</keycap>
+              <mousebutton>クリックしてドラッグする</mousebutton>
+            </keycombo> 動作は
+            選択範囲を移動するために使います。 
+            <link linkend="gimp-using-selections-moving">選択範囲の移動</link>
+            もご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Space bar</term>
+        <term lang="ja">スペースキー</term>
+        <listitem>
+          <para lang="en">
+            Pressing the <keycap>Space Bar</keycap> while using a selection
+            tool transforms this tool into the Navigation cross as long as
+            you press the bar, allowing you to pan around the image instead
+            of using the scroll-bars when your image is bigger than the
+            canvas. This the default option: in Preferences/Image Windows,
+            you can toggle the Space bar to the Move tool.
+          </para>
+          <para lang="ja">
+            選択ツールを呼びだした状態で <keycap>スペース</keycap> キー
+            を押していると、 その間じゅうこのツールのかわりに <link 
+            linkend="gimp-navigation-dialog">ナビゲーション</link> が有効に
+            なって、 マウスカーソルは移動十字に切り替わり、 キャンバスより大きな
+            画像でもスクロールバーを使わずに画像ウィンドウ内で移動できます。
+            これは初期設定での振舞いであり、 代わりに 
+            <link linkend="gimp-prefs-image-window">環境設定</link> ダイアログ
+            の<quote>画像ウィンドウ</quote>のページで
+            <menuchoice>
+              <guisubmenu>スペースキー</guisubmenu>
+              <guimenuitem>スペースキーが押されている時</guimenuitem>
+            </menuchoice> 
+            の動作を <guimenuitem>移動ツールに切り替え</guimenuitem>
+            ることもできます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="gimp-tool-select-options">
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <para lang="en">
+      Here we describe the tool options that apply to all selection tools:
+      options that apply only to some tools, or that affect each tool
+      differently, are described in the sections devoted to the individual
+      tools. The current settings for these options can be seen in the Tool
+      Options dialog, which you should always have visible when you are using
+      tools. (Most users keep it docked directly below the Toolbox.) To make
+      the interface consistent, the same options are presented for all
+      selection tools, even though some of them don't have any effect for some
+      of the tools.
+    </para>
+    <para lang="ja">
+      ここでは全ての選択ツールに適用できるツールオプションについて説明します:
+      一部のツールや個別のツールに対してのみ適用できるオプションについては、
+      それぞれのツールの説明をしている節で述べます。 現在のオプション設定の
+      様子はツールオプションダイアログで確かめられますので、 いつでも
+      見られるよう常時出しておきましょう。 (利用者の多くはツールボックスの下に
+      連接しておいています。) 操作盤面の共通化をはかるため、 全ての選択ツールに
+      同じオプションが並んでいますが、
+      ツールによっては何の変化も起きないオプションもいくつかあります。
+    </para>
+    <figure>
+      <title lang="en">Common options of selection tools</title>
+      <title lang="ja">選択ツールの共通オプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-selection.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Selection</primary>
+            <secondary>Selection modes</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="センタク">選択</primary>
+            <secondary>モード</secondary>
+          </indexterm>
+          <para lang="en">
+            This determines the way that the selection you create is combined
+            with any pre-existing selection. Note that the functions performed
+            by these buttons can be duplicated using modifier keys, as
+            described above. For the most part, advanced users use the
+            modifier keys; novice users find the mode buttons easier.
+          </para>
+          <para lang="ja">
+            これは新たに作られる選択領域とそれまでの選択領域とがどのように
+            連係するか、またはしないかを定めるものです。 これらのボタンの
+            動作と前述の修飾キーは重複ができることにご注意ください。
+            達人はほとんど修飾キーばかり使いますが、
+            初心者にとってはモードボタンのほうが簡単でしょう。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term>
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                    fileref="images/tool-options/rectsel-mode-replace.png"/>
+                  </imageobject>
+                </inlinemediaobject>
+              </term>
+              <listitem>
+                <para lang="en">
+                  Replace mode will cause any existing selection to be
+                  destroyed or replaced when the new selection is created.
+                </para>
+                <para lang="ja">
+                  <quote>選択範囲を置換</quote> モードは既にあった選択範囲を
+                  破棄し新たに作られた選択範囲に置き換えます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/tool-options/rectsel-mode-add.png"/>
+                  </imageobject>
+                </inlinemediaobject>
+              </term>
+              <listitem>
+                <para lang="en">
+                  Add mode will cause the new selection to be added to any
+                  existing selection regions.
+                </para>
+                <para lang="ja">
+                  <quote>選択範囲に加える</quote> モードはそれまでの選択範囲に
+                  新たに作られた選択範囲を追加します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/tool-options/rectsel-mode-subtract.png"/>
+                  </imageobject>
+                </inlinemediaobject>
+              </term>
+              <listitem>
+                <para lang="en">
+                  Subtract mode will remove the new selection area from any
+                  existing selection regions.
+                </para>
+                <para lang="ja">
+                  <quote>選択範囲から引く</quote> モードはそれまでの
+                  選択範囲から新たに作られた選択範囲を除外します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/tool-options/rectsel-mode-intersect.png"/>
+                  </imageobject>
+                </inlinemediaobject>
+              </term>
+              <listitem>
+                <para lang="en">
+                  Intersection mode will make a new selection from the area
+                  where the existing selection region and the new selection
+                  region overlap.
+                </para>
+                <para lang="ja">
+                  <quote>選択範囲との交わり</quote> モードはそれまでの
+                  選択領域と新たに作られた選択領域との重なる部分だけを
+                  選択範囲として残します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Antialiasing</term>
+        <term lang="ja">アンチエイリアス</term>
+        <listitem>
+          <para lang="en">
+            This option only affects a few of the selection tools: it causes
+            the boundary of the selection to be drawn more smoothly.
+          </para>
+          <para lang="ja">
+            このオプションは僅かな選択ツールにしか関係しません: 選択の境界線を
+            より滑らかにします。 用語集で<link linkend="glossary-antialiasing">
+            アンチエイリアス</link> について述べています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Feather Edges</term>
+        <term lang="ja">境界をぼかす</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Edge feathering (Selections)</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="センタク">選択</primary>
+            <secondary sortas="ボカシ">ぼかし</secondary>
+          </indexterm>
+          <para lang="en">
+            This options allows the boundary of the selection to be blurred,
+            so that points near the boundary are only partially selected. For
+            further information regarding feathering, see the glossary entry
+            <link linkend="glossary-feathering">Feathering</link>.
+          </para>
+          <para lang="ja">
+            このオプションは選択の境界線をぼかすもので
+            <quote>フェザリング</quote> とも呼ばれます。 境界線付近の画素は
+            不完全選択になります。 フェザリングについてのさらなる情報は、
+            用語集の <link linkend="glossary-feathering">フェザリング</link>
+            の項をお読みください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+<!--
+  <sect3>
+    <title lang="en">Additional information</title>
+    <title lang="ja">追加の情報</title>
+    <note>
+      <para lang="en">
+        When moving a selection beyond the boundaries of the image canvas, the
+        selection will be cropped to the image area. Selections can exist on
+        the visible canvas only. Selection movements and changes are, however,
+        kept in the undo buffer should you need to repair an error.
+      </para>
+      <para lang="ja">
+        画像ウィンドウの画像領域外に選択範囲を移動すると、 画像領域に合わせて
+        選択範囲が切り取られます。 画像やレイヤーの範囲を越えた選択範囲は
+        存続しません。 ただし操作履歴バッファには選択の移動や変更の経緯が
+        保護されていますので、 そこで失策から挽回することになります。
+      </para>
+    </note>
+  </sect3>
+-->
+</sect2>

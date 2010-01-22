@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-14 AntI: Added "es"
+  2007-05-13 KoSt: added 'no'
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  2005-10-11 en;fr updated by julien hardelin
+  2005-09-19 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-ifsfractal">
+  <title lang="en">IFS Fractal</title>
+  <title lang="ja">IFS フラクタル...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Fractal Composition</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>IFS Fractal</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary sortas="フラクタルヘンセイ">フラクタル編成</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="IFSフラクタル"><acronym>IFS</acronym> フラクタル</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Applying example for the IFS Compose filter</title>
+      <title lang="ja"><acronym>IFS</acronym>編成フィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-ifscompose.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>IFS Fractal</quote> applied</para>
+          <para lang="ja">
+            <quote><acronym>IFS</acronym> フラクタル</quote>フィルタ適用後
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This fractal-based plug-in is truly wonderful! With this
+      versatile instrument, you can create amazingly naturalistic
+      organic shapes, like leaves, flowers, branches, or even whole
+      trees.  (<quote>IFS</quote> stands for <quote>Iterated Function System
+      </quote>.)
+    </para>
+    <para lang="en">
+      The key to use this plug-in lies in making very small and precise
+      movements in fractal space. The outcome is always hard to predict, and
+      you have to be extremely gentle when you change the pattern. If you make
+      a component triangle too big, or if you move it too far (even ever so
+      slightly), the preview screen will black out, or more commonly, you'll
+      get stuck with a big shapeless particle cloud.
+    </para>
+    <para lang="en">
+      A word of advice: When you have found a pattern you want to work with,
+      make only small changes, and stick to variations of that pattern. It's
+      all too easy to lose a good thing. Contrary to what you might believe,
+      it's really much easier to create a leaf or a tree with IFS Compose than
+      to make a defined geometrical pattern (where you actually know what
+      you're doing, and end up with the pattern you had in mind).
+    </para>
+    <para lang="en">
+      For a brief introduction to IFS's see Foley and van Dam, et al,.
+      <citetitle pubwork="book">Computer Graphics, Principles and
+      Practice</citetitle><xref linkend="bibliography-books-foley01"/>.
+    </para>
+    <para lang="ja">
+      フラクタル図形を描くプラグインの一種である <guimenuitem>IFS 
+      フラクタル...</guimenuitem> フィルタは実に魅力的です。
+      いろいろな用途に使えるこの器具にかかれば草木の葉も花も枝も含め有機的形状
+      を自然な姿に描きだせるのでなんと樹木丸ごとでさえも作成できます。 
+      <acronym>IFS</acronym>は <foreignphrase>Iterated Function System
+      </foreignphrase> (反復関数系) の略です。
+    </para>
+    <para lang="ja">
+      このプラグインを使うにはフラクタル空間に非常に小さく精密な運動を設計する
+      ことが鉄則です。 成長後の姿は予見しづらく、 またパターンを変える際には
+      ことのほか慎重に行なう必要があります。 基礎の三角形が大き過ぎたり移動が
+      ほんの少しでも大き過ぎたりすると、 プレビュー画面が何もない闇に変じるか、
+      もしくは微粒子だらけの形のない雲の中に迷い込むはめに陥ることが
+      よくあります。
+    </para>
+    <para lang="ja">
+      作り方のコツを紹介します。 成長させたいパターンを見付けたら、 小さな変化
+      だけを加えるようにし、 そのパターンの変形[を探ること]のみに集中するように
+      します。 よく気をつけないと簡単においしいところを逃してしまいますよ。 
+      これはといえるものを見付けるのは大変ですが、 反対に<acronym>IFS</acronym>
+      編成を使って草木の葉や樹木を作るのは全く簡単で、 おそらく今試しに使って
+      みてダイアログの画面に現れている定義ずみの幾何学図形のパターンを構築する
+      よりも容易です。
+    </para>
+    <para lang="ja">
+      簡潔に<acronym>IFS</acronym>のあらましを述べている本を紹介します。 
+      <quote><citetitle pubwork="book">コンピュータグラフィックス 理論と実践
+      </citetitle></quote><xref linkend="bibliography-books-foley01"/>
+      著者は Foley 氏、 van Dam 氏その他、 第2版がおすすめですが第1版の日本語訳
+      が出ています。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guisubmenu>Nature</guisubmenu>
+        <guimenuitem>IFS fractal</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guisubmenu>ネイチャー</guisubmenu>
+        <guimenuitem>IFS フラクタル...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>IFS fractal</quote> filter options</title>
+      <title lang="ja">
+        <quote><acronym>IFS</acronym> フラクタル</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-render-ifsfractal.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">The Main Interface</term>
+        <term lang="ja">ダイアログの概観</term>
+        <listitem>
+          <para lang="en">
+            The plug-in interface consists of the compose area to the left, a
+            preview screen to the right, and some tabs and option buttons at
+            the bottom of the dialog. The Default setting (in the preview
+            window) is three equilateral triangles. (This gives rise to a
+            fractal pattern called the
+            <emphasis>Sierpinski Triangle</emphasis>).
+          </para>
+          <para lang="ja">
+            このプラグインの操作盤には編成作業の領域とプレビュー画像が左右に
+            並び、 2枚重ねのタブがあり、 ダイアログのボタンが並んでいます。 
+            初期設定では編成作業領域に3つの正三角形があり、 プレビュー画面には
+            <emphasis>シェルピンスキの詰め込み</emphasis> と呼ばれる
+            正三角形のフラクタル図形が現れているはずです。 
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Toolbar</term>
+        <term lang="ja">ツールバー</term>
+        <listitem>
+          <para lang="en">
+            Some tools are directly visible in this tool bar:
+            <guibutton>Move</guibutton>,
+            <guibutton>Rotate</guibutton>, <guibutton>Stretch</guibutton>,
+            <guibutton>New</guibutton>,
+            <guibutton>Delete</guibutton>, <guibutton>Undo</guibutton>,
+            <guibutton>Redo</guibutton>,
+            <guibutton>Select All</guibutton>.
+            You can see others, if your window is not wide enough, by
+            clicking on the drop-down list button on the right of tool bar:
+            <guibutton>Recenter</guibutton>  and
+            <guibutton>Render Options</guibutton> where you have have
+            several parameters:
+          </para>
+          <para lang="ja">
+            最上段に並ぶ10個のボタンも編成作業に使います。 左から順に 
+            <guibutton>移動</guibutton>、 <guibutton>回転/拡大縮小
+            </guibutton>、 <guibutton>延伸変形</guibutton>、 そのつぎは 
+            <guibutton>追加</guibutton>、 <guibutton>削除</guibutton>、
+            <guibutton>取り消し</guibutton>、 <guibutton>やり直し</guibutton>、
+            <guibutton>全要素選択</guibutton>、
+            <guibutton>中心の再計算</guibutton>、 右端にはつぎのパラメータを
+            調節するための<quote><acronym>IFS</acronym>フラクタル描画オプション
+            </quote>ダイアログを開く <guibutton>描画オプション</guibutton> 
+            ボタンがあります。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Render Options</term>
+              <term lang="ja">描画オプション</term>
+              <listitem>
+                <variablelist>
+                  <varlistentry>
+                    <term lang="en">Memory</term>
+                    <term lang="ja">最大メモリ</term>
+                    <listitem>
+                      <para lang="en">
+                        Enables you to speed up rendering time. This is
+                        especially useful when working with a large spot
+                        radius; just remember to use even multiples of the
+                        default value: 4096, 8192, 16384, ...
+                      </para>
+                      <para lang="ja">
+                        この値を増せば描画時間の短縮が図れます。 とりわけつぎに
+                        述べる <guilabel>スポット半径</guilabel> を大きくして
+                        作業する場合に役立ちます。 初期値を倍加した 4096、 
+                        8192、 16384、 32768 &hellip;などの値を使うよう
+                        心掛けましょう。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                  <varlistentry>
+                    <term lang="en">Iterations</term>
+                    <term lang="ja">繰り返し</term>
+                    <listitem>
+                      <para lang="en">
+                        Determines how many times the fractal will repeat
+                        itself. (A high value for Subdivide and Iterations is
+                        for obvious reasons a waste of process time unless
+                        your image is very large.)
+                      </para>
+                      <para lang="ja">
+                        フラクタルの自己反復回数を定めます。 非常に大きな画像に
+                        描く場合を除き、 <guilabel>繰り返し</guilabel> でも 
+                        <guilabel>細分化</guilabel> でも高い値を設定する十分な
+                        理由がなければただ処理時間を多く費すだけに終わります。
+                        値の範囲は 1 回から 10000000 回までです。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                  <varlistentry>
+                    <term lang="en">Subdivide</term>
+                    <term lang="ja">細分化</term>
+                    <listitem>
+                      <para lang="en">Controls the level of detail.</para>
+                      <para lang="ja">
+                        詳細に描き込む深度を調節します。 値の範囲は 1.00 から 
+                        10.00 までです。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                  <varlistentry>
+                    <term lang="en">Spot Radius</term>
+                    <term lang="ja">スポット半径</term>
+                    <listitem>
+                      <para lang="en">
+                        Determines the density of the
+                        <quote>brushstrokes</quote>
+                        in the rendered image. A low spot radius is good for
+                        thin particle clouds or spray, while a high spot
+                        radius produces thick, solid color strokes much like
+                        watercolor painting. Be careful not to use too much
+                        spot radius -- it takes a lot of time to render.
+                      </para>
+                      <para lang="ja">
+                        画像を描き出すときに使う<quote>筆触</quote>の密度を定め
+                        ます。 <guilabel>スポット半径</guilabel> を小さくとると
+                        薄い粒子状の雲や噴霧器の飛沫のような感じになり、 逆に
+                        スポット半径を大きくとると水彩画ぽい感じの濃い単色ベタ
+                        塗りになります。 あまりスポット半径を大きくし過ぎると
+                        描画処理に多く時間を費すことになりますので
+                        注意しましょう。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                </variablelist>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Spatial Transformation</term>
+        <term lang="ja">空間変換</term>
+        <listitem>
+          <para lang="en">
+            Gives you information on the active fractal, and allows you to
+            type a value instead of changing it manually. Changing parameters
+            with the mouse isn't very accurate, so this is a useful option
+            when you need to be exact.
+          </para>
+          <para lang="ja">
+            編成作業領域で現在選ばれているフラクタル素片に関する情報が示され
+            ていて、 それぞれの数値記入欄を使えばマウスポインタによる上記ツール
+            を使った手動操作とは異なり値を直接設定する方法がとれます。 精密な
+            操作はマウスで曳く変形では難しく、 このような数値指定が役立ちます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color transformation</term>
+        <term lang="ja">色変換</term>
+        <listitem>
+          <figure>
+            <title lang="en">
+              <quote>Color transformation</quote> tab options
+            </title>
+            <title lang="ja"><quote>色変換</quote>タブのオプション</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/options-render-ifscompose2.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Simple color transformation</term>
+              <term lang="ja">単純な色変換</term>
+              <listitem>
+                <para lang="en">
+                  Changes the color of the currently selected fractal
+                  component (default is the foreground color in the toolbox)
+                  to a color of your choice.
+                </para>
+                <para lang="ja">
+                  現在選択されているフラクタル素片の色は初期状態ではツール
+                  ボックスの色標識に示されている描画色ですが、 これをここで
+                  選んだ別の色で塗ります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Full color transformation</term>
+              <term lang="ja">完全な色変換</term>
+              <listitem>
+                <para lang="en">
+                  Like the Simple color transformation but this time you can
+                  manage the color transformation for each color channel and
+                  for the alpha channel (shown as a black channel).
+                </para>
+                <para lang="ja">
+                  単純な色変換としくみは同じですが、 こちらは色変換を3色の色
+                  チャンネルとアルファチャンネルごとに行ないます。 アルファ
+                  チャンネルは灰色濃淡で表されています。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Scale Hue/Value</term>
+              <term lang="ja">色相倍率; 明度倍率</term>
+              <listitem>
+                <para lang="en">
+                  When you have many fractals with different colors, the
+                  colors blend into each other. So even if you set
+                  <quote>pure red</quote> for a fractal, it might actually
+                  be quite blue in some places, while another <quote>red
+                  </quote> fractal might have a lot of yellow in it. Scale
+                  Hue/Value changes the color strength of the active
+                  fractal, or how influential that fractal color should be.
+                </para>
+                <para lang="ja">
+                  フラクタル素片が多くあってそれぞれに違う色をつけていると、 
+                  それらの重なりから色の合成が起こります。 ですからたとえ
+                  <quote>純赤</quote>だけのフラクタル素片を設定していても場所に
+                  よってはそれが青っぽくなったりまた他の場所では黄色が結構混じ
+                  り込んでしまうことがありえます。 <guilabel>色相倍率
+                  </guilabel> と <guilabel>明度倍率</guilabel> は現在選択
+                  されているフラクタル素片の色の強さを定め、 またそれはつまり
+                  色が重なるときの影響の大きさを定めます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Relative Probability</term>
+        <term lang="ja">相対的確率</term>
+        <listitem>
+          <para lang="en">
+            Determines influence or total impact of a certain fractal.
+          </para>
+          <para lang="ja">
+            いま選択されているフラクタル素片の勢力や全体的な影響力を定めます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">A Brief Tutorial</title>
+    <title lang="ja">簡単な演習</title>
+    <para lang="en">
+      This is a rather complex plug-in, so to help you understand it, we'll
+      guide you through an example where you'll create a leaf or branch.
+    </para>
+    <para lang="en">
+      Many forms of life, and especially plants, are built like
+      mathematical fractals, i.e., a shape that reproduces or repeats
+      itself indefinitely into the smallest detail. You can easily
+      reproduce the shape of a leaf or a branch by using four (or
+      more) fractals. Three fractals make up the tip and sides of the
+      leaf, and the fourth represents the stem.
+    </para>
+    <para lang="ja">
+      このプラグインは割と複雑なので、 理解が進むよう葉と枝を描く例を挙げて
+      ご案内します。
+    </para>
+    <para lang="ja">
+      多くの生命体の形、 なかでも植物の姿は数学的フラクタルという限りなく細かく
+      なってゆく自己複製や自己反復の構造をしています。 葉や枝の姿は4つかそれ
+      以上のフラクタル素片を使えば簡単に再現できます。 3つのフラクタル素片が
+      葉の先端と両脇を、 4番目が葉柄を形作ります。
+    </para>
+    <orderedlist>
+      <listitem>
+        <para lang="en">
+          Before invoking the filter: Select
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenuitem>New Image</guimenuitem>
+          </menuchoice>.
+          Add a transparent layer with
+          <menuchoice>
+            <guimenu>Layers</guimenu>
+            <guisubmenu>Layers and Channels</guisubmenu>
+            <guimenuitem>New Layer</guimenuitem>
+          </menuchoice>.
+          Set the foreground color in the toolbox to black, and
+          set the background to white.
+        </para>
+        <para lang="ja">
+          このフィルタを呼び出す前に画像ウィンドウのメニューより (以下同じ) 
+          <menuchoice>
+            <guimenu>ファイル</guimenu>
+            <guimenuitem>新しい画像...</guimenuitem>
+          </menuchoice>
+          と進んで空の画像を新規に作成します。 さらにそこに 
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>レイヤーの追加...</guimenuitem>
+          </menuchoice>
+          で透明なレイヤーを追加します。 つぎに <keycap>D</keycap> を押して
+          描画色を黒、 背景色を白に設定します。 これはツールボックスの色標識に
+          示されます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Open IFS Compose. Start by rotating the right and bottom triangles,
+          so that they point upward. You'll now be able to see the outline of
+          what's going to be the tip and sides of the leaf. (If you have
+          problems, it may help to know that the three vertices of a triangle
+          are not equivalent.)
+          <indexterm>
+            <primary>Docks</primary><secondary>Add tab</secondary>
+          </indexterm>
+        </para>
+        <para lang="ja">
+          この<acronym>IFS</acronym>フラクタルプラグインを開きます。 右の三角
+          <guilabel>変換 2</guilabel> と下の三角 <guilabel>変換 3</guilabel> を
+          回転させて両方上に尖った向きにします。 現れるフラクタル図形が
+          だんだん葉の先端と両脇のように見えてきます。 うまくいかないときは、
+          3つの三角形のいずれも頂点の向きが同じでないことに着目してください。
+        </para>
+        <figure>
+          <title lang="en">Tutorial Step 2</title>
+          <title lang="ja">演習 第2歩</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/examples/ifscompose-tut1.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Start by rotating triangles 2 and 3, trying to keep them nearly
+                the same size.
+              </para>
+              <para lang="ja">
+                第2、 第3の三角形を、 形があまり変わらないように気を付けながら
+                回転させる。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          To make the leaf symmetrical, adjust the bottom triangle to
+          point slightly to the left, and the right triangle to point
+          slightly to the right.
+        </para>
+        <para lang="ja">
+          葉の形が対称形になるようにするには、 回転のとき下の三角形 (3) を
+          わずかに左側に傾け、 右上の三角形 (2) をわずかに右に傾けると
+          よいでしょう。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Press <guibutton>New</guibutton> to add a component to the
+          composition. This is going to be the stem of the leaf, so we
+          need to make it long and thin. Press
+          <guibutton>Stretch</guibutton>, and drag to
+          stretch the new triangle. Don't be alarmed if this messes up
+          the image, just use <guibutton>Scale</guibutton> to adjust
+          the size of the overlong
+          triangle. You'll probably also have to move and rotate the
+          new fractal to make it look convincing.
+        </para>
+        <para lang="ja">
+          <guibutton>追加</guibutton> アイコンボタンをクリックして編成画面に
+          もうひとつフラクタル素片を加えます。 これは葉柄を描くのに使いたいので
+          長細くします。 <guibutton>延伸変形</guibutton> アイコンボタンを
+          クリックしてから4番目の三角形を曳き延ばしましょう。 プレビュー画像が
+          とんでもない形になるかもしれませんが、 伸縮機能 (<guibutton>
+          回転/拡大縮小</guibutton> アイコンボタン) を使えば長過ぎた三角形の
+          調整も簡単ですから慌てないでください。 収まりよくするには位置や傾きの
+          調整も必要になるかもしれません。
+        </para>
+        <figure>
+          <title lang="en">Tutorial Step 3</title>
+          <title lang="ja">演習 第3歩</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/examples/ifscompose-tut2.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Add a fourth component, then stretch, scale, and move it
+                as shown.
+              </para>
+              <para lang="ja">
+                4番目の素片を加えて曳き延ばし、 伸縮し、 この位置に移動した。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          You still have to make it look more leaf-like. Increase the
+          size of the top triangle, until you think it's thick and
+          leafy enough. Adjust all fractals until you're happy with
+          the shape. Right-click to get the pop-up menu, and choose
+          <guibutton>Select all</guibutton>. Now all components are
+          selected, and you can scale
+          and rotate the entire leaf.
+        </para>
+        <para lang="ja">
+          まだもっと葉っぱぼくする作業が残っています。 葉の先端の三角形の大きさ
+          を増してよく繁った葉の雰囲気を出します。 どのフラクタル素片にも納得が
+          できるまで加工したら、 <guibutton>全要素選択</guibutton> のアイコン
+          ボタンをクリックします。 すると全部のフラクタル素片が選択され、 
+          これで葉を全体的に回転/拡大縮小できるようになります。
+        </para>
+        <figure>
+          <title lang="en">Tutorial Step 4</title>
+          <title lang="ja">演習 第4歩</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/examples/ifscompose-tut3.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Enlarge component 1, arrange the other components
+                appropriately, then select all, scale and rotate.
+              </para>
+              <para lang="ja">
+                素片その1を大きくし、 それ以外の素片も凡そで良いので位置と形を
+                調整し、 つぎに全部を選択したら、 回転や拡大縮小をかける。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          The final step is to adjust color. Click on the
+          <guibutton>Color Transformation</guibutton> tab, and choose
+          a different color for each fractal. To do this, check
+          <guibutton>Simple</guibutton> and press the right color
+          square. A color circle appears, where you can click or
+          select to choose a color.
+        </para>
+        <para lang="ja">
+          最後の段階は色付けです。 <quote>色変換</quote>タブを開いて、 
+          フラクタル素片ごとに色を設定してゆきます。 そこでまず <guilabel>単純
+          </guilabel> を選択してその色だまりボタンをクリックします。 現れた
+          色変更ダイアログで色を選んでください。
+        </para>
+        <figure>
+          <title lang="en">Tutorial Step 5</title>
+          <title lang="ja">演習 第5歩</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/examples/ifscompose-tut4.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                Assign a brownish color to component 4, and various shades
+                of green to the other components.
+              </para>
+              <para lang="ja">
+                第4の素片に茶系統の色をつけ、 他の要素には緑系統の色を別々の
+                濃淡にして色づけた。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Press OK to apply the image, and voila, you've just made a
+          perfect fractal leaf! Now that you've got the hang of it,
+          you'll just have to experiment and make your own
+          designs. All plant-imitating fractals (be they oak trees,
+          ferns or straws) are more or less made in this fashion,
+          which is leaves around a stem (or several stems). You just
+          have to twist another way, stretch and turn a little or add
+          a few more fractals to get a totally different plant.
+        </para>
+        <para lang="ja">
+          <guibutton>OK</guibutton> ボタンをクリックして
+          実行します。 如何ですか。 フラクタルによる完璧な葉のできあがりです。 
+          もうコツはつかめたはずですから、 あとはいろいろ経験を積んで
+          あなた独自のデザインを生みだしてください。 ならやかしなどの樹木や
+          シダ類や麦藁まで、 植物を模倣するフラクタルはいずれも一本の茎もしくは
+          複数の茎に葉が茂る似たような構造に多かれ少なかれなっています。 つまり
+          何か別のひねりを加えたりちょっと伸ばしたり曲げたり、 フラクタル素片を
+          もう一つ二つ加えたりすればどんな形の植物も作れるようになるのです。
+        </para>
+      </listitem>
+    </orderedlist>
+  </sect3>
+</sect2>

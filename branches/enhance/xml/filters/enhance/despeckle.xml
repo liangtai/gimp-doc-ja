@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-19 AntI: added 'es'
+  2007-04-12 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050930 de replaced informalfigure by axel.wernicke
+  050830 de added by axel.wernicke
+-->
+<!--2009-9-15-->
+<sect2 id="plug-in-despeckle">
+  <title lang="en">Despeckle</title>
+  <title lang="ja">ノイズ除去...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Enhance</secondary>
+    <tertiary>Despeckle</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Despeckle</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="キョウチョウ">強調</secondary>
+    <tertiary sortas="ノイズジョキョ">ノイズ除去</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ノイズジョキョ">ノイズ除去</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
+      It is used to remove small defects due to dust, or scratches, on a
+      scanned image, and also moire effect on image scanned from a magazine.
+      You ought to select isolated defects before applying this filter, in
+      order to avoid unwanted changes in other areas of your image.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ノイズ除去...</guimenuitem> フィルタは
+      スキャナでとり込んだ画像に付いてくるごみやかすり傷などの小さな傷みや、
+      スキャナでとり込んだ雑誌の紙面画像にかかる 
+      <link linkend="glossary-moire">モアレ</link> 現象を除去するのに使えます。
+      このフィルタを適用する前に予めとり除きたい傷みを選択範囲で囲んで孤立
+      させ、 画像の他の部分にまで思いもよらない変更が起こるのを防いでおいた方が
+      よいでしょう。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Enhance</guisubmenu>
+        <guimenuitem>Despeckle</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>強調</guisubmenu>
+        <guimenuitem>ノイズ除去...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">
+        <quote>Despeckle</quote> filter options
+      </title>
+      <title lang="ja">
+        <quote>ノイズ除去</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-enhance-despeckle.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            Parameter setting results are interactively displayed in preview.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー/guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て分かるようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Type</term>
+        <term lang="ja">中央値</term>
+        <listitem>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>Adaptive</guilabel>: Adapts radius to image or
+                selection content (using Histogram). If this option is
+                checked, radius slider is not efficient.
+                It renders a result smoother than with radius alone.
+              </para>
+              <para lang="ja">
+                <guilabel>適応的</guilabel>: 画像もしくは
+                選択範囲の内容に最適な半径の値をヒストグラムを用いながら設定
+                します。 このオプションが有効な場合は <guilabel>
+                半径</guilabel> スライダの値が無視されます。
+                半径を直に単独で設定するよりは滑らかな仕上がりになります。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Recursive</guilabel>: Repeats filter action
+                which gets stronger.
+              </para>
+              <para lang="ja">
+                <guilabel>再帰的</guilabel>: フィルタの実行を
+                繰り返しますので効果が強く出ます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Radius</term>
+        <term lang="ja">半径</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Radius</guilabel>: Sets size of action window
+            from 1 (3x3 pixels) to 20 (41x41). This window moves over
+            the image, and the color in it is smoothed, so
+            imperfections are removed.
+          </para>
+          <para lang="ja">
+            <guilabel>半径</guilabel>: 作用窓の大きさを 1 
+            (3&times;3ピクセル) から 20 (41&times;41ピクセル) の範囲で設定
+            します。 この窓が画像[の選択範囲]内を走り廻り、 窓に入った色を
+            ならすことで画像の欠陥をとり除いてゆきます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Black level</term>
+        <term lang="ja">黒レベル</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Black level</guilabel>: Removes pixels darker
+            than set value (0-255).
+          </para>
+          <para lang="ja">
+            <guilabel>黒レベル</guilabel>: ここで設定した
+            値よりも暗い画素から色をとり除きます。 範囲は 0 から 255 です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">White level</term>
+        <term lang="ja">白レベル</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>White level</guilabel>: Removes pixels whiter
+            than set value (0-255).
+          </para>
+          <para lang="ja">
+            <guilabel>白レベル</guilabel>: ここで指定した
+            値よりも明るい画素から色をとり除きます。 範囲は 0 か 255 です。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

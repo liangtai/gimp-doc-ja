@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-14 AntI:Added "es"
+  2007-05-18 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005/09/23 created by axel.wernicke
+  2005/10/23 en;fr and adds-on by julien hardelin
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-fractalexplorer">
+  <title lang="en">Fractal Explorer</title>
+  <title lang="ja">フラクタルエクスプローラ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Fractal Explorer</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Fractal Explorer</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary>フラクタルエクスプローラ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フラクタルエクスプローラ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example for the Fractal Explorer filter</title>
+      <title lang="ja">フラクタルエクスプローラフィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-fractalexplorer.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Fractal Explorer</quote> applied</para>
+          <para lang="ja">
+            <quote>フラクタルエクスプローラ</quote>フィルタ適用後
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      With this filter, you can create fractals and multicolored pictures
+      verging to chaos. Unlike the
+      <link linkend="plug-in-ifsfractal">IFS Compose</link> filter, with
+      which you can fix the fractal structure precisely, this filter lets
+      you perform fractals simply.
+    </para>
+    <para lang="ja">
+      <guimenuitem>フラクタルエクスプローラ...</guimenuitem> 
+      フィルタを使うとフラクタル図形と複数の色づかいで混沌寸前の絵を描けます。
+      しかし精密にフラクタルを構成できる 
+      <link linkend="plug-in-ifsfractal">IFS 編成</link> フィルタとは異なり、 
+      こちらのフィルタのフラクタルの扱い方は単純です。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guimenuitem>Fractal Explorer</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guimenuitem>フラクタルエクスプローラ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">
+        <quote>Parameters</quote> options for Fractal Explorer filter
+      </title>
+      <title lang="ja">
+        プレビュー領域と<quote>パラメータ</quote>タブのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-render-fractalexplorer1.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Realtime preview</term>
+        <term lang="ja">プレビューを自動更新</term>
+        <listitem>
+          <para lang="en">
+            Uncheck the <guilabel>Real time preview</guilabel> only if your
+            computer is slow. In this case, you can update preview by
+            clicking on the <guibutton>Redraw</guibutton> button.
+          </para>
+          <para lang="en">
+            By clicking-dragging mouse pointer on preview, you can draw a
+            rectangle delimiting an area which will be zoomed.
+          </para>
+          <para lang="ja">
+            お使いのコンピュータの処理速度が遅くてこまるときは 
+            <guilabel>プレビューを自動更新</guilabel> オプションを無効に
+            しましょう。 この場合にプレビューに最新の設定状態を反映させるには 
+            <guibutton>プレビューを更新</guibutton> ボタンをクリックします。
+          </para>
+          <para lang="ja">
+            プレビュー画面内で任意の場所をクリックして他の位置まで曳くと矩形が
+            現れ、 その範囲だけが拡大表示されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Zoom</term>
+        <term lang="ja">サイズ変更</term><!--炎フィルタの "拡大" に干渉-->
+        <listitem>
+          <para lang="en">
+            You have there some options to zoom in or zoom out. The
+            <guibutton>Undo</guibutton> allows you to return to previous
+            state, before zooming. The <guibutton>Redo</guibutton> allows
+            you to reestablish the zoom you had undone, without having to
+            re-create it with the zoom-in button.
+          </para>
+          <para lang="ja">
+            <guilabel>サイズ変更</guilabel> の 4 つのボタンは生成した図形を拡大
+            ・縮小するのに使います。 <guibutton>元に戻す
+            </guibutton> ボタンは直前の大きさに戻します。
+            <guibutton>やり直す</guibutton> ボタンは元に
+            戻した操作を <guibutton>拡大</guibutton> や 
+            <guibutton>縮小</guibutton> ボタンを使わずに
+            再び実行するために使います。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Parameters tab</term>
+        <term lang="ja">パラメータタブ</term>
+        <listitem>
+          <para lang="en">
+            This tab contains some options to set fractal calculation and
+            select fractal type.
+          </para>
+          <para lang="ja">
+            <quote>パラメータ</quote>タブではフラクタル計算に関わるいろいろ
+            なオプション値の設定やフラクタルの種類の選択をします。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Fractal Parameters</term>
+              <term lang="ja">フラクタルのパラメータ</term>
+              <listitem>
+                <para lang="en">
+                  here, you have sliders and input boxes to set fractal
+                  spreading, repetition and aspect.
+                </para>
+                <para lang="ja">
+                  これらのスライダと付属する数値記入欄はフラクタル図形の展開や
+                  反復や外観について設定します。
+                </para>
+                <variablelist>
+                  <varlistentry>
+                    <term lang="en">XMIN; XMAX; YMIN; YMAX</term>
+                    <term lang="ja">左; 右; 上; 下</term>
+                    <listitem>
+                      <para lang="en">
+                        You can set fractal spreading between a MINimum and
+                        a MAXimum, in the horizontal (X) and/or vertical (Y)
+                        directions. Values are from -3.0 to 3.0.
+                      </para>
+                      <para lang="ja">
+                        フラクタル図形の展開について水平方向の最小値 <guilabel>
+                        左</guilabel> と最大値 <guilabel>右</guilabel>、
+                        垂直方向の最小値 <guilabel>上</guilabel> と最大値 
+                        <guilabel>下</guilabel> を設定します。 値の範囲は
+                        いずれも -3.0 から 3.0 までです。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                  <varlistentry>
+                    <term lang="en">ITER</term>
+                    <term lang="ja">繰り返し</term>
+                    <listitem>
+                      <para lang="en">
+                        With this parameter, you can set fractal iteration,
+                        repetition and so detail. Values are from 0.0 to
+                        1000.0
+                      </para>
+                      <para lang="ja">
+                        ここではフラクタル図形がどんどん細かくなる反復
+                        パラメータを設定します。 値の範囲は 0.0 から 1000.0 
+                        までです。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                  <varlistentry>
+                    <term>CX; CY</term>
+                    <listitem>
+                      <para lang="en">
+                        With these parameters, you can change fractal
+                        aspect, in the horizontal (X) and/or vertical (Y)
+                        directions, except for Mandelbrot and Sierpinski
+                        types.
+                      </para>
+                      <para lang="ja">
+                        これらのパラメータを水平方向 X と垂直方向 Y にそれぞれ
+                        調節するとフラクタル図形の外観が変化します。 ただし
+                        マンデルブロ集合かシエルピンスキを選んでいるときは
+                        これらの項目は灰色無効となって操作できません。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                  <varlistentry>
+                    <term lang="en">Open; Reset; Save</term>
+                    <term lang="ja">開く; リセット; 保存</term>
+                    <listitem>
+                      <para lang="en">
+                        With these three buttons, you can save your work
+                        with all its parameters, open a previously saved
+                        fractal, or return to the initial state before all
+                        modifications.
+                      </para>
+                      <para lang="ja">
+                        このボタンを使って現在のパラメータ設定値をファイルに
+                        保存したり、 それを読み込んで再び利用できるほか、 
+                        ここで行なった操作を破棄して元の状態に戻すことも
+                        できます。 保存場所は標準で
+                        個人用<acronym>GIMP</acronym>ディレクトリ内の
+                        <filename class="directory">fractalexplorer</filename> 
+                        フォルダです。 標準フォルダに保管した設定情報は
+                        <quote>プリセット</quote>タブの一覧表からも
+                        読み込めます。 それ以外の場所に保管したデータファイルは
+                        <guibutton>開く</guibutton> ボタンを
+                        クリックすると現れるファイルブラウザで探してください。
+                      </para>
+                    </listitem>
+                  </varlistentry>
+                </variablelist>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Fractal type</term>
+              <term lang="ja">フラクタルの種類</term>
+              <listitem>
+                <para lang="en">
+                  You can choose what fractal type will be, for instance
+                  <guilabel>Mandelbrot</guilabel>, <guilabel>Julia</guilabel>,
+                  <guilabel>Barnsley</guilabel> or
+                  <guilabel>Sierpinski</guilabel>.
+                </para>
+                <para lang="ja">
+                  ここでは代表的なフラクタルからどれかひとつを選べます。
+                  <guilabel>マンデルブロ集合</guilabel>、 <guilabel>
+                  ジュリア集合</guilabel>、 <guilabel>バーンスレイ</guilabel> 
+                  の 3 変種、 <guilabel>スパイダー</guilabel>、 <guilabel>
+                  マンオーウォー</guilabel>、 <guilabel>ラムダ</guilabel>、 
+                  <guilabel>シエルピンスキ</guilabel> の 9 種類あります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Colors tab</term>
+        <term lang="ja">色タブ</term>
+        <listitem>
+          <figure>
+            <title lang="en">Color tab options</title>
+            <title lang="en"><quote>色</quote>タブのオプション</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata  format="PNG"
+                 fileref="images/filters/options-render-fractalexplorer2.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This tab contains options for fractal color setting.
+          </para>
+          <para lang="ja">
+            <quote>色</quote>タブはフラクタル図形の色設定を行なうオプション
+            からなります。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Color number</term>
+              <term lang="ja">色数</term>
+              <listitem>
+                <para lang="en">
+                  This slider and its input boxes allow you to set the
+                  number of colors for the fractal, between 2 and 8192.
+                  A palette of these colors is displayed at the bottom of
+                  the tab. Actually, that's a gradient between colors in
+                  fractal: you can change colors with <quote>Color intensity
+                  </quote> and <quote>Color function </quote> options.
+                  Fractal colors don't depend on colors of the original
+                  image (you can use a white image for fractals as well).
+                </para>
+                <para lang="ja">
+                  このスライダと付属の数値記入欄でフラクタル図形に使う色の数を
+                  2 色から 8192 色の範囲で設定できます。 使われる色のパレットは
+                  このタブの底部に表示されます。 またこれは実際にフラクタルで
+                  利用されているグラデーションも示しています。 この色は 
+                  <guilabel>色密度</guilabel> オプションと <guilabel>色関数
+                  </guilabel> オプションで変更できます。 フラクタル図形の色は
+                  このフィルタを呼び出した画像の色に全く無関係に選ばれて
+                  います。 (つまり元画像が真っ白でもよいわけです。)
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Use loglog-smoothing</term>
+              <term lang="ja">loglog スムージングを使用</term>
+              <listitem>
+                <para lang="en">
+                  If this option is checked, the band effect is smoothed.
+                </para>
+                <para lang="ja">
+                  このオプションを有効にすると曲げ効果が滑らかになります。
+                </para>
+                <figure>
+                  <title lang="en">Loglog smoothing example</title>
+                  <title lang="ja">Loglog スムージングの例</title>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                     fileref="images/filters/examples/render-fractalexpl.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </figure>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Color density</term>
+              <term lang="ja">色密度</term>
+              <listitem>
+                <para lang="en">
+                  These three sliders and their text-boxes let you set the
+                  color intensity in the three
+                  <guilabel>Red</guilabel>, <guilabel>Green</guilabel> and
+                  <guilabel>Blue</guilabel> color channels. Values vary from
+                  0.0 to 1.0.
+                </para>
+                <para lang="ja">
+                  これら3つのスライダと付属の数値記入欄で 
+                  <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 
+                  <guilabel>青</guilabel> の色チャンネルごとに色の強さを
+                  設定できます。 値の範囲は 0.0 から 1.0 までです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Color function</term>
+              <term lang="ja">色関数</term>
+              <listitem>
+                <para lang="en">
+                  For the <guilabel>Red</guilabel>,
+                  <guilabel>Green</guilabel> and <guilabel>Blue</guilabel>
+                  color channels, you can select how color will be treated:
+                </para>
+                <para lang="ja">
+                  <guilabel>赤チャンネル</guilabel>、 <guilabel>緑チャンネル
+                  </guilabel>、 <guilabel>青チャンネル</guilabel> のそれぞれに
+                  おいて色の処理方法を選べます。
+                </para>
+                <itemizedlist>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Sinus</guilabel>: Color variations will be
+                      modulated according to the sinus function.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>Sin</guilabel> を選ぶと色あいは正弦関数に
+                      従って変化します。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Cosinus</guilabel>: Color densities will
+                      vary according to cosinus function.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>Cos</guilabel> を選ぶと色あいは余弦関数に
+                      従って変化します。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>None</guilabel>: Color densities will vary
+                      linearly.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>なし</guilabel> を選ぶと色あいは一次関数に
+                      従って変化します。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Inversion</guilabel>: if you check this
+                      option, function values will be inverted.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>反転</guilabel> オプションを有効にすると関数で
+                      得た値が反転されます。
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">カラーマップ</term>
+              <listitem>
+                <para lang="en">
+                  These options allow you to set where color values must be
+                  taken from.
+                </para>
+                <para lang="ja">
+                  このオプションでは色の値の取得先にこのダイアログの設定と現在
+                  活性化しているグラデーションのどちらかを選べます。
+                </para>
+                <itemizedlist>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>As specified above</guilabel>: Color values
+                      will be taken from the <guilabel>Color density
+                      </guilabel> options.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>上の設定に基づいて</guilabel> を選ぶと色の値は 
+                      <guilabel>色密度</guilabel> で設定したとおりになります。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Apply active gradient to final image
+                      </guilabel>: used colors will be that of active
+                      gradient. You should be able to select another gradient
+                      by clicking on the gradient source button.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>アクティブなグラデーションを適用して</guilabel>
+                      を選ぶと現在活性化しているグラデーションの色が使われる
+                      ようになります。 他のグラデーションを使うには
+                      グラデーションを表示しているボタンをクリックして
+                      ください。
+                    </p>
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Fractals tab</term>
+        <term lang="ja">プリセットタブ</term>
+        <listitem>
+          <figure>
+            <title lang="en"><quote>Fractal tab</quote> options</title>
+            <title lang="ja"><quote>プリセット</quote>タブのオプション</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/options-render-fractalexplorer3.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            This tab contains a big list of fractals with their parameters,
+            that you can use as a model: only click on the wanted one.
+          </para>
+          <para lang="en">
+            The <guibutton>Refresh</guibutton> allows you to update the
+            list if you have saved your work, without needing to re-start
+            GIMP. You can delete the selected fractal from the list by
+            clicking on the <guibutton>Delete</guibutton>.
+          </para>
+          <para lang="ja">
+            この一覧表には<quote>パラメータ</quote>タブ内で <guibutton>
+            保存</guibutton> したフラクタル図形の設定情報や
+            <acronym>GIMP</acronym>に同梱されている 36 種類のプリセットデータが
+            並んでいます。 どれでもひとつ任意にクリックして強調表示 (反転) 
+            させてから <guibutton>適用</guibutton> ボタンを
+            クリックすれば設定情報が読み込め、 たたき台として利用できます。
+          </para>
+          <para lang="ja">
+            <guibutton>更新</guibutton> ボタンを使えば新たに
+            保存したフラクタル図形の設定情報もこのリストに加えられますので、 
+            <acronym>GIMP</acronym>を再起動する必要がありません。 <guibutton>
+            削除</guibutton> ボタンをクリックすると一覧表で
+            選択されている項目が保存したファイルごと削除できます。 <acronym>
+            GIMP</acronym>同梱のデータも一旦はこの一覧表から撤去できますが、 
+            再びこのフィルタを呼び出すと自動的にこの表に復活します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

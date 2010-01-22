@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-11 j.h: revised for v2.6. Added Presets
+  2008-01-16 j.h: updated to v2.4
+  2007-06-06 kost: added 'no'
+  2007-04-15 Added Spanish translation by AntI
+  2006-02-05 en;fr revised by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-12-01 informalfigure replaced by figure by lexa
+  2005-08-07 de restructured and reviewed by axel.wernicke
+-->
+<!--2009-10-01-->
+<sect2 id="gimp-tool-colorize">
+  <title lang="en">Colorize</title>
+  <title lang="ja">着色</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Colorize</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Color</primary>
+    <secondary>Colorize</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Colorize</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="チャクショク">着色</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="チャクショク">着色</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="チャクショク">着色</primary>
+  </indexterm>
+  <para lang="en">
+    The Colorize tool renders the active layer or selection into a greyscale
+    image seen through a colored glass. You can use it to give a <quote>
+    Sepia</quote> effect to your image. See
+    <xref linkend="glossary-colormodel"/> for Hue, Saturation, Luminosity.
+  </para>
+  <para lang="ja">
+    着色ツールは選択範囲や活性レイヤーを色ガラスに通したようなグレースケール画像
+    として描くためのものです。 画像を<quote>セピア調</quote>にするのに使え
+    ます。 色相、 彩度、 輝度については <xref linkend="glossary-colormodel"/>
+    をご覧ください。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can get to the Colorize tool in two ways :
+    </para>
+    <para lang="ja">
+      <quote>着色</quote>ツールを起用する方法は2通りあります。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the the image-menu through:
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Color Tools</guisubmenu>
+            <guimenuitem>Colorize</guimenuitem>
+          </menuchoice>
+          or
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guimenuitem>Colorize</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>色ツール</guisubmenu>
+            <guimenuitem>着色...</guimenuitem>
+          </menuchoice>
+          あるいは
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guimenuitem>着色...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by clicking the tool icon:
+          <guiicon>
+            <inlinegraphic
+                  fileref="images/toolbox/stock-tool-colorize-22.png"/>
+          </guiicon>
+          in Toolbox, provided that you have installed color tools in Toolbox.
+          For this, go to
+          <link linkend="gimp-tools-dialog">Tools Dialog</link>.
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic
+                  fileref="images/toolbox/stock-tool-colorize-22.png"/>
+          </guiicon>
+          。 但しこの色ツールをツールボックスに登録した場合に限ります。
+          <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link>
+          をご覧ください。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Colorize options</title>
+      <title lang="ja"><quote>着色</quote>ツールのダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tools-colorize.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Presets</term>
+        <term lang="ja">プリセット</term>
+        <listitem>
+          <para lang="en">
+            You can save the color settings of your image by clicking the
+            <guibutton>Add settings to favourites</guibutton> button
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/toolbox/save-color-settings.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+          </para>
+          <para lang="en">
+            The
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/presets-menu-icon.png"/>
+            </guiicon>
+            button opens a menu:
+          </para>
+          <para lang="ja">
+            画像の色設定の内容は追加ボタン
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/toolbox/save-color-settings.png"/>
+                </imageobject>
+              </inlinemediaobject>
+            </guiicon>
+            をクリックすればプリセット一覧に保存できます。
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/presets-menu-icon.png"/>
+            </guiicon>
+            ボタンをクリックするとつぎのメニューが呼び出されます。
+          </para>
+          <figure>
+            <title lang="en">Preset Menu</title>
+            <title lang="ja">プリセットメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/toolbox/presets-menu.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            which lets you <guilabel>Import Settings from File</guilabel> or
+            <guilabel>Export Settings to File</guilabel>,
+            and gives you access to the Manage Save Settings dialog:
+          </para>
+          <para lang="en">
+            このメニューでは <guimenuitem>設定をエクスポート
+            </guimenuitem> によって現在の設定を記憶させたり、 <guimenuitem>
+            設定をインポート</guimenuitem> によって他の画像の
+            処理などに使った設定を再利用できます。 記憶された設定の数々は
+            <guimenuitem>プリセットデータの編集...
+            </guimenuitem> に進むと出てくるつぎのダイアログで管理できます。
+          </para>
+          <figure>
+            <title lang="en">Manage saved Settings Dialog</title>
+            <title lang="ja">
+              <quote>プリセットデータの編集</quote>ダイアログ
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                        fileref="images/toolbox/manage-saved-settings.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Select Color</term>
+        <term lang="ja">色の選択</term>
+        <listitem>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>Hue</guilabel>:
+                The slider and the numeric text box allow you to select a hue
+                in the HSV color circle (0 - 360).
+              </para>
+              <para lang="ja">
+                <guilabel>色相</guilabel>:
+                スライダや入力欄で<acronym>HSV</acronym>色相環 (0 - 360) から
+                色相を選べます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Saturation</guilabel>:
+                The slider and the input box allows you to select a
+                saturation: 0 through 100.
+              </para>
+              <para lang="ja">
+                <guilabel>彩度</guilabel>:
+                スライダや入力欄で (0 - 100) の値で彩度を選べます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Lightness</guilabel> :
+                The slider and the text box allow you to select a value:
+                -100 (dark) through 100 (light).
+              </para>
+              <para lang="ja">
+                <guilabel>輝度</guilabel>:
+                スライダや入力欄で -100 (暗) から 100 (明) の範囲から輝度を
+                選べます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            The Preview button makes all changes dynamically so that they can
+            be viewed immediately.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel>
+            が有効ならば全ての変更は動的に反映され即時に見られます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

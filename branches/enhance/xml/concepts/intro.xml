@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2009-02-19 j.h: revised for v2.6
+  2008-12-29 j.h: added language selection through GTK Environment
+  2008-03-21 Mr.Dust: reviewed ko
+  2007-09-30 lexa: reviewed en and de for GIMP 2.4
+  2006-10-17: dust added/enhanced ko translation
+  2006-02-17: added italian translation by ciampix
+  2005-12-16: made valid docbook and reviewed by lexa
+-->
+<!--2009-11-07-->
+<sect1 id="gimp-concepts-running">
+  <title lang="en">Running GIMP</title>
+  <title lang="ja"><acronym>GIMP</acronym>を起動する</title>
+
+  <indexterm lang="en">
+    <primary>Running GIMP</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キドウ">起動</primary>
+  </indexterm>
+
+  <para lang="en">
+    Most often, you start <acronym>GIMP</acronym> either by clicking on an
+    icon (if your system
+    is set up to provide you with one), or by typing <command>gimp</command>
+    on a command line. If you have multiple versions of
+    <acronym>GIMP</acronym> installed,
+    you may need to type <command>gimp-2.6</command>
+    to get the latest version. You can, if you want, give a list of image
+    files on the command line after the program name, and they will
+    automatically be opened by <acronym>GIMP</acronym> as it starts. It is
+    also possible, though, to open files from within
+    <acronym>GIMP</acronym> once it is running.
+  </para>
+  <para lang="en">
+    Most operating systems support file associations, which associates a
+    class of files (as determined by their filename extension, such as .jpg)
+    with a corresponding application (such as <acronym>GIMP</acronym>).
+    When image files are properly <quote>associated</quote> to
+    <acronym>GIMP</acronym>, you can double click on an image to open it in
+    <acronym>GIMP</acronym>.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>の起動のしかたは、 大抵の場合そのアイコンを
+    クリックするか(もちろんすでにあなたのシステムにそういう設定が
+    できていると仮定してですが)、またはコマンドライン上で
+    <command>gimp</command>とタイプして送る方法があります。 もし複数の
+    異なる版の<acronym>GIMP</acronym>をインストールされている場合は、
+    最新版なら <command>gimp-2.6</command> のようにタイプしなければ
+    なりません。 コマンドライン上では開きたい画像ファイルの名前をこの
+    プログラム名の後につづけてタイプすれば、<acronym>GIMP</acronym>は
+    起動と同時にそれらのファイルを開きます。 さらにこの方法は、
+    <acronym>GIMP</acronym>が既に起動されていたならば、 そのプロセス上で
+    画像ファイルを開きます。
+  </para>
+  <para lang="ja">
+    ほとんどのオペレーティングシステムは、 ファイルの関連づけと呼ばれる、 
+    ファイル名の末尾にある <filename class="extension">.jpg</filename> の
+    ような拡張子で判別したファイルの部類ごとに、 対応するアプリケーション 
+    (<acronym>GIMP</acronym>のような) を結びつけるしくみをサポートしています。 
+    適切に<acronym>GIMP</acronym>に
+    画像ファイルを<quote>関連づけ</quote>しておけば、 画像のアイコンをダブル
+    クリックするだけで<acronym>GIMP</acronym>で開けるようになります。
+  </para>
+
+  <sect2 id="introduction-platforms">
+    <title lang="en">Known Platforms</title>
+    <title lang="ja">動作可能な環境</title>
+    <para lang="en">
+      The <acronym>GIMP</acronym> is the most widely supported image
+      manipulation available today. The platforms on which
+      <acronym>GIMP</acronym> is known to work include:
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>は現在最も広くサポートされている画像操作
+      ソフトです。 <acronym>GIMP</acronym>は以下のプラットフォームで
+      動作することが分かっています。
+    </para>
+    <para lang="en">
+      <productname><acronym>GNU</acronym>/Linux</productname>,
+      <productname>Apple Mac OS X</productname>,
+      <productname>Microsoft Windows</productname>,
+      <productname>OpenBSD</productname>, <productname>NetBSD</productname>,
+      <productname>FreeBSD</productname>, <productname>Solaris</productname>,
+      <productname>SunOS</productname>, <productname>AIX</productname>,
+      <productname>HP-UX</productname>, <productname>Tru64</productname>,
+      <productname>Digital UNIX</productname>,
+      <productname>OSF/1</productname>, <productname>IRIX</productname>,
+      <productname>OS/2</productname>, and
+      <productname>BeOS</productname>.
+    </para>
+    <para lang="ja">
+      <productname><acronym>GNU</acronym>/Linux</productname>、
+      <productname>Apple Mac OS X</productname>、
+      <productname>Microsoft Windows</productname>、
+      <productname>OpenBSD</productname>、 <productname>NetBSD</productname>、
+      <productname>FreeBSD</productname>、 <productname>Solaris</productname>、
+      <productname>SunOS</productname>、 <productname>AIX</productname>、
+      <productname>HP-UX</productname>、 <productname>Tru64</productname>、
+      <productname>Digital UNIX</productname>、
+      <productname>OSF/1</productname>、 <productname>IRIX</productname>、
+      <productname>OS/2</productname>、
+      <productname>BeOS</productname>。
+    </para>
+    <para lang="en">
+      The <acronym>GIMP</acronym> is easily be ported to other
+      operating systems because of its source code availability. For further
+      information visit the <acronym>GIMP</acronym> developers homepage.
+      <xref linkend="bibliography-online-gimp-dev"/>.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>の他プラットフォームへの移植はソースコード
+      が利用できるからこそ可能なのです。
+      さらに詳しい情報は<acronym>GIMP</acronym>開発者のページでご覧下さい。
+      <xref linkend="bibliography-online-gimp-dev" />.
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-concepts-running-language">
+    <title lang="en">Language</title>
+    <title lang="ja">言語</title>
+    <indexterm lang="en">
+      <primary>Languages</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ゲンゴ">言語</primary>
+    </indexterm>
+    <para lang="en">
+      <acronym>GIMP</acronym> automatically detects and uses the system
+      language. In the
+      unlikely event that language detection fails, or if you just want to
+      use a different language, you may do so:
+    </para>
+    <para lang="ja">
+      [<acronym>GIMP</acronym>のメニューやダイアログはさまざまな国や民族の言葉
+      に翻訳されています。] <acronym>GIMP</acronym>はシステムで設定されている
+      言語を自動的に見付け出し使えるようにします。 めったにないことですが言語を
+      見付けるのに失敗する場合や、 システムとは別の言語を使用したい場合はつぎの
+      ようにしてください。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en"><productname>UNIX</productname> clones</term>
+        <term lang="ja"><productname>UNIX</productname>クローン</term>
+        <listitem>
+          <para lang="en">
+            <emphasis>In LINUX</emphasis>: in console mode,
+            type <userinput>LANGUAGE=en gimp</userinput> or
+            <userinput>LANG=en gimp</userinput>
+            replacing en by fr, de, ... according to the language you
+            want. Background: Using <userinput>LANGUAGE=en</userinput>
+            sets an environment variable for the executed
+            program <userinput>gimp</userinput>.
+          </para>
+          <para lang="ja">
+            コンソールのコマンドラインで、
+            <userinput>LANGUAGE=<replaceable>ja_JP</replaceable> <command>gimp
+            </command></userinput> あるいは <userinput>LANG=<replaceable>ja_JP
+            </replaceable> <command>gimp</command></userinput> のように送って
+            ください。 <literal>ja_JP</literal> のところは <literal>ja_JP.eucJP
+            </literal>、 <literal>ja_JP.Shift_JIS</literal>、 <literal>
+            ja_JP.UTF-8</literal>、 のように文字コードを明示したり (<userinput>
+            LANG=</userinput> に限る)、 <literal>ar</literal>、 <literal>fa
+            </literal>、 <literal>tr</literal> または <literal>en_GB
+            </literal>、 <literal>pt_BR</literal>、 <literal>zh_CN</literal> 
+            のように言語を指定できます。
+            背景: <userinput>LANGUAGE=<replaceable>ja</replaceable></userinput>
+            としたときそこで起動した <command>gimp</command> の環境変数の
+            ひとつが書き換わるしくみになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Windows XP</term>
+        <term lang="ja">Windows XP / Windows Vista</term>
+        <listitem>
+          <para lang="en">
+            <menuchoice>
+              <guimenu>Control Panel</guimenu>
+              <guisubmenu>System</guisubmenu>
+              <guisubmenu>Advanced</guisubmenu>
+              <guimenuitem>Environment</guimenuitem>
+            </menuchoice>
+            button in <quote>System Variables</quote> area:
+            <guibutton>Add</guibutton> button: Enter LANG for Name and fr or
+            de... for Value. Watch out! You have to click on three successive
+            <guibutton>OK</guibutton> to validate your choice.
+          </para>
+          <para lang="en">
+            If you often change language, you can create a batch file to
+            change the language. Open NotePad. Type the following
+            commands (for french for instance):
+            <!--do not reformat the following lines (literallayout)-->
+            <literallayout><userinput>set lang=fr
+start gimp-2.6.exe</userinput></literallayout>
+            Save this file as <filename>GIMP-FR.BAT</filename> (or another
+            name, but always with a
+            <filename class="extension">.BAT</filename> extension). Create
+            a shortcut and drag it to your desktop.
+          </para>
+          <para lang="en">
+            Another possibility:
+            <menuchoice>
+              <guimenu>Start</guimenu>
+              <guisubmenu>Programs</guisubmenu>
+              <guimenuitem>GTK Runtime Environment</guimenuitem>
+            </menuchoice>
+            Then <guimenuitem>Select language</guimenuitem> and select the
+            language you want in the dropping list.
+          </para>
+          <para lang="ja">
+            <variablelist>
+              <varlistentry>
+                <term>Windows XP</term>
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <guimenu>スタート</guimenu>
+                      <guisubmenu>コントロールパネル</guisubmenu>
+                      <guisubmenu>システム</guisubmenu>
+                      <guisubmenu>詳細設定タブ</guisubmenu>
+                      <guimenuitem>環境変数</guimenuitem>
+                    </menuchoice>
+                    の順に辿り、 <guibutton>新規</guibutton>ボタンをクリック。
+                    <quote>システム変数</quote>のところで、
+                    変数名欄に <literal>LANG</literal> 、変数値欄に日本語ならば
+                    <literal>ja</literal>、 外国語なら <literal>de</literal>、
+                    <literal>fr</literal>、 <literal>it</literal> あるいは
+                    <literal>en_CA</literal>、 <literal>ko_KR</literal>
+                    のような言語符号を記入します。
+                    連続して3度<guibutton>OK</guibutton>ボタンを押すと完了です。
+                    ユーザーアカウントごとに設定を変えるのなら、
+                    <menuchoice>
+                      <guimenu>スタート</guimenu>
+                      <guisubmenu>コントロールパネル</guisubmenu>
+                      <guisubmenu>ユーザーアカウントと家族のための安全設定
+                      </guisubmenu>
+                      <guimenuitem>ユーザーアカウント</guimenuitem>
+                    </menuchoice>
+                    のページを開き、 左のタスクにある <guimenuitem>
+                    環境変数の変更</guimenuitem> をクリックすると現れる
+                    ダイアログで上記のように設定します。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Windows Vista</term>
+                  <para>
+                    <menuchoice>
+                      <guimenu>スタート</guimenu>
+                      <guisubmenu>コントロールパネル</guisubmenu>
+                      <guisubmenu>システムとメンテナンス</guisubmenu>
+                      <guisubmenu>システム</guisubmenu>
+                      <guimenuitem>システムの詳細設定</guimenuitem>
+                    </menuchoice>
+                    に進むと<quote>管理者アカウントとパスワードの問い合わせ
+                    </quote>になるのでログインします。 そのあと、
+                    <guimenuitem>環境変数...</guimenuitem>
+                    のところで、 <guibutton>新規</guibutton>ボタンをクリック。
+                    <quote>システム変数</quote>の記入のしかたは
+                    <productname>Windows XP</productname> と同じです。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </para>
+          <para lang="ja">
+            たびたび言語を変更する必要があるときは、バッチファイルの
+            利用をおすすめします。メモ帳などのテキストエディタを開き、
+            たとえば以下のようなコマンドを記入します。
+            <literallayout><userinput>set lang=zh_TW.Big5
+start GIMP-2.6.exe</userinput></literallayout>
+            この例では臺灣繁體字を選択しているのでファイル名を
+            <filename>GIMP臺灣.bat</filename> のように (ファイル名はご自由に、
+            ただし拡張子 <filename class="extension">.bat</filename> は必須) 
+            して保存します。
+            そのショートカットを作成してデスクトップに置くのもよいでしょう。
+          </para>
+          <para lang="ja">
+            別の方法: 
+            <guimenu>スタート</guimenu> メニューから 
+            <menuchoice>
+              <guisubmenu>プログラム</guisubmenu>
+              <guimenuitem>GTK ランタイム環境</guimenuitem>
+            </menuchoice> 
+            と進み、 <guimenuitem>言語を選択</guimenuitem> の
+            引き出しメニューで使いたい言語を選択します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Apple Mac OS X</term>
+        <listitem>
+          <para lang="en">
+            From System Preferences, click on the International icon. In
+            the Language tab, the desired language should be the first in the
+            list.
+          </para>
+          <para lang="ja">
+            システム設定のウィンドウを開き、
+            国際化アイコンをクリックして言語タブをクリックします。
+            利用したい言語をリストの最上位に移動します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Another GIMP instance</term>
+        <term lang="ja">重複して<acronym>GIMP</acronym>を走らせるとき</term>
+        <listitem>
+          <para lang="en">
+            Use <userinput>-n</userinput> to run multiple instances
+            <acronym>GIMP</acronym>.
+            For example, use <userinput>gimp-2.6</userinput> to start
+            <acronym>GIMP</acronym> in the default system language, and
+            <userinput>LANGUAGE=en gimp-2.6 -n</userinput> to start another
+            instance of <acronym>GIMP</acronym> in English; This is very
+            useful for translators.
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>を複数同時に稼動させるには <option>-n
+            </option> オプションを使います。 例えば、 先にシステムの普段の
+            言語で <command>gimp-2.6</command> を起動し、 英語版の<acronym>GIMP
+            </acronym>を <command>LANGUAGE=en gimp-2.6 -n</command> として起動
+            するのです。 こうすると翻訳者も非常に助かります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="gimp-concepts-running-command-line">
+    <title lang="en">Command Line Arguments</title>
+    <title lang="ja">コマンドラインでの変数一覧</title>
+    <indexterm>
+      <primary lang="en">Command line Arguments</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="コマンドラインヘンスウ">コマンドライン変数</primary>
+    </indexterm>
+    <para lang="en">
+      Although arguments are not required when starting
+      <acronym>GIMP</acronym>, the most
+      common arguments are shown below.  On a Unix system, you can use
+      <userinput>man gimp</userinput> for a complete list.
+    </para>
+    <para lang="en">
+      Command line arguments must be in the command line that you use
+      to start <acronym>GIMP</acronym> as
+      <command>gimp-2.6 [OPTION...] [FILE|URI...]</command>.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>を起動する際オプション変数まで指定する必要は
+      ありませんが、 主だったものをここにいくつか挙げておきましょう。
+      Unix 風システムでは<userinput>man&nbsp;gimp</userinput>とすれば、 
+      オプションの完全なリストを含むマニュアルが読めます。
+    </para>
+    <para lang="ja">
+      コマンドライン変数は<acronym>GIMP</acronym>を起動するコマンドライン上で 
+      <command>gimp-2.6 [オプション...] [ファイル名|場所...]</command>
+      のようにつけてください。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term>-?, --help</term>
+        <listitem>
+          <para lang="en">Display a list of all commandline options.</para>
+          <para lang="ja">全てのコマンドラインオプションを表示。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--help-all</term>
+        <listitem>
+          <para lang="en">Show all help options.</para>
+          <para lang="ja">全てのヘルプオプションを表示。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--help-gtk</term>
+        <listitem>
+          <para lang="en">Show GTK+ Options.</para>
+          <para lang="ja">GTK+ のオプションを表示。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-v, --version</term>
+        <listitem>
+          <para lang="en">
+            Print the <acronym>GIMP</acronym> version and exit.
+          </para>
+          <para lang="ja"><acronym>GIMP</acronym>の版を表示して終了。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--license</term>
+        <listitem>
+          <para lang="en">Show license information and exit.</para>
+          <para lang="ja">利用許諾契約に関する情報を表示して終了。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--verbose</term>
+        <listitem>
+          <para lang="en">Show detailed start-up messages.</para>
+          <para lang="ja">起動過程での詳細報告を表示。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-n, --new-instance</term>
+        <listitem>
+          <para lang="en">Start a new <acronym>GIMP</acronym> instance.</para>
+          <para lang="ja">重ねて新たに<acronym>GIMP</acronym>を起動。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-a, --as-new</term>
+        <listitem>
+          <para lang="en">Open images as new.</para>
+          <para lang="ja">画像を新規で開く。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-i, --no-interface</term>
+        <listitem>
+          <para lang="en">Run without a user interface.</para>
+          <para lang="ja">ユーザインタフェースなしで起動。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-d, --no-data</term>
+        <listitem>
+          <para lang="en">
+            Do not load patterns, gradients, palettes, or brushes. Often
+            useful in non-interactive situations where start-up time is to be
+            minimized.
+          </para>
+          <para lang="ja">
+            パターン(文様)、 グラデーション、 パレット、 各種ブラシなどの
+            データを読み込まずに起動します。 起動時間を短縮する目的で
+            非対話非相互の状態にするために使用します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-f, --no-fonts</term>
+        <listitem>
+          <para lang="en">
+            Do not load any fonts. This is useful to load
+            <acronym>GIMP</acronym>
+            faster for scripts that do not use fonts, or to find problems
+            related to malformed fonts that hang <acronym>GIMP</acronym>.
+          </para>
+          <para lang="ja">
+            フォントを読み込みません。 たとえばフォントを必要としないスクリプト
+            を走らせる場合に<acronym>GIMP</acronym>起動時間の短縮が図れますし、
+            <acronym>GIMP</acronym>を不正停止させるような欠陥のあるフォントに
+            関わる問題を発見する用途にも使えます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>-s, --no-splash</term>
+        <listitem>
+          <para lang="en">Do not show the splash screen while starting.</para>
+          <para lang="ja">起動時のスプラッシュスクリーン表示をしません。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--no-shm</term>
+        <listitem>
+          <para lang="en">
+            Do not use shared memory between <acronym>GIMP</acronym> and
+            plugins. <!-- maybe useful if you do not trust a plugin code? -->
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>本体とプラグインの間でメモリを共有しません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--no-cpu-accel</term>
+        <listitem>
+          <para lang="en">Do not use special CPU acceleration
+            functions. Useful for finding or disabling buggy accelerated
+            hardware or functions.</para>
+          <para lang="ja">
+            <acronym>CPU</acronym>由来の特例加速機能を使用しません。 一部の
+            加速機能にまつわるバグを避けたり、 特定したりする用途があります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--session=<replaceable>name</replaceable></term>
+        <listitem>
+          <para lang="en">
+            Use a different <filename>sessionrc</filename> for this
+            <acronym>GIMP</acronym>
+            session. The given session name is appended to the default
+            <filename>sessionrc</filename> filename.
+          </para>
+          <para lang="ja">
+            異なる<filename>sessionrc</filename>ファイルを使って
+            <acronym>GIMP</acronym>のセッションを 建て上げます。
+            そのセッションは指定されたセッション名を
+            <filename>sessionrc.<replaceable>name</replaceable></filename>
+            のようにして追加したファイル名で保存されます。
+            セッションは主にウィンドウのサイズと配置を記録しています
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--gimprc=<filename>filename</filename></term>
+        <listitem>
+          <para lang="en">
+            Use an alternative <filename>gimprc</filename> instead of the
+            default one. The <filename>gimprc</filename> file contains a
+            record of your preferences.  Useful in cases where plugins paths
+            or machine specs may be different.
+          </para>
+          <para lang="ja">
+            常用のものとは異なる <filename>gimprc</filename> ファイルを
+            代わりに使います。 <filename>gimprc</filename> ファイルは
+            <acronym>GIMP</acronym>を好みに調節した内容を記録しています。
+            プラグインのパスを選んだり、 異なるマシンの諸元に対応する
+            目的に適います。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--system-gimprc=<replaceable>filename</replaceable></term>
+        <listitem>
+          <para lang="en">Use an alternate system gimprc file.</para>
+          <para lang="ja">
+            システム側の <filename>gimprc</filename> ファイルで別名のものを
+            指定します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          -b, --batch=<replaceable>commands</replaceable>
+        </term>
+        <listitem>
+          <para lang="en">
+            Execute the set of commands non-interactively. The set of commands
+            is typically in the form of a script that can be executed by one
+            of the <acronym>GIMP</acronym> scripting extensions.
+            When the command is <userinput>-</userinput>, commands
+            are read from standard input.
+          </para>
+          <para lang="ja">
+            コマンドの複合技を一気に無言で実行します。 実行は
+            <acronym>GIMP</acronym>のスクリプト拡張機能が担うので、
+            コマンドの組み合わせをスクリプトファイル <replaceable>commands
+            </replaceable> に書きます。 このファイル名のかわりに <userinput>
+            -</userinput> を与えると標準入力を読んで実行します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--batch-interpreter=<replaceable>proc</replaceable></term>
+        <listitem>
+          <para lang="en">
+            Specify the procedure to use to process batch commnds.
+            The default procedure is Script-Fu.
+          </para>
+          <para lang="ja">
+            バッチコマンドを実行するプロシージャを指定します。 初期状態での
+            プロシージャはScript-Fuです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--console-messages</term>
+        <listitem>
+          <para lang="en">
+            Do not popup dialog boxes on errors or warnings. Print the
+            messages on the console instead.
+          </para>
+          <para lang="ja">
+            事故の発生や警告を表示するポップアップダイアログを出しません。
+            かわりにコンソールにメッセージを表示します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--pdb-compat-mode=<replaceable>mode</replaceable></term>
+        <listitem>
+          <para lang="en">PDB compatibility mode (off|on|warn).</para>
+          <para lang="ja">PDB互換モード (off|on|warn)。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--stack-trace-mode=<replaceable>mode</replaceable></term>
+        <listitem>
+          <para lang="en">Debug in case of a crash (never|query|always).</para>
+          <para lang="ja">
+            クラッシュする原因を調べるためのデバッグ (never|query|always)。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--debug-handlers</term>
+        <listitem>
+          <para lang="en">
+            Enable non-fatal debugging signal
+            handlers. Useful for <acronym>GIMP</acronym> debugging.
+          </para>
+          <para lang="ja">
+            致命的でないデバッグ用シグナルハンドラを有効にします。
+            <acronym>GIMP</acronym>のデバッグ作業のためのものです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--g-fatal-warnings</term>
+        <listitem>
+          <para lang="en">Make all warnings fatal. Useful for debug.</para>
+          <para lang="ja">
+            すべての警告を致命的とみなします。 デバッグ作業のためのものです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--dump-gimprc</term>
+        <listitem>
+          <para lang="en">
+            Output a gimprc file with default
+            settings. Useful if you messed up the gimprc file.
+          </para>
+          <para lang="ja">
+            <filename>gimprc</filename>ファイルを出力します。
+            gimprc ファイルがもとで混乱したときに使えます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>--display=<replaceable>display</replaceable></term>
+        <listitem>
+          <para lang="en">
+            Use the designated X display (does not apply to all platforms).
+          </para>
+          <para lang="ja">
+            <productname>Xウィンドウシステム</productname>でのディスプレイ番号
+            を指定します。 (プラットフォーム限定です。)
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>

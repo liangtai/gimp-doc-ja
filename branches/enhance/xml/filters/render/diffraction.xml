@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-05 AntI: Added "es"
+  2007-05-18 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050919 de added by axel.wernicke
+-->
+<!--2009-09-15-->
+<sect2 id="plug-in-diffraction">
+  <title lang="en">Diffraction Patterns</title>
+  <title lang="ja">回折模様...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Diffraction</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Diffraction patterns (filter)</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary sortas="カイセツモヨウ">回折模様</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カイセツモヨウフィルタ">回折模様フィルタ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Two examples of diffraction patterns</title>
+      <title lang="ja">回折模様フィルタの生成画像例2点</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/diffraction1.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/diffraction2.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter lets you make diffraction or wave interference textures.
+      You can change the Frequency, Contours and Sharp Edges for each of the
+      RGB  channels. You can also set Brightness, Scattering and Polarization
+      of the texture. There is no automatic preview, so you must press the
+      preview button to update. On a slow system, this may take a bit of
+      time. Note that result doesn't depend on the initial image.
+    </para>
+    <para lang="en">
+      This is a very useful filter if you want to create intricate patterns.
+      It's perfect for making psychedelic, batik-like textures, or for
+      imitating patterns in stained glass (as in a church window).
+    </para>
+    <para lang="en">
+      It seems clear that the plugin works by simulating the physics of light
+      striking a grating. Unfortunately, the original authors never got around
+      to writing down the theory behind it, or explaining what the parameters
+      mean. The best approach, then, is just to twiddle things and see what
+      happens. Fortunately, almost anything you do seems to produce
+      interesting results.
+    </para>
+    <para lang="ja">
+      <guimenuitem>回折模様...</guimenuitem> フィルタは波の
+      回折現象や干渉現象のような模様素材を作成します。 波の<quote>振動</quote>
+      、 <quote>輪郭</quote>、 <quote>明瞭端</quote>の色を<acronym>RGB
+      </acronym>の各チャンネルごとに設定できます。 <quote>その他オプション
+      </quote>タブでは模様の <guilabel>明るさ</guilabel>、
+      <guilabel>散乱</guilabel>、
+      <guilabel>偏極</guilabel> が設定できます。 プレビュー
+      画面は自動更新をしないので、 最新の状態を反映させるには <guibutton>
+      プレビュー</guibutton> ボタンをクリックしてください。 
+      処理速度の遅いコンピュータをお使いのときは時間が少しかかるかも
+      しれません。 ちなみに生成される画像は元の画像の内容に影響されません。
+    </para>
+    <para lang="ja">
+      このフィルタは込み入った模様を生成するのにうってつけです。 陶酔的色使いの
+      ろうけつ染めの織物とかキリスト教会のステンドグラスのようなパターンを完璧
+      に作成します。
+    </para>
+    <para lang="ja">
+      このプラグインの処理過程は回折格子に光線を当てたときの物理現象を模倣して
+      いるだろうということは明らかなのですが、 残念なことに原作者がその理論背景
+      を未だ公表していないばかりか各パラメータの意味についても説明して
+      いません。 ですから最良の使い方はもはやいろいろなパラメータをいじって何が
+      どうなるか確かめてゆくという方法に限られます。 でも幸運なことにほとんど
+      何をやっても面白い結果が得られるようです。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guisubmenu>Pattern</guisubmenu>
+        <guimenuitem>Diffraction Patterns</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guisubmenu>パターン</guisubmenu>
+        <guimenuitem>回折模様...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">
+        <quote>Diffraction Patterns</quote> filter options
+      </title>
+      <title lang="ja"><quote>回折模様</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/filters-render-diffraction.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>
