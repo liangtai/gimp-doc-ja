@@ -9,15 +9,15 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2010-01-11-->
+<!--2010-01-25-->
 <sect1 id="gimp-using-paths">
   <title lang="en">
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
-    Paths
+    <phrase>Paths</phrase>
   </title>
   <title lang="ja">
     <anchor id="gimp-concepts-paths" xreflabel="パス"/>
-    パス
+    <phrase>パス</phrase>
   </title>
   <indexterm lang="en">
     <primary>Paths</primary>
@@ -174,14 +174,15 @@
       the line segment. Two events occur.
     </para>
     <para lang="ja">
-      パスツールを呼び出すとマウスポインタが矢印とうねった曲線からなる姿になります。 
-      画像を左クリックしたところがパスの始点です。 次の点となる位置にマウスを
-      移動してからまた左クリックすると、 第2の点ができて前の点と線で結ばれます。 
-      打てば打つほどいくつも点が打てますが、 パスの習得には始めの2点だけで十分です。
-      点を置くとき曲線の先ではポインタのそばに小さな十字<quote>+</quote>が
-      現れますが、 これはクリックすれば新たな点が追加できることを示しています。
-      一方で曲線の線分にポインタを近づけると、 ポインタの小さな十字
-      <quote>+</quote>は移動ツールのような四方矢印に替わります。 
+      パスツールを呼び出すとマウスポインタが矢印とうねった曲線からなる姿に
+      なります。 画像を左クリックしたところがパスの始点です。 次の点となる
+      位置にマウスを移動してからまた左クリックすると、 第2の点ができて前の点と
+      線で結ばれます。 打てば打つほどいくつも点が打てますが、 パスの習得には
+      始めの2点だけで十分です。点を置くとき曲線の先ではポインタのそばに小さな
+      十字<quote>+</quote>が現れますが、 これはクリックすれば新たな点が追加
+      できることを示しています。 一方で曲線の線分にポインタを近づけると、
+      ポインタの小さな十字<quote>+</quote>は移動ツールのような四方矢印に
+      替わります。 
     </para>
     <para lang="ja">
       ポインタを線分に近づけてクリックしその線分をドラッグしてください。
@@ -189,7 +190,9 @@
     </para>
     <itemizedlist>
       <listitem>
-        <para lang="en">The line segment bends and curves as it is pulled.</para>
+        <para lang="en">
+          The line segment bends and curves as it is pulled.
+        </para>
         <para lang="ja">線分はつかんで引くにしたがって曲折します。</para>
       </listitem>
       <listitem>
@@ -201,7 +204,8 @@
         </para>
         <para lang="ja">
           どの線分にも始点と終点があり、 しるしがついてはっきりわかるように
-          なっています。 動かされた線分の各端点から<quote>接線</quote>が生えました。
+          なっています。 動かされた線分の各端点から<quote>接線</quote>が
+          生えました。
         </para>
       </listitem>
     </itemizedlist>
@@ -355,20 +359,20 @@
     </para>
     <para lang="ja">
       パスの成分はそれぞれ <emphasis>開いた</emphasis> ものか <emphasis>閉じた
-      </emphasis> もののいずれかです: <quote>閉じた</quote>成分は終点の
+      </emphasis> もののいずれかです。 <quote>閉じた</quote>成分は終点の
       アンカーが始点のアンカーに繋っています。 パスを選択に変換するときには、
       <quote>開いた</quote>成分はいずれも終点から始点まで
       自動的に直線で結ばれ閉じられてから変換されます。
     </para>
     <para lang="ja">
-      パスの成分は直線にも曲線にもなります。 成分が直線だけで構成されているパスは
-      <quote>多辺形</quote>といいます。 パスを作成するとき、 新たに追加される
-      成分はいつも直線です。 新設されたアンカー点のハンドルはアンカーの真上に
-      置かれた状態で現れるので、 ハンドルの長さが 0 となりますから直線の成分と
-      なるのです。 ハンドルをドラッグしてアンカー点から離すと、 その成分が曲線に
-      なります。
-    </para>
-    <para lang="ja">
+      パスの線分は直線にも曲線にもなります。 線分が直線だけで構成されている
+      パスは<quote>多辺形</quote>といいます。 パスを作成するとき、 新たに追加
+      される線分はいつも直線です。 新設されたアンカー点のハンドルはアンカーの
+      真上に置かれた状態で現れるので、 ハンドルの長さが 0 となりますから直線の
+      線分となるのです。 ハンドルをドラッグしてアンカー点から離すと、 その線分
+      が曲線になります。
+    </para> <
+    ara lang="ja">
       パスの長所のひとつが[メモリ]資源をごく僅かしか使わずに済むことです。 画像
       そのものと比較すればその差は歴然です。 <acronym>RAM</acronym>上でのパスは
       各アンカーとハンドルの座標を記録する分だけしかメモリを要求しないので、
