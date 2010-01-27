@@ -5,15 +5,17 @@
 公式の配布物は [ftp://ftp.gimp.org/pub/gimp/help/gimp-help-2.6.0-html-ja.tar.bz2 ftp.gimp.org] で手に入ります。
 そのWindows版インストーラつきパッケージは [http://sourceforge.net/projects/gimp-win/files/ SourceForge] で提供されています。
 
-当サイトで自主公開しているヘルプファイルは不定期に更新しています。 
+当サイトで自主公開しているヘルプファイルは不定期に更新しています。 つまり公式の配布物よりは新しい内容や修正を含んでいます。
 [http://code.google.com/p/gimp-doc-ja/downloads/list?can=1&q=gimp-help-ja&colspec=Filename+Summary+Uploaded+Size+DownloadCount HTML形式の配布物] についてはファイル名に作成の日付を入れました。 
 容量の大きな画像ファイルにあまり変更がないときは、 
-以前の公開分に追加するだけのパッチ版も合わせて配布します。 
+以前の公開分に追加するだけで同じ文書になるパッチ版も同時に配布します。 
 パッチ版のファイル名は以前の名前に「patchXXXX」を加えた形にしています。
 
-===== パッケージの名前の例 =====
- * 通常版 gimp-help-ja-2.6.0.20091227.tar.bz2
- * パッチ版 gimp-help-ja-2.6.0.20091127patch1227.tar.bz2
+===== パッケージの例 =====
+ * 通常版 gimp-help-ja-2.6.0.20100126.tar.bz2
+   この中に20100126の時点での最新の文書と画像がすべて入っています。
+ * パッチ版 gimp-help-ja-2.6.0.20091227patch0126.tar.bz2
+   20091227の配布パッケージを先に展開してからこのパッチの内容で上書きしても20100126の内容になります。
 
 === インストールはどこに？ ===
 通常版もパッチ版もファイルの構成は
@@ -26,12 +28,15 @@
         images/
 }}}
 としています (パッチ版には images/ ディレクトリを省いたものもあり)。
+初めてインストールされるときはインストール先の help フォルダがない場合がほとんどですが、
+その後は help/ja/ 直下に html ファイルや images/ ディレクトリが来るように
+パッケージの内容を配置すれば OK です。
+
+インストール先はシステムによって異なります。つぎの例を参考にしてください。
 
  * FreeBSD (ports で導入の場合)
-
    /usr/local/share/gimp/help/ja/
- * Windows Vista (Cドライブの Program Files 直下に GIMP をインストールした場合)
-
+ * Windows Vista / XP (Cドライブの Program Files 直下に GIMP をインストールした場合)
    C:\Program Files\GIMP-2.0\share\gimp\2.0\help\ja\
  * GIMPPortable (Windows用) の場合
    GIMPPortable\App\gimp\share\gimp\2.0\help\ja\
@@ -43,7 +48,7 @@
 ソースを取得するためにGIT、 DocbookからT,,E,,Xシステムを通してPDF化するために
 gnome-doc-utilsなどのドキュメント作成ツール、 ODFにはdocbook2odfコマンドを
 ご自分でご用意ください。
-なお公式のソースはMakeシステムを利用しています。その扱い方については
-~~[http://wiki.gimp.org/gimp/TipsForContributingJapanese Wilber's Wiki]~~
-[http://bit.ly/8zOXcR Wilber's Wiki] の「2.準備」と「5.GIMPマニュアルのビルドシステム」
-が少し参考になるかもしれません。
+なお公式のソースはMakeシステムを利用しています。 ~~その扱い方については
+[http://wiki.gimp.org/gimp/TipsForContributingJapanese Wilber's Wiki]
+の「2.準備」と「5.GIMPマニュアルのビルドシステム」
+が少し参考になるかもしれません。~~(現在 Gimp Wiki のサイトは故障しています。)
