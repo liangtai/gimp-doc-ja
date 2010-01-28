@@ -50,27 +50,33 @@
 
 としてローカルコピーをまず取得してください。既にこの中には日本語のソースファイルが含まれています。
 images/ja 以下に日本語化した画像、 po/ja 以下に翻訳ファイル、 quickreference 以下に
-印刷して使える早見シートの日本語版 ja.po がある構成です。
+印刷して使える早見シートの日本語版のための翻訳ファイル ja.po がある構成です。
 
 一方、当サイトのレポジトリにも trunk/ 以下に同じく images, po, xml, quickreference の
 ディレクトリがあり、 xml フォルダを除きほとんど同じファイルが入っています。
 
 両者の違いは当サイトの方が若干新しい内容を含んでいることです。また当サイトのソースだけでは
-ヘルプ文書のビルドは不可能です。利用される場合は公式の方 (git レポジトリ) の内容へ適宜
-上書きで移してからビルドします。 取得方法は
+ヘルプ文書のビルドは不可能です。利用される場合は公式の方 (git レポジトリから得たソース) の同名の内容へ
+適宜上書きで移してからビルドします。 取得方法は
 [http://code.google.com/p/gimp-doc-ja/source/checkout Source タブ] にも説明がありますが、要するに
 || svn checkout http://gimp-doc-ja.googlecode.com/svn/trunk/ gimp-doc-ja-read-only ||
 
 としてローカルコピーを作ることです。もちろん gimp-doc-ja-read-only の名は自由に変えられます。
+
+その後の更新情報を得るには、公式なら git pull を、 当サイトなら svn up を実行してください。
+公式のソースはMakeシステムを利用しています。 ~~その扱い方については
+Wilber's Wiki の「2.準備」と「5.GIMPマニュアルのビルドシステム」
+が少し参考になるかもしれません。~~(現在 Gimp Wiki のサイトは故障しています。)
+<wiki:comment>
+[http://wiki.gimp.org/gimp/TipsForContributingJapanese Wilber's Wiki]
+</wiki:comment>
+
+git は svn と主目的が同じなのにコマンドや扱い方が随分異なっています。
+詳しいコマンドの説明は省きますのでお調べください。私(オーナー)が普段気をつけている
+ことだけ GitWorkFlow に書いておきます。
 
 ===HTML版以外の形式 (PDF, ODF) について===
 公式のソースからはPDF形式やODF形式の文書も作成できるようです。作成の前提として、
 ソースを取得するためにGIT、 DocbookからT,,E,,Xシステムを通してPDF化するために
 gnome-doc-utilsなどのドキュメント作成ツール、 ODFにはdocbook2odfコマンドを
 ご自分でご用意ください。
-なお公式のソースはMakeシステムを利用しています。 ~~その扱い方については
-Wilber's Wiki の「2.準備」と「5.GIMPマニュアルのビルドシステム」
-が少し参考になるかもしれません。~~(現在 Gimp Wiki のサイトは故障しています。)
-<wiki:comment>
-[http://wiki.gimp.org/gimp/TipsForContributingJapanese Wilber's Wiki]
-</wiki:comment>
