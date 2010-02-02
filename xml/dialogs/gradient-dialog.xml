@@ -9,7 +9,7 @@
   2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
   <title lang="en">Gradients Dialog</title>
   <title lang="ja">グラデーションダイアログ</title>
@@ -116,6 +116,7 @@
       </para>
     </listitem>
   </itemizedlist>
+
   <sect3 id="gimp-gradient-dialog-activate">
     <title lang="en">Activating the Dialog</title>
     <title lang="ja">ダイアログの呼び出し方</title>
@@ -256,9 +257,9 @@
       that you create yourself.
     </para>
     <para lang="ja">
-      このダイアログの最も基本的で普段最もよく行なわれる操作とは、 縦に長い
-      グラデーションの一覧表を繰って<acronym>GIMP</acronym>の現在の
-      グラデーションにしたいものを探し出しクリックすることです。 選ばれた
+      このダイアログで基本中の基本といえるありふれた操作といえば、 単純ですが
+      この縦に長いグラデーションの一覧表を繰って<acronym>GIMP</acronym>の
+      現行のグラデーションにしたいものを探し出しクリックする使い方でしょう。 選ばれた
       グラデーションはグラデーションを利用するあらゆる操作で使われます。
     </para>
     <para lang="ja">
@@ -329,42 +330,48 @@
     </para>
     <variablelist>
       <varlistentry>
-        <term lang="en">Edit Gradient</term>
-        <term lang="ja">グラデーションの編集</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Edit Gradient</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">グラデーションの編集</phrase>
+        </term>
         <listitem>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
-            </guiicon>
             This button activates the
             <link linkend="gimp-gradient-editor-dialog">Gradient Editor</link>.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-gtk-edit-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「グラデーションを編集」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon> このアイコンボタンは (後述する)
+            このアイコンボタンは (後述する)
             <link linkend="gimp-gradient-editor-dialog">グラデーションエディタ
             </link> を呼び出します。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">New Gradient</term>
-        <term lang="ja">新しいグラデーションを作成</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">New Gradient</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">
+            新しいグラデーションを作成
+          </phrase>
+        </term>
         <listitem>
           <anchor id="gimp-gradient-new"/>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
-            </guiicon>
             This creates a new gradient, initialized as a simple grayscale,
             and activates the Gradient Editor so that you can alter it.
             Gradients that you create are automatically saved in the
@@ -374,16 +381,6 @@
             folder, or add new ones, using the Preferences dialog.)
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata fileref="images/dialogs/dialogs-icon-new.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「新しいグラデーションを作成」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このアイコンボタンをクリックすると簡単なグレースケールで配色された
             新たなグラデーションが追加され、 これを変更できるグラデーション
             エディタが開かれます。 作成されたグラデーションは<acronym>GIMP
@@ -401,30 +398,26 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Duplicate Gradient</term>
-        <term lang="ja">グラデーションの複製</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic
+              fileref="images/dialogs/stock-duplicate-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Duplicate Gradient</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic
+              fileref="images/dialogs/stock-duplicate-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">グラデーションの複製</phrase>
         <listitem>
           <anchor id="gimp-gradient-duplicate"/>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/stock-duplicate-16.png"/>
-            </guiicon>
             This creates a copy of the currently selected gradient. You will
             be able to edit the copy even if you cannot edit the original.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-duplicate-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「グラデーションの複製」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このアイコンボタンをクリックすると現在選択されているグラデーション
             の複製がとられます。 元ファイルが書き込めなくても複製ならば編集
             できるでしょう。
@@ -432,30 +425,27 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Delete Gradient</term>
-        <term lang="ja">グラデーションの削除</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic
+              fileref="images/dialogs/dialogs-icon-delete.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Delete Gradient</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic
+              fileref="images/dialogs/dialogs-icon-delete.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">グラデーションの削除</phrase>
+        </term>
         <listitem>
           <anchor id="gimp-gradient-delete"/>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/dialogs-icon-delete.png"/>
-            </guiicon>
             This removes all traces of the gradient, if you have permission to
             do so. It asks for confirmation before doing anything.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/dialogs-icon-delete.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「グラデーションの削除」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             選択されているグラデーションファイルを削除できる権限をお持ちならば
             このアイコンボタンをクリックすれば跡形もなく消去できます。 実行前に
             確認が求められます。
@@ -463,37 +453,34 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Refresh Gradients</term>
-        <term lang="ja">グラデーションを再度読み込み</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Refresh Gradient</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">
+            グラデーションを再度読み込み
+          </phrase>
+        </term>
         <listitem>
           <anchor id="gimp-gradient-refresh"/>
           <para lang="en">
             If you add gradients to your personal
             <filename class="directory">gradients</filename>
             folder by some means other than this dialog,
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-            </guiicon>
             this button causes the list to be reloaded, so that the new
             entries will be available.
           </para>
           <para lang="ja">
             グラデーションエディタを使わない何らかの方法で新たにグラデーション
             ファイルを個人用 <filename class="directory">gradients</filename> 
-            フォルダなどに追加したときは、
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-reload-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「グラデーションを再度読み込み」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
-            このボタンをクリックすればダイアログの一覧表が読み込み直されて、
-            新しいグラデーションも使えるようになります。
+            フォルダなどに追加したときは、 このボタンをクリックすればダイアログの
+            一覧表が読み込み直されて、 新しいグラデーションも使えるようになります。
           </para>
         </listitem>
       </varlistentry>

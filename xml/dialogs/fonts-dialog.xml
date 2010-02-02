@@ -6,7 +6,7 @@
   2007-09-25 AntI: Added 'es'
   2007-09-03 j.h : reviewed en;fr for v2.4. No change.
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 id="gimp-font-dialog">
   <title lang="en">Fonts Dialog</title>
   <title lang="ja">フォントダイアログ</title>
@@ -254,15 +254,21 @@
         </listitem>
       </varlistentry>
       <varlistentry id="gimp-font-refresh">
-        <term lang="en">Refresh font list</term>
-        <term lang="ja">フォントを再読み込み</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Refresh font list</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">フォントを再読み込み</phrase>
+        </term>
         <listitem>
           <para lang="en">
-            Pressing
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-            </guiicon>
-            the button at the bottom of the dialog causes the system
+            Pressing the button at the bottom of the dialog causes the system
             font list to be rescanned. This may be useful if you add new fonts
             while GIMP is running, and want to make them accessible for the
             Text tool. You can also cause the font list to be rescanned by
@@ -271,19 +277,9 @@
             only option in the menu).
           </para>
           <para lang="ja">
-            ダイアログの底部中央にある
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata fileref="images/dialogs/stock-reload-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「フォント一覧の再スキャン」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
-            アイコンボタンをクリックすると、 システム上のフォントの目録を再走査
-            します。 <acronym>GIMP</acronym>を実行中にフォントを追加して
+            ダイアログの底部中央にあるこのアイコンボタンをクリックすると、 
+            システム上のフォントの目録を再走査します。 
+            <acronym>GIMP</acronym>を実行中にフォントを追加して
             テキストツールですぐ使いたいときにこのボタンが役に立ちます。 この
             機能はフォントの一覧表示を <mousebutton>第2ボタン</mousebutton>
             クリックするか、 ダイアログのタブメニューより最初の項目を進むと

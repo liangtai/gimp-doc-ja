@@ -9,7 +9,7 @@
   2006-03-12 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 id="gimp-indexed-palette-dialog">
   <title lang="en">Colormap Dialog</title>
   <title lang="ja">カラーマップダイアログ</title>
@@ -179,7 +179,7 @@
       colors that can be assigned to an index or the order they appear in: any
       index can be assigned any color.
     </para>
-    <para lang="en"><!-- changed dithering to quantization, bug #356354 -->
+    <para lang="en">
       It is important to realize that the colors in the colormap are the
       <emphasis>only colors available</emphasis> for an indexed image (that
       is, unless you add new colors to the colormap). This has a major effect
@@ -331,8 +331,18 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Edit color</term>
-        <term lang="ja">色を編集</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Edit color</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">色を編集</phrase>
+        </term>
         <listitem>
           <anchor id="gimp-indexed-palette-edit"/>
           <para lang="en">
@@ -342,17 +352,6 @@
             on the entry, except that it does not set GIMP's foreground color.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-gtk-edit-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「色を編集」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このボタン (ダイアログの左下にあります) をクリックすると<quote>
             インデックスカラーの編集</quote>ダイアログが開かれ、 現在選択して
             いるカラーマップの索引項目の色がそこで変更できます。 色見出しを
@@ -362,15 +361,22 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Add color</term>
-        <term lang="ja">色を追加</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-gtk-add-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Add color</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-gtk-add-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">色を追加</phrase>
+        </term>
         <listitem>
           <anchor id="gimp-indexed-palette-add"/>
           <para lang="en">
             This button
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-gtk-add-16.png"/>
-            </guiicon>
             (in the lower right corner of the dialog) allows you
             to add new colors to the colormap. If you click on the button, the
             current foreground color, as shown in the Toolbox, will be tacked
@@ -380,17 +386,6 @@
             is full, and trying to add more will have no effect.)
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-gtk-add-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「色を追加」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このボタン (ダイアログの右下にある) でカラーマップに新たに色を
             追加できます。 このボタンをクリックしたときの描画色 (ツールボックス
             の色標識に表示されている) がカラーマップの最後尾に付け加えられ
@@ -496,7 +491,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Add from FG</term>
+        <term lang="en">Add Color from FG</term>
         <term lang="ja">描画色から色を追加</term>
         <listitem>
           <para lang="en">
@@ -512,7 +507,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Add from BG</term>
+        <term lang="en">Add Color from BG</term>
         <term lang="ja">背景色から色を追加</term>
         <listitem>
           <para lang="en">

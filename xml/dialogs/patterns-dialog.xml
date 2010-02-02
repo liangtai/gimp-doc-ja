@@ -9,7 +9,7 @@
   2006-04-15 lexa: added de translatation and docbook compliance
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 id="gimp-pattern-dialog">
   <title lang="en">Patterns Dialog</title>
   <title lang="ja">パターンダイアログ</title>
@@ -354,16 +354,22 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Delete Pattern</term>
-        <term lang="ja">パターンの削除</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Delete Pattern</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">パターンの削除</phrase>
+        </term>
         <listitem>
           <anchor id="gimp-pattern-delete"/>
           <para lang="en">
-            Pressing
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
-            </guiicon>
-            this button removes the pattern from the list and causes
+            Pressing this button removes the pattern from the list and causes
             the file representing it to be deleted from disk. Note that you
             cannot remove any of the patterns that are supplied with GIMP and
             installed in the system <filename>patterns</filename>
@@ -371,17 +377,6 @@
             folders where you have write permission.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-delete-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「削除」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このアイコンボタンをクリックすると選択されていたパターンは一覧表
             から消されるだけでなくファイルそのものがディスクから削除されます。
             ただし<acronym>GIMP</acronym>と一緒についてきてシステムディレクトリ
@@ -392,32 +387,28 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Refresh Patterns</term>
-        <term lang="ja">パターンファイルを再度読み込み</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Refresh Patterns</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">パターンファイルを再度読み込み</phrase>
+        </term>
         <listitem>
           <anchor id="gimp-pattern-refresh"/>
           <para lang="en">
-            Pressing
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-            </guiicon>
-            this button causes GIMP to rescan the folders in your
-            pattern search path, adding any newly discovered patterns to the
-            list. This button is useful if you add new patterns to a folder,
-            and want to make them available without having to restart GIMP.
+            Pressing this button causes <acronym>GIMP</acronym> to rescan the
+            folders in your pattern search path, adding any newly discovered
+            patterns to the list. This button is useful if you add new
+            patterns to a folder, and want to make them available without
+            having to restart <acronym>GIMP</acronym>.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-reload-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「再読み込み」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このアイコンボタンをクリックすると<acronym>GIMP</acronym>はパターン
             の検索パスに登録されているフォルダを再度読み込み直して、 パターンが
             新たに見つかると一覧表に追加します。 新しいパターンをフォルダに追加
@@ -427,34 +418,29 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Open pattern as image</term>
-        <term lang="ja">パターンファイルを画像として開く</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-fileopen-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Open pattern as image</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-fileopen-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">パターンファイルを画像として開く</phrase>
+        </term>
         <listitem>
           <anchor id="gimp-pattern-open-as-image"/>
           <para lang="en">
-            If you click on
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-fileopen-16.png"/>
-            </guiicon>
-            this button, the current pattern is opened in a
+            If you click on this button, the current pattern is opened in a
             new image window. So, you can edit it. But if you try to save it
-            with the <quote>.pat</quote>, even with a new name, you will bang
-            into a <quote>Denied permission </quote> problem because this
-            image file is <quote>root</quote>. But this is possible under
-            Windows, less protected.
+            with the <filename class="extension">.pat</filename>, even with a
+            new name, you will bang into a <quote>Denied permission</quote>
+            problem because this image file is <quote>root</quote>. But this
+            is possible under Windows, less protected.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata
-                    fileref="images/dialogs/stock-fileopen-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>「ファイルを開く」</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon>
             このアイコンボタンをクリックすると現在選択されているパターン
             ファイルが新たに画像ウィンドウに開かれます。 つまりそれを編集でき
             ます。 でもまたそのファイルを拡張子 <filename class="extension">
