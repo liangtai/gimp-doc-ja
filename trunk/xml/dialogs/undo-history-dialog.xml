@@ -8,7 +8,7 @@
   2006-03.18 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 id="gimp-undo-dialog">
   <title lang="en">Undo History Dialog</title>
   <title lang="ja">操作履歴ダイアログ</title>
@@ -149,13 +149,20 @@
     </para>
     <variablelist>
       <varlistentry>
-        <term lang="en">Undo</term>
-        <term lang="ja">取り消し</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-undo-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Undo</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-undo-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">取り消し</phrase>
+        </term>
         <listitem>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-undo-16.png"/>
-            </guiicon>
             This button has the same effect as choosing
             <menuchoice>
               <guimenu>Edit</guimenu>
@@ -166,9 +173,6 @@
             it reverts the image to the next state back in the undo history.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-undo-16.png"/>
-            </guiicon>
             このボタンは、 画像ウィンドウのメニューで
             <menuchoice>
               <guimenu>編集</guimenu>
@@ -182,13 +186,20 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Redo</term>
-        <term lang="ja">やり直し</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-redo-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Redo</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-redo-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">やり直し</phrase>
+        </term>
         <listitem>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-redo-16.png"/>
-            </guiicon>
             This button has the same effect as choosing
             <menuchoice>
               <guimenu>Edit</guimenu>
@@ -199,9 +210,6 @@
             it advances the image to the next state forward in the Undo History.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-redo-16.png"/>
-            </guiicon>
             このボタンは、 画像ウィンドウのメニューで
             <menuchoice>
               <guimenu>編集</guimenu>
@@ -215,24 +223,26 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Clear Undo History</term>
-        <term lang="ja">操作履歴を消去</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-clear-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Clear Undo HIstory</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-clear-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">操作履歴を消去</phrase>
+        </term>
         <listitem>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/stock-edit-clear-16.png"/>
-            </guiicon>
             This button removes all contents from the undo history except the
             current state. If you press it, you are asked to confirm that you
             really want to do this. The only reason for doing it would be if
             you are very constrained for memory.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/stock-edit-clear-16.png"/>
-            </guiicon>
             このボタンは現在の状態だけを履歴に残し他の操作の記録を全て削除
             します。 このボタンを押すと本当にそうするつもりなのか確認を求め
             られます。 このボタンは使えるメモリ量に大きな制約のある場合でしか
@@ -243,7 +253,7 @@
               In a tab, this dialog is represented by
               <guiicon>
                 <inlinegraphic
-                      fileref="images/dialogs/stock-undo-history-16.png"/>
+                  fileref="images/dialogs/stock-undo-history-16.png"/>
               </guiicon>
             </para>
             <para lang="ja">

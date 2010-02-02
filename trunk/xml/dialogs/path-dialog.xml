@@ -9,7 +9,7 @@
   2006-02-25 fixed invalid image reference
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 id="gimp-path-dialog">
   <title lang="en"><quote>Paths</quote> Dialog</title>
   <title lang="ja">パスダイアログ</title>
@@ -200,8 +200,8 @@
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-eye-20.png"/>
           </guiicon>
-          <phrase lang="en">Path visibility</phrase>
-          <phrase lang="ja">パスの可視度</phrase>
+          <phrase condition="tag-is-required" lang="en">Path visibility</phrase>
+          <phrase condition="tag-is-required" lang="ja">パスの可視度</phrase>
         </term>
         <listitem>
           <para lang="en">
@@ -227,8 +227,8 @@
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-vchain-24.png"/>
           </guiicon>
-          <phrase lang="en">Chain paths</phrase>
-          <phrase lang="ja">パスの連結</phrase>
+          <phrase condition="tag-is-required" lang="en">Chain paths</phrase>
+          <phrase condition="tag-is-required" lang="ja">パスの連結</phrase>
         </term>
         <listitem>
           <para lang="en">
@@ -990,9 +990,8 @@
           <anchor id="gimp-path-import"/>
           <para lang="en">
             <guilabel>Import Path</guilabel> creates a new path from an SVG
-            file:
-            it pops up a file chooser dialog that allows you to navigate to
-            the file.  See the <link linkend="gimp-concepts-paths">Paths
+            file: it pops up a file chooser dialog that allows you to navigate
+            to the file.  See the <link linkend="gimp-concepts-paths">Paths
             </link> section for information on SVG files and how they relate
             to GIMP paths.
           </para>

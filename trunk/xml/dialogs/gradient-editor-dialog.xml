@@ -11,7 +11,7 @@
   2006-04-30 lexa: made almost docbook compliant and added german translation
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect3 id="gimp-gradient-editor-dialog">
   <title lang="en">The Gradient Editor</title>
   <title lang="ja">グラデーションエディタ</title>
@@ -312,14 +312,22 @@
           <para lang="ja">ダイアログの底部には5つのボタンがあります。</para>
           <variablelist>
             <varlistentry>
-              <term lang="en">Save</term>
-              <term lang="ja">保存</term>
+              <term lang="en">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-save-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">Save</phrase>
+              </term>
+              <term lang="ja">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-save-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">保存</phrase>
+              </term>
               <listitem>
                 <para lang="en">
-                  <guiicon>
-                    <inlinegraphic
-                      fileref="images/dialogs/stock-save-16.png"/>
-                  </guiicon>
                   Clicking this button causes the gradient, in its current
                   state, to be saved in your personal
                   <filename class="directory">gradients</filename>
@@ -327,18 +335,8 @@
                   time you start <acronym>GIMP</acronym>.
                 </para>
                 <para lang="ja">
-                  <guiicon>
-                    <inlinemediaobject>
-                      <imageobject>
-                        <imagedata
-                          fileref="images/dialogs/stock-save-16.png"/>
-                      </imageobject>
-                      <textobject>
-                        <phrase>「保存」</phrase>
-                      </textobject>
-                    </inlinemediaobject>
-                  </guiicon> このアイコンボタンをクリックするとグラデーション
-                  が個人用 <filename class="directory">gradients</filename> 
+                  このアイコンボタンをクリックするとグラデーションが個人用 
+                  <filename class="directory">gradients</filename> 
                   フォルダに現在の状態で保存されます。 
                   つまり次回から<acronym>GIMP</acronym>起動時に
                   このグラデーションも自動的に読み込まれます。
@@ -347,6 +345,12 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Revert</term>
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-revert-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">Save</phrase>
+              </term>
               <term lang="ja">復帰</term>
               <listitem>
                 <para lang="en">
@@ -377,68 +381,77 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Zoom Out</term>
-              <term lang="ja">表示倍率を下げる</term>
+              <term lang="en">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-zoom-out-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">Zoom Out</phrase>
+              </term>
+              <term lang="ja">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-zoom-out-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">表示倍率を下げる</phrase>
+              </term>
               <listitem>
                 <anchor id="gimp-gradient-editor-zoom-out"/>
                 <para lang="en">
-                  <guiicon>
-                    <inlinegraphic
-                      fileref="images/dialogs/stock-zoom-out-16.png"/>
-                  </guiicon>
                   Clicking this button shrinks the gradient display
                   horizontally.
                 </para>
                 <para lang="ja">
-                  <guiicon>
-                    <inlinemediaobject>
-                      <imageobject>
-                        <imagedata
-                          fileref="images/dialogs/stock-zoom-out-16.png"/>
-                      </imageobject>
-                      <textobject>
-                        <phrase>「表示倍率を下げる」</phrase>
-                      </textobject>
-                    </inlinemediaobject>
-                  </guiicon>
                   このアイコンボタンをクリックすると図面が左右に縮小します。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Zoom In</term>
-              <term lang="ja">表示倍率を上げる</term>
+              <term lang="en">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-zoom-in-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">Zoom In</phrase>
+              </term>
+              <term lang="ja">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-zoom-in-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">表示倍率を上げる</phrase>
+              </term>
               <listitem>
                 <anchor id="gimp-gradient-editor-zoom-in"/>
                 <para lang="en">
-                  <guiicon>
-                    <inlinegraphic
-                      fileref="images/dialogs/stock-zoom-in-16.png"/>
-                  </guiicon>
                   Clicking this button expands the gradient display
                   horizontally. You can then use the scrollbar to pan the
                   display left or right.
                 </para>
                 <para lang="ja">
-                  <guiicon>
-                    <inlinemediaobject>
-                      <imageobject>
-                        <imagedata
-                          fileref="images/dialogs/stock-zoom-in-16.png"/>
-                      </imageobject>
-                      <textobject>
-                        <phrase>「表示倍率を上げる」</phrase>
-                      </textobject>
-                    </inlinemediaobject>
-                  </guiicon> このアイコンボタンをクリックするとグラデーションの
+                  このアイコンボタンをクリックするとグラデーションの
                   図面が左右に拡大します。 ウィンドウからはみ出したところは
                   スクロールバーを使って繰り寄せられます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Zoom All</term>
-              <term lang="ja">すべて表示されるように表示倍率を調整</term>
+              <term lang="en">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">Zoom All</phrase>
+              </term>
+              <term lang="ja">
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
+                </guiicon>
+                <phrase condition="tag-is-required">
+                  すべて表示されるように表示倍率を調整
+                </phrase>
+              </term>
               <listitem>
                 <anchor id="gimp-gradient-editor-zoom-all"/>
                 <para lang="en">
@@ -446,17 +459,6 @@
                   that it fits precisely into the window.
                 </para>
                 <para lang="ja">
-                  <guiicon>
-                    <inlinemediaobject>
-                      <imageobject>
-                        <imagedata
-                          fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
-                      </imageobject>
-                      <textobject>
-                        <phrase>
-                          「すべて表示されるように表示倍率を調整」
-                        </phrase>
-                      </textobject>
                     </inlinemediaobject>
                   </guiicon>
                   このアイコンボタンをクリックすると図面は左右の大きさが調整

@@ -13,7 +13,7 @@
   2006-02-24 Written Brush Editor en;fr by j.h
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-10-06-->
+<!--2010-02-02-->
 <sect2 id="gimp-brush-dialog">
   <title lang="en">Brushes Dialog</title>
   <title lang="ja">ブラシダイアログ</title>
@@ -450,14 +450,20 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Edit Brush</term>
-          <term lang="ja">ブラシを編集</term>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">Edit Brush</phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">ブラシを編集</phrase>
+          </term>
           <listitem>
             <para lang="en">
-              <guiicon>
-                <inlinegraphic
-                  fileref="images/dialogs/stock-gtk-edit-16.png"/>
-              </guiicon>
               This activates the
               <link linkend="gimp-brush-editor-dialog">Brush Editor</link>.
               Pressing the button will open the Editor for any brush. It
@@ -466,17 +472,6 @@
               anything with it (<quote>Read only</quote>).
             </para>
             <para lang="ja">
-              <guiicon>
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata
-                      fileref="images/dialogs/stock-gtk-edit-16.png"/>
-                  </imageobject>
-                  <textobject>
-                    <phrase>「ブラシを編集」</phrase>
-                  </textobject>
-                </inlinemediaobject>
-              </guiicon>
               このボタンは (後述する)
               <link linkend="gimp-brush-editor-dialog">ブラシエディタ</link> 
               を呼び出します。 どんなブラシを選んでいてもブラシエディタを開け
@@ -487,31 +482,27 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">New Brush</term>
-          <term lang="ja">新しいブラシを作成</term>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">New Brush</phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">新しいブラシを作成</phrase>
+          </term>
           <listitem>
             <anchor id="gimp-brush-new"/>
             <para lang="en">
-              <guiicon>
-                <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
-              </guiicon>
               This creates a new parametric brush, initializes it with a small
               fuzzy round shape, and opens the Brush Editor so that you can
               modify it. The new brush is automatically saved in your personal
               <filename>brushes</filename> folder.
             </para>
             <para lang="ja">
-              <guiicon>
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata
-                      fileref="images/dialogs/stock-document-new-16.png"/>
-                  </imageobject>
-                  <textobject>
-                    <phrase>「新しいブラシの作成」</phrase>
-                  </textobject>
-                </inlinemediaobject>
-              </guiicon>
               このボタンをクリックすると新しい媒介変数つきブラシが境界にぼかし
               が入った丸い形に作られ、 これを編集できるようブラシエディタが
               開かれます。 この新しいブラシは自動的に個人用<acronym>GIMP
@@ -521,15 +512,21 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Duplicate Brush</term>
-          <term lang="ja">ブラシの複製</term>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-dupkicate-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">Duplicate Brush</phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-dupkicate-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">ブラシの複製</phrase>
+          </term>
           <listitem>
             <anchor id="gimp-brush-duplicate"/>
             <para lang="en">
-              <guiicon>
-                <inlinegraphic
-                  fileref="images/dialogs/stock-duplicate-16.png"/>
-              </guiicon>
               This button is only enabled if the currently selected brush is a
               parametric brush. If so, the brush is duplicated, and the Brush
               Editor is opened so that you can modify the copy. The result is
@@ -537,17 +534,6 @@
               <filename>brushes</filename> folder.
             </para>
             <para lang="ja">
-              <guiicon>
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata
-                      fileref="images/dialogs/stock-duplicate-16.png"/>
-                  </imageobject>
-                  <textobject>
-                    <phrase>「ブラシの複製」</phrase>
-                  </textobject>
-                </inlinemediaobject>
-              </guiicon>
               このボタンは現在選ばれているブラシが媒介変数つきであるときのみ
               利用できます。 ブラシの複製をとるとブラシエディタが開かれてその
               複製の加工ができるようになっています。 作成が済むと自動的にその
@@ -558,32 +544,27 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Delete Brush</term>
-          <term lang="ja">ブラシの削除</term>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">Delete Brush</phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">ブラシの削除</phrase>
+          </term>
           <listitem>
             <anchor id="gimp-brush-delete"/>
             <para lang="en">
-              <guiicon>
-                <inlinegraphic
-                  fileref="images/dialogs/dialogs-icon-delete.png"/>
-              </guiicon>
               This removes all traces of the brush, both from the dialog and
               the folder where its file is stored, if you have permission to
               do so. It asks for confirmation before doing anything.
             </para>
             <para lang="ja">
               現在選ばれているブラシを削除できる権限をお持ちでしたら、
-              <guiicon>
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata
-                      fileref="images/dialogs/stock-delete-16.png"/>
-                  </imageobject>
-                  <textobject>
-                    <phrase>「ブラシの削除」</phrase>
-                  </textobject>
-                </inlinemediaobject>
-              </guiicon>
               このボタンをクリックすればダイアログ上のみならず保存されていた
               ブラシファイルまで跡形もなく消し去れます。 実行に移すまえに確認が
               求められます。
@@ -591,8 +572,18 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Refresh Brushes</term>
-          <term lang="ja">ブラシの再読み込み</term>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">Refresh Brushes</phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">ブラシの再読み込み</phrase>
+          </term>
           <listitem>
             <anchor id="gimp-brush-refresh"/>
             <para lang="en">
@@ -600,9 +591,6 @@
               <filename class="drectory">brushes</filename>
               folder or any other folder in your brush search path, by some
               means other than the Brush Editor,
-              <guiicon>
-                <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-              </guiicon>
               this button causes the list to be reloaded, so that the new
               entries will be available in the dialog.
             </para>
@@ -612,17 +600,6 @@
               <filename class="directory">brushes</filename> フォルダをはじめ、
               ブラシ検索パスに登録されたフォルダに何かブラシファイルを
               新たに収めたら、 
-              <guiicon>
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata
-                      fileref="images/dialogs/stock-reload-16.png"/>
-                  </imageobject>
-                  <textobject>
-                    <phrase>「ブラシの再読み込み」</phrase>
-                  </textobject>
-                </inlinemediaobject>
-              </guiicon>
               このボタンをクリックすればダイアログの一覧表は読み込み直され、
               新しく追加されたブラシがダイアログで利用できるようになります。
             </para>

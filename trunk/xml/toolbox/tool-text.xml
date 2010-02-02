@@ -13,7 +13,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--2010-01-17-->
+<!--2010-02-02-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -380,8 +380,8 @@
           </para>
           <para lang="ja">
             <quote>左揃え</quote>、 <quote>右揃え</quote>、 <quote>中央揃え
-            </quote>、 <quote>均等割り</quote>の4つのボタンから文字列の
-            揃え方を選びます。"
+            </quote>、 <quote>両端揃え</quote>の4つのボタンから文字列の
+            揃え方を選びます。
           </para>
         </listitem>
       </varlistentry>
@@ -482,7 +482,7 @@
             パスダイアログで可視化します。
           </para>
           <para lang="ja">
-            ちなみにこのコマンドは<quote>レイヤー</quote>メニューにも現れます:
+            ちなみにこのコマンドは<quote>レイヤー</quote>メニューにも現れます。
           </para>
           <figure>
             <title lang="en">
@@ -643,9 +643,9 @@
     <para lang="ja">
       語句や文章を書き込み始めるとすぐにレイヤーダイアログにテキストレイヤー
       が現れます。 こんなふうにレイヤーがある画像 (今実践されているのなら
-      その画像、 あるいは <filename>.xcf</filename> 画像) ならば、
-      テキストレイヤーを活性化してテキスト上でクリック (もしくはダブル
-      クリック) すればテキスト編集を再開できます。 もちろん他の一般の
+      その画像、 あるいは <filename class="extension">.xcf</filename> 
+      画像) ならば、 テキストレイヤーを活性化してテキスト上でクリック (もしくは
+      ダブルクリック) すればテキスト編集を再開できます。 もちろん他の一般の
       レイヤーと同じように様々な機能を使ってテキストレイヤーを操作できます。
     </para>
     <para lang="ja">
@@ -752,59 +752,53 @@
         </secondary>
       </indexterm>
       <varlistentry>
-        <term lang="en">Load Text from file</term>
-        <term lang="ja">ファイルからテキストを読み込む</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-fileopen-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Load text from file</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-fileopen-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">
+            ファイルからテキストを読み込む
+          </phrase>
+        </term>
         <listitem>
           <para lang="en">
             Text can be loaded from a text file by clicking the folder icon
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/stock-fileopen-16.png"/>
-            </guiicon>
             in the text editor. All the text in the file is loaded.
           </para>
           <para lang="ja">
-            テキストはテキストファイルの内容を利用できます。 テキストエディタの
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/dialogs/stock-fileopen-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>開く</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon> ボタンをクリックして<quote>テキストファイル (UTF-8) 
-            を開く</quote>ダイアログからファイルを選んでください。 
+            テキストはテキストファイルの内容を利用できます。 テキストエディタにある
+            このボタンをクリックして<quote>テキストファイル (UTF-8) を開く</quote>
+            ダイアログからファイルを選んでください。 
             ファイル内の全てのテキストが読み込まれます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Clear all text</term>
-        <term lang="ja">文面を消去</term>
+        <term lang="en">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-clear-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">Clear all text</phrase>
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-edit-clear-16.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required">文面を消去</phrase>
+        </term>
         <listitem>
           <para lang="en">
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/stock-edit-clear-16.png"/>
-            </guiicon>
             Clicking this icon clears the editor and the associated text on
             the image.
           </para>
           <para lang="ja">
-            <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/dialogs/stock-edit-clear-16.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>消去</phrase>
-                </textobject>
-              </inlinemediaobject>
-            </guiicon> ボタンを押すとテキストエディタ内の
+            このボタンを押すとテキストエディタ内の
             全ての文字と画像上の連関したテキストレイヤーの文字が消えます。
           </para>
         </listitem>
