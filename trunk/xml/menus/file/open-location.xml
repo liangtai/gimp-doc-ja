@@ -8,7 +8,7 @@
 -->
 <!-- open tasks:
  -->
-<!--2009-09-12-->
+<!--2010-02-08-->
 <sect2 id="gimp-file-open-location">
   <title lang="en">Open Location</title>
   <title lang="ja">場所を開く...</title>
@@ -94,10 +94,11 @@
             The default base directory for relative paths depends on your
             operating system. It is typically
             <filename>/home/&lt;username&gt;/</filename> on Linux,
-            <filename>
-              C:\Documents and Settings\&lt;username&gt;\My Documents\My
-              Images\
-            </filename> on Windows and
+            <filename role="html">C:\Documents and
+            Settings\&lt;username&gt;\My Documents\My Images\<filename>
+            <filename role="tex">C:\\Documents and
+            Settings\\&lt;username&gt;\\My Documents\\My Images\\</filename>
+            on Windows and
             <filename>/Users/&lt;username&gt;/</filename> on Mac OS X.
           </para>
           <para lang="ja">
@@ -113,10 +114,14 @@
             よって異なります。 主な例では、 Unix系ならば <filename>
             file:///home/&lt;ユーザ名&gt;/</filename> のような
             ホームディレクトリが、 <productname>Windows</productname> ならば
-            <filename>C:\Documents&nbsp;and&nbsp;Settings\&lt;ユーザ名&gt;
-            \My&nbsp;Documents\My&nbsp;Images\</filename> が、 <productname>
-            Mac OS X</productname> ならば <filename>/Users/&lt;ユーザ名&gt;/
-            </filename> が典型的です。
+            <filename role="html">
+            C:\Documents&nbsp;and&nbsp;Settings\&lt;ユーザ名&gt;
+            \My&nbsp;Documents\My&nbsp;Images\</filename> 
+            <filename role="tex">
+            C:\\Documents~and~Settings\\{\\rm\\langle ユーザ名\\rangle}%
+            \\My~Documents\\My~Images\\
+            </filename> が、 <productname>Mac OS X</productname> ならば 
+            <filename>/Users/&lt;ユーザ名&gt;/</filename> が典型的です。
           </para>
         </listitem>
       </varlistentry>
