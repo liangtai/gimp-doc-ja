@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2009-11-08-->
+<!--2010-02-08-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -410,15 +410,20 @@
         <listitem>
           <para lang="en">
             Set the <envar>GS_PROG</envar> environment variable to the full
-            file name of the gswin32c binary  (e.g.
-            <filename>C:\gs\gsX.YY\bin\gswin32c.exe</filename>).
+            file name of the gswin32c binary (e.g.
+            <filename role="html">C:\gs\gsX.YY\bin\gswin32c.exe</filename>
+            <filename role="tex">C:\\gs\\gsX.YY\\bin\\gswin32c.exe</filename>).
           </para>
           <para lang="ja">
             <filename>gswin32c.exe</filename> の保管場所までの経路名 (パス) を
             環境変数 <envar>GS_PRG</envar> に代入してください。 例えば
-            <userinput>
+            <userinput role="html">
             SET GS_PRG=C:\gs\gs<replaceable>X.YY</replaceable>\bin\gswin32c.exe
-            </userinput> とします。
+            </userinput>
+            <userinput role="tex">
+            SET GS_PRG=C:\\gs\\gs{\\it X.YY\\/}\\bin\\gswin32c.exe
+            </userinput>
+            とします。
           </para>
         </listitem>
       </itemizedlist>

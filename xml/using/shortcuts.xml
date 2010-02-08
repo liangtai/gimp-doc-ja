@@ -9,10 +9,11 @@
   2006-06-22 Added italian content by ciampix
   2005-11-01 Created by julien hardelin
 -->
-<!--2009-09-29-->
+<!--2010-02-08-->
 <sect1 id="gimp-concepts-shortcuts">
   <title lang="en">Creating Shortcuts to Menu Functions</title>
   <title lang="ja">メニューの各機能にショートカットを作成</title>
+
   <indexterm lang="en">
     <primary>Shortcuts</primary>
   </indexterm>
@@ -27,6 +28,7 @@
     <primary sortas="アツラエモノ">誂物</primary>
     <secondary>ショートカット</secondary>
   </indexterm>
+
   <para lang="en">
     Many functions which are accessible via the image menu have a default
     keyboard shortcut. You may want to create a new shortcut for a command
@@ -39,6 +41,7 @@
     ショートカットを付けたり、 稀ですが既にあるショートカットを編集してみたいと
     思ったことはありませんか。 これには2通りの手続きがあります。
   </para>
+
   <procedure>
     <title lang="en">Using dynamic keyboard shortcuts</title>
     <title lang="ja">動的なキーボードショートカットを使用</title>
@@ -116,6 +119,7 @@
       </para>
     </step>
   </procedure>
+
   <figure>
     <title lang="en">Configure Keyboard Shortcuts</title>
     <title lang="ja">
@@ -128,6 +132,7 @@
       </imageobject>
     </mediaobject>
   </figure>
+
   <procedure>
     <title lang="en">Using the Keyboard Shortcut Editor</title>
     <title lang="ja">キーボードショートカット編集ダイアログを利用</title>
@@ -176,12 +181,17 @@
       </para>
     </step>
   </procedure>
+
   <note>
     <para lang="en">
-      Custom Keyboard shortcuts are stored in one of Gimp's hidden directory (
-      <filename class="directory">/home/[username]/.gimp-2.6/menurc</filename>)
-      under Linux, and <filename class="directory">
-      C:\Documents?and?Settings\[Username]\.gimp-2.6\menurc</filename>
+      Custom Keyboard shortcuts are stored in one of Gimp's hidden
+      directory (<filename
+      class="directory">/home/[username]/.gimp-2.6/menurc</filename>)
+      under Linux, and
+      <filename class="directory"
+      role="html">C:\Documents and Settings\[Username]\.gimp-2.6\menurc</filename>
+      <filename class="directory"
+      role="tex">C:\\Documents and Settings\\[Username]\\.gimp-2.6\\menurc</filename>
       under Windows XP.  It is a simple text file that you can transport from
       one computer to another.
     </para>
@@ -190,12 +200,14 @@
       ディレクトリ内で <filename>menurc</filename> という名前のファイルに書き
       込まれて保存されます。 <productname>UNIX</productname> システム風の
       システムなら <filename>~/.gimp-2.6/menurc</filename>、 
-      <productname>Windows XP</productname>なら <filename>
+      <productname>Windows XP</productname>なら <filename role="html">
       C:\Documents&nbsp;and&nbsp;Settings\ユーザー名\.gimp-2.6\menurc
+      </filename> <filename role="tex">
+C:\\Documents~and~Settings\\{\\rm\\langle ユーザー名\\rangle}\\.gimp-2.6\\menurc
       </filename> 、 <productname>Mac OS</productname> なら 
       <filename>/Users/ユーザー名/.gimp-2.6/menurc</filename> です。 
-      <acronym>ASCII</acronym>テキストファイルなので、
-      中身は単なる他のコンピュータに渡すのも容易です。
+      中身は単なる<acronym>ASCII</acronym>テキストファイルなので、
+      他のコンピュータに渡すのも容易です。
     </para>
   </note>
 </sect1>
