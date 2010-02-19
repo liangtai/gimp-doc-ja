@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2010-02-17 21:04+0900\n"
-"PO-Revision-Date: 2010-02-17 21:25+0900\n"
+"POT-Creation-Date: 2010-02-19 07:38+0900\n"
+"PO-Revision-Date: 2010-02-19 17:14+0900\n"
 "Last-Translator: liangtai <ss2pxd1c@yahoo.co.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -64,6 +64,7 @@ msgstr "筆触ツール (鉛筆、 絵筆、 エアブラシ)"
 #: src/toolbox/tool-blend.xml:31(primary)
 #: src/toolbox/tool-align.xml:18(primary)
 #: src/toolbox/tool-airbrush.xml:20(primary)
+#: src/toolbox/gegl-operation.xml:11(primary)
 msgid "Tools"
 msgstr "ツール"
 
@@ -430,6 +431,7 @@ msgstr ""
 #: src/toolbox/tool-brightness-contrast.xml:40(title)
 #: src/toolbox/tool-blend.xml:85(title) src/toolbox/tool-align.xml:44(title)
 #: src/toolbox/tool-airbrush.xml:38(title)
+#: src/toolbox/gegl-operation.xml:51(title)
 msgid "Activating the Tool"
 msgstr "呼び出し方"
 
@@ -509,6 +511,7 @@ msgstr ""
 #: src/toolbox/tool-brightness-contrast.xml:75(title)
 #: src/toolbox/tool-blend.xml:130(title)
 #: src/toolbox/tool-airbrush.xml:98(title)
+#: src/toolbox/gegl-operation.xml:70(title)
 msgid "Options"
 msgstr "オプション"
 
@@ -951,6 +954,7 @@ msgstr ""
 #: src/toolbox/tool-colorize.xml:147(term)
 #: src/toolbox/tool-color-balance.xml:162(term)
 #: src/toolbox/tool-brightness-contrast.xml:156(term)
+#: src/toolbox/gegl-operation.xml:145(term)
 msgid "Preview"
 msgstr "プレビュー"
 
@@ -3859,8 +3863,8 @@ msgid ""
 "The selection's outline will be moved (see <xref linkend=\"gimp-using-"
 "selections-moving\"/>)."
 msgstr ""
-"選択の輪郭が移動します。 ( <xref linkend=\"gimp-using-selections-moving\"/>"
-" をご覧ください。)"
+"選択の輪郭が移動します。 ( <xref linkend=\"gimp-using-selections-moving\"/> "
+"をご覧ください。)"
 
 #. see above
 #: src/toolbox/tool-move.xml:188(phrase)
@@ -10646,7 +10650,7 @@ msgstr ""
 msgid "Selection Tools"
 msgstr "選択ツール"
 
-#: src/toolbox/other-tools.xml:10(title)
+#: src/toolbox/other-tools.xml:11(title)
 msgid "Other"
 msgstr "その他のツール"
 
@@ -10917,6 +10921,237 @@ msgid ""
 msgstr ""
 "このボタンは現在使用中のツールもしくはすべてのツールに初期設定値を読み込ませ"
 "ます。"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: src/toolbox/gegl-operation.xml:22(None)
+#: src/toolbox/gegl-operation.xml:76(None)
+msgid ""
+"@@image: 'images/toolbox/gegl-operation.png'; "
+"md5=abca3b1ac11524b0cececc0ab9478cdd"
+msgstr "localized"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: src/toolbox/gegl-operation.xml:120(None)
+msgid ""
+"@@image: 'images/toolbox/gegl-operation-gaussian-blur.png'; "
+"md5=9de22c171853bc60cd1de067c0c1efc1"
+msgstr "localized"
+
+#: src/toolbox/gegl-operation.xml:8(title)
+msgid "GEGL Operation"
+msgstr "GEGL 操作"
+
+#: src/toolbox/gegl-operation.xml:12(secondary)
+#: src/toolbox/gegl-operation.xml:15(primary)
+msgid "GEGL operation"
+msgstr "GEGL 操作"
+
+#: src/toolbox/gegl-operation.xml:19(title)
+msgid "GEGL Operation tool"
+msgstr "GEGL 操作ツール"
+
+#: src/toolbox/gegl-operation.xml:27(para)
+msgid ""
+"<acronym>GEGL</acronym> (<quote>Generic Graphical Library</quote>) is a "
+"graph based image processing library designed to handle various image "
+"processing tasks needed in <acronym>GIMP</acronym>."
+msgstr ""
+"<acronym>GEGL</acronym> (<foreignphrase>Generic Graphical "
+"Library</foreignphrase>) はグラフ式の画像処理ライブラリです。 <acronym>GIMP"
+"</acronym>に必須の様々な画像処理を受け負わせることを念頭に開発されました。"
+
+#: src/toolbox/gegl-operation.xml:32(para)
+msgid ""
+"The <acronym>GEGL</acronym> Operation tool has been added in <link linkend="
+"\"gimp-introduction-whats-new\"><acronym>GIMP</acronym> 2.6</link> and was "
+"originally meant as an useful experimental tool for <acronym>GIMP</acronym> "
+"developers. The <acronym>GEGL</acronym> Operation tool enables applying "
+"<acronym>GEGL</acronym> operations to the image and gives on-canvas previews "
+"of the results."
+msgstr ""
+"<acronym>GEGL</acronym>操作ツールは元来<acronym>GIMP</acronym>開発者が実験的"
+"に試すためのツールとして <link linkend=\"gimp-"
+"introduction-whats-new\"><acronym>GIMP</acronym> 2.6</link> の登場よりつけ加"
+"えられました。 <acronym>GEGL</acronym>操作ツールを使えばキャンバス上でプレビ"
+"ューしながら <acronym>GEGL</acronym>操作を画像に適用できます。"
+
+#: src/toolbox/gegl-operation.xml:41(para)
+msgid ""
+"<acronym>GEGL</acronym> is in a very early phase and still under "
+"construction."
+msgstr "<acronym>GEGL</acronym>はまだほんの駆け出しの状態で開発途上です。"
+
+#: src/toolbox/gegl-operation.xml:45(para)
+msgid "The GEGL Operation tool is <emphasis>experimental</emphasis>."
+msgstr ""
+"<quote><acronym>GEGL</acronym>操作</quote>は <emphasis>実験的</emphasis> な"
+"ツールです。"
+
+#: src/toolbox/gegl-operation.xml:52(para)
+msgid ""
+"You can get to this tool only from the image menu: "
+"<menuchoice><guimenu>Tools</guimenu><guimenuitem>GEGL Operation</"
+"guimenuitem></menuchoice>."
+msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>ツール</"
+"guimenu><guimenuitem>GEGL 操作</guimenuitem></menuchoice>"
+
+#: src/toolbox/gegl-operation.xml:60(para)
+msgid ""
+"In addition to this tool for performing special <acronym>GEGL</acronym> "
+"operations you can configure <acronym>GIMP</acronym> to <link linkend=\"gimp-"
+"config-use-gegl\">use GEGL</link> for all color operations."
+msgstr ""
+"このツールは特殊な<acronym>GEGL</acronym>操作を作動させるだけでなく、 "
+"<acronym>GIMP</acronym>でのあらゆる色操作に <link linkend=\"gimp-config-use-"
+"gegl\">GEGL を使用</link> する設定もできます。"
+
+#: src/toolbox/gegl-operation.xml:72(title)
+msgid "GEGEL Operation tool options"
+msgstr "<quote>GEGL 操作</quote>ツールのツールオプション"
+
+#: src/toolbox/gegl-operation.xml:79(para)
+msgid "GEGEL Operation tool with no operation selected."
+msgstr "どの操作も選択されていない状態の<acronym>GEGL</acronym>操作ツール"
+
+#: src/toolbox/gegl-operation.xml:85(term)
+msgid "Operation"
+msgstr "操作"
+
+#: src/toolbox/gegl-operation.xml:87(para)
+msgid ""
+"Click on this button to select the operation you want to apply to the active "
+"selection or, if there is no selection, to the active layer."
+msgstr ""
+"この選択リストをクリックして選んだ操作が、 あれば活性選択範囲に、 なければ活"
+"性レイヤーに適用されます。"
+
+#: src/toolbox/gegl-operation.xml:92(para)
+msgid ""
+"Some of these operations are very basic operations like <quote>color</quote> "
+"which fills the active selection or layer with the specified color, while "
+"operations like <quote>fractal-explorer</quote> produce fairly complex "
+"patterns &mdash; just like a <link linkend=\"filters-render\">rendering "
+"filter</link>."
+msgstr ""
+"数々の操作のうちいくつかは、 活性選択範囲もしくは活性レイヤーを塗りつぶすだけ"
+"の <guimenuitem>color</guimenuitem> のような非常に基本的な操作である一方で、 "
+"その他の操作には <guimenuitem>fractal-explorer</guimenuitem> のようにちょうど"
+"<link linkend=\"filters-render\">下塗りフィルタ</link> が行なうようなかなり複"
+"雑なパターンを生成するものもあります。"
+
+#: src/toolbox/gegl-operation.xml:100(para)
+msgid ""
+"Remember that this is an experimental tool, so some operations may not work "
+"or even crash <acronym>GIMP</acronym>. As a consquence, it doesn't make "
+"sense to describe the operations here as long as the GEGL Operation tool is "
+"experimental"
+msgstr ""
+"このツールは実験用ですので作動しないものや<acronym>GIMP</acronym>を異常終了さ"
+"せる操作さえもあることをご了承ください。 またそういう状況に照らせば<acronym>"
+"GEGL</acronym>が実験段階を脱する前にこの場で各操作について細かく説明しても"
+"意味がありません。"
+
+#: src/toolbox/gegl-operation.xml:109(term)
+msgid "Operation Settings"
+msgstr "操作設定"
+
+#: src/toolbox/gegl-operation.xml:111(para)
+msgid ""
+"The operation settings depend on the selected <guilabel>Operation</guilabel>:"
+msgstr ""
+"選んだ <guilabel>操作</guilabel> によって操作に関する設定は変わります。"
+
+#: src/toolbox/gegl-operation.xml:116(title)
+msgid "<quote>Operation Settings</quote> example"
+msgstr "<quote>操作設定</quote>の例"
+
+#: src/toolbox/gegl-operation.xml:123(para)
+msgid "GEGEL operation <quote>Gaussian Blur</quote> selected."
+msgstr ""
+"<guimenuitem>ガウシアンぼかし</guimenuitem> を選んだときの"
+"<acronym>GEGL</acronym>操作"
+
+#: src/toolbox/gegl-operation.xml:129(para)
+msgid ""
+"If the options of the selected <acronym>GEGL</acronym> operation are not "
+"self-explanatory (guess what's the purpose of the <quote>color</quote> "
+"operation's <quote>Color</quote> option) you can look for a corresponding "
+"non-<acronym>GEGL</acronym> tool. For example, the <link linkend=\"plug-in-"
+"fractalexplorer\">Fractal Explorer</link> filter may have the same or "
+"similar options as the <quote>fractal-explorer</quote> operation."
+msgstr ""
+"選択した<acronym>GEGL</acronym>操作のオプションのはたらきがその名前からは判別"
+"し辛いとき (例えば <guimenuitem>color</guimenuitem> 操作の <guilabel>Color"
+"</guilabel> オプションの機能を知りたいとき) は、 操作と同じ名前の非<acronym>"
+"GEGL</acronym>ツールを[ <link linkend=\"gimp-concepts-running-language\">英語"
+"版の <acronym>GIMP</acronym></link> で]見てみましょう。 例えば <guimenuitem>"
+"fractal-explorer</guimenuitem> 操作と同じような名前で同じようなはたらきをする"
+"オプションが <link linkend=\"plug-in-fractalexplorer\">フラクタルエクスプロー"
+"ラ</link> フィルタにもあります。"
+
+#: src/toolbox/gegl-operation.xml:138(para)
+msgid ""
+"Or you can make use of the nice realtime preview feature and just experiment "
+"with different settings."
+msgstr ""
+"気の利いたプレビュー機能がありますから、 オプションをいろいろ調整して即座にそ"
+"の影響を見ながら試行錯誤する方法でも結構です。"
+
+#: src/toolbox/gegl-operation.xml:147(para)
+msgid ""
+"If this options is checked, as it is by default, you will get an on-canvas "
+"preview of the selected operation as soon as the operation in finished. You "
+"will have to press the <guibutton>OK</guibutton> button to actually apply "
+"the operation to the image."
+msgstr ""
+"初期設定どおりこのオプションにチェックを入れておくとキャンバス上で見られるプ"
+"レビューが有効になり、 オプションを調整すれば即座に処理され表示されます。 実"
+"際に画像へ操作を反映させるには <guibutton>OK</guibutton> ボタンをクリックしな"
+"ければなりません。"
+
+#: src/toolbox/gegl-operation.xml:158(title)
+msgid "The tool buttons"
+msgstr "ツールダイアログのボタン"
+
+#: src/toolbox/gegl-operation.xml:160(term)
+msgid "Reset"
+msgstr "リセット"
+
+#: src/toolbox/gegl-operation.xml:162(para)
+msgid ""
+"Pressing this button resets the operation settings the to their defaults."
+msgstr "このボタンをクリックするとオプションの値が初期設定に戻されます。"
+
+#: src/toolbox/gegl-operation.xml:169(term)
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/toolbox/gegl-operation.xml:171(para)
+msgid ""
+"Clicking on this button aborts the <acronym>GEGL</acronym> operation tool "
+"and leaves your image untouched. This is equivalent to close the dialog "
+"window using the usual <guibutton>Close</guibutton> button provided by your "
+"window manager."
+msgstr ""
+"このボタンをクリックすると<acronym>GEGL</acronym>操作ツールが解除され、 画像"
+"は変更されません。 ツールダイアログウィンドウの隅にたいていはついている閉じる"
+"ボタン<quote>&times;</quote> (ウィンドウマネージャが提供) を使ってウィンドウ"
+"を閉じても同じ結果になります。"
+
+#: src/toolbox/gegl-operation.xml:181(term)
+msgid "OK"
+msgstr "OK"
+
+#: src/toolbox/gegl-operation.xml:183(para)
+msgid ""
+"You have to press this button to apply the selected operation to the image. "
+"Then the dialog window will be closed."
+msgstr ""
+"選択した操作を画像に反映させるにはこのボタンをクリックする必要があります。 同"
+"時にこのウィンドウは閉じられます。"
 
 #: src/toolbox/about-common-transform-options.xml:8(para)
 msgid ""
