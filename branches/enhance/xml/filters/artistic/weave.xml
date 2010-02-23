@@ -2,7 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2010-01-31 liangtai: created initial version
+  2010-02-23 liangtai: created initial version
 -->
 <sect2 id="script-fu-weave">
   <title>Weave</title>
@@ -121,7 +121,11 @@
         <term>Thread length</term>
         <listitem>
           <para>
-            pixel 200.0 0-256
+            With this option you can set the regularity of stripe texture.
+            If this value is shorter than the summary of the ribbon width
+            and twice of the ribbon spacing, the surface of ribbon becomes
+            speckled.  Set this value in pixel on range between 0.0 to
+            256.0.  The default value is 200.0.
           </para>
         </listitem>
       </varlistentry>
@@ -150,7 +154,7 @@
       <title>Adding a lattice using <quote>Weave</quote> texture</title>
       <mediaobject>
         <imageobject>
-          <imagedata format="JPEG"
+          <imagedata format="JPG"
             fileref="images/filters/examples/artistic-weave-as-lattice.jpg"/>
         </imageobject>
         <caption>
