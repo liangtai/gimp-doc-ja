@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2010-01-31 liangtai: created initial version
+-->
+<sect2 id="script-fu-weave">
+  <title>Weave</title>
+
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Artistic</secondary>
+    <tertiary>Weave</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Weave</primary>
+  </indexterm>
+
+  <sect3>
+    <title>Overview</title>
+    <figure>
+      <title>Example of Weave</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/artistic-taj-weave.jpg"/>
+        </imageobject>
+        <caption>
+          <para>Filter <quote>Weave</quote> applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      <guimenuitem>Weave</guimenuitem> command is a script which creates
+      a new layer filled with a weave effect and adds it to the image
+      as an overlay or bump map.  The result of the image looks as if it
+      were printed over woven ribbons of paper, thin wooden sheet, or
+      stripped bamboo.  If the image is in indexed colors, this menu entry
+      is grayed out and unavailable.
+    </para>
+    <para>
+      This filter adds a <quote>Multiply</quote> mode layer, and its all
+      effects are applied only on this layer.  The layer's texture is
+      rendered in gray levels.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Activate the filter</title>
+    <para>
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Artistic</guisubmenu>
+        <guimenuitem>Weave...</guimenuitem>
+      </menuchoice>.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Options</title>
+    <figure>
+      <title><quote>Weave</quote> filter options</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-artistic-weave.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term>Ribbon width</term>
+        <listitem>
+          <para>
+            pixel 30.0 0-256
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Ribbon spacing</term>
+        <listitem>
+          <para>
+            pixel 10.0 0-256
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Shadow darkness</term>
+        <listitem>
+          <para>
+            <guilabel>Shadow darkness</guilabel>
+            % 75.0
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Shadow depth</term>
+        <listitem>
+          <para>
+            <guilabel>Shadow depth</guilabel>
+            % 75.0
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Thread length</term>
+        <listitem>
+          <para>
+            <guilabel>Thread length</guilabel>
+            pixel 200.0 0-256
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Thread density</term>
+        <listitem>
+          <para>
+            <guilabel>Thread density</guilabel>
+            % 50.0 0-100
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Thread intensity</term>
+        <listitem>
+          <para>
+            <guilabel>Thread intensity</guilabel>
+            % 100.0 0-100
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
