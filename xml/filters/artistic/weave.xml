@@ -31,17 +31,17 @@
       </mediaobject>
     </figure>
     <para>
-      <guimenuitem>Weave</guimenuitem> command is a script which creates
-      a new layer filled with a weave effect and adds it to the image
-      as an overlay or bump map.  The result of the image looks as if it
-      were printed over woven ribbons of paper, thin wooden sheet, or
-      stripped bamboo.  If the image is in indexed colors, this menu entry
-      is grayed out and unavailable.
+      The <guimenuitem>Weave</guimenuitem> command is a Script-Fu script
+      which creates a new layer filled with a weave effect and adds it to
+      the image as an overlay or bump map.  The result of the image looks
+      as if it were printed over woven ribbons of paper, thin wooden sheet,
+      or stripped bamboo.  If the image is in indexed colors, this menu
+      entry is grayed out and unavailable.
     </para>
     <para>
-      This filter adds a <quote>Multiply</quote> mode layer, and its all
-      effects are applied only on this layer.  The layer's texture is
-      rendered in gray levels.
+      This filter adds a <quote>Multiply</quote> mode layer upon the layer
+      where you activate this command.
+      The weave texture is rendered in gray levels.
     </para>
   </sect3>
 
@@ -68,12 +68,20 @@
         </imageobject>
       </mediaobject>
     </figure>
+    <para>
+      For to make coarse mesh texture, increase the ribbon spacing and/or
+      decrease the ribbon width.
+    </para>
+    <para>
+      For to strain ribbons hard, decrease the shadow depth.
+    </para>
     <variablelist>
       <varlistentry>
         <term>Ribbon width</term>
         <listitem>
           <para>
-            pixel 30.0 0-256
+            With this option you can set the tape width in pixel between
+            0.0 and 256.0.  30.0 pixels is the default value.
           </para>
         </listitem>
       </varlistentry>
@@ -81,7 +89,9 @@
         <term>Ribbon spacing</term>
         <listitem>
           <para>
-            pixel 10.0 0-256
+            With this option you can set the distance to the neighboring
+            ribbon or the size of black square hole in pixel between 0.0
+            and 256.0.  10.0 pixels is the default value.
           </para>
         </listitem>
       </varlistentry>
@@ -89,8 +99,9 @@
         <term>Shadow darkness</term>
         <listitem>
           <para>
-            <guilabel>Shadow darkness</guilabel>
-            % 75.0
+            With this option you can set the darkness at crossings of lower
+            ribbon in percentage.  Lower value shows ribbons thinner.  75.0
+            percent is the default value.
           </para>
         </listitem>
       </varlistentry>
@@ -98,8 +109,11 @@
         <term>Shadow depth</term>
         <listitem>
           <para>
-            <guilabel>Shadow depth</guilabel>
-            % 75.0
+            With this option you can set the bent strength of ribbons in
+            percentage.  Higher value shows ribbons more wavy, lower value
+            for flat surface.  The actual effect is limited by the
+            <guilabel>Shadow darkness</guilabel>.
+            75.0 percent is the default value.
           </para>
         </listitem>
       </varlistentry>
@@ -107,7 +121,6 @@
         <term>Thread length</term>
         <listitem>
           <para>
-            <guilabel>Thread length</guilabel>
             pixel 200.0 0-256
           </para>
         </listitem>
@@ -116,7 +129,6 @@
         <term>Thread density</term>
         <listitem>
           <para>
-            <guilabel>Thread density</guilabel>
             % 50.0 0-100
           </para>
         </listitem>
@@ -125,11 +137,38 @@
         <term>Thread intensity</term>
         <listitem>
           <para>
-            <guilabel>Thread intensity</guilabel>
             % 100.0 0-100
           </para>
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title>Another usage</title>
+    <figure>
+      <title>Adding a lattice using <quote>Weave</quote> texture</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPEG"
+            fileref="images/filters/examples/artistic-weave-as-lattice.jpg"/>
+        </imageobject>
+        <caption>
+          <para>
+            Narrower the ribbon width and wider the ribbon spacing.
+            Filled with the <quote>Wood #1</quote> pattern.
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      This texture can be a lattice over the original image.  Add a layer
+      over the original image for the lattice, and apply this filter.
+      Select a black regular square of the texture layer by clicking with
+      the By Color Select Tool, then delete black holes of the texture
+      layer by clearing selection, and add layer mask to the lattice layer
+      from the reversed selection.  Activate the lattice layer then
+      drag an image or a pattern and drop it over the image window.
+    </para>
   </sect3>
 </sect2>
