@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2010-03-02 liangtai: created initial version
+-->
+<sect2 id="script-fu-circuit">
+  <title>Line Nova</title>
+
+  <indexterm>
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Line Nova</tertiary>
+  </indexterm>
+  <indexterm>
+    <primary>Line Nova</primary>
+  </indexterm>
+
+  <sect3>
+    <title>Overview</title>
+    <figure>
+      <title>Example of Line Nova</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-line-nova.jpg"/>
+        </imageobject>
+        <caption>
+          <para>Filter <quote>Line Nova</quote> applied</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para>
+      <guimenuitem>Line Nova</guimenuitem> command is a script which fills
+      a layer with rays emanating outward from its center using the FG color.
+      All lines radiates from the center of the layer.  Rendered lines are
+      cropped to be fit inside of the image.
+    </para>
+    <para>
+      If you need adjust the center of lines, create a transparent image in
+      slightly larger size than the original, and apply this script on it,
+      then add a copy of the layer to the original image, and move the layer
+      to the appropriate position.
+    </para>
+  </sect3>
+
+  <sect3>
+    <title>Options</title>
+    <figure>
+      <title><quote>Line Nova</quote> filter options</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-render-line-nova.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>
+      1
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term>Number of lines</term>
+        <listitem>
+          <para>
+            By using this slider you can set the number of lines between 40
+            to 1000. The default is 200.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Sharpness (degrees)</term>
+        <listitem>
+          <para>
+            0.0-10.0 1.0
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Offset radius</term>
+        <listitem>
+          <para>
+            0-2000 100
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Randomness</term>
+        <listitem>
+          <para>
+            1-2000 30
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
