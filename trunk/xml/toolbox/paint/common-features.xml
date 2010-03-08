@@ -16,42 +16,19 @@
   2006-02-05 fr revised by j.h
   2005-05-20 de reviewed by axel.wernicke
 -->
-<!--2010-02-07-->
+<!--2010-03-08-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
 
-  <indexterm lang="en">
-    <primary>Paint Tools</primary>
-  </indexterm>
-  <indexterm lang="en">
-    <primary>Toolbox</primary>
-    <secondary>Brush Tools</secondary>
-  </indexterm>
-  <indexterm lang="ja">
-    <primary sortas="ビョウガツール">描画ツール</primary>
-    </indexterm>
-  <indexterm lang="ja">
-    <primary>ツールボックス</primary>
-    <secondary>ブラシツール</secondary>
-  </indexterm>
-
-  <figure>
-    <title lang="en">The Paint Tools (Tools menu)</title>
-    <title lang="ja">描画ツール (ツールメニュー)</title>
-    <mediaobject>
-      <imageobject>
-        <imagedata fileref="images/toolbox/brush-tools.png" format="PNG"/>
-      </imageobject>
-    </mediaobject>
-  </figure>
-
   <para lang="en">
-    The GIMP Toolbox includes thirteen <quote>brush tools</quote>,
-    all grouped together at the bottom (in the default arrangement).
+    The <acronym>GIMP</acronym> Toolbox includes thirteen <quote>paint
+    tools</quote>, all grouped together at the bottom (in the default
+    arrangement).
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>ツールボックスには13種類の<quote>ブラシツール</quote>    があり、 (初期設定での配置では) 底部寄りに全てまとまっています。
+    <acronym>GIMP</acronym>ツールボックスには13種類の<quote>描画ツール</quote>
+    があり、 (初期設定での配置では) 底部寄りに全てまとまっています。
   </para>
   <figure>
     <title>
@@ -108,11 +85,23 @@
   </itemizedlist>
 
   <para lang="en">
-    behave like the intuitive notion of "painting" with a brush. The others
-    use a brush to modify an image in some way rather than paint on it:
+    behave like the intuitive notion of <quote>painting</quote> with a brush.
+    Pencil, Paintbrush, and Airbrush are called <quote>basic painting
+    tools</quote> or
+    <link linkend="gimp-tools-brush">brush&nbsp;tools</link>.
+  </para>
+  <para lang="en">
+    The other tools use a brush to modify an image in some way rather than
+    paint on it:
   </para>
   <para lang="ja">
-    の4つの筆触ツールはブラシで「塗る」直観通りのはたらきをします。 それ
+    の4つのツールはブラシで<quote>塗る</quote>直観通りのはたらきをします。 
+    鉛筆で描画、 ブラシで描画 (絵筆)、 エアブラシで描画の3つは<quote>基本的な
+    描画ツール</quote>という位置付けのため 
+    <link linkend="gimp-tools-brush">ブラシツール</link> と呼ばれています。
+  </para>
+  <para lang="ja">
+    それ
     以外のツールは塗るのとはまた違った方法でブラシによる画像の加工を行います。
   </para>
   <itemizedlist>
@@ -205,20 +194,21 @@
     </listitem>
   </itemizedlist>
   <para lang="en">
-    The advantages of using GIMP with a tablet instead of a mouse
-    probably show up more clearly for brush tools than anywhere else:
-    the gain in fine control is invaluable.  These tools also have
-    special <quote>Pressure sensitivity</quote> options that are only usable
-    with a tablet.
+    The advantages of using <acronym>GIMP</acronym> with a tablet instead of a
+    mouse probably show up more clearly for brush tools than anywhere else:
+    the gain in fine control is invaluable.  These tools also have special
+    <quote>Pressure sensitivity</quote> options that are only usable with a
+    tablet.
   </para>
   <para lang="en">
     In addition to the more common <quote>hands-on</quote> method, it is
-    possible to apply brush tools in an automated way, by creating a
-    selection or path and then <quote>stroking</quote> it.  You can choose to
-    stroke with any of the brush tools, including nonstandard ones
-    such as the Eraser, Smudge tool, etc., and any options you set for
-    the tool will be applied.  See the section on
-    <link linkend="gimp-selection-stroke">Stroking</link> for more information.
+    possible to apply paint tools in an automated way, by creating a selection
+    or path and then <quote>stroking</quote> it.  You can choose to stroke
+    with any of the paint tools, including nonstandard ones such as the
+    Eraser, Smudge tool, etc., and any options you set for the tool will be
+    applied.  See the section on
+    <link linkend="gimp-selection-stroke">Stroking</link> for more
+    information.
   </para>
   <para lang="ja">
     があります。 
@@ -237,7 +227,7 @@
     境界線を描画</link> についての章をご覧ください。
   </para>
 
-  <sect3 id="gimp-tools-brush-modifiers">
+  <sect3 id="gimp-tools-paint-modifiers">
     <title lang="en">Key modifiers</title>
     <title lang="ja">キー修飾</title>
     <variablelist>
@@ -247,21 +237,20 @@
         </term>
         <listitem>
           <para lang="en">
-            Holding down the <keycap>Ctrl</keycap> key has a special effect
-            on every brush tool <!--except the ink tool-->. For the Pencil,
-            Paintbrush, Airbrush, Ink Tool, and Eraser tools, it
-            switches them into <quote>color picker</quote> mode, so that
-            clicking on an image pixel causes GIMP's foreground to be set
-            to the active layer's color at that point (or, for the Eraser,
-            GIMP's background color). For the Clone tool, the
-            <keycap>Ctrl</keycap> key switches it into a mode where
-            clicking sets the reference point for copying. For the Convolve
-            tool, the <keycap>Ctrl</keycap> key switches between blur and
-            sharpen modes; for the Dodge/Burn tool, it switches between
-            dodging and burning.
+            Holding down the <keycap>Ctrl</keycap> key has a special effect on
+            every paint tool. For the Pencil, Paintbrush, Airbrush, Ink, and
+            Eraser, it switches them into <quote>color picker</quote> mode, so
+            that clicking on an image pixel causes <acronym>GIMP</acronym>'s
+            foreground to be set to the active layer's color at that point
+            (or, for the Eraser, <acronym>GIMP'</acronym>s background color).
+            For the Clone tool, the <keycap>Ctrl</keycap> key switches it into
+            a mode where clicking sets the reference point for copying. For
+            the Convolve tool, the <keycap>Ctrl</keycap> key switches between
+            blur and sharpen modes; for the Dodge/Burn tool, it switches
+            between dodging and burning.
           </para>
           <para lang="ja">
-            どのブラシツールも <keycap>Ctrl</keycap> キーを押しながら
+            どの描画ツールも <keycap>Ctrl</keycap> キーを押しながら
             使うと特別な効果があります。 鉛筆、 絵筆、 エアブラシ、 インク、
             消しゴムの各ツールは<quote>スポイト</quote>に変身し、
             画像をクリックすると現在のレイヤーのその場所の画素 (ピクセル) から
@@ -288,9 +277,9 @@
             <primary sortas="チョクセン">直線</primary>
           </indexterm>
           <para lang="en">
-            Holding down the Shift key has the same effect on all brush tools:
-            it places the tool into <emphasis>straight line</emphasis>
-            mode. To create a straight line with any of the brush tools, first
+            Holding down the Shift key has the same effect on most paint
+            tools: it places the tool into <emphasis>straight line</emphasis>
+            mode. To create a straight line with any of the paint tools, first
             click on the starting point, <emphasis>then</emphasis>
             press the Shift key. As long as you hold it down, you will see a
             thin line connecting the previously clicked point with the current
@@ -300,9 +289,9 @@
             segments.
           </para>
           <para lang="ja">
-            全てのブラシツールに同様の効果があるのが <keycap>Shift</keycap>
+            全ての描画ツールに同様の効果があるのが <keycap>Shift</keycap>
             キーです。 <emphasis>直線</emphasis> が引けるモードに変わるのです。
-            どのブラシツールの場合も直線の引くにはまず始点をクリックして、
+            どの描画ツールの場合も直線の引くにはまず始点をクリックして、
             <emphasis>その後に</emphasis> <keycap>Shift</keycap> キーを
             押します。 キーを押したままでポインタを移動すると始点と現在地
             を繋ぐ細い線が示されます。 <keycap>Shift</keycap> キーを
@@ -345,12 +334,12 @@
     </variablelist>
   </sect3>
 
-  <sect3 id="gimp-tool-brush-options">
+  <sect3 id="gimp-tools-paint-options">
     <title lang="en">Tool Options</title>
     <title lang="ja">ツールオプション</title>
     <figure>
-      <title lang="en">Tool Options shared by all brush tools</title>
-      <title lang="ja">全てのブラシツールが共有するツールオプション</title>
+      <title lang="en">Tool Options shared by paint tools</title>
+      <title lang="ja">描画ツールが共有するツールオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -360,13 +349,13 @@
     </figure>
 
     <para lang="en">
-      Many tool options are shared by several brush tools: these are described
+      Many tool options are shared by several paint tools: these are described
       here. Options that apply only to one specific
       tool, or to a small number of tools, are described in the sections
       devoted to those tools.
     </para>
     <para lang="ja">
-      大多数のツールオプションがいくつかのブラシツールで共有されています。
+      大多数のツールオプションがいくつかの描画ツールで共有されています。
       ここでそれらのオプションについて説明します。 その他のオプションのうち
       ツール個別で独自に持つものやごく一部で共有されているものは、
       それぞれのツールの節の中で説明します。
@@ -388,7 +377,7 @@
             of special effects in this way. The Mode option is only usable
             for tools that can be thought of as adding color to the image:
             the Pencil, Paintbrush, Airbrush, Ink, and Clone tools. For the
-            other brush tools, the option appears for the sake of
+            other paint tools, the option appears for the sake of
             consistency but is always grayed out. A list of modes can be
             found in <xref linkend="gimp-concepts-layer-modes"/>.
           </para>
@@ -406,7 +395,7 @@
             モード指定によって多彩な計り知れない特殊効果が得られます。
             モードオプションが利用できるのは画像に色を描き加えるツール (鉛筆、
             絵筆、 エアブラシ、 インク、 スタンプ) に限られます。
-            それ以外のブラシツールでは利用できませんが、 ダイアログの統一感
+            それ以外の描画ツールでは利用できませんが、 ダイアログの統一感
             をはかる目的で灰色無効表示とされています。
             <xref linkend="gimp-concepts-layer-modes"/>
             に関しては実例を挙げて説明しています。
@@ -449,7 +438,7 @@
             the Tool Options has the same effect that changing opacity in the
             Layers dialog would have in the latter situation. It controls the
             <quote>strength</quote>
-            of all brush tools, not just those that paint on the active layer.
+            of all paint tools, not just those that paint on the active layer.
             In the case of the Eraser, this can come across as a bit
             confusing: it works out that the higher the <quote>opacity</quote>
             is, the more transparency you get.
@@ -461,7 +450,7 @@
             みなすことです。 ツールオプションで不透明度を変更したときの
             効果は、 その仮のレイヤーの不透明度をレイヤーダイアログで変更する
             のと同じです。 このスライダは活性レイヤーに描画するブラシツール
-            だけでなく、 全てのブラシツールの<quote>強さ</quote>を
+            だけでなく、 全ての描画ツールの<quote>強さ</quote>を
             調節しています。 消しゴムツールに関して言えば少々混乱しそうです。
             <quote>不透明度</quote>が高いほど、 このツールが消した部分の
             透明感が増す結果になります。
@@ -476,14 +465,14 @@
           <para lang="en">
             The brush determines how much of the image is affected by the
             tool, and how it is affected, when you trace out a brushstroke
-            with the pointer. GIMP allows you to use several different types
-            of brushes, which are described in the
+            with the pointer. <acronym>GIMP</acronym> allows you to use
+            several different types of brushes, which are described in the
             <link linkend="gimp-concepts-brushes">Brushes</link>
-            section. The same brush choices are available for all brush tools
+            section. The same brush choices are available for all paint tools
             except the Ink tool, which uses a unique type of procedurally
             generated brush. The colors of a brush only come into play for
             tools where they are meaningful: the Pencil, Paintbrush, and
-            Airbrush tools. For the other brush tools, only the intensity
+            Airbrush tools. For the other paint tools, only the intensity
             distribution of a brush is relevant.
           </para>
           <para lang="ja">
@@ -492,10 +481,10 @@
             <acronym>GIMP</acronym>で使えるブラシは様々な種類があります。
             <link linkend="gimp-concepts-brushes">ブラシ</link> の節に
             説明があります。 <quote>インクで描画</quote>ツールを除き、
-            どのツールに替えても同じブラシが選べます。 <quote> インクで描画
+            どの描画ツールに替えても同じブラシが選べます。 <quote> インクで描画
             </quote>ツールはオプションでの調整を経て特別に構成されたブラシを
-            使用します。 色の現れ方がブラシと関わるのは鉛筆、絵筆、エアブラシ
-            の筆触ツールだけです。 それ以外のブラシツールではブラシの
+            使用します。 色の現れ方がブラシと関わるのは鉛筆、 絵筆、 エアブラシ
+            の筆触ツールだけです。 それ以外の描画ツールではブラシの
             強度分布しか関係しません。
           </para>
         </listitem>
@@ -648,12 +637,12 @@
               <term lang="ja">大きさ</term>
               <listitem>
                 <para lang="en">
-                  This option applies to all of the pressure sensitive brush
+                  This option applies to all of the pressure sensitive paint
                   tools. If the option is checked, then pressing harder will
                   increase the size of the area affected by the brush.
                 </para>
                 <para lang="ja">
-                  このオプションは感圧対応のブラシツール全てに適用できます。
+                  このオプションは感圧対応の描画ツール全てに適用できます。
                   オプションが有効な場合は、 筆圧の強さでブラシの描く領域
                   が拡がります。
                 </para>
@@ -664,14 +653,14 @@
               <term lang="ja">色</term>
               <listitem>
                 <para lang="en">
-                  This option only applies to the painting tools: the Pencil,
+                  This option only applies to the brush tools: the Pencil,
                   Paintbrush, and Airbrush; and only if you are using colors
                   from a gradient. If these conditions are met, then pressing
                   harder causes colors to be taken from higher in the
                   gradient.
                 </para>
                 <para lang="ja">
-                  このオプションは鉛筆、 絵筆、 エアブラシの各描画ツールに
+                  このオプションは鉛筆、 絵筆、 エアブラシの各ブラシツールに
                   対して、 <guilabel>グラデーションで描画</guilabel>
                   オプションを利用している場合にのみ適用されます。 これらの
                   条件が揃ったときに、 強く筆圧がかかるほどにグラディエント
@@ -689,18 +678,18 @@
         <listitem>
           <para lang="en">
             This option causes each stroke to fade out over the specified
-            distance. It is easiest to visual for painting tools, but applies
-            to all of the brush tools. It is equivalent to gradually reducing
-            the opacity along the trajectory of the stroke. Note that, if you
-            are using a tablet, this option does not change the effects of
-            brush pressure.
+            distance. It is easiest to visual for <quote>real</quote> painting
+            tools, and applies to all of the brush tools. It is equivalent to
+            gradually reducing the opacity along the trajectory of the stroke.
+            Note that, if you are using a tablet, this option does not change
+            the effects of brush pressure.
           </para>
           <para lang="ja">
             このオプションによって一筆ごとに描線が所定の長さ以内で消え入ります。
-            特に筆触ツールでは視覚的にも分かり易いですが、 このオプションは
-            ブラシツールの全てに適用できます。 筆運びの軌道に沿って徐々に透明度
-            を増すのと同じです。 タブレットをお使いの場合、 このオプションでは
-            筆圧による効果は変化しないことにご注意ください。
+            <quote>現存する</quote>描画ツールなら視覚的にも分かり易いですが、 
+            このオプションはどのブラシツールにも適用できます。 筆運びの軌道に
+            沿って徐々に透明度を増すのと同じです。 タブレットをお使いの場合、 
+            このオプションでは筆圧による効果は変化しないことにご注意ください。
           </para>
         </listitem>
       </varlistentry>
@@ -760,7 +749,7 @@
             the same spot will not increase the effect beyond this limit. If
             Incremental is active, each additional pass with the brush will
             increase the effect, but the opacity can't exceed the opacity set
-            for the tool. This option is available for all brush tools except
+            for the tool. This option is available for all paint tools except
             those which have a <quote>rate</quote>
             control, which automatically implies an incremental effect. See
             also <xref linkend="gimp-concepts-layer-modes"/>.
@@ -772,9 +761,9 @@
             不透明度の限界を越えて塗色されることはありません。 重ね塗りを
             有効にすると、 ブラシで上塗りするたびに描画効果が増します。
             ただしツールに設定された不透明度を越すことはありません。
-            <quote>割合</quote>コントロールを備えたブラシは
+            <quote>割合</quote>調節オプションつきの描画ツールは
             自動的に重ね塗りの効果を実現していますが、
-            それらを除く全てのブラシでこのオプションが使えます。
+            それらを除くすべての描画ツールでこのオプションが使えます。
             <xref linkend="gimp-concepts-layer-modes"/> もご覧ください。
           </para>
         </listitem>
@@ -1332,7 +1321,7 @@
     <title lang="en">Further Information</title>
     <title lang="ja">さらなる情報</title>
     <para lang="en">
-      Advanced users may be interested to know that brush tools actually
+      Advanced users may be interested to know that paint tools actually
       operate at a sub-pixel level, in order to avoid producing jagged-looking
       results. One consequence of this is that even if you work with a
       hard-edged brush, such as one of the Circle brushes, pixels on the edge
@@ -1343,7 +1332,7 @@
       perfectly hard and disables sub-pixel anti-aliasing.
     </para>
     <para lang="ja">
-      先進的なユーザにとってはブラシツールがサブピクセルの細かさまで処理を
+      先進的なユーザにとっては描画ツールがサブピクセルの細かさまで処理を
       すすめて絵がギザギザになるのを防いでいることに興味を持たれるのでは
       ないでしょうか。 その成果は仮に<quote>Circle</quote>ブラシ
       のような縁のはっきりしたブラシを用いても、 描かれる線の画素には

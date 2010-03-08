@@ -2,6 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!--Section History
+  2010-03-03 ude: renamed: Painting tools -> Brush tools
   2008-03-15 Mr.Dust : added korean contents
   2008-01-14  PP reviewed for fr
   2007-10-07 lexa: reviewed de for GIMP 2.4
@@ -9,18 +10,29 @@
   2007-06-17 kost: added norwegian
   2007-01-13 lexa: enhanced docbook compliance
 -->
-<!--2009-11-15-->
-<sect2 id="gimp-tool-painting">
-  <title lang="en">Painting Tools (Pencil, Paintbrush, Airbrush)</title>
-  <title lang="ja">筆触ツール (鉛筆、 絵筆、 エアブラシ)</title>
+<!--2010-03-08-->
+<!-- XXX: do we really need this file or should we merge it with
+     the "common features" section?-->
+<sect2 id="gimp-tools-brush">
+  <!-- "Painting tools" would be confused with "Paint tools" (tools menu) -->
+  <title lang="en">Brush Tools (Pencil, Paintbrush, Airbrush)</title>
+  <title lang="ja">ブラシツール (鉛筆、 絵筆、 エアブラシ)</title>
 
   <indexterm lang="en">
     <primary>Tools</primary>
-    <secondary>Painting</secondary>
+    <secondary>Paint</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Brush</secondary>
   </indexterm>
   <indexterm lang="ja">
     <primary>ツール</primary>
     <secondary sortas="ヒッショク">筆触</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary>ブラシ</secondary>
   </indexterm>
 
   <figure>
@@ -46,9 +58,10 @@
   </figure>
 
   <para lang="en">
-    The tools in this group are GIMP's basic painting tools, and they have
-    enough features in common to be worth discussing together in this section.
-    Features common to all brush tools are described in the
+    The tools in this group are <acronym>GIMP</acronym>'s basic painting
+    tools, and they have enough features in common to be worth discussing
+    together in this section. Features common to all brush tools are
+    described in the
     <link linkend="gimp-tool-brush">Common Features</link>
     section. Features specific to an individual tool are described in the
     section devoted to that tool.
@@ -97,15 +110,39 @@
           <para lang="en">
             Holding down the <keycap>Ctrl</keycap> key changes each of these
             tools to a <link linkend="gimp-tool-color-picker">Color
-              Picker</link>: clicking on any pixel of any layer sets the
-            foreground color (as displayed in the Toolbox Color Area) to the
-            color of the pixel.
+            Picker</link>: clicking on any pixel of any layer sets the
+            foreground color (as displayed in the
+            <link linkend="gimp-toolbox-color-area">Toolbox Color Area</link>)
+            to the color of the pixel.
           </para>
           <para lang="ja">
             どのツールも <keycap>Ctrl</keycap> キーを押している間は
             <link linkend="gimp-tool-color-picker">スポイト (カラーピッカー)
-            </link> に変身し、 レイヤー上をクリックすればその画素 (ピクセル) の
-            色が (ツールボックスの色標識で表示されている) 描画色になります。
+            </link> に変身し、 レイヤー上をクリックすればその画素 (ピクセル) 
+            の色が (
+            <link linkend="gimp-toolbox-color-area">ツールボックスの色標識
+            </link> で表示されている) 描画色になります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <keycap>Shift</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            This key places these tools into straight line mode. Holding
+            <keycap>Shift</keycap> while clicking
+            <mousebutton>Button&nbsp;1</mousebutton> will generate a straight
+            line. Consecutive click will continue drawing straight lines that
+            originate from the end of the last line.
+          </para>
+          <para lang="ja">
+            このキーによって直線が引ける態勢になります。マウスの 
+            <mousebutton>第1ボタン</mousebutton> でクリックしている間 
+            <keycap>Shift</keycap> キーを押し続けておれば直線が引けます。 
+            さらにこのキーを押したままクリックをすれば先に引いた直線の終点を
+            始点とする直線を新たに引くことができ、 つぎつぎと繋げられます。 
           </para>
         </listitem>
       </varlistentry>
