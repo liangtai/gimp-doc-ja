@@ -11,7 +11,7 @@
   050530 de added content for scale dialog
   050530 de reviewed by axel.wernicke
 -->
-<!--2010-02-21-->
+<!--2010-03-11-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-scale">
   <title lang="en">Scale</title>
   <title lang="ja">拡大・縮小</title>
@@ -198,7 +198,6 @@
     <xi:include href="../about-common-options-display.xml"/>
 
     <variablelist>
-      </varlistentry>
       <varlistentry>
         <term lang="en">
           Transform; Interpolation; Direction; Clipping; Preview
@@ -207,6 +206,7 @@
           変換対象; 変換方向; 補間アルゴリズム; クリッピング; プレビュー
         </term>
         <listitem>
+          <xi:include href="about-common-transform-options.xml"/>
           <note>
             <para lang="en">
               The Transform mode works on the active layer only. To work on
@@ -220,7 +220,6 @@
               を起用してください。
             </para>
           </note>
-          <xi:include href="about-common-transform-options.xml"/>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -235,10 +234,10 @@
             toggles the linking chain in the dialog.
           </para>
           <para lang="ja">
-            <guilabel>縦横比を維持</guilabel>: 領域枠の角ハンドルを移動する
-            ときに、 このオプションはレイヤーの縦と横の比を保って寸法が変わる
-            ようにします。 ちなみに辺ハンドルを移動する場合はこのオプションは
-            無視されます。 またちなみにダイアログ上では縦横の各欄を結ぶ鎖の印が
+            領域枠の角ハンドルを移動するときに、 このオプションは
+            レイヤーの縦と横の比を保って寸法が変わるようにします。 
+            ちなみに辺ハンドルを移動する場合はこのオプションは無視されます。 
+            またちなみにダイアログ上では縦横の各欄を結ぶ鎖の印が
             連結に切り替わります。
           </para>
         </listitem>
