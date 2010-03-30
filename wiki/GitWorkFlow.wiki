@@ -1,50 +1,40 @@
-git では情報を変更したら定着(あるいは保留)または放棄しないことには更新コマンドが実行できません。
+Once you modify any source text or image files, you should anchor to fix (or reserve to delay) or dismiss them, otherwise you cannot update the tree.
 
-ソースに手を加える作業をされたあと、その変更内容が不要なら
+If all changes during your work are not necessary, they can be reverted by
 {{{git checkout -- images/ja po/ja}}}
-とすればすべて元に戻せます。この放棄処置は master ブランチ上
-(ローカルコピーを初めて作った直後の居場所)ではほぼ必須です。
+You need this dismissing action if you work on the master branch (which is the space created just after doing "git clone" command).
 
-それだと不都合であるなら新たなブランチを作ってそこで作業します。
-{{{git checkout -b branch7743 origin/master}}}
-ブランチの名前はご自分でお好きなように決められます。(この例では branch7743)
-また *いくつでもブランチが作れます。* ちなみに現在居るブランチの名前を知るには
+Creating branch for work space is avoid this problem.  The command
+{{{git checkout -b branch-foo origin/master}}}
+is a shorthand of "git branch branch-foo origin/master" and then "git checkout branch-foo".
+You can set branches name as you like (branch-foo for the example above).
+The command
 {{{git branch}}}
-コマンドがあります。ブランチ間の移動は
-{{{git checkout branch7743}}}
-です。
+tells where is the current branch.  Doing
+{{{git checkout branch-bar}}}
+switches to other branch (branch-bar in the example above).
 
-さてソースに何らかの変更を加えたら、できればひとまず
+Once you modify some source file, then I recomend to check what is happend by
 {{{git diff}}}
-コマンドで変更の実態を確認してから、
+, then anchor to fix by
 {{{git commit -a}}}
-で定着させてください。(コミットとありますが svn のように取得先のコンピュータに情報を
-送りつけるようなことはありません。)このとき画面が vi エディタのスクリーンに変わり、
-現在のブランチの状態がすべて#記号で始まる数十行で表示されます。
-ちなみにこの表示は
+(The command term is "commit", though, it does not send your information to the main repository like as SVN system.)
+Then the command line terminal becomes VI-like editor screen so that you can edit brief summary at the first line for your commit as well as more detailed description from 3rd line.  This screen also shows the status about the current branch which can be seen by
 {{{git status}}}
-で表示されるブランチの状態情報とほぼ同じです。ここで1行目に簡潔な要約を書き、 
-必要なら2行目を空行にして3行目以降に詳しい説明文を書いてから、 
-vi の保存コマンドを実行してください。
 
-定着した変更の履歴は
+You can see history of commits until now by
 {{{git log}}}
-で表示できます。変更の内容は
+Contents of commit can be seen by
 {{{git show HEAD^}}}
-で確認できます。これをパッチファイル化して残したいときは
+To make patch file of this commit, do
 {{{git format-patch HEAD^}}}
-とします。
 
-そのあとはブランチを削除しても構いません。他のブランチへ移動してから
-{{{git branch -d branch7743}}}
-とすれば消せますが、独自の変更を定着させたブランチは -d の代わりに -D として
-強制削除させる必要があるようです。
+Then you can drop away the branch.  After switch to another branch, do
+{{{git branch -d branch-foo}}}
+to erase the branch.
 
-保留は
+To reserve your modification, do
 {{{git stash save}}}
-です。
 
-繰り返しになりますがここに紹介するコマンドの用例はほんの一部です。
-どのコマンドも
+It is said already, but these instruction does not cover whole system.  You can get help about all commands by
 {{{git help _command_}}}
-で詳しいマニュアルが表示されますのでいろいろ試してみてください。
