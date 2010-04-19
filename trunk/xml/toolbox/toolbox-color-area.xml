@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-11-15 j.h: added tip , added D shortcut, documented XDS 'en;fr'
@@ -10,12 +10,23 @@
   2005-08-18 de reviewed by axel.wernicke
   2005-09-04 add en;fr in swap-colors by j.hardelin
 -->
-<!--2009-10-01-->
-<sect1 id="gimp-toolbox-areas">
+<!--2010-04-19-->
+<sect2 id="gimp-toolbox-areas">
   <title lang="en">Color and Indicator Area</title>
   <title lang="ja">色と標識の区画</title>
 
-  <sect2 id="gimp-toolbox-color-area">
+  <figure>
+    <title lang="en">Color and Indicator Area in the Toolbox</title>
+    <title lang="ja">ツールボックスの色と標識の区画</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/toolbox-show-area.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect3 id="gimp-toolbox-color-area">
     <title lang="en">Color Area</title>
     <title lang="ja">色の区画</title>
 
@@ -45,13 +56,14 @@
     <indexterm lang="ja">
       <primary sortas="ハイケイショク">背景色</primary>
     </indexterm>
+
     <figure>
-      <title lang="en">Color area in the Toolbox Palette</title>
-      <title lang="ja">ツールボックスパレットの色の区画</title>
+      <title lang="en">Active Colors in the Toolbox</title>
+      <title lang="ja">ツールボックスが示す現在の色</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/toolbox/toolbox-palette.png"/>
+            fileref="images/toolbox/toolbox-active-colors.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -117,11 +129,11 @@
         </listitem>
       </varlistentry>
     </variablelist>
-  </sect2>
+  </sect3>
 
-  <sect2 id="gimp-toolbox-indicator-area">
-    <title lang="en">Indicator Area</title>
-    <title lang="ja">標識の区画</title>
+  <sect3 id="gimp-toolbox-indicator-area">
+    <title lang="en">Tools Indicator Area</title>
+    <title lang="ja">ツールの標識の区画</title>
 
     <indexterm lang="en">
       <primary>Toolbox</primary>
@@ -163,11 +175,14 @@
     </indexterm>
 
     <figure>
-      <title lang="en">Active tool indicator area</title>
-      <title lang="ja">現在の主なツールの状態を示す区画</title>
+      <title lang="en">Active Brush, Pattern and Gradient in the Toolbox</title>
+      <title lang="ja">
+        ツールボックスが示す現在のブラシ、 パターン、 グラデーション
+      </title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/toolbox/toolbox-bpg.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/toolbox/toolbox-active-bpg.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -181,10 +196,10 @@
       グラデーションが表示されています。 いずれもクリックすればその選択を
       変更できます。
     </para>
-  </sect2>
+  </sect3>
 
-  <sect2 id="gimp-toolbox-image-area">
-    <title lang="en">Active image Area</title>
+  <sect3 id="gimp-toolbox-image-area">
+    <title lang="en">Active Image Area</title>
     <title lang="ja">現在の画像の区画</title>
     <indexterm lang="en">
       <primary>Toolbox</primary>
@@ -195,7 +210,7 @@
       <secondary sortas="ゲンザイノガゾウノクカク">現在の画像の区画</secondary>
     </indexterm>
     <figure>
-      <title lang="en">Current image in the toolbox</title>
+      <title lang="en">Active image in the toolbox</title>
       <title lang="ja">ツールボックス上に示された現在活性化している画像</title>
       <mediaobject>
         <imageobject>
@@ -212,8 +227,7 @@
       enabled XDS<footnote><para>
         See <xref linkend="bibliography-online-xds"/>.
       </para></footnote>
-      file manager to directly save the corresponding image; this opens a
-      dialog where you can enter a name for the image:
+      file manager to directly save the corresponding image.
     </para>
     <para lang="ja">
       <link linkend="gimp-prefs-toolbox">環境設定</link> ダイアログの<quote>
@@ -228,7 +242,14 @@
           <productname>X Window System</productname> 上の規格です。
         </para></footnote>
       可能なファイルマネージャまでドラッグして放つと、 その画像を直に
-      保存できます。 この画像につける名前を入力できるダイアログが提供されます。
+      保存できます。
+    </para>
+<!--
+      file manager to directly save the corresponding image; this opens a
+      dialog where you can enter a name for the image:
+    </para>
+    <para lang="ja">
+      この画像につける名前を入力できるダイアログが提供されます。
     </para>
     <figure>
       <title lang="en">A Direct Save Protocol (XDS) dialog</title>
@@ -239,5 +260,6 @@
         </imageobject>
       </mediaobject>
     </figure>
-  </sect2>
-</sect1>
+-->
+  </sect3>
+</sect2>
