@@ -10,12 +10,12 @@
 [http://code.google.com/p/gimp-doc-ja/downloads/list?can=1&q=gimp-help-ja&colspec=Filename+Summary+Uploaded+Size+DownloadCount HTML形式の配布物] についてはファイル名に作成の日付を入れました。 
 容量の大きな画像ファイルにあまり変更がないときは、 
 以前の公開分に追加するだけで同じ文書になるパッチ版も同時に配布します。 
-パッチ版のファイル名は以前の名前に「patchXXXX」を加えた形にしています。
+パッチ版のファイル名は以前の名前に「patch201XXXXX」を加えた形にしています。
 
 ===== パッケージの例 =====
  * 通常版 gimp-help-ja-2.6.0.20100126.tar.bz2
    この中に20100126の時点での最新の文書と画像がすべて入っています。
- * パッチ版 gimp-help-ja-2.6.0.20091227patch0126.tar.bz2
+ * パッチ版 gimp-help-ja-2.6.0.20091227patch20100126.tar.bz2
    20091227の配布パッケージを先に展開してからこのパッチの内容で上書きしても20100126の内容になります。
 
 === インストールはどこに？ ===
@@ -33,11 +33,11 @@
 その後は help/ja/ 直下に html ファイルや images/ ディレクトリが来るように
 パッケージの内容を配置すれば OK です。
 
-インストール先はシステムによって異なります。通常は Script-Fu コンソールで
+インストール先はシステムによって異なります。通常は [http://www.geocities.jp/ss2pxd1c/gimp/gimp-filters-script-fu.html#plug-in-script-fu-console Script-Fu コンソール] で
 {{{
 gimp-data-directory
 }}}
-と入力すれば html/ja フォルダを置くべきところがわかります。
+と入力すれば help/ja フォルダを置くべきところがわかります。
 つぎに主なプラットフォームの例を挙げます。
 
  * FreeBSD (ports で導入の場合)
@@ -57,7 +57,7 @@ gimp-data-directory
 
 としてローカルコピーをまず取得してください。既にこの中には日本語のソースファイルが含まれています。
 images/ja 以下に日本語化した画像、 po/ja 以下に翻訳ファイル、 quickreference 以下に
-印刷して使える早見シートの日本語版のための翻訳ファイル ja.po がある構成です。
+印刷して使える早見シートの日本語版のための翻訳ファイル po/ja.po がある構成です。
 
 一方、当サイトのレポジトリにも trunk/ 以下に同じく images, po, xml, quickreference の
 ディレクトリがあり、 xml フォルダを除きほとんど同じファイルが入っています。
