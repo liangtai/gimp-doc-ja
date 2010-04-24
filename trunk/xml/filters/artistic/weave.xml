@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2010-04-21 liangtai: created initial version
+-->
+<!--2010-04-23-->
+<sect2 id="script-fu-weave">
+  <title lang="en">Weave</title>
+  <title lang="ja">織物...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Artistic</secondary>
+    <tertiary>Weave</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Weave</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>芸術的効果</secondary>
+    <tertiary>織物...</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>織物...</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example of Weave</title>
+      <title lang="ja">織物の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/artistic-taj-weave.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Weave</quote> applied</para>
+          <para lang="ja"><quote>織物</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The <guimenuitem>Weave</guimenuitem> command is a Script-Fu script
+      which creates a new layer filled with a weave effect and adds it to
+      the image as an overlay or bump map.  The result of the image looks
+      as if it were printed over woven ribbons of paper, thin wooden sheet,
+      or stripped bamboo.  If the image is in indexed colors, this menu
+      entry is grayed out and unavailable.
+    </para>
+    <para lang="en">
+      This filter adds a <quote>Multiply</quote> mode layer upon the layer
+      where you activate this command.
+      The weave texture is rendered in gray levels.
+    </para>
+    <para lang="ja">
+      <guimenuitem>織物...</guimenuitem> コマンドは織物のような陰影がついた
+      新たなレイヤーをつくり画像に重ねてバンプマップ風の効果をつける
+      スクリプトです。 加工後の画像は帯状の紙か経木あるいは薄く削いだ竹を
+      織り合わせた表面に印刷したように見えます。 このスクリプトはインデックス化
+      カラー画像の場合はメニュー項目が灰色無効となり使用できません。
+    </para>
+    <para lang="ja">
+      このフィルタは活性レイヤーの上に新しく作ったレイヤーを<quote>乗算</quote>
+      モードで重ねます。 織物表現は灰色濃淡で描かれます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Artistic</guisubmenu>
+        <guimenuitem>Weave...</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>芸術的効果</guisubmenu>
+        <guimenuitem>織物...</guimenuitem>
+      </menuchoice>"
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Weave</quote> filter options</title>
+      <title lang="ja"><quote>織物</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-artistic-weave.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      For to make coarse mesh texture, increase the ribbon spacing and/or
+      decrease the ribbon width.
+    </para>
+    <para lang="en">
+      For to strain ribbons hard, decrease the shadow depth.
+    </para>
+    <para lang="ja">
+      目の粗い網状の織物にするには、 帯間隔を増したり帯幅を減らしたりします。
+    </para>
+    <para lang="ja">
+      帯をピンと張ったように見せるには影の深さを減らします。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Ribbon width</term>
+        <term lang="ja">帯幅</term>
+        <listitem>
+          <para lang="en">
+            With this option you can set the tape width in pixel between
+            0.0 and 256.0.  30.0 pixels is the default value.
+          </para>
+          <para lang="ja">
+            このオプションでリボンテープの幅を 0.0 ピクセルから
+            256.0 ピクセルの間で指定します。 デフォルトでは 30.0 ピクセルに
+            なります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Ribbon spacing</term>
+        <term lang="ja">帯間隔</term>
+        <listitem>
+          <para lang="en">
+            With this option you can set the distance to the neighboring
+            ribbon or the size of black square hole in pixel between 0.0
+            and 256.0.  In default, 10.0 pixels is set.
+          </para>
+          <para lang="ja">
+            このオプションで隣りに平行して並ぶ帯と帯との間隔、
+            換言すれば帯で囲まれた黒い正方形の部分の大きさを 0.0 ピクセルから
+            256.0 ピクセルの間で指定します。 デフォルトでは 10.0 ピクセルに
+            なります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Shadow darkness</term>
+        <term lang="ja">影の暗さ</term>
+        <listitem>
+          <para lang="en">
+            With this option you can set the darkness at crossings of lower
+            ribbon in percentage.  Lower value shows ribbons thinner.  75.0
+            percent is the default value.
+          </para>
+          <para lang="ja">
+            このオプションで下側に交差した帯にかかる影の暗さをパーセント指定
+            します。 低い値ほど帯が薄く感じられます。 デフォルトは
+            75.0 パーセントです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Shadow depth</term>
+        <term lang="ja">影の深さ</term>
+        <listitem>
+          <para lang="en">
+            With this option you can set the bent strength of ribbons in
+            percentage.  Higher value shows ribbons more wavy, lower value
+            for flat surface.  The actual effect is limited by the
+            <guilabel>Shadow darkness</guilabel>.
+            75.0 percent is the default value.
+          </para>
+          <para lang="ja">
+            このオプションで帯の湾曲度をパーセント指定します。 高い値にすると
+            ますます波うつような帯に見え、 低い値では帯の表面が扁平に見えます。
+            実際の効果は <guilabel>影の暗さ</guilabel> を超えません。
+            75.0 パーセントがデフォルト値です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Thread length</term>
+        <term lang="ja">糸の長さ</term>
+        <listitem>
+          <para lang="en">
+            With this option you can set the regularity of stripe texture.
+            If this value is shorter than the summary of the ribbon width
+            and twice of the ribbon spacing, the surface of ribbon becomes
+            speckled.  Set this value in pixel on range between 0.0 to
+            256.0.  The default value is 200.0.
+          </para>
+          <para lang="ja">
+            このオプションで帯表面の縞模様の均整度を設定します。 この値を
+            帯幅に帯間隔の2倍を足した値よりも小さくすると、 帯の表面がまだらに
+            なります。 0.0 ピクセルから 256.0 ピクセルの間で指定します。
+            デフォルト値は 200.0 ピクセルです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Thread density</term>
+        <term lang="ja">糸密度</term>
+        <listitem>
+          <para lang="en">
+            % 50.0 0-100
+          </para>
+          <para lang="ja">
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Thread intensity</term>
+        <term lang="ja">糸強度</term>
+        <listitem>
+          <para lang="en">
+            % 100.0 0-100
+          </para>
+          <para lang="ja">
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Another usage</title>
+    <title lang="ja">他の使い方</title>
+    <figure>
+      <title lang="en">
+        Adding a lattice using <quote>Weave</quote> texture
+      </title>
+      <title lang="ja"><quote>織物</quote>を使って格子をつけてみる</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/artistic-weave-as-lattice.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Narrower the ribbon width, wider the ribbon spacing, and
+            Filled with the <quote>Wood #1</quote> pattern.
+          </para>
+          <para lang="ja">
+            帯幅を狭く、 帯間隔を広くし、
+            <quote>Wood #1</quote> パターンで埋め尽くす。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This texture can be a lattice that you can see the original image
+      through its mesh holes.  Add a layer over the original image for the
+      lattice, and apply this filter.  Select a black regular square in the
+      texture layer by clicking with the By Color Select Tool, then delete
+      black squares in selection on the texture layer to be chink holes.
+      Reverse the selection, and add layer mask to the lattice layer from
+      the reversed selection.  Activate the upper layer so that you can
+      fill the lattice surface with a pattern, then drag and drop your
+      favorite pattern over the image window.
+    </para>
+    <para lang="ja">
+      この表質は隙間から画像を垣間見る格子枠のように利用できます。 格子用の
+      レイヤーを画像に追加してこのフィルタを適用します。 文様の帯で囲まれた
+      黒い正方形を<quote>色で選択</quote>ツールでクリックして選択し、
+      その部分を削除して穴開きにします。 選択範囲を反転して格子用レイヤーの
+      レイヤーマスクにします。 上側のレイヤーを活性化してパターンで
+      埋め尽くせるようにし、 お好きなパターンを画像ウィンドウ上まで
+      ドラッグして放ちます。
+    </para>
+  </sect3>
+</sect2>

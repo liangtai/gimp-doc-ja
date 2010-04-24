@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2010-04-21 liangtai: created initial version
+-->
+<!--2010-04-24-->
+<sect2 id="script-fu-clothify">
+  <title lang="en">Clothify</title>
+  <title lang="ja">覆布化...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Artistic</secondary>
+    <tertiary>Clothify</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Clothify</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>芸術的効果</secondary>
+    <tertiary>覆布化...</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>覆布化...</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example of Clothify</title>
+      <title lang="ja">覆布化の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/artistic-taj-clothify.jpg"/>
+        </imageobject>
+        <caption>
+		  <para lang="en">
+            Filter <quote>Clothify</quote> applied (in selection)
+          </para>
+          <para lang="en">
+            <quote>覆布化</quote>フィルタ適用後 (選択範囲内)
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      <guimenuitem>Clothify</guimenuitem> command is a script which
+      adds a cloth-like texture to the selected region or alpha.
+      If the image is in indexed colors, this menu entry is grayed out
+      and unavailable.
+    </para>
+    <para lang="en">
+      This script is achieved by the following steps:
+    </para>
+    <para lang="ja">
+      <guimenuitem>覆布化...</guimenuitem> コマンドは布のような質感を
+      選択範囲もしくはアルファ領域につけるスクリプトです。
+      インデックス化カラー画像の場合はこのメニュー項目が灰色無効になり
+      使用できません。
+    </para>
+    <para lang="ja">このスクリプトはつぎの手順で処理をしています。</para>
+    <procedure>
+      <step>
+        <para lang="en">
+          Create an image in the same size as the original image, or selection
+          or region in alpha if it is given, then add a layer to this image
+          filled with white and
+          <link linkend="plug-in-rgb-noise">noisified</link> strongly.
+        </para>
+        <para lang="ja">
+          元画像と同じ大きさ、 あるいはもしあれば選択範囲やアルファ領域の
+          大きさの画像を別に作成し、 そこに白く塗りつぶしたレイヤーを加えて強く
+          <link linkend="plug-in-rgb-noise">RGB ノイズ</link> をかけます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Reproduce a layer from the recently added layer and set the mode of
+          the upper layer to <quote>Multiply</quote>.
+        </para>
+        <para lang="ja">
+          先ほど追加したレイヤーの複製を作り、 上側のレイヤーを
+          <quote>乗算</quote>モードにします。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Apply <link linkend="plug-in-gauss">Gaussian blur</link> in
+          different directions, horizontally on the lower layer by the given
+          parameter <guilabel>Blur X</guilabel> as the radius, and vertically
+          on the upper layer with <guilabel>Blur Y</guilabel>.
+        </para>
+        <para lang="ja">
+          水平方向に半径 <guilabel>ぼかし X</guilabel>、 垂直方向に半径
+          <guilabel>ぼかし Y</guilabel> の
+          <link linked="plug-in-gauss">ガウスぼかし</link> を下側のレイヤーに
+          かけます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Merge these two layers into an image and making its contrast
+          <link linkend="plug-in-c-astretch">expanded as possibly</link>, then
+          slightly noisifying again on this working image.
+        </para>
+        <para lang="ja">
+          これら2層のレイヤーを統合し、 コントラストを
+          <link linkend="plug-in-c-astretch">最大限伸長</link> させてから
+          再びちょっとだけノイズをかけます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Finally do <link linkend="plug-in-bump-map">bump map</link> on the
+          original image by the working image with parameters
+          <guilabel>Azimuth</guilabel>, <guilabel>Elevation</guilabel>, and
+          <guilabel>Depth</guilabel>.
+        </para>
+        <para lang="ja">
+          最後にこの画像を使って元画像に
+          <link linkend="plug-in-bump-map">バンプマップ</link> 処理をかけます。
+          このとき <guilabel>方向</guilabel>、 <guilabel>高度</guilabel>
+          (バンプマッププラグインでは <guilabel>持ち上げ</guilabel> )、 
+          <guilabel>深さ</guilabel> (同 <guilabel>深度</guilabel> ) を
+          パラメータに用います。
+        </para>
+      </step>
+    </procedure>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Artistic</guisubmenu>
+        <guimenuitem>Clothify...</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>芸術的効果</guisubmenu>
+        <guimenuitem>覆布化...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Clothify</quote> filter options</title>
+      <title lang="ja"><quote>覆布化</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/options-artistic-clothify.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      <guilabel>Azimuth</guilabel>, <guilabel>Elevation</guilabel>, and
+      <guilabel>Depth</guilabel> come from
+      <link linkend="plug-in-bump-map">Bump Map</link> filter.
+    </para>
+    <para lang="ja">
+      <guilabel>方向</guilabel>、 <guilabel>高度</guilabel>、
+      <guilabel>深さ</guilabel> は
+      <link linkend="plug-in-bump-map">バンプマップ</link> プラグインから
+      きています。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Blur X; Blur Y</term>
+        <term lang="ja">ぼかし X; ぼかし Y</term>
+        <listitem>
+          <para lang="en">
+            These parameters lengthen fibers of the texture, horizontally
+            by <guilabel>Blur X</guilabel>, and vertically by
+            <guilabel>Blur Y</guilabel>.  The range of value is between
+            3 to 100.
+          </para>
+          <para lang="ja">
+            これらのパラメータは水平方向に <guilabel>ぼかし X</guilabel>、
+            垂直方向に <guilabel>ぼかし Y</guilabel> の長さぶんだけ織り目文様の
+            糸筋を伸ばします。 値の範囲は 3 から 100 です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Azimuth</term>
+        <term lang="ja">方向</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Azimuth</guilabel> slider controls the bearings
+            where light comes from according to the point of the compass.
+            Both the minimum value (0.00) and the maximum value (360.00)
+            are the direction of three o'clock on the dial panel of an
+            analogue clock.  Increasing value goes counter-clockwise.
+          </para>
+          <para lang="ja">
+            <guilabel>方向</guilabel> スライダは光の射してくる方向を方角で
+            指定します。 最低値 (0.00) と最大値 (360.00) が時計の文字盤で
+            3 時の方向を差しています。 値を増すほどに方角は反時計回りに
+            移動します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Elevation</term>
+        <term lang="ja">高度</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Elevation</guilabel> slider controls the height
+            where light comes from.  For the minimal value (0.50)
+            the light comes from horizon, and for the maximum value
+            (90.0) the light comes from zenith.
+          </para>
+          <para lang="ja">
+            <guilabel>高度</guilabel> スライダは光の射してくる高さを
+            指定します。 最小値 (0.50) なら光は水平方向から射し、 最大値 (90.0)
+            なら光は天頂から射します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Depth</term>
+        <term lang="ja">深度</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Depth</guilabel> slider controls distance between bump
+            height and hollow depth.  Increasing value causes more rugged
+            features.  Values vary from 1 to 65.
+          </para>
+          <para lang="ja">
+            <guilabel>深度</guilabel> スライダはバンプマップで見掛け上の
+            谷と山の高低差を指定します。 値を大きくとるとよりごわごわした
+            風合いの布を表現します。 値の範囲は1 から 65 です。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
