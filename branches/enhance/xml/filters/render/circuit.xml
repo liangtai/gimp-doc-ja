@@ -39,31 +39,35 @@
       out and unavailable.  The result is a grayscale image and is not be
       mattered by what image was drawn.
     </para>
-    <para>
-      This script is achieved by
-      <orderedlist>
-        <listitem>
-          <para>
-            <link linkend="plug-in-maze">draw maze</link>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <link linkend="plug-in-oilify">Oilify</link>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <link linkend="plug-in-edge">extract edge</link>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <link linkend="tool-desaturate">Desaturate</link>
-          </para>
-        </listitem>
-      <orderedlist>
-    </para>
+    <para>This script is achieved by the following steps.</para>
+    <procedure>
+      <step>
+        <para>
+          First, <link linkend="plug-in-maze">draw maze</link> with 5 pixels
+          width pathways and walls by the <quote>Depth First</quote>
+          algorithm.  The pattern of maze is set by <guilabel>Circuit
+          seed</guilabel>.
+        </para>
+      </step>
+      <step>
+        <para>
+          <link linkend="plug-in-oilify">Oilify</link>
+          mask-size 0
+        </para>
+      </step>
+      <step>
+        <para>
+          <link linkend="plug-in-edge">extract edge</link>
+          2 1 0
+        </para>
+      </step>
+      <step>
+        <para>
+          gray in RGB
+          <link linkend="tool-desaturate">Desaturate</link>
+        </para>
+      </step>
+    </procedure>
     <tip>
       <para>
         This script doesn't handle or color combos well, i.e. black/black
