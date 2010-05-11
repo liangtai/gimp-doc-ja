@@ -8,7 +8,7 @@
   050930 de replaced informalfigure by axel.wernicke
   050830 de added by axel.wernicke
 -->
-<!--2009-9-15-->
+<!--2010-05-11-->
 <sect2 id="plug-in-despeckle">
   <title lang="en">Despeckle</title>
   <title lang="ja">ノイズ除去...</title>
@@ -51,7 +51,8 @@
   </sect3>
 
   <sect3>
-    <title lang="en">フィルタの呼び出し方</title>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -74,16 +75,12 @@
     <title lang="en">Options</title>
     <title lang="ja">オプション</title>
     <figure>
-      <title lang="en">
-        <quote>Despeckle</quote> filter options
-      </title>
-      <title lang="ja">
-        <quote>ノイズ除去</quote>フィルタのオプション
-      </title>
+      <title lang="en"><quote>Despeckle</quote> filter options</title>
+      <title lang="ja"><quote>ノイズ除去</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/options-enhance-despeckle.png"/>
+            fileref="images/filters/enhance/despeckle.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -96,7 +93,7 @@
             Parameter setting results are interactively displayed in preview.
           </para>
           <para lang="ja">
-            <guilabel>プレビュー/guilabel> オプションを有効
+            <guilabel>プレビュー</guilabel> オプションを有効
             にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て分かるようになっています。
           </para>
@@ -106,32 +103,37 @@
         <term lang="en">Type</term>
         <term lang="ja">中央値</term>
         <listitem>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Adaptive</guilabel>: Adapts radius to image or
-                selection content (using Histogram). If this option is
-                checked, radius slider is not efficient.
-                It renders a result smoother than with radius alone.
-              </para>
-              <para lang="ja">
-                <guilabel>適応的</guilabel>: 画像もしくは
-                選択範囲の内容に最適な半径の値をヒストグラムを用いながら設定
-                します。 このオプションが有効な場合は <guilabel>
-                半径</guilabel> スライダの値が無視されます。
-                半径を直に単独で設定するよりは滑らかな仕上がりになります。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Recursive</guilabel>: Repeats filter action
-                which gets stronger.
-              </para>
-              <para lang="ja">
-                <guilabel>再帰的</guilabel>: フィルタの実行を
-                繰り返しますので効果が強く出ます。
-              </para>
-            </listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Adaptive</guilabel></term>
+              <term lang="en"><guilabel>適応的</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Adapts radius to image or selection content (using
+                  Histogram). If this option is checked, radius slider is not
+                  efficient.  It renders a result smoother than with radius
+                  alone.
+                </para>
+                <para lang="ja">
+                  画像もしくは選択範囲の内容に最適な半径の値を、 ヒストグラムを
+                  用いながら設定します。 このオプションが有効な場合は 
+                  <guilabel>半径</guilabel> スライダの値が無視されます。
+                  半径を直に単独で設定するよりは滑らかな仕上がりになります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Recursive</guilabel></term>
+              <term lang="en"><guilabel>再帰的</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Repeats filter action which gets stronger.
+                </para>
+                <para lang="ja">
+                  フィルタの実行を繰り返しますので効果が強く出ます。
+                </para>
+              </listitem>
+            </varlistentry>
           </itemizedlist>
         </listitem>
       </varlistentry>
@@ -140,16 +142,14 @@
         <term lang="ja">半径</term>
         <listitem>
           <para lang="en">
-            <guilabel>Radius</guilabel>: Sets size of action window
-            from 1 (3x3 pixels) to 20 (41x41). This window moves over
-            the image, and the color in it is smoothed, so
+            Sets size of action window from 1 (3x3 pixels) to 20 (41x41). This
+            window moves over the image, and the color in it is smoothed, so
             imperfections are removed.
           </para>
           <para lang="ja">
-            <guilabel>半径</guilabel>: 作用窓の大きさを 1 
-            (3&times;3ピクセル) から 20 (41&times;41ピクセル) の範囲で設定
-            します。 この窓が画像[の選択範囲]内を走り廻り、 窓に入った色を
-            ならすことで画像の欠陥をとり除いてゆきます。
+            作用窓の大きさを 1 (3&times;3 ピクセル) から 20 (41&times;41
+            ピクセル) の範囲で設定します。 この窓が画像[の選択範囲]内を走り
+            廻り、 窓に入った色をならすことで画像の欠陥をとり除いてゆきます。
           </para>
         </listitem>
       </varlistentry>
@@ -158,12 +158,11 @@
         <term lang="ja">黒レベル</term>
         <listitem>
           <para lang="en">
-            <guilabel>Black level</guilabel>: Removes pixels darker
-            than set value (0-255).
+            Removes pixels darker than set value (0-255).
           </para>
           <para lang="ja">
-            <guilabel>黒レベル</guilabel>: ここで設定した
-            値よりも暗い画素から色をとり除きます。 範囲は 0 から 255 です。
+            ここで設定した値よりも暗い画素から色をとり除きます。 
+            範囲は 0 から 255 です。
           </para>
         </listitem>
       </varlistentry>
@@ -176,8 +175,8 @@
             than set value (0-255).
           </para>
           <para lang="ja">
-            <guilabel>白レベル</guilabel>: ここで指定した
-            値よりも明るい画素から色をとり除きます。 範囲は 0 か 255 です。
+            ここで指定した値よりも明るい画素から色をとり除きます。 
+            範囲は 0 から 255 です。
           </para>
         </listitem>
       </varlistentry>
