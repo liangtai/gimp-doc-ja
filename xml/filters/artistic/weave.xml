@@ -4,7 +4,7 @@
 <!-- section history:
   2010-04-21 liangtai: created initial version
 -->
-<!--2010-04-23-->
+<!--2010-05-06-->
 <sect2 id="script-fu-weave">
   <title lang="en">Weave</title>
   <title lang="ja">織物...</title>
@@ -48,8 +48,11 @@
       which creates a new layer filled with a weave effect and adds it to
       the image as an overlay or bump map.  The result of the image looks
       as if it were printed over woven ribbons of paper, thin wooden sheet,
-      or stripped bamboo.  If the image is in indexed colors, this menu
-      entry is grayed out and unavailable.
+      or stripped bamboo.
+    </para>
+    <para lang="en">
+      If the image is in indexed colors, this menu entry is grayed out and
+      unavailable.
     </para>
     <para lang="en">
       This filter adds a <quote>Multiply</quote> mode layer upon the layer
@@ -60,8 +63,11 @@
       <guimenuitem>織物...</guimenuitem> コマンドは織物のような陰影がついた
       新たなレイヤーをつくり画像に重ねてバンプマップ風の効果をつける
       スクリプトです。 加工後の画像は帯状の紙か経木あるいは薄く削いだ竹を
-      織り合わせた表面に印刷したように見えます。 このスクリプトはインデックス化
-      カラー画像の場合はメニュー項目が灰色無効となり使用できません。
+      織り合わせた表面に印刷したように見えます。
+    </para>
+    <para lang="ja">
+      このスクリプトはインデックス化カラー画像の場合はメニュー項目が
+      灰色無効となり使用できません。
     </para>
     <para lang="ja">
       このフィルタは活性レイヤーの上に新しく作ったレイヤーを<quote>乗算</quote>
@@ -244,34 +250,35 @@
         <caption>
           <para lang="en">
             Narrower the ribbon width, wider the ribbon spacing, and
-            Filled with the <quote>Wood #1</quote> pattern.
+            Filled with the <quote>Wood&nbsp;#1</quote> pattern.
           </para>
           <para lang="ja">
             帯幅を狭く、 帯間隔を広くし、
-            <quote>Wood #1</quote> パターンで埋め尽くす。
+            <quote>Wood&nbsp;#1</quote> パターンで埋め尽くす。
           </para>
         </caption>
       </mediaobject>
     </figure>
     <para lang="en">
       This texture can be a lattice that you can see the original image
-      through its mesh holes.  Add a layer over the original image for the
-      lattice, and apply this filter.  Select a black regular square in the
-      texture layer by clicking with the By Color Select Tool, then delete
-      black squares in selection on the texture layer to be chink holes.
-      Reverse the selection, and add layer mask to the lattice layer from
-      the reversed selection.  Activate the upper layer so that you can
-      fill the lattice surface with a pattern, then drag and drop your
-      favorite pattern over the image window.
+      through its mesh holes.  Add a new, transparent layer over the active
+      layer for the lattice, and apply this filter.  Select a black regular
+      square in the texture layer using the
+      <link linkend="gimp-tool-by-color-select">By Color Select</link> Tool,
+      then delete black squares in selection on the texture layer to be chink
+      holes.  Reverse the selection, and activate the transparent layer so
+      that you can fill the lattice surface with a pattern, then drag and drop
+      your favorite pattern over the image window.
     </para>
     <para lang="ja">
-      この表質は隙間から画像を垣間見る格子枠のように利用できます。 格子用の
-      レイヤーを画像に追加してこのフィルタを適用します。 文様の帯で囲まれた
-      黒い正方形を<quote>色で選択</quote>ツールでクリックして選択し、
-      その部分を削除して穴開きにします。 選択範囲を反転して格子用レイヤーの
-      レイヤーマスクにします。 上側のレイヤーを活性化してパターンで
-      埋め尽くせるようにし、 お好きなパターンを画像ウィンドウ上まで
-      ドラッグして放ちます。
+      この表質は隙間から画像を垣間見る格子枠のように利用できます。 格子用に
+      透明なレイヤーを新たに画像へ追加してこのフィルタを適用します。 文様の
+      帯で囲まれた黒い正方形を
+      <link linkend="gimp-tool-by-color-select">色で選択</link> ツールで
+      クリックして選択し、 その部分を削除して穴開きにします。 選択範囲を
+      反転して格子用の透明レイヤーを活性化すれば枠の上だけパターンで
+      埋め尽くせるようになりますから、 あとはお好きなパターンを
+      画像ウィンドウ上までドラッグして放ちます。
     </para>
   </sect3>
 </sect2>

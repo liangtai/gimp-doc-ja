@@ -4,7 +4,7 @@
 <!-- section history:
   2010-04-21 liangtai: created initial version
 -->
-<!--2010-04-24-->
+<!--2010-05-06-->
 <sect2 id="script-fu-difference-clouds">
   <title lang="en">Difference Clouds</title>
   <title lang="ja">差分ソリッドノイズ...</title>
@@ -45,29 +45,40 @@
         </caption>
       </mediaobject>
     </figure>
+
+    <!-- Difference layer mode:  E:=|I-M| -->
     <para lang="en">
-      <guimenuitem>Difference Clouds</guimenuitem> command inverts colors
-      partially as random spots in the image.  This filter renders
+      <guimenuitem>Difference Clouds</guimenuitem> command changes colors
+      partially in cloud-like areas: The filter renders
       <link linkend="plug-in-solid-noise">Solid Noise</link> cloud in an
       automatically created new layer, and sets the layer mode to
-      <quote>Difference</quote>, then merges this layer over the specified
-      image.  If the image is in indexed colors, this menu entry is grayed
-      out and unavailable.
+      <link linkend="layer-mode-difference">Difference</link>,
+      then merges this layer over the specified image.
     </para>
     <para lang="en">
-      Before merging the layer, this script opens the dialog of the
-      Solid Noise plug-in which allows to control its effect.
+      Before merging the layer, this script opens the dialog of the Solid
+      Noise plug-in which allows to control its effect.
+    </para>
+    <para lang="en">
+      If the image is in indexed colors, this menu entry is grayed out and
+      unavailable.
     </para>
     <para lang="ja">
-      <guimenuitem>差分ソリッドノイズ...</guimenuitem> コマンドは画像の色を
-      不規則に反転させます。 このスクリプトは自動的に作成した新しいレイヤーに
+      <guimenuitem>差分ソリッドノイズ...</guimenuitem> コマンドは画像を
+      雲のような不規則な範囲で変色させます。 スクリプトが自動的に作成した
+      新しいレイヤーに
       <link linkend="plug-in-solid-noise">ソリッドノイズ</link> 雲を描いてから
-      元の画像に<quote>差の絶対値</quote>モードで統合します。 インデックス化
-      カラー画像の場合はメニュー項目が灰色無効となって使用できません。
+      元の画像に
+      <link linkend="layer-mode-difference">差の絶対値</link> モードで
+      統合します。
     </para>
     <para lang="ja">
       レイヤーを統合する前にこのスクリプトはソリッドノイズプラグインの
       ダイアログを呼び出してフィルタ効果の調整を促します。
+    </para>
+    <para lang="ja">
+     インデックス化カラー画像の場合はメニュー項目が灰色無効となって
+     使用できません。
     </para>
   </sect3>
 
@@ -98,9 +109,8 @@
     <title lang="en">Options</title>
     <title lang="ja">オプション</title>
     <para lang="en">
-      This script does not have its own dialogs but invokes the
-      <link linkend="plug-in-solid-noise">Solid Noise</link>
-      filter's dialog.
+      This script does not have its own dialogs window but invokes the
+      <link linkend="plug-in-solid-noise">Solid Noise</link> filter's dialog.
     </para>
     <para lang="ja">
       このスクリプトは独自のダイアログを持たないかわりに

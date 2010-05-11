@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
   2007-06-26 Added Spanish translation by AntI
@@ -10,10 +10,10 @@
   2005-09-15 de added by axel.wernicke
   2005-11-07 small add in Overview by julien hardelin
 -->
-<!--2009-09-15-->
-<sect2 id="gimpressionist-orient-map-editor">
-  <title lang="en">GIMPressionist - Orientation Map Editor</title>
-  <title lang="ja">GIMPressionist - 方向マップエディタ</title>
+<!--2010-05-08-->
+<sect3 id="gimpressionist-orient-map-editor">
+  <title lang="en">Orientation Map Editor</title>
+  <title lang="ja">方向マップエディタ</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -29,29 +29,32 @@
     <tertiary>GIMPressionist</tertiary>
   </indexterm>
 
-  <sect3>
+  <sect4>
     <title lang="en">Overview</title>
     <title lang="ja">概観</title>
     <para lang="en">
       The Orientation-map editor is an annexe of the
       <link linkend="plug-in-gimpressionist">GIMPressionist</link> filter. You
-      can get to it by clicking on the <guibutton>Edit</guibutton> button
-      in the <quote>Orientation</quote> tab. With this editor, you can set
-      the direction that brush strokes given by filter will have.
+      can get to it by clicking on the <guibutton>Edit</guibutton> button in
+      the
+      <link linkend="gimpressionist-orientation-options">Orientation</link>
+      tab. With this editor, you can set the direction that brush strokes
+      given by filter will have.
     </para>
     <para lang="ja">
       方向マップエディタは 
       <link linkend="plug-in-gimpressionist">GIMPressionist</link> フィルタに
-      付属するダイアログです。 このフィルタのダイアログの<quote>方向</quote>
-      タブで <guibutton>編集</guibutton> ボタンをクリック
-      すると呼び出せます。 このエディタではフィルタで使われる筆の運ばれる方向を
-      調整できます。
+      付属するダイアログです。 このフィルタのダイアログの
+      <link linkend="gimpressionist-orientation-options">方向</link> タブで 
+      <guibutton>編集</guibutton> ボタンをクリックすると呼び出せます。 
+      このエディタではフィルタで使われる筆の運ばれる方向を調整できます。
     </para>
-  </sect3>
+  </sect4>
 
-  <sect3>
-    <title lang="en">Parameter Settings</title>
-    <title lang="ja">パラメータの設定</title>
+  <sect4>
+    <!-- Parameter Settings -->
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
     <figure>
       <title lang="en">
         Options of the <quote>Orientation-map Editor</quote> dialog
@@ -197,7 +200,7 @@
           </para>
         </listitem>
       </varlistentry>
-      <varlistentry>
+      <varlistentry id="gimpressionist-editor-voronoi">
         <term lang="en">Voronoi</term>
         <term lang="ja">ボロノイ</term>
         <listitem>
@@ -258,11 +261,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Angle Offset</term>
+        <term lang="en">Angle offset</term>
         <term lang="ja">角度オフセット</term>
         <listitem>
           <para lang="en">
-            This slider allows you to change the angle of ALL vectors.
+            This slider allows you to change the angle of
+            <emphasis>all</emphasis> vectors.
           </para>
           <para lang="ja">
             このスライダは <emphasis>全て</emphasis> のベクトルの角度を変更
@@ -288,12 +292,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Strength Exp.</term>
+        <term lang="en">Strength exp.</term>
         <term lang="ja">強さ指数</term>
         <listitem>
           <para lang="en">
-            This slider acts on the length of ALL vectors, and so changes
-            the strength of all brush strokes.
+            This slider acts on the length of <emphasis>all</emphasis>
+            vectors, and so changes the strength of all brush strokes.
           </para>
           <para lang="ja">
             <guilabel>強さ指数</guilabel> スライダは
@@ -303,5 +307,5 @@
         </listitem>
       </varlistentry>
     </variablelist>
-  </sect3>
-</sect2>
+  </sect4>
+</sect3>
