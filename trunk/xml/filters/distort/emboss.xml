@@ -6,9 +6,9 @@
   2007-08-12 Added Spanish translation by AntI
   2007-04-23 KoSt: added 'no'
   2005-12-07 replaced <simplesect> by <sect3> by lexa
-  050905 de added by axel.wernicke
+  2005-09-05 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-05-15-->
 <sect2 id="plug-in-emboss">
   <title lang="en">Emboss</title>
   <title lang="ja">エンボス...</title>
@@ -58,24 +58,23 @@
       </mediaobject>
     </figure>
     <para lang="en">
-      You can use it only with RGB images. If your image is grayscale, it
-      will be grayed out in the menu.
+      This filter stamps and carves the active layer or selection, giving it
+      relief with bumps and hollows. Bright areas are raised and dark ones are
+      carved. You can vary the lighting.
     </para>
     <para lang="en">
-      It stamps and carves the active layer or selection, giving it relief
-      with bumps and hollows. Bright areas are raised and dark ones are
-      carved. You can vary the lighting.
+      You can use the filter only with RGB images. If your image is grayscale,
+      it will be grayed out in the menu.
+    </para>
+    <para lang="ja">
+      <guimenuitem>エンボス...</guimenuitem> フィルタは活性レイヤーかその
+      選択範囲をくぼみや盛り上がりのある浮き彫りのような陰影画に彫刻します。 
+      明るい部分が盛り上がり暗い部分が掘り下げられます。 照明を調節できます。
     </para>
     <para lang="ja">
       このフィルタは<acronym>RGB</acronym>画像でのみ作動します。 画像がグレー
       スケール色やインデックス化色の場合はこのメニュー項目が灰色無効となって
       使用できなくなります。
-    </para>
-    <para lang="ja">
-      <guimenuitem>エンボス...</guimenuitem> フィルタは活性
-      レイヤーかその選択範囲をくぼみや盛り上がりのある浮き彫りのような陰影画に
-      彫刻します。 明るい部分が盛り上がり暗い部分が掘り下げられます。 照明を
-      調節できます。
     </para>
   </sect3>
 
@@ -107,7 +106,8 @@
       <title lang="ja"><quote>エンボス</quote>フィルタのオプション</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/filters/emboss-options.png" format="PNG"/>
+          <imagedata format="PNG"
+            fileref="images/filters/distort/emboss.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -119,8 +119,8 @@
           <para lang="en">
             All your setting changes will appear in the Preview without
             affecting the image until you click on <guilabel>OK</guilabel>.
-            Don't keep <emphasis>Do Preview</emphasis> checked if your
-            computer is too much slow.
+            Don't keep <guilabel>Preview</guilabel> checked if your computer
+            is too much slow.
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
@@ -133,23 +133,32 @@
         <term lang="en">Function</term>
         <term lang="ja">機能</term>
         <listitem>
-          <para lang="en">
-            <guilabel>Bumpmap</guilabel>: Relief is smooth and colors are
-            preserved.
-          </para>
-          <para lang="en">
-            <guilabel>Emboss</guilabel>: It turns your image to grayscale
-            and relief is more marked, looking like metal.
-          </para>
-          <para lang="ja">
-            <guilabel>バンプマップ</guilabel>: 浮き彫りは
-            滑らかで、 色彩が残ります。
-          </para>
-          <para lang="ja">
-            <guilabel>エンボス</guilabel>: グレースケール風の
-            白黒灰色画像に変更され浮き彫りがより強くなります。 金属製品の風合い
-            です。
-          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Bumpmap</guilabel></term>
+              <term lang="ja"><guilabel>バンプマップ</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Relief is smooth and colors are preserved.
+                </para>
+                <para lang="ja">浮き彫りは滑らかで、 色彩が残ります。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Emboss</guilabel></term>
+              <term lang="ja"><guilabel>エンボス</guilabel></term>
+              </listitem>
+                <para lang="en">
+                  It turns your image to grayscale and relief is more marked,
+                  looking like metal.
+                </para>
+                <para lang="ja">
+                   グレースケール風の白黒灰色画像に変更され浮き彫りが
+                   より強くなります。 金属製品の風合いです。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -157,15 +166,13 @@
         <term lang="ja">方向</term>
         <listitem>
           <para lang="en">
-            <guilabel>Azimuth</guilabel>: This is about lighting
-            according to the points of the compass (0 - 360). If you
-            suppose South is at the top of your image, then East (0°) is
-            on the left. Increasing value goes counter-clockwise.
+            This is about lighting according to the points of the compass (0 -
+            360). If you suppose South is at the top of your image, then East
+            (0°) is on the left. Increasing value goes counter-clockwise.
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: 光の差してくる方向を
-            方位 (0 から 360) で示します。 右0°、 上90°、 下180°、 左270°です。
-            数値を増すと反時計回りに進みます。
+            光の差してくる方向を方位 (0 から 360) で示します。 右 0°、 上 90°、
+            下 180°、 左270° です。 数値を増すと反時計回りに進みます。
           </para>
         </listitem>
       </varlistentry>
@@ -174,14 +181,12 @@
         <term lang="ja">持ち上げ</term>
         <listitem>
           <para lang="en">
-            <guilabel>Elevation</guilabel>: That's height from
-            horizon (0°), in principle up to zenith (90°), but here up
-            to the opposite horizon (180°).
+            That's height from horizon (0°), in principle up to zenith (90°),
+            but here up to the opposite horizon (180°).
           </para>
           <para lang="ja">
-            <guilabel>持ち上げ</guilabel>: この値は水平線上
-            (0°) から天上 (90°) まで高さを設定できますが、 さらに進んで 180°
-            にすると逆の方角から照らすことになります。
+            この値は水平線上 (0°) から天上 (90°) まで高さを設定できますが、
+            さらに進んで 180° にすると逆の方角から照らすことになります。
           </para>
         </listitem>
       </varlistentry>
@@ -190,12 +195,11 @@
         <term lang="ja">深度</term>
         <listitem>
           <para lang="en">
-            <guilabel>Depth</guilabel> Seems to be the distance of the
-            light source. Light decreases when value increases.
+            Seems to be the distance of the light source. Light decreases when
+            value increases.
           </para>
           <para lang="ja">
-            <guilabel>深度</guilabel>: 光源からの距離のような
-            ものです。 値を増すと光量が減ります。
+            光源からの距離のようなものです。 値を増すと光量が減ります。
           </para>
         </listitem>
       </varlistentry>
