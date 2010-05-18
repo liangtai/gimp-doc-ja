@@ -8,7 +8,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-10 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-05-18-->
 <sect2 id="plug-in-vpropagate">
   <title lang="en">Value Propagate</title>
   <title lang="en">明度伝搬...</title>
@@ -88,7 +88,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/options-distort-vpropagate.png"/>
+            fileref="images/filters/distort/vpropagate.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -349,19 +349,20 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">More opaque / transparent</term>
-              <term lang="ja">より不透明に; より透明に</term>
+              <term lang="en">More opaque</term>
+              <term lang="en">More transparent</term>
+              <term lang="ja">より不透明に</term>
+              <term lang="ja">より透明に</term>
               <listitem>
                 <para lang="en">
-                  These commands work like More White and More Black. Opaque
-                  (transparent) areas will be propagated over less opaque
-                  (transparent) areas. These commands need an image with an
-                  Alpha channel.
+                  These commands work like <quote>More White</quote> and
+                  <quote>More Black</quote>. Opaque (transparent) areas will
+                  be propagated over less opaque (transparent) areas. These
+                  commands need an image with an Alpha channel.
                 </para>
                 <para lang="ja">
-                  これらのオプションは <guilabel>より白く
-                  (明度大)</guilabel> や <guilabel>より黒く
-                  (明度小)</guilabel> と似たはたらきを
+                  これらのオプションは <guilabel>より白く (明度大)</guilabel>
+                  や <guilabel>より黒く (明度小)</guilabel> と似たはたらきを
                   します。 前者は透明度のより低い部分の色が高いほうに伝搬し、 
                   後者は透明度のより高い部分が低い方を染めます。 いずれの
                   オプションも画像にアルファチャンネルが必要です。
@@ -411,8 +412,10 @@
         <listitem>
           <variablelist>
             <varlistentry>
-              <term lang="en">Lower / Upper threshold</term>
-              <term lang="ja">しきい値下限; しきい値上限</term>
+              <term lang="en">Lower threshold</term>
+              <term lang="en">Upper threshold</term>
+              <term lang="ja">しきい値下限</term>
+              <term lang="ja">しきい値上限</term>
               <listitem>
                 <para lang="en">
                   A pixel will be propagated (spread) if the difference in
@@ -420,9 +423,8 @@
                   the lower threshold and no larger than the upper threshold.
                 </para>
                 <para lang="ja">
-                  周辺の画素の値と比較して <guilabel>
-                  しきい値下限</guilabel> よりは大きく 
-                  <guilabel>しきい値上限</guilabel> よりは
+                  周辺の画素の値と比較して <guilabel>しきい値下限</guilabel>
+                  よりは大きく <guilabel>しきい値上限</guilabel> よりは
                   小さな差異を画素の値がもつときは伝搬 (拡散) します。
                 </para>
               </listitem>
@@ -442,14 +444,21 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Propagating direction</term>
-              <term lang="ja">上へ; 下へ; 左へ; 右へ</term>
+              <!--Propagating direction-->
+              <term lang="en">To left</term>
+              <term lang="en">To top</term>
+              <term lang="en">To right</term>
+              <term lang="en">To bottom</term>
+              <term lang="ja">左へ</term>
+              <term lang="ja">上へ</term>
+              <term lang="ja">右へ</term>
+              <term lang="ja">下へ</term>
               <listitem>
                 <para lang="en">
                   You can select one or more directions.
                 </para>
                 <para lang="ja">
-                  ひとつまたはそれ以上の伝搬方向を指定します。
+                  ひとつまたはそれ以上の伝搬方向が指定できます。
                 </para>
               </listitem>
             </varlistentry>

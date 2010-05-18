@@ -7,7 +7,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   050910 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-05-18-->
 <sect2 id="plug-in-wind">
   <title lang="en">Wind</title>
   <title lang="ja">風...</title>
@@ -104,7 +104,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/options-distort-wind.png"/>
+            fileref="images/filters/distort/wind.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -172,35 +172,42 @@
         <term lang="en">Style</term>
         <term lang="ja">スタイル</term>
         <listitem>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Wind</guilabel>: This option is the most
-                suggestive of a moving effect. Trails are thin.
-              </para>
-              <para lang="ja">
-                <guilabel>風</guilabel>: このオプションは最も
-                風らしさがよく出る動きの効果があります。 引き出し線は細く描かれ
-                ます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Blast</guilabel>: This option tries to suggest a
-                blast due to an explosion. Trails are thick.
-              </para>
-              <para lang="ja">
-                <guilabel>暴風</guilabel>: このオプションは
-                爆風っぽい感じを出します。 引き出し線は太く描かれます。
-              </para>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/filters/examples/blast1.png"/>
-                </imageobject>
-              </mediaobject>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Wind</guilabel></term>
+              <term lang="ja"><guilabel>風</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This option is the most suggestive of a moving effect.
+                  Trails are thin.
+                </para>
+                <para lang="ja">
+                  このオプションは最も風らしさがよく出る動きの効果があります。
+                  引き出し線は細く描かれます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Blast</guilabel></term>
+              <term lang="ja"><guilabel>暴風</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This option tries to suggest a blast due to an explosion.
+                  Trails are thick.
+                </para>
+                <para lang="ja">
+                  このオプションは爆風っぽい感じを出します。
+                  引き出し線は太く描かれます。
+                </para>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/filters/examples/blast1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -208,8 +215,8 @@
         <term lang="ja">方向</term>
         <listitem>
           <para lang="en">
-            You can select the direction, <emphasis>Left</emphasis> or
-            <emphasis>Right</emphasis>, from which the wind comes.
+            You can select the direction, <guilabel>Left</guilabel> or
+            <guilabel>Right</guilabel>, from which the wind comes.
           </para>
           <para lang="ja">
             風が吹いてくる方向を <guilabel>左</guilabel> と
@@ -221,56 +228,61 @@
         <term lang="en">Edge Affected</term>
         <term lang="ja">端の効果</term>
         <listitem>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Leading</guilabel>: Trails will start from the
-                front border, falling on the object itself. It suggests that
-                a violent wind is pulling color out.
-              </para>
-              <para lang="ja">
-                <guilabel>きっかけ</guilabel>: 風に向かう側の
-                輪郭から物体の上を通るように白い引き出し線を描きます。 暴風に
-                すると描かれた物体の色がとびます。
-              </para>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/filters/examples/wind2.png"/>
-                </imageobject>
-              </mediaobject>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Trailing</guilabel>: Trails start from the back
-                border of the object.
-              </para>
-              <para lang="ja">
-                <guilabel>たなびき</guilabel>: 風が吹いてくる
-                向きとは反対側の輪郭から黒い引き出し線を描きます。
-              </para>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/filters/examples/wind1.png"/>
-                </imageobject>
-              </mediaobject>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Both</guilabel>: Combines both effects.
-              </para>
-              <para lang="ja">
-                <guilabel>両方</guilabel>: 2つの効果を合わせ
-                もちます。
-              </para>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/filters/examples/wind3.png"/>
-                </imageobject>
-              </mediaobject>
-            </listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Leading</guilabel></term>
+              <term lang="en"><guilabel>きっかけ</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Trails will start from the front border, falling on the
+                  object itself. It suggests that a violent wind is pulling
+                  color out.
+                </para>
+                <para lang="ja">
+                  風に向かう側の輪郭から物体の上を通るように白い引き出し線を
+                  描きます。 暴風にすると描かれた物体の色がとびます。
+                </para>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/filters/examples/wind2.png"/>
+                  </imageobject>
+                </mediaobject>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Trailing</guilabel></term>
+              <term lang="ja"><guilabel>たなびき</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Trails start from the back border of the object.
+                </para>
+                <para lang="ja">
+                  風が吹いてくる向きとは反対側の輪郭から黒い引き出し線を
+                  描きます。
+                </para>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/filters/examples/wind1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Both</guilabel></term>
+              <term lang="ja"><guilabel>両方</guilabel></term>
+              <listitem>
+                <para lang="en">Combines both effects.</para>
+                <para lang="ja">2 つの効果を合わせもちます。</para>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/filters/examples/wind3.png"/>
+                  </imageobject>
+                </mediaobject>
+              </listitem>
+            </varlistentry>
           </itemizedlist>
         </listitem>
       </varlistentry>
@@ -279,8 +291,8 @@
         <term lang="ja">しきい値</term>
         <listitem>
           <para lang="en">
-            <guilabel>Threshold</guilabel>: The threshold to detect
-            borders. The higher it is, the fewer borders will be detected.
+            The threshold to detect borders. The higher it is, the fewer
+            borders will be detected.
           </para>
           <para lang="ja">
             輪郭を見付けるときの目安です。 しきい値を高く設定すると探知される
@@ -293,8 +305,7 @@
         <term lang="ja">強さ</term>
         <listitem>
           <para lang="en">
-            <guilabel>Strength</guilabel>:  Higher values increase the
-            strength of the effect.
+            Higher values increase the strength of the effect.
           </para>
           <para lang="ja">値を高くすると効果も強く出ます。</para>
         </listitem>

@@ -5,9 +5,9 @@
   2007-08-12 Added Spanish translation by AntI
   2007-04-23 KoSt: added 'no'
   2005-12-07 replaced <simplesect> by <sect3> by lexa
-  050904 de added by axel.wernicke
+  2005-09-04 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-05-18-->
 <sect2 id="plug-in-curve-bend">
   <title lang="en">Curve Bend</title>
   <title lang="ja">ひん曲げる...</title>
@@ -69,7 +69,7 @@
   </sect3>
 
   <sect3>
-    <title lang="en">Starting filter</title>
+    <title lang="en">Activating the filter</title>
     <title lang="ja">フィルタの呼び出し方</title>
     <para lang="en">
       You can find this filter through
@@ -98,7 +98,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/filters-distort-curvebend.png"/>
+            fileref="images/filters/distort/curvebend.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -117,7 +117,7 @@
           </para>
           <variablelist>
             <varlistentry>
-              <term lang="en">Preview Once</term>
+              <term lang="en">Preview once</term>
               <term lang="ja">プレビュー更新</term>
               <listitem>
                 <para lang="en">
@@ -138,13 +138,13 @@
                 <para lang="en">
                   With this option, preview is changed in real time. This
                   needs much calculation and may lengthen work. It is
-                  particularly evident when using "Rotation".
+                  particularly evident when using <quote>Rotation</quote>.
                 </para>
                 <para lang="ja">
                   このオプションが有効になるとダイアログ内での操作が即座に
                   プレビュー画像に反映されます。 計算が多くなるので処理に時間が
-                  かかるかもしれません。 特に <guilabel>回転
-                  </guilabel> 処理が加わると顕著になります。
+                  かかるかもしれません。 特に <guilabel>回転</guilabel> 処理が
+                  加わると顕著になります。
                 </para>
               </listitem>
             </varlistentry>
@@ -165,7 +165,7 @@
                   counter-clockwise). 0 is default setting: The curve will be
                   applied from the upper border and/or from the lower. Set to
                   90, it will be applied from left border and/or from the
-                  right  one.
+                  right one.
                 </para>
                 <para lang="ja">
                   ここでフィルタをかける角度を設定できます。 反時計回りに 0 
@@ -176,8 +176,10 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Smoothing and Antialiasing</term>
-              <term lang="ja">スムージング; 滑らかに</term>
+              <term lang="en">Smoothing</term>
+              <term lang="en">Antialiasing</term>
+              <term lang="ja">スムージング</term>
+              <term lang="ja">滑らかに</term>
               <listitem>
                 <para lang="en">
                   The distort process may create hard and stepped borders.
@@ -192,7 +194,7 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Work on Copy</term>
+              <term lang="en">Work on copy</term>
               <term lang="ja">コピーを操作</term>
               <listitem>
                 <para lang="en">
@@ -213,7 +215,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Modify Curve</term>
+        <term lang="en">Modify Curves</term>
         <term lang="ja">カーブ変更</term>
         <listitem>
           <para lang="en">
@@ -225,14 +227,15 @@
           </para>
           <para lang="en">
             You can have only two curves on the grid, one for the so named
-            "upper" border and the other for the so named "lower" border. You
-            can activate one of them by checking the
-            <emphasis>Upper</emphasis> or <emphasis>Lower</emphasis> radio
-            button.
+            <quote>upper</quote> border and the other for the so named
+            <quote>lower</quote> border. You can activate one of them by
+            checking the <guilabel>Upper</guilabel> or
+            <guilabel>Lower</guilabel> radio button.
           </para>
           <para lang="en">
-            If you use the <emphasis>Curve Type Free</emphasis> option, the
-            curve you draw will replace the active curve.
+            If you use the <guilabel>Free</guilabel> <emphasis>Curve
+            Type</emphasis> option, the curve you draw will replace the active
+            curve.
           </para>
           <para lang="ja">
             この方眼図には一本の水平線が両端にノードを伴って描かれています。
@@ -244,13 +247,12 @@
           <para lang="ja">
             この方眼図には上辺と下辺の2本だけ曲線が描けます。 一度に操作できる
             曲線は一本だけなので、 <guilabel>上</guilabel>、
-            <guilabel>下</guilabel> のラジオボタンで
-            切り替えてください。
+            <guilabel>下</guilabel> のラジオボタンで切り替えてください。
           </para>
           <para lang="ja">
             <guilabel>カーブタイプ</guilabel> に 
-            <guilabel>自由</guilabel> を選択すると、 ノード
-            を操作するのではなくマウスポインタで直接なぞって線が描けます。
+            <guilabel>自由</guilabel> を選択すると、 ノードを
+            操作するのではなくマウスポインタで直接なぞって線が描けます。
           </para>
         </listitem>
       </varlistentry>
@@ -260,27 +262,25 @@
         <listitem>
           <para lang="en">
             There you can select whether the active curve must be applied to
-            the <emphasis>Superior (or left)</emphasis> or the
-            <emphasis>Inferior (or right)</emphasis> border, according to the
-            rotation.
+            the <guilabel>Upper</guilabel> or the <guilabel>Lower</guilabel>
+            border, according to the rotation.
           </para>
           <para lang="ja">
-            ここで操作対象の曲線を切り替えられます。 <guilabel>
-            上</guilabel> と <guilabel>上
-            </guilabel> のいずれかを選びますが、 その名前とは裏腹に
+            ここで操作対象の曲線を切り替えられます。 <guilabel>上</guilabel> と
+            <guilabel>下</guilabel> のいずれかを選びますが、 その名前とは裏腹に
             意味が回転操作によって変化します。
           </para>
           <caution>
             <para lang="en">
               Remember that the curve border depends on the rotation. For
-              example, with <emphasis>Rotate</emphasis> = 90° the upper curve
+              example, with <guilabel>Rotate</guilabel> = 90° the upper curve
               will actually be applied to the left border.
             </para>
             <para lang="ja">
               ここで切り替えて選ばれる曲線は回転によって位置付けが異なります
-              のでお気を付けください。 例えば <guilabel>回転
-              </guilabel> に 90°を設定すると <guilabel>上
-              </guilabel> の曲線は実際は画像の左辺を表します。
+              のでお気を付けください。 例えば <guilabel>回転</guilabel> に 90°
+              を設定すると <guilabel>上</guilabel> の曲線は実際は画像の左辺を
+              表します。
             </para>
           </caution>
         </listitem>
@@ -290,20 +290,20 @@
         <term lang="ja">カーブタイプ</term>
         <listitem>
           <para lang="en">
-            With the <emphasis>Smooth</emphasis>, you get automatically a well
+            With the <guilabel>Smooth</guilabel>, you get automatically a well
             rounded curve when you drag a node.
           </para>
           <para lang="en">
-            The <emphasis>Free</emphasis> option allows you to draw a curve
+            The <guilabel>Free</guilabel> option allows you to draw a curve
             freely. It will replace the active curve.
           </para>
           <para lang="ja">
-            <guilabel>滑らか</guilabel> の場合はノードを操作
-            します。 曲線は自動的にノードに沿ってとてもなだらかに描かれます。
+            <guilabel>滑らか</guilabel> の場合はノードを操作します。 
+            曲線は自動的にノードに沿ってとてもなだらかに描かれます。
           </para>
           <para lang="ja">
-            <guilabel>自由</guilabel> の場合は方眼図上を
-            マウスでなぞります。 描かれた曲線が元あった曲線に置き換わります。
+            <guilabel>自由</guilabel> の場合は方眼図上をマウスでなぞります。 
+            描かれた曲線が元あった曲線に置き換わります。
           </para>
         </listitem>
       </varlistentry>
@@ -342,10 +342,10 @@
               <term lang="ja">入れ替え</term>
               <listitem>
                 <para lang="en">
-                  Swap the <quote>superior</quote> and
-                  <quote>inferior</quote> curves.
+                  Swap the <guilabel>Upper</guilabel> and
+                  <guilabel>Lower</guilabel> curves.
                 </para>
-                <para lang="ja">上下の2本の曲線を交換します。</para>
+                <para lang="ja">上下 2 本の曲線を交換します。</para>
               </listitem>
             </varlistentry>
             <varlistentry>
@@ -360,9 +360,7 @@
               <term lang="en">Open</term>
               <term lang="ja">開く</term>
               <listitem>
-                <para lang="en">
-                  Load the curve from a file.
-                </para>
+                <para lang="en">Load the curve from a file.</para>
                 <para lang="ja">
                   曲線を保存したファイルが選べます。 選択されたファイルから
                   曲線が読み込まれます。
@@ -373,9 +371,7 @@
               <term lang="en">Save</term>
               <term lang="ja">保存</term>
               <listitem>
-                <para lang="en">
-                  Save the curve to a file.
-                </para>
+                <para lang="en">Save the curve to a file.</para>
                 <para lang="ja">
                   ここで設定した現在の両曲線の形状をファイルに保存できます。
                   拡張子は <filename class="extension">.points</filename>
