@@ -8,7 +8,7 @@
   050930 de replaced informalfigure by axel.wernicke
   050829 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-06-01-->
 <sect2 id="plug-in-dog">
   <title lang="en">Difference of Gaussians</title>
   <title lang="ja">ガウシアン差分...</title>
@@ -35,8 +35,8 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">
-        Applying example for the <quote>Difference of Gaussians</quote>
-        filter
+        Applying example for the <quote>Difference of Gaussians</quote> filter
+      </title>
       <title lang="ja"><quote>ガウシアン差分</quote>フィルタの適用例</title>
       <mediaobject>
         <imageobject>
@@ -104,7 +104,7 @@
       You can find this filter through
       <menuchoice>
         <guimenu>Filters</guimenu>
-        <guisubmenu>Edge detect</guisubmenu>
+        <guisubmenu>Edge-Detect</guisubmenu>
         <guimenuitem>Difference of Gaussians</guimenuitem>
       </menuchoice>.
     </para>
@@ -127,29 +127,31 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/diff-gauss-options.png"/>
+            fileref="images/filters/edge-detect/diff-gauss.png"/>
         </imageobject>
       </mediaobject>
     </figure>
     <variablelist>
       <varlistentry>
-        <term lang="en">Smoothing parameters</term>
+        <term lang="en">Smoothing Parameters</term>
         <term lang="ja">スムーズ化パラメータ</term>
         <listitem>
           <para lang="en">
-            Radius 1 and Radius 2 are the blurring radii for the two Gaussian
-            blurs. The only constraints on them is that they cannot be equal,
-            or else the result will be a blank image. If you want to produce
-            something that looks like a sketch, in most cases setting Radius 2
-            smaller than Radius 1 will give better results.
+            <guilabel>Radius 1</guilabel> and <guilabel>Radius 2</guilabel>
+            are the blurring radii for the two Gaussian blurs. The only
+            constraints on them is that they cannot be equal, or else the
+            result will be a blank image. If you want to produce something
+            that looks like a sketch, in most cases setting
+            <guilabel>Radius&nbsp;2</guilabel> smaller than
+            <guilabel>Radius&nbsp;1</guilabel> will give better results.
           </para>
           <para lang="ja">
-            <guilabel>半径 1</guilabel> と <guilabel>半径 
-            2</guilabel> はガウシアンぼかしに用いられる半径
-            です。 両者の関係で唯一の制限が両値は等しくなってはいけないことで
-            あり、 等しくすると結果が空白画像になってしまいます。 スケッチ風の
-            画像に仕上げたい場合は<quote>半径2</quote>を<quote>半径1</quote>
-            より小さくとるとほとんどいつもうまくいきます。
+            <guilabel>半径 1</guilabel> と <guilabel>半径 2</guilabel> は
+            ガウシアンぼかしに用いられる半径です。 両者の関係で唯一の制限が
+            両値は等しくなってはいけないことであり、 等しくすると結果が
+            空白画像になってしまいます。 スケッチ風の画像に仕上げたい場合は
+            <quote>半径2</quote>を<quote>半径1</quote>より小さくとると
+            ほとんどいつもうまくいきます。
           </para>
         </listitem>
       </varlistentry>
