@@ -10,7 +10,7 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-29 de added by axel.wernicke
 -->
-<!--2010-02-02-->
+<!--2010-06-01-->
 <sect2 id="plug-in-edge">
   <title lang="en">Edge</title>
   <title lang="ja">輪郭...</title>
@@ -180,7 +180,7 @@
       You can find this filter through
       <menuchoice>
         <guimenu>Filters</guimenu>
-        <guisubmenu>Edge detect</guisubmenu>
+        <guisubmenu>Edge-Detect</guisubmenu>
         <guimenuitem>Edge...</guimenuitem>
       </menuchoice>.
     </para>
@@ -203,7 +203,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/edge-options.png"/>
+            fileref="images/filters/edge-detect/edge.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -212,75 +212,86 @@
         <term lang="en">Algorithm</term>
         <term lang="ja">アルゴリズム</term>
         <listitem>
-          <para lang="en">
-            Edge detector offers several detection methods:
-          </para>
-          <para lang="ja">
-            <guimenuitem>輪郭...</guimenuitem> フィルタには
-            つぎのような多彩な抽出方法があります。
-          </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Sobel</guilabel>: Here, this method has no options
-                and so is less interesting than the specific Sobel.
-              </para>
-              <para lang="ja">
-                <guimenuitem>ソーベル</guimenuitem>: これよりも 
-                <xref linkend="plug-in-sobel"/> の方がオプションがあるので
-                使い出があるのではないでしょうか。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Prewitt compass</guilabel>: Result doesn't look
-                different from Sobel.
-              </para>
-              <para lang="ja">
-                <guimenuitem>プレヴィット</guimenuitem>: <guimenuitem>ソーベル
-                </guimenuitem> と見た目がほとんど変わりません。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Gradient</guilabel>: Edges are thinner, less
-                contrasted and more blurred than Sobel.
-              </para>
-              <para lang="ja">
-                <guimenuitem>勾配/グラデーション</guimenuitem>: 輪郭は細くなり
-                ますが、 <guimenuitem>ソーベル</guimenuitem> よりもコントラスト
-                が弱く比較的ぼやけます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Roberts</guilabel>: No evident difference from Sobel.
-              </para>
-              <para lang="ja">
-                <guimenuitem>ロバーツ</guimenuitem>: <guimenuitem>ソーベル
-                </guimenuitem> と大して変わりありません。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Differential</guilabel>: Edges less bright.
-              </para>
-              <para lang="ja">
-                <guimenuitem>差分</guimenuitem>: 輪郭がやや暗くなります。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Laplace</guilabel>: Less interesting than the
-                specific one.
-              </para>
-              <para lang="ja">
-                <guimenuitem>ラプラス</guimenuitem>:
-                <xref linkend="plug-in-laplace"/> に比べると面白みが
-                ありません。
-              </para>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <para lang="en">
+              Edge detector offers several detection methods:
+            </para>
+            <para lang="ja">
+              <guimenuitem>輪郭...</guimenuitem> フィルタには
+              つぎのような多彩な抽出方法があります。
+            </para>
+            <varlistentry>
+              <term lang="en"><guilabel>Sobel</guilabel></term>
+              <term lang="ja"><guimenuitem>ソーベル</guimenuitem></term>
+              <listitem>
+                <para lang="en">
+                  Here, this method has no options and so is less interesting
+                  than the specific Sobel.
+                </para>
+                <para lang="ja">
+                  これよりも 
+                  <xref linkend="plug-in-sobel"/> の方がオプションがあるので
+                  使い出があるのではないでしょうか。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Prewitt compass</guilabel></term>
+              <term lang="ja"><guimenuitem>プレヴィット</guimenuitem></term>
+              <listitem>
+                <para lang="en">Result doesn't look different from Sobel.</para>
+                <para lang="ja">
+                  <guimenuitem>ソーベル</guimenuitem> と見た目がほとんど
+                  変わりません。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Gradient</guilabel></term>
+              <term lang="ja">
+                <guimenuitem>勾配/グラデーション</guimenuitem>
+              </term>
+              <listitem>
+                <para lang="en">
+                  Edges are thinner, less contrasted and more blurred than
+                  Sobel.
+                </para>
+                <para lang="ja">
+                  輪郭は細くなりますが、 <guimenuitem>ソーベル</guimenuitem>
+                  よりもコントラストが弱く比較的ぼやけます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Roberts</guilabel></term>
+              <term lang="ja"><guimenuitem>ロバーツ</guimenuitem></term>
+              <listitem>
+                <para lang="en">No evident difference from Sobel.</para>
+                <para lang="ja">
+                  <guimenuitem>ソーベル</guimenuitem> と大して変わりありません。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Differential</guilabel></term>
+              <term lang="ja"><guimenuitem>差分</guimenuitem></term>
+              <listitem>
+                <para lang="en">Edges less bright.</para>
+                <para lang="ja">輪郭がやや暗くなります。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Laplace</guilabel></term>
+              <term lang="ja"><guimenuitem>ラプラス</guimenuitem></term>
+              <listitem>
+                <para lang="en">Less interesting than the specific one.</para>
+                <para lang="ja">
+                  <xref linkend="plug-in-laplace"/> に比べると面白みが
+                  ありません。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -300,8 +311,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Wrap, Smear, Black</term>
-        <term lang="ja">回り込み, ぼかす, 黒</term>
+        <term lang="en">Wrap</term>
+        <term lang="en">Smear</term>
+        <term lang="en">Black</term>
+        <term lang="ja">回り込み</term>
+        <term lang="ja">ぼかす</term>
+        <term lang="ja">黒</term>
         <listitem>
           <para lang="en">
             Where the edge detector will get adjoining pixels for its
