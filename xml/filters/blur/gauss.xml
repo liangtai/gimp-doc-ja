@@ -11,7 +11,7 @@
   2005-11-10 en;fr reviewed by julien hardelin
   2005-09-30 de fixed figure issue by axel.wernicke
 -->
-<!--2010-05-11-->
+<!--2010-06-14-->
 <sect2 id="plug-in-gauss">
   <title lang="en">Gaussian Blur</title>
   <title lang="ja">ガウシアンぼかし...</title><!--ガウスぼかし-->
@@ -144,29 +144,40 @@
         <term lang="en">Blur Method</term>
         <term lang="ja">ぼかしの種類</term>
         <listitem>
-          <para lang="en">
-            <guilabel>IIR</guilabel>: IIR stands for <quote>Infinite Impulse
-            Response</quote>.This blur works best for large radius values and
-            for images which are not computer generated.
-          </para>
-          <para lang="en">
-            <guilabel>RLE</guilabel>: RLE stands for run-length
-            encoding. RLE Gaussian Blur is best used on
-            computer-generated images or those with large areas of
-            constant intensity.
-          </para>
-          <para lang="ja">
-            <guilabel><accel>I</accel>IR</guilabel> は <foreignphrase>Infinite
-            Impulse Response</foreignphrase> (無限インパルス応答) の略です。
-            このぼかし方法は写真などコンピュータ生成でない画像において大きな
-            半径を設定した場合に最高の仕上りが期待できます。
-          </para>
-          <para lang="ja">
-            <guilabel><accel>R</accel>LE</guilabel> は <foreignphrase>
-            Run-Length Encoding</foreignphrase> (連長圧縮) の略です。 <acronym>
-            RLE</acronym>ガウシアンぼかしの方法はコンピュータ生成画像や等質な
-            強度の部分が広く分布する画像において最高の仕上りが期待できます。
-          </para>
+          <variablelist>
+            <varlistentry>
+              <term><guilabel>IIR</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  IIR stands for <quote>Infinite Impulse Response</quote>.This
+                  blur works best for large radius values and for images which
+                  are not computer generated.
+                </para>
+                <para lang="ja">
+                  <foreignphrase>Infinite Impulse Response</foreignphrase>
+                  (無限インパルス応答) の略です。 このぼかし方法は写真など
+                  コンピュータ生成でない画像において大きな半径を設定した場合に
+                  最高の仕上りが期待できます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term><guilabel>RLE</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  RLE stands for <quote>run-length encoding</quote>. RLE
+                  Gaussian Blur is best used on computer-generated images or
+                  those with large areas of constant intensity.
+                </para>
+                <para lang="ja">
+                  <foreignphrase>Run-Length Encoding</foreignphrase> (連長圧縮)
+                  の略です。 <acronym>RLE</acronym>ガウシアンぼかしの方法は
+                  コンピュータ生成画像や等質な強度の部分が広く分布する画像に
+                  おいて最高の仕上りが期待できます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
     </variablelist>
