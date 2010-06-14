@@ -10,7 +10,7 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-01 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-06-14-->
 <sect2 id="plug-in-convmatrix">
   <title lang="en">Convolution Matrix</title>
   <title lang="ja">コンボリューション行列...</title>
@@ -186,31 +186,43 @@
             This is the 5x5 kernel matrix: you enter wanted values directly
             into boxes.
           </para>
-          <para lang="en">
-            <guilabel>Divisor</guilabel>: The result of previous calculation
-            will be divided by this divisor. You will hardly use 1, which
-            lets result unchanged, and 9 or 25 according to matrix size,
-            which gives the average of pixel values.
-          </para>
-          <para lang="en">
-            <guilabel>Offset</guilabel>: this value is added to the division
-            result. This is useful if result may be negative. This offset may
-            be negative.
-          </para>
           <para lang="ja">
             これは 5&times;5 行列を表しています。 それぞれの数値記入欄に直接
             任意の数値を入れてください。
           </para>
-          <para lang="ja">
-            <guilabel>割る数</guilabel>: 計算結果をこの数で
-            除算します。 1 は計算結果を変更しない値ですがめったに使われない
-            でしょう。 行列の大きさである 9 や 25 は画素の値の平均で割ります。
-          </para>
-          <para lang="ja">
-            <guilabel>オフセット</guilabel>: この値は除算の
-            あとで加わります。 負の値が出てよい場合に便利です。 ここに負の値も
-            設定できます。
-          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Divisor</guilabel></term>
+              <term lang="ja"><guilabel>割る数</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  The result of previous calculation will be divided by this
+                  divisor. You will hardly use 1, which lets result unchanged,
+                  and 9 or 25 according to matrix size, which gives the
+                  average of pixel values.
+                </para>
+                <para lang="ja">
+                  計算結果をこの数で除算します。 1 は計算結果を変更しない
+                  値ですがめったに使われないでしょう。 行列の大きさである 9 や
+                  25 は画素の値の平均で割ります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Offset</guilabel></term>
+              <term lang="ja"><guilabel>オフセット</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This value is added to the division result. This is useful
+                  if result may be negative. This offset may be negative.
+                </para>
+                <para lang="ja">
+                 この値は除算のあとで加わります。 負の値が出てよい場合に
+                 便利です。 ここに負の値も設定できます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -253,40 +265,46 @@
             初期画素が画像の縁にあるとカーネルの一部が画像からはみ出してしまい
             ます。 このときフィルタはどうすべきかを設定します。
           </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Extend</guilabel>: this part of kernel is not
-                taken into account.
-              </para>
-              <para lang="ja">
-                <guilabel>拡張</guilabel>: カーネルのはみ
-                出した部分は無視されます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Wrap</guilabel>: this part of kernel will study
-                pixels of the opposite border, so pixels disappearing from
-                one side reappear on the other side.
-              </para>
-              <para lang="ja">
-                <guilabel>回り込み</guilabel>: カーネルのはみ
-                出した部分は反対側の縁の画素を読み取りますので、 一方の辺で
-                消えた画素がもう一方の辺で復活することになります。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Crop</guilabel>: Pixels on borders are not
-                modified, but they are cropped.
-              </para>
-              <para lang="ja">
-                <guilabel>切抜き</guilabel>: 画像の縁の画素は
-                変更されず切り抜かれます。
-              </para>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Extend</guilabel></term>
+              <term lang="ja"><guilabel>拡張</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This part of kernel is not taken into account.
+                </para>
+                <para lang="ja">カーネルのはみ出した部分は無視されます。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Wrap</guilabel></term>
+              <term lang="ja"><guilabel>回り込み</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This part of kernel will study pixels of the opposite
+                  border, so pixels disappearing from one side reappear on the
+                  other side.
+                </para>
+                <para lang="ja">
+                  カーネルのはみ出した部分は反対側の縁の画素を読み取り
+                  ますので、 一方の辺で消えた画素がもう一方の辺で
+                  復活することになります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <guilabel>Crop</guilabel>
+              <guilabel>切抜き</guilabel>
+              <listitem>
+                <para lang="en">
+                  Pixels on borders are not modified, but they are cropped.
+                </para>
+                <para lang="ja">
+                  画像の縁の画素は変更されず切り抜かれます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -323,7 +341,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Alpha weighting</term>
+        <term lang="en">Alpha-weighting</term>
         <term lang="ja">アルファ加重</term>
         <listitem>
           <para lang="en">

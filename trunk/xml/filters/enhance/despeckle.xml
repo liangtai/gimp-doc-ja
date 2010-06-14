@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!-- section history:
-  2007-08-19 AntI: added 'es'
-  2007-04-12 KoSt: added 'no'
-  2005-12-07 replaced <simplesect> by <sect3> by lexa
-  050930 de replaced informalfigure by axel.wernicke
-  050830 de added by axel.wernicke
--->
-<!--2010-05-11-->
+
+<!--2010-06-14-->
 <sect2 id="plug-in-despeckle">
   <title lang="en">Despeckle</title>
   <title lang="ja">ノイズ除去...</title>
@@ -90,7 +84,8 @@
         <term lang="ja">プレビュー</term>
         <listitem>
           <para lang="en">
-            Parameter setting results are interactively displayed in preview.
+            If checked, parameter setting results are interactively displayed
+            in preview.
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
@@ -100,7 +95,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Type</term>
+        <term lang="en">Median</term>
         <term lang="ja">中央値</term>
         <listitem>
           <variablelist>
@@ -156,27 +151,28 @@
       <varlistentry>
         <term lang="en">Black level</term>
         <term lang="ja">黒レベル</term>
+        <!-- TODO: check range (-1-255) -->
         <listitem>
           <para lang="en">
             Removes pixels darker than set value (0-255).
           </para>
           <para lang="ja">
             ここで設定した値よりも暗い画素から色をとり除きます。 
-            範囲は 0 から 255 です。
+            範囲は -1 から 255 です。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">White level</term>
         <term lang="ja">白レベル</term>
+        <!-- TODO: check range (0-256) -->
         <listitem>
           <para lang="en">
-            <guilabel>White level</guilabel>: Removes pixels whiter
-            than set value (0-255).
+            Removes pixels whiter than set value (0-255).
           </para>
           <para lang="ja">
             ここで指定した値よりも明るい画素から色をとり除きます。 
-            範囲は 0 から 255 です。
+            範囲は 0 から 256 です。
           </para>
         </listitem>
       </varlistentry>
