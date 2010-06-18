@@ -10,7 +10,7 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-01 de added by axel.wernicke
 -->
-<!--2010-06-14-->
+<!--2010-06-18-->
 <sect2 id="plug-in-convmatrix">
   <title lang="en">Convolution Matrix</title>
   <title lang="ja">コンボリューション行列...</title>
@@ -173,7 +173,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/filters-generic-convolution.png"/>
+            fileref="images/filters/generic/convolution.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -229,41 +229,47 @@
         <term lang="en">Border</term>
         <term lang="ja">境界</term>
         <listitem>
-          <para>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/filters-convolution-milord.png"/>
-              </imageobject>
-            </inlinemediaobject>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/filters-convolution-extend.png"/>
-              </imageobject>
-            </inlinemediaobject>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/filters-convolution-wrap.png"/>
-              </imageobject>
-            </inlinemediaobject>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/filters-convolution-crop.png"/>
-              </imageobject>
-            </inlinemediaobject>
-          </para>
-          <para lang="en">Source, Extend, Wrap, Crop</para>
           <para lang="en">
             When the initial pixel is on a border, a part of kernel is out of
             image. You have to decide what filter must do:
           </para>
-          <para lang="ja">左から順に、 元画像、 拡張、 回り込み、 切抜き</para>
           <para lang="ja">
             初期画素が画像の縁にあるとカーネルの一部が画像からはみ出してしまい
             ます。 このときフィルタはどうすべきかを設定します。
+          </para>
+          <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/generic/convolution-milord.png"/>
+              </imageobject>
+            </inlinemediaobject>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/generic/convolution-extend.png"/>
+              </imageobject>
+            </inlinemediaobject>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/generic/convolution-wrap.png"/>
+              </imageobject>
+            </inlinemediaobject>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/generic/convolution-crop.png"/>
+              </imageobject>
+            </inlinemediaobject>
+          </para>
+          <para lang="en">
+            From left: source image, <guilabel>Extend</guilabel> border,
+            <guilabel>Wrap</guilabel> border, <guilabel>Crop</guilabel> border
+          </para>
+          <para lang="ja">
+            左から順に、 元画像、 <guilabel>拡張</guilabel>、
+            <guilabel>回り込み</guilabel>、 <guilabel>切抜き</guilabel>
           </para>
           <variablelist>
             <varlistentry>
