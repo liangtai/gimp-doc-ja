@@ -8,7 +8,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   050916 de added by axel.wernicke
 -->
-<!--2009-09-14-->
+<!--2010-06-30-->
 <sect2 id="plug-in-oilify">
   <title lang="en">Oilify</title>
   <title lang="ja">油絵化...</title>
@@ -59,15 +59,14 @@
     </figure>
     <para lang="en">
       This filter makes the image look like an oil painting. The
-      <parameter>Mask Size</parameter> controls the outcome:  a high
-      value gives the image less detail, as if you had used a larger
-      brush.
+      <guilabel>Mask Size</guilabel> controls the outcome:  a high value gives
+      the image less detail, as if you had used a larger brush.
     </para>
     <para lang="ja">
-      <guimenuitem>油絵化...</guimenuitem> フィルタは画像を
-      まるで油絵のように見せる処理をします。 仕上がりを左右するのは <guilabel>
-      マスクサイズ</guilabel> です。 高い値にすればまるで
-      太い絵筆を使って描いたかのように画像の詳細さを失います。
+      <guimenuitem>油絵化...</guimenuitem> フィルタは画像を油絵のように見せる
+      処理をします。 仕上がりを左右するのは <guilabel>マスクサイズ</guilabel>
+      です。 高い値にすればまるで太い絵筆を使って描いたかのように画像の
+      詳細さを失います。
     </para>
     <tip>
       <para lang="en">
@@ -90,7 +89,7 @@
         <guimenu>Filters</guimenu>
         <guisubmenu>Artistic</guisubmenu>
         <guimenuitem>Oilify...</guimenuitem>
-      </menuchoice>
+      </menuchoice>.
     </para>
     <para lang="ja">
       画像ウィンドウのメニューより
@@ -117,7 +116,7 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term lang="en">Mask Size</term>
+        <term lang="en">Mask size</term>
         <term lang="ja">マスクサイズ</term>
         <listitem>
           <para lang="en">
@@ -132,17 +131,66 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Use Intensity Algorithm</term>
+        <term lagn="en">Use mask-size map</term>
+        <term lagn="ja">マスクサイズマップを使用</term>
+        <listitem>
+          <para lang="en">
+            You may use a mask-size map to control
+            <guilabel>Mask&nbsp;size</guilabel> partially. Mask size is
+            reduced accordings to darkness in each pixel of the map image.
+            You can select a map image among the current opened images of the
+            same size as the source image.
+          </para>
+          <para lang="ja">
+            サイズマップ画像を利用するとブラシの太さを部分的に調整できます。 
+            マップ画像の画素が暗ければブラシが細くなります。 マップ画像は
+            元の画像と同じ大きさの現在開かれている画像の中から選べます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Exponent</term>
+        <term lang="ja">指数</term>
+        <listitem>
+          <para lang="en">
+            Exponent selects density of the brush mask used to paint the
+            oily render.
+          </para>
+          <para lang="ja">
+            <guilabel>指数</guilabel> スライダは油絵の具を塗るのに使われる
+            ブラシの密度を調整します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Use exponent map</term>
+        <term lang="ja">指数マップを使用</term>
+        <listitem>
+          <para lang="en">
+            You may use an exponent map to control density of brush touch
+            partially. Density is reduced accordings to darkness in each pixel
+            of the map image. You can select a map image among the current
+            opened images of the same size as the source image."
+          </para>
+          <para lang="ja">
+            指数マップを利用するとブラシの密度を部分的に調整できます。 
+            マップ画像の画素が暗ければブラシの密度が小さくなります。 
+            マップ画像は元の画像と同じ大きさの現在開かれている画像の中から
+            選べます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Use intensity algorithm</term>
         <term lang="ja">強度アルゴリズムを使用</term>
         <listitem>
           <para lang="en">
-            Use Intensity Algorithm changes the mode of operation to help
-            preserve detail and coloring.
+            <quote>Use Intensity Algorithm</quote> changes the mode of
+            operation to help preserve detail and coloring.
           </para>
           <para lang="ja">
-            <guilabel>強度アルゴリズム</guilabel> オプション
-            を有効にすると色使いや詳細さを保つのを助ける操作モードに切り替わり
-            ます。
+            <guilabel>強度アルゴリズム</guilabel> オプションを有効にすると
+            色使いや詳細さを保つのを助ける操作モードに切り替わります。
           </para>
         </listitem>
       </varlistentry>

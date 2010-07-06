@@ -9,7 +9,7 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-04 de added by axel.wernicke
 -->
-<!--2010-05-24-->
+<!--2010-06-30-->
 <sect2 id="plug-in-sparkle">
   <title lang="en">Sparkle</title>
   <title lang="ja">きらめき...</title>
@@ -119,8 +119,8 @@
         <term lang="ja">プレビュー</term>
         <listitem>
           <para lang="en">
-            Parameter setting results are interactively displayed in preview.
-            Scroll bars allow you to move around the image.
+            If checked, parameter setting results are interactively displayed
+            in preview. Scroll bars allow you to move around the image.
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
@@ -130,7 +130,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Luminosity Threshold</term>
+        <term lang="en">Luminosity threshold</term>
         <term lang="ja">光度閾値</term>
         <listitem>
           <para lang="en">
@@ -144,7 +144,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Flare Intensity</term>
+        <term lang="en">Flare intensity</term>
         <term lang="ja">フレア強度</term>
         <listitem>
           <para lang="en">
@@ -158,7 +158,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Spike Length</term>
+        <term lang="en">Spike length</term>
         <term lang="ja">尖りの長さ</term>
         <listitem>
           <para lang="en">
@@ -172,7 +172,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Spike Points</term>
+        <term lang="en">Spike points</term>
         <term lang="ja">尖りの数</term>
         <listitem>
           <para lang="en">
@@ -190,7 +190,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Spike Angle</term>
+        <term lang="en">Spike angle</term>
         <term lang="ja">尖りの角度 (-1: 乱数)</term>
         <listitem>
           <para lang="en">
@@ -212,7 +212,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Spike Density</term>
+        <term lang="en">Spike density</term>
         <term lang="ja">尖り密度</term>
         <listitem>
           <para lang="en">
@@ -227,16 +227,16 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Opacity</term>
-        <term lang="ja">不透明度</term>
+        <term lang="en">Transparency</term>
+        <term lang="ja">透明度<!--不透明度--></term>
         <listitem>
           <para lang="en">
-            When you decrease Opacity (0.0-1.0), sparkles become more
+            When you increase transparency (0.0-1.0), sparkles become more
             transparent and the layer beneath becomes visible. If there is no
             other layer, sparkle saturation decreases.
           </para>
           <para lang="ja">
-            不透明度を減らすときらめきの色が透過し始め、 下側のレイヤーの色が
+            透明度を増すときらめきの色が透過し始め、 下側のレイヤーの色が
             見えてくるようになります。 下側に何もレイヤーがなければきらめきの
             色の彩度が落ちてゆきます。 値は 0.00 から 1.00 の範囲で指定して
             ください。
@@ -244,12 +244,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Random Hue</term>
+        <term lang="en">Random hue</term>
         <term lang="ja">乱数色相</term>
         <listitem>
           <para lang="en">
-            <!--How does the numbers influence the randomness? -->
-            This option should change sparkle hue at random... (0.0-1.0)
+            <!--FIXME: How does the numbers influence the randomness? -->
+            This option should change sparkle hue at random... (0.0-1.0).
           </para>
           <para lang="ja">
             <guilabel>乱数色相</guilabel> オプションは
@@ -259,12 +259,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Random Saturation</term>
+        <term lang="en">Random saturation</term>
         <term lang="ja">乱数彩度</term>
         <listitem>
           <para lang="en">
             This option should change sparkle saturation at random...
-            (0.0-1.0)
+            (0.0-1.0).
           </para>
           <para lang="ja">
             このオプションは無作為な彩度変化の発生確率を設定します。 値は
@@ -273,7 +273,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Preserve Luminosity</term>
+        <term lang="en">Preserve luminosity</term>
         <term lang="ja">光度を保存する</term>
         <listitem>
           <para lang="en">
@@ -301,7 +301,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Add Border</term>
+        <term lang="en">Add border</term>
         <term lang="ja">縁付加</term>
         <listitem>
           <para lang="en">
@@ -315,24 +315,24 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Natural, Foreground, Background Colors</term>
-        <term lang="ja">自然色, 描画色, 背景色</term>
+        <term lang="en">Natural</term>
+        <term lang="en">Foreground</term>
+        <term lang="en">Background Colors</term>
+        <term lang="ja">自然色</term>
+        <term lang="ja">描画色</term>
+        <term lang="ja">背景色</term>
         <listitem>
           <para lang="en">
             You can change there the color of central pixels. This color will
-            be added in Screen mode (Multiply if Inverse is checked). You
-            can select between <guilabel>Natural color</guilabel> (the color
-            of the pixel in the image), <guilabel>Foreground color
-            </guilabel> and <guilabel>Background color</guilabel>.
+            be added in Screen mode (Multiply if <guilabel>Inverse</guilabel>
+            is checked). <quote>Natural color</quote> is the color of the
+            pixel in the image.
           </para>
           <para lang="ja">
             きらめき中心の色をここで変更できます。 ここで選ばれた色は
-            スクリーンモードで描画 (<guilabel>反転</guilabel>
-            を指定している場合は乗算モードで描画) されます。 元画像の明るい画素
-            の色をそのまま利用する <guilabel>自然色
-            </guilabel> と、 ツールボックスの色標識で示されている 
-            <guilabel>描画色</guilabel> と <guilabel>
-            背景色</guilabel> のいずれかを選べます。
+            スクリーンモードで描画 (<guilabel>反転</guilabel> を指定している
+            場合は乗算モードで描画) されます。 <quote>自然色</quote>は元画像の
+            明るい画素の色をそのまま利用します。
           </para>
         </listitem>
       </varlistentry>
