@@ -2,7 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2007-10-14 KoSt: updatet no to v2.4
+  2007-10-14 KoSt: updated no to v2.4
   2007-09-06 AntI: added 'es'
   2007-08-19 alex falappa: new sections for 2.4 and torough review
   2007-08-07 alex falappa: ude's fix to 'it', polar mode
@@ -15,7 +15,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-10-14 ceated by julien hardelin
 -->
-<!--2009-09-15-->
+<!--2010-07-20-->
 <sect2 id="plug-in-displace">
   <title lang="en">Displace</title>
   <title lang="ja">ずらしマップ...</title>
@@ -171,10 +171,10 @@
         <listitem>
           <para lang="en">
             You can choose working in
-            <link linkend="plug-in-displace-cartesian">cartesian</link>
+            <link linkend="plug-in-displace-cartesian">Cartesian</link>
             coordinates, where pixels are displaced in X or Y direction, or
             working in
-            <link linkend="plug-in-displace-polar">polar</link> coordinates,
+            <link linkend="plug-in-displace-polar">Polar</link> coordinates,
             where the image is pinched and whirled by displacing pixels in
             radial or tangent direction.
           </para>
@@ -205,42 +205,49 @@
             このオプションは活性レイヤーもしくはその選択範囲の境界線付近の画素
             をずらした跡地をどのように扱うかが指定できます。
           </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Wrap</guilabel>:
-                With this option, what disappears on one edge reappears on
-                the opposite edge.
-              </para>
-              <para lang="ja">
-                <guilabel>回り込み</guilabel>: この選択肢は
-                ずらされてはみ出した画素を反対側の縁で利用します。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Smear</guilabel>:
-                With this option, pixels vacated by displacement are
-                replaced with pixels stretched from the adjacent part of the
-                image.
-              </para>
-              <para lang="ja">
-                <guilabel>ぼかす</guilabel>: この選択肢は
-                画素が去って空になった領域を付近の画素の色の延伸で補います。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Black</guilabel>:
-                With this option, pixels vacated by displacement are replaced
-                with black.
-              </para>
-              <para lang="ja">
-                <guilabel>黒</guilabel>: この選択肢は画素が
-                去って空になった領域を黒く塗りつぶします。
-              </para>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Wrap</guilabel></term>
+              <term lang="ja"><guilabel>回り込み</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  With this option, what disappears on one edge reappears on
+                  the opposite edge.
+                </para>
+                <para lang="ja">
+                  この選択肢はずらされてはみ出した画素を反対側の縁で利用します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Smear</guilabel></term>
+              <term lang="ja"><guilabel>ぼかす</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  With this option, pixels vacated by displacement are
+                  replaced with pixels stretched from the adjacent part of the
+                  image.
+                </para>
+                <para lang="ja">
+                  この選択肢は画素が去って空になった領域を
+                  付近の画素の色の延伸で補います。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Black</guilabel></term>
+              <term lang="ja"><guilabel>黒</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  With this option, pixels vacated by displacement are
+                  replaced with black.
+                </para>
+                <para lang="ja">
+                  この選択肢は画素が去って空になった領域を黒く塗りつぶします。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -286,8 +293,10 @@
       </para>
       <variablelist>
         <varlistentry>
-          <term lang="en">X/Y Displacements</term>
-          <term lang="ja">X ずらし; Y ずらし</term>
+          <term lang="en">X Displacements</term>
+          <term lang="en">Y Displacements</term>
+          <term lang="ja">X ずらし</term>
+          <term lang="ja">Y ずらし</term>
           <listitem>
             <para lang="en">
               If the respective option is activated, image pixels
@@ -421,7 +430,7 @@
             </para>
             <para lang="en">
               For the values and the displacement map see above
-              (<quote>X/Y Displacements</quote>).
+              (<quote>X/Y displacement</quote>).
             </para>
             <para lang="en">
               The displacement is independent from the polar distance, all
