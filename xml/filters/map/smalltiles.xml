@@ -6,7 +6,7 @@
   2007-05-07 KoSt: added 'no'
   2005-11-15: created by julien hardelin
 -->
-<!--2009-09-15-->
+<!--2010-07-21-->
 <sect2 id="plug-in-small-tiles">
   <title lang="en">Small Tiles</title>
   <title lang="ja">小さくして並べる...</title>
@@ -105,20 +105,84 @@
     </figure>
     <variablelist>
       <varlistentry>
-        <term lang="en">Number of Segments</term>
-        <term lang="ja">区切りの数</term>
+        <term lang="en">Flip</term>
+        <term lang="ja">反転</term>
         <listitem>
           <para lang="en">
-            <guilabel>n2</guilabel> means <quote>the image into n to
-            the power of two tiles</quote>, where <quote>n</quote> is the
-            number  you set with the slider or its input box. n = 3 will
-            make nine tiles in the image.
+            You can flip tiles according to the
+            <guilabel>Horizontal</guilabel> or/and
+            <guilabel>Vertical</guilabel> axis by checking the corresponding
+            option(s).
+          </para>
+          <para lang="en">
+            You can also decide which tiles will be flipped:
+            <variablelist>
+              <varlistentry>
+                <term><guilabel>All tiles</guilabel></term>
+                <listitem>
+                  <para>
+                    No comment.
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>Alternate tiles</guilabel></term>
+                <listitem>
+                  <para>
+                    Only odd tiles will be flipped.
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>Explicit tile</guilabel></term>
+                <listitem>
+                  <para>
+                    You can define a particular tile using both
+                    <guilabel>Row</guilabel> and <guilabel>Column</guilabel>
+                    input boxes.  This tile will be marked with a box in
+                    Preview. Press <guibutton>Apply</guibutton> to mark this
+                    explicit tile. Repeat this procedure to mark more than one
+                    tile.
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
           </para>
           <para lang="ja">
-            <guilabel><accel>n</accel>2<!--<superscript>2</superscript>--></guilabel>
-            とはスライダや付属する数値記入欄で示された値<quote>n</quote>を 2 乗
-            した数のタイルで画像を分割することを表しています。 n = 3 なら画像は
-            縦 3 行横 3 列の 9 枚のタイルからなる構成に変わります。
+            <guilabel>水平</guilabel> や <guilabel>垂直</guilabel> を
+            有効にするとその方向におのおののタイルが規則的に反転します。
+          </para>
+          <para lang="ja">
+            反転させるタイルはつぎのオプションで決めます。
+            <variablelist>
+              <varlistentry>
+                <term><guilabel>すべてのタイル</guilabel></term>
+                <listitem>
+                  <para>言葉通りです。</para>
+                </listitem>
+              </variablelist>
+              <variablelist>
+                <term><guilabel>一つおきのタイル</guilabel></term>
+                <listitem>
+                  <para>
+                    一つおきにタイルが反転され、 市松模様のように、 同じ向きの
+                    タイルが隣り合わない並びになります。
+                  </para>
+                </listitem>
+              </variablelist>
+              <variablelist>
+                <term><guilabel>指定のタイル</guilabel></term>
+                <listitem>
+                  <para>
+                    <guilabel>列</guilabel> と <guilabel>行</guilabel> の
+                    番号記入欄で指定した位置のタイルはプレビュー画面に
+                    反転色枠で示されます。 水平や垂直の反転方向を選んでから
+                    <guibutton>適用</guibutton> ボタンをクリックすれば
+                    そのタイルだけを反転できます。
+                  </para>
+                </listitem>
+              </variablelist>
+            </variablelist>
           </para>
         </listitem>
       </varlistentry>
@@ -139,72 +203,20 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Flip</term>
-        <term lang="ja">反転</term>
+        <term lang="en">Number of Segments</term>
+        <term lang="ja">区切りの数</term>
         <listitem>
           <para lang="en">
-            You can flip tiles according to the
-            <guilabel>Horizontal</guilabel> or/and
-            <guilabel>Vertical</guilabel> axis by checking the corresponding
-            option(s).
-          </para>
-          <para lang="en">
-            You can also decide which tiles will be flipped:
-            <itemizedlist>
-              <listitem>
-                <para>
-                  <guilabel>All tiles</guilabel>: no comment.
-                </para>
-              </listitem>
-              <listitem>
-                <para>
-                  <guilabel>Alternate tiles</guilabel>: only odd tiles will
-                  be flipped.
-                </para>
-              </listitem>
-              <listitem>
-                <para>
-                  <guilabel>Explicit tile</guilabel>: you can define, a
-                  particular tile by using both <guilabel>Line</guilabel>
-                  and <guilabel>Column</guilabel> input boxes. This tile
-                  will be marked with a box in Preview.
-                </para>
-              </listitem>
-            </itemizedlist>
+            <guilabel>n2</guilabel> means <quote>the image into n to
+            the power of two tiles</quote>, where <quote>n</quote> is the
+            number  you set with the slider or its input box. n = 3 will
+            make nine tiles in the image.
           </para>
           <para lang="ja">
-            <guilabel>水平</guilabel> や 
-            <guilabel>垂直</guilabel> を有効にすると
-            その方向におのおののタイルが規則的に反転します。
-          </para>
-          <para lang="ja">
-            反転させるタイルはつぎのオプションで決めます。
-            <itemizedlist>
-              <listitem>
-                <para>
-                  <guilabel>すべてのタイル</guilabel>: 
-                  言葉通りです。
-                </para>
-              </listitem>
-              <listitem>
-                <para>
-                  <guilabel>一つおきのタイル</guilabel>: 
-                  一つおきにタイルが反転され、 市松模様のように、 同じ向きの
-                  タイルが隣り合わない並びになります。
-                </para>
-              </listitem>
-              <listitem>
-                <para>
-                  <guilabel>指定のタイル</guilabel>:
-                  <guilabel>列</guilabel> と <guilabel>
-                  行</guilabel> の番号記入欄で指定した位置の
-                  タイルはプレビュー画面で反転色枠で示されます。 水平や垂直の
-                  反転方向を選んでから <guibutton>適用
-                  </guibutton> ボタンをクリックすればそのタイルだけを
-                  反転できます。
-                </para>
-              </listitem>
-            </itemizedlist>
+            <guilabel><accel>n</accel>2<!--<superscript>2</superscript>--></guilabel>
+            とはスライダや付属する数値記入欄で示された値<quote>n</quote>を 2 乗
+            した数のタイルで画像を分割することを表しています。 n = 3 なら画像は
+            縦 3 行横 3 列の 9 枚のタイルからなる構成に変わります。
           </para>
         </listitem>
       </varlistentry>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+
+<!--2010-07-20-->
+<sect2 id="script-fu-sota-chrome-it">
+  <title lang="en">Stencil Chrome</title>
+  <title lang="ja">ステンシルクローム...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Decor</secondary>
+    <tertiary>Stencil Chrome</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Stencil Chrome</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>装飾</secondary>
+    <tertiary>ステンシルクローム</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ステンシルクローム</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure id="script-fu-sota-chrome-it-example">
+      <title lang="en">
+        Example for the <quote>Stencil Chrome</quote> filter
+      </title>
+      <title lang="ja"><quote>ステンシルクローム</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_grayscale.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/decor/taj-chrome-it.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Stencil Chrome</quote> applied</para>
+          <para lang="ja"><quote>ステンシルクローム</quote>適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter provides a state of the art chrome effect. The source image
+      must be a grayscale image containing a single layer without alpha
+      channel. This layer is used as mask (<quote>stencil</quote>) for the
+      chrome effect.
+    </para>
+    <para lang="en">
+      The filter creates a new image with the chrome effect applied to the
+      source image or, if a selection exists, to the selection of the source
+      image (a nice background is added too).
+    </para>
+    <para lang="ja">
+      <guimenuitem>ステンシルクローム...</guimenuitem> フィルタはあのなつかしい
+      クローム効果がつけられるスクリプトです。 元画像はアルファチャンネルの無い
+      1層だけのレイヤーからなるグレースケール画像でなくてはなりません。 この
+      画像はクローム効果のマスク (<quote>stencil</quote>) として使われます。
+    </para>
+    <para lang="ja">
+      スクリプトはクローム効果のかかった画像を新たに作成します。 選択範囲が
+      なければ画像全体に適用された結果を、 選択範囲があればその範囲だけ適用され
+      素敵な背景がついた結果が新しい画像に現れます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Decor</guisubmenu>
+        <guimenuitem>Stencil Chrome</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>装飾</guisubmenu>
+        <guimenuitem>ステンシルクローム...</guimenuitem>
+      </menuchoice>
+    </para>
+    <tip>
+      <para lang="en">
+        If this command remains grayed out although the image is grayscale,
+        check for an Alpha channel and delete it.
+      </para>
+      <para lang="ja">
+        原稿画像がグレースケールなのにこのコマンド項目が灰色無効なままで
+        使えないときは、 原稿画像にアルファチャンネルが加わっていないか確かめ、
+        あれば削除してください。
+      </para>
+    </tip>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Stencil Chrome</quote> options</title>
+      <title lang="ja"><quote>ステンシルクローム</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/decor/chrome-it.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Chrome saturation</term>
+        <term lang="en">Chrome lightness</term>
+        <term lang="ja">クローム彩度</term>
+        <term lang="ja">クローム明度</term>
+        <listitem>
+          <!-- TRANSLATORS: <quote>d "Chrome", "Highlight" and
+"Drop Shadow" are the layer names set by the script. -->
+          <para lang="en">
+            Use this option to control how
+            <link linkend="gimp-tool-hue-saturation">saturation and
+            lightness</link> of the <quote>Chrome</quote> layer are adjusted.
+            Negative values decrease saturation and lightness respectively.
+          </para>
+          <para lang="ja">
+            このオプションは、 作成される<quote>Chrome</quote>レイヤーの
+            <link linkend="gimp-tool-hue-saturation">彩度と明度</link> の調整に
+            使えます。 負の値は彩度を低くし、 明度を落とします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Chrome factor</term>
+        <term lang="ja">クローム率</term>
+        <listitem>
+          <para lang="en">
+            This factor lets you adjust offsets, feather radius, and brush
+            size used to construct the <quote>Chrome</quote> and
+            <quote>Highlight</quote> layer (and the <quote>Drop Shadow</quote>
+            as well).
+          </para>
+          <para lang="en">
+            Change with caution, decreasing this value may make the chrome
+            effect worse. The default factor 0.75 seems to be a good choice.
+          </para>
+          <para lang="ja">
+            この値は<quote>Chrome</quote>レイヤーと<quote>Highlight</quote>
+            レイヤーを作成する際のオフセット値、 ぼかし半径、 ブラシサイズを
+            調整するために使われます。 背景が作成されるときは
+            <quote>Drop Shadow</quote>レイヤーにも影響があります。
+          </para>
+          <para lang="ja">
+            値を下げるとクローム効果のはたらきが悪くなりがちなので十分ご注意
+            ください。 既定の値 0.75 が最良のようです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Environment map</term>
+        <term lang="ja">環境マップ</term>
+        <listitem>
+          <para lang="en">
+            The environment map is an image that is added as some kind of
+            <quote>noise</quote> to the source. The effect is best to see if
+            you use a simple map with some obvious shapes:
+          </para>
+          <para lang="ja">
+            環境マップは<quote>ノイズ</quote>のような効果をつける画像のこと
+            です。 つぎの例のようにはっきりした形が描かれた単純なマップを使うと
+            最高の仕上りになります。
+          </para>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/decor/chrome-it-env-example.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">Using a simple environment map</para>
+              <para lang="ja">簡明な環境マップを使う</para>
+            </caption>
+          </mediaobject>
+          <para lang="en">
+            The environment map must be a grayscale image too. Size doesn't
+            matter, the environment map is scaled to the size of the source
+            image.
+          </para>
+          <para lang="ja">
+            環境マップもグレースケール画像でなくてはなりません。 画像の大きさは
+            問われません。 マップ画像は元の画像の大きさに合うように縦と横に
+            それぞれ拡大もしくは縮小されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Highlight balance</term>
+        <term lang="ja">ハイライトバランス</term>
+        <listitem>
+          <para lang="en">
+            This color is used to modify the
+            <link linkend="gimp-tool-color-balance">color balance</link> of
+            the <quote>Highlight</quote> layer: the amount of red, green, and
+            blue colors is increased according to the corresponding values of
+            the specified option.
+          </para>
+          <para lang="en">
+            Avoid colors with red, green or blue value > 230.
+          </para>
+          <para lang="ja">
+            この色は<quote>Highlight</quote>レイヤーの
+            <link linkend="gimp-tool-color-balance">カラーバランス</link> を
+            変更するのに使われます。 赤・緑・青がそれぞれのオプションに応じて
+            強まります。
+          </para>
+          <para lang="ja">
+            赤・緑・青のいずれの色も値が 230 を超えぬようにしてください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Chrome balance</term>
+        <term lang="ja">クロームバランス</term>
+        <listitem>
+          <para lang="en">
+            Same as above, but modifies the
+            <link linkend="gimp-tool-color-balance">color balance</link> of
+            the <quote>Chrome</quote> layer.
+          </para>
+          <para lang="ja">
+            <quote>Chrome</quote>レイヤーの
+            <link linkend="gimp-tool-color-balance">カラーバランス</link> を
+            変更するのに使われることを除けば<quote>ハイライトバランス</quote>と
+            同じです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Chrome white areas</term>
+        <term lang="ja">白い部分をクローム化</term>
+        <listitem>
+          <para lang="en">
+            If checked (this is the default), the source image is used as
+            mask. If unchecked, the <emphasis>inverted</emphasis> source image
+            is used.
+          </para>
+          <para lang="ja">
+            このオプションが有効 (既定ではチェックが入っている) ならば、 
+            元画像はマスクとして用いられます。 チェックを外すと元画像は
+            <emphasis>明度を反転</emphasis> して使われます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">How to create the chrome effect</title>
+    <title lang="ja">クローム効果が生まれるしくみ</title>
+    <para lang="en">
+      The following section provides a brief and simplified description of how
+      the script (actually this filter is a Script-Fu) creates the chrome
+      effect.
+    </para>
+    <para lang="en">
+      If you apply the filter to your source images and then look at the
+      <link linkend="gimp-layer-dialog">layer dialog</link> of the resulting
+      image, you will see that there are two main layers which make up the
+      chrome effect: the <quote>Chrome</quote> layer and the
+      <quote>Highlight</quote> layer. These layers are created as follows:
+    </para>
+    <para lang="ja">
+      以下の節ではこのスクリプト (実際これは Script-Fu で書かれている) が
+      どうやってクローム効果を発揮するのかについて簡潔に述べています。
+    </para>
+    <para lang="ja">
+      このフィルタを画像に適用したあと、 生成された画像について
+      <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> をご覧
+      いただくと、 とくに<quote>Chrome</quote>と<quote>Highlight</quote>の2層の
+      レイヤーがクローム効果を生むのに使われていることがわかります。 これらの
+      レイヤーはつぎのようにして生成されます。
+    </para>
+    <procedure>
+      <step>
+        <para lang="en">
+          The script constructs a somewhat simplified and blurred layer from
+          the source image (from the inverted source image if
+          <guilabel>Chrome&nbsp;white&nbsp;areas</guilabel> is unchecked).
+        </para>
+        <para lang="ja">
+          スクリプトはまず元画像をいくぶん単純化しぼかしをかけたものから
+          レイヤーを作成します。 <guilabel>白い部分をクローム化</guilabel> を
+          無効にした場合は白黒反転させた元画像がもとになります。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/decor/chrome-it-step1.png"/>
+          </imageobject>
+        </mediaobject>
+        <para lang="en">
+          The <guilabel>Chrome factor</guilabel> controls the appearance of
+          this layer.
+        </para>
+        <para lang="ja">
+          <guilabel>クローム率</guilabel> によりそのレイヤーの様相が
+          調整されます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          The (scaled) environment map is blurred and merged into the above
+          layer with 50% opacity. (Do you spot the cat in the introducing
+          <link linkend="script-fu-sota-chrome-it-example">example</link>?)
+        </para>
+        <para lang="ja">
+          環境マップ画像は元画像の大きさに合わせて拡縮され、 ぼかしがかけられて
+          さきのレイヤー上に透明度 50% で重なります。 (冒頭の
+          <link linkend="script-fu-sota-chrome-it-example">適用例画像</link>
+          から子猫を見付けられますか？)
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/decor/chrome-it-step2.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Merging the environment map</para>
+            <para lang="ja">環境画像を統合</para>
+          </caption>
+        </mediaobject>
+      </step>
+      <step>
+        <para lang="en">
+          The brightness (value) of the layer is modified according to a
+          spline-based intensity curve.
+        </para>
+        <para lang="ja">
+          できたレイヤーの明るさ (明度) が強度スプライン曲線に従って
+          変更されます。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/decor/chrome-it-step3.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Modifying the intensity curve</para>
+            <para lang="ja">強度曲線を変更</para>
+          </caption>
+        </mediaobject>
+      </step>
+      <step>
+        <para lang="en">
+          A layer mask is added, initialized with the source image
+          (the <quote>Chrome Stencil</quote>). This is the
+          <quote>Chrome</quote> layer before the final step.
+        </para>
+        <para lang="en">
+          The <quote>Highlight</quote> layer is a copy of the
+          <quote>Chrome</quote> layer where the layer mask is stroked with a
+          white brush.
+        </para>
+        <para lang="ja">
+          元画像 (<quote>クロームステンシル</quote>) で初期化された
+          レイヤーマスクが加わります。 これが最終段階で<quote>Chrome</quote>
+          レイヤーとなります。
+        </para>
+        <para lang="ja">
+          <quote>Highlight</quote>レイヤーは<quote>Chrome</quote>レイヤーに
+          白ブラシで描いたレイヤーマスクがついた複製です。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/decor/chrome-it-step4.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Chrome and Highlight base</para>
+            <para lang="ja">クロームとハイライトの各レイヤーの初期段階</para>
+          </caption>
+        </mediaobject>
+      </step>
+      <step>
+        <para lang="en">
+          For both layers the color balance is modified (according to
+          <guilabel>Highlight&nbsp;balance</guilabel> and
+          <guilabel>Chrome&nbsp;balance</guilabel>), increasing the amount of
+          red, green, and blue, with emphasis on highlights.
+        </para>
+        <para lang="en">
+          Additionally, saturation and lightness of the <quote>Chrome</quote>
+          layer is modified (controlled by
+          <guilabel>Chrome&nbsp;saturation</guilabel> and
+          <guilabel>Chrome&nbsp;lightness</guilabel>).
+        </para>
+        <para lang="ja">
+          両レイヤーともカラーバランスが変更を受けます。 
+          (<guilabel>ハイライトバランス</guilabel> と
+          <guilabel>クロームバランス</guilabel> がそれぞれに関わります。)
+          ハイライト部分を強調しつつ赤・緑・青の各色の値が増やされる処理です。
+        </para>
+        <para lang="ja">
+          さらに、 <quote>Chrome</quote>レイヤーの彩度と輝度が変更を受けます。
+          (<guilabel>クローム彩度</guilabel> と
+          <guilabel>クローム明度</guilabel> が関わります。)
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/decor/chrome-it-step5.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Chrome and Highlight layer</para>
+            <para lang="ja">クロームレイヤーとハイライトレイヤー</para>
+          </caption>
+        </mediaobject>
+      </step>
+    </procedure>
+    <para lang="en">
+      Now add a drop shadow and a background layer and you get the
+      <link linkend="script-fu-sota-chrome-it-example">Example image</link>
+      for the <quote>Stencil Chrome</quote> filter.
+    </para>
+    <para lang="ja">
+      ドロップシャドウがつき背景レイヤーが加わると
+      <quote>ステンシルクローム</quote>フィルタのような
+      <link linkend="script-fu-sota-chrome-it-example">適用例画像</link>
+      となります。
+    </para>
+  </sect3>
+</sect2>

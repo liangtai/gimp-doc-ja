@@ -7,7 +7,7 @@
   2006-12-23 lexa: added de translation
   2005-11-15: created by julien hardelin
 -->
-<!--2009-09-15-->
+<!--2010-07-21-->
 <sect2 id="plug-in-papertile">
   <title lang="en">Paper Tile</title>
   <title lang="ja">紙タイル...</title>
@@ -129,32 +129,36 @@
         <term lang="en">Movement</term>
         <term lang="ja">移動</term>
         <listitem>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Max%</guilabel>
-                is the maximum displacement percentage against the side size
-                of squares.
-              </para>
-              <para lang="ja">
-                <guilabel>最大(%)</guilabel> は断片の辺の
-                長さに対するずれの大きさの最大限度の割合です。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Wrap around</guilabel>:
-                As tiles move, some can go out image borders. If this option
-                is checked, what goes out on one side goes in on the opposite
-                side.
-              </para>
-              <para lang="ja">
-                断片は移動するので画像からはみ出します。 <guilabel>
-                回り込み</guilabel> オプションを有効に
-                すると、 はみ出した部分が反対側の辺に現れるようになります。
-              </para>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Max%</guilabel></term>
+              <term lang="ja"><guilabel>最大(%)</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This is the maximum displacement percentage against the side
+                  size of squares.
+                </para>
+                <para lang="ja">
+                  断片の辺の長さに対するずれの大きさの最大限度の割合です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Wrap around</guilabel></term>
+              <term lang="ja"><guilabel>回り込み</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  As tiles move, some can go out image borders. If this option
+                  is checked, what goes out on one side goes in on the
+                  opposite side.
+                </para>
+                <para lang="ja">
+                  断片は移動するので画像からはみ出します。 このオプションを有効
+                  にすると、 はみ出した部分が反対側の辺に現れるようになります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -169,40 +173,44 @@
             切り分けられた画像の下に元の画素が存続できます。 移動で空いた隙間
             から見える残された画素の処理についてはつぎの3つの方法があります。
           </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Background</guilabel>: Remaining pixels will be
-                replaced with the background type defined in the following
-                section.
-              </para>
-              <para lang="ja">
-                <guilabel>背景</guilabel>: 残っている画素を
-                <guilabel>背景の種類</guilabel> で選ばれた色が置き換えます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Ignore</guilabel>: Background Type option is
-                not taken into account and remaining pixels are kept.
-              </para>
-              <para lang="ja">
-                <guilabel>無視</guilabel>: <guilabel>
-                背景の種類</guilabel> で選ばれた色は無視され、 元の画像が
-                そのまま垣間見えます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Force</guilabel>: Remaining pixels will be cut
-                also.
-              </para>
-              <para lang="ja">
-                <guilabel>強制</guilabel>: 残された画素も
-                切り取られます。
-              </para>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Background</guilabel></term>
+              <term lang="ja"><guilabel>背景</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Remaining pixels will be replaced with the background type
+                  defined in the following section.
+                </para>
+                <para lang="ja">
+                  残っている画素を
+                  <guilabel>背景の種類</guilabel> で選ばれた色が置き換えます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Ignore</guilabel></term>
+              <term lang="ja"><guilabel>無視</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Background Type</guilabel> option is not taken
+                  into account and remaining pixels are kept.
+                </para>
+                <para lang="ja">
+                  <guilabel>背景の種類</guilabel> で選ばれた色は無視され、 
+                  元の画像がそのまま垣間見えます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Force</guilabel></term>
+              <term lang="ja"><guilabel>強制</guilabel></term>
+              <listitem>
+                <para lang="en">Remaining pixels will be cut also.</para>
+                <para lang="ja">残された画素も切り取られます。</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -219,72 +227,85 @@
             <guilabel>背景</guilabel> を選んだときの断片の
             隙間から垣間見える背景の種類をつぎの6つの方法から選びます。
           </para>
-          <itemizedlist>
-            <listitem>
-              <para lang="en">
-                <guilabel>Transparent</guilabel>: Background will be
-                transparent.
-              </para>
-              <para lang="ja">
-                <guilabel>透明</guilabel>: 背景が透明に
-                なります。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Inverted image</guilabel>: Background colors
-                will be inverted (255-value in every color channel).
-              </para>
-              <para lang="ja">
-                <guilabel>反転画像</guilabel>: 元画像を反転
-                したものが垣間見えます。 反転は各色チャンネルごとに 255 との
-                差を算出して得ます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Image</guilabel>: Background colors
-                will be unchanged. The original image is the background.
-              </para>
-              <para lang="ja">
-                <guilabel>画像</guilabel>: 元画像がそのまま
-                背景に使われます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Foreground Color</guilabel>: Remaining pixels
-                will be replaced by the Foreground color of Toolbox.
-              </para>
-              <para lang="ja">
-                <guilabel>前景色</guilabel>: 残った画素は
-                ツールボックスの色標識で示される描画色で塗りつぶされます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Background Color</guilabel>: Remaining pixels
-                will be replaced by the Background color of Toolbox.
-              </para>
-              <para lang="ja">
-                <guilabel>背景色</guilabel>: 残った画素は
-                ツールボックスの色標識で示される背景色で塗りつぶされます。
-              </para>
-            </listitem>
-            <listitem>
-              <para lang="en">
-                <guilabel>Select here</guilabel>: When this radio-button
-                is checked, clicking in the color dwell will open a Color
-                Selector where you can select the color you want for
-                background.
-              </para>
-              <para lang="ja">
-                <guilabel>ここで選択</guilabel>: 色だまり
-                ボタンが示す色で背景が塗りつぶされます。 色だまりボタンを
-                クリックすると色変更ダイアログが現れ、 別の色も選べます。
-              </para>
-            </listitem>
-          </itemizedlist>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Transparent</guilabel></term>
+              <term lang="ja"><guilabel>透明</guilabel></term>
+              <listitem>
+                <para lang="en">Background will be transparent.</para>
+                <para lang="ja">背景が透明になります。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Inverted image</guilabel></term>
+              <term lang="ja"><guilabel>反転画像</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Background colors will be inverted (255-value in every color
+                  channel).
+                </para>
+                <para lang="ja">
+                  元画像を反転したものが垣間見えます。 反転は各
+                  色チャンネルごとに 255 との差を算出して得ます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Image</guilabel></term>
+              <term lang="ja"><guilabel>画像</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Background colors will be unchanged. The original image is
+                  the background.
+                </para>
+                <para lang="ja">元画像がそのまま背景に使われます。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Foreground Color</guilabel></term>
+              <term lang="ja"><guilabel>前景色</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Remaining pixels will be replaced by the Foreground color of
+                  Toolbox.
+                </para>
+                <para lang="ja">
+                  残った画素はツールボックスの色標識で示される描画色で
+                  塗りつぶされます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Background Color</guilabel></term>
+              <term lang="ja"><guilabel>背景色</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Remaining pixels will be replaced by the Background color of
+                  Toolbox.
+                </para>
+                <para lang="ja">
+                  残った画素はツールボックスの色標識で示される背景色で
+                  塗りつぶされます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Select here</guilabel></term>
+              <term lang="ja"><guilabel>ここで選択</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  When this radio-button is checked, clicking in the color
+                  dwell will open a Color Selector where you can select the
+                  color  you want for background.
+                </para>
+                <para lang="ja">
+                  色だまりボタンが示す色で背景が塗りつぶされます。 色だまり
+                  ボタンをクリックすると色変更ダイアログが現れ、
+                  別の色も選べます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
       <varlistentry>
