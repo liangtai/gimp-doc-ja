@@ -10,7 +10,7 @@
   2005-10-07 en;fr by j.h
   2005-09-21 created by axel.wernicke
 -->
-<!--2009-12-19-->
+<!--2010-07-28-->
 <sect2 id="plug-in-cml-explorer">
   <title lang="en">CML Explorer</title>
   <title lang="ja"><acronym>CML</acronym> エクスプローラ...</title>
@@ -107,17 +107,16 @@
         Filter options are distributed among
         <guilabel>Hue</guilabel>,<guilabel>Saturation</guilabel>,
         <guilabel>Value</guilabel>, <guilabel>Advanced</guilabel>,
-        <guilabel>others</guilabel> and <guilabel>Misc.ops</guilabel>
-        tabs.  Some more options are available. They will be described
+        <guilabel>Others</guilabel> and <guilabel>Misc.Ops</guilabel>
+        tabs. Some more options are available. They will be described
         in following section.
       </para>
       <para lang="ja">
-        このフィルタのオプションは大部分が <guilabel>色相
-        </guilabel>、 <guilabel>彩度</guilabel>、 <guilabel>
-        明度</guilabel>、 <guilabel>詳細
-        </guilabel>、 <guilabel>その他</guilabel>、 
-        <guilabel>その他の操作</guilabel> の各タブに分かれて
-        います。 タブの外にある共通オプションについてはつぎのとおりです。
+        このフィルタのオプションは大部分が <guilabel>色相</guilabel>、
+        <guilabel>彩度</guilabel>、 <guilabel>明度</guilabel>、
+        <guilabel>詳細</guilabel>、 <guilabel>その他</guilabel>、 
+        <guilabel>その他の操作</guilabel> の各タブに分かれています。
+        タブの外にある共通オプションについてはつぎのとおりです。
       </para>
       <variablelist>
         <varlistentry>
@@ -137,18 +136,22 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">New seed; Fix seed; Random seed</term>
-          <term lang="ja">新しい種; 固定種; 乱数種</term>
+          <term lang="en">New Seed</term>
+          <term lang="en">Fix Seed</term>
+          <term lang="en">Random Seed</term>
+          <term lang="ja">新しい種</term>
+          <term lang="ja">固定種</term>
+          <term lang="ja">乱数種</term>
           <listitem>
             <para lang="en">
               Random plays a large part in creating patterns. With these
               options, you can influence the way random is generated. By
-              clicking on the <guibutton>New seed</guibutton> button, you
+              clicking on the <guibutton>New Seed</guibutton> button, you
               can force random to use a new source of random. The preview
               will show you the result.
-              <guibutton>Fix seed</guibutton> lets you keep the same seed
+              <guibutton>Fix Seed</guibutton> lets you keep the same seed
               and so to reproduce the same effect with the filter.
-              <guibutton>Random seed</guibutton> generates a random seed
+              <guibutton>Random Seed</guibutton> generates a random seed
               at random.
             </para>
             <para lang="ja">
@@ -164,8 +167,10 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Open; Save</term>
-          <term lang="ja">開く; 保存</term>
+          <term lang="en">Open</term>
+          <term lang="en">Save</term>
+          <term lang="ja">開く</term>
+          <term lang="ja">保存</term>
           <listitem>
             <para lang="en">
               With these both command buttons you can save pattern
@@ -181,7 +186,7 @@
     </simplesect>
 
     <simplesect>
-      <title lang="en"><quote>CML Explorer</quote> filter options(Hue)</title>
+      <title lang="en"><quote>CML Explorer</quote> filter options (Hue)</title>
       <title lang="ja">
         <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
         オプション (色相)
@@ -220,78 +225,93 @@
               この引き出しリストから、 レイヤー上で行なわれる処理の方法が選べ
               ます。 つぎのいずれかを指定してください。
             </para>
-            <itemizedlist>
-              <listitem>
-                <para lang="en">
-                  <guilabel>Keep image's values</guilabel>: With this
-                  option, image hue values will be kept.
-                </para>
-                <para lang="ja">
-                  <guimenuitem>画像の値を保持</guimenuitem> オプションを選ぶと
-                  元の画像の色相の値が保たれます。
-                </para>
-              </listitem>
-              <listitem>
-                <para lang="en">
-                  <guilabel>Keep the first value</guilabel>: With this
-                  option, starting color will be standard cyan.
-                </para>
-                <para lang="ja">
-                  <guimenuitem>最初の値を保持</guimenuitem> オプションを選ぶと
-                  最初の色は標準的なシアンになります。
-                </para>
-              </listitem>
-              <listitem>
-                <para lang="en">
-                  <guilabel>Fill with k parameter</guilabel>,
-                  <guilabel>k{x(1-x)}^p</guilabel>,
-                  <guilabel>k{x(1-x)}^p stepped</guilabel>,
-                  <guilabel>kx^p</guilabel>,
-                  <guilabel>kx^p stepped</guilabel>,
-                  <guilabel>k(1-x^p)</guilabel>,
-                  <guilabel>k(1-x^p) stepped</guilabel>: pattern look
-                  will depend on <parameter>k</parameter> that you will
-                  set later in options.
-                </para>
-                <para lang="ja">
-                  <guimenuitem>パラメータ k で塗る</guimenuitem>、 
-                  <guimenuitem>k{x(1-x)}^p</guimenuitem> と 
-                  <guimenuitem>段階化 k{x(1-x)}^p</guimenuitem>、 
-                  <guimenuitem>kx^p</guimenuitem> と 
-                  <guimenuitem>段階化 kx^p</guimenuitem>、 
-                  <guimenuitem>k(1-x^p)</guimenuitem> と 
-                  <guimenuitem>段階化 k(1-x^p)</guimenuitem> はいずれも後述する
-                  パラメータ<quote><parameter>k</parameter></quote>[と乗数
-                  <quote><parameter>p</parameter></quote>]の値によって
-                  パターンの見た目が決まります。
-                  なお<quote><parameter>x</parameter></quote>とは色相の値を 
-                  256 で除算した値 (0.0 から 1.0 まで) です。
-                </para>
-              </listitem>
-              <listitem>
-                <para lang="en">
-                  <guilabel>Delta function</guilabel>,
-                  <guilabel>Delta function stepped</guilabel>: FIXME
-                </para>
-                <para lang="ja">
-                  <guimenuitem>デルタ関数</guimenuitem> と 
-                  <guimenuitem>段階化デルタ関数</guimenuitem>: FIXME
-                </para>
-              </listitem>
-              <listitem>
-                <para lang="en">
-                  <guilabel>sin^p based Function</guilabel>,
-                  <guilabel>sin^p stepped</guilabel>: These options
-                  create wave-like patterns, like aurora borealis or
-                  curtain folds.
-                </para>
-                <para lang="ja">
-                  <guimenuitem>sin^p 型関数</guimenuitem> と 
-                  <guimenuitem>段階化 sin^p</guimenuitem> オプションは極地の
-                  オーロラやカーテンのひだのような波形パターンを生成します。
-                </para>
-              </listitem>
-            </itemizedlist>
+            <variablelist>
+              <varlistentry>
+                <term lang="en"><guilabel>Keep image's values</guilabel></term>
+                <term lang="ja"><guimenuitem>画像の値を保持</guimenuitem></term>
+                <listitem>
+                  <para lang="en">
+                    With this option, image hue values will be kept.
+                  </para>
+                  <para lang="ja">元の画像の色相の値が保たれます。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en"><guilabel>Keep the first value</guilabel></term>
+                <term lang="ja"><guimenuitem>最初の値を保持</guimenuitem></term>
+                <listitem>
+                  <para lang="en">
+                    With this option, starting color will be standard cyan.
+                  </para>
+                  <para lang="ja">最初の色は標準的なシアンになります。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">
+                  <guilabel>Fill with k parameter</guilabel>
+                </term>
+                <term lang="ja">
+                  <guimenuitem>パラメータ k で塗る</guimenuitem>
+                </term>
+                <listitem>
+                  <para lang="en">
+                    Pattern look will depend on <parameter>k</parameter> that
+                    you will set later in options.
+                  </para>
+                  <para lang="ja">
+                    後述するパラメータ<quote><parameter>k</parameter></quote>
+                    [と乗数<quote><parameter>p</parameter></quote>]の値によって
+                    パターンの見た目が決まります。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Miscellaneous f(k)</term>
+                <term lang="ja">さまざまな k の関数 f(k)</term>
+                <listitem>
+                  <para lang="en">
+                    See above, <quote>Fill with k parameter</quote>.
+                  </para>
+                  <para lang="ja">
+                    上記の<quote>パラメータ k で塗る</quote>を参考に
+                    してください。
+                    なお<quote><parameter>x</parameter></quote>とは色相の値を 
+                    256 で除算した値 (0.0 から 1.0 まで) です。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en"><guilabel>Delta function</guilabel></term>
+                <term lang="en">
+                  <guilabel>Delta function stepped</guilabel>
+                </term>
+                <term lang="ja"><guimenuitem>デルタ関数</guimenuitem></term>
+                <term lang="ja">
+                  <guimenuitem>段階化デルタ関数</guimenuitem>
+                </term>
+                <listitem>
+                  <para>
+                    // TODO
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en"><guilabel>sin^p based Function</guilabel></term>
+                <term lang="en"><guilabel>sin^p stepped</guilabel></term>
+                <term lang="ja"><guimenuitem>sin^p 型関数</guimenuitem></term>
+                <term lang="ja"><guimenuitem>段階化 sin^p</guimenuitem></term>
+                <listitem>
+                  <para lang="en">
+                    These options create wave-like patterns, like aurora
+                    borealis or curtain folds.
+                  </para>
+                  <para lang="ja">
+                    極地のオーロラやカーテンのひだのような波形パターンを
+                    生成します。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -299,104 +319,38 @@
           <term lang="ja">合成</term>
           <listitem>
             <para lang="en">
-              Here, these options concern Hue. You can select:
-            </para>
-            <para lang="en">
-              <guilabel>None</guilabel>, <guilabel>Max(x, -)</guilabel>,
-              <guilabel>Max(x+d, -)</guilabel>,
-              <guilabel>Max(x-d, -)</guilabel>,
-              <guilabel>Min(x, -)</guilabel>,
-              <guilabel>Min(x+d, -)</guilabel>,
-              <guilabel>Min(x-d, -)</guilabel>,
-              <guilabel>Max(x+d, -), (x &lt; 0,5)</guilabel>,
-              <guilabel>Max(x+d, -), (0,5 &lt; x)</guilabel>,
-              <guilabel>Max(x-d, -), (x &lt; 0,5)</guilabel>,
-              <guilabel>Max(x-d, -), (0,5 &lt; x)</guilabel>,
-              <guilabel>Min(x+d, -), (x &lt; 0,5)</guilabel>,
-              <guilabel>Min(x+d, -), (0,5 &lt; x)</guilabel>,
-              <guilabel>Min(x-d, -), (x &lt; 0,5)</guilabel> and
-              <guilabel>Min(x-d, -), (0,5 &lt; x)</guilabel>.
-            </para>
-            <para lang="en">
-              A book could be filled with results of all these
+              Here, these options concern Hue. You can choose among several
+              functions, and a book could be filled with results of all these
               functions. Please, experiment!
             </para>
             <para lang="ja">
-              これらのオプションは色相を基に合成を行ないます。 つぎのいずれかを
+              このオプションは色相を基に合成を行ないます。 いずれかを
               選んでください。 <quote><parameter>x</parameter></quote>は色相の
               値を 256 で除算したもの (0.0 から 1.0 まで) であり、 <quote>d
               </quote>は 256 分の 1 です。 <quote><parameter>x</parameter>
               </quote>の値そのものかもしくは<quote>d</quote>を加減した値と、 
               先に選んだ関数により得られた値との大小比較を行なって、 大きい方の
               値Maxか小さい方の値Minをとります。
-            </para>
-            <para lang="ja">
               <guimenuitem>なし</guimenuitem> は先に選んだ関数により得られた値
-              をそのまま使います。  <guimenuitem>Max(x, -)</guimenuitem> から 
-              <guimenuitem>Max(x+d, -)</guimenuitem>、 
-              <guimenuitem>Max(x-d, -)</guimenuitem>、 
-              <guimenuitem>Min(x, -)</guimenuitem>、 
-              <guimenuitem>Min(x+d, -)</guimenuitem>、 
-              <guimenuitem>Min(x-d, -)</guimenuitem> まではいずれも大小比較を
-              します。 また<quote><parameter>x</parameter></quote>の値により
-              <guimenuitem>Max(x+d, -), (x &lt; 0.5)</guimenuitem> から 
-              <guimenuitem>Max(x+d, -), (0.5 &lt; x)</guimenuitem>、 
-              <guimenuitem>Max(x-d, -), (x &lt; 0.5)</guimenuitem>、 
-              <guimenuitem>Max(x-d, -), (0.5 &lt; x)</guimenuitem>、 
-              <guimenuitem>Min(x+d, -), (x &lt; 0.5)</guimenuitem>、 
-              <guimenuitem>Min(x+d, -), (0.5 &lt; x)</guimenuitem>、 
-              <guimenuitem>Min(x-d, -), (x &lt; 0.5)</guimenuitem>、 
-              <guimenuitem>Min(x-d, -), (0.5 &lt; x)</guimenuitem> までは
-              条件付きで大小比較を行ないます。
-            </para>
-            <para lang="ja">
+              をそのまま使います。
               これらの関数の組み合わせ全ての結果を載せるとなると一冊の本が
-              できあがってしまうことになりますので、 申し分けありませんが
+              できあがってしまうことになりますので、 申しわけありませんが
               ご自分でその効果を確かめてください。
             </para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Misc. Arrange</term>
+          <term lang="en">Misc. arrange</term>
           <term lang="ja">その他のアレンジ</term>
           <listitem>
             <para lang="en">
-              This drop-down list offers you some other parameters:
-            </para>
-            <para lang="en">
-              <guilabel>Standard</guilabel>,
-              <guilabel>Use average value</guilabel>,
-              <guilabel>Use reverse value</guilabel>,
-              <guilabel>With random power (0,10)</guilabel>,
-              <guilabel>With random power (0,1)</guilabel>,
-              <guilabel>with gradient power (0,1)</guilabel>,
-              <guilabel>Multiply rand. value (0,1)</guilabel>,
-              <guilabel>Multiply rand. value (0,2)</guilabel>,
-              <guilabel>Multiply gradient (0,1)</guilabel> and
-              <guilabel>With p and random (0,1)</guilabel>.
-            </para>
-            <para lang="en">
-              Also a book would be necessary to explain all
-              possibilities of these parameters.
+              This drop-down list offers you some other parameters.
+              Also a book would be necessary to explain all possibilities of
+              these parameters.
             </para>
             <para lang="ja">
-              この引き出しリストにはつぎのような他のパラメータがあります。
-            </para>
-            <para lang="ja">
-              <guimenuitem>標準</guimenuitem> から 
-              <guimenuitem>平均値を使う</guimenuitem>、 
-              <guimenuitem>逆数を使う</guimenuitem><!--1の補数-->、 
-              <guimenuitem>(0,10) の乱数乗する</guimenuitem>、 
-              <guimenuitem>(0,1) の乱数乗する</guimenuitem>、 
-              <guimenuitem>(0,1) の傾斜乗する</guimenuitem>、 
-              <guimenuitem>(0,1) の乱数倍する</guimenuitem>、 
-              <guimenuitem>(0,2) の乱数倍する</guimenuitem>、 
-              <guimenuitem>(0,1) の傾斜倍する</guimenuitem>、 
-              <guimenuitem>p と (0,1) の乱数で</guimenuitem> までの10種類です。
-            </para>
-            <para lang="ja">
-              これらのパラメータの効果を全て説明するにもやはり一冊の本が必要に
-              なります。
+              この引き出しリストには他のパラメータがあります。 これらの
+              パラメータの効果を全て説明するにもやはり一冊の本が必要になります。
             </para>
           </listitem>
         </varlistentry>
@@ -404,7 +358,9 @@
           <term lang="en">Use cyclic range</term>
           <term lang="ja">回帰値域を使う</term>
           <listitem>
-            <para>//TODO</para>
+            <para>
+              // TODO
+            </para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -476,7 +432,7 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">k Parameter</term>
+          <term lang="en">Parameter k</term>
           <term lang="ja">パラメータ k</term>
           <listitem>
             <para lang="en">
@@ -521,7 +477,7 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Plot a graph of the settings</term>
+          <term lang="en">Plot a Graph of the Settings</term>
           <term lang="ja">設定のグラフを描く</term>
           <listitem>
             <para lang="en">
@@ -549,7 +505,7 @@
 
     <simplesect>
       <title lang="en">
-        <quote>CML Explorer</quote> filter options(Saturation)
+        <quote>CML Explorer</quote> filter options (Saturation)
       </title>
       <title lang="ja">
         <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
@@ -642,7 +598,8 @@
       </para>
       <variablelist>
         <varlistentry>
-          <term lang="en">Channel Sensitivity</term>
+          <!--Ch. sensitivity-->
+          <term lang="en">Channel sensitivity</term>
           <term lang="ja">チャンネル感度</term>
           <listitem>
             <para>// TODO</para>
@@ -656,10 +613,11 @@
           </listitem>
         </varlistentry>
         <varlistentry>
+          <!--Mutation dist.-->
           <term lang="en">Mutation distance</term>
           <term lang="ja">変化域</term>
           <listitem>
-            <para>//TODO</para>
+            <para>// TODO</para>
           </listitem>
         </varlistentry>
       </variablelist>
@@ -700,7 +658,7 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Zoom factor</term>
+          <term lang="en">Zoom scale</term>
           <term lang="ja">拡大スケール</term>
           <listitem>
             <para>// TODO</para>
@@ -714,7 +672,8 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Seed of random</term>
+          <!--Seed of Random (only for "From Seed" Modes)-->
+          <term lang="en">Seed of Random</term>
           <term lang="ja">乱数の種</term>
           <listitem>
             <para>// TODO</para>
@@ -725,7 +684,7 @@
 
     <simplesect>
       <title lang="en">
-        <quote>CML Explorer</quote> filter options (Misc.ops)
+        <quote>CML Explorer</quote> filter options (Misc. Ops.)
       </title>
       <title lang="ja">
         <quote><acronym>CML</acronym> エクスプローラ</quote>フィルタの
@@ -751,7 +710,7 @@
       </para>
       <variablelist>
         <varlistentry>
-          <term lang="en">Copy settings</term>
+          <term lang="en">Copy Settings</term>
           <term lang="ja">設定をコピー</term>
           <listitem>
             <para lang="en">
@@ -768,7 +727,7 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">Selective load setting</term>
+          <term lang="en">Selective Load Setting</term>
           <term lang="ja">選択可能な設定読み込み</term>
           <listitem>
             <para lang="en">

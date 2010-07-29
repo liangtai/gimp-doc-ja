@@ -7,7 +7,7 @@
   2005-12-08 <simplesect> replaced by <sect3> by lexa
   2005/09/21 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-07-28-->
 <sect2 id="plug-in-plasma">
   <title lang="en">Plasma</title>
   <title lang="ja">プラズマ...</title>
@@ -51,7 +51,10 @@
       Sometimes the strong colors may be distracting, and a more
       interesting surface will appear when you desaturate the image
       using
-      <guimenuitem>Layer/Colors/Desaturate</guimenuitem>.
+      <menuchoice>
+        <guimenu>Colors</guimenu>
+        <guimenuitem>Desaturate</guimenuitem>
+      </menuchoice>
     </para>
     <para lang="ja">
       <guimenuitem>プラズマ...</guimenuitem> フィルタが描く色
@@ -112,26 +115,39 @@
     </figure>
     <variablelist>
       <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            If checked, parameter setting results are interactively displayed
+            in preview.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効にしておれば
+            画像に実際にフィルタをかける前からダイアログ上で調節したとおりに
+            即座に効果のようすが見て分かるようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
         <term lang="en">Random Seed</term>
         <term lang="ja">乱数種</term>
         <listitem>
           <para lang="en">
-            <guilabel>Random Seed</guilabel> controls the randomization
-            element. The <guibutton>Randomize</guibutton> check-button will
-            set the seed using the hardware clock of the computer.
-            There is no reason to use anything else unless you want to
-            be able to repeat the exact same pattern of randomization
-            on a later occasion.
+            This option controls the randomization element. The
+            <guibutton>Randomize</guibutton> check-button will set the seed
+            using the hardware clock of the computer. There is no reason to
+            use anything else unless you want to be able to repeat the exact
+            same pattern of randomization on a later occasion.
           </para>
           <para lang="ja">
-            <guilabel>乱数種</guilabel> ごとに乱数の要素が
-            決まり、 生成されるプラズマ画像の姿が決まります。 <guibutton>
-            新しい種</guibutton> ボタンをクリックするたびに
-            異なる乱数種が生成できます。 <guilabel>乱数化
-            </guilabel> を有効にすると自動的にコンピュータ内蔵時計を使った
-            乱数種が生成され使用されます。 同じプラズマ画像を繰り返し作成したい
-            という特別な理由がなければ、 常に異なるプラズマ画像が得られる乱数化
-            オプションを有効にしない手はありません。
+            <guilabel>乱数種</guilabel> ごとに乱数の要素が決まり、 生成される
+            プラズマ画像の姿が決まります。 <guibutton>新しい種</guibutton>
+            ボタンをクリックするたびに異なる乱数種が生成できます。 
+            <guilabel>乱数化</guilabel> を有効にすると自動的にコンピュータ
+            内蔵時計を使った乱数種が生成され使用されます。 同じプラズマ画像を
+            繰り返し作成したいという特別な理由がなければ、 常に異なるプラズマ
+            画像が得られる乱数化オプションを有効にしない手はありません。
           </para>
         </listitem>
       </varlistentry>

@@ -4,7 +4,7 @@
 <!-- section history:
   2010-04-30 liangtai: created initial version
 -->
-<!--2010-05-06-->
+<!--2010-07-28-->
 <sect2 id="script-fu-circuit">
   <title lang="en">Circuit</title>
   <title lang="ja">回路...</title>
@@ -49,6 +49,20 @@
       circuit board. It looks even better when gradmapped with a suitable
       gradient.
     </para>
+    <tip>
+      <para lang="en">
+        <!--This script doesn't handle or color combos well, i.e. black/black
+        doesn't work. (I don't understand this)-->
+        The effect seems to work best on odd shaped selections because of
+        some limitations in the maze codes selection handling ability.
+      </para>
+      <para lang="ja">
+        <!--このスクリプトは色の組み合わせの把握がよくありません。
+        つまり黒地に黒を選ぶなどすると正しく動作しません。 -->
+        効果を最大限に引き出すには選択範囲をいびつな形にする方がよいようです。
+        迷路のプログラムで選択範囲の扱いにある種の限界があるためです。
+      </para>
+    </tip>
     <para lang="en">
       If the image is in indexed colors, this menu entry is grayed out
       and unavailable.
@@ -77,75 +91,6 @@
         描かれる回路は元画像に描かれている内容に頓着しません。
       </para>
     </note>
-    <para lang="en">This effect is achieved through the following steps:</para>
-    <para lang="ja">このスクリプトはつぎの手順で処理をしています。</para>
-    <procedure>
-      <step>
-        <para lang="en">
-          First, <link linkend="plug-in-maze">draw maze</link> with 5 pixels
-          width pathways and walls with the <quote>Depth First</quote>
-          algorithm.  The pattern of maze is set by <guilabel>Circuit
-          seed</guilabel>.
-        </para>
-        <para lang="ja">
-          まず始めに 5 ピクセル幅の壁と通路からなる
-          <link linkend="plug-in-maze">迷路</link> を<quote>深度優先</quote>
-          アルゴリズムで描きます。 迷路の種は <guilabel>回路種</guilabel>
-          の値を用います。
-        </para>
-      </step>
-      <step>
-        <para lang="en">
-          <link linkend="plug-in-oilify">Oilify</link> this maze with a brush
-          of <guilabel>Oilify mask size</guilabel>.
-        </para>
-        <para lang="ja">
-          この迷路図を <guilabel>油絵化マスクサイズ</guilabel>
-          の大きさのブラシで 
-          <link linkend="plug-in-oilify">油絵化</link> します。
-        </para>
-      </step>
-      <step>
-        <para lang="en">
-          Then apply the <link linkend="plug-in-edge">extract edge</link>
-          filter with Sobel algorithm, Smear option and Amount to 2.0,
-          to the oilified maze image. This crowds high contrast winding curves
-          like as a circuit map.
-        </para>
-        <para lang="ja">
-          ソーベルアルゴリズムを用い、 <quote>ぼかす</quote>オプションを選び
-          <quote>量</quote>を 2.0 とした
-          <link linkend="plug-in-edge">輪郭抽出</link> をこの油絵化した迷路で
-          行うと、 あたかも回路図のようなコントラストが高いうねった曲線の
-          密集が描き出されます。
-        </para>
-      </step>
-      <step>
-        <para lang="en">
-          Finally, <link linkend="gimp-tool-desaturate">Desaturate</link> the
-          map with gray color in <acronym>RGB</acronym> mode.
-        </para>
-        <para lang="ja">
-          最後に、 この図に
-          <link linkend="gimp-tool-desaturate">脱色</link> を施すと
-          <acronym>RGB</acronym>モードでの灰色濃淡に変化します。
-        </para>
-      </step>
-    </procedure>
-    <tip>
-      <para lang="en">
-        <!--This script doesn't handle or color combos well, i.e. black/black
-        doesn't work. (I don't understand this)-->
-        The effect seems to work best on odd shaped selections because of
-        some limitations in the maze codes selection handling ability.
-      </para>
-      <para lang="ja">
-        <!--このスクリプトは色の組み合わせの把握がよくありません。
-        つまり黒地に黒を選ぶなどすると正しく動作しません。 -->
-        得られる効果については、 選択範囲を変な形にするとうまくゆくようです。
-        迷路のプログラムで選択範囲の扱いにある種の限界があるためです。
-      </para>
-    </tip>
   </sect3>
 
   <sect3>
@@ -271,5 +216,65 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Making the Circuit effect</title>
+    <title lang="ja">回路の効果が生まれるまで</title>
+    <para lang="en">This effect is achieved through the following steps:</para>
+    <para lang="ja">このスクリプトはつぎの手順で処理をしています。</para>
+    <procedure>
+      <step>
+        <para lang="en">
+          First, <link linkend="plug-in-maze">draw maze</link> with 5 pixels
+          width pathways and walls with the <quote>Depth First</quote>
+          algorithm.  The pattern of maze is set by <guilabel>Circuit
+          seed</guilabel>.
+        </para>
+        <para lang="ja">
+          まず始めに 5 ピクセル幅の壁と通路からなる
+          <link linkend="plug-in-maze">迷路</link> を<quote>深度優先</quote>
+          アルゴリズムで描きます。 迷路の種は <guilabel>回路種</guilabel>
+          の値を用います。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          <link linkend="plug-in-oilify">Oilify</link> this maze with a brush
+          of <guilabel>Oilify mask size</guilabel>.
+        </para>
+        <para lang="ja">
+          この迷路図を <guilabel>油絵化マスクサイズ</guilabel>
+          の大きさのブラシで 
+          <link linkend="plug-in-oilify">油絵化</link> します。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Then apply the <link linkend="plug-in-edge">extract edge</link>
+          filter with Sobel algorithm, Smear option and Amount to 2.0,
+          to the oilified maze image. This crowds high contrast winding curves
+          like as a circuit map.
+        </para>
+        <para lang="ja">
+          ソーベルアルゴリズムを用い、 <quote>ぼかす</quote>オプションを選び
+          <quote>量</quote>を 2.0 とした
+          <link linkend="plug-in-edge">輪郭抽出</link> をこの油絵化した迷路で
+          行うと、 あたかも回路図のようなコントラストが高いうねった曲線の
+          密集が描き出されます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Finally, <link linkend="gimp-tool-desaturate">Desaturate</link> the
+          map with gray color in <acronym>RGB</acronym> mode.
+        </para>
+        <para lang="ja">
+          最後に、 この図に
+          <link linkend="gimp-tool-desaturate">脱色</link> を施すと
+          <acronym>RGB</acronym>モードでの灰色濃淡に変化します。
+        </para>
+      </step>
+    </procedure>
   </sect3>
 </sect2>
