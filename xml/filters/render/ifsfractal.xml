@@ -9,7 +9,7 @@
   2005-10-11 en;fr updated by julien hardelin
   2005-09-19 de added by axel.wernicke
 -->
-<!--2010-04-19-->
+<!--2010-07-28-->
 <sect2 id="plug-in-ifscompose">
   <title lang="en">IFS Fractal</title>
   <title lang="ja">IFS フラクタル...</title>
@@ -122,7 +122,7 @@
         <guimenu>Filters</guimenu>
         <guisubmenu>Render</guisubmenu>
         <guisubmenu>Nature</guisubmenu>
-        <guimenuitem>IFS fractal</guimenuitem>
+        <guimenuitem>IFS Fractal</guimenuitem>
       </menuchoice>.
     </para>
     <para lang="ja">
@@ -140,7 +140,7 @@
     <title lang="en">Options</title>
     <title lang="ja">オプション</title>
     <figure>
-      <title lang="en"><quote>IFS fractal</quote> filter options</title>
+      <title lang="en"><quote>IFS Fractal</quote> filter options</title>
       <title lang="ja">
         <quote><acronym>IFS</acronym> フラクタル</quote>フィルタのオプション
       </title>
@@ -151,240 +151,305 @@
         </imageobject>
       </mediaobject>
     </figure>
+    <para lang="en">
+      The plug-in interface consists of the compose area to the left, a
+      preview screen to the right, and some tabs and option buttons at the
+      bottom of the dialog. The Default setting (in the preview window) is
+      three equilateral triangles. (This gives rise to a fractal pattern
+      called the <emphasis>Sierpinski Triangle</emphasis>).
+    </para>
+    <para lang="ja">
+      このプラグインの操作盤には編成作業の領域とプレビュー画像が左右に並び、 
+      2枚重ねのタブがあり、 ダイアログのボタンが並んでいます。 初期設定では
+      編成作業領域に3つの正三角形があり、 プレビュー画面には
+      <emphasis>シェルピンスキの詰め込み</emphasis> と呼ばれる正三角形の
+      フラクタル図形が現れているはずです。 
+    </para>
     <variablelist>
+      <title lang="en">Toolbar</title>
+      <title lang="ja">ツールバー</title>
+      <para lang="en">
+        Click on the toolbar buttons to use the following tools, or open the
+        context menu of the compose area.
+      </para>
+      <para lang="ja">
+        つぎの機能を呼び出すにはツールバーボタンをクリックするか編成区画の
+        脈絡メニューを開きます。
+      </para>
       <varlistentry>
-        <term lang="en">The Main Interface</term>
-        <term lang="ja">ダイアログの概観</term>
+        <term lang="en">Move</guibutton>
+        <term lang="en">Rotate</guibutton>
+        <term lang="en">Stretch</guibutton>
+        <term lang="ja">移動</guibutton>
+        <term lang="ja">回転/拡大縮小</guibutton>
+        <term lang="ja">延伸変形</guibutton>
         <listitem>
           <para lang="en">
-            The plug-in interface consists of the compose area to the left, a
-            preview screen to the right, and some tabs and option buttons at
-            the bottom of the dialog. The Default setting (in the preview
-            window) is three equilateral triangles. (This gives rise to a
-            fractal pattern called the
-            <emphasis>Sierpinski Triangle</emphasis>).
+            Select the action to perform using the (mouse) pointer.
           </para>
-          <para lang="ja">
-            このプラグインの操作盤には編成作業の領域とプレビュー画像が左右に
-            並び、 2枚重ねのタブがあり、 ダイアログのボタンが並んでいます。 
-            初期設定では編成作業領域に3つの正三角形があり、 プレビュー画面には
-            <emphasis>シェルピンスキの詰め込み</emphasis> と呼ばれる
-            正三角形のフラクタル図形が現れているはずです。 
+          <para lang="ja">マウスのポインタで行なう作業を選びます。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">New</term>
+        <term lang="en">Delete</term>
+        <term lang="ja">追加</term>
+        <term lang="ja">削除</term>
+        <listitem>
+          <para lang="en">Add or remove fractals.</para>
+          <para lang="ja">フラクタル素片の追加と削除を行ないます。</para>
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Toolbar</term>
-        <term lang="ja">ツールバー</term>
+       <term lang="en">Undo</term>
+        <term lang="en">Redo</term>
+        <term lang="ja">取り消し</term>
+        <term lang="ja">やり直し</term>
+        <listitem>
+          <para lang="en">Standard.</para>
+          <para lang="ja">標準的機能</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Select All</term>
+        <term lang="ja">全要素選択</term>
         <listitem>
           <para lang="en">
-            Some tools are directly visible in this tool bar:
-            <guibutton>Move</guibutton>,
-            <guibutton>Rotate</guibutton>, <guibutton>Stretch</guibutton>,
-            <guibutton>New</guibutton>,
-            <guibutton>Delete</guibutton>, <guibutton>Undo</guibutton>,
-            <guibutton>Redo</guibutton>,
-            <guibutton>Select All</guibutton>.
-            You can see others, if your window is not wide enough, by
-            clicking on the drop-down list button on the right of tool bar:
-            <guibutton>Recenter</guibutton>  and
-            <guibutton>Render Options</guibutton> where you have have
-            several parameters:
+            Link fractals and let apply actions to all fractals.
           </para>
           <para lang="ja">
-            最上段に並ぶ10個のボタンも編成作業に使います。 左から順に 
-            <guibutton>移動</guibutton>、 <guibutton>回転/拡大縮小
-            </guibutton>、 <guibutton>延伸変形</guibutton>、 そのつぎは 
-            <guibutton>追加</guibutton>、 <guibutton>削除</guibutton>、
-            <guibutton>取り消し</guibutton>、 <guibutton>やり直し</guibutton>、
-            <guibutton>全要素選択</guibutton>、
-            <guibutton>中心の再計算</guibutton>、 右端にはつぎのパラメータを
-            調節するための<quote><acronym>IFS</acronym>フラクタル描画オプション
-            </quote>ダイアログを開く <guibutton>描画オプション</guibutton> 
-            ボタンがあります。
+            フラクタル素片を繋ぎ合わせ、 作業がすべてのフラクタルに
+            及ぶようにします。
           </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Recenter</term>
+        <term lang="ja">中心の再計算</term>
+        <listitem>
+          <!--TODO: when or why is this useful?-->
+          <para lang="en">
+            Recompute the center of the fractals. This does not have any
+            visible effect to the resulting fractal.
+          </para>
+          <para lang="ja">
+            フラクタル図形の中心を再計算します。 仕上りの見た目には何の変化も
+            得られません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Render Options</term>
+        <term lang="ja">描画オプション</term>
+        <listitem>
           <variablelist>
             <varlistentry>
-              <term lang="en">Render Options</term>
-              <term lang="ja">描画オプション</term>
-              <listitem>
-                <variablelist>
-                  <varlistentry>
-                    <term lang="en">Memory</term>
-                    <term lang="ja">最大メモリ</term>
-                    <listitem>
-                      <para lang="en">
-                        Enables you to speed up rendering time. This is
-                        especially useful when working with a large spot
-                        radius; just remember to use even multiples of the
-                        default value: 4096, 8192, 16384, ...
-                      </para>
-                      <para lang="ja">
-                        この値を増せば描画時間の短縮が図れます。 とりわけつぎに
-                        述べる <guilabel>スポット半径</guilabel> を大きくして
-                        作業する場合に役立ちます。 初期値を倍加した 4096、 
-                        8192、 16384、 32768 &hellip;などの値を使うよう
-                        心掛けましょう。
-                      </para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term lang="en">Iterations</term>
-                    <term lang="ja">繰り返し</term>
-                    <listitem>
-                      <para lang="en">
-                        Determines how many times the fractal will repeat
-                        itself. (A high value for Subdivide and Iterations is
-                        for obvious reasons a waste of process time unless
-                        your image is very large.)
-                      </para>
-                      <para lang="ja">
-                        フラクタルの自己反復回数を定めます。 非常に大きな画像に
-                        描く場合を除き、 <guilabel>繰り返し</guilabel> でも 
-                        <guilabel>細分化</guilabel> でも高い値を設定する十分な
-                        理由がなければただ処理時間を多く費すだけに終わります。
-                        値の範囲は 1 回から 10000000 回までです。
-                      </para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term lang="en">Subdivide</term>
-                    <term lang="ja">細分化</term>
-                    <listitem>
-                      <para lang="en">Controls the level of detail.</para>
-                      <para lang="ja">
-                        詳細に描き込む深度を調節します。 値の範囲は 1.00 から 
-                        10.00 までです。
-                      </para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term lang="en">Spot Radius</term>
-                    <term lang="ja">スポット半径</term>
-                    <listitem>
-                      <para lang="en">
-                        Determines the density of the
-                        <quote>brushstrokes</quote>
-                        in the rendered image. A low spot radius is good for
-                        thin particle clouds or spray, while a high spot
-                        radius produces thick, solid color strokes much like
-                        watercolor painting. Be careful not to use too much
-                        spot radius -- it takes a lot of time to render.
-                      </para>
-                      <para lang="ja">
-                        画像を描き出すときに使う<quote>筆触</quote>の密度を定め
-                        ます。 <guilabel>スポット半径</guilabel> を小さくとると
-                        薄い粒子状の雲や噴霧器の飛沫のような感じになり、 逆に
-                        スポット半径を大きくとると水彩画ぽい感じの濃い単色ベタ
-                        塗りになります。 あまりスポット半径を大きくし過ぎると
-                        描画処理に多く時間を費すことになりますので
-                        注意しましょう。
-                      </para>
-                    </listitem>
-                  </varlistentry>
-                </variablelist>
-              </listitem>
-            </varlistentry>
-          </variablelist>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Spatial Transformation</term>
-        <term lang="ja">空間変換</term>
-        <listitem>
-          <para lang="en">
-            Gives you information on the active fractal, and allows you to
-            type a value instead of changing it manually. Changing parameters
-            with the mouse isn't very accurate, so this is a useful option
-            when you need to be exact.
-          </para>
-          <para lang="ja">
-            編成作業領域で現在選ばれているフラクタル素片に関する情報が示され
-            ていて、 それぞれの数値記入欄を使えばマウスポインタによる上記ツール
-            を使った手動操作とは異なり値を直接設定する方法がとれます。 精密な
-            操作はマウスで曳く変形では難しく、 このような数値指定が役立ちます。
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Color transformation</term>
-        <term lang="ja">色変換</term>
-        <listitem>
-          <figure>
-            <title lang="en">
-              <quote>Color transformation</quote> tab options
-            </title>
-            <title lang="ja"><quote>色変換</quote>タブのオプション</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/options-render-ifscompose2.png"/>
-              </imageobject>
-            </mediaobject>
-          </figure>
-          <variablelist>
-            <varlistentry>
-              <term lang="en">Simple color transformation</term>
-              <term lang="ja">単純な色変換</term>
+              <term lang="en">Max. memory</term>
+              <term lang="ja">最大メモリ</term>
               <listitem>
                 <para lang="en">
-                  Changes the color of the currently selected fractal
-                  component (default is the foreground color in the toolbox)
-                  to a color of your choice.
+                  Enables you to speed up rendering time. This is
+                  especially useful when working with a large spot
+                  radius; just remember to use even multiples of the
+                  default value: 4096, 8192, 16384, ...
                 </para>
                 <para lang="ja">
-                  現在選択されているフラクタル素片の色は初期状態ではツール
-                  ボックスの色標識に示されている描画色ですが、 これをここで
-                  選んだ別の色で塗ります。
+                  この値を増せば描画時間の短縮が図れます。 とりわけつぎに述べる 
+                  <guilabel>スポット半径</guilabel> を大きくして作業する場合に
+                  役立ちます。 初期値を倍加した 4096、 8192、 16384、 32768
+                  &hellip;などの値を使うよう心掛けましょう。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Full color transformation</term>
-              <term lang="ja">完全な色変換</term>
+              <term lang="en">Iterations</term>
+              <term lang="ja">繰り返し</term>
               <listitem>
                 <para lang="en">
-                  Like the Simple color transformation but this time you can
-                  manage the color transformation for each color channel and
-                  for the alpha channel (shown as a black channel).
+                  Determines how many times the fractal will repeat
+                  itself. (A high value for Subdivide and Iterations is
+                  for obvious reasons a waste of process time unless
+                  your image is very large.)
                 </para>
                 <para lang="ja">
-                  単純な色変換としくみは同じですが、 こちらは色変換を3色の色
-                  チャンネルとアルファチャンネルごとに行ないます。 アルファ
-                  チャンネルは灰色濃淡で表されています。
+                  フラクタルの自己反復回数を定めます。 非常に大きな画像に描く
+                  場合を除き、 <guilabel>繰り返し</guilabel> でも 
+                  <guilabel>細分化</guilabel> でも高い値を設定する十分な理由が
+                  なければただ処理時間を多く費すだけに終わります。
+                  値の範囲は 1 回から 10000000 回までです。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Scale Hue/Value</term>
-              <term lang="ja">色相倍率; 明度倍率</term>
+              <term lang="en">Subdivide</term>
+              <term lang="ja">細分化</term>
+              <listitem>
+                <para lang="en">Controls the level of detail.</para>
+                <para lang="ja">
+                  詳細に描き込む深度を調節します。 値の範囲は 1.00 から 10.00
+                  までです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Spot radius</term>
+              <term lang="ja">スポット半径</term>
               <listitem>
                 <para lang="en">
-                  When you have many fractals with different colors, the
-                  colors blend into each other. So even if you set
-                  <quote>pure red</quote> for a fractal, it might actually
-                  be quite blue in some places, while another <quote>red
-                  </quote> fractal might have a lot of yellow in it. Scale
-                  Hue/Value changes the color strength of the active
-                  fractal, or how influential that fractal color should be.
+                  Determines the density of the <quote>brushstrokes</quote> in
+                  the rendered image. A low spot radius is good for thin
+                  particle clouds or spray, while a high spot radius produces
+                  thick, solid color strokes much like watercolor painting. Be
+                  careful not to use too much spot radius &mdash; it takes a
+                  lot of time to render.
                 </para>
                 <para lang="ja">
-                  フラクタル素片が多くあってそれぞれに違う色をつけていると、 
-                  それらの重なりから色の合成が起こります。 ですからたとえ
-                  <quote>純赤</quote>だけのフラクタル素片を設定していても場所に
-                  よってはそれが青っぽくなったりまた他の場所では黄色が結構混じ
-                  り込んでしまうことがありえます。 <guilabel>色相倍率
-                  </guilabel> と <guilabel>明度倍率</guilabel> は現在選択
-                  されているフラクタル素片の色の強さを定め、 またそれはつまり
-                  色が重なるときの影響の大きさを定めます。
+                  画像を描き出すときに使う<quote>筆触</quote>の密度を定めます。 
+                  <guilabel>スポット半径</guilabel> を小さくとると薄い粒子状の
+                  雲や噴霧器の飛沫のような感じになり、 逆にスポット半径を大きく
+                  とると水彩画ぽい感じの濃い単色ベタ塗りになります。 あまり
+                  スポット半径を大きくし過ぎると描画処理に多く時間を費すことに
+                  なりますので注意しましょう。
                 </para>
               </listitem>
             </varlistentry>
           </variablelist>
         </listitem>
       </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Spatial Transformation</title>
+      <title lang="ja">空間変換</title>
+      <para lang="en">
+        Gives you information on the active fractal, and allows you to type a
+        value instead of changing it manually. Changing parameters with the
+        mouse isn't very accurate, so this is a useful option when you need to
+        be exact.
+      </para>
+      <para lang="ja">
+        編成作業領域で現在選ばれているフラクタル素片に関する情報が示されて
+        いて、 それぞれの数値記入欄を使えばマウスポインタによる上記ツールを
+        使った手動操作とは異なり値を直接設定する方法がとれます。 精密な操作は
+        マウスで曳く変形では難しく、 このような数値指定が役立ちます。
+      </para>
       <varlistentry>
-        <term lang="en">Relative Probability</term>
+        <term>X</term>
+        <term>Y</term>
+        <term lang="en">Scale</term>
+        <term lang="en">Angle</term>
+        <term lang="en">Shear</term>
+        <term lang="ja">拡大縮小</term>
+        <term lang="ja">角度</term>
+        <term lang="ja">剪断</term>
+        <listitem>
+          <para lang="en">Move, scale, or shear the active fractal.</para>
+          <para lang="ja">
+            いま選ばれているフラクタル素片の移動、 拡大縮小、 剪断を行ないます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Asymmetry</term>
+        <term lang="ja">非対称</term>
+        <listitem>
+          <para lang="en">Stretch the active fractal.</para>
+          <para lang="ja">
+            いま選ばれているフラクタル素片を引き伸ばします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Flip</term>
+        <term lang="ja">反転</term>
+        <listitem>
+          <para lang="en">Flip the active fractal.</para>
+          <para lang="ja">
+            いま選ばれているフラクタル素片を裏返しにします。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Color Transformation</title>
+      <title lang="ja">色変換</title>
+      <para>
+        <figure>
+          <title lang="en">IFS Fractal options (Color Transformation)</title>
+          <title lang="ja">IFS フラクタルのオプション (色変換)</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/filters/options-render-ifscompose2.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </para>
+      <varlistentry>
+        <term lang="en">Simple</term>
+        <term lang="ja">単純</term>
+        <listitem>
+          <para lang="en">
+            Changes the color of the currently selected fractal
+            component (default is the foreground color in the toolbox)
+            to a color of your choice.
+          </para>
+          <para lang="ja">
+            現在選択されているフラクタル素片の色は初期状態ではツールボックスの
+            色標識に示されている描画色ですが、 これをここで選んだ別の色で
+            塗ります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Full</term>
+        <term lang="ja">完全</term>
+        <listitem>
+          <para lang="en">
+            Like the Simple color transformation but this time you can
+            manage the color transformation for each color channel and
+            for the alpha channel (shown as a black channel).
+          </para>
+          <para lang="ja">
+            単純な色変換としくみは同じですが、 こちらは色変換を3色の色
+            チャンネルとアルファチャンネルごとに行ないます。 アルファ
+            チャンネルは灰色濃淡で表されています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Scale hue by</term>
+        <term lang="en">Scale value by</term>
+        <term lang="ja">色相倍率</term>
+        <term lang="ja">明度倍率</term>
+        <listitem>
+          <para lang="en">
+            When you have many fractals with different colors, the
+            colors blend into each other. So even if you set
+            <quote>pure red</quote> for a fractal, it might actually
+            be quite blue in some places, while another <quote>red
+            </quote> fractal might have a lot of yellow in it. Scale
+            Hue/Value changes the color strength of the active
+            fractal, or how influential that fractal color should be.
+          </para>
+          <para lang="ja">
+            フラクタル素片が多くあってそれぞれに違う色をつけていると、 それらの
+            重なりから色の合成が起こります。 ですからたとえ<quote>純赤</quote>
+            だけのフラクタル素片を設定していても場所によってはそれが青っぽく
+            なったりまた他の場所では黄色が結構混じり込んでしまうことが
+            ありえます。 <guilabel>色相倍率</guilabel> と
+            <guilabel>明度倍率</guilabel> は現在選択されているフラクタル素片の
+            色の強さを定め、 またそれはつまり色が重なるときの影響の大きさを
+            定めます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <title lang="en">Other</title>
+      <title lang="ja">その他</title>
+      <varlistentry>
+        <term lang="en">Relative probability</term>
         <term lang="ja">相対的確率</term>
         <listitem>
           <para lang="en">

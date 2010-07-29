@@ -6,7 +6,7 @@
   2005-12-08 <simplesect> replaced by <sect3> by lexa
   2005/09/21 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-07-28-->
 <sect2 id="plug-in-sinus">
   <title lang="en">Sinus</title>
   <title lang="ja">Sin 曲線...</title>
@@ -93,232 +93,242 @@
   <sect3>
     <title lang="en">Options</title>
     <title lang="ja">オプション</title>
-    <figure>
-      <title lang="en"><quote>Sinus</quote> filter options (Settings)</title>
-      <title lang="ja">
-        <quote>Sin 曲線</quote>フィルタのオプション (設定)
-      </title>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/filters/options-render-sinus1.png"/>
-        </imageobject>
-      </mediaobject>
-    </figure>
-    <variablelist>
-      <varlistentry>
-        <term lang="en">Settings tab</term>
-        <term lang="ja">設定タブ</term>
-        <listitem>
-          <variablelist>
-            <varlistentry>
-              <term lang="en">X and Y Scales</term>
-              <term lang="ja">X 拡大縮小; Y 拡大縮小</term>
-              <listitem>
-                <para lang="en">
-                  A low X/Y value will maximize the horizontal/vertical
-                  stretch of the texture, whereas a high value will compress
-                  it.
-                </para>
-                <para lang="ja">
-                  X は水平方向に、 Y は垂直方向に関連しています。 低い値に
-                  するといずれもその方向に文様が引き伸ばされ、 高い値に
-                  すると文様は圧縮されます。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Complexity</term>
-              <term lang="ja">複雑度</term>
-              <listitem>
-                <para lang="en">
-                  This controls how the two colors interact with each other
-                  (the amount of interplay or repetition).
-                </para>
-                <para lang="ja">
-                  このスライダは2つの色が互いに影響しあう程度を調節します。 
-                  相互作用や反復の量といえます。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Random Seed</term>
-              <term lang="ja">乱数種</term>
-              <listitem>
-                <para lang="en">
-                  <guilabel>Random Seed</guilabel> controls the random
-                  behaviour of the filter. If the same random seed in the
-                  same situation is used, the filter produces exactly the
-                  same results. A different random seed produces different
-                  results. Random seed can be entered manually or generated
-                  randomly by pressing the <guibutton>New Seed</guibutton>
-                  button.
-                </para>
-                <para lang="en">
-                  When the <guilabel>Randomize</guilabel> option is checked,
-                  random seed cannot be entered manually, but is randomly
-                  generated each time the filter is run. If it is not
-                  checked, the filter remembers the last random seed used.
-                </para>
-                <para lang="ja">
-                  <guilabel>乱数種</guilabel> はフィルタの
-                  不規則なふるまいを制御します。 同じ乱数種を同じ条件下で使用
-                  するとフィルタは全く同じ結果を生みます。 乱数種が異なれば
-                  別の結果が出ます。 乱数種は数値記入欄から直接与えるほか、 
-                  <guibutton>新しい種</guibutton> ボタンを
-                  クリックして無作為に発行させる方法もあります。
-                </para>
-                <para lang="ja">
-                  <guilabel>乱数化</guilabel> オプションを
-                  有効にすると乱数種の記入欄は灰色無効となって、 直接指定が
-                  できなくなりますが、 代わりにフィルタを呼び出した時点で自動的
-                  に乱数種が生成され利用されます。 無効にしておれば前回利用した
-                  乱数種を記憶しており繰り返し再利用できます。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Force Tiling?</term>
-              <term lang="ja">強制的に並べる?</term>
-              <listitem>
-                <para lang="en">
-                  If you check this, you'll get a pattern that can be
-                  used for tiling. For example, you can use it as a
-                  background in an HTML page, and the tile edges will be
-                  joined seamlessly.
-                </para>
-                <para lang="ja">
-                  このオプションを有効にすると、 生成されるパターンはタイル化
-                  可能な文様になります。 例えば<acronym>HTML</acronym>ページの
-                  背景画像として使えば並べたとき継ぎ目が目立ちません。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Ideal/Distorted</term>
-              <term lang="ja">典型, ゆがめる</term>
-              <listitem>
-                <para lang="en">
-                  This option gives additional control of the interaction
-                  between the two colors. Distorted creates a more distorted
-                  interference between the two colors than Ideal.
-                </para>
-                <para lang="ja">
-                  これは使われる2つの色が互いに影響しあうときの処理を調整する
-                  付加的なオプションです。 <guilabel>ゆがめる
-                  </guilabel> を選んだ場合の2色間の相互作用は 
-                  <guilabel>典型</guilabel> を選んだ場合に
-                  比べより歪んだものになります。
-                </para>
-              </listitem>
-            </varlistentry>
-          </variablelist>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Color settings</term>
-        <term lang="ja">色タブ</term>
-        <listitem>
-          <figure>
-            <title lang="en">
-              <quote>Sinus</quote> filter options (Color)
-            </title>
-            <title lang="ja">
-              <quote>Sin 曲線</quote>フィルタのオプション (色)
-            </title>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/options-render-sinus2.png"/>
-              </imageobject>
-            </mediaobject>
-          </figure>
-          <variablelist>
-            <varlistentry>
-              <term lang="en">Colors</term>
-              <term lang="ja">カラー</term>
-              <listitem>
-                <para lang="en">
-                  Here, you set the two colors that make up your
-                  texture. You can use Black and white or the
-                  foreground/background colors in the toolbox, or you can
-                  choose a color with the color icons. The <parameter>Alpha
-                  Channels</parameter> sliders allow you to assign an
-                  opacity to each of the colors.  (If the layer you are
-                  working on does not have an alpha channel, they will be
-                  grayed out.)
-                </para>
-                <para lang="ja">
-                  このタブでは文様を作るのに使われる2色を設定します。 白黒の
-                  画像にするか、 ツールボックスの色標識に示される現在の描画色と
-                  背景色で描くか、 もしくは2つの色だまりボタンでそれぞれ指定
-                  した色を使う方法があります。 <guilabel>アルファチャンネル
-                  </guilabel> スライダはそれぞれの色の不透明度を設定します。
-                  フィルタを呼び出したレイヤーにアルファチャンネルがない
-                  ときは、 どちらのスライダも灰色無効になり使用できません。
-                </para>
-              </listitem>
-            </varlistentry>
-          </variablelist>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Blend settings</term>
-        <term lang="ja">混色タブ</term>
-        <listitem>
-          <figure>
-            <title lang="en">Sinus filter options (Blend)</title>
-            <title lang="ja">Sin 曲線フィルタのオプション (混色)</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/options-render-sinus3.png"/>
-              </imageobject>
-            </mediaobject>
-          </figure>
-          <variablelist>
-            <varlistentry>
-              <term lang="en">Gradient</term>
-              <term lang="ja">勾配/グラデーション</term>
-              <listitem>
-                <para lang="en">
-                  You can choose between three functions to set the shapes
-                  of the waves that are produced:  Linear, Bilinear and
-                  Sinusoidal.
-                </para>
-                <para lang="ja">
-                  波形を生成する関数には <guilabel>線形
-                  </guilabel>、 <guilabel>双線型</guilabel>、
-                  <guilabel>波状</guilabel> のいずれかを
-                  選びます。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Exponent</term>
-              <term lang="ja">指数</term>
-              <listitem>
-                <para lang="en">
-                  The Exponent controls which of the two colors is
-                  dominant, and how dominant it is. If you set
-                  the exponent to -7.5, the left color will dominate
-                  totally, and if you set it to +7.5 it will be the other
-                  way around. A zero value is neutral.
-                </para>
-                <para lang="ja">
-                  <guilabel>指数</guilabel> スライダは2色の
-                  うちどちらがどの程度優勢となるかを設定します。 この値を -7.5 
-                  にすると<quote>色</quote>タブで指定した色のうち、 白黒なら
-                  黒が、 描画色と背景色なら描画色が、 色だまりボタンでは右側の
-                  色が完全に画像を塗りつぶします。 逆にこの値を 7.5 とすると
-                  もう一方の色が完全支配します。 値が 0.0 なら中立的に
-                  なります。
-                </para>
-              </listitem>
-            </varlistentry>
-          </variablelist>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+
+    <sect4>
+      <title lang="en">Settingstab</title>
+      <title lang="ja">設定</title>
+      <figure>
+        <title lang="en"><quote>Sinus</quote> filter options (Settings)</title>
+        <title lang="ja">
+          <quote>Sin 曲線</quote>フィルタのオプション (設定)
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/options-render-sinus1.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <variablelist>
+        <title lang="en">Drawing Settings</title>
+        <title lang="ja">描画設定</title>
+        <varlistentry>
+          <term lang="en">X scale</term>
+          <term lang="en">Y scale</term>
+          <term lang="ja">X 拡大縮小</term>
+          <term lang="ja">Y 拡大縮小</term>
+          <listitem>
+            <para lang="en">
+              A low X/Y value will maximize the horizontal/vertical
+              stretch of the texture, whereas a high value will compress
+              it.
+            </para>
+            <para lang="ja">
+              X は水平方向に、 Y は垂直方向に関連しています。 低い値にすると
+              いずれもその方向に文様が引き伸ばされ、 高い値にすると文様は
+              圧縮されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Complexity</term>
+          <term lang="ja">複雑度</term>
+          <listitem>
+            <para lang="en">
+              This controls how the two colors interact with each other
+              (the amount of interplay or repetition).
+            </para>
+            <para lang="ja">
+              このスライダは2つの色が互いに影響しあう程度を調節します。 
+              相互作用や反復の量といえます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <variablelist>
+        <title lang="en">Calculation Settings</title>
+        <title lang="ja">演算設定</title>
+        <varlistentry>
+          <term lang="en">Random seed</term>
+          <term lang="ja">乱数種</term>
+          <listitem>
+            <para lang="en">
+              This option controls the random
+              behaviour of the filter. If the same random seed in the
+              same situation is used, the filter produces exactly the
+              same results. A different random seed produces different
+              results. Random seed can be entered manually or generated
+              randomly by pressing the <guibutton>New Seed</guibutton>
+              button.
+            </para>
+            <para lang="en">
+              When the <guilabel>Randomize</guilabel> option is checked,
+              random seed cannot be entered manually, but is randomly
+              generated each time the filter is run. If it is not
+              checked, the filter remembers the last random seed used.
+            </para>
+            <para lang="ja">
+              このオプションはフィルタの不規則なふるまいを制御します。 同じ
+              乱数種を同じ条件下で使用するとフィルタは全く同じ結果を生みます。 
+              乱数種が異なれば別の結果が出ます。 乱数種は数値記入欄から
+              直接与えるほか、 <guibutton>新しい種</guibutton> ボタンを
+              クリックして無作為に発行させる方法もあります。
+            </para>
+            <para lang="ja">
+              <guilabel>乱数化</guilabel> オプションを有効にすると乱数種の
+              記入欄は灰色無効となって、 直接指定ができなくなりますが、 
+              代わりにフィルタを呼び出した時点で自動的に乱数種が生成され
+              利用されます。 無効にしておれば前回利用した乱数種を記憶しており
+              繰り返し再利用できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Force Tiling?</term>
+          <term lang="ja">強制的に並べる?</term>
+          <listitem>
+            <para lang="en">
+              If you check this, you'll get a pattern that can be
+              used for tiling. For example, you can use it as a
+              background in an HTML page, and the tile edges will be
+              joined seamlessly.
+            </para>
+            <para lang="ja">
+              このオプションを有効にすると、 生成されるパターンはタイル化
+              可能な文様になります。 例えば<acronym>HTML</acronym>ページの
+              背景画像として使えば並べたとき継ぎ目が目立ちません。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Ideal</term>
+          <term lang="en">Distorted</term>
+          <term lang="ja">典型</term>
+          <term lang="ja">ゆがめる</term>
+          <listitem>
+            <para lang="en">
+              This option gives additional control of the interaction between
+              the two colors. <quote>Distorted</quote> creates a more
+              distorted interference between the two colors than
+              <quote>Ideal</quote>.
+            </para>
+            <para lang="ja">
+              これは使われる2つの色が互いに影響しあうときの処理を調整する
+              付加的なオプションです。 <guilabel>ゆがめる</guilabel> を選んだ
+              場合の2色間の相互作用は <guilabel>典型</guilabel> を選んだ場合に
+              比べより歪んだものになります。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+
+    <sect4>
+      <title lang="en">Colors</title>
+      <title lang="ja">色</title>
+      <figure>
+        <title lang="en"><quote>Sinus</quote> filter options (Color)</title>
+        <title lang="ja">
+          <quote>Sin 曲線</quote>フィルタのオプション (色)
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/options-render-sinus2.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Colors</term>
+          <term lang="ja">カラー</term>
+          <listitem>
+            <para lang="en">
+              Here, you set the two colors that make up your texture. You can
+              use <guilabel>Black &amp; white</guilabel> or the
+              <guilabel>foreground &amp; background</guilabel> colors in the
+              toolbox, or you can <guilabel>Choose</guilabel> a color with the
+              color icons.
+            </para>
+            <para lang="ja">
+              このタブでは文様を作るのに使われる2色を設定します。 白黒の画像に
+              するか、 ツールボックスの色標識に示される現在の描画色と背景色で
+              描くか、 もしくは2つの色だまりボタンでそれぞれ指定した色を使う
+              方法があります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Alpha Channels</term>
+          <term lang="ja">アルファチャンネル</term>
+          <listitem>
+            <para lang="en">
+              This sliders allow you to assign an opacity to each of the
+              colors.  (If the layer you are working on does not have an alpha
+              channel, they will be grayed out.)
+            </para>
+            <para lang="ja">
+              これらのスライダはそれぞれの色の不透明度を設定します。
+              フィルタを呼び出したレイヤーにアルファチャンネルがないときは、 
+              どちらのスライダも灰色無効になり使用できません。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+
+    <sect4>
+      <title lang="en">Blend</title>
+      <title lang="ja">混色</title>
+      <figure>
+        <title lang="en"><quote>Sinus</quote> filter options (Blend)</title>
+        <title lang="ja">
+          <quote>Sin 曲線</quote>フィルタのオプション (混色)
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/options-render-sinus3.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Gradient</term>
+          <term lang="ja">勾配/グラデーション</term>
+          <listitem>
+            <para lang="en">
+              You can choose between three functions to set the shapes of the
+              waves that are produced:  Linear, Bilinear and Sinusoidal.
+            </para>
+            <para lang="ja">
+              波形を生成する関数には <guilabel>線形</guilabel>、
+              <guilabel>双線型</guilabel>、 <guilabel>波状</guilabel> 
+              のいずれかを選びます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Exponent</term>
+          <term lang="ja">指数</term>
+          <listitem>
+            <para lang="en">
+              The Exponent controls which of the two colors is dominant, and
+              how dominant it is. If you set the exponent to -7.5, the left
+              color will dominate totally, and if you set it to +7.5 it will
+              be the other way around. A zero value is neutral.
+            </para>
+            <para lang="ja">
+              <guilabel>指数</guilabel> スライダは2色のうちどちらがどの程度
+              優勢となるかを設定します。 この値を -7.5 にすると
+              <quote>色</quote>タブで指定した色のうち、 白黒なら黒が、 描画色と
+              背景色なら描画色が、 色だまりボタンでは右側の色が完全に画像を
+              塗りつぶします。 逆にこの値を 7.5 とするともう一方の色が
+              完全支配します。 値が 0.0 なら中立的になります。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
   </sect3>
 </sect2>

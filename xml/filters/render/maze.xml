@@ -7,7 +7,7 @@
   2005-12-08 <simplesect> replaced by <sect3> by lexa
   2005/09/20 de added by axel.wernicke
 -->
-<!--2009-09-15-->
+<!--2010-07-28-->
 <sect2 id="plug-in-maze">
   <title lang="en">Maze</title>
   <title lang="ja">迷路...</title>
@@ -97,45 +97,35 @@
       </mediaobject>
     </figure>
     <variablelist>
+      <title lang="en">Maze Size</title>
+      <title lang="ja">迷路サイズ</title>
       <varlistentry>
-        <term lang="en">Width/Height</term>
-        <term lang="ja">迷路サイズ</term>
+        <term lang="en">Width</term>
+        <term lang="en">Height</term>
+        <term lang="ja">幅</term>
+        <term lang="ja">高さ</term>
         <listitem>
           <para lang="en">
-            The <guilabel>Width</guilabel> and
-            <guilabel>Height</guilabel> sliders control how many
-            pathways the
-            maze should have. The lower the values for width and height,
-            the more paths you will get. The same happens if you
-            increase the number of pieces in the Width and Height
-            <guilabel>Pieces</guilabel> fields.  The result won't
-            really look like a maze unless the width and height are
+            These sliders control how many pathways the maze should have. The
+            lower the values for width and height, the more paths you will
+            get. The same happens if you increase the number of pieces in the
+            Width and Height <guilabel>Pieces</guilabel> fields.  The result
+            won't really look like a maze unless the width and height are
             equal.
           </para>
           <para lang="ja">
-            <guilabel>幅</guilabel> と <guilabel>高さ</guilabel> スライダは
-            迷路の道の広さを水平方向と垂直方向ごとに設定します。 幅や高さを
-            小さくするほど迷路にはたくさんの通路ができます。 <guilabel>部品数
-            </guilabel> を増すと自動的に幅や高さのスライダが反比例して小さい
-            値に変化し、 同じ結果になります。 幅と高さの値を同じにしないと
-            できあがった図面が迷路らしくありません。
+            これらのスライダは迷路の道の広さを水平方向と垂直方向ごとに設定
+            します。 幅や高さを小さくするほど迷路にはたくさんの通路ができます。 
+            <guilabel>部品数</guilabel> を増すと自動的に幅や高さのスライダが
+            反比例して小さい値に変化し、 同じ結果になります。 幅と高さの値を
+            同じにしないとできあがった図面が迷路らしくありません。
           </para>
         </listitem>
       </varlistentry>
-      <varlistentry>
-        <term lang="en">Tileable</term>
-        <term lang="ja">タイル化可能</term>
-        <listitem>
-          <para lang="en">
-            If you want to use it in a pattern, you can make the maze
-            tileable by checking this check-button.
-          </para>
-          <para lang="ja">
-            生成した図面を文様として使うとき、 このオプションを有効にすれば
-            継ぎ目なく並べられる画像ができます。
-          </para>
-        </listitem>
-      </varlistentry>
+    </varlistentry>
+    <varlistentry>
+      <title lang="en">Algorithm</title>
+      <title lang="ja">アルゴリズム</title>
       <varlistentry>
         <term lang="en">Seed</term>
         <term lang="ja">種</term>
@@ -154,19 +144,32 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Algorithm</term>
-        <term lang="ja">アルゴリズム</term>
+        <term lang="en">Depth first</term>
+        <term lang="en">Prim's algorithm</term> 
+        <term lang="ja">深度優先</term>
+        <term lang="ja">Prim アルゴリズム</term>
         <listitem>
           <para lang="en">
-            You can choose between two algorithms for maze,
-            <guilabel>Depth First</guilabel> and
-            <guilabel>Prim's Algorithm</guilabel>.  Only a computer
-            scientist can tell the difference between them.
+            You can choose between these two algorithms for maze. Only a
+            computer scientist can tell the difference between them.
           </para>
           <para lang="ja">
-            迷路の作成方法は <guilabel>深度優先</guilabel> と <guilabel>Prim 
-            アルゴリズム</guilabel> のいずれかを選べます。 その違いは
+            迷路の作成方法はこれらのいずれかを選べます。 その違いは
             コンピュータ技術者だけが理解できるしろものです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Tileable</term>
+        <term lang="ja">タイル化可能</term>
+        <listitem>
+          <para lang="en">
+            If you want to use it in a pattern, you can make the maze
+            tileable by checking this check-button.
+          </para>
+          <para lang="ja">
+            生成した図面を文様として使うとき、 このオプションを有効にすれば
+            継ぎ目なく並べられる画像ができます。
           </para>
         </listitem>
       </varlistentry>
