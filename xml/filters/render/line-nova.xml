@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!-- section history:
-  2010-03-02 liangtai: created initial version
--->
-<sect2 id="script-fu-circuit">
+
+<sect2 id="script-fu-line-nova">
   <title>Line Nova</title>
 
   <indexterm>
@@ -12,24 +10,33 @@
     <secondary>Render</secondary>
     <tertiary>Line Nova</tertiary>
   </indexterm>
-  <indexterm>
-    <primary>Line Nova</primary>
-  </indexterm>
+  <indexterm><primary>Line Nova</primary></indexterm>
 
   <sect3>
     <title>Overview</title>
+
     <figure>
-      <title>Example of Line Nova</title>
+      <title>Example for the <quote>Line Nova</quote> filter</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
-            fileref="images/filters/examples/render-taj-line-nova.jpg"/>
+            fileref="images/filters/examples/taj_orig.jpg" />
         </imageobject>
         <caption>
-          <para>Filter <quote>Line Nova</quote> applied</para>
+          <para>Original image</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render/taj-line-nova.jpg" />
+        </imageobject>
+        <caption>
+          <para><quote>Line Nova</quote> applied</para>
         </caption>
       </mediaobject>
     </figure>
+
     <para>
       <guimenuitem>Line Nova</guimenuitem> command is a script which fills
       a layer with rays emanating outward from its center using the FG color.
@@ -38,29 +45,42 @@
     </para>
     <tip>
       <para>
-        This filter does not have any option which allow you to set the center
-        point of lines.  If you need adjust the center of lines, create another
-        transparent image and apply this filter on it, then add it on your
-        image.  When creating the new transparent image, set size larger than
-        your image so that its lines would not break inside of your image.
+        This filter does not provide any option which allow you to set the
+        center point of lines.  If you need adjust the center of starred-out
+        lines where you want, create another transparent image and apply this
+        filter on it, then add it on your image.  Setting large size for the
+        new nova image may help you not to break lines inside of your image.
       </para>
     </tip>
   </sect3>
 
   <sect3>
+    <title>Activating the filter</title>
+    <para>
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guimenuitem>Line Nova</guimenuitem>
+      </menuchoice>.
+    </para>
+  </sect3>
+
+  <sect3>
     <title>Options</title>
-    <figure>
-      <title><quote>Line Nova</quote> filter options</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/filters/render/line-nova.png"/>
-        </imageobject>
-      </mediaobject>
-    </figure>
     <para>
       1
     </para>
+    <figure>
+      <title><quote>Line Nova</quote> options</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/render/line-nova.png" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
     <variablelist>
       <varlistentry>
         <term>Number of lines</term>
@@ -75,7 +95,7 @@
         <term>Sharpness (degrees)</term>
         <listitem>
           <para>
-            0.0-10.0 1.0
+            Every line tapers off on outer limit. 0.0-10.0 The default is 1.0.
           </para>
         </listitem>
       </varlistentry>
@@ -83,7 +103,10 @@
         <term>Offset radius</term>
         <listitem>
           <para>
-            0-2000 100
+            Almost lines don't reach the center point if this value is set
+            over 0.  You can set radius of the void space circle around the
+            center point between 0 to 2000 pixels.  Default value is 100
+            pixels.
           </para>
         </listitem>
       </varlistentry>
