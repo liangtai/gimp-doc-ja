@@ -36,12 +36,15 @@
       All lines radiates from the center of the layer.  Rendered lines are
       cropped to be fit inside of the image.
     </para>
-    <para>
-      If you need adjust the center of lines, create a transparent image in
-      slightly larger size than the original, and apply this script on it,
-      then add a copy of the layer to the original image, and move the layer
-      to the appropriate position.
-    </para>
+    <tip>
+      <para>
+        This filter does not have any option which allow you to set the center
+        point of lines.  If you need adjust the center of lines, create another
+        transparent image and apply this filter on it, then add it on your
+        image.  When creating the new transparent image, set size larger than
+        your image so that its lines would not break inside of your image.
+      </para>
+    </tip>
   </sect3>
 
   <sect3>
@@ -51,7 +54,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/options-render-line-nova.png"/>
+            fileref="images/filters/render/line-nova.png"/>
         </imageobject>
       </mediaobject>
     </figure>
