@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!-- section history:
-  2010-02-24 liangtai: created initial version
--->
+
 <sect2 id="script-fu-spyrogimp">
   <title>Spyrogimp</title>
 
@@ -12,62 +10,41 @@
     <secondary>Render</secondary>
     <tertiary>Spyrogimp</tertiary>
   </indexterm>
-  <indexterm>
-    <primary>Spyrogimp</primary>
-  </indexterm>
+  <indexterm><primary>Spyrogimp</primary></indexterm>
 
   <sect3>
     <title>Overview</title>
+
     <figure>
-      <title>Example of Spyrogimp</title>
+      <title>Example for the <quote>Spyrogimp</quote> filter</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
-            fileref="images/filters/examples/render-taj-spyrogimp.jpg"/>
+            fileref="images/filters/examples/taj_orig.jpg" />
         </imageobject>
         <caption>
-          <para>Filter <quote>Spyrogimp</quote> applied</para>
+          <para>Original image</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render/taj-spyrogimp.jpg" />
+        </imageobject>
+        <caption>
+          <para><quote>Spyrogimp</quote> applied</para>
         </caption>
       </mediaobject>
     </figure>
+
     <para>
       <guimenuitem>Spyrogimp</guimenuitem> command is a script which adds
       Spirographs, Epitrochoids, and Lissajous Curves to the current layer.
     </para>
-    <para>
-      This script is achieved by the following steps.
-    </para>
-    <orderedlist>
-      <listitem>
-        <para>
-          <link linkend="plug-in-rgb-noise">noisified</link>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <link linkend="plug-in-gauss">Gaussian blur</link>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <link linkend="plug-in-c-astretch">expanded as possibly</link>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Finally doing
-          <link linkend="plug-in-bump-map">bump map</link>
-        </para>
-      </listitem>
-    </orderedlist>
   </sect3>
 
   <sect3>
-    <title>Activate the filter</title>
+    <title>Activating the filter</title>
     <para>
       This filter is found in the image window menu under
       <menuchoice>
@@ -80,17 +57,23 @@
 
   <sect3>
     <title>Options</title>
+    <para>
+      <!--
+        Describe how the filter options are organized in general.
+        This part is optional, but helps if the filter options dialog is a bit
+        more complex e.g. has some tabs etc.
+       -->
+    </para>
     <figure>
-      <title><quote>Spyrogimp</quote> filter options</title>
+      <title><quote>Spyrogimp</quote> options</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/filters/options-render-spyrogimp.png"/>
+            fileref="images/filters/render/spyrogimp.png" />
         </imageobject>
       </mediaobject>
     </figure>
-    <para>
-    </para>
+
     <variablelist>
       <varlistentry>
         <term>Type</term>
@@ -204,5 +187,39 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title>Making the Spyrogimp effect</title>
+    <para>
+      This script is achieved by the following steps.
+    </para>
+    <orderedlist>
+      <listitem>
+        <para>
+          <link linkend="plug-in-rgb-noise">noisified</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <link linkend="plug-in-gauss">Gaussian blur</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <link linkend="plug-in-c-astretch">expanded as possibly</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Finally doing
+          <link linkend="plug-in-bump-map">bump map</link>
+        </para>
+      </listitem>
+    </orderedlist>
   </sect3>
 </sect2>

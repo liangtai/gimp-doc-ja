@@ -39,14 +39,16 @@
 
     <para>
       <guimenuitem>Line Nova</guimenuitem> command is a script which fills
-      a layer with rays emanating outward from its center using the FG color.
-      All lines radiates from the center of the layer.  Rendered lines are
-      cropped to be fit inside of the image.
+      a layer with rays emanating outward from its center using the foreground
+      color of toolbox.  All lines radiates from the near center of the layer,
+      and get broader to join both neighboring lines into outer solid field
+      filled with the foreground color.  Rendered lines are cropped on the
+      every edge of the image to be fit inside of it.
     </para>
     <tip>
       <para>
         This filter does not provide any option which allow you to set the
-        center point of lines.  If you need adjust the center of starred-out
+        center point of lines.  If you need adjust the place of the radial
         lines where you want, create another transparent image and apply this
         filter on it, then add it on your image.  Setting large size for the
         new nova image may help you not to break lines inside of your image.
@@ -95,7 +97,11 @@
         <term>Sharpness (degrees)</term>
         <listitem>
           <para>
-            Every line tapers off on outer limit. 0.0-10.0 The default is 1.0.
+            Every transparent chink between lines is tapering off toward the
+            outer direction.  To see the base image more wider, set this
+            degree more shorter so that the chick stretch longer. Allowed range
+            is between 0.0 and 10.0, but note that 0.0 makes nothing drawn.
+            The default is 1.0.
           </para>
         </listitem>
       </varlistentry>
@@ -104,9 +110,9 @@
         <listitem>
           <para>
             Almost lines don't reach the center point if this value is set
-            over 0.  You can set radius of the void space circle around the
-            center point between 0 to 2000 pixels.  Default value is 100
-            pixels.
+            over 0.  By this option, you can set radius (between 0 to 2000
+            pixels) of the transparent space around the center point.  Default
+            value is 100 pixels.
           </para>
         </listitem>
       </varlistentry>
@@ -114,7 +120,9 @@
         <term>Randomness</term>
         <listitem>
           <para>
-            1-2000 30
+            Set this value more larger (up to 2000) to get more distoted
+            radiation.  Regular star shape is given by setting this value
+            to 1.  The default is 30.
           </para>
         </listitem>
       </varlistentry>
