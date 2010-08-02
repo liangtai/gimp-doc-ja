@@ -50,11 +50,36 @@
     </figure>
 
     <para lang="en">
-      <!--
-        Describe what the filter does, which algorithms it uses.
-        Give the user an idea what to use the filter for
-       -->
+      <guimenuitem>Line Nova</guimenuitem> command is a script which fills
+      a layer with rays emanating outward from its center using the foreground
+      color shown in the Toolbox.  All lines radiates from the near center of
+      the layer, and get broader to join both neighboring lines into outer
+      solid field filled with the foreground color.  Rendered lines are
+      cropped on the every edge of the image to be fit inside of it.
     </para>
+    <para lang="ja">
+      <guimenuitem>集中線...</guimenuitem> コマンドはレイヤーの中心より外に
+      向かって幾筋もの光線をツールボックスに示される描画色で描くスクリプトです。
+      いずれの線もレイヤーの中心付近から放射状に延び、 徐々に太くなって隣りの
+      線と混じり、 やがて外周で描画色の塗りつぶしとなります。 描線は画像の
+      境界で刈り揃えられます。
+    </para>
+    <tip>
+      <para lang="en">
+        This filter does not provide any option which allow you to set the
+        center point of lines.  If you need adjust the place of the radial
+        lines where you want, create another transparent image and apply this
+        filter on it, then add it on your image.  Setting large size for the
+        new nova image may help you not to break lines inside of your image.
+      </para>
+      <para lang="ja">
+        このフィルタには集中線の中心を設定する機能が一切ありません。 放射状の
+        線を好みの位置に置くためには、 透過する画像を新たに用意してそこにこの
+        フィルタを適用し、 元の画像に加えてください。 集中線の新しい画像は元の
+        画像より大きくしておくと位置を変えても画像の途中で線が途切れるさせずに
+        済みます。
+      </para>
+    </tip>
   </sect3>
 
 
@@ -82,13 +107,6 @@
   <sect3>
     <title lang="en">Options</title>
     <title lang="ja">オプション</title>
-    <para>
-      <!--
-        Describe how the filter options are organized in general.
-        This part is optional, but helps if the filter options dialog is a bit
-        more complex e.g. has some tabs etc.
-       -->
-    </para>
     <figure>
       <title lang="en"><quote>Line Nova</quote> options</title>
       <title lang="ja"><quote>集中線</quote>フィルタのオプション</title>
@@ -105,8 +123,13 @@
         <term lang="en">Number of lines</term>
         <term lang="ja">線数</term>
         <listitem>
-          <para>
-            TODO
+          <para lang="en">
+            By using this slider you can set the number of lines between 40
+            to 1000. The default is 200.
+          </para>
+          <para lang="ja">
+            このスライダで、 描かれる線の数を 40 本から 1000 本の間で
+            指定できます。 初期設定値は 200 本です。
           </para>
         </listitem>
       </varlistentry>
@@ -114,8 +137,19 @@
         <term lang="en">Sharpness (degrees)</term>
         <term lang="ja">鋭さ (角度)</term>
         <listitem>
-          <para>
-            TODO
+          <para lang="en">
+            Every transparent chink between lines is tapering off toward the
+            outer direction.  To see the base image more wider, set this
+            degree more shorter so that the chick spaces stretch longer.
+            Allowed range is between 0.0 and 10.0, but note that 0.0 makes
+            nothing drawn.  The default is 1.0.
+          </para>
+          <para lang="ja">
+            線と線の間の透過した隙間は外に向かってだんだん細くなります。 下絵
+            をもっと広く見せるのなら、 この角度をもっと小さくすれば隙間の部分が
+            どんどん長く延びます。 指定できる範囲は 0.0 から 10.0 までですが、
+            0.0 を指定すると何も描画されなくなりますのでご注意ください。 初期
+            設定値は 1.0 です。
           </para>
         </listitem>
       </varlistentry>
@@ -123,8 +157,16 @@
         <term lang="en">Offset radius</term>
         <term lang="ja">オフセット半径</term>
         <listitem>
-          <para>
-            TODO
+          <para lang="en">
+            Almost lines don't reach the center point if this value is set
+            over 0.  By this option, you can set radius (between 0 to 2000
+            pixels) of the transparent space around the center point. The
+            default value is 100 pixels.
+          </para>
+          <para lang="ja">
+            この値を 0 より大きくするとほとんどの線は中心点に届かなくなります。
+            このオプションで中心部に空く透過部分の半径を 0 ピクセルから 2000
+            ピクセルの間で設定できます。 初期設定値は 100 ピクセルです。
           </para>
         </listitem>
       </varlistentry>
@@ -132,8 +174,14 @@
         <term lang="en">Randomness</term>
         <term lang="ja">複雑度</term>
         <listitem>
-          <para>
-            TODO
+          <para lang="en">
+            Set this value more larger (up to 2000) to get more distoted
+            radiation.  Regular star shape is given by setting this value
+            to 1.  The default is 30.
+          </para>
+          <para lang="ja">
+            いびつに線を放射させるにはこの値をもっと大きく (2000 まで) します。
+            正確な星型にするときはこの値を 1 にします。 初期設定値は 30 です。
           </para>
         </listitem>
       </varlistentry>
