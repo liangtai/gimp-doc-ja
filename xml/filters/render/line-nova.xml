@@ -2,7 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                 "http://www.docbook.org/xml/4.3/docbookx.dtd">
 
-<!--2010-07-31-->
+<!--2010-08-25-->
 <sect2 id="script-fu-line-nova">
   <title lang="en">Line Nova</title>
   <title lang="ja">集中線...</title>
@@ -50,19 +50,16 @@
     </figure>
 
     <para lang="en">
-      <guimenuitem>Line Nova</guimenuitem> command is a script which fills
-      a layer with rays emanating outward from its center using the foreground
-      color shown in the Toolbox.  All lines radiates from the near center of
-      the layer, and get broader to join both neighboring lines into outer
-      solid field filled with the foreground color.  Rendered lines are
-      cropped on the every edge of the image to be fit inside of it.
+      <guimenuitem>Line Nova</guimenuitem> The Line Nova filter fills a
+      layer with rays emanating outward from its center of the layer using
+      the foreground color shown in the Toolbox. The rays starts as one pixel
+      and grew broader towars the edges of the layer.
     </para>
     <para lang="ja">
       <guimenuitem>集中線...</guimenuitem> コマンドはレイヤーの中心より外に
-      向かって幾筋もの光線をツールボックスに示される描画色で描くスクリプトです。
-      いずれの線もレイヤーの中心付近から放射状に延び、 徐々に太くなって隣りの
-      線と混じり、 やがて外周で描画色の塗りつぶしとなります。 描線は画像の
-      境界で刈り揃えられます。
+      向かって放射される幾筋もの光線をツールボックスに示される描画色で描く
+      スクリプトです。 光線は 1 ピクセルから始まりレイヤーの外縁に向かって
+      だんだん太くなります。
     </para>
     <tip>
       <para lang="en">
@@ -81,7 +78,6 @@
       </para>
     </tip>
   </sect3>
-
 
   <sect3>
     <title lang="en">Activating the filter</title>
@@ -138,19 +134,42 @@
         <term lang="ja">鋭さ (角度)</term>
         <listitem>
           <para lang="en">
-            Every transparent chink between lines is tapering off toward the
-            outer direction.  To see the base image more wider, set this
-            degree more shorter so that the chick spaces stretch longer.
-            Allowed range is between 0.0 and 10.0, but note that 0.0 makes
-            nothing drawn.  The default is 1.0.
+            This slider determines how much the rays will broaden towards
+            the edges. The range goes from 0.0 to 10.0. If set to 0.0, nothing
+            will be drawn. If set to 10.0 most of the area near the edges of
+            the layer will be painted.
           </para>
           <para lang="ja">
-            線と線の間の透過した隙間は外に向かってだんだん細くなります。 下絵
-            をもっと広く見せるのなら、 この角度をもっと小さくすれば隙間の部分が
-            どんどん長く延びます。 指定できる範囲は 0.0 から 10.0 までですが、
-            0.0 を指定すると何も描画されなくなりますのでご注意ください。 初期
-            設定値は 1.0 です。
+            このオプションは光線が外に向かってどの程度の割合で太くなるかを
+            決めます。 値の範囲は 0.0 から 10.0 です。 0.0 に設定すると何も
+            描かれません。 10.0 に設定するとレイヤーの外辺付近がほとんど塗り
+            つぶされます。
           </para>
+          <figure>
+            <title lang="en">
+              <quote>Line Nova</quote> sharpness option</quote>
+            </title>
+            <title lang="ja">
+              <quote>集中線</quote>の鋭さオプション</quote>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/examples/render/line-nova-sharp.png" />
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From left to right: sharpness = 1; sharpness = 5;
+                  sharpness = 10
+                </para>
+                <para lang="ja">
+                  左から順に: <parameter>鋭さ (角度)</parameter> = 1;
+                  <parameter>鋭さ (角度)</parameter> = 5;
+                  <parameter>鋭さ (角度)</parameter> = 10
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -158,16 +177,42 @@
         <term lang="ja">オフセット半径</term>
         <listitem>
           <para lang="en">
-            Almost lines don't reach the center point if this value is set
-            over 0.  By this option, you can set radius (between 0 to 2000
-            pixels) of the transparent space around the center point. The
-            default value is 100 pixels.
+            Here you choose the distance, in pixels, from center to the
+            starting point of the rays. If set to 0.0 the rays starts from the
+            center. Any other value will let the starting points be on a circle
+            at the selected distance from the center. The maximum distance is
+            2000 pixels. The default value is 100 pixels.
           </para>
           <para lang="ja">
-            この値を 0 より大きくするとほとんどの線は中心点に届かなくなります。
-            このオプションで中心部に空く透過部分の半径を 0 ピクセルから 2000
-            ピクセルの間で設定できます。 初期設定値は 100 ピクセルです。
+            ここでは光線の中心点から光線が現れる位置までの距離をピクセル単位で
+            決めます。 0.0 にすると光線は中心点から出ます。 それ以上の値に
+            すると、 光線の始点はここで定めた距離だけ中心点から離れ円形に
+            並びます。 最大の距離は 2000 ピクセルです。 初期設定値は 100
+            ピクセルです。
           </para>
+          <figure>
+            <title lang="en">
+              <quote>Line Nova</quote> offset radius option</quote>
+            </title>
+            <title lang="ja">
+              <quote>集中線</quote>のオフセット半径オプション</quote>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/examples/render/line-nova-radius.png" />
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From left to right: randomness = 1; randomness = 50
+                </para>
+                <para lang="ja">
+                  左から順に: <parameter>複雑度</parameter> = 1;
+                  <parameter>複雑度</parameter> = 50
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -175,14 +220,42 @@
         <term lang="ja">複雑度</term>
         <listitem>
           <para lang="en">
-            Set this value more larger (up to 2000) to get more distoted
-            radiation.  Regular star shape is given by setting this value
-            to 1.  The default is 30.
+            If this slider is set to a value higher than 1, the starting point
+            for each ray differ more or less randomly from the average starting
+            point set as the offset radius above. With the value set to 1, all
+            the rays will start at the circle determined by the offset radius.
+            The maximum value is 2000. The default value is 30.
           </para>
           <para lang="ja">
-            いびつに線を放射させるにはこの値をもっと大きく (2000 まで) します。
-            正確な星型にするときはこの値を 1 にします。 初期設定値は 30 です。
+            ここで値を 1 よりも大きくすると、 光線の始点がまばらになり、 上記の
+            オフセット半径で定めた中心からの距離が各線ごとに不規則に
+            増減します。 値を 1 と定めたときはすべての光線の始点が揃い、 上記の
+            オフセット半径で定めたとおり中心から等距離に発して始点が正円を
+            描いて並びます。 最大値は 2000 です。 初期設定値は 100 です。
           </para>
+          <figure>
+            <title lang="en">
+              <quote>Line Nova</quote> randomness option</quote>
+            </title>
+            <title lang="ja">
+              <quote>集中線</quote>の複雑度オプション</quote>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/examples/render/line-nova-rand.png" />
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From left to right: offset radius = 0; offset radius = 50
+                </para>
+                <para lang="ja">
+                  左から順に: <parameter>オフセット半径</parameter> = 0;
+                  <parameter>オフセット半径</parameter> = 50
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
         </listitem>
       </varlistentry>
     </variablelist>
