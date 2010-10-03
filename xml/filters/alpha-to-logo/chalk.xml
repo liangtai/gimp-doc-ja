@@ -90,8 +90,8 @@
           fileref="images/filters/examples/chalk-script-fu.png"/>
       </imageobject>
       <caption>
-        <para lang="en">The <quote>Chalk</quote> Script-Fu script.</para>
-        <para lang="ja"><quote>チョーク</quote>Script-Fuスクリプト</para>
+        <para lang="en">The <quote>Chalk</quote> logo</para>
+        <para lang="ja"><quote>チョーク</quote>ロゴ</para>
       </caption>
     </mediaobject>
     <warning>
@@ -102,55 +102,6 @@
         画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
       </para>
     </warning>
-    <itemizedlist>
-      <para lang="en">The <quote>Chalk</quote> filter</para>
-      <para lang="ja"><quote>チョーク</quote>フィルタは</para>
-      <listitem>
-        <para lang="en">
-          applies a <link linkend="plug-in-gauss">Gaussian blur</link> to the
-          layer, <link linkend="plug-in-spread">spreads</link> the pixels, and
-          <link linkend="plug-in-ripple">ripples</link> the layer
-          horizontally and vertically,
-        </para>
-        <para lang="ja">
-          <link linkend="plug-in-gauss">ガウスぼかし</link> をレイヤーに
-          かけ、 画素を 
-          <link linkend="plug-in-spread">拡散</link> させてから、 その
-          レイヤーを水平方向と垂直方向に 
-          <link linkend="plug-in-ripple">波紋</link> 化し、
-        </para>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          extracts edges using the <link linkend="plug-in-sobel">Sobel</link>
-          edge detect filter, and
-        </para>
-        <para lang="ja">
-          <link linkend="plug-in-sobel">ソーベル</link> 輪郭抽出フィルタで
-          レイヤーから画像の輪郭を読み取り、
-        </para>
-        <note>
-          <para lang="en">
-            Sometimes the sobel edge detect produces some garbage at the
-            image sides.
-          </para>
-          <para lang="ja">
-            ソーベル輪郭抽出プラグインはときおり画像の形に沿ってゴーストを
-            作ってしまいます。
-          </para>
-        </note>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          increases the luminosity
-          <link linkend="gimp-tool-levels">level</link>.
-        </para>
-        <para lang="ja">
-          <link linkend="gimp-tool-levels">レベルツール</link> で明度を
-          増します。
-        </para>
-      </listitem>
-    </itemizedlist>
     <para lang="en">
       Unfortunately you cannot change the tool and filter options. But you may
       reproduce the process step by step using the methods listed above,
@@ -218,5 +169,71 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <title lang="ja">フィルタの詳細</title>
+    <procedure>
+      <para lang="en">The <quote>Chalk</quote> filter</para>
+      <para lang="ja"><quote>チョーク</quote>フィルタは</para>
+      <step>
+        <para lang="en">
+          applies a <link linkend="plug-in-gauss">Gaussian blur</link> to the
+          layer, <link linkend="plug-in-spread">spreads</link> the pixels, and
+          <link linkend="plug-in-ripple">ripples</link> the layer
+          horizontally and vertically,
+        </para>
+        <para lang="ja">
+          <link linkend="plug-in-gauss">ガウスぼかし</link> をレイヤーに
+          かけ、 画素を 
+          <link linkend="plug-in-spread">拡散</link> させてから、 その
+          レイヤーを水平方向と垂直方向に 
+          <link linkend="plug-in-ripple">波紋</link> 化し、
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          extracts edges using the <link linkend="plug-in-sobel">Sobel</link>
+          edge detect filter, and
+        </para>
+        <para lang="ja">
+          <link linkend="plug-in-sobel">ソーベル</link> 輪郭抽出フィルタで
+          レイヤーから画像の輪郭を読み取り、
+        </para>
+        <note>
+          <para lang="en">
+            Sometimes the sobel edge detect produces some garbage at the
+            image sides.
+          </para>
+          <para lang="ja">
+            ソーベル輪郭抽出プラグインはときおり画像の形に沿ってゴーストを
+            作ってしまいます。
+          </para>
+        </note>
+      </step>
+      <step>
+        <para lang="en">
+          increases the luminosity
+          <link linkend="gimp-tool-levels">level</link>.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-tool-levels">レベルツール</link> で明度を
+          増します。
+        </para>
+      </step>
+    </procedure>
+    <para lang="en">
+      Unfortunately you cannot change the tool and filter options. But you may
+      reproduce the process step by step using the methods listed above,
+      varying the respective options. Then you just have to add a background
+      layer filled withe any color. That's all.
+    </para>
+    <para lang="ja">
+      残念なことにこれらの作業過程で使われるツールのオプションがこの
+      フィルタでは指定できません。 したがってそういったオプションを変更するには
+      代わりに以上の工程を手作業で実行することになるでしょう。 その場合
+      仕上げに任意の色で塗りつぶした背景レイヤーを追加すればできあがりです。
+    </para>
   </sect3>
 </sect2>

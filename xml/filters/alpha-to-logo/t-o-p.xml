@@ -41,18 +41,18 @@
             fileref="images/filters/examples/t-o-p.jpg"/>
         </imageobject>
         <caption>
-          <para lang="en"><quote>Particle Trace</quote> applied</para>
-          <para lang="ja"><quote>粒子の軌跡</quote>フィルタ適用後</para>
+          <para lang="en">The <quote>Particle Trace</quote> filter</para>
+          <para lang="ja"><quote>粒子の軌跡</quote>フィルタ</para>
         </caption>
       </mediaobject>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
-            fileref="images/filters/examples/t-o-p-edge.jpg"/>
+            fileref="images/filters/examples/t-o-p-script-fu.jpg"/>
         </imageobject>
         <caption>
-          <para lang="en">Applied with <quote>Edge only</quote> option</para>
-          <para lang="ja"><quote>縁だけ</quote>オプション適用</para>
+          <para lang="en">The <quote>Particle Trace</quote> logo</para>
+          <para lang="ja"><quote>粒子の軌跡</quote>ロゴ</para>
         </caption>
       </mediaobject>
     </figure>
@@ -85,18 +85,18 @@
       </para>
     </warning>
     <para lang="en">
-      The filter is derived from the <quote>Particle Trace</quote> script
+      The filter is derived from the <quote>Particle Trace</quote> logo script
       (<menuchoice>
         <guimenu>File</guimenu>
         <guisubmenu>Create</guisubmenu>
         <guisubmenu>Logos</guisubmenu>
         <guimenuitem>Particle Trace</guimenuitem>
-      </menuchoice>
-      in image window), which creates the following text effect:
+      </menuchoice>),
+      which creates the text effect shown in the example above.
     </para>
     <para lang="ja">
-      このフィルタはテキストをつぎに示すようなロゴに変える<quote>粒子の軌跡
-      </quote>ロゴスクリプトから派生しました。
+      このフィルタはテキストをさきに示した例図のようなロゴに変える
+      <quote>粒子の軌跡</quote>ロゴスクリプトから派生しました。
       ロゴスクリプトは画像ウィンドウのメニューの 
       <menuchoice>
         <guimenu>ファイル</guimenu>
@@ -105,33 +105,6 @@
         <guimenuitem>粒子の軌跡...</guimenuitem>
       </menuchoice>
       にあります。
-    </para>
-    <mediaobject>
-      <imageobject>
-        <imagedata format="JPG"
-          fileref="images/filters/examples/t-o-p-script-fu.jpg"/>
-      </imageobject>
-      <caption>
-        <para lang="en">
-          The <quote>Particle Trace</quote> Script-Fu script.
-        </para>
-        <para lang="ja">
-          <quote>粒子の軌跡</quote>Script-Fuロゴスクリプト
-        </para>
-      </caption>
-    </mediaobject>
-    <para lang="en">
-      The filter adds <link linkend="plug-in-rgb-noise">noise</link> to the
-      alpha and then turns the spots into
-      <link linkend="plug-in-sparkle">sparkles</link>. Then it adds a
-      <link linkend="gimp-selection-feather">feathered</link> white shadow.
-    </para>
-    <para lang="ja">
-      このフィルタはアルファ域に 
-      <link linkend="plug-in-rgb-noise">ノイズ</link> を加え、 出来た斑点を
-      <link linkend="plug-in-sparkle">きらめかせ</link> ます。 そこに 
-      <link linkend="gimp-selection-feather">境界がぼかされた</link> 白い影を
-      加えます。
     </para>
   </sect3>
 
@@ -277,6 +250,16 @@
             このオプションを有効にするとフィルタの効果はアルファチャンネルの
             縁のところだけに適用され、 アルファ域は消去されます。
           </para>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="JPG"
+                fileref="images/filters/examples/t-o-p-edge.jpg"/>
+            </imageobject>
+            <caption>
+              <para lang="en"><quote>Edge only</quote> activated</para>
+              <para lang="ja"><quote>縁だけ</quote>を有効にした</para>
+            </caption>
+          </mediaobject>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -336,5 +319,23 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <title lang="ja">フィルタの詳細</title>
+    <para lang="en">
+      The filter adds <link linkend="plug-in-rgb-noise">noise</link> to the
+      alpha and then turns the spots into
+      <link linkend="plug-in-sparkle">sparkles</link>. Then it adds a
+      <link linkend="gimp-selection-feather">feathered</link> white shadow.
+    </para>
+    <para lang="ja">
+      このフィルタはアルファ域に 
+      <link linkend="plug-in-rgb-noise">ノイズ</link> を加え、 出来た斑点を
+      <link linkend="plug-in-sparkle">きらめかせ</link> ます。 そこに 
+      <link linkend="gimp-selection-feather">境界がぼかされた</link> 白い影を
+      加えます。
+    </para>
   </sect3>
 </sect2>

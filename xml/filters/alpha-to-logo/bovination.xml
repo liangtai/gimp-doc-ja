@@ -63,6 +63,114 @@
         画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
       </para>
     </warning>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Bovination</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>牛模様...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Bovination</quote> options</title>
+      <title lang="ja"><quote>牛模様</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/alpha-to-logo/bovination-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Spots density X</term>
+        <term lang="en">Spots density Y</term>
+        <term lang="ja">斑点密度 X</term>
+        <term lang="ja">斑点密度 Y</term>
+        <listitem>
+          <para lang="en">
+            The horizontal (X) and vertical (Y) spots density will be used by
+            the <link linkend="plug-in-solid-noise">Solid&nbsp;Noise</link>
+            filter as <guilabel>X&nbsp;Size</guilabel> and <guilabel>
+            Y&nbsp;Size</guilabel>
+            options. So these values range from 1 to 16, with high values
+            resulting in many spots in the respective dimension, low values
+            resulting in few spots.
+          </para>
+          <para lang="ja">
+            水平方向 X と垂直方向 Y のこれらの斑点密度の値は 
+            <link linkend="plug-in-solid-noise">ソリッドノイズ</link> フィルタ
+            の <guilabel><accel>X</accel> サイズ</guilabel> と <guilabel>
+            <accel>Y</accel> サイズ</guilabel> オプションとして使われます。 
+            この値は 1 から 16 までの範囲があります。 高い値にするとその方向に
+            斑紋が増え、 低い値にするとその方向はまばらになります。
+          </para>
+          <figure>
+            <title lang="en"><quote>Spots density</quote> examples</title>
+            <title lang="ja"><quote>斑点密度</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/bovination-x.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Maximum X density, minimum Y density</para>
+                <para lang="ja">斑点密度 X 最大、 反転密度 Y 最小</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/bovination-y.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Maximum Y density, minimum X density</para>
+                <para lang="ja">斑点密度 Y 最大、 反転密度 X 最小</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Background Color</term>
+        <term lang="ja">背景色</term>
+        <listitem>
+          <para lang="en">
+            This is the color used to fill the <quote>Background</quote>
+            layer; it defaults to white. When you click on the color button,
+            you may choose any other color in the color selector dialog.
+          </para>
+          <para lang="ja">
+            生成される<quote>背景</quote>レイヤーはこの色で塗りつぶされます。 
+            初期設定は白です。 色だまりボタンをクリックすると色変更ダイアログ
+            が開かれ、 ここで他の色も選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <title lang="ja">フィルタの詳細</title>
     <para lang="en">
       The filter fills the alpha channel with
       <link linkend="plug-in-solid-noise">Solid Noise</link>:
@@ -127,106 +235,5 @@
           fileref="images/filters/examples/bovination-layers.png"/>
       </imageobject>
     </mediaobject>
-  </sect3>
-
-  <sect3>
-    <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
-    <para lang="en">
-      You can find this filter in the image window menu under
-      <menuchoice>
-        <guimenu>Filters</guimenu>
-        <guisubmenu>Alpha to Logo</guisubmenu>
-        <guimenuitem>Bovination</guimenuitem>
-      </menuchoice>.
-    </para>
-    <para lang="ja">
-      画像ウィンドウのメニューより
-      <menuchoice>
-        <guimenu>フィルタ</guimenu>
-        <guisubmenu>ロゴ効果</guisubmenu>
-        <guimenuitem>牛模様...</guimenuitem>
-      </menuchoice>
-    </para>
-  </sect3>
-
-  <sect3>
-    <title lang="en">Options</title>
-    <title lang="ja">オプション</title>
-    <figure>
-      <title lang="en"><quote>Bovination</quote> options</title>
-      <title lang="ja"><quote>牛模様</quote>のオプション</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/filters/alpha-to-logo/bovination-options.png"/>
-        </imageobject>
-      </mediaobject>
-    </figure>
-    <variablelist>
-      <varlistentry>
-        <term lang="en">Spots density X; Spots density Y</term>
-        <term lang="ja">斑点密度 X; 斑点密度 Y</term>
-        <listitem>
-          <para lang="en">
-            The horizontal (X) and vertical (Y) spots density will be used by
-            the <link linkend="plug-in-solid-noise">Solid&nbsp;Noise</link>
-            filter as <guilabel>X&nbsp;Size</guilabel> and <guilabel>
-            Y&nbsp;Size</guilabel>
-            options. So these values range from 1 to 16, with high values
-            resulting in many spots in the respective dimension, low values
-            resulting in few spots.
-          </para>
-          <para lang="ja">
-            水平方向 X と垂直方向 Y のこれらの斑点密度の値は 
-            <link linkend="plug-in-solid-noise">ソリッドノイズ</link> フィルタ
-            の <guilabel><accel>X</accel> サイズ</guilabel> と <guilabel>
-            <accel>Y</accel> サイズ</guilabel> オプションとして使われます。 
-            この値は 1 から 16 までの範囲があります。 高い値にするとその方向に
-            斑紋が増え、 低い値にするとその方向はまばらになります。
-          </para>
-          <figure>
-            <title lang="en"><quote>Spots density</quote> examples</title>
-            <title lang="ja"><quote>斑点密度</quote>の例</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/examples/bovination-x.png"/>
-              </imageobject>
-              <caption>
-                <para lang="en">Maximum X density, minimum Y density</para>
-                <para lang="ja">斑点密度 X 最大、 反転密度 Y 最小</para>
-              </caption>
-            </mediaobject>
-            <mediaobject>
-              <imageobject>
-                <imagedata format="PNG"
-                  fileref="images/filters/examples/bovination-y.png"/>
-              </imageobject>
-              <caption>
-                <para lang="en">Maximum Y density, minimum X density</para>
-                <para lang="ja">斑点密度 Y 最大、 反転密度 X 最小</para>
-              </caption>
-            </mediaobject>
-          </figure>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term lang="en">Background Color</term>
-        <term lang="ja">背景色</term>
-        <listitem>
-          <para lang="en">
-            This is the color used to fill the <quote>Background</quote>
-            layer; it defaults to white. When you click on the color button,
-            you may choose any other color in the color selector dialog.
-          </para>
-          <para lang="ja">
-            生成される<quote>背景</quote>レイヤーはこの色で塗りつぶされます。 
-            初期設定は白です。 色だまりボタンをクリックすると色変更ダイアログ
-            が開かれ、 ここで他の色も選択できます。
-          </para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
   </sect3>
 </sect2>
