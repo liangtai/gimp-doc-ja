@@ -39,8 +39,18 @@
             fileref="images/filters/examples/logo-chip-away.jpg"/>
         </imageobject>
         <caption>
-          <para lang="en"><quote>Chip Away</quote> applied</para>
-          <para lang="ja"><quote>かじり取り</quote>フィルタ適用後</para>
+          <para lang="en">The <quote>Chip Away</quote> filter</para>
+          <para lang="ja"><quote>かじり取り</quote>フィルタ</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/chip-away-script-fu.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Chip Away</quote> logo</para>
+          <para lang="ja"><quote>かじり取り</quote>ロゴ</para>
         </caption>
       </mediaobject>
     </figure>
@@ -72,12 +82,12 @@
         <guisubmenu>Create</guisubmenu>
         <guisubmenu>Logos</guisubmenu>
         <guimenuitem>Chip Away</guimenuitem>
-      </menuchoice>
-      in the image window), which creates a text effect like that:
+      </menuchoice>),
+      which creates a text logo with the effect shown above.
     </para>
     <para lang="ja">
-      このフィルタはつぎのような[縁だけ表面が砕けた]ロゴを作成する<quote>
-      かじり取り</quote>Script-Fuロゴスクリプトから派生しました。 
+      このフィルタはさきに掲げた図のような[縁だけ表面が砕けた]ロゴを作成する
+      <quote>かじり取り</quote> Script-Fu ロゴスクリプトから派生しました。 
       ロゴスクリプトは画像ウィンドウのメニューの 
       <menuchoice>
         <guimenu>ファイル</guimenu>
@@ -86,31 +96,6 @@
         <guimenuitem>かじり取り...</guimenuitem>
       </menuchoice>
       にあります。
-    </para>
-    <mediaobject>
-      <imageobject>
-        <imagedata format="JPG"
-          fileref="images/filters/examples/chip-away-script-fu.jpg"/>
-      </imageobject>
-    </mediaobject>
-    <para lang="en">
-      To achieve a chipping effect, the filter creates a
-      <link linkend="gimp-channel-selection-replace">selection from the alpha
-      channel</link> in a new layer, fills the selection with white,
-      <link linkend="plug-in-spread">spreads</link> the pixels, and applies a
-      <link linkend="plug-in-gauss">Gaussian blur</link> to the layer.
-      Then it uses this layer as a
-      <link linkend="plug-in-bump-map">Bump map</link>, creating a 3D effect.
-    </para>
-    <para lang="ja">
-      このフィルタはかじり取り効果を起こすために、 新たなレイヤーで 
-      <link linkend="gimp-channel-selection-replace">アルファチャンネルから
-      選択範囲を生成</link> して白く塗りつぶし、 画素を 
-      <link linkend="plug-in-spread">拡散</link> させ、 レイヤーに 
-      <link linkend="plug-in-gauss">ガウスぼかし</link> を適用します。 この
-      レイヤーは立体効果をつくるときの 
-      <link linkend="plug-in-bump-map">バンプマップ</link> として利用
-      されます。
     </para>
   </sect3>
 
@@ -391,5 +376,59 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <procedure>
+      <para lang="en">To achieve a chipping effect, the filter...</para>
+      <para lang="ja">かじり取り効果がうまれるまでに、 フィルタは</para>
+      <step>
+        <para lang="en">
+          ... creates a
+          <link linkend="gimp-channel-selection-replace">selection from the
+          alpha channel</link> in a new layer,
+        </para>
+        <para lang="ja">
+          新たなレイヤーで 
+          <link linkend="gimp-channel-selection-replace">アルファチャンネルから
+          選択範囲を生成</link> して
+        </para>
+      </step>
+      <step>
+        <para lang="en">fills the selection with white,</para>
+        <para lang="ja">その選択範囲を白く塗りつぶし、</para>
+      </step>
+      <step>
+        <para lang="en">
+          <link linkend="plug-in-spread">spreads</link> the pixels,
+        </para>
+        <para lang="ja">
+          画素を 
+          <link linkend="plug-in-spread">拡散</link> させ、
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          and applies a <link linkend="plug-in-gauss">Gaussian blur</link> to
+          the layer.
+        </para>
+        <para lang="ja">
+          レイヤーに 
+          <link linkend="plug-in-gauss">ガウスぼかし</link> を適用します。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Then it uses this layer as a <link linkend="plug-in-bump-map">Bump
+          map</link>, creating a 3D effect.
+        </para>
+        <para lang="ja">
+          このレイヤーは立体効果をつくるときの 
+          <link linkend="plug-in-bump-map">バンプマップ</link> として利用
+          します。
+        </para>
+      </step>
+    </procedure>
   </sect3>
 </sect2>

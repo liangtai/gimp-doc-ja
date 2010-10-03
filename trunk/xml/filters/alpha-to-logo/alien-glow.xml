@@ -42,8 +42,18 @@
             fileref="images/filters/examples/logo-alien-glow.jpg"/>
         </imageobject>
         <caption>
-          <para lang="en"><quote>Alien Glow</quote> applied</para>
-          <para lang="ja"><quote>エイリアン発光</quote>フィルタ適用後</para>
+          <para lang="en">The <quote>Alien Glow</quote> filter</para>
+          <para lang="ja"><quote>エイリアン発光</quote>フィルタ</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/alien-glow-script-fu.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Alien Glow</quote> logo</para>
+          <para lang="ja"><quote>エイリアン発光</quote>ロゴ</para>
         </caption>
       </mediaobject>
     </figure>
@@ -54,14 +64,6 @@
       <guimenuitem>エイリアン発光...</guimenuitem> フィルタ
       は活性レイヤーのアルファ域の周囲に不気味な発光効果をつけます。
     </para>
-    <warning>
-      <para lang="en">
-        The image will always be resized to the active layer's size.
-      </para>
-      <para lang="ja">
-        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
-      </para>
-    </warning>
     <para lang="en">
       The filter is derived from the <quote>Alien Glow</quote> script
       (<menuchoice>
@@ -70,11 +72,12 @@
         <guisubmenu>Logos</guisubmenu>
         <guimenuitem>Alien Glow</guimenuitem>
       </menuchoice>
-      in the image window), which creates the following text effect:
+      in the image window),
+      which creates a logo with the above text effect.
     </para>
     <para lang="ja">
-      このフィルタはつぎの図のようなロゴ文字を作成する<quote>エイリアン発光
-      </quote>スクリプトから派生しました。
+      このフィルタは上図のようなロゴ文字を作成する
+      <quote>エイリアン発光</quote>スクリプトから派生しました。
       ロゴスクリプトは画像ウィンドウのメニューの 
       <menuchoice>
         <guimenu>ファイル</guimenu>
@@ -84,73 +87,14 @@
       </menuchoice>
       にあります。
     </para>
-    <mediaobject>
-      <imageobject>
-        <imagedata format="JPG"
-          fileref="images/filters/examples/alien-glow-script-fu.jpg"/>
-      </imageobject>
-      <caption>
-        <para lang="en">The <quote>Alien Glow</quote> Script-Fu script.</para>
-        <para lang="ja"><quote>エイリアン発光</quote>Script-Fuスクリプト</para>
-      </caption>
-    </mediaobject>
-    <para lang="en">Reproducing this glow is easy:</para>
-    <para lang="ja">発光効果はつぎのような簡単な方法で再現できます。</para>
-    <itemizedlist>
-      <listitem>
-        <para lang="en">
-          If necessary, create a
-          <link linkend="gimp-layer-alpha-selection-replace">selection from
-          the alpha channel</link> of the active layer.
-        </para>
-        <para lang="ja">
-          活性レイヤーの選択範囲は必要なら 
-          <link linkend="gimp-layer-alpha-selection-replace">アルファチャンネル
-          から作成</link> します。
-        </para>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          Fill the selection with the following
-          <link linkend="gimp-tool-blend">Gradient Blend</link>: Shape =
-          Shaped (spherical); Gradient = FG to BG (RGB), with FG = dark gray
-          (79,79,79), BG = black.
-        </para>
-        <para lang="ja">
-          描画色と背景色をそれぞれ暗灰色 (79,79,79) と黒に設定します。 
-          <link linkend="gimp-tool-blend">ブレンドツール</link> を呼び出し、 
-          <guilabel>形状</guilabel> に<quote>形状広がり (球面)</quote>を設定
-          して<quote>描画色から背景色 (RGB</quote>グラデーションを選択範囲の
-          全体にかけます。
-        </para>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          Create a <link linkend="gimp-layer-new">new layer</link>
-          (<quote>Alien Glow</quote>) below.
-          <link linkend="gimp-selection-grow">Extend</link> the selection
-          slightly,
-          <link linkend="gimp-selection-feather">feather</link> it,
-          and fill it with the <guilabel>Glow&nbsp;color</guilabel>.
-        </para>
-        <para lang="ja">
-          <quote>Alien Glow</quote>という名前の 
-          <link linkend="gimp-layer-new">新しいレイヤー</link> を下側に
-          追加します。 選択範囲は僅かにその大きさを 
-          <link linkend="gimp-selection-grow">広げ</link> てから 
-          <link linkend="gimp-selection-feather">境界をぼかし</link>、 
-          <guilabel>発光色</guilabel> で塗りつぶします。
-        </para>
-      </listitem>
-      <listitem>
-        <para lang="en">
-          Create a new background layer filled with black.
-        </para>
-        <para lang="ja">
-          背景に黒く塗りつぶしたレイヤーを加えます。
-        </para>
-      </listitem>
-    </itemizedlist>
+    <warning>
+      <para lang="en">
+        The image will always be resized to the active layer's size.
+      </para>
+      <para lang="ja">
+        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
+      </para>
+    </warning>
   </sect3>
 
   <sect3>
@@ -231,5 +175,68 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <para lang="en">Reproducing an eerie alien glow is easy:</para>
+    <para lang="ja">
+      薄気味悪いエイリアン発光効果はつぎのように簡単に再現されています。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          If necessary, create a
+          <link linkend="gimp-layer-alpha-selection-replace">selection from
+          the alpha channel</link> of the active layer.
+        </para>
+        <para lang="ja">
+          活性レイヤーの選択範囲は必要なら 
+          <link linkend="gimp-layer-alpha-selection-replace">アルファチャンネル
+          から作成</link> します。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Fill the selection with the following
+          <link linkend="gimp-tool-blend">Gradient Blend</link>: Shape =
+          Shaped (spherical); Gradient = FG to BG (RGB), with FG = dark gray
+          (79,79,79), BG = black.
+        </para>
+        <para lang="ja">
+          描画色と背景色をそれぞれ暗灰色 (79,79,79) と黒に設定します。 
+          <link linkend="gimp-tool-blend">ブレンドツール</link> を呼び出し、 
+          <guilabel>形状</guilabel> に<quote>形状広がり (球面)</quote>を設定
+          して<quote>描画色から背景色 (RGB)</quote>グラデーションを選択範囲の
+          全体にかけます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Create a <link linkend="gimp-layer-new">new layer</link>
+          (<quote>Alien Glow</quote>) below.
+          <link linkend="gimp-selection-grow">Extend</link> the selection
+          slightly,
+          <link linkend="gimp-selection-feather">feather</link> it,
+          and fill it with the <guilabel>Glow&nbsp;color</guilabel>.
+        </para>
+        <para lang="ja">
+          <quote>Alien Glow</quote>という名前の 
+          <link linkend="gimp-layer-new">新しいレイヤー</link> を下側に
+          追加します。 選択範囲は僅かにその大きさを 
+          <link linkend="gimp-selection-grow">広げ</link> てから 
+          <link linkend="gimp-selection-feather">境界をぼかし</link>、 
+          <guilabel>発光色</guilabel> で塗りつぶします。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Create a new background layer filled with black.
+        </para>
+        <para lang="ja">
+          背景に黒く塗りつぶしたレイヤーを加えます。
+        </para>
+      </listitem>
+    </itemizedlist>
   </sect3>
 </sect2>

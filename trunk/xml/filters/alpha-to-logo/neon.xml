@@ -40,8 +40,18 @@
             fileref="images/filters/examples/logo-neon-applied.jpg"/>
         </imageobject>
         <caption>
-          <para lang="en"><quote>Neon</quote> applied</para>
-          <para lang="ja"><quote>ネオン</quote>フィルタ適用後</para>
+          <para lang="en">The <quote>Neon</quote> filter</para>
+          <para lang="ja"><quote>ネオン</quote>フィルタ</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/neon-script-fu.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Neon</quote> logo</para>
+          <para lang="ja"><quote>ネオン</quote>ロゴ</para>
         </caption>
       </mediaobject>
     </figure>
@@ -56,8 +66,8 @@
         <guisubmenu>Create</guisubmenu>
         <guisubmenu>Logos</guisubmenu>
         <guimenuitem>Neon</guimenuitem>
-      </menuchoice> in the image window),
-      which creates a text effect that simulates neon lighting:
+      </menuchoice>),
+      which creates a text effect that simulates neon lighting.
     </para>
     <para lang="ja">
       <guimenuitem>ネオン...</guimenuitem> フィルタは活性
@@ -65,8 +75,8 @@
       つけることもできます。
     </para>
     <para lang="ja">
-      このフィルタはテキストからネオン発光管で描いたロゴを作成する<quote>
-      ネオン</quote>Script-Fuロゴスクリプトから派生しました。
+      このフィルタはテキストからネオン発光管で描いたロゴを作成する
+      <quote>ネオン</quote> Script-Fu ロゴスクリプトから派生しました。
       ロゴスクリプトは画像ウィンドウのメニューの 
       <menuchoice>
         <guimenu>ファイル</guimenu>
@@ -76,53 +86,6 @@
       </menuchoice>
       にあります。
     </para>
-    <mediaobject>
-      <imageobject>
-        <imagedata format="JPG"
-          fileref="images/filters/examples/neon-script-fu.jpg"/>
-      </imageobject>
-    </mediaobject>
-    <para lang="en">
-      The filter uses two layers to achieve the neon effect:
-    </para>
-    <para lang="ja">
-      このフィルタはネオン効果の実現に2層のレイヤーを用います。
-    </para>
-    <figure>
-      <title lang="en">The Neon effect</title>
-      <title lang="ja">ネオン効果</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/filters/examples/neon-tubes.png"/>
-        </imageobject>
-        <caption>
-          <para lang="en">The <quote>Neon Tubes</quote> layer</para>
-          <para lang="ja"><quote>ネオン管</quote>レイヤー</para>
-        </caption>
-      </mediaobject>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/filters/examples/neon-glow.png"/>
-        </imageobject>
-        <caption>
-          <para lang="en">The <quote>Neon Glow</quote> layer</para>
-          <para lang="ja"><quote>ネオン発光</quote>レイヤー</para>
-        </caption>
-      </mediaobject>
-    </figure>
-    <para lang="en">
-      The layer <quote>Neon Tubes</quote> is the active layer the filter is
-      applied to. The content of this layer doesn't matter. Only the alpha
-      channel does, especially its shape.
-    </para>
-    <para lang="ja">
-      <quote>ネオン管</quote>レイヤーがフィルタをかける活性レイヤーです。
-      このレイヤーに元から描かれていた内容は無視されます。 ただアルファ
-      チャンネルだけを読み取り、 そこに表されている図形がネオンの基に
-      なります。
-    </para>
     <warning>
       <para lang="en">
         The image will always be resized to the active layer's size.
@@ -131,33 +94,6 @@
         画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
       </para>
     </warning>
-    <para lang="en">
-      The <quote>Neon Glow</quote> layer below contains the glowing of the
-      neon light.
-    </para>
-    <para lang="en">
-      Optional a <quote>Shadow</quote> layer is created below, containing a
-      drop shadow in the same shape of the active layer's alpha channel. At
-      the bottom a new <quote>Background</quote> layer is created filled with
-      the <guilabel>Background color</guilabel>.
-    </para>
-    <para lang="en">Overview of the Neon filter layers:</para>
-    <para lang="ja">
-      下側の<quote>ネオン発光</quote>レイヤーにはネオン光の輝きが描かれます。
-    </para>
-    <para lang="ja">
-      付加的に<quote>ネオン発光</quote>レイヤーが背面側に追加でき、 活性
-      レイヤーのアルファチャンネルの図形と同じ形のドロップシャドウが描かれ
-      ます。 最背面には背景レイヤーが作成され<quote>背景色</quote>で塗り
-      つぶされます。
-    </para>
-    <para lang="ja">ネオンフィルタのレイヤーの概観</para>
-    <mediaobject>
-      <imageobject>
-        <imagedata format="PNG"
-          fileref="images/filters/examples/neon-4layers.png"/>
-      </imageobject>
-    </mediaobject>
   </sect3>
 
   <sect3>
@@ -281,5 +217,77 @@
         </listitem>
       </varlistentry>
     </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <para lang="en">
+      The filter uses two layers to achieve the neon effect:
+    </para>
+    <para lang="ja">
+      このフィルタはネオン効果の実現に2層のレイヤーを用います。
+    </para>
+    <figure>
+      <title lang="en">The Neon effect</title>
+      <title lang="ja">ネオン効果</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/neon-tubes.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Neon Tubes</quote> layer</para>
+          <para lang="ja"><quote>ネオン管</quote>レイヤー</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/neon-glow.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Neon Glow</quote> layer</para>
+          <para lang="ja"><quote>ネオン発光</quote>レイヤー</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The layer <quote>Neon Tubes</quote> is the active layer the filter is
+      applied to. The content of this layer doesn't matter. Only the alpha
+      channel does, especially its shape.
+    </para>
+    <para lang="ja">
+      <quote>ネオン管</quote>レイヤーがフィルタをかける活性レイヤーです。
+      このレイヤーに元から描かれていた内容は無視されます。 ただアルファ
+      チャンネルだけを読み取り、 そこに表されている図形がネオンの基に
+      なります。
+    </para>
+    <para lang="en">
+      The <quote>Neon Glow</quote> layer below contains the glowing of the
+      neon light.
+    </para>
+    <para lang="en">
+      Optional a <quote>Shadow</quote> layer is created below, containing a
+      drop shadow in the same shape of the active layer's alpha channel. At
+      the bottom a new <quote>Background</quote> layer is created filled with
+      the <guilabel>Background color</guilabel>.
+    </para>
+    <para lang="en">Overview of the Neon filter layers:</para>
+    <para lang="ja">
+      下側の<quote>ネオン発光</quote>レイヤーにはネオン光の輝きが描かれます。
+    </para>
+    <para lang="ja">
+      付加的に<quote>ネオン発光</quote>レイヤーが背面側に追加でき、 活性
+      レイヤーのアルファチャンネルの図形と同じ形のドロップシャドウが描かれ
+      ます。 最背面には背景レイヤーが作成され<quote>背景色</quote>で塗り
+      つぶされます。
+    </para>
+    <para lang="ja">ネオンフィルタのレイヤーの概観</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/filters/examples/neon-4layers.png"/>
+      </imageobject>
+    </mediaobject>
   </sect3>
 </sect2>
