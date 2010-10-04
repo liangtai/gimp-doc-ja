@@ -13,7 +13,7 @@
   050818 de fixed wrong shortcut - its O not Shift-O
   050817 de reviewed by axel.wernicke
 -->
-<!--2010-04-18-->
+<!--2010-10-03-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-color-picker">
   <title lang="en">Color Picker</title>
   <title lang="ja">スポイト (カラーピッカー)</title>
@@ -234,6 +234,18 @@
             は全ての可視レイヤーの合成色が採られます。 用語集にも
             <link linkend="glossary-samplemerge">レイヤー結合色</link>
             の説明があります。
+            <note>
+              <formalpara>
+                <title>どうして予想外の色が拾われてしまうの？</title>
+                <para>
+                  見たままの色を拾いたいときは<quote>レイヤー結合色</quote>
+                  オプションを有効にしてください。 無効の場合は現在活性化して
+                  いるレイヤーからの採色されます。 レイヤーにはどの画素にも
+                  色があるので、 たとえそこがまったく透明であっても、 その下に
+                  見えているレイヤーの色とは関わりなしに色の情報が現れます。
+                </para>
+              </formalpara>
+            </note>
           </para>
         </listitem>
       </varlistentry>
