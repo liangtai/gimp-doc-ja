@@ -9,7 +9,7 @@
   2005-08-20 de added by axel.wernicke
   2005-08-30 de replaced informalfigure by axel.wernicke
 -->
-<!--2010-10-03-->
+<!--2010-10-12-->
 <sect2 id="plug-in-rotate-colormap">
   <title lang="en">Rotate Colors</title>
   <title lang="ja">カラーマップ回転...</title>
@@ -189,10 +189,10 @@
   </sect3>
 
   <sect3>
-    <title lang="en">Grey Options</title>
+    <title lang="en">Gray Options</title>
     <title lang="ja">グレーオプション</title>
     <figure>
-      <title lang="en">Base image for Grey Options</title>
+      <title lang="en">Base image for Gray Options</title>
       <title lang="ja">グレーオプションの例題用原画</title>
       <mediaobject>
         <imageobject>
@@ -202,7 +202,7 @@
         <caption>
           <para lang="en">
             Three sectors are defined for Red, Green and Blue with different
-            saturations. Grey and White colors are represented (0% Sat).
+            saturations. Gray and White colors are represented (0% Sat).
           </para>
           <para lang="ja">
             (3段階に) 彩度の異なる赤緑青付近の色と、 彩度0%の灰色、 白。
@@ -211,10 +211,10 @@
       </mediaobject>
     </figure>
     <para lang="en">
-      In this tab, you can specify how to treat gray. By default, grey is not
+      In this tab, you can specify how to treat gray. By default, gray is not
       considered as a color and is not taken in account by the rotation. Here,
-      you can convert slightly saturated colors into grey and you can also
-      convert grey into color.
+      you can convert slightly saturated colors into gray and you can also
+      convert gray into color.
     </para>
     <para lang="ja">
       このタブはグレー (灰色) の扱い方を設定します。 初期設定ではグレーが色彩の
@@ -224,21 +224,21 @@
     </para>
     <variablelist>
       <varlistentry>
-        <term lang="en">Grey Color Circle</term>
+        <term lang="en">Gray Color Circle</term>
         <term lang="ja">グレー</term>
         <listitem>
           <para lang="en">
             At center of this color circle is a small <quote>define
-            circle</quote>. At center, it represents grey. If you increase
-            grey threshold progressively, colors with saturation less than
-            this threshold turn to grey.
+            circle</quote>. At center, it represents gray. If you increase
+            gray threshold progressively, colors with saturation less than
+            this threshold turn to gray.
           </para>
           <para lang="en">
             Then, if you pan the define circle in the color circle, or if
             you use input boxes, you define
             <emphasis>Hue</emphasis> and <emphasis>
             Saturation</emphasis>. This color will replace all colors you
-            have defined as grey. But result depends on Grey Mode too.
+            have defined as gray. But result depends on Gray Mode too.
           </para>
           <para lang="ja">
             この色相環の中心には小さな<quote>定義円</quote>があります。 中心部
@@ -255,7 +255,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Grey Mode</term>
+        <term lang="en">Gray Mode</term>
         <term lang="ja">グレーモード</term>
         <listitem>
           <para lang="en">
@@ -274,7 +274,7 @@
             <listitem>
               <para lang="en">
                  With <emphasis>Change to this</emphasis>,
-                 grey will take the color defined by the define circle
+                 gray will take the color defined by the define circle
                  directly, without any rotation, whatever its position in
                  the color circle.
               </para>
@@ -287,12 +287,12 @@
             <listitem>
               <para lang="en">
                  With <emphasis>Treat as this</emphasis>,
-                 grey will take the color defined by the define circle
+                 gray will take the color defined by the define circle
                  after rotation, according to <quote>From</quote> and
                  <quote>To</quote> choices you made in the Main tab. With
                  this option, you can select color only in the
                  <quote>From</quote> sector, even if it is not visible in
-                 Grey tab.
+                 Gray tab.
               </para>
               <para lang="ja">
                  <guimenuitem>この色にする</guimenuitem> を選ぶと、 定義円で
@@ -306,7 +306,7 @@
             </listitem>
           </itemizedlist>
           <figure>
-            <title lang="en">Grey Mode</title>
+            <title lang="en">Gray Mode</title>
             <title lang="ja">グレーモード</title>
             <mediaobject>
               <imageobject>
@@ -318,7 +318,7 @@
                 <para lang="en">
                   The small circle is on yellow and mode is <quote>Change to
                   this</quote>. <emphasis>Blue has changed to yellow. Note that
-                  Grey and White did so too.</emphasis>
+                  Gray and White did so too.</emphasis>
                 </para>
                 <para lang="ja">
                   黄色い領域に小さな定義円があり、 グレーモードは <guimenuitem>
@@ -346,8 +346,8 @@
               </imageobject>
               <caption>
                 <para lang="en">
-                  Grey-threshold is 0.25: the blue sector (sat 0.25) has
-                  turned to Grey (Note that Grey and White, that are 0% Sat.,
+                  Gray-threshold is 0.25: the blue sector (sat 0.25) has
+                  turned to Gray (Note that Gray and White, that are 0% Sat.,
                   are not concerned).
                 </para>
                 <para lang="ja">
@@ -358,12 +358,13 @@
               </caption>
             </mediaobject>
           </figure>
+          <!--CHECK: works for me without <quote>Continuous update</quote> -->
           <para lang="en">
-            You specify there how much saturation will be considered grey.
+            You specify there how much saturation will be considered gray.
             By increasing progressively saturation, you will see an
             enlarging circle in color circle and enlarging selected areas in
             Preview if <quote>Continuous update</quote> is checked. In a
-            black to white gradient,you can see enlarging color replacement
+            black to white gradient, you can see enlarging color replacement
             as you increase threshold very slowly.
           </para>
           <para lang="ja">
@@ -402,8 +403,10 @@
     <title lang="ja">プレビュー</title>
     <variablelist>
       <varlistentry>
-        <term lang="en">Original and Rotated</term>
-        <term lang="ja">原画; 回転後</term>
+        <term lang="en">Original</term>
+        <term lang="en">Rotated</term>
+        <term lang="ja">原画</term>
+        <term lang="ja">回転後</term>
         <listitem>
           <para lang="en">
             The Original preview displays a thumbnail of the original image

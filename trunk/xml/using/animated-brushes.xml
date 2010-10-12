@@ -6,7 +6,7 @@
   2009-09-23 j.h: reviewed for v2.6
   2007-05-08 Added Spanish translation by AntI
 -->
-<!--2010-01-17-->
+<!--2010-10-13-->
 <sect1 id="gimp-using-animated-brushes">
   <title lang="en">The GIH Dialog Box</title>
   <title lang="ja">GIHダイアログ</title>
@@ -111,10 +111,9 @@
         </para>
         <para lang="ja">
           これはブラシにつける名前を記入するところで、 ブラシダイアログ上では
-          <guimenuitem>一覧で表示</guimenuitem> モードなら各
-          ブラシの右側に、 <guimenuitem>並べて表示
-          </guimenuitem> モードならば選ばれたブラシについてのみダイアログの
-          上部に表示されます。
+          <guimenuitem>一覧で表示</guimenuitem> モードなら各ブラシの右側に、
+          <guimenuitem>並べて表示</guimenuitem> モードならば選ばれたブラシに
+          ついてのみダイアログの上部に表示されます。
         </para>
       </listitem>
     </varlistentry>
@@ -155,14 +154,14 @@
           1つある設定になります。
         </para>
         <para lang="ja">
-          たった1層の大きなレイヤーを細かくセルに分けて、 アニメーションする
+          たった 1 層の大きなレイヤーを細かくセルに分けて、 アニメーションする
           ブラシの様々な相に割り当てることが可能です。
         </para>
         <para lang="ja">
-          例えば、 大きさが 100&times;100 ピクセルで8つの相 (変化形) からなる
-          ブラシを作るとします。 この8相を 400&times;200 ピクセルのレイヤーに
+          例えば、 大きさが 100&times;100 ピクセルで 8 つの相 (変化形) からなる
+          ブラシを作るとします。 この 8 相を 400&times;200 ピクセルのレイヤーに
           振り分けてもよいですし、 300&times;300 ピクセルのレイヤーを用意して
-          1セル余らせる方法もあります。 前者は
+          1 セル余らせる方法もあります。 前者は
           <simplelist type="horiz" columns="4">
           <member>1</member> <member>2</member> <member>3</member>
           <member>4</member> <member>5</member> <member>6</member>
@@ -188,8 +187,8 @@
           one layer per aspect.
         </para>
         <para lang="ja">
-          これはレイヤー1層あたりのセル数を定めます。 1つの相に1個のセルが必要
-          です。 既定では1つの相に1層だけレイヤーがあるとみなすので
+          これはレイヤー 1 層あたりのセル数を定めます。 1 つの相に 1 個のセルが
+          必要です。 既定では 1 つの相に 1 層だけレイヤーがあるとみなすので
           初期値はレイヤーの数と同じになります。
         </para>
       </listitem>
@@ -205,8 +204,8 @@
           <computeroutput>1 rows of 2 columns on each layer</computeroutput>.
         </para>
         <para lang="ja">
-          この表示はセルをレイヤーに配置する様子です。 例えばもし4層の
-          レイヤーを使ってそれぞれに高さセルを2つ置く割合にすると、 この表示は
+          この表示はセルをレイヤーに配置する様子です。 例えばもし 4 層の
+          レイヤーを使ってそれぞれに高さセルを 2 つ置く割合にすると、 この表示は
           <computeroutput>1行2列(各レイヤー)</computeroutput> となるでしょう。
         </para>
       </listitem>
@@ -273,32 +272,32 @@
           セルを読み込みにゆき、 それらを<acronym>FIFO</acronym>
           (先入れ先出し: 収められた最も古いものから順に取り出せる収録方法) 式の
           スタックに収めることから始めます。 先の例では4層のレイヤーにそれぞれ
-          2個のセルが上下の順に入っています。 これらの読み込みは第1のレイヤーの
-          第1のセルから始まり、 同じレイヤーの第2のセル、 第2のレイヤーの第1の
-          セル、 第2のレイヤーの第2のセル、 (中略)、 第4のレイヤーの第2のセルの
-          順に進みます。 仮に1層のレイヤーに置かれているセルが1個だけでも
-          数個でもやはり結果は同じです。 このスタックの様子は 
-          <filename class="extension">.gih</filename> 形式
+          2 個のセルが上下の順に入っています。 これらの読み込みは第 1 の
+          レイヤーの第 1 のセルから始まり、 同じレイヤーの第 2 のセル、 第 2 の
+          レイヤーの第 1 のセル、 第 2 のレイヤーの第 2 のセル、 (中略)、 第 4
+          のレイヤーの第 2 のセルの順に進みます。 仮に 1 層のレイヤーに
+          置かれているセルが 1 個だけでも数個でもやはり結果は同じです。
+          このスタックの様子は <filename class="extension">.gih</filename> 形式
           の画像ファイルに保存したあとでレイヤーダイアログを見るとわかります。
         </para>
         <para lang="ja">
           つぎに<acronym>GIMP</acronym>はこのスタックをコンピュータ式配列に
-          記録します。 この配列は1次元から4次元までの <guilabel>次元</guilabel>
-          に示された数値を用います。 
+          記録します。 この配列は 1 次元から 4 次元までの
+          <guilabel>次元</guilabel> に示された数値を用います。 
         </para>
         <para lang="ja">
           コンピュータ科学での3次元 (3D) では配列が myarray(x,y,z) のような形式
-          になります。 2次元を想像するのは簡単でしょう。 つまり紙の上の行と列の
+          になります。 2 次元を想像するのは簡単でしょう。 つまり紙の上の行と列の
           配列のことです。
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/using/gih-array2D.png" format="PNG"/>
             </imageobject>
           </mediaobject>
-          3次元の配列では行や列とは言わず <guilabel>次元</guilabel> と
+          3 次元の配列では行や列とは言わず <guilabel>次元</guilabel> と
           <guilabel>並び</guilabel> といいます。
-          第1次元はx軸、 第2次元はy軸、 第3次元はz軸のことを指しています。
-          それぞれの次元にセルの並びがあるのです。
+          第 1 次元は x 軸、 第 2 次元は y 軸、 第 3 次元は z 軸のことを
+          指しています。 それぞれの次元にセルの並びがあるのです。
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/using/gih-array3D.png" format="PNG"/>
@@ -371,17 +370,16 @@
                 </para></footnote>
               </para>
               <para lang="ja">
-                ブラシが移動する方角を参考にして
-                与えられた次元から位を選びます。
+                ブラシが移動する方角を参考にして与えられた次元から位を選びます。
               </para>
               <para lang="ja">
                 最初の位は 0°、 つまり上向き方向に結びつけます。 つづく他の
                 位には桁数で 360° を等分割した方角を時計回りの順に割り振って
-                ゆきます。 例えばこの次元に4つの位があればブラシの移動の方角は
+                ゆきます。 例えばこの次元に 4 つの位があればブラシの移動の方角は
                 それぞれ時計回りに 90° ずつの区切りのどれかに拾われます。
-                つまり2番目の位は第4象限、 3番目の位は第3象限、 4番目の位は
-                第2象限の各方向への動きに反応するようになるのです。 <footnote>
-                <para>
+                つまり 2 番目の位は第 4 象限、 3 番目の位は第 3 象限、 4 番目の
+                位は第 2 象限の各方向への動きに反応するようになるのです。
+                <footnote><para>
                   前の版の<acronym>GIMP</acronym>でブラシを作成される方は
                   <quote>時計回り</quote>を<quote>反時計回り</quote>と
                   読み替えてください。
@@ -411,7 +409,7 @@
     <title lang="ja">例</title>
     <varlistentry>
       <term lang="en">A one dimension image pipe</term>
-      <term lang="ja">1次元のパイプブラシ</term>
+      <term lang="ja">1 次元のパイプブラシ</term>
       <listitem>
         <para lang="en">
           Well! What is all this useful for? We'll see that gradually with
@@ -434,7 +432,7 @@
           ブラシもちゃんと作れます。
         </para>
         <para lang="ja">
-          まずは1次元ブラシからはじめますが、 これでも選択モードのはたらきが
+          まずは 1 次元ブラシからはじめますが、 これでも選択モードのはたらきが
           わかるようになります。 下図のような配列を思い起こしてください。
           <mediaobject>
             <imageobject>
@@ -454,7 +452,7 @@
             <para lang="ja">
               大きさが 30&times;30 ピクセルで塗りつぶし色を透明にした 
               <acronym>RGB</acronym>画像を新規に用意します。 テキストツールで
-              テキストレイヤーを4層、 それぞれ <quote>1</quote>、
+              テキストレイヤーを 4 層、 それぞれ <quote>1</quote>、
               <quote>2</quote>、 <quote>3</quote>、 <quote>4</quote>と記入
                します。 背景レイヤーは削除してください。
             </para>
@@ -467,10 +465,10 @@
               <filename class="extension">.gih</filename>.
             </para>
             <para lang="ja">
-              拡張子 <filename class="extension">.gih</filename> をつけて保存
-              する前に、 元の画像の全ての属性を保存するためにこの画像に拡張子
-              <filename class="extension">.xcf</filename> をつけて
-              保存してください。
+              画像は拡張子 <filename class="extension">.gih</filename> をつけて
+              保存しますが、 元の画像の属性を余さず保持したいのでその前に
+              拡張子 <filename class="extension">.xcf</filename> をつけた
+              形式で保存しておいてください。
             </para>
           </step>
           <step>
@@ -553,7 +551,7 @@
                     fileref="images/using/gih1234incr.png"/>
                 </imageobject>
                 <caption>
-                  <para>数字の1と2と3と4が順番通りに並んでいる</para>
+                  <para>数字の 1 と 2 と 3 と 4 が順番通りに並んでいる</para>
                 </caption>
               </mediaobject>
             </para>
@@ -618,7 +616,7 @@
 
     <varlistentry>
       <term lang="en">A 3 dimensions image hose</term>
-      <term lang="ja">3次元のパイプブラシ</term>
+      <term lang="ja">3 次元のパイプブラシ</term>
       <listitem>
         <para lang="en">
           We are now going to create a 3D animated brush: its orientation will
@@ -647,23 +645,23 @@
           描き、 黒か青に無作為に色変りするブラシにします。
         </para>
         <para lang="ja">
-          まずはじめにいくつの形象が必要になるかが問題になります。 第1次元 x は
-          ブラシの方角 (4方向) のためにとっておきます。 第2次元 y は左手と右手
-          の交替に、 第3次元 z は色変化に割り当てます。 このようなブラシは
-          3次元配列 myarray(4,2,2) として表せます。
+          まずはじめにいくつの形象が必要になるかが問題になります。 第 1 次元 x
+          はブラシの方角 (4方向) のためにとっておきます。 第 2 次元 y は左手と
+          右手の交替に、 第 3 次元 z は色変化に割り当てます。 このようなブラシは
+          3 次元配列 myarray(4,2,2) として表せます。
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/using/gih-3Dnum.png" format="PNG"/>
             </imageobject>
           </mediaobject>
-          第1次元 x には4つの位があり、 第2次元 y には2つの位、 第3次元 z には
-          2つの位があります。 合計は 4&times;2&times;2 = 16 セルなので、 必要な
-          形象は 16 枚です。
+          第 1 次元 x には 4 つの位があり、 第 2 次元 y には 2 つの位、 第 3
+          次元 z には 2 つの位があります。 合計は 4&times;2&times;2 = 16 セル
+          なので、 必要な形象は 16 枚です。
         </para>
         <procedure>
           <step>
             <title lang="en">Creating images of dimension 1 (x)</title>
-            <title lang="ja">第1次元 x の形象を作成</title>
+            <title lang="ja">第 1 次元 x の形象を作成</title>
             <para lang="en">
               Open a new 30x30 pixels image, RGB with Transparent Fill Type.
               Using the zoom draw a left hand with fingers upwards.<footnote>
@@ -727,7 +725,7 @@
           </step>
           <step>
             <title lang="en">Creating images of dimension 2 (y)</title>
-            <title lang="ja">第2次元 y の形象を作成</title>
+            <title lang="ja">第 2 次元 y の形象を作成</title>
             <para lang="en">
               This dimension in our example has two ranks, one for left hand
               and the other for right hand. The left hand rank exists yet. We
@@ -747,9 +745,9 @@
               handR90k, ..., handR-90k.
             </para>
             <para lang="ja">
-              この例題では第2次元に2つの位を置き、 1つめに左手を、 2つめには
-              右手を割り当てます。 左手の位はもうできています。 水平方向の
-              鏡像反転を利用して右手の形象をつくりましょう。
+              この例題では第 2 次元に 2 つの位を置き、 1 つめに左手を、
+              2 つめには右手を割り当てます。 左手の位はもうできています。
+              水平方向の鏡像反転を利用して右手の形象をつくりましょう。
             </para>
             <para lang="ja">
               <quote><userinput>左手　0黒</userinput></quote>レイヤーを複製
@@ -776,7 +774,7 @@
           </step>
           <step>
             <title lang="en">Creating images of dimension 3 (z)</title>
-            <title lang="ja">第3次元 z の形象を作成</title>
+            <title lang="ja">第 3 次元 z の形象を作成</title>
             <para lang="en">
               The third dimension has two ranks, one for black color and the
               other for blue color. The first rank, black, exists yet. We well
@@ -816,12 +814,12 @@
               Repeat the same operations on the other layers.
             </para>
             <para lang="ja">
-              第3の次元には2つの位を設け、 ひとつは黒くもうひとつは青く
-              塗ります。 黒の第1の位はもうできています。 しかも第3次元の形象は
-              いずれも第2次元の形象を複製して青色に変えればできあがることは
-              もうおわかりですね。 以上で16枚全ての形象が出揃うことになります。
-              しかし16ものレイヤーの列は管理がたいへんです。 そこでレイヤーに
-              2つづつ形象を収めるようにしてしまいましょう。
+              第 3 の次元には 2 つの位を設け、 ひとつは黒くもうひとつは青く
+              塗ります。 黒の第 1 の位はもうできています。 しかも第 3 次元の
+              形象はいずれも第 2 次元の形象を複製して青色に変えればできあがる
+              ことはもうおわかりですね。 以上で 16 枚全ての形象が出揃うことに
+              なります。 しかし 16 ものレイヤーの列は管理がたいへんです。
+              そこでレイヤーに 2 つづつ形象を収めるようにしてしまいましょう。
             </para>
             <para lang="ja">
               <quote><userinput>左手　0黒</userinput></quote>のレイヤーを選んで
@@ -845,7 +843,7 @@
             <para lang="ja">
               つぎに<quote><userinput>左手　0黒</userinput></quote>レイヤーと
               その青コピーを統合しなければなりません。 <acronym>GIMP</acronym>
-              には2通りの方法がありますのでお好きな手順をとってください。 
+              には 2 通りの方法がありますのでお好きな手順をとってください。 
               ひとつめは、 青の複製レイヤーをレイヤーダイアログ上で<quote>
               <userinput>左手　0黒</userinput></quote>のすぐ下に置いて、 
               レイヤーメニューから <guimenuitem>
@@ -911,14 +909,14 @@
               ように、 レイヤーを順序よく配置しなければなりません。 既に例題の
               レイヤーはその順序で並べ終えていますが、 レイヤーの配置順の一般的
               な方則についても理解しておく必要があるでしょう。 序列化のしくみに
-              ついて見当をつける方法が2通りありますのでご紹介しましょう。
+              ついて見当をつける方法が 2 通りありますのでご紹介しましょう。
               1つめは数学的な見方です。 <acronym>GIMP</acronym>は16層のレイヤー
-              を4層ごとに区切って4つのグループとみなし、 これが第1次元に
+              を 4 層ごとに区切って 4 つのグループとみなし、 これが第 1 次元に
               なります。 それぞれのグループがブラシの方角を表すのです。
-              さらに、 それぞれのグループを2つに分けて、 2層のレイヤーからなる
-              8つのグループとみなし、 これが第2次元になります。 このグループは
-              それぞれ左右の掌の転換を表します。 第3次元では全体を2つのグループ
-              に分け、 青か黒の無作為な色分けを表します。
+              さらに、 それぞれのグループを 2 つに分けて、 2 層のレイヤーから
+              なる 8 つのグループとみなし、 これが第 2 次元になります。 この
+              グループはそれぞれ左右の掌の転換を表します。 第 3 次元では全体を
+              2 つのグループ に分け、 青か黒の無作為な色分けを表します。
             </para>
             <para lang="ja">
               もう一つの方法は配列を視覚的に表現してみることです。 先に示した
@@ -933,11 +931,11 @@
             <para lang="ja">
               <emphasis><acronym>GIMP</acronym>はどんなふうにしてこの配列を
               読み込むか？</emphasis>: <acronym>GIMP</acronym>が最初に読み取る
-              のは第1次元です。 例題では <guimenuitem>angular</guimenuitem>
+              のは第 1 次元です。 例題では <guimenuitem>angular</guimenuitem>
               (ブラシ方向: 例えば 90°) に結びつけてプログラムされています。
-              90° の位をみると、 黄色で示した第2次元では <guimenuitem>
+              90° の位をみると、 黄色で示した第 2 次元では <guimenuitem>
               incremental</guimenuitem> 選択によって左右の転換をしています。
-              そして第3の次元では、 無作為に色を選択しています。
+              そして第 3 の次元では、 無作為に色を選択しています。
               よって最終的にレイヤーの順序は次のようにしなければなりません。
               <mediaobject>
                 <imageobject>
@@ -997,19 +995,19 @@
                     <para lang="en">
                       Dimension 1: 4 ranks Selection: Angular
                     </para>
-                    <para lang="ja">第1次元: 4桁、 選択: Angular</para>
+                    <para lang="ja">第 1 次元: 4 桁、 選択: Angular</para>
                   </listitem>
                   <listitem>
                     <para lang="en">
                       Dimension 2: 2 ranks Selection: Incremental
                     </para>
-                    <para lang="ja">第2次元: 2桁、 選択: Incremental</para>
+                    <para lang="ja">第 2 次元: 2 桁、 選択: Incremental</para>
                   </listitem>
                   <listitem>
                     <para lang="en">
                       Dimension 3: 2 ranks Selection: Random
                     </para>
-                    <para lang="ja">第3次元: 2桁、 選択: Random</para>
+                    <para lang="ja">第 3 次元: 2 桁、 選択: Random</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1046,7 +1044,7 @@
                   </para>
                   <para lang="ja">
                     このブラシの左手と右手はかわるがわる入れ替わり、 無作為に
-                    黒と青の色変りが起こり、 ブラシの方向は4つの方角に
+                    黒と青の色変りが起こり、 ブラシの方向は 4 つの方角に
                     従っている。
                   </para>
                 </caption>
