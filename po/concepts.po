@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2010-10-24 13:24+0900\n"
-"PO-Revision-Date: 2010-09-16 03:09+0900\n"
+"POT-Creation-Date: 2010-11-06 06:33+0900\n"
+"PO-Revision-Date: 2010-11-06 16:11+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/concepts/undo.xml:12(title) src/concepts/concepts.xml:149(term)
+#: src/concepts/undo.xml:12(title) src/concepts/concepts.xml:190(term)
 msgid "Undoing"
 msgstr "取り消し"
 
@@ -537,7 +537,7 @@ msgstr "common"
 msgid "The Selection"
 msgstr "選択"
 
-#: src/concepts/selection.xml:21(primary) src/concepts/concepts.xml:117(term)
+#: src/concepts/selection.xml:21(primary) src/concepts/concepts.xml:158(term)
 msgid "Selections"
 msgstr "選択範囲"
 
@@ -1499,12 +1499,11 @@ msgstr ""
 
 #: src/concepts/qmask.xml:107(para)
 msgid ""
-"You can learn more on <link linkend=\"dialogs-selection-masks\">Selection "
-"masks</link> in the section dedicated to the channel dialog."
+"You can learn more on <link linkend=\"gimp-channel-mask\">Selection masks</"
+"link> in the section dedicated to the channel dialog."
 msgstr ""
-"チャンネルダイアログについての節で <link linkend=\"gimp-qmask\">クイックマス"
-"ク</link> と <link linkend=\"dialogs-selection-masks\">選択マスク</link> の詳"
-"しい説明があります。"
+"チャンネルダイアログについての節で <link linkend=\"dialogs-selection-masks\">"
+"選択マスク</link> の詳しい説明があります。"
 
 #: src/concepts/qmask.xml:115(title)
 msgid "Properties"
@@ -7865,35 +7864,100 @@ msgstr ""
 "全体を覆う必要もないので、 画像を見たときそこには最前面だけでなくその背面のレ"
 "イヤーの部品がいくつも見えているかもしれません。"
 
-#: src/concepts/concepts.xml:97(term)
+#: src/concepts/concepts.xml:96(varlistentry:xreflabel)
+#: src/concepts/concepts.xml:98(phrase)
 msgid "Channels"
 msgstr "チャンネル"
 
-#: src/concepts/concepts.xml:99(para)
-msgid ""
-"In <acronym>GIMP</acronym>, Channels are the smallest units of subdivision "
-"in the stack of layers from which the image is constructed. Every Channel in "
-"a layer has exactly the same size as the layer to which it belongs, and, "
-"consequently consists of the same number of pixels. Every pixel can be "
-"regarded as a container which can be filled with a value ranging from 0 to "
-"255.The exact meaning of this value depends on the type of channel, e.g. in "
-"the <acronym>RGB</acronym> color model the value in the <emphasis>R</"
-"emphasis>-channel means the amount of red which is added to the color of the "
-"different pixels, in the selection channel, the value denotes how strongly "
-"the pixels are selected, and in the alpha channel the values denote how "
-"transparent the corresponding pixels are."
-msgstr ""
-"<acronym>GIMP</acronym>におけるチャンネルは、 画像を構成するレイヤーの重なり"
-"をさらに再分割した最も小さな単位です。 チャンネルはどれもそれが属するレイヤー"
-"と同じサイズをとり、 ひいては画素 (ピクセル) 数も同じということです。 画素は"
-"ひとつひとつが 0 から 255 の範囲で値をもつ容器といえます。 その値の意味を定め"
-"るのがチャンネルの種類です。 つまり<acronym>RGB</acronym> (赤・緑・青) 色型式"
-"での <emphasis>R</emphasis>-チャンネルとはおのおのの画素に収められた赤色だけ"
-"をまとめたものであり、 選択チャンネルとは画素がどの程度の強度で選択されている"
-"かを表す値になり、 アルファチャンネルでの値は相対する画素の透明度を表すので"
-"す。"
+#: src/concepts/concepts.xml:100(primary)
+msgid "Channel"
+msgstr "チャンネル"
 
-#: src/concepts/concepts.xml:119(para)
+#. TRANSLATORS: this is the modified text from glossary.xml, so
+#.         you should check po/LANG/glossary.po for an old translation
+#: src/concepts/concepts.xml:106(para)
+msgid ""
+"A Channel is a single component of a pixel's color. For a colored pixel in "
+"<acronym>GIMP</acronym>, these components are usually Red, Green, Blue and "
+"sometimes transparency (Alpha). For a <link linkend=\"glossary-graylevel"
+"\">Grayscale</link> image, they are Gray and Alpha and for an <link linkend="
+"\"glossary-indexedcolors\">Indexed</link> color image, they are Indexed and "
+"Alpha."
+msgstr ""
+"チャンネルとは画素の色成分ひとつを示すことばです。 <acronym>GIMP</acronym>で"
+"扱う色つき画素は、 通常は赤、 緑、 青の色成分と、 必須ではありませんが透過効"
+"果 (アルファ) 成分によって構成されます。 <link linkend=\"glossary-graylevel"
+"\">グレースケール</link> 画像は灰色陰影のチャンネルとアルファチャンネルで、 "
+"<link linkend=\"glossary-indexedcolors\">インデックス化</link> カラー画像はイ"
+"ンデックス化カラーマップとアルファチャンネルで構成されています。"
+
+#: src/concepts/concepts.xml:115(para)
+msgid ""
+"The entire rectangular array of any one of the color components for all of "
+"the pixels in an image is also referred to as a Channel. You can see these "
+"color channels with the <link linkend=\"gimp-channel-dialog\">Channels "
+"dialog</link>."
+msgstr ""
+"なに色の成分であっても、 画像の全ての画素の色から値を抽出して四角の画面一杯の"
+"全体像にすればそれはチャンネルです。 このような色チャンネルのようすは <link "
+"linkend=\"gimp-channel-dialog\">チャンネルダイアログ</link> 上で見られます。"
+
+#: src/concepts/concepts.xml:121(para)
+msgid ""
+"When the image is displayed, <acronym>GIMP</acronym> puts these components "
+"together to form the pixel colors for the screen, printer, or other output "
+"device. Some output devices may use different channels from Red, Green and "
+"Blue. If they do, <acronym>GIMP</acronym>'s channels are converted into the "
+"appropriate ones for the device when the image is displayed."
+msgstr ""
+"画像を表示するとき、 <acronym>GIMP</acronym>は色成分を画面やプリンタをはじめ"
+"とする出力デバイスに合わせて再編成します。 一部の出力デバイスは赤・緑・青とは"
+"異なる色チャンネル構成を使用しています。 このようなデバイスで画像が表示される"
+"とき、 <acronym>GIMP</acronym>のチャンネルはそのデバイスに最適なものへ変換さ"
+"れます。"
+
+#: src/concepts/concepts.xml:129(para)
+msgid ""
+"Channels can be useful when you are working on an image which needs "
+"adjustment in one particular color. For example, if you want to remove "
+"<quote>red eye</quote> from a photograph, you might work on the Red channel."
+msgstr ""
+"ある特定の画像の色を調節したいとき、 チャンネルを利用すると便利です。 たとえ"
+"ば写真から<quote>赤目</quote>を除去したいときは、 赤チャンネルで作業するとよ"
+"いでしょう。"
+
+#: src/concepts/concepts.xml:135(para)
+msgid ""
+"You can look at channels as masks which allow or restrict the output of the "
+"color that the channel represents. By using Filters on the channel "
+"information, you can create many varied and subtle effects on an image. A "
+"simple example of using a Filter on the color channels is the <link linkend="
+"\"plug-in-colors-channel-mixer\">Channel Mixer</link> filter."
+msgstr ""
+"チャンネルがもつ色だけに着目できることから、 チャンネルはその色の出力マスクと"
+"しても活用できます。 チャンネルの情報にフィルタをかければ、 多種多様で繊細な"
+"効果を画像にかけられます。 色チャンネルにフィルタをかける単純な例として "
+"<link linkend=\"plug-in-colors-channel-mixer\">チャンネルミキサー</link> フィ"
+"ルタがあります。"
+
+#: src/concepts/concepts.xml:144(para)
+msgid ""
+"In addition to these channels, <acronym>GIMP</acronym> also allows you to "
+"create other channels (or more correctly, Channel Masks), which are "
+"displayed in the lower part of the Channels dialog. You can create a <link "
+"linkend=\"gimp-channel-new\">New Channel</link> or save a <link linkend="
+"\"gimp-selection-to-channel\">selection to a channel (mask)</link>. See the "
+"glossary entry on <link linkend=\"glossary-masks\">Masks</link> for more "
+"information about Channel Masks."
+msgstr ""
+"3 つの色チャンネルに加え、 <acronym>GIMP</acronym>では他にもチャンネル (正確"
+"にはチャンネルマスク) を作成できます。 これらはチャンネルダイアログの下側に表"
+"示されます。 新しい <link linkend=\"gimp-channel-new\">チャンネルを追加</"
+"link> したり選択範囲を <link linkend=\"gimp-selection-to-channel\">チャンネル"
+"に保存</link> することもできます。 この他のチャンネルについての情報は用語集"
+"の <xref linkend=\"glossary-masks\"/> の項でご覧ください。"
+
+#: src/concepts/concepts.xml:160(para)
 msgid ""
 "Often when modify an image, you only want a part of the image to be "
 "affected. The <quote>selection</quote> mechanism makes this possible. Each "
@@ -7917,7 +7981,7 @@ msgstr ""
 "見たければ、 ただ <link linkend=\"gimp-image-window-qmask-button\">クイックマ"
 "スク</link> ボタンを押すだけでいつでも切り替わります。"
 
-#: src/concepts/concepts.xml:135(para)
+#: src/concepts/concepts.xml:176(para)
 msgid ""
 "A large component of learning how to use <acronym>GIMP</acronym> effectively "
 "is acquiring the art of making good selections—selections that contain "
@@ -7935,7 +7999,7 @@ msgstr ""
 "ドに切り替えるボタン&mdash;このモードでは選択チャンネルがまるで色のチャンネル"
 "であるかのように<quote>選択を描く</quote>ことも可能なのです。"
 
-#: src/concepts/concepts.xml:151(para)
+#: src/concepts/concepts.xml:192(para)
 msgid ""
 "When you make mistakes, you can undo them. Nearly everything you can do to "
 "an image is undoable. In fact, you can usually undo a substantial number of "
@@ -7964,11 +8028,11 @@ msgstr ""
 "<quote>画像を閉じる</quote>があります。 このため<acronym>GIMP</acronym>では何"
 "かしら操作が加えられた画像を閉じる際には確認を求めるようにしています。)"
 
-#: src/concepts/concepts.xml:171(term)
+#: src/concepts/concepts.xml:212(term)
 msgid "Plug-ins"
 msgstr "プラグイン"
 
-#: src/concepts/concepts.xml:173(para)
+#: src/concepts/concepts.xml:214(para)
 msgid ""
 "Many, probably most, of the things that you do to an image in <acronym>GIMP</"
 "acronym> are done by the <acronym>GIMP</acronym> application itself. "
@@ -7990,7 +8054,7 @@ msgstr ""
 "と大変そうですが、 実はプラグインを (スクリプトも) 書くのは簡単なので"
 "<acronym>GIMP</acronym>の開発スタッフでなくてもできてしまいます。"
 
-#: src/concepts/concepts.xml:187(para)
+#: src/concepts/concepts.xml:228(para)
 msgid ""
 "All of the commands in the Filters menu, and a substantial number of "
 "commands in other menus, are actually implemented as plug-ins."
@@ -7998,11 +8062,11 @@ msgstr ""
 "実際フィルタメニューの全コマンドと、 その他のメニューのかなりの数のコマンド"
 "が、 プラグインで実装されています。"
 
-#: src/concepts/concepts.xml:194(term)
+#: src/concepts/concepts.xml:235(term)
 msgid "Scripts"
 msgstr "スクリプト"
 
-#: src/concepts/concepts.xml:196(para)
+#: src/concepts/concepts.xml:237(para)
 msgid ""
 "In addition to plug-ins, which are programs written in the C language, "
 "<acronym>GIMP</acronym> can also make use of scripts. The largest number of "

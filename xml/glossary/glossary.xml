@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--2010-09-13-->
+<!--2010-11-06-->
 <glossary id="glossary">
   <title lang="en">Glossary</title>
   <title lang="ja">用語集</title>
@@ -378,112 +378,50 @@ BMPはマイクロソフト社が発案した非圧縮の画像
 
   <glossentry id="glossary-channels">
     <glossterm>
-      <phrase lang="en">Channels</phrase>
+      <phrase lang="en">Channel</phrase>
       <phrase lang="ja">チャンネル</phrase>
     </glossterm>
-    <indexterm significance="normal" lang="en">
+    <indexterm lang="en">
       <primary>Channel</primary>
-      <secondary>Introduction</secondary>
     </indexterm>
-    <indexterm significance="normal" lang="ja">
+    <indexterm lang="ja">
       <primary>チャンネル</primary>
-      <secondary sortas="アラマシ">あらまし</secondary>
     </indexterm>
     <glossdef>
       <para lang="en">
-        A Channel is a single component of a pixel's color. For a colored
-        pixel in <acronym>GIMP</acronym>, these components are usually Red,
-        Green, Blue and sometimes transparency (Alpha). For a
-        <link linkend="glossary-graylevel">Grayscale</link> image, they are
-        Gray and Alpha and for an
-        <link linkend="glossary-indexedcolors">Indexed</link> color image,
-        they are Indexed and Alpha.
+        A channel refers to a certain component of an image. For instance, the
+        components of an <link linkend="glossary-rgb">RGB</link> image are the
+        three primary colors red, green, blue, and sometimes transparency
+        (alpha).
       </para>
       <para lang="en">
-        The entire rectangular array of any one of the color components for
-        all of the pixels in an image is also referred to as a Channel. You
-        can see these color channels with the Channels dialog.
-      </para>
-      <para lang="en">
-        When the image is displayed, <acronym>GIMP</acronym> puts these
-        components together to form the pixel colors for the screen, printer,
-        or other output device. Some output devices may use different
-        channels from Red, Green and Blue. If they do,
-        <acronym>GIMP</acronym>'s channels are converted into the
-        appropriate ones for the device when the image is displayed.
-      </para>
-      <para lang="en">
-        Channels can be useful when you are working on an image which needs
-        adjustment in one particular color. For example, if you want to
-        remove <quote>red eye</quote> from a photograph, you might work on
-        the Red channel.
-      </para>
-      <para lang="en">
-        You can look at channels as masks which allow or restrict the output
-        of the color that the channel represents. By using Filters on the
-        channel information, you can create many varied and subtle effects
-        on an image. A simple example of using a Filter on the color
-        channels is the
-        <link linkend="plug-in-colors-channel-mixer">Channel Mixer</link>
-        filter.
-      </para>
-      <para lang="en">
-        In addition to these channels, <acronym>GIMP</acronym> also allows
-        you to create other channels (or more correctly, Channel Masks),
-        which are displayed in the lower part of the Channels dialog. You
-        can convert a selection to a channel mask by using the
-        <link linkend="gimp-selection-to-channel">Save to Channel</link>
-        command. You can also create a channel by right-clicking in the
-        Channels dialog and using the
-        <link linkend="gimp-channel-new">New channel</link> command.
-        See the glossary entry on
-        <link linkend="glossary-masks">Masks</link> for more information about
-        Channel Masks.
+        Every Channel is a grayscale image of exactly the same size as the
+        image and, consequently, consists of the same number of pixels. Every
+        pixel of this grayscale image can be regarded as a container which can
+        be filled with a value ranging from 0 to 255. The exact meaning of
+        this value depends on the type of channel, e.g. in the
+        <acronym>RGB</acronym> color model the value in the
+        <emphasis>R</emphasis>-channel means the amount of red which is added
+        to the color of the different pixels; in the selection channel, the
+        value denotes how strongly the pixels are selected; and in the alpha
+        channel the values denote how opaque the corresponding pixels are.
+        See also <xref linkend="gimp-concepts-channels"/>.
       </para>
       <para lang="ja">
-チャンネルとは画素の色成分ひとつを示すことばです。 <acronym>GIMP
-</acronym>で扱う色つき画素は、 通常は赤、 緑、 青の色成分と、 必須では
-ありませんが透過効果 (アルファ) 成分によって構成されます。 
-<link linkend="glossary-graylevel">グレースケール</link> 画像は灰色
-陰影のチャンネルとアルファチャンネルで、
-<link linkend="glossary-indexedcolors">インデックス化</link> カラー画像
-はインデックス化カラーマップとアルファチャンネルで構成されています。
+        チャンネルとは画像の何らかの成分のことです。 つまり 
+        <link linkend="glossary-rgb">RGB</link> 画像では赤・緑・青ときどき
+        透明度 (アルファ値) の各成分がこれにあたります。
       </para>
       <para lang="ja">
-いずれかの色成分を画像から抜き出せば、 全ての画素に対する行列式の全体像
-もまたチャンネルとして参照できます。 このような色チャンネルのようすは
-チャンネルダイアログ上で見られます。
-      </para>
-      <para lang="ja">
-画像を表示するとき、 <acronym>GIMP</acronym>は色成分を画面やプリンタを
-はじめとする出力デバイスに合わせて再編成します。 一部の出力デバイスは
-赤緑青とは異なる色チャンネル構成を使用しています。 このようなデバイスに
-で画像が表示されるとき、 <acronym>GIMP</acronym>のチャンネルはそれらに
-最適なものに変換されます。
-      </para>
-      <para lang="ja">
-ある特定の画像の色を調節したいとき、 チャンネルを利用すると便利です。 
-たとえば写真から<quote>赤目</quote>を除去したいときは、 赤チャンネルで
-作業するとよいでしょう。
-      </para>
-      <para lang="ja">
-チャンネルがもつ色だけに着目できることから、 チャンネルはその色の出力
-マスクとしても活用できます。 チャンネルの情報にフィルタをかければ、 
-多種多様で繊細な効果を画像にかけられます。 色チャンネルにフィルタを
-かける単純な例として
-<link linkend="plug-in-colors-channel-mixer">チャンネルミキサー</link>
-フィルタがあります。
-      </para>
-      <para lang="ja">
-3つの色チャンネルに加え、 <acronym>GIMP</acronym>では他にもチャンネル
- (正確にはチャンネルマスク) を作成できます。 これらはチャンネル
-ダイアログの下側に表示されます。 
-<link linkend="gimp-selection-to-channel">チャンネルに保存</link> 
-コマンドを使えば選択範囲を変換してチャンネルマスクが作成できます。 
-チャンネルダイアログの脈絡メニューには新たにチャンネルを作成する 
-<link linkend="gimp-channel-new">チャンネルを追加...</link> コマンド
-もあります。 より詳しい情報は用語集の 
-<xref linkend="glossary-masks"/> の項をご覧ください。
+        チャンネルはそれぞれが画像と同じサイズのグレースケール画像なので、 
+        どれも同数の画素 (ピクセル) でできています。 このグレースケール画像
+        の画素はひとつひとつが 0 から 255 の範囲の値をとる容器といえます。 
+        その値の意味を定めるのがチャンネルの種類です。 つまり
+        <acronym>RGB</acronym> (赤・緑・青) 色型式での <emphasis>R</emphasis>-
+        チャンネルとはおのおのの画素に収められた赤色だけをまとめたもの
+        であり、 選択チャンネルとは画素がどの程度の強度で選択されている
+        かを表す値になり、 アルファチャンネルでの値は相対する画素の
+        透明度を表すのです。
       </para>
     </glossdef>
   </glossentry>
@@ -2144,27 +2082,6 @@ aとbは色の<quote>赤-緑</quote>と<quote>青-イエロー</quote>の各部�
 蟻の行進とは選択範囲をとり囲む点滅破線をいい表した言葉です。 この線は
 まるで小さな蟻がぞろぞろと線上を廻る様子に似たアニメーションをします。
       </para>
-      <!-- off-topic in a glossary
-      <para lang="en">
-        You can disable the marching ants by unchecking the
-        <menuchoice>
-          <guimenu>View</guimenu>
-          <guimenuitem>Show Selection</guimenuitem>
-          </menuchoice>
-        option or by using the keyboard shortcut
-        <keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>.
-      </para>
-      <para lang="ja">
-蟻の行進を表示させないようにするには画像ウィンドウのメニューで
-<menuchoice>
-  <guimenu>表示</guimenu>
-  <guimenuitem>選択範囲の境界線を表示</guimenuitem>
-</menuchoice>
-を無効にするか、 キーボードショートカット
-<keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>
-で切り替えてください。
-      </para>
-      -->
     </glossdef>
   </glossentry>
 
@@ -2244,12 +2161,12 @@ aとbは色の<quote>赤-緑</quote>と<quote>青-イエロー</quote>の各部�
             <link linkend="gimp-channel-menu">Channel menu</link>. Channel
             masks are so important in <acronym>GIMP</acronym> that a
             special type has been implemented: the
-            <link linkend="gimp-qmask">Quick mask</link>. See the
-            <link linkend="dialogs-selection-masks">Selection mask</link>
+            <link linkend="gimp-qmask">Quick&nbsp;mask</link>. See the
+            <link linkend="dialogs-selection-masks">Selection&nbsp;mask</link>
             section for more details.
           </para>
           <para lang="ja">
-<emphasis>チャンネルマスク</emphasis>:
+<emphasis>チャンネルマスク</emphasis>、 またの名を
 <emphasis>選択マスク</emphasis>:
 チャンネルマスクは選択範囲の透過効果を定めます。 チャンネルマスクを
 白く塗るとマスクは消えてゆき選択が増します。 黒く塗るにつれ選択は
