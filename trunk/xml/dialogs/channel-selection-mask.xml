@@ -6,10 +6,12 @@
   2006-04-29 lexa: made docbook compliant
   2006-02-25 romanofski fixed broken image references
 -->
-<!--2009-10-06-->
-<sect3 id="dialogs-selection-masks">
+<!--2010-11-06-->
+<sect3 id="gimp-channel-mask">
   <title lang="en">Selection masks</title>
   <title lang="ja">選択マスク</title>
+  <anchor id="dialogs-selection-masks" xreflabel="Selection masks"/>
+
   <indexterm lang="en">
     <primary>Masks</primary>
     <secondary>Selection mask</secondary>
@@ -55,7 +57,6 @@
     <title lang="en">A selection composed out of channels.</title>
     <title lang="ja">チャンネルから作られた選択範囲</title>
     <mediaobject>
-      <!--was dialogs-channel-masks.png-->
       <imageobject>
         <imagedata format="PNG"
           fileref="images/dialogs/channel-masks-example.png"/>
@@ -63,15 +64,10 @@
     </mediaobject>
   </figure>
   <para lang="en">
-    Channels can be used to save and restore your selections. Clicking on the
-    <guilabel>Quick mask</guilabel> button on the
-    <link linkend="gimp-image-window">Image window</link>
-    automatically creates a new channel called <guilabel>Qmask</guilabel>
-    and saves the displayed active selection to a thumbnail in front of the
-    channel.There are many selection tools in GIMP like rectangular
-    selection tool or fuzzy selection for continuous selections. Selection
-    Masks are a graphical way to build selections into a gray level channel
-    where white pixels are selected and black pixels are not selected.
+    Channels can be used to save and restore your selections.
+    In the channel dialog you can see a thumbnail representing the selection.
+    Selection Masks are a graphical way to build selections into a gray level
+    channel where white pixels are selected and black pixels are not selected.
     Therefore gray pixels are partially selected. You can think of them as
     feathering the selection, a smooth transition between selected and not
     selected. This is important to avoid the ugly pixelization effect when you
@@ -79,15 +75,11 @@
     from background.
   </para>
   <para lang="ja">
-    チャンネルは選択範囲を保存して再利用するのにも使えます。 画像ウィンドウの
-    <link linkend="gimp-image-window-qmask-button">クイックマスク</link> ボタン
-    をクリックすると自動的に <guilabel>クイックマスク</guilabel> と名付けられた
-    チャンネルが作成され、 画面上に見えていた選択範囲がチャンネルダイアログの
-    一覧表で縮小見本画像になって保存されます。 ここでは白い部分が選択されており
-    黒い部分は選択範囲外を示しています。 <acronym>GIMP</acronym>には矩形選択
-    ツールやファジー選択ツールをはじめたくさんの選択ツールがありますが、 選択
-    マスクは選択範囲をそういった描画方法で灰色濃淡のチャンネルに変換するしくみ
-    です。 ですから灰色の画素は不完全選択です。 選択範囲の境界線をぼかしたとき
+    チャンネルは選択範囲を保存して再利用するのにも使えます。 
+    チャンネルダイアログでは選択範囲を図示する縮小画像が見られます。 ここでは
+    白い部分が選択されており黒い部分は選択範囲外を示しています。 選択マスクは
+    選択範囲をそういった描画方法で灰色濃淡のチャンネルに変換するしくみです。 
+    ですから灰色の画素は不完全選択です。 選択範囲の境界線をぼかしたとき
     選択されたところとされていないところの区切りがなだらかになる様子になぞらえ
     てもよいでしょう。 選択範囲を塗りつぶしたり画像上の物体を背景から孤立させて
     消去するときに醜いモザイク処理効果に陥るのを避けるためにも、 このことが重要
@@ -189,8 +181,17 @@
       or black, the color Value (luminosity) will be used to define a gray
       (medium, light, or dark). When your mask is painted, you can transform
       it to a selection by clicking on the
-      <guilabel>Channel to selection</guilabel>
-      button or from the context menu.
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/dialogs/stock-selection-16.png"/>
+          </imageobject>
+        </inlinemediaobject>
+      </guiicon>
+      button (<link linkend="gimp-channel-selection-replace">Channel to
+      Selection</link>) or from the
+      <link linkend="gimp-channel-menu">context menu</link>.
     </para>
     <para lang="en">
       You can work in selection masks not only with the paint tool but also
@@ -215,8 +216,11 @@
             <phrase>「チャンネルを選択範囲に置き換える」</phrase>
           </textobject>
         </inlinemediaobject>
-      </guiicon> ボタンをクリックするか、 脈絡メニューの
-      <guimenuitem>チャンネルを選択範囲に</guimenuitem>
+      </guiicon>
+      ボタン
+      (<link linkend="gimp-channel-selection-replace">チャンネルを選択範囲に
+      </link>) をクリックするか、 脈絡メニューの
+      <link linkend="gimp-channel-menu">チャンネルを選択範囲に</link>
       を実行すればそれを選択範囲に変換できます。
     </para>
     <para lang="ja">

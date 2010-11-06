@@ -12,7 +12,7 @@
              version of layers explanation
   2005-12-18 Lexa: reviewed and added de translation
 -->
-<!--2009-11-08-->
+<!--2010-11-06-->
 <sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-concepts-basic">
   <title lang="en">Basic Concepts</title>
   <title lang="ja">基本概念</title>
@@ -152,36 +152,116 @@
         </para>
       </listitem>
     </varlistentry>
-    <varlistentry>
-      <term lang="en">Channels</term>
-      <term lang="ja">チャンネル</term>
+    <varlistentry id="gimp-concepts-channels" xreflabel="Channels">
+      <term>
+        <phrase lang="en">Channels</phrase>
+        <phrase lang="ja">チャンネル</phrase>
+        <indexterm lang="en">
+          <primary>Channels</primary>
+        </indexterm>
+        <indexterm lang="ja">
+          <primary>チャンネル</primary>
+        </indexterm>
+      </term>
       <listitem>
+        <!--TRANSLATORS: this is the modified text from glossary.xml, so
+        you should check po/LANG/glossary.po for an old translation.-->
         <para lang="en">
-          In <acronym>GIMP</acronym>, Channels are the smallest units of
-          subdivision in the stack of layers from which the image is
-          constructed. Every Channel in a layer has exactly the same size as
-          the layer to which it belongs, and, consequently consists of the
-          same number of pixels. Every pixel can be regarded as a container
-          which can be filled with a value ranging from 0 to 255. The exact
-          meaning of this value depends on the type of channel, e.g. in the
-          <acronym>RGB</acronym> color model the value in the
-          <emphasis>R</emphasis>-channel means the amount of red which is
-          added to the color of the different pixels, in the selection
-          channel, the value denotes how strongly the pixels are
-          selected, and in the alpha channel the values denote how
-          transparent the corresponding pixels are.
+          A Channel is a single component of a pixel's color. For a colored
+          pixel in <acronym>GIMP</acronym>, these components are usually Red,
+          Green, Blue and sometimes transparency (Alpha). For a
+          <link linkend="glossary-graylevel">Grayscale</link> image, they are
+          Gray and Alpha and for an
+          <link linkend="glossary-indexedcolors">Indexed</link> color image,
+          they are Indexed and Alpha.
+        </para>
+        <para lang="en">
+          The entire rectangular array of any one of the color components for
+          all of the pixels in an image is also referred to as a Channel. You
+          can see these color channels with the
+          <link linkend="gimp-channel-dialog">Channels dialog</link>.
+        </para>
+        <para lang="en">
+          When the image is displayed, <acronym>GIMP</acronym> puts these
+          components together to form the pixel colors for the screen,
+          printer, or other output device. Some output devices may use
+          different channels from Red, Green and Blue. If they do,
+          <acronym>GIMP</acronym>'s channels are converted into the
+          appropriate ones for the device when the image is displayed.
+        </para>
+        <para lang="en">
+          Channels can be useful when you are working on an image which needs
+          adjustment in one particular color. For example, if you want to
+          remove <quote>red eye</quote> from a photograph, you might work on
+          the Red channel.
+        </para>
+        <para lang="en">
+          You can look at channels as masks which allow or restrict the output
+          of the color that the channel represents. By using Filters on the
+          channel information, you can create many varied and subtle effects
+          on an image. A simple example of using a Filter on the color
+          channels is the
+          <link linkend="plug-in-colors-channel-mixer">Channel Mixer</link>
+          filter.
+        </para>
+        <para lang="en">
+          In addition to these channels, <acronym>GIMP</acronym> also allows
+          you to create other channels (or more correctly, Channel Masks),
+          which are displayed in the lower part of the Channels dialog. You
+          can create a <link linkend="gimp-channel-new">New channel</link> or
+          save a <link linkend="gimp-selection-to-channel">selection to a
+          channel (mask)</link>.
+          See the glossary entry on
+          <link linkend="glossary-masks">Masks</link> for more information
+          about Channel Masks.
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>におけるチャンネルは、 画像を構成するレイヤー
-          の重なりをさらに再分割した最も小さな単位です。 チャンネルはどれも
-          それが属するレイヤーと同じサイズをとり、 ひいては画素 (ピクセル)
-          数も同じということです。 画素はひとつひとつが0から255の範囲で値をもつ
-          容器といえます。 その値の意味を定めるのがチャネルの種類です。つまり
-          <acronym>RGB</acronym> (赤・緑・青) 色型式での <emphasis>R</emphasis>-
-          チャンネルとはおのおのの画素に収められた赤色だけをまとめたもの
-          であり、 選択チャンネルとは画素がどの程度の強度で選択されている
-          かを表す値になり、 アルファチャンネルでの値は相対する画素の
-          透明度を表すのです。
+          チャンネルとは画素の色成分ひとつを示すことばです。 
+          <acronym>GIMP</acronym>で扱う色つき画素は、 通常は赤、 緑、 青の
+          色成分と、 必須ではありませんが透過効果 (アルファ) 成分によって
+          構成されます。 
+          <link linkend="glossary-graylevel">グレースケール</link> 画像は灰色
+          陰影のチャンネルとアルファチャンネルで、
+          <link linkend="glossary-indexedcolors">インデックス化</link> カラー
+          画像はインデックス化カラーマップとアルファチャンネルで
+          構成されています。
+        </para>
+        <para lang="ja">
+          なに色の成分であっても、 画像の全ての画素の色から値を抽出して四角い
+          画面一杯の全体像にすればそれはチャンネルです。 このような色チャンネルの
+          ようすは
+          <link linkend="gimp-channel-dialog">チャンネルダイアログ</link> 上で
+          見られます。
+        </para>
+        <para lang="ja">
+          画像を表示するとき、 <acronym>GIMP</acronym>は色成分を画面やプリンタを
+          はじめとする出力デバイスに合わせて再編成します。 一部の出力デバイスは
+          赤・緑・青とは異なる色チャンネル構成を使用しています。 このような
+          デバイスで画像が表示されるとき、 <acronym>GIMP</acronym>の
+          チャンネルはそのデバイスに最適なものへ変換されます。
+        </para>
+        <para lang="ja">
+          ある特定の画像の色を調節したいとき、 チャンネルを利用すると便利です。 
+          たとえば写真から<quote>赤目</quote>を除去したいときは、 赤チャンネルで
+          作業するとよいでしょう。
+        </para>
+        <para lang="ja">
+          チャンネルがもつ色だけに着目できることから、 チャンネルはその色の出力
+          マスクとしても活用できます。 チャンネルの情報にフィルタをかければ、 
+          多種多様で繊細な効果を画像にかけられます。 色チャンネルにフィルタを
+          かける単純な例として
+          <link linkend="plug-in-colors-channel-mixer">チャンネルミキサー</link>
+          フィルタがあります。
+        </para>
+        <para lang="ja">
+          3 つの色チャンネルに加え、 <acronym>GIMP</acronym>では他にもチャンネル
+           (正確にはチャンネルマスク) を作成できます。 これらはチャンネル
+          ダイアログの下側に表示されます。 新しい
+          <link linkend="gimp-channel-new">チャンネルを追加</link> したり
+          選択範囲を 
+          <link linkend="gimp-selection-to-channel">チャンネルに保存</link> 
+          することもできます。 この他のチャンネルについての情報は用語集の 
+          <xref linkend="glossary-masks"/> の項でご覧ください。
         </para>
       </listitem>
     </varlistentry>
