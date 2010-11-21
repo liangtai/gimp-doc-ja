@@ -15,7 +15,7 @@
                    examples and equations
   2006-09-06 scb: thorough review and/or rewrite of English
 -->
-<!--2010-05-06-->
+<!--2010-11-19-->
 <sect1 id="gimp-concepts-layer-modes">
   <title lang="en">Layer Modes</title>
   <title lang="ja">レイヤーのモード</title>
@@ -60,17 +60,17 @@
     layer with the pixel in the same location in the layer below it.
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>のレイヤーモードは21種類あります。 レイヤーモードは
+    <acronym>GIMP</acronym>のレイヤーモードは 21 種類あります。 レイヤーモードは
     <quote>ブレンドのモード</quote>と呼ばれることもあります。 レイヤーモードを
     選ぶと、 対象レイヤーもしくはその背面側のレイヤーを下敷に、 そのレイヤーや
-    画像が視覚的に変化します。 画像にレイヤーが1層しかないときはレイヤーモード
+    画像が視覚的に変化します。 画像にレイヤーが 1 層しかないときはレイヤーモード
     を変えても何も起きません。 すなわちレイヤーモードを利用するには画像に少なく
-    とも2層以上のレイヤーがなくてはなりません。
+    とも 2 層以上のレイヤーがなくてはなりません。
   </para>
   <para lang="ja">
     レイヤーモードはレイヤーダイアログの <guilabel>モード</guilabel> メニューで
-    選びます。 レイヤーモードとは対象レイヤーの画素とその背面側のレイヤーの同じ
-    位置の画素との合成方法を定めるものです。
+    選びます。 レイヤーモードにより現在いるレイヤーの画素とその背面側の
+    レイヤーの同じ位置の画素との合成方法が定まります。
   </para>
   <note>
     <para lang="en">
@@ -82,8 +82,8 @@
     </para>
     <para lang="ja">
       描画ツールのうち鉛筆、 絵筆、 エアブラシ、 インク、 スタンプの各ツール
-      には描画モードがあり、 レイヤーモードと共通のはたらきをする21種類のモード
-      と描画モード特有の2種類のモードがあります。
+      には描画モードがあり、 レイヤーモードと共通のはたらきをする 21 種類の
+      モードと描画モード特有の 2 種類のモードがあります。
       <link linkend="gimp-paint-mode-examples">描画ツール特有のモード</link>
       をご覧ください。
     </para>
@@ -185,9 +185,9 @@
     の意味は、 
     <blockquote>
       <para>
-        ある画素の色 <emphasis>E</emphasis> は、 上に重ねたマスクのその位置の
-        画素の色 <emphasis>M</emphasis> に、 同じ位置の下側にあるレイヤーの
-        画素の色 <emphasis>I</emphasis> を加えたものである。
+        ある画素の色 <parameter>E</parameter> は、 上に重ねたマスクのその位置の
+        画素の色 <parameter>M</parameter> に、 同じ位置の下側にあるレイヤーの
+        画素の色 <parameter>I</parameter> を加えたものである。
       </para>
     </blockquote>
     です。 画素の色はその値が 0 から 255 の範囲に常に入らなければなりません。
@@ -267,7 +267,7 @@
                 with <quote>Normal</quote>.
               </para>
               <para lang="ja">
-                <quote>標準</quote>合成の場合、 上のレイヤーが不透明度100%
+                <quote>標準</quote>合成の場合、 上のレイヤーが不透明度 100%
                 ならば重なった部分は上のレイヤーだけが見える。
               </para>
             </caption>
@@ -282,8 +282,8 @@
         <para lang="ja">
           <guimenuitem>標準</guimenuitem> モードは既定のレイヤーモードです。
           上のレイヤーがその下側のレイヤーを覆い隠します。 このモードで下側の
-          レイヤーが何か見えるようにするには上のレイヤーに透過部分がなくては
-          なりません。
+          レイヤーが僅かでも見えるようにするには上のレイヤーに透過部分が
+          なくてはなりません。
         </para>
         <para lang="en">The equation is:</para>
         <para lang="ja">等式はつぎのとおり。</para>
@@ -347,7 +347,7 @@
                 with <quote>dissolve</quote>.
               </para>
               <para lang="ja">
-                <quote>ディザ合成</quote>の場合、 上のレイヤーが不透明度100%
+                <quote>ディザ合成</quote>の場合、 上のレイヤーが不透明度 100%
                 ならば重なった部分は上のレイヤーだけが見える。
               </para>
             </caption>
@@ -441,7 +441,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -455,7 +455,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -527,7 +527,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100%不 透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -541,7 +541,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -606,7 +606,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -620,7 +620,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -640,7 +640,7 @@
         <para lang="en">The equation is:</para>
         <para lang="ja">
           <guimenuitem>スクリーン</guimenuitem> モードはまず画像の両レイヤーの
-          可視画素の値を反転します。 (つまり各値は255との差に置き換わります。)
+          可視画素の値を反転します。 (つまり各値は 255 との差に置き換わります。)
           次に両値の積を 255 で除算した値を再び反転します。 その結果、 
           ほとんどの画像は明るくなり、 ときには<quote>洗い晒し</quote>た
           ようにも見えます。 このモードの例外は、 レイヤーが黒い場合にもう一方
@@ -701,7 +701,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -715,7 +715,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -731,9 +731,9 @@
         </para>
         <para lang="ja">
           <guimenuitem>オーバーレイ</guimenuitem> モードは下側のレイヤーの画素
-          の値を反転し、 上側のレイヤーの同じ位置の画素の値との積を2倍して255で
-          割り、 その値と下側のレイヤーの画素の元の値との和にさらに下側の
-          レイヤーの画素の元の値をかけて、 再び255で割ります。 画像は暗く
+          の値を反転し、 上側のレイヤーの同じ位置の画素の値との積を 2 倍して 
+          255 で割り、 その値と下側のレイヤーの画素の元の値との和にさらに下側の
+          レイヤーの画素の元の値をかけて、 再び 255 で割ります。 画像は暗く
           なりますが<quote>乗算</quote>モードほどの変化はありません。
         </para>
         <para>
@@ -808,7 +808,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -822,7 +822,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -843,8 +843,8 @@
         <para lang="en">The equation is:</para>
         <para lang="ja">
           <guimenuitem>覆い焼き</guimenuitem> モードは下側のレイヤーの画素の
-          値を256倍してから、 上側のレイヤーの同じ位置の画素の値を反転してから
-          1を加えた値により商を求めます。 その結果、 画像は通常色が薄くなり、
+          値を 256 倍してから、 上側のレイヤーの同じ位置の画素の値を反転してから
+          1 を加えた値により商を求めます。 その結果、 画像は通常色が薄くなり、
           一部の色は反転します。
         </para>
         <para lang="ja">
@@ -896,7 +896,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -910,7 +910,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -932,16 +932,18 @@
         <para lang="en">The equation is:</para>
         <para lang="ja">
           <guimenuitem>焼き込み</guimenuitem> モードは下側のレイヤーの画素の
-          値を反転して256倍し、 上側のレイヤーの同じ位置の画素の値に1を加えた
-          値で除算し、 反転します。 結果として画像は暗くなる傾向があり、
+          値を反転して 256 倍し、 上側のレイヤーの同じ位置の画素の値に 1 を
+          加えた値で除算し、 反転します。 結果として画像は暗くなる傾向があり、
           いくぶん<quote>乗算</quote>モードに似ています。
         </para>
         <para lang="ja">
           写真の業界では焼き込みとは暗室での現像作業で画像の特定の部分の露出を
           強める技法をさしています。 結果として眩しくなっていた部分が詳しく
-          見えるようになります。 この本来の目的で焼き込みモードを使うのならば、
-          レイヤーモードよりむしろ描画ツールでグレイスケール画像に対しての
-          操作で真価を発揮します。
+          見えるようになります。 この本来の目的で焼き込みモードを使いたいのなら、
+          レイヤーモードよりむしろ
+          描画ツールを用いたグレースケール画像に対しての操作で真価を発揮します。
+          maybe レイヤーモードよりむしろ描画ツールを焼き込みモードにして
+          グレースケール画像に対して操作する方が真価を発揮します。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
         <equation>
@@ -989,7 +991,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1003,7 +1005,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1023,15 +1025,16 @@
         <equation>
         <para lang="ja">
           <guimenuitem>ハードライト</guimenuitem> モードは明るい色用と暗い色用
-          の2つの等式を扱うためちょっとややこしくなっています。 上側のレイヤー
-          の画素の値が 128 を越えておれば、 下に示した第1の数式をレイヤーの
-          合成処理に使います。 逆に上側のレイヤーの画素の値が 128 以下ならば、
-          両レイヤーの画素の値の積を2倍して 256 で割ります。 2枚の写真を合成する
-          ときこのモードを使えば色が明るくなり形象の輪郭がはっきりします。
+          の 2 つの等式を扱うためちょっとややこしくなっています。 上側の
+          レイヤーの画素の値が 128 を越えておれば、 下に示した第 1 の数式を
+          レイヤーの合成処理に使います。 逆に上側のレイヤーの画素の値が 128 
+          以下ならば、 両レイヤーの画素の値の積を 2 倍して 256 で割ります。 
+          2 枚の写真を合成するときこのモードを使えば
+          色が明るくなり形象の輪郭がはっきりします。
         </para>
         <para lang="ja">
-          この等式は上側のレイヤーの画素の値が128を越す場合と128以下である場合
-          とで異なっています:
+          この等式は上側のレイヤーの画素の値が 128 を越す場合と 128 以下で
+          ある場合とで異なっています。
         </para>
           <title lang="en">
             Equation for layer mode <quote>Hard light</quote>, M &gt; 128
@@ -1096,7 +1099,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1110,7 +1113,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1206,7 +1209,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1220,7 +1223,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1237,9 +1240,9 @@
         <para lang="ja">
           <guimenuitem>微粒取り出し</guimenuitem> モードはレイヤーから<quote>
           フィルム粒子</quote>を抽出して純粒子からなる新たなレイヤーを生成する
-          ことと想定<!--意味わからぬ-->できますが、 画像にエンボス加工を施した
-          ようにする目的にも適います。 上側のレイヤーの画素の値を下側のレイヤー
-          の同じ位置の画素の値から引き、 128 を加えます。
+          ものらしいのですが、 エンボス加工を施したような画像にする目的にも
+          適います。 上側のレイヤーの画素の値を下側のレイヤーの同じ位置の
+          画素の値から引き、 128 を加えます。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
         <equation>
@@ -1280,7 +1283,7 @@
           for detailed information.
         </para>
         <para lang="ja">
-          これ以外の2つのモードは描画ツール専用です。 詳しくは
+          これ以外の 2 つのモードは描画ツール専用です。 詳しくは
           <link linkend="gimp-tool-painting-modes">描画モード</link>
           をご覧ください。
         </para>
@@ -1299,7 +1302,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1313,7 +1316,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1329,9 +1332,9 @@
         <para lang="en">The equation is:</para>
         <para lang="ja">
           <guimenuitem>微粒結合</guimenuitem> モードは粒状レイヤー (
-          <quote>微粒取り出し</quote>モードで作成できます) を上側のレイヤーに
+          <quote>微粒取り出し</quote>モードで作成できる) を上側のレイヤーに
           融合させ元のレイヤーの粒状性は残します。 ちょうど<quote>微粒取り出し
-          </quote>モードの逆です。 上下の両レイヤーの画素の値の和から128を
+          </quote>モードの逆です。 上下の両レイヤーの画素の値の和から 128 を
           除算します。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
@@ -1379,7 +1382,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1393,7 +1396,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1465,7 +1468,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1479,7 +1482,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1495,8 +1498,8 @@
         <para lang="ja">
           <guimenuitem>加算</guimenuitem> モードは非常に簡素です。 上下の両
           レイヤーの画素の値の和をとります。 その結果、 ほとんどの画像は色が
-          薄くなります。 等式から導かれる色の値は255を越えることもあるため、
-          薄い色は最大値255に定められているかもしれません。
+          薄くなります。 等式から導かれる色の値は 255 を越えることもあるため、
+          色が薄いと最大値 255 になるようです。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
         <equation>
@@ -1550,7 +1553,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1564,7 +1567,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1582,8 +1585,8 @@
           <guimenuitem>減算</guimenuitem> モードは下側のレイヤーの画素の値から
           上側のレイヤーの同じ位置の画素の値を引きます。 その結果、 画像は
           通常暗くなります。 得られる画像は真っ黒か黒っぽいものになりがちです。
-          等式から導かれる値が負の色の値となることがあり、 暗い色は最低値の0に
-          されているのかもしれません。
+          等式から導かれる値が負の色の値となることがあり、 暗い色は最低値の 0
+          にされるものもあります。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>
         <equation>
@@ -1631,7 +1634,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1645,7 +1648,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1715,7 +1718,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1729,7 +1732,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1796,7 +1799,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1810,7 +1813,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1863,7 +1866,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1877,7 +1880,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1925,7 +1928,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク1を100%不透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1939,7 +1942,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -1987,7 +1990,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -2001,7 +2004,7 @@
                 Mask 2 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク2を100%不透明な上側のレイヤーとして使う。
+                マスク 2 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -2034,11 +2037,11 @@
   <para lang="ja">
     画像のレイヤーごとに別個のレイヤーモードも選べます。 (もちろん最背面の
     レイヤーのモードはどれを選んでも画像には何の変化ももたらしません。)
-    それぞれのレイヤーモードの効果は掛け合わされます。 次の画像は3層のレイヤー
+    それぞれのレイヤーモードの効果は掛け合わされます。 次の画像は 3 層のレイヤー
     から成ります。 最前面 (上側) のレイヤーは透明な部分で囲まれたウィルバー君が
     描かれ、 そのレイヤーモードは<quote>差の絶対値</quote>にしてあります。
-    第2のレイヤーは単色青で<quote>加算</quote>モードです。 背景レイヤーは
-    <quote>Red Cubes</quote>パターンで埋め尽くされています。
+    第 2 のレイヤーは単色青で<quote>加算</quote>モードです。 背景レイヤーは
+    <quote>Red&nbsp;Cubes</quote>パターンで埋め尽くされています。
   </para>
   <figure>
     <title lang="en">Multi layer example</title>
@@ -2067,13 +2070,13 @@
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>の描画ツールにも同じようなモードがあります。
-    これらはレイヤーモードの21種類と同じものと、 2つの描画ツール特有のモード
+    これらはレイヤーモードの 21 種類と同じものと、 2 つの描画ツール特有のモード
     からなります。 描画ツールではこれらのモードをツールオプションダイアログ上の
     <guilabel>モード</guilabel> メニューで設定できます。 上述の等式については、
-    描画対象のレイヤーが<quote>下側のレイヤー I</quote>で、 そのツールで
-    描かれる画素は<quote>上側のレイヤー M</quote>にあります。 これらのモードを
-    使用するのに画像にはレイヤーがひとつあれば充分です。 任意の描画ツールで
-    現在使用中のレイヤーに操作をするのですから当然ですね。
+    描画対象のレイヤーが<quote>下側のレイヤー&nbsp;I</quote>で、 そのツールで
+    描かれる画素は<quote>上側のレイヤー&nbsp;M</quote>にあります。 これらの
+    モードを使用するのに画像にはレイヤーがひとつあれば充分です。 任意の
+    描画ツールで現在使用中のレイヤーに操作をするのですから当然ですね。
   </para>
   <para lang="ja">
     別の2つの描画モードについては

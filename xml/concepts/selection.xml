@@ -14,7 +14,7 @@
   2005-11-28 lexa: replaced informalfigures by figures
   050905: Added Making a selection semi-transparente
 -->
-<!--2009-11-07-->
+<!--2010-11-17-->
 <sect1 id="gimp-concepts-selection">
   <title lang="en">The Selection</title>
   <title lang="ja">選択</title>
@@ -42,7 +42,7 @@
   <para lang="ja">
     画像の加工をする際に、 部分的に限定して操作したい場合がよくあります。
     <acronym>GIMP</acronym>ではその部分を <emphasis>選択</emphasis> することで
-    作業をすすめます。 どんな画像もこの意味での <emphasis>選択範囲</emphasis>
+    作業をすすめます。 どんな画像もそれぞれに <emphasis>選択範囲</emphasis>
     をひとつ持っています。 <acronym>GIMP</acronym>の操作はほとんど全て
     画像の選択領域に対してのみ及ぼされます。
   </para>
@@ -117,8 +117,8 @@
     この概念はたしかにさまざまな場面で有効ですが、 実際は不正確です。
   </para>
   <para lang="ja">
-    選択の実装は具体的には <emphasis>チャンネル</emphasis> が使われています。
-    内部構造的には、 選択は赤緑青およびアルファチャンネルとは別に設けられます。
+    実を言うと選択の実装は <emphasis>チャンネル</emphasis> でできています。
+    内部構造的には、 選択は赤緑青およびアルファのチャンネルとは別に設けられます。
     そして画像の各画素 (ピクセル) ごとに、 0 (非選択) から255 (完全選択) までの
     値を定めることで選択は成り立っています。 こうしたやり方が有利なのは、
     画素によっては0でも255でもない中間の値をとることで <emphasis>不完全選択
@@ -234,7 +234,7 @@
       ツールオプションの <guilabel>境界をぼかす</guilabel> という
       チェックボックスを使うとなだらかな選択とくっきりした選択を切り替え
       られます。 ぼかしの <guilabel>半径</guilabel> は
-      漸進変化の始めと終わりの間の距離を定めるもので、 調節できます。
+      漸進変化の始めと終わりの間の距離を定めており、 調節できます。
     </para>
     <para lang="ja">
       演習を実践されているのならば、 矩形選択ツールで試してみて、
@@ -259,7 +259,7 @@
         <guimenu>選択</guimenu>
         <guimenuitem>境界を明確化</guimenuitem>
       </menuchoice>
-      を選ぶと<quote>ぼやけた輪郭線を一切か無かの明確なものに替える</quote>
+      を選ぶと<quote>ぼやけた輪郭線を一切か無かの明確なものに変える</quote>
       操作ができます。
     </para>
     <note>
@@ -270,7 +270,7 @@
       </para>
       <para lang="ja">
         技術的な話題ですが、 境界のぼかしは
-        <link linkend="plug-in-gauss">ガウスぼかし</link> を使用しており、
+        <link linkend="plug-in-gauss">ガウシアンぼかし</link> を使用しており、
         与えられた量をぼかし半径として選択チャンネルに作用させています。
       </para>
     </note>

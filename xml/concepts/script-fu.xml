@@ -11,7 +11,7 @@
   2006-01-05 fixed ambigous description of installing new script-fu
   scripts (#324309)
 -->
-<!--2010-09-13-->
+<!--2010-11-17-->
 <sect1 id="gimp-concepts-script-fu">
   <title lang="en">Using Script-Fu Scripts</title>
   <title lang="ja">Script-Fuスクリプトを使用</title>
@@ -80,11 +80,12 @@
       Registry <xref linkend="bibliography-online-gimp-plugin-registry"/>.
     </para>
     <para lang="ja">
-      Script-Fuならたくさんのことができるということは覚えていてください。
-      <acronym>GIMP</acronym>に付いてくるスクリプトは十分お役に立つばかりでなく
-      Script-Fuを学習する手本ともなり、 最終的には自作のスクリプトを作成する
-      ときの改造用にしたりたたき台として活用できます。 次節のScript-Fu作成演習
-      はもっとスクリプトの作り方を学びたいときにお読みください。
+      Script-Fu ならあまねくたくさんのことができるということは覚えていて
+      ください。 <acronym>GIMP</acronym>に付いてくるスクリプトは十分お役に立つ
+      ばかりでなく Script-Fu を学習する手本ともなり、 最終的には自作の
+      スクリプトを作成するときの改造用にしたりたたき台として活用できます。 
+      次節の Script-Fu 作成演習はもっとスクリプトの作り方を学びたいときに
+      お読みください。
     </para>
     <para lang="ja">
       最も役立ちそうなスクリプトをこの章でとりあげてゆきますが、 全ては網羅し
@@ -93,21 +94,21 @@
       ようなものもあります。
     </para>
     <para lang="ja">
-      Script-Fu (Scheme言語の派生言語) だけが<acronym>GIMP</acronym>で使える
+      Script-Fu (Scheme 言語の派生言語) だけが<acronym>GIMP</acronym>で使える
       スクリプト言語なのではありません。 しかし初期段階からインストールされて
-      いるスクリプト言語はScript-Fuだけです。 他に利用できるスクリプト拡張には
-      [Pythonと]PerlとTclがあります。<footnote><para>
-        実験段階ですがRuby拡張もあります。</para>
-      </footnote> 両拡張機能は<acronym>GIMP</acronym>の 
+      いるスクリプト言語は Script-Fu だけです。 他に利用できるスクリプト拡張には
+      [Python と] Perl と Tcl があります。<footnote><para>
+        実験段階ですが Ruby 拡張もあります。</para>
+      </footnote> どちらの拡張機能も<acronym>GIMP</acronym>の 
       <citetitle>Plugin Registry</citetitle>
       <xref linkend="bibliography-online-gimp-plugin-registry"/>
-      からダウンロードしてください。
+      からダウンロードできます。
     </para>
   </sect2>
 
   <sect2 id="install-script-fu">
     <title lang="en">Installing Script-Fus</title>
-    <title lang="ja">Script-Fuの導入</title>
+    <title lang="ja">Script-Fu の導入</title>
     <indexterm lang="en">
       <primary>Script-Fu</primary>
       <secondary>Install</secondary>
@@ -124,8 +125,8 @@
       available for download all around the Internet.
     </para>
     <para lang="ja">
-      Script-Fuの素晴らしいところののひとつがお持ちのスクリプトを他の<acronym>
-      GIMP</acronym>友達と共有できることです。 多数のスクリプトが元から
+      Script-Fu の素晴らしいところのひとつがお持ちのスクリプトを他の
+      <acronym>GIMP</acronym>友達と共有できることです。 多数のスクリプトが元から
       <acronym>GIMP</acronym>に付いてきますが、 インターネットを通じて
       ダウンロード利用できるスクリプトはもっと莫大な数にのぼります。
     </para>
@@ -192,10 +193,10 @@
       likely nothing wrong with it.
     </para>
     <para lang="ja">
-      Script-Fuを扱ううえでよくある間違いが、 ただ単に呼びだして <guibutton>OK
-      </guibutton> ボタンをクリックしてしまうときに起こります。 これで何も変化
-      がないとスクリプトが壊れているとかバグがあると思い込んでしまうのですが、
-      スクリプトには非がない場合がほとんどです。
+      Script-Fu を扱ううえでよくある間違いが、 ただ単に呼びだして 
+      <guibutton>OK</guibutton> ボタンをクリックしてしまうときに起こります。 
+      これで何も変化がないとスクリプトが壊れているとかバグがあると思い込んで
+      しまいそうですが、 スクリプトには非がない場合がほとんどです。
     </para>
   </sect2>
 
@@ -203,11 +204,11 @@
     <title lang="en">Different Kinds Of Script-Fus</title>
     <title lang="ja">Script-Fuの種別</title>
     <para lang="en">There are two kinds of Script-Fus:</para>
-    <para lang="ja">Script-Fuには2つの種別があります。</para>
+    <para lang="ja">Script-Fuには 2 つの種別があります。</para>
     <variablelist>
       <varlistentry>
         <term lang="en">Standalone Script-Fus</term>
-        <term lang="ja">独立系Script-Fu</term>
+        <term lang="ja">独立系 Script-Fu</term>
         <listitem>
           <para lang="en">
             You will find the standalone variants under
@@ -217,7 +218,7 @@
             </menuchoice> in the image menubar (see the figure below).
           </para>
           <para lang="ja">
-            独立系のScript-Fuは画像を生成するために使われるもので、 メニューを
+            独立系の Script-Fu は画像を生成するために使われるもので、 メニューを
             <menuchoice>
               <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
@@ -226,7 +227,7 @@
           </para>
           <figure>
             <title lang="en">Script-Fus by category</title>
-            <title lang="ja">部門別のScript-Fu</title>
+            <title lang="ja">部門別の Script-Fu</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -238,7 +239,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Image-dependent Script-Fus</term>
-        <term lang="ja">画像に依存するScript-Fu</term>
+        <term lang="ja">画像に依存する Script-Fu</term>
         <listitem>
           <para lang="en">
             Menus have been reorganized. A new Colors-menu appears. It groups
@@ -258,9 +259,9 @@
             メニューは再編されています。 [<acronym>GIMP</acronym> 2.4 からは]
             色メニューができました。 色を扱うスクリプト、 例えば色相、 彩度、
             光度などを調整するツールやフィルタなどがまとめて入っています。 
-            フィルタメニューとScript-Fuメニューは統合されて新フィルタメニュー
+            フィルタメニューと Script-Fu メニューは統合されて新フィルタメニュー
             となり、 メニューの内訳も再編されました。 画像に依存する
-            プラグインやScript-Fuスクリプトは画像メニューの方に散って
+            プラグインや Script-Fu スクリプトは画像メニューの方に散って
             ゆきました。 はじめはとっつきにくいかもしれませんが、 道理に
             かなった配置ですからじきに慣れていただけると思います。
           </para>
@@ -308,7 +309,7 @@
     </para>
     <para lang="ja">
       ここで全部のスクリプトについて個々に深入りして説明するつもりは
-      ありません。 大部分のScript-Fuは非常に理解し易くかつ使い易く作られて
+      ありません。 大部分の Script-Fu は非常に理解し易くかつ使い易く作られて
       います。 この説明文を執筆した時点では初期状態でつぎの種類の画像を作成
       するものが導入されています。
     </para>

@@ -6,7 +6,7 @@
   2008-04-05 Mr.Dust : added 'ko' contents
   2007-12-26 lexa: initial version for en and de
 -->
-<!--2009-09-24-->
+<!--2010-11-21-->
 <sect1 id="gimp-concepts-color-management">
   <title lang="en">Color Management in GIMP</title>
   <title lang="ja"><acronym>GIMP</acronym>での色管理</title>
@@ -193,9 +193,8 @@
         そのファイルを作業空間 (<acronym>RGB</acronym>色空間) に合わせて変換
         するかどうか尋ねられます。 この色空間は初期設定では s<acronym>RGB
         </acronym>が指定されていますが、 作業の全工程をその色空間で行うよう
-        お勧めします。
-        Should you however decide to keep the embedded color profile,
-        the image will however still be displayed correctly.
+        お勧めします。 それでもなお埋め込まれていたカラープロファイルの方を
+        残しておくにしても、 やはり画像は正しく表示されます。
       </para>
       <para lang="ja">
         何らかの事情があって画像にカラープロファイルが埋め込まれていなくても、
@@ -240,7 +239,7 @@
       </para>
       <para lang="ja">
         お使いのモニタ装置にカラープロファイルが無くても、 装置を測定・計測する
-        ツールを使って作成できます。 UNIX系のシステムなら
+        ツールを使って作成できます。 UNIX 系のシステムなら
         <productname>Argyll Color Management System</productname>
         <xref linkend="bibliography-online-argyllcms"/> や
         <productname>LProf</productname>
@@ -287,12 +286,13 @@
           are sent to the video card (which already contains the vgct LUT).
         </para>
         <para lang="ja">
-          ディスプレイ装置には2段階必要です。 第一は測定、 第二はプロファイル
-          作成です。 さらに測定には通例2段階必要です。 そのひとつがコントラスト
-          や明るさ、 色温度などの外部モニタ制御を調節することですが、 これらは
-          モニタの機種に大きく依存しています。 さらにモニタを標準状態にできる
-          だけ近づけるためにビデオカードメモリ[画像処理器基盤の記憶装置]に
-          読み込ませることになる調整項目があります。 この情報はいわゆる
+          ディスプレイ装置には 2 段階必要です。 第一は測定、 第二はプロファイル
+          作成です。 さらに測定には通例 2 段階必要です。 そのひとつが
+          コントラストや明るさ、 色温度などの外部モニタ制御を調節すること
+          ですが、 これらはモニタの機種に大きく依存しています。 さらにモニタを
+          標準状態にできるだけ近づけるためにビデオカードメモリ
+          [画像処理器基盤の記憶装置]に読み込ませることになる調整項目があります。
+          この情報はいわゆる
           <acronym>vgct</acronym>タグ内のモニタプロファイルに保存されます。
           <productname>Windows XP</productname> や <productname>Mac OS
           </productname> では恐らく起動時にオペレーティングシステムがこの情報

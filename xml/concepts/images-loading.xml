@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2010-02-08-->
+<!--2010-11-21-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -75,7 +75,7 @@
         ファイルを開くときは<acronym>GIMP</acronym>はそのファイル形式を判定し
         なければなりません。 形式が多様であることに加え、 残念ながらそれを表す
         拡張子 (例: <filename class="extension">.jpg</filename>) に信頼が
-        置けないので、 <acronym>GIMP</acronym>が拡張子でファイルの形式を
+        置けないので、 <acronym>GIMP</acronym>が拡張子からファイルの形式を
         そのまま判断することはありません。 じっさいにシステムごとに拡張子が
         異なったり、 機能追加でファイル名が変化することもあるからです。 
         さらに、 ファイル名から拡張子が省かれることもあるのが大きな理由です。 
@@ -137,23 +137,23 @@
       text box.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym> 2.2から、 欲しいファイルをすばやく探しだすために
-      見回すのを助けるいろいろな機能がついた<quote>画像を開く</quote>ダイアログ
-      が加わりました。 <guilabel>場所</guilabel> 欄によく
-      使われるフォルダを登録できる<quote>ブックマーク</quote>をとれるように
-      なったのがおそらく決定的でしょう。 その先頭には、 <quote>デスクトップ
-      </quote>などが自動的に挿入されます。 <guibutton>追加
-      </guibutton> ボタンをクリックすると現在選択しているディレクトリがブック
-      マークに追加登録できます。 <guibutton>削除</guibutton>
-      ボタンをクリックすれば現在選ばれているディレクトリがブックマークから撤去
-      されます。 ブックマークはダブルクリックすれば、 そのディレクトリに即座に
-      移動できます。
+      <application><acronym>GIMP</acronym> 2.2</application> から、 欲しい
+      ファイルをすばやく探しだすために見回すのを助けるいろいろな機能がついた
+      <quote>画像を開く</quote>ダイアログが加わりました。 
+      <guilabel>場所</guilabel> 欄によく使われるフォルダを登録できる
+      <quote>ブックマーク</quote>をとれるようになったのがおそらく決定的
+      でしょう。 その先頭には、 <quote>デスクトップ</quote>などが自動的に
+      挿入されます。 <guibutton>追加</guibutton> ボタンをクリックすると現在
+      選択しているディレクトリがブックマークに追加登録できます。
+      <guibutton>削除</guibutton> ボタンをクリックすれば現在選ばれている
+      ディレクトリがブックマークから撤去されます。 ブックマークは
+      ダブルクリックすれば、 そのディレクトリに即座に移動できます。
     </para>
     <para lang="ja">
       選ばれたディレクトリの内容がダイアログの中央部に現れます。 その一覧の
-      上部はサブディレクトリが並び、ファイルはその後に整列します。 はじめは
-      ディレクトリにあるファイルが全て列されますが、 ダイアログの下部にある
-      <guilabel>ファイルタイプの選択</guilabel> メニューで
+      上部はサブ (下位) ディレクトリが並び、ファイルはその後に整列します。
+      はじめはディレクトリにあるファイルが全て列されますが、 ダイアログの
+      下部にある <guilabel>ファイルタイプの選択</guilabel> メニューで
       ファイル形式を指定すればその種類のファイルだけが並んで出てくるように
       制限できます。
     </para>
@@ -161,14 +161,14 @@
       整列しているファイルのなかから画像ファイルの項目をクリックすると、 
       ダイアログの右端にプレビュー画と画像の基本的な属性情報が表示されます。 
       プレビュー画は作成とともにキャッシュされて再利用されるため、 操作後の
-      現状と食い違うプレビュー画を表示することもありえます。 
-      そこで、間違いが予見できる場合にプレビュー区画で <keycap>Ctrl</keycap> 
+      現状と食い違うプレビュー画を表示することもありえます。 こうした
+      食い違いになっていそうなときは、 プレビュー区画で <keycap>Ctrl</keycap> 
       キーを押しながらクリックすれば強制的にプレビュー画を更新できます。
     </para>
     <para lang="ja">
       初期設定の場合、 <quote>画像を開く</quote>ダイアログには <guilabel>
-      場所</guilabel> 文字記入欄があります。 これは隠すことも
-      できます。 <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>
+      場所</guilabel> 文字記入欄があります。 これは隠せます。
+      <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>
       で表示を切り替えてください。 またこのほか左上の紙と鉛筆のアイコン
       <guiicon>
         <inlinemediaobject>
@@ -197,12 +197,12 @@
         image file, it is either corrupt or not a supported format.
       </para>
       <para lang="ja">
-        排列からファイル名を選びだしてダイアログの右下にある <guibutton>
-        開く</guibutton> ボタンをクリックすると、 ほぼ必ず
+        ファイル一覧からファイル名を選びだしてダイアログの右下にある 
+        <guibutton>開く</guibutton> ボタンをクリックすると、 ほぼ必ず
         <acronym>GIMP</acronym>はファイルの形式を自動的に判別します。 
-        しかしまれにファイル形式が異例でその拡張子が不完全なとき、 <acronym>
-        GIMP</acronym>はファイルの本当の形式を推定できないかもしれません。
-        必要ならダイアログの下部にある
+        しかしまれにファイル形式が異例でその拡張子が不完全なとき、 
+        <acronym>GIMP</acronym>はファイルの本当の形式を推定できないかも
+        しれません。 必要ならダイアログの下部にある
         <guilabel>ファイルタイプを選択</guilabel>
         オプションを引き出し、 手動でファイル形式を特定できます。 でも
         <acronym>GIMP</acronym>がその画像ファイルを読み込めなかった理由は、 
@@ -274,12 +274,12 @@
         <guimenu>ファイル</guimenu>
         <guisubmenu>最近開いた画像ファイルを開く</guisubmenu>
       </menuchoice>
-      サブメニューを使うと最も簡単に開けます。 見付からなければ <guimenuitem>
-      画像ファイル履歴</guimenuitem> まで進み、 出てくる
+      サブメニューを使うと最も簡単に開けます。 このメニューでは最近開いた画像が
+      アイコンつきで並んで表示されており、 開きたい画像を一つ選べます。
+      [見付からなければ 
+      <guimenuitem>画像ファイル履歴</guimenuitem> まで進み、 出てくる
       <link linkend="gimp-document-dialog">ダイアログ</link> で探して
-      みましょう。 このダイアログは開いた時が最も近いものから順に
-      画像ファイルを並べたもので、 それぞれに縮小見本画像がついています。 
-      ここから一つだけ選ぶことができ、 その画像が開かれます。
+      みましょう。]
     </para>
     <figure lang="ja">
       <title lang="en">Open Recent menu and Open Recent Dialog</title>
@@ -306,10 +306,10 @@
       </mediaobject>
     </figure>
     <para lang="ja">
-      サブメニューに展開されるファイル名は10個までしかなく、 ここで開ける
-      ファイルは最も最近に開かれた10件に限られます。 それより以前のものを
-      探している場合は、 サブメニューの最後にある <guimenuitem>
-      ドキュメント履歴</guimenuitem> をクリックすれば、
+      サブメニューに展開されるファイル名は 10 個までしかなく、 ここで開ける
+      ファイルは最も最近に開かれた 10 件に限られます。 それより以前のものを
+      探している場合は、 サブメニューの最後にある 
+      <guimenuitem>ドキュメント履歴</guimenuitem> をクリックすれば、
       画像を開いた全ての履歴を最も最近のものから順に並べたウィンドウが出て
       きますので、 ここから一つだけ選んでください。 詳しい説明が
       <xref linkend="gimp-document-dialog"/> にあります。
@@ -332,7 +332,7 @@
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym>は画像ファイルを読み書きするとき、 <acronym>XCF
-      </acronym>形式を除くいずれのファイル形式にもプラグインを使用しています。
+      </acronym>形式を除くあらゆるファイル形式にプラグインを使用しています。
       このようなプラグインがプログラム用の外部ライブラリを使うこともよく
       あります。 たとえば<acronym>GIMP</acronym>は 
       <link linkend="glossary-postscript">PostScript</link> を直接にサポート
@@ -459,11 +459,11 @@
       the image will open in <acronym>GIMP</acronym>.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>のインストール時やその後で画像ファイルの形式を
+      <acronym>GIMP</acronym>のインストール時かその後で画像ファイルの形式を
       <acronym>GIMP</acronym>に関連づけておけば、 ファイルマネージャ
       (<productname>Linux</productname> における <application>Nautilus
-      </application>や<application>Dolphin</application>、 <productname>
-      Windows</productname> における<application>WindowsExplorer</application>)
+      </application> や <application>Dolphin</application>、 <productname>
+      Windows</productname> における <application>WindowsExplorer</application>)
       を使ってファイルを見回し、 見付けたファイルアイコンをダブルクリックする
       だけで、 設定が正しくできておれば、 <acronym>GIMP</acronym>がその画像を
       開きます。
@@ -549,7 +549,7 @@
       <keycombo>
         <keycap>Alt</keycap><keycap>Print&nbsp;Screen</keycap>
       </keycombo>
-      キーを使えば活性ウィンドウだけ取り込めます。 ただし <keycap>
+      キーを使えば今使っているウィンドウだけ取り込めます。 ただし <keycap>
       Print&nbsp;Screen</keycap> キーを使った技はどんな環境でも使えるというもの
       ではなく、 また画像をクリップボードに取り込めるオペレーティングシステム上
       であっても必ずしも<acronym>GIMP</acronym>がその画像を利用できるとは限り
@@ -574,16 +574,16 @@
       <xref linkend="bibliography-online-xnview"/>.
     </para>
     <para lang="ja">
-      <productname>UNIX</productname> 系のソフトで <application>gThumb
-      </application> という名前の画像管理アプリケーションがあります。 優れた
-      画像縦覧ソフトとして使えるだけでなく、 画像上で <mousebutton>第2ボタン
-      </mousebutton> クリックすると出てくるメニューから <guimenuitem>
-      他で開く...</guimenuitem> に進むと現れる<quote>画像を
-      開く</quote>ダイアログで<acronym>GIMP</acronym>を選択して <guibutton>
-      開く</guibutton> ボタンをクリックしても開けます。 また 
+      <productname>Linux</productname> など <productname>UNIX</productname> 風
+      システム用のソフトに <application>gThumb</application> という名前の
+      画像管理アプリケーションがあります。 優れた画像縦覧ソフトとして使える
+      だけでなく、 画像上で <mousebutton>第2ボタン</mousebutton> クリックすると
+      出てくるメニューから <guimenuitem>他で開く...</guimenuitem> に進むと
+      現れる<quote>画像を開く</quote>ダイアログで<acronym>GIMP</acronym>を
+      選択して <guibutton>開く</guibutton> ボタンをクリックしても開けます。 また 
       <application>gThumb</application> で表示されている画像をクリックしたまま
       <acronym>GIMP</acronym>のツールボックス上にドラッグして放っても開けます。 
-      より詳しくはgThumbのホームページ 
+      より詳しくは gThumb のホームページ 
       <xref linkend="bibliography-online-gthumb"/> をご覧ください。
       その他の同様なアプリケーションとして、 <application>GQview</application>
       <xref linkend="bibliography-online-gqview"/> や

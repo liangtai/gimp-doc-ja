@@ -14,7 +14,7 @@
   2006-02-17: added italian translation by ciampix
   2005-12-26: added german translation and made the file docbook compliant by lexa
 -->
-<!--2009-11-07-->
+<!--2010-11-18-->
 <sect1 id="gimp-concepts-layers">
   <title lang="en">Introduction to Layers</title>
   <title lang="ja">レイヤーのあらまし</title>
@@ -127,14 +127,14 @@
             <guimenuitem>Edit Layer Attributes</guimenuitem>.
           </para>
           <para lang="ja">
-            全てのレイヤーは名前がつけられます。 レイヤーが作られるときに自動的
+            レイヤーはそれぞれ名前がつきます。 レイヤーが作られるときに自動的
             に名付けられることもありますが、 変更もできます。 レイヤー名は
-            レイヤーダイアログ上で名前を変えたいレイヤーの名前をダブルクリック
-            すればその場で書き換えられます。 あるいはレイヤーダイアログ上を
-            マウスの <mousebutton>第2ボタン</mousebutton> でクリックして出て
-            くるメニューの最上部にある <guimenuitem>
-            レイヤー名の変更... </guimenuitem> をクリック
-            すると、 ダイアログが現れますのでここで
+            レイヤーダイアログで名前を変えたいレイヤーの名前をダブルクリック
+            すればその場で書き換えられます。 あるいはレイヤーダイアログで
+            レイヤー名をマウスの <mousebutton>第2ボタン</mousebutton> で
+            クリックして出てくるメニューの最上部にある 
+            <guimenuitem>レイヤー名の変更... </guimenuitem> をクリックすると、 
+            ダイアログが現れますのでここで
             現在活性化しているレイヤーの名前を変更できます。
           </para>
         </listitem>
@@ -192,7 +192,7 @@
           </para>
           <para lang="ja">
             背景レイヤーはこの件で独特です。 新しい画像を作成した直後の段階
-            では、 画像のレイヤーは背景レイヤーの一層だけです。 作成の際に塗り
+            では、 画像のレイヤーは背景レイヤーの 1 層だけです。 作成の際に塗り
             つぶし色に透明以外を指定した場合はその画像にアルファチャンネルは
             ありません。 しかし新しくレイヤーを追加すれば、 不透明な塗りつぶし
             色で作成された画像であっても自動的にアルファチャンネルがつくられ、
@@ -237,10 +237,10 @@
                       and the corresponding channels are black.
                     </para>
                     <para lang="ja">
-                      この画像では3層のレイヤーがそれぞれ純赤、 純緑、 純青で
-                      100%不透明に塗られている。 チャンネルダイアログではこの
+                      この画像では 3 層のレイヤーがそれぞれ純赤、 純緑、 純青で
+                      100% 不透明に塗られている。 チャンネルダイアログではこの
                       画像にアルファチャンネルが加わっていることがわかる。 白く
-                      描かれているのは、 100%不透明なレイヤーしかないので画像が
+                      描かれているのは、 100% 不透明なレイヤーしかないので画像が
                       全く透過しないためである。 いま赤のレイヤーを活性化
                       している。 純赤で塗られているので緑や青は片鱗もなく、
                       それぞれのチャンネルは黒くなっている。
@@ -253,7 +253,7 @@
                   Alpha channel example: One transparent layer
                 </title>
                 <title lang="ja">
-                  アルファチャンネルの例: 透過レイヤーが1層
+                  アルファチャンネルの例: 透過レイヤーが 1 層
                 </title>
                 <mediaobject>
                   <imageobject>
@@ -276,7 +276,7 @@
                         <guimenu>編集</guimenu>
                         <guimenuitem>消去</guimenuitem>
                       </menuchoice>)。
-                      第2のレイヤーの緑が透けて見える。 アルファチャンネルが
+                      第 2 のレイヤーの緑が透けて見える。 アルファチャンネルが
                       まだ白いままなのは、 画像にはこの区画で不透明なレイヤーが
                       あるためである。
                     </para>
@@ -288,7 +288,7 @@
                   Alpha channel example: Two transparent layers
                 </title>
                 <title lang="ja">
-                  アルファチャンネルの例: 透過レイヤーが2層
+                  アルファチャンネルの例: 透過レイヤーが 2 層
                 </title>
                 <mediaobject>
                   <imageobject>
@@ -303,10 +303,10 @@
                       since there is an opaque layer in this part of the image.
                     </para>
                     <para lang="ja">
-                      第2のレイヤーの左側を透過させた。 第3のレイヤーの青が
-                      第1と第2のレイヤーを通して見えている。 アルファチャンネル
-                      がいまだ白いのは、 画像にはこの区画で不透明なレイヤーが
-                      あるためである。
+                      第 2 のレイヤーの左側を透過させた。 第 3 のレイヤーの青が
+                      第 1 と第2のレイヤーを通して見えている。 
+                      アルファチャンネルがいまだ白いのは、 画像にはこの区画で
+                      不透明なレイヤーがあるためである。
                     </para>
                   </caption>
                 </mediaobject>
@@ -316,7 +316,7 @@
                   Alpha channel example: Three transparent layers
                 </title>
                 <title lang="ja">
-                  アルファチャンネルの例: 透過レイヤーが3層
+                  アルファチャンネルの例: 透過レイヤーが 3 層
                 </title>
                 <mediaobject>
                   <imageobject>
@@ -332,12 +332,12 @@
                       like the Eraser and uses the Background color of Toolbox.
                     </para>
                     <para lang="ja">
-                      第3のレイヤーの左半分を透過させ[ようとし]た。 アルファ
+                      第 3 のレイヤーの左半分を透過させ[ようとし]た。 アルファ
                       チャンネルは白いままで、 このレイヤーの左半分も白く不透明
                       だ。 背景レイヤーにアルファチャンネルがない。
                       つまりこれは、 消去コマンドが消しゴムツールのように動作
-                      するため、 ツールボックスの色の区画にある背景色が塗られた
-                      ことになる。
+                      するため、 ツールボックスの色の区画に示されている背景色が
+                      塗られたことになる。
                     </para>
                   </caption>
                 </mediaobject>
@@ -376,8 +376,8 @@
                       </menuchoice>
                       コマンドを背景レイヤーに対して使った。 とうとうこの画像の
                       左半分は完全に透過し、 画像が置かれたページの色が
-                      出ている。<!-- ?? --> アルファチャンネルの左部分は透明に
-                      なり、 チャンネルダイアログ上では黒く表示された。
+                      出ている。 アルファチャンネルの左部分は透明になり、 
+                      チャンネルダイアログ上では黒く表示された。
                     </para>
                   </caption>
                 </mediaobject>
@@ -405,26 +405,26 @@
           </para>
           <para lang="ja">
             レイヤーの種類とは画像のモード (前節を参照) とアルファチャンネルの
-            有無により決まっています。 6種類が考えられます。
+            有無により決まっています。 6 種類が考えられます。
           </para>
           <itemizedlist>
             <listitem><para>RGB</para></listitem>
             <listitem><para>RGBA</para></listitem>
             <listitem>
               <para lang="en">Gray</para>
-              <para lang="ja">グレースケール</para>
+              <para lang="ja">グレースケール (Gray)</para>
             </listitem>
             <listitem>
               <para lang="en">GrayA</para>
-              <para lang="ja">アルファつきグレースケール</para>
+              <para lang="ja">アルファつきグレースケール (GrayA)</para>
             </listitem>
             <listitem>
               <para lang="en">Indexed</para>
-              <para lang="ja">インデックス化カラー</para>
+              <para lang="ja">インデックス化カラー (Indexed)</para>
             </listitem>
             <listitem>
               <para lang="en">IndexedA</para>
-              <para lang="ja">アルファつきインデックス化カラー</para>
+              <para lang="ja">アルファつきインデックス化カラー (IndexedA)</para>
             </listitem>
           </itemizedlist>
           <para lang="en">
@@ -436,12 +436,12 @@
             image or by adding or removing an alpha channel.
           </para>
           <para lang="ja">
-            レイヤーの種類を問うものの代表がフィルタ (<guimenu>
-            フィルタ</guimenu> メニューにある) です。 
-            その多くが扱える種類を一部に限定していて、 使えないフィルタは
-            メニュー上で灰色無効になっています。 この問題への対処は、 画像の
-            モードを変更したりアルファチャンネルを追加もしくは削除すると
-            できます。
+            レイヤーの種類を問うものの代表がフィルタ 
+            (<guimenu>フィルタ</guimenu> メニューにある) です。 
+            その多くが扱える種類を限定しており、 使えないフィルタは
+            メニュー上で灰色無効になっています。 画像のモードを変更したり
+            アルファチャンネルを追加もしくは削除すると
+            大抵の問題は対処できます。
           </para>
         </listitem>
       </varlistentry>
@@ -640,10 +640,11 @@
             ranges from 0 to 100, with 0 meaning complete transparency, and
             100 meaning complete opacity.
           </para>
+          <!--"レイヤーの透明度は..." もしくは "...レイヤーの色をどの程度遮るかを.."-->
           <para lang="ja">
-            レイヤーの不透明度は積み重なったレイヤーを通して下層のレイヤーの色が
-            どの程度見えるかを定めます。 不透明度の範囲は 0 から 100 にあり、
-            0 は完全透過を、 100 は完全不透明を表します。
+            レイヤーの不透明度は積み重なったレイヤーを上から見て下層の
+            レイヤーの色がどの程度見えるかを定めます。 不透明度の範囲は 0 から
+            100 にあり、 0 は完全透過を、 100 は完全不透明を表します。
           </para>
         </listitem>
       </varlistentry>
