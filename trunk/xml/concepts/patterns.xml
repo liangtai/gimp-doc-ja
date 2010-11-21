@@ -14,7 +14,7 @@
   2005-11-28 lexa: replaced informalfigures by figures
   2005-05-09 nn: added french translation
 -->
-<!--2009-11-07-->
+<!--2010-11-18-->
 <sect1 id="gimp-concepts-patterns">
   <title lang="en">Patterns</title>
   <title lang="en">パターン</title>
@@ -41,8 +41,8 @@
   </para>
   <para lang="ja">
     <emphasis>パターン (文様)</emphasis> とは <emphasis>タイル状</emphasis>
-    に小さな画像の複製が並び、 ちょうど焼き物のタイルが継ぎあわされるように
-    一定の区画を敷き詰めるために使うものです。 パターンのなかでもその複製同士で
+    に小さな画像の複製を並べ、 ちょうど焼き物のタイルが継ぎあわされるように
+    一定の区画を敷き詰めるために使う画像です。 パターンの種類にはその複製同士で
     上辺と下辺を継いでも左辺と右辺を継いでも目立った区切りがないものがあり、
     これらを <emphasis>継ぎ目なしタイル</emphasis> と呼びます。 有用なパターン
     が全て継ぎ目なしタイルだとは限りませんが、 継ぎ目なしのほうが何かと便利
@@ -172,9 +172,9 @@
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>の <emphasis>現在活性化しているパターン</emphasis>
-    はパターンに関連する操作の大部分に使われており、 ツールボックスのブラシ /
-    パターン / グラデーションの領域でもその見本が表示されいます。 見本の標識を
-    クリックすると
+    はパターンに関連する操作の大部分に使われており、 ツールボックスの
+    <link linkend="gimp-toolbolx-indicator-area">ブラシ/パターン/グラデーション
+    </link> の領域でもその見本が表示されます。 見本の標識をクリックすると
     <link linkend="gimp-pattern-dialog">パターンダイアログ</link> が開かれ、
     様々なパターンから選べるようになっています。 パターンダイアログは <guimenu>
     ウィンドウ</guimenu> メニューから呼びだせるほか、 
@@ -285,19 +285,19 @@
   <para lang="ja">
     <acronym>GIMP</acronym>でパターンファイルを使えるようにするには、 まずその
     ファイルを<acronym>GIMP</acronym>がパターンを検索する場所として登録された
-    パターン用フォルダに入れてください。 初期設定では、 ユーザは改変できない
-    システム用の <filename>patterns</filename> フォルダと、 個人用の<acronym>
-    GIMP</acronym>ディレクトリ内の <filename>patterns</filename> フォルダの
-    2箇所が既にパターン用フォルダとして登録されています。 それ以外のフォルダを
-    追加するには環境設定ダイアログの
+    パターン用フォルダに入れてください。 初期設定では、 システム用なので
+    ユーザーでは改変できない <filename>patterns</filename> フォルダと、 
+    個人用の<acronym>GIMP</acronym>ディレクトリ内の 
+    <filename>patterns</filename> フォルダの 2 箇所が既にパターン用フォルダと
+    して登録してあります。 それ以外のフォルダを追加するには環境設定ダイアログの
     <link linkend="gimp-prefs-folders-data">パターン用フォルダ</link> のページ
-    で登録してください。 PAT形式のファイル (や<acronym>GIMP</acronym> 2.2 以降
-    ならパターンに利用可能なその他の形式のファイル) はいずれもパターン用
-    フォルダに入れておけば次の<acronym>GIMP</acronym>の起動時からパターン
-    ダイアログの一覧に加わります。
+    で登録してください。 PAT形式のファイル (や <application>
+    <acronym>GIMP</acronym> 2.2</application> 以降ならパターンに利用可能な
+    その他の形式のファイル) はいずれもパターン用フォルダに入れておけば次の
+    <acronym>GIMP</acronym>の起動時からパターンダイアログの一覧に加わります。
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>に備わる様々なツールやいろいろなフィルタ、 中でも
+    <acronym>GIMP</acronym>に備わる様々なツールやいろいろなフィルタ、 なかでも
     <quote>下塗り</quote>フィルタを使えば、 面白いパターンをつくる方法は
     いくらでもあります。
     そういったチュートリアルを紹介するサイトも沢山ありますが、
@@ -305,7 +305,7 @@
     <xref linkend="bibliography-online-gimp"/> もそのひとつです。 フィルタの
     一部には継ぎ目なしの仕上りになるオプションつきのものもあります。 また、
     <xref linkend="script-fu-tile-blur"/> フィルタは画像をもっと円滑に継ぎ
-    合わせられるよう、 画像の縁をブレンドするためのものです。
+    合わせられるよう、 画像の縁をブレンドするのに使えます。
   </para>
   <figure>
     <title lang="en">Pattern script examples</title>
