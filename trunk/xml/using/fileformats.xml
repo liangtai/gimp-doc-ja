@@ -12,7 +12,7 @@
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2009-11-25-->
+<!--2010-11-23-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -38,7 +38,7 @@
   <para lang="ja">
     <acronym>GIMP</acronym>は膨大な種類の画像ファイル形式を読み書きできます。
     <acronym>GIMP</acronym>由来の<acronym>XCF</acronym>ファイル形式を除き、 
-    すべてのファイルはプラグインがこなします。 そのおかげで比較的簡単に
+    どのファイルの取り扱いもプラグインがこなします。 そのおかげで比較的簡単に
     <acronym>GIMP</acronym>は新しいファイル形式への対応要望に応えられます。
   </para>
   <para lang="ja">
@@ -113,7 +113,7 @@
     <para lang="ja">
       出来上がった画像を保存するファイル形式について、 <acronym>GIMP</acronym>
       は幾種類もの対応ができます。 ただしレイヤーや透明度をはじめ画像の情報を
-      <emphasis>全て</emphasis> 保存できる形式は、 <acronym>GIMP</acronym>
+      <emphasis>すべて</emphasis> 保存できる形式は、 <acronym>GIMP</acronym>
       由来の<acronym>XCF</acronym>形式をおいて他にないということは重要です。 
       これ以外の形式はいずれも、 画像の属性を一定の範囲は保存できても一部は
       失ないます。 画像を保存する際に<acronym>GIMP</acronym>はこの事実を警告
@@ -146,10 +146,10 @@
       先に述べたとおり、 <acronym>GIMP</acronym>で作成した画像情報を何の損失
       もなく保存できるファイル形式は、 <acronym>GIMP</acronym>由来の 
       <link linkend="glossary-xcf">XCF</link> 形式を措いて他に全くありません。
-      画像の情報に損失がでるファイル形式が選択されているときには、 <acronym>
-      GIMP</acronym>はそのことを伝えるとともに、 どの情報が損なわれるかを示し、 
-      あわせてそのファイル形式に
-      合った画像に <quote>エクスポート</quote> (転換) するかどうか訊ねます。
+      画像の情報に損失がでるファイル形式が選択されているときには、 
+      <acronym>GIMP</acronym>はそのことを伝えるとともに、 どの情報が
+      損なわれるかを示し、 あわせてそのファイル形式に合った画像に 
+      <quote>エクスポート</quote> (転換) するかどうか訊ねます。
       画像のエクスポートで元の画像そのものが変更されるものではありませんので、
       それが原因で何かを失なうおそれはありません。
       <link linkend="gimp-export-dialog">画像のエクスポート</link>
@@ -175,7 +175,7 @@
 
     <sect3 id="file-gif-save">
       <title lang="en">Saving as GIF</title>
-      <title lang="ja">GIF形式で保存</title>
+      <title lang="ja">GIF 形式で保存</title>
       <anchor id="file-gif-load" xreflabel="GIF"/>
 
       <indexterm>
@@ -192,7 +192,7 @@
         <secondary>GIF</secondary>
       </indexterm>
       <indexterm lang="ja">
-        <primary sortas="GIFケイシキデホゾン">GIF形式で保存</primary>
+        <primary sortas="GIFケイシキデホゾン">GIF 形式で保存</primary>
       </indexterm>
       <indexterm lang="ja">
         <primary sortas="ケイシキ">形式</primary>
@@ -245,10 +245,10 @@
                     <guilabel>インターレース</guilabel> 
                     オプションを有効にすると、 ウェブページでダウンロード
                     読み込みの最中から漸進的に表示できる画像になります。
-                    画像の漸進的表示はコンピュータやモデムの処理速度が遅いときに、
-                    画像を表示し終える前に読み込みを中止できるので便利でした。
-                    しかし今日の高速回線時代にこの機能はあまり役立たない技術と
-                    なりました。
+                    画像の漸進的表示はコンピュータやモデムの処理速度が
+                    遅いときに、 画像を表示し終える前に読み込みを中止できる
+                    ので便利でした。 しかし今日の高速回線時代にこの機能は
+                    あまり役立たない技術となりました。
                   </para>
                 </listitem>
               </varlistentry>
@@ -264,11 +264,12 @@
                     saved.
                   </para>
                   <para lang="ja">
-                    <acronym>GIF</acronym>形式では7ビット<acronym>ASCII
-                    </acronym>文字列のみコメントに使えます。 もしうっかり7
-                    ビット<acronym>ASCII</acronym>文字集合以外の文字を入れて
-                    しまうと<acronym>GIMP</acronym>はコメント自体を削除して
-                    画像を保存し、 コメントは保存されなかったことを告げます。
+                    <acronym>GIF</acronym>形式では 7 ビット
+                    <acronym>ASCII</acronym>文字列のみコメントに使えます。 
+                    もしうっかり 7 ビット<acronym>ASCII</acronym>文字集合以外の
+                    文字を入れてしまうと<acronym>GIMP</acronym>はコメント自体を
+                    削除して画像を保存し、 コメントは保存されなかったことを
+                    告げます。
                   </para>
                 </listitem>
               </varlistentry>
@@ -288,7 +289,7 @@
                 アニメーション(動画)
               </primary>
               <secondary sortas="ドウガGIFオプション">
-                動画GIFオプション
+                動画 GIF オプション
               </secondary>
             </indexterm>
             <variablelist>
@@ -333,7 +334,7 @@
                   </para>
                   <para lang="ja">
                     このオプションはフレームの重ね方を指定するもので、
-                    未定だった場合は以下の3つから選びます。
+                    未定だった場合は以下の 3 つから選びます。
                   </para>
                   <itemizedlist mark="opencircle">
                     <listitem>
@@ -382,7 +383,7 @@
 
     <sect3 id="file-jpeg-save">
       <title lang="en">Saving as JPEG</title>
-      <title lang="ja">JPEG形式で保存</title>
+      <title lang="ja">JPEG 形式で保存</title>
       <anchor id="file-jpeg-load" xreflabel="JPEG"/>
 
       <indexterm>
@@ -402,7 +403,7 @@
         <secondary>JPEG</secondary>
       </indexterm>
       <indexterm lang="ja">
-        <primary sortas="JPEGケイシキデホゾン">JPEG形式で保存</primary>
+        <primary sortas="JPEGケイシキデホゾン">JPEG 形式で保存</primary>
       </indexterm>
       <indexterm lang="ja">
         <primary sortas="ケイシキ">形式</primary>
@@ -419,14 +420,14 @@
         <acronym>GIMP</acronym>.
       </para>
       <para lang="ja">
-        <acronym>JPEG</acronym>ファイルは通常 <filename class="extension">.jpg
-        </filename> か <filename class="extension">.jpg</filename> もしくは 
-        <filename class="extension">.jpeg</filename>
-        のいずれかの拡張子を持っています。 画像を非常に効率的に圧縮しつつも
-        画像の品質低下を最小限に抑える性能があり、 広範に使われています。
-        その圧縮能率は他の形式の追随を許しません。 しかし透過画像や複数レイヤー
-        はサポートされません。 そのため <acronym>GIMP</acronym> から <acronym>
-        JPEG</acronym> 形式で画像を保存する度にエクスポートが要求されます。
+        <acronym>JPEG</acronym>ファイルは通常 <filename class="extension">
+        .jpg</filename> か <filename class="extension">.jpg</filename> もしくは 
+        <filename class="extension">.jpeg</filename> のいずれかの拡張子を
+        持っています。 画像を非常に効率的に圧縮しつつも画像の品質低下を最小限に
+        抑える性能があり、 広範に使われています。 その圧縮能率は他の形式の
+        追随を許しません。 しかし透過画像や複数レイヤーはサポートされません。 
+        そのため <acronym>GIMP</acronym> から<acronym>JPEG</acronym>形式で
+        画像を保存する度にエクスポートが要求されます。
       </para>
       <figure>
         <title lang="en">The JPEG Save dialog</title>
@@ -683,7 +684,7 @@
                   </para>
                   <para lang="ja">
                     <acronym>XMP</acronym>データとは画像のメタ情報のことです。
-                    これはExifに競合する形式です。
+                    これは Exif に競合する形式です。
                     このオプションを有効にすると、 画像のメタ情報がファイル内に
                     <acronym>XMP</acronym>構造体として保存されます。
                   </para>
@@ -773,7 +774,7 @@
                     このオプションを有効にすると画像ファイル内部に分割読み込み
                     を可能にするマーカーを挿入できます。 ウェブページの画像を
                     読み込んでいる最中に接続が中断しても、 
-                    あとで途中のマーカーを起点に読み込みを再開できます。
+                    あとで途中のマーカーを起点にして読み込みを再開できます。
                   </para>
                 </listitem>
               </varlistentry>
@@ -1213,7 +1214,7 @@
 
     <sect3 id="file-tiff-save">
       <title lang="en">Saving as TIFF</title>
-      <title lang="ja">TIFF形式で保存</title>
+      <title lang="ja">TIFF 形式で保存</title>
       <figure>
         <title lang="en">The TIFF Save dialog</title>
         <title lang="ja"><quote>TIFF 形式で保存</quote>ダイアログ</title>
@@ -1225,7 +1226,7 @@
           <secondary>TIFF</secondary>
         </indexterm>
         <indexterm lang="ja">
-          <primary sortas="TIFFケイシキデホゾン">TIFF形式で保存</primary>
+          <primary sortas="TIFFケイシキデホゾン">TIFF 形式で保存</primary>
         </indexterm>
         <indexterm>
           <primary>TIFF</primary>
@@ -1296,10 +1297,10 @@
                   <productname>Macintosh</productname> コンピュータに
                   搭載する <application>MacPaint</application> の
                   リリースの際に PackBits 方式を導入しました。
-                  PackBits は連続したデータから2つ以上 (128以下) のバイトの
+                  PackBits は連続したデータから 2 つ以上 (128 以下) のバイトの
                   繰り返しの長さと 繰り返しのないバイト列の長さを数え、
                   各部分の前にその数値を(繰り返しなしは負の数で)挿入して、
-                  繰り返し部分を1バイトに短縮する圧縮法です。 (出典:
+                  繰り返し部分を 1 バイトに短縮する圧縮法です。 (出典:
                   <xref linkend="bibliography-online-wkpd-packbits" />)。
                 </para>
               </listitem>
@@ -1354,7 +1355,7 @@
                     <quote>Use black and white (1-bit) palette</quote>.
                   </para>
                   <para lang="ja">
-                    この2つのオプションは、 画像が2色のみにインデックス化
+                    この2つのオプションは、 画像が 2 色のみにインデックス化
                     されている場合に有効です。 
                     <menuchoice>
                       <guimenu>画像</guimenu>

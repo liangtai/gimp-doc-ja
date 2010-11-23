@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2010-03-14-->
+<!--2010-11-23-->
 <sect1 id="gimp-using-paths">
   <title lang="en">
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -66,7 +66,7 @@
     <acronym>GIMP</acronym>の用語法では、 <quote>パスの境界線を描画する</quote>
     とはパスに色、 幅、 パターンなどの具体的な姿を与えることを意味します。
   </para>
-  <para lang="ja">パスは主に2つの目的があります。</para>
+  <para lang="ja">パスは主に 2 つの目的があります。</para>
   <itemizedlist>
     <listitem>
       <para lang="en">You can convert a closed path to a selection.</para>
@@ -79,14 +79,13 @@
       </para>
       <para lang="ja">
         開いたパスも閉じたパスも、 その <emphasis>境界線が描画</emphasis> 
-        できます。
-        つまりそれらを多彩な手法で描画して画像に加えられるということです。
+        できます。 これはつまり線に沿って多彩な手法で画像に描画します。"
       </para>
     </listitem>
   </itemizedlist>
   <figure>
     <title lang="en">Illustration of four different path creating.</title>
-    <title lang="ja">パス作成の例4つ</title>
+    <title lang="ja">パス作成の例 4 つ</title>
     <mediaobject>
       <imageobject>
         <imagedata fileref="images/using/path-examples.png" format="PNG"/>
@@ -98,7 +97,7 @@
           curved segments.
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>パスの4例: 閉じた多辺形、 開いた多辺形、
+          <acronym>GIMP</acronym>パスの 4 例: 閉じた多辺形、 開いた多辺形、
           閉じた曲線、 直線と曲線の混成。
         </para>
       </caption>
@@ -176,17 +175,17 @@
     <para lang="ja">
       パスツールを呼び出すとマウスポインタが矢印とうねった曲線からなる姿に
       なります。 画像を左クリックしたところがパスの始点です。 次の点となる
-      位置にマウスを移動してからまた左クリックすると、 第2の点ができて前の点と
-      線で結ばれます。 打てば打つほどいくつも点が打てますが、 パスの習得には
-      始めの2点だけで十分です。点を置くとき曲線の先ではポインタのそばに小さな
-      十字<quote>+</quote>が現れますが、 これはクリックすれば新たな点が追加
-      できることを示しています。 一方で曲線の線分にポインタを近づけると、
-      ポインタの小さな十字<quote>+</quote>は移動ツールのような四方矢印に
-      替わります。 
+      位置にマウスを移動してからまた左クリックすると、 第 2 の点ができて前の
+      点と線で結ばれます。 クリックすればするほどいくつも点が打てますが、 
+      パスの習得には始めの 2 点だけで十分です。点を置くとき曲線の先では
+      ポインタのそばに小さな十字<quote>+</quote>が現れますが、 これは
+      クリックすれば新たな点が追加できることを示しています。 一方で曲線の線分に
+      ポインタを近づけると、 ポインタの小さな十字<quote>+</quote>は移動ツールの
+      ような四方矢印に替わります。 
     </para>
     <para lang="ja">
       ポインタを線分に近づけてクリックしその線分をドラッグしてください。
-      すると2つの反応が起きます。
+      すると 2 つの反応が起きます。
     </para>
     <itemizedlist>
       <listitem>
@@ -249,9 +248,10 @@
       with the selected anchor.
     </para>
     <para lang="ja">
-      図のパスには直線や曲線の入り交じった2本の成分があります。 黒い正方形は
+      図のパスには直線や曲線の入り交じった 2 本の成分があります。 黒い正方形は
       アンカーポイントを、 ひとつだけある白丸は選択されたアンカーを表していて、
-      2つの白い正方形はそのアンカーから延びる2本の曲線のハンドルを表しています。
+      2 つの白い正方形はそのアンカーから延びる 2 本の曲線のハンドルを
+      表しています。
     </para>
   </sect2>
 
@@ -327,9 +327,9 @@
       <link linkend="gimp-tool-path">Path tool</link>.
     </para>
     <para lang="ja">
-      パスはレイヤーやチャンネルと同じく、 画像の一部です。 画像を<acronym>GIMP
-      </acronym>由来の<acronym>XCF</acronym>ファイル形式で保存すれば、 画像上の
-      パスはすべて一緒に保存されます。
+      パスはレイヤーやチャンネルと同じく、 画像の一部です。 画像を
+      <acronym>GIMP</acronym>由来の<acronym>XCF</acronym>ファイル形式で
+      保存すれば、 画像上のパスはすべて一緒に保存されます。
       <link linkend="gimp-path-dialog">パスダイアログ</link> を使えば画像に収め
       られたパスの一覧を見回して選びだし、 さらに手を加えることも可能です。
       パスを画像から他の画像へと移動させるには、 パスダイアログの脈絡メニューで
@@ -352,9 +352,9 @@
       操作があるとたちまち数百、 数千ものアンカー点ができてしまいます。
     </para>
     <para lang="ja">
-      パスには数本の <emphasis>成分</emphasis> が入れられます。 <quote> 成分
-      </quote> は一本のパスとそれに貫かれたたくさんのアンカー点からなります。
-      数本の成分をまとめてパスに含められることによって、 
+      パスには数本の <emphasis>成分</emphasis> が入れられます。 
+      <quote>成分</quote>は一本のパスとそれに貫かれたたくさんのアンカー点から
+      なります。 数本の成分をまとめてパスに含められることによって、 
       それを選択に変換したときに飛び地のある選択が作れます。
     </para>
     <para lang="ja">
@@ -366,17 +366,17 @@
     </para>
     <para lang="ja">
       パスの線分は直線にも曲線にもなります。 線分が直線だけで構成されている
-      パスは<quote>多辺形</quote>といいます。 パスを作成するとき、 新たに追加
+      パスは<quote>多角形</quote>といいます。 パスを作成するとき、 新たに追加
       される線分はいつも直線です。 新設されたアンカー点のハンドルはアンカーの
       真上に置かれた状態で現れるので、 ハンドルの長さが 0 となりますから直線の
       線分となるのです。 ハンドルをドラッグしてアンカー点から離すと、 その線分
       が曲線になります。
-    </para> <
-    ara lang="ja">
+    </para>
+    <para lang="ja">
       パスの長所のひとつが[メモリ]資源をごく僅かしか使わずに済むことです。 画像
       そのものと比較すればその差は歴然です。 <acronym>RAM</acronym>上でのパスは
       各アンカーとハンドルの座標を記録する分だけしかメモリを要求しないので、
-      とても込み入ったパスでもたった1キロバイト程度のメモリ容量で十分です。
+      とても込み入ったパスでもたった 1 キロバイト程度のメモリ容量で十分です。
       片や<acronym>RGB</acronym>画像ではたった 20&times;20 ピクセル大のレイヤー
       でさえこのメモリ量では足りません。 こうしたことから、 コンピュータシステム
       に大したストレスも伴わずに優に数百にものぼるパスを画像上にのせられます。
@@ -459,15 +459,16 @@
     </para>
     <para lang="ja">
       回転、拡大・縮小、 遠近法など、 どんな 
-      <link linkend="gimp-tool-transform">変換ツール</link> もレイヤーか選択範囲か
-      パスを操作できます。 ツールボックスでどれかの変換ツールを選んでから、 そのツールの
-      ツールオプションダイアログの <guilabel>変換対象:</guilabel> オプションでレイヤー
-      か選択範囲かパスのいずれかを指定します。 強力な変換ツールの機能を利用して、 
+      <link linkend="gimp-tool-transform">変換ツール</link> もレイヤーか
+      選択範囲かパスを操作できます。 ツールボックスでどれかの変換ツールを
+      選んでから、 そのツールのツールオプションダイアログの 
+      <guilabel>変換対象:</guilabel> オプションでレイヤーか選択範囲か
+      パスのいずれかを指定します。 強力な変換ツールの機能を利用して、 
       画像上の他の構成要素に全く影響を与えずにパスの形状を変更できます。
     </para>
     <para lang="ja">
       パスを変換対象にしたときの変換ツールは、 はじめ初期設定では一面のパスに
-      のみ作用します。 これをパスダイアログでは <emphasis>活性化パス</emphasis>
+      のみ作用します。 これをパスダイアログでは <emphasis>活性パス</emphasis>
       として目立たせて表示します。 変換作用を一面のパスに限らずに、 
       パスダイアログの<quote>アイテムの連結</quote>ボタンを使うことで数面の
       パスを同時に変化させることも可能です。 変換アイテムの連結はパス同士だけ
@@ -501,7 +502,7 @@
             different way.
           </para>
           <para lang="ja">
-            前掲のパス4例の境界線をそれぞれ異なる方法で描画
+            前掲のパス 4 例の境界線をそれぞれ異なる方法で描画
           </para>
         </caption>
       </mediaobject>
@@ -682,8 +683,8 @@
     </para>
     <para lang="ja">
       <quote><foreignphrase>Scalable Vector Graphics</foreignphrase></quote>
-      &mdash;略して<acronym>SVG</acronym>は、 近年人気の高まってきた <emphasis>
-      ベクター画像</emphasis> のファイル形式であり、
+      &mdash;略して<acronym>SVG</acronym>は、 近年人気の高まってきた 
+      <emphasis>ベクター画像</emphasis> のファイル形式であり、
       解像度に依存しない形式で画素が表現される特徴があります。 
       この形式と対照的なのが <emphasis>ラスター画像</emphasis> であり、 
       整列したピクセルで画素が表現されています。 <acronym>GIMP</acronym>
@@ -692,21 +693,22 @@
     <para lang="ja">
       幸いにもパスは<acronym>SVG</acronym>ファイル中でも<acronym>GIMP</acronym>
       上でもほぼ同じ形態で表現されています。 (現在は何も将来的な変更予定が
-      ありません。 <acronym>GIMP</acronym> 2.0 を契機にパス関連の書き直しが
-      <acronym>SVG</acronym>パスを意識して行なわれたためです。) 互換性がある
-      ことから、 <acronym>GIMP</acronym>のパスの情報を何ら損失することなく
-      <acronym>SVG</acronym>ファイルへ保存することが可能です。
-      パスダイアログの脈絡メニューからこの機能が使えます。
+      ありません。 <application><acronym>GIMP</acronym> 2.0</application> を
+      契機にパス関連の書き直しが<acronym>SVG</acronym>パスを意識して
+      行なわれたためです。) 互換性があることから、 <acronym>GIMP</acronym>の
+      パスの情報を何ら損失することなく<acronym>SVG</acronym>ファイルへ保存する
+      ことが可能です。 パスダイアログの脈絡メニューからこの機能が使えます。
     </para>
     <para lang="ja">
-      <acronym>SVG</acronym>ファイルを保存できるプログラムには、 <application>
-      Inkscape</application> や <application>Sodipodi</application> という
-      ベクター画像を扱う2つのオープンソースプログラム等がありますが、 もちろん
-      <acronym>GIMP</acronym>はこれらによって保存された<acronym>SVG</acronym>
-      ファイルからパスを読み込めます。 こういったプログラムには<acronym>GIMP
-      </acronym>よりずっと強力なパス操作ツールが備わっていますから、 この連携は
-      うれしいものです。 <acronym>SVG</acronym>ファイルからのパスのインポートは
-      パスダイアログの脈絡メニューにあります。
+      <acronym>SVG</acronym>ファイルを保存できるプログラムには、 
+      <application>Inkscape</application> や 
+      <application>Sodipodi</application> というベクター画像を扱う 2 つの
+      オープンソースプログラム等がありますが、 もちろん<acronym>GIMP</acronym>
+      はこれらによって保存された<acronym>SVG</acronym>ファイルからパスを
+      読み込めます。 こういったプログラムには<acronym>GIMP</acronym>よりずっと
+      強力なパス操作ツールが備わっていますから、 この連携はうれしいものです。 
+      <acronym>SVG</acronym>ファイルからのパスのインポートはパスダイアログの
+      脈絡メニューにあります。
     </para>
     <para lang="ja">
       <acronym>SVG</acronym>形式はパスにとどまらず様々な多くの画像要素を

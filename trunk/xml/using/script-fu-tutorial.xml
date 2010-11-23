@@ -6,11 +6,11 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2010-09-13-->
+<!--2010-11-23-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
-  <title lang="ja">Script-Fu作成演習</title>
+  <title lang="ja">Script-Fu 作成演習</title>
 
   <indexterm lang="en">
     <primary>Script-Fu</primary>
@@ -591,7 +591,7 @@
         called. For example:
       </para>
       <para lang="ja">
-        ここで <replaceable>関数名</replaceable> は関数につけられた名前を、 
+        ここで <replaceable>関数名</replaceable> には関数につけられた名前を、 
         <replaceable>パラメータの一群</replaceable> にはひとつもしくは複数の
         パラメータの名前もしくは値を空白で区切って並べます。 <replaceable>式
         </replaceable> には関数が呼ばれたときに実行する一連の式を書きます。
@@ -828,7 +828,7 @@
         リストを<quote>先頭</quote>と<quote>後続</quote>からできていると
         とらえるのがうまい考え方です。 先頭とはリストの最初の要素のことであり、
         後続はリストの残りの要素のことです。 リストから要素をとりだしたり
-        加えたりする方法を学ぶなかでこうした捉え方の重要性が判るはずです。
+        加えたりする方法を学ぶなかでこうしたとらえ方の重要性が判るはずです。
       </para>
     </sect3>
 
@@ -994,7 +994,7 @@
         the heads and tails of lists, so
       </para>
       <para lang="ja">
-        はい、 もう十分です。 リストから先頭の要素も後続の要素群も取り出せる
+        はい、 もう十分です。 リストから先頭の要素も後続の要素たちも取り出せる
         ようになりました。 それではリストの2番目や3番目などほかの要素はどんな
         ふうにしたら取り出せるのでしょう。 ここで使える<quote>便利</quote>な
         関数があります。 たとえば後続の先頭の先頭を引き出すには <code>caadr
@@ -1157,7 +1157,13 @@
         ホームディレクトリ内に<acronym>GIMP</acronym>が作成する 
         <filename class="directory">.gimp-2.6</filename> ディレクトリに 
         <filename class="directory">scripts</filename> フォルダができている
-        のをお確かめください。 <acronym>GIMP</acronym>は必ず 
+        のをお確かめください。<footnote><para>
+          <productname>Mac OS X</productname> では <filename role="html"
+          class="directory">~/Library/Application&nbsp;Support/Gimp/scripts
+          </filename>
+          <filename role="tex" class="directory">~/Library/Application
+          Support/Gimp/scripts</filename> です。</para></footnote>
+        <acronym>GIMP</acronym>は必ず 
         <filename class="directory">.gimp-2.6</filename> ディレクトリ内で
         <filename class="directory">scripts</filename> フォルダを探し、 
         このディレクトリパスをScript-Fuデータベースに入れます。 個人用の
@@ -1440,14 +1446,15 @@
             定めます。 スクリプトの位置を Unix 風のパス表記で正確に指定して
             ください。 パスのはじめ (ルート) には <code>&lt;Image&gt;</code>
             が指定できます。 <footnote><para>
-              バージョン 2.6 以前はツールボックスを表す <code>&lt;Toolbox&gt;
-              </code> も指定できました。 ツールボックスのメニューは廃止
-              されたので、 こちらは使わないほうが無難です。</para></footnote>
+              バージョン 2.6 よりも前はツールボックスを表す 
+              <code>&lt;Toolbox&gt;</code> も指定できました。 ツールボックスの
+              メニューは廃止されたので、 こちらは使わないほうが無難です。
+              </para></footnote>
           </para>
           <para lang="ja">
             既存の画像を加工しないスクリプトを書いた場合 (このテキスト
-            ボックスのような画像を新たに作成するスクリプトもこの分類に含まれ
-            ます)、 <acronym>GIMP</acronym>の分類に従いそのスクリプトを 
+            ボックスのような画像を新たに作成するスクリプトもこの分類に
+            含まれる)、 <acronym>GIMP</acronym>の分類に従いそのスクリプトを 
             <menuchoice>
               <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
@@ -1471,8 +1478,9 @@
             <para>
               マイクテリー氏の原文はツールボックスメニュー内の 
               <guimenu>Xtns</guimenu> 以下にスクリプトを置いていますが、 
-              <acronym>GIMP</acronym> 2.6 でツールボックスメニューが廃止され
-              画像ウィンドウメニューに統合されました。</para>つまり
+              <application><acronym>GIMP</acronym> 2.6</application> で
+              ツールボックスメニューが廃止され画像ウィンドウメニューに
+              されました。</para></footnote>つまり
             <menuchoice>
               <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
