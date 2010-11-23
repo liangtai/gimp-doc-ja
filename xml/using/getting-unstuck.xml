@@ -14,7 +14,7 @@
   2006-02-20 fixed #322305
   2005-11-30 replaced informalfigure by axel.wernicke
 -->
-<!--2010-04-19-->
+<!--2010-11-23-->
 <sect1 id="gimp-using-getting-unstuck">
   <title lang="en">Getting Unstuck</title>
   <title lang="ja">固まったときの対処</title>
@@ -99,10 +99,10 @@
       </para>
       <para lang="ja">
         <emphasis>みわけかた:</emphasis>
-        <link linkend="gimp-selection-float">フローティング (浮層) 選択範囲
-        </link> があると、 これを固定するまでは実行できない操作がたくさん
-        あります。 確認のため、 レイヤーダイアログを見て (作業中の画像を扱って
-        いる状態で)、 最前面のレイヤーが<quote>フローティング選択範囲</quote>に
+        <link linkend="gimp-selection-float">フローティング選択範囲</link> 
+        があると、 これを固定するまでは実行できない操作がたくさんあります。 
+        確認のため、 レイヤーダイアログを見て (作業中の画像を扱っている
+        状態で)、 最前面のレイヤーが<quote>フローティング選択範囲</quote>に
         なっていないか確かめます。
       </para>
       <para lang="ja">
@@ -197,9 +197,8 @@
               in the Select menu to make sure that everything is selected.
             </para>
             <para lang="ja">
-              選択範囲を全域にするため <guimenu>選択
-              </guimenu>メニューの <guimenuitem>すべて選択
-              </guimenuitem> をクリックする。
+              選択範囲を全域にするため <guimenu>選択</guimenu>メニューの
+              <guimenuitem>すべて選択</guimenuitem> をクリックする。
             </para>
           </caption>
         </mediaobject>
@@ -225,15 +224,15 @@
         <keycombo><keycap>CTRL</keycap><keycap>Z</keycap></keycombo> (取り消し)
         を数回繰り返してから問題解決に入りましょう。 考えられる原因はいくつか
         あります。 もし選択範囲がどこにも見当たらないときは、 選択範囲が極めて
-        小さく、ときには1ピクセルも含んでいないようなものになっている可能性が
+        小さく、ときには 1 ピクセルも含んでいないようなものになっている可能性が
         あります。 この場合、残しておきたいようなものではないでしょうから、
         もとに戻す必要はありませんね。 もし選択範囲が見えていて作業もその
         範囲内でしているはずだという場合は、 選択範囲が反転している可能性が
         あります。 クイックマスクボタンを押すのがいちばん簡単なみわけかたです。
         選択範囲は透明ですが非選択範囲にはマスクが掛かっています。
         原因がこのとおりならば、クイックマスクを解除してから
-        <guimenu>選択</guimenu> メニューより <guimenuitem>
-        選択範囲を反転</guimenuitem> してください。
+        <guimenu>選択</guimenu> メニューより 
+        <guimenuitem>選択範囲を反転</guimenuitem> してください。
       </para>
     </sect3>
 
@@ -286,7 +285,7 @@
         <emphasis>対処法:</emphasis>
         処理対象のレイヤーが無効だった場合は、 レイヤーダイアログでそのレイヤー
         をクリックして有効にしてください。 (有効なレイヤーがまったく無ければ、
-        描画領域はチャンネルかもしれませんので チャンネルダイアログを見て
+        描画領域はチャンネルかもしれませんのでチャンネルダイアログを見て
         ください。 解法は同じです。) レイヤーダイアログ上で目のしるしが
         なければ、 左端をクリックして切り替えてください。 これでレイヤーは
         可視化されます。 より詳しい説明が
@@ -365,18 +364,32 @@
         矩形領域をさがしだし、 その内側で作業しているのかどうか確かめるのです。
       </para>
       <para lang="ja">
-        レイヤーを大きくします。 <guimenuitem>レイヤー
-        </guimenuitem>メニューの下のほうにある2つの操作がどちらもこの問題を解決
-        します。 <guimenuitem>レイヤーをキャンバスに合わせる
-        </guimenuitem>: レイヤーの範囲を画像の大きさと同じにします。
-        <guimenuitem>レイヤーの拡大・縮小...</guimenuitem>:
-        ダイアログが開き、 レイヤーの大きさを自由に変えられます。
+        レイヤーを大きくします。 <guimenuitem>レイヤー</guimenuitem>メニューの
+        下のほうにある2つの操作がどちらもこの問題を解決します。 
+        <variablelist>
+          <varlistentry>
+            <term>
+              <guimenuitem>レイヤーをキャンバスに合わせる</guimenuitem>
+            </term>
+            <listitem>
+              <para>レイヤーの範囲を画像の大きさと同じにします。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guimenuitem>レイヤーの拡大・縮小...</guimenuitem></term>
+            <listitem>
+              <para>
+                ダイアログが開き、 レイヤーの大きさを自由に変えられます。
+              </para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
       </para>
     </sect3>
 
     <sect3>
       <title lang="en">The image is in indexed color mode.</title>
-      <title lang="ja">画像がインデックスカラーのモードになっている</title>
+      <title lang="ja">画像がインデックス化カラーのモードになっている</title>
       <para lang="en">
         <emphasis>How to tell:</emphasis><acronym>GIMP</acronym> can handle
         three different color modes:
@@ -400,8 +413,8 @@
       <para lang="ja">
         <emphasis>みわけかた:</emphasis>
         <acronym>GIMP</acronym>は3つの異なる色のモード
-        <link linkend="glossary-colormodel">RGB(A)とインデックスと
-        グレースケール</link> を扱えます。 インデックスカラーのモードは
+        <link linkend="glossary-colormodel">RGB(A)とインデックス化と
+        グレースケール</link> を扱えます。 インデックス化カラーのモードは
         カラーマップを使用しており、 画像のすべての色は色目録から
         とられています。 しかし<acronym>GIMP</acronym>の
         <link linkend="gimp-tool-color-picker">スポイト</link>は
