@@ -10,7 +10,7 @@
   2006-04-29 made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-03-01-->
+<!--2010-11-28-->
 <sect2 id="gimp-image-dialog">
   <title lang="en">Images Dialog</title>
   <title lang="ja">画像一覧ダイアログ</title>
@@ -122,29 +122,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>画像</guimenuitem>
       </menuchoice>
       と進めば<quote>画像</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>画像</quote>ダイアログウィンドウが単独で (例えば<quote>
-          画像</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>画像</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -287,8 +273,24 @@
         <term lang="en">Delete</term>
         <term lang="ja">この画像を削除</term>
         <listitem>
-          <para lang="en">This button is not working.</para>
-          <para lang="ja">この機能は使用できません。</para>
+          <para lang="en">
+            This command works only on a image which is loaded without any
+            window.  Though images can be opened by the New Window command,
+            if the image has been already loaded without window by a primitive
+            procedure command (such as <function>gimp-image-new</function>,
+            <function>file-png-load</function>, etc.), it can not be unloaded
+            even if its windows are closed to the last.  Then use this command
+            to close it.
+          </para>
+          <para lang="ja">
+            このコマンドは画像ウィンドウなしで読み込まれた画像にだけ効きます。 
+            画像は新しいウィンドウとともに開く方法だけでなく、 
+            <function>gimp-image-new</function> や 
+            <function>file-png-load</function> コマンドのような基礎的な
+            プロシージャ命令でも読み込めますが、 そうした場合には画像
+            ウィンドウを最後まで閉じても画像は読み込まれたままになります。 
+            これを閉じるのにこのコマンドも使えます。
+          </para>
         </listitem>
       </varlistentry>
     </variablelist>

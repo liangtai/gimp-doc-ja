@@ -11,7 +11,7 @@
   2006-08-24 ciampix: added italian translation
   2006-03-29 lexa: added german translation an made docbook compliant
 -->
-<!--2010-05-24-->
+<!--2010-11-29-->
 <sect2 id="gimp-color-dialog">
   <title lang="en">FG/BG Color Dialog</title>
   <title lang="ja"><quote>描画色/背景色</quote>ダイアログ</title>
@@ -74,7 +74,7 @@
   <para lang="ja">
     この色ダイアログは色を管理したり色を新たに引き出すためのものです。 使える
     モードが<acronym>GIMP</acronym>、 <acronym>CMYK</acronym>、 水彩色、 
-    三角形、 スケールの5通りあります。 コンピュータ画面上ならどこでも色が採取
+    三角形、 スケールの 5 通りあります。 コンピュータ画面上ならどこでも色が採取
     できるという面白いスポイトがついています。
   </para>
   <para lang="ja">
@@ -83,15 +83,15 @@
     <itemizedlist>
       <listitem>
         <para>
-          <quote>スケール</quote>モードが無く、 そこにあった<acronym>HSV
-          </acronym>と<acronym>RGB</acronym>の6本のスライダが常時表示
-          されています。
+          <quote>スケール</quote>モードが無く、 そこにあった
+          <acronym>HSV</acronym>と<acronym>RGB</acronym>の 6 本のスライダが
+          常時表示されています。
         </para>
       </listitem>
       <listitem>
         <para>
-          最近使った色を示す12個の色履歴ボタンがあります。 いずれも押せばその色
-          が使えるようになるほか、 現在の描画色か背景色をここに取り込めまず。
+          最近使った色を示す 12 個の色履歴ボタンがあります。 いずれも押せばその
+          色が使えるようになるほか、 現在の描画色か背景色をここに取り込めまず。
         </para>
       </listitem>
     </itemizedlist>
@@ -177,29 +177,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>描画色/背景色</guimenuitem>
       </menuchoice>
       と進めば<quote>描画色/背景色</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>描画色/背景色</quote>ダイアログウィンドウが単独で (例えば
-          <quote>描画色/背景色</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>描画色/背景色</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -221,16 +207,16 @@
             parameters.
           </para>
           <para lang="ja">
-            <acronym>GIMP</acronym>カラーセレクタは右側の縦に長い1次元色尺と
-            その左隣の広い2次元領域をクリックして色を選びます。 1次元色尺は
+            <acronym>GIMP</acronym>カラーセレクタは右側の縦に長い 1 次元色尺と
+            その左隣の広い2次元領域をクリックして色を選びます。 1 次元色尺は
             色相 <guibutton><accel>H</accel></guibutton>、
             彩度 <guibutton><accel>S</accel></guibutton>、
             明度 <guibutton><accel>V</accel></guibutton>、
             赤 <guibutton><accel>R</accel></guibutton>、
             緑 <guibutton><accel>G</accel></guibutton>、
             青 <guibutton><accel>B</accel></guibutton> のいずれかの色変数を
-            表すボタンをクリックするとその値を設定できます。 2次元領域で残りの
-            色変数の値を定めます。 [合計で3つの次元が<acronym>HSV</acronym>
+            表すボタンをクリックするとその値を設定できます。 2 次元領域で残りの
+            色変数の値を定めます。 [合計で 3 つの次元が<acronym>HSV</acronym>
             もしくは<acronym>RGB</acronym>の組にあたります。]
           </para>
         </listitem>
@@ -436,7 +422,7 @@
             <primary>CSS Keywords</primary>
           </indexterm>
           <indexterm lang="ja">
-            <primary sortas="CSSイロメイ">CSS色名</primary>
+            <primary sortas="CSSイロメイ">CSS 色名</primary>
           </indexterm>
           <para lang="en">
             See <link linkend="glossary-html-notation">HTML notation</link>.
@@ -470,13 +456,13 @@
             <xref linkend="bibliography-online-unicode"/>.
           </para>
           <para lang="ja">
-            <acronym>HTML</acronym>表記法入力欄上をマウスの <mousebutton>
-            第2ボタン</mousebutton> でクリックすると脈絡メニューが現れ、 他の
-            場所で取り込んだ色名を貼り付けるなどの編集ができるようになって
-            います。 このメニューは <guisubmenu>入力メソッド
-            </guisubmenu> で外国語の文字が使えるようになっているほか、
-            <guisubmenu>Unicode 制御文字の挿入</guisubmenu>
-            もできます。 その内容は途轍もなく広く当てびきの守備範囲を越えます。
+            <acronym>HTML</acronym>表記法入力欄上をマウスの 
+            <mousebutton>第2ボタン</mousebutton> でクリックすると脈絡メニューが
+            現れ、 他の場所で取り込んだ色名を貼り付けるなどの編集ができるように
+            なっています。 このメニューは <guisubmenu>入力メソッド</guisubmenu> 
+            で外国語の文字が使えるようになっているほか、
+            <guisubmenu>Unicode 制御文字の挿入</guisubmenu> もできます。 
+            その内容は途轍もなく広く当てびきの守備範囲を越えます。
             <xref linkend="bibliography-online-unicode"/> をご参照ください。
           </para>
           <figure>

@@ -10,7 +10,7 @@
   2006-02-26 Several updates to v2.10 by j.h in en
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2009-09-12-->
+<!--2010-11-29-->
 <sect2 id="gimp-buffer-dialog">
   <title lang="en">Buffers Dialog</title>
   <title lang="ja">バッファダイアログ</title>
@@ -113,7 +113,7 @@
   <para lang="ja">
     バッファとは描画対象 (レイヤーやレイヤーマスクなど) を切り取りもしくは
     写し取ったときにできる画像データの一時的保管庫のことです。 バッファに作品を
-    保管する方法にはつぎの2つのコマンドがあります。
+    保管するコマンドは、
     <menuchoice>
       <guimenu>編集</guimenu>
       <guisubmenu>バッファ操作</guisubmenu>
@@ -125,7 +125,8 @@
       <guisubmenu>バッファ操作</guisubmenu>
       <guimenuitem>名前付きで切り取り...</guimenuitem>
     </menuchoice>
-    。 いずれもダイアログが開かれてそこに保管される画像の名前を尋ねますので
+    の 2 通りの方法があります。
+    いずれもダイアログが開かれてそこに保管される画像の名前を尋ねますので
     記入してください。 名前つきバッファの総数に制限はありませんのでいくつ作って
     も構いませんが、 無論そのひとつひとつがメモリを消費してゆきます。
   </para>
@@ -218,29 +219,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>バッファ</guimenuitem>
       </menuchoice>
       と進めば<quote>バッファ</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>バッファ</quote>ダイアログウィンドウが単独で (例えば<quote>
-          バッファ</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>バッファ</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -275,16 +262,16 @@
       ます。 つまりバッファ操作メニューの貼り付けコマンドを実行したりこの
       ダイアログの底部にあるアイコンボタンをクリックするとそのバッファが使用
       されます。 バッファの見本をダブルクリックするとその内容が活性画像に
-      フローティング選択範囲として貼り付けられます。 結果的には <guimenuitem>
-      バッファを貼り付け</guimenuitem> コマンドを実行するのと
+      フローティング選択範囲として貼り付けられます。 結果的には 
+      <guimenuitem>バッファを貼り付け</guimenuitem> コマンドを実行するのと
       変わりませんが、 こちらのほうが手早くできます。
     </para>
     <para lang="ja">
-      ダイアログの底部には4つのアイコンボタンがあります。 これらを使った操作は
-      バッファダイアログの脈絡メニューを通じてもできます。 脈絡メニューは活性
-      バッファを <mousebutton>第2ボタン</mousebutton> でクリックするか、 タブ
-      メニューアイコンをクリックして出てくるメニューの最初の項目を進むと
-      呼び出せます。
+      ダイアログの底部には 4 つのアイコンボタンがあります。 これらを使った
+      操作はバッファダイアログの脈絡メニューを通じてもできます。 
+      脈絡メニューは活性バッファを <mousebutton>第2ボタン</mousebutton> で
+      クリックするか、 タブメニューアイコンをクリックして出てくるメニューの
+      最初の項目を進むと呼び出せます。
     </para>
     <figure>
       <title lang="en">The Buffers dialog (Grid View)</title>
@@ -306,9 +293,8 @@
       dimensions.
     </para>
     <para lang="ja">
-      バッファダイアログのタブメニューで <guimenuitem>
-      並べて表示</guimenuitem> と <guimenuitem>
-      一覧で表示</guimenuitem> を切り替えられます。
+      バッファダイアログのタブメニューで <guimenuitem>並べて表示</guimenuitem> 
+      と <guimenuitem>一覧で表示</guimenuitem> を切り替えられます。
       <quote>並べて表示</quote>の場合はフォントの見本が升目状に並びます。
       <quote>一覧で表示</quote>の場合はバッファが縦一列に列挙され、 各段に
       その見本画像と名前とピクセル単位の大きさが表示されます。
@@ -343,7 +329,7 @@
         At the bottom of the dialog you find a couple of buttons:
       </para>
       <para lang="ja">
-        ダイアログの底部に4つのボタンが並んでいます。
+        ダイアログの底部に 4 つのボタンが並んでいます。
       </para>
       <variablelist>
         <varlistentry>
@@ -403,7 +389,7 @@
               content of the global clipboard buffer.
             </para>
             <para lang="ja">
-              このコマンドは選択されたバッファの内容を基にレイヤー1層からなる
+              このコマンドは選択されたバッファの内容を基にレイヤー 1 層からなる
               画像を生成します。 この操作は通常の
               <link linkend="gimp-edit-paste-as-new">画像をクリップボードから
               生成</link> 操作とは異なり通用クリップボードバッファの内容では

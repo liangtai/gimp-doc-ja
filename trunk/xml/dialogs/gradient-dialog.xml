@@ -9,7 +9,7 @@
   2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2010-02-02-->
+<!--2010-11-29-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
   <title lang="en">Gradients Dialog</title>
   <title lang="ja">グラデーションダイアログ</title>
@@ -62,8 +62,9 @@
     <link linkend="gimp-tool-blend">ブレンドツール</link> をはじめ数々の加工に
     利用されています。 このダイアログからグラデーションを操作する機能もいくつか
     呼び出せます。 グラデーションを選ぶには一覧表からどれかをクリックしてくだ
-    さい。 選ばれたものがツールボックスの<quote>ブラシ/パターン/グラデーション
-    </quote>の区画でも表示されます。 <acronym>GIMP</acronym>には良さそうな
+    さい。 選ばれたものがツールボックスの
+    <link linkend="gimp-toolbox-indicator-area">ブラシ/パターン/グラデーション
+    </link> の区画でも表示されます。 <acronym>GIMP</acronym>には良さそうな
     グラデーションがいっぱい付いてきます。 そのうえ自作も可能にする
     <link linkend="gimp-gradient-editor-dialog">グラデーションエディタ</link>
     もあります。 グラデーションの一般的な情報とその使い方については
@@ -76,7 +77,7 @@
       between Foreground and background colors of toolbox in different ways.
     </para>
     <para lang="ja">
-      一覧表の最初の4つのグラデーションは特別です。 ツールボックスに表示される
+      一覧表の最初の 4 つのグラデーションは特別です。 ツールボックスに表示される
       描画色と背景色を基にそれぞれ異なる方法で作成され、 再構成されています。
     </para>
     <listitem>
@@ -209,29 +210,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>グラデーション</guimenuitem>
       </menuchoice>
       と進めば<quote>グラデーション</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>グラデーション</quote>ダイアログウィンドウが単独で (例えば
-          <quote>グラデーション</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像ウィンドウのメニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>グラデーション</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -259,8 +246,8 @@
     <para lang="ja">
       このダイアログで基本中の基本といえるありふれた操作といえば、 単純ですが
       この縦に長いグラデーションの一覧表を繰って<acronym>GIMP</acronym>の
-      現行のグラデーションにしたいものを探し出しクリックする使い方でしょう。 選ばれた
-      グラデーションはグラデーションを利用するあらゆる操作で使われます。
+      現行のグラデーションにしたいものを探し出しクリックする使い方でしょう。 
+      選ばれたグラデーションはグラデーションを利用するあらゆる操作で使われます。
     </para>
     <para lang="ja">
       グラデーション一覧表のどれかを <emphasis>ダブルクリック</emphasis> すると
@@ -286,13 +273,13 @@
             each row showing its name.
           </para>
           <para lang="ja">
-            タブメニューで <guimenuitem>並べて表示
-            </guimenuitem> と <guimenuitem>一覧で表示
-            </guimenuitem> を切り替えられます。 <quote>並べて表示</quote>を選ぶ
-            とグラデーションは升目状に並べられます。 この表示は結構壮観ですが、
-            隣同士が視覚的に干渉してしまうので欲しいものを探すのはあまり楽では
-            ありません。 既定で選ばれる<quote>一覧で表示</quote>の方がもっと
-            便利で、 グラデーションは各行ごとに名前つきで表示されています。
+            タブメニューで <guimenuitem>並べて表示</guimenuitem> と 
+            <guimenuitem>一覧で表示</guimenuitem> を切り替えられます。 
+            <quote>並べて表示</quote>を選ぶとグラデーションは升目状に
+            並べられます。 この表示は結構壮観ですが、 隣同士が視覚的に
+            干渉してしまうので欲しいものを探すのはあまり楽ではありません。 
+            初期設定のままの<quote>一覧で表示</quote>の方がもっと便利で、 
+            グラデーションは各行ごとに名前つきで表示されています。
           </para>
           <tip>
             <para lang="en">
@@ -313,9 +300,9 @@
             liking.
           </para>
           <para lang="ja">
-            タブメニューの <guisubmenu>プレビューサイズ
-            </guisubmenu> サブメニューでダイアログに表示されるグラデーション
-            見本をお好みの大きさに調節できます。
+            タブメニューの <guisubmenu>プレビューサイズ</guisubmenu> 
+            サブメニューでダイアログに表示されるグラデーション見本を
+            お好みの大きさに調節できます。
           </para>
         </listitem>
       </varlistentry>
@@ -385,9 +372,9 @@
             新たなグラデーションが追加され、 これを変更できるグラデーション
             エディタが開かれます。 作成されたグラデーションは<acronym>GIMP
             </acronym>の個人用ディレクトリ内の <filename classs="directory">
-            gradients</filename>フォルダに自動的に保存され、 次回の<acronym>GIMP
-            </acronym>起動時から自動的に読み込まれるようになります。 (これらの
-            フォルダは 
+            gradients</filename>フォルダに自動的に保存され、 次回の
+            <acronym>GIMP</acronym>起動時から自動的に読み込まれるように
+            なります。 (これらのフォルダは 
             <link linkend="gimp-prefs-folders-data">環境設定</link> ダイアログの
             <menuchoice>
               <guimenu>フォルダ</guimenu>
@@ -479,8 +466,9 @@
           <para lang="ja">
             グラデーションエディタを使わない何らかの方法で新たにグラデーション
             ファイルを個人用 <filename class="directory">gradients</filename> 
-            フォルダなどに追加したときは、 このボタンをクリックすればダイアログの
-            一覧表が読み込み直されて、 新しいグラデーションも使えるようになります。
+            フォルダなどに追加したときは、 このボタンをクリックすれば
+            ダイアログの一覧表が読み込み直されて、 新しいグラデーションも
+            使えるようになります。
           </para>
         </listitem>
       </varlistentry>
@@ -495,8 +483,8 @@
       これらのアイコンボタンでできる操作はこのダイアログのポップアップメニュー
       にもあります。 このメニューを呼び出すにはグラデーションの一覧表のどこかを
       <mousebutton>第2ボタン</mousebutton> でクリックするか、 タブメニューの
-      筆頭にある <guisubmenu>グラデーション</guisubmenu> サブメニューに進んで
-      ください。
+      筆頭にある <guisubmenu>グラデーション</guisubmenu> サブメニューに
+      進みます。
     </para>
     <figure>
       <title lang="en">The Gradients Menu</title>
@@ -525,10 +513,10 @@
             program.
           </para>
           <para lang="ja">
-            グラデーションを <application><acronym>POV</acronym>-Ray
-            </application> (<foreignphrase>Persistence of Vision Raytracer
-            </foreignphrase>) 3次元レイトレーシングプログラムのファイル形式で
-            保存できます。
+            グラデーションを 
+            <application><acronym>POV</acronym>-Ray</application> 
+            (<foreignphrase>Persistence of Vision Raytracer</foreignphrase>) 
+            3 次元レイトレーシングプログラムのファイル形式で保存できます。
           </para>
         </listitem>
       </varlistentry>

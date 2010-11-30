@@ -9,7 +9,7 @@
   2006-03-12 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-04-18-->
+<!--2010-11-28-->
 <sect2 id="gimp-indexed-palette-dialog">
   <title lang="en">Colormap Dialog</title>
   <title lang="ja">カラーマップダイアログ</title>
@@ -34,7 +34,7 @@
       An indexed image with 6 colors and its Colormap dialog
     </title>
     <title lang="ja">
-      6色のインデックス化画像とそのカラーマップダイアログ
+      6 色のインデックス化画像とそのカラーマップダイアログ
     </title>
     <mediaobject>
       <imageobject>
@@ -135,29 +135,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>カラーマップ</guimenuitem>
       </menuchoice>
       と進めば<quote>カラーマップ</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>カラーマップ</quote>ダイアログウィンドウが単独で (例えば
-          <quote>カラーマップ</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>カラーマップ</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -202,15 +188,15 @@
     <para lang="ja">
       インデックス化された画像では、 各画素に直接色を与える方法 (つまり
       <acronym>RGB</acronym>画像やグレースケール画像での方式) をとらず、 各画素
-      の色は <emphasis>カラーマップ</emphasis> と呼ばれる対照表を通して遠回しに
-      画素に与えられます。
+      の色は <emphasis>カラーマップ</emphasis> と呼ばれる対照表を通す遠回りな
+      方法で画素に与えられます。 [各画素には索引への参照番号が記録されます。]
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym>は画素に表示する色を判定するときに画像のカラー
-      マップ[対照表]を見て、 その参照番号にある色を出します。 インデックス化
+      マップを見て、 参照番号に割り当てられた色を出します。 インデックス化
       画像はそれぞれ固有のカラーマップを持っています。 <acronym>GIMP</acronym>
       ではカラーマップに並べられる色数は最大で 256 色の制限があります。
-      カラーマップは最大色数ならば 0 から 255 までの索引番号のひとつひとつに
+      カラーマップは最大色数ならば 0 から 255 までの、 索引番号のひとつひとつに
       任意の<acronym>RGB</acronym>色が割り振られます。 対照表に登録できる色には
       何ら制限はなく、 その順序も問いません。 どの索引番号にどの色を結び付けても
       構わないのです。
@@ -231,8 +217,8 @@
       カラーマップダイアログで画像のカラーマップを変更できます。 新たに登録項目
       を作成したり既存の項目の色を別の色に変えたりします。 既に使用されている
       参照番号に対する色を変更すると画像上にもその変更が反映され、 その色を参照
-      している全ての画素の色が一斉に入れ替わります。 ダイアログの色表では0番の
-      色が左上隅に、 1番の色がその右隣に&hellip;のように並んでいます。
+      している全ての画素の色が一斉に入れ替わります。 ダイアログの色表では 0 番
+      の色が左上隅に、 1 番の色がその右隣に&hellip;のように並んでいます。
     </para>
   </sect3>
 
@@ -435,10 +421,11 @@
       <para lang="ja">
         このダイアログならインデックス化カラー画像のカラーマップを変更する通常
         の処理はほとんどこなせます。 <quote>明るさ-コントラスト</quote>ツールや
-        <quote>色相-彩度</quote>ツールなどの色ツールではインデックス化画像の
-        加工ができません。 一方でプラグインのなかには<quote>正規化</quote>、
-        <quote>色強調</quote>、 <quote>コントラスト伸長</quote>をはじめ僅か
-        ですがインデックス化画像を操作できるものがあります。
+        <quote>色相-彩度</quote>ツールなどの色ツールではインデックス化カラー
+        画像の加工ができません。 一方でプラグインのなかには僅かですが
+        <quote>正規化</quote>、 <quote>色強調</quote>、 
+        <quote>コントラスト伸長</quote>をはじめインデックス化カラー画像を
+        操作できるものがあります。
       </para>
     </note>
     <note>
