@@ -9,7 +9,7 @@
   2006-03-11 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-01-17-->
+<!--2010-11-28-->
 <sect2 id="gimp-histogram-dialog">
   <title lang="en">Histogram dialog</title>
   <title lang="ja">ヒストグラムダイアログ</title>
@@ -49,8 +49,8 @@
   </para>
   <para lang="ja">
     ヒストラムダイアログは活性レイヤーもしくは選択範囲内で使われている色の統計
-    分布の情報とその図面を表示します。 この情報は画像の色調の平衡 (<emphasis>
-    カラーバランス</emphasis>) をとる場合に重宝するでしょう。 ただし
+    分布の情報とその図面を表示します。 この情報は画像の色調の平衡 
+    (<emphasis>カラーバランス</emphasis>) をとる場合に重宝するでしょう。 ただし
     ヒストグラムダイアログは情報を見せてはくれますが操作はできません。
     ヒストグラムを利用して色の修正を行なうのなら
     <link linkend="gimp-tool-levels">レベル</link> ツールをお使いください。
@@ -145,29 +145,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>ヒストグラム</guimenuitem>
       </menuchoice>
       と進めば<quote>ヒストグラム</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>ヒストグラム</quote>ダイアログウィンドウが単独で (例えば
-          <quote>ヒストグラム</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>ヒストグラム</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -197,14 +183,14 @@
       <xref linkend="gimp-concepts-image-types"/>.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>の画像はそれぞれのレイヤーを1つ以上の色チャンネル
-      に分解できます。 <acronym>RGB</acronym>画像ならば赤緑青の色チャンネルに、
-      グレイスケール画像なら明度チャンネルひとつにです。 透過効果を得たレイヤー
-      にはもうひとつ、 アルファチャンネルが加わります。 いずれのチャンネルも
-      強度レベル値 (整数値) が表せる0から255の範囲をもちます。 そこで、 黒の
-      画素では全ての色チャンネルの値が0になります。 逆に白い画素では全ての色
-      チャンネルを255にします。 透明な画素ではアルファチャンネルの値が0になり、
-      不透明な画素だと255になります。
+      <acronym>GIMP</acronym>の画像はそれぞれのレイヤーを 1 つ以上の色
+      チャンネルに分解できます。 <acronym>RGB</acronym>画像ならば赤・緑・青の
+      色チャンネルに、 グレースケール画像なら明度チャンネルひとつにです。 
+      透過効果を得たレイヤーにはもうひとつ、 アルファチャンネルが加わります。 
+      いずれのチャンネルも強度レベル値 (整数値) が表せる 0 から 255 の範囲を
+      もちます。 そこで、 黒の画素では全ての色チャンネルの値が 0 になります。 
+      逆に白い画素では全ての色チャンネルを 255 にします。 透明な画素では
+      アルファチャンネルの値が 0 になり、 不透明な画素だと 255 になります。
     </para>
     <para lang="ja">
       <acronym>RGB</acronym>画像にあると便利なのが<quote>明度</quote>と呼ばれる
@@ -221,7 +207,7 @@
           </textobject>
         </inlinemediaobject>
       </inlineequation>
-      によって算出されます。 本来明度とは画像をグレイスケールモードに変換した
+      によって算出されます。 本来明度とは画像をグレースケールモードに変換した
       とき各画素に与えられる数値のことです。
     </para>
     <para lang="ja">
@@ -288,16 +274,17 @@
                   histogram rather than a true color histogram.
                 </para>
                 <para lang="ja">
-                  <acronym>RGB</acronym>およびグレイスケールの画像の場合は
-                  レイヤー全体の明るさの分布を図示します。 グレイスケール画像に
-                  おいてはその明度をそのまま読み取ります。 <acronym>RGB
-                  </acronym>画像においては明度の仮想チャンネルを算出します。
+                  <acronym>RGB</acronym>およびグレースケールの画像の場合は
+                  レイヤー全体の明るさの分布を図示します。 グレースケール画像に
+                  おいてはその明度をそのまま読み取ります。 
+                  <acronym>RGB</acronym>画像においては明度の仮想チャンネルを
+                  算出します。
                 </para>
                 <para lang="ja">
-                  インデックス付きカラー画像においては名前こそ<quote>明度
-                  </quote>ですが実際はカラーマップの対照表の順番にその利用頻度
-                  を表しています。 つまりこれは正当な色分布ヒストグラムではなく
-                  <quote>仮想色</quote>ヒストグラムなのです。
+                  インデックス付きカラー画像においては名前こそ
+                  <quote>明度</quote>ですが実際はカラーマップの対照表の順番に
+                  その利用頻度を表しています。 つまりこれは正当な色分布
+                  ヒストグラムではなく<quote>仮想色</quote>ヒストグラムなのです。
                 </para>
               </listitem>
             </varlistentry>
@@ -312,7 +299,7 @@
                 </para>
                 <para lang="ja">
                   これらのチャンネルは<acronym>RGB</acronym>画像のレイヤーに
-                  おいてのみ現れます。 赤緑青の各チャンネルごとに強度分布が
+                  おいてのみ現れます。 赤・緑・青の各チャンネルごとに強度分布が
                   図示されます。
                 </para>
               </listitem>
@@ -342,7 +329,7 @@
                     Combined histograms of R, G, and B channels.
                   </title>
                   <title lang="ja">
-                    赤緑青の各チャンネルの合成ヒストグラム
+                    赤・緑・青の各チャンネルの合成ヒストグラム
                   </title>
                   <mediaobject>
                     <imageobject>
@@ -357,9 +344,9 @@
                   the color distribution information in a single view.
                 </para>
                 <para lang="ja">
-                  この<acronym>RGB</acronym>色レイヤー専用の項目を選ぶと赤緑青
-                  の各チャンネルが折り重なって図示され、 各色の分布がまとめて
-                  一望できます。
+                  この<acronym>RGB</acronym>色レイヤー専用の項目を選ぶと赤・
+                  緑・青の各チャンネルが折り重なって図示され、 各色の分布が
+                  まとめて一望できます。
                 </para>
               </listitem>
             </varlistentry>
@@ -381,6 +368,7 @@
           buttons
         </term>
         <term lang="ja">
+          線形
           <guiicon>
             <inlinemediaobject>
               <imageobject>
@@ -391,7 +379,8 @@
                 <phrase>「線形ヒストグラム」</phrase>
               </textobject>
             </inlinemediaobject>
-          </guiicon> /
+          </guiicon>
+          / 対数
           <guiicon>
             <inlinemediaobject>
               <imageobject>
@@ -426,8 +415,8 @@
             logarithmic histogram will often be more useful.
           </para>
           <para lang="ja">
-            この2つのボタンでヒストグラムの縦方向 (Y軸) に線形尺か対数尺の
-            どちらを用いて表示をするのかを決められます。 写真を使った画像に
+            この 2 つのボタンがヒストグラムの縦方向 (Y軸) に線形尺か対数尺の
+            どちらを用いて表示をするのかを決めます。 写真を使った画像に
             おいては通常役立つのはほとんどが線形モードです。 しかし同じ色の
             部分がかなり広い画像の線形ヒストグラムは一本だけの棒グラフが
             突出してしまう図面になるため、 むしろ対数ヒストグラムのほうが
@@ -456,7 +445,7 @@
           </para>
           <para lang="ja">
             ダイアログの下部に表示される分析はここで範囲を絞ると局所的な
-            観測結果を出します。 観測範囲の設定方法はつぎの3通りあります。
+            観測結果を出します。 観測範囲の設定方法はつぎの 3 通りあります。
           </para>
           <itemizedlist>
             <listitem>
@@ -491,9 +480,9 @@
                 <footnote>
                   <para>
                     スピンボタンは整数値を直接記入できる入力欄があるほか、 付属
-                    の小さな上下矢印ボタンや <keycap>上下</keycap> キーで1つ
+                    の小さな上下矢印ボタンや <keycap>上下</keycap> キーで 1 つ
                     ずつ、 <keycap>PgUp</keycap> キーや <keycap>PgDn</keycap>
-                    キーで16ずつ数値を繰り上げ/繰り下げられます。
+                    キーで 16 ずつ数値を繰り上げ/繰り下げられます。
                   </para>
                 </footnote>
                 を使います (左側は下限、 右側は上限です)。
@@ -544,7 +533,7 @@
                </para>
                <para lang="ja">
                  <guilabel>中心値</guilabel>: 例えば集中度が同じ尖端が図面の
-                 範囲内で等間隔に100本あれば50番目の尖端が中心値です。
+                 範囲内で等間隔に 100 本あれば 50 番目の尖端が中心値です。
                </para>
             </listitem>
             <listitem>

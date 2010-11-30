@@ -10,7 +10,7 @@
   2006-03-09 lexa: reviewed and spellchecked german version
   2005-11-04 reviewed by axel.wernicke
 -->
-<!--2010-09-13-->
+<!--2010-11-28-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-layer-dialog">
   <title lang="en">Layers Dialog</title>
   <title lang="ja">レイヤーダイアログ</title>
@@ -51,13 +51,13 @@
     foreground of the image come above it.
   </para>
   <para lang="ja">
-    <quote>レイヤー</quote>ダイアログはレイヤーの編集、 変更、 
-    管理を行うための主要なインタフェースです。 レイヤーとはスライド[画像]の
-    重なりだとか身に付けた衣服のようなものととらえてよろしい。 レイヤーを
-    使えば、
-    画像が概念上の分割をして構築できるうえ、 それぞれ個別に他の部分へ影響しない
-    作業が可能になります。 レイヤーは上へ上へと積み重なりあっています。 最背面
-    のレイヤーは画像の背景をなし、 画像の前景の各部分はその上に置かれます。
+    <quote>レイヤー</quote>ダイアログはレイヤーの編集、 変更、 管理を行う
+    ための主要なインタフェースです。 レイヤーは喩えて言えばスライド映写機に
+    重ねて置かれた画像フィルムだとか、 重ねて羽織ったさまざまな形や色の衣服の
+    ようにとらえることがあります。 レイヤーを使えば、 画像を部品に分けて構築し、
+    それぞれが他の部分へ影響しない個別作業が可能になります。 レイヤーは上へ
+    上へと積み重なりあっています。 最背面のレイヤーは画像の背景をなし、 
+    画像の前景の各部分はその上に置かれます。
   </para>
   <figure>
     <title lang="en">An image with layers</title>
@@ -164,29 +164,15 @@
       </menuchoice>.
     </para>
     <para lang="ja">
-      <guimenu>ウィンドウ</guimenu> メニューでは
-      ダイアログがひとつだけの状態で開かれている場合に限り、
+      ダイアログが少なくともひとつ開かれておれば、
+      <guimenu>ウィンドウ</guimenu> メニューに
       <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
-      現れます。 この場合には画像メニューより
+      現れます。 このときは画像メニューより
       <menuchoice>
         <guimenu>ウィンドウ</guimenu>
         <guimenuitem>レイヤー</guimenuitem>
       </menuchoice>
       と進めば<quote>レイヤー</quote>ダイアログを浮かび上がらせられます。
-      <!--<footnote>
-        <para>
-          一部意味が理解しづらい。 2009-02-28 r2767 以前はこう書かれていた:
-          <quote>レイヤー</quote>ダイアログウィンドウが単独で (例えば<quote>
-          レイヤー</quote>タブとなっていたダイアログが
-          <link linkend="gimp-dockable-menu">切り放</link> されたあとで)
-          [隠れて]いるときは、 画像メニューから
-          <menuchoice>
-            <guimenu>ウィンドウ</guimenu>
-            <guimenuitem>レイヤー</guimenuitem>
-          </menuchoice>
-          と進めばこのダイアログを浮かび上がらせられます。
-        </para>
-      </footnote>-->
     </para>
   </sect3>
 
@@ -304,10 +290,10 @@
                   layer.
                 </para>
                 <para lang="ja">
-                  主な属性としてレイヤー名があります。 名前を編集するには
-                  レイヤーの縮小見本画像かレイヤー名をダブルクリックして
-                  ください。 <keycap>Enter</keycap> キーを押すか他のレイヤーの
-                  欄をクリックすれば編集が終わります。
+                  属性の要はレイヤー名です。 名前を編集するにはレイヤーの
+                  縮小見本画像かレイヤー名をダブルクリックしてください。 
+                  <keycap>Enter</keycap> キーを押すか他のレイヤーの欄を
+                  クリックすれば編集が終わります。
                 </para>
               </listitem>
             </varlistentry>
@@ -324,17 +310,18 @@
               (combine) or (replace).
             </para>
             <para lang="ja">
-              アニメーション用レイヤー (<acronym>GIF</acronym>か<acronym>MNG
-              </acronym>) の場合にはレイヤー名がある種のパラメータを示すのに
-              使われます。 その形式は <guilabel><replaceable>レイヤー名
-              </replaceable> (<replaceable>フレーム間の時間</replaceable>ms) 
+              アニメーション用レイヤー (<acronym>GIF</acronym>か
+              <acronym>MNG</acronym>) の場合にはレイヤー名がある種の
+              パラメータを示すのに使われます。 その形式は 
+              <guilabel><replaceable>レイヤー名</replaceable> 
+              (<replaceable>フレーム間の時間</replaceable>ms) 
               (<replaceable>結合モード</replaceable>)</guilabel>、 例えば
               <guilabel>フレーム1 (100ms) (replace)</guilabel> となります。
               <quote>フレーム間の時間</quote>はアニメーションのコマとなる
-              レイヤーの各持ち時間をミリ秒単位で設定しています。 <quote>
-              結合モード</quote>はコマを切り替えるとき直前のレイヤーと結合
-              させる方法 (combine) をとるか置き換える方法 (replace) をとるかを
-              定めます。
+              レイヤーの各持ち時間をミリ秒単位で設定しています。 
+              <quote>結合モード</quote>は、 コマを切り替えるとき直前のレイヤーに
+              結合させる方法 (combine) と置き換える方法 (replace) のどちらを
+              行なうかを定めます。
             </para>
           </note>
         </listitem>
@@ -352,8 +339,9 @@
           <para lang="ja">
             レイヤーの一覧表より上に現在活性化しているレイヤーの属性のいくつか
             を指定する項目があります。 活性化レイヤーは下図で青く強調表示されて
-            います。 <guilabel>モード</guilabel>、 <guilabel>透明保護
-            </guilabel>、 <guilabel>不透明度</guilabel> の3つの属性があります。
+            います。 <guilabel>モード</guilabel>、 
+            <guilabel>透明保護</guilabel>、 <guilabel>不透明度</guilabel> の
+            3 つの属性があります。
           </para>
           <variablelist>
             <varlistentry id="gimp-layer-dialog-paint-mode-menu">
@@ -368,8 +356,9 @@
                 </para>
                 <para lang="ja">
                   レイヤーのモードはこのレイヤーが他のレイヤーとどのように相互
-                  作用するかを定めるものです。 引き出しメニューより<acronym>
-                  GIMP</acronym>で利用できる全てのモードを選んで呼び出せます。
+                  作用するかを定めるものです。 引き出しメニューより
+                  <acronym>GIMP</acronym>で利用できるすべてのモードを選んで
+                  呼び出せます。
                   <xref linkend="gimp-concepts-layer-modes"/>
                   でレイヤーのモードを逐一解説しています。
                 </para>
@@ -428,7 +417,7 @@
                         painted with red.
                       </para>
                       <para lang="ja">
-                        活性レイヤーには3本の水平な不透明の緑色の縞がひかれ、
+                        活性レイヤーには 3 本の水平な不透明の緑色の縞がひかれ、
                         その背景は透明である。 <guilabel>透明保護</guilabel>に
                         チェックは入っていない。 不透明部分と透過部分を問わず
                         活性レイヤーにひかれた赤のすじは連続している。
