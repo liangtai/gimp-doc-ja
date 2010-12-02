@@ -13,7 +13,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--2010-02-02-->
+<!--2010-12-02-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -71,11 +71,11 @@
     確かめられます。
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym> 2.6 より新たな手段が加わりました。 キャンバス内で
-    クリックしてマウスポインタを曳いて矩形枠を描くと、 矩形選択ツールと同じ方法
-    で拡げたり移動したりできます。 テキスト編集ウィンドウに書き込んだテキストは
-    この枠内に表示され、 枠の大きさにその文字が自動的に適合します。 <!--たぶん
-    嘘-->この枠はいつでも調整できます。
+    <application><acronym>GIMP</acronym> 2.6</application> より新たな手段が
+    加わりました。 キャンバス内でクリックしてマウスポインタを曳いて矩形枠を
+    描くと、 矩形選択ツールと同じ方法で拡げたり移動したりできます。 テキスト
+    編集ウィンドウに書き込んだテキストはこの枠内に表示され、 枠の大きさにその
+    文字が自動的に適合します。 <!--たぶん嘘-->この枠はいつでも調整できます。
   </para>
   <figure id="gimp-text-bounding-box">
     <title lang="en">Text tool bounding box</title>
@@ -190,8 +190,8 @@
           <para lang="ja">
             フォントボタン <guibutton>永</guibutton> をクリックすると簡易型
             フォント選択ウィンドウが開きます。 ここからシステムにインストール
-            されているフォントや、 <acronym>GIMP</acronym>のフォントディレクトリ
-            に追加したフォントが選べます。
+            されているフォントや、 <acronym>GIMP</acronym>の
+            フォントディレクトリに追加したフォントが選べます。
           </para>
           <itemizedlist>
             <para lang="en">
@@ -212,8 +212,8 @@
                 view</emphasis>,
               </para>
               <para lang="ja">
-                <emphasis>リストで表示</emphasis> か <emphasis>グリッドで表示
-                </emphasis> かを選択
+                <emphasis>リストで表示</emphasis> か 
+                <emphasis>グリッドで表示</emphasis> かを選択
               </para>
             </listitem>
             <listitem>
@@ -330,8 +330,8 @@
             current color sample is clicked.
           </para>
           <para lang="ja">
-            これから書く文字の色を予め指定します。 既定の色は黒です。 この色
-            ボタンをクリックすると現れる<quote>文字色</quote>ダイアログで
+            これから書く文字の色をあらかじめ指定します。 既定の色は黒です。 
+            この色ボタンをクリックすると現れる<quote>文字色</quote>ダイアログで
             色を指定できます。
           </para>
           </para>
@@ -345,12 +345,13 @@
               きて直接放っても文字色を変更できます。
             </para>
             <para lang="en">
-              Before changing color of a text by gradient or a pattern,
-              set <guilabel>Lock:</guilabel> at Layer Dialog, for protecting
-              transparent area of the text layer.  Then apply colors by
-              gradient or fill with a pattern.  Although this layer will
+              You can use a gradient or a pattern to embellish your text.
+              Before changing color of a text, set <guilabel>Lock:</guilabel>
+              at Layer Dialog, so that text face is filled but
+              transparent area around the text is kept.  Then apply colors
+              by gradient or fill with a pattern.  Although this layer will
               enclose the specificity as a text layer temporally, you can
-              re-edit this text by clicking this layer,
+              edit this text again by clicking this layer,
               and this text will colored with the foreground color.
             </para>
             <para lang="ja">
@@ -379,9 +380,9 @@
             selectable from the associated icons.
           </para>
           <para lang="ja">
-            <quote>左揃え</quote>、 <quote>右揃え</quote>、 <quote>中央揃え
-            </quote>、 <quote>両端揃え</quote>の4つのボタンから文字列の
-            揃え方を選びます。
+            <quote>左揃え</quote>、 <quote>右揃え</quote>、 
+            <quote>中央揃え</quote>、 <quote>両端揃え</quote>の 4 つの
+            ボタンから文字列の揃え方を選びます。
           </para>
         </listitem>
       </varlistentry>
@@ -474,7 +475,7 @@
             This command is also available from the <quote>Layer</quote> menu:
           </para>
           <para lang="ja">
-            このオプションは予め
+            このオプションはあらかじめ
             <link linkend="gimp-using-paths">パス</link> が描かれていることが
             条件です。 文字を収めたテキストレイヤーを作ったら、 パスを作成
             するかもしくは転換によって作成して活性化します。 もし既に作った
@@ -528,9 +529,9 @@
             呼び出してから画像ウィンドウのテキストをクリックします。
           </para>
           <para lang="ja">
-            ツールオプションの <guibutton>パスに沿ってテキストを配置
-            </guibutton> ボタンをクリックします。 するとテキストはパスに沿って
-            うねるように綴られます。 それぞれの文字は輪郭だけが描かれています。
+            ツールオプションの <guibutton>パスに沿ってテキストを配置</guibutton> 
+            ボタンをクリックします。 するとテキストはパスに沿ってうねるように
+            綴られます。 それぞれの文字は輪郭だけが描かれています。
             これらは新たなパスの成分になっていて、
             <link linkend="gimp-path-dialog">パスダイアログ</link> でも確認
             できます。 パスに適用できるオプションは全てこのパスにも適用
@@ -575,8 +576,7 @@
           <para lang="ja">
             このツールは選択したテキストをもとにパスを作成できます。 全ての文字
             は輪郭がパス成分として描かれます。 つまり文字の形状はパスの
-            コントロールポイント (アンカーやハンドル) を操作して加工が可能
-            です。
+            コントロールポイント (アンカーやハンドル) を操作して加工が可能です。
           </para>
         </listitem>
       </varlistentry>
@@ -772,9 +772,9 @@
             in the text editor. All the text in the file is loaded.
           </para>
           <para lang="ja">
-            テキストはテキストファイルの内容を利用できます。 テキストエディタにある
-            このボタンをクリックして<quote>テキストファイル (UTF-8) を開く</quote>
-            ダイアログからファイルを選んでください。 
+            テキストはテキストファイルの内容を利用できます。 テキストエディタ
+            にあるこのボタンをクリックして<quote>テキストファイル (UTF-8) 
+            を開く</quote> ダイアログからファイルを選んでください。 
             ファイル内の全てのテキストが読み込まれます。
           </para>
         </listitem>
