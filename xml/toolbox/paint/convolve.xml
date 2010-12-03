@@ -11,7 +11,7 @@
   2005-12-01 informalfigure replaced by figure by lexa
   050523 de reviewed by axel.wernicke
   -->
-<!--2010-04-19-->
+<!--2010-12-03-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-convolve">
   <title lang="en">Blur/Sharpen</title>
   <title lang="ja">ぼかし/シャープ</title>
@@ -64,7 +64,7 @@
     一部が目立ちすぎている場合にそれを柔らげてやるのには便利です。 ぼかしを
     レイヤーの全体もしくは広い範囲に適用したいときは、
     <link linkend="filters-blur">ぼかしフィルタ</link> を使う方がよいかもしれ
-    ません。 このツールでは描線の走る方向を問題にしませんので、 もし筆の方向で
+    ません。 このツールでは描線の走る方向を考慮しませんので、 もし筆の方向で
     効果が変わるぼかしが必要ならばにじみツールを使ってください。
   </para>
   <para lang="ja">
@@ -90,14 +90,14 @@
     <para lang="ja">
       <quote>スタンプで描画</quote>ツールを使えばもっと高度なシャープ化ブラシを
       作れます。 その方法はまず作業するレイヤーの複製をとり、 コピーの方に
-      アンシャープマスク等の強調フィルタをかけます。 それから<quote>
-      スタンプで描画 </quote>ツールを起用して、 オプションはスタンプソースに
-      <guimenuitem>画像から</guimenuitem> を、 位置合わせには <guimenuitem>
-      登録したもの</guimenuitem> を指定しておきます。 不透明度は控え目に、
-      だいたい10%ぐらいにします。 <keycap>Ctrl</keycap> キーを押しながら
-      コピーのレイヤー上でクリックして参照用画像に定めます。 元画像上で描画を
-      すれば、 ブラシでなぞった部分では、 強調されている版と強調されていない
-      版の両者の合成が起こります。
+      アンシャープマスク等の強調フィルタをかけます。 それから
+      <quote>スタンプで描画 </quote>ツールを起用して、 オプションは
+      スタンプソースに <guimenuitem>画像から</guimenuitem> を、 位置合わせには 
+      <guimenuitem>登録したもの</guimenuitem> を指定しておきます。 不透明度は
+      控え目に、 だいたい 10% ぐらいにします。 <keycap>Ctrl</keycap> キーを
+      押しながらコピーのレイヤー上でクリックして参照用画像に定めます。 
+      元画像上で描画をすれば、 ブラシでなぞった部分では、 強調されている版と
+      強調されていない版の両者の合成が起こります。
     </para>
   </tip>
 
@@ -125,7 +125,7 @@
       There are different possibilities to activate the tool:
     </para>
     <para lang="ja">
-      <quote>ぼかし/シャープ</quote>ツールを起用する方法はつぎのいずれかです:
+      <quote>ぼかし/シャープ</quote>ツールを起用する方法はつぎのいずれかです。
     </para>
     <itemizedlist>
       <listitem>
@@ -232,7 +232,7 @@
         </term>
         <term lang="ja">
           不透明度; ブラシ; 拡大・縮小; ブラシ感度の調整; フェードアウト;
-          重ね塗り; ハードエッジ
+          揺らぎ; ハードエッジ
         </term>
         <listitem>
           <xi:include href="about-common-paint-options.xml"/>
@@ -263,12 +263,13 @@
           <para lang="ja">
             <guimenuitem>ぼかし</guimenuitem> モードでは、 ブラシに触れた画素
             (ピクセル) は隣接するピクセルと色が混ざりあいますので、 ブラシの
-            通った領域は画素の相似性が高まります。 <guimenuitem>シャープ
-            </guimenuitem> のモードはどの画素も隣接する画素との違いを
-            より強くしますので、 ブラシの通った領域のコントラストが増します。
-            <emphasis>シャープ</emphasis> をかけすぎると汚いホコリ玉のように
-            なってしまいます。 モードはここで設定した限りではなく、 
-            <keycap>Ctrl</keycap> キーを押しておれば作業中でも逆転できます。
+            通った領域は画素の相似性が高まります。 
+            <guimenuitem>シャープ</guimenuitem> のモードはどの画素も隣接する
+            画素との違いをより強くしますので、 ブラシの通った領域の
+            コントラストが増します。 <emphasis>シャープ</emphasis> を
+            かけすぎると汚いホコリ玉のようになってしまいます。 モードはここで
+            設定した限りではなく、 <keycap>Ctrl</keycap> キーを押しておれば
+            作業中でも逆転できます。
           </para>
           <para lang="ja">
             <quote>ぼかし/シャープ</quote>は数学の行列式を適用しています。

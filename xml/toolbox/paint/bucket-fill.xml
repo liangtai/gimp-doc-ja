@@ -12,7 +12,7 @@
   2005-11-30 informalfigure replaced by figure by lexa
   050815 de reviewed by axel.wernicke
 -->
-<!--2010-04-18-->
+<!--2010-12-03-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-bucket-fill">
   <title lang="en">Bucket Fill</title>
   <title lang="ja">塗りつぶし</title>
@@ -240,7 +240,7 @@
           <para lang="en"><acronym>GIMP</acronym> provides three fill types:
           </para>
           <para lang="ja">
-            <acronym>GIMP</acronym>は塗りつぶしに3つの方法を提供しています:
+            <acronym>GIMP</acronym>は塗りつぶしに 3 つの方法を提供しています。
           </para>
           <variablelist>
             <varlistentry>
@@ -285,12 +285,15 @@
                 </para>
                 <para lang="ja">
                   現在指定されているパターン (文様) を用いて塗りつぶします。
-                  引き出し排列から使いたい文様を選択できます。
+                  簡易型パターン選択ウィンドウから使いたいパターンを
+                  選択できます。
                 </para>
                 <para lang="ja">
-                  この引き出し排列で数多ある文様から次回の塗りつぶしに用いる
-                  文様をひとつ選び出します。 排列選択枠の底部にある左寄り4つの
-                  ボタンを使って見本の並べかたや大きさを調節できます。
+                  この簡易型パターン選択ウィンドウをクリックするか記入欄に
+                  パターン名を書き込めば、 数多ある文様から次回の塗りつぶしに
+                  用いる文様をひとつ選び出せます。 簡易ウィンドウの
+                  排列選択枠の底部にある左寄り 4 つのボタンを使って見本の
+                  並べかたや大きさを調節できます。
                 </para>
               </listitem>
             </varlistentry>
@@ -330,10 +333,10 @@
                   can set by a value or by a cursor position.
                 </para>
                 <para lang="ja">
-                  既定はこちらです。 クリックした場所の画素の色に類似した
+                  初期設定値はこちらです。 クリックした場所の画素の色に類似した
                   色のある隣接領域が塗りつぶされます。 色の類似性は
                   明度のしきい値で定められ、 しきい値は実値もしくはカーソルの
-                  位置で設定できます。<!--明度のしきい値? カーソル? -->
+                  位置で設定できます。<!--XXX: 明度のしきい値? カーソル? -->
                 </para>
               </listitem>
             </varlistentry>
@@ -346,7 +349,7 @@
         <term lang="ja">類似色の識別</term>
         <listitem>
           <para lang="en">Under this section you can find two options:</para>
-          <para lang="ja">この区画では2つ<!-- 4つ -->のオプションがあります:
+          <para lang="ja">この区画では 2 つ<!-- 4 つ -->のオプションがあります。
           </para>
           <variablelist>
             <varlistentry>
@@ -479,26 +482,26 @@
                   <guimenuitem>明度</guimenuitem> からひとつ選びます。
                 </para>
                 <para lang="ja">
-                  このオプションを理解することは簡単ではありません。
-                  試しに赤チャンネルを選択したとします。 どこかの画素
-                  をクリックすれば、 その画素の <emphasis>赤チャンネル
-                  </emphasis> の値からしきい値を越えない範囲で近い値を、
-                  このツールは隣接する画素を辿って探し出します。
-                  さらに例を挙げましょう:
+                  このオプションを理解することは簡単ではありません。 試しに
+                  赤チャンネルを選択したとします。 どこかの画素を
+                  クリックすれば、 その画素の 
+                  <emphasis>赤チャンネル</emphasis> の値からしきい値を
+                  越えない範囲で近い値を、このツールは隣接する画素を辿って
+                  探し出します。さらに例を挙げましょう。
                 </para>
                 <para lang="ja">
-                  元の画像: 三原色すなわち赤(255,0,0)、 緑(0,255,0)、
-                  青(0,0,255) それぞれの帯にグラデーションをかけたもの。
-                  これからこの画像をしきい値が15の設定でマゼンタ色で
+                  元の画像: 三原色すなわち赤 (255,0,0)、 緑 (0,255,0)、
+                  青 (0,0,255) それぞれの帯にグラデーションをかけたもの。
+                  これからこの画像をしきい値が 15 の設定でマゼンタ色で
                   塗りつぶします。
                 </para>
                 <para lang="ja">
-                  画像その1: 塗りつぶし手段 = <guimenuitem>コンポジット
-                  </guimenuitem> 。 3色の帯をつぎつぎとクリックしました。
+                  画像その 1: 塗りつぶし手段 = <guimenuitem>コンポジット
+                  </guimenuitem> 。 3 色の帯をつぎつぎとクリックしました。
                   どの帯もしきい値の許す範囲で塗りつぶされています。
                 </para>
                 <para lang="ja">
-                  画像その2: 塗りつぶし手段 = <guimenuitem>赤</guimenuitem>。
+                  画像その 2: 塗りつぶし手段 = <guimenuitem>赤</guimenuitem>。
                   赤の帯をクリックしました。 塗りつぶしツールはクリックした
                   点の赤チャンネル上の値をとり、 そこに隣接する画素から
                   順にしきい値の許す範囲で赤チャンネル上に近似値をもつ領域
@@ -508,10 +511,10 @@
                   異なります。 したがってマゼンタ色はこちらには拡がりません。
                 </para>
                 <para lang="ja">
-                  画像その3: 塗りつぶし手段 = <guimenuitem>赤</guimenuitem>。
+                  画像その 3: 塗りつぶし手段 = <guimenuitem>赤</guimenuitem>。
                   緑の帯をクリックしました。 すると赤チャンネル上のクリック
-                  された画素の値は0ですが、 緑と青の帯上の全ての画素も
-                  赤チャンネルでの値は0ですから、 両者とも塗りつぶされました。
+                  された画素の値は 0 ですが、 緑と青の帯上の全ての画素も
+                  赤チャンネルでの値は 0 ですから、 両者とも塗りつぶされました。
                 </para>
                 <figure>
                   <title lang="en">Example for <quote>Fill By</quote></title>
@@ -533,7 +536,7 @@
                     </imageobject>
                     <caption>
                       <para lang="en">Image 1</para>
-                      <para lang="ja">画像その1</para>
+                      <para lang="ja">画像その 1</para>
                     </caption>
                   </mediaobject>
                   <mediaobject>
@@ -543,7 +546,7 @@
                     </imageobject>
                     <caption>
                       <para lang="en">Image 2</para>
-                      <para lang="ja">画像その2</para>
+                      <para lang="ja">画像その 2</para>
                     </caption>
                   </mediaobject>
                   <mediaobject>
@@ -553,7 +556,7 @@
                     </imageobject>
                     <caption>
                       <para lang="en">Image 3</para>
-                      <para lang="ja">画像その3</para>
+                      <para lang="ja">画像その 3</para>
                     </caption>
                   </mediaobject>
                 </figure>
@@ -600,7 +603,7 @@
           <para lang="en">
             After clicking 3 times more with the Bucket-Fill tool
           </para>
-          <para lang="ja">塗りつぶしツールでさらに3回クリックした後の図</para>
+          <para lang="ja">塗りつぶしツールでさらに 3 回クリックした後の図</para>
         </caption>
       </mediaobject>
     </figure>
