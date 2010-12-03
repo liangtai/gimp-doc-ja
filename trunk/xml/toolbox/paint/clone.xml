@@ -18,7 +18,7 @@
   2005-11-30 replaced informalfigure by figure by lexa
   2005-05-23 de reviewed by axel.wernicke
 -->
-<!--2010-09-13-->
+<!--2010-12-03-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-clone">
   <title lang="en">Clone</title>
   <title lang="ja">スタンプで描画 (クローン)</title>
@@ -94,7 +94,7 @@
     転写するためのものです。 使い道はたくさんありますが、 最も重要なのが
     デジタル写真の不味い部分を周辺部分の画素情報 (ピクセルデータ) を用いて
     <quote>ハメ込み</quote>修復することです。 この技法は習得するまで少々時間が
-    かかりますが、 ひとたび身に付ければ非常に頼もしいものです。 その他、 直線や
+    かかりますが、 ひとたび身に付ければ非常に頼もしくなります。 その他、 直線や
     曲線の上を文様で描画することも重要な使い道です。
     <link linkend="gimp-concepts-patterns">パターン</link> にその例があります。
   </para>
@@ -105,11 +105,7 @@
     この作業を済まさなければ<quote>スタンプで描画</quote>ツールで描画することは
     不可能です。 ツールのカーソルの姿が
     <guiicon>
-      <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="images/toolbox/clone-bad.png"/>
-        </imageobject>
-      </inlinemediaobject>
+      <inlinegraphic fileref="images/toolbox/clone-bad.png"/>
     </guiicon> に変化してその状態を示します。
   </para>
   <para lang="ja">
@@ -121,7 +117,7 @@
     参照位置が転写元の画像の端部に達すると変化を止めてしまいます。
   </para>
   <para lang="ja">
-    <quote>スタンプで描画</quote>ツールは描画可能なもの全てから、 すなわち
+    <quote>スタンプで描画</quote>ツールは描画可能なものすべてから、 すなわち
     レイヤー、 マスク、 チャンネルのいずれからも他の描画対象に転写が
     できます。 クイックマスクモードにすれば選択マスクからさえも転写ができます。
     これがもし転写を受ける画像の受けつけないはずの色を転写する場合、 例えば
@@ -225,15 +221,11 @@
             できます。 ツールオプションの <guilabel>位置合わせ</guilabel> が
             <guimenuitem>なし</guimenuitem>、 <guimenuitem>揃える</guimenuitem>
             、 <guimenuitem>固定</guimenuitem> のいずれかであるならば、
-            クリックした位置が転写の参照原点です。 この部分の画像情報が<quote>
-            スタンプで描画</quote>ツールの描線の始めの位置に転写されます。
-            参照位置を定めるときにはカーソルの姿が網目十字のしるし
+            クリックした位置が転写の参照原点です。 この部分の画像情報が
+            <quote>スタンプで描画</quote>ツールの描線の始めの位置に転写
+            されます。 参照位置を定めるときにはカーソルの姿が網目十字のしるし
             <guiicon>
-              <inlinemediaobject>
-                <imageobject>
-                  <imagedata fileref="images/toolbox/clone-cross.png"/>
-                </imageobject>
-              </inlinemediaobject>
+              <inlinegraphic fileref="images/toolbox/clone-cross.png"/>
             </guiicon> に変わります。
           </para>
         </listitem>
@@ -318,16 +310,17 @@
                 </para>
                 <para lang="ja">
                   <guimenuitem>画像から</guimenuitem> を選んだときはこのツール
-                  で描く前に、 転写元となるレイヤーの参照位置を <keycap>Ctrl
-                  </keycap> キーを押しながらクリックして<acronym>GIMP</acronym>
-                  に教えなければなりません。
+                  で描く前に、 転写元となるレイヤーの参照位置を 
+                  <keycap>Ctrl</keycap> キーを押しながらクリックして
+                  <acronym>GIMP</acronym>に教えなければなりません。
                 </para>
                 <para lang="ja">
                   <guilabel>レイヤー結合色</guilabel> にチェックを入れておけば、
                   転写される絵は <emphasis>見たまま</emphasis> に、 そして
-                  レイヤーが複数ある画像は全てのレイヤーを通して採られた色を使う
-                  ようになります。 チェックを外すと、 選択されたレイヤー (活性
-                  レイヤー) だけから転写します。 より詳しい情報が、 用語集の
+                  レイヤーが複数ある画像はすべてのレイヤーを通して採られた色を
+                  使うようになります。 チェックを外すと、 選択されたレイヤー 
+                  (活性レイヤー) だけから転写します。 より詳しい情報が、 
+                  用語集の
                   <link linkend="glossary-samplemerge">レイヤー結合色</link>
                   の項目にあります。
                 </para>
@@ -532,10 +525,9 @@
                   <quote>登録されたもの</quote>のモードは他の位置合わせのモード
                   とは異なります。 画像から写し取るときは <keycap>Ctrl</keycap>
                   キーを押しながら元画像のレイヤーをクリックして登録します。 
-                  すると転写を受ける
-                  レイヤーでの描画は元画像の画素と同じ位置で同じ座標の画素が
-                  参照されます。 このしくみは同じ画像内のあるレイヤーから他の
-                  レイヤーへ転写するのに便利です。
+                  すると転写を受けるレイヤーでの描画は元画像の画素と同じ位置で
+                  同じ座標の画素が参照されます。 このしくみは同じ画像内のある
+                  レイヤーから他のレイヤーへ転写するのに便利です。
                   (もちろん画像から他の画像への転写もできます。)
                 </para>
                 <para lang="ja">
@@ -699,17 +691,17 @@
           </para>
           <para lang="ja">
             <quote>スタンプで描画</quote>ツールには一風変わった方法でもっと
-            強力な効果を引きだす技があります。 その一つが<quote> フィルタブラシ
-            </quote>を作るやり方で、 これはフィルタの効果をブラシで描いて
-            かけるものです。 その方法はまず作業するレイヤーの複製をとり、 
-            コピーの側にフィルタをかけておきます。 それから<quote>スタンプで
-            描画</quote>ツールを起用して、 オプションはスタンプソースに
-            <guimenuitem>画像から</guimenuitem> を、 位置合わせには
-            <guimenuitem>登録したもの</guimenuitem> を選択しておきます。
-            <keycap>Ctrl</keycap> キーを押しながらフィルタのかかった方のレイヤー
-            をクリックして元画像として登録してから、 複製元の画像上で描画
-            します。 ポインタでドラッグしてなぞった
-            ところにフィルタのかかった画像が塗られます。
+            強力な効果を引きだす技があります。 その一つが
+            <quote>フィルタブラシ</quote>を作るやり方で、 これはフィルタの
+            効果をブラシで描いてかけるものです。 その方法はまず作業する
+            レイヤーの複製をとり、 コピーの側にフィルタをかけておきます。 
+            それから<quote>スタンプで描画</quote>ツールを起用して、 
+            オプションはスタンプソースに <guimenuitem>画像から</guimenuitem> 
+            を、 位置合わせには <guimenuitem>登録したもの</guimenuitem> を
+            選択しておきます。 <keycap>Ctrl</keycap> キーを押しながら
+            フィルタのかかった方のレイヤーをクリックして元画像として
+            登録してから、 複製元の画像上で描画します。 ポインタでドラッグして
+            なぞったところにフィルタのかかった画像が塗られます。
           </para>
         </listitem>
       </varlistentry>

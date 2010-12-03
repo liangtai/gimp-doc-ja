@@ -12,7 +12,7 @@
   050801 addition en;fr by j.h
   050517 de reviewed by axel.wernicke
 -->
-<!--20110-02-17-->
+<!--2010-12-03-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-free-select">
   <title lang="en">Free Selection (Lasso)</title>
   <title lang="ja">自由選択 (なげなわ)</title>
@@ -72,17 +72,20 @@
   </para>
   <para lang="en">
     For information on selections and how
-    they are used in GIMP see <link linkend="gimp-concepts-selection">Selections</link>.  For information on
-    features common to all selection tools see <link linkend="gimp-tool-select">Selection Tools</link>.
+    they are used in GIMP see
+    <link linkend="gimp-concepts-selection">Selections</link>.  For
+    information on features common to all selection tools see
+    <link linkend="gimp-tool-select">Selection Tools</link>.
   </para>
   <para lang="ja">
-    なげなわツールの名で知られる自由選択ツールは、 マウスの <mousebutton>
-    第1ボタン</mousebutton> を押しながら (またはタブレット上に尖筆を押しつけ
-    ながら) 任意に輪郭を描いて選択範囲を作るためのものです。 マウスボタンを
-    放すと現在のポインタの位置から開始点までを結ぶ直線が引かれ選択範囲の輪郭が
-    閉じられます。 画像領域の外に線がはみ出してもどこかで内側に戻ってこれば
-    問題ありません。 なげなわは選択範囲を<quote>大雑把に描く</quote>ときに
-    たびたび重宝するツールです。 精密に選択する用途には向きません。 達人たちは
+    なげなわツールの名で知られる自由選択ツールは、 マウスの 
+    <mousebutton>第1ボタン</mousebutton> を押しながら (またはタブレット上に
+    尖筆を押しつけながら) 任意に輪郭を描いて選択範囲を作るためのものです。 
+    マウスボタンを放すと現在のポインタの位置から開始点までを結ぶ直線が引かれ
+    選択範囲の輪郭が閉じられます。 画像領域の外に線がはみ出してもどこかで
+    内側に戻ってこれば問題ありません。 なげなわは選択範囲を
+    <quote>大雑把に描く</quote>ときにたびたび重宝するツールです。 精密に
+    選択する用途には向きません。 達人たちは
     <link linkend="gimp-qmask">クイックマスク</link> モードで細かく作業する
     前に、 なげなわツールで大まかに選択をとっておくと
     作業が楽になることを知っています。
@@ -117,15 +120,16 @@
     So, you can mix free hand segments and polygonal segments.
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym> 2.6 より新たな機能が加わりました。 多角形選択です。
-    クリックしてドラッグし続ける手書きの自由選択に対し、 これはクリックのみで
-    作られ、 つぎつぎとアンカーポイントが置かれます。 最後に置かれたアンカー
-    ポイントからマウスの現在位置までには直線が表示され、 再びクリックするまでは
-    その直線がマウスの動きに反応します (マウスポインタはアンカーポイント上で
-    移動十字 (四方矢印) の姿になります。) つぎのクリックで新たなアンカーポイント
-    が置かれ、 直前に置かれたアンカーポイントとの間に分節の線分が引かれます。
-    <keycap>Ctrl</keycap> キーを押している間は直前のアンカーポイントから 15 度
-    刻みの方角の位置にのみ次のポイントが置けます。
+    <application><acronym>GIMP</acronym> 2.6</application> より新たな機能が
+    加わりました。 多角形選択です。 クリックしてドラッグし続ける手書きの
+    自由選択に対し、 これはクリックのみで作られ、 つぎつぎとアンカーポイントが
+    置かれます。 最後に置かれたアンカーポイントからマウスの現在位置までには
+    直線が表示され、 再びクリックするまではその直線がマウスの動きに反応します。
+    (マウスポインタはアンカーポイント上で移動十字 (四方矢印) の姿になります。)
+    つぎのクリックで新たなアンカーポイントが置かれ、 直前に置かれた
+    アンカーポイントとの間に分節の線分が引かれます。 <keycap>Ctrl</keycap> 
+    キーを押している間は直前のアンカーポイントから 15 度刻みの方角の位置にのみ
+    次のポイントが置けます。
   </para>
   <para lang="ja">
     もちろん、 手書きの曲線と多角形線分は混在できます。
@@ -148,7 +152,7 @@
       You can access to the Lasso Tool in different ways:
     </para>
     <para lang="ja">
-      <quote>自由選択</quote>ツールを起用する方法はつぎのいずれかです:
+      <quote>自由選択</quote>ツールを起用する方法はつぎのいずれかです。
     </para>
     <itemizedlist>
       <listitem>
@@ -264,6 +268,7 @@
         一般的にはこのツールを起用すると、 そのツールオプションが
         ツールボックスの下に繋げられたウィンドウ上に現れます。 そのような
         ウィンドウが見あたらないときは、 画像メニューバーより
+        <menuchoice>
           <guimenu>ウィンドウ</guimenu>
           <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
           <guimenuitem>ツールオプション</guimenuitem>
