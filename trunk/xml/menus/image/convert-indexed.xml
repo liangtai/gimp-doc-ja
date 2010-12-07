@@ -7,7 +7,7 @@
   2006-07-17 note added about the Colormap Dialog by j.h
   2005/10/25 created from image-mode.xml by axel.wernicke
 -->
-<!--2009-09-12-->
+<!--2010-12-07-->
 <sect2 id="gimp-image-convert-indexed">
   <title lang="en">Indexed mode</title>
   <title lang="ja">インデックス...</title>
@@ -124,9 +124,9 @@
               <para lang="ja">
                 <guilabel>最適パレットを生成</guilabel>: このオプションを選ぶ
                 と、 既定値なら<acronym>GIF</acronym>形式の従来からの最大色数
-                256 [(画像にアルファチャンネルがあるときは255)] 以内で一番画像
-                に適したパレットを生成します。 <guilabel>
-                最大色数</guilabel> はそれよりも小さい値に
+                256 [(画像にアルファチャンネルがあるときは 255)] 以内で一番
+                画像に適したパレットを生成します。 
+                <guilabel>最大色数</guilabel> はそれよりも小さい値に
                 変更可能ですが、 グラデーションのような滑らかな色変化のある場所
                 では望ましくない結果になりがちです。 こんなときはディザリングを
                 併用するとある程度は望ましからざる効果を減らせます。
@@ -151,7 +151,7 @@
               <para lang="ja">
                 <guilabel>白黒 ( 1-bit) パレットを使用<!--モノクロ 2 階調 ( 
                 1-bit) パレットを使用--></guilabel>: このオプションを選ぶと
-                白と黒の2色だけを使用した画像が生成されます。
+                白と黒の 2 色だけを使用した画像が生成されます。
               </para>
             </listitem>
             <listitem>
@@ -180,24 +180,24 @@
               <para lang="ja">
                 <guilabel>カスタムパレットを使用</guilabel>: このオプションでは
                 ボタンをクリックして一覧表からパレットをひとつ選んでください。 
-                ちなみに<quote>Web</quote>パレットとはディザリング不要な216色の
-                <emphasis>ウェブセーフカラー</emphasis> パレットです。 
-                これはもともと 
-                <productname>Netscape</productname> 社が提唱したパレットで、 
-                Macと<acronym>PC</acronym>の両方で同等な発色が可能な色の取り
-                合わせになっており、 しかも <application>Internet Explorer 3
-                </application> でも扱えるようになっていました。 <acronym>MSIE
-                </acronym>はバージョン4以降、 212色のパレットを扱います。 色の
-                同等性を全てのプラットフォームで確保する課題はいまだ解決して
-                おらず、 その見込みもありません。 少なくとも文字が明るければ
-                背景を暗くし、 あるいは文字を暗く背景を明るくするべきですし、 
-                色に頼って情報を伝えようとしてはいけません。 ウェブ用ページを
-                作成されるときにはこの2つの基本をいつも意識してください。
+                ちなみに<quote>Web</quote>パレットとはディザリング不要な 216 
+                色の <emphasis>ウェブセーフカラー</emphasis> パレットです。 
+                これはもともと <productname>Netscape</productname> 社が提唱した
+                パレットであり、 Mac と <acronym>PC</acronym> の両方で同等な
+                発色が可能な色の取り合わせになっており、 しかも 
+                <application>Internet Explorer 3</application> でも扱えるように
+                なっていました。 <acronym>MSIE</acronym> はバージョン 4 以降、 
+                212 色のパレットを扱います。 色の同等性を全てのプラットフォーム
+                で確保する課題はいまだ解決しておらず、 その見込みもありません。 
+                少なくとも文字が明るければ背景を暗くし、 あるいは文字を暗く
+                背景を明るくするべきですし、 色に頼って情報を伝えようとしては
+                いけません。 ウェブ用ページを作成されるときにはこの 2 つの
+                基本をいつも意識してください。
               </para>
               <para lang="ja">
                 色数の少ない画像をインデックス化カラーに変換すると実際は使われ
-                ていない色がパレットに含まれてしまうことがあります。 <guilabel>
-                未使用の色をカラーマップから削除</guilabel> 
+                ていない色がパレットに含まれてしまうことがあります。 
+                <guilabel>未使用の色をカラーマップから削除</guilabel> 
                 オプションを有効にするとそのような色はパレットから削除
                 されます。
               </para>
@@ -233,11 +233,11 @@
             adapted to animations.
           </para>
           <para lang="ja">
-            インデックス化カラー画像が使える色数は256色以下なので、 [変換前の]
-            元画像にあった色のいくつかはパレットに加えられません。 そのため
-            画像が部分的に染みかつぎ当てのように見える不自然な色斑ができて
-            しまいます。 このようなインデックス化カラーパレットの副作用を修正
-            するためにディザリングオプションがあります。
+            インデックス化カラー画像が使える色数は 256 色以下なので、 
+            [変換前の]元画像にあった色のいくつかはパレットに加えられません。 
+            そのため画像が部分的に染みかつぎ当てのように見える不自然な色斑が
+            できてしまいます。 このようなインデックス化カラーパレットの
+            副作用を修正するためにディザリングオプションがあります。
           </para>
           <para lang="ja">
             ディザリングフィルタはパレットに無い色の代わりに、 パレットにある
@@ -248,13 +248,13 @@
             ください。
           </para>
           <para lang="ja">
-            ディザリングフィルタは3種類あります。 <guimenuitem>なし
-            </guimenuitem>を含め <guilabel>色ディザリング
-            </guilabel> ではそのいずれかか選べます。 どのフィルタがどんな効果を
-            画像にもたらすかは予測がつきませんので、 全部のフィルタを試してその
-            画像に最適なものを見付けるしかありません。 ただし <guimenuitem>
-            ポジション</guimenuitem> フィルタはアニメーションできる画像によく
-            適しています。
+            ディザリングフィルタは 3 種類あります。 
+            <guimenuitem>なし</guimenuitem> を含め 
+            <guilabel>色ディザリング</guilabel> ではそのいずれかか選べます。 
+            どのフィルタがどんな効果を画像にもたらすかは予測がつきませんので、 
+            全部のフィルタを試してその画像に最適なものを見付けるしか
+            ありません。 ただし <guimenuitem>ポジション</guimenuitem> 
+            フィルタはアニメーションできる画像によく適しています。
           </para>
           <figure>
             <title lang="en">Example: full color, with no dithering</title>
@@ -277,7 +277,7 @@
           </figure>
           <figure>
             <title lang="en">Example: four colors, with no dithering</title>
-            <title lang="ja">例: 4色、 ディザリングなし</title>
+            <title lang="ja">例: 4 色、 ディザリングなし</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -289,7 +289,7 @@
                   colors, without dithering.
                 </para>
                 <para lang="ja">
-                  上図と同じ画像をディザリングなしで4色のインデックス化カラー
+                  上図と同じ画像をディザリングなしで 4 色のインデックス化カラー
                   画像に変換したもの
                 </para>
               </caption>
@@ -310,7 +310,7 @@
                 </para>
                 <para lang="ja">
                   同じ画像を <guimenuitem>Floyd-Steinberg ディザリング (通常)
-                  </guimenuitem> で4色のインデックス化カラー画像に変換したもの
+                  </guimenuitem> で4 色のインデックス化カラー画像に変換したもの
                 </para>
               </caption>
             </mediaobject>
@@ -335,7 +335,7 @@
                 </para>
                 <para lang="ja">
                   同じ画像を <guimenuitem>Floyd-Steiberg ディザリング 
-                  (使用する色数を減らす)</guimenuitem> で4色のインデックス化
+                  (使用する色数を減らす)</guimenuitem> で 4 色のインデックス化
                   カラー画像に変換したもの
                 </para>
               </caption>
@@ -350,10 +350,10 @@
             plug-in may give you better results.
           </para>
           <para lang="ja">
-            <acronym>GIF</acronym>画像の透明度は1ビットに符号化されるので透過
-            するかしないかのどちらかになります。  にもかかわらず半透明の偽装が
-            可能な <guilabel>透明部分のディザリングを行う
-            </guilabel> オプションがあります。 ただしこれよりも 
+            <acronym>GIF</acronym>画像の透明度は 1 ビットに符号化されるので
+            透過するかしないかのどちらかになります。  にもかかわらず半透明の
+            偽装が可能な <guilabel>透明部分のディザリングを行う</guilabel> 
+            オプションがあります。 ただしこれよりも 
             <link linkend="plug-in-semiflatten">半統合</link>
             プラグインのほうがより良好な仕上がりになります。
           </para>

@@ -6,7 +6,7 @@
    2008-06-07 ude: added new sections: Refresh, Console, Server
    2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2009-11-06-->
+<!--2010-12-06-->
 <sect2 id="gimp-filters-script-fu">
   <title lang="en">The <quote>Script-Fu</quote> Submenu</title>
   <title lang="ja"><quote>Script-Fu</quote>サブメニュー</title>
@@ -41,10 +41,10 @@
   </para>
   <para lang="ja">
     <guisubmenu>Script-Fu</guisubmenu> サブメニューには
-    Script-FuコンソールをはじめScript-Fu関連のコマンドが入っています。 
-    <link linkend="gimp-concepts-script-fu">Script-Fu</link> は<acronym>GIMP
-    </acronym>のコマンドを自動的に実行させるスクリプトを書くための言語の一種
-    です。
+    Script-Fu コンソールをはじめ Script-Fu 関連のコマンドが入っています。 
+    <link linkend="gimp-concepts-script-fu">Script-Fu</link> は
+    <acronym>GIMP</acronym>のコマンドを自動的に実行させるスクリプトを
+    書くための言語の一種です。
   </para>
   <sect3>
     <title lang="en">Activating the submenu</title>
@@ -84,17 +84,17 @@
       scripts failes.
     </para>
     <para lang="ja">
-      Script-Fuスクリプトを追加や削除や変更するときにはいつもこのコマンドが必要
-      になることでしょう。 このコマンドを実行するとScript-Fuファイルが読み込み
-      直され、 Script-Fuのメニュー項目を含んでいるメニューは頭から構築し直され
-      ます。 <acronym>GIMP</acronym>は一旦スクリプトを読み込んでしまうと
-      スクリプトの内容が変更されても<acronym>GIMP</acronym>を再起動するまでは
-      感知しないため、 このコマンドを実行しない限りスクリプトの変更を反映でき
-      ません。
+      Script-Fu スクリプトを追加や削除や変更するときにはいつもこのコマンドが
+      必要になることでしょう。 このコマンドを実行すると Script-Fu ファイルが
+      読み込み直され、 Script-Fu のメニュー項目を含んでいるメニューは頭から
+      構築し直されます。 <acronym>GIMP</acronym>は一旦スクリプトを読み込んで
+      しまうとスクリプトの内容が変更されても<acronym>GIMP</acronym>を
+      再起動するまでは感知しないため、 このコマンドを実行しない限り
+      スクリプトの変更を反映できません。
     </para>
     <para lang="ja">
-      ちなみに保存できていないままスクリプトが実行に失敗すると、 フィードバック
-      が何も得られません。<!--???-->
+      ちなみにひとつでもスクリプトに間違いがあると、 保存できていなければ
+      フィードバックが何も得られません。<!--XXX-->
     </para>
   </sect3>
 
@@ -112,11 +112,11 @@
       return value will be displayed in the main window.
     </para>
     <para lang="ja">
-      Script-FuコンソールはScheme言語のコマンドを対話的に試すのに使えます。
+      Script-Fu コンソールは Scheme 言語のコマンドを対話的に試すのに使えます。
     </para>
     <para lang="ja">
       このコンソールには繰り寄せ可能な大きなウィンドウがあり、 その下にある
-      一行入力欄から送られたコマンドの出力が表示されます。 この欄にScheme式
+      一行入力欄から送られたコマンドの出力が表示されます。 この欄に Scheme 式
       命令文を記入して <keycap>Enter</keycap> キーを押すと、 命令文と返された
       値が上のウィンドウに表示されます。
     </para>
@@ -141,12 +141,12 @@
       <link linkend="gimp-using-script-fu-tutorial-scheme">Scheme</link> の
       詳しい案内や
       <xref linkend="gimp-using-script-fu-tutorial"/> での
-      <link linkend="gimp-using-script-fu-tutorial-console">Script-Fuコンソール
-      </link> の使い方の例もご覧ください。
+      <link linkend="gimp-using-script-fu-tutorial-console">Script-Fu 
+      コンソール</link> の使い方の例もご覧ください。
     </para>
     <variablelist>
       <title lang="en">The Script-Fu Console Buttons</title>
-      <title lang="ja">Script-Fuコンソールのボタン</title>
+      <title lang="ja">Script-Fu コンソールのボタン</title>
       <varlistentry>
         <term lang="en">Browse</term>
         <term lang="ja">参照...</term>
@@ -158,7 +158,7 @@
             up, with an additional button at the bottom of the window:
           </para>
           <para lang="ja">
-            <guibutton>参照</guibutton> ボタンはScheme命令の
+            <guibutton>参照</guibutton> ボタンは Scheme 命令の
             記入欄の右隣にあります。 クリックすると 
             <link linkend="plug-in-dbbrowser">プロシージャブラウザ</link> が
             開かれます。 プロシージャブラウザには 
@@ -184,9 +184,9 @@
             text box:
           </para>
           <para lang="ja">
-            プロシージャブラウザの <guibutton>適用
-            </guibutton> ボタンをクリックすると、 ブラウザで選択した手続き命令
-            のコードがコンソールのScheme命令記入欄に貼り付けられます。
+            プロシージャブラウザの <guibutton>適用</guibutton> ボタンを
+            クリックすると、 ブラウザで選択した手続き命令のコードが
+            コンソールの Scheme 命令記入欄に貼り付けられます。
           </para>
           <mediaobject>
             <imageobject>
@@ -228,7 +228,7 @@
           </para>
           <para lang="ja">
             <guibutton>閉じる</guibutton> ボタンをクリック
-            するとScript-Fuコンソールを閉じます。
+            すると Script-Fu コンソールを閉じます。
           </para>
         </listitem>
       </varlistentry>
@@ -242,11 +242,10 @@
             the <guilabel>Save</guilabel> command.
           </para>
           <para lang="ja">
-            <guibutton>クリア</guibutton> ボタンをクリック
-            すると、 主ウィンドウ部分から現在のコマンド出力の表示が消えます。
-            ちなみにコンソール出力に表示された内容は <guibutton>
-            保存</guibutton> していても一旦クリアすると
-            復元ができません。
+            <guibutton>クリア</guibutton> ボタンをクリックすると、 
+            主ウィンドウ部分から現在のコマンド出力の表示が消えます。 ちなみに
+            コンソール出力に表示された内容は <guibutton>保存</guibutton> 
+            していても一旦クリアすると復元ができません。
           </para>
         </listitem>
       </varlistentry>
@@ -282,11 +281,11 @@
     <para lang="ja">
       <guimenuitem>サーバスタート...</guimenuitem> コマンドは
       サーバプログラムを起動します。 起動時に指定したポートを介してサーバに
-      Script-Fu命令 (Scheme言語のコード) を送ると解釈され実行されます。
+      Script-Fu 命令 (Scheme 言語のコード) を送ると解釈され実行されます。
     </para>
     <figure>
       <title lang="en">The Script-Fu Server Options</title>
-      <title lang="ja">Script-Fuサーバオプション</title>
+      <title lang="ja">Script-Fu サーバオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -330,13 +329,13 @@
     </variablelist>
     <itemizedlist>
       <title lang="en">The Script-Fu Server Protocol</title>
-      <title lang="ja">Script-Fuサーバのプロトコル</title>
+      <title lang="ja">Script-Fu サーバのプロトコル</title>
       <para lang="en">
         The protocol used to communicate with the Script-Fu server is very
         simple:
       </para>
       <para lang="ja">
-        Script-Fuサーバと交信するためのプロトコルはとても単純です。
+        Script-Fu サーバと交信するためのプロトコルはとても単純です。
       </para>
       <listitem>
         <para lang="en">
@@ -344,8 +343,8 @@
           the server has to be preceded with the following 3 bytes:
         </para>
         <para lang="ja">
-          サーバに送るメッセージ (Script-Fu命令文) にはいずれもその文字列の長さ
-          <code>L</code> を含むつぎのような3バイトを頭に付加します。
+          サーバに送るメッセージ (Script-Fu 命令文) にはいずれもその文字列の
+          長さ <code>L</code> を含むつぎのような 3 バイトを頭に付加します。
         </para>
         <table>
           <title lang="en">Header format for commands</title>
@@ -405,8 +404,8 @@
         </para>
         <para lang="ja">
           サーバが返すメッセージ (返し値もしくはエラーメッセージ) にはいずれも
-          その文字列の長さ <code>L</code> を含むつぎのような4バイトが付加されて
-          います。
+          その文字列の長さ <code>L</code> を含むつぎのような 4 バイトが
+          付加されています。
         </para>
         <table>
           <title lang="en">Header format for responses</title>
@@ -478,10 +477,12 @@
         command line shell for the Script-Fu server.
       </para>
       <para lang="ja">
-        面倒くさそうですか? それなら<acronym>GIMP</acronym> 2.7 版 (2.8用
-        開発者版) のソースコードに含まれている <application>servertest.py
-        </application> という名前のPythonスクリプトはいかがでしょう。 これは
-        Script-Fuサーバと交信できる単純なコマンドライン端末のプログラムです。
+        面倒くさそうですか? それなら 
+        <application><acronym>GIMP</acronym> 2.7 <application> 版 (2.8 用
+        開発者版) のソースコードに含まれている 
+        <application>servertest.py</application> という名前の Python 
+        スクリプトはいかがでしょう。 これは Script-Fu サーバと交信できる
+        単純なコマンドライン端末のプログラムです。
       </para>
     </tip>
   </sect3>

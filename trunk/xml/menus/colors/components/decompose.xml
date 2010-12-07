@@ -14,7 +14,7 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-25 de added by axel.wernicke
 -->
-<!--2010-10-26-->
+<!--2010-12-05-->
 <sect2 id="plug-in-decompose-registered">
   <title>
     <anchor id="plug-in-decompose"/>
@@ -98,8 +98,8 @@
             <guilabel>Decompose to layers</guilabel> unchecked.
           </para>
           <para lang="ja">
-            <guilabel>分解したチャンネルをレイヤーに展開
-            </guilabel> にチェックなし、 <acronym>RGB</acronym>分解で
+            <guilabel>分解したチャンネルをレイヤーに展開</guilabel> 
+            にチェックなし、 <acronym>RGB</acronym>分解で
             <quote>チャンネル分解</quote>コマンドを適用
           </para>
         </caption>
@@ -128,8 +128,8 @@
             <guilabel>Decompose to layers</guilabel> checked.
           </para>
           <para lang="ja">
-            <guilabel>分解したチャンネルをレイヤーに展開
-            </guilabel> にチェックあり、 <acronym>RGB</acronym>分解で
+            <guilabel>分解したチャンネルをレイヤーに展開</guilabel> 
+            にチェックあり、 <acronym>RGB</acronym>分解で
             <quote>チャンネル分解</quote>コマンドを適用
           </para>
         </caption>
@@ -222,9 +222,9 @@
                   a channel (right-click&gt;Select&gt;Save to a channel).
                 </para>
                 <para lang="ja">
-                  <guimenuitem>RGB</guimenuitem> を選択すると赤緑青のそれぞれの
-                  チャンネルの値を示す灰色階調の3層のレイヤーとグレースケール
-                  およびアルファの2つのチャンネルが生成されます。
+                  <guimenuitem>RGB</guimenuitem> を選択すると赤・緑・青の
+                  それぞれのチャンネルの値を示す灰色濃淡の 3 層のレイヤーと
+                  グレースケールおよびアルファの 2 つのチャンネルが生成されます。
                 </para>
                 <para lang="ja">
                   <link linkend="gimp-tool-threshold">しきい値</link> ツールと
@@ -252,10 +252,10 @@
                   opaque pixels are white.
                 </para>
                 <para lang="ja">
-                  <guimenuitem>RGBA</guimenuitem> を選ぶと画像は<acronym>RGB
-                  </acronym>分解されたチャンネルと元画像で透明度を表していた
-                  アルファ値が加わった4層のレイヤーが生成されます。 完全透明な
-                  画素は黒く、完全不透明な画素は白で表されています。
+                  <guimenuitem>RGBA</guimenuitem> を選ぶと画像は
+                  <acronym>RGB</acronym>分解されたチャンネルと元画像で透明度を
+                  表していたアルファ値が加わった 4 層のレイヤーが生成されます。 
+                  完全透明な画素は黒く、 完全不透明な画素は白で表されています。
                 </para>
               </listitem>
             </varlistentry>
@@ -283,7 +283,7 @@
                 </para>
                 <para lang="ja">
                   <guimenuitem>HSV</guimenuitem> オプションは元画像の色相と
-                  彩度と明度からなる3層のグレースケールレイヤーを生成します。
+                  彩度と明度からなる 3 層のグレースケールレイヤーを生成します。
                 </para>
                 <para lang="ja">
                   <guimenuitem>色相</guimenuitem> レイヤーもグレースケール化
@@ -310,9 +310,10 @@
                   the image's <emphasis>L</emphasis> component.
                 </para>
                 <para lang="ja">
-                  <guimenuitem>HSL</guimenuitem> オプションは <guimenuitem>HSV
-                  </guimenuitem> オプションに似ています。 しかし3層目のレイヤー
-                  は明度 (Value) の 代わりにL成分が元となっています。
+                  <guimenuitem>HSL</guimenuitem> オプションは 
+                  <guimenuitem>HSV</guimenuitem> オプションに似ています。 
+                  しかし 3 層目のレイヤーは明度 (Value) の 
+                  代わりに L 成分が元となっています。
                 </para>
               </listitem>
             </varlistentry>
@@ -329,7 +330,7 @@
                 </para>
                 <para lang="ja">
                   <guimenuitem>CMY</guimenuitem> オプションは画像をイエロー、 
-                  マゼンタ、 シアンの色成分を元に3層のグレースケールレイヤーを
+                  マゼンタ、 シアンの色成分を元に 3 層のグレースケールレイヤーを
                   生成します。
                 </para>
                 <para lang="ja">
@@ -350,9 +351,9 @@
                   softwares with CMYK capabilities.
                 </para>
                 <para lang="ja">
-                  <guimenuitem>CMYK</guimenuitem> オプションは <guimenuitem>CMY
-                  </guimenuitem> オプションと似ていますが、 黒のレイヤーが追加
-                  されます。
+                  <guimenuitem>CMYK</guimenuitem> オプションは 
+                  <guimenuitem>CMY</guimenuitem> オプションと似ていますが、 
+                  黒のレイヤーが追加されます。
                 </para>
                 <para lang="ja">
                   このオプションは<acronym>CMYK</acronym>が扱える印刷ソフト
@@ -408,9 +409,9 @@
                 </para>
                 <para lang="ja">
                   <quote>LAB</quote>分解は<quote>明るさ-色</quote>モデルの一種
-                  です。 ひとつのチャンネルで光度を示し残りの2つのチャンネルで
-                  色を示します。 <quote>L*a*b*</quote>色モデルは <application>
-                  Photoshop</application> で使用されています。
+                  です。 ひとつのチャンネルで光度を示し残りの 2 つのチャンネルで
+                  色を示します。 <quote>L*a*b*</quote>色モデルは 
+                  <application>Photoshop</application> で使用されています。
                 </para>
               </listitem>
             </varlistentry>
@@ -433,24 +434,27 @@
                   Telecommunication Union) applied to the matrix .
                 </para>
                 <para lang="ja">
-                  <acronym>GIMP</acronym>には <guimenuitem>YCbCr ITU R470
-                  </guimenuitem>、 <guimenuitem>YCbCr ITU R709</guimenuitem>、
-                  <guimenuitem>YCbCr ITU R470 256</guimenuitem>、 <guimenuitem>
-                  YCbCr ITU R709 256</guimenuitem> の4種類のチャンネル分解方法
-                  があります。 いずれのオプションも画像の明るさを元にした
-                  グレースケールレイヤーと、 青み、 赤みのそれぞれの色尺を元に
-                  した2層のグレースケールレイヤーを生成します。
+                  <acronym>GIMP</acronym>には 
+                  <guimenuitem>YCbCr ITU R470</guimenuitem>、 
+                  <guimenuitem>YCbCr ITU R709</guimenuitem>、
+                  <guimenuitem>YCbCr ITU R470 256</guimenuitem>、 
+                  <guimenuitem>YCbCr ITU R709 256</guimenuitem> の 4 種類の
+                  チャンネル分解方法があります。 いずれのオプションも画像の
+                  明るさを元にしたグレースケールレイヤーと、 青み、 赤みの
+                  それぞれの色尺を元にした 2 層のグレースケールレイヤーを
+                  生成します。
                 </para>
                 <para lang="ja">
-                  <link linkend="glossary-ycbcr">YCbCr</link>色モデルは
-                  <acronym>YUV</acronym>色モデルの一種です。 <acronym>YUV
-                  </acronym>はデジタルビデオに利用されています (そのはじめは
-                  <acronym>PAL</acronym>アナログビデオでした)。 この色モデルは
-                  ヒトの目が明るさに最も敏感で、 次に色彩の認識が強いことが基に
-                  なっています。 YCbCr分解は変換行列を使用しますが、 4つの
-                  オプションの違いは<acronym>ITU</acronym> (<foreignphrase>
-                  International Telecommunication Union</foreignphrase>: 国際
-                  電気通信連合) が勧告した変換行列の分類に基づいています。
+                  <link linkend="glossary-ycbcr">YCbCr</link> 色モデルは
+                  <acronym>YUV</acronym>色モデルの一種です。 
+                  <acronym>YUV</acronym>はデジタルビデオに利用されています 
+                  (そのはじめは<acronym>PAL</acronym>アナログビデオでした)。 
+                  この色モデルはヒトの目が明るさに最も敏感で、 次に色彩の認識が
+                  強いことが基になっています。 YCbCr 分解は変換行列を使用し
+                  ますが、 4 つのオプションの違いは<acronym>ITU</acronym> 
+                  (<foreignphrase>International Telecommunication 
+                  Union</foreignphrase>: 国際電気通信連合) が勧告した
+                  変換行列の分類に基づいています。
                 </para>
               </listitem>
             </varlistentry>
@@ -471,9 +475,9 @@
             bar.
           </para>
           <para lang="ja">
-            <guilabel>分解したチャンネルをレイヤーに展開
-            </guilabel> オプションにチェックを入れると、 いずれもグレースケール
-            画像が1つ作成され、 指定された色モデルのチャンネルはおのおのがその
+            <guilabel>分解したチャンネルをレイヤーに展開</guilabel> 
+            オプションにチェックを入れると、 いずれもグレースケール画像が
+            1 つ作成され、 指定された色モデルのチャンネルはおのおのがその
             画像のレイヤーになります。 このオプションのチェックを外した場合は
             各チャンネルそれぞれを元にグレースケール画像が生成され、 元の
             チャンネルがよくわかる名前が自動的にその画像ウィンドウのタイトルに
@@ -532,10 +536,10 @@
             plates are lined up.
           </para>
           <para lang="ja">
-            [このオプション名は<acronym>GIMP</acronym>2.8より <guilabel>
-            描画色のピクセルをマーカーとして出力</guilabel>
-            に変更予定です。] このオプションはスペシャリストのために設けられ
-            ました。 <acronym>CMYK</acronym>印刷に関連があります。 ここを有効に
+            [このオプション名は
+            <guilabel>描画色のピクセルをマーカーとして出力</guilabel> に変更
+            予定です。] このオプションはスペシャリストのために設けられました。 
+            <acronym>CMYK</acronym>印刷に関連があります。 ここを有効に
             すると、 元画像で現在の描画色と同じ色をもつ画素がどの生成画像でも
             黒く塗られます。 これはチャンネルを分解してできたそれぞれの画像
             もしくはレイヤーに及びます。 この機能でどのチャンネルでも見える

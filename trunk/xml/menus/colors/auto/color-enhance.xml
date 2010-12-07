@@ -9,7 +9,7 @@
   2006-09-05 text rewritten by scb;  example added by j.h
   2005-11-11 split of from layer-colors.xml by axel.wernicke
 -->
-<!--2009-10-21-->
+<!--2010-12-05-->
 <sect2 id="plug-in-color-enhance">
   <title lang="en">Color Enhance</title>
   <title lang="ja">色強調</title>
@@ -42,13 +42,13 @@
     entry is insensitive and grayed out.
   </para>
   <para lang="ja">
-    <guimenuitem>色強調</guimenuitem> コマンドはレイヤー内で
-    色の彩度の幅を膨らませます。 輝度と色相は変えません。 この処理のために
-    色空間を<acronym>HSV</acronym>空間に変換し、 レイヤー全体から彩度の幅を測定
-    してからできるだけその幅を伸長します。 そのあと色空間を<acronym>RGB
-    </acronym>空間に戻します。 操作の内容は 
-    <link linkend="plug-in-c-astretch">コントラスト伸長</link> に似ています
-    が、 このプラグインは作業を<acronym>HSV</acronym>色空間で行なうため色相が
+    <guimenuitem>色強調</guimenuitem> コマンドはレイヤー内で色の彩度の幅を
+    膨らませます。 輝度と色相は変えません。 この処理のために色空間を
+    <acronym>HSV</acronym>空間に変換し、 レイヤー全体から彩度の幅を測定してから
+    できるだけその幅を伸長します。 そのあと色空間を<acronym>RGB</acronym>空間に
+    戻します。 操作の内容は 
+    <link linkend="plug-in-c-astretch">コントラスト伸長</link> に似ていますが、 
+    このプラグインは作業を<acronym>HSV</acronym>色空間で行なうため色相が
     保たれるところが異なります。 このコマンドの対象は<acronym>RGB</acronym>色
     とインデックス化色の画像です。 画像の色がグレースケールの場合はこのメニュー
     項目は灰色無効となっていて使用できません。
@@ -98,7 +98,8 @@
             histograms before <quote>Color Enhance</quote>.
           </para>
           <para lang="ja">
-            <quote>色強調</quote>適用前の活性レイヤーとその赤緑青のヒストグラム
+            <quote>色強調</quote>適用前の活性レイヤーとその赤・緑・青の
+            ヒストグラム
           </para>
         </caption>
       </mediaobject>
@@ -120,7 +121,7 @@
             what you expect.
           </para>
           <para lang="ja">
-            <quote>色強調</quote>適用後の活性レイヤーとその赤緑青の
+            <quote>色強調</quote>適用後の活性レイヤーとその赤・緑・青の
             ヒストグラム。 予想通りの結果とならないこともよくある。
           </para>
         </caption>
