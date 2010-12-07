@@ -4,7 +4,7 @@
 <!-- section history:
   2009-10-26 ude: created
 -->
-<!--2009-10-28-->
+<!--2010-12-06-->
 <sect2 id="gimp-filters-python-fu" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">The <quote>Python-Fu</quote> Submenu</title>
   <title lang="ja"><quote>Python-Fu</quote>サブメニュー</title>
@@ -38,7 +38,7 @@
     the writing of plug-ins for <acronym>GIMP</acronym>.
   </para>
   <para lang="ja">
-    初期状態のこのサブメニューにはPython-Fuコンソールだけが入っています。
+    初期状態のこのサブメニューには Python-Fu コンソールだけが入っています。
   </para>
   <para lang="ja">
     Python-Fu は
@@ -72,7 +72,7 @@
 
   <sect3 id="python-fu-console">
     <title lang="en">The Python-Fu Console</title>
-    <title lang="ja">Python-Fuコンソール</title>
+    <title lang="ja">Python-Fu コンソール</title>
     <para lang="en">
       The Python-Fu console is a dialog window running a <quote>Python
       shell</quote> (a Python interpreter in interactive mode). This console
@@ -92,24 +92,25 @@
     </para>
     <para lang="ja">
       Python-Fu コンソールはダイアログウィンドウになっていて、 相互対話的に
-      Python言語を実行するインタープリタ<quote>Pythonシェル</quote>がここで
-      稼働しています。 このコンソールでは libgimp が提供する内部<acronym>GIMP
-      </acronym>ライブラリルーチンが使える体制ができています。
+      Python 言語を実行するインタープリタ<quote>Python シェル</quote>がここで
+      稼働しています。 このコンソールでは libgimp が提供する内部
+      <acronym>GIMP</acronym>ライブラリルーチンが使える体制ができています。
     </para>
     <para lang="ja">
-      Python-FuコンソールはPython言語のコマンドを相互対話的にテストするのに
+      Python-Fu コンソールは Python 言語のコマンドを相互対話的にテストするのに
       利用できます。
     </para>
     <para lang="ja">
       このコンソールには大きな縦に繰り寄せられるウィンドウが中央を占めており、 
-      ここで直にPythonコマンドが入力でき、 出力行が表示されます。 Python言語の
-      コマンドを書き込んで <keycap>Enter</keycap> キーを押すとそのコマンドが
-      Pythonインタープリタにより実行されます。 コマンドの実行結果だけでなく
-      その関数返し値や、 あればエラーメッセージもあわせてここに表示されます。
+      ここで直に Python コマンドが入力でき、 出力行が表示されます。 Python 
+      言語のコマンドを書き込んで <keycap>Enter</keycap> キーを押すとその
+      コマンドが Python インタープリタにより実行されます。 コマンドの
+      実行結果だけでなくその関数返し値や、 あればエラーメッセージも
+      あわせてここに表示されます。
     </para>
     <figure>
       <title lang="en">The Python-Fu Console</title>
-      <title lang="ja">Python-Fuコンソール</title>
+      <title lang="ja">Python-Fu コンソール</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -119,7 +120,7 @@
     </figure>
     <variablelist>
       <title lang="en">The Python-Fu Console Buttons</title>
-      <title lang="ja">Python-Fuコンソールのボタン</title>
+      <title lang="ja">Python-Fu コンソールのボタン</title>
       <varlistentry>
         <term lang="en">Save</term>
         <term lang="ja">保存</term>
@@ -132,7 +133,7 @@
           <para lang="ja">
             このコマンドは主ウィンドウに現れたすべての内容を保存します。 
             つまり<quote><code>&gt;&gt;&gt;</code></quote>プロンプトを含む
-            入力行とPython-Fuコンソールに表示される出力の両方がテキスト形式で
+            入力行と Python-Fu コンソールに表示される出力の両方がテキスト形式で
             記録できます。 ボタンをクリックするとファイルブラウザが
             開かれますので保管場所とファイル名を指定してください。"
           </para>
@@ -150,8 +151,8 @@
           <para lang="ja">
             <guibutton>クリア</guibutton> ボタンをクリック
             すると、 主ウィンドウ部分から現在のコマンド出力の表示が消えます。
-            ちなみにコンソール出力に表示された内容は <guibutton>
-            保存</guibutton> していても一旦クリアすると
+            ちなみにコンソール出力に表示された内容は 
+            <guibutton>保存</guibutton> していても一旦クリアすると
             復元ができません。
           </para>
         </listitem>
@@ -207,7 +208,7 @@
           <para lang="ja">
             プロシージャブラウザの <guibutton>適用</guibutton> ボタンをクリック
             すると、 ブラウザ上で選択されている手続き命令のコードがコンソール
-            のPython命令記入欄に貼り付けられます。
+            の Python 命令記入欄に貼り付けられます。
           </para>
           <mediaobject>
             <imageobject>
@@ -249,11 +250,11 @@
           </para>
           <para lang="ja">
             プロシージャのパラメータには説明にある通りの定数値も使えます。 
-            むしろ使うべきです。 例えば<quote>RGB-IMAGE</quote>や<quote>
-            OVERLAY-MODE</quote>があります。 ただしブラウザに現れる名前の
-            ハイフン記号<quote>-</quote>は下線記号 (アンダースコア) <quote>_
-            </quote>に置き換えて、 <code>RGB_IMAGE</code> や <code>
-            OVERLAY_MODE</code> のような表現にしなくてはなりません。
+            むしろ使うべきです。 例えば<quote>RGB-IMAGE</quote>や
+            <quote>OVERLAY-MODE</quote>があります。 ただしブラウザに現れる
+            名前のハイフン記号<quote>-</quote>は下線記号 (アンダースコア) 
+            <quote>_</quote>に置き換えて、 <code>RGB_IMAGE</code> や 
+            <code>OVERLAY_MODE</code> のような表現にしなくてはなりません。
           </para>
           <tip>
             <!-- cf. plug-ins/pygimp/doc/pygimp.html -->
@@ -266,7 +267,7 @@
             <para lang="ja">
               <link linkend="glossary-pdb"><acronym>PDB</acronym></link>
               (<acronym>GIMP</acronym>プロシージャデータベース) から
-              プロシージャを拾い上げる用途ならばPython-Fuに何の制限も
+              プロシージャを拾い上げる用途ならば Python-Fu に何の制限も
               ありません。 上記の例のとおり新しい画像オブジェクトを作成する
               のなら、 次のように記入しましょう。
             </para>

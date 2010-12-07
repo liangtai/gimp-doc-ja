@@ -10,7 +10,7 @@
   2006-02-25 fixed invalid image reference
   2005/10/18 zh_CN removed by romanofski - missing translation
 -->
-<!--2009-09-12-->
+<!--2010-12-06-->
 <sect2 id="gimp-file-save-as">
   <title lang="en">Save as</title>
   <title lang="ja">名前を付けて保存...</title>
@@ -59,26 +59,26 @@
   </para>
   <para lang="ja">
     <guimenuitem>名前を付けて保存...</guimenuitem> コマンドは
-    <quote>画像の保存</quote>ダイアログを開きます。 下図に示すとおり、 その
-    基本的な形状はファイルに名前をつける語句記入欄とその保管場所を選ぶのに
-    使えるブックマークの引き出しリストでできています。 通常ファイルの形式は
-    ファイル名に付けた拡張子で判定 ( <filename class="extension">.jpg
+    <quote>画像の保存</quote>ダイアログを開きます。 下図に示すとおり、 
+    ダイアログの基本的な構成はファイルに名前をつける語句記入欄とその保管場所を
+    選ぶのに使えるブックマークの引き出しリストでできています。 通常ファイルの
+    形式はファイル名に付けた拡張子で判定 ( <filename class="extension">.jpg
     </filename> を付ければ<acronym>JPEG</acronym>形式のファイルに) されます。
     <guilabel>ファイルタイプを選択</guilabel> を使えばその
     ファイル形式の標準的な拡張子とは別の名前をつけられますが、 無用な混乱を
     避けるため絶対に必要な場合を除きこの方法はおすすめできません。
   </para>
   <para lang="ja">
-    ブックマークに入れていないディレクトリに保存したいときは <guilabel>他の
-    フォルダ</guilabel> をクリックしてください。 すると
+    ブックマークに入れていないディレクトリに保存したいときは 
+    <guilabel>他のフォルダ</guilabel> をクリックしてください。 すると
     ダイアログの畳まれていた部分が拡がります。 その中身とブックマークの
     作成法や利用法については
     <link linkend="gimp-using-fileformats">ファイル</link> の節に説明が
     あります。
   </para>
   <para lang="ja">
-    以前に保存したことのある画像を保存するときにファイル名とオプションを
-    そのままで変更したくない場合は代わりに
+    以前に保存したことのある画像を保存するときにファイル名とオプションは
+    そのままで変えるつもりがない場合は代わりに
     <link linkend="gimp-file-save">保存</link> コマンドが使えます。
   </para>
 
@@ -135,16 +135,16 @@
       <filename class="extension">.png</filename>).
     </para>
     <para lang="ja">
-      <quote>画像の保存</quote>ダイアログの形状は[主に]2つの種類があります。
+      <quote>画像の保存</quote>ダイアログの構成は[主に] 2 つの種類があります。
       簡単な方はファイル名の記入欄とその保管場所を選ぶ機能だけでできています。
       ファイルを保存したいディレクトリがブックマークメニューにないときは、
       記入欄に直接そのパスとファイル名をつなげて指定しても構いません。 あるいは
-      <guilabel>別のフォルダ</guilabel> の小さな三角形を
-      クリックすれば大きなフォルダブラウザが拡がったもうひとつの形状に切り
-      替わります。 さらに <guilabel>ファイルタイプを選択
-      </guilabel> の小さな三角形をクリックすればファイルの拡張子 (<filename 
-      class="extension">.xcf</filename> や <filename class="extension">.png
-      </filename>) を指定すれば画像形式を選択できます。
+      <guilabel>別のフォルダ</guilabel> の小さな三角形をクリックすれば大きな
+      フォルダブラウザが拡がったもうひとつの形状に切り替わります。 さらに 
+      <guilabel>ファイルタイプを選択</guilabel> の小さな三角形をクリックすれば
+      ファイルの拡張子 (<filename class="extension">.xcf</filename> や 
+      <filename class="extension">.png</filename>) を指定できるオプションが
+      現れて画像形式を選択できます。
     </para>
     <figure>
       <title lang="en">The basic <quote>File Save</quote> dialog</title>
@@ -188,27 +188,18 @@
           it and clicking on the <guibutton>Remove</guibutton> button.
         </para>
         <para lang="ja">
-          左の <guilabel>場所</guilabel> パネルは2つの部分に
-          分けてとらえてください。 上側の部分は今のユーザの基本ディレクトリと
-          ディスク装置 (ドライブ) が並んでいます。これらはここで加工でき
-          ません。 下側の部分はブックマーク (しおり) です。 ブックマークは追加
-          と削除ができます。 ブックマークを追加するには中央のパネル
-          <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/callouts/2.png"/>
-              </imageobject>
-              <textobject><phrase>(2)</phrase></textobject>
-            </inlinemediaobject>
-          </guiicon>
-          でディレクトリかファイルを探し出してクリックしてから左下の 
-          <guibutton>追加</guibutton> ボタンをクリックして
-          ください。 あるいは中央のパネルで選んだ項目を <mousebutton>第2ボタン
-          </mousebutton> でクリックして出てくる脈絡メニューの <guimenuitem>
-          ブックマークに追加</guimenuitem> コマンドでも追加
-          できます。 ブックマークから削除するにはそのブックマーク項目を
-          クリックしてから <guibutton>削除</guibutton> ボタン
-          をクリックしてください。
+          左の <guilabel>場所</guilabel> パネルは 2 つの部分に分けられます。
+          上側の部分は今のユーザの基本ディレクトリとディスク装置 (ドライブ) が
+          並んでいます。 これらはここで加工できません。 下側の部分は
+          ブックマーク (しおり) です。 ブックマークは追加と削除ができます。 
+          ブックマークを追加するには中央のパネル (2) でディレクトリか
+          ファイルを探し出してクリックしてから左下の 
+          <guibutton>追加</guibutton> ボタンをクリックします。 あるいは中央の
+          パネルで選んだ項目を <mousebutton>第2ボタン</mousebutton> で
+          クリックして出てくる脈絡メニューの 
+          <guimenuitem>ブックマークに追加</guimenuitem> コマンドでも
+          追加できます。 ブックマークから削除するにはそのブックマーク項目を
+          クリックしてから <guibutton>削除</guibutton> ボタンをクリックします。
         </para>
       </listitem>
       <listitem>
@@ -227,26 +218,18 @@
         <para lang="ja">
           中央のパネルには現在のディレクトリ内のファイルやフォルダが列挙されて
           います。 ここでフォルダの項目をダブルクリックすればそのディレクトリに
-          移動できます。 ファイルの項目はクリックするとファイル名記入欄
-          <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/callouts/4.png"/>
-              </imageobject>
-              <textobject><phrase>(4)</phrase></textobject>
-            </inlinemediaobject>
-          </guiicon>
-          にその名前が表示されます。 つぎに <guibutton>保存
-          </guibutton> ボタンをクリックすれば保存できますが、 その前に名前を
-          変更すれば別の名前で保存できます。 ちなみにファイルの項目をダブル
-          クリックすれば直ちに保存できます。
+          移動できます。 ファイルの項目はクリックするとファイル名記入欄 (4) に
+          その名前が表示されます。 つぎに <guibutton>保存</guibutton> ボタンを
+          クリックすれば保存できますが、 その前に名前を変更すれば別の名前で
+          保存できます。 ちなみにファイルの項目をダブルクリックすれば直ちに
+          保存できます。
         </para>
         <para lang="ja">
           お使いのオペレーティングシステムによってはある種のファイルや
           ディレクトリが主に保安上の理由で表示されないようになっています。 中央
           のパネルを <mousebutton>第2ボタン</mousebutton> でクリックすると出て
-          くる脈絡メニューの <guimenuitem>隠しファイルも表示
-          </guimenuitem> を有効にすればこれらも表示されます。
+          くる脈絡メニューの <guimenuitem>隠しファイルも表示</guimenuitem> 
+          を有効にすればこれらも表示されます。
         </para>
       </listitem>
       <listitem>
@@ -262,8 +245,8 @@
           click on the preview to update it.
         </para>
         <para lang="ja">
-          選択された画像は<acronym>GIMP</acronym>で扱える形式ならば <guilabel>
-          プレビュー</guilabel> パネルに見本画像ならびに
+          選択された画像は<acronym>GIMP</acronym>で扱える形式ならば 
+          <guilabel>プレビュー</guilabel> パネルに見本画像ならびに
           ファイルの大きさと解像度や画像の構造の情報が表示されます。
         </para>
         <para lang="ja">
@@ -284,8 +267,8 @@
           <para lang="ja">
             既に保存されている画像の名前を使い、 新たに作成した画像や他の画像
             を保存しようとすると<acronym>GIMP</acronym>は同名のファイルが
-            あることを示唆します。 さらに <guibutton>保存
-            </guibutton> をクリックするとそのファイルに上書きします。
+            あることを示唆します。 さらに <guibutton>保存</guibutton> 
+            をクリックするとそのファイルに上書きします。
           </para>
         </note>
       </listitem>
@@ -334,18 +317,10 @@
         </para>
         <para lang="ja">
           このメニューは規定では <guimenuitem>すべての画像</guimenuitem> を
-          選んでいます。 このときは中央のパネル
-          <guiicon>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="images/callouts/2.png"/>
-              </imageobject>
-              <textobject><phrase>(2)</phrase></textobject>
-            </inlinemediaobject>
-          </guiicon>
-          で現在のディレクトリ内の全てのフォルダと全ての画像ファイルの名前が
-          表示されるようになっています。 このリストを展開して表示したい画像
-          ファイル形式を選べば表示を限定できます。
+          選んでいます。 このときは中央のパネル (2) で現在のディレクトリ内の
+          すべてのフォルダとすべての画像ファイルの名前が表示されるように
+          なっています。 このリストを展開して表示したい画像ファイル形式を
+          選べば表示を限定できます。
         </para>
       </listitem>
       <listitem>
