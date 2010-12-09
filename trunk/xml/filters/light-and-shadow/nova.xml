@@ -10,7 +10,7 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-04 de added by axel.wernicke
 -->
-<!--2010-09-13-->
+<!--2010-12-09-->
 <sect2 id="plug-in-nova">
   <title lang="en">Supernova</title>
   <title lang="ja">超新星...</title>
@@ -68,7 +68,7 @@
       <guimenuitem>超新星...</guimenuitem> フィルタは生まれた
       ばかりの輝く恒星&mdash;超新星を思い起こさせる大きな星を描きます。 
       <acronym>RGB</acronym>画像かグレースケール画像で作動できます。 光の効果は
-      星の中心からの距離 r に反比例して減少してゆきます。
+      星の中心からの距離 <parameter>r</parameter> に反比例して減少してゆきます。
     </para>
   </sect3>
 
@@ -203,8 +203,8 @@
           <para lang="ja">
             ここでは超新星の中心で輝く玉の半径を 1 から 100 の範囲 (ピクセル
             単位) で設定できます。 この値を大きくすると中央の白い玉の画素数が
-            半径の2乗 r&times;r に比例して 1、 4、 9、 16、 &hellp; 9801、 
-            10000 と増加します。
+            半径の 2 乗 <parameter>r</parameter>&times;<parameter>r</parameter>
+            に比例して 1、 4、 9、 16、 &hellp; 9801、 10000 と増加します。
           </para>
         </listitem>
       </varlistentry>

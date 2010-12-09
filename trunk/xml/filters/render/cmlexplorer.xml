@@ -10,7 +10,7 @@
   2005-10-07 en;fr by j.h
   2005-09-21 created by axel.wernicke
 -->
-<!--2010-09-13-->
+<!--2010-12-10-->
 <sect2 id="plug-in-cml-explorer">
   <title lang="en">CML Explorer</title>
   <title lang="ja"><acronym>CML</acronym> エクスプローラ...</title>
@@ -158,10 +158,10 @@
               乱数が模様の作成に大きな役割を果たしています。 これらのボタンの
               どれもが乱数発生に関わります。 <guibutton>新しい種</guibutton>
               ボタンをクリックすると乱数発生源を新たにし、 その乱数を使うように
-              します。 プレビュー画面にはその成果がすぐ現れます。 <guibutton>
-              固定種</guibutton> ボタンをクリックすると乱数種に同じ値を使い
-              続けるようにしますので、 フィルタは同一の効果を繰り返し発揮
-              します。 <guibutton>乱数種</guibutton> ボタンをクリックすると
+              します。 プレビュー画面にはその成果がすぐ現れます。 
+              <guibutton>固定種</guibutton> ボタンをクリックすると乱数種に同じ
+              値を使い続けるようにしますので、 フィルタは同一の効果を繰り返し
+              発揮します。 <guibutton>乱数種</guibutton> ボタンをクリックすると
               無作為に新たな乱数種を発生します。
             </para>
           </listitem>
@@ -326,13 +326,13 @@
             <para lang="ja">
               このオプションは色相を基に合成を行ないます。 いずれかを
               選んでください。 <quote><parameter>x</parameter></quote>は色相の
-              値を 256 で除算したもの (0.0 から 1.0 まで) であり、 <quote>d
-              </quote>は 256 分の 1 です。 <quote><parameter>x</parameter>
-              </quote>の値そのものかもしくは<quote>d</quote>を加減した値と、 
-              先に選んだ関数により得られた値との大小比較を行なって、 大きい方の
-              値Maxか小さい方の値Minをとります。
-              <guimenuitem>なし</guimenuitem> は先に選んだ関数により得られた値
-              をそのまま使います。
+              値を 256 で除算したもの (0.0 から 1.0 まで) であり、 
+              <quote>d</quote>は 256 分の 1 です。 
+              <quote><parameter>x</parameter></quote>の値そのものかもしくは
+              <quote>d</quote>を加減した値と、 先に選んだ関数により得られた値
+              との大小比較を行なって、 大きい方の値 Max か小さい方の値 Min を
+              とります。 <guimenuitem>なし</guimenuitem> は先に選んだ関数により
+              得られた値をそのまま使います。
               これらの関数の組み合わせ全ての結果を載せるとなると一冊の本が
               できあがってしまうことになりますので、 申しわけありませんが
               ご自分でその効果を確かめてください。
@@ -425,9 +425,9 @@
             </para>
             <para lang="ja">
               このオプションの値が前述の <guilabel>関数の種類</guilabel> で
-              選んだ関数に影響するパラメータ<quote><parameter>p</parameter>
-              </quote>です。 このスライダの値は 0.0 から 10.0 までの
-              範囲があります。
+              選んだ関数に影響するパラメータ
+              <quote><parameter>p</parameter></quote>です。 このスライダの
+              値は 0.0 から 10.0 までの範囲があります。
             </para>
           </listitem>
         </varlistentry>
@@ -442,9 +442,9 @@
             </para>
             <para lang="ja">
               このオプションの値が前述の <guilabel>関数の種類</guilabel> で
-              選んだ関数に影響するパラメータ<quote><parameter>k</parameter>
-              </quote>です。 このスライダの値は 0.0 から 10.0 までの
-              範囲があります。
+              選んだ関数に影響するパラメータ
+              <quote><parameter>k</parameter></quote>です。 このスライダの
+              値は 0.0 から 10.0 までの範囲があります。
             </para>
           </listitem>
         </varlistentry>
@@ -593,7 +593,7 @@
         These tab settings apply to the three HSV channels.
       </para>
       <para lang="ja">
-        このタブでは<acronym>HSV</acronym>色モデルの3つのチャンネルごとに
+        このタブでは<acronym>HSV</acronym>色モデルの 3 つのチャンネルごとに
         感度と変化の割合や幅の絞りを調節します。
       </para>
       <variablelist>
@@ -704,9 +704,9 @@
         In this tab you can find various options about copy and loading.
       </para>
       <para lang="ja">
-        このタブでは<quote>色相</quote>、 <quote>彩度</quote>、 <quote>
-        明度</quote>のタブで相互に設定値を転写する操作と、 設定ファイルから
-        転写先を変更して読み込む操作ができます。
+        このタブでは<quote>色相</quote>、 <quote>彩度</quote>、 
+        <quote>明度</quote>のタブで相互に設定値を転写する操作と、 
+        設定ファイルから転写先を変更して読み込む操作ができます。
       </para>
       <variablelist>
         <varlistentry>
@@ -718,10 +718,11 @@
               one of the HSV channel to another one.
             </para>
             <para lang="ja">
-              これらのオプションは<acronym>HSV</acronym>のいずれかのチャンネル
-              から他のチャンネルへ設定値をやりとりします。 <guilabel>
-              コピー元チャンネル</guilabel> と <guilabel>コピー先チャンネル</guilabel> を
-              それぞれ選んで <guibutton>パラメータをコピーする</guibutton> 
+              これらのオプションは<acronym>HSV</acronym>のいずれかの
+              チャンネルから他のチャンネルへ設定値をやりとりします。 
+              <guilabel>コピー元チャンネル</guilabel> と 
+              <guilabel>コピー先チャンネル</guilabel> をそれぞれ選んで 
+              <guibutton>パラメータをコピーする</guibutton> 
               ボタンをクリックすると転写が実行されます。
             </para>
           </listitem>

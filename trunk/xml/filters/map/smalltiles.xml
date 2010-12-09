@@ -6,7 +6,7 @@
   2007-05-07 KoSt: added 'no'
   2005-11-15: created by julien hardelin
 -->
-<!--2010-07-31-->
+<!--2010-12-09-->
 <sect2 id="plug-in-small-tiles">
   <title lang="en">Small Tiles</title>
   <title lang="ja">小さくして並べる...</title>
@@ -61,9 +61,8 @@
       displays it in many copies inside the original image.
     </para>
     <para lang="ja">
-      <guimenuitem>小さくして並べる...</guimenuitem> フィルタ
-      は画像のレイヤーもしくはその選択範囲の縮小した複製を多数作成して元画像上
-      に並べます。
+      <guimenuitem>小さくして並べる...</guimenuitem> フィルタは画像のレイヤー
+      もしくはその選択範囲の縮小した複製を多数作成して元画像上に並べます。
     </para>
   </sect3>
 
@@ -213,10 +212,12 @@
             make nine tiles in the image.
           </para>
           <para lang="ja">
-            <guilabel><accel>n</accel>2<!--<superscript>2</superscript>--></guilabel>
-            とはスライダや付属する数値記入欄で示された値<quote>n</quote>を 2 乗
-            した数のタイルで画像を分割することを表しています。 n = 3 なら画像は
-            縦 3 行横 3 列の 9 枚のタイルからなる構成に変わります。
+            <!--<guilabel><accel>n</accel><superscript>2</superscript></guilabel>-->
+            <guilabel><accel>n</accel>²</guilabel> とはスライダや付属する
+            数値記入欄で示された値 <parameter>n</parameter> を 2 乗した数の
+            タイルで画像を分割することを表しています。 
+            <parameter>n</parameter> = 3 なら画像は縦 3 行横 3 列の 9 枚の
+            タイルからなる構成に変わります。
           </para>
         </listitem>
       </varlistentry>
