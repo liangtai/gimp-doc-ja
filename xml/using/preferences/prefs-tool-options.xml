@@ -7,7 +7,7 @@
   2006-11-01 lexa: made the file docbook compliant
   2008-01-28 jpl: update text & images
 -->
-<!--2009-11-21-->
+<!--2010-12-11-->
 <sect2 id="gimp-prefs-tool-options">
   <title lang="en">Tool Options</title>
   <title lang="ja">ツールオプション</title>
@@ -108,24 +108,24 @@
             snapped onto it, in pixels.
           </para>
         <para lang="ja">
-            ガイド (見当線) やグリッド (升目) に<quote>吸い付かせる (スナップ)
-            </quote>とは、 何かツールで画像表示のどこかをクリックしたときに、
-            その位置がガイドや升目の格子線に十分近い場合に、 その線上にクリック
-            地点を移すことをさしています。 ガイドへ<quote>吸い付かせる</quote>
-            か否かは、 メニューの
+            ガイド (見当線) やグリッド (格子線) に<quote>スナップ</quote> (吸い
+            付かせる) とは、 何らかのツールで画像表示のどこかを適当にクリック
+            したときに、 クリック位置がガイドやグリッドに十分近ければ、 
+            ひとりでに位置がずれてその線上でクリックしたことになる機能です。 
+            ガイドへ<quote>吸い付かせる</quote>か否かは、 メニューの
             <menuchoice>
               <guimenu>表示</guimenu>
               <guimenuitem>ガイドにスナップ</guimenuitem>
             </menuchoice>
-            で切り替えられます。 升目表示を有効にしている場合に、 そこに<quote>
-            吸い付かせる</quote>か否かは、 メニューの
+            で切り替えられます。 グリッド表示を有効にしている場合に、 そこに
+            <quote>吸い付かせる</quote>か否かは、 メニューの
             <menuchoice>
               <guimenu>表示</guimenu>
               <guimenuitem>グリッドにスナップ</guimenuitem>
             </menuchoice>
-            で切り替えられます。 またこの環境設定オプションではクリック地点を
-            <quote>吸い付かせる</quote>にはどの程度の距離までガイドや升目格子線
-            に近づける必要があるかを、 ピクセル単位で指定できます。
+            で切り替えられます。 またこの環境設定オプションでは、 クリック
+            地点を<quote>吸い付かせる</quote>にはどの程度の距離までガイドや
+            グリッドの線に近づく必要があるかを、 ピクセル単位で指定できます。
         </para>
         </listitem>
       </varlistentry>
@@ -145,8 +145,9 @@
             Tool Options dialog.
           </para>
           <para lang="ja">
-            描画されたものを拡大もしくは縮小すると、 結果の画素はいずれも元画像
-            のいくつかの画素を補間計算してつくられます。 このオプションは既定の
+            [ラスター画像に]描画されたものを拡大もしくは縮小すると、 できた
+            結果の画素はいずれも元画像のいくつかの画素が補間計算されて
+            つくられます。 このオプションは既定の
             <link linkend="glossary-interpolation">補間方法</link> を
             定めますが、 拡大・縮小ツールではツールオプションの
             <guilabel>補間アルゴリズム</guilabel> で、 拡大・縮小ダイアログでは
@@ -154,7 +155,7 @@
           </para>
           <variablelist>
             <para lang="en">There are four choices:</para>
-            <para lang="en">つぎの4つの選択肢があります。</para>
+            <para lang="en">つぎの 4 つの選択肢があります。</para>
             <varlistentry>
               <term lang="en">None</term>
               <term lang="ja">補間しない</term>
@@ -196,9 +197,10 @@
                   default.
                 </para>
                 <para lang="ja">
-                  最高なのはこの方法  (ただし実際はある種の画像においては線形に
-                  劣ります) ですが、 処理が最も遅くなります。 <acronym>GIMP
-                  </acronym> 2.6 よりこの方法が既定に据えられています。
+                  最高なのはこの方法です (ただし実際はある種の画像においては
+                  線形に劣る) が、 処理が最も遅くなります。 
+                  <application><acronym>GIMP</acronym> 2.6</application> より
+                  この方法が既定に据えられています。
                 </para>
               </listitem>
             </varlistentry>
