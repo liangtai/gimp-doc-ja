@@ -8,7 +8,7 @@
   2006-11-01 lexa: made the file docbook compliant
   2008-01-28 jpl: update text & images
 -->
-<!--2009-09-15-->
+<!--2010-12-11-->
 <sect2 id="gimp-prefs-environment">
   <title lang="en">Environment</title>
   <title lang="ja">環境</title>
@@ -78,10 +78,11 @@
           <para lang="ja">
             <acronym>GIMP</acronym>はほとんどの操作が取り消せるようにするため、
             各画像ごとに<quote>操作履歴</quote>を保持していますが、 その目的で
-            一定量のメモリを割り当てることになります。 ただし<acronym>GIMP
-            </acronym>はメモリの総消費量を無視してでも直近の操作には最小限の
-            取り消し手数を確保します。 その手数はここで指定します。
-            <acronym>GIMP</acronym>の操作履歴機能についてのさらなる情報が
+            一定量のメモリを割り当てることになります。 ただし
+            <acronym>GIMP</acronym>はメモリの総消費量を無視してでも直近の
+            操作には最小限の取り消し手数を確保します。 その手数はここで
+            指定します。<acronym>GIMP</acronym>の操作履歴機能についての
+            さらなる情報が
             <xref linkend="gimp-concepts-undo"/> にあります。
           </para>
         </listitem>
@@ -94,7 +95,7 @@
             Default is one. Your computer may have more than one processor.
           </para>
           <para lang="ja">
-            初期値は1つです。 複数の中央演算処理装置を備えたコンピュータで
+            初期値は 1 つです。 複数の中央演算処理装置を備えたコンピュータで
             指定します。 <option>--disable-mp</option> としてビルドした場合は
             このオプションはありません。
           </para>
@@ -111,8 +112,8 @@
             minimal number specified above.
           </para>
           <para lang="ja">
-            これは各画像ごとに割り当てる操作履歴のためのメモリ量の仮の上限
-            です。 操作履歴がこの容量を越すと、 最も古い操作の記録から順に
+            これは各画像ごとに割り当てる操作履歴のためのメモリ量の仮の
+            上限です。 操作履歴がこの容量を越すと、 最も古い操作の記録から順に
             削除されることになりますが、 もし履歴の手数が上記の最小エントリ数を
             下回るようならば削除しません。
           </para>
@@ -180,10 +181,11 @@
             </para>
           <para lang="ja">
             このオプションは<quote>ファイルを開く</quote>ダイアログで見られる
-            縮小見本画像の大きさを設定するものです (これらは保存され他の
-            プログラムでも使用されます)。 <guimenuitem>サムネイルなし
-            </guimenuitem>、 <guimenuitem>標準 (128x128)</guimenuitem>、
-            <guimenuitem>大 (256x256)</guimenuitem> の3つの選択肢があります。
+            縮小見本画像の大きさを設定するものです。 (これらは保存され他の
+            プログラムでも使用されます。) 
+            <guimenuitem>サムネイルなし</guimenuitem>、
+            <guimenuitem>標準 (128x128)</guimenuitem>、
+            <guimenuitem>大 (256x256)</guimenuitem> の 3 つの選択肢があります。
           </para>
         </listitem>
       </varlistentry>
