@@ -7,7 +7,7 @@
   2006-07-23 note added about the Scale tool by j.h
   2005/06/18 en Link added
 -->
-<!--2010-12-06-->
+<!--2010-12-15-->
 <sect2 id="gimp-image-scale">
   <title lang="en">Scale Image</title>
   <title lang="ja">画像の拡大・縮小...</title>
@@ -183,9 +183,9 @@
           </para>
           <para lang="ja">
             画像を引き伸ばして拡大すると<acronym>GIMP</acronym>は不足する画素を
-            補完により算出しますが、 それで画像がより詳細になるわけではあり
+            補間により算出しますが、 それで画像がより詳細になるわけではあり
             ません。 画像は拡大を進めるにつれ不鮮明になってゆきます。 拡大
-            された画像の見た目の質は選択した補完方法によって違ってきます。
+            された画像の見た目の質は選択した補間方法によって違ってきます。
             <link linkend="plug-in-sharpen">鮮鋭化</link> 強調フィルタを使えば
             拡大した画像も多少は見栄えがよくなりますが、 スキャナで取り込むに
             しろデジタル写真を撮るにしろ画像をデジタル作成するにしろやはり始め
@@ -287,13 +287,13 @@
           <para lang="ja">
             画像の大きさを変更すると画素の削除または追加のいずれかが必ず起こり
             ます。 その処理方法いかんで仕上がりの品質が変わってきます。 
-            <guilabel>補完方法</guilabel> の引き出しリストで拡大・縮小を受けた
-            画像の画素の色を補完するのに使える処理方法が選択できます。
+            <guilabel>補間方法</guilabel> の引き出しリストで拡大・縮小を受けた
+            画像の画素の色を補間するのに使える処理方法が選択できます。
           </para>
           <variablelist>
             <varlistentry>
               <term lang="en">Interpolation</term>
-              <term lang="ja">補完方法</term>
+              <term lang="ja">補間方法</term>
               <listitem>
                 <itemizedlist>
                   <listitem>
@@ -304,7 +304,7 @@
                       quality, but very fast.
                     </para>
                     <para lang="ja">
-                      <guilabel>補完しない</guilabel>: 補完は行なわれません。 
+                      <guilabel>補間しない</guilabel>: 補間は行なわれません。 
                       あたかも拡大表示のような画素の拡張や削除がなされるだけ
                       です。 この方式の品質は最低ですが非常に高い処理速度が
                       出ます。
