@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2010-10-06 07:32+0900\n"
-"PO-Revision-Date: 2010-12-08 06:42+0900\n"
+"POT-Creation-Date: 2010-12-20 07:50+0900\n"
+"PO-Revision-Date: 2010-12-20 19:41+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -127,7 +127,7 @@ msgstr ""
 #: src/toolbox/zoom.xml:102(title) src/toolbox/text.xml:104(title)
 #: src/toolbox/path.xml:113(title) src/toolbox/measure.xml:170(title)
 #: src/toolbox/gegl-operation.xml:70(title)
-#: src/toolbox/color-picker.xml:132(title)
+#: src/toolbox/color-picker.xml:133(title)
 msgid "Options"
 msgstr "オプション"
 
@@ -1452,13 +1452,13 @@ msgstr "パスの境界線を描画"
 msgid ""
 "In previous versions, you could access to this command only by the Edit sub-"
 "menu in the Image Menu. Now you can access to it also via this button. See "
-"<link linkend=\"gimp-path-stroke\">Stroke Path</link> and <link linkend="
-"\"gimp-using-paths\">Stroke Path</link>."
+"<xref linkend=\"gimp-path-stroke\"/> and <xref linkend=\"gimp-using-paths\"/"
+">."
 msgstr ""
 "<acronym>GIMP</acronym>の旧版では画像ウィンドウのメニューの編集サブメニューを"
-"通してしかこのコマンドを発することができませんでしたが、 今ではこのボタンも使"
-"えます。 <link linkend=\"gimp-path-stroke\">パスの境界線を描画</link> もご覧"
-"ください。"
+"通してしかこのコマンドを呼び出せませんでしたが、 今ではこのボタンも使えま"
+"す。 <xref linkend=\"gimp-path-stroke\"/> や <xref linkend=\"gimp-using-"
+"paths\"/> もご覧ください。"
 
 #: src/toolbox/path.xml:348(para)
 msgid ""
@@ -2302,7 +2302,7 @@ msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/toolbox/color-picker.xml:138(None)
+#: src/toolbox/color-picker.xml:139(None)
 msgid ""
 "@@image: 'images/toolbox/color-picker-options.png'; "
 "md5=3e6925f8895c972c889b65679f168232"
@@ -2310,7 +2310,7 @@ msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/toolbox/color-picker.xml:228(None)
+#: src/toolbox/color-picker.xml:229(None)
 msgid ""
 "@@image: 'images/toolbox/color-picker-info.png'; "
 "md5=2b90e2cbaae378e7c88a82642c1d3b9c"
@@ -2415,23 +2415,24 @@ msgstr ""
 
 #: src/toolbox/color-picker.xml:120(para)
 msgid ""
-"The <link linkend=\"gimp-pointer-info-dialog\">Pointer window</link> gives "
-"you the same information permanently. But be weary it defaults to "
+"The <link linkend=\"gimp-pointer-info-dialog\">Pointer Information</link> "
+"gives you the same information permanently. But be warned, it defaults to "
 "<guilabel>Sample merged</guilabel>."
 msgstr ""
 "<link linkend=\"gimp-pointer-info-dialog\">ピクセル情報</link> ダイアログを使"
-"えば恒常的に同様な情報を得られます。 ただし開いた直後は <guilabel>レイヤー結"
-"合色</guilabel> が既定なのが玉にキズですが。"
+"えば恒常的に同様な情報を得られます。 ただし開いた直後は初期設定で "
+"<guilabel>レイヤー結合色</guilabel> を採るようになっているのでご注意くださ"
+"い。"
 
-#: src/toolbox/color-picker.xml:134(title)
+#: src/toolbox/color-picker.xml:135(title)
 msgid "Color Picker Options"
 msgstr "<quote>スポイト</quote>ツールのツールオプション"
 
-#: src/toolbox/color-picker.xml:147(term)
+#: src/toolbox/color-picker.xml:148(term)
 msgid "Sample Merged"
 msgstr "レイヤー結合色"
 
-#: src/toolbox/color-picker.xml:149(para)
+#: src/toolbox/color-picker.xml:150(para)
 msgid ""
 "The Sample Merged check-box when enabled will take color information as a "
 "composite from all the visible layers. Further information regarding Sample "
@@ -2448,11 +2449,11 @@ msgstr ""
 "関わりなしに色の情報が現れます。 レイヤーの領域外は便宜的に透けて見えない黒が"
 "示されます。</para></note>"
 
-#: src/toolbox/color-picker.xml:159(term)
+#: src/toolbox/color-picker.xml:160(term)
 msgid "Sample Average"
 msgstr "色の平均を取る"
 
-#: src/toolbox/color-picker.xml:161(para)
+#: src/toolbox/color-picker.xml:162(para)
 msgid ""
 "The <guilabel>Radius</guilabel> slider adjusts the size of the square area "
 "that is used to determine an average color for the final selection. When you "
@@ -2463,26 +2464,26 @@ msgstr ""
 "必要な正方形の領域の大きさを定めます。 クリックしている短い時間にマウスポイン"
 "タの姿がその大きさの正方形に変化します。"
 
-#: src/toolbox/color-picker.xml:170(term)
+#: src/toolbox/color-picker.xml:171(term)
 msgid "Pick Mode"
 msgstr "スポイトモード"
 
-#: src/toolbox/color-picker.xml:174(term)
+#: src/toolbox/color-picker.xml:175(term)
 msgid "Pick Only"
 msgstr "スポイト情報のみ"
 
-#: src/toolbox/color-picker.xml:176(para)
+#: src/toolbox/color-picker.xml:177(para)
 msgid ""
 "The color of the selected pixel will be shown in an Information Dialog, but "
 "not otherwise used."
 msgstr ""
 "選択した画素の色が情報ダイアログで表示されますが、 それ以外には何もしません。"
 
-#: src/toolbox/color-picker.xml:183(term)
+#: src/toolbox/color-picker.xml:184(term)
 msgid "Set Foreground Color"
 msgstr "描画色に設定"
 
-#: src/toolbox/color-picker.xml:185(para)
+#: src/toolbox/color-picker.xml:186(para)
 msgid ""
 "The Foreground color, as shown in the Toolbox Color Area, will be set to the "
 "color of the pixel you click on."
@@ -2490,11 +2491,11 @@ msgstr ""
 "ツールボックスの色標識にも示されている描画色には、 このツールでクリックした画"
 "素の色が入ります。"
 
-#: src/toolbox/color-picker.xml:193(term)
+#: src/toolbox/color-picker.xml:194(term)
 msgid "Set Background Color"
 msgstr "背景色に設定"
 
-#: src/toolbox/color-picker.xml:195(para)
+#: src/toolbox/color-picker.xml:196(para)
 msgid ""
 "The Background color, as shown in the Toolbox Color Area, will be set to the "
 "color of the pixel you click on."
@@ -2502,11 +2503,11 @@ msgstr ""
 "ツールボックスの色標識にも示されている背景色には、 このツールでクリックした画"
 "素の色が入ります。"
 
-#: src/toolbox/color-picker.xml:203(term)
+#: src/toolbox/color-picker.xml:204(term)
 msgid "Add to Palette"
 msgstr "パレットに追加"
 
-#: src/toolbox/color-picker.xml:205(para)
+#: src/toolbox/color-picker.xml:206(para)
 msgid ""
 "When this option box is checked, the picked color is sent to the active "
 "color palette. See <link linkend=\"gimp-palette-editor-dialog\">Palette "
@@ -2515,11 +2516,11 @@ msgstr ""
 "このオプションを選ぶと、 採られた色は色パレットに送られます。 <link linkend="
 "\"gimp-palette-editor-dialog\">パレット編集</link> もご覧ください。"
 
-#: src/toolbox/color-picker.xml:216(term)
+#: src/toolbox/color-picker.xml:217(term)
 msgid "Use info window"
 msgstr "情報ウィンドウを使用"
 
-#: src/toolbox/color-picker.xml:218(para)
+#: src/toolbox/color-picker.xml:219(para)
 msgid ""
 "When this option is checked, the information window is opened automatically. "
 "The <keycap>Shift</keycap> key allows you to toggle this possibility "
@@ -2529,7 +2530,7 @@ msgstr ""
 "す。 <keycap>Shift</keycap> キーを押している間はこの指定が一時的に反転しま"
 "す。"
 
-#: src/toolbox/color-picker.xml:224(title)
+#: src/toolbox/color-picker.xml:225(title)
 msgid "Color Picker Info Window"
 msgstr "スポイト情報ウィンドウ"
 

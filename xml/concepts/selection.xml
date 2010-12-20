@@ -14,7 +14,7 @@
   2005-11-28 lexa: replaced informalfigures by figures
   050905: Added Making a selection semi-transparente
 -->
-<!--2010-11-17-->
+<!--2010-12-20-->
 <sect1 id="gimp-concepts-selection">
   <title lang="en">The Selection</title>
   <title lang="ja">選択</title>
@@ -184,7 +184,7 @@
     </mediaobject>
   </figure>
 
-  <sect2>
+  <sect2 id="gimp-concepts-selection-feathering">
     <title lang="en">Feathering</title>
     <title lang="ja">境界のぼかし</title>
     <para lang="en">
@@ -216,14 +216,13 @@
         <guimenu>Select</guimenu>
         <guimenuitem>Feather</guimenuitem>
       </menuchoice>
-      from the image menu to open the Feather Selection dialog.
-      Set the feather radius and click OK.
-      This brings up a dialog that allows you to set the feather radius. Use
+      from the image menu to open the Feather Selection dialog. Set the 
+      feather radius and click <guibutton>OK</guibutton>. Use
       <menuchoice>
         <guimenu>Select</guimenu>
         <guimenuitem>Sharpen</guimenuitem>
       </menuchoice>
-      do the opposite&mdash;sharpen a graduated selection into an
+      to do the opposite&mdash;sharpen a graduated selection into an
       all-or-nothing selection&mdash;.
     </para>
     <para lang="ja">
@@ -247,13 +246,14 @@
     </para>
     <para lang="ja">
       選択はいつでもその境界をぼかすことができます。 つまり具体的には、 元は
-      明瞭な線でできていた選択をあとからぼかせるということです。 その方法は
+      明瞭な線でできていた選択をあとからぼかせるということです。 その方法は、
       画像ウィンドウのメニューから
       <menuchoice>
         <guimenu>選択</guimenu>
         <guimenuitem>境界をぼかす...</guimenuitem>
       </menuchoice>
-      に進んで実行です。 出てきたダイアログで線をぼかす量が調節できます。
+      に進んで<quote>選択範囲の境界をぼかす</quote>ダイアログウィンドウを開き、
+      線をぼかす量を調節してから <guibutton>OK</guibutton> をクリックします。
       その逆に画像ウィンドウのメニューから
       <menuchoice>
         <guimenu>選択</guimenu>
@@ -276,7 +276,7 @@
     </note>
   </sect2>
 
-  <sect2>
+  <sect2 id="gimp-concepts-selection-transparent">
     <title lang="en">Making a Selection Partially Transparent</title>
     <title lang="ja">不完全透過な選択の作成</title>
     <para lang="en">
