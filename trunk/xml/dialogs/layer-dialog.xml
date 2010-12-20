@@ -10,7 +10,7 @@
   2006-03-09 lexa: reviewed and spellchecked german version
   2005-11-04 reviewed by axel.wernicke
 -->
-<!--2010-12-13-->
+<!--2010-12-20-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-layer-dialog">
   <title lang="en">Layers Dialog</title>
   <title lang="ja">レイヤーダイアログ</title>
@@ -326,26 +326,26 @@
           </note>
         </listitem>
       </varlistentry>
-      <varlistentry>
+      <varlistentry id="gimp-layer-characteristics">
         <term lang="en">Layers characteristics</term>
         <term lang="ja">レイヤーの特徴</term>
         <listitem>
           <para lang="en">
             Above the layer list, it is possible to specify some properties
             for the active layer. The active layer is the one highlighted in
-            blue. The properties are : "Layer mode", "Lock Alpha channel", and
-            "Opacity".
+            blue. The properties are : <quote>Layer mode<quote>,
+            <quote>Opacity<quote>, and <quote>Lock Alpha channel<quote>.
           </para>
           <para lang="ja">
             レイヤーの一覧表より上に現在活性化しているレイヤーの属性のいくつか
             を指定する項目があります。 活性化レイヤーは下図で青く強調表示されて
             います。 <guilabel>モード</guilabel>、 
-            <guilabel>透明保護</guilabel>、 <guilabel>不透明度</guilabel> の
+            <guilabel>不透明度</guilabel>、 <guilabel>透明保護</guilabel> の
             3 つの属性があります。
           </para>
           <variablelist>
             <varlistentry id="gimp-layer-dialog-paint-mode-menu">
-              <term lang="en">Layer modes</term>
+              <term lang="en">Modes</term>
               <term lang="ja">モード</term>
               <listitem>
                 <para lang="en">
@@ -361,6 +361,42 @@
                   呼び出せます。
                   <xref linkend="gimp-concepts-layer-modes"/>
                   でレイヤーのモードを逐一解説しています。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry id="gimp-layer-dialog-opacity-scale">
+              <term lang="en">Opacity</term>
+              <term lang="ja">不透明度</term>
+              <listitem>
+                <indexterm lang="en">
+                  <primary>Transparency</primary>
+                  <secondary>Layer opacity</secondary>
+                </indexterm>
+                <indexterm lang="en">
+                  <primary>Opacity</primary>
+                  <secondary>Layers dialog</secondary>
+                </indexterm>
+                <indexterm lang="ja">
+                  <primary sortas="トウカコウカ">透過効果</primary>
+                  <secondary sortas="レイヤーノフトウメイド">
+                    レイヤーの不透明度
+                  </secondary>
+                </indexterm>
+                <indexterm lang="ja">
+                  <primary sortas="フトウメイド">不透明度</primary>
+                  <secondary>レイヤーダイアログ</secondary>
+                </indexterm>
+                <para lang="en">
+                  By moving the slider you give more or less opacity to the
+                  layer. With a 0 opacity value, the layer is transparent and
+                  completely invisible. Don't confuse this with a Layer Mask,
+                  which sets the transparency pixel by pixel.
+                </para>
+                <para lang="ja">
+                  このスライダを動かせばレイヤーの不透明度を増減できます。 
+                  不透明度が 0 のときレイヤーは透明で全く見えません。 ここと
+                  レイヤーマスクとを混同しないようにしましょう。 レイヤーマスク
+                  は画素ごとに透明度を設定するものです。
                 </para>
               </listitem>
             </varlistentry>
@@ -452,43 +488,6 @@
                     にはアルファチャンネルがありません。
                   </para>
                 </tip>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Opacity</term>
-              <term lang="ja">不透明度</term>
-              <listitem id="gimp-layer-dialog-opacity-scale"
-                xreflabel="Opacity">
-                <indexterm lang="en">
-                  <primary>Transparency</primary>
-                  <secondary>Layer opacity</secondary>
-                </indexterm>
-                <indexterm lang="en">
-                  <primary>Opacity</primary>
-                  <secondary>Layers dialog</secondary>
-                </indexterm>
-                <indexterm lang="ja">
-                  <primary sortas="トウカコウカ">透過効果</primary>
-                  <secondary sortas="レイヤーノフトウメイド">
-                    レイヤーの不透明度
-                  </secondary>
-                </indexterm>
-                <indexterm lang="ja">
-                  <primary sortas="フトウメイド">不透明度</primary>
-                  <secondary>レイヤーダイアログ</secondary>
-                </indexterm>
-                <para lang="en">
-                  By moving the slider you give more or less opacity to the
-                  layer. With a 0 opacity value, the layer is transparent and
-                  completely invisible. Don't confuse this with a Layer Mask,
-                  which sets the transparency pixel by pixel.
-                </para>
-                <para lang="ja">
-                  このスライダを動かせばレイヤーの不透明度を増減できます。 
-                  不透明度が 0 のときレイヤーは透明で全く見えません。 ここと
-                  レイヤーマスクとを混同しないようにしましょう。 レイヤーマスク
-                  は画素ごとに透明度を設定するものです。
-                </para>
               </listitem>
             </varlistentry>
           </variablelist>
