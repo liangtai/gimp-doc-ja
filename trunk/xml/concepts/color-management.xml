@@ -6,7 +6,7 @@
   2008-04-05 Mr.Dust : added 'ko' contents
   2007-12-26 lexa: initial version for en and de
 -->
-<!--2010-12-28-->
+<!--2011-01-12-->
 <sect1 id="gimp-concepts-color-management">
   <title lang="en">Color Management in GIMP</title>
   <title lang="ja"><acronym>GIMP</acronym>での色管理</title>
@@ -229,17 +229,18 @@
       </para>
       <para lang="ja">
         最良の結果を得るためには、 モニタ装置にカラープロファイルが必要です。
-        モニタプロファイルの作成は、 システム全般で行うにせよ<acronym>GIMP
-        </acronym>環境設定ダイアログの色管理のページで行うにせよ、 いずれの場合
-        も画像の色が最も正確に表現されるようになります。
+        モニタプロファイルの作成は、 システム全般で行なっても
+        <acronym>GIMP</acronym>で環境設定ダイアログの色管理のページから
+        行なっても、 いずれの場合も画像の色が最も正確に
+        表現されるようになります。
       </para>
       <para lang="ja">
         <acronym>GIMP</acronym>の色管理用の最重要コマンドのひとつが
         <xref linkend="gimp-display-filter-dialog"/> に述べられています。
       </para>
       <para lang="ja">
-        お使いのモニタ装置にカラープロファイルが無くても、 装置を測定・計測する
-        ツールを使って作成できます。 UNIX 系のシステムなら
+        お使いのモニタ装置にカラープロファイルが無くても、 調整や測定をする
+        キャリブレーションツールを使えば作成できます。 UNIX 風のシステムなら
         <productname>Argyll Color Management System</productname>
         <xref linkend="bibliography-online-argyllcms"/> や
         <productname>LProf</productname>
@@ -286,30 +287,30 @@
           are sent to the video card (which already contains the vgct LUT).
         </para>
         <para lang="ja">
-          ディスプレイ装置には 2 段階必要です。 第一は測定、 第二はプロファイル
-          作成です。 さらに測定には通例 2 段階必要です。 そのひとつが
-          コントラストや明るさ、 色温度などの外部モニタ制御を調節すること
-          ですが、 これらはモニタの機種に大きく依存しています。 さらにモニタを
-          標準状態にできるだけ近づけるためにビデオカードメモリ
-          [画像処理器基盤の記憶装置]に読み込ませることになる調整項目があります。
-          この情報はモニタプロファイル内のいわゆる<acronym>vgct</acronym>タグに
+          ディスプレイ装置には 2 段階必要です。 第一はキャリブレーションと
+          いい、 第二はプロファイリングといいます。 さらにキャリブレーションは
+          通例 2 段階を要します。 まずさきにコントラストや明るさ、 色温度などの
+          外部モニタ制御を調節しますが、 これらはモニタの機種に大きく
+          依存しています。 そのあとにモニタを標準状態にできるだけ近づけるために
+          ビデオカードの<acronym>LUT</acronym>に読み込ませることになる調整が
+          あります。 この情報はモニタプロファイル内のいわゆる vcgt タグに
           保存されます。 <productname>Windows XP</productname> や 
           <productname>Mac OS</productname> ではおそらく起動時に
           オペレーティングシステムがこの情報 (<acronym>LUT</acronym>[対照表]) 
-          をビデオカードに読み込ませるはずです。 UNIX 系なら今のところ
-          <application>xcalib</application> や
-          <application>dispwin</application> のような外部プログラムが必要です。
-          (Norman Koren 氏のウェブサイトの方法のような簡単な視覚的測定をされた
-          方は、 ガンマ値は <application>xgamma</application> だけを使って
-          読み込ませることになります。)
+          をビデオカードに読み込ませるはずです。 <productname>UNIX</productname>
+          システム風のシステムなら今のところ <application>xcalib</application>
+          や <application>dispwin</application> のような外部プログラムが
+          必要です。 (Norman Koren 氏のウェブサイトの方法のような簡単な
+          目視測定をされた方は、 ガンマ値は <application>xgamma</application> 
+          だけを使って読み込ませることになります。)
         </para>
         <para lang="ja">
           第二段階はプロファイル作成です。 これをもとに<acronym>GIMP</acronym>
           が画像の<acronym>RGB</acronym>値を画面の適正な色に転換するための
           規則集が生成できます。 これはモニタプロファイルにも収められます。
-          この転換は画像の<acronym>RGB</acronym>値を変更するのではなく、 ビデオ
-          メモリ (フレームバッファ) に書き込む値を変えています。 
-          (ビデオカードは既に<acronym>vgct</acronym> <acronym>LUT</acronym>を
+          この転換は画像の<acronym>RGB</acronym>値を変更するのではなく、 
+          ビデオメモリ (フレームバッファ) に書き込む値を変えています。 
+          (ビデオカードは既に vcgt <acronym>LUT</acronym>を
           持っているものとします。)
         </para>
       </sect4>
