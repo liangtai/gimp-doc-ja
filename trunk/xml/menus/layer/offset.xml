@@ -6,7 +6,7 @@
   2007-03-12 Kolbjorn: added no translation
   2005/11/11 split of from layer-mask.xml by axel.wernicke
 -->
-<!--2010-12-07-->
+<!--2011-02-08-->
 <sect2 id="gimp-layer-offset">
   <title lang="en">Offset</title>
   <title lang="ja">オフセット...</title>
@@ -200,4 +200,65 @@
       </varlistentry>
     </variablelist>
   </sect3>
+
+  <sect3>
+    <title lang="en">Example</title>
+    <title lang="ja">例</title>
+    <figure>
+      <title lang="en">
+        Using <quote>Offset</quote> together with <quote>Edge Behaviors</quote>
+      </title>
+      <title lang="ja">
+        いろいろな<quote>境界部分の処理方法</quote>と
+        <quote>オフセット</quote>の様子
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/layer/offset-example.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The Original</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/layer/offset-example-wrap.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Y = -40, wrap</para>
+          <para lang="ja">
+            Y = -40 とし、 <guilabel>はみ出し部分を回り込ませる</guilabel>
+          </para>
+        </caption>
+      </mediaobject>
+	  <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/layer/offset-example-bg.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Y = -40, bg color</para>
+          <para lang="ja">
+            Y = -40 とし、 <guilabel>背景色で塗りつぶす</guilabel>
+          </para>
+        </caption>
+      </mediaobject>
+	  <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/layer/offset-example-trans.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">X = 40, transparent</para>
+        </caption>
+          <para lang="ja">
+            Y = +40 とし、 <guilabel>透明にする</guilabel>
+          </para>
+      </mediaobject>
+    </figure>
+  </sect3>  
+
 </sect2>
