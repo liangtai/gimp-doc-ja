@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
 "POT-Creation-Date: 2010-12-24 08:05+0900\n"
-"PO-Revision-Date: 2011-01-18 20:16+0900\n"
+"PO-Revision-Date: 2011-02-27 13:52+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -538,7 +538,7 @@ msgstr "common"
 msgid "The Selection"
 msgstr "選択"
 
-#: src/concepts/selection.xml:21(primary) src/concepts/concepts.xml:158(term)
+#: src/concepts/selection.xml:21(primary) src/concepts/concepts.xml:190(term)
 msgid "Selections"
 msgstr "選択範囲"
 
@@ -7790,38 +7790,38 @@ msgid ""
 "Images are the basic entities used by <acronym>GIMP</acronym>. Roughly "
 "speaking, an <quote>image</quote> corresponds to a single file, such as a "
 "TIFF or JPEG file. You can also think of an image as corresponding to a "
-"single display window, but this is not quite correct: it is possible to have "
-"multiple windows all displaying the same image. It is not possible to have a "
-"single window display more than one image, though, or for an image to have "
-"no window displaying it."
+"single display window (although in truth it is possible to have multiple "
+"windows all displaying the same image). It is not possible to have a single "
+"window display more than one image, though, or for an image to have no "
+"window displaying it."
 msgstr ""
 "画像は<acronym>GIMP</acronym>が扱う根源的な要素です。 誤解を恐れずに言えば、 "
 "ひとつの<quote>画像</quote>が<acronym>TIFF</acronym>や<acronym>JPEG</acronym>"
-"といった種類のファイルひとつに対応しています。 するとひとつの画像がひとつの画"
-"像ウィンドウに喩えられそうですが、 これは正しくありません。 画像ファイルが一"
-"つでもそれを表示するウィンドウを複数開くことができるからです。 もちろんいくつ"
-"もの画像をひとつのウィンドウで表示することはできませんが、 ウィンドウ表示して"
-"いない画像もありえます。"
+"といった種類のファイルひとつに対応しています。 画像ひとつにつき画像ウィンドウ"
+"ひとつが対応するという見方もできます。 (ただし実際はひとつの画像ファイルを複"
+"数のウィンドウで同時に開くことも可能です。) もちろんひとつのウィンドウのなか"
+"でふたつ以上の画像は表示できませんが、 一方でウィンドウ表示をしないまま開いて"
+"いる画像がありえます。"
 
 #: src/concepts/concepts.xml:60(para)
 msgid ""
 "A <acronym>GIMP</acronym> image may be quite a complicated thing. Instead of "
-"thinking of it as something like a sheet of paper with a picture on it, "
-"think of it as more like a book, whose pages are called <quote>layers</"
-"quote>. In addition to a stack of layers, a <acronym>GIMP</acronym> image "
-"may contain a selection mask, a set of channels, and a set of paths. In "
-"fact, <acronym>GIMP</acronym> provides a mechanism for attaching arbitrary "
-"pieces of data, called <quote>parasites</quote>, to an image."
+"thinking of it as a sheet of paper with a picture on it, think of it as more "
+"like a stack of sheets, called <quote>layers</quote>. In addition to a stack "
+"of layers, a <acronym>GIMP</acronym> image may contain a selection mask, a "
+"set of channels, and a set of paths. In fact, <acronym>GIMP</acronym> "
+"provides a mechanism for attaching arbitrary pieces of data, called "
+"<quote>parasites</quote>, to an image."
 msgstr ""
-"<acronym>GIMP</acronym>形式の画像はいくぶん複雑なものです。 画像といえば大抵"
-"は一枚の紙面に見立てるのが一般的ですが、 ここでは<quote>レイヤー</quote>と呼"
-"ばれるページを重ねた一冊の本のようにとらえてください。 <acronym>GIMP</"
-"acronym>形式では選択マスクや数層のチャンネル、 数面のパスがさらにこれに加わり"
-"ます。 実際、 <acronym>GIMP</acronym>は画像に対するいろんな加工をひとつひとつ"
-"情報の断片としてとらえる機構があり、 それらを画像の<quote>parasites (寄生体)"
-"</quote>と呼んでいるのです。"
+"<acronym>GIMP</acronym>形式の画像はいくぶん複雑なものです。 画像は一枚の紙面"
+"に見立てるのではなく、 そのようなシートをいくつも重ね合わせたものととらえてく"
+"ださい。 その一層一層を<quote>レイヤー</quote>と呼びます。 <acronym>GIMP</"
+"acronym>形式ではさらに選択マスクや一揃いのチャネル、 数面のパスが画像に含めら"
+"れます。 じっさい<acronym>GIMP</acronym>は画像に対するいろんな加工をひとつひ"
+"とつ情報の断片としてとらえる機構があり、 それらを画像の<quote>parasites "
+"(寄生体)</quote>と呼んでいるのです。"
 
-#: src/concepts/concepts.xml:70(para)
+#: src/concepts/concepts.xml:66(para)
 msgid ""
 "In <acronym>GIMP</acronym>, it is possible to have many images open at the "
 "same time. Although large images may use many megabytes of memory, "
@@ -7836,35 +7836,87 @@ msgstr ""
 "麗に扱えるようになっています。 無論これにも限界がありますが、 もっと使えるメ"
 "モリを増やせばシステムの処理能力は高まります。"
 
-#: src/concepts/concepts.xml:84(para)
+#: src/concepts/concepts.xml:80(para)
 msgid ""
-"If an image is like a book, then a layer is like a page within the book. The "
-"simplest images contain only a single layer, and can be treated like single "
-"sheets of paper. Sophisticated <acronym>GIMP</acronym> users often deal with "
-"images containing many layers, even dozens of them. Layers need not be "
-"opaque, and they need not cover the entire extent of an image, so when you "
-"look at an image's display, you may see more than just the top layer: you "
-"may see elements of many layers."
+"If a simple image can be compared to a single sheet of paper, an image with "
+"layers is likened to a sheaf of transparent papers stacked one on top of the "
+"other. You can draw on each paper, but still see the content of the other "
+"sheets through the transparent areas. You can also move one sheet in "
+"relation to the others. Sophisticated <acronym>GIMP</acronym> users often "
+"deal with images containing many layers, even dozens of them. Layers need "
+"not be opaque, and they need not cover the entire extent of an image, so "
+"when you look at an image's display, you may see more than just the top "
+"layer: you may see elements of many layers."
 msgstr ""
-"画像を本に喩えれば、 レイヤーはそれぞれのページにあたります。 最も簡単な画像"
-"であればレイヤーはたった 1 層しかなく、 つまりは紙が一枚あるだけといえます。 "
-"無論熟達した<acronym>GIMP</acronym>ユーザーならば、 レイヤーが何層にも重なっ"
-"た画像を何十枚と扱うことになるでしょう。レイヤーは不透明とは限らず、 しかも画"
-"像全体を覆う必要もないので、 画像を見たときそこには最前面だけでなくその背面の"
-"レイヤーの部品がいくつも見えているかもしれません。"
+"簡単な画像なら一枚の紙面に喩えられる一方で、 レイヤーが複数ある画像となると紙"
+"は半透明もしくは透明でそれが幾層にも重ね合わさった紙束のようなものが画像とい"
+"うことになります。 それぞれの紙面に絵が描けますが、 見える範囲は上の層の透過"
+"した部分からのみに限られます。 どの紙も場所をずらして重ね位置が変えられま"
+"す。 熟達した<acronym>GIMP</acronym>ユーザならば、 レイヤーが何層にも重なった"
+"画像を何十枚と扱うことになるでしょう。 レイヤーは不透明とは限らず、 しかも画"
+"像全体を覆う必要もないので、 画像を見たときそこには最前面だけでなくその背面側"
+"のレイヤーの部品がいくつも見えているかもしれません。"
 
-#: src/concepts/concepts.xml:96(varlistentry:xreflabel)
-#: src/concepts/concepts.xml:98(phrase)
+#: src/concepts/concepts.xml:96(phrase) src/concepts/concepts.xml:98(primary)
+msgid "Resolution"
+msgstr "解像度"
+
+#: src/concepts/concepts.xml:102(para)
+msgid ""
+"Digital images comprise of a grid of square elements of varying colors, "
+"called pixels. Each image has a pixel size, such as 900 pixels wide by 600 "
+"pixels high. But pixels don't have a set size in physical space. To set up "
+"an image for printing, we use a value called resolution, defined as the "
+"ratio between an image's size in pixels and its physical size (usually in "
+"inches) when it is printed on paper. Most file formats (but not all) can "
+"save this value, which is expressed as ppi - pixels per inch. When printing "
+"a file, the resolution value determines the size the image will have on "
+"paper, and as a result, the physical size of the pixels. The same 900X600 "
+"pixel image may be printed as a small 2X3\" card with barely noticeable "
+"pixels - or as a large poster with large, chunky pixels. Images imported "
+"from cameras and mobile devices tend to have a resolution value attached to "
+"the file. The value is usually 72 or 96ppi. It is important to realize that "
+"this value is arbitrary and was chosen for historic reasons. You can always "
+"change the resolution value inside <acronym>GIMP</acronym> - this has no "
+"effect on the actual image pixels. Furthermore, for uses such as displaying "
+"images on line, on mobile devices, television or video games - in short, any "
+"use that is not print - the resolution value is meaningless and is ignored, "
+"and instead the image is usually displayed so that each image pixel conforms "
+"to one screen pixel."
+msgstr ""
+"デジタル画像は方眼図状に並んだいろんな色の正方形の升目の集まりでできていま"
+"す。 これらの升目を画素 (ピクセル) といいます。 幅 900 ピクセル &times; 高さ "
+"600 ピクセルというふうに画素数で画像の大きさが表せます。 しかし画素数のサイズ"
+"だけでは画像の実寸を示せません。 画像を印刷するときは解像度という値を用いま"
+"す。 これは画像の大きさを示す画素数と印刷物の実寸 (通常はインチ単位) との比率"
+"で表されます。 ほとんどすべてのファイル形式が ppi 値 (<foreignphrase>pixels "
+"per inch</foreignphrase> = 1 インチあたりの画素数) で解像度を保存できます。 "
+"ファイルの画像を印刷するとその解像度に従って紙面上での大きさが決まるので、 結"
+"局これは画素の実寸を示したものともいえます。 同じ 900&times;600 ピクセルの画"
+"像といえど片や 2&times;3 インチ大の小さなカードに印刷するのなら画素は個々の見"
+"分けがつかないほど小さくなるのに、 大きなポスターに引き伸ばして印刷すれば画素"
+"が粗く目立つものになるでしょう。 デジタルカメラや携帯端末で撮った画像には解像"
+"度の値が添付されていることがよくあります。 たいていが 72ppi や 96ppi になって"
+"います。 でもこれは歴史的な事情から付けられた値にすぎないのだと理解しておくこ"
+"とが大事です。 <acronym>GIMP</acronym>にかかれば解像度はいつでも変更が可能で"
+"す。 それでも画像の個々の画素に実害はありません。 さらにいえば、 オンラインで"
+"画像を表示したり、 携帯端末やテレビやビデオゲームで表示させる場合、 つまり端"
+"的に言えば印刷以外の表示方法であるなら、 解像度という値は意味がないので無視さ"
+"れ、 いつもはその代わりに画像の画素とディスプレイ装置の画素が相応するような等"
+"倍率で表示されます。"
+
+#: src/concepts/concepts.xml:128(varlistentry:xreflabel)
+#: src/concepts/concepts.xml:130(phrase)
 msgid "Channels"
 msgstr "チャンネル"
 
-#: src/concepts/concepts.xml:100(primary)
+#: src/concepts/concepts.xml:132(primary)
 msgid "Channel"
 msgstr "チャンネル"
 
 #. TRANSLATORS: this is the modified text from glossary.xml, so
 #.         you should check po/LANG/glossary.po for an old translation
-#: src/concepts/concepts.xml:106(para)
+#: src/concepts/concepts.xml:138(para)
 msgid ""
 "A Channel is a single component of a pixel's color. For a colored pixel in "
 "<acronym>GIMP</acronym>, these components are usually Red, Green, Blue and "
@@ -7880,7 +7932,7 @@ msgstr ""
 "linkend=\"glossary-indexedcolors\">インデックス化</link> カラー画像はインデッ"
 "クス化カラーマップとアルファチャンネルで構成されています。"
 
-#: src/concepts/concepts.xml:115(para)
+#: src/concepts/concepts.xml:147(para)
 msgid ""
 "The entire rectangular array of any one of the color components for all of "
 "the pixels in an image is also referred to as a Channel. You can see these "
@@ -7891,7 +7943,7 @@ msgstr ""
 "全体像にすればそれはチャンネルです。 このような色チャンネルのようすは <link "
 "linkend=\"gimp-channel-dialog\">チャンネルダイアログ</link> 上で見られます。"
 
-#: src/concepts/concepts.xml:121(para)
+#: src/concepts/concepts.xml:153(para)
 msgid ""
 "When the image is displayed, <acronym>GIMP</acronym> puts these components "
 "together to form the pixel colors for the screen, printer, or other output "
@@ -7905,7 +7957,7 @@ msgstr ""
 "とき、 <acronym>GIMP</acronym>のチャンネルはそのデバイスに最適なものへ変換さ"
 "れます。"
 
-#: src/concepts/concepts.xml:129(para)
+#: src/concepts/concepts.xml:161(para)
 msgid ""
 "Channels can be useful when you are working on an image which needs "
 "adjustment in one particular color. For example, if you want to remove "
@@ -7915,7 +7967,7 @@ msgstr ""
 "ば写真から<quote>赤目</quote>を除去したいときは、 赤チャンネルで作業するとよ"
 "いでしょう。"
 
-#: src/concepts/concepts.xml:135(para)
+#: src/concepts/concepts.xml:167(para)
 msgid ""
 "You can look at channels as masks which allow or restrict the output of the "
 "color that the channel represents. By using Filters on the channel "
@@ -7929,7 +7981,7 @@ msgstr ""
 "<link linkend=\"plug-in-colors-channel-mixer\">チャンネルミキサー</link> フィ"
 "ルタがあります。"
 
-#: src/concepts/concepts.xml:144(para)
+#: src/concepts/concepts.xml:176(para)
 msgid ""
 "In addition to these channels, <acronym>GIMP</acronym> also allows you to "
 "create other channels (or more correctly, Channel Masks), which are "
@@ -7946,7 +7998,7 @@ msgstr ""
 "に保存</link> することもできます。 この他のチャンネルについての情報は用語集"
 "の <xref linkend=\"glossary-masks\"/> の項でご覧ください。"
 
-#: src/concepts/concepts.xml:160(para)
+#: src/concepts/concepts.xml:192(para)
 msgid ""
 "Often when modify an image, you only want a part of the image to be "
 "affected. The <quote>selection</quote> mechanism makes this possible. Each "
@@ -7970,7 +8022,7 @@ msgstr ""
 "qmask-button\">クイックマスク</link> ボタンを押すだけで選択チャンネルが可視化"
 "されいつでもそのすばらしい詳細がご覧になれます。"
 
-#: src/concepts/concepts.xml:176(para)
+#: src/concepts/concepts.xml:208(para)
 msgid ""
 "A large component of learning how to use <acronym>GIMP</acronym> effectively "
 "is acquiring the art of making good selections—selections that contain "
@@ -7988,7 +8040,7 @@ msgstr ""
 "ドに切り替えるボタン&mdash;このモードでは選択チャンネルがまるで色のチャンネル"
 "であるかのように<quote>選択を描く</quote>ことも可能なのです。"
 
-#: src/concepts/concepts.xml:192(para)
+#: src/concepts/concepts.xml:224(para)
 msgid ""
 "When you make mistakes, you can undo them. Nearly everything you can do to "
 "an image is undoable. In fact, you can usually undo a substantial number of "
@@ -8017,11 +8069,11 @@ msgstr ""
 "に<quote>画像を閉じる</quote>があります。 このため<acronym>GIMP</acronym>では"
 "何かしら操作が加えられた画像を閉じる際には確認を求めるようにしています。)"
 
-#: src/concepts/concepts.xml:212(term)
+#: src/concepts/concepts.xml:244(term)
 msgid "Plug-ins"
 msgstr "プラグイン"
 
-#: src/concepts/concepts.xml:214(para)
+#: src/concepts/concepts.xml:246(para)
 msgid ""
 "Many, probably most, of the things that you do to an image in <acronym>GIMP</"
 "acronym> are done by the <acronym>GIMP</acronym> application itself. "
@@ -8043,7 +8095,7 @@ msgstr ""
 "と大変そうですが、 実はプラグインを (スクリプトも) 書くのは簡単なので"
 "<acronym>GIMP</acronym>の開発スタッフでなくてもできてしまいます。"
 
-#: src/concepts/concepts.xml:228(para)
+#: src/concepts/concepts.xml:260(para)
 msgid ""
 "All of the commands in the Filters menu, and a substantial number of "
 "commands in other menus, are actually implemented as plug-ins."
@@ -8051,11 +8103,11 @@ msgstr ""
 "実際フィルタメニューの全コマンドと、 その他のメニューのかなりの数のコマンド"
 "が、 プラグインで実装されています。"
 
-#: src/concepts/concepts.xml:235(term)
+#: src/concepts/concepts.xml:267(term)
 msgid "Scripts"
 msgstr "スクリプト"
 
-#: src/concepts/concepts.xml:237(para)
+#: src/concepts/concepts.xml:269(para)
 msgid ""
 "In addition to plug-ins, which are programs written in the C language, "
 "<acronym>GIMP</acronym> can also make use of scripts. The largest number of "
