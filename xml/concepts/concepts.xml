@@ -2,17 +2,14 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2011-02-26 Michael added "resolution" and improved "layers"
   2009-03-20 j.h: fixed bug #557343
-  2008-06-03 prokoudine: yet another shot at Russian content
-  2007-02-27 prokoudine: fixes to Russian translation
   2007-02-27 lexa: reorganized concepts
-  2006-05-02 Dust: added Korean translation
-  2006-02-27 kolbjørn: added norwegian
-  2006-01-07 HdJ: Added quote and acronym tags, added english and dutch
+  2006-01-07 HdJ: Added quote and acronym tags, added English and Dutch
              version of layers explanation
   2005-12-18 Lexa: reviewed and added de translation
 -->
-<!--2010-11-21-->
+<!--2011-02-26-->
 <sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-concepts-basic">
   <title lang="en">Basic Concepts</title>
   <title lang="ja">基本概念</title>
@@ -70,23 +67,22 @@
       <listitem>
         <para lang="en">
           Images are the basic entities used by <acronym>GIMP</acronym>.
-          Roughly speaking, an <quote>image</quote> corresponds to a
-          single file, such as a TIFF or JPEG file. You can also think of an
-          image as corresponding to a single display window, but this is not
-          quite correct: it is possible to have multiple windows all
-          displaying the same image. It is not possible to have a single
-          window display more than one image, though, or for an image to have
-          no window displaying it.
+          Roughly speaking, an <quote>image</quote> corresponds to a single
+          file, such as a TIFF or JPEG file. You can also think of an image
+          as corresponding to a single display window (although in truth it
+          is possible to have multiple windows all displaying the same image).
+          It is not possible to have a single window display more than one
+          image, though, or for an image to have no window displaying it.
         </para>
         <para lang="en">
           A <acronym>GIMP</acronym> image may be quite a complicated thing.
-          Instead of thinking of it as something like a sheet of paper with a
-          picture on it, think of it as more like a book, whose
-          pages are called <quote>layers</quote>. In addition to a stack of
-          layers, a <acronym>GIMP</acronym> image may contain a selection
-          mask, a set of channels, and a set of paths. In fact,
-          <acronym>GIMP</acronym> provides a mechanism for attaching arbitrary
-          pieces of data, called <quote>parasites</quote>, to an image.
+          Instead of thinking of it as a sheet of paper with a
+          picture on it, think of it as more like a stack of sheets, called
+          <quote>layers</quote>. In addition to a stack of layers, a
+          <acronym>GIMP</acronym> image may contain a selection mask, a set of
+          channels, and a set of paths. In fact, <acronym>GIMP</acronym>
+          provides a mechanism for attaching arbitrary pieces of data, called
+          <quote>parasites</quote>, to an image.
         </para>
         <para lang="en">
           In <acronym>GIMP</acronym>, it is possible to have many images open
@@ -101,18 +97,18 @@
           画像は<acronym>GIMP</acronym>が扱う根源的な要素です。 誤解を恐れずに
           言えば、 ひとつの<quote>画像</quote>が<acronym>TIFF</acronym>や
           <acronym>JPEG</acronym>といった種類のファイルひとつに対応しています。
-          するとひとつの画像がひとつの画像ウィンドウに例えられそうですが、
-          これは正しくありません。画像ファイルが一つでもそれを表示する
-          ウィンドウを複数開くことができるからです。もちろんいくつもの
-          画像をひとつのウィンドウで表示することはできませんが、
-          ウィンドウ表示していない画像もありえます。
+          画像ひとつにつき画像ウィンドウひとつが対応するという見方もできます。
+          (ただし実際はひとつの画像ファイルを複数のウィンドウで同時に開くことも
+          可能です。) もちろんひとつのウィンドウのなかでふたつ以上の画像は
+          表示できませんが、 一方でウィンドウ表示をしないまま開いている
+          画像がありえます。
         </para>
         <para lang="ja">
           <acronym>GIMP</acronym>形式の画像はいくぶん複雑なものです。
-          たいていは画像を一枚の紙面に見立てるのが一般的ですが、
-          これは<quote>レイヤー</quote>と呼ばれるページを重ねた
-          一冊の本のようにとらえて下さい。<acronym>GIMP</acronym>形式では
-          選択マスクや数層のチャネル、 数面のパスがさらにこれに加わります。
+          画像は一枚の紙面に見立てるのではなく、 そのようなシートを
+          いくつも重ね合わせたものととらえてください。 その一層一層を
+          <quote>レイヤー</quote>と呼びます。 <acronym>GIMP</acronym>形式では
+          さらに選択マスクや一揃いのチャネル、 数面のパスが画像に含められます。
           じっさい<acronym>GIMP</acronym>は画像に対するいろんな加工を
           ひとつひとつ情報の断片としてとらえる機構があり、 それらを
           画像の<quote>parasites(寄生体)</quote>と呼んでいるのです。
@@ -132,23 +128,91 @@
       <term lang="ja">レイヤー</term>
       <listitem>
         <para lang="en">
-          If an image is like a book, then a layer is like a page within the
-          book. The simplest images contain only a single layer, and can be
-          treated like single sheets of paper. Sophisticated
-          <acronym>GIMP</acronym> users often deal with images containing
-          many layers, even dozens of them.  Layers need not be opaque, and
-          they need not cover the entire extent of an image, so when you
-          look at an image's display, you may see more than just the top
-          layer: you may see elements of many layers.
+          If a simple image ca be compared to a single shet of paper, an
+          image with layers is likened to a sheaf of transparent papers
+          stacked one on top of other. You can draw on each paper, but
+          still see the content of the other sheets through the transparent
+          areas. You can also move on sheet in relation to the others.
+          Sophisticated <acronym>GIMP</acronym> users often deal with images
+          containing many layers, even dozens of them.  Layers need not be
+          opaque, and they need not cover the entire extent of an image, so
+          when you look at an image's display, you may see more than just the
+          top layer: you may see elements of many layers.
         </para>
         <para lang="ja">
-          画像を本に喩えれば、 レイヤーはそれぞれのページにあたります。
-          最も簡単な画像であればレイヤーはたった 1 層しかなく、 つまりは
-          紙が一枚あるだけといえます。 無論熟達した<acronym>GIMP</acronym>
-          ユーザならば、 レイヤーが何層にも重なった画像を何十枚と扱うことに
-          なるでしょう。レイヤーは不透明とは限らず、 しかも画像全体を覆う
+          簡単な画像なら一枚の紙面に喩えられる一方で、 レイヤーが複数ある
+          画像となると紙は半透明もしくは透明でそれが幾層にも重ね合わさった
+          紙束のようなものが画像ということになります。
+          それぞれの紙面に絵が描けますが、 見える範囲は上の層の透過した
+          部分からのみに限られます。 どの紙も場所をずらして重ね位置が
+          変えられます。 熟達した<acronym>GIMP</acronym>ユーザならば、 
+          レイヤーが何層にも重なった画像を何十枚と扱うことになるでしょう。
+          レイヤーは不透明とは限らず、 しかも画像全体を覆う
           必要もないので、 画像を見たときそこには最前面だけでなく
-          その背面のレイヤーの部品がいくつも見えているかもしれません。
+          その背面側のレイヤーの部品がいくつも見えているかもしれません。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>
+        <phrase lang="en">Resolution</phrase>
+        <phrase lang="ja">解像度</phrase>
+        <indexterm lang="en">
+          <primary>Resolution</primary>
+        </indexterm>
+        <indexterm lang="ja">
+          <primary sortas="カイゾウド">解像度</primary>
+        </indexterm>
+      </term>
+      <listitem>
+        <para lang="en">
+          Digital images comprise of a grid of square elements of varying
+          colors, called pixels. Each image has a pixel size, such as 900
+          pixels wide by 600 pixels high. But pixels don't have a set size
+          in physical space. To set up an image for printing, we use a value
+          called resolution, defined as the ratio between an image's size in
+          pixels and its physical size (usually in inches) when it is printed
+          on paper. Most file formats (but not all) can save this value, which
+          is expressed as ppi - pixels per inch. When printing a file, the
+          resolution value determines the size the image will have on paper,
+          and as a result, the physical size of the pixelss. The same 900X600
+          pixel image may be printed as a small 2X3" card with barely
+          noticeable pixels - or as a large poster with large, chunky pixels.
+          Image imported from cameras and mobile devices tend to have a
+          resolution value attached to the file. The value is usually 72 or
+          96ppi. It is important to realize that this value is arbitrary and
+          was chosen for historic reasons. You can always change the resolution
+          value inside <acronym>GIMP</acronym> - this has no effect on the
+          actual image pixels. Furthermore, for uses such as displaying images
+          on line, on mobile devices, television or video games - in short,
+          any use that is not print - the resolution value is meaningless and
+          is ignored, and instead the image is usually displayed so that each
+          image pixel conforms to one screen pixel.
+        </para>
+        <para lang="ja">
+          デジタル画像は方眼図状に並んだいろんな色の正方形の升目の集まりで
+          できています。 これらの升目を画素 (ピクセル) といいます。 幅 900 
+          ピクセル &times; 高さ 600 ピクセルというふうに画素数で画像の大きさが
+          表せます。 しかし画素数のサイズだけでは画像の実寸を示せません。
+          画像を印刷するときは解像度という値を用います。 これは画像の大きさを
+          示す画素数と印刷物の実寸 (通常はインチ単位) との比率で表されます。
+          ほとんどすべてのファイル形式が ppi 値 (<foreignphrase>pixels per
+          inch</foreignphrase> - 1 インチあたりの画素数) で解像度を
+          保存できます。 ファイルの画像を印刷するとその解像度に従って紙面上での
+          大きさが決まるので、 結局これは画素の実寸を示したものともいえます。
+          同じ 900&times;600 ピクセルの画像といえど片や 2&times;3 インチ大の
+          小さなカードに印刷するのなら画素は個々の見分けがつかないほど小さく
+          なるのに、 大きなポスターに引き伸ばして印刷すれば画素が粗く目立つ
+          ものになるでしょう。 デジタルカメラや携帯端末で撮った画像には解像度の
+          値が添付されていることがよくあります。 たいていが 72ppi や 96ppi に
+          なっています。 でもこれは歴史的な事情から付けられた値にすぎないのだと
+          理解しておくことが大事です。 <acronym>GIMP</acronym>にかかれば
+          解像度はいつでも変更が可能です。 それでも画像の個々の画素に実害は
+          ありません。 さらにいえば、 オンラインで画像を表示したり、 携帯端末や
+          テレビやビデオゲームで表示させる場合、 つまり端的に言えば印刷以外の
+          表示方法であるなら、 解像度という値は意味がないので無視され、 
+          いつもはその代わりに画像の画素とディスプレイ装置の画素が
+          相応するような等倍率で表示されます。
         </para>
       </listitem>
     </varlistentry>
