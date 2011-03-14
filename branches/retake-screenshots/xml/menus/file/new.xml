@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-01-02 j.h: Updated to v2.6
+  2008-12-29 j.h: link to File-references to be fixed
+  2007-10-17 j.h: updated to v2.4 (comment)
+  2007-02-07 added 'no' by KoSt
+  2006-09-19 lexa: minor change (link enabled)
+  2006-07-03 changed the note en;fr by j.h
+  2006-06-17 added a para en;fr for default image size by j.h
+  2005-09-03 de reviewed by axel.wernicke
+-->
+<!--2011-01-18-->
+<sect2 id="gimp-file-new">
+  <title lang="en">New</title>
+  <title lang="ja">新しい画像...</title>
+
+  <indexterm lang="en">
+    <primary>Image</primary>
+    <secondary>New</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>New</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>New Image</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="シンキ">新規</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="シンキ">新規</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="アタラシイガゾウ">新しい画像</primary>
+  </indexterm>
+
+  <para lang="en">
+    Using the <guimenuitem>New Image</guimenuitem> dialog, you can
+    create a new empty image and set its
+    properties. The image is shown in a new image window.
+    You may have more than one image on your screen at the same time.
+  </para>
+  <para lang="ja">
+    このコマンドで呼び出した<quote>新しい画像を作成</quote>ダイアログを使えば
+    新しい空の画像が作成でき、 その属性も設定できます。 できた画像は新たな画像
+    ウィンドウで表示されます。 画面にはひとつならず複数の画像が同時に開けます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the command</title>
+    <title lang="ja">このコマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access the command from either the Toolbox menubar or the
+          Image menubar through:
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenuitem>New</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ファイル</guimenu>
+            <guimenuitem>新しい画像...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the keyboard shortcut
+          <keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Basic Options</title>
+    <title lang="ja">基本のオプション</title>
+    <figure>
+      <title lang="en">The <quote>New Image</quote> dialog</title>
+      <title lang="ja"><quote>新しい画像を作成</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG" fileref="images/menus/file/new.png"/>
+          <!--was:  images/dialogs/dialogs-new-image.png-->
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <indexterm lang="en">
+        <primary>Template</primary>
+        <secondary>Menu</secondary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Image</primary>
+        <secondary>Image size</secondary>
+        <tertiary>When creating</tertiary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Image size</primary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>テンプレート</primary>
+        <secondary>メニュー</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>画像</primary>
+        <secondary>画像の大きさ</secondary>
+        <tertiary>作成当初</tertiary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary>画像の大きさ</primary>
+      </indexterm>
+      <varlistentry>
+        <term lang="en">Template</term>
+        <term lang="ja">テンプレート</term>
+        <listitem>
+          <figure>
+            <title lang="en">The <quote>Template</quote> dialog</title>
+            <title lang="ja"><quote>テンプレート</quote>サブメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/menus/file/new/templates.png"/>
+              </imageobject>
+              <!-- was:  images/dialogs/dialogs-new-image-templates.png-->
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            Rather than entering all the values by hand, you can select some
+            predefined values for your image from a menu of templates, which
+            represent image types that are somewhat commonly useful. The
+            templates set values for the size, resolution, comments, etc. If
+            there is a particular image shape that you use often and it does
+            not appear on the list, you can create a new template, using the
+            <link linkend="gimp-template-dialog">Templates</link> dialog.
+          </para>
+          <para lang="ja">
+            全部の値を手で入力しなくても、 テンプレートメニューからどれか定型を
+            選ぶ方法があります。 ここには広く通用する画像の形式がいくつか入って
+            いて、 画像の大きさや解像度などの値やコメントの雛形が利用できます。
+            画像作成でいつも使う定型設定がこのリストにない場合は、
+            <link linkend="gimp-template-dialog">テンプレート</link> ダイアログ
+            を使えば新たに追加できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Image Size</term>
+        <term lang="ja">画像サイズ (キャンバスサイズ)</term>
+        <listitem>
+          <para lang="en">
+            Here you set the <guilabel>Width</guilabel> and
+            <guilabel>Height</guilabel> of the new image.  The
+            default units are pixels, but you can choose a different
+            unit if you prefer, using the adjoining menu. If you do,
+            note that the resulting pixel size is determined by
+            the X and Y resolution (which you can change in the
+            <guilabel>Advanced Options</guilabel>), and by setting
+            <quote>Dot for Dot</quote> in the
+            <guimenu>View</guimenu> menu.
+          </para>
+          <para lang="en">
+            If no image is open, the <quote>New</quote> image is opened in
+            the empty image window, with the default size you have determined.
+            If you open the <quote>New</quote> image when another is open (or
+            has been), then it is opened in another window, with the same
+            size as the first image.
+          </para>
+          <para lang="ja">
+            新しい画像については、 ここで <guilabel>幅</guilabel> と 
+            <guilabel>高さ</guilabel> が設定できます。 既定の単位は
+            ピクセルですが、 すぐ隣りのメニューで他の単位にも切り替えられます。 
+            ちなみにこのとき換算される大きさは X と Y の解像度 
+            (<guilabel>詳細設定</guilabel> で調節できる) によっても 
+            <guimenu>表示</guimenu> メニューで
+            <quote>点に点を対応させる</quote>を有効にするかどうかによっても
+            違いが出ます。
+          </para>
+          <para lang="ja">
+            何も画像が開かれていない状態では無画像ウィンドウで
+            <quote>新しい</quote>画像が開かれます。 何か他の画像を
+            開いているときに (あるいは開いたあとで) <quote>新しい</quote>
+            画像を開くときは、 その画像の大きさに適した新たな大きさの
+            画像ウィンドウで開かれます。
+          </para>
+          <note>
+            <para lang="en">
+              Keep in mind that every pixel of an image is stored
+              in memory. If you create large files with a high pixel
+              density, <acronym>GIMP</acronym> will need a lot
+              of time and memory for every function you apply to the
+              image.
+            </para>
+            <para lang="ja">
+              画像のいずれの画素もメモリ上に読み込まれる事実をいつも頭に置いて
+              おいてください。 高いビット深度で巨大な画像を作成すると、 
+              <acronym>GIMP</acronym>でその画像に操作をするたびに莫大な時間と
+              メモリを消費します。
+            </para>
+          </note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Portrait/Landscape buttons</term>
+        <term lang="ja">縦長/横長ボタン</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Portrait/Landscape mode</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="タテナガヨコナガモード">縦長/横長モード</primary>
+          </indexterm>
+          <para lang="en">
+            There are two buttons which toggle between Portrait and Landscape
+            mode. What they actually do is to exchange the values for Width
+            and Height. (If the Width and Height are the same, these buttons
+            are not activated.) If the X and Y resolutions are not the same
+            (which you can set in Advanced Options), then these values are
+            also exchanged. On the right of the dialog, image size, screen
+            resolution and color space are displayed.
+          </para>
+          <para lang="ja">
+            縦長と横長を切り替える 2 つのボタンが並んでいます。 これらの
+            ボタンは実質的には幅と高さを交換します。 (幅と高さが同じ場合は
+            これらのボタンは灰色無効になります。) X と Y の解像度が異なる 
+            (<quote>詳細設定</quote>でそのようにも設定できる) 場合は解像度も
+            交換されます。 ダイアログではその右側に画像の大きさと容量、 
+            解像度と色空間が表示されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Advanced Options</title>
+    <title lang="ja">詳細設定</title>
+    <figure>
+      <title lang="en">New Image dialog (Advanced Options)</title>
+      <title lang="ja">
+        <quote>新しい画像</quote>ダイアログの詳細設定部分
+      </title>
+      <mediaobject>
+        <imageobject>
+          <!--<imagedata format="PNG"
+            fileref="images/dialogs/dialogs-templates-edit-advanced.png"/>-->
+          <imagedata format="PNG"
+            fileref="images/menus/file/new/advanced-dialog.png"/>
+        </imageobject>
+        <!-- was: images/dialogs/dialogs-new-image-advanced.png-->
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The <guilabel>Advanced Options</guilabel>
+      are mostly of interest to more advanced <acronym>GIMP</acronym>
+      users. You can display these options by clicking on the small triangle
+      on the lower edge of the dialog window.
+    </para>
+    <para lang="ja">
+      <guilabel>詳細設定</guilabel> はもっと高度な<acronym>GIMP</acronym>
+      ユーザー向けの内容です。 これらのオプションはダイアログの下寄りにある
+      小さな三角形をクリックすると表示されます。
+    </para>
+    <variablelist>
+      <indexterm lang="en">
+        <primary>Image</primary>
+        <secondary>Resolution</secondary>
+        <tertiary>Setting when creating</tertiary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Resolution</primary>
+        <secondary>Setting when creating</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary sortas="ガゾウ">画像</primary>
+        <secondary sortas="カイゾウド">解像度</secondary>
+        <tertiary sortas="サクセイトウショ">作成当初</tertiary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary sortas="カイゾウド">解像度</primary>
+        <secondary sortas="サクセイトウショ">作成当初</secondary>
+      </indexterm>
+      <varlistentry>
+        <term lang="en">X and Y resolution</term>
+        <term lang="ja">水平解像度; 垂直解像度</term>
+        <listitem>
+          <para lang="en">
+            The values in the <guilabel>X resolution</guilabel> and
+            <guilabel>Y resolution</guilabel>
+            fields relate mainly to printing: they do not affect the size of
+            the image in pixels, but they may determine its physical size when
+            it is printed. The X and Y resolution values can determine how
+            pixels are translated into other measurement units, such as
+            millimeters or inches.
+          </para>
+          <para lang="ja">
+            <guilabel>水平解像度</guilabel> と <guilabel>垂直解像度</guilabel> 
+            の入力欄に入れた値は主として印刷に関係します。 画像の画素数を
+            変えるのではなく、 印刷したときの実測的な大きさが変わります。 
+            いずれの解像度も画素数から
+            ミリメートルやインチなどの距離単位に換算する土台になります。
+          </para>
+          <tip>
+            <para lang="en">
+              If you want to display the image on the screen at the
+              correct dimensions, select
+              <menuchoice>
+                <guimenu>View</guimenu>
+                <guimenuitem>Dot for Dot</guimenuitem>
+              </menuchoice>
+              Set the zoom factor to 100% to see the image at its true
+              screen size. The calibration of the screen size is normally
+              done when <acronym>GIMP</acronym> is installed,
+              but if the image does not display at the correct size,
+              you may have to adjust the screen parameters in the
+              <acronym>GIMP</acronym>. You can do this in
+              the <link linkend="gimp-prefs-display">Preferences</link>
+              dialog.
+            </para>
+            <para lang="ja">
+              画像の表示をいまの解像度に応じた大きさにするには、 画像ウィンドウ
+              のメニューで
+              <menuchoice>
+                <guimenu>表示</guimenu>
+                <guimenuitem>点に点を対応させる</guimenuitem>
+              </menuchoice>
+              を無効にします。 さらに表示倍率を 100% に設定すれば画像が正当な
+              大きさの画面で表示されるはずです。 画面の正当な大きさの測定は通常
+              <acronym>GIMP</acronym>を導入した時点で行なわれますが、 画像が
+              正しい大きさで表示されていない場合には<acronym>GIMP</acronym>で
+              画面の変数を調節すべきかもしれません。 その手続は
+              <link linkend="gimp-prefs-display">環境設定</link> ダイアログの
+              <quote>ディスプレイ</quote>のページで行なえます。
+            </para>
+          </tip>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Colorspace</term>
+        <term lang="ja">色空間</term>
+        <listitem>
+          <para lang="en">
+            You can create the new image in different
+            <link linkend="gimp-image-mode">color modes</link>, as either an
+            <link linkend="glossary-rgb">RGB</link> image or a grayscale
+            image.
+          </para>
+          <para lang="ja">
+            新しい画像は 
+            <link linkend="glossary-rgb">RGB</link> かグレースケールの何れかの
+            <link linkend="gimp-image-mode">色モード</link> で作成できます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">RGB color</term>
+              <term lang="ja">RGBカラー</term>
+              <listitem>
+                <para lang="en">
+                  The image is created in the Red, Green, Blue color system,
+                  which is the one used by your monitor or your television
+                  screen.
+                </para>
+                <para lang="ja">
+                  お使いのコンピュータ画面やテレビ画面でも利用されている
+                  赤・緑・青の 3 原色系で画像を作成します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Grayscale</term>
+              <term lang="ja">グレースケール</term>
+              <listitem>
+                <para lang="en">
+                  The image is created in black and white, with various shades
+                  of gray. Aside from your artistic interests, this type of
+                  image may be necessary for some plug-ins. Nevertheless, the
+                  <acronym>GIMP</acronym> allows you to
+                  <link linkend="gimp-image-convert-grayscale">change an RGB
+                  image into grayscale</link>, if you would like.
+                </para>
+                <para lang="ja">
+                  白黒や灰色陰影のモードで画像が作成されます。 趣味でこのような
+                  モノクロ画像にするだけのためにこのモードがあるのではなく、 
+                  いくつかのプラグインがこの画像形式を必要としています。 
+                  とはいえ<acronym>GIMP</acronym>なら 
+                  <link linkend="gimp-image-convert-grayscale">
+                  <acronym>RGB</acronym>画像をグレースケールに変換</link> する
+                  手段もあります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+          <para lang="en">
+            You cannot create an indexed image directly with this menu, but of
+            course you can always convert the image to indexed mode after it
+            has been created. To do that, use the
+            <menuchoice>
+              <guimenu>Image</guimenu>
+              <guisubmenu>Mode</guisubmenu>
+              <guimenuitem>Indexed</guimenuitem>
+            </menuchoice> command.
+          </para>
+          <para lang="ja">
+            このメニューから直にインデックス化カラー画像を作ることはできません
+            が、 もちろん画像を作成したらあとからいつでもその画像をインデックス
+            化モードに変換できます。 画像ウィンドウのメニューより
+            <menuchoice>
+              <guimenu>画像</guimenu>
+              <guisubmenu>モード</guisubmenu>
+              <guimenuitem>インデックス...</guimenuitem>
+            </menuchoice>
+            と進むと開かれる<quote>インデックスカラー変換</quote>ダイアログで
+            実行してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Fill</term>
+        <term lang="ja">塗りつぶし色</term>
+        <listitem>
+          <para lang="en">
+            Here, you specify the background color that is used for your new
+            image. It is certainly possible to change the background of an
+            image later, too. You can find more information about doing that
+            in the <link linkend="gimp-layer-dialog">Layer dialog</link>.
+          </para>
+          <para lang="ja">
+            ここで新しい画像の背景色を定められます。 もちろん後からでも画像の
+            背景色は変更できます。 その方法については 
+            <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> で述べ
+            ています。
+          </para>
+          <itemizedlist>
+            <para lang="en">There are several choices:</para>
+            <para lang="ja">つぎのようにさまざまな方法があります。</para>
+            <listitem>
+              <para lang="en">
+                Fill the image with the current <guilabel>Foreground
+                color</guilabel>, shown in the Toolbox.
+              </para>
+              <para lang="en">
+                Note that you can change the foreground color while the
+                <quote>New Image</quote> dialog window is open.
+              </para>
+              <para lang="ja">
+                ツールボックスに示されている現在の 
+                <guimenuitem>描画色</guimenuitem> で画像を塗りつぶします。
+              </para>
+              <para lang="ja">
+                ちなみにこの描画色は<quote>新しい画像</quote>ダイアログを開いて
+                いる間も変更できます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                Fill the image with the current <guilabel>Background
+                color</guilabel>, shown in the Toolbox. (You can change the
+                background color too, while the dialog window is open.)
+              </para>
+              <para lang="ja">
+                ツールボックスに示されている現在の 
+                <guimenuitem>背景色</guimenuitem> で画像を塗りつぶします。 
+                (背景色も同様に<quote>新しい画像</quote>ダイアログを
+                開いている最中でも変更できます。)
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                Fill the image with <guilabel>White</guilabel>.
+              </para>
+              <para lang="ja">
+                画像を <guimenuitem>白</guimenuitem> で塗りつぶします。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                Fill the image with <guilabel>Transparency</guilabel>.  If you
+                choose this option, the image is created with an <link
+                linkend="glossary-alpha-channnel">alpha&nbsp;channel</link> and
+                the background is transparent.  The transparent parts of the
+                image are then displayed with a checkered pattern, to indicate
+                the transparency.
+              </para>
+              <para lang="ja">
+                画像に何も色を塗らず <guimenuitem>透明</guimenuitem> にします。
+                このオプションを選ぶと画像に 
+                <link linkend="glossary-alpha-channel">アルファチャンネル
+                </link> が追加され、 背景レイヤーは透明になります。 画像
+                ウィンドウでは透過している部分がわかるようにするため
+                [初期設定では]市松模様が透けて見えます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Comment</term>
+        <term lang="ja">コメント</term>
+        <listitem>
+          <indexterm lang="en">
+            <primary>Image</primary>
+            <secondary>Comment</secondary>
+          </indexterm>
+          <indexterm lang="en">
+            <primary>Comment</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="ガゾウ">画像</primary>
+            <secondary>コメント</secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary>コメント</primary>
+          </indexterm>
+          <para lang="en">
+            You can write a descriptive comment here.  The text is
+            attached to the image as a
+            <link linkend="glossary-parasite">parasite</link>, and is saved
+            with the image by some file formats (PNG, JPEG, GIF).
+          </para>
+          <para lang="ja">
+            説明的な付記がここで書き込めます。 この文章は画像に 
+            <link linkend="glossary-parasite">パラサイト</link> として埋め
+            込まれ、 [<acronym>XCF</acronym>はもちろん]<acronym>PNG</acronym>や
+            <acronym>JPEG</acronym>や<acronym>GIF</acronym>といったファイル形式
+            で保存する場合に画像内に保存されます。 
+            [<acronym>PNG</acronym>や<acronym>GIF</acronym>など一部のファイル
+            形式はマルチバイト文字に対応していません。 このような形式で
+            日本語文字を含んだ文を保存すると何の警告もなくコメント全文が
+            削除されます。]
+          </para>
+          <note>
+            <para lang="en">
+              You can view and edit this comment in the
+              <link linkend="gimp-image-properties">Image Properties</link>
+              dialog.
+            </para>
+            <para lang="ja">
+              このコメントは
+              <link linkend="gimp-image-properties">画像の情報</link> 
+              ダイアログで閲覧と編集が可能です。
+            </para>
+          </note>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

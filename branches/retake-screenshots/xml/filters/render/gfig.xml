@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-15 AntI: Added "es"
+  2007-05-18 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005/10/07 en;fr by julien hardelin
+  2005/09/21 created by axel.wernicke
+-->
+<!--2010-12-10-->
+<sect2 id="plug-in-gfig">
+  <title lang="en">Gfig</title>
+  <title lang="ja">シェイプ (Gfig)...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Gfig</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Gfig</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="シタヌリ">下塗り</secondary>
+    <tertiary>シェイプ (Gfig)</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>シェイプ (Gfig)</primary>
+  </indexterm>
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">The same image, before and after using Gfig</title>
+      <title lang="ja">シェイプ (Gfig)フィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render-taj-gfig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Gfig</quote> applied</para>
+          <para lang="ja"><quote>シェイプ (Gfig)</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter is a tool: You can create geometrical figures to add them to
+      the image. It is very complex. I hope this paper will help you.
+    </para>
+    <para lang="en">
+      When using this filter, elements inserted in the image will be placed in
+      a new layer. So the image will not be modified, all modifications
+      occurring in this layer.
+    </para>
+    <para lang="ja">
+      <guimenuitem>シェイプ (Gfig)...</guimenuitem> フィルタ
+      の実体は一介のツールといえます。 Gfig を使って幾何学図形を描き画像に追加
+      できます。 機能満載で複雑ですがこの説明が理解の助けになれば本望です。
+    </para>
+    <para lang="ja">
+      このプラグインを呼び出すと、 元の画像に新たなレイヤーが作成され
+      その上にフィルタの成果が置かれます。 元のレイヤーの情報は損なわれず、 
+      作業は全てそのレイヤーで行なわれます。 [このオプションダイアログを閉じた
+      あともそのレイヤーには制御点の情報が保持されます。 またこのようなレイヤー
+      は画像に複数置けます。 このダイアログには独自の取り消し機能があり、 
+      各ツールの操作が取り消せますが、 やり直しはできません。]
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guimenuitem>Gfig</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guimenuitem>シェイプ (Gfig)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3 id="plug-in-gfig-options">
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Gfig</quote> filter options</title>
+      <title lang="ja">
+        <quote>シェイプ (Gfig)</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/render/gfig.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <!-- TODO: should we eliminate the word "Preview"? -->
+    <para lang="en">
+      The Preview (with a horizontal and a vertical ruler) on the left of the
+      main window actually is your working area where you are adding your
+      figures.
+    </para>
+    <para lang="en">
+      You can add and modify figures using the Gfig tools
+      (<link linkend="plug-in-gfig-toolbar">Gfig tool bar</link>)
+      and using the appropriate options
+      (<link linkend="plug-in-gfig-mainwindow">Gfig main window</link>).
+    </para>
+    <para lang="ja">
+      実は主ウィンドウの左側を占めるプレビュー表示域 (水平と垂直の定規が
+      ついている区画) で図形を加工する作業を行ないます。
+    </para>
+    <para lang="ja">
+      図形の加工や追加は、 Gfig の各ツール
+      (<link linkend="plug-in-gfig-toolbar">Gfig のツールバー</link>)
+      を使い、 関連するオプション
+      (<link linkend="plug-in-gfig-mainwindow">Gfig の主ウィンドウ</link>)
+      を調節して行ないます。
+    </para>
+
+    <!-- FIXME: Gfig menu ("File", "Edit") is not documented -->
+<!--
+     <sect4 id="plug-in-gfig-menu">
+     </sect4>
+-->
+
+    <sect4 id="plug-in-gfig-menu">
+      <title lang="en">The Gfig tool bar</title>
+      <title lang="ja">Gfig のツールバー</title>
+      <para lang="en">
+        At the top of dialog, you can find a set of icons which represents the
+        functions of this filter. Help pop-ups are explicit.
+      </para>
+      <para lang="ja">
+        このダイアログの上辺には、 メニューバーの下にツールバーがあり、 
+        たくさんのアイコンボタンが並んでいます。 いずれもボタン上にマウス
+        ポインタをかざすとその機能の説明が現れます。
+      </para>
+      <variablelist>
+        <title lang="en">Functions for object drawing </title>
+        <title lang="ja">オブジェクトを描くための機能群</title>
+        <para lang="en">
+          On the left part of tool bar, you can find some functions for object
+          drawing. You enable them by clicking on the corresponding icon. You
+          can create the following objects (note that <emphasis>Control
+          points</emphasis> are created at the same time as object):
+        </para>
+        <para lang="ja">
+          ツールバーの左から 9 つのボタンは、 オブジェクトを描く機能です。 
+          いずれもそのアイコンボタンをクリックすれば利用可能になります。 
+          つぎのような種類の形を描き加えられます。
+          そのとき形象の本質として <emphasis>制御点</emphasis> が置かれます。
+        </para>
+        <varlistentry>
+          <!--terms according to tooltips-->
+          <term lang="en">Create line</term>
+          <term lang="ja">直線の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can draw lines. Click on Preview to mark
+              start point, then drag mouse pointer to the end point.
+            </para>
+            <para lang="ja">
+              このツールで真っ直ぐな線が引けます。 プレビュー画面上で始点を
+              クリックしてから、 終点まで曳いてください。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create rectangle</term>
+          <term lang="ja">矩形の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can draw rectangules. Click on Prevew to
+              mark start point, then drag mouse pointer to create the
+              rectangle.
+            </para>
+            <para lang="ja">
+              このツールで長方形が描けます。 プレビュー画面上で長方形の
+              いずれかの角をクリックしてから、 その対角まで曳いてください。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create circle</term>
+          <term lang="ja">円の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can draw circles. Click on Preview to mark
+              center, then drag mouse pointer to the wanted radius.
+            </para>
+            <para lang="ja">
+              このツールで正円が描けます。 プレビュー画面上で円の中心を
+              クリックし、 半径の距離だけ曳いてください。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create ellipse</term>
+          <term lang="ja">楕円の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can draw ellipses. Click on Preview to mark
+              center, then drag mouse pointer to get the wanted size and form.
+            </para>
+            <para lang="ja">
+              このツールで楕円が描けます。 プレビュー画面上で楕円の中心を
+              クリックし曳くと、 その位置を一角にもつ矩形に内接する楕円が
+              現れます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create arc</term>
+          <term lang="ja">アーチの作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can draw circle arcs. Click on Preview to
+              set start point. Click again to set another arc point. Without
+              releasing mouse button, drag pointer; when you release mouse
+              button, the arc end point is placed and an arc encompassing
+              these three points is drawn.
+            </para>
+            <para lang="ja">
+              このツールで円弧が描けます。 プレビュー画面上で円弧の始点を
+              クリックします。 またつぎに弧上の一点をクリックして
+              マウスボタンを押したまま終点まで曳きマウスボタンを放します。 
+              するとこれら三点を結ぶ円弧が描かれます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create regular polygon</term>
+          <term lang="ja">規則的ポリゴンの作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can create a regular polygon. Start with
+              setting side number in <guilabel>Tool Options</guilabel> at the
+              right of Preview. Then click on Preview to place center and,
+              without releasing mouse button, drag pointer to get the wanted
+              size and orientation.
+            </para>
+            <para lang="ja">
+              このツールで正多角形が描けます。 プレビュー画面の右にある
+              <quote>ツールオプション</quote>の <guilabel>サイズ</guilabel> 
+              スライダや付属の数値記入欄を使って角の数を定めます。 つぎに
+              プレビュー画面上で図形の中心をクリックし、 マウスボタンを
+              押したまま曳き、 仮描画される図形が必要な大きさと傾きになる位置で
+              ボタンを放します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create star</term>
+          <term lang="ja">星型の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can create a star. Start with setting side
+              number (spikes) in <guilabel>Tool Options</guilabel> at the
+              right of Preview. Then click on Preview to place center and,
+              without releasing mouse button, drag pointer to get the wanted
+              size and orientation.
+            </para>
+            <para lang="ja">
+              このツールで尖端の数が 3 つ以上の星型が描けます。 プレビュー
+              画面の右にある<quote>ツールオプション</quote>の
+              <guilabel>サイズ</guilabel> スライダや付属の数値記入欄を使って
+              尖端の数を定めます。 つぎにプレビュー画面上で図形の中心を
+              クリックし、 マウスボタンを押したまま曳き、 仮描画される図形が
+              必要な大きさと傾きになる位置でボタンを放します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create spiral</term>
+          <term lang="ja">螺旋の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can create a spiral. Start with setting
+              spire number (sides) and spire orientation in <guilabel>Tool
+              Options </guilabel> at the right of Preview. Then click on
+              Preview to place center and, without releasing mouse button,
+              drag pointer to get the wanted size.
+            </para>
+            <para lang="ja">
+              このツールで渦巻が描けます。 形状はアルキメデスの螺旋です。
+              プレビュー画面の右にある<quote>ツールオプション</quote>の
+              <guilabel>サイズ</guilabel> スライダで渦の終点までの周回数を
+              定め、 <guilabel>向き</guilabel> メニューで巻く向きを定めます。
+              つぎに渦の中心をクリックして、 マウスボタンを押したまま
+              渦の終点まで曳きます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Create Bezier curve</term>
+          <term lang="ja">ベジエ曲線の作成</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can create B&eaucte;zier curves. Click on
+              Preview to set start point and the other points: the curve will
+              be created between these points. To end point creation press
+              <keycap>Shift</keycap> key when creating last point.
+            </para>
+            <para lang="ja">
+              このツールで 
+              <link linkend="glossary-bezier-curve">ベジエ曲線</link> が
+              描けます。 プレビュー画面上でスプラインの始点をクリックしてから、 
+              中途の制御点をつぎつぎとクリックします。 最後に 
+              <keycap>Shift</keycap> キーを押しながらクリックした点が終点に
+              なります。 ただし <guilabel>閉じる</guilabel> オプションを有効に
+              すると始点が終点を兼ね、 閉曲線が描かれます。 
+              <guilabel>漸近線の表示</guilabel> を有効にするとハンドルが
+              表示されます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <variablelist>
+        <title lang="en">Functions for object management</title>
+        <title lang="ja">オブジェクトを操作する機能群</title>
+        <para lang="en">
+          In the middle of tool bar, you can find tools to manage objects:
+        </para>
+        <para lang="ja">
+          ツールバーの中ほどにはオブジェクトを個々に操作するツールのアイコン
+          ボタンが 5 つ並んでいます。 [操作を受けるオブジェクトは活性化して
+          いなければなりません。 <guilabel>オブジェクトの選択</guilabel>
+          機能が選択に使えます。 また活性オブジェクトはその制御点がすべて
+          黒い小さな正方形で表わされます。]
+        </para>
+        <varlistentry>
+          <term lang="en">Move an object</term>
+          <term lang="ja">オブジェクトを移動</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can move the active object. To enable an
+              object, click on a control point created at the same time as the
+              object.
+            </para>
+            <para lang="ja">
+              このツールで活性オブジェクトを移動できます。 オブジェクトは
+              作成されたときに置かれた制御点をクリックすると活性化します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Move a single oint</term>
+          <term lang="ja">一つのポイントを移動</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can click-and-drag one of the control points
+              created at the same time as object. Each of these points moves
+              the object in a different way.
+            </para>
+            <para lang="ja">
+              このツールで活性オブジェクトの制御点の位置を変更できます。 どの
+              オブジェクトも制御点を移動するとその形が変わります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Copy an object</term>
+          <term lang="ja">オブジェクトのコピー</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can duplicate an object. Click on an object
+              control point and drag it to the wanted place.
+            </para>
+            <para lang="ja">
+              このツールでオブジェクトの複製ができます。 コピー元の
+              オブジェクトの制御点をどれかひとつクリックしたまま任意の位置まで
+              曳きます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Delete an object</term>
+          <term lang="ja">オブジェクトの削除</term>
+          <listitem>
+            <para lang="en">
+              Click on an object control point to delete it.
+            </para>
+            <para lang="ja">
+              このツールでクリックしたオブジェクトは削除されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Select an object</term>
+          <term lang="ja">オブジェクトの選択</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can select an object to active it. Simply
+              click on one of its control points.
+            </para>
+            <para lang="ja">
+              このツールでオブジェクトを活性化できます。 オブジェクトの
+              制御点をどれでもクリックすれば活性化します。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <variablelist>
+        <title lang="en">Functions for object organisation</title>
+        <title lang="ja">オブジェクトの上下関係を制御する機能群</title>
+        <para lang="en">
+          At the right of tool bar, you can find tools for object
+          superimposing (you can also get them by clicking on the drop-down
+           list button if they are not visible). You have:
+        </para>
+        <para lang="ja">
+          ツールバーの右寄りに (ボタンが隠れているときは右端の小さな三角形の
+          引き出しメニューを辿る) あるボタンのうち上下の矢印で描かれた 4 つの
+          アイコンはオブジェクトの重ね合わせを制御するツールです。
+        </para>
+        <varlistentry>
+          <term lang="en">Up (Raise selected object)</term>
+          <term lang="en">Down (Lower selected object)</term>
+          <term lang="ja">選択オブジェクトを前面に</term>
+          <term lang="ja">選択オブジェクトを背面に</term>
+          <listitem>
+            <para lang="en">
+              With this tool, you can push the selected object one level up or
+              down.
+            </para>
+            <para lang="ja">
+              オブジェクトの重ね合わせ順の一段上に活性オブジェクトを移動します。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <!--terms according to drop-down- list-->
+          <!--Raise selected object to top-->
+          <term lang="en">Top</term>
+          <term lang="ja">選択オブジェクトを最前面に</term>
+          <!--Lower selected object to bottom-->
+          <term lang="en">Bottom</term>
+          <term lang="ja">選択オブジェクトを最背面に</term>
+          <listitem>
+            <para lang="en">Self explanatory.</para>
+            <para lang="ja">文字通りのはたらきをします。</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <variablelist>
+        <title lang="en">Functions for object display</title>
+        <title lang="ja">オブジェクト表示を制御する機能群</title>
+        <varlistentry>
+          <!--Show previous object-->
+          <term lang="en">Back</term>
+          <!--Show next object-->
+          <term lang="en">Forward</term>
+          <term lang="ja">前のオブジェクトを表示</term>
+          <term lang="ja">次のオブジェクトを表示</term>
+          <listitem>
+            <para lang="en">
+              These functions allow you to jump from one object to another.
+              Only this object is displayed.
+            </para>
+            <para lang="ja">
+              オブジェクトを順番に選びます。 選ばれたオブジェクトだけが
+              表示されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Show all objects</term>
+          <term lang="ja">すべてのオブジェクトを表示</term>
+          <listitem>
+            <para lang="en">
+              This function shows all objects again, after using both previous
+              functions.
+            </para>
+            <para lang="ja">
+              このツールは上の単独表示ツールを使用したあとで再びすべての
+              オブジェクトを表示させるのに使います。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <note>
+        <para lang="en">
+          If your window is too small to show all icons, the tool bar provides a
+          drop-down list which offers you the missing functions. 
+        </para>
+        <para lang="ja">
+          ウィンドウが小さくてすべてのアイコンボタンが表示しきれなくても、
+          このアイコンボタンツールバーには右端に引き出しリストがあってそこから
+          残りの機能が呼び出せます。
+        </para>
+      </note>
+    </sect4>
+
+    <sect4 id="plug-in-gfig-mainwindow">
+      <title lang="en">The Gfig main window</title>
+      <title lang="ja">Gfig の主ウィンドウ</title>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Object Details</term>
+          <term lang="ja">オブジェクト詳細</term>
+          <listitem>
+            <para lang="en">
+              The <guilabel>XY posotion</guilabel> shows the position of your
+              pointer.
+            </para>
+            <para lang="ja">
+              <guilabel>XY 位置</guilabel> にポインタの現在位置が表示されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Tool Options</term>
+          <term lang="ja">ツールオプション</term>
+          <listitem>
+            <para lang="en">
+              If the selected tool provides some options (like number of
+              sides), you can change them here.
+            </para>
+            <para lang="ja">
+              選択したツールに (角の数のような) オプションがあればここで
+              変更できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Stroke</term>
+          <term lang="ja">ストローク描画</term>
+          <listitem>
+            <para lang="en">
+              If this option is checked, the object will be drawn. Two
+              buttons are available, to select color and brush type.
+              Changes to color or brush apply to existing objects too.
+            </para>
+            <para lang="ja">
+              このオプションを有効にすると活性オブジェクトの線が彩色されます。 
+              無効にすると活性オブジェクトの線が彩色されません。 色だまり
+              ボタンをクリックすると色変更ダイアログが現れ、 色を選択できます。 
+              変更した色は直ちに活性オブジェクトに反映されます。 
+              <guibutton>参照...</guibutton> ボタンをクリックすると彩色に
+              用いるブラシを選択するダイアログが現れ<acronym>GIMP</acronym>で
+              利用できるすべてのブラシから任意の穂先が選べます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Fill</term>
+          <term lang="ja">塗りつぶし</term>
+          <listitem>
+            <para lang="en">
+              With help of this drop-down list, you can decide whether
+              and how the object will be filled, with a color, a pattern
+              or a gradient.
+            </para>
+            <para lang="ja">
+              塗りつぶしの方法は、 この引き出しリストから
+              <guimenuitem>塗りつぶさない</guimenuitem>、
+              <guimenuitem>色で塗りつぶす</guimenuitem>、
+              <guimenuitem>パターンで塗りつぶす</guimenuitem>、
+              <guimenuitem>形状対応グラデーション</guimenuitem>、
+              <guimenuitem>水平方向のグラデーション</guimenuitem>、
+              <guimenuitem>垂直方向のグラデーション</guimenuitem> のいずれ
+              かを選びます。 [塗りつぶしができるオブジェクトは矩形、 円形、
+              楕円形、 星型、 多角形に限られます。] またその選択により色だまり
+              ボタン、 パターン選択ボタン、 グラデーション選択ボタンの
+              いずれかが適宜現れ、 クリックすると開かれるダイアログで他の色、 
+              パターン、 グラデーションが選択できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Show grid</term>
+          <term lang="ja">グリッドの表示</term>
+          <listitem>
+            <para lang="en">
+              If this option is checked, a grid is applied on Preview to
+              make object positioning easier.
+            </para>
+            <para lang="ja">
+              このオプションを有効にするとプレビュー画面上にオブジェクト配置の
+              めやすとなる格子線が表示されます。 ダイアログのメニューバーから 
+              <menuchoice>
+                <guimenu>編集</guimenu>
+                <guimenuitem>グリッド</guimenuitem>
+              </menuchoice>
+              と辿ると<quote>グリッド</quote>ダイアログが開かれます。 ここ
+              では <guilabel>グリッドの間隔</guilabel> スライダで格子の線分
+              の長さを設定できます。 <guilabel>グリッドの種類</guilabel> 
+              引き出しメニューから <guimenuitem>矩形</guimenuitem>、 
+              <guimenuitem>正三角形</guimenuitem>、 
+              <guimenuitem>極座標</guimenuitem> のいずれかを選択できます。
+              <guilabel>グリッドの色</guilabel> 引き出しメニューでは格子線の
+              表示色に <guimenuitem>標準</guimenuitem>、 
+              <guimenuitem>黒</guimenuitem>、 <guimenuitem>白</guimenuitem>、
+              <guimenuitem>グレー</guimenuitem>、
+              <guimenuitem>暗い</guimenuitem>、
+              <guimenuitem>明るい</guimenuitem>、 
+              <guimenuitem>とても暗い</guimenuitem> のいずれかを選べます。
+              グリッドの種類に <guimenuitem>極座標</guimenuitem> を選んだ
+              ときは、 <guilabel>極座標グリッドの分割数</guilabel> と、
+              <guilabel>極座標グリッドの半径間隔</guilabel> をそれぞれ
+              スライダで調節できます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Snap to Grid</term>
+          <term lang="ja">グリッドにスナップ</term>
+          <listitem>
+            <para lang="en">
+              If this option is checked, objects will align to the grid.
+            </para>
+            <para lang="ja">
+              このオプションを有効にするとオブジェクトはグリッドに沿って
+              配置がしやすくなります。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Show image</term>
+          <term lang="ja">画像の表示</term>
+          <listitem>
+            <para lang="en">
+              When this option is checked, the current image is displayed in
+              Preview (working area).
+            </para>
+            <para lang="ja">
+              このオプションを有効にするとプレビュー画面には呼び出し元の
+              画像が表示されるほか、 このフィルタで描いた図形も表示
+              されます。 <!--無効にすると背景は灰色無色になり、 ストローク描画
+              や塗りつぶしで塗られた色は隠されオブジェクトの線と制御点だけ
+              の表示に切り替わります。-->
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+  </sect3>
+</sect2>

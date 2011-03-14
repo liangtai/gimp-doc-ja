@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-07-19 ude: changed id 'gimp-image-guides-percent' to
+                  'script-fu-guide-new-percent'
+  2007-11-25 j.h: replaced coordinate origin, 'image' with 'canvas' en;fr
+  2007-09-28 AntI: Added 'es'
+  2007-03-12 alex falappa: added it translation
+  2006-07-23 tip translated to en;fr from german by j.h
+  2006-08-07 scb: 'en' review
+  2005-10-30 created from image-guides.xml by axel.wernicke
+-->
+<!--2010-12-07-->
+<sect2 id="script-fu-guide-new-percent">
+  <title lang="en">New Guide (by Percent)</title>
+  <title lang="ja">新規ガイド (パーセントで)...</title>
+
+  <indexterm lang="en">
+    <primary>Guides</primary>
+    <secondary>Add by percent</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sotas="ガイド (ケントウセン)">ガイド (見当線)</primary>
+    <secondary sortas="パーセントデツイカ">パーセントで追加</secondary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>New Guide (by Percent)</guimenuitem> command adds
+    a guide to the image. The position of the guide is specified as a
+    percentage of the canvas Height and Width.
+  </para>
+  <para lang="ja">
+    <guimenuitem>新規ガイド (パーセントで)...</guimenuitem> 
+    コマンドは画像に見当線 (ガイド) を追加します。 見当線の位置はキャンバスの
+    高さか幅の百分率で指定できます。
+  </para>
+  <tip>
+    <para lang="en">
+      You can add guides to the image more quickly by simply clicking and
+      dragging guides from the image rulers and positioning them where you
+      would like. Guides you draw with click-and-drag are not as precisely
+      positioned as those you draw with this command, however.
+    </para>
+    <para lang="ja">
+      画像ウィンドウの定規をクリックして画像上まで曳いてゆき適当な位置で放てば
+      もっと手軽に見当線を画像に追加できます。 しかしこのようなマウスで行なう
+      方法はこの<quote>新規ガイド (パーセントで)</quote>コマンドで行なうような
+      精確さが足りません。
+    </para>
+  </tip>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <para lang="en">
+      You can access this command from the image menubar through
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guisubmenu>Guides</guisubmenu>
+        <guimenuitem>New Guide (by Percent)</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guisubmenu>ガイド</guisubmenu>
+        <guimenuitem>新規ガイド (パーセントで)...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">
+      <quote>New Guide (by Percent)</quote> Options
+    </title>
+    <title lang="ja">
+      <quote>Script-Fu: 新規ガイド (パーセントで)</quote>ダイアログのオプション
+    </title>
+    <para lang="en">
+      When you select this menu item, a dialog opens, which allows you to set
+      the <guilabel>Direction</guilabel> and <guilabel>Position</guilabel>, by
+      percent, of the new guide.
+    </para>
+    <para lang="ja">
+      このメニュー項目を選ぶとダイアログが現れますので、 新たに追加するガイドの
+      <guilabel>方向</guilabel> と <guilabel>位置 (パーセントで指定)</guilabel>
+      を設定してください。
+    </para>
+    <figure>
+      <title lang="en">
+        The <quote>New Guide (by Percent)</quote> Dialog
+      </title>
+      <title lang="ja">
+        <quote>Script-Fu: 新規ガイド (パーセントで)</quote>ダイアログ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/new-guide-percent.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Direction</term>
+        <term lang="ja">方向</term>
+        <listitem>
+          <para lang="en">
+            You can choose the <guilabel>Direction</guilabel> of the guide,
+            either <guilabel>Horizontal</guilabel> or
+            <guilabel>Vertical</guilabel>, by using the drop-down list.
+          </para>
+          <para lang="ja">
+            見当線の <guilabel>方向</guilabel> を引き出しリストで 
+            <guimenuitem>水平</guimenuitem> か 
+            <guimenuitem>垂直</guimenuitem> に指定してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Position</term>
+        <term lang="ja">位置 (パーセントで指定)</term>
+        <listitem>
+          <para lang="en">
+            You can also choose the <guilabel>Position</guilabel> of the
+            new guide. The coordinate origin is in the upper left corner of
+            the canvas.
+          </para>
+          <para lang="ja">
+            追加される見当線の <guilabel>位置 (パーセントで指定)</guilabel> を
+            示してください。 0% の位置はキャンバスの左上隅、 100% が右下隅です。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

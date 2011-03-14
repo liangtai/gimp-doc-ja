@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+     2007-11-30 j.h: updated en;fr for v2.4. Moved from layer menu to image
+     menu
+     2007-06-18 Added Spanish translation by AntI
+     2007-03-12 Kolbjorn: added no translation
+     2006-07-31 scb: revised 'en'
+     -->
+<!--2010-12-07-->
+<sect2 id="plug-in-align-layers">
+  <title lang="en">Align Visible Layers</title>
+  <title lang="ja">可視レイヤーの整列...</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Stack managing</secondary>
+    <tertiary>Align visible layers</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Align visible layers</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサナリヲカンリ">重なりを管理</secondary>
+    <tertiary sortas="カシレイヤーノセイレツ">可視レイヤーの整列</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カシレイヤーノセイレツ">可視レイヤーの整列</primary>
+  </indexterm>
+
+  <para lang="en">
+    With the <guimenuitem>Align Visible Layers</guimenuitem> command,
+    you can very precisely position the visible layers (those marked with
+    the <quote>eye</quote> icon). This degree of precision is especially
+    useful when you are working on animations, which typically have many
+    small layers. Clicking on <guimenuitem>Align Visible
+      Layers</guimenuitem> displays a dialog which allows you to choose
+    how the layers should be aligned.
+  </para>
+  <para lang="ja">
+    <guimenuitem>可視レイヤーの整列...</guimenuitem> コマンド
+    によって可視レイヤー (レイヤーダイアログ上では<quote>目</quote>のしるしが
+    ついている) を極めて精密に配置できるようになります。 とくに小さなレイヤー
+    を多く使うアニメーション作成で効果を発揮します。 
+    <guimenuitem>可視レイヤーの整列...</guimenuitem> コマンドを呼び出すと
+    ダイアログが現れ、 レイヤーを揃える方式が選択できます。
+  </para>
+  <note>
+    <para lang="en">
+      In <application>GIMP 1.2</application>, the default base for the
+      alignment was the top visible layer in the stack.  In
+      <application>GIMP 2</application>, the default alignment base is
+      the edge of the canvas. You can still align the image on the bottom
+      layer of the stack, even if it is invisible, by checking
+      <guilabel>Use the (invisible) bottom layer as the base</guilabel>
+      in the dialog.
+    </para>
+    <para lang="ja">
+      <application><acronym>GIMP</acronym> 1.2</application> の初期設定では
+      レイヤーの重なりのうち最前面のレイヤーを整列の基準に据えていましたが、
+      <application><acronym>GIMP</acronym> 2</application> の初期設定ではそれが
+      キャンバスの輪郭に変更されました。 代わりにこのダイアログの 
+      <guilabel>(不可視でも)一番下のレイヤーを基準に使う</guilabel> 
+      オプションによって、 最背面のレイヤーが、 たとえ不可視でも、 
+      整列の基準に使えます。
+    </para>
+  </note>
+  <figure>
+   <title lang="en">Example image for layer alignment</title>
+   <title lang="ja">レイヤー整列の例題画像</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/menus/image/align-demo.png" format="PNG"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          The example image contains four layers on a large (150x150 pixel)
+          canvas. The red square is 10x10 pixels, the green rectangle is
+          10x20 pixels and the yellow rectangle is 20x10 pixels. The
+          background layer (blue, 100x100 pixels) will not be affected by
+          the command, since the <guilabel>Ignore lower layer</guilabel>
+          option has been checked on the dialog. Note that the layers in the
+          image seem to have a different order than their actual order in
+          the stack because of their positions on the canvas. The yellow
+          layer is the top layer in the image and the second one in the
+          stack.
+        </para>
+        <para lang="ja">
+          この例題画像では 4 層のレイヤーがそれより大きめのキャンバス 
+          (150&times;150ピクセル) に重ねられている。 赤の正方形が
+          10&times;10 ピクセル、 緑の矩形が 10&times;20 ピクセル、 
+          黄色の矩形が 20&times;10 ピクセル。 
+          背景レイヤー (青、 100&times;100 ピクセル) はダイアログの 
+          <guilabel>可視でも一番下のレイヤーを無視する</guilabel> 
+          オプションを有効にしているためこの操作の対象外である。 ちなみに画像
+          でのレイヤーの順序がキャンバス内の位置につられて実際の積み重ねの順序
+          とは異なるように思えてしまうようだ。 例えばここでは黄色のレイヤーは
+          画像での見た目が一番上のようだが実際は手前から 2 層目である。
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Image</guimenu>
+            <guimenuitem>Align Visible layers</guimenuitem>
+          </menuchoice>.
+          There is no default keyboard shortcut. The dialog doesn't show up
+          if the image holds a single layer only.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guimenuitem>可視レイヤーの整列...</guimenuitem>
+          </menuchoice> 。
+          初期設定ではキーボードショートカットがまだありません。 レイヤーが 
+          1 層しかない画像でこのコマンドを呼び出してもダイアログは現れません。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">
+      Description of the <quote>Align Visible Layers</quote> dialog
+    </title>
+    <title lang="ja">
+      <quote>可視レイヤーの整列</quote>ダイアログのご説明
+    </title>
+    <figure>
+      <title lang="en">The <quote>Align Visible Layers</quote> dialog</title>
+      <title lang="ja"><quote>可視レイヤーの整列</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/layer-align.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Horizontal Style; Vertical Style</term>
+        <term lang="ja">水平方向スタイル; 垂直方向スタイル</term>
+        <listitem>
+          <para lang="en">
+            These options control how the layers should be moved in
+            relationship to each other. You can choose:
+          </para>
+          <para lang="ja">
+            これらのオプションではレイヤーが移動するときのレイヤー同士の関係を
+            調節できます。 つぎの 5 つの選択肢があります。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <guilabel>None</guilabel>:
+                There will be no change in the horizontal or the vertical
+                position, respectively.
+              </para>
+              <para lang="ja">
+                <guimenuitem>なし</guimenuitem>: これを選んだ水平もしくは垂直の
+                方向では変更がありません。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Collect</guilabel>:
+                The visible layers will be aligned on the canvas, in the
+                way that is determined by the <guilabel>Horizontal
+                  base</guilabel> and <guilabel>Vertical base</guilabel>
+                options. If you select a <guilabel>Horizontal
+                  base</guilabel> of <guilabel>Right edge</guilabel>, layers
+                may disappear from the canvas. You can recover them by
+                enlarging the canvas. If you check the
+                <guilabel>Use the (invisible) bottom layer as the
+                  base</guilabel> option, the layers will be aligned on the
+                top left corner of the bottom layer.
+              </para>
+              <para lang="ja">
+                <guimenuitem>合わせる</guimenuitem>: 
+                可視レイヤーは <guilabel>水平方向基準</guilabel> や 
+                <guilabel>垂直方向基準</guilabel> で定められた筋に揃えられます。 
+                仮に <guilabel>水平方向基準</guilabel> に 
+                <guimenuitem>右端</guimenuitem> を選んだら、 レイヤーは
+                キャンバスから消え去ってしまうでしょう。 でもキャンバスを
+                拡張すればまた見えるところに入ります。 
+                <guilabel>(不可視でも)一番下のレイヤーを基準に使う</guilabel> 
+                オプションを有効にすると背景レイヤーの左上隅に
+                合わせてレイヤーが整列することになります。
+              </para>
+              <figure>
+                <title lang="en">
+                  Horizontal <quote>Collect</quote> alignment
+                  (on the edge of the canvas)
+                </title>
+                <title lang="ja">
+                  (キャンバスの端を基準に)水平方向に<quote>合わせる</quote>整列
+                </title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/align-demo.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">Original image with the layer stack</para>
+                    <para lang="ja">レイヤーが重なった元画像</para>
+                  </caption>
+                </mediaobject>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/alignHCLB-.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">
+                      The layers have been moved horizontally so that their
+                      left edges are aligned with the left edge of the
+                      canvas.
+                    </para>
+                    <para lang="ja">
+                      各レイヤーはその左端がキャンバスの左端に接するところまで
+                      水平に平行移動した。
+                    </para>
+                  </caption>
+                </mediaobject>
+              </figure>
+              <figure>
+                <title lang="en">
+                  Horizontal <quote>Collect</quote> alignment
+                  (on the bottom layer)
+                </title>
+                <title lang="ja">
+                  (背景レイヤーを基準に)水平方向に<quote>合わせる</quote>整列
+                </title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/align-demo.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">Original image with the layer stack</para>
+                    <para lang="ja">レイヤーが重なった元画像</para>
+                  </caption>
+                </mediaobject>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/alignHCLB+.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">
+                      The layers have been moved horizontally so that their
+                      left edges align with the left edge of the bottom
+                      layer.
+                    </para>
+                    <para lang="ja">
+                      各レイヤーはその左端が背景レイヤーの左端やその延長線に
+                      接するところまで水平に平行移動した。
+                    </para>
+                  </caption>
+                </mediaobject>
+              </figure>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Fill (left to right)</guilabel>;
+                <guilabel>Fill (top to bottom)</guilabel>:
+                The visible layers will be aligned with the canvas
+                according to the edge you selected with
+                <guilabel>Horizontal base</guilabel> or
+                <guilabel>Vertical base</guilabel>, respectively.
+                The layers are arranged regularly, so that they do not
+                overlap each other. The top layer in the stack is placed
+                on the leftmost (or uppermost) position in the image.
+                The bottom layer in the stack is placed on the rightmost
+                (or bottommost) position of the image. The other layers
+                are placed regularly between these two positions.  If the
+                <guilabel>Use the (invisible) bottom layer as the
+                  base</guilabel> option is checked, the layers are aligned
+                with the corresponding edge of the bottom layer.
+              </para>
+              <para lang="ja">
+                <guimenuitem>左から右へ順番に</guimenuitem>;
+                <guimenuitem>上から下へ順番に</guimenuitem>: 
+                <guilabel>水平方向基準</guilabel> や 
+                <guilabel>垂直方向基準</guilabel> で指定したキャンバス
+                上の位置に可視レイヤーを揃えて配置します。 いずれのレイヤーも
+                画像上で互いに重なり合わないよう規則正しく整列します。 層順で
+                一番上 (最前面) のレイヤーが画像の最も左寄り (あるいは上側) に
+                置かれ、 層順で一番下 (最背面) のレイヤーが最も右寄り (あるいは
+                下側) に置かれます。 その他のレイヤーは順番に従い以上の 2 つの
+                レイヤーの間に規則正しく置かれます。 
+                <guilabel>(不可視でも)一番下のレイヤーを基準に使う</guilabel> 
+                オプションを有効にしている場合は最背面のレイヤーの所定の境界線
+                やその延長線から順に可視レイヤーが整列します。
+              </para>
+              <figure>
+                <title lang="en">
+                  Horizontal <quote>Fill</quote> alignment (canvas)
+                </title>
+                <title lang="ja">
+                  (キャンバスの端を基準に)水平方向に
+                  <quote>順序よく連ねる</quote>整列
+                </title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/align-demo.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">Original image with the layer stack</para>
+                    <para lang="ja">レイヤーが重なった元画像</para>
+                  </caption>
+                </mediaobject>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/alignHFLB-.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">
+                      Horizontal filling alignment, Left to Right, with
+                      <guilabel>Use the (invisible) bottom layer as the
+                        base</guilabel> option not checked. The top layer
+                      in the stack, the green one, is placed all the way
+                      on the left. The bottom layer in the stack, the red
+                      one, is placed is on the right and the yellow layer
+                      is between the other two.
+                    </para>
+                    <para lang="ja">
+                      左から右へ水平方向に順序よく連ねる整列。 <guilabel>
+                      (不可視でも)一番下のレイヤーを基準に使う</guilabel> 
+                      オプションは無効。 全レイヤーの最前面の層をなす
+                      緑色のレイヤーが先頭をきって最も左寄りに置かれた。 
+                      最背面の赤いレイヤーは右寄りに、 黄色のレイヤーはその間に
+                      置かれる。
+                    </para>
+                  </caption>
+                </mediaobject>
+              </figure>
+              <figure>
+                <title lang="en">
+                  Horizontal <quote>Fill</quote> alignment (bottom layer)
+                </title>
+                <title lang="ja">
+                  (背景レイヤーを基準に)水平方向に
+                  <quote>順序よく連ねる</quote>整列
+                </title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/align-demo.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">Original image with the layer stack</para>
+                    <para lang="ja">レイヤーが重なった元画像</para>
+                  </caption>
+                </mediaobject>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/alignHFLB+.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">
+                      The same parameters as in the previous example,
+                      but with the lowest (blue) level as the base.
+                    </para>
+                    <para lang="ja">
+                      基準に青いレイヤーを選んだ他は前の例と同じ設定
+                    </para>
+                  </caption>
+                </mediaobject>
+              </figure>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <guilabel>Fill (right to left)</guilabel>;
+                <guilabel>Fill (bottom to top)</guilabel>:
+                These settings work similarly to the ones described above,
+                but the filling occurs in the opposite direction.
+              </para>
+              <para lang="ja">
+                <guimenuitem>右から左へ順番に</guimenuitem>;
+                <guimenuitem>下から上へ順番に</guimenuitem>:
+                このような設定ならば以上で述べた整列と逆方向であるほかは同じ
+                作用をします。
+              </para>
+              <figure>
+                <title lang="en">
+                  Vertical <quote>Fill</quote> alignment (bottom layer)
+                </title>
+                <title lang="ja">
+                  (背景レイヤーを基準に)垂直方向に
+                  <quote>順序よく連ねる</quote>整列
+                </title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/align-demo.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">Original image with the layer stack</para>
+                    <para lang="ja">レイヤーが重なった元画像</para>
+                  </caption>
+                </mediaobject>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata format="PNG"
+                      fileref="images/menus/image/alignVFBB+.png"/>
+                  </imageobject>
+                  <caption>
+                    <para lang="en">
+                      Vertical <quote>Fill</quote> alignment, bottom to
+                      top, bottom layer as base
+                    </para>
+                    <para lang="ja">
+                      下から上へ垂直方向に順序よく連ねる整列。
+                      背景レイヤーが基準。
+                    </para>
+                  </caption>
+                </mediaobject>
+              </figure>
+              <para lang="en">
+                There must be at least three visible layers in the image to
+                use the <quote>Fill</quote> options.
+              </para>
+              <para lang="ja">
+                <quote>○から○へ順番に</quote>オプションが使えるのは、 画像に
+                少なくとも 3 層の可視レイヤーがあるときです。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

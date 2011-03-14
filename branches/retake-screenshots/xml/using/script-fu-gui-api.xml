@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-03-12 jpl: fr & en update
+  2007-11-27 ude: created (en,de)
+-->
+<!--2010-11-23-->
+<sect3 id="gimp-using-script-fu-api">
+  <title lang="en">
+    The Script-Fu parameter API<footnote><para>
+      This section is not part of the original tutorial.
+    </para></footnote>
+  </title>
+  <title lang="ja">
+    Script-Fuパラメータ<acronym>API</acronym>
+    <footnote>
+      <para>この節は原文の演習には含まれていません。</para>
+    </footnote>
+  </title>
+
+  <note>
+    <para lang="en">
+      Beside the above parameter types there are more types for the
+      interactive mode, each of them will create a widget in the control
+      dialog. You will find a list of these parameters with descriptions and
+      examples in the test script
+      <filename>plug-ins/script-fu/scripts/test-sphere.scm</filename>
+      shipped with the <acronym>GIMP</acronym> source code.
+    </para>
+    <para lang="ja">
+      上記のパラメータ型に加え、 操作盤ダイアログ上に使えるさらに多くの
+      相互対話モード用ウィジェットの型があります。 <acronym>GIMP</acronym>の
+      ソースコードとともに配布されているテスト用スクリプト 
+      <filename>plug-ins/script-fu/scripts/test-sphere.scm</filename> に
+      そういったパラメータの説明や使用例があります。
+    </para>
+  </note>
+
+  <informaltable>
+    <tgroup cols="2">
+      <thead>
+        <row>
+          <entry>
+            <para lang="en">Param Type</para>
+            <para lang="ja">パラメータの型</para>
+          </entry>
+          <entry>
+            <para lang="en">Description</para>
+            <para lang="ja">説明</para>
+          </entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>
+            <para lang="en">SF-ADJUSTMENT</para>
+            <para lang="ja"><function>SF-ADJUSTMENT</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              Creates an adjustment widget in the dialog.
+            </para>
+            <para lang="en">
+              SF-ADJUSTMENT "label" '(value lower upper step_inc page_inc
+              digits type)
+            </para>
+            <para lang="ja">
+              ダイアログ上に値を調節するためのウィジェットを作成します。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-ADJUSTMENT</function> "<replaceable>label</replaceable>" '(<replaceable>value lower upper step_inc page_inc digits type</replaceable>)
+              </synopsis>
+            </para>
+            <segmentedlist>
+              <title lang="en">Widget arguments list</title>
+              <title lang="ja">ウィジェット変数表</title>
+              <segtitle lang="en">Element</segtitle>
+              <segtitle lang="en">Description</segtitle>
+              <segtitle lang="ja">要素</segtitle>
+              <segtitle lang="ja">説明</segtitle>
+              <seglistitem>
+                <seg lang="en">"label"</seg>
+                <seg lang="en">Text printed before the widget.</seg>
+                <seg lang="ja">"<replaceable>label</replaceable>"</seg>
+                <seg lang="ja">
+                  ウィジェットの前に貼られる語句 
+                </seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">value</seg>
+                <seg lang="en">Value print at the start.</seg>
+                <seg lang="ja"><replaceable>value</replaceable></seg>
+                <seg lang="ja">当初の数値 デフォルト</seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">lower / upper</seg>
+                <seg lang="en">The lower / upper values (range of choice).</seg>
+                <seg lang="ja">
+                  <replaceable>lower</replaceable>;
+                  <replaceable>upper</replaceable>
+                </seg>
+                <seg lang="ja">最低値と最高値 (選べる値の範囲)</seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">step_inc</seg>
+                <seg lang="en">Increment/decrement value.</seg>
+                <seg lang="ja"><replaceable>step_inc</replaceable></seg>
+                <seg lang="ja">最小変動値、 公差</seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">page_inc</seg>
+                <seg lang="en">Increment/decrement value using page key.</seg>
+                <seg lang="ja"><replaceable>page_inc</replaceable></seg>
+                <seg lang="ja">
+                  <keycap>PgUp</keycap> キーと <keycap>PgDn</keycap> 
+                  キーによる操作での公差。
+                </seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">digits</seg>
+                <seg lang="en">Digits after the point (decimal part).</seg>
+                <seg lang="ja"><replaceable>digits</replaceable></seg>
+                <seg lang="ja">小数点以下の桁数 (十進数)</seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">type</seg>
+                <seg lang="en">One of: SF-SLIDER or 0, SF-SPINNER or 1</seg>
+                <seg lang="ja"><replaceable>type</replaceable></seg>
+                <seg lang="ja">
+                  スライダは SF-SLIDER もしくは 0、
+                  スピンボックスは SF-SPINNER もしくは 1
+                </seg>
+              </seglistitem>
+            </segmentedlist>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-COLOR</para>
+            <para lang="ja"><function>SF-COLOR</function></para>
+          </entry>
+          <entry>
+            <para lang="en">Creates a color button in the dialog.</para>
+            <para lang="en">SF-COLOR "label" '(red green blue)</para>
+            <para lang="en">or</para>
+            <para lang="en">SF-COLOR "label" "color"</para>
+            <para lang="ja">ダイアログにカラーボタンを作成します。</para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-COLOR</function> "<replaceable>label</replaceable>" '(<replaceable>red green blue</replaceable>)
+              </synopsis>
+            </para>
+            <para lang="ja">もしくは</para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-COLOR</function> "<replaceable>label</replaceable>" "<replaceable>color</replaceable>"
+              </synopsis>
+            </para>
+            <segmentedlist>
+              <title lang="en">Widget arguments list</title>
+              <title lang="ja">ウィジェット変数表</title>
+              <segtitle lang="en">Element</segtitle>
+              <segtitle lang="en">Description</segtitle>
+              <segtitle lang="ja">要素</segtitle>
+              <segtitle lang="ja">説明</segtitle>
+              <seglistitem>
+                <seg lang="en">"label"</seg>
+                <seg lang="en">Text printed before the widget.</seg>
+                <seg lang="ja">"<replaceable>label</replaceable>"</seg>
+                <seg lang="ja">
+                  ウィジェットの前に貼られる語句
+                </seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">'(red green blue)</seg>
+                <seg lang="en">
+                  List of three values for the red, green and blue components.
+                </seg>
+                <seg lang="ja">'(<replaceable>red green blue</replaceable>)</seg>
+                <seg lang="ja">赤・緑・青の 3 つの成分</seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">"color"</seg>
+                <seg lang="en">Color name in CSS notatation.</seg>
+                <seg lang="ja">"<replaceable>color</replaceable>"</seg>
+                <seg lang="ja"><acronym>CSS</acronym> notatation の色名</seg>
+              </seglistitem>
+            </segmentedlist>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-FONT</para>
+            <para lang="ja"><function>SF-FONT</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              Creates a font-selection widget in the dialog. It returns a
+              fontname as a string. There are two new gimp-text procedures to
+              ease the use of this return parameter:
+            </para>
+            <para lang="en">
+              (gimp-text-fontname image drawable x-pos y-pos text border
+              antialias size unit font)
+            </para>
+            <para lang="en">
+              (gimp-text-get-extents-fontname text size unit font)
+            </para>
+            <para lang="en">
+              where font is the fontname you get. The size specified in the
+              fontname is silently ignored. It is only used in the
+              font-selector. So you are asked to set it to a useful value (24
+              pixels is a good choice).
+            </para>
+            <para lang="en">SF-FONT "label" "fontname"</para>
+            <para lang="ja">
+              ダイアログにフォント選択ウィジェットを作成します。 フォント名を
+              文字列変数形式で返します。 
+            </para>
+            <para lang="ja">
+              <itemizedlist>
+                <para>
+                  <acronym>GIMP</acronym>にはこの返し値を手軽に扱えるテキスト
+                  処理プロシージャが 2 つ備わっています。
+                </para>
+                <listitem>
+                  <para>
+                    <code>
+                      (gimp-text-fontname image drawable x-pos y-pos text
+                      border antialias size unit font)
+                    </code>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <code>
+                      (gimp-text-get-extents-fontname text size unit font)
+                    </code>
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+            <para lang="ja"><!--no use--></para>
+            <para lang="ja">
+              いずれも <replaceable>fontname</replaceable> に得られたフォント
+              名を入れます。 フォントの大きさには有益な値を設定しておくと
+              良いでしょう。 24 ピクセルがおすすめです。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-FONT</function> "<replaceable>label</replaceable>" "<replaceable>fontname</replaceable>"
+              </synopsis>
+            </para>
+            <segmentedlist>
+              <title lang="en">Widget arguments list</title>
+              <title lang="ja">ウィジェット変数表</title>
+              <segtitle lang="en">Element</segtitle>
+              <segtitle lang="en">Description</segtitle>
+              <segtitle lang="ja">要素</segtitle>
+              <segtitle lang="ja">説明</segtitle>
+              <seglistitem>
+                <seg lang="en">"label"</seg>
+                <seg lang="en">Text printed before the widget.</seg>
+                <seg lang="ja">"<replaceable>label</replaceable>"</seg>
+                <seg lang="ja">
+                  ウィジェットの前に貼られる語句
+                </seg>
+              </seglistitem>
+              <seglistitem>
+                <seg lang="en">"fontname"</seg>
+                <seg lang="en">Name of the default font.</seg>
+                <seg lang="ja">"<replaceable>fontname</replaceable>"</seg>
+                <seg lang="ja">初期状態でのフォント名</seg>
+              </seglistitem>
+            </segmentedlist>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-BRUSH</para>
+            <para lang="ja"><function>SF-BRUSH</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a preview area (which when pressed will produce a
+              popup preview ) and a button with the "..." label. The button
+              will popup a dialog where brushes can be selected and each of
+              the characteristics of the brush can be modified.
+            </para>
+            <para lang="en">SF-BRUSH "Brush" '("Circle (03)" 100 44 0)</para>
+            <para lang="en">
+              Here the brush dialog will be popped up with a default brush of
+              Circle (03) opacity 100 spacing 44 and paint mode of Normal
+              (value 0).
+            </para>
+            <para lang="en">
+              If this selection was unchanged the value passed to the function
+              as a parameter would be '("Circle (03)" 100 44 0).
+            </para>
+            <para lang="ja">
+              ダイアログにブラシ選択ウィジェットを作成します。 この
+              ウィジェットは縮小見本表示があります。 ここはクリックしたまま
+              待つと大きく表示されます。 さらに <guibutton>...</guibutton> の
+              ラベルがついたボタンが作られます。 このボタンをクリックすると
+              ブラシ選択ダイアログが開かれ、 ブラシを選んだりその特徴を変更
+              できるしくみになっています。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-BRUSH</function> "<replaceable>label</replaceable>" '("<replaceable>Brush Name</replaceable>" <replaceable>opacity spacing mode</replaceable>)
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>brush name</replaceable>"</seg>
+                  <seg>ブラシの名前。 例えば "Circle (03)"</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>opacity</replaceable></seg>
+                  <seg>不透明度 (0-100)</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>spacing</replaceable></seg>
+                  <seg>間隔 (対ブラシ高さ%)</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg><replaceable>mode</replaceable></seg>
+                  <seg>描画モード番号。 例えば 0 なら標準モード</seg>
+                </seglistitem>
+              </segmentedlist>
+            </para>
+            <para lang="ja">
+              例えば<quote>SF-BRUSH "Brush" '("Circle (03)" 100 44 0)</quote>
+              として呼び出してダイアログで何も変更しなかった場合、 返ってくる
+              パラメータは<quote><parameter>'("Circle (03)" 100 44 0)
+              </parameter></quote>となります。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-PATTERN</para>
+            <para lang="ja"><function>SF-PATTERN</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a preview area (which when pressed will produce a
+              popup preview ) and a button with the "..." label. The button
+              will popup a dialog where patterns can be selected.
+            </para>
+            <para lang="en">SF-PATTERN "Pattern" "Maple Leaves"</para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the pattern name. If the above selection was not
+              altered the string would contain "Maple Leaves".
+            </para>
+            <para lang="ja">
+              ダイアログにパターン選択ウィジェットを作成します。 この
+              ウィジェットは縮小見本表示があります。 ここはクリックしたまま
+              待つと大きく表示されます。 さらに <guibutton>...</guibutton> の
+              ラベルがついたボタンが作られます。 このボタンをクリックすると
+              パターン選択ダイアログが開かれ、 パターンを選んだりその特徴を
+              変更できるしくみになっています。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-PATTERN</function> "<replaceable>label</replaceable>" "<replaceable>Pattern Name</replaceable>"
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>brush name</replaceable>"</seg>
+                  <seg>パターンの名前。 例えば "Maple Leaves"</seg>
+                </seglistitem>
+              </segmentedlist>
+              スクリプトが呼び出されたときに返される値はパターンの名前をもつ
+              文字列変数です。 例えば<quote>SF-PATTERN "Pattern" "Maple
+              Leaves"</quote>として呼び出してダイアログで何も変更しなかった
+              場合、 返ってくるパタメータは<quote><parameter>"Maple Leaves"
+              </parameter></quote>となります。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-GRADIENT</para>
+            <para lang="ja"><function>SF-GRADIENT</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a button containing a preview of the selected
+              gradient.
+            </para>
+            <para lang="en">
+              If the button is pressed a gradient selection dialog will popup.
+            </para>
+            <para lang="en">SF-GRADIENT "Gradient" "Deep Sea"</para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the gradient name. If the above selection was not
+              altered the string would contain "Deep Sea".
+            </para>
+            <para lang="ja">
+              ダイアログにグラデーション選択ウィジェットを作成します。 
+              グラデーションボタンが設置され現在選ばれているグラデーションが
+              表示されます。
+            </para>
+            <para lang="ja">
+              このボタンはクリックするとグラデーション変更ダイアログが開かれ
+              他のグラデーションも選べるしくみになっています。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-GRADIENT</function> "<replaceable>label</replaceable>" "<replaceable>gradientname</replaceable>"
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>gradientname</replaceable>"</seg>
+                  <seg>初期状態でのグラデーション名</seg>
+                </seglistitem>
+              </segmentedlist>
+              スクリプトが呼び出されたときに返される値はグラデーションの
+              名前をもつ文字列変数です。 例えば<quote><code>SF-GRADIENT 
+              "Gradient" "Deep Sea"</code></quote>として呼び出してダイアログ
+              で何も変更しなかった場合、 返ってくるパタメータは<quote>
+              <parameter>"Deep Sea"</parameter></quote>となります。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-PALETTE</para>
+            <para lang="ja"><function>SF-PALETTE</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a button containing the name of the selected
+              palette.
+            </para>
+            <para lang="en">
+              If the button is pressed a palette selection dialog will popup.
+            </para>
+            <para lang="en">SF-PALETTE "Palette" "Named Colors"</para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the palette name. If the above selection was not
+              altered the string would contain "Named Colors".
+            </para>
+            <para lang="ja">
+              ダイアログにパレット選択ウィジェットを作成します。 この
+              ウィジェットは縮小見本とパレット名を表示します。 縮小見本は
+              ボタンになっておりクリックするとパレット選択ダイアログが開かれ
+              他のパレットも選べるしくみになっています。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-PALETTE</function> "<replaceable>label</replaceable>" "<replaceable>Palette Name</replaceable>"
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>Palette Name</replaceable>"</seg>
+                  <seg>パレットの名前。 例えば "Named Colors"</seg>
+                </seglistitem>
+              </segmentedlist>
+            </para>
+            <para lang="ja">
+              スクリプトが呼び出されたときに返される値はパレットの名前をもつ
+              文字列変数です。 例えば<quote><code>SF-PALETTE "Palette" 
+              "Named Colors"</code></quote>として呼び出してダイアログで何も
+              変更しなかった場合、 返ってくるパタメータは<quote><parameter>
+              "Named Colors"</parameter></quote>となります。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-FILENAME</para>
+            <para lang="ja"><function>SF-FILENAME</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget
+              consists of a button containing the name of a file.
+            </para>
+            <para lang="en">
+              If the button is pressed a file selection dialog will popup.
+            </para>
+            <para lang="en">
+              SF-FILENAME "label" (string-append ""
+              gimp-data-directory "/scripts/beavis.jpg")
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the filename.
+            </para>
+            <para lang="ja">
+              ダイアログにファイル選択ウィジェットを作成します。 ファイル名が
+              記されたボタンが設置されます。 このボタンをクリックすると
+              ファイルブラウザが開かれ、 ファイルを探してひとつ選ぶ操作ができる
+              しくみになっています。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-FILENAME</function> "<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path/to/file.ext</replaceable>")
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>path/to/file.ext</replaceable>"</seg>
+                  <seg>gimp-data-directory からの相対パスとファイル名</seg>
+                </seglistitem>
+              </segmentedlist>
+            </para>
+            <para lang="ja">
+              スクリプトが呼び出されたときに返される値はファイルの名前と
+              保管場所を記した文字列変数です。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-DIRNAME</para>
+            <para lang="ja"><function>SF-DIRNAME</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              Only useful in interactive mode. Very similar to SF-FILENAME,
+              but the created widget allows to choose a directory instead of a
+              file.
+            </para>
+            <para lang="en">
+              SF-DIRNAME "label" "/var/tmp/images"
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked is a string
+              containing the dirname.
+            </para>
+            <para lang="ja">
+              対話式操作でのみ有益です。 ファイルではなくディレクトリを選択する
+              ウィジェットであることのほかは <function>SF-FILENAME</function> と
+              酷似しています。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-DIRNAME</function> "<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path</replaceable>")
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>path</replaceable>"</seg>
+                  <seg>gimp-data-directory からの相対パス</seg>
+                </seglistitem>
+              </segmentedlist>
+              スクリプトが呼び出されたときに返される値はディレクトリ名と
+              それまでの筋道を記した文字列変数です。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-OPTION</para>
+            <para lang="ja"><function>SF-OPTION</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget is a
+              combo-box showing the options that are passed as a list.
+            </para>
+            <para lang="en">The first option is the default choice.</para>
+            <para lang="en">
+              SF-OPTION "label" '("option1" "option2")
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked is the number of
+              the chosen option, where the option first is counted as 0.
+            </para>
+            <para lang="ja">
+              ダイアログに数々の選択肢からひとつを選ぶコンボボックス
+              ウィジェットを作成します。
+            </para>
+            <para lang="ja">
+              選択肢はまとめてリストにして渡し、 
+              ウィジェットは最初の項目を初期値として表示します。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-OPTION</function> "<replaceable>label</replaceable>" '("<replaceable>option 1</replaceable>" "<replaceable>option 2</replaceable>" [... "<replaceable>option n</replaceable>"])
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>option 1</replaceable>"</seg>
+                  <seg>最初のオプション。 初期設定値となる</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>option 2</replaceable>"</seg>
+                  <seg>第2のオプション</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>option n</replaceable>"</seg>
+                  <seg>
+                    それ以上のオプション。 無くても良いが、 
+                    いくつでも増やせる
+                  </seg>
+                </seglistitem>
+              </segmentedlist>
+              スクリプトが呼び出されたときに返される値はオプション項目の
+              番号です。 最初のオプションが 0 番です。
+            </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para lang="en">SF-ENUM</para>
+            <para lang="ja"><function>SF-ENUM</function></para>
+          </entry>
+          <entry>
+            <para lang="en">
+              It will create a widget in the control dialog. The widget is a
+              combo-box showing all enum values for the given enum type. This
+              has to be the name of a registered enum, without the "Gimp"
+              prefix. The second parameter speficies the default value, using
+              the enum value's nick.
+            </para>
+            <para lang="en">
+              SF-ENUM "Interpolation" '("InterpolationType" "linear")
+            </para>
+            <para lang="en">
+              The value returned when the script is invoked corresponds to
+              chosen enum value.
+            </para>
+            <para lang="ja">
+              ダイアログに列挙型リストの選択ウィジェットを作成します。 指定
+              された列挙型の項目を並べたコンボボックスが設けられます。 使える
+              列挙型は登録済のものに限られ、 その名前から冒頭の<quote>Gimp
+              </quote>を取り除いた語で指定します。 第2のパラメータには初期
+              設定値を、 その略称で指定します。
+            </para>
+            <para lang="ja">
+              <synopsis>
+                <function>SF-ENUM</function> "<replaceable>label</replaceable>" '("<replaceable>enum type</replaceable>" "<replaceable>default choice</replaceable>")
+              </synopsis>
+            </para>
+            <para lang="ja">
+              <segmentedlist>
+                <title>ウィジェット変数表</title>
+                <segtitle>要素</segtitle>
+                <segtitle>説明</segtitle>
+                <seglistitem>
+                  <seg>"<replaceable>label</replaceable>"</seg>
+                  <seg>
+                    ウィジェットの前に貼られる語句
+                  </seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>enum type</replaceable>"</seg>
+                  <seg>列挙型の登録名</seg>
+                </seglistitem>
+                <seglistitem>
+                  <seg>"<replaceable>default choice</replaceable>"</seg>
+                  <seg>初期設定値。 略称で指定する</seg>
+                </seglistitem>
+              </segmentedlist>
+              スクリプトが呼び出されたときに返される値は扱われる列挙型での
+              値です。
+            </para>
+          </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+</sect3>

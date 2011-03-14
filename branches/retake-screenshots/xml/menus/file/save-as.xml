@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-01-04 ude: replaced calloutlist with orderedlist
+  2007-10-23 j.h: updated en;fr to v2.4
+  2007-05-19 Added Spanish translation by AntI
+  2007-02-08 added 'no' by KoSt
+  2006-07-27 en revised by scb
+  2006-02-25 fixed invalid image reference
+  2005/10/18 zh_CN removed by romanofski - missing translation
+-->
+<!--2011-01-18-->
+<sect2 id="gimp-file-save-as">
+  <title lang="en">Save as</title>
+  <title lang="ja">名前を付けて保存...</title>
+
+  <indexterm lang="en">
+    <primary>Image</primary>
+    <secondary>Save image</secondary>
+    <tertiary>Save as</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Save as</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="ガゾウヲホゾン">画像を保存</secondary>
+    <tertiary sortas="ナマエヲツケテホゾン">名前を付けて保存</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ナマエヲツケテホゾン">名前を付けて保存</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Save as</guimenuitem> command
+    displays the <quote>File Save</quote> dialog.
+    In its basic form, as shown below, this gives you a text box
+    to assign a name to the file, and a drop-down list of bookmarks
+    to select a directory to save it in.  Normally the file
+    format is determined by the extension you use in the file name
+    (i.e., .jpg for a JPEG file).  You can use the <guilabel>Select File
+    Type</guilabel> option expander to pick a different file type, but you
+    should avoid doing this unless absolutely necessary, to avoid
+    confusion.
+  </para>
+  <para lang="en">
+    If the directory you want is not in the list of bookmarks, click on
+    <guilabel>Browse for other folders</guilabel>
+    to expand the dialog to its full form. You can find an explanation of
+    the layout, and help on creating and using bookmarks, in the
+    <link linkend="gimp-using-fileformats">Files</link>
+    section.
+  </para>
+  <para lang="en">
+    If you saved the image previously and don't need to change the file name
+    or any of the options, you can use the
+    <link linkend="gimp-file-save">Save</link> command instead.
+  </para>
+  <para lang="ja">
+    <guimenuitem>名前を付けて保存...</guimenuitem> コマンドは
+    <quote>画像の保存</quote>ダイアログを開きます。 下図に示すとおり、 
+    ダイアログの基本的な構成はファイルに名前をつける語句記入欄とその保管場所を
+    選ぶのに使えるブックマークの引き出しリストでできています。 通常ファイルの
+    形式はファイル名に付けた拡張子で判定 ( <filename class="extension">.jpg
+    </filename> を付ければ<acronym>JPEG</acronym>形式のファイルに) されます。
+    <guilabel>ファイルタイプを選択</guilabel> を使えばその
+    ファイル形式の標準的な拡張子とは別の名前をつけられますが、 無用な混乱を
+    避けるため絶対に必要な場合を除きこの方法はおすすめできません。
+  </para>
+  <para lang="ja">
+    ブックマークに入れていないディレクトリに保存したいときは 
+    <guilabel>他のフォルダ</guilabel> をクリックしてください。 すると
+    ダイアログの畳まれていた部分が拡がります。 その中身とブックマークの
+    作成法や利用法については
+    <link linkend="gimp-using-fileformats">ファイル</link> の節に説明が
+    あります。
+  </para>
+  <para lang="ja">
+    以前に保存したことのある画像を保存するときにファイル名とオプションは
+    そのままで変えるつもりがない場合は代わりに
+    <link linkend="gimp-file-save">保存</link> コマンドが使えます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenuitem>Save as</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ファイル</guimenu>
+            <guimenuitem>名前を付けて保存...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the keyboard shortcut
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>Ctrl</keycap><keycap>S</keycap>
+          </keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo>
+            <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>S</keycap>
+          </keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">The Basic <quote>Save as</quote> Dialog</title>
+    <title lang="ja"><quote>画像の保存</quote>ダイアログの基本形</title>
+    <para lang="en">
+      There are two different forms of the <guimenu>Save as</guimenu>
+      dialog. The simple form only lets you type in the filename and
+      choose the directory the file should be saved in. If the folder
+      you want is not on the list, you can type in the path to the
+      directory, along with the filename. You can also click on the small
+      triangle to display the full folder browser. You can also choose
+      the image format, by selecting the file extension (e.g., 
+      <filename class="extension">.xcf</filename> or
+      <filename class="extension">.png</filename>).
+    </para>
+    <para lang="ja">
+      <quote>画像の保存</quote>ダイアログの構成は[主に] 2 つの種類があります。
+      簡単な方はファイル名の記入欄とその保管場所を選ぶ機能だけでできています。
+      ファイルを保存したいディレクトリがブックマークメニューにないときは、
+      記入欄に直接そのパスとファイル名をつなげて指定しても構いません。 あるいは
+      <guilabel>別のフォルダ</guilabel> の小さな三角形をクリックすれば大きな
+      フォルダブラウザが拡がったもうひとつの形状に切り替わります。 さらに 
+      <guilabel>ファイルタイプを選択</guilabel> の小さな三角形をクリックすれば
+      ファイルの拡張子 (<filename class="extension">.xcf</filename> や 
+      <filename class="extension">.png</filename>) を指定できるオプションが
+      現れて画像形式を選択できます。
+    </para>
+    <figure>
+      <title lang="en">The basic <quote>File Save</quote> dialog</title>
+      <title lang="ja"><quote>画像の保存</quote>ダイアログの基本形</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/file/save-as.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect3>
+
+  <sect3>
+    <title lang="en">The <quote>Save</quote> Dialog with a Browser</title>
+    <title lang="ja">
+      ブラウザを開いた<quote>画像の保存</quote>ダイアログ
+    </title>
+    <figure>
+      <title lang="en">The <quote>Save</quote> Dialog (Browser)</title>
+      <title lang="ja"><quote>画像の保存</quote>ダイアログ (ブラウザ)</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/file/save-as-browse.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <orderedlist>
+      <listitem>
+        <para lang="en">
+          The left panel is divided into two parts. The upper part lists
+          your main directories and your storage devices; you cannot modify
+          this list. The lower part lists your bookmarks; you can add or
+          remove <emphasis>bookmarks</emphasis>. To add a
+          bookmark, select a directory or a file in the middle panel
+          and click on the <guibutton>Add</guibutton> button at the bottom
+          of the left
+          panel. You can also use the <guilabel>Add to bookmarks</guilabel>
+          command in the context menu, which you get by clicking the
+          right mouse button. You can delete a bookmark by selecting
+          it and clicking on the <guibutton>Remove</guibutton> button.
+        </para>
+        <para lang="ja">
+          左の <guilabel>場所</guilabel> パネルは 2 つの部分に分けられます。
+          上側の部分は今のユーザーの基本ディレクトリとディスク装置 (ドライブ) 
+          が並んでいます。 これらはここで加工できません。 下側の部分は
+          ブックマーク (しおり) です。 ブックマークは追加と削除ができます。 
+          ブックマークを追加するには中央のパネル (2) でディレクトリか
+          ファイルを探し出してクリックしてから左下の 
+          <guibutton>追加</guibutton> ボタンをクリックします。 あるいは中央の
+          パネルで選んだ項目を <mousebutton>第2ボタン</mousebutton> で
+          クリックして出てくる脈絡メニューの 
+          <guimenuitem>ブックマークに追加</guimenuitem> コマンドでも
+          追加できます。 ブックマークから削除するにはそのブックマーク項目を
+          クリックしてから <guibutton>削除</guibutton> ボタンをクリックします。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          The middle panel displays a list of the files in the current
+          directory. Change your current directory by double left-clicking on
+          a directory in this panel. Select a file with a single left click.
+          You can then save to the file you have selected by clicking on the
+          <guibutton>Save</guibutton>
+          button. Note that a double left click saves the file directly.
+        </para>
+        <para lang="en">
+          You can right click on the middle panel to access the
+          <emphasis>Show Hidden Files</emphasis> command.
+        </para>
+        <para lang="ja">
+          中央のパネルには現在のディレクトリ内のファイルやフォルダが列挙されて
+          います。 ここでフォルダの項目をダブルクリックすればそのディレクトリに
+          移動できます。 ファイルの項目はクリックするとファイル名記入欄 (4) に
+          その名前が表示されます。 つぎに <guibutton>保存</guibutton> ボタンを
+          クリックすれば保存できますが、 その前に名前を変更すれば別の名前で
+          保存できます。 ちなみにファイルの項目をダブルクリックすれば直ちに
+          保存できます。
+        </para>
+        <para lang="ja">
+          お使いのオペレーティングシステムによってはある種のファイルや
+          ディレクトリが主に保安上の理由で表示されないようになっています。 中央
+          のパネルを <mousebutton>第2ボタン</mousebutton> でクリックすると出て
+          くる脈絡メニューの <guimenuitem>隠しファイルも表示</guimenuitem> 
+          を有効にすればこれらも表示されます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          The selected image is displayed in the <guilabel>Preview
+          </guilabel> window if it is an image created by
+          <acronym>GIMP</acronym>. File size,
+          resolution and the image's composition are displayed below
+          the preview window.
+        </para>
+        <para lang="en">
+          If your image has been modified by another program,
+          click on the preview to update it.
+        </para>
+        <para lang="ja">
+          選択された画像は<acronym>GIMP</acronym>で扱える形式ならば 
+          <guilabel>プレビュー</guilabel> パネルに見本画像ならびに
+          ファイルの大きさと解像度や画像の構造の情報が表示されます。
+        </para>
+        <para lang="ja">
+          画像が他のプログラムで変更を受けたときはこのパネル内をクリックすれば
+          更新できます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">Enter the filename of the new image file here.</para>
+        <para lang="ja">ここで新しい画像のファイル名を入力します。</para>
+        <note>
+          <para lang="en">
+            If the image has already been saved,
+            <acronym>GIMP</acronym> suggests the same filename to
+            you. If you click on <emphasis>Save</emphasis>, the file
+            is overwritten.
+          </para>
+          <para lang="ja">
+            既に保存されている画像の名前を使い、 新たに作成した画像や他の画像
+            を保存しようとすると<acronym>GIMP</acronym>は同名のファイルが
+            あることを示唆します。 さらに <guibutton>保存</guibutton> 
+            をクリックするとそのファイルに上書きします。
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          This drop-down list is only available in the basic form of the
+          dialog. It provides a list of bookmarks for selecting a directory
+          in which to save your file.
+        </para>
+        <para lang="ja">
+          この引き出しリストは先に述べた基本形のダイアログでのみ利用できます。
+          ちなみにこのリストにはブックマークの内容が並び、 ファイルの保管場所は
+          それらのうちのひとつから選べるようになっています。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Above the middle panel, the path of the current directory is
+          displayed. You can navigate along this path by clicking on one of
+          the buttons.
+        </para>
+        <para lang="ja">
+          ファイルブラウザ部分の左上から現在のディレクトリまでを示すボタンが
+          並んでいます。 いずれのボタンもクリックすればそのディレクトリに移れ
+          ます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          If you want to save the image into a folder that doesn't yet
+          exist, you can create it by clicking on
+          <guilabel>Create Folder</guilabel> and following the instructions.
+        </para>
+        <para lang="ja">
+          まだ存在しないフォダに画像を保存したい場合には
+          <guibutton>フォルダの作成</guibutton> ボタンを
+          クリックして案内に従えば作成できます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          This button shows <guilabel>All Images</guilabel> by default. This
+          means that all images will be displayed in the middle panel,
+          whatever their file type. By developing this list, you can choose
+          to show only one type of file.
+        </para>
+        <para lang="ja">
+          このメニューは規定では <guimenuitem>すべての画像</guimenuitem> を
+          選んでいます。 このときは中央のパネル (2) で現在のディレクトリ内の
+          すべてのフォルダとすべての画像ファイルの名前が表示されるように
+          なっています。 このリストを展開して表示したい画像ファイル形式を
+          選べば表示を限定できます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          At <guilabel>Select File Type</guilabel>, you have to select
+          the file format for saving the file. If you select
+          <guilabel>By Extension</guilabel>, the file type is determined
+          by the extension you add to the name, for example,
+          <quote>.jpg</quote> for JPEG format.
+        </para>
+        <para lang="ja">
+          <guilabel>ファイルタイプを選択</guilabel> では
+          ファイルを保存するときのファイル形式を指定するようになっています。 
+          <guilabel>拡張子で判別</guilabel> を選ぶとファイル名の拡張子に従い
+          ファイル形式が定まります。 例えば <filename class="extension">.jpg
+          </filename> をつけたファイルは<acronym>JPEG</acronym>形式で保存
+          されます。
+        </para>
+        <note>
+          <para lang="en">
+            To preserve all the components of your image when you
+            save it&mdsh;the layers, channels, etc.&mdash;use ".xcf" format,
+            which is the <acronym>GIMP</acronym>'s native format.
+          </para>
+          <para lang="ja">
+            画像の全ての構成物&ndash;レイヤーやチャンネルなど&ndash;を余さず
+            保存するためには<acronym>GIMP</acronym>由来のファイル形式つまり
+            <filename class="extension">.xcf</filename> をつけたファイル名を
+            使いましょう。
+          </para>
+        </note>
+      </listitem>
+    </orderedlist>
+  </sect3>
+</sect2>

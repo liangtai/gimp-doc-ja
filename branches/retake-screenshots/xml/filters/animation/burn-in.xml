@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                "http://www.docbook.org/xml/4.3/docbookx.dtd">
+
+<!--2010-09-10-->
+<sect2 id="script-fu-burn-in-anim">
+  <title lang="en">Burn-In</title>
+  <title lang="ja">焼き付け...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Animation</secondary>
+    <tertiary>Burn-In</tertiary>
+  </indexterm>
+  <indexterm lang="en"><primary>Burn-In</primary></indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>アニメーション</secondary>
+    <tertiary>焼き付け</tertiary>
+  </indexterm>
+  <indexterm lang="ja"><primary>焼き付け</primary></indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+
+    <figure>
+      <title lang="en">
+        Example for the <quote>Burn-In</quote> filter: original image
+      </title>
+      <title lang="ja">
+        <quote>焼き付け</quote>フィルタの使用例: 元画像
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/animation/burn-in-orig.png" />
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Opaque background layer and foreground layer with transparency
+          </para>
+          <para lang="ja">
+            不透明な背景レイヤーと透過効果つき前景レイヤー
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Burn-In</quote> filter: filter applied
+      </title>
+      <title lang="ja">
+        <quote>焼き付け</quote>フィルタの使用例: フィルタ適用後
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/animation/burn-in-applied.png" />
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Resulting image with 8 frames (depending on size and speed)
+          </para>
+          <para lang="ja">
+            8 コマになった。
+            (結果は画像の寸法と<quote>速さ</quote>設定により異なる)
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <para>
+      <!--
+        Describe what the filter does, which algorithms it uses.
+        Give the user an idea what to use the filter for
+       -->
+    </para>
+  </sect3>
+
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Animation</guisubmenu>
+        <guimenuitem>Burn-In</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>アニメーション</guisubmenu>
+        <guimenuitem>焼き付け...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <para>
+      <!--
+        Describe how the filter options are organized in general.
+        This part is optional, but helps if the filter options dialog is a bit
+        more complex e.g. has some tabs etc.
+       -->
+    </para>
+    <figure>
+      <title lang="en"><quote>Burn-In</quote> options</title>
+      <title lang="ja"><quote>焼き付け</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/animation/burn-in.png" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Glow color</term>
+        <term lang="ja">発光色</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Fadeout</term>
+        <term lang="ja">フェイドアウト</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Fadeout width</term>
+        <term lang="ja">フェイドアウトの幅</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Corona width</term>
+        <term lang="ja">コロナの幅</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">After glow</term>
+        <term lang="ja">発光の残像</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Add glowing</term>
+        <term lang="ja">発光を追加</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Prepare for GIF</term>
+        <term lang="ja">GIF向けに下準備する</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Speed (pixels/frame)</term>
+        <term lang="ja">速さ (ピクセル/フレーム)</term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

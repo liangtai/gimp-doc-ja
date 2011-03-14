@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-16 j.h: updated en;fr to v2.6. Standardized xml structure, may be
+             with some errors in lt;no,ru languages.
+  2008-03-01 ude: renamed id (old: gimp-pointer-dialog)
+  2008-01-23 ude: de translation
+  2007-11-22 j.h: created
+-->
+<!--2010-11-26-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-pointer-info-dialog">
+  <title lang="en">Pointer Dialog</title>
+  <title lang="en">ピクセル情報ダイアログ</title>
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Pointer</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Pointer</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary sortas="ピクセルジョウホウ">ピクセル情報</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ピクセルジョウホウ">ピクセル情報</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Pointer Dialog</title>
+    <title lang="en">ピクセル情報ダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/pointer-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    This dialog offers you, in a same window, in real time, the position of
+    the mouse pointer, and the channel values of the pointed pixel, in the
+    chosen color model.
+  </para>
+  <para lang="ja">
+    このダイアログは画像上のマウスポインタ位置の画素について、 座標と、 
+    今の色モデルに基づくチャンネル値を示すものであり、 ウィンドウを開いたまま
+    でもマウスの移動に合わせて即座にその位置と画素情報を反映し表示を変えます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Pointer</quote> dialog is a dockable dialog; see the section
+      <xref linkend="gimp-concepts-docks"/>
+      for help on manipulating it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>ピクセル情報</quote>ダイアログはドッキング可能です。
+      その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from the image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Pointer</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>ピクセル情報</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Pointeur</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのアイコンボタン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブを追加</guimenu>
+            <guimenuitem>ピクセル情報</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en"><quote>Pointer</quote> dialog options</title>
+    <title lang="ja"><quote>ピクセル情報</quote>ダイアログのオプション</title>
+    <variablelist>
+      <title lang="en">Pointer Information</title>
+      <title lang="ja">ピクセル情報</title>
+      <varlistentry>
+        <term lang="en">Pixels</term>
+        <term lang="ja">ピクセル</term>
+        <listitem>
+          <para lang="en">
+            Shows the position of the pointed pixel, in X (horizontal) and Y
+            (vertical) coordinates, stated in pixels from the origin (the
+            upper left corner of the canvas).
+          </para>
+          <para lang="ja">
+            マウスポインタの位置がキャンバスの画像の左上角を原点として X
+            (水平軸) と Y (垂直軸) の座標で表されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Units</term>
+        <term lang="ja">単位</term>
+        <listitem>
+          <para lang="en">
+            Shows the distance from the origin, in inches.
+          </para>
+          <para lang="ja">原点からの距離をインチ単位で表示しています。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Channel values</term>
+        <term lang="ja">チャンネルの各値</term>
+        <listitem>
+          <variablelist>
+            <para lang="en">
+              The channel values for the selected
+              <link linkend="glossary-colormodel">color model</link> are shown
+              below. Both pulldown menus contain the same choices, which
+              makes it easier for you to compare the color values of a
+              particular pixel using different color models.
+              <quote>Hex</quote> is the
+              <link linkend="glossary-html-notation">HTML Notation</link> of
+              the pixel color, in hexadecimal. The choices on the pulldown
+              menus are (<guilabel>Pixel</guilabel> is the default):
+            </para>
+            <para lang="ja">
+              選んだ
+              <link linkend="glossary-colormodel">色モデル</link> によって
+              チャンネル値の表示は以下のように異なります。 2 つある引き出し
+              メニュー内の項目は同一ですので、 相異なる色モデルを通した特定の
+              画素の色の値の比較も楽にできます。 <guilabel>16進数</guilabel> は
+              <link linkend="glossary-html-notation"><acronym>HTML</acronym>
+              表記法</link> に基づく色の値を示します。 それでは引き出しメニュー
+              で選べるモードをひとつずつ見てゆきましょう
+              (<guimenuitem>ピクセル値</guimenuitem> が初期値です)。
+            </para>
+            <varlistentry>
+              <term lang="en">Pixel</term>
+              <term lang="ja">ピクセル値</term>
+              <listitem>
+                <para lang="en">
+                  The <link linkend="glossary-rgb">RGB</link> channel values.
+                  This choice displays the <emphasis>Red</emphasis>,
+                  <emphasis>Green</emphasis>, <emphasis>Blue</emphasis> and
+                  <emphasis>Alpha</emphasis> values of the pixel, as numbers
+                  between 0 and 255.
+                </para>
+                <para lang="ja">
+                  <link linkend="glossary-rgb"><acronym>RGB</acronym></link>
+                  チャンネルの値を表示します。 画素の <guilabel>赤</guilabel>、
+                  <guilabel>緑</guilabel>、 <guilabel>青</guilabel>、
+                  <guilabel>アルファ</guilabel> の各チャンネル値を 0 から 255
+                  の範囲で表します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>RGB</term>
+              <listitem>
+                <para lang="en">
+                  The <link linkend="glossary-rgb">RGB</link> channel values.
+                  This choice displays the <emphasis>Red</emphasis>,
+                  <emphasis>Green</emphasis>, <emphasis>Blue</emphasis> and
+                  <emphasis>Alpha</emphasis> values of the pixel, as
+                  percentages. It also shows the hexadecimal value of the
+                  pixel's color.
+                </para>
+                <para lang="ja">
+                  <link linkend="glossary-rgb"><acronym>RGB</acronym></link>
+                  チャンネルの値を表示します。 画素の <guilabel>赤</guilabel>、
+                  <guilabel>緑</guilabel>、 <guilabel>青</guilabel>、
+                  <guilabel>アルファ</guilabel> の各チャンネル値を百分率で
+                  表します。 さらに画素の色を 16 進数で表示します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>HSV</term>
+              <listitem>
+                <para lang="en">
+                  The <link linkend="glossary-hsv">HSV</link> components.
+                  This choice displays the <emphasis>Hue</emphasis>, in
+                  degrees, as well as the <emphasis>Saturation</emphasis>,
+                  <emphasis>Value</emphasis> and <emphasis>Alpha</emphasis> of
+                  the pixel, as percentages.
+                </para>
+                <para lang="ja">
+                  <link linkend="glossary-hsv"><acronym>HSV</acronym></link>
+                  成分です。 画素の <guilabel>色相</guilabel> を角度で表示し、
+                  <guilabel>彩度</guilabel>、 <guilabel>明度</guilabel>、
+                  <guilabel>アルファ</guilabel> の各値を百分率で表示します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>CMYK</term>
+              <listitem>
+                <para lang="en">
+                  The <link linkend="glossary-cmyk">CMYK</link> channel
+                  values. This choice displays the <emphasis>Cyan</emphasis>,
+                  <emphasis>Magenta</emphasis>, <emphasis>Yellow</emphasis>,
+                  <emphasis>Black</emphasis> and <emphasis>Alpha</emphasis>
+                  values of the pixel, as percentages.
+                </para>
+                <para lang="ja">
+                  <link linkend="glossary-cmyk"><acronym>CMYK</acronym></link>
+                  チャンネルの値です。 画素の <guilabel>シアン</guilabel>、
+                  <guilabel>マゼンタ</guilabel>、
+                  <guilabel>イエロー</guilabel>、 <guilabel>ブラック</guilabel>
+                  、 <guilabel>アルファ</guilabel> の各値を百分率で表示します。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sample Merged</term>
+        <term lang="ja">レイヤー結合色</term>
+        <listitem>
+          <para lang="en">
+            If this option is checked (default), sampling is performed on all
+            layers. If it is unchecked, sampling is performed on the active
+            layer only.
+          </para>
+          <para lang="ja">
+            このオプションを有効 (初期値) にすると、 採色は全てのレイヤーを
+            通して行なわれます。 無効にしたときは活性レイヤーだけから色を抽出
+            します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

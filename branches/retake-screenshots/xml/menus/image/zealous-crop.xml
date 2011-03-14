@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+     2007-11-30 j.h: no 'en' change for v2.4
+     2007-09-26 AntI: Added 'es'
+     2007-03-22 alex falappa: added it translation
+     2006-07-28 scb: revised 'en'
+     2005/10/25 split intro off by axel.wernicke
+     -->
+<!--2009-09-12-->
+<sect2 id="plug-in-zealouscrop">
+  <title lang="en">Zealous Crop</title>
+  <title lang="ja">最小枠で切り抜き</title>
+
+  <indexterm lang="en">
+    <primary>Image</primary>
+    <secondary>Crop</secondary>
+    <tertiary>According to color</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Zealous Crop</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="キリヌキ">切り抜き</secondary>
+    <tertiary sortas="イロニシタガッタキリヌキ">色に従った切り抜き</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="サイショウワクデキリヌキ">最小枠で切り抜き</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Zealous Crop</guimenuitem> command crops an image
+    using a single solid color as a guide. It crops the edges, as with
+    the <link linkend="gimp-image-crop">Autocrop</link> command, but it
+    also crops the areas in the middle of the image which have the
+    same color (at least, in principle).
+  </para>
+  <para lang="ja">
+    <guimenuitem>最小枠で切り抜き</guimenuitem> コマンドは
+    単色で塗られた部分を依代に画像を切り抜きます。 画像の外縁を切り抜くところは
+    <link linkend="gimp-image-autocrop">画像の自動切り抜き</link> コマンドと
+    同じ作用をしますが、 ともかく原則的にはさらに画像の途中でも同じ色の部分が
+    切り落とされます。
+  </para>
+  <caution>
+    <para lang="en">
+      Please note that <guimenuitem>Zealous Crop</guimenuitem> crops all of
+      the layers, although it only analyzes the active layer. This may
+      lead to a loss of information from the other layers.
+    </para>
+    <para lang="ja">
+      <guimenuitem>最小枠で切り抜き</guimenuitem> コマンドは
+      画像に複数のレイヤーがあっても活性レイヤーを見ただけで画像全体を切り
+      抜いてしまいます。 他のレイヤーにあった情報が失われるおそれがあるのです。
+    </para>
+  </caution>
+
+  <sect3>
+    <title lang="en">Example</title>
+    <title lang="ja">使用例</title>
+    <figure>
+      <title lang="en"><quote>Zealous Crop</quote> Example</title>
+      <title lang="ja"><quote>最小枠で切り抜き</quote>の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/crop-orig.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/crop-auto.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Autocrop</quote> applied</para>
+          <para lang="ja"><quote>自動切り抜き</quote>を実施</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/using/crop-zealous.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Zealous Crop</quote> applied</para>
+          <para lang="ja"><quote>最小枠で切り抜き</quote>を実施</para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menu bar through
+          <menuchoice>
+            <guimenu>Image</guimenu>
+            <guimenuitem>Zealous Crop</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guimenuitem>最小枠で切り抜き</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>

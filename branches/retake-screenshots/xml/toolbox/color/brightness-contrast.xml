@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+     2009-03-11 j.h: revised for v2.6. Added Presets
+     2008-01-16 j.h updated "en;fr" to v2.4
+     2007-06-06 kost: added 'no'
+     2007-04-15 Added Spanish translation by AntI
+     2006-02-04 fr revised by j.h
+     2005-08-07 de reviewed and restructured by axel.wernicke
+     2005-05-31 en revised Bill Skaggs
+     -->
+<!--2010-12-22-->
+<sect2 id="gimp-tool-brightness-contrast">
+  <title lang="en">Brightness-Contrast</title>
+  <title lang="ja">明るさ-コントラスト</title>
+
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Brightness-Contrast</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="アカルサ-コントラスト">明るさ-コントラスト</secondary>
+  </indexterm>
+
+  <para lang="en">
+    The Brightness-Contrast tool adjusts the brightness and contrast levels
+    for the active layer or selection. This tool is easy to use, but
+    relatively unsophisticated. The Levels and Curve tools allow you to make
+    the same types of adjustments, but also give you the ability to treat
+    bright colors differently from darker colors. Generally speaking, the BC
+    tool is great for doing a "quick and dirty" adjustment in a few seconds,
+    but if the image is important and you want it to look as good as possible,
+    you will use one of the other tools.
+  </para>
+  <para lang="en">
+    In GIMP 2.4, a new way of operating this tool has been added: by
+    clicking the mouse inside the image, and dragging while keeping the
+    left mouse button down. Moving the mouse vertically changes the
+    brightness; moving horizontally changes the contrast. When you are
+    satisfied with the result, you can either press the
+    <guilabel>OK</guilabel> button on the dialog, or hit the
+    <keycap>Return</keycap> key on your keyboard.
+  </para>
+  <para lang="ja">
+    <quote>明るさ-コントラスト</quote>ツールは選択範囲や活性レイヤーの明るさと
+    コントラストを増減するためのものです。 このツールは使い易い反面、
+    比較的に単純すぎるきらいがあります。 レベルツールやトーンカーブツールにも
+    似た調整機能がありますが、 それらは明るい色に対して暗い色とは異なる処理が
+    可能です。 概して言えば<quote>明るさ-コントラスト</quote>ツールはやっつけ
+    仕事的な調整を短時間で済ますのには優れていますが、 大切な画像をできるだけ
+    美しく処理したいのなら他のツールを使うべきでしょう。
+  </para>
+  <para lang="ja">
+    <application><acronym>GIMP</acronym> 2.4</application> からはこのツールに
+    新しい操作方法が加わりました。 画像上でクリックしてマウスボタンを
+    押しながら曳く操作を用います。 垂直方向にマウスを移動すれば明るさが
+    変化します。 水平方向ならコントラストです。 満足のいく結果を得られたら
+    ダイアログの <guibutton>OK</guibutton> ボタンをクリックするか 
+    <keycap>Enter</keycap> キーを押してください。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can get to the Brightness-Contrast tool in two ways:
+    </para>
+    <para lang="ja">
+    <quote>明るさ-コントラスト</quote>ツールを起用する方法は 2 通りあります。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          In the image-menu through:
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Color Tools</guisubmenu>
+            <guimenuitem>Brightness-Contrast</guimenuitem>
+          </menuchoice> or
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guimenuitem>Brightness-Contrast</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>色ツール</guisubmenu>
+            <guimenuitem>明るさ-コントラスト...</guimenuitem>
+          </menuchoice>
+          あるいは
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guimenuitem>明るさ-コントラスト...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by clicking the tool icon:
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-brightness-contrast-22.png"/>
+          </guiicon>
+          in Toolbox, provided that you have installed color tools in Toolbox.
+          For this, go to
+          <link linkend="gimp-tools-dialog">Tools Dialog</link>.
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-brightness-contrast-22.png"/>
+          </guiicon>
+          。 但しこの色ツールをツールボックスに登録した場合に限ります。
+          <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link>
+          をご覧ください。
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Brightness-Contrast options dialog</title>
+      <title lang="ja">
+        <quote>明るさ-コントラスト</quote>ツールのダイアログ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tools-brightness.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Presets</term>
+        <term lang="ja">プリセット</term>
+        <listitem>
+          <para lang="en">
+            You can save the color settings of your image by clicking the
+            <guibutton>Add settings to favourites</guibutton> button
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/save-color-settings.png"/>
+            </guiicon>
+          </para>
+          <para lang="en">
+            The
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/presets-menu-icon.png"/>
+            </guiicon>
+            button opens a menu:
+          </para>
+          <para lang="ja">
+            画像の色設定の内容は追加ボタン
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/save-color-settings.png"/>
+            </guiicon>
+            をクリックすればプリセット一覧に保存できます。
+          </para>
+          <para lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/toolbox/presets-menu-icon.png"/>
+            </guiicon>
+            ボタンをクリックするとつぎのメニューが呼び出されます。
+          </para>
+          <figure>
+            <title lang="en">Preset Menu</title>
+            <title lang="ja">プリセットメニュー</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                           fileref="images/toolbox/presets-menu.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            which lets you <guilabel>Import Settings from File</guilabel> or
+            <guilabel>Export Settings to File</guilabel>,
+            and gives you access to the Manage Save Settings dialog:
+          </para>
+          <para lang="en">
+            このメニューでは <guimenuitem>設定をエクスポート</guimenuitem> 
+            によって現在の設定を記憶させたり、 
+            <guimenuitem>設定をインポート</guimenuitem> によって他の画像の
+            処理などに使った設定を再利用できます。 記憶された設定の数々は
+            <guimenuitem>プリセットデータの編集...</guimenuitem> 
+            に進むと出てくるつぎのダイアログで管理できます。
+          </para>
+          <figure>
+            <title lang="en">Manage saved Settings Dialog</title>
+            <title lang="ja">
+              <quote>プリセットデータの編集</quote>ダイアログ
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                        fileref="images/toolbox/manage-saved-settings.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Brightness</term>
+        <term lang="ja">明るさ</term>
+        <listitem>
+          <para lang="en">
+            This slider sets a negative (to darken) or positive (to brighten)
+            value for the brightness, decreasing or increasing bright tones.
+          </para>
+          <para lang="ja">
+            このスライダは明るさを負の値 (暗) や正の値 (明) に設定するもので、
+            明るさの度合いを加減します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Contrast</term>
+        <term lang="ja">コントラスト</term>
+        <listitem>
+          <para lang="en">
+            This slider sets a negative (to decrease) or positive (to
+            increase) value for the contrast.
+          </para>
+          <para lang="ja">
+            このスライダはコントラストを負の値 (減) や正の値 (増) に設定
+            します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edit these settings as Levels</term>
+        <term lang="ja">この設定をレベルで調整</term>
+        <listitem>
+          <para lang="en">
+            To make your work easier, this button lets you turn to the
+            <link linkend="gimp-tool-levels">Levels</link> tool with the same
+            settings.
+          </para>
+          <para lang="ja">
+            このボタンは作業を楽にするためのもので、 現在の設定内容を引き継いで
+            <link linkend="gimp-tool-levels">レベル</link> ツールに
+            切り替わります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            The Preview check-box makes all changes to the brightness and
+            contrast dynamically so that the new level settings can be viewed
+            immediately.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> 
+            チェックボックスが入りのときは明るさとコントラストの全ての変更は
+            動的に反映され、 新たなレベルの設定が即時に見られます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

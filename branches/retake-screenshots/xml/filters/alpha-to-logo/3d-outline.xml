@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-07-15 KoSt: Added 'no'
+  2008-04-24 alex falappa: added 'it' translation
+  2008-04-16 ude: initial release ('en','de')
+-->
+<!--2010-10-03-->
+<sect2 id="script-fu-3d-outline-logo-alpha">
+  <title lang="en">3D Outline</title>
+  <title lang="ja">3D アウトライン...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>3D Outline</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>3D Outline</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary>3D アウトライン</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>3D アウトライン</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="en">概観</title>
+    <figure>
+      <title lang="en">Example for the <quote>3D Outline</quote> filter</title>
+      <title lang="en"><quote>3D アウトライン</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/logo-3d-outline.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>3D Outline</quote> filter</para>
+          <para lang="ja"><quote>3D アウトライン</quote>フィルタ</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/3d-outline-script-fu.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>3D Outline</quote> logo</para>
+          <para lang="ja"><quote>3D アウトライン</quote>ロゴ</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter is derived from the <quote>3D Outline</quote> script
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>3D Outline</guimenuitem>
+      </menuchoice> in the image window),
+      which creates a logo (see above) with outlined text and a drop shadow.
+    </para>
+    <para lang="en">
+      The filter outlines the non-transparent areas of the active layer
+      (determined from the Alpha channel) with a pattern and adds a drop
+      shadow.
+      Here, we will use the <emphasis>alpha</emphasis> term to refer to these
+      areas of the active layer defined by the non-transparent pixels.
+    </para>
+    <para lang="en">
+      The filter uses the <link linkend="plug-in-edge">Sobel edge
+      detect</link> filter to get the alpha's outline. So with a simple alpha,
+      for example a cleared rectangle selection, you will just get the
+      boundary. But when you use a layer mask (don't forget to Apply the
+      Layer Mask), as in the following example, the edge detector will find
+      more edges and thus the filter effect will be applied to these edges
+      too.
+    </para>
+    <para lang="ja">
+      このフィルタは縁取りつき文字とドロップシャドウからなるロゴ文字 (上図
+      参照) を作成する<quote>3D アウトライン</quote>スクリプトから派生
+      しました。 ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ</guisubmenu>
+        <guimenuitem>3D アウトライン...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
+    <para lang="ja">
+      <guimenuitem>3D アウトライン...</guimenuitem> フィルタ
+      は活性レイヤーの半透明や不透明な部分の輪郭をアルファチャンネルより
+      読み取り、 パターンで縁取ってドロップシャドウを付けます。 以下の説明では
+      <quote>アルファ域</quote>を活性レイヤーの半透明や不透明な部分を
+      指す用語として扱います。
+    </para>
+    <para lang="ja">
+      このフィルタはアルファ域の輪郭を抽出するために 
+      <link linkend="plug-in-edge">ソーベル輪郭抽出</link> を利用します。 
+      すると例えばまっさらの矩形の選択範囲のような単純なアルファ域であれば
+      単なる境界線がとれることでしょう。 しかしつぎの例のようにレイヤーマスク
+      を使った場合は (そしてもちろんレイヤーマスクの適用をお忘れなく)、 輪郭
+      はもっといろいろ抽出されるはずですし、 ひいてはその輪郭のどれにも
+      フィルタの効果が施されます。
+    </para>
+    <figure>
+      <title lang="en">Example based on multicolored layer mask</title>
+      <title lang="ja">色が複数あるレイヤーマスクの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/3d-outline-alpha.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">With an layer mask (alpha) like this ...</para>
+          <para lang="ja">
+            このようなレイヤーマスク (アルファ域) があると、
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/3d-outline-example.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">... you will get this.</para>
+          <para lang="ja">このような結果になる。</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <warning>
+      <para lang="en">
+        The image will always be resized to the active layer's size.
+      </para>
+      <para lang="ja">
+        画像は常に活性レイヤーの寸法と同じ大きさに変更されます。
+      </para>
+    </warning>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>3D Outline</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="en">
+      The filter only works if the active layer has an alpha channel.
+      Otherwise, the menu entry is insensitive and grayed out.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>3D アウトライン...</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      このフィルタは活性レイヤーにアルファチャンネルがある場合に作動し、 
+      なければメニュー項目が灰色無効となって使用できません。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>3D Outline</quote> options</title>
+      <title lang="ja"><quote>3D アウトライン</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/alpha-to-logo/3d-outline-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Pattern</term>
+        <term lang="ja">パターン</term>
+        <listitem>
+          <para lang="en">
+            Here you can see and change the currently selected pattern. When
+            you click on the pattern, an enlarged preview will popup.
+            Pressing the <guibutton>Browse...</guibutton> button opens a
+            dialog where you can select a different pattern.
+          </para>
+          <para lang="ja">
+            ここには現在選択されているパターンが表示されています。 パターン
+            見本はクリックすると大きく表示されます。 <guibutton>
+            参照...</guibutton> ボタンをクリックすると
+            <quote>パターンの選択 (Script-Fu)</quote>ダイアログが現れ、 
+            別のパターンに変更できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Outline blur radius</term>
+        <term lang="ja">輪郭ぼかし半径</term>
+        <listitem>
+          <para lang="en">
+            This radius is used to <link linkend="plug-in-gauss">blur</link>
+            the alpha before the <link linkend="plug-in-edge">edge
+            detector</link> will select the area to be filled with the
+            pattern. That's why a high value results in a wide but smeared
+            pattern:
+          </para>
+          <para lang="ja">
+            この半径はパターンで埋め尽くされる領域を 
+            <link linkend="plug-in-edge">輪郭抽出</link> により選択する前に
+            アルファ域を 
+            <link linkend="plug-in-gauss">ぼかす</link> ために使います。 その
+            ためここに大きな値を指定するとつぎの図のように適用範囲は広くなる
+            反面でパターンがぼやけます。
+          </para>
+          <figure>
+            <title lang="en">Outline blur radius example</title>
+            <title lang="ja">輪郭ぼかし半径の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-5.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Radius: 5</para>
+                <para lang="ja">ぼかし半径 = 5</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-20.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Radius: 20</para>
+                <para lang="ja">ぼかし半径 = 20</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-40.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Radius: 40</para>
+                <para lang="ja">ぼかし半径 = 40</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Shadow blur radius</term>
+        <term lang="ja">影ぼかし半径</term>
+        <listitem>
+          <para lang="en">
+            This radius is used to <link linkend="plug-in-gauss">blur</link>
+            the drop shadow.  A high value will smear the shadow:
+          </para>
+          <para lang="ja">
+            この半径はドロップシャドウを 
+            <link linkend="plug-in-gauss">ぼかす</link> ために使います。 
+            値を高くすると影がぼやけます。
+          </para>
+          <figure>
+            <title lang="en">Shadow blur radius example</title>
+            <title lang="ja">影ぼかし半径の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-5.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Radius: 10</para>
+                <para lang="ja">ぼかし半径 = 10</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-shadow20.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Radius: 20</para>
+                <para lang="ja">ぼかし半径 = 20</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-shadow40.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Radius: 40</para>
+                <para lang="ja">ぼかし半径 = 40</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Bumpmap (alpha layer) blur radius</term>
+        <term lang="ja">バンプマップ (アルファレイヤーの) ぼかし半径</term>
+        <listitem>
+          <para lang="en">
+            The <link linkend="plug-in-bump-map">Bump Map</link> used to
+            create a 3D effect is the active layer (alpha layer) with the
+            <link linkend="plug-in-edge">edge detect</link> filter applied.
+            Before it is used to emboss the pattern layer, another
+            <link linkend="plug-in-gauss">Gaussian blur</link> will be applied
+            with the specified radius. So a high value will reduce the 3D
+            effect.
+          </para>
+          <para lang="ja">
+            立体効果を生む 
+            <link linkend="plug-in-bump-map">バンプマップ</link> には活性
+            レイヤー (アルファレイヤー) に 
+            <link linkend="plug-in-edge">輪郭抽出</link> フィルタを適用
+            したものを用います。 さらにパターン用レイヤーにエンボス加工を
+            施しますが、 その前にこのぼかし半径で 
+            <link linkend="plug-in-gauss">ガウスぼかし</link> がかけられます。
+            そのためここに高い値を設定すると立体効果が薄れます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Default bumpmap settings</term>
+        <term lang="ja">標準のバンプマップ設定</term>
+        <listitem>
+          <para lang="en">
+            If checked (this is the default) the bump map plug-in will be
+            applied with its default options. Otherwise, the
+            <link linkend="plug-in-bump-map">Bump Map</link> dialog window
+            will popup while the filter is running, and you can choose
+            different options. Note that, when you close the window pressing
+            the <keycap>Cancel</keycap> button, no bump map at all will be
+            applied.
+          </para>
+          <para lang="ja">
+            このオプションを既定どおり有効にするとバンプマッププラグインは
+            初期設定値で適用されます。 無効の場合はフィルタを実行中に 
+            <link linkend="plug-in-bump-map">バンプマップ</link> ダイアログ
+            が開かれ、 任意にオプションの設定ができます。 ただしこの
+            ダイアログを <guibutton>キャンセル</guibutton>
+            ボタンで閉じた場合は一切バンプマップ処理が行なわれません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Shadow X offset; Shadow Y offset</term>
+        <term lang="ja">影 X オフセット; 影 Y オフセット</term>
+        <listitem>
+          <para lang="en">
+            This is the amount of pixels the shadow layer will be moved to the
+            right (X) and down (Y). Then the layer will be clipped to the
+            image size. Note that there is no real background layer, and
+            moving the shadow will clear its original place:
+          </para>
+          <para lang="ja">
+            影が描かれたレイヤーは右下方向にずらされます。 この値はピクセル
+            単位で右方向 X と下方向 Y の移動距離を定めます。 移動したあと
+            影のレイヤーは画像からはみ出した部分が切り取られます。 元から実際
+            の背景レイヤーがないので移動あとには透過部分が残されます。
+          </para>
+          <figure>
+            <title lang="en">Shadow offset example</title>
+            <title lang="ja">影オフセットの例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/examples/3d-outline-moved.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">X offset: 50; Y offset: 20</para>
+                <para lang="ja">
+                  影 X オフセット = 50; 影 Y オフセット = 20
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

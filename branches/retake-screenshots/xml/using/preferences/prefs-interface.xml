@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2008-04-08 Mr.Dust : added 'ko'
+  2006-11-01 lexa: made the file docbook compliant
+  2008-01-28 jpl: update text & images
+-->
+<!--2010-12-11-->
+<sect2 id="gimp-prefs-interface">
+  <title lang="en">Interface</title>
+  <title lang="ja">ユーザーインタフェース</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Preferences</secondary>
+    <tertiary>Interface</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Interface</primary>
+    <secondary>Preferences</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Navigation</primary>
+    <secondary>Preview size</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Preview</primary>
+    <secondary>Navigation preview size</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary sortas="カンキョウセッテイ">環境設定</secondary>
+    <tertiary>インタフェース</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>インタフェース</primary>
+    <secondary sortas="カンキョウセッテイ">環境設定</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ナビゲーション</primary>
+    <secondary>プレビューサイズ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>プレビュー</primary>
+    <secondary sortas="ナビゲーションノプレビューサイズ">
+      ナビゲーションのプレビューサイズ
+    </secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Assorted Interface Preferences</title>
+    <title lang="ja">環境設定 ユーザーインタフェースのページ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/preferences/prefs-interface.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          This page lets you customize layer/channel previews and keyboard
+          shortcuts.
+        </para>
+        <para lang="ja">
+          このページではレイヤーとチャンネルのプレビューと
+          キーボードショートカットが誂えられる。
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <variablelist>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <indexterm lang="en">
+      <primary>Previews</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Keyboard Shortcuts</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>プレビュー</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary>キーボードショートカット</primary>
+    </indexterm>
+    <varlistentry>
+      <term lang="en">Previews</term>
+      <term lang="ja">プレビュー</term>
+      <listitem>
+        <para lang="en">
+          By default, GIMP shows miniature previews of the contents of
+          layers and channels in several places, including the Layers
+          dialog.  If for some reason you would prefer to disable
+          these, you can do it by unchecking <guilabel>Enable layer and
+          channel previews</guilabel>.  If you do want previews to be shown,
+          you can customize their sizes using the menus for <guilabel>Default
+          layer and channel preview size</guilabel> and <guilabel>Navigation
+          preview size</guilabel>.
+        </para>
+        <para lang="ja">
+          初期設定では、 レイヤーダイアログなどいろいろな場面で画像の縮小見本が
+          表示されます。 何らかの理由でこの機能を無効にする場合には、
+          <guilabel>レイヤーとチャンネルのプレビューを表示</guilabel> 
+          のチェックを外してください。 プレビューを表示する場合には
+          <guilabel>プレビューサイズの既定値</guilabel> や
+          <guilabel>ナビゲーションのプレビューサイズ</guilabel> 
+          のメニューでその大きさが 9 段階に調節できます。
+        </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry id="prefs-kbd-shortcuts" xreflabel="Keyboard Shortcuts">
+      <term lang="en">Keyboard Shortcuts</term>
+      <term lang="ja">キーボードショートカット</term>
+      <listitem>
+        <para lang="en">
+          Any menu item can be activated by holding down
+          <keycap>Alt</keycap> and pressing a sequence of keys.
+          Normally, the key associated with each menu entry is shown
+          as an underlined letter in the text, called <emphasis>
+          accelerator</emphasis>.  If for some reason you
+          would prefer the underlines to go away (maybe because you
+          think they're ugly and you don't use them anyway), then you
+          can make this happen by unchecking <guilabel>Show menu
+          mnemonics</guilabel>.
+        </para>
+        <para lang="en">
+          GIMP can give you the ability to create keyboard shortcuts
+          (key combinations that activate a menu entry) dynamically,
+          by pressing the keys while the pointer hovers over the
+          desired menu entry.  However, this capability is disabled by
+          default, because it might lead novice users to accidentally
+          overwrite the standard keyboard shortcuts.  If you want to
+          enable it, check <guilabel>Use dynamics keyboard shortcuts</guilabel>
+          here.
+        </para>
+        <para lang="en">
+          Pressing the button for <guilabel>Configure Keyboard
+          Shortcuts</guilabel> brings up the Shortcut Editor, which gives you
+          a graphical interface to select menu items and assign shortcuts
+          to them.
+        </para>
+        <para lang="en">
+          If you change shortcuts, you will probably want your changes
+          to continue to apply in future GIMP sessions.  If not,
+          uncheck <guilabel>Save keyboard shortcuts on exit</guilabel>. But
+          remember that you have done this, or you may be frustrated
+          later. If you don't want to save shortcuts on exit every
+          session, you can save the current settings at any time using the
+          <guilabel>Save Keyboard Shortcuts Now</guilabel> button, and they will
+          be applied to future sessions.  If you decide that you have made
+          some bad decisions concerning shortcuts, you can reset them to
+          their original state by pressing <guilabel>Reset Saved Keyboard
+          Shortcuts to Default Values</guilabel>.
+        </para>
+        <para lang="ja">
+          メニュー上の項目は <keycap>Alt</keycap> キーと個々の呼応するキーとの
+          組み合わせにより活性化できます。 普通はそれぞれのメニュー見出しに
+          [(丸括弧)に入った]下線つきの英数字がついていて、 これらを 
+          <emphasis>アクセラレータ</emphasis> といいます。 (その表記が煩わしい
+          とか使うつもりもないというふうな) 何らかの理由でこの表示が不要な
+          場合は、 
+          <guilabel>メニューにニーモニック (アクセスキー)を表示</guilabel> の
+          チェックを外すとよいでしょう。
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>はキーボードショートカット (メニュー項目を
+          活性化するキーやキーの組み合わせ) が動的に作成可能です。 対象となる
+          メニュー項目上にマウスポインタを合わせ、 キーを押せば登録完了です。
+          ただしこの機能は初心者ユーザが誤って標準のキーボードショートカットを
+          上書きする恐れがあるため、 初期設定では無効となっています。 これを
+          有効にするには
+          <guilabel>動的なキーボードショートカットを使用</guilabel> に
+          チェックを入れてください。
+        </para>
+        <para lang="ja">
+          <guibutton>キーボードショートカット設定...</guibutton> 
+          ボタンをクリックすると<quote>キーボードショートカット設定</quote>
+          ダイアログが開かれます。 ここには[あらゆるコマンドと]
+          メニュー項目が並んでおり、 ショートカットの登録が視覚的に行えます。
+        </para>
+        <para lang="ja">
+          登録変更したショートカットはおそらくこれからも<acronym>GIMP</acronym>
+          でずっと使い続けるのを念頭に置かれている方がほとんどだと思います。
+          もしそうでないのなら、 
+          <guilabel>終了時にキーボードショートカットを保存</guilabel>
+          のチェックを外しておくとよいでしょう。 でもこのことを覚えておかないと
+          あとで困るはめになります。 ショートカットの保存が毎終了時では嫌な方は
+          <guilabel>現在のキーボードショートカットを保存</guilabel> を
+          クリックすれば即座に保存できます。 ショートカットまわり
+          で何か登録の手違いをしたように思われるときには、 
+          <guilabel>キーボードショートカットをリセット</guilabel>
+          ボタンをクリックすれば出荷時設定に戻せます。
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</sect2>

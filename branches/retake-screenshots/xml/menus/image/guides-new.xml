@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-07-20 ude: changed id 'gimp-image-guides-add' to 'script-fu-guide-new'
+  2007-11-25 j.h: changed 'image' to 'canvas' for origin of coordinates
+  2007-09-28 AntI: Added 'es'
+  2007-03-09 alex falappa: added it translation
+  2006-08-10 scb: revised 'en'
+  2005/10/30 created from image-guides.xml by axel.wernicke
+-->
+<!--2010-12-06-->
+<sect2 id="script-fu-guide-new">
+  <title lang="en">New Guide</title>
+  <title lang="ja">新規ガイド...</title>
+
+  <indexterm lang="en">
+    <primary>Guides</primary>
+    <secondary>Add</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガイド (ケントウセン)">ガイド (見当線)</primary>
+    <secondary sortas="シンキ">新規</secondary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>New Guide</guimenuitem> command adds a guide to
+    the image.
+  </para>
+  <para lang="ja">
+    <guimenuitem>新規ガイド...</guimenuitem> コマンドは画像に
+    見当線を追加します。
+  </para>
+  <tip>
+    <para lang="en">
+      You can add guides to the image more quickly, but less accurately, by
+      simply clicking and dragging guides from the image rulers and
+      positioning them where you would like.
+    </para>
+    <para lang="ja">
+      他にも画像に見当線を追加する方法があります。 画像ウィンドウの上辺と右辺に
+      ある定規 (ルーラー) をクリックしてから画像上まで曳いて適当な位置で放ち
+      ましょう。 これは簡単な反面、 精確さに欠けます。
+    </para>
+  </tip>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Image</guimenu>
+            <guisubmenu>Guides</guisubmenu>
+            <guimenuitem>New Guide</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guisubmenu>ガイド</guisubmenu>
+            <guimenuitem>新規ガイド...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en"><quote>New Guide</quote> Options</title>
+    <title lang="ja">
+      <quote>Script-Fu: 新規ガイド</quote>ダイアログのオプション
+    </title>
+    <para lang="en">
+      When you select <guimenuitem>New Guide</guimenuitem>, a dialog opens,
+      which allows you to set the <guilabel>Direction</guilabel> and
+      <guilabel>Position</guilabel>, in pixels, of the new guide more
+      precisely than by using click-and-drag.
+    </para>
+    <para lang="ja">
+      <guimenuitem>新規ガイド...</guimenuitem> コマンドを選ぶと現れる
+      ダイアログで、 新たに追加するガイドの <guilabel>方向</guilabel> と 
+      <guilabel>位置 (ピクセルで指定)</guilabel> の値を、
+      クリックして曳くよりも精密に設定できます。
+    </para>
+    <figure>
+      <title lang="en">The <quote>New Guide</quote> Dialog</title>
+      <title lang="ja"><quote>Script-Fu: 新規ガイド</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/new-guide.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Direction</term>
+        <term lang="ja">方向</term>
+        <listitem>
+          <para lang="en">
+            You can choose the <guilabel>Direction</guilabel> of the guide,
+            either <guilabel>Horizontal</guilabel> or
+            <guilabel>Vertical</guilabel>, by using the drop-down list.
+          </para>
+          <para lang="ja">
+            <guilabel>方向</guilabel> には <guimenuitem>水平</guimenuitem> か 
+            <guimenuitem>垂直</guimenuitem> を引き出しリストで選んでください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Position</term>
+        <term lang="ja">位置 (ピクセルで指定)</term>
+        <listitem>
+          <para lang="en">
+            The coordinate origin for the <guilabel>Position</guilabel> is
+            the upper left corner of the canvas.
+          </para>
+          <para lang="ja">
+            <guilabel>位置 (ピクセルで指定)</guilabel> の原点は
+            キャンバスの左上隅です。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

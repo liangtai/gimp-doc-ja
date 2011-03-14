@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-10 ude: adapted 'no' guides text for 'en','de'
+  2007-10-23 kost: added 'no'
+  2007-09-12 lexa: encapsulated images in figures
+  2007-05-24 ude: options section rewritten for de
+  2007-05-12 ude: added translation of new text
+  2007-05-01 Pierre :  main modifications;  new text and images created
+  2007-01-05 lexa: added de translation
+  2006-12-27 created by j.h
+-->
+<!--2010-12-10-->
+<sect2 id="plug-in-imagemap">
+  <title lang="en">ImageMap</title>
+  <title lang="ja">イメージマップ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Web</secondary>
+    <tertiary>Clickable image</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>ImageMap</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>ウェブ</secondary>
+    <tertiary sortas="クリックカンノウガゾウ">クリック感応画像</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>イメージマップ</primary>
+  </indexterm>
+
+  <para lang="en">
+    In Web sensitive images are frequently used to get some effects when
+    defined areas are enabled by the pointer. Obviously the most used effect
+    is a dynamic link to another web page when one of the sensitive areas is
+    clicked on. This <quote>filter</quote> allows you to design easily
+    sensitive areas within an image. Web site design softwares have this as a
+    standard function. In <acronym>GIMP</acronym> you can do this in a similar
+    way.
+  </para>
+  <para lang="ja">
+    感応画像はウェブページ内の特定の領域にマウスポインタをかざしたとき何らかの
+    反応を起こすしかけを作るときよく使われます。 なかでも感応画像の一部に
+    リンクを張り、 クリックされると他のウェブページを開くようにする用途はすぐ
+    思い付かれることでしょう。 このフィルタを使えば一枚の画像の特定の部分
+    だけが感応するように画像を簡単に加工できます。 同様の機能はウェブデザイン
+    専用ソフトにも標準的にありますが、 <acronym>GIMP</acronym>を使っても
+    同じことができるわけです。
+  </para>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
+      This plug-in lets you design graphically and friendly all areas you
+      want to delimit over your displayed image. You get the relevant part
+      of html tags that must be merged into the right place in your page html
+      code. You can define some actions linked to these areas too.
+    </para>
+    <para lang="en">
+      This is a complex tool which is not completely described here
+      (it works about like Web page makers offering this function). However
+      we want to describe here some of the most current handlings. If you
+      want, you can find a more complete descriptions in Grokking the GIMP
+      with the
+      link <xref linkend="bibliography-online-grokking-gimp-imagemap"/>.
+    </para>
+    <para lang="ja">
+      <guimenuitem>イメージマップ...</guimenuitem> プラグインは画像を
+      思いのままに区切る創造的な作業を視覚的に判り易く親切にお手伝いします。 
+      こうして設定した領域の情報を反映した、 <acronym>HTML</acronym>コードに
+      すぐ埋め込める適切な<acronym>HTML</acronym>のタグを書き出してくれます。 
+      さらにリンク部分をマウスオーバーなどに反応させるいろいろな動作設定も
+      可能です。
+    </para>
+    <para lang="ja">
+      このツールはこのてびきの 1 ページで説明し尽くすには複雑過ぎます。 
+      なにしろこの用途では専用のウェブページ作成アプリケーションとほぼ同等な
+      機能がついているからです。 ともかく最新の活用法のいくつかをここで紹介
+      することにしましょう。 全てを詳細に網羅した説明が必要なら、 
+      <citetitle pubwork="book">Grokking the GIMP</citetitle>
+      <xref linkend="bibliography-online-grokking-gimp-imagemap"/> をご覧
+      ください。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      From an image window, you can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Web</guisubmenu>
+        <guimenuitem>ImageMap</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ウェブ</guisubmenu>
+        <guimenuitem>イメージマップ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="en">オプション</title>
+    <figure>
+      <title lang="en">Imagemap filter options</title>
+      <title lang="ja">イメージマップフィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/web/imagemap.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Imagemap window</para>
+          <para lang="ja">Image Map ウィンドウ</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The window is a small one, but you can magnify it.
+      The main useful areas are:
+    </para>
+    <para lang="ja">
+      ウィンドウが小さければ大きくして使ってください。 とくに大事な部分は
+      つぎのところです。
+    </para>
+    <itemizedlist mark="bullet" spacing="normal">
+      <listitem>
+        <para lang="en">
+          completely on the left are vertically displayed icons, one for
+          pointing, three for calling tools to generate various shape areas,
+          one to edit zone properties, and finally one to erase a selected
+          zone; you can call these functions with the Mapping menu,
+        </para>
+        <para lang="ja">
+          左端の辺で縦に並ぶアイコンはそれぞれ、 一番上の矢印がポインタ、 
+          つぎの青い 3 つのボタンは形の異なる領域選択ツール、 5 番目のボタンは
+          領域の属性設定、 そして最後のゴミ箱アイコンボタンは選択された
+          領域を撤去するはたらきがあります。 なおこれらの機能は全てこの
+          ダイアログの <guimenu>マッピング</guimenu> 
+          メニューからも呼び出せます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          just on the right is your working area where you can draw all the
+          shapes areas you want with the relevant tools,
+        </para>
+        <para lang="ja">
+          アイコンの右隣は元画像が表示されており、 ここでいろいろな図形領域
+          をツールを使って描きます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          on the right is displayed an icon vertical set; its use is obvious
+          but a help pop-up gives you some information about each function,
+        </para>
+        <para lang="ja">
+          さらに右側にはアイコンが縦に並んでいます。 ダイアログの右側に表示
+          されている領域の一覧表に関わる操作ができます。 それぞれのはたらき
+          はアイコンを見れば想像できますが、 ポインタをかざすと現れる
+          ツールチップが機能の説明をします。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          finally, even on the right is a display area, as a property list of
+          the created areas. A click on one item of the list selects
+          automatically the corresponding shape in the working area,
+        </para>
+        <para lang="ja">
+          そして最も右端の区画は作成された領域の属性情報を表示する一覧表
+          です。 ここに並ぶ項目はクリックして選択すると左側の画像表示でそれに
+          対応する領域が選択されます。
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <sect4>
+      <title lang="en">The Menu Bar</title>
+      <title lang="ja">メニューバー</title>
+      <para lang="en">
+        The menu bar is similar to the image window menu bar, only a few menus
+        or menu entries are different:
+      </para>
+      <para lang="ja">
+        このメニューバーは画像ウィンドウのメニューバーと似ていますが、 
+        メニューの見出しや項目がところどころ異なっています。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">File</term>
+          <term lang="ja">ファイル</term>
+          <listitem>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">Save; Save As</term>
+                <term lang="ja">保存...; 名前を付けて保存...</term>
+                <listitem>
+                  <para lang="en">
+                    Contrary to other filters, this plug-in doesn't make an
+                    image but a text file. So you must save your work in a
+                    text format.
+                  </para>
+                  <para lang="ja">
+                    他のフィルタは画像を生成するのにこのプラグインだけは画像を
+                    加工せずテキストファイルを生成します。 つまりこの
+                    ダイアログで行なった操作の成果はテキストファイル形式で保存
+                    することになります。
+                  </para>
+                  <tip>
+                    <para lang="en">
+                      With
+                      <menuchoice>
+                        <guimenu>View</guimenu>
+                        <guimenuitem>Source</guimenuitem>
+                      </menuchoice>
+                      you can preview this text file content.
+                    </para>
+                    <para lang="ja">
+                      ダイアログのメニューより
+                      <menuchoice>
+                        <guimenu>表示</guimenu>
+                        <guimenuitem>ソース...</guimenuitem>
+                      </menuchoice>
+                      と進むとプレビューウィンドウが現れ、 現在の設定を反映
+                      したテキスト形式のタグ情報が表示されます。
+                    </para>
+                  </tip>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Open; Open recent</term>
+                <term lang="ja">開く...</term>
+                <listitem>
+                  <para lang="en">
+                    In the plug-in you can open the saved text file. The
+                    areas defined in your file will be loaded and
+                    overdisplayed; if the displayed image is not the
+                    original one or not with the same size,
+                    <acronym>GIMP</acronym> will ask you for adapting the
+                    scale.
+                  </para>
+                  <para lang="ja">
+                    このプラグインは保存されているテキストファイルを開いて
+                    使えます。 そのファイルで定義されている領域が読み込まれ
+                    元の画像と領域に重ねて表示されます。 ファイル作成時とは
+                    異なる画像が開かれていたり、 画像の寸法が変わっていた
+                    場合にはサイズを合わせるかどうか<acronym>GIMP</acronym>
+                    が質問します。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Edit</term>
+          <term lang="ja">編集</term>
+          <listitem>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">Edit area info</term>
+                <term lang="ja">エリア情報を編集...</term>
+                <listitem>
+                  <figure>
+                    <title lang="en">Editing an imagemap area</title>
+                    <title lang="ja">各領域を設定するダイアログ</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata format="PNG"
+                          fileref="images/filters/web/imagemap-area.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                  <para lang="en">
+                    In the settings dialog you can edit the area information
+                    of a selected area. This dialog will pop up automatically
+                    whenever you create a new area.
+                    <!--CHECK: If you are opening the HTML file from the pull
+                    down menu only the file name is added. You have to add
+                    the path manually.  In the tag JavaScript you may add
+                    functions for onMouseover, onMouseout etc.-->
+                  </para>
+                  <para lang="ja">
+                    この<quote>領域 #<replaceable>n</replaceable> 設定</quote>
+                    ダイアログは選択されている領域の情報を編集するときに
+                    使います。 またこのダイアログは領域を新たに作成したとき
+                    には自動的に開かれます。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">View</term>
+          <term lang="ja">表示</term>
+          <listitem>
+            <para lang="en">
+              This menu offers you special functions:
+            </para>
+            <para lang="ja">
+              このメニューの内容は独特なので詳しく説明します。
+            </para>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">Area list</term>
+                <term lang="ja">エリアリスト</term>
+                <listitem>
+                  <para lang="en">
+                    Here you can hide or show the selection area.
+                  </para>
+                  <para lang="ja">
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Source</term>
+                <term lang="ja">ソース...</term>
+                <listitem>
+                  <para lang="en">
+                    Here you see the raw data as you would save it to or read
+                    it from a file.
+                  </para>
+                  <para lang="ja">
+                    現れ出るウィンドウでファイルに保存もしくはファイルから
+                    読み込まれる生データが見られます。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Color; Grayscale</term>
+                <term lang="ja">カラー, グレー</term>
+                <listitem>
+                  <para lang="en">
+                    You can select the image mode here and work with a
+                    Grayscale display.
+                  </para>
+                  <para lang="ja">
+                    ここで画像表示モードを切り替えるとプレビュー区画の
+                    表示が白黒グレースケールにも変えられます。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Mapping</term>
+          <term lang="ja">マッピング</term>
+          <listitem>
+            <para lang="en">
+              You will seldom use this menu, since you can more easily access
+              selection tools by clicking on icons on the left of the working
+              area.
+            </para>
+            <para lang="ja">
+              めったに使わないメニューかもしれません。 というのもツールを
+              呼び出すなら作業区画の左隣のアイコンをクリックした方が手早く
+              簡単だからです。
+            </para>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">Arrow</term>
+                <term lang="ja">矢印</term>
+                <listitem>
+                  <para lang="en">
+                    The arrow here represents the Move tool. When activated
+                    tool is selected, you can select and move an area on the
+                    image.
+                  </para>
+                  <para lang="en">
+                    With a polygon, you can use the arrow to move one of
+                    the red points. Right-click on a segment between two
+                    red points to open a pop-up menu that offers, with
+                    several others, the possibility to add a new point. If
+                    you right-click on a red point, you can remove it.
+                  </para>
+                  <para lang="ja">
+                    ここでの矢印とは移動ツールのことです。 このツールを呼び
+                    出したら領域を選択したりその領域を移動したりできます。
+                  </para>
+                  <para lang="ja">
+                    多角形の領域ではその角を示す赤いコントロールポイントを
+                    矢印ツールで移動できます。 またポイント間の線分を 
+                    <mousebutton>第2ボタン</mousebutton> でクリックすると
+                    現れるメニューには、 線分上に新たなポイントを追加する
+                    コマンドなどがあります。 またポイントは 
+                    <mousebutton>第2ボタン</mousebutton> でクリックすると
+                    削除できます。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Rectangle; Circle; Polygon</term>
+                <term lang="ja">矩形, 円, 多角形</term>
+                <listitem>
+                  <para lang="en">
+                    These tools let you create various shape areas: click on
+                    the image, move the pointer, and click again.
+                  </para>
+                  <para lang="ja">
+                    ここらのツールは皆いろいろな形の領域を作成するのに使い
+                    ます。 ツールを呼び出したらプレビュー画面でクリックし、 
+                    他の位置でさらにクリックという操作です。 多角形は
+                    クリックするたびにポイントが増えてゆきますが、 ダブル
+                    クリックすれば領域作成が終わり属性情報のダイアログが
+                    開きます。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Edit Map Info</term>
+                <term lang="ja">マップ情報編集...</term>
+                <listitem>
+                  <figure>
+                    <title lang="en">Editing the imagemap data</title>
+                    <title lang="ja">
+                      <quote>このマップファイルに対する設定</quote>ダイアログ
+                    </title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata format="PNG"
+                          fileref="images/filters/web/imagemap-info.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                  <para lang="en">
+                    With this simple dialog you can enter some items, which
+                    will be written to the resulting output file; either as
+                    comments (<guilabel>Author</guilabel>,
+                    <guilabel>Description</guilabel>)
+                    or as attribute values of the HTML tags
+                    (<guilabel>Image name</guilabel>,
+                    <guilabel>Title</guilabel>,
+                    <guilabel>Default URL</guilabel>).
+                  </para>
+                  <para lang="ja">
+                    これは生成されるテキストファイルに書き込まれる僅かな項目を
+                    満たすための単純なダイアログです。 
+                    <guilabel>作者</guilabel> と
+                    <guilabel>説明</guilabel> でコメントが
+                    付記できます。 <acronym>HTML</acronym>タグの属性情報は
+                    <guilabel>画像名</guilabel> と 
+                    <guilabel>タイトル</guilabel> と
+                    <guilabel>デフォルト<accel>U</accel>RL</guilabel> に
+                    それぞれ指定してください。 マップファイル形式は
+                    ウェブページを置くウェブサーバの一部の機能に依存する 
+                    <guilabel><accel>N</accel>CSA</guilabel> や 
+                    <guilabel>C<accel>E</accel>RN</guilabel> よりも、 ほぼ
+                    どんなウェブサーバでも利用可能な 
+                    <guilabel>C<accel>S</accel>IM</guilabel> をお勧めします。 
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Tools</term>
+          <term lang="ja">ツール</term>
+          <listitem>
+            <para lang="en">
+              With the <quote>Tools</quote> menu you can create
+              guides and even regularly spaced rectangular areas.
+            </para>
+            <para lang="ja">
+              <guimenu>ツール</guimenu> メニューを
+              使えば見当線の表示ができ、 きっちり大きさや間隔を整えて
+              矩形領域を描けます。
+            </para>
+            <variablelist>
+              <varlistentry>
+                <term lang="en">Grid; Grid settings</term>
+                <term lang="ja">グリッド; グリッド設定...</term>
+                <listitem>
+                  <figure>
+                    <title lang="en">Grid options</title>
+                    <title lang="ja">
+                      <quote>グリッド設定</quote>ダイアログ
+                    </title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata format="PNG"
+                          fileref="images/filters/web/imagemap-grid.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                  <para lang="en">
+                    Here you can enable and disable the image grid or
+                    configure some grid properties.
+                  </para>
+                  <para lang="ja">
+                    ここではグリッドを表示するかしないかを選びその姿の種類を
+                    選べるほか、 間隔やオフセットが設定できます。 [なおこれら
+                    の項目はどういうわけかグリッドにスナップさせる 
+                    <guilabel>グリッドに付ける</guilabel> 
+                    を有効にしなければ定義できません。]
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Use GIMP guides; Create guides</term>
+                <term lang="ja">GIMP のガイドを使う...; ガイドの作成...</term>
+                <listitem>
+                  <para lang="en">
+                    The guide lines are created at the border of the image but
+                    can be moved around by clicking on the red squares on each
+                    line something similar to the GIMP guide lines. By using
+                    the guides you are able to create active rectangles in the
+                    image.
+                  </para>
+                  <para lang="ja">
+                    ガイドは画像の辺境に作成されますが<acronym>GIMP</acronym>
+                    の見当線に少し似てそれぞれの線の赤い正方形ポイントを
+                    クリックして曳けば移動できます。 ガイドを使えば画像上に
+                    活性化した矩形を作成できます。
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Create guides</term>
+                <term lang="ja">ガイドの作成...</term>
+                <listitem>
+                  <figure>
+                    <title lang="en">Guide options</title>
+                    <title lang="ja">
+                      <quote>ガイド作成</quote>オプション
+                    </title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata format="PNG"
+                 fileref="images/filters/web/imagemap-guides-options.png"/>
+                      </imageobject>
+                      <caption>
+                        <para lang="en">The guide options</para>
+                        <para lang="ja">ガイドのオプション</para>
+                      </caption>
+                    </mediaobject>
+                  </figure>
+                  <para lang="en"> 
+                    Instead of creating geometrical shapes to select the
+                    active areas you may use an array of rectangles, each
+                    representing an active area, by clicking on the
+                    <quote>Create guides</quote>. In the menu popping
+                    up you set the width and height of the rectangles, the
+                    space between them, the number of rows and 
+                    columns, and the upper and left startpoint for the array.
+                    All messures are in pixels. If you are not satisfied with 
+                    the result you may adjust each rectangle by moving the 
+                    red squares as usual. 
+                  </para>
+                  <para lang="ja">
+                    活性領域を作成する方法として図形を作成する代わりに、 
+                    <guimenuitem>ガイドの作成...</guimenuitem> を呼び出すと
+                    できる升目状に並んだ矩形を任意にクリックして領域を作成
+                    する方法があります。 ダイアログが開かれますので、 升目
+                    の高さと幅や互いの間隔を定め、 縦や横の方向にそれぞれ
+                    並ぶ数と、 左上の升目の座標を設定できます。 寸法は
+                    いずれもピクセル単位です。 実行後も気に入らなければ
+                    また赤い正方形ポイントを移動すれば調節できます。
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+
+    <sect4>
+      <title lang="en">The Tool Bar</title>
+      <title lang="ja">ツールバー</title>
+      <para lang="en">
+        Most entries here are just shortcuts for some functions already
+        described. Exceptions:
+      </para>
+      <para lang="ja">
+        ここに並ぶ機能はほとんどが既に上述したものばかりですが、 2 つだけ
+        残っています。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Move to Front; Send to Back</term>
+          <term lang="ja">前面に移動; 背面に移動</term>
+          <listitem>
+            <para lang="en">
+              Here you can move an area entry to the bottom (<quote>Move to
+              Front</quote>) <!--sic!--> or top (<quote>Send to Back</quote>)
+              of the area list.
+            </para>
+            <para lang="ja">
+              右の一覧表で領域の項目の順序を変えます。 <quote>前面に移動
+              </quote>で一覧表の一番下に、 <quote>背面に移動</quote>で一覧表
+              の一番上に移動します。 ややこしい。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+
+    <sect4>
+      <title lang="en">The Working Area</title>
+      <title lang="ja">作業区画</title>
+      <figure>
+        <title lang="en">The Working Area</title>
+        <title lang="ja">作業区画</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/web/imagemap-draw.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        In the main area of the imagemap window, on the left side, you will
+        find your working area where you can draw all the shapes areas you
+        want with the relevant tools.
+      </para>
+      <para lang="en">
+        Beside the working area there are vertically displayed icons, one for
+        pointing, three for calling tools to generate various shape areas, one
+        to edit zone properties, and finally one to erase a selected zone; you
+        can call these functions with the Mapping menu too.
+      </para>
+      <para lang="ja">
+        イメージマップウィンドウの主要部左側は作業区画です。 ここで適宜ツールを
+        使ってあらゆる領域をいろんな形に作成します。
+      </para>
+      <para lang="ja">
+        作業区画の左隣にはアイコンが縦に並んでおり、 一番上は指摘や変形を司る
+        矢印、 そのつぎの 3 つは図形別の領域作成、 続いて領域の属性情報の編集、
+        最後には選択した領域を撤去するアイコンです。 いずれのツールも 
+        <guimenu>マッピング</guimenu> メニューからでも
+        呼び出せます。
+      </para>
+      <caution>
+        <para lang="en">Note that the areas should not overlap.</para>
+        <para lang="ja">領域が重なり合ってはいけません。</para>
+      </caution>
+    </sect4>
+
+    <sect4>
+      <title lang="en">The selection area</title>
+      <title lang="ja">選択範囲の一覧表</title>
+      <para lang="en">
+        On the right is a display area, as a property list of the created
+        areas. A click on one item of the list selects automatically the
+        corresponding shape in the working area, then you can modify it.
+      </para>
+      <para lang="en">
+        Beside the display are is an icon vertical set; its use is obvious
+        but a help pop-up gives you some information about each function,
+      </para>
+      <para lang="en">
+        Unfortunately, the arrow symbols for moving a list entry up or down do
+        not work here.
+        <!--You can use <guiicon>Move to Front</guiicon> or
+        <guiicon>Send to Back</guiicon> in the tool bar instead. Or you can
+        activate the arrow tool and open the context menu of a selected area,
+        with menu items <guimenuitem>Move Up</guimenuitem> and
+        <guimenuitem>Move Down</guimenuitem>.-->
+        But of course you carefully avoided to create overlapping areas, so
+        you do not use these functions at all.
+      </para>
+      <para lang="ja">
+        作業区画の右側には作成された領域のそれぞれの属性情報を示す一覧表が
+        あります。 ここで項目をクリックして選択すると連動して作業区画上の
+        領域が選択され、 加工ができます。
+      </para>
+      <para lang="ja">
+        一覧表の左隣には縦にアイコンが並んでいます。 使い道は明らかですが
+        アイコンにポインタをかざすとツールチップでその機能の説明が
+        現れます。
+      </para>
+      <para lang="ja">
+        上下のボタンは一覧表で項目を移動するためのものですが、 残念ながら
+        どちらも機能しません。 
+        <!-- ツールバーの <guiicon><phrase>前面に移動</phrase></guiicon> 
+        と <guiicon><phrase>背面に移動</phrase></guiicon> も使えます。 
+        そのほか矢印ツールを呼び出してから選択した領域を <mousebutton>
+        第2ボタン</mousebutton> でクリックすると現れるメニューから 
+        <guimenuitem>上げる</guimenuitem> や <guimenuitem>下げる
+        </guimenuitem> を使う方法もあります。-->
+        しかし当然ながら領域は重なり合わないよう慎重に作図されたはずです
+        ので、 結局のところこの機能はいらないでしょう。
+      </para>
+    </sect4>
+  </sect3>
+</sect2>

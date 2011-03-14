@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-04-25 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050910 de added by axel.wernicke
+-->
+<!--2010-09-13-->
+<sect2 id="plug-in-waves">
+  <title lang="en">Waves</title>
+  <title lang="ja">波...</title>
+
+  <indexterm lang="en">
+    <primary>Waves</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ナミ">波</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example for the Waves filter</title>
+      <title lang="ja">波フィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-waves.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Waves</quote> applied</para>
+          <para lang="ja"><quote>波</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      With this filter you get the same effect as a stone thrown in a quiet
+      pond, giving concentric waves.
+    </para>
+    <para lang="ja">
+      <guimenuitem>波...</guimenuitem> フィルタは静かな水面に
+      石を投げ入れたときに起こる同心円状の波紋のような効果を画像に与えます。
+      波紋の中心は常にレイヤーの中心です。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Distorts</guisubmenu>
+        <guimenuitem>Waves</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>波...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Waves</quote> filter options</title>
+      <title lang="ja"><quote>波</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/distort/waves.png"/>
+        </imageobject>
+      //mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            All your setting changes will appear in the Preview without
+            affecting the image until you click on <guilabel>OK</guilabel>.
+            Don't keep <guilabel>Preview</guilabel> checked if your computer
+            is too slow.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て判るようになっています。
+            お使いのコンピュータが処理に時間を多く費すときはプレビューに
+            チェックを入れっぱなしにしないのがコツです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Mode</term>
+        <term lang="ja">モード</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Smear</guilabel></term>
+              <term lang="ja"><guilabel>ぼかす</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Because of the waves, areas are rendered empty on sides. The
+                  adjacent pixels will spread to fill them.
+                </para>
+                <para lang="ja">
+                  波が起これば画像の全辺で空いた部分ができてしまいます。 
+                  その隙間を隣接する画素が拡散して埋めます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Blacken</guilabel></term>
+              <term lang="ja"><guilabel>黒くする</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  The empty areas will be filled by black color.
+                </para>
+                <para lang="ja">空いた部分は黒く塗られます。</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Reflective</term>
+        <term lang="ja">反射</term>
+        <listitem>
+          <para lang="en">
+            Waves bounce on sides and interfere with the arriving ones.
+          </para>
+          <para lang="ja">波は画像の端で反射し迎え来る波と干渉します。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Amplitude</term>
+        <term lang="ja">振幅</term>
+        <listitem>
+          <para lang="en">Varies the height of waves.</para>
+          <para lang="ja">波の高さが調節できます。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Phase</term>
+        <term lang="ja">位相</term>
+        <listitem>
+          <para lang="en">This command shifts the top of waves.</para>
+          <para lang="ja">このオプションは波の山の位置をずらします。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Wavelength</term>
+        <term lang="ja">波長</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Wavelength</guilabel>: Varies the distance between
+            the top of waves.
+          </para>
+          <para lang="ja">波の頭と頭の間の距離を調節できます。</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

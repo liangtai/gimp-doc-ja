@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-15 j.h: updated en;fr to v2.6
+  2007-12-04 ude: updated 'de'
+  2007-10-05 KoSt: updated 'no'
+  2007-09-16 j.h : updated en;fr to v2.4
+  2006-09-03 lexa: streamlined structure to match the description of other dilogs
+  2006-04-29 made docbook compliant
+  2005-11-29 replaced informalfigures by figures by lexa
+-->
+<!--2010-11-28-->
+<sect2 id="gimp-image-dialog">
+  <title lang="en">Images Dialog</title>
+  <title lang="ja">画像一覧ダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Images</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Image</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary sortas="ガゾウイチラン">画像一覧</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">画像一覧ダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/images-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The <quote>Images</quote> Dialog displays the list of open images on your
+    screen; each of them is represented with a thumbnail. This dialog is
+    useful when you have many overlapping images on your screen: thus, you
+    can raise the wanted image to foreground.
+  </para>
+  <para lang="ja">
+    <quote>画像</quote>ダイアログは<acronym>GIMP</acronym>が画面上に開いている
+    画像を一覧表にして表示します。 それぞれの縮小見本画像が並んでおりこれらを
+    操作します。 画面上に多くの画像を開いていたり大きな画像を開いていて重なり
+    合っている場合にこのダイアログが重宝します。 つまり、 扱いたい画像を前面に
+    浮かび上がらせられます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Images</quote> dialog is a dockable dialog; see the section
+      <xref linkend="gimp-concepts-docks"/> for help on manipulating it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>画像</quote>ダイアログはドッキング可能です。
+      その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from the image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Images</guimenuitem>
+          </menuchoice>;
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>画像一覧</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Images</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加</guimenu>
+            <guimenuitem>画像一覧</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Images</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Images</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 このときは画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guimenuitem>画像</guimenuitem>
+      </menuchoice>
+      と進めば<quote>画像</quote>ダイアログを浮かび上がらせられます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Using the Images dialog</title>
+    <title lang="ja">画像ダイアログの利用法</title>
+    <para lang="en">
+      At the top of the dialog, a drop-list of open images appears if the
+      <quote>Show Image Selection</quote> option is checked in the Tab Menu.
+    </para>
+    <para lang="en">
+      At center, open images appear, as a list or a grid, according to the
+      selected mode. The current image is highlighted in list mode, outlined
+      in grid mode. With a double click on an image name,  you raise this
+      image to the foreground of your screen. With a simple click you select
+      this image so that the buttons of the dialog can act on it.
+    </para>
+    <para lang="ja">
+      いずれのドッキング可能なダイアログのタブメニューにも <guimenuitem>
+      選択画像を表示</guimenuitem> チェックボックスがあり、
+      これを有効にするとドック上部に
+      <link linkend="gimp-dock-image-menu">画像メニュー</link> が加わります。
+    </para>
+    <para lang="ja">
+      開いた画像の縮小見本は<quote>画像</quote>ダイアログの中央に、 縦一列か
+      升目状かのいずれか指定された表示形式で並びます。 現在活性化している画像
+      は、 <guimenuitem>一覧で表示</guimenuitem> の場合は
+      強調表示され、 <guimenuitem>並べて表示</guimenuitem>
+      の場合はその縮小見本画像が枠で囲まれます。 いずれもダブルクリックすれば
+      その画像のウィンドウをコンピュータ画面の最前面に浮き上がらせられます。
+      単クリックしたときも画像を活性化できますので、 このダイアログのアイコン
+      ボタンによる操作の対象になります。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Grid and List modes, preview size</term>
+        <term lang="ja">升目表示と列挙表示; プレビューサイズ</term>
+        <listitem>
+          <para lang="en">
+            In the Tab menu for the <quote>Images</quote> dialog, you can choose
+            between  <guimenuitem>View as Grid</guimenuitem> and
+            <guimenuitem>View as List</guimenuitem>.
+            In Grid mode, the images are laid out in a rectangular array.
+            In List mode, they are lined up vertically, with each row showing
+            a thumbnail of the contents of the image, its name, and its pixel
+            dimensions.
+          </para>
+          <para lang="ja">
+            <quote>画像</quote>ダイアログのタブメニューで 
+            <guimenuitem>一覧で表示</guimenuitem> か 
+            <guimenuitem>並べて表示</guimenuitem> を切り替え
+            られます。 <quote>並べて表示</quote>の場合は現在開かれている画像の
+            見本が升目状に並びます。 <quote>一覧で表示</quote>の場合はそれらの
+            画像が縦一列に列挙され、 各段にその見本画像と名前とピクセル単位の
+            寸法が表示されます。
+          </para>
+          <tip>
+            <para lang="en">
+              <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+              opens a search field.
+              See <xref linkend="gimp-dock-view-as-list" />
+            </para>
+            <para lang="j">
+              キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+              <keycap>F</keycap></keycombo> で検索窓が現れます。
+              <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+              </link> をご覧ください。
+            </para>
+          </tip>
+          <para lang="en">
+            You can change the size of the image previews in the dialog using
+            the <quote>Preview Size</quote> submenu of the dialog's Tab menu.
+          </para>
+          <para lang="ja">
+            ダイアログのタブメニューの 
+            <guimenuitem>プレビューサイズ</guimenuitem> 
+            サブメニューをつうじて縮小見本画像の大きさが調節できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Buttons</term>
+        <term lang="ja">ボタン</term>
+        <listitem>
+          <para lang="en">
+            Three buttons at the bottom of the dialog allow you to operate on
+            the selected image. These buttons are present if the <quote>Show
+            button bar</quote> is checked in the tab dialog. You can get the
+            same commands through the pop menu by right-clicking on the dialog.
+          </para>
+          <para lang="ja">
+            このダイアログの底部にあるアイコンボタンで、 選択された画像の操作
+            ができます。 これらはタブダイアログの <guimenuitem>
+            ボタンバーを表示</guimenuitem> を有効にしている
+            場合に表示されます。 各ボタンの機能はダイアログの脈絡メニューにも
+            あります。 脈絡メニューはダイアログを <mousebutton>第2ボタン
+            </mousebutton> クリックするか、 タブメニューボタンをクリックして
+            出てくるメニューの最初の項目を進んで呼び出します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Raise this image displays</term>
+        <term lang="ja">この画像のウィンドウを前面に</term>
+        <listitem>
+          <para lang="en">
+            The selected image appears at the foreground of your screen. If
+            this image has another view, this view also is raised but
+            remains behind the original. The same option in the pop-up menu,
+            that you get by right-clicking, is called <quote>Raise views
+            </quote>
+          </para>
+          <para lang="ja">
+            選択された画像がコンピュータ画面の最前面に現れます。 後述する
+            <quote>別の画像ウィンドウ</quote>表示で複数のウィンドウがある画像を
+            選んだときは、 その全てが前面に浮き上がりますが、 元画像が最前面に
+            なります。 このボタンのはたらきはダイアログを <mousebutton>
+            第2ボタン</mousebutton> クリックすると出てくる脈絡メニューの
+            <guimenuitem>ビューを前面へ</guimenuitem> と同じ
+            機能です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Create a new display for this image</term>
+        <term lang="ja">この画像を別の画像ウィンドウで表示</term>
+        <listitem>
+          <para lang="en">
+            Duplicates the image window (not the image) of the selected image.
+          </para>
+          <para lang="ja">
+            選択された画像の画像ウィンドウを複製します (画像を複製するのでは
+            ありません)。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Delete</term>
+        <term lang="ja">この画像を削除</term>
+        <listitem>
+          <para lang="en">
+            This command works only on a image which is loaded without any
+            window.  Though images can be opened by the New Window command,
+            if the image has been already loaded without window by a primitive
+            procedure command (such as <function>gimp-image-new</function>,
+            <function>file-png-load</function>, etc.), it can not be unloaded
+            even if its windows are closed to the last.  Then use this command
+            to close it.
+          </para>
+          <para lang="ja">
+            このコマンドは画像ウィンドウなしで読み込まれた画像にだけ効きます。 
+            画像は新しいウィンドウとともに開く方法だけでなく、 
+            <function>gimp-image-new</function> や 
+            <function>file-png-load</function> コマンドのような基礎的な
+            プロシージャ命令でも読み込めますが、 そうした場合には画像
+            ウィンドウを最後まで閉じても画像は読み込まれたままになります。 
+            これを閉じるのにこのコマンドも使えます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

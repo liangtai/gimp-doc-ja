@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-12 Added Spanish translation by AntI
+  2007-04-24 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050910 de added by axel.wernicke
+-->
+<!--2010-09-13-->
+<sect2 id="plug-in-shift">
+  <title lang="en">Shift</title>
+  <title lang="ja">ずらし...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Distorts</secondary>
+    <tertiary>Shift</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Shift</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary sortas="ズラシ">ずらし</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ズラシ">ずらし</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example for the Shift filter</title>
+      <title lang="ja">ずらしフィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-shift.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Shift</quote> applied</para>
+          <para lang="ja"><quote>ずらし</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      It shifts all pixel rows, horizontally or vertically, in the current
+      layer or selection, on a random distance and within determined limits.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ずらし...</guimenuitem> フィルタは活性
+      レイヤー内もしくはその選択範囲内の画素を無作為な距離にずらします。
+      距離の限界が設定できます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Distorts</guisubmenu>
+        <guimenuitem>Sift</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>ずらし...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Shift</quote> filter options</title>
+      <title lang="ja"><quote>ずらし</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/distort/shift.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            The result of your settings will appear in the Preview without
+            affecting the image until you click on <guibutton>OK</guibutton>.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て判るようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en"><guilabel>Shift Horizontally</guilabel></term>
+        <term lang="en"><guilabel>Shift vertically</guilabel></term>
+        <term lang="ja"><guilabel>水平方向にずらす</guilabel></term>
+        <term lang="ja"><guilabel>垂直方向にずらす</guilabel></term>
+        <listitem>
+          <para lang="en">
+            This options sets the dimension where pixels are moved.
+          </para>
+          <para lang="en">
+            Pixels going out one side will come back on the other side.
+          </para>
+          <para lang="ja">
+            画素がずれる方向をこのオプションで指定します。
+          </para>
+          <para lang="ja">
+            辺をはみ出した画素は反対側の辺にまわりこみます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Shift amount</term>
+        <term lang="ja">ずれの量</term>
+        <listitem>
+          <para lang="en">
+            With this option, you can set the maximum shift, between 1 and
+            200 pixels, or in another unit of measurement.
+          </para>
+          <para lang="ja">
+            <guilabel>ずれの量</guilabel> オプションはずれの
+            量の最大限度を 1 ピクセルから 200 ピクセルもしくはその他の単位で
+            指定します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

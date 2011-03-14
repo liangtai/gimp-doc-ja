@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-09-05 AntI: added 'es'
+  2007-05-07 KoSt: added 'no'
+  2005-11-15: created by julien hardelin
+-->
+<!--2010-12-09-->
+<sect2 id="plug-in-small-tiles">
+  <title lang="en">Small Tiles</title>
+  <title lang="ja">小さくして並べる...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Map</secondary>
+    <tertiary>Small Tiles</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Small Tiles</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>マップ</secondary>
+    <tertiary sortas="チイサクシテナラベル">小さくして並べる</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="チイサクシテナラベル">小さくして並べる</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Small Tiles</quote> filter
+      </title>
+      <title lang="ja"><quote>小さくして並べる</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/map-taj-smalltile.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="ja"><quote>小さくして並べる</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter reduces the image (active layer or selection) and
+      displays it in many copies inside the original image.
+    </para>
+    <para lang="ja">
+      <guimenuitem>小さくして並べる...</guimenuitem> フィルタは画像のレイヤー
+      もしくはその選択範囲の縮小した複製を多数作成して元画像上に並べます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Small Tiles</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>小さくして並べる...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Small Tiles</quote> filter options</title>
+      <title lang="ja">
+        <quote>小さくして並べる</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/map/smalltiles.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Flip</term>
+        <term lang="ja">反転</term>
+        <listitem>
+          <para lang="en">
+            You can flip tiles according to the
+            <guilabel>Horizontal</guilabel> or/and
+            <guilabel>Vertical</guilabel> axis by checking the corresponding
+            option(s).
+          </para>
+          <para lang="en">
+            You can also decide which tiles will be flipped:
+            <variablelist>
+              <varlistentry>
+                <term><guilabel>All tiles</guilabel></term>
+                <listitem>
+                  <para>
+                    No comment.
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>Alternate tiles</guilabel></term>
+                <listitem>
+                  <para>
+                    Only odd tiles will be flipped.
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>Explicit tile</guilabel></term>
+                <listitem>
+                  <para>
+                    You can define a particular tile using both
+                    <guilabel>Row</guilabel> and <guilabel>Column</guilabel>
+                    input boxes.  This tile will be marked with a box in
+                    Preview. Press <guibutton>Apply</guibutton> to mark this
+                    explicit tile. Repeat this procedure to mark more than one
+                    tile.
+                  </para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </para>
+          <para lang="ja">
+            <guilabel>水平</guilabel> や <guilabel>垂直</guilabel> を
+            有効にするとその方向におのおののタイルが規則的に反転します。
+          </para>
+          <para lang="ja">
+            反転させるタイルはつぎのオプションで決めます。
+            <variablelist>
+              <varlistentry>
+                <term><guilabel>すべてのタイル</guilabel></term>
+                <listitem>
+                  <para>言葉通りです。</para>
+                </listitem>
+              </variablelist>
+              <variablelist>
+                <term><guilabel>一つおきのタイル</guilabel></term>
+                <listitem>
+                  <para>
+                    一つおきにタイルが反転され、 市松模様のように、 同じ向きの
+                    タイルが隣り合わない並びになります。
+                  </para>
+                </listitem>
+              </variablelist>
+              <variablelist>
+                <term><guilabel>指定のタイル</guilabel></term>
+                <listitem>
+                  <para>
+                    <guilabel>列</guilabel> と <guilabel>行</guilabel> の
+                    番号記入欄で指定した位置のタイルはプレビュー画面に
+                    反転色枠で示されます。 水平や垂直の反転方向を選んでから
+                    <guibutton>適用</guibutton> ボタンをクリックすれば
+                    そのタイルだけを反転できます。
+                  </para>
+                </listitem>
+              </variablelist>
+            </variablelist>
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Opacity</term>
+        <term lang="ja">不透明度</term>
+        <listitem>
+          <para lang="en">
+            With this slider and its input box, you can set the opacity of
+            the resulting image. This option is valid only if your image has
+            an Alpha channel.
+          </para>
+          <para lang="ja">
+            このスライダと付属する数値記入欄で結果画像の不透明度を調節
+            できます。 画像にアルファチャンネルがないときはこのオプションは
+            灰色無効となって使用できません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Number of Segments</term>
+        <term lang="ja">区切りの数</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>n2</guilabel> means <quote>the image into n to
+            the power of two tiles</quote>, where <quote>n</quote> is the
+            number  you set with the slider or its input box. n = 3 will
+            make nine tiles in the image.
+          </para>
+          <para lang="ja">
+            <!--<guilabel><accel>n</accel><superscript>2</superscript></guilabel>-->
+            <guilabel><accel>n</accel>²</guilabel> とはスライダや付属する
+            数値記入欄で示された値 <parameter>n</parameter> を 2 乗した数の
+            タイルで画像を分割することを表しています。 
+            <parameter>n</parameter> = 3 なら画像は縦 3 行横 3 列の 9 枚の
+            タイルからなる構成に変わります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

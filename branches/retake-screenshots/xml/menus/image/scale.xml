@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-11-28 j.h: updated v2.4. Lanczos interpolation added
+  2007-09-26 AntI: Added 'es'
+  2006-07-23 note added about the Scale tool by j.h
+  2005/06/18 en Link added
+-->
+<!--2010-12-22-->
+<sect2 id="gimp-image-scale">
+  <title lang="en">Scale Image</title>
+  <title lang="ja">画像の拡大・縮小...</title>
+
+  <indexterm lang="en">
+    <primary>Scale Image</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウノカクダイシュクショウ">画像の拡大・縮小</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Scale Image</guimenuitem> command enlarges or reduces
+    the physical size of the image by changing the number of pixels it
+    contains. It changes the size of the contents of the image and resizes
+    the canvas accordingly.
+  </para>
+  <para lang="en">
+    It operates on the entire image. If your image has layers of different
+    sizes, making the image smaller could shrink some of them down to nothing,
+    since a layer cannot be less than one pixel wide or high. If this happens,
+    you will be warned before the operation is performed.
+  </para>
+  <para lang="en">
+    If you only want to scale a particular layer, use the
+    <link linkend="gimp-layer-scale">Scale Layer</link> command.
+  </para>
+  <para lang="ja">
+    <guimenuitem>画像の拡大・縮小...</guimenuitem> コマンドは
+    画像の縦と横のそれぞれの画素数を変更することで画像の大きさを物理的に増加
+    もしくは減少させます。 拡大・縮小は画像の内容を変更して行われますので
+    キャンバスの大きさも変わります。
+  </para>
+  <para lang="ja">
+    この操作は画像を全体的に変更します。 レイヤーの幅や高さは 1 ピクセルたり
+    とも伸縮できないため、 大きさの異なるレイヤーが画像に含まれているときは
+    画像を小さくしても一部のレイヤーが縮小できません。 その場合には操作を
+    実行する前に警告が出ます。
+  </para>
+  <para lang="ja">
+    特定のレイヤーだけを拡大・縮小するには 
+    <link linkend="gimp-layer-scale">レイヤーの拡大縮小...</link> コマンド
+    をご利用ください。
+  </para>
+  <anchor id="gimp-image-scale-warning"/>
+  <note>
+    <para lang="en">
+      If scaling would produce an image larger than the
+      <quote>Maximum new image size</quote> set in the
+      <link linkend="gimp-prefs-environment">Environment</link> page of the
+      Preferences dialog (which has a default of 64Mb), you are warned and
+      asked to confirm the operation before it is performed. You may not
+      experience any problems if you confirm the operation, but you should
+      be aware that very large images consume a lot of resources and
+      extremely large images may take more resources than you have,
+      causing <acronym>GIMP</acronym> to crash or not perform well.
+    </para>
+    <para lang="ja">
+      <link linkend="gimp-prefs-environment">環境設定</link> ダイアログの
+      <quote>環境</quote>のページで設定される 
+      <guilabel>新しい画像の最大サイズ</guilabel> (初期設定値は 64Mb) 
+      を上回る容量の画像を拡大の操作で生成するおそれのあるときは、 実行前に
+      警告があり、 確認を求められます。 このような操作でも問題が発生しなければ
+      よいのですが、 残念ながら大きな画像はたくさんの資源を要求しますし、 
+      お使いのシステムの資源量を上回る巨大な画像ともなると
+      <acronym>GIMP</acronym>を異常終了させたり不正な処理を行なう
+      危険がありますので注意が必要です。
+    </para>
+  </note>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Image</guimenu>
+            <guimenuitem>Scale Image</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guimenuitem>画像の拡大・縮小...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">The <quote>Scale Image</quote> Dialog</title>
+    <title lang="en"><quote>画像の拡大・縮小</quote>ダイアログ</title>
+    <figure>
+      <title lang="en">The <quote>Scale Image</quote> dialog</title>
+      <title lang="en"><quote>画像の拡大・縮小</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/scale-image.png"/>
+          <!--was: images/dialogs/scale-image.png-->
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Image Size</term>
+        <term lang="ja">画像サイズ (キャンバスサイズ)</term>
+        <listitem>
+          <para lang="en">
+            You should keep in mind that an image can be located in one of
+            four places: in the image file, in RAM after it has been loaded,
+            on your screen when it is displayed, or on paper after it has been
+            printed. Scaling the image changes the number of pixels (the
+            amount of information) the image contains, so it directly affects
+            the amount of memory the image needs (in RAM or in a file).
+          </para>
+          <para lang="en">
+            However printing size also depends upon the resolution of the
+            image, which essentially determines how many pixels there will
+            be on each inch of paper. If you want to change the printing
+            size without scaling the image and changing the number of pixels
+            in it, you should use the
+            <link linkend="gimp-image-print-size">Print Size</link> dialog.
+            The screen size depends not only on the number of pixels, but
+            also on the screen resolution, the zoom factor and the setting
+            of the <link linkend="gimp-view-dot-for-dot">Dot for Dot</link>
+            option.
+          </para>
+          <para lang="en">
+            If you enlarge an image beyond its original size,
+            <acronym>GIMP</acronym> calculates the missing pixels by
+            interpolation, but it does not add any new detail. The more you
+            enlarge an image, the more blurred it becomes. The appearance of
+            an enlarged image depends upon the interpolation method you
+            choose. You may improve the appearance by using the
+            <link linkend="plug-in-sharpen">Sharpen</link> filter after you
+            have scaled an image, but it is best to use high resolution when
+            you scan, take digital photographs or produce digital images by
+            other means. Raster images inherently do not scale up well.
+          </para>
+          <para lang="en">
+            You may need to reduce your image if you intend to use it on a web
+            page. You have to consider that most internet users have
+            relatively small screens which cannot completely display a large
+            image. Many screens have a resolution of 1024x768 or even less.
+          </para>
+          <para lang="en">
+            Adding or removing pixels is called <quote>Resampling</quote>.
+          </para>
+          <para lang="ja">
+            画像の現れる場所を 4 つの段階に分けると、 画像ファイルの中に
+            あったものが、 読み込まれたあとは<acronym>RAM</acronym>に収まり、 
+            表示されれば画面上に現れ、 印刷されれば紙面に描かれます。 画像の
+            ありかはこのいずれかになることを念頭に置いて話をすすめます。 
+            画像を拡大・縮小することは画像に含まれる画素数 (つまり情報量) が
+            変化することですから、 画像を収めるための<acronym>RAM</acronym>や
+            ファイルの容量に直接の影響があります。
+          </para>
+          <para lang="ja">
+            ただし印刷された画像の大きさは画像の解像度にも依存します。 解像度は
+            紙上で単位距離あたりの画素数 (ppi ならピクセル毎インチ) を本質的に
+            決定します。 画像をいっさい拡大・縮小せず画素数もいじらぬまま印刷物
+            の画像の大きさを変更する必要があるときは 
+            <link linkend="gimp-image-print-size">画像印刷解像度の設定</link> 
+            ダイアログをお使いください。
+            画面上の寸法は画素数のみならず画面の解像度や表示倍率、 さらには 
+            <link linkend="gimp-view-dot-for-dot">点に点を対応させる</link> 
+            オプションの扱いによっても変わります。
+          </para>
+          <para lang="ja">
+            画像を引き伸ばして拡大すると<acronym>GIMP</acronym>は不足する画素を
+            補間により算出しますが、 それで画像がより詳細になるわけではあり
+            ません。 画像は拡大を進めるにつれ不鮮明になってゆきます。 拡大
+            された画像の見た目の質は選択した補間方法によって違ってきます。
+            <link linkend="plug-in-sharpen">鮮鋭化</link> 強調フィルタを使えば
+            拡大した画像も多少は見栄えがよくなりますが、 スキャナで取り込むに
+            しろデジタル写真を撮るにしろ画像をデジタル作成するにしろやはり始め
+            から高い解像度にしておくに越したことはありません。 もともとラスター
+            画像の引き伸ばしはうまくできないものなのです。
+          </para>
+          <para lang="ja">
+            Web で公開する予定の画像は縮小する必要がでてきます。 インターネット
+            の向こう側にいる人々のなかには大きな画像を丸ごと表示できない比較的
+            小さなコンピュータ画面で見ているひともいます。 だいたい
+            1024&times;768 ピクセルかそれ以下の画面がまだ多く使われています。
+          </para>
+          <para lang="ja">
+            画素を加減する処理を<quote>再標本化</quote> 
+            (<foreignphrase>resampling</foreignphrase>) といいます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Width; Height</term>
+              <term lang="ja">幅; 高さ</term>
+              <listitem>
+                <para lang="en">
+                  When you click on the <guimenuitem>Scale</guimenuitem>
+                  command, the dialog displays the dimensions of the
+                  original image in pixels. You can set the
+                  <guilabel>Width</guilabel> and the
+                  <guilabel>Height</guilabel> you want to give to your
+                  image by adding or removing pixels. If the chain icon next
+                  to the Width and Height boxes is unbroken, the Width and
+                  Height will stay in the same proportion to each other. If
+                  you break the chain by clicking on it, you can set them
+                  independently, but this will distort the image.
+                </para>
+                <para lang="en">
+                  However, you do not have to set the dimensions in pixels.
+                  You can choose different units from the drop-down menu.
+                  If you choose percent as the units, you can set the image
+                  size relative to its original size. You can also use
+                  physical units, such as inches or millimeters. If you do
+                  that, you should set the <guilabel>X resolution</guilabel>
+                  and <guilabel>Y resolution</guilabel> fields to
+                  appropriate values, because they are used to convert
+                  between physical units and image dimensions in pixels.
+                </para>
+                <para lang="ja">
+                  <guimenuitem>画像の拡大・縮小...</guimenuitem> コマンドで
+                  このダイアログを呼び出した時点では画像の寸法がピクセル単位で
+                  表示されています。 これらの値を加減して 
+                  <guilabel>幅</guilabel> や <guilabel>高さ</guilabel> を
+                  決めてゆきます。 両記入欄の右隣にある鎖のしるしが連結した
+                  姿になっているときは幅と高さが連動して互いの比例関係 
+                  (縦横比) を維持します。 この鎖をクリックすると連結が解け、 
+                  幅と高さを個別に指定できるようになりますが、 画像は歪みます。
+                </para>
+                <para lang="ja">
+                  もちろん寸法の設定に使える単位はピクセルに限りません。 記入欄
+                  の右隣の引き出しメニューで他の単位に換えて指定できます。 また
+                  百分率を単位に選べば元画像の大きさとの相対比率で大きさを設定
+                  できます。 インチやミリメートルのような実寸単位も利用
+                  できます。 しかしこのとき <guilabel>水平解像度</guilabel> と
+                  <guilabel>垂直解像度</guilabel> 
+                  に適切な値を設定しなければなりません。 この解像度をもとに実寸
+                  から画像の画素数による寸法への変換が行なわれるためです。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">X resolution; Y resolution</term>
+              <term lang="ja">水平解像度; 垂直解像度</term>
+              <listitem>
+                <para lang="en">
+                  You can set the printing resolution for the image in the
+                  <guilabel>X resolution</guilabel>
+                  and <guilabel>Y resolution</guilabel>
+                  fields. You can also change the units of measurement by
+                  using the drop-down menu.
+                </para>
+                <para lang="ja">
+                  画像印刷の解像度が <guilabel>水平解像度</guilabel> と 
+                  <guilabel>垂直解像度</guilabel> で設定できます。 寸法は
+                  引き出しメニューで他の単位にも切り替えられます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Quality</term>
+        <term lang="ja">品質</term>
+        <listitem>
+          <para lang="en">
+            To change the image size, either some pixels have to be removed
+            or new pixels must be added. The process you use determines the
+            quality of the result. The <guilabel>Interpolation</guilabel>
+            drop down list provides a selection of available methods of
+            interpolating the color of pixels in a scaled image:
+          </para>
+          <para lang="ja">
+            画像の大きさを変更すると画素の削除または追加のいずれかが必ず起こり
+            ます。 その処理方法いかんで仕上がりの品質が変わってきます。 
+            <guilabel>補間方法</guilabel> の引き出しリストで拡大・縮小を受けた
+            画像の画素の色を補間するのに使える処理方法が選択できます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en">Interpolation</term>
+              <term lang="ja">補間方法</term>
+              <listitem>
+                <itemizedlist>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>None</guilabel>:
+                      No interpolation is used. Pixels are simply enlarged
+                      or removed, as they are when zooming. This method is low
+                      quality, but very fast.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>補間しない</guilabel>: 補間は行なわれません。 
+                      あたかも拡大表示のような画素の拡張や削除がなされるだけ
+                      です。 この方式の品質は最低ですが非常に高い処理速度が
+                      出ます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Linear</guilabel>: This method is relatively
+                      fast, but still provides fairly good results.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>線形</guilabel>: この方式は比較的高速ですが、 
+                      かなり良い結果が出せます。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Cubic</guilabel>:
+                      The method that produces the best results, but also
+                      the slowest method.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>キュービック</guilabel>: この処理は最高の仕上り
+                      が期待できますが、 処理に最も時間が掛かります。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <guilabel>Sinc (Lanczos 3)</guilabel>: New with
+                      GIMP-2.4, this method gives less blur in important
+                      resizings.
+                    </para>
+                    <para lang="ja">
+                      <guilabel>Sinc (Lanczos 3)</guilabel>: 
+                      <application><acronym>GIMP</acronym> 2.4</application> 
+                      から登場したこの方式は、 比較的ぼやけにくい
+                      卓越したリサイズを実現します。
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <note>
+      <para lang="en">
+        See also the <link linkend="gimp-tool-scale">Scale tool</link>,
+        which lets you scale a layer, a selection or a path.
+      </para>
+      <para lang="ja">
+        レイヤーや選択範囲やパスの大きさも変えられる 
+        <link linkend="gimp-tool-scale">拡大・縮小ツール</link> も参照して
+        ください。
+      </para>
+    </note>
+  </sect3>
+</sect2>

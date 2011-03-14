@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-02-09 lexa: fixed de bug #515187 "german translation of internet"
+  2007-03-25 lexa: reviewed de
+  2006-09-19 added norwegian translation by KoSt
+  2006-08-27 Added Korean Translation by Mr.Dust
+  2005-11-30 replaced informalfigure by axel.wernicke
+  050930 de replaced informalfigure by axel.wernicke
+  050829 de added by axel.wernicke
+-->
+<!--2010-11-21-->
+<sect1 id="gimp-using-web">
+  <title lang="en">Preparing your Images for the Web</title>
+  <title lang="ja">ウェブ用の画像の作成</title>
+  <indexterm lang="en">
+    <primary>Web</primary>
+    <secondary>Images for the web</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ウェブ</primary>
+    <secondary sortas="ウェブヨウノガゾウ">ウェブ用の画像</secondary>
+  </indexterm>
+  <para lang="en">
+    One of the most common uses for <acronym>GIMP</acronym>,
+    is prepare images for web sites. This means that
+    images should look as nice as possible while keeping the file
+    size as small as possible.  This step-by-step guide demonstrates
+    how to create small files with minimal loss of
+    image quality.
+  </para>
+  <para lang="ja">
+    <acronym>GIMP</acronym>の主な用途にはウェブサイト用画像の作成があります。
+    ここでの課題はできるだけ小さなファイル容量を保ちつつ画像をいかに良好に
+    見せるかということです。 この節は、 画像の劣化を最小限にしつつファイル
+    容量の小さな画像を作る方法について順を追って実演します。
+  </para>
+
+  <sect2 id="gimp-using-web-size-vs-quality">
+    <title lang="en">Images with an Optimal Size/Quality Ratio</title>
+    <title lang="ja">画像の容量最適化と品質</title>
+    <para lang="en">
+      An optimal image for the web depends upon the image type and the file
+      format. Use
+      <link linkend="file-jpeg-save">JPEG</link> for
+      Photographs because they usually have many colors and great detail.
+      An image with fewer colors, such as a button, icon, or screenshot, is
+      better suited to the
+      <link linkend="file-png-load">PNG</link>
+      format.
+    </para>
+    <para lang="ja">
+      画像をウェブでも使いやすくするとき肝心なのは、 どんな画像形態と
+      ファイル形式にするかということです。 写真は大抵がたくさんの色を持ち
+      とても緻密なので
+      <link linkend="file-jpeg-save">JPEG</link> を使いましょう。
+      ボタンやアイコンやスクリーンショットのような色が少ない画像には
+      <link linkend="file-png-load">PNG</link> がふさわしい形式です。
+    </para>
+    <procedure>
+      <step>
+        <para lang="en">
+          First, open the image as usual. I have opened our Wilber as an
+          example image.
+        </para>
+        <para lang="ja">
+          まずは、いつも通り画像を開いてください。 ここには例として
+          我らがウィルバー君の画像をとりあげます。
+        </para>
+        <figure>
+          <title lang="en">The Wilber image opened in RGBA mode.</title>
+          <title lang="ja">
+            <acronym>RGBA</acronym>モードで開かれたウィルバー君の画像
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/preparing_for_web1.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          The image is now in RGB mode, with an additional
+          <link linkend="glossary-alpha">Alpha channel</link>
+          (RGBA). There is usually no need to have an alpha channel for your
+          web image. You can remove the alpha channel by
+          <link linkend="gimp-image-flatten">flattening the image</link>.
+        </para>
+        <para lang="en">
+          A photograph rarely has an alpha channel, so the image will open
+          in RGB mode rather than RGBA mode; and you wan't have to remove
+          the alpha channel.
+        </para>
+        <para lang="ja">
+          この画像は<acronym>RGB</acronym>モードに
+          <link linkend="glossary-alpha">アルファチャンネル</link> が加えられた
+          もの (<acronym>RGBA</acronym>) になっています。 普段ウェブ用画像には
+          アルファチャンネルは不要です。 アルファチャンネルは
+          <link linkend="gimp-image-flatten">画像の統合</link>で外せます。
+        </para>
+        <para lang="ja">
+          写真画像にアルファチャンネルがつくことはめったにありませんので、 画像
+          は<acronym>RGBA</acronym>モードではなく<acronym>RGB</acronym>モードで
+          開かれるはずです。 つまりアルファチャンネルの削除を行う必要はないと
+          考えられます。
+        </para>
+        <note>
+          <para lang="en">
+            If the image has a soft transition into the transparent areas, you
+            should not remove the alpha channel, since the information
+            used for the transition is not be saved in the file.
+            To save an image with transparent areas which do not have a
+            soft transition, (similar to
+            <link linkend="file-gif-save">GIF</link>),
+            remove the alpha channel.
+          </para>
+          <para lang="ja">
+            もしも画像に半透明な部分があり、 全く透明な部分へ徐々に変化する
+            透過効果がついているなら、 アルファチャンネルを外してはなりません。 
+            [インデックス化も避けるべきです。] この部分に用いられている
+            なだらかな色変化の情報がファイルに保存されなくなるからです。
+            透明部分がある画像でも、 徐々に変化する部分を含まないのであれば、 (
+            <link linkend="file-gif-save">GIF</link>の場合と同じく、)
+            保存するときはアルファチャンネルを削除しましょう。
+          </para>
+        </note>
+      </step>
+      <step>
+        <para lang="en">
+          After you have flattened the image,
+          <link linkend="gimp-file-save">save the image</link>
+          in the <link linkend="file-png-save-defaults">PNG format</link>
+          for your web site.
+        </para>
+        <para lang="ja">
+          画像を統合したあとは、 ウェブサイト用に
+          <link linkend="file-png-save-defaults">PNG形式</link> で
+          <link linkend="gimp-file-save">画像を保存</link> します。
+        </para>
+      </step>
+    </procedure>
+    <note>
+      <para lang="en">
+        You can save your image in the PNG format with the default settings.
+        Always using maximum compression when creating the image.
+        Maximum compression has no affect on image quality or the time
+        required to display the image, but it does take longer to save.
+        A <link linkend="file-jpeg-save">JPEG</link> image, however,
+        loses quality as the compression is increased.
+        If your image is a photogaph with lots of colors, you should
+        use jpeg. The main thing is to find the best
+        tradeoff between quality and compression. You can find more
+        information about this topic in <xref linkend="file-jpeg-save"/>.
+      </para>
+      <para lang="ja">
+        画像を<acronym>PNG</acronym>形式で保存するときは既定の設定が利用
+        できます。 画像を作成するときはいつも最高の圧縮率を使うことに
+        なりますが、 画像の品質には全く影響がなく、 しかも表示に要する時間も
+        変わりません。 ただし保存のときだけは処理時間が長くなります。 これに対し
+        <link linkend="file-jpeg-save">JPEG</link> 形式は圧縮率を上げると画質
+        の劣化が進みます。 色数が大変多い写真画像なら<acronym>JPEG</acronym>
+        形式をも使うべきでしょう。 品質と圧縮の最高の
+        兼ね合いを探ることが肝心です。 この話題に関する情報は前述の
+        <xref linkend="file-jpeg-save"/> の節にもあります。
+      </para>
+    </note>
+  </sect2>
+
+  <sect2 id="gimp-using-web-reducing-file-size">
+    <title lang="en">Reducing the File Size Even More</title>
+    <title lang="ja">さらにファイル容量を削減</title>
+    <para lang="en">
+      If you want to reduce the size of your image a bit more, you could
+      convert your image to Indexed mode. That means that all of the colors
+      will be reduced to only 256 values. Do not convert images with
+      smooth color transitions or gradients to indexed mode, because
+      the original smooth gradients are typically converted into a
+      series of bands. Indexed mode is not recommended for photographs
+      because after the conversion, they typically look coarse and grainy.
+    </para>
+    <para lang="ja">
+      画像のファイル容量をもっと小さくしたいときは、 画像をインデックス化モード
+      に変換することになるでしょう。 つまり全色数を 256 色に減らすのです。
+      徐々に色が変化する画像やグラデーション効果があるものはインデックス化モード
+      に変換してはいけません。 なぜなら徐々に変化していた色が数色の縞に
+      変えられてしまうからです。 とくにインデックス化モードは写真に使うと
+      粗末な仕上りになるためおすすめできません。
+    </para>
+    <figure>
+      <title lang="en">The indexed image</title>
+      <title lang="ja">インデックス化した画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/preparing_for_web2.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            An indexed image can look a bit grainy. The left image is Wilber
+            in its original size, the right image is zoomed in by 300 percent.
+          </para>
+          <para lang="ja">
+            インデックス化した画像はややギザギザになってしまう。
+            左上の画像が元の大きさのウィルバー君、 右の大きい画像が
+            300 パーセントにズームしたもの。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <procedure>
+      <step>
+        <para lang="en">
+          Use the command described in <xref linkend="gimp-image-mode"/>
+          to convert an RGB image to indexed mode.
+        </para>
+        <para lang="ja">
+          <link linkend="gimp-image-mode">モード</link> の節で述べられている
+          コマンドを用いて<acronym>RGB</acronym>画像をインデックス化モードに
+          変換します。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          After you convert am image to indexed mode, you are once
+          again able to <link linkend="gimp-file-save">save</link> the
+          image in <link linkend="file-png-save-defaults">PNG
+          format</link>.
+        </para>
+        <para lang="ja">
+          画像をインデックス化モードに変換したら、 こんどは
+          <link linkend="file-png-save-defaults">PNG形式</link> で
+          <link linkend="gimp-file-save">保存</link> しましょう。
+        </para>
+      </step>
+    </procedure>
+  </sect2>
+
+  <sect2 id="gimp-using-web-transparency">
+    <title lang="en">Saving Images with Transparency</title>
+    <title lang="ja">透過画像の保存</title>
+    <indexterm lang="en">
+      <primary>Transparency</primary>
+      <secondary>Saving images with transparency</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="トウカコウカ">透過効果</primary>
+      <secondary sortas="トウカガゾウノホゾン">透過画像の保存</secondary>
+    </indexterm>
+    <para lang="en">
+      There are two different approaches used by graphic file formats
+      for supporting transparent image areas: simple binary transparency
+      and alpha transparency. Simple binary transparency is supported
+      in the <link linkend="file-gif-save">GIF</link> format; one color
+      from the indexed color palette is marked as the transparent color.
+      Alpha transparency is supported in the
+      <link linkend="file-png-save-defaults">PNG</link> format; the
+      transparency information is stored in a separate channel, the
+      <link linkend="glossary-alpha">Alpha channel</link>.
+    </para>
+    <para lang="ja">
+      画像の透明部分をサポートするのに使える画像ファイル形式は 2 つあります。
+      単純二値化透過とアルファ透過です。 単純二値化透過は
+      <link linkend="file-gif-save">GIF</link> 形式でサポートされています。
+      この形式はインデックス化された色パレットのうちの1色を透過色として
+      扱います。 アルファ透過は
+      <link linkend="file-png-save-defaults">PNG</link> 形式で
+      サポートされています。 この形式は
+      <link linkend="glossary-alpha">アルファチャンネル</link> という
+      別個のチャンネルに透明度の情報を収めています。
+    </para>
+    <note>
+      <para lang="en">
+        The GIF format is rarely used
+        because PNG supports all the features of GIF with additional
+        features (e.g., alpha transparency). Nevertheless, GIF is
+        still used for animations.
+      </para>
+      <para lang="ja">
+        <acronym>GIF</acronym>形式はあまり使われません。 <acronym>GIF
+        </acronym>の全ての機能とそれ以上の (アルファ透過などの) 性能を
+        <acronym>PNG</acronym>があわせもつからです。
+        とはいえ、 アニメーションのためにこの形式もまだ使われています。
+      </para>
+    </note>
+    <procedure>
+      <title lang="en">
+        Creating an Image with Transparent Areas (Alpha Transparency)
+      </title>
+      <title lang="ja">透明部分のある画像の作成 (アルファ透過)</title>
+      <step>
+        <para lang="en">
+          First of all, we will use the same image as in the previous
+          tutorials, Wilber the GIMP mascot.
+        </para>
+        <para lang="ja">
+          まずは<acronym>GIMP</acronym>のマスコット、 ウィルバー君の
+          前回演習に使ったのと同じ絵を使いましょう。
+        </para>
+        <figure>
+          <title lang="en">The Wilber Image Opened in RGBA Mode.</title>
+          <title lang="ja">RGBAモードで開かれたウィルバー君の画像</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/preparing_for_web1.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </step>
+      <step>
+        <para lang="en">
+          To save an image with alpha transparency, you must have an alpha
+          channel. To check if the image has an alpha channel, go to the
+          <link linkend="gimp-channel-dialog">channel dialog</link> and
+          verify that an entry for <quote>Alpha</quote> exists, besides
+          Red, Green and Blue. If this is not the case,
+          <link linkend="gimp-layer-alpha-add">add a new alpha channel</link>
+          from the layers menu;
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Transparency</guisubmenu>
+            <guimenuitem>Add Alpha Channel</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          アルファ透過つきの画像で保存するにはアルファチャンネルが必要です。
+          画像のアルファチャンネルの有無は、
+          <link linkend="gimp-channel-dialog">チャンネルダイアログ</link>
+          を開いて、 赤・緑・青のほかに<quote>アルファ値</quote>の層があるか
+          どうかで確かめます。 もし無ければ、 画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guisubmenu>透過効果</guisubmenu>
+            <guimenuitem>アルファチャンネルを追加</guimenuitem>
+          </menuchoice>
+          と辿り、 そのレイヤーに
+          <link linkend="gimp-layer-alpha-add">アルファチャンネルを追加</link>
+          します。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          The original XCF file contains background layers that you can
+          remove. <acronym>GIMP</acronym> comes with standard filters
+          that support creating gradients; look under
+          <menuchoice>
+            <guimenu>Filters</guimenu>
+            <guisubmenu>Light and Shadow</guisubmenu>
+          </menuchoice>.
+          You are only limited by your imagination. To
+          demonstrate the capabilities of alpha transparency, a
+          soft glow in the background around our Wilber is shown.
+        </para>
+        <para lang="ja">
+          <acronym>XCF</acronym>形式の画像は初期状態では背景レイヤーが
+          ついてきますがこれは削除できます。 <acronym>GIMP</acronym>には
+          グラデーション作成をサポートする標準的なフィルタが付属しています。
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>フィルタ</guimenu>
+            <guisubmenu>照明と投影</guisubmenu>
+          </menuchoice>
+          サブメニュー内を探してみましょう。
+          ここはあなたの想像力次第です。 アルファ透過の効果の実演として、
+          ウィルバー君の背後に後光をつけました。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          After you're done with your image, you can
+          <link linkend="gimp-file-save">save</link> it in
+          <link linkend="file-png-save-defaults">PNG format</link>.
+        </para>
+        <para lang="ja">
+          画像が仕上がったら、
+          <link linkend="file-png-save-defaults">PNG形式</link>で
+          <link linkend="gimp-file-save">保存</link>しましょう。
+        </para>
+      </step>
+    </procedure>
+    <figure>
+      <title lang="en">The Wilber image with transparency</title>
+      <title lang="ja">透過効果つきのウィルバー像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/using/preparing_for_web-alphatransparency.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Mid-Tone Checks in the background layer represent the transparent
+            region of the saved image while you are working on it in
+            <acronym>GIMP</acronym>.
+          </para>
+          <para lang="ja">
+            <acronym>GIMP</acronym>上での作業では背景レイヤー越しに中間色をみて
+            保存された画像の透明部分を確かめる
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect2>
+</sect1>

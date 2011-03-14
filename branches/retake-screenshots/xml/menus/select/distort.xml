@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+    2009-01-11 j.h: created
+-->
+<!--2010-01-26-->
+<sect2 id="script-fu-distress-selection">
+  <title lang="en">Distort</title>
+  <title lang="ja">選択範囲を歪める...</title>
+
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Distort</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Distort Selection</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="ユガメル">歪める</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイヲユガメル">選択範囲を歪める</primary>
+  </indexterm>
+
+   <figure>
+    <title lang="en">Example of using Distort on a selection</title>
+    <title lang="ja">選択範囲を歪めた例</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/menus/select/distort-selection-01.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">An image with a selection</para>
+        <para lang="ja">選択範囲のある画像</para>
+      </caption>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/menus/select/distort-selection-02.png"/>
+      </imageobject>
+      <caption>
+        <para lang="en">After <quote>Distort</quote></para>
+        <para lang="ja"><quote>選択範囲を歪める</quote>適用後</para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The <quote>Distort</quote> command deforms the selection contour.
+  </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲を歪める...</guimenuitem> コマンドは
+    選択範囲の輪郭線の形を崩す Script-Fu スクリプトです。
+    [インデックス化カラー画像の場合、 コマンドのメニュー項目は灰色無効と
+    なっていて使用できません。]
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menu bar through
+          <menuchoice>
+            <guimenu>Select</guimenu>
+            <guimenuitem>Distort...</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>選択</guimenu>
+            <guimenuitem>選択範囲を歪める...</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+  </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">
+      Description of the <quote>Distort</quote> Dialog Window
+    </title>
+    <title lang="ja">
+      <quote>Script-Fu: 選択範囲を歪める</quote>ダイアログのご説明
+    </title>
+    <figure>
+      <title lang="en">The <quote>Distort</quote> dialog</title>
+      <title lang="ja">
+        <quote>Script-Fu: 選択範囲を歪める</quote>ダイアログ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/select/distort.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      This command has several options which allow to increase or reduce
+      the deformation. It is not possible to foresee the result and you
+      have to experiment.
+    </para>
+    <para lang="ja">
+      このコマンドは崩し具合を増減するためのいろいろなオプションがついて
+      います。 予測不可能な効果が得られますからまずは試してみてください。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Threshold</term>
+        <term lang="ja">しきい値</term>
+        <listitem>
+          <para lang="en">
+            A higher threshold shrinks the distorted selection. A lower
+            threshold makes the selection bigger.
+          </para>
+          <para lang="en">
+            If the active selection has a regular shape (e.g. rectangle or
+            ellipse selection), this opton controls if the new outline is
+            more inside for the original selection or more outside the original
+            selection.
+          </para>
+          <para lang="ja">
+            しきい値を大きくとると歪められた選択範囲は元の範囲より縮まります。
+            逆に小さくとると元の選択範囲より膨らみます。
+          </para>
+          <para lang="ja">
+            現在活性化している変形対象の選択範囲が矩形や楕円のような整った
+            選択範囲なら、 このオプションのはたらきは選択範囲の新たな輪郭が
+            元からあった輪郭よりも内側寄りになるか外側寄りになるかを制御する
+            ことになります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Spread</term>
+        <term lang="ja">拡散度</term>
+        <listitem>
+          <para lang="en">
+            A higher <quote>Spread</quote> increases the deformation.
+          </para>
+          <para lang="ja">拡散度が大きいほど歪みが激しくなります。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Granularity</term>
+        <term lang="ja">粒状度</term>
+        <listitem>
+          <para lang="en">
+            A higher <quote>Granularity</quote> increases the deformation.
+          </para>
+          <para lang="ja">粒状度が大きいほど歪みが激しくなります。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Smooth</term>
+        <term lang="ja">滑らかさ</term>
+        <listitem>
+          <para lang="en">
+            A higher <quote>Smooth</quote> decreases the deformation.
+          </para>
+          <para lang="en">
+            Deactivating <guilabel>Smooth horizontally</guilabel> or
+            <guilabel>Smooth vertically</guilabel> increases the deformation.
+          </para>
+          <para lang="ja">
+            滑らかさが増すほど歪みは穏やかになります。 
+          </para>
+          <para lang="ja">
+            <guilabel>水平方向を滑らかに</guilabel> と
+            <guilabel>垂直方向をに滑らかに</guilabel> は併用でき、 さらに
+            歪みが増します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

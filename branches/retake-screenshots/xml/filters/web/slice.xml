@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--CHECK all: I had this filter in earlier versions, but not in v2.4 and 2.6 for Windows. Is it removed? (KoSt) -->
+<!-- section history:
+  2008-07-31 alex falappa: added 'it'
+  2008-04-05 ude: created 'en','de'
+-->
+<!--2010-09-16-->
+<sect2 id="python-fu-slice">
+  <title lang="en">Slice</title>
+  <title lang="ja">画像分割...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Web</secondary>
+    <tertiary>Slice</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Slice</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>ウェブ</secondary>
+    <tertiary>画像分割</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>画像分割</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example for the <quote>Slice</quote> filter</title>
+      <title lang="en"><quote>画像分割</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_guides.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image with guides</para>
+          <para lang="ja">元画像 (見当線つき)</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/web-taj-slice.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Slice</quote> applied</para>
+          <para lang="ja"><quote>画像分割</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter is a simple and easy to use helper for creating sensitive
+      images to be used in HTML files. The filter slices up the source image
+      (like the <link linkend="plug-in-guillotine">Guillotine</link> command
+      does) along its horizontal and vertical guides, and produces a set of
+      sub-images. At the same time it creates a piece of HTML code for a table
+      saved in a text file. Every table cell contains one part of the image.
+      The text file should then be embedded in an HTML document.
+    </para>
+    <para lang="en">
+      Note that this filter is really a very simple helper. A typical HTML
+      code produced by the filter may be not much more than this:
+    </para>
+    <para lang="ja">
+      <guimenuitem>画像分割...</guimenuitem> フィルタは
+      <acronym>HTML</acronym>ページで感応する画像の作成を支援する単純で使い
+      易いスクリプトです。 このフィルタは垂直と水平に置かれた見当線に沿って 
+      <link linkend="plug-in-guillotine">ギロチン</link> コマンドのように
+      画像を切り分け、 ひと揃いの断片画像を作成します。 また同時にこの
+      フィルタは生成される画像ファイルを接ぎ合わせる<acronym>HTML</acronym>
+      の表組みコードをテキストファイルで生成します。 表組みのそれぞれの升目
+      に画像の断片が入っている構造です。 あとはこのテキストファイルの内容を
+      <acronym>HTML</acronym>文書に埋め込むことになります。
+    </para>
+    <para lang="ja">
+      繰り返しますがこのフィルタは実にとても単純な支援ツールです。 書き出さ
+      れる<acronym>HTML</acronym>コードは精々次の例のようなものになります。
+    </para>
+    <example>
+      <title lang="en">
+        Simple <quote>Slice</quote> filter example output
+      </title>
+      <title lang="ja">
+        単純な<quote>画像分割</quote>フィルタの出力例
+      </title>
+      <programlisting><!--
+        <![CDATA[
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><a href="#"><img alt="" src="slice_0_0.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_0_1.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_0_2.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_0_3.png"/></a></td>
+  </tr>
+  <tr>
+    <td><a href="#"><img alt="" src="slice_1_0.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_1_1.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_1_2.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_1_3.png"/></a></td>
+  </tr>
+  <tr>
+    <td><a href="#"><img alt="" src="slice_2_0.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_2_1.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_2_2.png"/></a></td>
+    <td><a href="#"><img alt="" src="slice_2_3.png"/></a></td>
+  </tr>
+</table>
+        ]]>
+--><![CDATA[
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><img alt="" src="slice_0_0.png"/></td>
+    <td><img alt="" src="slice_0_1.png"/></td>
+  </tr>
+  <tr>
+    <td><img alt="" src="slice_1_0.png"/></td>
+    <td><img alt="" src="slice_1_1.png"/></td>
+  </tr>
+</table>
+        ]]></programlisting>
+      <para lang="en">
+        Produced HTML code; the <quote>style</quote> attribute has been
+        omitted.
+      </para>
+      <para lang="ja">
+        生成される<acronym>HTML</acronym>コード。 <quote>style</quote>属性
+        は省かれている。
+      </para>
+    </example>
+    <para lang="en">
+      When there are no guides in the image, the filter will no nothing. If,
+      however, the guides are just hidden, the filter will work.
+    </para>
+    <para lang="ja">
+      画像にガイド (見当線) がないときはフィルタは何も実行しません。 もちろん
+      見当線が単に隠されているだけならフィルタは作動します。
+    </para>
+    <tip>
+      <para lang="en">
+        The <link linkend="plug-in-imagemap">ImageMap</link> filter is a much
+        more powerful and sophisticated tool for creating sensitive images.
+        (But it is also much more complex...)
+      </para>
+      <para lang="ja">
+        感応画像を作成するツールには、 より強力かつ高度な 
+        <link linkend="plug-in-imagemap">イメージマップ</link> フィルタも
+        あります。 (でもこれは随分と複雑ですが。)
+      </para>
+    </tip>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Web</guisubmenu>
+        <guimenuitem>Slice</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="en">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ウェブ</guisubmenu>
+        <guimenuitem>画像分割...</guimenuitem>
+      </menuchoice>
+      このフィルタはPython-Fuが利用可能な場合のみメニューに現れます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Slice</quote> options</title>
+      <title lang="ja"><quote>画像分割</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG" fileref="images/filters/web/slice.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <para lang="en">
+        Most options are self-explanatory, but nevertheless:
+      </para>
+      <para lang="ja">
+        ほとんどのオプションの意味は見てのとおりですが、 あえて説明します。
+      </para>
+      <varlistentry>
+        <term lang="en">Path for HTML export</term>
+        <term lang="ja">HTMLドキュメントを生成する場所</term>
+        <listitem>
+          <para lang="en">
+            Where the HTML file and the image files will be saved. By default
+            these files will be stored in the current working directory.
+            Clicking on the button to the right opens a pull-down menu, where
+            you can select a different location.
+          </para>
+          <para lang="ja">
+            生成された<acronym>HTML</acronym>ファイルと画像ファイルの保管場所
+            です。 初期状態では現在の作業ディレクトリにこれらのファイルが保管
+            されます。 記入欄の右端の三角形のボタンをクリックすると他の
+            フォルダを辿れる引き出しメニューが出てきます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Filename for export</term>
+        <term lang="ja">HTMLドキュメント名</term>
+        <listitem>
+          <para lang="en">
+            The name of the HTML file. You can change the filename using the
+            textbox.
+          </para>
+          <para lang="ja">
+            生成される<acronym>HTML</acronym>コードを収めたファイルの名前
+            です。 記入欄で他の名前も指定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Image name prefix</term>
+        <term lang="ja">画像ファイル名のプレフィクス</term>
+        <listitem>
+          <para lang="en">
+            The name of an image file produced by this filter is
+            <filename>prefix_i_k.ext</filename>, where
+            <filename>prefix</filename> is that part of the filename which you
+            can freely select using the textbox to the right, by default:
+            <filename>slice</filename>.
+            (<filename>i</filename> and <filename>k</filename> are the numbers
+            of the row and the column, each starting with 0;
+            <filename class="extension">.ext</filename> is the filename
+            extension depending on the selected
+            <guilabel>Image&nbsp;format</guilabel>.)
+          </para>
+          <para lang="en">
+            This option is particularly useful when you want to create
+            <guilabel>Javascript for onmouseover and clicked</guilabel> and
+            need different sets of images.
+          </para>
+          <para lang="ja">
+            このフィルタが生成する画像のファイル名は <filename><replaceable>
+            共通部</replaceable>_<replaceable>行</replaceable>_<replaceable>
+            列</replaceable>.<replaceable>拡張子</replaceable></filename> 
+            となります。 このうち共通部のところがこの文字記入欄で指定できる
+            プレフィクス (先頭部分) です。 初期状態では<quote>slice</quote>
+            となっています。 行と列にはそれぞれの番号が 0 を開始番号として
+            振られます。 <filename class="extension">.<replaceable>拡張子
+            </replaceable></filename> は <guilabel>エクスポートの画像形式
+            </guilabel> で指定したファイル拡張子が入ります。
+          </para>
+          <para lang="ja">
+            このオプションはとくに <guilabel>'onmouseover' と 'clicked' の 
+            Javascript を記述</guilabel> オプションを有効にしており分割画像
+            に他の組み合わせを必要としている場合に出番が多くあります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Image format</term>
+        <term lang="ja">エクスポートの画像形式</term>
+        <listitem>
+          <para lang="en">
+            You can choose to create image files in the
+            <link linkend="glossary-gif">GIF</link>,
+            <link linkend="glossary-jpeg">JPG</link>, or
+            <link linkend="glossary-png">PNG</link>
+            <link linkend="glossary-fileformat">file?format</link>.
+          </para>
+          <para lang="ja">
+            作成される 
+            <link linkend="glossary-fileformat">ファイル形式</link> には 
+            <link linkend="glossary-gif">GIF</link>、 
+            <link linkend="glossary-jpeg">JPG</link>、 
+            <link linkend="glossary-png">PNG</link> のいずれかが選べます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Separate image folder</term>
+        <term lang="en">Folder for image export</term>
+        <term lang="ja">画像を別フォルダにエクスポート</term>
+        <term lang="ja">エクスポートするフォルダ名</term>
+        <listitem>
+          <para lang="en">
+            When <guilabel>Separate image folder</guilabel> is enabled, a
+            folder will be created where the image files will be placed. By
+            default, the name of this destination folder is
+            <filename class="directory">images</filename>, but you can change
+            it in the <guilabel>Folder for image export</guilabel> textbox.
+          </para>
+          <para lang="ja">
+            <guilabel>画像を別フォルダにエクスポート</guilabel> させる場合は
+            画像を収めるフォルダが無ければ作成されます。 この場合の既定の保管
+            先フォルダの名前は <filename class="directory">images</filename> 
+            ですが、 <guilabel>エクスポートするフォルダ名</guilabel> の記入欄
+            で他のフォルダ名が指定できます。
+          </para>
+          <example>
+            <title lang="en">With separate image folder</title>
+            <title lang="ja">画像用に別フォルダを使った例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/slice-folder.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Result of enabled <quote>Separate image folder</quote>
+                </para>
+                <para lang="ja">
+                  <guilabel>画像を別フォルダにエクスポート</guilabel> 
+                  した結果
+                </para>
+              </caption>
+            </mediaobject>
+          </example>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Space between table elements</term>
+        <term lang="ja">テーブル要素間の間隔</term>
+        <listitem>
+          <para lang="en">
+            This value (0-15) will be passed as <quote>cellspacing</quote>
+            attribute to the HTML table. The result is, that horizontal and
+            vertical guides will be replaced with stripes of the specified
+            width:
+          </para>
+          <para lang="ja">
+            この数値は<acronym>HTML</acronym>テーブルのセル同士の間隔を指定
+            する<quote>celllspacing</quote>属性値になります。 値の範囲は 0 
+            ピクセルから 15 ピクセルまでです。  ここに正の整数を設定すると
+            縦や横の見当線はこの太さをした平行線で現れます。
+          </para>
+          <example>
+            <title lang="en">Space between table elements</title>
+            <title lang="ja">表組み要素同士の間隔</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/slice-cellspacing.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Corresponding HTML code snippet</para>
+                <para lang="ja">
+                  関連している<acronym>HTML</acronym>コードの抜粋
+                </para>
+              </caption>
+            </mediaobject>
+          </example>
+          <para lang="en">
+            Note that the image will not be enlarged by the size of these
+            stripes. Instead, the resulting HTML image will look like you have
+            drawn the stripes with the Eraser tool.
+          </para>
+          <para lang="ja">
+            ここで気をつけていただきたいことは、 この間隔を拡げても画像の規模
+            は大きくならないことです。 むしろ<acronym>HTML</acronym>テーブル
+            で揃えられた画像は消しゴムツールで縦横の線状に消されたように
+            見えることでしょう。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Javascript for onmouseover and clicked</term>
+        <term lang="ja">'onmouseover' と 'clicked' の Javascript を記述</term>
+        <listitem>
+          <para lang="en">
+            When this option is enabled, the filter will also add some
+            JavaScript code. Like the HTML code, this code does not work as
+            is, rather it's a good starting point for adding some dynamic
+            functionality. The JavaScript code provides a function to handle
+            events like <quote>onmouseover</quote>:
+          </para>
+          <para lang="ja">
+            このオプションを有効にするとこのフィルタは Javascript コードを
+            追加します。 <acronym>HTML</acronym>の場合と同じく生成された
+            ままの状態では何の効果もありませんが、 動的機能を追加してゆく
+            には良好な手掛かりとなります。 この Javascript コードは<quote>
+            onmouseover</quote>のようなイベントを扱う関数に利用できます。
+          </para>
+          <example>
+            <title lang="en">JavaScript code snippet</title>
+            <title lang="ja">JavaScript コードの抜粋</title>
+            <programlisting><![CDATA[
+function exchange (image, images_array_name, event)
+  {
+    name = image.name;
+    images = eval (images_array_name);
+
+    switch (event)
+      {
+        case 0:
+          image.src = images[name + "_plain"].src;
+          break;
+        case 1:
+          image.src = images[name + "_hover"].src;
+          break;
+        case 2:
+          image.src = images[name + "_clicked"].src;
+          break;
+        case 3:
+          image.src = images[name + "_hover"].src;
+          break;
+      }
+  }
+              ]]></programlisting>
+          </example>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Skip animation for table caps</term>
+        <term lang="ja">'&lt;A&gt;, &lt;/A&gt;' の記述を省略</term>
+        <listitem>
+          <para lang="en">
+            When disabled, the filter will add a
+            <code language="HTML">&lt;a?href="#"&gt;?...?&lt;/a&gt;</code>
+            hyperlink stub to every table cell. When enabled (this is the
+            default) and there are at least two horizontal or two vertical
+            guides, the filter will not add a hyperlink stub to the first and
+            last cell in a column or row. This may be useful when you have an
+            image with border and you don't want to make the border sensitive.
+          </para>
+          <para lang="ja">
+            このオプションが無効ならばこのフィルタは全ての表組みセルに 
+            <code language="HTML">&lt;a?href="#"&gt;?...?&lt;/a&gt;</code>
+            というハイパーリンク素枠を加えます。 逆に初期設定どおりこれを
+            有効にすると、 見当線が水平方向と垂直方向のどちらにも少なくとも
+            2本以上ある場合に、 フィルタは各行各列の全ての先頭と最後のセル
+            だけはこのハイパーリンク素枠を省きます。 この処置は画像に枠が
+            描かれていてその部分は反応させたくないときに役立ちます。
+          </para>
+          <example>
+            <title lang="en">
+              Skipped animation for table caps (simplified HTML code)
+            </title>
+            <title lang="ja">
+              外周部の画像片にはアンカータグを省略
+              (簡易<acronym>HTML</acronym>コード)
+            </title>
+            <programlisting><![CDATA[
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><img alt="" src="images/slice_0_0.png"/></td>
+    <td><img alt="" src="images/slice_0_1.png"/></td>
+    <td><img alt="" src="images/slice_0_2.png"/></td>
+    <td><img alt="" src="images/slice_0_3.png"/></td>
+  </tr>
+  <tr>
+    <td><img alt="" src="images/slice_1_0.png"/></td>
+    <td><a href="#"><img alt="" src="images/slice_1_1.png"/></a></td>
+    <td><a href="#"><img alt="" src="images/slice_1_2.png"/></a></td>
+    <td><img alt="" src="images/slice_1_3.png"/></td>
+  </tr>
+  <tr>
+    <td><img alt="" src="images/slice_2_0.png"/></td>
+    <td><img alt="" src="images/slice_2_1.png"/></td>
+    <td><img alt="" src="images/slice_2_2.png"/></td>
+    <td><img alt="" src="images/slice_2_3.png"/></td>
+  </tr>
+</table>
+              ]]></programlisting>
+            <para lang="en">
+              Only inner cells have (empty) hyperlinks.
+            </para>
+            <para lang="ja">
+              内側のセルだけ (空の) ハイパーリンクがかかる。
+            </para>
+          </example>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

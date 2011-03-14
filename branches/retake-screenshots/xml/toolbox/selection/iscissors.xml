@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-12 ude: added Shift modifier description (bug #572673)
+  2008-12-07 j.h : fixed bug #562448
+  2008-03-23 JPL : rewied fr & en for Gimp 2.4
+  2008-01-29 Dust : added 'ko'
+  2008-01-09 PP : rewied fr & en for Gimp 2.4
+  2007-10-05 lexa: reviewed de for GIMP 2.4
+  2007-06-02 kost: added no
+  2007-04-18 Added Spanish translation by manuq
+  2006-06-06 warning modified en;fr by j.h
+  2006-02-10 en;fr revised by j.h
+  2005-12-06 replaced sect3 by sect3 by lexa
+  2005-12-06 replaced informalfigure by figure by lexa
+  050519 de reviewed by axel.wernicke
+-->
+<!--2010-12-22-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-iscissors">
+  <title lang="en">Intelligent Scissors</title>
+  <title lang="ja">電脳はさみ</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Scissors</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Scissors tool</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="ハサミ">はさみ</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="デンノウハサミ">電脳はさみ</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Intelligent Scissors tool icon in the Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>電脳はさみ</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/toolbox-scissor.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The Intelligent Scissors tool is an interesting piece of equipment: it has
+    some features in common with the Lasso, some features in common with the
+    Path tool, and some features all its own. It is useful when you are trying
+    to select a region defined by strong color-changes at the edges. To use
+    the Scissors, you click to create a set of "control nodes", also referred to
+    as anchors or control points, at the edges of
+    the region you are trying to select. The tool produces a continuous curve
+    passing through these control nodes, following any high-contrast edges it
+    can find. If you are lucky, the path that the tool finds will correspond
+    to the contour you are trying to select.
+  </para>
+  <para lang="en">
+    Unfortunately, there seem to be some problems with the edge-following
+    logic for this tool, with the result that the selections it creates tend
+    to be pretty crude in a lot of cases. A good way to clean them up is to
+    switch to <link linkend="gimp-qmask">QuickMask</link>
+    mode, and use paint tools to paint in the problematic parts. On the whole,
+    most people find the Path tool to be more useful than the Scissors,
+    because, even though it does not have the intelligent edge-finding
+    capability, the paths it produces persist until you delete them, and can
+    be altered at any time.
+  </para>
+  <para lang="ja">
+    電脳はさみツールは興味深い装備品です: なげなわツールに共通する機能も
+    一部にありますし、 他にもパスツールに共通する機能があり、 そのほか
+    独自の機能があります。 このツールは色の境目がはっきりした領域を選択する
+    のに便利です。 電脳はさみの使い方は、 選択したい領域の輪郭を点々と
+    クリックしてゆくことで<quote>コントロールノード</quote> (アンカーとか
+    コントロールポイントとも呼ばれる) を置いてゆきます。 ツールが自動的に
+    なるべく色の対照の強い境目をなぞって、 各コントロールノードを結ぶ
+    連続した曲線を引いてゆきます。 うまくゆけばツールが引いた経路は
+    選択したい輪郭と一致するはずです。
+  </para>
+  <para lang="ja">
+    残念ながら色の境目をたどるこのツールの特質に起因して、 できあがった選択
+    が少々雑なものになる傾向がたびたび見られます。 後で修正するのに最適なのが
+    <link linkend="gimp-qmask">クイックマスク</link> モードで、
+    描画ツールを用いて問題のある箇所の塗りなおしができます。 概して
+    電脳はさみよりはパスツールのほうが使い易いと多くの人が感じています。
+    パスツールには知能的に境界を探りあてる機能はありませんが、 引かれたパスは
+    消去しない限りずっと残しておくことができますし、 いつでも変更できる
+    ところが魅力だからでしょう。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access the Intelligent Scissors Tool in different ways:
+    </para>
+    <para lang="ja">
+      <quote>電脳はさみ</quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          From the image menu bar
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Selection Tools</guisubmenu>
+            <guimenuitem>Intelligent Scissors</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>選択</guisubmenu>
+            <guimenuitem>電脳はさみ</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by clicking on the tool icon
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rect-select-22.png"/>
+          </guiicon>
+          in the ToolBox,
+        </para>
+        <para lang="en">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic
+              fileref="images/toolbox/stock-tool-rect-select-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by using the keyboard shortcut <keycap>I</keycap>.
+        </para>
+        <para lang="en">
+          キーボードショートカット <keycap>I</keycap> (アルファベットのアイ)
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Key modifiers</title>
+    <title lang="ja">修飾キー</title>
+    <para lang="en">
+      The default behavior of the <keycap>Shift</keycap>,
+      <keycap>Ctrl</keycap>, and  <keycap>Alt</keycap> keys is described in
+      <xref linkend="gimp-tools-select-modifiers"/> for all selection tools.
+    </para>
+    <para lang="en">
+      There is, however, one key modifier that has a special behavior if you
+      use it while editing a selection, that is <emphasis>after</emphasis> you
+      have added the first node:
+    </para>
+    <para lang="ja">
+      <keycap>Shift</keycap> キー、 <keycap>Ctrl</keycap> キー、
+      <keycap>Alt</keycap> キーの既定での使い方は、 選択ツール共通の説明
+      <xref linkend="gimp-tools-select-modifiers"/> をご覧ください。
+    </para>
+    <para lang="ja">
+      ただし選択範囲を編集する段になって使える特有の修飾キーがあります。
+      これは最初のノードを置いた <emphasis>後から</emphasis> 有効です。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term><keycap>Shift</keycap></term>
+        <listitem>
+          <para lang="en">
+            By default, the <emphasis>auto-edge snap feature</emphasis> is
+            enabled: whenever you click and drag the mouse pointer, the
+            Scissors tool finds the point of the maximal gradient (where the
+            color change is maximal) for placing a new control node or moving
+            an existing node.
+          </para>
+          <para lang="en">
+            Holding down this key while clicking and dragging disables this
+            feature, and the control node will be placed at the position of
+            the mouse pointer.
+          </para>
+          <para lang="ja">
+            既定では <emphasis>自動的に形象の輪郭線に貼り付く機能</emphasis>
+            が有効になっています。 マウスポインタでクリックしてドラッグする際、
+            電脳はさみツールは最大のグラデーション (色変化の最も大きな位置)
+            をその付近に探り当て、 新たに置かれたコントロールノードや既存の
+            ノードをそこに強制移動します。
+          </para>
+          <para lang="ja">
+            クリックしてドラッグするときにこのキーを押していると、 上に述べた
+            機能は無効になり、 マウスポインタで指定したそのままの位置にノードが
+            置かれます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Tool handling</title>
+    <title lang="ja">ツールの操縦</title>
+    <figure>
+      <title lang="en">Using Intelligent Scissors</title>
+      <title lang="ja">電脳はさみを使用</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/iscissors-selection.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Each time you left-click with the mouse, you create a new control point,
+      which is connected to the last control point by a curve that tries to
+      follow edges in the image. To finish, click on the first point (the
+      cursor changes to indicate when you are in the right spot). You can
+      adjust the curve by dragging the control nodes, or by clicking to create
+      new control nodes. When you are satisfied, click anywhere inside the
+      curve to convert it into a selection.
+    </para>
+    <para lang="en">
+      As said above when you click with this tool you drop points. The
+      selection boundary is driven by these control points. During creation you
+      can move each one by clicking and dragging, except the first and the last
+      one. The selection is closed when you are clicking the last point over
+      the first one. When the selection is closed the pointer shape
+      changes according to its position: inside
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/cissors-mouse.png"/>
+      </guiicon>,
+      on the boundary
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/cissors-plus.png"/>
+      </guiicon>,
+      and outside
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/cissors-bad.png"/>
+      </guiicon>.
+      You can adjust the selection creating new points by clicking on the
+      boundary or by moving each control points (merged first and last
+      point). The selection is validated when you click inside.
+    </para>
+    <para lang="en">
+      You have to notice that you can get only one selection; if you
+      create a second selection, the first one is erased when you validate the
+      second one.
+    </para>
+    <para lang="ja">
+      マウスで左クリックしてゆく度に、 新たなコントロールポイントが置かれ、
+      直前に置かれたポイントと結ばれる線が形象の輪郭をたどって引かれます。
+      一周したら開始点をクリックします。このときカーソルの姿が開始点の真上を
+      知らせてくれます。 コントロールノード (ポイント) をドラッグして移動したり
+      新たなコントロールノードを追加して曲線を整えてゆきます。 満足のゆく
+      曲線ができあがったところで、 内側をクリックすれば曲線の輪が選択に
+      変換されます。
+    </para>
+    <para lang="ja">
+      上で述べたとおり、 このツールはクリックしてポイントを置きます。
+      選択範囲の輪郭はこれらポイントで操ります。 選択範囲を形作るうえで、
+      始点と終点を除き個々のポイントはクリックしてドラッグすれば移動できます。
+      選択の輪郭は始点上に終点ポイントをクリックして置けば閉じられます。
+      選択を閉じたあとで、 マウスポインタの姿は選択範囲との位置関係によって
+      変化します。 範囲内では
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/cissors-mouse.png"/>
+      </guiicon>、 
+      輪郭線上では
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/cissors-plus.png"/>
+      </guiicon>、
+      範囲外では
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/cissors-bad.png"/>
+      </guiicon>
+      と変わります。 輪郭線上をクリックして新たなポイントを追加したり、
+      それぞれのポイント (始点と終点を含む) を移動して選択の輪郭を整えて
+      ゆきます。 選択の仕上げは範囲の内側をクリックします。
+    </para>
+    <para lang="ja">
+      一度にひとつの選択範囲しか作れないことにご注意ください。 次の選択を
+      つくるとき、 修飾キーなどを用いてモードを切り替えなければ、
+      新たな輪郭内でクリックした途端にそれまでの選択範囲は破棄されます。
+      [でもこの失敗は取り消せます。]
+    </para>
+    <warning>
+      <para lang="en">
+        Be sure not to click inside the curve until you are completely done
+        adjusting it. Once you have converted it into a selection, undoing
+        takes you back to zero, and you will have to start constructing the
+        curve again from scratch if you need to change it. Also be sure not to
+        switch to a different tool, or again all of your carefully created
+        control nodes will be lost. (But you still can transform your
+        selection into a path and work it with the Path tool.)
+      </para>
+      <para lang="ja">
+        輪郭が完全に整うまでは、 輪郭内をクリックしないでください。 ひとたび
+        選択範囲が確定されたなら、 変更しようとして<quote>やり直す</quote>と
+        何も無い状態に戻され、 曲線を再び振り出しから作らなければならなく
+        なります。 <!--[もはや使える修正手段はクイックマスクしかありません。]-->
+        それともう一つ、 途中で他のツールを呼び出さないでください。 それまでに
+        置いたコントロールノードは全て失われてしまいます。 (ただし選択範囲を
+        パスに変換してしまえば、 パスツールを呼び出して作業を続行できます。)
+      </para>
+    </warning>
+    <para lang="en">
+      To move the selection, see
+      <link linkend="gimp-using-selections-moving">Moving selections</link>.
+    </para>
+    <para lang="ja">
+      選択範囲の移動の方法は、
+      <link linkend="gimp-using-selections-moving">選択領域の移動</link>
+      をご覧ください。
+    </para>
+  </sect3>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Tool Options for the Intelligent Scissors</title>
+      <title lang="ja">
+        <quote>電脳はさみ</quote>ツールのツールオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-scissor.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="../abouot-common-options-display.xml"/>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Modes; Antialiasing; Feather edges</term>
+        <term lang="ja">モード; アンチエイリアス; 境界をぼかす</term>
+        <listitem>
+          <xi:include href="about-common-select-options.xml"/>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Interactive boundary</term>
+        <term lang="ja">インタラクティブに境界を表示</term>
+        <listitem>
+          <para lang="en">
+            If this option is enabled, dragging a control node during
+            placement will indicate the path that will be taken by the
+            selection boundary. If it is not enabled, the node will be shown
+            connected to the previous node by a straight line while you are
+            dragging it around, and you won't see the resulting path until you
+            release the pointer button. On slow systems, if your control nodes
+            are far apart, this may give a bit of a speed-up.
+          </para>
+          <para lang="ja">
+            このオプションが有効な場合は、 境界線の再配置の段階で
+            コントロールノードをドラッグして移動する最中にも選択範囲の境界が
+            再描画されます。 無効な場合は、 ノードをドラッグしている間はノード
+            の移動前の位置から現在地へ直線が引かれるのみで、 ポインタを放して
+            移動を終えるまでは境界線の結果が見られません。 システムが遅い場合や
+            コントロールノードが互いに離れている場合には、 このオプションを
+            無効にするとわずかに処理が早くなります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

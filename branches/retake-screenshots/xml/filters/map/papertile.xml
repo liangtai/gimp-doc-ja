@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-09-05 AntI: added 'es'
+  2007-05-07 KoSt: added 'no'
+  2006-12-23 lexa: added de translation
+  2005-11-15: created by julien hardelin
+-->
+<!--2010-12-09-->
+<sect2 id="plug-in-papertile">
+  <title lang="en">Paper Tile</title>
+  <title lang="ja">紙タイル...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Map</secondary>
+    <tertiary>Paper Tile</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Paper Tile</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>マップ</secondary>
+    <tertiary sortas="カミタイル">紙タイル</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カミタイル">紙タイル</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en"><quote>Papertile</quote> filter example</title>
+      <title lang="ja"><quote>紙タイル</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/map-taj-papertile.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Papertile</quote> applied</para>
+          <para lang="ja"><quote>紙タイル</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter cuts the image (active layer or selection) into several
+      pieces, with square form, and then slides them so that they, more or
+      less, overlap or move apart. They can go out image borders a little.
+    </para>
+    <para lang="ja">
+      <guimenuitem>紙タイル...</guimenuitem> フィルタは画像の
+      レイヤーもしくはその選択範囲を断片に切り分け、 位置や向きをずらして多かれ
+      少なかれ互いに重なり合うような状態に描きます。 周辺部の断片は画像を少し
+      はみ出します。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Paper Tile</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>紙タイル...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Paper Tile</quote> filter options</title>
+      <title lang="ja"><quote>紙タイル</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/map/papertile.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Division</term>
+        <term lang="ja">分割</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>X</guilabel>, <guilabel>Y</guilabel> and <guilabel>
+            Size</guilabel> parameters are linked, because filter starts
+            cutting image before it displaces pieces; so, piece size and
+            number of pieces in horizontal (X) and vertical (Y) directions
+            must be convenient to image size.
+          </para>
+          <para lang="ja">
+            このフィルタは断片をずらす前に画像を断片に等分するので、 
+            <guilabel><accel>X</accel></guilabel> は <guilabel>幅</guilabel> 
+            と、 <guilabel><accel>Y</accel></guilabel> は 
+            <guilabel>高さ</guilabel> と相互に連携しています。 
+            つまり水平方向 X や垂直方向 Y の分割数と断片の寸法の積が
+            画像の大きさに近くなる値が現れます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Movement</term>
+        <term lang="ja">移動</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Max%</guilabel></term>
+              <term lang="ja"><guilabel>最大(%)</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This is the maximum displacement percentage against the side
+                  size of squares.
+                </para>
+                <para lang="ja">
+                  断片の辺の長さに対するずれの大きさの最大限度の割合です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Wrap around</guilabel></term>
+              <term lang="ja"><guilabel>回り込み</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  As tiles move, some can go out image borders. If this option
+                  is checked, what goes out on one side goes in on the
+                  opposite side.
+                </para>
+                <para lang="ja">
+                  断片は移動するので画像からはみ出します。 このオプションを有効
+                  にすると、 はみ出した部分が反対側の辺に現れるようになります。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Fractional Pixels</term>
+        <term lang="ja">ピクセル断片</term>
+        <listitem>
+          <para lang="en">
+            Because of image cutting, original pixels can persist. There are
+            three ways treating them:
+          </para>
+          <para lang="ja">
+            切り分けられた画像の下に元の画素が存続できます。 移動で空いた隙間
+            から見える残された画素の処理についてはつぎの 3 つの方法があります。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Background</guilabel></term>
+              <term lang="ja"><guilabel>背景</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Remaining pixels will be replaced with the background type
+                  defined in the following section.
+                </para>
+                <para lang="ja">
+                  残っている画素を
+                  <guilabel>背景の種類</guilabel> で選ばれた色が置き換えます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Ignore</guilabel></term>
+              <term lang="ja"><guilabel>無視</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  <guilabel>Background Type</guilabel> option is not taken
+                  into account and remaining pixels are kept.
+                </para>
+                <para lang="ja">
+                  <guilabel>背景の種類</guilabel> で選ばれた色は無視され、 
+                  元の画像がそのまま垣間見えます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Force</guilabel></term>
+              <term lang="ja"><guilabel>強制</guilabel></term>
+              <listitem>
+                <para lang="en">Remaining pixels will be cut also.</para>
+                <para lang="ja">残された画素も切り取られます。</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Background Type</term>
+        <term lang="ja">背景の種類</term>
+        <listitem>
+          <para lang="en">
+            You can select the background type which will be used, if the
+            <guilabel>Background</guilabel> radio-button is checked, among
+            six options:
+          </para>
+          <para lang="ja">
+            <guilabel>ピクセル断片</guilabel> で <guilabel>背景</guilabel> を
+            選んだときの断片の隙間から垣間見える背景の種類をつぎの 6 つの
+            方法から選びます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Transparent</guilabel></term>
+              <term lang="ja"><guilabel>透明</guilabel></term>
+              <listitem>
+                <para lang="en">Background will be transparent.</para>
+                <para lang="ja">背景が透明になります。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Inverted image</guilabel></term>
+              <term lang="ja"><guilabel>反転画像</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Background colors will be inverted (255-value in every color
+                  channel).
+                </para>
+                <para lang="ja">
+                  元画像を反転したものが垣間見えます。 反転は各
+                  色チャンネルごとに 255 との差を算出して得ます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Image</guilabel></term>
+              <term lang="ja"><guilabel>画像</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Background colors will be unchanged. The original image is
+                  the background.
+                </para>
+                <para lang="ja">元画像がそのまま背景に使われます。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Foreground Color</guilabel></term>
+              <term lang="ja"><guilabel>前景色</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Remaining pixels will be replaced by the Foreground color of
+                  Toolbox.
+                </para>
+                <para lang="ja">
+                  残った画素はツールボックスの色標識で示される描画色で
+                  塗りつぶされます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Background Color</guilabel></term>
+              <term lang="ja"><guilabel>背景色</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  Remaining pixels will be replaced by the Background color of
+                  Toolbox.
+                </para>
+                <para lang="ja">
+                  残った画素はツールボックスの色標識で示される背景色で
+                  塗りつぶされます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Select here</guilabel></term>
+              <term lang="ja"><guilabel>ここで選択</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  When this radio-button is checked, clicking in the color
+                  dwell will open a Color Selector where you can select the
+                  color  you want for background.
+                </para>
+                <para lang="ja">
+                  色だまりボタンが示す色で背景が塗りつぶされます。 色だまり
+                  ボタンをクリックすると色変更ダイアログが現れ、
+                  別の色も選べます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Centering</term>
+        <term lang="ja">中央寄せ</term>
+        <listitem>
+          <para lang="en">
+            If this option is checked, tiles will rather be gathered together
+            in the center of the image.
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると断片がいくぶん画像の中央付近に寄り
+            集まります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

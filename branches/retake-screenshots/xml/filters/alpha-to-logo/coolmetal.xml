@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-02-08 alex falappa: added 'it'
+  2008-01-18 ude: created en,de
+-->
+<!--2010-12-08-->
+<sect2 id="script-fu-cool-metal-logo-alpha">
+  <title lang="en">Cool Metal</title>
+  <title lang="ja">冷たい金属...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Cool Metal</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Cool Metal</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary sortas="ツメタイキンゾク">冷たい金属</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ツメタイキンゾク">冷たい金属</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="en">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Cool Metal</quote> filter
+      </title>
+      <title lang="ja"><quote>冷たい金属</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/coolmetal.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Cool Metal</quote> filter</para>
+          <para lang="ja"><quote>冷たい金属</quote>フィルタ</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/coolmetal-script-fu.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Cool Metal</quote> logo</para>
+          <para lang="ja"><quote>冷たい金属</quote>ロゴ</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter creates an effect that looks like metal with a reflection in
+      the mirrored ground, and an interesting drop shadow.
+    </para>
+    <para lang="en">
+      The filter is derived from the <quote>Cool Metal</quote> script
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>Cool Metal</guimenuitem>
+      </menuchoice>
+      in the image window), which creates a logo from a text as shown above.
+    </para>
+    <para lang="ja">
+      <guimenuitem>冷たい金属...</guimenuitem> フィルタは金属製に見える物体と
+      鏡面反射する地面に映る姿を描き、 興味深いドロップシャドウをつけます。
+    </para>
+    <para lang="ja">
+      このフィルタはテキストに同様な効果 (上記参照) をつけたロゴを作成する
+      <quote>冷たい金属</quote>ロゴスクリプトから派生しました。 
+      ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ</guisubmenu>
+        <guimenuitem>冷たい金属...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Cool Metal</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>冷たい金属...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Cool Metal</quote> options</title>
+      <title lang="ja"><quote>冷たい金属</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/alpha-to-logo/coolmetal-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Effect size (pixels)</term>
+        <term lang="ja">効果サイズ (ピクセル)</term>
+        <listitem>
+          <para lang="en">
+            This is actually the font size option of the
+            <quote>Cool&nbsp;Metal</quote> Script-Fu script. Some internal values
+            will be set in relation to this size, for feathering, blurring,
+            embossing, and creating ripple patterns.
+          </para>
+          <para lang="ja">
+            このオプションの値はもともと<quote>冷たい金属</quote> Script-Fu
+            ロゴスクリプトのフォントサイズオプションでした。 ここでは内部的に
+            境界線のぼかしとぼかし処理の半径やエンボス加工と波紋パターンの
+            作成にこの値が使われています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Background color</term>
+        <term lang="ja">背景色</term>
+        <listitem>
+          <para lang="en">
+            The color of the background layer added by the filter. When you
+            click in the color swatch button, the color select dialog pops up.
+          </para>
+          <para lang="ja">
+            スクリプトが生成する背景レイヤーはこの色で塗りつぶされます。 色
+            だまりボタンをクリックすると色変更ダイアログが現れて、 他の色も
+            選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Gradient</term>
+        <term lang="ja">グラデーション</term>
+        <listitem>
+          <para lang="en">
+            The default gradient to create the cool metal is
+            <quote>Horizon&nbsp;1</quote>. Clicking in the gradient button will
+            open a simplified <link linkend="gimp-gradient-dialog">gradient
+            dialog</link>, where you can select any other gradient.
+          </para>
+          <para lang="ja">
+            冷たい金属スクリプトに使われるグラデーションは初期設定では
+            <quote>Horizon&nbsp;1</quote>です。 グラデーションボタンを
+            クリックすれば簡約型の 
+            <link linkend="gimp-gradient-dialog">グラデーションダイアログ
+            </link> が開かれ、 他のグラデーションも選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Gradient reverse</term>
+        <term lang="ja">グラデーションの反転</term>
+        <listitem>
+          <para lang="en">
+            By default, the selected gradient will be applied from top to
+            bottom. When this option is checked, the direction will be
+            reversed.
+          </para>
+          <para lang="ja">
+            初期状態ではここで選ばれたグラデーションは画面の上から下への
+            方向で利用されます。 このオプションを有効にするとその向きが
+            逆になります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter details</title>
+    <title lang="ja">フィルタの詳細</title>
+    <para>
+      At least some of the filter effects should be described briefly: how the
+      filter creates the reflection and this nice shadow, or rather, how you
+      can reproduce these effects manually. In fact, the only trick is to know
+      which tool to use...
+    </para>
+    <para lang="ja">
+      このフィルタの効果のことを少しぐらいはかいつまんで説明しておく
+      べきでしょう。 このフィルタが映り込みや素敵な影を描くしくみの説明よりは
+      むしろスクリプトがやっている操作を手動で再現する方法について解説が必要だ
+      と思います。 実のところどんなツールを使っているのかさえわかれば
+      秘訣でもなんでもないのですが。
+    </para>
+    <orderedlist>
+      <title lang="en">Making the reflection</title>
+      <title lang="ja">映り込みの作成</title>
+      <para lang="en">
+        Assuming that the alpha has been filled with a gradient, then:
+      </para>
+      <para lang="ja">
+        アルファ域はグラデーションで塗りつぶされているとします。 そのあと、
+      </para>
+      <listitem>
+        <para lang="en">
+          Create a new layer containing the area you want to mirror, for
+          example <link linkend="gimp-edit-copy">Copy</link> and
+          <link linkend="gimp-edit-paste">Paste</link> the area in a new
+          layer.
+        </para>
+        <para lang="ja">
+          レイヤーを作成し鏡映部分を描きます。 例えば元の絵を 
+          <link linkend="gimp-edit-copy">写し取</link> って新たなレイヤーに 
+          <link linkend="gimp-edit-paste">貼り付</link> けます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          To make the reflection look more natural, scale down the layer (the
+          filter resizes to 85% of the original height). You can do this e.g.
+          using <link linkend="gimp-layer-scale">Scale Layer</link> command or
+          the <link linkend="gimp-tool-scale">Scale Tool</link>.
+        </para>
+        <para lang="ja">
+          自然な映り込みに見えるようそのレイヤーを縮小します。 このスクリプト
+          は元の高さの 85% に縮めています。 この処理には 
+          <link linkend="gimp-layer-scale">レイヤーの拡大・縮小</link> 
+          コマンドか 
+          <link linkend="gimp-tool-scale">拡大・縮小ツール</link> が使えます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Then <link linkend="gimp-tool-flip">flip</link> the layer vertically
+          and <link linkend="gimp-tool-move">move</link> it down.
+        </para>
+        <para lang="ja">
+          さらにこのレイヤーを垂直方向に 
+          <link linkend="gimp-tool-flip">鏡像反転</link> してから下方向に 
+          <link linkend="gimp-tool-move">移動</link> します。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          Now <link linkend="gimp-layer-mask-add">add a layer mask</link>,
+          fill the layer mask with a
+          <link linkend="gimp-tool-blend">gradient</link> (for instance white
+          or gray to black), and, of course,
+          <link linkend="gimp-layer-mask-apply">apply the layer mask</link>.
+        </para>
+        <para lang="ja">
+          あとは 
+          <link linkend="gimp-layer-mask-add">レイヤーマスクを追加</link> して
+          そのレイヤーマスクに白もしくは灰色から黒に変化する 
+          <link linkend="gimp-tool-blend">グラデーション</link> をかけ、 当然
+          ながら 
+          <link linkend="gimp-layer-mask-apply">レイヤーマスクを適用</link> 
+          します。
+        </para>
+      </listitem>
+    </orderedlist>
+    <orderedlist>
+      <title lang="en">Making the shadow</title>
+      <title lang="ja">影の作成</title>
+      <para lang="en">
+        Fill the alpha with black, for instance via
+        <link linkend="gimp-layer-duplicate">Duplicate Layer</link> and
+        <link linkend="gimp-layer-alpha-selection-replace">Alpha to
+        Selection</link>, then
+      </para>
+      <para lang="ja">
+        アルファ域を黒く塗りつぶしたいので、 具体的には 
+        <link linkend="gimp-layer-duplicate">レイヤーの複製</link> をとって
+        <link linkend="gimp-layer-alpha-selection-replace">
+        不透明部分を選択範囲に</link> 転換して塗りつぶします。 そのあと、
+      </para>
+      <listitem>
+        <para lang="en">
+          shrink and slant the layer, e.g. using the
+          <link linkend="gimp-tool-perspective">Perspective</link> tool,
+        </para>
+        <para lang="ja">
+          レイヤーを押しつぶして傾けます。 たとえばこれを 
+          <link linkend="gimp-tool-perspective">遠近法ツール</link> で行ない
+          ます。
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          and apply a <link linkend="plug-in-gauss">Gaussian Blur</link> to
+          the layer.
+        </para>
+        <para lang="ja">
+          <link linkend="plug-in-gauss">ガウスぼかし</link> をそのレイヤーに
+          かけます。
+        </para>
+      </listitem>
+    </orderedlist>
+  </sect3>
+</sect2>

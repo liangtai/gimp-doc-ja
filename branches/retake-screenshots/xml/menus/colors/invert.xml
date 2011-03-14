@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-16 ude: copied here from "menus/layer-invert.xml"
+  2007-06-07 Added Spanish translation by AntI
+  2007-03-12 Kolbjorn: added no translation
+  2005-11-12 split of from layer-colors.xml by axel.wernicke
+-->
+<!-- id is still used by GIMP, do not change! -->
+<!--2010-12-06-->
+<sect2 id="gimp-layer-invert">
+  <title lang="en">Invert</title>
+  <title lang="ja">階調を反転</title>
+
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Invert</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Invert colors</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロ">色</primary>
+    <secondary sortas="ハンテン">反転</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="イロヲハンテン">色を反転</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Invert</guimenuitem> command inverts all the pixel
+    colors and brightness values in the current layer, as if the image were
+    converted into a negative. Dark areas become bright and bright areas
+    become dark. Hues are replaced by their complementary colors. For more
+    information about colors, see the Glossary entry about
+    <link linkend="glossary-colormodel">Color Model</link>.
+  </para>
+  <para lang="ja">
+    <guimenuitem>階調を反転</guimenuitem> コマンドは現在の
+    活性レイヤーの全ての画素にわたって色と輝度を反転させあたかもネガフィルムに
+    変換したかのような画像にします。 暗い部分が明るくなり明るい部分が暗く
+    なります。 色相はその補色に置き換わります。 色についての詳しい解説は用語集の 
+    <link linkend="glossary-colormodel">色モデル</link> の項をご覧ください。
+  </para>
+
+  <note>
+    <para lang="en">
+      This command only works on layers of RGB and Grayscale images. If the
+      current image is Indexed, the menu entry is insensitive and grayed out.
+    </para>
+    <para lang="ja">
+      このコマンドは<acronym>RGB</acronym>画像とグレースケール画像でのみ作動
+      します。 現在の画像がインデックス化カラー画像になっているときはこの
+      メニュー項目は灰色無効になっていて使用できません。
+    </para>
+  </note>
+  <warning>
+    <para lang="en">
+      Do not confuse this command with the
+      <link linkend="gimp-selection-invert">Invert Selection</link> command.
+    </para>
+    <para lang="ja">
+      このコマンドと 
+      <link linkend="gimp-selection-invert">選択範囲を反転</link> コマンドを
+      混同しないようご注意ください。
+    </para>
+  </warning>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <para lang="en">
+      You can access this command from the image menubar through
+      <menuchoice>
+        <guimenu>Colors</guimenu>
+        <guimenuitem>Invert</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>色</guimenu>
+        <guimenuitem>階調を反転</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Example</title>
+    <title lang="ja">使用例</title>
+    <figure>
+      <title lang="en">Applying <quote>Invert colors</quote></title>
+      <title lang="ja"><quote>階調を反転</quote>を適用</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/colors/invert-1.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/menus/colors/invert-2.png" format="PNG"/>
+        </imageobject>
+        <caption>
+          <para lang="en">After the colors were inverted</para>
+          <para lang="ja">階調の反転を実施した後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

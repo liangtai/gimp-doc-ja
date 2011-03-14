@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-07-01 liangtai: removed "Path to Selection" from path tool options
+  no longer exists
+  2008-12-07 j.h: updated to v2.6
+  2006-03-11 lexa: made docbook compliant
+  2006-02-25 fixed invalid image reference
+  2005-11-29 replaced informalfigures by figures by lexa
+-->
+<!--2010-11-28-->
+<sect2 id="gimp-path-dialog">
+  <title lang="en"><quote>Paths</quote> Dialog</title>
+  <title lang="ja">パスダイアログ</title>
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Paths</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Paths</primary>
+    <secondary>Dialog</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>パス</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>パス</primary>
+    <secondary>ダイアログ</secondary>
+  </indexterm>
+  <para lang="en">
+    Please see <xref linkend="gimp-using-paths"/> if you don't know what a
+    path is.
+  </para>
+  <para lang="ja">
+    パスについての初歩からの解説が
+    <xref linkend="gimp-using-paths"/> にあります。
+  </para>
+
+  <figure>
+    <title lang="en">The <quote>Paths</quote> dialog</title>
+    <title lang="ja"><quote>パス</quote>ダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dialogs/paths-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The <quote>Paths</quote> dialog is used to manage paths, allowing you to
+    create or delete them, save them, convert them to and from selections, etc.
+  </para>
+  <para lang="ja">
+    <quote>パス</quote>ダイアログは、 パスを作成、 削除、 保存するほか、
+    選択範囲と相互に変換するなどの管理作業に使います。
+  </para>
+
+  <sect3 id="gimp-path-dialog-activate">
+    <title lang="en">Activating the dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Paths</quote> dialog is a dockable dialog; see the section
+      <xref linkend="gimp-concepts-docks"/>
+      for help on manipulating it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>パス</quote>ダイアログはドッキング可能です。 その扱い方については
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from the image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Paths</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>パス</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Paths</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加</guimenu>
+            <guimenuitem>パス</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para lang="en">
+      In the <guimenu>Windows</guimenu> menu, there is a list of
+      <link linkend="gimp-dockable-menu">detached windows</link> which exists
+      only if at least one dialog remains open. In this case, you can raise
+      the <quote>Paths</quote> dialog from the image-menu:
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guimenuitem>Paths</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      ダイアログが少なくともひとつ開かれておれば、 
+      <guimenu>ウィンドウ</guimenu> メニューに
+      <link linkend="gimp-dockable-menu">切り放したウィンドウ</link> のリストが
+      現れます。 このときは画像メニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guimenuitem>パス</guimenuitem>
+      </menuchoice>
+      と進めば<quote>パス</quote>ダイアログを浮かび上がらせられます。
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-path-dialog-using">
+    <title lang="en">Using the Paths dialog</title>
+    <title lang="ja">パスダイアログの利用法</title>
+    <para lang="en">
+      Each path belongs to one image: paths are components of images just
+      like layers. The Paths dialog shows you a list of all paths belonging
+      to the currently active image: switching images causes the dialog to
+      show a different list of paths. If the Paths dialog is embedded in a
+      <quote>Layers, Channels, and Paths</quote> dock, you can see the name
+      of the active image in the Image Menu at the top of the dock.
+      (Otherwise, you can add an Image Menu to the dock by choosing
+      <quote>Show Image Menu</quote> from the Tab menu.)
+    </para>
+    <para lang="en">
+      If you are familiar with the Layers dialog, you have a head start,
+      because the Paths dialog is in several ways similar. It shows a list of
+      all paths that exist in the image, with four items for each path:
+    </para>
+    <para lang="ja">
+      パスはそれぞれが一枚の画像に属します。 パスはレイヤーと同じく画像の一部
+      なのです。 パスダイアログは現在活性化している画像に属しているパスの一覧表
+      を示します。 別の画像に移ればダイアログの一覧表も別のものに替わります。
+      パスダイアログが<quote>レイヤー, チャンネル, パス</quote>ドックに
+      入っていたなら、 現在活性化している画像の名前がドックの上部にある画像
+      メニューに表示されているのが見えるでしょう。 (もし無ければ、 タブメニュー
+      で <guimenuitem>選択画像を表示</guimenuitem> を指示
+      すれば画像メニューをドックに付けられます。)
+    </para>
+    <para lang="ja">
+      もしレイヤーダイアログの扱いに慣れていらっしゃるのなら、 パスダイアログは
+      レイヤーダイアログに似ているところがありますので出だしから有利です。
+      一覧表には画像上にある全てのパスが個々につぎのような 4 つの指標を伴って
+      並んでいます。
+    </para>
+    <variablelist>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/path-list-entry.png"/>
+        </imageobject>
+      </mediaobject>
+      <varlistentry>
+        <term>
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-eye-20.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required" lang="en">Path visibility</phrase>
+          <phrase condition="tag-is-required" lang="ja">パスの可視度</phrase>
+        </term>
+        <listitem>
+          <para lang="en">
+            An <quote>open eye</quote> icon if the path is visible, or a
+            blank space if it is not.  <quote>Visible</quote> means that a
+            trace of the path is drawn on the image display.  The path is not
+            actually shown in the image pixel data unless it has been stroked
+            or otherwise rendered.  Clicking in the eye-symbol-space
+            toggles the visibility of the path.
+          </para>
+          <para lang="ja">
+            <quote>開いた目</quote>のアイコンはパスが可視化されているときに
+            現れ、 不可視の場合はその欄が空白になります。 <quote>可視</quote>
+            とはパスをなぞる線が画像ウィンドウ上に表示されていることを
+            さします。 パスはその境界線を描画するなどの塗色をしなければ、
+            実際のところ画像の画素データとしては現れません。 目の印の欄を
+            クリックすればパスの可視性が切り替わります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-vchain-24.png"/>
+          </guiicon>
+          <phrase condition="tag-is-required" lang="en">Chain paths</phrase>
+          <phrase condition="tag-is-required" lang="ja">パスの連結</phrase>
+        </term>
+        <listitem>
+          <para lang="en">
+            A <quote>chain</quote> symbol is shown to the right of the
+            eye-symbol-space if the path is transform-locked, or a blank
+            space if it is not. <quote>Transform-locked</quote> means that
+            it forms
+            part of a set of elements (layers, channels, etc) that are
+            all affected in the same way by transformations (scaling,
+            rotation, etc) applied to any one of them.  Clicking in the
+            chain-symbol-space toggles the transform-lock status of the
+            path.
+          </para>
+          <para lang="ja">
+            <quote>鎖</quote>の印はパスが組み合わせ変形になっているときに目の
+            印の欄の右隣に現れ、 個別に変形できるときは消えています。 <quote>
+            組み合わせ変形</quote>とはレイヤーやチャンネルなどの描画対象から
+            なるひとつのまとまりに加わることをさしており、 そのいずれかが拡大・
+            縮小や回転などの変形を受けると連結された他の描画対象が全て同時に
+            変形されるようになっています。 鎖の印の欄をクリックすればパスの
+            組み合わせ変形の状態が切り替わります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Preview image</term>
+        <term lang="ja">縮小見本画像</term>
+        <listitem>
+          <para lang="en">
+            A small preview-icon showing a sketch of the path. If you click
+            on the icon and drag it into an image, this will create a copy of
+            the path in that image.
+          </para>
+          <para lang="ja">
+            小さなプレビューアイコンがパスの素描を表示しています。 そのアイコン
+            をクリックして画像上まで曳くと、 その画像にこのパスの複製が加わり
+            ます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Path Name</term>
+        <term lang="ja">パス名</term>
+        <listitem>
+          <para lang="en">
+            The name of the path, which must be unique within the image.
+            Double-clicking on the name will allow you to edit it. If the
+            name you create already exists, a number will be appended (e.g.,
+            <quote>#1</quote>) to make it unique.
+          </para>
+          <para lang="ja">
+            パスの名前はその画像内で重複があってはいけません。 名前欄をダブル
+            クリックすると編集ができるようになります。 与えた名前が既にあるとき
+            は名前の唯一性を確保するためその名前に<quote>コピー</quote>の語句が
+            付け加えられ、 さらに同じ名前を与えるとこんどは<quote>#1</quote>の
+            ような番号が振られます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para lang="en">
+      If the list is non-empty, at any given moment one of the members is the
+      image's <emphasis>active path</emphasis>,
+      which will be the subject of any operations you perform using the
+      dialog menu or the buttons at the bottom: the active path is shown
+      highlighted in the list. Clicking on any of the entries will make it
+      the active path.
+    </para>
+    <para lang="en">
+      Right-clicking on any entry in the list brings up the
+      <link linkend="gimp-concepts-paths-menu">Paths Menu</link>.
+      You can also access the Paths Menu from the dialog Tab menu.
+    </para>
+    <para lang="ja">
+      一覧表が空でなければいつでも、 そこに挙げられたパスのいずれかが必ず画像の
+      <emphasis>活性パス</emphasis> となり、 ダイアログのメニューや下側に並ぶ
+      ボタンを通じて行なうあらゆる操作の対象となります。 活性パスは一覧表で
+      強調表示されます。 パスの一覧表のひとつをクリックすればそれが活性パスに
+      なります。
+    </para>
+    <para lang="ja">
+      一覧表のいずれの項目もマウスの <mousebutton>第2ボタン</mousebutton>
+      でクリックすると、 後述する
+      <link linkend="gimp-concepts-paths-menu">パスメニュー</link>
+      が出てきます。 またダイアログのタブメニューからもこのメニューを呼び出せ
+      ます。
+    </para>
+  </sect3>
+
+  <sect3 id="gimp-path-dialog-buttons">
+    <title lang="en">Buttons</title>
+    <title lang="ja">アイコンボタン</title>
+    <para lang="en">
+      The buttons at the bottom of the Paths dialog all correspond to entries
+      in the Paths menu (accessed by right-clicking on a path list entry),
+      but some of them have extra options obtainable by holding down modifier
+      keys while you press the button.
+    </para>
+    <para lang="ja">
+      パスダイアログの底部にあるボタンは全てパスメニュー (一覧表のいずれかの
+      項目を <mousebutton>第2ボタン</mousebutton> クリックして起用)
+      の項目も同じコマンドがありますが、 修飾キーを押しながらクリックすれば拡張
+      オプションが扱えるボタンもいくつかあります。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">New Path</term>
+        <term lang="ja">新しいパスを画像に追加</term>
+        <listitem>
+          <para lang="en">
+            See <link linkend="gimp-path-new">New Path</link>. Holding down
+            the <keycap>Shift</keycap> key brings up a dialog that allows you
+            to assign a name to the new (empty) path.
+          </para>
+          <para lang="ja">
+            後述するパスメニューの
+            <link linkend="gimp-path-new">新しいパス...</link> をご覧ください。
+            <keycap>Shift</keycap> キーを押しながらクリックすると、 新しく作成
+            される (空の) パスの名前を設定するダイアログが同時に開きます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Raise Path</term>
+        <term lang="ja">パスを前面へ</term>
+        <listitem>
+          <para lang="en">
+            See <link linkend="gimp-path-raise">Raise Path</link>.
+          </para>
+          <para lang="ja">
+            後述するパスメニューの
+            <link linkend="gimp-path-raise">パスを前面ヘ</link>
+            をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Lower Path</term>
+        <term lang="ja">パスを背面へ</term>
+        <listitem>
+          <para lang="en">
+            See <link linkend="gimp-path-lower">Lower Path</link>.
+          </para>
+          <para lang="ja">
+            同じく
+            <link linkend="gimp-path-raise">パスを背面ヘ</link>
+            をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Duplicate Path</term>
+        <term lang="ja">パスを複製</term>
+        <listitem>
+          <para lang="en">
+            See <link linkend="gimp-path-duplicate">Duplicate Path</link>.
+          </para>
+          <para lang="ja">
+            後述するパスメニューの
+            <link linkend="gimp-path-duplicate">パスを複製</link>
+            をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Path to Selection</term>
+        <term lang="ja">パスを選択範囲に</term>
+        <listitem>
+          <para lang="en">
+            Converts the path into a selection; see
+            <link linkend="gimp-path-selection-replace">
+              Path to Selection
+            </link>
+            for a full explanation. You can use modifier keys to set the way
+            the new selection interacts with the existing selection:
+          </para>
+          <para lang="ja">
+            パスを選択範囲に変換します。 詳細は
+            <link linkend="gimp-path-selection-replace">パスを選択範囲に</link>
+            をご覧ください。 修飾キーを使うと既存の選択範囲と掛け合わせた新たな
+            選択範囲の作成を制御できます。
+          </para>
+          <segmentedlist>
+            <segtitle lang="en">Modifiers</segtitle>
+            <segtitle lang="en">Action</segtitle>
+            <segtitle lang="ja">修飾キー</segtitle>
+            <segtitle lang="ja">動作</segtitle>
+            <seglistitem>
+              <seg lang="en">None</seg>
+              <seg lang="en">Replace existing selection</seg>
+              <seg lang="ja">なし</seg>
+              <seg lang="ja">既存の選択範囲に置き換わります</seg>
+            </seglistitem>
+            <seglistitem>
+              <seg>
+                <keycap>Shift</keycap>
+              </seg>
+              <seg lang="en">Add to selection</seg>
+              <seg lang="ja">選択範囲を追加します</seg>
+            </seglistitem>
+            <seglistitem>
+              <seg>
+                <keycap>Ctrl</keycap>
+              </seg>
+              <seg lang="en">Subtract from selection</seg>
+              <seg lang="ja">選択範囲から除外します</seg>
+            </seglistitem>
+            <seglistitem>
+              <seg>
+                <keycombo>
+                  <keycap>Shift</keycap>
+                  <keycap>Ctrl</keycap>
+                </keycombo>
+              </seg>
+              <seg lang="en">Intersect with selection.</seg>
+              <seg lang="ja">重なりを選択範囲にします</seg>
+            </seglistitem>
+          </segmentedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Selection to Path</term>
+        <term lang="ja">選択範囲をパスに</term>
+        <listitem>
+          <para lang="en">
+            Holding down the <keycap>Shift</keycap> key brings up the
+            <guilabel>Advanced Options</guilabel> dialog, which
+            probably is only useful to GIMP developers.
+          </para>
+          <para lang="ja">
+            <keycap>Shift</keycap> キーを押しながらクリックすると高度な
+            オプションが並ぶ<quote>選択領域からパスの詳細設定</quote>ダイアログ
+            が出てきますが、 おそらく<acronym>GIMP</acronym>開発者にしか役立た
+            ないものでしょう。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Stroke Path</term>
+        <term lang="ja">パスに沿って描画</term>
+        <listitem>
+          <para lang="en">
+            See <link linkend="gimp-path-stroke">Stroke Path</link>.
+          </para>
+          <para lang="ja">
+            <link linkend="gimp-path-stroke">パスの境界線を描画...</link>
+            をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Delete Path</term>
+        <term lang="ja">パスを削除</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Delete Path</guilabel> deletes the current selected
+            path.
+          </para>
+          <para lang="ja">
+            このボタンは現在活性化しているパスを削除します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="gimp-concepts-paths-menu">
+    <title lang="en">The <quote>Paths</quote> context menu</title>
+    <title lang="ja"><quote>パス</quote>の脈絡メニュー</title>
+    <figure>
+      <title lang="en">The <quote>Paths</quote> context menu</title>
+      <title lang="ja"><quote>パス</quote>の脈絡メニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/dialogs/paths-menu.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The Paths menu can be brought up by right-clicking on a path entry in
+      the list in the Paths dialog, or by choosing the top entry ("Paths
+      Menu") from the Paths dialog Tab menu. This menu gives you access to
+      most of the operations that affect paths.
+    </para>
+    <para lang="ja">
+      パスメニューを開くにはパスダイアログのパス一覧表の項目上をマウスで
+      <mousebutton>第2ボタン</mousebutton> クリックするか、 パスダイアログの
+      タブメニューの最初の項目 (<guisubmenu>パスメニュー</guisubmenu>) を辿って
+      ください。 このメニューでパスに関わる操作の大部分が行えます。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Path Tool</term>
+        <term lang="ja">パスのツール</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Path Tool</guilabel> is an alternative way to
+            activate the <link linkend="gimp-tool-path">Path tool</link>,
+            used for creating and manipulating paths.  It can also be
+            activated from the Toolbox, or by using the keyboard shortcut
+            <keycap>B</keycap> (for <emphasis>Bezier</emphasis>).
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスのツール</guimenuitem> は
+            <link linkend="gimp-tool-path">パスツール</link> を起用するもう
+            ひとつの方法です。 パスツールはパスを作成し操作するために使います。
+            もちろんツールボックスのツールアイコンやキーボードショートカット
+            <keycap>B</keycap> (これはベジエ <foreignphrase>B&eacute;zier
+            </foreignphrase> から来ている) を使っても呼び出せます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edit Path Attributes</term>
+        <term lang="ja">パス名の変更...</term>
+        <listitem>
+          <anchor id="gimp-path-edit"/>
+          <para lang="en">
+            <guilabel>Edit Path Attributes</guilabel> brings up a small
+            dialog that allows you to change the name of the path.  You
+            can also do this by double-clicking on the name in the list in
+            the Paths dialog.
+          </para>
+          <para lang="ja">
+            <guilabel>パス名の変更...</guilabel> はパスの名前
+            を変更できる小さなダイアログを呼び出します。 パス名の変更はパス
+            ダイアログの一覧表内のパス名をダブルクリックしてもできます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">New Path</term>
+        <term lang="ja">新しいパス...</term>
+        <listitem>
+          <anchor id="gimp-path-new"/>
+          <para lang="en">
+            <guilabel>New Path</guilabel>creates a new path, adds it to
+            the list in the Paths dialog, and makes it the active path
+            for the image.  It brings up a dialog that allows you to
+            give a name to the path.  The new path is created with no
+            anchor points, so you will need to use the Path tool to give
+            it some before you can use it for anything.
+          </para>
+          <para lang="ja">
+            <guimenuitem>新しいパス...</guimenuitem> は一面の
+            新たなパスを作成し、 パスダイアログの一覧表にその項目を加え、 その
+            画像においての活性パスにします。 また新しいパスの名前を与えるための
+            ダイアログを開きます。 新しいパスにはまだアンカーポイントがひとつも
+            置かれていないので、 何をするにしてもまずはパスツールを使ってパスを
+            作成するところから始める必要があります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Raise Path</term>
+        <term lang="ja">パスを前面へ</term>
+        <listitem>
+          <anchor id="gimp-path-raise"/>
+          <para lang="en">
+            <guilabel>Raise Path</guilabel> moves the path one slot higher
+            in the list in the Paths dialog.  The position of a path in
+            the list has no functional significance, so this is simply a
+            convenience to help you keep things organized.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスを前面へ</guimenuitem> により
+            パスダイアログの一覧表上でパスの項目を一段上に移動できます。 パスは
+            一覧表のどの位置にあっても機能上の変化はありませんので、 これは単に
+            内容を整理しておくための方便に過ぎません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Lower Path</term>
+        <term lang="ja">パスを背面へ</term>
+        <listitem>
+          <anchor id="gimp-path-lower"/>
+          <para lang="en">
+            <guilabel>Lower Path</guilabel>moves the path one slot lower
+            in the list in the Paths dialog.  The position of a path in
+            the list has no functional significance, so this is simply a
+            convenience to help you keep things organized.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスを背面へ</guimenuitem> により
+            パスダイアログの一覧表上でパスの項目を一段下に移動できます。 パスは
+            一覧表のどの位置にあっても機能上の変化はありませんので、 これは単に
+            内容を整理しておくための方便に過ぎません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Duplicate Path</term>
+        <term lang="ja">パスを複製</term>
+        <listitem>
+          <anchor id="gimp-path-duplicate"/>
+          <para lang="en">
+            <quote>Duplicate Path</quote> creates a copy of the active path,
+            assigns it a unique name, adds it to the list in the Paths dialog,
+            and makes it the active path for the image.  The copy will
+            be visible only if the original path was visible.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスを複製</guimenuitem> は活性パス
+            のコピーを作成し、 [元のパスの名前を利用しつつも]重複しない名前を
+            与え、 パスダイアログの一覧表に加え、 その画像においての活性パスに
+            します。 元のパスが可視化されている場合に限りそのパスも最初から
+            可視となります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Delete Path</term>
+        <term lang="ja">パスを削除</term>
+        <listitem>
+          <anchor id="gimp-path-delete"/>
+          <para lang="en">
+            <guilabel>Delete Path</guilabel> deletes the current selected
+            path.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスを削除</guimenuitem>
+            は現在活性化しているパスを削除します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Merge Visible Paths</term>
+        <term lang="ja">可視パスの統合</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Merge Visible Paths</guilabel> takes all the paths
+            in the image that are visible (that is, all that show
+            <quote>open eye</quote> symbols in the Paths dialog), and turns
+            them into components of a single path.  This may be convenient if
+            you want to stroke them all in the same way, etc.
+          </para>
+          <para lang="ja">
+            <guimenuitem>可視パスの統合</guimenuitem> はその
+            画像にあるパスの全ての可視パス (すなわちパスダイアログで<quote>
+            開いた目</quote>の印がついているもの全て) の成分を一面のパスの
+            成分としてまとめます。 これはパスの境界線を同じ方法で描画する
+            という場合などに便利な機能です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">
+          Path to Selection; Add to Selection; Subtract from Selection;
+          Intersect with Selection
+        </term>
+        <term lang="ja">
+          パスを選択範囲に; 選択範囲に加える;
+          選択範囲から引く; 選択範囲との交わり
+        </term>
+        <listitem>
+          <!--anchor id="gimp-path-selection-replace"/
+          (see menus/select/from-path.xml)-->
+          <anchor id="gimp-path-selection-add"/>
+          <anchor id="gimp-path-selection-subtract"/>
+          <anchor id="gimp-path-selection-intersect"/>
+          <para lang="en">
+            These commands all convert the active path into a selection, and
+            then combine it with the existing selection in the specified
+            ways.
+            (<quote>Path to Selection</quote> discards the existing selection
+            and replaces it with one formed from the path.) If necessary, any
+            unclosed components of the path are closed by connecting the last
+            anchor point to the first anchor point with a straight line. The
+            <quote>marching ants</quote> for the resulting selection should
+            closely follow the path, but don't expect the correspondence to
+            be perfect.
+          </para>
+          <para lang="ja">
+            これらのコマンドはどれも活性パスを選択範囲に変換して、 その指示
+            どおりに既存の選択範囲と合成します。 ( <guimenuitem>
+            パスを選択範囲に</guimenuitem> だけは既存の
+            選択範囲を破棄してからパスより生成された選択範囲に置き換えます。)
+            パスの閉じていない成分は必要に応じてその始点アンカーと終点アンカー
+            を直線で結んで閉じられます。 できあがった選択範囲の<quote>蟻の行進
+            </quote>はできる限りぴたりとパス上に沿うはずですが、 完璧に一致
+            するのを期待してはいけません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Selection to Path</term>
+        <term lang="ja">選択範囲をパスに</term>
+        <listitem>
+          <anchor id="selection-to-path"/>
+          <para lang="en">
+            This operation can be accessed in several ways:
+          </para>
+          <para lang="ja">
+            この操作コマンドの呼び出し方は幾通りもあります。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                From an image menubar, as
+                <menuchoice>
+                  <guimenu>Select</guimenu>
+                  <guimenuitem>To Path</guimenuitem>
+                </menuchoice>
+              </para>
+              <para lang="ja">
+                画像ウィンドウのメニューより
+                <menuchoice>
+                  <guimenu>選択</guimenu>
+                  <guimenuitem>選択範囲をパスに</guimenuitem>
+                </menuchoice>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                From the Paths dialog menu, as
+                <guimenuitem>Selection to Path</guimenuitem>.
+              </para>
+              <para lang="ja">
+                パスダイアログのメニューより
+                <guimenuitem>選択範囲をパスに</guimenuitem>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                From the <guilabel>Selection to Path</guilabel> button
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-selection-to-path-16.png"/>
+                </guiicon>
+                at the bottom of the Paths dialog.
+              </para>
+              <para lang="ja">
+                パスダイアログの底部にある
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata
+                      fileref="images/dialogs/stock-selection-to-path-16.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「選択範囲をパスに変換」</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> アイコンボタン
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para lang="en">
+            <guilabel>Selection to Path</guilabel> creates a new path
+            from the image's selection. In most cases the resulting path
+            will closely follow the <quote>marching ants</quote> of the
+            selection, but the correspondence will not usually be perfect.
+          </para>
+          <para lang="en">
+            Converting a two-dimensional selection mask into a
+            one-dimensional path involves some rather tricky algorithms:
+            you can alter the way it is done using the
+            <guilabel>Advanced Options</guilabel>, which are accessed by
+            holding down the <keycap>Shift</keycap> key while pressing
+            the <guilabel>Selection to Path</guilabel> button
+            <guiicon>
+              <inlinegraphic
+                fileref="images/dialogs/stock-selection-to-path-16.png"/>
+            </guiicon>
+            at the bottom of the Paths dialog.  This brings up the Advanced
+            Options dialog, which allows you to set 20 different options
+            and variables, all with cryptic names.  The Advanced Options
+            are really intended for developers only, and help with them
+            goes beyond the scope of this documentation.  Generally
+            speaking, <guilabel>Selection to Path</guilabel> will do
+            what you expect it to, and you don't need to worry about how
+            it is done (unless you want to).
+          </para>
+          <para lang="ja">
+            <guimenuitem>選択範囲をパスに</guimenuitem> は画像上の選択範囲から
+            新たなパスを作成します。 出来上がったパスは大抵が選択範囲の<quote>
+            蟻の行進</quote>に沿ってひかれますが、 常に完全一致をするものでは
+            ありません。
+          </para>
+          <para lang="ja">
+            もともと2次元の選択マスクを一次元のパスに変換するわけですから、
+            その算出方法には奇策がいくつか含まれることになります。 これら高度な
+            オプションはパスダイアログの底部にある
+            <guiicon>
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata
+                    fileref="images/dialogs/stock-selection-to-path-16.png"/>
+                </imageobject>
+                <textobject>
+                  <phrase>「選択範囲をパスに変換」</phrase>
+                </textobject>
+              </inlinemediaobject>
+            </guiicon>
+            アイコンボタンを、  <keycap>Shift</keycap> キーを押しながらクリック
+            すると開かれる<quote>選択領域からパスの詳細設定</quote>ダイアログで
+            設定できます。 ただしそのオプションや変数は 20 個もあり、 いずれも
+            暗号めいた名前が[英語のまま]つけられています。 実のところこれらの
+            高度なオプションは開発者のために設けられたものなので、 それらの詳細
+            に立ち入ることはこの文書の持ち場の範囲を越えています。 通例
+            <guimenuitem>選択範囲をパスに</guimenuitem> はそのままでも期待
+            どおりの成果を挙げてくれますし、 その処理過程は (強いて意識する
+            つもりがなければ) 気にする必要はないと言えます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Stroke Path</term>
+        <term lang="ja">パスの境界線を描画...</term>
+        <listitem>
+          <anchor id="gimp-path-dialog-stroke"/>
+          <para lang="en">
+            This operation can be accessed in several ways:
+          </para>
+          <para lang="ja">
+            この操作コマンドの呼び出し方は幾通りもあります。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                From an image menubar, as
+                <menuchoice>
+                  <guimenu>Edit</guimenu>
+                  <guimenuitem>Stroke Path</guimenuitem>
+                </menuchoice>
+              </para>
+              <para lang="ja">
+                画像ウィンドウのメニューから
+                <menuchoice>
+                  <guimenu>編集</guimenu>
+                  <guimenuitem>パスの境界線を描画...</guimenuitem>
+                </menuchoice>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                From the Paths dialog menu, as <guimenuitem>Stroke
+                Path</guimenuitem>.
+              </para>
+              <para lang="ja">
+                パスダイアログのメニューから
+                <guimenuitem>パスの境界線を描画...</guimenuitem>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                From the <guilabel>Stroke Path</guilabel> button
+                <guiicon>
+                  <inlinegraphic
+                    fileref="images/dialogs/stock-path-stroke-16.png"/>
+                </guiicon>
+                at the bottom of the Paths dialog.
+              </para>
+              <para lang="ja">
+                パスダイアログの底部にある
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata
+                        fileref="images/dialogs/stock-path-stroke-16.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「パスの境界線を描画」</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> アイコンボタン
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                From the <guilabel>Stroke Path</guilabel> button in the
+                Tool Options for the Path tool.
+              </para>
+              <para lang="ja">
+                パスツールのツールオプションにある
+                <guibutton>パスの境界線を描画</guibutton> ボタン
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para lang="en">
+            <quote>Stroke Path</quote> renders the active path on the active
+            layer of
+            the image, permitting a wide variety of line styles and
+            stroking options.  See the section on
+            <link linkend="gimp-selection-stroke">Stroking</link> for more
+            information.
+          </para>
+          <para lang="ja">
+            <quote>パスの境界線を描画</quote>とは画像の活性レイヤーに活性パスの
+            線上に沿って多彩な描線形状をさまざまなオプション変化を伴って塗色
+            する機能です。 さらなる情報が
+            <link linkend="gimp-path-stroke">パスの境界線を描画</link>
+            の節にあります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Copy Path</term>
+        <term lang="ja">パスをコピー</term>
+        <listitem>
+          <anchor id="gimp-path-copy"/>
+          <para lang="en">
+            <guilabel>Copy Path</guilabel> copies the active path to the
+            Paths Clipboard, enabling you to paste it into a different image.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスをコピー</guimenuitem> は活性
+            パスをパス用クリップボードに取り込み、 他の画像に貼り付けられる
+            ようにするためにあります。
+          </para>
+          <tip>
+            <para lang="en">
+              You can also copy and paste a path by dragging its icon
+              from the Paths dialog into the target image's display.
+            </para>
+            <para lang="ja">
+              パスダイアログの縮小見本画像をクリックして他の画像まで曳いて放っ
+              てもパスを転写できます。
+            </para>
+          </tip>
+          <note>
+            <para lang="en">
+              When you copy a path to an image, it is not visible. You have
+              to make it visible in the Path dialog.
+            </para>
+            <para lang="ja">
+              パスを画像に貼り付けた時点ではパスは不可視です。 見えるようにする
+              にはパスダイアログで可視化してください。
+            </para>
+          </note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Paste Path</term>
+        <term lang="ja">パスを貼り付け</term>
+        <listitem>
+          <anchor id="gimp-path-paste"/>
+          <para lang="en">
+            <guilabel>Paste Path</guilabel> creates a new path from the
+            contents of the Path Clipboard, adds it to the list in the
+            Paths dialog, and makes it the active path for the image.  If
+            no path has previously been copied into the clipboard, the
+            menu entry will be insensitive.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスを貼り付け</guimenuitem> はパス
+            用クリップボードの内容から新たなパスを作成し、 パスダイアログの
+            一覧表にそのパスを追加し、 その画像においての活性パスにします。
+            もしまだパス用クリップボードに何も取り込まれていないときは、 この
+            メニューは一切何もしません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Import Path</term>
+        <term lang="ja">パスをインポート...</term>
+        <listitem>
+          <anchor id="gimp-path-import"/>
+          <para lang="en">
+            <guilabel>Import Path</guilabel> creates a new path from an SVG
+            file: it pops up a file chooser dialog that allows you to navigate
+            to the file.  See the <link linkend="gimp-concepts-paths">Paths
+            </link> section for information on SVG files and how they relate
+            to GIMP paths.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスをインポート...</guimenuitem>
+            は<acronym>SVG</acronym>ファイルを基にパスを新たに作成します。 この
+            メニューを呼びだすとファイルを選択するダイアログが開かれますので、
+            ここで読み込まれるファイルを探し出して指定してください。
+            <link linkend="gimp-concepts-paths">パス</link> の節に<acronym>SVG
+            </acronym>ファイル形式の情報と<acronym>GIMP</acronym>パスとの関係に
+            ついて述べていますのでご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Export Path</term>
+        <term lang="ja">パスをエクスポート...</term>
+        <listitem>
+          <para lang="en">
+            <guilabel>Export Path</guilabel> allows you to save a path to
+            a file:  it pops up a file save dialog that allows you to
+            specify the file name and location.  You can later add this
+            path to any GIMP image using the <guilabel>Import
+            Path</guilabel> command.  The format used for saving paths is
+            SVG:  this means that vector-graphics programs such as
+            <application>Sodipodi</application> or
+            <application>Inkscape</application> will also be able to
+            import the paths you save.  See the
+            <link linkend="gimp-concepts-paths">Paths</link> section for more
+            information on SVG files and how they relate to GIMP paths.
+          </para>
+          <para lang="ja">
+            <guimenuitem>パスをエクスポート...</guimenuitem>
+            でパスをファイルに保存できます。 このコマンドを呼びだすとファイルを
+            選択するダイアログが開かれますので、 保存するファイルの名前と保管
+            場所を指定してください。 またこのパスは <guimenuitem>
+            パスをインポート...</guimenuitem> コマンドを
+            使えばあとから<acronym>GIMP</acronym>画像に取り込むことも可能です。
+            パスを保存するファイル形式は<acronym>SVG</acronym>です。 これは
+            つまりこうして保存したパスが <application>Sodipodi</application> や
+            <application>Inkscape</application> のようなベクタ画像プログラムに
+            読み込んで使えることを意味します。
+            <link linkend="gimp-concepts-paths">パス</link> の節に<acronym>SVG
+            </acronym>ファイル形式の情報と<acronym>GIMP</acronym>パスとの関係に
+            ついて述べていますのでご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>
