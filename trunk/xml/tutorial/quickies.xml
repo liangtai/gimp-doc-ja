@@ -5,7 +5,7 @@
   2011-04-02 Michael: rewrote tutorial
   2007-05-11 lexa: initial version
 -->
-<!--2011-04-11-->
+<!--2011-04-14-->
 <sect1 id="gimp-tutorial-quickies">
   <title lang="en">Common Tasks</title>
   <title lang="ja">よくある使い方</title>
@@ -38,6 +38,7 @@
       tasks without having to learn all the intricacies of
       <acronym>GIMP</acronym> and computer graphics in general.
     </para>
+    <para lang="en">
       Hopefully, these tutorials will not only help you with your current
       task, but also get you ready to learn more complex tools and methods
       later, when you have the time and inspiration.
@@ -82,7 +83,7 @@
     </indexterm>
     <indexterm lang="en">
       <primary>Image</primary>
-      <secondary>scale</secondary>
+      <secondary>Scale</secondary>
     </indexterm>
     <indexterm lang="ja">
       <primary sortas="エンシュウ">演習</primary>
@@ -122,8 +123,9 @@
     <para lang="en">
       The other thing to look at in the title-bar is the mode.
       If the mode shows as RGB in the title bar, you are fine.
-      If the mode says Indexed or grayscale,
-      read the <xref linkend="gimp-tutorial-quickie-change-mode"/>.
+      If the mode says <guilabel>Indexed</guilabel> or
+      <guilabel>grayscale</guilabel>, read the
+      <xref linkend="gimp-tutorial-quickie-change-mode"/>.
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym>が開いた画像が、 理にかなった大きさで
@@ -157,10 +159,10 @@
         <guimenu>Image</guimenu>
         <guimenuitem>Scale Image</guimenuitem>
       </menuchoice>
-      to open the Scale Image dialog. You can right click on the image to open
-      the menu, or use the menu along the top of the Image window.
-      Notice that the Scale Image menu item contains three dots,
-      which is a hint that a dialog will be opened.
+      to open the <quote>Scale Image</quote> dialog. You can right click on
+      the image to open the menu, or use the menu along the top of the Image
+      window.  Notice that the <quote>Scale Image</quote> menu item contains
+      three dots, which is a hint that a dialog will be opened.
     </para>
     <para lang="ja">
       <quote>画像の拡大・縮小</quote>ダイアログは画像ウィンドウのメニューより
@@ -287,9 +289,9 @@
         <guimenu>Image</guimenu>
         <guimenuitem>Print Size</guimenuitem>
       </menuchoice>
-      to open the Print Size dialog.  Select a size unit you are comfortable
-      with, such as <quote>inches</quote>.  Set one dimension, and let
-      <acronym>GIMP<.acronym> change the other one proportionally.  Now
+      to open the <quote>Print Size</quote> dialog.  Select a size unit you
+      are comfortable with, such as <quote>inches</quote>.  Set one dimension,
+      and let <acronym>GIMP<.acronym> change the other one proportionally.  Now
       examine the change in resolution.  If the resolution is 300 pixels per
       Inch or over, the printed image's quality will be very high and pixels
       will not be noticeable.  With a resolution of between 200 and 150 ppi,
@@ -338,7 +340,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-          fileref="images/tutorials/quickie-print-size.png" />
+            fileref="images/menus/image/print-size.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -389,26 +391,26 @@
         <guimenu>File</guimenu>
         <guimenuitem>Save As</guimenuitem>
       </menuchoice>
-      to open the Save As dialog.
+      to open the <quote>Save As</quote> dialog.
     </para>
     <para lang="ja">
       お手持ちの画像がディスク容量を圧迫しそうなとき、 画像の寸法を変えずに
-      分量を減省できる方法があります。 最大級の画像圧縮は<acronym>JPG</acronym>
+      分量を減省できる方法があります。 最大級の画像圧縮は<acronym>JPEG</acronym>
       形式を用いれば可能であり、 画像が既にこの形式で保存されていても
-      <acronym>JPG</acronym>形式のもつ順応性の高い圧縮指針によってあとから
+      <acronym>JPEG</acronym>形式のもつ順応性の高い圧縮指針によってあとから
       圧縮率を変えて保存し直せるので大抵はさらに分量を減らせる余地があります。
       ただし画像の容量を減らせば減らすほど元画像の精確さが失われるという
-      交換条件があります。 しかも<acronym>JPG</acronym>形式の画像は
+      交換条件があります。 しかも<acronym>JPEG</acronym>形式の画像は
       保存し直すたびに画像の質が落ちてゆく性質があることも知っておくべきです。
     </para>
     <para lang="ja">
-      したがってお手持ちの画像を<acronym>JPG</acronym>形式のファイルに保存
+      したがってお手持ちの画像を<acronym>JPEG</acronym>形式のファイルに保存
       するときは、 画像ウィンドウのメニューより
       <menuchoice>
         <guimenu>ファイル</guimenu>
         <guimenuitem>名前を付けて保存...</guimenuitem>
       </menuchoice>
-      と進んでください。 保存ダイアログが現れます。
+      と進んでください。 <quote>画像の保存</quote>ダイアログが現れます。
     </para>
     <figure>
       <title lang="en">Save As Dialog</title>
@@ -431,8 +433,8 @@
       <quote>JPEG</quote> is grayed out in the Extensions menu, cancel out of
       everything and step through the 
       <xref linkend="gimp-tutorial-quickie-change-mode"/>.  Once you have done
-      this, click Save. This opens the Save as JPEG dialog that contains the
-      quality control.
+      this, click <guibutton>Save</guibutton>. This opens the <quote>Save
+      as</quote> JPEG dialog that contains the quality control.
     </para>
     <para>
       The <quote>Save as JPEG</quote> dialog uses default values that reduce 
@@ -441,7 +443,7 @@
     </para>
     <para lang="ja">
       ダイアログを開くと名前記入欄には既にファイル名が書かれています。 その
-      形式が<acronym>JPG</acronym>形式でないときは拡張子を削除して代わりに
+      形式が<acronym>JPEG</acronym>形式でないときは拡張子を削除して代わりに
       <filename class="extension">.jpg</filename> をつけるだけで、
       <acronym>GIMP</acronym>はファイル拡張子を見て保存される画像のファイル
       形式を判断します。 利用可能な画像ファイル形式は上図で囲んで強調した拡張子
@@ -450,6 +452,9 @@
       ここで<acronym>GIMP</acronym>が何らかの反論をしたり、 <quote>JPEG</quote>
       が拡張子メニューで灰色無効にされている場合は、 このダイアログを中止して
       <xref linkend="gimp-tutorial-quickie-change-mode"/> に従ってください。
+      そのあと <guibutton>保存</guibutton> ボタンをクリックします。 すると
+      <quote><acronym>JPEG</acronym>形式で保存</quote>ダイアログが出て
+      きますので、 画質の調節はここで行ないます。
     </para>
     <para lang="ja">
       <quote><acronym>JPEG</acronym>形式で保存</quote>ダイアログは画像の見た目
@@ -474,12 +479,13 @@
       Reduce the image <guilabel>Quality</guilabel> to make the image even
       smaller.  Reduced quality degrades the image, so be certain to check
       <quote>Show preview in image window</quote> to visually gauge the
-      degradation.  As shown in the figure above, a Quality setting of 10
-      produces a very poor quality image that uses very little disk space.
-      The figure below shows a more reasonable image.  A quality of 75
-      produces a reasonable image using much less disk space, which will, in
-      turn, load much faster on a web page.  Although the image is degraded,
-      it is acceptable for the intended purpose.
+      degradation.  As shown in the figure above, a
+      <guilabel>Quality</guilabel> setting of 10 produces a very poor quality
+      image that uses very little disk space.  The figure below shows a more
+      reasonable image.  A quality of 75 produces a reasonable image using
+      much less disk space, which will, in turn, load much faster on a web
+      page.  Although the image is somewhat degraded, it is acceptable for the
+      intended purpose.
     </para>
     <para lang="ja">
       さらにもっと画像を軽くするには、 <guilabel>品質</guilabel> スライダを
@@ -490,7 +496,7 @@
       ディスク使用量は非常に小さくなります。 下図はちょうど良い具合の画像を
       示しています。 品質を 75 としてみたところ画質はそこそこなれどディスク
       使用量がもっと小さくなって、 つまりはウェブページでの読み込みが速くなる
-      画像ができます。 画質は落ちましたがこの目的に照らせば妥当でしょう。
+      画像ができます。 画質はやや落ちましたがこの目的に照らせば妥当でしょう。
     </para>
     <figure>
       <title lang="en">Dialog for Image Saving as JPEG</title>
@@ -747,7 +753,7 @@
       <title lang="ja">情報を探る</title>
       <mediaobject>
         <imageobject>
-          <imagedata format="JPG"
+          <imagedata format="PNG"
             fileref="images/tutorials/quickie-info-menu.png"/>
         </imageobject>
       </mediaobject>
@@ -771,12 +777,12 @@
       モードなどさまざまな情報がわかります。
     </para>
     <figure>
-      <title lang="en">Image Properties Dialog</title>
-      <title lang="ja">画像の情報ダイアログ</title>
+      <title lang="en"><quote>Image Properties</quote> Dialog</title>
+      <title lang="ja"><quote>画像の情報</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/tutorials/quickie-info-dialog.png"/>
+            fileref="images/menus/image/properties.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -838,7 +844,7 @@
       every pixel is an additive combination of these three components.
     </para>
     <para lang="en">
-      <emphasis>Indexed</emphasis> - This is the mode usually used when file
+      <emphasis>Indexed</emphasis>- This is the mode usually used when file
       size is of concern, or when you are working with images with few
       colors.  It involves using a fixed number of colours (256 or less) for
       entire image to represent colors.  By default when you change an image
@@ -868,7 +874,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
-            fileref="images/tutorials/quickie-mode-indexed.png"/>
+            fileref="images/dialogs/image-mode-indexed.png"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -1201,7 +1207,7 @@
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
-            fileref="images/tutorials/quickie-background-free-select.png"/>
+            fileref="images/tutorials/quickie-background-free-select.jpg"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -1211,7 +1217,7 @@
       border around the object. Use this when the subject is complex but 
       distinct enough against its current background. Read more about this
       tool here: 
-      <xref linkend="gimp-tool-iscissors"/>
+      <xref linkend="gimp-tool-iscissors"/>.
     </para>
     <para lang="ja">
       <quote>電脳はさみツール</quote>を使うとフリーハンドで描いた輪郭線が
@@ -1225,14 +1231,14 @@
       <title lang="ja">電脳はさみツール</title>
       <mediaobject>
         <imageobject>
-          <imagedata format="JPG"
+          <imagedata format="PNG"
             fileref="images/toolbox/toolbox-scissor.png"/>
         </imageobject>
       </mediaobject>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
-            fileref="images/tutorials/quickie-background-scissors.png"/>
+            fileref="images/tutorials/quickie-background-scissors.jpg"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -1240,12 +1246,12 @@
       The <quote>Foreground Select Tool</quote> lets you mark areas as 
       <quote>Foreground</quote> or <quote>Background</quote> and refines the
       selection automatically.  Read more about this tool here: 
-      <xref linkend="gimp-tool-foreground-select"/>
+      <xref linkend="gimp-tool-foreground-select"/>.
     </para>
     <para lang="ja">
       <quote>前景抽出選択ツール</quote>を使うと大雑把に<quote>前景</quote>と
-      <quote>背景</quote>を塗り分ける墨を捺すだけで自動的に選択範囲を精密に
-      作成します。 詳しい説明は
+      <quote>背景</quote>を塗り分ける墨を捺すだけで自動的に精密な選択範囲が
+      作成できます。 詳しい説明は
       <xref linkend="gimp-tool-foreground-select"/> にあります。
     </para>
     <figure>
@@ -1253,14 +1259,14 @@
       <title lang="ja">前景抽出選択ツール</title>
       <mediaobject>
         <imageobject>
-          <imagedata format="JPG"
+          <imagedata format="PNG"
             fileref="images/toolbox/FG-select-toolbox.png"/>
         </imageobject>
       </mediaobject>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
-           fileref="images/tutorials/quickie-background-foreground-select.png"/>
+           fileref="images/tutorials/quickie-background-foreground-select.jpg"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -1286,27 +1292,21 @@
       <listitem>
         <para lang="en">To fill the background with a single color:</para>
         <para lang="ja">
-          Click the background color picker in the toolbox and select the
+          Click the foreground color swatch (the top left of the two
+          overlapping colored rectangles) in the toolbox and select the
           desired color. Next, use 
-          <menuchoice>
-            <guimenu>Edit</guimenu>
-            <guimenuitem>Clear</guimenuitem>
-          </menuchoice>
-          or hit the <keycap>Del</keycap> key on the keyboard to replace the
-          background with your chosen color.
+          <xref linkend="gimp-tool-bucket-fill"/> to replace the background
+          with your chosen color.
         </para>
         <para lang="ja">背景を単色で塗りつぶすには、</para>
-        <para lang="en"><!--XXX: 原文は要修正-->
-          背景部分の色を
-          <link linkend="gimp-tool-color-picker">スポイトツール</link> で
-          クリックしてから塗りたい色を選択しておきます。 つぎに画像ウィンドウの
-          メニューより
-          <menuchoice>
-            <guimenu>編集</guimenu>
-            <guimenuitem>消去</guimenuitem>
-          </menuchoice>
-          を実行するかキーボードの <keycap>Delete</keycap> キーを押せば背景の
-          色が先ほど選んだ色で置き換わります。
+        <para lang="ja">
+          <link linkend="gimp-toolbox-color-area">ツールボックスの色ボタン
+          </link> (色を示す 2 つの四角形が一部重なっている標識) をクリックして
+          <quote>描画色を変更</quote>ダイアログを呼び出すか、 あるいは
+          <xref linkend="gimp-color-dialog"/> を使って、 塗りたい色を選んで
+          おきます。 そのあと
+          <xref linkend="gimp-tool-bucket-fill"/> を使うと背景は選んでおいた
+          色で置き換わります。
         </para>
         <figure>
           <title lang="en">Result of Adding a Plain Color Background</title>
@@ -1324,8 +1324,8 @@
         <para lang="en">
           Use 
           <menuchoice>
-            <guimenu>Image</guimenu>
-            <guisubmenu>Transform</guisubmenu>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Transparence</guisubmenu>
             <guimenuitem>Add Alpha Channel</guimenuitem>
           </menuchoice>
           to add an alpha channel. Next, use 
