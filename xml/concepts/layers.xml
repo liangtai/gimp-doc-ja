@@ -14,7 +14,7 @@
   2006-02-17: added italian translation by ciampix
   2005-12-26: added german translation and made the file docbook compliant by lexa
 -->
-<!--2010-11-18-->
+<!--2011-05-21-->
 <sect1 id="gimp-concepts-layers">
   <title lang="en">Introduction to Layers</title>
   <title lang="ja">レイヤーのあらまし</title>
@@ -66,7 +66,7 @@
     accessed by right-clicking in the Layers dialog.
   </para>
   <para lang="ja">
-    ronym>GIMP</acronym>の画像はあたかも透明なシートを重ね合わせるようにした
+    <acronym>GIMP</acronym>の画像はあたかも透明なシートを重ね合わせるようにした
     うまい見せ方ができます。 <acronym>GIMP</acronym>の用語ではそれぞれの透明
     シートのことを <emphasis>レイヤー</emphasis> と呼びます。 システムのメモリ
     容量が許せば、 画像に使うレイヤーは根本的に何層にも増やせます。 しかし上級
@@ -84,8 +84,9 @@
     <indexterm>
       <primary sortas="ビョウガタイショウ">描画対象</primary>
     </indexterm>
-    画像は開かれるとそれぞれに <emphasis>活性描画対象</emphasis> をひとつ
-    持ちます。 レイヤーは<quote>描画対象</quote>のひとつですが、 他にも
+    画像は開かれるとそれぞれに <emphasis>活性描画対象</emphasis>
+    (<foreignphrase>active drawable</foreignphrase>) をひとつ持ちます。 
+    レイヤーは<quote>描画対象</quote>のひとつですが、 他にも
     チャンネルやレイヤーマスク、 選択マスクもこれに含まれます。 (基本的には、
     <quote>描画対象</quote>とは描画ツールで書き込めるもの全般を表しています。)
     現在活性化しているレイヤーはレイヤーダイアログで強調表示され、 画像
@@ -95,9 +96,9 @@
     なります。
   </para>
   <para lang="ja">
-    画像ウィンドウ上部のメニューバーに、 <guimenu>レイヤー
-    </guimenu> と書かれたメニューがあります。 主に現在活性化しているレイヤーを
-    処理する様々なコマンドがここから呼びだせます。 同じ目的のメニューが
+    画像ウィンドウ上部のメニューバーに、 <guimenu>レイヤー</guimenu> と書かれた
+    メニューがあります。 主に現在活性化しているレイヤーを処理する様々な
+    コマンドがここから呼びだせます。 同じ目的のメニューが
     レイヤーダイアログにもあります。 こちらはレイヤーダイアログ上を
     <mousebutton>第2ボタン</mousebutton> でクリックすると出てきます。
   </para>
@@ -408,8 +409,14 @@
             有無により決まっています。 6 種類が考えられます。
           </para>
           <itemizedlist>
-            <listitem><para>RGB</para></listitem>
-            <listitem><para>RGBA</para></listitem>
+            <listitem>
+              <para lang="en">RGB</para>
+              <para lang="ja">赤・緑・青 (RGB)</para>
+            </listitem>
+            <listitem>
+              <para lang="en">RGBA</para>
+              <para lang="ja">赤・緑・青・アルファつき (RGB)</para>
+            </listitem>
             <listitem>
               <para lang="en">Gray</para>
               <para lang="ja">グレースケール (Gray)</para>
@@ -608,8 +615,8 @@
             黒と黄の点滅破線で縁取られて表示されます。
           </para>
           <para lang="ja">
-            この境界線に関して気を付けなければならないことは、 その領域外では
-            何も操作できないということです。 何もないところでは作業できません。
+            レイヤーの境界線に気を付けなければならない主な理由は、 領域外では
+            何も操作ができないからです。 何もないところでは作業できません。
             これでは困るときはレイヤーの大きさを変更しても構いません。
             <guimenu>レイヤー</guimenu> メニューの下のほうに
             いくつか関係するコマンドがあります。
