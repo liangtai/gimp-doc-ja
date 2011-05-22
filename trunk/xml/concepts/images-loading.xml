@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2010-11-21-->
+<!--2011-05-21-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -160,8 +160,8 @@
     <para lang="ja">
       整列しているファイルのなかから画像ファイルの項目をクリックすると、 
       ダイアログの右端にプレビュー画と画像の基本的な属性情報が表示されます。 
-      プレビュー画は作成とともにキャッシュされて再利用されるため、 操作後の
-      現状と食い違うプレビュー画を表示することもありえます。 こうした
+      プレビュー画は作成とともにキャッシュに蓄えられて再利用されるため、 
+      操作後の現状と食い違うプレビュー画を表示することもありえます。 こうした
       食い違いになっていそうなときは、 プレビュー区画で <keycap>Ctrl</keycap> 
       キーを押しながらクリックすれば強制的にプレビュー画を更新できます。
     </para>
@@ -331,16 +331,16 @@
       <application>Ghostscript</application>.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>は画像ファイルを読み書きするとき、 <acronym>XCF
-      </acronym>形式を除くあらゆるファイル形式にプラグインを使用しています。
-      このようなプラグインがプログラム用の外部ライブラリを使うこともよく
-      あります。 たとえば<acronym>GIMP</acronym>は 
+      <acronym>GIMP</acronym>は画像ファイルを読み書きするとき、 
+      <acronym>XCF</acronym>形式を除くあらゆるファイル形式にプラグインを
+      使用しています。 このようなプラグインがプログラム用の外部ライブラリを
+      使うこともよくあります。 たとえば<acronym>GIMP</acronym>は 
       <link linkend="glossary-postscript">PostScript</link> を直接にサポート
-      してはいませんが、 Postscript ファイル (ファイルの拡張子は <filename
-      class="extension">.ps</filename> や <filename class="extension">.eps
-      </filename>) を読んだり (書いたり) する機能を、 <application>Ghostscript
-      </application> という強力なフリーソフトウェアプログラムに依拠して実現して
-      います。
+      してはいませんが、 Postscript ファイル (ファイルの拡張子は 
+      <filename class="extension">.ps</filename> や
+      <filename class="extension">.eps</filename>) を読んだり (書いたり) する
+      機能を、 <application>Ghostscript</application> という強力な
+      フリーソフトウェアプログラムに依拠して実現しています。
     </para>
     <simplesect>
       <title lang="en">
@@ -367,8 +367,8 @@
             <xref linkend="bibliography-online-ghostscript"/>.
           </para>
           <para lang="ja">
-            <citetitle>Sourceforge</citetitle> にある <application>
-            Ghostscript</application> プロジェクトのページ
+            <citetitle>Sourceforge</citetitle> にある 
+            <application>Ghostscript</application> プロジェクトのページ
             <xref linkend="bibliography-online-ghostscript"/> に行きます。
           </para>
         </listitem>
@@ -380,8 +380,8 @@
             use only) and go to the download section.
           </para>
           <para lang="ja">
-            <application>gnu-gs</application> パッケージか <application>
-            ghostscript</application> (非商用限定) パッケージの
+            <application>gnu-gs</application> パッケージか 
+            <application>ghostscript</application> (非商用限定) パッケージの
             ダウンロードページに進みます。
           </para>
         </listitem>
@@ -393,8 +393,9 @@
           </para>
           <para lang="ja">
             <productname>Windows</productname> 用のインストールパッケージを
-            ダウンロードしてください。 例えば <filename>gs854w32.exe
-            </filename>、 <filename>gs864w32.exe</filename>、
+            ダウンロードしてください。 例えば 
+            <filename>gs854w32.exe</filename>、
+            <filename>gs864w32.exe</filename>、
             <filename>gs864w64.exe</filename> がダウンロードできます。
           </para>
         </listitem>
@@ -417,13 +418,10 @@
           <para lang="ja">
             <filename>gswin32c.exe</filename> の保管場所までの経路名 (パス) を
             環境変数 <envar>GS_PRG</envar> に代入してください。 例えば
-            <userinput role="html">
-            SET GS_PRG=C:\gs\gs<replaceable>X.YY</replaceable>\bin\gswin32c.exe
-            </userinput>
-            <userinput role="tex">
-            SET GS_PRG=C:\\gs\\gs{\\it X.YY\\/}\\bin\\gswin32c.exe
-            </userinput>
-            とします。
+            <userinput role="html">SET GS_PRG=C:\gs\gs<!--
+            --><replaceable>X.YY</replaceable>\bin\gswin32c.exe</userinput>
+            <userinput role="tex">SET GS_PRG=C:\\gs\\gs{\\it X.YY\\/}<!--
+            -->\\bin\\gswin32c.exe</userinput> とします。
           </para>
         </listitem>
       </itemizedlist>
@@ -437,10 +435,11 @@
       </para>
       <para lang="ja">
         以上で <productname>Postscript</productname> を<acronym>GIMP</acronym>
-        で扱えるようになります。 インストールが終わったあとで <application>
-        Ghostscript</application> のディレクトリを移動してはいけません。 一緒に
-        インストールされたライブラリがレジストリに登録されているためです。
-        (ここで紹介した方法は <ulink url="http://www.kirchgessner.net/">
+        で扱えるようになります。 インストールが終わったあとで 
+        <application>Ghostscript</application> のディレクトリを移動しては
+        いけません。 一緒にインストールされたライブラリがレジストリに
+        登録されているためです。 (ここで紹介した方法は
+        <ulink url="http://www.kirchgessner.net/">
         http://www.kirchgessner.net</ulink> を参考にしました。)
       </para>
     </simplesect>
@@ -461,12 +460,12 @@
     <para lang="ja">
       <acronym>GIMP</acronym>のインストール時かその後で画像ファイルの形式を
       <acronym>GIMP</acronym>に関連づけておけば、 ファイルマネージャ
-      (<productname>Linux</productname> における <application>Nautilus
-      </application> や <application>Dolphin</application>、 <productname>
-      Windows</productname> における <application>WindowsExplorer</application>)
-      を使ってファイルを見回し、 見付けたファイルアイコンをダブルクリックする
-      だけで、 設定が正しくできておれば、 <acronym>GIMP</acronym>がその画像を
-      開きます。
+      (<productname>Linux</productname> における 
+      <application>Nautilus</application> や
+      <application>Dolphin</application>、 <productname>Windows</productname> 
+      における <application>WindowsExplorer</application>) を使ってファイルを
+      見回し、 見付けたファイルアイコンをダブルクリックするだけで、 
+      設定が正しくできておれば、 <acronym>GIMP</acronym>がその画像を開きます。
     </para>
   </sect2>
 
@@ -549,11 +548,12 @@
       <keycombo>
         <keycap>Alt</keycap><keycap>Print&nbsp;Screen</keycap>
       </keycombo>
-      キーを使えば今使っているウィンドウだけ取り込めます。 ただし <keycap>
-      Print&nbsp;Screen</keycap> キーを使った技はどんな環境でも使えるというもの
-      ではなく、 また画像をクリップボードに取り込めるオペレーティングシステム上
-      であっても必ずしも<acronym>GIMP</acronym>がその画像を利用できるとは限り
-      ません。 まずはご自分で試してみてお確かめください。
+      キーを使えば今使っているウィンドウだけ取り込めます。 ただし 
+      <keycap>Print&nbsp;Screen</keycap> キーを使った技はどんな環境でも使える
+      というものではなく、 また画像をクリップボードに取り込める
+      オペレーティングシステム上であっても必ずしも<acronym>GIMP</acronym>が
+      その画像を利用できるとは限りません。 まずはご自分で試してみて
+      お確かめください。
     </para>
   </sect2>
 
@@ -580,10 +580,10 @@
       だけでなく、 画像上で <mousebutton>第2ボタン</mousebutton> クリックすると
       出てくるメニューから <guimenuitem>他で開く...</guimenuitem> に進むと
       現れる<quote>画像を開く</quote>ダイアログで<acronym>GIMP</acronym>を
-      選択して <guibutton>開く</guibutton> ボタンをクリックしても開けます。 また 
-      <application>gThumb</application> で表示されている画像をクリックしたまま
-      <acronym>GIMP</acronym>のツールボックス上にドラッグして放っても開けます。 
-      より詳しくは gThumb のホームページ 
+      選択して <guibutton>開く</guibutton> ボタンをクリックしても開けます。
+      また <application>gThumb</application> で表示されている画像を
+      クリックしたまま<acronym>GIMP</acronym>のツールボックス上にドラッグして
+      放っても開けます。 より詳しくは gThumb のホームページ 
       <xref linkend="bibliography-online-gthumb"/> をご覧ください。
       その他の同様なアプリケーションとして、 <application>GQview</application>
       <xref linkend="bibliography-online-gqview"/> や

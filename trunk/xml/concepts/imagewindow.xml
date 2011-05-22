@@ -14,7 +14,7 @@
   2006-01-11 note added by j.h line 744
   2006-01-06 HdJ: Revised dutch text.
  -->
-<!--2010-11-20-->
+<!--2011-05-21-->
 <sect2 id="gimp-image-window">
   <title lang="en">Image Window</title>
   <title lang="ja">画像ウィンドウ</title>
@@ -81,20 +81,19 @@
       menu.
     </para>
     <para lang="ja">
-      画像ウィンドウは1枚も画像が開かれていなくても画面に在ります。 画像のない
+      画像ウィンドウは 1 枚も画像が開かれていなくても画面に在ります。 画像のない
       画像ウィンドウのタイトルは<quote>GNU Image Manipulating Program</quote>と
       なります。 画像が表示されているウィンドウではタイトルバーに画像の名前と
       画像の特徴を示した情報が 
       <link linkend="gimp-prefs-image-window-title">環境設定</link> ダイアログ
       の<quote>画像ウィンドウのタイトルとステータスバー</quote>のページで設定
-      された通りの形式で表示されます。 どの画像ウィンドウもちょうど1枚の画像を
-      表示しますが、 画像が1枚も開かれていなければ無画像ウィンドウがひとつ
-      開かれます。 1枚の画像は1つもしくは複数の画像ウィンドウで表示できますが、
+      されたとおりの形式で表示されます。 どの画像ウィンドウもちょうど 1 枚の
+      画像を表示しますが、 画像が1枚も開かれていなければ無画像ウィンドウがひとつ
+      開かれます。 1 枚の画像は1つもしくは複数の画像ウィンドウで表示できますが、
       普段からそうする必要はありません。 それでは一般的な画像ウィンドウについて
       その各部分の説明を手短にすすめてゆきましょう。 
       画像ウィンドウの部品のいくつかは画像ウィンドウの 
-      <link linkend="gimp-view-menu">表示</link> 
-      メニューのコマンドで隠せます。
+      <link linkend="gimp-view-menu">表示</link> メニューのコマンドで隠せます。
     </para>
     <listitem>
       <!--1-->
@@ -111,10 +110,10 @@
       <para lang="ja">
         <emphasis>タイトルバー:</emphasis>
         タイトルバーは大抵は画像ウィンドウのてっぺんにあって、 画像の名前と
-        その基本的な情報を表示しています。 タイトルバー自体は<acronym>GIMP
-        </acronym>ではなくウィンドウシステムが提供するものなので、 その外観は
-        オペレーティングシステムやウィンドウマネージャ、 さらにはそのテーマ設定
-        によって異なっています。 タイトルバーに表示される情報の内容は 
+        その基本的な情報を表示しています。 タイトルバー自体は
+        <acronym>GIMP</acronym>ではなくウィンドウシステムが提供するものなので、
+        その外観はオペレーティングシステムやウィンドウマネージャ、 さらにはその
+        テーマ設定によって異なっています。 タイトルバーに表示される情報の内容は 
         <link linkend="gimp-prefs-image-window-title">環境設定</link> 
         ダイアログの<quote>画像ウィンドウのタイトルとステータスバー</quote>の
         ページで調節ができます。
@@ -146,10 +145,11 @@
       </para>
       <para lang="ja">
         <emphasis>メニューバー:</emphasis> タイトルバーの真下にあるのが
-        メニューバーです (隠せます)。 画像ウィンドウのメニューには画像に対して
-        行なうほとんど全ての操作が並んでいます。 この
-        メニューは画像の上を右クリック (<mousebutton>第2ボタン</mousebutton> 
-        クリック)
+        メニューバーです (
+        <link linkend=\"gimp-view-show-menubar\">隠せます</link>)。 画像
+        ウィンドウのメニューには画像に対して行なうほとんどすべての操作が
+        並んでいます。 このメニューは画像の上を右クリック
+        (<mousebutton>第2ボタン</mousebutton> クリック)
         <footnote>
           <para>
             アップルマッキントッシュの単ボタンマウスをお使いの方は
@@ -297,8 +297,8 @@
       <para lang="ja">
         <emphasis>ズームボタン</emphasis> ズームで近づいたり離れたりする方法
         はたくさん用意されていますが、 ズームボタンが最も単純かもしれません。
-        <acronym>GIMP</acronym> 2.6 からは表示倍率が数値入力欄で直接指定
-        できますので非常に精密な伸縮が可能になりました。
+        <application><acronym>GIMP</acronym> 2.6</application> からは表示倍率が
+        数値入力欄で直接指定できますので非常に精密な伸縮が可能になりました。
       </para>
     </listitem>
     <listitem>
@@ -335,8 +335,8 @@
           different from the image file size. For instance, a 69.7Kb .PNG
           image will occupy 246Kb in memory when displayed. Two reasons for
           that. First, image is reconstituted from the compressed .PNG file.
-          Then, <acronym>GIMP</acronym> keeps a copy of the image in memory to be used by the
-          Undo command.
+          Then, <acronym>GIMP</acronym> keeps a copy of the image in memory to
+          be used by the Undo command.
         </para>
         <para lang="ja">
           画像が費やすメモリ量は画像ファイルのサイズとは全く違います。 たとえば
