@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
-"POT-Creation-Date: 2011-05-22 01:28+0900\n"
+"POT-Creation-Date: 2011-03-07 00:04+0900\n"
 "PO-Revision-Date: 2011-05-22 00:15+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -447,7 +447,7 @@ msgstr ""
 msgid "Starting GIMP the first time"
 msgstr "初めて<acronym>GIMP</acronym>を使うとき"
 
-#: src/concepts/setup.xml:17(primary) src/concepts/directories.xml:11(primary)
+#: src/concepts/setup.xml:17(primary)
 msgid "Setup"
 msgstr "導入設営"
 
@@ -1932,7 +1932,6 @@ msgstr ""
 "ただくだけで十分です。"
 
 #: src/concepts/plugins.xml:258(title) src/concepts/intro.xml:134(term)
-#: src/concepts/directories.xml:144(productname)
 msgid "Apple Mac OS X"
 msgstr "Apple Mac OS X"
 
@@ -4737,7 +4736,6 @@ msgstr ""
 "ています。"
 
 #: src/concepts/intro.xml:95(term)
-#: src/concepts/directories.xml:176(productname)
 msgid "Windows XP"
 msgstr "Windows XP / Windows Vista"
 
@@ -7744,230 +7742,6 @@ msgstr ""
 "</guimenuitem> を無効にしていたときは、 画像を選択できるのは画像選択メニュー"
 "だけになります。 もし有効ならば、 画像を直接活性化 (つまり画像ウィンドウのタ"
 "イトルバーをクリック) しても画像を選択できます。"
-
-#: src/concepts/directories.xml:8(title)
-#, fuzzy
-msgid "Files and folders for <acronym>GIMP</acronym>"
-msgstr "<acronym>GIMP</acronym>の基本ウィンドウ群"
-
-#: src/concepts/directories.xml:12(secondary)
-msgid "Directories"
-msgstr ""
-
-#: src/concepts/directories.xml:15(para)
-msgid ""
-"When you install <acronym>GIMP</acronym> on your computer, it stores many "
-"files that include system files (executables and libraries), and bundled "
-"resource items (brushes, patterns, gradients, etc.). You don't have to "
-"manage them on general usage, but it may be important that <acronym>GIMP</"
-"acronym> also places a directory <filename class=\"directory\">.gimp-2.6</"
-"filename> on your <emphasis>personal</emphasis> storage after the first run, "
-"while creating a tree of directories underneath of it where you can add "
-"items, as well as several setting files to record what you customise."
-msgstr ""
-
-#: src/concepts/directories.xml:26(para)
-msgid ""
-"Therefore <acronym>GIMP</acronym> is a multi-platform application, the "
-"actual location of these files depends on what system runs on your computer. "
-"This section also discusses about where it goes on almost popular systems, "
-"including <productname>Apple Mac OS X</productname>, <productname>Microsoft "
-"Windows</productname>, and <productname>GNU</productname>."
-msgstr ""
-
-#: src/concepts/directories.xml:36(title)
-msgid "Overview of personal directory and files"
-msgstr ""
-
-#: src/concepts/directories.xml:37(para)
-msgid ""
-"Almost modern operating systems provide multiple user accounts for easily "
-"keeping user's individual settings and preferences information. "
-"<acronym>GIMP</acronym> uses this feature for creating user's folder on each "
-"personal directory. Any settings are recorded in text files that are named "
-"as <filename><replaceable>*</replaceable>rc</filename>."
-msgstr ""
-
-#: src/concepts/directories.xml:44(para)
-msgid ""
-"If you get brushes, patterns, gradients, palettes, fonts, themes, <link "
-"linkend=\"gimp-plugins-install\">plug-ins</link>, <link linkend=\"install-"
-"script-fu\">script-fus</link>, or modules from somewhere, the subdirectories "
-"under your <filename class=\"directory\">.gimp-2.6</filename> directory "
-"gives the most suitable places to store them respectively. Of course you may "
-"store them at any other place for use by <acronym>GIMP</acronym>, so far as "
-"you register the path where they are installed by using <link linkend=\"gimp-"
-"prefs-folders-data\">Preference</link> Dialog. Incidentially speaking, these "
-"preference information you set is also placed at this directory as a human "
-"readable text file <filename>gimprc</filename>."
-msgstr ""
-
-#: src/concepts/directories.xml:58(para)
-msgid ""
-"Images to display as splash screen should be placed on the subdirectory "
-"<filename class=\"directory\">splashes</filename>. For more detailed "
-"information, see <xref linkend=\"customize-splashscreen\"/>."
-msgstr ""
-
-#: src/concepts/directories.xml:67(title)
-msgid "Overview of system directory and files"
-msgstr ""
-
-#: src/concepts/directories.xml:69(para)
-msgid ""
-"Almost discussion on this section is unnecessary exept setup session or "
-"installation of this on-line manual to <acronym>GIMP</acronym>."
-msgstr ""
-
-#: src/concepts/directories.xml:74(para)
-msgid "* main executable, i.e. <command>gimp-2.6</command> and other commands"
-msgstr ""
-
-#: src/concepts/directories.xml:77(para)
-msgid ""
-"* bundled items plug-ins at <filename class=\"directory\">libexec/gimp/2.2/</"
-"filename> or <filename class=\"directory\">libexec/gimp/2.0/</filename>, "
-"others in <filename class=\"directory\">share/gimp/</filename><filename "
-"class=\"directory\">share/gimp/2.0/</filename> and what????"
-msgstr ""
-
-#: src/concepts/directories.xml:84(para)
-msgid ""
-"* default setting files, tips of recover messed-out personal rc_files "
-"<filename class=\"directory\">etc/gimp/2.2/</filename>"
-msgstr ""
-
-#: src/concepts/directories.xml:88(para)
-msgid ""
-"* destination of GIMP-help :) <filename class=\"directory\">share/gimp/2.0/"
-"help/</filename>"
-msgstr ""
-
-#: src/concepts/directories.xml:92(para)
-msgid ""
-"* catalog files of translation, tips of reducing disk space by removal "
-"<filename>share/locale/<replaceable>&lt;LOCALE&gt;</replaceable>/LC_MESSAGES/"
-"gimp20*.mo</filename>"
-msgstr ""
-
-#: src/concepts/directories.xml:96(para)
-msgid ""
-"* libraries <filename class=\"directory\">lib/</filename> * optionally "
-"headers and api-docs <filename class=\"directory\">include/gimp-2.0/</"
-"filename><filename class=\"directory\">share/doc/gimp/</filename>"
-msgstr ""
-
-#: src/concepts/directories.xml:106(title)
-msgid "Location of directories on almost popular systems"
-msgstr ""
-
-#: src/concepts/directories.xml:107(para)
-msgid ""
-"As usual of almost free softwares, <acronym>GIMP</acronym> source codes come "
-"with autoconf tools which allow to change destination to install system "
-"files and bundled items. This section describes about default settings, as "
-"well as pre-built packages supplied on several popular operating systems."
-msgstr ""
-
-#: src/concepts/directories.xml:115(para)
-msgid "* introduce how to use script to show paths"
-msgstr ""
-
-#: src/concepts/directories.xml:121(term)
-msgid ""
-"<productname>GNU/Linux</productname> or other <productname>UNIX</"
-"productname>-like system"
-msgstr ""
-
-#: src/concepts/directories.xml:126(para)
-msgid ""
-"The personal folder is <filename class=\"directory\">~/.gimp-2.6</filename>, "
-"while <quote>~</quote> represents your <envar>HOMEDIR</envar> that is "
-"defined at the system password file, but usually this path is set in the "
-"form in <filename class=\"directory\">/home/</filename> directory followed "
-"by the user's account id. For more detailed information about definition of "
-"home directory, see online manual of <command>passwd(5)</command> file "
-"format on your system."
-msgstr ""
-
-#: src/concepts/directories.xml:136(para)
-msgid ""
-"* gimpdatadir, gimpplugindir, gimpsysconfdir, gimplocaledir what you can set "
-"at configuration * hier(7)"
-msgstr ""
-
-#: src/concepts/directories.xml:146(para)
-#: src/concepts/directories.xml:178(para)
-#: src/concepts/directories.xml:210(para)
-msgid "blah blah"
-msgstr ""
-
-#: src/concepts/directories.xml:152(productname)
-#, fuzzy
-msgid "Microsoft Windows"
-msgstr "主なウィンドウ"
-
-#: src/concepts/directories.xml:154(para)
-msgid ""
-"<ulink url=\"http://gimp-win.sourceforge.net/\">GIMP for Windows</ulink> "
-"supplies pre-built package of <acronym>GIMP</acronym> with auto-installer. "
-"This installer stores whole system files under the program's folder "
-"<filename role=\"html\" class=\"directory\">C:\\Program&nbsp;Files"
-"\\GIMP-2.0\\</filename><filename role=\"tex\" class=\"directory\">C:\\"
-"\\Program&nbsp;Files\\\\GIMP-2.0\\\\</filename> in default settings."
-msgstr ""
-
-#: src/concepts/directories.xml:164(para)
-msgid ""
-"Beside of <acronym>GIMP</acronym> components and items, this installer may "
-"also place <acronym>GTK+</acronym>, <acronym>BABL</acronym>, and "
-"<acronym>GEGL</acronym> libraries."
-msgstr ""
-
-#: src/concepts/directories.xml:170(para)
-msgid "troubles on multibyte user name caused by gtk2-unicode bug"
-msgstr ""
-
-#: src/concepts/directories.xml:184(productname)
-#, fuzzy
-msgid "Windows Vista"
-msgstr "Windows"
-
-#: src/concepts/directories.xml:186(para)
-msgid ""
-"The personal directory is usually <filename role=\"html\" class=\"directory"
-"\">&gt;C:\\Users\\<replaceable>&lt;your_account&gt;</replaceable>\\."
-"gimp-2.6</filename><filename role=\"tex\" class=\"directory\">C:\\\\\\\\Users"
-"\\\\\\\\{\\\\rm\\\\langle{}your_account\\\\rangle}\\\\\\\\.gimp-2.6</"
-"filename>, while <quote>C:</quote> is the system drive."
-msgstr ""
-
-#: src/concepts/directories.xml:194(para)
-msgid ""
-"If the installer run with default setting, or if you choose the destination "
-"for installing the application to <filename role=\"html\" class=\"directory"
-"\">C:\\Program&nbsp;Files</filename><filename role=\"tex\" class=\"directory"
-"\">C:\\\\Program&nbsp;Files</filename>, the program's folder become "
-"<filename role=\"html\" class=\"directory\">C:\\Program&nbsp;Files"
-"\\GIMP-2.0</filename><filename role=\"tex\" class=\"directory\">C:\\"
-"\\Program&nbsp;Files\\\\GIMP-2.0</filename>."
-msgstr ""
-
-#: src/concepts/directories.xml:208(productname)
-#, fuzzy
-msgid "Windows 7"
-msgstr "Windows"
-
-#: src/concepts/directories.xml:216(application)
-msgid "GIMP portable"
-msgstr ""
-
-#: src/concepts/directories.xml:218(para)
-msgid ""
-"Portableapps.com supplies <acronym>GIMP</acronym> package for install in "
-"<acronym>USB</acronym> memory stick. * Where should I install GIMP help "
-"package?"
-msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
