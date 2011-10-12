@@ -2,7 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 
-<!--2010-09-13-->
+<!--2011-10-12-->
 <sect2 id="plug-in-despeckle">
   <title lang="en">Despeckle</title>
   <title lang="ja">ノイズ除去...</title>
@@ -28,19 +28,22 @@
     <title lang="en">Overview</title>
     <title lang="ja">概観</title>
     <para lang="en">
-      It is used to remove small defects due to dust, or scratches, on a
-      scanned image, and also moire effect on image scanned from a magazine.
-      You ought to select isolated defects before applying this filter, in
-      order to avoid unwanted changes in other areas of your image.
+      This filter is used to remove small defects due to dust, or scratches,
+      on a scanned image, and also moiré effect on image scanned from a
+      magazine.  You should select isolated defects before applying this
+      filter, in order to avoid unwanted changes in other areas of your image.
+      The filter replaces each pixel with the median value of the pixels within
+      the specified radius.
     </para>
     <para lang="ja">
       <guimenuitem>ノイズ除去...</guimenuitem> フィルタは
       スキャナでとり込んだ画像に付いてくるごみやかすり傷などの小さな傷みや、
       スキャナでとり込んだ雑誌の紙面画像にかかる 
       <link linkend="glossary-moire">モアレ</link> 現象を除去するのに使えます。
-      このフィルタを適用する前に予めとり除きたい傷みを選択範囲で囲んで孤立
-      させ、 画像の他の部分にまで思いもよらない変更が起こるのを防いでおいた方が
-      よいでしょう。
+      画像の他の部分にまで思いもよらない変更が起こるのを防ぐため、
+      このフィルタを適用する前にあらかじめとり除きたい傷みを選択範囲で囲んで
+      孤立させておかなくてはいけません。 このフィルタにかかった画素は、
+      定められた半径内にあるすべての画素の中間値で置き換わります。
     </para>
   </sect3>
 
@@ -104,16 +107,15 @@
               <term lang="en"><guilabel>適応的</guilabel></term>
               <listitem>
                 <para lang="en">
-                  Adapts radius to image or selection content (using
-                  Histogram). If this option is checked, radius slider is not
-                  efficient.  It renders a result smoother than with radius
-                  alone.
+                  Adapts the radius to image or selection content by analyzing
+                  the histogram of the region round the target pixel. The
+                  adapted radius will always be equal to or smaller than the
+                  specified radius.
                 </para>
                 <para lang="ja">
-                  画像もしくは選択範囲の内容に最適な半径の値を、 ヒストグラムを
-                  用いながら設定します。 このオプションが有効な場合は 
-                  <guilabel>半径</guilabel> スライダの値が無視されます。
-                  半径を直に単独で設定するよりは滑らかな仕上がりになります。
+                  画像もしくは選択範囲の内容に最適な半径の値を、 対象画素の
+                  周辺のヒストグラムの解析にしたがい設定します。 適応的半径は、
+                  常に指定された半径以下の大きさになります。
                 </para>
               </listitem>
             </varlistentry>
@@ -151,28 +153,28 @@
       <varlistentry>
         <term lang="en">Black level</term>
         <term lang="ja">黒レベル</term>
-        <!-- TODO: check range (-1-255) -->
         <listitem>
           <para lang="en">
-            Removes pixels darker than set value (0-255).
+            Only include pixels brighter than the set value in the histogram
+            (-1-255).
           </para>
           <para lang="ja">
-            ここで設定した値よりも暗い画素から色をとり除きます。 
-            範囲は -1 から 255 です。
+            ヒストグラムでここに指定した値よりも明るい画素だけを含めます。
+            -1 から 255 の範囲で指定します。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">White level</term>
         <term lang="ja">白レベル</term>
-        <!-- TODO: check range (0-256) -->
         <listitem>
           <para lang="en">
-            Removes pixels whiter than set value (0-255).
+            Only include pixels darker than the set value in the histogram
+            (0-256).
           </para>
           <para lang="ja">
-            ここで指定した値よりも明るい画素から色をとり除きます。 
-            範囲は 0 から 256 です。
+            ヒストグラムでここに指定した値よりも明るい画素だけを含めます。
+            0 から 256 の範囲で指定します。
           </para>
         </listitem>
       </varlistentry>
