@@ -8,7 +8,7 @@
   2006-07-31 lexa: applied patch from hans de jonge
   2008-02-08 jpl: relecture et legeres corrections
 -->
-<!--2011-05-20-->
+<!--2012-01-08-->
 <sect1 id="gimp-concepts-plugins">
   <title lang="en">Plugins</title>
   <title lang="ja">プラグイン</title>
@@ -78,10 +78,11 @@
       プラグインは外部プログラムでありながら<acronym>GIMP</acronym>の主幹
       アプリケーションの制御下で動作し、 両者は緊密に相互作用します。 
       ユーザーが[手で]行う画像操作はほとんど何でもプラグインで実行できます。 
-      ちょっとばかりプラグインのコードを書けば、 <acronym>GIMP</acronym>核心の
-      膨大な数の複雑なコードに手をつけることなく、 簡単に機能を<acronym>GIMP
-      </acronym>に追加できるところが強みです。 現に価値あるプラグインの大多数は
-      ほぼ 100 行から 200 行の C 言語ソースだけでできています。
+      ちょっとばかりプラグインのコードを書けば、 <acronym>GIMP</acronym>
+      中枢部の膨大な数の複雑なコードに手をつけることなく、 簡単に機能を
+      <acronym>GIMP</acronym>に追加できるところが強みです。 現に価値ある
+      プラグインの大多数はほぼ 100 行から 200 行の C 言語ソースだけで
+      できています。
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym>には数十個のプラグインが配付版に入っていて、
@@ -197,7 +198,7 @@
       あります。
     </para>
     <para lang="ja">
-      ひとつには通常プラグインは<acronym>GIMP</acronym>の核心部分と比較して
+      ひとつには通常プラグインは<acronym>GIMP</acronym>中枢部と比較して
       頑丈にはできていないといえます。 仮にも<acronym>GIMP</acronym>が異常終了
       するのは非常に深刻な事態です。 ユーザにとっても計り知れない災厄と頭痛が
       襲いかかるでしょう。 一方でプラグインが異常終了した場合にその結果は通常
@@ -214,9 +215,9 @@
           error</quote>.
       </para>
       <para lang="ja">
-        プラグインは分離独立したプログラムなので、 <acronym>GIMP</acronym>本体
-        とは特別な方法で通信を行います。 <acronym>GIMP</acronym>開発者はそれを
-        <quote>talking over a wire</quote> (有線会話) と呼んでいます。
+        プラグインは分離独立したプログラムなので、 <acronym>GIMP</acronym>
+        中枢部とは特別な方法で通信を行います。 <acronym>GIMP</acronym>開発者は
+        それを<quote>talking over a wire</quote> (有線会話) と呼んでいます。
         プラグインが異常終了して通信が途絶えた時には、 <quote>wire read error
         </quote> (通信線解読障害) を知らせるエラーメッセージが出ます。
       </para>
