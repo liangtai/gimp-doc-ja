@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-06-25 Added Spanish translation by AntI
+  2007-05-03 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050916 added by axel.wernicke
+-->
+<!--2010-09-13-->
+<sect2 id="plug-in-softglow">
+  <title lang="en">Softglow</title>
+  <title lang="ja">柔らかい発光...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Artistic</secondary>
+    <tertiary>Softglow</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Softglow</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
+    <tertiary sortas="ヤワラカイハッコウ">柔らかい発光</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ヤワラカイハッコウ">柔らかい発光</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Softglow filter</quote> filter
+      </title>
+      <title lang="ja"><quote>柔らかい発光</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/artistic-taj-softglow.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Softglow</quote> applied</para>
+          <para lang="ja"><quote>柔らかい発光</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en"><!--Like the old trick smearing vaseline on the lens-->
+      This filter lights the image with a soft glow. Softglow produces this
+      effect by making bright areas of the image brighter.
+    </para>
+    <para lang="ja">
+      <guimenuitem>柔らかい発光...</guimenuitem> フィルタは
+      画像をほのかに輝かせます。 <quote>柔らかい発光</quote>は画像の明るい
+      部分をさらに明るくする操作による効果です。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Starting filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this file in the Image menu through:
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Atistic</guisubmenu>
+        <guimenuitem>Softglow</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>芸術的効果</guisubmenu>
+        <guimenuitem>柔らかい発光...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Softglow</quote> filter options</title>
+      <title lang="ja"><quote>柔らかい発光</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/artistic/softglow.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー(P)</term>
+        <listitem>
+          <para lang="en">
+            Your changes are displayed in this preview before being applied
+            to your image.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て判るようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Glow radius</term>
+        <term lang="ja">発光半径</term>
+        <listitem>
+          <para lang="en">
+            The glow radius parameter controls the sharpness of the effect,
+            giving a "vaseline-on-the-lens" effect.
+          </para>
+          <para lang="ja">
+            <guilabel>発光半径</guilabel> スライダは画像の
+            鋭さと<quote>ワセリンを塗ったレンズ</quote>の曇り効果を制御します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Brightness</term>
+        <term lang="ja">明るさ</term>
+        <listitem>
+          <para lang="en">
+            The brightness parameter controls the degree of intensification
+            applied to image highlights.
+          </para>
+          <para lang="ja">
+            <guilabel>明るさ</guilabel> スライダは画像の
+            ハイライト部分に加えられる強化の度合いを制御します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sharpness</term>
+        <term lang="ja">シャープ度</term>
+        <listitem>
+          <para lang="en">
+            The sharpness parameter controls how defined or alternatively
+            diffuse the glow effect should be.
+          </para>
+          <para lang="ja">
+            <guilabel>シャープ度</guilabel> スライダは発光
+            効果の輪郭をどの程度はっきりさせるか、 あるいは逆にどの程度放散
+            させるかを制御します。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

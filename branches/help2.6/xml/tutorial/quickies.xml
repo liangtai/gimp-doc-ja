@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--  section history:
+  2011-04-02 Michael: rewrote tutorial
+  2007-05-11 lexa: initial version
+-->
+<!--2012-01-05-->
+<sect1 id="gimp-tutorial-quickies">
+  <title lang="en">Common Tasks</title>
+  <title lang="ja">よくある使い方</title>
+  <indexterm lang="en">
+    <primary>Tutorial</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="エンシュウ">演習</primary>
+  </indexterm>
+
+  <para lang="en">
+    This tutorial is based on text Copyright &#169; 2004 Carol Spears.
+    The original tutorial can be found in the Internet
+    <xref linkend="bibliography-online-tutorial02"/>.
+  </para>
+  <para lang="ja">
+    この演習は Carol Spears 氏の著作 (著作権 &#xa9; 2004) Tutorial: GIMPLite
+    Quickies の文がもとになっています。 原本はインターネット上で
+    <xref linkend="bibliography-online-tutorial02" />
+    入手できます。
+  </para>
+
+  <sect2>
+    <title lang="en">Intention</title>
+    <title lang="ja">この演習の意図</title>
+    <para lang="en">
+      <acronym>GIMP</acronym> is a powerful image editing program with many
+      options and tools. However, it is also well suited for small tasks. The
+      following tutorials are meant for those who want to achieve these common
+      tasks without having to learn all the intricacies of
+      <acronym>GIMP</acronym> and computer graphics in general.
+    </para>
+    <para lang="en">
+      Hopefully, these tutorials will not only help you with your current
+      task, but also get you ready to learn more complex tools and methods
+      later, when you have the time and inspiration.
+    </para>
+    <para lang="en">
+      All you need to know to start this tutorial, is how to find and open
+      your image. (
+      <menuchoice>
+        <guimenu>File</guimenu>
+        <guimenuitem>Open</guimenuitem>
+      </menuchoice>
+      from the Image window).
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>はたくさんの装備や画材が使える強力な
+      画像編集ソフトです。 でも、 もっと小さな作業をするにもぴったりです。
+      ここでご紹介する演習は、 そういったありふれた作業をするのにわざわざ
+      一般的なコンピュータグラフィックスの知識や<acronym>GIMP</acronym>の
+      込み入ったしくみまで全部勉強しなくても済むようにしてあります。
+    </para>
+    <para lang="ja">
+      うまくいけば、 この演習で今やりたい作業がこなせるようになるだけでなく、
+      そのあとは時間とアイデアをつくせばつくすほどもっと複雑なツールや
+      操作法が身に付くようになります。
+    </para>
+    <para lang="ja">
+      この演習を始める前に、 画像ファイルを選びだしそれを開く方法については
+      ご自身で習得しておいてください。 (画像ウィンドウのメニューで
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guimenuitem>開く...</guimenuitem>
+      </menuchoice>
+      と辿ります。)
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-scale">
+    <title lang="en">Change the Size of an Image for the screen</title>
+    <title lang="ja">画像のサイズを変える (拡大・縮小)</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>Scale</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="カクダイシュクショウ">拡大・縮小</secondary>
+    </indexterm>
+    <para lang="en">
+      You have a huge image, possibly from a digital camera, and you want to
+      resize it so that it will display nicely on a web page, online board or
+      email message. 
+    </para>
+    <para lang="ja">
+      デジタルカメラで撮ったような大きな画像があって、
+      これをウェブページや掲示板に載せたり電子メールに添付するのに
+      最適な大きさにしたいときはどうすればよいでしょう。
+    </para>
+    <figure>
+      <title lang="en">Example Image for Scaling</title>
+      <title lang="ja">縮尺をかけられる例題画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-scale-example.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The first thing that you might notice after opening the image, is that
+      <acronym>GIMP</acronym> opens the image at a logical size for viewing.
+      If your image is very large, like the sample image,
+      <acronym>GIMP</acronym> sets the zoom so that it displays nicely on the
+      screen. The zoom level is shown in the status area at the bottom of the
+      Image widnow.  This does not change the actual image.
+    </para>
+    <para lang="en">
+      The other thing to look at in the title-bar is the mode.
+      If the mode shows as RGB in the title bar, you are fine.
+      If the mode says <guilabel>Indexed</guilabel> or
+      <guilabel>grayscale</guilabel>, read the
+      <xref linkend="gimp-tutorial-quickie-change-mode"/>.
+    </para>
+    <para lang="ja">
+      <acronym>GIMP</acronym>が開いた画像が、 理にかなった大きさで
+      表示されていることにすぐ気付いた人もいるかもしれません。 例題画像の
+      ような本当に大きな画像を開くと画面にうまく合うよう表示倍率を変え
+      て表示されます。 表示倍率は画像ウィンドウのステータスバーの左側に
+      表示されます。
+    </para>
+    <para lang="ja">
+      タイトルバーに表示されるものには他に色空間のモードがあります。 ここが
+      <acronym>RGB</acronym>になっていれば OK です。 <quote>インデックス</quote>
+      もしくは<quote>グレースケール</quote>となっている場合は、 
+      <xref linkend="gimp-tutorial-quickie-change-mode"/> 
+      をお読みください。
+    </para>
+    <figure>
+      <title lang="en">GIMP Used for Image Scaling</title>
+      <title lang="ja">
+        <acronym>GIMP</acronym>で画像の拡大・縮小をしているようす
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-scale-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Use
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guimenuitem>Scale Image</guimenuitem>
+      </menuchoice>
+      to open the <quote>Scale Image</quote> dialog. You can right click on
+      the image to open the menu, or use the menu along the top of the Image
+      window.  Notice that the <quote>Scale Image</quote> menu item contains
+      three dots, which is a hint that a dialog will be opened.
+    </para>
+    <para lang="ja">
+      <quote>画像の拡大・縮小</quote>ダイアログは画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guimenuitem>画像の拡大・縮小...</guimenuitem>
+      </menuchoice>
+      と進むと呼び出せます。 このメニューは画像ウィンドウを 
+      <mousebutton>第2ボタン</mousebutton> でクリックすると呼び出せるほか、 
+      ウィンドウ上部のメニューバーも使えます。 メニュー内の項目のうち
+      その名前が<quote>...</quote>で終わっているものをクリックすると、 
+      ダイアログが現れるようになっています。
+    </para>
+    <figure>
+      <title lang="en">Dialog for Image Scaling in Pixels</title>
+      <title lang="ja">画像をピクセル単位で縮尺しているときのダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-scale-dialog.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The unit of size of the purpose of displaying an image on a screen
+      is the pixel.  You can see the dialog has two sections: one for
+      <guilabel>width</guilabel> and <guilabel>height</guilabel> and another
+      for <guilabel>resolution</guilabel>.  Resolution applies to printing
+      only and has no effect on the image's size ahwhen it is displayed on a
+      monitor or a mobile device.  The reason is that different devices have
+      different pixels sizes and so, an image that displays on one device
+      (such as a smartphone) with a certain physical size, might display on
+      other devices (such as an LCD projector) in another size altogether.
+      For the purpose of displaying an image on a screen, you can ignore the
+      resolution parameter.  For the same reason, do not use any size unit
+      other than the pixel in the height / width fields.
+    </para>
+    <para lang="en">
+      If you know the desired width, put it in the dialog at the top where it
+      says <guilabel>Width</guilabel>. This is shown in the figure above. If
+      you don't have such a number in mind, choose an appropiate width for the
+      desired use. Common screen sizes range between 320 pixels for simpler
+      phones, 1024 pixels for a netbook, 1440 for a wide-screen PC display and
+      1920 pixels for an HD screen. For the purpose of displaying an image
+      on-line, a widht of 600 to 800 pixels offers a good compromise.
+    </para>
+    <para lang="en">
+      When you change one of the iamge's dimensions, <acronym>GIMP</acronym>
+      changes the other dimension proportionally.  To change the two
+      dimensions arbitrarily, the image might become stretched or squashed.
+    </para>
+    <para lang="ja">
+      画面上に画像を表示するときの画像の大きさを表す単位はピクセルです。
+      ダイアログでは <guilabel>幅</guilabel> と <guilabel>高さ</guilabel>
+      のところと <guilabel>解像度</guilabel> の 2 つの部分に分かれているのが
+      見てとれます。 解像度は印刷時にのみ適用される値ですし、 ディスプレイ
+      モニタとかモバイルデバイスで表示するときには意味がありません。 というのも
+      デバイスによって表示できる画素数は異なるうえに、 見た目の寸法ですら
+      デバイスが異なればたとえばスマートフォンと<acronym>LCD</acronym>の
+      プロジェクタでは違って見えるからです。 画面に表示するのが目的なら
+      解像度の値は気にしなくても大丈夫です。 同じ理由から
+      <quote>高さ・幅</quote>の記入欄でピクセル以外の単位を使用しては
+      いけません。
+    </para>
+    <para lang="ja">
+      幅から決めたいときは、 <guilabel>画像サイズ (キャンバスサイズ)</guilabel>
+      のところの <guilabel>幅</guilabel> にその値を入力します。 上の図は
+      作業の様子を描いています。 しかし何ピクセルにすれば良いかわからない
+      ときは目的に合わせてつぎのめやすを参考に決めましょう。 画面の幅は画素数で
+      いうと簡単な携帯電話なら 320 ピクセル前後、 ネットブックなら 1024
+      ピクセル前後、 ワイドスクリーンなパソコンでは 1440 ピクセル前後、
+      そして高解像度スクリーンなら 1920 ピクセル前後がよくある大きさです。
+      オンラインで出すつもりの画像なら 600〜800 ピクセル幅あたりが
+      妥当だといえます。
+    </para>
+    <para lang="ja">
+      画像の縦か横の一方の寸法を変更すれば<acronym>GIMP</acronym>は自動的に
+      もう一方の寸法も同じ割合で変更します。 [<guilabel>幅</guilabel> 欄と
+      <guilabel>高さ</guilabel> 欄を結ぶ鎖アイコンでこの自動化調節機能の
+      無効/有効を切り替えられます。] 形の違う寸法にしたい場合は
+      <xref linkend="gimp-tutorial-quickie-crop"/> をご覧ください。
+      ここで <guilabel>幅</guilabel> と <guilabel>高さ</guilabel> を個別に
+      変更してしまうと画像の中身が伸びたり拉げたりします。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-scale-print">
+    <title lang="en">Change the Size of an Image for print</title>
+    <title lang="ja">印刷用の画像の寸法を変更する</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>scale</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="カクダイシュクショウ">拡大・縮小</secondary>
+    </indexterm>
+    <para lang="en">
+      As discussed before, pixels don't have a set size in the real world.
+      When you set out to print an image on paper, <acronym>GIMP</acronym>
+      needs to know how big each pixels is.  We use a parameter called
+      resolution to set the ratio between pixels and real-world units such
+      as inches.
+    </para>
+    <para lang="en">
+      By default, most images open with the resolution set to 72.  This
+      number was chosen for historical reasons as it was the resolution of
+      screens i the past, and means that when printed, every pixel is 1/72 of
+      an inch wide.  When printing images are taken with modern digital
+      cameras, this produces very large but chunky images with visible pixels.
+      What we want to do is tell <acronym>GIMP</acronym> to print it with the
+      size we have in mind, but not alter the pixel data so as not to lose
+      quality.
+    </para>
+    <para lang="en">
+      To change the print size use
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guimenuitem>Print Size</guimenuitem>
+      </menuchoice>
+      to open the <quote>Print Size</quote> dialog.  Select a size unit you
+      are comfortable with, such as <quote>inches</quote>.  Set one dimension,
+      and let <acronym>GIMP<.acronym> change the other one proportionally.  Now
+      examine the change in resolution.  If the resolution is 300 pixels per
+      Inch or over, the printed image's quality will be very high and pixels
+      will not be noticeable.  With a resolution of between 200 and 150 ppi,
+      pixels will be somewhat noticeable, but the image will be fine as long
+      as its not inspected too closely.  Values lower than 100 are visibly
+      coarse and should only be used for material that is seen from a distance,
+      such as signs or large posters.
+    </para>
+    <para lang="ja">
+      前述のとおりピクセル単位の画素数は実際の寸法を表していません。 
+      <acronym>GIMP</acronym>で紙に印刷するときは各画素の実際の大きさがどの
+      くらいとなるかを<acronym>GIMP</acronym>で設定してやらねばなりません。
+      このときにピクセル (画素) 数とインチのような実寸との比率を表すために
+      使われるのが解像度という値です。
+    </para>
+    <para lang="ja">
+      初期設定だと、 たいていの画像は解像度が 72 ピクセル毎インチで開かれます。
+      72 という数値は歴史的な経緯があり、 かつての画面の解像度に由来するとか、
+      印刷すると 1 画素が 1/72 インチの大きさになっていたというのが理由だ
+      そうです。 最近のデジタルカメラで撮った画像を[この解像度で]印刷すると
+      図体が非常に大きく画素は見分けがつくほどごろごろしている画像に仕上ります。
+      いま一番知りたいことは、 画質を落すおそれのある画素データの改変処理を
+      行なわせず思い通りの大きさに画像を<acronym>GIMP</acronym>で印刷させる
+      ための方法です。
+    </para>
+    <para lang="ja">
+      印刷物の大きさを変更するには画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guimenuitem>印刷サイズ...</guimenuitem>
+      </menuchoice>
+      と辿って<quote>画像印刷解像度の設定</quote>ダイアログを呼び出します。
+      単位はお好みで<quote>ミリメートル</quote>などに替えられます。 [縦か横の]
+      一方の寸法を定めると<acronym>GIMP</acronym>はもう一方も比例して自動的に
+      変更します。 では解像度を変えるとどうなるか見てみましょう。 例えば
+      解像度が 1 インチあたり 300 ピクセル以上であれば印刷物の画質はとても高く
+      画素の粒は見分けがつかないはずです。 200〜150 ppi の解像度だと画素にやや
+      粗さが見えるものの近づいて注視でもしなければ画像には繊細さが
+      まだあるはずです。 100 ppi 未満となると見るからに粗雑な画像になってしまい
+      看板・標識やら大型ポスターのような遠くから見るのを前提にした印刷物でしか
+      使えない仕上りになります。
+    </para>
+    <figure>
+      <title lang="en">Dialog for Setting Print Size</title>
+      <title lang="ja"><quote>画像印刷解像度の設定</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/print-size.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-jpeg">
+    <title lang="en">Compressing Images</title>
+    <title lang="ja">画像の圧縮</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>save</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="ホゾン">保存</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">Example Image for JPEG Saving</title>
+      <title lang="ja"><acronym>JPEG</acronym>で保存するための例題画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-jpeg-example.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      If you have images that take up a large space on disk, you can reduce
+      that space even without changing the image dimensions. The best image
+      compression is achieved by using the <acronym>JPG</acronym> format, but
+      even if the image is already in this format, you can usually still make
+      it take up less space, as the JPG format has an adaptive compression
+      scheme that allows saving in varying levels of compression. The
+      trade-off is that the less space an image takes, the more detail from
+      the original image you lose. You should also be aware that repeated
+      saving in the <acronym>JPG</acronym> format causes more and more image
+      degradation.
+    </para>
+    <para lang="en">
+      To save you image as a JPG file, therefore, use 
+      <menuchoice>
+        <guimenu>File</guimenu>
+        <guimenuitem>Save As</guimenuitem>
+      </menuchoice>
+      to open the <quote>Save As</quote> dialog.
+    </para>
+    <para lang="ja">
+      お手持ちの画像がディスク容量を圧迫しそうなとき、 画像の寸法を変えずに
+      分量を減省できる方法があります。 最大級の画像圧縮は<acronym>JPEG</acronym>
+      形式を用いれば可能であり、 画像が既にこの形式で保存されていても
+      <acronym>JPEG</acronym>形式のもつ順応性の高い圧縮指針によってあとから
+      圧縮率を変えて保存し直せるので大抵はさらに分量を減らせる余地があります。
+      ただし画像の容量を減らせば減らすほど元画像の精確さが失われるという
+      交換条件があります。 しかも<acronym>JPEG</acronym>形式の画像は
+      保存し直すたびに画像の質が落ちてゆく性質があることも知っておくべきです。
+    </para>
+    <para lang="ja">
+      したがってお手持ちの画像を<acronym>JPEG</acronym>形式のファイルに保存
+      するときは、 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guimenuitem>名前を付けて保存...</guimenuitem>
+      </menuchoice>
+      と進んでください。 <quote>画像の保存</quote>ダイアログが現れます。
+    </para>
+    <figure>
+      <title lang="en">Save As Dialog</title>
+      <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+          fileref="images/tutorials/quickie-save-image-dialog-file-type.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>
+      The dialog opens with the file name already typed in the Name box.  If
+      the image is not a <acronym>JPG</acronym> image, delete the existing
+      extension and type JPG instead, and <acronym>GIMP</acronym> will
+      determine the file type from the file extension.  Use the file extension
+      list, circled in the figure above, to see the types supported by 
+      <acronym>GIMP</acronym>.  The supported extensions change depending on
+      your installed libraries.  If <acronym>GIMP</acronym> complains, or if 
+      <quote>JPEG</quote> is grayed out in the Extensions menu, cancel out of
+      everything and step through the 
+      <xref linkend="gimp-tutorial-quickie-change-mode"/>.  Once you have done
+      this, click <guibutton>Save</guibutton>. This opens the <quote>Save
+      as</quote> JPEG dialog that contains the quality control.
+    </para>
+    <para>
+      The <quote>Save as JPEG</quote> dialog uses default values that reduce 
+      size while retaining good visual quality; this is the safest and 
+      quickest thing to do.
+    </para>
+    <para lang="ja">
+      ダイアログを開くと名前記入欄には既にファイル名が書かれています。 その
+      形式が<acronym>JPEG</acronym>形式でないときは拡張子を削除して代わりに
+      <filename class="extension">.jpg</filename> をつけるだけで、
+      <acronym>GIMP</acronym>はファイル拡張子を見て保存される画像のファイル
+      形式を判断します。 利用可能な画像ファイル形式は上図で囲んで強調した拡張子
+      引き出しメニューでわかるようになっています。 サポートされているファイル
+      形式と拡張子はインストールされているライブラリによって異なります。
+      ここで<acronym>GIMP</acronym>が何らかの反論をしたり、 <quote>JPEG</quote>
+      が拡張子メニューで灰色無効にされている場合は、 このダイアログを中止して
+      <xref linkend="gimp-tutorial-quickie-change-mode"/> に従ってください。
+      そのあと <guibutton>保存</guibutton> ボタンをクリックします。 すると
+      <quote><acronym>JPEG</acronym>形式で保存</quote>ダイアログが出て
+      きますので、 画質の調節はここで行ないます。
+    </para>
+    <para lang="ja">
+      <quote><acronym>JPEG</acronym>形式で保存</quote>ダイアログは画像の見た目
+      の美しさを損なわずに容量を減らすのにちょうど良い値を既定値としています。
+      そのまま進むのが最も安全で最も速い方法です。
+    </para>
+    <figure>
+      <title lang="en">
+        <quote>Save as JPEG</quote> dialog with poor quality.
+      </title>
+      <title lang="ja">
+        <quote><acronym>JPEG</acronym>形式で保存する</quote>ダイアログ (低品質)
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-jpeg-dialog.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Reduce the image <guilabel>Quality</guilabel> to make the image even
+      smaller.  Reduced quality degrades the image, so be certain to check
+      <quote>Show preview in image window</quote> to visually gauge the
+      degradation.  As shown in the figure above, a
+      <guilabel>Quality</guilabel> setting of 10 produces a very poor quality
+      image that uses very little disk space.  The figure below shows a more
+      reasonable image.  A quality of 75 produces a reasonable image using
+      much less disk space, which will, in turn, load much faster on a web
+      page.  Although the image is somewhat degraded, it is acceptable for the
+      intended purpose.
+    </para>
+    <para lang="ja">
+      さらにもっと画像を軽くするには、 <guilabel>品質</guilabel> スライダを
+      低い値に下げてください。 ただし品質の低下はすなわち画質の悪化に
+      つながりますので、 画質の変化が目の当たりにできる
+      <guilabel>画像ウィンドウでプレビュー</guilabel> を有効にしてよく注視
+      しましょう。 上図のように品質を 10 にしてみると非常に画質は落ちますが
+      ディスク使用量は非常に小さくなります。 下図はちょうど良い具合の画像を
+      示しています。 品質を 75 としてみたところ画質はそこそこなれどディスク
+      使用量がもっと小さくなって、 つまりはウェブページでの読み込みが速くなる
+      画像ができます。 画質はやや落ちましたがこの目的に照らせば妥当でしょう。
+    </para>
+    <figure>
+      <title lang="en">Dialog for Image Saving as JPEG</title>
+      <title lang="ja">
+        画像を<quote><acronym>JPEG</acronym>形式で保存する</quote>ダイアログ
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-jpeg-dialog2.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Finally, here is a comparison of the same picture with varying degrees
+      of compression:
+    </para>
+    <para lang="ja">
+      最後に同じ画像を使って圧縮率をいろいろに変化させた比較をご覧ください。
+    </para>
+    <figure>
+      <title lang="en">Example for High JPEG Compression</title>
+      <title lang="ja"><acronym>JPEG</acronym>高圧縮の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-jpeg-010.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Quality: 10; Size: 3.4 KiloBytes</para>
+          <para lang="ja">品質: 10; 内容量: 3.4 KiloBytes</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-jpeg-040.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Quality: 40; Size: 9.3 KiloBytes</para>
+          <para lang="ja">品質: 40; 内容量: 9.3 KiloBytes</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Example for Moderate JPEG Compression</title>
+      <title lang="ja">中程度の<acronym>JPEG</acronym>圧縮の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-jpeg-070.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Quality: 70; Size: 15.2 KiloBytes</para>
+          <para lang="ja">品質: 70; 内容量: 15.2 KiloBytes</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-jpeg-100.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Quality: 100; Size: 72.6 KiloBytes</para>
+          <para lang="ja">品質: 100; 内容量: 72.6 KiloBytes</para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-crop">
+    <title lang="en">Crop An Image</title>
+    <title lang="ja">画像を切り抜く</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>crop</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+      </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="キリヌク">切り抜く</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">Example Image for Cropping</title>
+      <title lang="ja">画像切り抜きの例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-crop-example-source.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Source image</para>
+          <para lang="ja">元の画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-crop-example-result.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Image after cropping</para>
+          <para lang="ja">切り抜いた画像</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      There are many reasons to crop an image; for example, fitting an image
+      to fill a frame, removing a portion of the background to emphasize the
+      subject, etc. There are two methos to activate the crop tool.
+      Click the
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="images/toolbox/stock-tool-crop-22.png"/>
+          </imageobject>
+        </inlinemediaobject>
+      </guiicon>
+      button in the Toolbox, or use
+      <menuchoice>
+        <guimenu>Tools</guimenu>
+        <guisubmenu>Transform Tools</guisubmenu>
+        <guimenuitem>Crop</guimenuitem>
+      </menuchoice>
+      in the image window. This will change the cursor and allow you to click
+      and drag a rectangular shape. The button in the toolbox is the easiest
+      way to get to any of the tools. 
+    </para>
+    <para lang="ja">
+      画像を切り抜く理由はたくさんあります。 枠に収まるようにしたり、
+      背景の要らない部分を切り落として被写体をよく見えるようにしたり&hellip;。
+      切り抜きツールの呼びだし方には 2 通りあります。 ツールボックスの 
+      <guiicon>
+        <inlinegraphic
+          fileref="images/toolbox/stock-tool-crop-22.png"/>
+      </guiicon>
+      ボタンをクリックするか、 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>ツール</guimenu>
+        <guisubmenu>変換ツール</guisubmenu>
+        <guimenuitem>切り抜き</guimenuitem>
+      </menuchoice>
+      と進んでください。 するとカーソル形状が変わり、 クリックしてドラッグ
+      することで矩形が現れます。 ツールボックスのボタンを使えば最も簡単に
+      ツールを選べます。
+    </para>
+    <figure>
+      <title lang="en">Select a Region to Crop</title>
+      <title lang="ja">切り抜き範囲を選択</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-crop-step1.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Click on one corner of the desired crop area and drag your mouse to
+      create the crop rectangle.  You don't have to be accurate as you can
+      change the exact shape of the rectangle later.
+    </para>
+    <para lang="ja">
+      切り抜きたい部分を囲む四角な領域の一角をマウスでクリックして対角まで
+      ドラッグすると切り抜き範囲ができます。 切り抜きの最初からきっちり正確に
+      しようと苦心する必要はありません。 すぐさま変更が効きます。
+    </para>
+    <figure>
+      <title lang="en">Dialog for Cropping</title>
+      <title lang="ja">切り抜きツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-crop-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      After completing the click and drag motion, a rectangle with special
+      regions is shown on the canvas.  As the cursor is moved over the
+      different areas of the selected crop area, the cursor changes.
+      You can then drag the rectangle's corners or edges to change the
+      dimensions of the selected area.  As shown in the figure above, as the
+      crop area is resized, the dimensions and ration are shown in the status
+      bar.  See
+      <xref linkend="gimp-tool-crop"/> for more information on cropping in
+      <acronym>GIMP</acronym>.  If you would like cropt the image in a
+      specific aspect ratio, such as as square, make sure the tool options are
+      visible (
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guisubmenu>Dockable Dialogs</guisubmenu>
+        <guimenuitem>Tool Options</guimenuitem>
+      </menuchoice>).
+      In the Tool Options dockable, check the mark next to 
+      <guilabel>Fixed</guilabel> and make sure the drop-down box next to it is 
+      set to <guilabel>Aspect Ratio</guilabel>.  You can now type the desired 
+      aspect ratio on the text box below, such as <quote>1:1</quote>.  You
+      also have controls to change the aspect from landscape to portrait.
+      After you set the aspect ratio, drag one of the corners of the crop
+      rectangle to update it. The rectangle changes to the chosen ratio, and
+      when you drag it should maintain that ratio.
+    </para>
+    <para lang="ja">
+      クリックしてドラッグすると、 キャンバス上に特別な矩形の領域が
+      図示されます。 切り抜き枠の内側や周辺のいろいろなところでマウスを
+      かざすとポインタの姿が変化します。 その各部分をマウスでクリックして
+      ドラッグすれば枠の寸法や位置が変更できます。 上図で示すとおり、 
+      切り抜き枠の大きさを変えるとステータスバーにその寸法が
+      表示されます。 <acronym>GIMP</acronym>の<quote>切り抜き</quote>ツールの
+      使い方についてのより詳しい情報は 
+      <xref linkend="gimp-tool-crop"/> でご覧ください。 もし正方形のような
+      決まった縦横比の四角形に整形したい場合は、 ツールオプション (画像
+      ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+        <guimenuitem>ツールオプション</guimenuitem>
+      </menuchoice>
+      と進むと呼び出せる) が見えるようにしておきましょう。 ドック入りも可能な
+      ツールオプションダイアログの、 <guilabel>値を固定</guilabel> にチェック
+      を入れ引き出しリストで <guimenuitem>縦横比</guimenuitem> を選んで
+      おきます。 そうしたらすぐ下の記入欄で<quote>1:1</quote>というふうに
+      幅と高さの比を決めましょう。 記入欄のすぐとなりのボタンで縦向きか横向きに
+      画像の形を切り替えられます。 縦横比を決めたら切り抜き領域の辺または角の
+      取っ手を動かすとこの縦横比が反映します。 矩形領域の形はこの縦横比に従って
+      変化します。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-info">
+    <title lang="en">Find Info About Your Image</title>
+    <title lang="ja">画像に関する情報を見る</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>information</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="ジョウホウ">情報</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">Finding Info</title>
+      <title lang="ja">情報を探る</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-info-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      When you need to find out information about your image, use
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guimenuitem>Image Properties</guimenuitem>
+      </menuchoice>
+      to open the <quote>Image Properties</quote> dialog, which contains
+      information about the image size, resolution, mode and much more.
+    </para>
+    <para lang="ja">
+      画像についての諸元を調べたいときは 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guimenuitem>画像の情報...</guimenuitem>
+      </menuchoice>
+      と辿りましょう。 するとダイアログが現れ、 画像の画素数や解像度、
+      モードなどさまざまな情報がわかります。
+    </para>
+    <figure>
+      <title lang="en"><quote>Image Properties</quote> Dialog</title>
+      <title lang="ja"><quote>画像の情報</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/properties.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-change-mode">
+    <title lang="en">Change the Mode</title>
+    <title lang="ja">モードを変える</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>change Mode</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="モードヘンコウ">モード変更</secondary>
+    </indexterm>
+    <para lang="en">
+      As with anything else, images come in different kinds and serve
+      different purposes.  Sometimes, a small size is important (for web
+      sites) and at other times, retaining a high colour depth (e.g., a
+      family portrait) is what you want.  <acronym>GIMP</acronym> can handle
+      all of this, and more, primarily by converting between three
+      fundamental modes, as seen in this menu.  In order to switch your image
+      to one of these modes, you open it and follow that menu and click the
+      mode you want.
+    </para>
+    <para lang="ja">
+      他の物もそうですが画像を手に入れる手段や種類はいろいろありますし
+      使いかたも様々です。 時には小さなサイズ (ウェブサイト用)
+      が必要になることもあれば、 一方でハイカラーの色数を確保したいとき 
+      (例えば家族写真用の場合) もあります。 <acronym>GIMP</acronym>はどれでも
+      こなせますが、 さらにこのメニューに見えている 3 つの基本モード間での
+      変換もできます。 画像のモードをどれかに切り替えるときは、
+      画像を開いてからこのメニューでそのモードをクリックすればいいのです。
+    </para>
+    <figure>
+      <title lang="en">Dialog for changing the mode</title>
+      <title lang="ja">モードを変えるメニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-mode-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      <emphasis>RGB</emphasis>- This is the default mode, used for high-
+      quality images, and able to dispaly millions of colors.  This is also
+      the mode for most of your image work including scaling, cropping, and
+      even flipping.  In <acronym>RGB</acronym> mode, each pixel consists of
+      three different components: R-&gt;Red, G-&gt;Green, B-&gt;Blue.  Each of
+      these in turn can have an intensity value of 0-255.  What you see at
+      every pixel is an additive combination of these three components.
+    </para>
+    <para lang="en">
+      <emphasis>Indexed</emphasis>- This is the mode usually used when file
+      size is of concern, or when you are working with images with few
+      colors.  It involves using a fixed number of colours (256 or less) for
+      entire image to represent colors.  By default when you change an image
+      to a palleted image, <acronym>GIMP</acronym> generates an <quote>optimum
+      palette</quote> to best represent your image.
+    </para>
+    <para lang="ja">
+      <emphasis>RGB</emphasis>- 初期設定ではこのモードです。 高品質な
+      カラー画像に向いており、 一千数百万色以上の表現能力があります。 画像の
+      拡大・縮小や切り抜き、 さらには反転など、 作業のほとんどをするための
+      モードでもあります。 <acronym>RGB</acronym>モードではどの画素も 3 つに
+      分解できます。 R-&gt;赤、 G-&gt;緑、 B-&gt;青という意味です。 この成分
+      それぞれに 0〜255 の強度があります。 つまりひとつの画素 (ピクセル) として
+      見えているのは 3 つの要素の合成なのです。
+    </para>
+    <para lang="ja">
+      <emphasis>インデックスつき</emphasis>- このモードはたいていファイルの
+      容量に気をつけている場合か色数の少ない画像で作業しているときに用います。
+      使える色数は 256 以下の一定数に限られており、 そのいずれかの色が
+      各画素の色を表します。 パレットつき画像に変更したとき初期設定では
+      画像を最良に見せる <guilabel>最適パレットを生成</guilabel> が
+      選ばれています。
+    </para>
+    <figure>
+      <title lang="en">Dialog <quote>Change to Indexed Colors</quote></title>
+      <title lang="ja"><quote>インデックスカラー変換</quote>ダイアログ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/dialogs/image-mode-indexed.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      As you might expect, since the information needed to represent the color
+      at each pixel is less, the file size is smaller.  However, sometimes,
+      there are options in the various menus that are greyed-out for no
+      apparent reason.  This usually means that the filter or option cannot be
+      applied when your image is in its current mode.  Changing the mode to
+      <acronym>RGB</acronym>, as outlined above, should solve this issue.  If
+      <acronym>RGB</acronym> mode doesn't work either, perhaps the option
+      you're trying requires your layer to have the ability to be transparent.
+      This can be done just as easily via
+      <menuchoice>
+        <guimenu>Layer</guimenu>
+        <guisubmenu>Transparency</guisubmenu>
+        <guimenuitem>Add Alpha Channel</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      それぞれのピクセルの色を表現するのに必要な情報が少なくなりますから、
+      予想どおりファイルの大きさも随分小さくなります。 ところがどういうわけか、
+      メニューの一部が数カ所灰色無効になっていることがしばしばあります。
+      その理由のほとんどは画像の現在のモードでは適用できないフィルタや
+      オプションだからです。 先段で述べた方法で<acronym>RGB</acronym>にモード
+      変換すればこの問題は解決するはずです。 そうしてもまだできないときは、
+      ひょっとするとそのオプションのためにお使いのレイヤーを透明化可能に
+      しなければならないのかもしれません。
+      <menuchoice>
+        <guimenu>レイヤー</guimenu>
+        <guisubmenu>透明部分</guisubmenu>
+        <guimenuitem>アルファチャンネルを追加</guimenuitem>
+      </menuchoice>
+      と進むだけですから簡単です。
+    </para>
+    <figure>
+      <title lang="en">Add Alpha Channel</title>
+      <title lang="ja">アルファチャンネルを追加</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-mode-alpha.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      <emphasis>Grayscale</emphasis>- Grayscale images have only shades of
+      gray.  This mode has some specific uses and takes less space on the hard
+      drive in some formats, but is not recommended for general use as reading
+      it is not supported by many applications.
+    </para>
+    <para lang="en">
+      There is no need to convert an image to a specific mode before saving it
+      in your favourite format, as <acronym>GIMP</acronym> is smart enough to
+      properly export the image.
+    </para>
+    <para lang="ja">
+      <emphasis>グレースケール</emphasis>- グレースケール画像は灰色濃淡だけで
+      表された画像です。 このモードは特定の用途があり、 ファイル形式によっては
+      ディスクに占める容量が小さくなる画像モードですが、 数多くの
+      アプリケーションで閲覧がサポート外なため一般的な利用にはお勧めできません。
+    </para>
+    <para lang="ja">
+      画像を保存する前にいずれかのモードに変換しておく必要はありません。
+      <acronym>GIMP</acronym>はちゃんとしたファイルのエクスポートも颯爽と
+      こなします。
+    </para>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-flip">
+    <title lang="en">Flip An Image</title>
+    <title lang="ja">画像を裏返したり反転させる</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>Flip</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="キョウゾウハンテン">鏡像反転</secondary>
+    </indexterm>
+    <para lang="en">
+      Use this option when you need the person in the photo looking in the
+      other direction, or you need the top of the image to be the bottom.  Use
+      <menuchoice>
+        <guimenu>Tools</guimenu>
+        <guisubmenu>Transform Tools</guisubmenu>
+        <guimenuitem>Flip</guimenuitem>
+      </menuchoice>, or use the
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="images/toolbox/stock-tool-flip-22.png" />
+          </imageobject>
+        </inlinemediaobject>
+      </guiicon>
+      button on the toolbox.  After selecting the flip tool from the toolbox,
+      click inside the canvas.  Controls in the Tool Options dockable let you
+      switch between Horizontal and Vertical modes.
+    </para>
+    <para lang="ja">
+      写真に写っている人物の向きを変えたいときや、 画像の上部を底にもって
+      ゆきたいときにこのオプションを使います。 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>ツール</guimenu>
+        <guisubmenu>変換ツール</guisubmenu>
+        <guimenuitem>鏡像反転</guimenuitem>
+      </menuchoice>
+      と辿るか、 ツールボックスの
+      <guiicon>
+        <inlinegraphic fileref="images/toolbox/stock-tool-flip-22.png" />
+      </guiicon>
+      ボタンで呼び出してください。 ツールボックスから反転ツールを呼び出したら
+      キャンバス上でクリックします。 ドック入りできるツールオプションダイアログ
+      で調節すれば上下左右を裏返したり入れ替えたりが可能です。
+    </para>
+    <figure>
+      <title lang="en">Dialog <quote>Flip an Image</quote></title>
+      <title lang="ja">メニューより<quote>鏡像反転</quote></title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-flip-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      After selecting the flip tool from the toolbox, click inside the canvas.
+      The tool flips the image horizontally.  Use the options dialog to
+      switch between Horizontal and Vertical.  If it is not already displayed
+      in the dock under the toolbox, double click the toolbox button.  You
+      can also use the <keycap>Ctrl</keycap> key to switch between horizontal
+      and vertical.
+    </para>
+    <para lang="ja">
+      ツールボックスから反転ツールを呼び出したらキャンバス上でクリックします。
+      このツールは画像を縦軸で反転します (左右が入れ替わります)。 
+      ツールオプションダイアログに縦軸か横軸を選ぶところがあります。
+      ツールオプションダイアログがないときはツールボックスでアイコンボタンを
+      クリックすれば出てきます。
+      <keycap>Ctrl</keycap> キーでも水平と垂直に反転の向きを切り替えられます。
+    </para>
+    <para lang="ja">反転の全ての型をこのページに載せました。</para>
+    <figure id="quickie-flip-images">
+      <title lang="en">Example Image to Flip</title>
+      <title lang="ja">鏡像反転の例</title>
+      <informalfigure>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/tutorials/quickie-flip-example-source.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Source image</para>
+            <para lang="ja">元の画像</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/tutorials/quickie-flip-example-horizontal.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Horizontal flipped image</para>
+            <para lang="ja">横軸で反転した画像</para>
+          </caption>
+        </mediaobject>
+      </informalfigure>
+      <informalfigure>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/tutorials/quickie-flip-example-vertical.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Vertical flipped image</para>
+            <para lang="ja">縦軸で反転した画像</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/tutorials/quickie-flip-example-horizontal-and-vertical.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Horizontal and vertical flipped image</para>
+            <para lang="ja">縦軸と横軸それぞれに反転した画像</para>
+          </caption>
+        </mediaobject>
+      </informalfigure>
+    </figure>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-rotate">
+    <title lang="en">Rotate An Image</title>
+    <title lang="ja">画像を回転させる</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Image</primary>
+      <secondary>Rotate</secondary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウ">画像</primary>
+      <secondary sortas="カイテン">回転</secondary>
+    </indexterm>
+    <figure>
+      <title lang="en">Menu for <quote>Rotate An Image</quote></title>
+      <title lang="ja">画像の<quote>回転</quote>メニュー</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-rotate-menu.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Images that are taken with digital cameras sometimes need to be rotated.
+      To do this, use
+      <menuchoice>
+        <guimenu>Image</guimenu>
+        <guisubmenu>Transform</guisubmenu>
+        <guimenuitem>Rotate 90&#176; clockwise</guimenuitem>
+      </menuchoice>
+      (or counter-clockwise).  The image below demonstrate a 90 degrees CCW
+      rotation.
+    </para>
+    <para lang="ja">
+      デジタルカメラで撮った画像の向きを直す必要があるときがたまにあります。
+      その方法は、 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>画像</guimenu>
+        <guisubmenu>変換</guisubmenu>
+        <guimenuitem>時計回りに 90 度回転</guimenuitem>
+      </menuchoice>
+      と (もしくは反時計回りに) 進みましょう。 
+      実演のため <guilabel>反時計回りに 90 度回転</guilabel> も実行しました。
+    </para>
+    <figure>
+      <title lang="en">Example for <quote>Rotate An Image</quote></title>
+      <title lang="ja">画像の<quote>回転</quote>の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-rotate-example-source.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Source Image</para>
+          <para lang="ja">元の画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/tutorials/quickie-rotate-example-90-CCW.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Rotated image 90 degree CCW</para>
+          <para lang="ja">反時計回りに 90 度回転</para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect2>
+
+  <sect2 id="gimp-tutorial-quickie-separate">
+    <title lang="en">Separating an Object From Its Background</title>
+    <title lang="en">被写体を背景から分離</title>
+    <indexterm lang="en">
+      <primary>Tutorial</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="エンシュウ">演習</primary>
+    </indexterm>
+    <figure>
+      <title lang="en">Object with Background</title>
+      <title lang="ja">背景つきの被写体</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-remove-background-source.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Sometimes you need to separate the subject of an image from its
+      background.  You may want to have the subject on a flat color, or keep
+      the background transparent so you can use it on an existing background,
+      or any other thing you have in mind.  To do this, you must first use 
+      <acronym>GIMP</acronym>'s selection tools to draw a selection around
+      your subject. This is not an easy task, and selecting the correct tool
+      is crucial.  You have several tools to accomplish this.
+    </para>
+    <para lang="en">
+      The <quote>Free Select Tool</quote> allows you to draw a border using
+      either freehand or straight lines. Use this when the subject has a
+      relatively simple shape. Read more about this tool here: 
+      <xref linkend="gimp-tool-free-select"/>
+    </para>
+    <para lang="ja">
+      画像の背景を削って被写体だけを取り出したいときがあります。 被写体以外を
+      平板な色に変えたり、 あるいは背景部分を透過させて他の背景に合わせるとか
+      別の画像に組み合わせたりできるようにしたい場合もあるでしょう。 そのため
+      ともかく<acronym>GIMP</acronym>の選択ツールで欲しい部分だけを囲まなくては
+      なりません。 しかしこの作業は容易でなく、 選択に用いるツールをどれに
+      するかも大きな問題です。 数点のツールがここで役にたちます。
+    </para>
+    <para lang="ja">
+      <quote>自由選択 (なげなわ) ツール</quote>を使うとフリーハンドや直線を
+      思いのままにつなげて選択範囲の輪郭が描けます。 被写体の形が比較的単純な
+      場合にお使いください。 詳しい説明は
+      <xref linkend="gimp-tool-free-select"/> にあります。
+    </para>
+    <figure>
+      <title lang="en">Free Select Tool</title>
+      <title lang="ja">自由選択 (なげなわ) ツール</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG" fileref="images/toolbox/toolbox-lasso.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-background-free-select.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The <quote>Intelligent Scissors Select Tool</quote> lets you select a
+      freehand border and uses edge-recognition algorithms to better fit the
+      border around the object. Use this when the subject is complex but 
+      distinct enough against its current background. Read more about this
+      tool here: 
+      <xref linkend="gimp-tool-iscissors"/>.
+    </para>
+    <para lang="ja">
+      <quote>電脳はさみツール</quote>を使うとフリーハンドで描いた輪郭線が
+      さらに輪郭抽出アルゴリズムに基づき被写体と背景の境界にもっと近づきます。
+      被写体の形が複雑な反面その背景が単純なため区切りが十分はっきりしている
+      場合にお使いください。 詳しい説明は
+      <xref linkend="gimp-tool-iscissors"/> にあります。
+    </para>
+    <figure>
+      <title lang="en">Intelligent Scissors Select Tool</title>
+      <title lang="ja">電脳はさみツール</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/toolbox-scissor.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/tutorials/quickie-background-scissors.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The <quote>Foreground Select Tool</quote> lets you mark areas as 
+      <quote>Foreground</quote> or <quote>Background</quote> and refines the
+      selection automatically.  Read more about this tool here: 
+      <xref linkend="gimp-tool-foreground-select"/>.
+    </para>
+    <para lang="ja">
+      <quote>前景抽出選択ツール</quote>を使うと大雑把に<quote>前景</quote>と
+      <quote>背景</quote>を塗り分ける墨を捺すだけで自動的に精密な選択範囲が
+      作成できます。 詳しい説明は
+      <xref linkend="gimp-tool-foreground-select"/> にあります。
+    </para>
+    <figure>
+      <title lang="en">Foreground Select Tool</title>
+      <title lang="ja">前景抽出選択ツール</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/FG-select-toolbox.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+           fileref="images/tutorials/quickie-background-foreground-select.jpg"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Once you have selected your subject successfully, use 
+      <menuchoice>
+        <guimenu>Select</guimenu>
+        <guimenuitem>Invert</guimenuitem>
+      </menuchoice>.
+      Now, instead of the subject, the background is selected.  What you do
+      now depends on what you intended to do with the background.
+    </para>
+    <para lang="ja">
+      うまく被写体だけが選択できたら、 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>選択</guimenu>
+        <guimenuitem>選択範囲を反転</guimenuitem>
+      </menuchoice>
+      を実行します。 これで被写体ではなく背景部分だけが選択されます。 あとは
+      背景部分をどうしたいかによってなすべき操作はこんなにいろいろあります。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">To fill the background with a single color:</para>
+        <para lang="ja">
+          Click the foreground color swatch (the top left of the two
+          overlapping colored rectangles) in the toolbox and select the
+          desired color. Next, use 
+          <xref linkend="gimp-tool-bucket-fill"/> to replace the background
+          with your chosen color.
+        </para>
+        <para lang="ja">背景を単色で塗りつぶすには、</para>
+        <para lang="ja">
+          <link linkend="gimp-toolbox-color-area">ツールボックスの色ボタン
+          </link> (色を示す 2 つの四角形が一部重なっている標識) をクリックして
+          <quote>描画色を変更</quote>ダイアログを呼び出すか、 あるいは
+          <xref linkend="gimp-color-dialog"/> を使って、 塗りたい色を選んで
+          おきます。 そのあと
+          <xref linkend="gimp-tool-bucket-fill"/> を使うと背景は選んでおいた
+          色で置き換わります。
+        </para>
+        <figure>
+          <title lang="en">Result of Adding a Plain Color Background</title>
+          <title lang="ja">平板な色の背景を加えた結果</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/quickie-background-color-result.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">To make a transparent background:</para>
+        <para lang="en">
+          Use 
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Transparence</guisubmenu>
+            <guimenuitem>Add Alpha Channel</guimenuitem>
+          </menuchoice>
+          to add an alpha channel. Next, use 
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Clear</guimenuitem>
+          </menuchoice>
+          or hit the <keycap>Del</keycap> key on the keyboard to remove the
+          background. Please note that only a small subset of file formats
+          support transparent areas. Your best bet is to save your image as
+          PNG.
+        </para>
+        <para lang="ja">透過背景にするには、</para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guisubmenu>透明部分</guisubmenu>
+            <guimenuitem>アルファチャンネルを追加</guimenuitem>
+          </menuchoice>
+          を実行してアルファチャンネルを有効にします。 つづいて同メニューより
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guimenuitem>消去</guimenuitem>
+          </menuchoice>
+          を実行するかキーボードの <keycap>Delete</keycap> キーを押すと、 
+          背景が消去されます。 ただし透過効果のついたままの画像をサポート
+          しているファイル形式はあまり多くありませんのでご注意ください。 
+          保存に向いている形式のなかでは<acronym>PNG</acronym>形式が最高です。
+        </para>
+        <figure>
+          <title lang="en">Result of Adding a Transparent Background</title>
+          <title lang="ja">透過背景をつけた結果</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/tutorials/quickie-background-alpha-result.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          To make a black-and-white background while keeping the subject in
+          color:
+        </para>
+        <para lang="en">
+          Use 
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guimenuitem>Desaturate</guimenuitem>
+          </menuchoice>.
+          In the dialog that opens, cycle between the modes and select the
+          best-looking one, then click OK.
+        </para>
+        <para lang="ja">
+          背景を白黒写真のようにしつつも被写体はそのままの色にするには、
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guimenuitem>脱色</guimenuitem>
+          </menuchoice>
+          と進んで脱色ツールを呼び出します。 現れたダイアログで
+          <guilabel>プレビュー</guilabel> を有効にしたまま 3 つの選択肢を
+          いろいろ試し、 画像ウィンドウを見て最もよさそうな効果を選んだら
+          <guibutton>OK</guibutton> ボタンをクリックしましょう。
+        </para>
+        <figure>
+          <title lang="en">Result of Desaturating the Background</title>
+          <title lang="ja">背景を脱色した結果</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+           fileref="images/tutorials/quickie-background-desaturate-result.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+</sect1>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-02-20 added Spanish translation by manuq
+  2006-04-29 lexa: made docbook compliant
+  2006-02-25 romanofski fixed broken image references
+-->
+<!--2010-11-06-->
+<sect3 id="gimp-channel-mask">
+  <title lang="en">Selection masks</title>
+  <title lang="ja">選択マスク</title>
+  <anchor id="dialogs-selection-masks" xreflabel="Selection masks"/>
+
+  <indexterm lang="en">
+    <primary>Masks</primary>
+    <secondary>Selection mask</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Selection mask</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Masks</primary>
+    <secondary>Channel mask</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Channel</primary>
+    <secondary>Channel mask</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Masks</primary>
+    <secondary>Quick mask</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>マスク</primary>
+    <secondary sortas="センタクマスク">選択マスク</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタク">選択</primary>
+    <secondary sortas="センタクマスク">選択マスク</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>マスク</primary>
+    <secondary>チャンネルマスク</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>チャンネル</primary>
+    <secondary>チャンネルマスク</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>マスク</primary>
+    <secondary>クイックマスク</secondary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">A selection composed out of channels.</title>
+    <title lang="ja">チャンネルから作られた選択範囲</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/dialogs/channel-masks-example.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    Channels can be used to save and restore your selections.
+    In the channel dialog you can see a thumbnail representing the selection.
+    Selection Masks are a graphical way to build selections into a gray level
+    channel where white pixels are selected and black pixels are not selected.
+    Therefore gray pixels are partially selected. You can think of them as
+    feathering the selection, a smooth transition between selected and not
+    selected. This is important to avoid the ugly pixelization effect when you
+    fill the selection or when you erase its content after isolating a subject
+    from background.
+  </para>
+  <para lang="ja">
+    チャンネルは選択範囲を保存して再利用するのにも使えます。 
+    チャンネルダイアログでは選択範囲を図示する縮小画像が見られます。 ここでは
+    白い部分が選択されており黒い部分は選択範囲外を示しています。 選択マスクは
+    選択範囲をそういった描画方法で灰色濃淡のチャンネルに変換するしくみです。 
+    ですから灰色の画素は不完全選択です。 選択範囲の境界線をぼかしたとき
+    選択されたところとされていないところの区切りがなだらかになる様子になぞらえ
+    てもよいでしょう。 選択範囲を塗りつぶしたり画像上の物体を背景から孤立させて
+    消去するときに醜いモザイク処理効果に陥るのを避けるためにも、 このことが重要
+    です。
+  </para>
+
+  <variablelist>
+    <varlistentry>
+      <term lang="en">Creating Selection Masks</term>
+      <term lang="ja">選択マスクの作成</term>
+      <listitem>
+        <para lang="en">
+          There are several ways to initialize a selection mask.
+          <itemizedlist>
+            <listitem>
+              <para>
+                From the image window menu
+                <menuchoice>
+                  <guimenu>Select</guimenu>
+                  <guimenuitem>Save to Channel</guimenuitem>
+                </menuchoice>
+                if there is an active selection.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                In the image window the bottom-left button creates a
+                <link linkend="gimp-qmask">Quick Mask</link>; the content
+                will be initialized with the active selection.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                From the channel dialog, when you click on the
+                <guilabel>New channel</guilabel> button or from the context
+                menu. When created, this Selection mask appears in the
+                Channel dialog, named <quote>Selection maskcopy</quote> with
+                a queuing number. You can change this by using the context
+                menu that you get by right-clicking on the channel.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </para>
+        <para lang="ja">
+          選択マスクを初期化するにはつぎのような方法があります。
+          <itemizedlist>
+            <listitem>
+              <para>
+                活性化させた選択範囲があるなら、 画像ウィンドウのメニューから
+                <menuchoice>
+                  <guimenu>選択</guimenu>
+                  <guimenuitem>チャンネルに保存</guimenuitem>
+                </menuchoice> を実行します。
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                画像ウィンドウの左下にあるボタンで
+                <link linkend="gimp-qmask">クイックマスク</link> を作成します。
+                その内容は活性化していた選択範囲をもとに初期化されます。
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                チャンネルダイアログ上で、
+                <guiicon>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata
+                        fileref="images/dialogs/stock-document-new-16.png"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「新しいチャンネルを画像に追加」</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </guiicon> ボタンをクリックするか脈絡メニューから <guimenuitem>
+                チャンネルを追加...</guimenuitem> と
+                進みます。 作成された選択マスクは<quote>選択マスク コピー
+                </quote>と名付けられて (さらに作成されるチャンネルには番号が
+                振られて) チャンネルダイアログに現れます。 名前の変更は
+                チャンネルの項目上をマウスで <mousebutton>第2ボタン
+                </mousebutton> クリックすると出てくる脈絡メニューの最初の項目を
+                実行するか、 チャンネルの名前をダブルクリックすればできます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <sect4>
+    <title lang="en">Using Selection Masks</title>
+    <title lang="ja">選択マスクを使用</title>
+    <para lang="en">
+      Once the channel is initialized, selected (highlighted in blue), visible
+      (eye-icon in the dialog), and displayed as you want (color and opacity
+      attributes), you can start to work with all the paint tools. The colors
+      used are important. If you paint with some color other than white, grey,
+      or black, the color Value (luminosity) will be used to define a gray
+      (medium, light, or dark). When your mask is painted, you can transform
+      it to a selection by clicking on the
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/dialogs/stock-selection-16.png"/>
+          </imageobject>
+        </inlinemediaobject>
+      </guiicon>
+      button (<link linkend="gimp-channel-selection-replace">Channel to
+      Selection</link>) or from the
+      <link linkend="gimp-channel-menu">context menu</link>.
+    </para>
+    <para lang="en">
+      You can work in selection masks not only with the paint tool but also
+      with other tools. For instance, you can use the selection tools to fill
+      areas uniformly with gradients or patterns. By adding many selection
+      masks in your list you can easily compose very complex selections. One
+      can say that a selection mask is to a selection as a layer is to an
+      image.
+    </para>
+    <para lang="ja">
+      チャンネルは初期化もしくは選択 (一覧表で強調表示) あるいは可視化 (
+      ダイアログの目のアイコン) または表示を任意に (色と不透明度の属性) した
+      あとは、 あらゆる描画ツールで加工を始められます。 特に使う色は重要です。
+      白や灰色や黒以外の色を用いて塗った場合には、 その色の明度がマスクの陰影
+      (中間調や明暗の灰色) を定めるのに使われます。 マスクの描画ができたら、
+      <guiicon>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="images/dialogs/stock-selection-16.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>「チャンネルを選択範囲に置き換える」</phrase>
+          </textobject>
+        </inlinemediaobject>
+      </guiicon>
+      ボタン
+      (<link linkend="gimp-channel-selection-replace">チャンネルを選択範囲に
+      </link>) をクリックするか、 脈絡メニューの
+      <link linkend="gimp-channel-menu">チャンネルを選択範囲に</link>
+      を実行すればそれを選択範囲に変換できます。
+    </para>
+    <para lang="ja">
+      選択マスクの加工に使えるのは描画ツールだけではありません。 例えば一様に
+      グラデーションやパターンで塗りつぶす領域を選択ツールで区切られます。
+      一覧表に選択マスクをたくさん並べ、 それらを組み合わせれば容易に複雑な
+      選択範囲が描けます。 選択マスクの選択範囲に対する関係を画像に対する
+      レイヤーになぞらえて言う人もいます。
+    </para>
+    <caution>
+      <para lang="en">
+        As long as a selection mask is activated you are working in the mask
+        and not in the image. To work in the image you have to deactivate all
+        selection masks. Don't forget also to stop displaying masks in the
+        image by removing the eye icon. Check also that all RGB and Alpha
+        channels are activated and displayed in the image.
+      </para>
+      <para lang="ja">
+        選択マスクを活性化している間は、 画像でなくマスクを加工していることに
+        ご注意ください。 画像上で作業するには選択マスクを全て不活性にする必要が
+        あります。 それから目のアイコンを消してマスクの表示を止めるのを忘れない
+        でください。 もちろん<acronym>RGB</acronym>の各色チャンネル全てを (もし
+        あればアルファチャンネルも) 活性化して画像を表示させましょう。
+      </para>
+    </caution>
+  </sect4>
+</sect3>

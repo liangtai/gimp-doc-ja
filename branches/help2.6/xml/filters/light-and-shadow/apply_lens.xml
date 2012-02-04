@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-06-09 ude: rearranged options ('en')
+  2008-06-02 j.h: replaced "image" with "active layer"
+  2007-12-21 MikaS: updated 'fr'
+  2007-09-25 KoSt: updated ’no’
+  2007-08-24 AntI: added 'es'
+  2007-04-17 KoSt: added 'no'
+  2006-11-28 added "Make Surroundings Transparent" en;fr by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-08-30 de replaced informalfigure by axel.wernicke
+  2005-09-02 de added by axel.wernicke
+-->
+<!--2010-09-13-->
+<sect2 id="plug-in-applylens">
+  <title lang="en">Apply Lens</title>
+  <title lang="ja">レンズ効果...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Light and Shadow</secondary>
+    <tertiary>Apply Lens</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Apply Lens</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary sortas="レンズコウカ">レンズ効果</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="レンズコウカ">レンズ効果</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        The same image, before and after applying lens effect.
+      </title>
+      <title lang="ja">レンズ効果フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/glass-taj-apply-lens.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Apply lens</quote> applied</para>
+          <para lang="ja"><quote>レンズ効果</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      After applying this filter, a part of the active layer is rendered as
+      through a spherical lens.
+    </para>
+    <para lang="ja">
+      <guimenuitem>レンズ効果...</guimenuitem> フィルタは
+      活性レイヤーで球体レンズを通して見るような変形を部分的に加えます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image window menu through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Light and Shadow</guisubmenu>
+        <guimenuitem>Apply Lens</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>照明と投影</guisubmenu>
+        <guimenuitem>レンズ効果...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Apply Lens</quote> filter options</title>
+      <title lang="ja"><quote>レンズ効果</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/light-and-shadow/apply-lens.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            If checked, parameter setting results are interactively displayed
+            in preview. Scroll bars allow you to move around the image.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て判るようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Keep original surroundings</term>
+        <term lang="ja">元画像の周辺部を残す</term>
+        <listitem>
+          <para lang="en">The lens seems to be put on the active layer.</para>
+          <para lang="ja">
+            レンズが活性レイヤー上に置かれたような効果があります。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Set surroundings to background color</term>
+        <term lang="ja">周辺部を背景色にする</term>
+        <listitem>
+          <para lang="en">
+            The part of the active layer outside the lens will have the
+            background color selected in the toolbox.
+          </para>
+          <para lang="ja">
+            活性レイヤーでレンズが及ばなかった部分がツールボックスの色標識で
+            示される背景色で塗りつぶされます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Make surroundings transparent</term>
+        <term lang="ja">周辺部を透明にする</term>
+        <listitem>
+          <para lang="en">
+            The part of the active layer outside the lens will be transparent.
+            This option exists only if the active layer has an alpha channel.
+          </para>
+          <para lang="ja">
+            活性レイヤーでレンズが及ばなかった部分は完全透過します。 この
+            オプションは活性レイヤーにアルファチャンネルがあるときだけ
+            現れます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Lens refraction index</term>
+        <term lang="ja">レンズ屈折度</term>
+        <listitem>
+          <para lang="en">Lens will be more or less convergent (1-100).</para>
+          <para lang="ja">
+            レンズによる収束の程度を設定します。 値は 1.00 から 100.00 の範囲で
+            指定してください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

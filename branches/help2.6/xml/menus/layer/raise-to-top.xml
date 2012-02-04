@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-05-31 Added Spanish translation by AntI
+  2007-02-22 KoSt: added no
+  2005/11/11 split of from layer-stack.xml by axel.wernicke
+-->
+<!--2010-12-07-->
+<sect2 id="gimp-layer-raise-to-top">
+  <title lang="en">Layer to Top</title>
+  <title lang="en">レイヤーを最前面へ</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Stack managing</secondary>
+    <tertiary>Move current layer to the top of stack</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary sortas="カサナリヲカンリ">重なりを管理</secondary>
+    <tertiary sortas="ゲンザイノレイヤーヲカサナリノサイジョウダンニイドウ">
+      現在のレイヤーを重なりの最上段に移動
+    </tertiary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Layer to Top</guimenuitem> command raises the active
+    layer to the top of the layer stack. If the active layer is already at
+    the top or if there is only one layer, this menu entry is insensitive
+    and grayed out. If the active layer is at the bottom of the stack and it
+    does not have an alpha channel, you cannot raise it until you add an
+    alpha channel to it.
+  </para>
+  <para lang="ja">
+    <guimenuitem>レイヤーを最前面へ</guimenuitem> コマンドは現在活性化している
+    レイヤーをレイヤー積み重ねの最上段に移動します。 ただし活性レイヤーが既に
+    最前面に位置していたり、 もともと画像に 1 層しかレイヤーが
+    なかった場合は、 このメニュー項目は灰色無効となって使用できません。 また、 
+    活性レイヤーがレイヤー積み重ねの最背面に位置しておりアルファチャンネルを
+    持たないレイヤーであった場合、 そのレイヤーはアルファチャンネルが
+    追加されるまで上層に移動できません。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guisubmenu>Stack</guisubmenu>
+            <guimenuitem>Layer to Top</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guisubmenu>重なり</guisubmenu>
+            <guimenuitem>レイヤーを最前面へ</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by pressing the <keycap>Shift</keycap> key and clicking on the
+          up-arrow icon at the bottom of the Layers dialog.
+        </para>
+        <para lang="ja">
+          <keycap>Shift</keycap> キーを押しながレイヤーダイアログの上向き矢印
+          アイコンボタンをクリック
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>

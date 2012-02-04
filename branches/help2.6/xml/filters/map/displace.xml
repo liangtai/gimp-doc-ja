@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-14 KoSt: updated no to v2.4
+  2007-09-06 AntI: added 'es'
+  2007-08-19 alex falappa: new sections for 2.4 and torough review
+  2007-08-07 alex falappa: ude's fix to 'it', polar mode
+  2007-07-23 ude: new section and image for displacement details
+  2007-07-04 kost: ude's fix to 'no'
+  2007-07-04 ude: added polar mode for GIMP 2.4 (disabled)
+  2007-07-02 ude: fixed description of displacement calculation
+  2007-05-06 KoSt: added 'no'
+  2006-12-12 lexa: added german translation
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-10-14 ceated by julien hardelin
+-->
+<!--2010-12-09-->
+<sect2 id="plug-in-displace">
+  <title lang="en">Displace</title>
+  <title lang="ja">ずらしマップ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Map</secondary>
+    <tertiary>Displace</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Displace</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>マップ</secondary>
+    <tertiary sortas="ズラシマップ">ずらしマップ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ズラシマップ">ずらしマップ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Displacement examples</title>
+      <title lang="ja"><quote>ずらしマップ</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/map-displace7a.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/map-displace7b.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The displacement map has four grey stripes with values of 210,
+            160, 110, and 60, respectively.
+          </para>
+          <para lang="ja">
+            このずらしマップは明度が 210、 160、 110、 60 の 4 本の
+            灰色帯より成る
+          </para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/map-displace7c.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            X displacement coefficient is 30. Vacated pixels are black. The
+            image areas corresponding to light gray (128) were displaced
+            19 and 8 pixels to the left. The image areas corresponding to dark
+            gray (127) were displaced 4 and 15 pixels to the right.
+          </para>
+          <para lang="ja">
+            <quote>X ずらし</quote>係数は 30。 ずらされる画素は黒。 明るい灰色
+            (128) にあたる画素は 19 ピクセル左と 8 ピクセル左にそれぞれずれた。
+            暗い灰色 (127) にあたる画素は 4 ピクセル右と 15 ピクセル右に
+            それぞれずれた。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter uses a <quote>displace-map</quote>
+      to displace corresponding pixels of the image. This filter displaces
+      the content of the specified drawable (active layer or selection) by
+      the amounts specified in X and Y Displacement multiplied by the
+      intensity of the corresponding pixel in the 'displace map' drawables.
+      <emphasis>
+        Both X and Y displace maps should be gray-scale images and have the
+        same size as the drawable
+      </emphasis>. This filter allows interesting distortion effects.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ずらしマップ...</guimenuitem> フィルタは画像に対応する
+      <quote>ずらしマップ</quote>を用いて画素ごとにずらし方を調節できます。 
+      このフィルタは描画対象 (活性レイヤーや選択範囲) の画素を、 同じ位置の
+      ずらしマップの画素の濃さに <guilabel>X ずらし</guilabel> や 
+      <guilabel>Y ずらし</guilabel> の値を乗算した値に基づいて X 方向と Y 方向
+      にそれぞれ移動させます。 <emphasis>X 方向と Y 方向のいずれのずらし
+      マップも適用を受ける描画対象と同じ寸法でなければなりません。</emphasis> 
+      [このフィルタはずらしマップに選ばれた画像を内部的にグレースケール画像に
+      変換して利用しています。] 面白い変形効果を引き出せるフィルタです。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Map</guisubmenu>
+        <guimenuitem>Displace</guimenuitem>
+      </menuchoice>
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>マップ</guisubmenu>
+        <guimenuitem>ずらしマップ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3 id="plug-in-displace-general-options">
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en">Displace filter options</title>
+      <title lang="ja">ずらしマップフィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/map/displace.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            Uncheck this option if your processor is slow.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て判るようになっています。
+            お使いのコンピュータが処理に時間を多く費すときはプレビューに
+            チェックを入れっぱなしにしないのがコツです。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Displacement Mode</term>
+        <term lang="ja">ずらしモード</term>
+        <listitem>
+          <para lang="en">
+            You can choose working in
+            <link linkend="plug-in-displace-cartesian">Cartesian</link>
+            coordinates, where pixels are displaced in X or Y direction, or
+            working in
+            <link linkend="plug-in-displace-polar">Polar</link> coordinates,
+            where the image is pinched and whirled by displacing pixels in
+            radial or tangent direction.
+          </para>
+          <para lang="en">
+            Please see the next sections for details about these options.
+          </para>
+          <para lang="ja">
+            このフィルタの操作は、 水平方向 X と垂直方向 Y に分けて画素をずらす
+            <link linkend="plug-in-displace-cartesian">直交座標</link> モード
+            と、 角度と正接方向に分けて画素をずらし回転やひねりを加える 
+            <link linkend="plug-in-displace-polar">極座標</link> モードの
+            どちらかを選べます。
+          </para>
+          <para lang="ja">
+            いずれのオプションについても詳しくはこの下の節をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edge Behavior</term>
+        <term lang="ja">縁の処理</term>
+        <listitem>
+          <para lang="en">
+            These options allows you to set displacement behaviour on active
+            layer or selection edges:
+          </para>
+          <para lang="ja">
+            このオプションは活性レイヤーもしくはその選択範囲の境界線付近の画素
+            をずらした跡地をどのように扱うかが指定できます。
+          </para>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Wrap</guilabel></term>
+              <term lang="ja"><guilabel>回り込み</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  With this option, what disappears on one edge reappears on
+                  the opposite edge.
+                </para>
+                <para lang="ja">
+                  この選択肢はずらされてはみ出した画素を反対側の縁で利用します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Smear</guilabel></term>
+              <term lang="ja"><guilabel>ぼかす</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  With this option, pixels vacated by displacement are
+                  replaced with pixels stretched from the adjacent part of the
+                  image.
+                </para>
+                <para lang="ja">
+                  この選択肢は画素が去って空になった領域を
+                  付近の画素の色の延伸で補います。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Black</guilabel></term>
+              <term lang="ja"><guilabel>黒</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  With this option, pixels vacated by displacement are
+                  replaced with black.
+                </para>
+                <para lang="ja">
+                  この選択肢は画素が去って空になった領域を黒く塗りつぶします。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <sect4 id="plug-in-displace-cartesian">
+      <title lang="en">Cartesian Displacement Mode</title>
+      <title lang="ja">直交座標ずらしモード</title>
+      <figure>
+        <title lang="en">Displace filter options (Cartesian)</title>
+        <title lang="ja">ずらしマップフィルタのオプション (直交座標)</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/map/displace-cartesian.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Displacement Mode: Cartesian</para>
+            <para lang="ja">ずらしモードに直交座標を指定</para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        In both modes, direction and amount of displacement depend on the
+        intensity of the corresponding pixel in the displacement map.
+      </para>
+      <para lang="en">
+        The map, that should be a grayscale image, has 256 gray levels
+        (0-255), the (theoretical) average value is 127.5. The filter
+        displaces image pixels corresponding to pixels with values less than
+        127.5 (0 to 127) in map to one direction, corresponding to pixels with
+        values from 128 to 255 to the opposite direction.
+      </para>
+      <para lang="ja">
+        どちらのモードもずらし方向やずらし距離はずらしマップの同じ位置の画素の
+        濃さによって決まります。
+      </para>
+      <para lang="ja">
+        マップ用画像は 256 階調の灰色濃淡 (0-255) グレースケール画像に変換され
+        てから利用され、 階調の (理論的な) 平均値は 127.5 となるはずです。 
+        フィルタは画像上でどの画素もそれと同じ位置のマップ画素が 127.5 より
+        小さい (0-127) 値の場合に所定の方向へ、 逆に同じ位置のマップ画素が 128 
+        から 255 までの間の値ならばその反対側の方向へずらされます。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">X Displacements</term>
+          <term lang="en">Y Displacements</term>
+          <term lang="ja">X ずらし</term>
+          <term lang="ja">Y ずらし</term>
+          <listitem>
+            <para lang="en">
+              If the respective option is activated, image pixels
+              corresponding to pixels from 0 to 127 will be displaced to the
+              right for X, downwards for Y, image pixels corresponding to
+              pixels from 128 to 255 will be displaced to the left for X,
+              upwards for Y.
+            </para>
+            <para lang="en">
+              What you enter in input boxes, directly or by using arrow-head
+              buttons, is not the actual displacement. It's a coefficient used
+              in a
+              <inlineequation>
+                <alt role="latex">
+                  $displacement = (intensity x coefficient)$
+                </alt>
+                <graphic fileref="images/math/displace0.png"
+                  format="PNG"/>
+              </inlineequation>
+              formula, which gives the pixel actual displacement according to
+              the scaled intensity
+              <footnote><para>
+                  Scaled intensity = (intensity - 127.5) / 127.5;
+                  see <xref linkend="plug-in-displace-calculation"/>.
+                </para></footnote>
+              of the corresponding pixel in map, modulated by the coefficient
+              you enter. Introducing intensity into formula is important: this
+              allows progressive displacement by using a gradient map.
+            </para>
+            <para lang="en">
+              This value may be positive or negative. A negative displacement
+              is reverse of a positive one. The value varies in limits equal
+              to the double of image dimensions.
+            </para>
+            <para lang="en">
+              When you click on the drop-down list button, a list appears
+              where you can select a displacement map. To be present in this
+              list, an image must respect two conditions. First, this image
+              must be present on your screen when you call filter. Then, this
+              image must have the same dimensions as the original image. Most
+              often, it will be a duplicate original image, which is
+              transformed to grey scale and modified appropriately, with a
+              gradient. It may be possible to use RGB images, but color
+              luminosity is used making result prevision difficult. Map may be
+              different in horizontal and vertical directions.
+            </para>
+            <para lang="ja">
+              これらのオプションは水平方向 (X) と垂直方向 (Y) のずらしを可能に
+              し、 マップの画素の値が 0 か 127 までなら右方向や下方向に、 128
+              から 255 までなら左方向や上方向に画像の画素を移動させます。
+            </para>
+            <para lang="ja">
+              記入した <guilabel>X ずらし</guilabel> 係数や
+              <guilabel>Y ずらし</guilabel> 係数はそのまま
+              移動距離を示しているのではありません。 移動距離を求める計算式 
+              <inlineequation>
+                <alt role="tex">
+                  $ずれ = (強度 \times 係数)$
+                </alt>
+                <graphic fileref="images/math/displace0.png"
+                  format="PNG"/>
+              </inlineequation>
+              で係数として使われます。 この式の
+              <quote><parameter>強度</parameter></quote>とはマップ上の画素の
+              比例濃度です。
+              <footnote>
+                <para>
+                  比例濃度 = (明度 - 127.5) / 127.5 です。 後述の 
+                  <xref linkend="plug-in-displace-calculation"/> を
+                  ご覧ください。
+                </para>
+              </footnote>
+              この計算式に強度が関わることが大事な点です。 これがあるおかげで、
+              徐々に拡がるずれをグラデーションを使ったマップで表現できるの
+              です。 [強度の値は -1.00 から 1.00 までの範囲で変化しますので、 
+              係数はずれの距離 (ピクセル単位) の最大値ということになります。]
+            </para>
+            <para lang="ja">
+              この係数の値は正にも負にも設定できます。 負のずれは正と方向が逆に
+              なります。 ずれ係数 X の値の範囲は画像の幅のマイナス 2 倍から
+              プラス 2 倍まで、 ずれ係数 Y の値の範囲は画像の高さのマイナス 
+              2 倍からプラス 2 倍までです。
+            </para>
+            <para lang="ja">
+              引き出しリストにはずらしマップに使えるレイヤーが並んでおり、 そこ
+              からひとつを選びます。 レイヤーがここに現れるにはつぎの条件が
+              あります。 まずひとつめは、 このフィルタを呼び出した時点でその
+              レイヤーを含む画像が開かれていなければなりません。 さらにふたつめ
+              は、 ずらしの対象となる画像もしくはその選択範囲と同じ寸法で
+              なければなりません。 これを作るためにずらしの対象となる画像
+              もしくはレイヤーの複製をとってグレースケール化し、 グラデーション
+              などをかけつつ適当に加工してマップにする方法がよく行なわれて
+              います。 マップ画像には<acronym>RGB</acronym>画像も使えますが、 
+              明度だけ利用されるため色があるとかえって結果が見通しづらくなって
+              しまいます。 マップには水平方向と垂直方向にそれぞれ異なる画像を
+              指定できます。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+
+    <sect4 id="plug-in-displace-polar">
+      <title lang="en">Polar Displacement Mode</title>
+      <title lang="ja">極座標ずらしモード</title>
+      <figure>
+        <title lang="en">Displace filter options (Polar)</title>
+        <title lang="ja">ずらしマップフィルタのオプション (極座標)</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/map/displace-polar.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Displacement Mode: Polar</para>
+            <para lang="ja">ずらしモードに極座標を指定</para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">Pinch</term>
+          <term lang="ja">ひねり</term>
+          <listitem>
+            <para lang="en">
+              If this option is activated, the radial coordinates (i.e. the
+              distance to the image's midpoint, the <quote>pole</quote>)
+              of the pixels will be changed. Image pixels corresponding to
+              map pixels from 0 to 127 will be displaced outwards, image
+              pixels corresponding to pixels from 128 to 255 will be displaced
+              towards center.
+            </para>
+            <para lang="en">
+              For the values and the displacement map see above
+              (<quote>X/Y displacement</quote>).
+            </para>
+            <para lang="en">
+              The displacement is independent from the polar distance, all
+              pixels are displaced by the same amount. So the image will not
+              only be stretched or compressed, but also distorted:
+            </para>
+            <para lang="ja">
+              このオプションを有効にすると、 対象画像では画素はレイヤーもしくは
+              その選択範囲の中心までの距離が変化します。 レイヤーの画素は
+              それぞれ同じ位置のマップ上の画素の値が 0 から 127 までの値ならば
+              中心から離れてゆき、 逆にその画素と同じ位置のマップ上の画素の値が
+              128 から 255 までの値ならば対象レイヤーの画素は中心に近づきます。
+            </para>
+            <para lang="ja">
+              ここで設定した値とずらしマップとの関係は前述の
+              <quote>X ずらし, Y ずらし</quote>を参考にしてください。
+            </para>
+            <para lang="ja">
+              ずらしの規模は極点からの距離には関係なく、 どの画素も同程度の移動
+              をします。 つまり画像は伸び縮みをせず歪んでしまうこともあります。
+            </para>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/map-displace-pinch.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Image distortion by Pinch option</para>
+                <para lang="ja">ひねりオプションによる画像のひずみ</para>
+              </caption>
+            </mediaobject>
+            <para lang="en">
+              A 160x120 pixel image, plain white displacement map, and
+              displacement coefficient 20.0: this results in a 20 pixels
+              displacement towards center. This is a horizontal reduction in
+              size by 25%, vertical by 33%, and diagonal by 20%, so the image
+              will be distorted.
+            </para>
+            <para lang="ja">
+              上図は 160&times;120 ピクセルの画像を、 ひねりオプションに真っ白
+              なずらしマップと係数 20.0 を設定した例です。 フィルタを適用した
+              ところ中央に向かって 20 ピクセルのずれとなりました。 しかしこの
+              ずれは水平方向では 25%、 水平方向では 33%、 対角線方向では 20% と
+              まちまちなため画像にひずみが生まれます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">Whirl</term>
+          <term lang="ja">回転</term>
+          <listitem>
+            <para lang="en">
+              If this option is activated, the angular coordinates of the
+              image pixels will be <quote>displaced</quote> by a map pixel
+              dependent amount. For a plain displacement map, the image will
+              be rotated, otherwise it will be whirled.
+            </para>
+            <para lang="en">
+              Image pixels corresponding to pixels from 0 to 127 in the map
+              will be displaced counterclockwise, image pixels corresponding
+              to pixels from 128 to 255 will be displaced clockwise.
+            </para>
+            <para lang="en">
+              For the values and the displacement map see above.
+            </para>
+            <para lang="ja">
+              このオプションを有効にするとレイヤーもしくはその選択範囲の画素の
+              レイヤー中央からの方角が、 その同じ位置のマップ上の画素の値の
+              大きさに従ってずれます。 平坦な濃度のずらしマップなら画像が丸ごと
+              回転しますが、 マップに多様な濃度があれば画像は渦を巻きます。
+            </para>
+            <para lang="ja">
+              対象画像のある画素はその同じ位置のずらしマップの濃度が 0 から 127
+              までの値の場合は反時計回りに回転し、 位置の同じずらしマップの画素
+              の濃度が 128 から 255 までの値ならば時計回りに回転します。
+            </para>
+            <para lang="ja">
+              係数とずらしマップについては上記をご覧ください。
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <note>
+        <para lang="en">
+          For a plain, non neutral map, if displace mode <quote>Polar</quote>
+          is enabled, this filter works like
+          <link linkend="plug-in-whirl-pinch">Whirl and Pinch</link>.
+        </para>
+        <para lang="ja">
+          中間濃度以外の平坦なマップを用いて<quote>極座標</quote>ずらしモードで
+          このフィルタを適用すると結果的に 
+          <link linkend="plug-in-whirl-pinch">グルグルひねる</link> 変形
+          フィルタと同じような効果が得られます。
+        </para>
+      </note>
+    </sect4>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Using gradient to bend a text</title>
+    <title lang="ja">グラデーションを使ったテキストのくねらせ方</title>
+    <para lang="en">Follow following steps:</para>
+    <para lang="ja">つぎの手順を踏んでください。</para>
+    <procedure>
+      <step>
+        <para lang="en">Start with opening your image.</para>
+        <para lang="ja">加工したい画像をまず開いてください。</para>
+      </step>
+      <step>
+        <para lang="en">
+          Duplicate this image. Activate this duplicate and make it
+          gray-scaled
+          (<menuchoice>
+            <guimenu>Image</guimenu>
+            <guisubmenu>Mode</guisubmenu>
+            <guimenuitem>GrayScale</guimenuitem>
+          </menuchoice>).
+          Fill it with the wanted gradient. This image will be your
+          <emphasis>Displacement map</emphasis>, with the dimensions of
+          original image.
+        </para>
+        <para lang="ja">
+          その画像もしくはレイヤーの複製を作ります。 複製側を活性化して
+          (画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>画像</guimenu>
+            <guisubmenu>モード</guisubmenu>
+            <guimenuitem>グレースケール</guimenuitem>
+          </menuchoice> で)
+          グレースケール化します。 そこにお好みのグラデーションをつけます。
+          これが対象画像と寸法が同じ <emphasis>ずらしマップ</emphasis> と
+          なります。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/filters/examples/2zinnias-c.png"
+              format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </step>
+      <step>
+        <para lang="en">
+          Activate original image. Create a <emphasis>Text Layer</emphasis>
+          with your text. Set layer to image size: right-click on the layer
+          in layer dialog and, in the pop-menu, click on <quote>Layer to
+          image size</quote>. Note that letters in text layer lie on a
+          transparent background; now this filter doesn't displace
+          transparent pixels. Only letters will be displaced.
+        </para>
+        <para lang="ja">
+          対象画像もしくはレイヤーを活性化します。 そこに何かテキストを貼って 
+          <emphasis>テキストレイヤー</emphasis> として加えます。 そのレイヤーを
+          画像と同じ大きさにします。 やり方は、 画像ウィンドウのメニューの
+          <guimenu>画像</guimenu> メニューからもしくはレイヤーダイアログの
+          脈絡メニューを呼び出して 
+          <guimenuitem>レイヤーをキャンバスに合わせる</guimenuitem> 
+          コマンドを実行します。 ちなみにテキストレイヤーは文字と透明な背景で
+          できており、 フィルタは完全透過ピクセルを移動しないため文字の画素
+          だけがずらせます。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/filters/examples/2zinnias-i.png"/>
+          </imageobject>
+        </mediaobject>
+      </step>
+      <step>
+        <para lang="en">
+          Activate the text layer. Open the Displace filter window. Set
+          parameters, particularly the displacement coefficient, according to
+          the result in Preview. Click <guilabel>OK</guilabel>.
+        </para>
+        <para lang="ja">
+          テキストレイヤーを活性化させます。 ずらしマップフィルタを呼び出し、
+          プレビュー画面を参考にしながらパラメータ、 とりわけ係数の調節を行い
+          ます。 <guibutton>OK</guibutton> ボタンをクリックして実行です。
+        </para>
+      </step>
+    </procedure>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/filters/examples/map-displace5.png"/>
+      </imageobject>
+    </mediaobject>
+    <para lang="en">This method also applies to standard layers:</para>
+    <para lang="ja">
+      この方法はテキストレイヤーに限らずどんなレイヤーにも適用できます。
+    </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/filters/examples/map-displace6.png"/>
+      </imageobject>
+    </mediaobject>
+    <tip>
+      <para lang="en">
+        To get the wanted gradient, first draw a black to white gradient.
+        Then use the <link linkend="gimp-tool-curves">Curves</link> tool to
+        modify the gradient curve.
+      </para>
+      <para lang="ja">
+        グラデーションを望みどおりに描くには先に黒から白へのグラデーションを
+        描いておき、 
+        <link linkend="gimp-tool-curves">トーンカーブツール</link> を使って
+        グラデーション曲線を描くとよいでしょう。
+      </para>
+    </tip>
+  </sect3>
+
+  <sect3 id="plug-in-displace-calculation">
+    <title lang="en">Displacement Calculation</title>
+    <title lang="ja">ずれの算出</title>
+    <para lang="en">
+      The following section will show you how to calculate the amount of
+      displacement, if you are interested in these details. If you don't want
+      to know it, you can safely omit this section.
+    </para>
+    <para lang="en">
+      The overview example showed the X displacement using a coefficient of
+      30.0: 19, 8, 4, or 15 pixels, depending on the grey level of the
+      displacement map's color.
+    </para>
+    <para lang="en">Why just these amounts? That's easy:</para>
+    <para lang="ja">
+      この節ではずれの規模の算出について詳しく知りたい方を対象にそのしくみに
+      ついて解説しています。 ご興味のない方は無視してくださっても問題
+      ありません。
+    </para>
+    <para lang="ja">
+      つぎの概観例では X のずれ係数を 30.0 とした結果、 ずらしマップの灰色濃淡
+      に従い右に 19 ピクセルか 8 ピクセル、 左に 4 ピクセルか 15 ピクセル
+      画素が移動した様子を示しています。
+    </para>
+    <para lang="ja">
+      移動距離はどのように算出されるのでしょう。 これは意外と簡単です。
+    </para>
+    <para>
+      <informalequation>
+        <alt role="tex">$$30.0 \times {I - 127.5\over127.5} = D$$</alt>
+        <graphic fileref="images/math/displace1.png" format="PNG"/>
+      </informalequation>
+    </para>
+    <para>
+      <informalequation>
+        <alt role="tex">$$30.0 \times {210 - 127.5\over127.5} = 19$$</alt>
+        <graphic fileref="images/math/displace2.png" format="PNG"/>
+      </informalequation>
+    </para>
+    <para>
+      <informalequation>
+        <alt role="tex">$$30.0 \times {160 - 127.5\over127.5} = 8$$</alt>
+        <graphic fileref="images/math/displace3.png" format="PNG"/>
+      </informalequation>
+    </para>
+    <para>
+      <informalequation>
+        <alt role="tex">$$30.0 \times {110 - 127.5\over127.5} = -4$$</alt>
+        <graphic fileref="images/math/displace4.png" format="PNG"/>
+      </informalequation>
+    </para>
+    <para>
+      <informalequation>
+        <alt role="tex">$$30.0 \times {60 - 127.5\over127.5} = -15$$</alt>
+        <graphic fileref="images/math/displace5.png" format="PNG"/>
+      </informalequation>
+    </para>
+    <para lang="en">
+      If you check these equations, you will notice that the values they give
+      are not exactly the results we retained in the example
+      (using non-integers, that's not surprising). So, were the results
+      rounded to the nearest integer and then the pixels were
+      displaced by a whole-numbered amount? No. Every pixel is displaced
+      exactly by the calculated amount; a <quote>displacement by a fractional
+      amount</quote> is realized by interpolation. A closer look at the
+      example image will show it:
+    </para>
+    <para lang="ja">
+      どの等式も得られた値が例で見て知っている結果とまったく同じにはなって
+      いません。 (整数以外の値も使っていますが大したことではありません。) それ
+      ではここで得られた値は整数値に近似されて画素はきりのいい数だけ移動すると
+      いうことなのでしょうか。 答えはいいえです。 どの画素も小数点以下を含め
+      計算どおりに移動されます。 <quote>分数的なずらし</quote>は補間を使って
+      実施されます。 つぎの近影はその様子を表しています。
+    </para>
+    <figure>
+      <title lang="en">A closer look at the displacement example</title>
+      <title lang="ja">ずらした例の近影</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/map-displace8.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">A small area zoomed in by 800 percent.</para>
+          <para lang="ja">一部だけ 800% の倍率で表示</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The displacement causes small (one pixel wide) areas of intermediate
+      colors at the edges of plain color areas. E.g., the black area (zoomed
+      in image) is caused by a displacement of -4.12, so the intermediate
+      color is 12% black and 88% gold.
+    </para>
+    <para lang="en">
+      So if you select a displacement coefficient of 30.01 instead of 30.00,
+      you will indeed get a different image, although you won't see the
+      difference, of course.
+    </para>
+    <para lang="ja">
+      単色の領域をずらすとその境界線付近で細い (1 ピクセル幅の) 中間色領域が
+      できます。 上の拡大図では黒い領域は -4.12 ピクセル移動したため中間色は
+      黒が 12% と金が 88% の配分になります。
+    </para>
+    <para lang="ja">
+      たとえばもし X ずらし係数を  30.00 ではなく 30.01 と設定したとしたら、 
+      得られる結果は異なるはずですが、 もちろんその違いを見分けるのは難しい
+      でしょう。
+    </para>
+  </sect3>
+</sect2>

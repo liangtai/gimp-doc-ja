@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-08-06 prokoudine: improved RU translation, added a localized screenshot
+  2007-04-09 KoSt: added 'no'
+  2005-12-08 <simplesect> replaced by <sect3> by lexa
+  2005-09-30 de replaced informalfigure by axel.wernicke
+  2005-08-26 de added by axel.wernicke
+-->
+<!--2010-12-10-->
+<sect2 id="plug-in-randomize-pick">
+  <title lang="en">Pick</title>
+  <title lang="ja">つまむ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Noise</secondary>
+    <tertiary>Pick</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Pick</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>ノイズ</secondary>
+    <tertiary sortas="ツマム">つまむ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ツマム">つまむ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example of applying the <quote>Pick</quote> filter
+      </title>
+      <title lang="ja"><quote>つまむ</quote>フィルタの適用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/noise-taj-pick.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Pick</quote> applied</para>
+          <para lang="ja"><quote>つまむ</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The Pick filter replaces each affected pixel by a pixel value randomly
+      chosen from its eight neighbours and itself (from a 3×3 square the pixel
+      is center of). All or only some pixels in an active layer or selection
+      are affected, the percentage of affected pixels is determined by the
+      <guilabel>Randomization (%)</guilabel> option.
+    </para>
+    <para lang="ja">
+      <guimenuitem>つまむ...</guimenuitem> フィルタは対象となる画素の周囲 
+      3&times;3 ピクセルの範囲内で自身を含む 9 個の画素から無作為にどれか
+      ひとつを選んでその値で自身の値を置き換えます。 このような処理は
+      活性レイヤーもしくはその選択範囲のすべての画素に及ぼすことができるほか、 
+      <guilabel>乱数度 (%)</guilabel> オプションにより
+      対象となる画素を減らして元画像の画素をある程度残すこともできます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Noise</guisubmenu>
+        <guimenuitem>Pick</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ノイズ</guisubmenu>
+        <guimenuitem>つまむ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Pick</quote> filter options</title>
+      <title lang="ja"><quote>つまむ</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG" fileref="images/filters/noise/pick.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Random seed</term>
+        <term lang="ja">乱数種</term>
+        <listitem>
+          <para lang="en">
+            Controls randomness of picking.  If the same random seed in the
+            same situation is used, the filter produces exactly the same
+            results. A different random seed produces different
+            results. Random seed can be entered manually or generated
+            randomly by pressing <guibutton>New Seed</guibutton> button.
+          </para>
+          <para lang="en">
+            When the <guilabel>Randomize</guilabel> option is checked, random
+            seed cannot be entered manually, but is randomly generated each
+            time the filter is run. If it is not checked, the filter remembers
+            the last random seed used.
+          </para>
+          <para lang="ja">
+            つまむ処理の不規則性を制御します。 同じ状況で同じ乱数種を用いると
+            このフィルタは全く同じ結果を生みます。 乱数種が変われば結果も違う
+            ものになります。 乱数種は数値記入欄で直に指定できるほか、 
+            <guibutton>新しい種</guibutton> ボタンをクリック
+            して無作為に生成させる方法もあります。
+          </para>
+          <para lang="ja">
+            <guilabel>乱数化</guilabel> オプションを有効に
+            すると乱数種を直に指定できなくなりますが、 その代わりこのフィルタ
+            を実行する度に新しい乱数種が自動生成されるようになります。 この
+            オプションを無効にしている間は前回利用した乱数種が記憶されています
+            ので再利用が容易です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Randomization (%)</term>
+        <term lang="ja">乱数度 (%)</term>
+        <listitem>
+          <para lang="en">
+            This slider represents the percentage of pixels of the active
+            layer or selection which will be picked. The higher value, the
+            more pixels are picked.
+          </para>
+          <para lang="ja">
+            このスライダは活性レイヤーもしくはその選択範囲における画素のうち
+            つまむ処理の対象となる画素の割合を設定します。 値を高くするにつれ
+            より多くの画素が不規則変化をし、 元画像の面影が失われてゆきます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Repeat</term>
+        <term lang="ja">繰り返し</term>
+        <listitem>
+          <para lang="en">
+            This slider represents the number of times the filter will be
+            applied. Higher values result in more picking, pixel values
+            being transferred farther away.
+          </para>
+          <para lang="ja">
+            このスライダでフィルタによる処理の回数を定めます。 高い値にするほど
+            つまむ処理が多くなり、 画素の値がどんどん離れた場所に移動することに
+            もなります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

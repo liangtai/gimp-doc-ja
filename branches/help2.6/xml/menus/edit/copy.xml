@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-09 j.h : no change needed for v2.4
+  2007-05-14 Added Spanish translation by AntI
+-->
+<!--2009-09-12-->
+<sect2 id="gimp-edit-copy">
+  <title lang="en">Copy</title>
+  <title lang="ja">コピー</title>
+
+  <indexterm lang="en">
+    <primary>Layer</primary>
+    <secondary>Copy</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Copy</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>レイヤー</primary>
+    <secondary>コピー</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary>コピー</secondary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Copy</guimenuitem> command makes
+    a copy of the current selection and stores it in the Clipboard.  The
+    information can be recalled using the 
+    <link linkend="gimp-edit-paste">Paste</link>, 
+    <link linkend="gimp-edit-paste-into">Paste Into</link>, or 
+    <link linkend="gimp-edit-paste-as-new">Paste As New</link> commands. If
+    there is no selection, the entire current layer is
+    copied.  <quote>Copy</quote> only works on the current active
+    layer. Any layers above or below it are ignored.
+  </para>
+  <para lang="ja">
+    <guimenuitem>コピー</guimenuitem> コマンドは現在の選択
+    範囲から描画対象の複製をとりクリップボードに収めます。 得られた情報は
+    <link linkend="gimp-edit-paste">貼り付け</link>、
+    <link linkend="gimp-edit-paste-into">選択範囲内に貼り付け</link>、
+    <link linkend="gimp-edit-paste-as-new">クリップボードから画像を生成</link>
+    の各コマンドで利用できます。 選択範囲がない場合は現在活性化しているレイヤー
+    全体の画像の複製をとります。 <quote>コピー</quote>操作は現在活性化している
+    レイヤー上でのみ作用します。 その前面側と背面側のいずれのレイヤーも対象と
+    なりません。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Edit</guimenu>
+            <guimenuitem>Copy</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>編集</guimenu>
+            <guimenuitem>コピー</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the keyboard shortcut
+          <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>

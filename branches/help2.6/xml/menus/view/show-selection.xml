@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-01-16 j.h: reviewed for v2.6
+  2007-05-20 Added Spanish translation by AntI
+  2005/10/23 reviewed; de added by axel.wernicke
+-->
+<!--2010-12-08-->
+<sect2 id="gimp-view-show-selection">
+  <title lang="en">Show Selection</title>
+  <title lang="ja">選択範囲の境界線を表示</title>
+
+  <indexterm lang="en">
+    <primary>Selection</primary>
+    <secondary>Selection boundary</secondary>
+    <tertiary>Show/Mask selection boundary</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Show Selection</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイ">選択範囲</primary>
+    <secondary sortas="センタクハンイノキョウカイセン">
+      選択範囲の境界線
+    </secondary>
+    <tertiary sortas="キョウカイセンノヒョウジ/ヒヒョウジ">
+      境界線の表示/非表示
+    </tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="センタクハンイノキョウカイセンヲヒョウジ">
+      選択範囲の境界線を表示
+    </primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Show Selection</guimenuitem> command enables and
+    disables displaying the dotted line surrounding the selection in the
+    image window. Please note that the selection still exists, even if
+    displaying this line is disabled.
+  </para>
+  <para lang="en">
+    You can set the default for displaying the selection in the
+    <link linkend="gimp-prefs-image-window">Image Window Appearance</link>
+    dialog.
+  </para>
+  <para lang="ja">
+    <guimenuitem>選択範囲の境界線を表示</guimenuitem> コマンドは画像上の
+    選択範囲を点滅破線<quote>蟻の行進</quote>で囲んで境界線を図示するかどうかを
+    切り替えます。 この表示を無効にしても選択範囲は解消されず残っています。
+  </para>
+  <para lang="ja">
+    このコマンドで画像ごとに指定するほかに、 
+    <link linkend="gimp-prefs-image-window-appearance">環境設定</link> 
+    ダイアログの<quote>画像ウィンドウの表示形式</quote>のページの 
+    <guilabel>選択範囲の境界線</guilabel> チェックボックスでも指定が可能で、 
+    それが初期設定になります。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>View</guimenu>
+            <guimenuitem>Show Selection</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>表示</guimenu>
+            <guimenuitem>選択範囲の境界線を表示</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the keyboard shortcut
+          <keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+</sect2>

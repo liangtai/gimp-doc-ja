@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-10-29 ude: continued ('en','de')
+  2088-08-19 kost: added 'no'
+  2008-08-17 ude: created stub ('en','de')
+-->
+<!--2009-09-12-->
+<sect2 id="script-fu-frosty-logo-alpha">
+  <title lang="en">Frosty</title>
+  <title lang="ja">霜...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Alpha to Logo</secondary>
+    <tertiary>Frosty</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Frosty</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
+    <tertiary sortas="シモ">霜</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="シモ">霜</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="en">概観</title>
+    <figure>
+      <title lang="en">Example for the <quote>Frosty</quote> filter</title>
+      <title lang="ja"><quote>霜</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/alpha-to-logo/frosty.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Frosty</quote> filter applied</para>
+          <para lang="ja"><quote>霜</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/menus/file/create/logos/frosty.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The <quote>Frosty</quote> logo</para>
+          <para lang="ja"><quote>霜</quote>ロゴ</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter is derived from the <quote>Frosty</quote> logo script
+      (<menuchoice>
+        <guimenu>File</guimenu>
+        <guisubmenu>Create</guisubmenu>
+        <guisubmenu>Logos</guisubmenu>
+        <guimenuitem>Frosty</guimenuitem>
+      </menuchoice>
+      in the image window), which creates a frozen logo like the example above.
+    </para>
+    <para lang="en">
+      The filter adds this frosty effect to the alpha, that is the area of the
+      active layer defined by the non-transparent pixels (think of it as a
+      <quote>selection by visibility</quote>). The filter effect will always
+      be applied according to the alpha values.
+    </para>
+    <para lang="ja">
+      このフィルタは上の図のような霜のついたロゴを作成する<quote>霜</quote>
+      ロゴスクリプトから派生しました。
+      ロゴスクリプトは画像ウィンドウのメニューの 
+      <menuchoice>
+        <guimenu>ファイル</guimenu>
+        <guisubmenu>画像の作成</guisubmenu>
+        <guisubmenu>ロゴ</guisubmenu>
+        <guimenuitem>霜...</guimenuitem>
+      </menuchoice>
+      にあります。
+    </para>
+    <para lang="ja">
+      <guimenuitem>霜...</guimenuitem> フィルタはこのような
+      霜効果をアルファ域に加えます。 アルファ域とは活性レイヤーの半透明や
+      不透明な部分からなる領域のことであり、 可視性による選択範囲ととらえる
+      こともできます。 このフィルタ効果はいつもアルファ値によって適用を加減
+      されます。
+    </para>
+    <note>
+      <para lang="en">
+        Unlike the most alpha to logo filters, the <quote>Frosty</quote>
+        filter will <emphasis>not</emphasis> resize the image to the active
+        layer's size.
+      </para>
+      <para lang="ja">
+        他のロゴ効果フィルタは活性レイヤーの大きさに合わせて画像の寸法を
+        変えてしまうのですが、 この<quote>霜</quote>フィルタだけは画像の 
+        <emphasis>寸法を変えません</emphasis>。
+      </para>
+    </note>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Alpha to Logo</guisubmenu>
+        <guimenuitem>Frosty</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより 
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ロゴ効果</guisubmenu>
+        <guimenuitem>霜...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Frosty</quote> options</title>
+      <title lang="ja"><quote>霜</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/alpha-to-logo/frosty-options.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Effect size (pixels)</term>
+        <term lang="ja">効果サイズ (ピクセル)</term>
+        <listitem>
+          <figure>
+            <title lang="en"><quote>Effect size</quote> examples</title>
+            <title lang="ja"><quote>効果サイズ</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/alpha-to-logo/frosty-10.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Effect size 10</para>
+                <para lang="ja">効果サイズ = 10</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/alpha-to-logo/frosty-200.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Effect size 200</para>
+                <para lang="ja">効果サイズ = 200</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="JPG"
+                  fileref="images/filters/alpha-to-logo/frosty-400.jpg"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Effect size 400</para>
+                <para lang="ja">効果サイズ = 400</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Background color</term>
+        <term lang="ja">背景色</term>
+        <listitem>
+          <para lang="en">
+            This color is used to fill the background layer created by the
+            filter. It defaults to white. When you click on the color button,
+            a color selector pops up where you can select any other color.
+          </para>
+          <para lang="ja">
+            スクリプトは作成した背景レイヤーをこの背景色で塗りつぶします。 
+            初期設定では白です。 色だまりボタンをクリックすると色変更
+            ダイアログが現れ、 他の色も選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

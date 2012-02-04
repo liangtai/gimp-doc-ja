@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-12-29 MikaS: updated 'fr'
+  2007-07-09 Added Spanish translation by AntI
+  2007-04-06 KoSt: added 'no'
+  2006-11-12 added example by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-08-26 de added by axel.wernicke
+-->
+<!--2012-01-07-->
+<sect2 id="plug-in-semiflatten">
+  <title lang="en">Semi-Flatten</title>
+  <title lang="ja">半統合</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Web</secondary>
+    <tertiary>Semi-Flatten</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Semi-Flatten</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>ウェブ</secondary>
+    <tertiary sortas="ハントウゴウ">半統合</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ハントウゴウ">半統合</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <para lang="en">
+      The Semi-flatten filter helps those in need of a solution to
+      anti-aliasing indexed images with transparency. The GIF indexed format
+      supports complete transparency (0 or 255 alpha value), but not
+      semi-transparency (1 - 254): semi-transparent pixels will be
+      transformed to no transparency or complete transparency, ruining
+      anti-aliasing you applied to the logo you want to put onto your Web
+      page.
+    </para>
+    <para lang="en">
+      Before applying the filter, it's essential that you should know the
+      background color of your Web page. Use the color-picker to determine
+      the exact color which pops up as the Foreground color of the Toolbox.
+      Invert FG/BG colors so that BG color is the same as Web background
+      color.
+    </para>
+    <para lang="en">
+      Semi-flatten process will combine FG color to layer (logo) color,
+      proportionally to corresponding alpha values, and will rebuild correct
+      anti-aliasing. Completely transparent pixels will not take the color.
+      Very transparent pixels will take a few color and weakly transparent
+      will take much color.
+    </para>
+    <para lang="ja">
+      <guimenuitem>半統合</guimenuitem> フィルタは
+      インデックス化された画像の透過効果にアンチエイリアスをかけようとして
+      編みだされた処方です。 というのも、 <acronym>GIF</acronym>形式の
+      インデックス化カラー画像は透過効果をつけられますが、 完全透過か完全
+      不透明 (アルファ値が 0 か 255) だけしか選べず、 半透明 (1 から 255) 
+      が使えません。 半透明な画素は透過を全くしなくなるか、 あるいは完全
+      透過するかの二者択一となり、 例えばウェブページ用に作ったロゴに
+      施したアンチエイリアス処理が崩壊してしまいます。
+    </para>
+    <para lang="ja">
+      このフィルタを適用する前にウェブページの背景色がどんな色か知っておく
+      ことは大事です。 この作業には<quote>描画色/背景色</quote>ダイアログ
+      の点眼器が便利です。 この機能はコンピュータの画面のどこからでも彩色
+      でき、 その色は描画色としてツールボックスの色標識にも表示されます。 
+      このフィルタは背景色を使いますので、 描画色と背景色の交換 (ショート
+      カット <keycap>X</keycap>) をしましょう。
+    </para>
+    <para lang="ja">
+      半統合化の処理はレイヤーの色にその画素のアルファ値をかけ合わせて
+      描画色とし背景色と合成することで正しくアンチエイリアスを再現
+      します。 完全透過な画素には色がつきません。 よく透過している画素は
+      あまり色が付かず、 弱い透過にはよく色が乗ります。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can access this filter in the image window menu through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Web</guisubmenu>
+        <guimenuitem>Semi-Flatten</guimenuitem>
+      </menuchoice>.
+      It is available if your image holds an Alpha channel
+      (see <xref linkend="gimp-layer-alpha-add"/>).
+      Otherwise, it is greyed out.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>ウェブ</guisubmenu>
+        <guimenuitem>半統合</guimenuitem>
+      </menuchoice>。 
+      このプラグインは画像にアルファチャンネルが加わっている場合のみ利用
+      できます。 アルファチャンネルがなければこのメニュー項目は灰色無効に
+      なり使用できません。 アルファチャンネルの追加については 
+      <xref linkend="gimp-layer-alpha-add"/> をご覧ください。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Example</title>
+    <title lang="ja">適用例</title>
+    <para lang="en">
+      In the example below, the Toolbox Background color is pink, and the
+      image has feathered edges on a transparent background.
+    </para>
+    <para lang="ja">
+      つぎに示す例では<acronym>GIMP</acronym>背景色を桃色にし、 元画像は
+      透過背景に輪郭をぼかした薄緑の筋を描いたものを使用します。
+    </para>
+    <figure>
+      <title lang="en">Semi-Flatten example</title>
+      <title lang="ja">半統合のための例図</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/BGcolor.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Active background color</para>
+          <para lang="ja">現在の背景色</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/logo-semi-transp.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">At 800% zoom level</para>
+          <para lang="ja">倍率 800% 表示</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Full transparency is kept. Semi-tranparent pixels are colored with pink
+      according to their transparency (Alpha value). This image will well
+      merge into the pink background of the new page.
+    </para>
+    <para lang="ja">
+      完全透過なところはそのまま残ります。 半透明な画素はその透明度 (アルファ
+      値) に従って桃色が加わります。 こうしてこの画像は背景が桃色のページに
+      うまく馴染みます。
+    </para>
+      <title lang="en">Semi-Flatten filter applied</title>
+      <title lang="ja">半統合フィルタ適用後</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/examples/logo-semi-flatten.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            Result, in GIF format, after applying Semi-flatten filter.
+          </para>
+          <para lang="ja">
+            半統合フィルタ適用後の結果。 <acronym>GIF</acronym>に使える。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

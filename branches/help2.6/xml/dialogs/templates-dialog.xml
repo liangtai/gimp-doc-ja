@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-26 j.h updated to v2.6
+  2007-10-07 v2.4: no change
+  2007-05-03 Added Spanish translation by AntI
+  2006-08-18 lexA: added german translation
+  2006-08-22 added italian content by ciampix
+  2005-11-29 replaced informalfigures by figures by lexa
+  2005-05-19 created by j.h
+-->
+<!--2011-05-30-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-template-dialog">
+  <title lang="en">Templates Dialog</title>
+  <title lang="ja">テンプレートダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Templates</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Templates</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary>テンプレート</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>テンプレート</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">The Templates dialog</title>
+    <title lang="ja">テンプレートダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/dialogs/templates-dialog.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    Templates are templates for an image format to be created. GIMP offers you
+    a lot of templates and you can create your owns. When you create a New
+    image, you can access to the list of existing templates but you can't
+    manage them. The <quote>Templates</quote>
+    dialog allows you to manage all these templates.
+  </para>
+  <para lang="ja">
+    テンプレートとは新しい白紙画像を作るときのための画像モードや大きさを
+    定めておいた雛形のことです。 <acronym>GIMP</acronym>には数多くの
+    テンプレートが用意されていますがご自分で作成して追加もできます。 新しい画像
+    を作成するときに一覧表からテンプレートを選んで利用できますが、 その場で
+    テンプレートそのものの管理作業はできません。 <quote>テンプレート</quote>
+    ダイアログを使えばテンプレート管理ができます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Templates</quote> dialog is a dockable dialog; see the
+      section <xref linkend="gimp-concepts-docks"/> for help on manipulating
+      it.
+    </para>
+    <para lang="en">
+      You can access it:
+    </para>
+    <para lang="ja">
+      <quote>テンプレート</quote>ダイアログはドッキング可能です。 その扱い方に
+      ついては
+      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+    </para>
+    <para lang="ja">呼び出し方はつぎのとおりです。</para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          from the image menu:
+          <menuchoice>
+            <guimenu>Windows</guimenu>
+            <guisubmenu>Dockable Dialogs</guisubmenu>
+            <guimenuitem>Templates</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ウィンドウ</guimenu>
+            <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+            <guimenuitem>テンプレート</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          from the Tab menu in any dockable dialog by clicking on
+          <guiicon>
+            <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> and selecting
+          <menuchoice>
+            <guimenu>Add Tab</guimenu>
+            <guimenuitem>Templates</guimenuitem>
+          </menuchoice>.
+        </para>
+        <para lang="ja">
+          任意のドッキング可能なダイアログのボタンアイコン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-menu-left-12.png"/>
+          </guiicon> をクリックすると出てくるタブメニューより
+          <menuchoice>
+            <guimenu>タブに追加</guimenu>
+            <guimenuitem>テンプレート</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Using the Templates dialog</title>
+    <title lang="ja">テンプレートダイアログの利用法</title>
+    <para lang="en">
+      You select a template by clicking on its icon. Right clicking reveals a
+      local menu that offers the same functions as buttons.
+    </para>
+    <para lang="ja">
+      テンプレートは一覧表でそのアイコンをクリックして選んでください。 代わりに
+      <mousebutton>第2ボタン</mousebutton> でクリックすると脈絡メニューが出て
+      きます。 これらの機能はダイアログのアイコンボタンと同じはたらきをします。
+    </para>
+    <sect4>
+      <title lang="en">Grid/List modes</title>
+      <title lang="ja">升目表示と列挙表示</title>
+      <para lang="en">
+        In the Tab menu for the <quote>Templates</quote> dialog, you can
+        choose between
+        <guimenuitem>View as Grid</guimenuitem> and <guimenuitem>View as
+        List</guimenuitem>. In Grid mode, templates are laid out in a
+        rectangular array of identical icons (unless you gave them a
+        particular icon, as we will see later). Only the name of the
+        selected template is displayed. In List mode, they are lined up
+        vertically; icons are identical too; all names are displayed.
+      </para>
+      <para lang="en">
+        In this Tab menu, the <guilabel>Preview Size</guilabel> option allows
+        you to change the size of thumbnails.
+      </para>
+      <para lang="ja">
+        <quote>テンプレート</quote>ダイアログのタブメニューで 
+        <guimenuitem>並べて表示</guimenuitem> と 
+        <guimenuitem>一覧で表示</guimenuitem> を切り替えられます。 
+        <quote>並べて表示</quote>を選ぶとテンプレートはその種類を表わすような
+        アイコンが升目状に整列します。 (後で述べるように、 追加した
+        テンプレートに適切なアイコンをつけていなければここで混乱するはめに
+        なります。) 選ばれたテンプレートの名前と大きさが一覧表より上に
+        表示されます。 <quote>一覧で表示</quote>を選ぶとテンプレートは縦に
+        列挙されます。 アイコンがその内容の目印になることでしょう。
+        それぞれの名前も併記されます。
+      </para>
+      <para lang="ja">
+        タブメニューには <guisubmenu>プレビューサイズ</guisubmenu> 
+        サブメニューがあって、 ここでアイコンの大きさを好みに調節できます。
+      </para>
+      <tip>
+        <para lang="en">
+          <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
+          opens a search field.
+          See <xref linkend="gimp-dock-view-as-list" />
+        </para>
+        <para lang="j">
+          キーボードショートカット <keycombo><keycap>Ctrl</keycap>
+          <keycap>F</keycap></keycombo> で検索窓が現れます。
+          <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
+          </link> をご覧ください。
+        </para>
+      </tip>
+    </sect4>
+
+    <sect4>
+      <title lang="en">Buttons at the bottom</title>
+      <title lang="ja">ダイアログ底部に並ぶアイコンボタン</title>
+      <para lang="en">
+        The buttons at the bottom of the dialog allow you to operate on
+        templates in several ways:
+      </para>
+      <para lang="ja">
+        ダイアログの底部にはテンプレートにいろいろな操作ができるボタンが
+        並びます。
+      </para>
+      <variablelist>
+        <varlistentry>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-image-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">
+              Create a new image from the selected template
+            </phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-image-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">
+              選択したテンプレートで新しい画像を生成
+            </phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              Clicking on this button opens the
+              <link linkend="gimp-file-new">Create a new image</link>
+              on the model of the selected template.
+            </para>
+            <para lang="ja">
+              このアイコンボタンをクリックすると、 選んでおいたテンプレートの
+              型どおりの
+              <link linkend="gimp-file-new">新しい画像が作成</link> されます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">Create a new template</phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">新しいテンプレートを作成</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              Clicking on this button opens the
+              <link linkend="edit-template-dialog">New template</link>
+              dialog, identical to the Edit Template dialog, that we will see
+              below.
+            </para>
+            <para lang="ja">
+              このアイコンボタンをクリックすると、 
+              <quote>新規テンプレート</quote>ダイアログが開かれます。
+              使い方は後述する
+              <link linkend="edit-template-dialog">テンプレートの編集</link>
+              ダイアログと同じです。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">
+              Duplicate the selected template
+            </phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">選択したテンプレートを複製</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              Clicking on this button opens the Edit Template dialog that we
+              are going to study now.
+            </para>
+            <para lang="ja">
+              このアイコンボタンをクリックすると、 後述する
+              <quote>テンプレートの編集</quote>ダイアログが開かれます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">
+              Edit the selected template
+            </phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">選択したテンプレートを編集</phrase>
+          </term>
+          <listitem>
+            <para lang="en">
+              Clicking on this button opens the
+              <link linkend="edit-template-dialog">Edit Template</link>
+              dialog.
+            </para>
+            <para lang="ja">
+              このアイコンボタンをクリックすると
+              <link linkend="edit-template-dialog">テンプレートの編集</link>
+              ダイアログが開かれます。
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term lang="en">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">
+              Delete the selected template
+            </phrase>
+          </term>
+          <term lang="ja">
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            <phrase condition="tag-is-required">選択したテンプレートを削除</phrase>
+          </term>
+          <listitem>
+            <para lang="en">Guess what?</para>
+            <para lang="ja">
+              TODO
+            </para>
+            <tip>
+              <para lang="en">
+                Every template is stored in a <filename>templaterc</filename>
+                file at your personal <acronym>GIMP</acronym> directory.
+                If you want to restore some deleted templates, you can copy or
+                append template entries to your file from the master
+                <filename>templaterc</filename> file at the
+                <filename class="directory">etc/gimp/2.0</filename> directory
+                of the <acronym>GIMP</acronym>'s system folder.
+              </para>
+              <para lang="ja">
+                テンプレートはすべて個人用<acronym>GIMP</acronym>ディレクトリの
+                <filename>templaterc</filename> ファイルに保存されています。
+                消したテンプレートを再び蘇らせるには、 マスターの
+                <filename>templaterc</filename> ファイルが
+                <acronym>GIMP</acronym>システムフォルダ内の
+                <filename class="directory">etc/gimp/2.0</filename> 以下に
+                ありますので、 そのままコピーするかそこから必要なテンプレート
+                項目をコピーして個人用のファイルに加える方法があります。
+              </para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect4>
+  </sect3>
+  <xi:include href="edit-template-dialog.xml"/>
+</sect2>

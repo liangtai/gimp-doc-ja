@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-15 j.h: no change for v2.6
+  2007-12-22 MikaS: added 'fr'
+  2007-10-07 ciampix: added 'it'
+  2007-09-24 ude: created 'en','de'
+-->
+<!--2010-12-09-->
+<sect2 id="script-fu-drop-shadow">
+  <title lang="en">Drop Shadow</title>
+  <title lang="ja">ドロップシャドウ...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Light and Shadow</secondary>
+    <tertiary>Drop Shadow</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Drop Shadow</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
+    <tertiary>ドロップシャドウ</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ドロップシャドウ</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Drop Shadow</quote> filter
+      </title>
+      <title lang="ja"><quote>ドロップシャドウ</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/light-taj-drop-shadow.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            <quote>Drop Shadow</quote> applied
+            (white background layer added manually)
+          </para>
+          <para lang="ja">
+            <quote>ドロップシャドウ</quote>適用後 (白い背景は後からつけ加えた)
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter adds a drop-shadow to the current selection or to the image
+      if there's no active selection. Optional the filter resizes the image if
+      that's necessary for displaying the shadow.
+    </para>
+    <para lang="en">
+      You may choose the color, position, and size of the shadow.
+    </para>
+    <para lang="en">
+      Please note that the filter does not add a background layer to make the
+      shadow visible. The shadow's background is transparent. The white
+      background in the above example has not been created by the filter,
+      instead it has been added later to let you see the shadow.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ドロップシャドウ...</guimenuitem> フィルタは
+      現在の選択範囲の、 あるいは選択範囲が無ければレイヤーの可視部分の
+      影を描くスクリプトです。 影を描くのに必要な場合に画像を拡げる
+      オプションも使えます。
+    </para>
+    <para lang="ja">
+      影の色と落ちる方向と長さを設定できます。 このフィルタは新たにレイヤーを
+      作成し、 ドロップシャドウはそのレイヤーに描かれ、 このレイヤーは元画像の
+      背面側に置かれます。
+    </para>
+    <para lang="ja">
+      ちなみにこのフィルタは背景レイヤーを自動添付しないので影が透過部分に
+      かかって見辛いこともあります。 上の例図では白い背景レイヤーがありますが、
+      このフィルタが生成したものではなく見易くするためにあとから追加しました。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image menu menu through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Light and Shadow</guisubmenu>
+        <guimenuitem>Drop Shadow</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>照明と投影</guisubmenu>
+        <guimenuitem>ドロップシャドウ...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Drop Shadow</quote> filter options</title>
+      <title lang="ja">
+        <quote>ドロップシャドウ</quote>フィルタのオプション
+      </title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/light-and-shadow/drop-shadow.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Offset X</term>
+        <term lang="en">Offset Y</term>
+        <term lang="ja">オフセット X</term>
+        <term lang="ja">オフセット Y</term>
+        <listitem>
+          <para lang="en">
+            The layer containing the drop shadow will be moved horizontally
+            by X pixels, vertically by Y pixels. So, X and Y offset
+            determine where the shadow will be placed in relation to the
+            image. High values make the imaginary source of light look like
+            it's far away in horizontal or vertical direction, and low
+            values will make it look closer to the image.
+          </para>
+          <para lang="en">
+            The offsets may be negative, leading to a shadow on the left of
+            the selection if offset X &lt; 0, or above the selection if offset
+            Y &lt; 0.
+          </para>
+          <para lang="en">
+            If there's no active selection, you must have <guilabel>Allow
+            resizing</guilabel> enabled to see any effect.
+          </para>
+          <para lang="ja">
+            ドロップシャドウが描かれたレイヤーは対象となる選択範囲もしくは
+            レイヤーの真下から水平に X ピクセル、 垂直に Y ピクセル移動
+            します。 したがって元画像からの相対的な位置を X と Y のオフセットで
+            設定できます。 ここに高い値を指定すれば仮想上の光源はどこか水平方向
+            や垂直方向に遠く離れているような効果をもたらし、 逆に低い値を指定
+            すれば画像の至近距離から照らしているように見えます。
+          </para>
+          <para lang="ja">
+            オフセット値は負の数も可能であり、 X &lt; 0 にすれば影が画面の左側
+            に落ち、 Y &lt; 0 にすれば影は画面の上側に落ちます。
+          </para>
+          <para lang="ja">
+            選択範囲がキャンバスよりも小さくないときや、 対象レイヤーが
+            キャンバスと同じ大きさの場合には、 
+            <guilabel>画像サイズ変更可</guilabel> を有効にしておかないと
+            このフィルタの効果が見られません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Blur radius</term>
+        <term lang="ja">ぼかし半径</term>
+        <listitem>
+          <para lang="en">
+            After creating the shadow, a
+            <link linkend="plug-in-gauss">Gaussian blur</link> with the
+            specified radius is applied to the shadow layer, resulting in the
+            realistic appearance of the drop shadow. It may be necessary to
+            enable <guilabel>Allow resizing</guilabel>, since blurring extends
+            the shadow.
+          </para>
+          <para lang="ja">
+            [描画対象の形に]影が作成されたあと、 影の描かれたレイヤー上では
+            ここで設定したぼかし半径の値を使って 
+            <link linkend="plug-in-gauss">ガウスぼかし</link> が施されますので
+            ドロップシャドウはより本物らしくなります。 このぼかし処理は影の範囲
+            を膨らませますので <guilabel>画像サイズ変更可</guilabel> を有効に
+            する必要があるかもしれません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Color</term>
+        <term lang="ja">色</term>
+        <listitem>
+          <para lang="en">
+            The shadow may have any color. Just click on the button, and
+            select a color when the color selector pops up.
+          </para>
+          <para lang="ja">
+            影は黒でなくても構いません。 このボタンをクリックすると色変更
+            ダイアログが現れますので好きな色を選んでください。
+          </para>
+          <figure>
+            <title lang="en"><quote>Drop Shadow</quote> color example</title>
+            <title lang="ja"><quote>ドロップシャドウ</quote>の色の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/drop-shadow-color.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Opacity</term>
+        <term lang="ja">不透明度</term>
+        <listitem>
+          <para lang="en">
+            The shadow's opacity is just the opacity of the new layer
+            containing the shadow (see
+            <xref linkend="gimp-layer-properties"/>). It defaults to 80%, but
+            you may select any other value from 0 (full transparency) to 100
+            (full opacity) here. After applying the filter to an image you can
+            change the opacity in the
+            <link linkend="gimp-layer-dialog">layers dialog</link>.
+          </para>
+          <para lang="ja">
+            影の不透明度はすなわち新たに作成され影が描かれたレイヤーの不透明度
+            のことです。 (
+            <xref linkend="gimp-layer-properties"/> を参照してください。)
+            初期値は 80% ですが 0% (完全透過) から 100% (完全不透明) までの範囲
+            で設定できます。 影の濃度はフィルタ適用後でも 
+            <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> で
+            影のレイヤーの不透明度を変えれば調節が可能です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Allow resizing</term>
+        <term lang="ja">画像サイズ変更可</term>
+        <listitem>
+          <para lang="en">
+            If enabled, the filter will resize the image if that is needed to
+            make place for the shadow. The new size depends on the size of the
+            selection, the blur radius, and the shadow offsets.
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると、 仮に影が画像をはみ出してしまうときは
+            影が画像に収まるよう自動的に画像の寸法が拡大されるようになります。
+            拡大後の画像の大きさはもとの選択範囲の大きさとぼかし半径と影の
+            オフセット長によって決まります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

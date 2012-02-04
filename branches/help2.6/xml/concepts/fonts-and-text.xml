@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-02-19 j.h: revised for v2.6
+  2007-01-28 added Spanish translation by manuq
+  2006-08-13 added norwegian translation by KoSt
+  2006-07-24 added italian translation by ciampix
+  2006-05-12 added Korean translation by Dust
+  2006-03-05 lexa: added german translation and made docbook compliant
+  2006-01-06 HdJ: Added dutch translation, replaced some " by "
+                  and added empty lines between the markup tags of
+                  succesive translations.
+  2005-11-28 lexa: replaced informalfigures by figures
+-->
+<!--2010-11-21-->
+<sect1 id="gimp-concepts-text">
+  <title lang="en">Text and Fonts</title>
+  <title lang="ja">テキストとフォント</title>
+  <indexterm lang="en">
+    <primary>Fonts and Texts</primary>
+    <secondary>Overview</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="フォントトテキスト">フォントとテキスト</primary>
+    <secondary sortas="ガイカン">概観</secondary>
+  </indexterm>
+  <figure>
+    <title lang="en">Example of a text item</title>
+    <title lang="ja">テキスト品目の例</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/text-example.png" format="PNG"/>
+      </imageobject>
+      <caption>
+        <para lang="en">
+          Example of a text item, showing the boundary of the text layer.
+          (Font: Utopia Bold)
+        </para>
+        <para lang="ja">
+          テキスト品目の例、 テキストレイヤーの境界線が見えている。 (フォント名:
+          Utopia Bold)
+        </para>
+      </caption>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Text tool is progressively improved.
+    One of the greatest improvements of <acronym>GIMP</acronym> 2.0 over
+    <acronym>GIMP</acronym> 1.2 is in the
+    handling of text. In <acronym>GIMP</acronym> 2.0 and 2.2, each text item
+    goes in a separate
+    Text layer, and you can come back later to the layer and edit the text in
+    it. You can also move the text around in the image, or change the font, or
+    the font size. You can use any font available on your system. You can
+    control justification, indentation, and line spacing.
+  </para>
+  <para lang="en">
+    With <acronym>GIMP</acronym>-2.6, you can draw a bounding box (a
+    rectangular frame) for the text on your image and you can adjust this
+    rectangle in the same way as a rectangular selection.  The text goes on
+    being edited in the Text Editor, but it is automatically wrapped within
+    this box.
+  </para>
+  <para lang="en">
+    Actually, you can operate on a text layer in the same ways as any other
+    layer, but doing so often means giving up the ability to edit the text
+    without losing the results of your work.
+  </para>
+  <para lang="ja">
+    テキストツールは徐々に改良が加えられています。
+    <application><acronym>GIMP</acronym> 1.2</application> から 
+    <application><acronym>GIMP</acronym> 2.0</application> への最大の改善点が
+    テキストの扱いでした。 <application><acronym>GIMP</acronym> 2.0</application>
+    及び <application><acronym>GIMP</acronym>2.2</application> では
+    各テキストはテキストレイヤーとなって分離したので、 そのテキストレイヤーに
+    立ち戻れば文章の編集ができます。 また画像内でテキストを移動できるほか、 
+    書体や大きさも変更可能です。 システム上で使えるフォントは全て利用できます。
+    行揃えの形式、 インデント、 行間隔も調節できます。
+  </para>
+  <para lang="ja">
+    <application><acronym>GIMP</acronym> 2.6</application> からは画像上で
+    テキストの囲み線 (矩形枠) を描けるようになったうえ、 この枠を矩形の
+    選択領域の編集の要領で調節できます。 テキストの編集はテキストエディタ上で
+    行ないますが、 この枠内で自動的に文字が回り込みます。
+  </para>
+  <para lang="ja">
+    テキストレイヤーはまさしく他のレイヤーと同じ要領で操作できますが、 操作に
+    よってはその成果を失なわずにテキストを再編集する望みの無いことも覚悟せねば
+    なりません。
+  </para>
+  <figure>
+    <title lang="en">GIMP text editor</title>
+    <title lang="ja"><acronym>GIMP</acronym> テキストエディタ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/tool-dialog-text.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    To understand some of the idiosyncrasies of text handling, it may help for
+    you to realize that a text layer contains more information than the pixel
+    data that you see: it also contains a representation of the text in a
+    text-editor format. You can see this in the text-editor window that pops
+    up while you are using the Text tool. Every time you alter the text, the
+    image layer is redrawn to reflect your changes.
+  </para>
+  <para lang="en">
+    Now suppose you create a text layer, and then operate on it in some way
+    that does not involve the Text tool: rotate it, for example. Suppose you
+    then come back and try to edit it using the Text tool. As soon as you edit
+    the text, the Text tool will redraw the layer, wiping out the results of
+    the operations you performed in the meantime.
+  </para>
+  <para lang="en">
+    Because this danger is not obvious, the Text tool tries to protect you
+    from it. If you operate on a text layer, and then later try to edit the
+    text, a message pops up, warning you that your alterations will be undone,
+    and giving you three options: (1) edit the text anyway; (2) cancel; (3)
+    create a new text layer with the same text as the existing layer, leaving
+    the existing layer unchanged.
+  </para>
+  <para lang="ja">
+    テキストレイヤーには見たままの画素データだけではない情報が詰まっていることが
+    わかると、 テキスト操作の特質を少しでも理解する助けになるかもしれません。
+    その情報とは、 テキストについてのテキストエディタ形式による表現です。
+    テキストツールを使うときに現れるテキストエディタウィンドウ内で見られます。
+    テキストを変更するたびに画像のレイヤー上でもその成果が反映されます。
+  </para>
+  <para lang="ja">
+    テキストレイヤーを作成したあとで、 テキストツールを通さない操作 (例えば
+    回転) をしたとします。 そのテキストをまたテキストツールで編集すると、
+    テキストツールはテキストレイヤーを再描画しますので、 それまでのこの
+    レイヤーに対する操作の成果は破棄されることになります。
+  </para>
+  <para lang="ja">
+    目立たない危険ですので、 テキストツールはそれに陥らないようにはからいます。
+    操作してあるテキストレイヤーのテキストを再び編集しようとすると、
+    メッセージが現れ、 それまでの操作が取り消されてしまうことを警告し、 つぎの
+    3 つの選択肢を示します。 
+  </para>
+  <itemizedlist>
+    <listitem>
+      <para>そのまま編集を続行</para>
+    </listitem>
+    <listitem>
+      <para>断念</para>
+    </listitem>
+    <listitem>
+      <para>
+       そのテキストレイヤーはそのままに、 テキストや属性が同じ
+       テキストレイヤーを新たに作成
+      </para>
+    </listitem>
+  </itemizedlist>
+  <figure>
+    <title lang="en">Warning lose modifications</title>
+    <title lang="ja">変更が失われることを警告</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/text-warning.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+</sect1>

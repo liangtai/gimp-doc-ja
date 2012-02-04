@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-08-14 Added Spanish translation by AntI
+  2007-04-24 KoSt: added 'no'
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  050910 de added by axel.wernicke
+-->
+<!--2010-12-09-->
+<sect2 id="plug-in-ripple">
+  <title lang="en">Ripple</title>
+  <title lang="ja">波紋...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Distorts</secondary>
+    <tertiary>Ripple</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Ripple filter</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary sortas="ハモン">波紋</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ハモン">波紋</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en"><quote>Ripple</quote> filter example</title>
+      <title lang="ja"><quote>波紋</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/distort-taj-ripple.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Filter <quote>Ripple</quote> applied</para>
+          <para lang="ja"><quote>波紋</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      It displaces the pixels of the active layer or selection to waves or
+      ripples reminding a reflection on disturbed water.
+    </para>
+    <para lang="ja">
+      <guimenuitem>波紋...</guimenuitem> フィルタは活性
+      レイヤーもしくはその選択範囲の画素を波の形にずらし、 まるでゆれる水面に
+      写った風景のような画像にします。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Distotrts</guisubmenu>
+        <guimenuitem>Ripple</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>変形</guisubmenu>
+        <guimenuitem>波紋...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Ripple</quote> filter options</title>
+      <title lang="ja"><quote>波紋</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/distort/ripple.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Preview</term>
+        <term lang="ja">プレビュー</term>
+        <listitem>
+          <para lang="en">
+            The result of your settings will appear in the Preview without
+            affecting the image until you click on <guibutton>OK</guibutton>.
+          </para>
+          <para lang="ja">
+            <guilabel>プレビュー</guilabel> オプションを有効
+            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            したとおりに即座に効果のようすが見て判るようになっています。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Options</term>
+        <term lang="ja">オプション</term>
+        <listitem>
+          <variablelist>
+            <varlistentry>
+              <term lang="en"><guilabel>Antialiasing</guilabel></term>
+              <term lang="ja"><guilabel>滑らかに</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This improves the scaled look the image borders may have.
+                </para>
+                <para lang="ja">
+                  変形の過程で拡大・縮小されることもある画像の輪郭線を
+                  アンチエイリアス化して見栄えをよくします。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en"><guilabel>Retain Tileability</guilabel></term>
+              <term lang="ja"><guilabel>タイルメモリを保持する</guilabel></term>
+              <listitem>
+                <para lang="en">
+                  This preserves the seamless properties if your image is
+                  a tile pattern.
+                </para>
+                <para lang="ja">
+                  元画像がタイル化可能なパターンだった場合にこのオプションを
+                  使うと継ぎ目のない特性を維持できます。
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Orientation</term>
+        <term lang="ja">向き</term>
+        <listitem>
+          <para lang="en">
+            That's the <guilabel>Horizontal</guilabel> or
+            <guilabel>Vertical</guilabel> direction of waves.
+          </para>
+          <para lang="ja">
+            波の進行方向を <guilabel>水平</guilabel> と 
+            <guilabel>垂直</guilabel> のいずれかから選びます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Edges</term>
+        <term lang="ja">周辺部</term>
+        <listitem>
+          <para lang="en">
+            Because ripples cause pixel displacement, some pixels may be
+            missing on the image sides:
+          </para>
+          <para lang="ja">
+            波紋フィルタは画素の位置をずらすので画像の周辺部に隙間が空いて
+            しまうでしょう。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                With <guilabel>Wrap</guilabel>, pixels going out one side
+                will come back on the other side, replacing so the missing
+                pixels.
+              </para>
+              <para lang="ja">
+                <guilabel>回り込み</guilabel> は画像からはみ
+                出した画素を反対側の辺に空いた隙間に入れます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                With <guilabel>Smear</guilabel>, the adjacent pixels will
+                spread out to replace the mixing pixels.
+              </para>
+              <para lang="ja">
+                <guilabel>ぼかす</guilabel> は空いた隙間を
+                埋めるため近接する画素の色を拡散させます。
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                With <guilabel>Blank</guilabel>, the missing pixels will be
+                replaced by black pixels, if the layer does not have an
+                Alpha channel. If an Alpah channel exsists in the layer,
+                transparent pixels replace the missing pixels after applying
+                this option.
+              </para>
+              <para lang="ja">
+                <guilabel>空白</guilabel> の場合はレイヤーに
+                アルファチャンネルがあれば空いた隙間の画素は完全透過しますが、
+                アルファチャンネルがなければ黒く塗られます。
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Wave Type</term>
+        <term lang="ja">波の種類</term>
+        <listitem>
+          <para lang="en">Choose how the wave should look like:</para>
+          <para lang="ja">
+            のこぎり歯と正弦波 (余弦波) からいずれかを選んでください。
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en"><guilabel>Sawtooth</guilabel></para>
+              <para lang="ja"><guilabel>鋸歯</guilabel></para>
+            </listitem>
+            <listitem>
+              <para lang="en"><guilabel>Sine</guilabel></para>
+              <para lang="ja"><guilabel>サイン波</guilabel></para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Period</term>
+        <term lang="ja">波長</term>
+        <listitem>
+          <para lang="en">
+            It is related to wavelength (0-200 pixels)
+          </para>
+          <para lang="ja">
+            <guilabel>波長</guilabel> は 0 から 200 ピクセル
+            の範囲で指定します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Amplitude</term>
+        <term lang="ja">振幅</term>
+        <listitem>
+          <para lang="en">
+            It is related to waveheight (0-200 pixels).
+          </para>
+          <para lang="ja">
+            <guilabel>振幅</guilabel> は 0 から 200 ピクセル
+            の範囲で指定します。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Phase shift</term>
+        <term lang="ja">位相変位</term>
+        <listitem>
+          <para lang="en">
+            It is angle to delay the wave (0-360 degree).
+            Appling this filter again with the same setting
+            but Phase shift differs by 180 brings the once processed image
+            back to become almost similar to the first original image.
+          </para>
+          <para lang="ja">
+            <guilabel>位相変位</guilabel> は角度を 0 から 360 までの範囲で
+            指定します。 一度処理した画像にもう一度このフィルタを 180 度
+            ずらした位相でかけると最初の画像とほとんど同じ画像に戻ります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

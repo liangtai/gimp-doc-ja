@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history
+  2008-04-07 Mr.Dust : added 'ko'
+  2006-11-01 lexa: made the file docbook compliant
+  2006-08-04: added italian translation by ciampix
+  2008-01-28 jpl: update text & images
+-->
+<!--2010-12-11-->
+<sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-prefs-dialog">
+  <title lang="en">Preferences Dialog</title>
+  <title lang="ja">環境設定ダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Dialogs</primary>
+    <secondary>Preferences</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Preferences</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ダイアログ</primary>
+    <secondary sortas="カンキョウセッテイ">環境設定</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="カンキョウセッテイ">環境設定</primary>
+  </indexterm>
+
+  <sect2>
+    <title lang="en">Introduction</title>
+    <title lang="ja">はじめに</title>
+    <figure>
+      <title lang="en">List of preference pages</title>
+      <title lang="ja">環境設定のページ一覧</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/preferences/prefs-list.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      The preferences dialog can be accessed from the image menu-bar, through
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+        <guimenuitem>Preferences</guimenuitem>
+      </menuchoice>.
+      It lets you customize many aspects of the way
+      GIMP works.  The following sections detail the settings that you
+      can customize, and what they affect.
+    </para>
+    <para lang="en">
+      All of the Preferences information is stored in a file called
+      <filename>gimprc</filename>  in your personal GIMP directory, so
+      if you are a <quote>power user</quote> who would rather work with a
+      text editor than a graphical interface, you can alter preferences by
+      editing that file.  If you do, and you are on a Unix clone system,
+      then <command>man gimprc</command> will give you a lot of
+      technical information about the contents of the file and what
+      they are used for.
+    </para>
+    <para lang="ja">
+      環境設定ダイアログは画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>編集</guimenu>
+        <guimenuitem>環境設定</guimenuitem>
+      </menuchoice>
+      と進んで呼び出します。 ここで<acronym>GIMP</acronym>の動作慣習を様々な
+      面で変更できます。 以下の各節は個々に誂え得る設定とその効果を詳細に
+      解説します。
+    </para>
+    <para lang="ja">
+      ここで定義した環境設定情報は全て個人用の<acronym>GIMP</acronym>
+      ディレクトリに置かれた <filename>gimprc</filename> というファイルに記入
+      して保管されます。 グラフィカルユーザインタフェースよりもテキストエディタ
+      で作業したいという自称パワーユーザの方はこのファイルを編集して環境設定を
+      変更しても構いません。 また <productname>UNIX</productname> システム風の
+      システムではそういう方のための詳しいオンラインマニュアルがあり、 この
+      ファイルの内容についての技術的情報と、各設定項目の用途が 
+      <command>man</command> <userinput>gimprc</userinput> とすれば読めます。
+    </para>
+  </sect2>
+  <xi:include href="prefs-environment.xml"/>
+  <xi:include href="prefs-interface.xml"/>
+  <xi:include href="prefs-theme.xml"/>
+  <xi:include href="prefs-help.xml"/>
+  <xi:include href="prefs-tool-options.xml"/>
+  <xi:include href="prefs-toolbox.xml"/>
+  <xi:include href="prefs-default-image.xml"/>
+  <xi:include href="prefs-default-grid.xml"/>
+  <xi:include href="prefs-image-window.xml"/>
+  <xi:include href="prefs-image-window-appearance.xml"/>
+  <xi:include href="prefs-image-window-title.xml"/>
+  <xi:include href="prefs-display.xml"/>
+  <xi:include href="prefs-color-management.xml"/>
+  <xi:include href="prefs-input-devices.xml"/>
+  <xi:include href="prefs-input-controllers.xml"/>
+  <xi:include href="prefs-window-management.xml"/>
+  <xi:include href="prefs-folders.xml"/>
+  <xi:include href="prefs-folders-data.xml"/>
+</sect1>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2009-03-15 j.h: reviewed for v2.6. No change
+  2008-01-14 j.h: no change for v2.4
+  2007-06-13 kost: added 'no'
+  2007-05-20 lexa: enhanced docbook compliance
+  2007-04-20 Added Spanish translation by AntI
+  2006-02-10 some more precisions on tool action en;fr by j.h
+  2005-12-07 replaced <simplesect> by <sect3> by lexa
+  2005-12-01 informalfigure replaced by figure by lexa
+  050806 de reviewed by axel.wernicke
+-->
+<!--2010-12-22-->
+<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-flip">
+  <title lang="en">Flip</title>
+  <title lang="ja">鏡像反転</title>
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Flip</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Flip</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="キョウゾウハンテン">鏡像反転</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="キョウゾウハンテン">鏡像反転</primary>
+  </indexterm>
+
+  <figure>
+    <title lang="en">Flip tool</title>
+    <title lang="ja">
+      ツールボックス上の<quote>鏡像反転</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/toolbox/toolbox-flip.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+  <para lang="en">
+    The Flip tool provides the ability to flip layers or selections either
+    horizontally or vertically. When a selection is flipped, a new layer with
+    a Floating Selection is created. You can use this tool to create
+    reflections.
+  </para>
+  <para lang="ja">
+    鏡像反転ツールはレイヤーや選択範囲を水平方向もしくは垂直方向に反転させる
+    機能を提供します。 選択範囲の反転では、 その成果がフローティング選択範囲
+    として作られます。 このツールは裏返しの画像を作るのに使えます。
+  </para>
+
+  <sect3>
+    <title lang="en">Activating the Tool</title>
+    <title lang="ja">呼び出し方</title>
+    <para lang="en">
+      You can access the Flip Tool in different ways:
+    </para>
+    <para lang="ja">
+      <quote>鏡像反転</quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          From the image menu bar
+          <guimenuitem>Tools</guimenuitem>/
+          <guimenuitem>Transform Tools</guimenuitem>
+          <guimenuitem>Flip</guimenuitem>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenuitem>ツール</guimenuitem>
+            <guimenuitem>変換ツール</guimenuitem>
+            <guimenuitem>鏡像反転</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          By clicking the tool icon:
+          <guiicon>
+            <inlinegraphic
+                fileref="images/toolbox/stock-tool-flip-22.png"/>
+          </guiicon> in Toolbox,
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinegraphic fileref="images/toolbox/stock-tool-flip-22.png"/>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by using the
+          <keycombo><keycap>Shift</keycap><keycap>F</keycap></keycombo> key
+          combination.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Shift</keycap><keycap>F</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Key modifiers (Defaults)</title>
+    <title lang="ja">キー修飾 (初期設定)</title>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycap>Ctrl</keycap>
+        </term>
+        <listitem>
+          <para lang="en">
+            <keycap>Ctrl</keycap> lets you change the modes between
+            horizontal and vertical flipping.
+          </para>
+          <para lang="ja">
+            このキーを押している間は反転の向きが水平から垂直に切り替わります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Flip Tool</quote> Options</title>
+      <title lang="ja"><quote>鏡像反転</quote>ツールのツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-flip.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <xi:include href="../about-common-options-display.xml"/>
+
+    <variablelist>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Affect</term>
+        <term lang="ja">対象</term>
+        <listitem>
+          <xi:include href="about-common-transform-options.xml"/>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Flip Type</term>
+        <term lang="ja">反転の向き</term>
+        <listitem>
+          <para lang="en">
+            The Tool Toggle settings control flipping in either a Horizontal
+            or Vertical direction. This toggle can also be switched using a
+            key modifier.
+          </para>
+          <para lang="ja">
+            ツールのひっくり返す向きを平行から垂直に切り替えます。
+            この切り替えができるキー修飾もあります。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

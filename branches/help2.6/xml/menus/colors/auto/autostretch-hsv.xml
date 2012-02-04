@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-12-29 j.h: rev v2.6. no change
+  2007-10-17 ude: moved here from menus/plug-in-autostretch-hsv.xml ('en','de')
+  2007-06-08 Added Spanish translation by AntI
+  2007-02-22 KoSt: added no
+  2006-09-05 text rewritten by scb;  example added by j.h
+  2005-11-11 split of from layer-colors.xml by axel.wernicke
+-->
+<!--2010-12-05-->
+<sect2 id="plug-in-autostretch-hsv">
+  <title lang="en">Stretch HSV</title>
+  <title lang="ja">HSV 伸長</title>
+
+  <indexterm lang="en">
+    <primary>Colors</primary>
+    <secondary>Stretch colors in HSV space</secondary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Stretch HSV</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>色</primary>
+    <secondary sortas="HSVイロクウカンデイロヲシンチョウ">
+      HSV 色空間で色を伸長
+    </secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="HSVシンチョウ">HSV伸長</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Stretch HSV</guimenuitem> command does the same thing
+    as the <link linkend="plug-in-c-astretch">Stretch Contrast</link> command,
+    except that it works in HSV color space, rather than RGB color space,
+    and it preserves the Hue. Thus, it independently stretches the ranges of
+    the Hue, Saturation and Value components of the colors. Occasionally the
+    results are good, often they are a bit odd. <quote>Stretch HSV</quote>
+    operates on layers from RGB and Indexed images. If the image is
+    Grayscale, the menu entry is insensitive and grayed out.
+  </para>
+  <para lang="ja">
+    <guimenuitem>HSV 伸長</guimenuitem> コマンドは 
+    <link linkend="plug-in-c-astretch">コントラスト伸長</link> と同じ操作を
+    <acronym>RGB</acronym>色空間ではなく<acronym>HSV</acronym>色空間で行ない
+    ます。 色相は変えません。 つまり彩度、 明度の各成分の分布をそれぞれ個別に
+    伸長させるのです。 処理の成果はときおり良好なこともありますが、 たびたび
+    ちょっと変な具合になります。 <quote>HSV 伸長</quote>プラグインは
+    <acronym>RGB</acronym>色とインデックス化色の画像のレイヤーで作動します。 
+    画像がグレースケール色の場合はこのメニュー項目が灰色無効となり
+    使用できません。
+  </para>
+
+  <sect3>
+    <title lang="en">Activate the Command</title>
+    <title lang="ja">コマンドの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command from the image menubar through
+          <menuchoice>
+            <guimenu>Colors</guimenu>
+            <guisubmenu>Auto</guisubmenu>
+            <guimenuitem>Stretch HSV</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>色</guimenu>
+            <guisubmenu>自動調整</guisubmenu>
+            <guimenuitem>HSV 伸長</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en"><quote>Stretch HSV</quote> example</title>
+    <title lang="ja"><quote>HSV 伸長</quote>の例</title>
+    <figure>
+      <title lang="en">Original image</title>
+      <title lang="ja">元画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/colors/auto/alice.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The active layer and its Red, Green and Blue histograms
+            before <quote>Stretch HSV</quote>.
+          </para>
+          <para lang="ja">
+            <quote>HSV 伸長</quote>適用前の活性レイヤーとその赤・緑・青
+            それぞれのヒストグラム
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <figure>
+      <title lang="en">Image after the command</title>
+      <title lang="ja">コマンド適用後の画像</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/colors/auto/stretch-hsv.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">
+            The active layer and its Red, Green and Blue histograms after
+            <quote>Stretch HSV</quote>.
+            Contrast, luminosity and hues are enhanced.
+          </para>
+          <para lang="ja">
+            <quote>HSV 伸長</quote>適用後の活性レイヤーとその赤・緑・青
+            それぞれのヒストグラム。 コントラストと明度と色相が強調された。
+          </para>
+        </caption>
+      </mediaobject>
+    </figure>
+  </sect3>
+</sect2>

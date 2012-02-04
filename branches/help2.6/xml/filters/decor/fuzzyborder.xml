@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2007-10-01 KoSt: added 'no'
+  2007-09-02 ciampix: added it
+  2007-09-02 AntI: Added 'es'
+  2007-08-28 ude: created en, de
+-->
+<!--2010-12-08-->
+<sect2 id="script-fu-fuzzy-border">
+  <title lang="en">Fuzzy Border</title>
+  <title lang="ja">ファジー縁取り...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Decor</secondary>
+    <tertiary>Fuzzy Border</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Fuzzy Border</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ソウショク">装飾</secondary>
+    <tertiary sortas="ファジーフチドリ">ファジー縁取り</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ファジーフチドリ">ファジー縁取り</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">
+        Example for the <quote>Fuzzy Border</quote> filter
+      </title>
+      <title lang="ja"><quote>ファジー縁取り</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/decor-taj-fuzzyborder.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Fuzzy Border</quote> applied</para>
+          <para lang="ja"><quote>ファジー縁取り</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      This filter adds a cool fading border to an image. The border will look
+      jagged and fuzzy, and you can specify color and thickness of the fading
+      border. Optionally you may add a shadow to the image.
+    </para>
+    <para lang="ja">
+      <guimenuitem>ファジー縁取り...</guimenuitem> フィルタは
+      画像の縁が薄れてゆくかっこいい縁取りを施すスクリプトです。 縁の画像は
+      揃わずあいまいになります。 縁取りの幅と、 薄れる画像に代わって現れる色が
+      調節できます。 任意で画像に影も付けられます。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      You can find this filter in the image window menu through
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Decor</guisubmenu>
+        <guimenuitem>Fuzzy Border</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>装飾</guisubmenu>
+        <guimenuitem>ファジー縁取り...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Fuzzy Border</quote> options</title>
+      <title lang="ja"><quote>ファジー縁取り</quote>のオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/decor/fuzzyborder.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Color</term>
+        <term lang="ja">色</term>
+        <listitem>
+          <para lang="en">
+            Clicking on this button brings up the color selector dialog that
+            allows you to choose the border color.
+          </para>
+          <para lang="ja">
+            色だまりボタンをクリックすると色変更ダイアログが現れますので
+            縁取りに使われる色を選択してください。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Border size</term>
+        <term lang="ja">枠の大きさ</term>
+        <listitem>
+          <para lang="en">
+            Here you can set the thickness of the fuzzy border, in pixels.
+            Maximum is 300 pixels, regardless of the image width or height.
+          </para>
+          <para lang="ja">
+            あいまいな縁の部分の幅をピクセル単位で設定できます。 画像の幅や
+            高さに関係なく幅 300 ピクセルまで指定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Blur border</term>
+        <term lang="ja">枠をぼかす</term>
+        <listitem>
+          <para lang="en">
+            If checked, the border will be blurred. The example below shows
+            the effect of blurring:
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると縁の部分はぼかされます。 下図に比較例を
+            示します。
+          </para>
+          <figure>
+            <title lang="en"><quote>Blur border</quote> example</title>
+            <title lang="ja"><quote>枠をぼかす</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-blur.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en"><quote>Blur</quote> checked</para>
+                <para lang="ja"><quote>ぼかし</quote>有効</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-noblur.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en"><quote>Blur</quote> unchecked</para>
+                <para lang="ja"><quote>ぼかし</quote>無効</para>
+              </caption>
+            </mediaobject>
+          </figure>
+          <figure>
+            <title lang="en"><quote>Blur border</quote> zoomed (1600%)</title>
+            <title lang="ja"><quote>枠をぼかす</quote>の例 (倍率 1600%)</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-blurx16.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en"><quote>Blur</quote> checked</para>
+                <para lang="ja"><quote>ぼかし</quote>有効</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-noblurx16.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en"><quote>Blur</quote> unchecked</para>
+                <para lang="ja"><quote>ぼかし</quote>無効</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Granularity</term>
+        <term lang="ja">粒状度</term>
+        <listitem>
+          <para lang="en">
+            The border's granularity is almost the size of pixel blocks spread
+            to create the effect of a jagged and fuzzy border.
+          </para>
+          <para lang="ja">
+            縁の粒状度とは縁を揃えずあいまい化するための単位となる微小区画の
+            凡その大きさです。
+          </para>
+          <figure>
+            <title lang="en">Granularity example (without blurring)</title>
+            <title lang="ja">粒状度の例 (ぼかしなし)</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-gran1.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Granularity 1 (min)</para>
+                <para lang="ja">粒状度 1 (最低)</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-gran4.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Granularity 4 (default)</para>
+                <para lang="ja">粒状度 4 (初期値)</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-gran16.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Granularity 16 (max)</para>
+                <para lang="ja">粒状度 16 (最高)</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Add shadow</term>
+        <term lang="ja">影を付ける</term>
+        <listitem>
+          <para lang="en">
+            If checked, the filter will also create a shadow at the border.
+          </para>
+          <para lang="ja">
+            有効にするとフィルタは縁のぼかしに影を付けます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Add shadow</quote> example</title>
+            <title lang="ja"><quote>影を付ける</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-shadow100.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  <quote>Add shadow</quote> checked, shadow weight 100%
+                  (default shadow weight).
+                </para>
+                <para lang="ja">
+                  影の濃さ 100% (初期値) で<quote>影を付ける</quote>
+                </para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-shadow10.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  <quote>Add shadow</quote> with shadow weight 10%.
+                </para>
+                <para lang="ja">影の濃さ 10% で<quote>影を付ける</quote></para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/fuzzyborder-noshadow.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  <quote>Add shadow</quote> unchecked (default)
+                </para>
+                <para lang="ja"><quote>影を付ける</quote>無効 (初期設定)</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Shadow weight</term>
+        <term lang="ja">影の濃さ</term>
+        <listitem>
+          <para lang="en">
+            If <guilabel>Add shadow</guilabel> is checked,
+            you may set the shadow opacity here. Defaults to 100% (full
+            opacity).
+          </para>
+          <para lang="ja">
+            <guilabel>影を付ける</guilabel> が有効ならこのスライダで影の
+            不透明度を調節できます。 初期値は 100% (完全不透明) です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Work on copy</term>
+        <term lang="ja">コピーで作業する</term>
+        <listitem>
+          <para lang="en">
+            If checked, the filter creates a new window containing a copy of
+            the image with the filter applied. The original image remains
+            unchanged.
+          </para>
+          <para lang="ja">
+            このオプションを有効にするとスクリプトは対象の画像の複製をとって
+            新しいウィンドウで開き、 その画像上でフィルタを適用します。 元の
+            画像は変更を受けません。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Flatten image</term>
+        <term lang="ja">画像を統合</term>
+        <listitem>
+          <para lang="en">
+            If unchecked, the filter keeps the additional layers it used to
+            create the border and the shadow (if demanded). Default is to
+            merge down all layers.
+          </para>
+          <para lang="ja">
+            このオプションが無効ならばフィルタが枠を作成して (指示あれば) 影を
+            つけるために使用した追加のレイヤーが残ります。 初期設定では有効と
+            なっていて、 全てのレイヤーが実行後に統合されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

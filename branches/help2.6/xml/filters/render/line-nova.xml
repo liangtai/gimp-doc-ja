@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                "http://www.docbook.org/xml/4.3/docbookx.dtd">
+
+<!--2010-08-25-->
+<sect2 id="script-fu-line-nova">
+  <title lang="en">Line Nova</title>
+  <title lang="ja">集中線...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Render</secondary>
+    <tertiary>Line Nova</tertiary>
+  </indexterm>
+  <indexterm lang="en"><primary>Line Nova</primary></indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary>下塗り</secondary>
+    <tertiary>集中線</tertiary>
+  </indexterm>
+  <indexterm lang="ja"><primary>集中線</primary></indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+
+    <figure>
+      <title lang="en">Example for the <quote>Line Nova</quote> filter</title>
+      <title lang="ja"><quote>集中線</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg" />
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/render/taj-line-nova.jpg" />
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Line Nova</quote> applied</para>
+          <para lang="ja"><quote>集中線</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      <guimenuitem>Line Nova</guimenuitem> The Line Nova filter fills a
+      layer with rays emanating outward from its center of the layer using
+      the foreground color shown in the Toolbox. The rays starts as one pixel
+      and grew broader towars the edges of the layer.
+    </para>
+    <para lang="ja">
+      <guimenuitem>集中線...</guimenuitem> コマンドはレイヤーの中心より外に
+      向かって放射される幾筋もの光線をツールボックスに示される描画色で描く
+      スクリプトです。 光線は 1 ピクセルから始まりレイヤーの外縁に向かって
+      だんだん太くなります。
+    </para>
+    <tip>
+      <para lang="en">
+        This filter does not provide any option which allow you to set the
+        center point of lines.  If you need adjust the place of the radial
+        lines where you want, create another transparent image and apply this
+        filter on it, then add it on your image.  Setting large size for the
+        new nova image may help you not to break lines inside of your image.
+      </para>
+      <para lang="ja">
+        このフィルタには集中線の中心を設定する機能が一切ありません。 放射状の
+        線を好みの位置に置くためには、 透過する画像を新たに用意してそこにこの
+        フィルタを適用し、 元の画像に加えてください。 集中線の新しい画像は元の
+        画像より大きくしておくと位置を変えても画像の途中で線が途切れるさせずに
+        済みます。
+      </para>
+    </tip>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activating the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Render</guisubmenu>
+        <guimenuitem>Line Nova</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>下塗り</guisubmenu>
+        <guimenuitem>集中線...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Line Nova</quote> options</title>
+      <title lang="ja"><quote>集中線</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/render/line-nova.png" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Number of lines</term>
+        <term lang="ja">線数</term>
+        <listitem>
+          <para lang="en">
+            By using this slider you can set the number of lines between 40
+            to 1000. The default is 200.
+          </para>
+          <para lang="ja">
+            このスライダで、 描かれる線の数を 40 本から 1000 本の間で
+            指定できます。 初期設定値は 200 本です。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Sharpness (degrees)</term>
+        <term lang="ja">鋭さ (角度)</term>
+        <listitem>
+          <para lang="en">
+            This slider determines how much the rays will broaden towards
+            the edges. The range goes from 0.0 to 10.0. If set to 0.0, nothing
+            will be drawn. If set to 10.0 most of the area near the edges of
+            the layer will be painted.
+          </para>
+          <para lang="ja">
+            このオプションは光線が外に向かってどの程度の割合で太くなるかを
+            決めます。 値の範囲は 0.0 から 10.0 です。 0.0 に設定すると何も
+            描かれません。 10.0 に設定するとレイヤーの外辺付近がほとんど塗り
+            つぶされます。
+          </para>
+          <figure>
+            <title lang="en">
+              <quote>Line Nova</quote> sharpness option</quote>
+            </title>
+            <title lang="ja">
+              <quote>集中線</quote>の鋭さオプション</quote>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/examples/render/line-nova-sharp.png" />
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From left to right: sharpness = 1; sharpness = 5;
+                  sharpness = 10
+                </para>
+                <para lang="ja">
+                  左から順に: <parameter>鋭さ (角度)</parameter> = 1;
+                  <parameter>鋭さ (角度)</parameter> = 5;
+                  <parameter>鋭さ (角度)</parameter> = 10
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Offset radius</term>
+        <term lang="ja">オフセット半径</term>
+        <listitem>
+          <para lang="en">
+            Here you choose the distance, in pixels, from center to the
+            starting point of the rays. If set to 0.0 the rays starts from the
+            center. Any other value will let the starting points be on a circle
+            at the selected distance from the center. The maximum distance is
+            2000 pixels. The default value is 100 pixels.
+          </para>
+          <para lang="ja">
+            ここでは光線の中心点から光線が現れる位置までの距離をピクセル単位で
+            決めます。 0.0 にすると光線は中心点から出ます。 それ以上の値に
+            すると、 光線の始点はここで定めた距離だけ中心点から離れ円形に
+            並びます。 最大の距離は 2000 ピクセルです。 初期設定値は 100
+            ピクセルです。
+          </para>
+          <figure>
+            <title lang="en">
+              <quote>Line Nova</quote> offset radius option</quote>
+            </title>
+            <title lang="ja">
+              <quote>集中線</quote>のオフセット半径オプション</quote>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/examples/render/line-nova-radius.png" />
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From left to right: randomness = 1; randomness = 50
+                </para>
+                <para lang="ja">
+                  左から順に: <parameter>複雑度</parameter> = 1;
+                  <parameter>複雑度</parameter> = 50
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Randomness</term>
+        <term lang="ja">複雑度</term>
+        <listitem>
+          <para lang="en">
+            If this slider is set to a value higher than 1, the starting point
+            for each ray differ more or less randomly from the average starting
+            point set as the offset radius above. With the value set to 1, all
+            the rays will start at the circle determined by the offset radius.
+            The maximum value is 2000. The default value is 30.
+          </para>
+          <para lang="ja">
+            ここで値を 1 よりも大きくすると、 光線の始点がまばらになり、 上記の
+            オフセット半径で定めた中心からの距離が各線ごとに不規則に
+            増減します。 値を 1 と定めたときはすべての光線の始点が揃い、 上記の
+            オフセット半径で定めたとおり中心から等距離に発して始点が正円を
+            描いて並びます。 最大値は 2000 です。 初期設定値は 100 です。
+          </para>
+          <figure>
+            <title lang="en">
+              <quote>Line Nova</quote> randomness option</quote>
+            </title>
+            <title lang="ja">
+              <quote>集中線</quote>の複雑度オプション</quote>
+            </title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                 fileref="images/filters/examples/render/line-nova-rand.png" />
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  From left to right: offset radius = 0; offset radius = 50
+                </para>
+                <para lang="ja">
+                  左から順に: <parameter>オフセット半径</parameter> = 0;
+                  <parameter>オフセット半径</parameter> = 50
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+</sect2>

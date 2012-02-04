@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!-- section history:
+  2008-02-10 alex falappa: added 'it'
+  2008-01-03 ude: added content (en,de)
+  2007-12-02 lexa: created initial version
+-->
+<!--TODO es lt pl ru: translate new content (and review en)-->
+<!--2010-12-08-->
+<sect2 id="script-fu-predator">
+  <title lang="en">Predator</title>
+  <title lang="ja">プレデター...</title>
+
+  <indexterm lang="en">
+    <primary>Filters</primary>
+    <secondary>Artistic</secondary>
+    <tertiary>Predator</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Predator</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>フィルタ</primary>
+    <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
+    <tertiary>プレデター</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>プレデター</primary>
+  </indexterm>
+
+  <sect3>
+    <title lang="en">Overview</title>
+    <title lang="ja">概観</title>
+    <figure>
+      <title lang="en">Example for the <quote>Predator</quote> filter</title>
+      <title lang="ja"><quote>プレデター</quote>フィルタの使用例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/taj_orig.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Original image</para>
+          <para lang="ja">元画像</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="JPG"
+            fileref="images/filters/examples/artistic-taj-predator.jpg"/>
+        </imageobject>
+        <caption>
+          <para lang="en"><quote>Predator</quote> applied</para>
+          <para lang="ja"><quote>プレデター</quote>フィルタ適用後</para>
+        </caption>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+       This filter adds a <quote>Predator</quote> effect to the image. The
+       predator effect makes the image/selection look something like the view
+       the predator has in movies (kind of a thermogram and that type of
+       thing). This will reduce the image to edges in a few basic colors on a
+       dark background.
+    </para>
+    <para lang="en">
+       If there is an active selection, the filter effect will be applied to
+       the selected region, otherwise to the alpha channel (the filter will
+       add an alpha channel, if necessary). The filter works best on colorful
+       RGB images.
+    </para>
+    <para lang="ja">
+      <guimenuitem>プレデター...</guimenuitem> フィルタは
+      画像を<quote>プレデター</quote>風にするスクリプトです。 プレデター風とは
+      映画<quote>プレデター</quote>[捕食者]の視覚に現れたような赤外線サーモ
+      グラフィ[熱分布画像]にも似た効果のことで、 このフィルタは画像もしくは
+      その選択範囲に適用できます。
+    </para>
+    <para lang="ja">
+      現在活性化している選択範囲があるときは選択範囲内にフィルタが適用され
+      ますが、 なければアルファチャンネルに適用されます (必要ならば自動的に
+      アルファチャンネルが追加されます)。 このフィルタが最良の効果を発揮するの
+      は画像が彩り豊かな<acronym>RGB</acronym>色のときです。
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Activate the filter</title>
+    <title lang="ja">フィルタの呼び出し方</title>
+    <para lang="en">
+      This filter is found in the image window menu under
+      <menuchoice>
+        <guimenu>Filters</guimenu>
+        <guisubmenu>Artistic</guisubmenu>
+        <guimenuitem>Predator</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="ja">
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>フィルタ</guimenu>
+        <guisubmenu>芸術的効果</guisubmenu>
+        <guimenuitem>プレデター...</guimenuitem>
+      </menuchoice>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Options</title>
+    <title lang="ja">オプション</title>
+    <figure>
+      <title lang="en"><quote>Predator</quote> options</title>
+      <title lang="ja"><quote>プレデター</quote>フィルタのオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/filters/artistic/predator.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Edge amount</term>
+        <term lang="ja">エッジ量</term>
+        <listitem>
+          <para lang="en">
+            The <quote>predator</quote> filter will detect edges using the
+            Sobel <link linkend="plug-in-edge">edge detector</link>. The
+            specified <quote>Edge amount</quote> will be passed to the Sobel
+            filter. A high value will result in detecting more edges.
+          </para>
+          <para lang="ja">
+            <quote>プレデター</quote>フィルタは 
+            <link linkend="plug-in-edge">輪郭...</link> フィルタを呼び出し、
+            オプションに<quote>ソーベル</quote>アルゴリズムを指定して輪郭抽出を
+            行ないます。 このスクリプトの <guilabel>エッジ量</guilabel> はその
+            ソーベル処理に用いられます。 高い値を与えると読み取られる輪郭線が
+            増えます。
+          </para>
+          <figure>
+            <title lang="en"><quote>Edge amount</quote> examples</title>
+            <title lang="ja"><quote>エッジ量</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-edge4.png"/>
+              </imageobject>
+              <caption>
+                <para>4</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-edge8.png"/>
+              </imageobject>
+              <caption>
+                <para>8</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-edge16.png"/>
+              </imageobject>
+              <caption>
+                <para>16</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Pixelize</term>
+        <term lang="ja">ピクセル化</term>
+        <listitem>
+          <para lang="en">
+            If checked, the filter will simplify the image into solid-colored
+            squares using the <link linkend="plug-in-pixelize">Pixelise</link>
+            filter before the real predator effect will be applied. You can
+            select the size of these squares with the option <guilabel>Pixel
+            amount</guilabel>, which will heavily affect the result (see
+            examples below).
+          </para>
+          <para lang="ja">
+            <guilabel>ピクセル化</guilabel> オプションを有効にすると画像は 
+            <link linkend="plug-in-pixelize">ピクセル化...</link> フィルタに
+            よって単色の小さな正方形の集まりに単純化されてからプレデター処理の
+            適用を受けます。 正方形の大きさは <guilabel>ピクセル量</guilabel>
+            の増減により変化しますが、 これが仕上がりに多大な影響 (後述の例) を
+            及ぼします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Pixel amount</term>
+        <term lang="ja">ピクセル量</term>
+        <listitem>
+          <para lang="en">
+            <quote>Pixel amount</quote> is the size of the color blocks the
+            image will be simplified to if <guilabel>Pixelize</guilabel> is
+            checked. Actually you are decreasing the resolution with this
+            option. In the examples below, you can see directly how increasing
+            the pixel block size leads to something like
+            <quote>macro pixels</quote>:
+          </para>
+          <para lang="ja">
+            <guilabel>ピクセル量</guilabel> スライダは 
+            <guilabel>ピクセル化</guilabel> オプションを有効にしているときに
+            画像を単純化するために使われる正方形のかけらの大きさを調節します。 
+            この値を増せば実質的に画像の解像度が落ちます。 つぎの例を
+            ご覧になればピクセル量を増すと升目が大きくなって
+            <quote>大ピクセル化</quote>していく様子がつかめるでしょう。
+          </para>
+          <figure>
+            <title lang="en"><quote>Pixelize</quote> examples</title>
+            <title lang="ja"><quote>ピクセル化</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-pixelize0.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">Disabled</para>
+                <para lang="ja">無効</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-pixelize4.png"/>
+              </imageobject>
+              <caption>
+                <para>4</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-pixelize8.png"/>
+              </imageobject>
+              <caption>
+                <para>8</para>
+              </caption>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/filters/examples/predator-pixelize16.png"/>
+              </imageobject>
+              <caption>
+                <para>16</para>
+              </caption>
+            </mediaobject>
+          </figure>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Keep selection</term>
+        <term lang="ja">選択範囲を残す</term>
+        <listitem>
+          <para lang="en">
+            If checked, the filter will be applied to the active selection.
+            Else, it will be applied to the active layer.
+          </para>
+          <para lang="ja">
+            このオプションを有効にするとフィルタは現在活性化している選択範囲に
+            適用されます。 無効の場合は活性レイヤーに適用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Separate layer</term>
+        <term lang="ja">レイヤーに分ける</term>
+        <listitem>
+          <para lang="en">
+            When this option is checked, a copy of the active layer will be
+            created above the active layer and the filter will be applied to
+            this copy, leaving the original layer untouched. If not checked,
+            the filter will be applied to the active layer.
+          </para>
+          <para lang="ja">
+            このオプションを有効にすると活性レイヤーの複製が作成されて上に重ね
+            られ、 元のレイヤーは変更を受けず複製側のレイヤーにフィルタが適用
+            されます。 無効の場合は活性レイヤーに直にフィルタが適用されます。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Filter algorithm</title>
+    <title lang="ja">フィルタのアルゴリズム</title>
+    <para lang="en">
+      Since this filter delegates the essential parts to two or three other
+      filters the algorithm is very simple:
+    </para>
+    <para lang="ja">
+      このフィルタは処理の根幹を 2〜3 種の他のフィルタに任せているため、 使用
+      しているアルゴリズムはつぎのようにとても単純です。
+    </para>
+    <procedure>
+      <figure>
+        <title lang="en">Making the <quote>predator</quote> effect</title>
+        <title lang="ja"><quote>プレデター</quote>効果の生成過程</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="JPG"
+              fileref="images/filters/examples/predator-step0.jpg"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Original</para>
+            <para lang="ja">原画</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="JPG"
+              fileref="images/filters/examples/predator-step1.jpg"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Pixelize</para>
+            <para lang="ja">ピクセル化</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="JPG"
+              fileref="images/filters/examples/predator-step2.jpg"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Min RGB</para>
+            <para lang="ja"><acronym>RGB</acronym>値最小</para>
+          </caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="JPG"
+              fileref="images/filters/examples/predator-step3.jpg"/>
+          </imageobject>
+          <caption>
+            <para lang="en">Edge detection</para>
+            <para lang="ja">輪郭抽出</para>
+          </caption>
+        </mediaobject>
+      </figure>
+      <step>
+        <para lang="en">The original image.</para>
+        <para lang="ja">元の画像です。</para>
+      </step>
+      <step>
+        <para lang="en">
+          Optionally, the filter
+          <link linkend="plug-in-pixelize">pixelizes</link> the image: it
+          renders the image by using color blocks instead of pixels, thus
+          reducing the image resolution.
+        </para>
+        <para lang="ja">
+          オプションで<quote>ピクセル化</quote>を選ぶとこの時点で画像に 
+          <link linkend="plug-in-pixelize">ピクセル化</link> フィルタが適用
+          されます。 画像は画素より大きめの色升目で構成されるので画像の解像度が
+          実質的に下がります。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          The colors will be reduced to pure red, green, blue (and possibly
+          gray colors), using the <link linkend="plug-in-max-rgb">minimal
+          RGB</link> channel for every pixel.
+        </para>
+        <para lang="ja">
+          画素の色はいずれも 
+          <link linkend="plug-in-max-rgb"><acronym>RGB</acronym>値最大最小
+          </link> フィルタによって最小値チャンネルだけ残す処理を施され、 純赤、
+          純緑、 純青の濃淡と場合により灰色陰影が加わった僅かな色構成に減色
+          されます。
+        </para>
+      </step>
+      <step>
+        <para lang="en">
+          Applying the <link linkend="plug-in-edge">Sobel edge
+          detecting</link> filter, the image will be reduced further on to
+          edges, usually on a black background, with very few colors.
+        </para>
+        <para lang="ja">
+          <quote>ソーベル</quote>アルゴリズムを利用した 
+          <link linkend="plug-in-edge">輪郭抽出</link> フィルタが適用されると、
+          画像は色数が随分減らされ大抵は背景が黒くなったものにすっかり変わり
+          ます。
+        </para>
+      </step>
+    </procedure>
+  </sect3>
+</sect2>
