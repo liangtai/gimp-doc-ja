@@ -10,7 +10,7 @@
   2006-12-23 ude: added de translation
   2005-11-26: created by julien hardelin.
 -->
-<!--2010-12-06-->
+<!--2012-03-07-->
 <sect2 id="plug-in-retinex">
   <title lang="en">Retinex</title>
   <title lang="ja">レティネックス...</title>
@@ -55,7 +55,7 @@
             Note new details in the upper right corner.
           </para>
           <para lang="ja">
-            <quote>レティネックス</quote>フィルタ適用後。 右上付近の詳しさに
+            <quote>レティネックス</quote>フィルター適用後。 右上付近の詳しさに
             注目。
           </para>
         </caption>
@@ -75,10 +75,10 @@
       poorly visible structures in X-rays or scanners.
     </para>
     <para lang="ja">
-      <guimenuitem>レティネックス...</guimenuitem> フィルタは明るさの不十分な
+      <guimenuitem>レティネックス...</guimenuitem> フィルターは明るさの不十分な
       画像の見た目を改善する描画を行ないます。 光の乏しいところでもヒトの目は
       色を見分けられるのにカメラやビデオカメラはそれがちゃんと処理できません。 
-      レティネックスフィルタの根幹をなす<acronym>MSRCR</acronym> 
+      レティネックスフィルターの根幹をなす<acronym>MSRCR</acronym> 
       (<foreignphrase>MultiScale Retinex with Color Restoration</foreignphrase>)
       とはヒトの目がその場の状況に合わせる生物学的構造をもっていることに
       着目したアルゴリズムです。 レティネックスは1971年に登場した 
@@ -93,7 +93,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -116,7 +116,7 @@
     <figure>
       <title lang="en"><quote>Retinex</quote> filter options</title>
       <title lang="ja">
-        <quote>レティネックス</quote>フィルタのオプション
+        <quote>レティネックス</quote>フィルターのオプション
       </title>
       <mediaobject>
         <imageobject>
@@ -135,7 +135,7 @@
       これらのオプションは数学者や医用画像処理の技術者だけしか理解できない
       思考回路を要求します。 実用的な面では、 最適な設定を模索していくしか他に
       方法がありません。 それでもつぎの説明は試され済みの
-      <acronym>GIMP</acronym>ユーザにとっては役立つ情報だと思います。
+      <acronym>GIMP</acronym>ユーザーにとっては役立つ情報だと思います。
     </para>
     <variablelist>
       <varlistentry>
@@ -155,10 +155,10 @@
             このプラグイン作者が自身のサイト 
             <xref linkend="bibliography-online-plugin-retinex"/>
             でつぎのようなことを述べています。 <quote>色の変わりようと光源を
-            特定するためガウスフィルタを使い規模を違えて結果の差異を比較
-            します。 これらのパラメータは最小規模 (シグマ値が2.0) から
+            特定するためガウスフィルターを使い規模を違えて結果の差異を比較
+            します。 これらのパラメーターは最小規模 (シグマ値が2.0) から
             最大規模 (画像サイズと同じシグマ値) までの間でそれぞれのガウス
-            フィルタに与える規模の値をどのように置くかを決めます。</quote>...
+            フィルターに与える規模の値をどのように置くかを決めます。</quote>...
           </para>
           <variablelist>
             <varlistentry>
@@ -219,7 +219,7 @@
           </para>
           <para lang="ja">
             レティネックスの深度を決めます。 最小値は 16 です。 この値で
-            フィルタをかけると品のない粗野な仕上りになります。 最大値は 250 
+            フィルターをかけると品のない粗野な仕上りになります。 最大値は 250 
             です。 初期値には最適な 240 が選ばれています。
           </para>
         </listitem>
@@ -236,10 +236,10 @@
             too high tends to introduce noise in the picture.
           </para>
           <para lang="ja">
-            複数スケールのレティネックスフィルタの繰り返し回数を設定します。
+            複数スケールのレティネックスフィルターの繰り返し回数を設定します。
             できるだけ小さな値が望ましいため推奨値は 3 となっています。 ただし
             1 回や 2 回のスケール分割だけでは複数スケールの相が消されるので単数
-            スケールのレティネックスフィルタ処理に逆戻りしてしまいます。 逆に
+            スケールのレティネックスフィルター処理に逆戻りしてしまいます。 逆に
             高すぎる値を設定すると画像にノイズが入り込みます。
           </para>
         </listitem>
@@ -257,8 +257,8 @@
           </para>
           <para lang="ja">
             <acronym>MSR</acronym>アルゴリズムは画像を明るくするきらいがある
-            ため、 このスライダで彩度のずれを平均的に調整できるようになって
-            います。 高い値を与えると彩度が落ちます。 このパラメータの効果は
+            ため、 このスライダーで彩度のずれを平均的に調整できるようになって
+            います。 高い値を与えると彩度が落ちます。 このパラメーターの効果は
             画像にとりわけ強く依存しますので、 最適な結果をひねり出すのには
             まさに欠かせない値です。
           </para>

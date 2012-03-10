@@ -12,7 +12,7 @@
   2005-11-30 replaced informalfigure by axel.wernicke
   2005-09-30 created by julien hardelin
 -->
-<!--2010-12-09-->
+<!--2012-03-06-->
 <sect2 id="plug-in-bump-map">
   <title lang="en">Bump Map</title>
   <title lang="ja">バンプマップ...</title>
@@ -26,7 +26,7 @@
     <primary>Bump Map</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>マップ</secondary>
     <tertiary>バンプマップ</tertiary>
   </indexterm>
@@ -56,7 +56,7 @@
           <para lang="ja">
             左図は起伏をつける前の対象画像。 中央はバンプマップ。 黒いところ
             ほど掘り下げ白いところほど盛り上げることを意図するグレースケール
-            画像である。 右図はバンプマップ後の対象画像。 フィルタは陰だけで
+            画像である。 右図はバンプマップ後の対象画像。 フィルターは陰だけで
             なく影もつけている。
           </para>
         </caption>
@@ -71,19 +71,19 @@
       filter.
     </para>
     <para lang="ja">
-      <guimenuitem>バンプマップ...</guimenuitem> フィルタは
+      <guimenuitem>バンプマップ...</guimenuitem> フィルターは
       ある画像をカードに見立ててエンボス加工 (起伏をつけること) し、 他の画像に
       貼り付けることで立体感の効果を生み出します。 起伏の高さは画素の光度で
       決められ、 光の射す向きは調整可能です。 エンボス加工については 
-      <link linkend="plug-in-emboss">エンボス</link> フィルタのところで詳しく
-      解説しています。 画像の種類にエンボスフィルタのような制限はなく、 どんな
+      <link linkend="plug-in-emboss">エンボス</link> フィルターのところで詳しく
+      解説しています。 画像の種類にエンボスフィルターのような制限はなく、 どんな
       形式でもバンプマップ化して利用できます。
     </para>
   </sect3>
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -95,7 +95,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>マップ</guisubmenu>
         <guimenuitem>バンプマップ...</guimenuitem>
       </menuchoice>
@@ -107,7 +107,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Bump Map</quote> filter options</title>
-      <title lang="ja"><quote>バンプマップ</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>バンプマップ</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -126,7 +126,7 @@
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
-            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            にしておれば画像に実際にフィルターをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
           </para>
         </listitem>
@@ -144,8 +144,8 @@
           <para lang="ja">
             <guilabel>バンプマップ</guilabel> 引き出しリスト
             からバンプマップ化して利用できるレイヤーを選んでください。 ここに
-            並ぶ画像はこのフィルタを呼び出した時点で<acronym>GIMP</acronym>が
-            画面上に開いている画像だけです。 フィルタを呼び出したあとで開いた
+            並ぶ画像はこのフィルターを呼び出した時点で<acronym>GIMP</acronym>が
+            画面上に開いている画像だけです。 フィルターを呼び出したあとで開いた
             画像はこのリストに現れません。
           </para>
         </listitem>
@@ -256,8 +256,8 @@
             counter-clockwise.
           </para>
           <para lang="ja">
-            このスライダで光の射してくる方角を 0.00 度 (右-東から) から 360.00
-            度 (同) まで反時計回りの範囲で設定できます。
+            このスライダーで光の射してくる方角を 0.00 度 (右-東から) から
+            360.00 度 (同) まで反時計回りの範囲で設定できます。
           </para>
         </listitem>
       </varlistentry>
@@ -269,7 +269,7 @@
             That's height from horizon (0.50°), up to zenith (90°).
           </para>
           <para lang="ja">
-            このスライダで光の射角を 0.50 度 (水平線上) から 90.00 度 (天頂) 
+            このスライダーで光の射角を 0.50 度 (水平線上) から 90.00 度 (天頂) 
             までの範囲で指定できます。
           </para>
         </listitem>
@@ -284,7 +284,7 @@
             vary from 1 to 65.
           </para>
           <para lang="ja">
-            このスライダで起伏の底部と頂部の高度差を設定できます。 値を高く
+            このスライダーで起伏の底部と頂部の高度差を設定できます。 値を高く
             すれば起伏は大きくなります。 値の範囲は 1 から 65 までです。
           </para>
         </listitem>
@@ -301,7 +301,7 @@
             (Y).
           </para>
           <para lang="ja">
-            これらのスライダで対象画像からマップ化画像への相対位置を水平方向
+            これらのスライダーで対象画像からマップ化画像への相対位置を水平方向
             (右に正) に <guilabel>X オフセット</guilabel> で、 垂直方向 
             (下に正) に <guilabel>Y オフセット</guilabel> で設定できます。
           </para>
@@ -322,7 +322,7 @@
           </para>
           <para lang="ja">
             マップ化しておく画像に透過部分があると、 その部分は黒いと見做され
-            バンプマップ処理では掘り下げられることになります。 このスライダは
+            バンプマップ処理では掘り下げられることになります。 このスライダーは
             その穴にあたかも水を張ったかのように嵩上げします。 水位を最高の
             255 に引き上げると穴は完全に消えます。 
             <guilabel>反転バンプマップ</guilabel> オプションを有効にしている
@@ -340,7 +340,7 @@
             values, shadows will fade and relief lessen.
           </para>
           <para lang="ja">
-            このスライダは包み込むような光の強さを調節します。 高い値をとると
+            このスライダーは包み込むような光の強さを調節します。 高い値をとると
             影が薄れ浮き彫りは減ります。
           </para>
         </listitem>

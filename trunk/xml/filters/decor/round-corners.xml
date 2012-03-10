@@ -7,7 +7,7 @@
   2007-09-04 alex falappa: added it
   2007-09-03 ude: created en, de
 -->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="script-fu-round-corners">
   <title lang="en">Round Corners</title>
   <title lang="ja">角丸め...</title>
@@ -21,7 +21,7 @@
     <primary>Round Corners</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ソウショク">装飾</secondary>
     <tertiary sortas="カドマルメ">角丸め</tertiary>
   </indexterm>
@@ -36,7 +36,7 @@
       <title lang="en">
         Example for the <quote>Round Corners</quote> filter
       </title>
-      <title lang="ja"><quote>角丸め</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>角丸め</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -54,7 +54,7 @@
         </imageobject>
         <caption>
           <para lang="en"><quote>Round Corners</quote> applied</para>
-          <para lang="ja"><quote>角丸め</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>角丸め</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -69,12 +69,12 @@
       layer.
     </para>
     <para lang="ja">
-      <guimenuitem>角丸め...</guimenuitem> フィルタは画像の
+      <guimenuitem>角丸め...</guimenuitem> フィルターは画像の
       角を丸く切り取ったように加工し、 任意で背景レイヤーにドロップシャドウを
       つけるスクリプトです。
     </para>
     <para lang="ja">
-      このフィルタはレイヤーが 1 層だけの<acronym>RGB</acronym>もしくはグレー
+      このフィルターはレイヤーが 1 層だけの<acronym>RGB</acronym>もしくはグレー
       スケールの画像でのみ作動します。 複製を作成してその上で作業するか、 元
       画像に直接適用するかを選択できます。 追加される背景レイヤーには現在の
       背景色を使います。
@@ -82,7 +82,7 @@
   </sect3>
 
   <sect3>
-    <title lang="en">フィルタの呼び出し方</title>
+    <title lang="en">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -94,7 +94,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>装飾</guisubmenu>
         <guimenuitem>角丸め...</guimenuitem>
       </menuchoice>
@@ -142,7 +142,7 @@
           </para>
           <para lang="ja">
             下図の例では 100&times;100 ピクセル大の画像で<quote>半径</quote>を
-            いろいろ変えながらフィルタを適用していす。 半径 = 50 にすれば 
+            いろいろ変えながらフィルターを適用していす。 半径 = 50 にすれば 
             4 つの 4 半分円が合体してちょうど直径 100 ピクセルの完全な
             円になり、 元画像の境界線と 4 つの点で接します。 さらに半径を 50 を
             越える値にすることも可能ですが、 その結果は見てのとおりの有様です。
@@ -206,7 +206,7 @@
             your image after rounding the image corners.
           </para>
           <para lang="ja">
-            このオプションを有効にするとフィルタは角丸めの実行後に画像の下側に
+            このオプションを有効にするとフィルターは角丸めの実行後に画像の下側に
             影をつけます。 描かれた影がはみ出した分の領域が加わったひとまわり
             大きな画像に変わります。
           </p>
@@ -282,7 +282,7 @@
           <para lang="ja">
             <guilabel>影を落す</guilabel> オプションを有効にした場合は 
             <link linkend="script-fu-drop-shadow">ドロップシャドウ</link> 
-            フィルタで使われるぼかし半径をここで設定できます。 画像は影
+            フィルターで使われるぼかし半径をここで設定できます。 画像は影
             オフセットの値とぼかし半径に合わせてその寸法を拡大します。
           </para>
         </listitem>
@@ -298,7 +298,7 @@
             on the blur radius and the shadow offsets.
           </para>
           <para lang="ja">
-            このオプションを有効 (初期状態) にするとフィルタは対象画像の唯一の
+            このオプションを有効 (初期状態) にするとフィルターは対象画像の唯一の
             レイヤーの背面側に現在の背景色で塗りつぶされた背景レイヤーを追加
             します。 新たに作成されるこのレイヤーの寸法はぼかし半径と影
             オフセットの値により変化します。
@@ -316,7 +316,7 @@
           </para>
           <para lang="ja">
             このオプションを有効にするとスクリプトは画像の複製をとって新たな
-            ウィンドウで開き、 その複製画像上でフィルタを適用します。 元の
+            ウィンドウで開き、 その複製画像上でフィルターを適用します。 元の
             画像は変更を受けません。
           </para>
         </listitem>

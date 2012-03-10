@@ -6,7 +6,7 @@
   2007-08-29 j.h : link to glossary Alpha Channel added en;fr
   2006-03-06 lexa: reviewed and made docbook compliant
 -->
-<!--2012-01-05-->
+<!--2012-03-03-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-channel-dialog">
   <title lang="en">Channels Dialog</title>
   <title lang="ja">チャンネルダイアログ</title>
@@ -70,7 +70,7 @@
   </para>
   <para lang="ja">
     チャンネルダイアログはチャンネルを編集、 加工、 管理する主要な
-    インタフェースです。 チャンネルには二重の使い道があります。 そのため
+    インターフェースです。 チャンネルには二重の使い道があります。 そのため
     ダイアログも 2 つに区切られています。 上側には色のチャンネルがあり、
     下側には
     <link linkend="gimp-channel-mask">選択マスク</link> が置かれます。
@@ -97,14 +97,14 @@
     透過効果なしで作成された画像にはアルファチャンネルがありませんが、 
     <link linkend="gimp-layer-dialog">レイヤーダイアログのメニュー</link> など
     に追加のコマンドがあります。 そのうえレイヤーが 1 層の画像にレイヤーを追加
-    して複数層にすると、 <acronym>GIMP</acronym>は自動的にその <emphasis>画像に
-    </emphasis> アルファチャンネルを追加します。
+    して複数層にすると、 <acronym>GIMP</acronym>は自動的にその 
+    <emphasis>画像に</emphasis> アルファチャンネルを追加します。
   </para>
   <note>
     <para lang="en">GIMP doesn't support CMYK or YUV color models.</para>
     <para lang="ja">
-      <acronym>GIMP</acronym>は<acronym>CMYK</acronym>色モデルや<acronym>YUV
-      </acronym>色モデルを扱えません。
+      <acronym>GIMP</acronym>は<acronym>CMYK</acronym>色モデルや
+      <acronym>YUV</acronym>色モデルを扱えません。
     </para>
   </note>
   <figure>
@@ -157,7 +157,7 @@
       </imageobject>
       <caption>
         <para lang="en"><!-- All channels combined -->All channels</para>
-        <para lang="ja"><!--全てのチャンネルの合成 -->全てのチャンネル</para>
+        <para lang="ja"><!--すべてのチャンネルの合成 -->すべ全てのチャンネル</para>
       </caption>
     </mediaobject>
   </figure>
@@ -171,13 +171,13 @@
     visible only in their own channels and invisible in others.
   </para>
   <para lang="ja">
-    右端の画像を赤緑青の 3 つの色チャンネルと透明度を表すアルファチャンネルに
-    分解した様子です。 右端の画像では透過部分を灰色濃淡による市松模様で表現して
-    あります。 いずれの色チャンネルでも白の部分は全ての色が出ているので白く
-    なっており、 黒の部分は黒くなっています。 赤い帽子は赤チャンネルでは見えて
-    も他の色チャンネルでは全く見えません。 このことは仮に真緑や真青であっても
-    同じで、 その色のチャンネルでは見えても他の色チャンネルでは見えなく
-    なります。
+    右端の画像を赤・緑・青の 3 つの色チャンネルと透明度を表すアルファ
+    チャンネルに分解した様子です。 右端の画像では透過部分を灰色濃淡による
+    市松模様で表現してあります。 いずれの色チャンネルでも白の部分は全ての色が
+    出ているので白くなっており、 黒の部分は黒くなっています。 赤い帽子は赤
+    チャンネルでは見えても他の色チャンネルでは全く見えません。 このことは仮に
+    純緑や純青であっても同じで、 その色のチャンネルでは見えても他の色
+    チャンネルでは見えなくなります。
   </para>
 
   <sect3 id="gimp-channel-dialog-calling">
@@ -326,7 +326,7 @@
               will toggle the visibility of the channel.
             </para>
             <para lang="ja">
-              最初は全てのチャンネルが、 つまりは全ての色成分が可視化されて
+              最初はすべてのチャンネルが、 つまりはすべての色成分が可視化されて
               います。 どれかのチャンネルを不可視にするにはその左側にある
               <quote>開いた眼</quote>のアイコンをクリックすればよいのです。
               そうすると画像からこのチャンネルに対応する色成分が失われ、 その
@@ -480,7 +480,7 @@
       <indexterm lang="ja">
         <primary>チャンネル</primary>
         <secondary sortas="チャンネルヲセンタクハンイニ">
-          Mャンネルを選択範囲に
+          チャンネルを選択範囲に
         </secondary>
       </indexterm>
 
@@ -516,12 +516,12 @@
               image window. A click on the color button displays the GIMP
               color selector and then you can change the mask color.
             </para>
-            <para lang="ja"><!--XXX チャンネル表示色の変更-->
+            <para lang="ja">
               選択マスクにのみ有効です。 <guilabel>チャンネル名</guilabel> は
               ここで変更できます。 この他に画像ウィンドウ上でのチャンネルの
               見え方を設定する項目が 2 つあります。 これらは画像ウィンドウ上で
               マスクの <guilabel>塗り不透明度</guilabel> と色を調節します。 色
-              ボタンをクリックすると<quote>チャンネル表示色の編集</quote>
+              ボタンをクリックすると<quote>チャンネル表示色の変更</quote>
               ウィンドウが開かれ、 ここでマスクの表示色を変更できます。
             </para>
           </listitem>

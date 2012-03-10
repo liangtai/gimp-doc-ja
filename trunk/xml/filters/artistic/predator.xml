@@ -7,7 +7,7 @@
   2007-12-02 lexa: created initial version
 -->
 <!--TODO es lt pl ru: translate new content (and review en)-->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="script-fu-predator">
   <title lang="en">Predator</title>
   <title lang="ja">プレデター...</title>
@@ -21,7 +21,7 @@
     <primary>Predator</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
     <tertiary>プレデター</tertiary>
   </indexterm>
@@ -34,7 +34,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Example for the <quote>Predator</quote> filter</title>
-      <title lang="ja"><quote>プレデター</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>プレデター</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -52,7 +52,7 @@
         </imageobject>
         <caption>
           <para lang="en"><quote>Predator</quote> applied</para>
-          <para lang="ja"><quote>プレデター</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>プレデター</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -70,23 +70,23 @@
        RGB images.
     </para>
     <para lang="ja">
-      <guimenuitem>プレデター...</guimenuitem> フィルタは
+      <guimenuitem>プレデター...</guimenuitem> フィルターは
       画像を<quote>プレデター</quote>風にするスクリプトです。 プレデター風とは
       映画<quote>プレデター</quote>[捕食者]の視覚に現れたような赤外線サーモ
-      グラフィ[熱分布画像]にも似た効果のことで、 このフィルタは画像もしくは
+      グラフィ[熱分布画像]にも似た効果のことで、 このフィルターは画像もしくは
       その選択範囲に適用できます。
     </para>
     <para lang="ja">
-      現在活性化している選択範囲があるときは選択範囲内にフィルタが適用され
+      現在活性化している選択範囲があるときは選択範囲内にフィルターが適用され
       ますが、 なければアルファチャンネルに適用されます (必要ならば自動的に
-      アルファチャンネルが追加されます)。 このフィルタが最良の効果を発揮するの
+      アルファチャンネルが追加されます)。 このフィルターが最良の効果を発揮するの
       は画像が彩り豊かな<acronym>RGB</acronym>色のときです。
     </para>
   </sect3>
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -98,7 +98,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>芸術的効果</guisubmenu>
         <guimenuitem>プレデター...</guimenuitem>
       </menuchoice>
@@ -110,7 +110,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Predator</quote> options</title>
-      <title lang="ja"><quote>プレデター</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>プレデター</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -130,8 +130,8 @@
             filter. A high value will result in detecting more edges.
           </para>
           <para lang="ja">
-            <quote>プレデター</quote>フィルタは 
-            <link linkend="plug-in-edge">輪郭...</link> フィルタを呼び出し、
+            <quote>プレデター</quote>フィルターは 
+            <link linkend="plug-in-edge">輪郭...</link> フィルターを呼び出し、
             オプションに<quote>ソーベル</quote>アルゴリズムを指定して輪郭抽出を
             行ないます。 このスクリプトの <guilabel>エッジ量</guilabel> はその
             ソーベル処理に用いられます。 高い値を与えると読み取られる輪郭線が
@@ -184,7 +184,7 @@
           </para>
           <para lang="ja">
             <guilabel>ピクセル化</guilabel> オプションを有効にすると画像は 
-            <link linkend="plug-in-pixelize">ピクセル化...</link> フィルタに
+            <link linkend="plug-in-pixelize">ピクセル化...</link> フィルターに
             よって単色の小さな正方形の集まりに単純化されてからプレデター処理の
             適用を受けます。 正方形の大きさは <guilabel>ピクセル量</guilabel>
             の増減により変化しますが、 これが仕上がりに多大な影響 (後述の例) を
@@ -205,7 +205,7 @@
             <quote>macro pixels</quote>:
           </para>
           <para lang="ja">
-            <guilabel>ピクセル量</guilabel> スライダは 
+            <guilabel>ピクセル量</guilabel> スライダーは 
             <guilabel>ピクセル化</guilabel> オプションを有効にしているときに
             画像を単純化するために使われる正方形のかけらの大きさを調節します。 
             この値を増せば実質的に画像の解像度が落ちます。 つぎの例を
@@ -264,7 +264,7 @@
             Else, it will be applied to the active layer.
           </para>
           <para lang="ja">
-            このオプションを有効にするとフィルタは現在活性化している選択範囲に
+            このオプションを有効にするとフィルターは現在活性化している選択範囲に
             適用されます。 無効の場合は活性レイヤーに適用されます。
           </para>
         </listitem>
@@ -281,8 +281,8 @@
           </para>
           <para lang="ja">
             このオプションを有効にすると活性レイヤーの複製が作成されて上に重ね
-            られ、 元のレイヤーは変更を受けず複製側のレイヤーにフィルタが適用
-            されます。 無効の場合は活性レイヤーに直にフィルタが適用されます。
+            られ、 元のレイヤーは変更を受けず複製側のレイヤーにフィルターが適用
+            されます。 無効の場合は活性レイヤーに直にフィルターが適用されます。
           </para>
         </listitem>
       </varlistentry>
@@ -291,14 +291,14 @@
 
   <sect3>
     <title lang="en">Filter algorithm</title>
-    <title lang="ja">フィルタのアルゴリズム</title>
+    <title lang="ja">フィルターのアルゴリズム</title>
     <para lang="en">
       Since this filter delegates the essential parts to two or three other
       filters the algorithm is very simple:
     </para>
     <para lang="ja">
-      このフィルタは処理の根幹を 2〜3 種の他のフィルタに任せているため、 使用
-      しているアルゴリズムはつぎのようにとても単純です。
+      このフィルターは処理の根幹を 2〜3 種の他のフィルターに任せているため、 
+      使用しているアルゴリズムはつぎのようにとても単純です。
     </para>
     <procedure>
       <figure>
@@ -358,7 +358,7 @@
         </para>
         <para lang="ja">
           オプションで<quote>ピクセル化</quote>を選ぶとこの時点で画像に 
-          <link linkend="plug-in-pixelize">ピクセル化</link> フィルタが適用
+          <link linkend="plug-in-pixelize">ピクセル化</link> フィルターが適用
           されます。 画像は画素より大きめの色升目で構成されるので画像の解像度が
           実質的に下がります。
         </para>
@@ -372,9 +372,9 @@
         <para lang="ja">
           画素の色はいずれも 
           <link linkend="plug-in-max-rgb"><acronym>RGB</acronym>値最大最小
-          </link> フィルタによって最小値チャンネルだけ残す処理を施され、 純赤、
-          純緑、 純青の濃淡と場合により灰色陰影が加わった僅かな色構成に減色
-          されます。
+          </link> フィルターによって最小値チャンネルだけ残す処理を施され、 
+          純赤、 純緑、 純青の濃淡と場合により灰色陰影が加わった僅かな色構成に
+          減色されます。
         </para>
       </step>
       <step>
@@ -385,9 +385,9 @@
         </para>
         <para lang="ja">
           <quote>ソーベル</quote>アルゴリズムを利用した 
-          <link linkend="plug-in-edge">輪郭抽出</link> フィルタが適用されると、
-          画像は色数が随分減らされ大抵は背景が黒くなったものにすっかり変わり
-          ます。
+          <link linkend="plug-in-edge">輪郭抽出</link> フィルターが
+          適用されると、 画像は色数が随分減らされ大抵は背景が黒くなったものに
+          すっかり変わります。
         </para>
       </step>
     </procedure>

@@ -7,7 +7,7 @@
   2005-12-08 <simplesect> replaced by <sect3> by lexa
   2005/09/21 de added by axel.wernicke
 -->
-<!--2010-12-10-->
+<!--2012-03-07-->
 <sect2 id="plug-in-qbist">
   <title lang="en">Qbist</title>
   <title lang="ja">Qビスト...</title>
@@ -21,9 +21,9 @@
     <primary>Qbist</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="シタヌリ">下塗り</secondary>
-    <tertiary sortas="シタヌリ">Random textures</tertiary>
+    <tertiary sortas="フキソクナテクスチャー">不規則なテクスチャー</tertiary>
   </indexterm>
   <indexterm lang="ja">
     <primary>Qビスト</primary>
@@ -34,7 +34,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Applying examples for the Qbist filter</title>
-      <title lang="ja">Qビストフィルタの適用例</title>
+      <title lang="ja">Qビストフィルターの適用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -59,14 +59,14 @@
       and color gradients.
     </para>
     <para lang="ja">
-      <guimenuitem>Qビスト...</guimenuitem> フィルタは
+      <guimenuitem>Qビスト...</guimenuitem> フィルターは
       グラデーションの色を使った不規則な幾何学文様を生成します。
     </para>
   </sect3>
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -79,7 +79,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>下塗り</guisubmenu>
         <guisubmenu>パターン</guisubmenu>
         <guimenuitem>Qビスト...</guimenuitem>
@@ -92,7 +92,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Qbist</quote> filter options</title>
-      <title lang="ja"><quote>Qビスト</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>Qビスト</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -111,19 +111,20 @@
       currently active layer, completely replacing its previous contents.
     </para>
     <para lang="ja">
-      Qビストフィルタは不規則な表質図を生成します。 最初の表質図はダイアログの
-      中央に現れ、 その 8 つの派生形が周りをとり囲んでいます。 変容した画像から
-      どれか気に入ったものを 1 つ選んでクリックすると、 その画像が中央に
-      移動し、 中央の画像の派生型が生成され周りに置かれます。 この操作は
-      繰り返し行なえますが、 使用したい表質図が現れたらそれをクリックしてから
-      <guibutton>OK</guibutton> ボタンをクリックしてください。 選ばれた
-      表質図は活性レイヤーに元からあったものを破棄してから置き換わります。
+      Qビストフィルターは不規則なテクスチャーを生成します。 最初の表質図は
+      ダイアログの中央に現れ、 その 8 つの派生形が周りをとり囲んでいます。 
+      変容した画像からどれか気に入ったものを 1 つ選んでクリックすると、 その
+      画像が中央に移動し、 中央の画像の派生型が生成され周りに置かれます。 この
+      操作は繰り返し行なえますが、 使用したいテクスチャーが現れたらそれを
+      クリックしてから <guibutton>OK</guibutton> ボタンをクリックしてください。
+      選ばれたテクスチャーは活性レイヤーに元からあったものを破棄してから
+      置き換わります。
     </para>
 
     <variablelist>
       <varlistentry>
         <term lang="en">Antialiasing</term>
-        <term lang="ja">滑らかに</term>
+        <term lang="ja">なめらかに</term>
         <listitem>
           <para lang="en">
             If you check this, it will make edges appear smooth rather than
@@ -140,7 +141,10 @@
         <term lang="ja">元に戻す</term>
         <listitem>
           <para lang="en">Lets you go back one step in history.</para>
-          <para lang="ja">作業履歴を一手ずつ遡ります。</para>
+          <para lang="ja">
+            <guibutton>元に戻す</guibutton> をクリックするたびに作業履歴が
+            一手ずつ遡ります。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>

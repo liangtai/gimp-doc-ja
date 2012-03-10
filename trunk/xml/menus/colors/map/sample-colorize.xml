@@ -9,7 +9,7 @@
   2005-08-22 de added by axel.wernicke
   2005-08-30 de replaced informalfigure by axel.wernicke
 -->
-<!--2010-12-14-->
+<!--2012-03-07-->
 <sect2 id="plug-in-sample-colorize">
   <title lang="en">Sample Colorize</title>
   <title lang="ja">サンプル色付け...</title>
@@ -36,7 +36,7 @@
       <title lang="en">
         Example for the <quote>Sample Colorize</quote> filter
       </title>
-      <title lang="ja"><quote>サンプル色付け</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>サンプル色付け</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -54,7 +54,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Sample Colorize</quote> applied</para>
-          <para lang="ja"><quote>サンプル色付け</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>サンプル色付け</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -63,7 +63,7 @@
       a color source image or a gradient against it.
     </para>
     <para lang="en">
-      <guimenuitem>サンプル色付け...</guimenuitem> フィルタは
+      <guimenuitem>サンプル色付け...</guimenuitem> フィルターは
       かつての白黒写真のような画像に、 ソース画像に使われている色かもしくは
       グラデーションの色を使って着色します。
     </para>
@@ -82,7 +82,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -109,7 +109,7 @@
         Options of the <quote>Sample Colorize</quote> filter
       </title>
       <title lang="ja">
-        <quote>サンプル色付け</quote>フィルタのオプション
+        <quote>サンプル色付け</quote>フィルターのオプション
       </title>
       <mediaobject>
         <imageobject>
@@ -123,7 +123,7 @@
       Sampling on the right.
     </para>
     <para lang="en">
-      このフィルタのオプションウィンドウは左に色付け対象、 右に色の原本の 
+      このフィルターのオプションウィンドウは左に色付け対象、 右に色の原本の 
       2 つの区画に分かれています。
     </para>
     <variablelist>
@@ -156,27 +156,28 @@
             gray-scaled.
           </para>
           <para lang="ja">
-            初期状態ではこのフィルタを呼び出した画像ウィンドウに表示されている
+            初期状態ではこのフィルターを呼び出した画像ウィンドウに表示されている
             画像がターゲットに選ばれ見本画像として右側に表示されます。
           </para>
           <para lang="ja">
             <guilabel>ソース画像</guilabel> では画像の全体像または選択範囲内の
-            画像の見本が表示されています。 引き出しリストにはこのフィルタを
+            画像の見本が表示されています。 引き出しリストにはこのフィルターを
             呼び出した時点で<acronym>GIMP</acronym>が画面に開いている画像の名前
             が並び、 ここから他の画像を標本に選ぶこともできます。 代わりに
             <guimenuitem>グラデーションを使用</guimenuitem> (または
             <guimenuitem>グラデーション (逆向き) を使用</guimenuitem>) を選ぶと
-            グラデーションダイアログ上で選択されたグラデーションの色が利用され
-            ます。 選ばれたグラデーションは見本画像の区画より下のスライダ部分に
-            表示されます。 見本画像の区画は灰色無効になり、 グラデーション見本
-            には2つの小さなスライダカーソルが現れ、 ターゲット画像もしくはその
-            選択範囲の着色に使われる色がその間に絞れます。
+            グラデーションダイアログ上で選択されたグラデーションの色が
+            利用されます。 選ばれたグラデーションは見本画像の区画より下の
+            スライダー部分に表示されます。 見本画像の区画は灰色無効になり、 
+            グラデーション見本には 2 つの小さなスライダーカーソルが現れ、 
+            ターゲット画像もしくはその選択範囲の着色に使われる色がその間に
+            絞れます。
           </para>
           <para lang="ja">
             <guilabel>ターゲット画像</guilabel> も初期状態ではソース画像[と同じ
-            ]です。 このフィルタを呼び出した時点で<acronym>GIMP</acronym>が画面
-            に開いている全ての画像の名前が引き出しリストにありますので、 ここ
-            から着色の対象になる画像を選べます。 この見本画像の区画では、 
+            ]です。 このフィルターを呼び出した時点で<acronym>GIMP</acronym>が
+            画面に開いているすべての画像の名前が引き出しリストにありますので、 
+            ここから着色の対象になる画像を選べます。 この見本画像の区画では、 
             色付け対象に選ばれた画像に選択範囲があればその範囲内が
             グレースケール化されて表示され、 選択範囲がなければ画像全体が
             グレースケール化されて表示されます。
@@ -231,16 +232,16 @@
           </para>
           <para lang="ja">
             このボタンをクリックすると見本画像の下のグラデーションバー (小さな
-            スライダが 2 つある) にソース画像から採取された色が表示されます。
+            スライダーが 2 つある) にソース画像から採取された色が表示されます。
             [画像が大きいときはしばらく時間がかかります。] 画像の色数が少ないと
             このグラデーション表示でも色と色の間に断絶が起きます。 これを改善
-            する <guilabel>滑らかなサンプル</guilabel> オプションもご利用
+            する <guilabel>なめらかなサンプル</guilabel> オプションもご利用
             ください。
           </para>
           <para lang="ja">
             <guilabel>サブカラー使用</guilabel> は理解するのが難しいオプション
             です。 まずグレースケール画像には明度 (光度とか明るさ) の情報しか
-            ありません。 <acronym>RGB</acronym>画像だとどの画素にも3つの原色と
+            ありません。 <acronym>RGB</acronym>画像だとどの画素にも 3 つの原色と
             明度の情報があります。 つまり色の違う画素でも明度が同じ場合もあり
             えます。 このオプションにチェックを入れるとそうした色が混ぜ合わ
             され、 ターゲット画像の同じ明度の画素にその色が付きます。 この
@@ -259,7 +260,7 @@
             destination preview.
           </para>
           <para lang="ja">
-            2 つの数値記入欄と 2 つの小さなスライダは同じはたらきをします。 
+            2 つの数値記入欄と 2 つの小さなスライダーは同じはたらきをします。 
             両数値はターゲット画像を着色する色の範囲を定めます。 0 から 255 の
             範囲で任意の精密な調節が可能です。 ここでの操作は即座にターゲット
             画像の見本に反映されます。
@@ -276,7 +277,7 @@
             interactively in destination preview.
           </para>
           <para lang="ja">
-            3 つの数値記入欄や 3 つの小さなスライダで暗い色調と中間の色調と
+            3 つの数値記入欄や 3 つの小さなスライダーで暗い色調と中間の色調と
             明るい色調の比重を調節できます。 ここでの操作は即座にターゲット
             画像の見本に反映されます。
           </para>

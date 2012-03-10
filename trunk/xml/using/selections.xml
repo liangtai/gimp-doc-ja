@@ -14,7 +14,7 @@
   2006-07-12 Added Korean Translation by Dust.
   2006-06-13 Added para about using arrow keys by j.h
 -->
-<!--2010-11-22-->
+<!--2012-03-04-->
 <sect1 id="gimp-using-selections">
   <title lang="en">Creating and Using Selections</title>
   <title lang="ja">選択範囲の作成と利用</title>
@@ -104,17 +104,19 @@
         selection! To move the selection contents, you have to
       </para>
       <para lang="ja">
-        大概のシステムでは <keycap>矢印</keycap> キーを使って選択範囲が移動
+        大概のシステムでは <keycap>上</keycap> <keycap>下</keycap>
+        <keycap>左</keycap> <keycap>右</keycap> 矢印キーを使って選択範囲が移動
         できます。 ただし細かいところでシステムごとにその動作や使い方が
-        違います。 <keycap>矢印</keycap> キーを操作しても選択範囲が移動しない
-        ときはまず選択範囲上にマウスカーソルを置いてください。 ここで 
+        違います。 矢印キーを操作しても選択範囲が移動しないときは
+        まず選択範囲上にマウスカーソルを置いてください。 ここで 
         <keycap>Alt</keycap> キーを押したままにします。 
         (システムによってはこれが <keycombo><keycap>Ctrl</keycap>
         <keycap>Alt</keycap></keycombo> か <keycombo><keycap>Shift</keycap>
         <keycap>Alt</keycap></keycombo> のような組み合わせだったりします。)
-        そのどれかと <keycap>矢印</keycap> キーを組み合わせた操作で選択範囲が 
-        1 ピクセルずつ移動でき、 どれか他の組み合わせで 25 ピクセルずつの
-        移動ができます。 選択範囲の辺や角の取っ手にマウスカーソルを置いて
+        そのどれかと <keycap>上</keycap> <keycap>下</keycap>
+        <keycap>左</keycap> <keycap>右</keycap> 矢印キーを組み合わせた操作で
+        選択範囲が 1 ピクセルずつ移動でき、 どれか他の組み合わせで 25 ピクセル
+        ずつの移動ができます。 選択範囲の辺や角の取っ手にマウスカーソルを置いて
         このような操作をすると選択範囲の大きさが変更できます。
       </para>
       <para lang="ja">
@@ -200,13 +202,13 @@
           that, the <keycap>Alt</keycap> key is ineffective!
         </para>
         <para lang="ja">
-          システムに拠っては <keycap>Shift</keycap> キーや <keycap>Ctrl
-          </keycap> キーを押す前に <keycap>Alt</keycap> を押さなくては
-          なりません。 これは <keycap>Shift</keycap> や <keycap>Ctrl</keycap> 
-          を先に押すと、 システムが<acronym>GIMP</acronym>の態勢を既存の選択
-          範囲に選択範囲を追加もしくはそこから除外するモードに切り替えてしまう
-          ため、 後から押された <keycap>Alt</keycap> が無視されてしまう
-          からです。
+          システムに拠っては <keycap>Shift</keycap> キーや 
+          <keycap>Ctrl</keycap> キーを押す前に <keycap>Alt</keycap> を
+          押さなくてはなりません。 これは <keycap>Shift</keycap> や
+          <keycap>Ctrl</keycap> を先に押すと、 システムが
+          <acronym>GIMP</acronym>の態勢を既存の選択範囲に選択範囲を追加もしくは
+          そこから除外するモードに切り替えてしまうため、 
+          後から押された <keycap>Alt</keycap> が無視されてしまうからです。
         </para>
       </note>
     </sect3>
@@ -235,8 +237,9 @@
         を押したままクリックしてドラッグします。
       </para>
       <para lang="ja">
-        クリックしてドラッグするかわりに <keycap>矢印</keycap> キーを使った場合は、 
-        輪郭線のみが移動します。
+        クリックしてドラッグするかわりに <keycap>上</keycap>
+        <keycap>下</keycap> <keycap>左</keycap> <keycap>右</keycap> 矢印キーを
+        使った場合は、 輪郭線のみが移動します。
       </para>
     </sect3>
 
@@ -253,8 +256,9 @@
         <para lang="ja">
           もっと遠回しな方法ならば、 他にも選択領域を移動できます。 まず
           <link linkend="gimp-selection-float">フローティング選択範囲</link>
-          にします。 つぎに、 もとの位置を空白にするのならばクリックしてドラッグするか
-          <keycap>矢印</keycap> キーで内容を移動、
+          にします。 つぎに、 もとの位置を空白にするのならばクリックして
+          ドラッグするか <keycap>上</keycap> <keycap>下</keycap>
+          <keycap>左</keycap> <keycap>右</keycap> 矢印キーで内容を移動、
           もとの位置を空白にしないのならば写し取って貼り付けします。
         </para>
       </note>
@@ -315,8 +319,8 @@
       <itemizedlist>
         <listitem>
           <para>
-            置換が最もよく使われる選択のモードです。 置換モードでは既存の選択範囲が
-            解消され新たに作った選択範囲で置き換わります。
+            置換が最もよく使われる選択のモードです。 置換モードでは既存の
+            選択範囲が解消され新たに作った選択範囲で置き換わります。
           </para>
         </listitem>
         <listitem>
@@ -337,7 +341,8 @@
           <para>
             交差モードは既存の選択範囲と新たに作成した選択範囲の共通部分だけが
             残ります。 <keycap>Shift</keycap> キーと <keycap>Ctrl</keycap> 
-            キーの両方を押しながら選択範囲を作成するときも一時的な交差モードとなります。
+            キーの両方を押しながら選択範囲を作成するときも一時的な交差モードと
+            なります。
           </para>
         </listitem>
       </itemizedlist>
@@ -362,8 +367,8 @@
     <para lang="ja">
       この図では矩形の選択範囲が既にできています。 自由選択 (なげなわ) ツールを
       起用します。 <keycap>Shift</keycap> キーを押しながら矩形の選択範囲に
-      かぶるように手書きの選択範囲を描きます。 マウスボタンを放せば、 両方の選択範囲が
-      足し合わされます。
+      かぶるように手書きの選択範囲を描きます。 マウスボタンを放せば、 両方の
+      選択範囲が足し合わされます。
     </para>
     <note>
       <para lang="en">

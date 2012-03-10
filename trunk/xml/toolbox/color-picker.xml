@@ -13,7 +13,7 @@
   050818 de fixed wrong shortcut - its O not Shift-O
   050817 de reviewed by axel.wernicke
 -->
-<!--2012-01-05-->
+<!--2012-03-04-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-color-picker">
   <title lang="en">Color Picker</title>
   <title lang="ja">スポイト (カラーピッカー)</title>
@@ -33,13 +33,13 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ツール</primary>
-    <secondary>スポイト(カラーピッカー)</secondary>
+    <secondary>スポイト (カラーピッカー)</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>スポイト(カラーピッカー)</primary>
+    <primary>スポイト (カラーピッカー)</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>ピペット</primary>
+    <primary sortas="ピペット, テンガンキ">ピペット, 点眼器</primary>
   </indexterm>
   <indexterm lang="ja">
     <primary sortas="イロ">色</primary>
@@ -72,9 +72,9 @@
     スポイトツール (カラーピッカー、 点眼器、 ピペットとも呼ばれる) は画面上
     で開かれた画像から色を採るためのものです。 画像上のどこかでクリックすれば、
     描画色をクリックした位置の色で置き換えます。 既定の場合は活性レイヤーから
-    のみ採色しますが、 <guilabel>レイヤー結合色</guilabel> オプションを有効に
-    すれば全てのレイヤーの合成色を採るので、 画像の見たままの色が得られます。 
-    ただし <emphasis>可視レイヤーの色だけが使われます</emphasis>。 画像を
+    のみ採色しますが、 <guilabel>見えている色で</guilabel> オプションを有効に
+    すればすべてのレイヤーの合成色を採るので、 画像の見たままの色が得られます。 
+    したがって <emphasis>可視レイヤーの色だけが使われます</emphasis>。 画像を
     クリックしたときには<quote>スポイト情報</quote>ウィンドウが開きます。
   </para>
 
@@ -194,8 +194,8 @@
             <para lang="ja">
               <link linkend="gimp-pointer-info-dialog">ピクセル情報</link>
               ダイアログを使えば恒常的に同様な情報を得られます。 ただし開いた
-              直後は初期設定で <guilabel>レイヤー結合色</guilabel> を採るように
-              なっているのでご注意ください。
+              直後は初期設定で <guilabel>見えている色で</guilabel> 採色する
+              ようになっているのでご注意ください。
             </para>
           </note>
         </listitem>
@@ -222,7 +222,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Sample Merged</term>
-        <term lang="ja">レイヤー結合色</term>
+        <term lang="ja">見えている色で</term>
         <listitem>
           <para lang="en">
             The Sample Merged check-box when enabled will take color
@@ -232,17 +232,17 @@
             <link linkend="glossary-samplemerge">Sample Merge</link>.
           </para>
           <para lang="ja">
-            <guilabel>レイヤー結合色</guilabel> のチェックボックスにチェックが
+            <guilabel>見えている色で</guilabel> のチェックボックスにチェックが
             入っている場合はすべての可視レイヤーの合成色が採られます。
             用語集にも
-            <link linkend="glossary-samplemerge">レイヤー結合色</link>
+            <link linkend="glossary-samplemerge">見えている色で</link>
             の説明があります。
             <note>
               <title>どうして予想外の色が拾われてしまうの？</title>
               <para>
-                見たままの色を拾いたいときは<quote>レイヤー結合色</quote>
+                見たままの色を拾いたいときは<quote>見えている色で</quote>
                 オプションを有効にしてください。 無効の場合は現在活性化して
-                いるレイヤーからの採色されます。 レイヤーにはどの画素にも
+                いるレイヤーのみから採色されます。 レイヤーにはどの画素にも
                 色があるので、 たとえそこがまったく透明であっても、 その下に
                 見えているレイヤーの色とは関わりなしに色の情報が現れます。
               </para>
@@ -261,9 +261,9 @@
             mouse pointer shows the size of the square or radius.
           </para>
           <para lang="ja">
-            <guilabel>半径</guilabel> スライダは最終的に得られる平均的な色を
+            <guilabel>半径</guilabel> スライダーは最終的に得られる平均的な色を
             算定するのに必要な正方形の領域の大きさを定めます。 クリックしている
-            短い時間にマウスポインタの姿がその大きさの正方形に変化します。
+            短い時間にマウスポインターの姿がその大きさの正方形に変化します。
           </para>
         </listitem>
       </varlistentry>

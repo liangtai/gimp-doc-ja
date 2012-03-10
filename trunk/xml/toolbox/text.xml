@@ -13,7 +13,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050818 de reviewed by axel.wernicke
   -->
-<!--2011-01-18-->
+<!--2012-03-04-->
 <sect2 id="gimp-tool-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -64,7 +64,7 @@
   </para>
   <para lang="ja">
     テキストツールは画像内に文字や語句を置くためのものです。 このツールで画像を
-    クリックすると文章を書きこめる<quote>テキストエディタ</quote>ダイアログが
+    クリックすると文章を書きこめる<quote>テキストエディター</quote>ダイアログが
     開かれます。 入力された文は新たなテキストレイヤーとなり、 レイヤー
     ダイアログで管理できます。 <emphasis>ツールオプション</emphasis> 上で書体
     (フォント) や文字の色、 大きさが変更できて、 即座に画像上で変化を
@@ -72,10 +72,11 @@
   </para>
   <para lang="ja">
     <application><acronym>GIMP</acronym> 2.6</application> より新たな手段が
-    加わりました。 キャンバス内でクリックしてマウスポインタを曳いて矩形枠を
-    描くと、 矩形選択ツールと同じ方法で拡げたり移動したりできます。 テキスト
-    編集ウィンドウに書き込んだテキストはこの枠内に表示され、 枠の大きさにその
-    文字が自動的に適合します。 <!--たぶん嘘-->この枠はいつでも調整できます。
+    加わりました。 キャンバス内でクリックしてマウスポインターを曳くとテキスト
+    矩形枠が描け、 矩形選択ツールと同じ要領で拡げたり移動したりできます。 
+    テキスト編集ウィンドウに書き込んだテキストはこの枠内に表示され、 枠の
+    大きさにその文字が自動的に適合します。 <!--未確認-->この枠はいつでも
+    調整できます。
   </para>
   <figure id="gimp-text-bounding-box">
     <title lang="en">Text tool bounding box</title>
@@ -98,7 +99,7 @@
     frame.
   </para>
   <para lang="ja">
-    マウスポインタはこの枠内の中央に入ると小さな移動十字 (四方矢印)
+    マウスポインターはこの枠内の中央に入ると小さな移動十字 (四方矢印)
     <guiicon>
       <inlinegraphic fileref="images/toolbox/stock-move-16.png"/>
     </guiicon>
@@ -191,7 +192,7 @@
             フォントボタン <guibutton>永</guibutton> をクリックすると簡易型
             フォント選択ウィンドウが開きます。 ここからシステムにインストール
             されているフォントや、 <acronym>GIMP</acronym>の
-            フォントディレクトリに追加したフォントが選べます。
+            フォントディレクトリーに追加したフォントが選べます。
           </para>
           <itemizedlist>
             <para lang="en">
@@ -574,8 +575,8 @@
             the shape of letters by moving path control points.
           </para>
           <para lang="ja">
-            このツールは選択したテキストをもとにパスを作成できます。 全ての文字
-            は輪郭がパス成分として描かれます。 つまり文字の形状はパスの
+            このツールは選択したテキストをもとにパスを作成できます。 すべての
+            文字は輪郭がパス成分として描かれます。 つまり文字の形状はパスの
             コントロールポイント (アンカーやハンドル) を操作して加工が可能です。
           </para>
         </listitem>
@@ -585,14 +586,14 @@
 
   <sect3 id="gimp-text-editor-dialog">
     <title lang="en">Text Editor</title>
-    <title lang="ja">テキストエディタ</title>
+    <title lang="ja">テキストエディター</title>
     <indexterm lang="en">
       <primary>Text</primary>
       <secondary>Editor</secondary>
     </indexterm>
     <indexterm lang="ja">
       <primary>テキスト</primary>
-      <secondary>エディタ</secondary>
+      <secondary>エディター</secondary>
     </indexterm>
     <indexterm lang="ja">
       <primary sortas="モジ">文字</primary>
@@ -600,7 +601,7 @@
     </indexterm>
     <figure>
       <title lang="en">The Text Editor</title>
-      <title lang="ja">テキストエディタダイアログ</title>
+      <title lang="ja">テキストエディターダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -637,8 +638,8 @@
       の中にも表示されます。
     </para>
     <para lang="ja">
-      テキストレイヤーに書き込まれた文字はフォントエディタを通じていつでも
-      訂正可能ですし、 書体も変更できます。
+      テキストレイヤーに書き込まれた文はフォントエディターを通じていつでも
+      書体が変更できます。
     </para>
     <para lang="ja">
       語句や文章を書き込み始めるとすぐにレイヤーダイアログにテキストレイヤー
@@ -653,7 +654,7 @@
       クリックしてください。 新たなテキストエディタが現れるとともに新しい
       テキストレイヤーが画像に加わります。 どれかのテキストを扱っていたあとで
       他のテキストの編集を行ないたい場合は、 そのテキストレイヤーを活性化した
-      うえでテキストの枠内をクリックしてテキストエディタを開きます。
+      うえでテキストの枠内をクリックしてテキストエディターを開きます。
     </para>
     <!--cf. bug #580532 (2009-06-15)-->
     <para lang="en">
@@ -739,7 +740,7 @@
 
     <variablelist>
       <title lang="en">The Text Editor options</title>
-      <title lang="ja">テキストエディタのオプション</title>
+      <title lang="ja">テキストエディターのオプション</title>
       <varlistentry>
       <indexterm lang="en">
         <primary>Text</primary>
@@ -772,10 +773,10 @@
             in the text editor. All the text in the file is loaded.
           </para>
           <para lang="ja">
-            テキストはテキストファイルの内容を利用できます。 テキストエディタ
+            テキストはテキストファイルの内容を利用できます。 テキストエディター
             にあるこのボタンをクリックして<quote>テキストファイル (UTF-8) 
             を開く</quote> ダイアログからファイルを選んでください。 
-            ファイル内の全てのテキストが読み込まれます。
+            ファイル内のすべてのテキストが読み込まれます。
           </para>
         </listitem>
       </varlistentry>
@@ -798,8 +799,8 @@
             the image.
           </para>
           <para lang="ja">
-            このボタンを押すとテキストエディタ内の
-            全ての文字と画像上の連関したテキストレイヤーの文字が消えます。
+            このボタンを押すとテキストエディター内の
+            すべての文字と画像上の連関したテキストレイヤーの文字が消えます。
           </para>
         </listitem>
       </varlistentry>
@@ -856,8 +857,8 @@
             dialog. If you want to use it, check this option.
           </para>
           <para lang="ja">
-            既定ではオプションダイアログで指定している書体をこのエディタ上では
-            使用しません。 使用するにはこのオプションにチェックを入れます。
+            既定ではオプションダイアログで指定している書体をこのエディター上
+            では使用しません。 使用するにはこのオプションにチェックを入れます。
           </para>
           <note>
             <para lang="en">See also <xref linkend="gimp-using-text"/>.</para>

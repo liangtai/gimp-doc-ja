@@ -7,10 +7,10 @@
   2006-11-01 lexa: made the file docbook compliant
   2008-02-04 Vérification + compléments par jpl in french
 -->
-<!--2010-12-15-->
+<!--2012-03-09-->
 <sect2 id="gimp-prefs-folders">
   <title lang="en">Folders</title>
-  <title lang="ja">フォルダ</title>
+  <title lang="ja">フォルダー</title>
 
   <indexterm lang="en">
     <primary>Dialogs</primary>
@@ -20,12 +20,12 @@
   <indexterm lang="ja">
     <primary>ダイアログ</primary>
     <secondary sortas="カンキョウセッテイ">環境設定</secondary>
-    <tertiary>フォルダ</tertiary>
+    <tertiary>フォルダー</tertiary>
   </indexterm>
 
   <figure>
     <title lang="en">Basic Folder Preferences</title>
-    <title lang="ja">環境設定 基本のフォルダのページ</title>
+    <title lang="ja">環境設定 基本のフォルダーのページ</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -44,17 +44,17 @@
   </para>
   <para lang="ja">
     このページでは<acronym>GIMP</acronym>が一時的なファイルを置くための 
-    2 箇所の重要なフォルダの位置を設定できます。 このページ以降では
+    2 箇所の重要なフォルダーの位置を設定できます。 このページ以降では
     <acronym>GIMP</acronym>で扱う例えばブラシのようなファイル資材を探し出す
     位置を、 個別に設定できるようになっています。 それぞれの説明が次項
-    <link linkend="gimp-prefs-folders-data">データフォルダ</link> にあります。
-    ここに示されたフォルダ以外の位置を指定する場合は、 引き出しメニューから
+    <link linkend="gimp-prefs-folders-data">データフォルダー</link> にあります。
+    ここに示されたフォルダー以外の位置を指定する場合は、 引き出しメニューから
     選択するか、 その下端にある <guimenuitem>その他...</guimenuitem> をクリック
-    しておのおののフォルダ選択ダイアログで指定してください。
+    しておのおののフォルダー選択ダイアログで指定してください。
   </para>
   <variablelist>
     <title lang="en">Folders</title>
-    <title lang="ja">フォルダ</title>
+    <title lang="ja">フォルダー</title>
     <indexterm lang="en">
       <primary>Temp folder</primary>
     </indexterm>
@@ -62,14 +62,14 @@
       <primary>Swap folder</primary>
     </indexterm>
     <indexterm lang="ja">
-      <primary>テンポラリフォルダ</primary>
+      <primary>テンポラリフォルダー</primary>
     </indexterm>
     <indexterm lang="ja">
-      <primary>スワップフォルダ</primary>
+      <primary>スワップフォルダー</primary>
     </indexterm>
     <varlistentry>
       <term lang="en">Temp folder</term>
-      <term lang="ja">テンポラリフォルダ</term>
+      <term lang="ja">テンポラリフォルダー</term>
       <listitem>
         <para lang="en">
           This folder is used for temporary files: files created for temporary
@@ -82,21 +82,21 @@
           writable by you, or bad things will happen.
         </para>
         <para lang="ja">
-          このフォルダは一時的に発生するファイルを置くためのものです。 これらの
-          ファイルは作業用データを暫時保存するために作成され、 その
+          このフォルダーは一時的に発生するファイルを置くためのものです。 
+          これらのファイルは作業用データを暫時保存するために作成され、 その
           <acronym>GIMP</acronym>操作の期間内に消去されます。 大きな容量も高い
           性能も必要ありません。 初期設定では個人用<acronym>GIMP</acronym>内の
-          <filename class="directory">tmp</filename> というサブディレクトリが
+          <filename class="directory">tmp</filename> というサブディレクトリーが
           使われますが、 ディスク残量がたいへん窮屈になっていたり重大な
-          性能問題がある場合には、 ここで他のディレクトリに替えましょう。 
-          ただしそのディレクトリが存在し、 なおかつそのディレクトリに対する
+          性能問題がある場合には、 ここで他のディレクトリーに替えましょう。 
+          ただしそのディレクトリーが存在し、 なおかつそのディレクトリーに対する
           読み書きの権限が必要です。 無ければまずいことになるでしょう。
         </para>
       </listitem>
     </varlistentry>
     <varlistentry>
       <term lang="en">Swap folder</term>
-      <term lang="ja">スワップ用フォルダ</term>
+      <term lang="ja">スワップ用フォルダー</term>
       <listitem>
         <para lang="en">
           This is the folder used as a <quote>memory bank</quote> when the
@@ -112,18 +112,18 @@
           directory must exist and be writable by you.
         </para>
         <para lang="ja">
-          このフォルダは<acronym>GIMP</acronym>で開かれたすべての画像とデータの
-          容量が使用可能な<acronym>RAM</acronym>の限界を越してしまった場合の
-          メモリ貯蔵庫として使われます。 とても大きな画像やレイヤーを多数持つ
-          画像を扱ったり、 多数の画像を同時に開いたときに
+          このフォルダーは<acronym>GIMP</acronym>で開かれたすべての画像と
+          データの容量が使用可能な<acronym>RAM</acronym>の限界を越してしまった
+          場合のメモリー貯蔵庫として使われます。 とても大きな画像やレイヤーを
+          多数持つ画像を扱ったり、 多数の画像を同時に開いたときに
           <acronym>GIMP</acronym>は可能性として数百メガバイトものスワップ空間を
           要求することになりうるのですが、 ディスク容量がどこまで利用可能か
-          という問題やその性能についてはこのフォルダに明確にかかっています。 
-          初期設定ではここは<acronym>GIMP</acronym>の個人用ディレクトリ内に
+          という問題やその性能についてはこのフォルダーに明確にかかっています。 
+          初期設定ではここは<acronym>GIMP</acronym>の個人用ディレクトリー内に
           置かれますが、 もっと大きな容量のディスクや、 実際的に性能がより良い
-          ディスクが他にある場合には、 そちらにスワップフォルダを移動すれば
-          目に見えて恩恵を得るでしょう。 もちろんそのディレクトリが必ず存在し、
-          書き込み権限を持っていなくてはなりません。
+          ディスクが他にある場合には、 そちらにスワップフォルダーを移動すれば
+          目に見えて恩恵を得るでしょう。 もちろんそのディレクトリーが必ず
+          存在し、 書き込み権限を持っていなくてはなりません。
         </para>
       </listitem>
     </varlistentry>

@@ -8,7 +8,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-10 de added by axel.wernicke
 -->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="plug-in-vpropagate">
   <title lang="en">Value Propagate</title>
   <title lang="en">明度伝搬...</title>
@@ -25,7 +25,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Example for Value Propagate filter</title>
-      <title lang="ja">明度伝搬フィルタの使用例</title>
+      <title lang="ja">明度伝搬フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -43,7 +43,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Value Propagate</quote> applied</para>
-          <para lang="ja"><quote>明度伝搬</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>明度伝搬</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -52,7 +52,7 @@
       specified way from their neighbouring pixels.
     </para>
     <para lang="ja">
-      <guimenuitem>明度伝搬...</guimenuitem> フィルタは色の
+      <guimenuitem>明度伝搬...</guimenuitem> フィルターは色の
       境目に作用します。 特定の条件で画素が付近の画素と色の異なりが認められる
       ときにその色が周囲を染めます。
     </para>
@@ -60,7 +60,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -72,7 +72,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>変形</guisubmenu>
         <guimenuitem>明度伝搬...</guimenuitem>
       </menuchoice>
@@ -84,7 +84,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Value propagate</quote> filter options</title>
-      <title lang="ja"><quote>明度伝搬</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>明度伝搬</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -103,7 +103,7 @@
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
-            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            にしておれば画像に実際にフィルターをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
           </para>
         </listitem>
@@ -150,8 +150,8 @@
                         Filter applied several times to increase effect.
                       </para>
                       <para lang="ja">
-                        明るい画素が上下左右四方の暗い画素に伝搬した。 フィルタ
-                        は繰り返すほどに効果が増す。
+                        明るい画素が上下左右四方の暗い画素に伝搬した。 
+                        フィルターは繰り返すほどに効果が増す。
                       </para>
                     </caption>
                   </mediaobject>
@@ -194,8 +194,7 @@
                         direction only checked.
                       </para>
                       <para lang="ja">
-                        方向は <guilabel>下へ</guilabel> だけ
-                        を有効にした
+                        方向は <guilabel>下へ</guilabel> だけを有効にした
                       </para>
                     </caption>
                   </mediaobject>
@@ -267,8 +266,8 @@
                 <para lang="ja">
                   伝搬する部分はツーボックスの色標識に示される描画色で塗り
                   つぶされます。
-                </para>
-                <para lang="ja">
+                <!--</para>
+                <para lang="ja">-->
                   つぎの例ではツールボックスの色標識に示される描画色は赤と
                   します。 1 ピクセル幅の細い赤の縁取りが形象につけ加わります。
                   徐々に色変りする方の形象ではそのような縁取りが色変りの端に
@@ -328,7 +327,7 @@
                       </para>
                       <para lang="ja">
                         この例ではツールボックス描画色を緑の形象と同じ色に
-                        しておいた。 このフィルタを幾度か適用すると緑の部分が
+                        しておいた。 このフィルターを幾度か適用すると緑の部分が
                         明らかに拡大しているのがわかる。
                       </para>
                     </caption>
@@ -395,7 +394,7 @@
                         got increased.
                       </para>
                       <para lang="ja">
-                        幾度かフィルタを適用した。 緑色の不透明な部分が拡大
+                        幾度かフィルターを適用した。 緑色の不透明な部分が拡大
                         している。
                       </para>
                     </caption>
@@ -438,7 +437,7 @@
                   more colored the propagation will be.
                 </para>
                 <para lang="ja">
-                  伝搬する量です。 高い率を設定すれば一度のフィルタ適用で
+                  伝搬する量です。 高い率を設定すれば一度のフィルター適用で
                   より多くの画素が染まります。
                 </para>
               </listitem>
@@ -475,7 +474,7 @@
                 <para lang="ja">
                   このオプションを有効にすると、 画素のアルファ値が伝搬したり
                   もしくは周辺の画素のアルファ値に染まったりします。 この
-                  チェックボックスのオプションはフィルタを呼び出した時点で
+                  チェックボックスのオプションはフィルターを呼び出した時点で
                   活性レイヤーにアルファチャンネルがある場合のみ現れます。
                 </para>
               </listitem>
@@ -494,7 +493,7 @@
                   このオプションを有効にすると、 画素の色チャンネル (グレー
                   スケール画像なら明度チャンネル) が伝搬します。 もちろん初期
                   状態ではこのオプションが有効になっています。 このチェック
-                  ボックスのオプションもフィルタを呼び出した時点で活性レイヤー
+                  ボックスのオプションもフィルターを呼び出した時点で活性レイヤー
                   にアルファチャンネルがある場合のみ出現します。
                 </para>
               </listitem>

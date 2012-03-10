@@ -6,7 +6,7 @@
   2008-07-31 alex falappa: added 'it'
   2008-04-05 ude: created 'en','de'
 -->
-<!--2012-01-07-->
+<!--2012-03-07-->
 <sect2 id="python-fu-slice">
   <title lang="en">Slice</title>
   <title lang="ja">画像分割...</title>
@@ -20,12 +20,12 @@
     <primary>Slice</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>ウェブ</secondary>
-    <tertiary>画像分割</tertiary>
+    <tertiary sortas="ガゾウブンカツ">画像分割</tertiary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>画像分割</primary>
+    <primary sortas="ガゾウブンカツ">画像分割</primary>
   </indexterm>
 
   <sect3>
@@ -33,7 +33,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Example for the <quote>Slice</quote> filter</title>
-      <title lang="en"><quote>画像分割</quote>フィルタの使用例</title>
+      <title lang="en"><quote>画像分割</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -51,7 +51,7 @@
         </imageobject>
         <caption>
           <para lang="en"><quote>Slice</quote> applied</para>
-          <para lang="ja"><quote>画像分割</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>画像分割</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -69,18 +69,18 @@
       code produced by the filter may be not much more than this:
     </para>
     <para lang="ja">
-      <guimenuitem>画像分割...</guimenuitem> フィルタは
+      <guimenuitem>画像分割...</guimenuitem> フィルターは
       <acronym>HTML</acronym>ページで感応する画像の作成を支援する単純で使い
-      易いスクリプトです。 このフィルタは垂直と水平に置かれた見当線に沿って 
+      易いスクリプトです。 このフィルターは垂直と水平に置かれた見当線に沿って 
       <link linkend="plug-in-guillotine">ギロチン</link> コマンドのように
       画像を切り分け、 ひと揃いの断片画像を作成します。 また同時にこの
-      フィルタは生成される画像ファイルを接ぎ合わせる<acronym>HTML</acronym>
+      フィルターは生成される画像ファイルを接ぎ合わせる<acronym>HTML</acronym>
       の表組みコードをテキストファイルで生成します。 表組みのそれぞれの升目
       に画像の断片が入っている構造です。 あとはこのテキストファイルの内容を
       <acronym>HTML</acronym>文書に埋め込むことになります。
     </para>
     <para lang="ja">
-      繰り返しますがこのフィルタは実にとても単純な支援ツールです。 書き出さ
+      繰り返しますがこのフィルターは実にとても単純な支援ツールです。 書き出さ
       れる<acronym>HTML</acronym>コードは精々次の例のようなものになります。
     </para>
     <example>
@@ -88,7 +88,7 @@
         Simple <quote>Slice</quote> filter example output
       </title>
       <title lang="ja">
-        単純な<quote>画像分割</quote>フィルタの出力例
+        単純な<quote>画像分割</quote>フィルターの出力例
       </title>
       <programlisting><!--
         <![CDATA[
@@ -139,8 +139,8 @@
       however, the guides are just hidden, the filter will work.
     </para>
     <para lang="ja">
-      画像にガイド (見当線) がないときはフィルタは何も実行しません。 もちろん
-      見当線が単に隠されているだけならフィルタは作動します。
+      画像にガイド (見当線) がないときはフィルターは何も実行しません。 もちろん
+      見当線が単に隠されているだけならフィルターは作動します。
     </para>
     <tip>
       <para lang="en">
@@ -150,7 +150,7 @@
       </para>
       <para lang="ja">
         感応画像を作成するツールには、 より強力かつ高度な 
-        <link linkend="plug-in-imagemap">イメージマップ</link> フィルタも
+        <link linkend="plug-in-imagemap">イメージマップ</link> フィルターも
         あります。 (でもこれは随分と複雑ですが。)
       </para>
     </tip>
@@ -158,7 +158,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -170,11 +170,11 @@
     <para lang="en">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ウェブ</guisubmenu>
         <guimenuitem>画像分割...</guimenuitem>
       </menuchoice>
-      このフィルタは Python-Fu が利用可能な場合のみメニューに現れます。
+      このフィルターは Python-Fu が利用可能な場合のみメニューに現れます。
     </para>
   </sect3>
 
@@ -209,9 +209,9 @@
           </para>
           <para lang="ja">
             生成された<acronym>HTML</acronym>ファイルと画像ファイルの保管場所
-            です。 初期状態では現在の作業ディレクトリにこれらのファイルが保管
-            されます。 記入欄の右端の三角形のボタンをクリックすると他の
-            フォルダを辿れる引き出しメニューが出てきます。
+            です。 初期状態では現在の作業ディレクトリーにこれらのファイルが
+            保管されます。 記入欄の右端の三角形のボタンをクリックすると他の
+            フォルダーを辿れる引き出しメニューが出てきます。
           </para>
         </listitem>
       </varlistentry>
@@ -251,7 +251,7 @@
             need different sets of images.
           </para>
           <para lang="ja">
-            このフィルタが生成する画像のファイル名は <filename><replaceable>
+            このフィルターが生成する画像のファイル名は <filename><replaceable>
             共通部</replaceable>_<replaceable>行</replaceable>_<replaceable>
             列</replaceable>.<replaceable>拡張子</replaceable></filename> 
             となります。 このうち共通部のところがこの文字記入欄で指定できる
@@ -292,7 +292,7 @@
         <term lang="en">Separate image folder</term>
         <term lang="en">Folder for image export</term>
         <term lang="ja">画像を別フォルダにエクスポート</term>
-        <term lang="ja">エクスポートするフォルダ名</term>
+        <term lang="ja">エクスポートするフォルダー名</term>
         <listitem>
           <para lang="en">
             When <guilabel>Separate image folder</guilabel> is enabled, a
@@ -302,15 +302,15 @@
             it in the <guilabel>Folder for image export</guilabel> textbox.
           </para>
           <para lang="ja">
-            <guilabel>画像を別フォルダにエクスポート</guilabel> させる場合は
+            <guilabel>画像を別フォルダーにエクスポート</guilabel> させる場合は
             画像を収めるフォルダが無ければ作成されます。 この場合の既定の保管
-            先フォルダの名前は <filename class="directory">images</filename> 
-            ですが、 <guilabel>エクスポートするフォルダ名</guilabel> の記入欄
-            で他のフォルダ名が指定できます。
+            先フォルダーの名前は <filename class="directory">images</filename> 
+            ですが、 <guilabel>エクスポートするフォルダー名</guilabel> の記入欄
+            で他のフォルダー名が指定できます。
           </para>
           <example>
             <title lang="en">With separate image folder</title>
-            <title lang="ja">画像用に別フォルダを使った例</title>
+            <title lang="ja">画像用に別フォルダーを使った例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -321,7 +321,7 @@
                   Result of enabled <quote>Separate image folder</quote>
                 </para>
                 <para lang="ja">
-                  <guilabel>画像を別フォルダにエクスポート</guilabel> 
+                  <guilabel>画像を別フォルダーにエクスポート</guilabel> 
                   した結果
                 </para>
               </caption>
@@ -386,7 +386,7 @@
             events like <quote>onmouseover</quote>:
           </para>
           <para lang="ja">
-            このオプションを有効にするとこのフィルタは Javascript コードを
+            このオプションを有効にするとこのフィルターは Javascript コードを
             追加します。 <acronym>HTML</acronym>の場合と同じく生成された
             ままの状態では何の効果もありませんが、 動的機能を追加してゆく
             には良好な手掛かりとなります。 この Javascript コードは<quote>
@@ -435,11 +435,11 @@ function exchange (image, images_array_name, event)
             image with border and you don't want to make the border sensitive.
           </para>
           <para lang="ja">
-            このオプションが無効ならばこのフィルタは全ての表組みセルに 
+            このオプションが無効ならばこのフィルターはすべての表組みセルに 
             <code language="HTML">&lt;a?href="#"&gt;?...?&lt;/a&gt;</code>
             というハイパーリンク素枠を加えます。 逆に初期設定どおりこれを
             有効にすると、 見当線が水平方向と垂直方向のどちらにも少なくとも
-            2本以上ある場合に、 フィルタは各行各列の全ての先頭と最後のセル
+            2本以上ある場合に、 フィルターは各行各列の全ての先頭と最後のセル
             だけはこのハイパーリンク素枠を省きます。 この処置は画像に枠が
             描かれていてその部分は反応させたくないときに役立ちます。
           </para>

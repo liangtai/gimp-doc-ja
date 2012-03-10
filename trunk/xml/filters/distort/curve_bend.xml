@@ -7,11 +7,10 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-04 de added by axel.wernicke
 -->
-<!--2011-02-20-->
+<!--2012-03-05-->
 <sect2 id="plug-in-curve-bend">
-  <!--カーブに沿って曲げる-->
   <title lang="en">Curve Bend</title>
-  <title lang="ja">ひん曲げる...</title>
+  <title lang="ja">カーブに沿って曲げる...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -22,12 +21,12 @@
     <primary>Curve Bend</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
-    <secondary>変形</secondary>
-    <tertiary>ひん曲げる</tertiary>
+    <primary>フィルター</primary>
+    <secondary sortas="ヘンケイ">変形</secondary>
+    <tertiary sortas="カーブニソッテマゲル">カーブに沿って曲げる</tertiary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>ひん曲げる</primary>
+    <primary sortas="カーブニソッテマゲル">カーブに沿って曲げる</primary>
   </indexterm>
 
   <sect3>
@@ -35,7 +34,9 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Applying example for the Curve Bend filter</title>
-      <title lang="ja">ひん曲げるフィルタの適用例</title>
+      <title lang="ja">
+        <quote>カーブに沿って曲げる</quote>フィルターの適用例
+        </title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -53,7 +54,9 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Curve Bend</quote> applied</para>
-          <para lang="ja"><quote>ひん曲げる</quote>フィルタ適用後</para>
+          <para lang="ja">
+            <quote>カーブに沿って曲げる</quote>フィルター適用後
+          </para>
         </caption>
       </mediaobject>
     </figure>
@@ -63,7 +66,7 @@
       from an image or selection border to the other.
     </para>
     <para lang="ja">
-      <guimenuitem>ひん曲げる...</guimenuitem> フィルタは、 
+      <guimenuitem>カーブに沿って曲げる...</guimenuitem> フィルターは、 
       曲線を描くとその線に沿って活性レイヤーもしくはその選択範囲を変形します。
       画像か選択範囲のいずれかの辺から別の辺まで徐々に曲げる変形をします。
     </para>
@@ -71,7 +74,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -83,9 +86,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>変形</guisubmenu>
-        <guimenuitem>ひん曲げる...</guimenuitem>
+        <guimenuitem>カーブに沿って曲げる...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -95,7 +98,9 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Curve bend</quote> filter options</title>
-      <title lang="ja"><quote>ひん曲げる</quote>フィルタのオプション</title>
+      <title lang="ja">
+        <quote>カーブに沿って曲げる</quote>フィルターのオプション
+      </title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -113,7 +118,7 @@
             modifying the image until you press <emphasis>OK</emphasis>.
           </para>
           <para lang="ja">
-            プレビュー画面は画像に実際にフィルタをかける前からダイアログ上で
+            プレビュー画面は画像に実際にフィルターをかける前からダイアログ上で
             調節したとおりの効果のようすを見るのに使われます。
           </para>
           <variablelist>
@@ -133,9 +138,8 @@
               </listitem>
             </varlistentry>
             <varlistentry>
-              <!--プレビュー自動更新-->
               <term lang="en">Automatic Preview</term>
-              <term lang="ja">自動プレビュー</term>
+              <term lang="ja">プレビュー自動更新</term>
               <listitem>
                 <para lang="en">
                   With this option, preview is changed in real time. This
@@ -170,7 +174,7 @@
                   right one.
                 </para>
                 <para lang="ja">
-                  ここでフィルタをかける角度を設定できます。 反時計回りに  
+                  ここでフィルターをかける角度を設定できます。 反時計回りに  
                   0 から 360 までの範囲があります。 初期状態では 0.0 度に
                   なっています。 この場合、 曲げ操作は画像の上辺と下辺に適用
                   されます。 90.0 度に設定すると左辺と右辺に適用されます。
@@ -181,7 +185,7 @@
               <term lang="en">Smoothing</term>
               <term lang="en">Antialiasing</term>
               <term lang="ja">スムージング</term>
-              <term lang="ja">滑らかに</term>
+              <term lang="ja">なめらかに</term>
               <listitem>
                 <para lang="en">
                   The distort process may create hard and stepped borders.
@@ -190,15 +194,14 @@
                 <para lang="ja">
                   変形の過程で縁が階段状になってしまいます。 
                   <guilabel>スムージング</guilabel> で線をなだらかにし、 
-                  <guilabel>滑らかに</guilabel> で線に
+                  <guilabel>なめらかに</guilabel> で線に
                   アンチエイリアスをかけます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <!--コピーで作業-->
               <term lang="en">Work on copy</term>
-              <term lang="ja">コピーを操作</term>
+              <term lang="ja">コピーで作業</term>
               <listitem>
                 <para lang="en">
                   This option creates a new layer called
@@ -218,9 +221,8 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <!--カーブ設定-->
         <term lang="en">Modify Curves</term>
-        <term lang="ja">カーブ変更</term>
+        <term lang="ja">カーブ設定</term>
         <listitem>
           <para lang="en">
             In this grid, you have a marked horizontal line, with a node at
@@ -248,22 +250,21 @@
             ノードは追加できます。 [削除するには両端のいずれかのノード上まで
             そこに近いノードを曳いてください。]
           </para>
-          <!--上->上部境界, 下->下部境界-->
           <para lang="ja">
             この方眼図には上辺と下辺の 2 本だけ曲線が描けます。 一度に
-            操作できる曲線は一本だけなので、 <guilabel>上</guilabel>、
-            <guilabel>下</guilabel> のラジオボタンで切り替えてください。
+            操作できる曲線は一本だけなので、 <guilabel>上部境界</guilabel>、
+            <guilabel>下部境界</guilabel> のラジオボタンで切り替えてください。
           </para>
           <para lang="ja">
             <guilabel>カーブタイプ</guilabel> に 
-            <guilabel>自由</guilabel> を選択すると、 ノードを
-            操作するのではなくマウスポインタで直接なぞって線が描けます。
+            <guilabel>フリーハンド</guilabel> を選択すると、 ノードを
+            操作するのではなくマウスポインターで直接なぞって線が描けます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Curve for Border</term>
-        <term lang="ja">曲げ操作する端</term>
+        <term lang="ja">カーブ設定する境界</term>
         <listitem>
           <para lang="en">
             There you can select whether the active curve must be applied to
@@ -271,8 +272,9 @@
             border, according to the rotation.
           </para>
           <para lang="ja">
-            ここで操作対象の曲線を切り替えられます。 <guilabel>上</guilabel> と
-            <guilabel>下</guilabel> のいずれかを選びますが、 その名前とは裏腹に
+            ここで操作対象の曲線を切り替えられます。
+            <guilabel>上部境界</guilabel> と <guilabel>下部境界</guilabel> の
+            いずれかを選びますが、 その名前とは裏腹に
             意味が回転操作によって変化します。
           </para>
           <caution>
@@ -284,8 +286,8 @@
             <para lang="ja">
               ここで切り替えて選ばれる曲線は回転によって位置付けが異なります
               のでお気を付けください。 例えば <guilabel>回転</guilabel> に 90
-              度を設定すると <guilabel>上</guilabel> の曲線は実際は画像の左辺を
-              表します。
+              度を設定すると <guilabel>上部境界</guilabel> の曲線は実際は
+              画像の左辺を表します。
             </para>
           </caution>
         </listitem>
@@ -302,15 +304,13 @@
             The <guilabel>Free</guilabel> option allows you to draw a curve
             freely. It will replace the active curve.
           </para>
-          <!--滑らかな曲線-->
           <para lang="ja">
-            <guilabel>滑らか</guilabel> の場合はノードを操作します。 
+            <guilabel>なめらかな曲線</guilabel> の場合はノードを操作します。 
             曲線は自動的にノードに沿ってとてもなだらかに描かれます。
           </para>
-          <!--フリーハンド-->
           <para lang="ja">
-            <guilabel>自由</guilabel> の場合は方眼図上をマウスでなぞります。 
-            描かれた曲線が元あった曲線に置き換わります。
+            <guilabel>フリーハンド</guilabel> の場合は方眼図上をマウスで
+            なぞります。 描かれた曲線が元あった曲線に置き換わります。
           </para>
         </listitem>
       </varlistentry>
@@ -352,7 +352,11 @@
                   Swap the <guilabel>Upper</guilabel> and
                   <guilabel>Lower</guilabel> curves.
                 </para>
-                <para lang="ja">上下 2 本の曲線を交換します。</para>
+                <para lang="ja">
+                  <guilabel>上部境界</guilabel> と
+                  <guilabel>下部境界</guilabel> の 2 本の曲線を
+                  互いに交換します。
+                  </para>
               </listitem>
             </varlistentry>
             <varlistentry>

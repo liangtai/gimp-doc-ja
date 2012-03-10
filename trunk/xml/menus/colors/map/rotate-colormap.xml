@@ -9,7 +9,7 @@
   2005-08-20 de added by axel.wernicke
   2005-08-30 de replaced informalfigure by axel.wernicke
 -->
-<!--2011-02-20-->
+<!--2012-03-07-->
 <sect2 id="plug-in-rotate-colormap">
   <title lang="en">Rotate Colors</title>
   <title lang="ja">カラーマップ回転...</title>
@@ -36,7 +36,7 @@
       <title lang="en">
         Example for the <quote>Rotate Colors</quote> filter
       </title>
-      <title lang="ja"><quote>カラーマップ回転</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>カラーマップ回転</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/filters/examples/taj_orig.jpg"
@@ -54,7 +54,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Rotate Colors</quote> applied</para>
-          <para lang="ja"><quote>カラーマップ回転</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>カラーマップ回転</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -69,7 +69,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -110,14 +110,13 @@
       color range and the other for the <quote>To</quote> color range:
     </para>
     <para lang="ja">
-      このタブには<quote>最初</quote>と<quote>宛</quote>の 2 つの色相環が
-      あります。
+      このタブには<quote>回転させる色範囲</quote>と
+      <quote>回転後の色範囲</quote>の 2 つの色相環があります。
     </para>
     <variablelist>
       <varlistentry>
         <term lang="en">From</term>
-        <!--開始位置-->
-        <term lang="ja">最初</term>
+        <term lang="ja">回転させる色範囲</term>
         <listitem>
           <para lang="en">
             The <guilabel>Color Circle</guilabel>: Two axis to define
@@ -147,44 +146,44 @@
           <para lang="ja">
             <quote>色相環</quote>グラフには扇形がありその 2 本の軸が元色の
             範囲を決めます。 中心付近にある曲がった矢印は元色の範囲の 
-            <guilabel>最初</guilabel> と <guilabel>宛</guilabel> を示して
-            います。 2 本の軸はいずれもクリックして曳けば範囲を変えられます。
+            <guilabel>開始位置</guilabel> と <guilabel>終了位置</guilabel> を
+            示しています。 2 本の軸はいずれもクリックして曳けば範囲を
+            変えられます。
           </para>
           <para lang="ja">
             <guibutton>(反)時計周りに変更</guibutton>: 扇型の色範囲の方向を
             逆転させます。 初期状態の方向は反時計回りなので、 このボタンは 
             <guibutton>時計回りに変更</guibutton> になっています。
           </para>
-          <!--<guibutton>範囲を反転</guibutton>-->
           <para lang="ja">
-            <guibutton>矢印の場所を変更</guibutton>: 色範囲の 
-            <guilabel>最初</guilabel> と <guilabel>宛</guilabel> は入れ替わり、
-            範囲を反転して外側の色相を選びます。 この変更は扇型の色範囲内の
-            色を全面的に入れ替えます。
+            <guibutton>範囲を反転</guibutton>: 色範囲の 
+            <guilabel>開始位置</guilabel> と <guilabel>終了位置</guilabel> は
+            入れ替わり、 範囲を反転して外側の色相を選びます。 この変更は扇型の
+            色範囲内の色を全面的に入れ替えます。
           </para>
           <para lang="ja">
             <guibutton>すべて選択</guibutton> は色相環のすべての色を範囲内に
             とります。
           </para>
           <para lang="ja">
-            <guilabel>最初</guilabel> と <guilabel>宛</guilabel> の数値記入欄は
-            扇型の範囲の開始角と終端角を (ラジアン/π) で表示しています。 直接
-            記入でも付属の小さな矢印の操作でも数値を変更できます。
+            <guilabel>開始位置</guilabel> と <guilabel>終了位置</guilabel> の
+            数値記入欄は扇型の範囲の開始角と終端角を (ラジアン/π) で
+            表示しています。 直接記入でも付属の小さな矢印の操作でも数値を
+            変更できます。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">To</term>
-        <!--終了位置-->
-        <term lang="ja">宛</term>
+        <term lang="ja">回転後の色範囲</term>
         <listitem>
           <para lang="en">
             This section options are the same as <quote>From</quote> section
             ones.
           </para>
           <para lang="ja">
-            この区画のオプションの操作方法は <guilabel>最初</guilabel> の区画と
-            同じです。
+            この区画のオプションの操作方法は
+            <guilabel>回転させる色範囲</guilabel> の区画と同じです。
           </para>
         </listitem>
       </varlistentry>
@@ -302,8 +301,9 @@
                  選んだ色の代わりに<quote>主オプション</quote>の設定でその色が
                  回転後に変化するであろう色をグレーの代わりに使います。 その
                  ためこのオプションでは定義円で選ぶ色が
-                 <quote>主オプション</quote>の上側 <guilabel>最初</guilabel> の
-                 色範囲内の色でなければなりません。 
+                 <quote>主オプション</quote>の上側
+                 <guilabel>回転させる色範囲</guilabel> の色範囲内の
+                 色でなければなりません。 
                  <quote>グレーオプション</quote>タブから見えませんので
                  ご不便をおかけします。
               </para>
@@ -409,8 +409,7 @@
       <varlistentry>
         <term lang="en">Original</term>
         <term lang="en">Rotated</term>
-        <!--回転前-->
-        <term lang="ja">原画</term>
+        <term lang="ja">回転前</term>
         <term lang="ja">回転後</term>
         <listitem>
           <para lang="en">
@@ -419,7 +418,7 @@
             before they are applied to the Image.
           </para>
           <para lang="ja">
-            <guilabel>原画</guilabel> プレビューは現在の画像の縮小見本です。 
+            <guilabel>回転前</guilabel> プレビューは現在の画像の縮小見本です。 
             <guilabel>回転後</guilabel> プレビューはダイアログ内の操作を反映
             した結果を実行前に見極めるための見本画像です。
           </para>

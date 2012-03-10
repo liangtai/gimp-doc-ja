@@ -10,7 +10,7 @@
   2006-02-17: added italian translation by ciampix
   2005-12-16: made valid docbook and reviewed by lexa
 -->
-<!--2011-05-21-->
+<!--2012-02-28-->
 <sect1 id="gimp-concepts-running">
   <title lang="en">Running GIMP</title>
   <title lang="ja"><acronym>GIMP</acronym>を起動する</title>
@@ -111,8 +111,8 @@
       <xref linkend="bibliography-online-gimp-dev"/>.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>の他プラットフォームへの移植はソースコードが
-      利用できるからこそ可能なのです。
+      <acronym>GIMP</acronym>はソースコードの利用が許されているため他の
+      プラットフォームへの移植が容易に行なわれています。
       さらに詳しい情報は<acronym>GIMP</acronym>開発者のページでご覧下さい。
       <xref linkend="bibliography-online-gimp-dev"/>
     </para>
@@ -158,13 +158,11 @@
             コンソールのコマンドラインで、
             <userinput>LANGUAGE=<replaceable>ja_JP</replaceable> <command>gimp
             </command></userinput> あるいは <userinput>LANG=<replaceable>ja_JP
-            </replaceable> <command>gimp</command></userinput> のように送って
-            ください。 <literal>ja_JP</literal> のところは <literal>ja_JP.eucJP
-            </literal>、 <literal>ja_JP.Shift_JIS</literal>、 <literal>
-            ja_JP.UTF-8</literal>、 のように文字コードを明示したり (<userinput>
-            LANG=</userinput> に限る)、 <literal>ar</literal>、 <literal>fa
-            </literal>、 <literal>tr</literal> または <literal>en_GB
-            </literal>、 <literal>pt_BR</literal>、 <literal>zh_CN</literal> 
+            </replaceable> <command>gimp</command></userinput> のように
+            送ります。 <literal>ja_JP</literal> のところは、
+            <literal>ar</literal>、 <literal>fa</literal>、
+            <literal>tr</literal> または <literal>en_GB</literal>、 
+            <literal>pt_BR</literal>、 <literal>zh_CN</literal> 
             のように言語を指定できます。
             背景: <userinput>LANGUAGE=<replaceable>ja</replaceable></userinput>
             としたときそこで起動した <command>gimp</command> の環境変数の
@@ -229,8 +227,8 @@ start gimp-2.6.exe</userinput></literallayout>
                     <literal>ja</literal>、 外国語なら <literal>de</literal>、
                     <literal>fr</literal>、 <literal>it</literal> あるいは
                     <literal>en_CA</literal>、 <literal>ko_KR</literal>
-                    のような言語符号を記入します。
-                    連続して3度<guibutton>OK</guibutton>ボタンを押すと完了です。
+                    のような言語符号を記入します。 連続して 3 度
+                    <guibutton>OK</guibutton> ボタンを押すと完了です。
                     ユーザーアカウントごとに設定を変えるのなら、
                     <menuchoice>
                       <guimenu>スタート</guimenu>
@@ -267,7 +265,7 @@ start gimp-2.6.exe</userinput></literallayout>
             </variablelist>
           </para>
           <para lang="ja">
-W
+            たびたび言語を変更する必要があるときは、バッチファイルの
             利用をおすすめします。メモ帳などのテキストエディタを開き、
             たとえば以下のようなコマンドを記入します。
             <literallayout><userinput>set lang=zh_TW.Big5
@@ -380,7 +378,7 @@ start GIMP-2.6.exe</userinput></literallayout>
         <term>--help-gtk</term>
         <listitem>
           <para lang="en">Show GTK+ Options.</para>
-          <para lang="ja">GTK+ のオプションを表示。</para>
+          <para lang="ja"><acronym>GTK</acronym>+ のオプションを表示。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -424,7 +422,7 @@ start GIMP-2.6.exe</userinput></literallayout>
         <term>-i, --no-interface</term>
         <listitem>
           <para lang="en">Run without a user interface.</para>
-          <para lang="ja">ユーザインタフェースなしで起動。</para>
+          <para lang="ja">ユーザーインターフェースなしで起動。</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -436,7 +434,7 @@ start GIMP-2.6.exe</userinput></literallayout>
             minimized.
           </para>
           <para lang="ja">
-            パターン(文様)、 グラデーション、 パレット、 各種ブラシなどの
+            パターン、 グラデーション、 パレット、 各種ブラシなどの
             データを読み込まずに起動します。 起動時間を短縮する目的で
             非対話非相互の状態にするために使用します。
           </para>
@@ -501,11 +499,11 @@ start GIMP-2.6.exe</userinput></literallayout>
           </para>
           <para lang="ja">
             異なる<filename>sessionrc</filename>ファイルを使って
-            <acronym>GIMP</acronym>のセッションを 建て上げます。
+            <acronym>GIMP</acronym>のセッションを建て上げます。
             そのセッションは指定されたセッション名を
             <filename>sessionrc.<replaceable>name</replaceable></filename>
             のようにして追加したファイル名で保存されます。
-            セッションは主にウィンドウのサイズと配置を記録しています
+            セッションは主にウィンドウのサイズと配置を記録しています。
           </para>
         </listitem>
       </varlistentry>
@@ -550,7 +548,7 @@ start GIMP-2.6.exe</userinput></literallayout>
             are read from standard input.
           </para>
           <para lang="ja">
-            コマンドの複合技を一気に無言で実行します。 実行は
+            コマンドの複合技を一気に応答なく実行します。 実行は
             <acronym>GIMP</acronym>のスクリプト拡張機能が担うので、
             コマンドの組み合わせをスクリプトファイル <replaceable>commands
             </replaceable> に書きます。 このファイル名のかわりに <userinput>
@@ -566,8 +564,8 @@ start GIMP-2.6.exe</userinput></literallayout>
             The default procedure is Script-Fu.
           </para>
           <para lang="ja">
-            バッチコマンドを実行するプロシージャを指定します。 初期状態での
-            プロシージャはScript-Fuです。
+            バッチコマンドを実行するプロシージャーを指定します。 初期状態での
+            プロシージャーは Script-Fu です。
           </para>
         </listitem>
       </varlistentry>
@@ -608,7 +606,7 @@ start GIMP-2.6.exe</userinput></literallayout>
             handlers. Useful for <acronym>GIMP</acronym> debugging.
           </para>
           <para lang="ja">
-            致命的でないデバッグ用シグナルハンドラを有効にします。
+            致命的でないデバッグ用シグナルハンドラーを有効にします。
             <acronym>GIMP</acronym>のデバッグ作業のためのものです。
           </para>
         </listitem>
@@ -631,7 +629,7 @@ start GIMP-2.6.exe</userinput></literallayout>
           </para>
           <para lang="ja">
             <filename>gimprc</filename>ファイルを出力します。
-            gimprc ファイルがもとで混乱したときに使えます。
+            <filename>gimprc</filename> ファイルがもとで混乱したときに使えます。
           </para>
         </listitem>
       </varlistentry>

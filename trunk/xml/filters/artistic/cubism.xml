@@ -8,7 +8,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-15 de added by axel.wernicke
 -->
-<!--2012-01-06-->
+<!--2012-03-05-->
 <sect2 id="plug-in-cubism">
   <title lang="en">Cubism</title>
   <title lang="ja">キュービズム...</title>
@@ -22,7 +22,7 @@
     <primary>Cubism</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ゲイジュツテコウカ">芸術的効果</secondary>
     <tertiary>キュービズム</tertiary>
   </indexterm>
@@ -35,7 +35,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Example for the <quote>Cubism</quote></title>
-      <title lang="ja"><quote>キュービズム</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>キュービズム</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -53,7 +53,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Cubism</quote> applied</para>
-          <para lang="ja"><quote>キュービズム</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>キュービズム</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -62,9 +62,8 @@
       constructed of small squares of semitransparent tissue paper.
     </para>
     <para lang="ja">
-      <guimenuitem>キュービズム...</guimenuitem> フィルタ
-      プラグインは画像を加工して半透明のティシュペーパーの小片で組み上げられた
-      ような画像にします。
+      <guimenuitem>キュービズム...</guimenuitem> フィルタープラグインは画像を
+      加工して半透明のティシュペーパーの小片で組み上げられたような画像にします。
     </para>
     <tip>
       <para lang="en">
@@ -74,15 +73,15 @@
       </para>
       <para lang="ja">
         このプラグインでは物足りないと感じはじめたら、 よりオプションの多い 
-        <link linkend="plug-in-gimpressionist">GIMPressionist</link> フィルタを
-        お試しください。
+        <link linkend="plug-in-gimpressionist">GIMPressionist</link> 
+        フィルターをお試しください。
       </para>
     </tip>
   </sect3>
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -94,7 +93,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>芸術的効果</guisubmenu>
         <guimenuitem>キュービズム...</guimenuitem>
       </menuchoice>
@@ -106,7 +105,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Cubism</quote> filter options</title>
-      <title lang="ja"><quote>キュービズム</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>キュービズム</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -142,7 +141,7 @@
             the arrow buttons can be used.
           </para>
           <para lang="ja">
-            <guilabel>タイルサイズ</guilabel> スライダは
+            <guilabel>タイルサイズ</guilabel> スライダーは
             正方形の大きさをピクセル単位で調節できます。 これで新たに生成される
             画像に使われる小さな正方形のティシュペーパーの大きさを決めます。 
             値は 0.0 から 100.0 ピクセルまでの範囲で指定してください。
@@ -165,7 +164,7 @@
             color will fill the entire layer.
           </para>
           <para lang="ja">
-            <guilabel>タイル彩度</guilabel> スライダは描かれ
+            <guilabel>タイル彩度</guilabel> スライダーは描かれ
             る小さな正方形の色の強さを決定づける値を調節します。 この小片の
             透明度を変化させます。 高い値を与えると描かれる正方形はとても濃く
             描かれ、 重なりの下側になった正方形の色が見通せなくなります。 低い
@@ -193,7 +192,7 @@
             Alpha channel, this color scale will also be transparent.
           </para>
           <para lang="ja">
-            このフィルタは画像の全ての色から小片を作り 
+            このフィルターは画像の全ての色から小片を作り 
             <guilabel>タイル彩度</guilabel> に従ってその色階調を変化させて
             描きます。 タイル彩度が低いときは色階調は背景色が見えるように
             します。 タイル彩度を 0.0 にすれば初期設定の黒が背景に現れるのが
@@ -283,10 +282,10 @@
         to adjust the image so it will tile seamlessly in your background.
       </para>
       <para lang="ja">
-        このフィルタをウェブ用ページの背景画像などの作成に使うつもりなら、 ある
-        狭い範囲の色を使って小さめの正方形の領域に不規則な塗色をしてから、 この
-        フィルタをお好みの設定で適用したうえで、 
-        <link linkend="plug-in-make-seamless">シームレス化</link> フィルタを
+        このフィルターをウェブ用ページの背景画像などの作成に使うつもりなら、 
+        ある狭い範囲の色を使って小さめの正方形の領域に不規則な塗色をしてから、 
+        このフィルターをお好みの設定で適用したうえで、 
+        <link linkend="plug-in-make-seamless">シームレス化</link> フィルターを
         使ってタイル化利用できるように画像を加工するとよいでしょう。
       </para>
     </tip>

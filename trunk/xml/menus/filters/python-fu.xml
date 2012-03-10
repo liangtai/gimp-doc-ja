@@ -4,7 +4,7 @@
 <!-- section history:
   2009-10-26 ude: created
 -->
-<!--2010-12-06-->
+<!--2012-03-08-->
 <sect2 id="gimp-filters-python-fu" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">The <quote>Python-Fu</quote> Submenu</title>
   <title lang="ja"><quote>Python-Fu</quote>サブメニュー</title>
@@ -62,7 +62,7 @@
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>フィルタ</guimenu>
+            <guimenu>フィルター</guimenu>
             <guimenuitem>Python-Fu</guimenuitem>
           </menuchoice>
         </para>
@@ -92,7 +92,7 @@
     </para>
     <para lang="ja">
       Python-Fu コンソールはダイアログウィンドウになっていて、 相互対話的に
-      Python 言語を実行するインタープリタ<quote>Python シェル</quote>がここで
+      Python 言語を実行するインタープリター<quote>Python シェル</quote>がここで
       稼働しています。 このコンソールでは libgimp が提供する内部
       <acronym>GIMP</acronym>ライブラリルーチンが使える体制ができています。
     </para>
@@ -104,7 +104,7 @@
       このコンソールには大きな縦に繰り寄せられるウィンドウが中央を占めており、 
       ここで直に Python コマンドが入力でき、 出力行が表示されます。 Python 
       言語のコマンドを書き込んで <keycap>Enter</keycap> キーを押すとその
-      コマンドが Python インタープリタにより実行されます。 コマンドの
+      コマンドが Python インタープリターにより実行されます。 コマンドの
       実行結果だけでなくその関数返し値や、 あればエラーメッセージも
       あわせてここに表示されます。
     </para>
@@ -134,7 +134,7 @@
             このコマンドは主ウィンドウに現れたすべての内容を保存します。 
             つまり<quote><code>&gt;&gt;&gt;</code></quote>プロンプトを含む
             入力行と Python-Fu コンソールに表示される出力の両方がテキスト形式で
-            記録できます。 ボタンをクリックするとファイルブラウザが
+            記録できます。 ボタンをクリックするとファイルブラウザーが
             開かれますので保管場所とファイル名を指定してください。"
           </para>
         </listitem>
@@ -169,7 +169,7 @@
           </para>
           <para lang="ja">
             このボタンをクリックすると
-            <link linkend="plug-in-dbbrowser">プロシージャブラウザ</link> が
+            <link linkend="plug-in-dbbrowser">プロシージャーブラウザー</link> が
             開かれ、 ウィンドウの下部にはボタンが追加されています。
           </para>
           <mediaobject>
@@ -182,7 +182,7 @@
                 The additional button of the Procedure Browser
               </para>
               <para lang="ja">
-                プロシージャブラウザに追加されたボタン
+                プロシージャーブラウザーに追加されたボタン
               </para>
             </caption>
           </mediaobject>
@@ -201,14 +201,14 @@
           </para>
           <para lang="ja">
             このボタンをクリックすると
-            <link linkend="plug-in-dbbrowser">プロシージャブラウザ</link> が
-            開かれます。 プロシージャブラウザには <guibutton>適用</guibutton> 
-            ボタンがついています。
+            <link linkend="plug-in-dbbrowser">プロシージャーブラウザー</link> が
+            開かれます。 プロシージャーブラウザーには 
+            <guibutton>適用</guibutton> ボタンがついています。
           </para>
           <para lang="ja">
-            プロシージャブラウザの <guibutton>適用</guibutton> ボタンをクリック
-            すると、 ブラウザ上で選択されている手続き命令のコードがコンソール
-            の Python 命令記入欄に貼り付けられます。
+            プロシージャーブラウザーの <guibutton>適用</guibutton> ボタンを
+            クリックすると、 ブラウザー上で選択されている手続き命令のコードが
+            コンソールの Python 命令記入欄に貼り付けられます。
           </para>
           <mediaobject>
             <imageobject>
@@ -218,7 +218,7 @@
             <caption>
               <para lang="en">Applied <acronym>PDB</acronym> procedure</para>
               <para lang="ja">
-                <acronym>PDB</acronym>からプロシージャを適用したところ
+                <acronym>PDB</acronym>からプロシージャーを適用したところ
               </para>
             </caption>
           </mediaobject>
@@ -228,9 +228,9 @@
             <quote>type</quote>) with actual values, e.g.
           </para>
           <para lang="ja">
-            この時点でパラメータの名前を実際の値に置き換えます。 この例では
-            <quote>width</quote>、 <quote>height</quote>、 <quote>type
-            </quote>のところを実際の値でつぎのように置き換えます。
+            この時点でパラメーターの名前を実際の値に置き換えます。 この例では
+            <quote>width</quote>、 <quote>height</quote>、 <quote>type</quote>
+            のところを実際の値でつぎのように置き換えます。
           </para>
           <!-- Don't wrap the following line (without testing)! -->
           <programlisting>image = pdb.gimp_image_new(400, 300, RGB)</programlisting>
@@ -249,9 +249,9 @@
             そのあとは <keycap>Enter</keycap> を押せばコマンドが実行されます。
           </para>
           <para lang="ja">
-            プロシージャのパラメータには説明にある通りの定数値も使えます。 
+            プロシージャーのパラメーターには説明にある通りの定数値も使えます。 
             むしろ使うべきです。 例えば<quote>RGB-IMAGE</quote>や
-            <quote>OVERLAY-MODE</quote>があります。 ただしブラウザに現れる
+            <quote>OVERLAY-MODE</quote>があります。 ただしブラウザーに現れる
             名前のハイフン記号<quote>-</quote>は下線記号 (アンダースコア) 
             <quote>_</quote>に置き換えて、 <code>RGB_IMAGE</code> や 
             <code>OVERLAY_MODE</code> のような表現にしなくてはなりません。
@@ -266,8 +266,8 @@
             </para>
             <para lang="ja">
               <link linkend="glossary-pdb"><acronym>PDB</acronym></link>
-              (<acronym>GIMP</acronym>プロシージャデータベース) から
-              プロシージャを拾い上げる用途ならば Python-Fu に何の制限も
+              (<acronym>GIMP</acronym>プロシージャーデータベース) から
+              プロシージャーを拾い上げる用途ならば Python-Fu に何の制限も
               ありません。 上記の例のとおり新しい画像オブジェクトを作成する
               のなら、 次のように記入しましょう。
             </para>

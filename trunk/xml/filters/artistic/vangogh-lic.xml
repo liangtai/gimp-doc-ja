@@ -11,7 +11,7 @@
   2006-12-13 lexa: added german translation
   2005-11-15: created by julien hardelin
 -->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="plug-in-lic">
   <title lang="en">Van Gogh (LIC)</title>
   <title lang="ja">ヴァン ゴッホ風(LIC)...</title>
@@ -25,7 +25,7 @@
     <primary>Van Gogh (LIC)</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
     <tertiary>ヴァンゴッホ</tertiary>
   </indexterm>
@@ -80,22 +80,23 @@
     <para lang="ja">
       <quote><acronym>LIC</acronym></quote>とは <foreignphrase>Line Integral 
       Convolution</foreignphrase> (線積分畳込み) という数学理論のことです。 
-      プラグイン作者はこの数学用語をフィルタの名前に加えたのです。
+      プラグイン作者はこの数学用語をフィルターの名前に加えたのです。
       <guimenuitem>ヴァン ゴッホ風(LIC)...</guimenuitem> 
-      フィルタの用途は画像に方向性のあるぼかしを適用することと、 テクスチャを
-      生成することのいずれかです。 画像に特定方向のぼかしをかけることから
-      <quote>乱視化</quote>フィルタとも呼ばれます。
+      フィルターの用途は画像に方向性のあるぼかしを適用することと、 を
+      テクスチャー生成することのいずれかです。 画像に特定方向のぼかしを
+      かけることから<quote>乱視化</quote>フィルターとも呼ばれます。
     </para>
     <para lang="ja">
-      このフィルタはぼかしマップを利用しますが、 他とは違ってぼかしマップの陰影
-      は使いません。 <emphasis>グラデーションの方向だけを考慮します。
-      </emphasis> マップの単色部分にあたる画素は変化を受けません。
+      このフィルターはぼかしマップを利用しますが、 他とは違ってぼかしマップの
+      陰影は使いません。
+      <emphasis>グラデーションの方向だけを考慮します。</emphasis> 
+      マップの単色部分にあたる画素は変化を受けません。
     </para>
   </sect3>
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -107,7 +108,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>芸術的効果</guisubmenu>
         <guimenuitem>ヴァン ゴッホ風(LIC)...</guimenuitem>
       </menuchoice>
@@ -120,7 +121,7 @@
     <figure>
       <title lang="en"><quote>Van Gogh (LIC)</quote> filter options</title>
       <title lang="ja">
-        <quote>ヴァン ゴッホ風(LIC)</quote>フィルタのオプション
+        <quote>ヴァン ゴッホ風(LIC)</quote>フィルターのオプション
       </title>
       <mediaobject>
         <imageobject>
@@ -139,8 +140,8 @@
           </para>
           <para lang="ja">
             ぼかしをかけたいときは <guilabel>元画像と</guilabel> を選びます。 
-            <guilabel>フィルタ長</guilabel> スライダと、 あるいはさらに 
-            <guilabel>積分ステップ</guilabel> スライダだけがはたらきます。
+            <guilabel>フィルター長</guilabel> スライダーと、 あるいはさらに 
+            <guilabel>積分ステップ</guilabel> スライダーだけがはたらきます。
           </para>
         </listitem>
         <listitem>
@@ -149,8 +150,9 @@
             All sliders can be useful.
           </para>
           <para lang="ja">
-            テクスチャを生成させるときは <guilabel>ホワイトノイズと</guilabel> 
-            を選びます。 すべてのスライダが調整に関わります。
+            テクスチャーを生成させるときは
+            <guilabel>ホワイトノイズと</guilabel> 
+            を選びます。 すべてのスライダーが調整に関わります。
           </para>
         </listitem>
       </itemizedlist>
@@ -166,7 +168,7 @@
             will use this channel to treat image.
           </para>
           <para lang="ja">
-            フィルタが画像を扱うときに用いるチャンネルを 
+            フィルターが画像を扱うときに用いるチャンネルを 
             <guilabel>色相</guilabel>、 <guilabel>彩度</guilabel>、
             <guilabel>明るさ</guilabel> (=明度) のいずれかに選んでください。
           </para>
@@ -264,7 +266,7 @@
             ここで選ぶのはぼかしを指示するマップ画像か方向パターンです。 この
             マップ画像は呼び出し元画像と同じ寸法でなくてはなりません。 グレー
             スケール画像ならなお良いでしょう。 この一覧表で選べるようにするため
-            フィルタを呼び出すより前に画面上に開いておく必要があります。
+            フィルターを呼び出すより前に画面上に開いておく必要があります。
           </para>
           <figure>
             <title lang="en">Blurring with vertical gradient map</title>
@@ -313,7 +315,7 @@
           </figure>
           <figure>
             <title lang="en">Texture example</title>
-            <title lang="ja">テクスチャの例</title>
+            <title lang="ja">テクスチャーの例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -327,10 +329,10 @@
                   are going horizontally.
                 </para>
                 <para lang="ja">
-                  <guilabel>ホワイトノイズと</guilabel> 
-                  オプション有効。 その他のパラメータは既定のまま。 垂直
-                  グラデーションマップを用いるとテクスチャ (生地) の
-                  <quote>繊維方向</quote>が水平になる。
+                  <guilabel>ホワイトノイズと</guilabel> オプション有効。 
+                  その他のパラメーターは既定のまま。 垂直グラデーションマップを
+                  用いるとテクスチャー (生地) の<quote>繊維方向</quote>が
+                  水平になる。
                 </para>
               </caption>
             </mediaobject>
@@ -339,7 +341,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Filter length</term>
-        <term lang="ja">フィルタ長</term>
+        <term lang="ja">フィルター長</term>
         <listitem>
           <para lang="en">
             When applying blur, this option controls how important blur is.
@@ -347,14 +349,14 @@
             values result in smooth surface; high values in rough surface.
           </para>
           <para lang="ja">
-            <guilabel>フィルタ長</guilabel> スライダは、 
-            ぼかしをかける場合にはぼかしの重要度を制御します。 テクスチャを
+            <guilabel>フィルター長</guilabel> スライダーは、 
+            ぼかしをかける場合にはぼかしの重要度を制御します。 テクスチャーを
             生成する場合には生地の粗さを制御します。 低い値は滑らかな質感と
             なり、 高い値はごわごわした質感です。
           </para>
           <figure>
             <title lang="en">Action example of Filter Length on blur</title>
-            <title lang="ja">ぼかし用途でのフィルタ長の活用例</title>
+            <title lang="ja">ぼかし用途でのフィルター長の活用例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -369,7 +371,7 @@
                 </para>
                 <para lang="ja">
                   左図には 1 ピクセル幅の垂直線を、 右図には同様の線に
-                  フィルタ長を 3 とした垂直ぼかしを適用。 ぼかし後の線幅は
+                  フィルター長を 3 とした垂直ぼかしを適用。 ぼかし後の線幅は
                   左右 3 ピクセルずつの 6 ピクセルになる。
                 </para>
               </caption>
@@ -377,7 +379,7 @@
           </figure>
           <figure>
             <title lang="en">Filter Length example on texture</title>
-            <title lang="ja">テクスチャ用途のフィルタ長の例</title>
+            <title lang="ja">テクスチャー用途のフィルター長の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -389,8 +391,8 @@
                   the same texture with Filter Length=24.
                 </para>
                 <para lang="ja">
-                  左図はフィルタ長を 3 としたテクスチャ。 右図はフィルタ長を
-                  24 とした同じテクスチャ。
+                  左図はフィルター長を 3 としたテクスチャー。 右図は
+                  フィルター長を 24 とした同じテクスチャー。
                 </para>
               </caption>
             </mediaobject>
@@ -407,7 +409,7 @@
             coarse-grained textures.
           </para>
           <para lang="ja">
-            <guilabel>ノイズ強度</guilabel> スライダは
+            <guilabel>ノイズ強度</guilabel> スライダーは
             ホワイトノイズの量と大きさを制御します。 低い値は肌理の細かい質感
             になります。 高い値は粒度が粗い生地になります。
           </para>
@@ -415,7 +417,7 @@
             <title lang="en">
               Action example of Noise Magnitude on texture
             </title>
-            <title lang="ja">テクスチャ用途のノイズ強度の活用例</title>
+            <title lang="ja">テクスチャー用途のノイズ強度の活用例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -437,14 +439,14 @@
             This options controls the influence of gradient map on texture.
           </para>
           <para lang="ja">
-            <guilabel>積分ステップ</guilabel> スライダは
-            テクスチャ生成用途でのグラデーションマップの影響力を制御します。
+            <guilabel>積分ステップ</guilabel> スライダーは
+            テクスチャー生成用途でのグラデーションマップの影響力を制御します。
           </para>
           <figure>
             <title lang="en">
               Action example of Integration Steps on texture
             </title>
-            <title lang="ja">テクスチャ用途での積分ステップの活用例</title>
+            <title lang="ja">テクスチャー用途での積分ステップの活用例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -476,16 +478,16 @@
             in low contrast.
           </para>
           <para lang="ja">
-            <guilabel>最小値</guilabel> スライダと <guilabel>
-            最大値</guilabel> スライダの両設定値はテクスチャ
-            のコントラスト幅を制御します。 幅を狭くとるとコントラストが強まり、
+            <guilabel>最小値</guilabel> スライダーと 
+            <guilabel>最大値</guilabel> スライダーの両設定値はテクスチャーの
+            コントラスト幅を制御します。 幅を狭くとるとコントラストが強まり、
             幅を拡げるとコントラストが弱まります。
           </para>
           <figure>
             <title lang="en">
               Action example of min/max values on texture
             </title>
-            <title lang="ja">テクスチャ用途での最小値/最大値の活用例</title>
+            <title lang="ja">テクスチャー用途での最小値/最大値の活用例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"

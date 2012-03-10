@@ -5,7 +5,7 @@
   2008-03-17 alex falappa: added 'it'
   2008-02-17 ude: created 'en','de'
 -->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="script-fu-glossy-logo-alpha">
   <title lang="en">Glossy</title>
   <title lang="ja">光沢...</title>
@@ -19,7 +19,7 @@
     <primary>Glossy</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
     <tertiary sortas="コウタク">光沢</tertiary>
   </indexterm>
@@ -33,7 +33,7 @@
     <figure>
       <title lang="en">Example for the <quote>Glossy</quote> filter</title>
       <title lang="ja">
-        <quote>光沢</quote>フィルタの使用例
+        <quote>光沢</quote>フィルターの使用例
       </title>
       <mediaobject>
         <imageobject>
@@ -42,7 +42,7 @@
         </imageobject>
         <caption>
           <para lang="en">The <quote>Glossy</quote> filter</para>
-          <para lang="ja"><quote>光沢</quote>フィルタ</para>
+          <para lang="ja"><quote>光沢</quote>フィルター</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -62,7 +62,7 @@
       drop shadow.
     </para>
     <para lang="ja">
-      <guimenuitem>光沢...</guimenuitem> フィルタはアルファ
+      <guimenuitem>光沢...</guimenuitem> フィルターはアルファ
       域にグラデーションとパターンを適用します。 バンプマップにより僅かに
       立体効果をつけ、 付加的にドロップシャドウの追加ができます。
     </para>
@@ -99,7 +99,7 @@
       Otherwise, the menu entry is insensitive and grayed out.
     </para>
     <para lang="ja">
-      このフィルタは少なくとも規定のオプション通りなら上図のように艶のある
+      このフィルターは少なくとも規定のオプション通りなら上図のように艶のある
       ロゴを作成する<quote>光沢</quote>ロゴスクリプトから派生しました。 
       しました。 ロゴスクリプトは画像ウィンドウのメニューの 
       <menuchoice>
@@ -111,7 +111,7 @@
       にあります。
     </para>
     <para lang="ja">
-      このフィルタは活性レイヤーにアルファチャンネルがある場合に作動し、 
+      このフィルターは活性レイヤーにアルファチャンネルがある場合に作動し、 
       なければメニュー項目が灰色無効となって使用できません。
     </para>
     <warning>
@@ -126,7 +126,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -138,7 +138,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより 
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ロゴ効果</guisubmenu>
         <guimenuitem>光沢...</guimenuitem>
       </menuchoice>
@@ -177,7 +177,7 @@
             alpha will be filled with a gradient blend starting at the bottom.
           </para>
           <para lang="ja">
-            初期設定ではこのフィルタはアルファ域を 
+            初期設定ではこのフィルターはアルファ域を 
             <link linkend="gimp-tool-blend">グラデーションブレンド</link> で
             塗りつぶします。 グラデーションボタンをクリックすれば簡素な 
             <link linkend="gimp-gradient-dialog">グラデーションダイアログ
@@ -241,8 +241,9 @@
           <para lang="ja">
             ちょうど活性レイヤーの<quote>文字</quote>オプションと同じように
             これらのオプションも輪郭部分を塗りつぶすためのグラデーションを指定
-            したり、 <guilabel>グラデーションの代わりにパターンを輪郭に使う
-            </guilabel> オプションが有効ならそのパターンの指定をします。
+            したり、
+            <guilabel>グラデーションの代わりにパターンを輪郭に使う</guilabel> 
+            オプションが有効ならそのパターンの指定をします。
           </para>
         </listitem>
       </varlistentry>
@@ -289,7 +290,7 @@
             <link linkend="plug-in-bump-map">bump map</link>.
           </para>
           <para lang="ja">
-            このオプションは何のはたらきもしません。 このフィルタは常に
+            このオプションは何のはたらきもしません。 このフィルターは常に
             <link linkend="plug-in-bump-map">バンプマップ</link> を適用
             します。
           </para>
@@ -326,7 +327,7 @@
             background layer will keep the size of the active layer.
           </para>
           <para lang="ja">
-            付加的にこのフィルタは 
+            付加的にこのフィルターは 
             <link linkend="script-fu-drop-shadow">ドロップシャドウ</link> を
             描いたレイヤーを作成できます。 影のレイヤーは 
             <guilabel>影 X オフセット</guilabel> だけ右に移動し、 
@@ -341,7 +342,7 @@
 
   <sect3>
     <title lang="en">Filter details</title>
-    <title lang="ja">フィルタの詳細</title>
+    <title lang="ja">フィルターの詳細</title>
     <para lang="en">
       The numerous options may give the impression that this is a very
       complicate filter, but actually it is fairly simple. The interesting
@@ -366,8 +367,8 @@
       will still see a border (<quote>outline</quote>), because
     </para>
     <para lang="ja">
-      オプションがどっさりあるので複雑なフィルタだと思われがちですが、 実態は
-      結構単純です。 着目点はこのフィルタが活性レイヤーと輪郭用レイヤーをどう
+      オプションがどっさりあるので複雑なフィルターだと思われがちですが、 実態は
+      結構単純です。 着目点はこのフィルターが活性レイヤーと輪郭用レイヤーをどう
       扱うかということになります。
     </para>
     <para lang="ja">

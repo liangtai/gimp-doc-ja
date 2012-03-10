@@ -8,7 +8,7 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-26 de added by axel.wernicke
 -->
-<!--2010-09-13-->
+<!--2012-03-06-->
 <sect2 id="plug-in-rgb-noise">
   <title lang="en">RGB Noise</title>
   <title lang="ja">RGB ノイズ...</title>
@@ -22,7 +22,7 @@
     <primary>RGB Noise</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>ノイズ</secondary>
     <tertiary>RGB ノイズ</tertiary>
   </indexterm>
@@ -38,7 +38,7 @@
         Example of applying the <quote>RGB Noise</quote> filter
       </title>
       <title lang="ja">
-        <quote><acronym>RGB</acronym>ノイズ</quote>フィルタの適用例
+        <quote><acronym>RGB</acronym>ノイズ</quote>フィルターの適用例
       </title>
       <mediaobject>
         <imageobject>
@@ -58,7 +58,7 @@
         <caption>
           <para lang="en">Filter <quote>RGB Noise</quote> applied</para>
           <para lang="ja">
-            <quote><acronym>RGB</acronym>ノイズ</quote>フィルタ適用後
+            <quote><acronym>RGB</acronym>ノイズ</quote>フィルター適用後
           </para>
         </caption>
       </mediaobject>
@@ -80,26 +80,26 @@
       This filter does not work with indexed images.
     </para>
     <para lang="ja">
-      <guimenuitem><accel>R</accel>GB ノイズ</guimenuitem> フィルタは正規分布
+      <guimenuitem><accel>R</accel>GB ノイズ</guimenuitem> フィルターは正規分布
       ノイズを活性レイヤーもしくはその選択範囲に加えます。 ノイズ発生の過程に
       <acronym>RGB</acronym>色モデルが利用されます。 (それぞれの画素について赤
       ・緑・青のそれぞれのチャンネルでノイズを加えています。) 正規分布という
       ことは、 ほとんどの画素にはちょっとだけノイズがかかり、 激しいノイズが
       かかる画素はほんの僅かになるといえます。 (例えばもし単色灰色で塗り
-      つぶされた画像にこのフィルタを適用したら、 ヒストグラムの曲線が典型的な
+      つぶされた画像にこのフィルターを適用したら、 ヒストグラムの曲線が典型的な
       釣鐘形のガウス曲線に見えることでしょう。)
     </para>
     <para lang="ja">
       ノイズがとても自然に見える仕上がりになります。
     </para>
     <para lang="ja">
-      このフィルタはインデックス化カラー画像では作動しません。
+      このフィルターはインデックス化カラー画像では作動しません。
     </para>
   </sect3>
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -111,7 +111,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ノイズ</guisubmenu>
         <guimenuitem><accel>R</accel>GB ノイズ...</guimenuitem>
       </menuchoice>
@@ -124,7 +124,7 @@
     <figure>
       <title lang="en"><quote>RGB Noise</quote> filter options</title>
       <title lang="ja">
-        <quote><acronym>RGB</acronym>ノイズ</quote>フィルタのオプション
+        <quote><acronym>RGB</acronym>ノイズ</quote>フィルターのオプション
       </title>
       <mediaobject>
         <imageobject>
@@ -144,7 +144,7 @@
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
-            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            にしておれば画像に実際にフィルターをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
           </para>
         </listitem>
@@ -182,9 +182,9 @@
           </para>
           <para lang="ja">
             このオプションが有効な場合は<acronym>RGB</acronym>の 3 つの
-            スライダを別個に調整できます。 無効にすると 
+            スライダーを別個に調整できます。 無効にすると 
             <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、
-            <guilabel>青</guilabel> のスライダは同時に動き常に同じ値に
+            <guilabel>青</guilabel> のスライダーは同時に動き常に同じ値に
             なります。 この場合相対的に等しいノイズが各画素のすべての
             チャンネルに加わることになるため、 画素の色相はあまり変化しなく
             なります。
@@ -217,15 +217,15 @@
           </para>
           <para lang="ja">
             <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 
-            <guilabel>青</guilabel> の 3 つのスライダとその隣の数値記入欄で
+            <guilabel>青</guilabel> の 3 つのスライダーとその隣の数値記入欄で
             チャンネルごとにノイズのレベルを 0.00 から 1.00 の範囲で
-            設定できます。 <guilabel>透明度</guilabel> チャンネルのスライダは
+            設定できます。 <guilabel>透明度</guilabel> チャンネルのスライダーは
             レイヤーにアルファチャンネルがあるときのみダイアログに現れます。 
-            グレースケール画像でこのフィルタを呼び出したときは色のスライダの
-            代わりに <guilabel>グレー</guilabel> スライダが現れます。
+            グレースケール画像でこのフィルターを呼び出したときは色のスライダーの
+            代わりに <guilabel>グレー</guilabel> スライダーが現れます。
           </para>
           <para lang="ja">
-            これらのスライダは具体的にはノイズをつけるときの正規分布における
+            これらのスライダーは具体的にはノイズをつけるときの正規分布における
             標準偏差の値を設定しています。 使用される標準偏差は設定された値の
             半分です。 (値の範囲 1.00 がチャンネルでとりうる最高値から最低値
             までの幅に相当します。)

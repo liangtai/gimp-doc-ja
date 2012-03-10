@@ -8,10 +8,10 @@
   050930 de replaced informalfigure by axel.wernicke
   050829 de added by axel.wernicke
 -->
-<!--2011-02-21-->
+<!--2012-03-05-->
 <sect2 id="plug-in-dog">
   <title lang="en">Difference of Gaussians</title>
-  <title lang="ja">ガウシアン差分...</title>
+  <title lang="ja">ガウス差分...</title>
 
   <indexterm lang="en">
     <primary>Filters</primary>
@@ -22,12 +22,12 @@
     <primary>Difference of Gaussians</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="リンカクチュウシュツ">輪郭抽出</secondary>
-    <tertiary sortas="ガウシアンサブン">ガウシアン差分</tertiary>
+    <tertiary sortas="ガウスサブン">ガウス差分</tertiary>
   </indexterm>
   <indexterm lang="ja">
-    <primary sortas="ガウシアンサブン">ガウシアン差分</primary>
+    <primary sortas="ガウスサブン">ガウス差分</primary>
   </indexterm>
 
   <sect3>
@@ -37,7 +37,7 @@
       <title lang="en">
         Applying example for the <quote>Difference of Gaussians</quote> filter
       </title>
-      <title lang="ja"><quote>ガウシアン差分</quote>フィルタの適用例</title>
+      <title lang="ja"><quote>ガウス差分</quote>フィルターの適用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -57,7 +57,7 @@
           <para lang="en">
             Filter <quote>Difference of Gaussians</quote> applied
           </para>
-          <para lang="ja"><quote>ガウシアン差分</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>ガウス差分</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -80,13 +80,13 @@
       the dark background, reversing them may actually improve the result.
     </para>
     <para lang="ja">
-      <guimenuitem>ガウシアン差分...</guimenuitem> フィルタはいわゆる
-      <quote>ガウシアン差分</quote>アルゴリズムを用いて輪郭を読み解きます。 
-      このアルゴリズムはぼかし半径を違えた 2 種類のガウシアンぼかしを画像に
+      <guimenuitem>ガウス差分...</guimenuitem> フィルターはいわゆる
+      <quote>ガウス差分</quote>アルゴリズムを用いて輪郭を読み解きます。 
+      このアルゴリズムはぼかし半径を違えた 2 種類のガウスぼかしを画像に
       かけて両者の差分をもとに結果を得ます。 この方法は加工画像に (おそらく
-      生物学的な[解析用]画像にも) 広く利用されており、 しかもガウシアンぼかしを
+      生物学的な[解析用]画像にも) 広く利用されており、 しかもガウスぼかしを
       かなり効果的に利用するしくみができているためとても素早く処理できます。
-      一番肝心なパラメータは 2 種類のガウシアンぼかし用半径です。 プレビュー
+      一番肝心なパラメーターは 2 種類のガウスぼかし用半径です。 プレビュー
       画面を見ながら設定すれば簡単だとは思いますが、 小さい方の半径は長くする
       ほど輪郭が太く描かれやすくなることと、 大きい方の半径は短くするほど輪郭を
       見極めるための<quote>しきい値</quote>が高くなりやすくなることは覚えて
@@ -99,7 +99,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -111,9 +111,9 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>輪郭抽出</guisubmenu>
-        <guimenuitem>ガウシアン差分...</guimenuitem>
+        <guimenuitem>ガウス差分...</guimenuitem>
       </menuchoice>
     </para>
   </sect3>
@@ -123,7 +123,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en">Gaussian Difference filter options</title>
-      <title lang="ja">ガウシアン差分フィルタのオプション</title>
+      <title lang="ja">ガウス差分フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -134,7 +134,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Smoothing Parameters</term>
-        <term lang="ja">スムーズ化パラメータ</term>
+        <term lang="ja">スムーズ化パラメーター</term>
         <listitem>
           <para lang="en">
             <guilabel>Radius 1</guilabel> and <guilabel>Radius 2</guilabel>
@@ -147,7 +147,7 @@
           </para>
           <para lang="ja">
             <guilabel>半径&nbsp;1</guilabel> と
-            <guilabel>半径&nbsp;2</guilabel> はガウシアンぼかしに用いられる
+            <guilabel>半径&nbsp;2</guilabel> はガウスぼかしに用いられる
             半径です。 唯一の両者間の制限は両値を等しくしてはいけないことで
             あり、 等しくすると結果が空白画像になってしまいます。 スケッチ風の
             画像に仕上げたい場合は<quote>半径&nbsp;2</quote>を
@@ -179,8 +179,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Invert</term>
-        <!--階調を反転-->
-        <term lang="ja">反転</term>
+        <term lang="ja">階調を反転する</term>
         <listitem>
           <para lang="en">
             Checking this box inverts the result, so that you see dark edges

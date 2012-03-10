@@ -12,7 +12,7 @@
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2010-11-23-->
+<!--2012-03-04-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -42,7 +42,7 @@
     <acronym>GIMP</acronym>は新しいファイル形式への対応要望に応えられます。
   </para>
   <para lang="ja">
-    どんなファイル形式であれ全ての目的に適うものではありません。 このあたりで
+    どんなファイル形式であれすべての目的に適うものではありません。 このあたりで
     それぞれの形式の有利な点と不利な点をお話しすることにしましょう。
   </para>
 
@@ -73,16 +73,16 @@
       頑丈なプログラムなのに、 稀に謎めいたクラッシュを起こすことがあるとの
       出所不明の噂があることも知っています。) <acronym>GIMP</acronym>で開ける
       ファイル形式のほとんどが保存も可能です。 ただ一つの特別な形式&mdash;
-      <acronym>XCF</acronym>は<acronym>GIMP</acronym>由来であり、 <emphasis>
-      あらゆる</emphasis> 画像の情報を保存できる便利なファイル形式です。 (
-      おっと、 <emphasis>ほとんど何でも</emphasis> でした。 <quote>操作履歴
-      </quote>の情報は保存できませんから。) このように、 <acronym>XCF</acronym>
-      形式は途中結果を保存したり、 あとでまた<acronym>GIMP</acronym>で開く
-      つもりの画像を保存するのに特に適しています。 画像を表示できる他の
-      プログラムで<acronym>XCF</acronym>形式のファイルを開けるものは少ない
-      ので、 画像加工が完成したらそれらをより広く使われている<acronym>JPEG
-      </acronym>や<acronym>PNG</acronym>や<acronym>TIFF</acronym>の形式で
-      保存することになるでしょう。
+      <acronym>XCF</acronym>は<acronym>GIMP</acronym>由来であり、 
+      <emphasis>あらゆる</emphasis> 画像の情報を保存できる便利なファイル
+      形式です。 (おっと、 <emphasis>ほとんど何でも</emphasis> でした。 
+      <quote>操作履歴</quote>の情報は保存できませんから。) このように、
+      <acronym>XCF</acronym>形式は途中結果を保存したり、 あとでまた
+      <acronym>GIMP</acronym>で開くつもりの画像を保存するのに特に適しています。
+      画像を表示できる他のプログラムで<acronym>XCF</acronym>形式のファイルを
+      開けるものは少ないので、 画像加工が完成したらそれらをより広く
+      使われている<acronym>JPEG</acronym>や<acronym>PNG</acronym>や
+      <acronym>TIFF</acronym>の形式で保存することになるでしょう。
     </para>
   </sect2>
 
@@ -149,7 +149,7 @@
       画像の情報に損失がでるファイル形式が選択されているときには、 
       <acronym>GIMP</acronym>はそのことを伝えるとともに、 どの情報が
       損なわれるかを示し、 あわせてそのファイル形式に合った画像に 
-      <quote>エクスポート</quote> (転換) するかどうか訊ねます。
+      <quote>エクスポート</quote> (変換書き出し) するかどうか訊ねます。
       画像のエクスポートで元の画像そのものが変更されるものではありませんので、
       それが原因で何かを失なうおそれはありません。
       <link linkend="gimp-export-dialog">画像のエクスポート</link>
@@ -245,7 +245,7 @@
                     <guilabel>インターレース</guilabel> 
                     オプションを有効にすると、 ウェブページでダウンロード
                     読み込みの最中から漸進的に表示できる画像になります。
-                    画像の漸進的表示はコンピュータやモデムの処理速度が
+                    画像の漸進的表示はコンピューターやモデムの処理速度が
                     遅いときに、 画像を表示し終える前に読み込みを中止できる
                     ので便利でした。 しかし今日の高速回線時代にこの機能は
                     あまり役立たない技術となりました。
@@ -344,7 +344,7 @@
                         opaque. Layers will overwrite what is beneath.
                       </para>
                       <para lang="ja">
-                        <guilabel>気にしない</guilabel>: 画像のレイヤーが全て
+                        <guilabel>気にしない</guilabel>: 画像のレイヤーがすべて
                         不透明である場合に限りこの指定は有効です。 前のフレーム
                         のレイヤーに現在のレイヤーが上書きされてゆきます。
                       </para>
@@ -452,7 +452,7 @@
         <acronym>JPEG</acronym>の算術は断然複雑なうえ、 目のくらむような数の
         オプションがついてくるため、 その内容はこの文書の及ぶところでは
         ありません。 殊に<acronym>JPEG</acronym>の達人でもない限り、 指定すべき
-        オプションは品質パラメータの他には何もないでしょう。
+        オプションは品質パラメーターの他には何もないでしょう。
       </para>
       <para>
         <caution>
@@ -473,7 +473,7 @@
             ときの警告すらありません。 しかし<acronym>JPEG</acronym>は損失が
             起きるうえに、 透明部分や複数レイヤーがサポートされない形式である
             ため、 画像の情報の一部が失なわれてしまいます。 もし画像の情報を
-            全て保存したいという場合は、 <acronym>GIMP</acronym>由来の
+            すべて保存したいという場合は、 <acronym>GIMP</acronym>由来の
             <link linkend="glossary-xcf">XCF</link>を使ってください。
           </para>
         </caution>
@@ -502,8 +502,8 @@
               結果を得られますが、 画像の劣化をあまり目立たせない範囲でさらに
               相当低く品質を下げられる場合も多くあります。
               <quote>JPEG 形式で保存する</quote>ダイアログでは、
-              <guilabel>画像ウィンドウでプレビュ</guilabel>
-              を有効にすれば実際にスライダを動かして品質の変化とその効果を
+              <guilabel>画像ウィンドウでプレビュー</guilabel>
+              を有効にすれば実際にスライダーを動かして品質の変化とその効果を
               確かめられます。
             </para>
             <note>
@@ -515,8 +515,9 @@
                 80 in a different application.
               </para>
               <para lang="ja">
-                <acronym>JPEG</acronym>の品質レベルの数値は<acronym>GIMP</acronym>
-                独自のもので他のアプリケーションにとっては意味がありません。 
+                <acronym>JPEG</acronym>の品質レベルの数値は
+                <acronym>GIMP</acronym>独自のもので、
+                他のアプリケーションにとっては意味がありません。 
                 仮に<acronym>GIMP</acronym>で 80 のレベルで保存したとして、 
                 別のアプリケーションで 80 のレベルで
                 保存したとしてもそこに必然的な共通性はありません。
@@ -536,9 +537,10 @@
             </para>
             <para lang="ja">
               この項目を有効にすると、 品質 (やその他の<acronym>JPEG</acronym>
-              のパラメータ) の変更を画像ウィンドウの表示で即座に反映します。
-              (しかし画像そのものを変化させているのではありません。 <acronym>
-              JPEG</acronym>のダイアログを閉じれば画像の元来の状態に戻ります。)
+              のパラメーター) の変更を画像ウィンドウの表示で即座に反映します。
+              (しかし画像そのものを変化させているのではありません。 
+              <acronym>JPEG</acronym>のダイアログを閉じれば画像の元来の状態に
+              戻ります。)
             </para>
           </listitem>
         </varlistentry>
@@ -627,18 +629,19 @@
                     Exif データと呼ばれる外部情報が混入されます。 Exif データは
                     カメラのメーカー名や型番、 画像の寸法、 撮影の日付などなど
                     画像に関する情報を記録します。 <acronym>GIMP</acronym>は
-                    Exifデータを読み書きするために<quote>libexif</quote>
-                    ライブラリを利用しますが、 このライブラリは<acronym>GIMP
-                    </acronym>には同梱されていません。 libexif ライブラリが導入
-                    されており<acronym>GIMP</acronym>のビルド時にそのサポートを
-                    有効にしていたならば、 Exif データを扱うことができ、 
-                    <acronym>JPEG</acronym>ファイルを保存する際にはファイル内
-                    にそのデータが記録できます。 このとき Exif データは一切変更
-                    されません。 つまり Exif データが示す作成日付やファイル名
-                    などの一部の情報が不正なまま残されてしまいます。 <acronym>
-                    GIMP</acronym>のビルド時にこのサポートを無効にしていた場合
-                    も、 Exifデータを含んだ<acronym>JPEG</acronym>ファイルは
-                    支障なく開けますが、 そのあとこの画像を保存すると
+                    Exif データを読み書きするために<quote>libexif</quote>
+                    ライブラリーを利用しますが、 このライブラリーは
+                    <acronym>GIMP</acronym>には同梱されていません。 libexif
+                    ライブラリーが導入されており<acronym>GIMP</acronym>の
+                    ビルド時にそのサポートを有効にしていたならば、 Exif 
+                    データを扱うことができ、 <acronym>JPEG</acronym>ファイルを
+                    保存する際にはファイル内にそのデータが記録できます。
+                    このとき Exif データは一切変更されません。 つまり Exif 
+                    データが示す作成日付やファイル名などの一部の情報が不正な
+                    まま残されてしまいます。 <acronym>GIMP</acronym>のビルド
+                    時にこのサポートを無効にしていた場合も、 Exif データを
+                    含んだ<acronym>JPEG</acronym>ファイルは支障なく開けますが、 
+                    そのあとこの画像を保存すると
                     ファイル内に Exif データが残りません。
                   </para>
                 </listitem>
@@ -665,7 +668,7 @@
                     </para>
                     <para lang="ja">
                       このオプションは<acronym>GIMP</acronym>をソースファイル
-                      からビルドするときExifサポートを有効にしていた場合に
+                      からビルドするとき Exif サポートを有効にしていた場合に
                       のみ現れます。
                     </para>
                   </note>
@@ -793,7 +796,7 @@
                     人間の色覚は一様に可視光線全般に対して鈍感です。この
                     オプションはわずかに異なる色ならばごく近くほとんど同色
                     であるとヒトの視覚が認識することを前提に圧縮します。 
-                    つぎの3つの形式から選択できます。
+                    つぎの 3 つの形式から選択できます。
                   </para>
                   <itemizedlist>
                     <listitem>
@@ -878,7 +881,7 @@
                     アルゴリズムである <quote>離散コサイン変換</quote>の略
                     であり、 <acronym>JPEG</acronym>処理の第一段階に用いられて
                     います。 選択肢には<quote>浮動小数</quote>と
-                    <quote>整数</quote> (初期設定)と
+                    <quote>整数</quote> (初期設定) と
                     <quote>高速整数</quote>があります。
                   </para>
                   <itemizedlist>
@@ -1016,11 +1019,11 @@
               up to version 6 did not use this information.
             </para>
             <para lang="ja">
-              画像の透明度が大きく設定されている部分で、 透明度を2段階でしか
-              認識できないインターネット用ブラウザは透明化のかわりに背景色を
+              画像の透明度が大きく設定されている部分で、 透明度を 2 段階でしか
+              認識できないインターネット用ブラウザーは透明化のかわりに背景色を
               表示します。 (背景色はツールボックスなどで指定できます。)
-              ただし<application>インターネットエクスプローラ</application>
-              の第6版以前のものはこの情報を利用しません。
+              ただし<application>インターネットエクスプローラー</application>
+              の第 6 版以前のものはこの情報を利用しません。
             </para>
           </listitem>
         </varlistentry>
@@ -1037,12 +1040,12 @@
               is not too dark or too bright.
             </para>
             <para lang="ja">
-              ガンマ補正はコンピュータの表示装置によって起こる色の値の再現の
-              ずれを修正するしくみです。 このオプションを有効にすると<acronym>
-              PNG</acronym>画像に現在お使いのディスプレイモニタのガンマ値を
-              反映する情報を画像に保存します。 他のコンピュータの画像表示
-              プログラムはこれを利用すれば画像が明る過ぎたり暗過ぎたりしない
-              よう補正できます。
+              ガンマ補正はコンピューターの表示装置によって起こる色の値の再現の
+              ずれを修正するしくみです。 このオプションを有効にすると
+              <acronym>PNG</acronym>画像に現在お使いのディスプレイモニターの
+              ガンマ値を反映する情報を画像に保存します。 他のコンピューターの
+              画像表示プログラムはこれを利用すれば画像が明る過ぎたり
+              暗過ぎたりしないよう補正できます。
             </para>
           </listitem>
         </varlistentry>
@@ -1066,10 +1069,10 @@
             <para lang="ja">
                <acronym>PNG</acronym>画像は位置データを示す<quote>oFFs
                チャンク</quote>と名付けられたオフセット値を提供しています。
-               しかし残念ながら<acronym>GIMP</acronym>の<acronym>PNG
-               </acronym>オフセット値を扱う機能は壊れているのか他の
-               アプリケーションと互換性がないまま放置されています。 この
-               オプションは使わないようにしましょう。 使わない場合は
+               しかし残念ながら<acronym>GIMP</acronym>の<acronym>PNG</acronym>
+               オフセット値を扱う機能は壊れているのか他のアプリケーションと
+               互換性がないまま放置されています。 このオプションは
+               使わないようにしましょう。 使わない場合は
                レイヤーが画像に複数あると<acronym>PNG</acronym>に保存する
                前に統合が行なわれるということであり問題はありません。
             </para>
@@ -1083,7 +1086,8 @@
               Save the image resolution, in DPI (dots per inch).
             </para>
             <para lang="ja">
-              画像の解像度を<acronym>DPI</acronym> (ドット毎インチ) で記録します。
+              画像の解像度を<acronym>DPI</acronym> (ドット毎インチ) で
+              記録します。
             </para>
           </listitem>
         </varlistentry>
@@ -1138,8 +1142,8 @@
               decompression: it is as quick whatever the compression level.
             </para>
             <para lang="ja">
-              この圧縮は可逆的なので、 圧縮レベルを9未満に落とす理由は単に
-              低速なコンピュータでは圧縮に時間がかかるということ以外に
+              この圧縮は可逆的なので、 圧縮レベルを 9 未満に落とす理由は単に
+              低速なコンピューターでは圧縮に時間がかかるということ以外に
               ありません。 しかも伸長には何の心配もありません。
               どんな圧縮レベルでも一様に素早く伸長できます。
             </para>
@@ -1192,18 +1196,18 @@
           <xref linkend="gimp-image-convert-indexed"/> の節をご覧ください。
         </para>
         <para lang="ja"><!--8 ビットに限定しない説明を希望 --> 
-          コンピュータの内部は<quote>バイト</quote>と呼ばれる8ビット単位で作動
-          しています。1バイトで256色まで受容
-          できます。 256色より色数を減らしても効果はありません。 少なくとも
-          1バイトは使われるためファイルの内容量はそれ以下に減らないのです。
-          それともう一つ、 この<quote>PNG8</quote>形式は <acronym>GIF</acronym>
-          形式と同じく透明度に1ビットしか使いません。
-          透明度は完全透明と不透明の2段階だけです。
+          コンピューターの内部は<quote>バイト</quote>と呼ばれる 8 ビット単位で
+          作動しています。1 バイトで 256 色まで受容できます。 256 色より色数を
+          減らしても効果はありません。 少なくとも 1 バイトは使われるため
+          ファイルの内容量はそれ以下に減らないのです。 それともう一つ、 
+          この<quote>PNG8</quote>形式は <acronym>GIF</acronym>形式と同じく
+          透明度に 1 ビットしか使いません。
+          透明度は完全透明と不透明の 2 段階だけです。
         </para>
         <para lang="ja">
-          <application>InternetExplorer</application>で<acronym>PNG</acronym>の
+          <application>InternetExplorer</application> で<acronym>PNG</acronym>の
           透明効果を充分に表示させたいのならば、 <application>AlphaImageLoader
-          DirectX フィルタ</application>をウェブページのコードに入れて
+          DirectX フィルター</application>をウェブページのコードに入れて
           みましょう。 <productname>Microsoft</productname> サポートオンライン
           <xref linkend="bibliography-online-microsoft-kb294714"/> をご覧
           ください。 この措置は <application>InternetExplorer 7</application>
@@ -1294,7 +1298,7 @@
                 <para lang="ja">
                   <guilabel>Pack Bits</guilabel> は高速で簡素な
                   連長圧縮法です。 <productname>Apple</productname> 社は
-                  <productname>Macintosh</productname> コンピュータに
+                  <productname>Macintosh</productname> コンピューターに
                   搭載する <application>MacPaint</application> の
                   リリースの際に PackBits 方式を導入しました。
                   PackBits は連続したデータから 2 つ以上 (128 以下) のバイトの

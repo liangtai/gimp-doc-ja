@@ -6,7 +6,7 @@
   2005-12-08 <simplesect> replaced by <sect3> by lexa
   2005/09/20 de added by axel.wernicke
 -->
-<!--2010-12-10-->
+<!--2012-03-07-->
 <sect2 id="plug-in-jigsaw">
   <title lang="en">Jigsaw</title>
   <title lang="ja">ジグソーパズル...</title>
@@ -20,7 +20,7 @@
     <primary>Jigsaw</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="シタヌリ">下塗り</secondary>
     <tertiary>ジグソーパズル</tertiary>
   </indexterm>
@@ -33,7 +33,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Jigsaw filter example</title>
-      <title lang="ja">ジグソーパズルフィルタの使用例</title>
+      <title lang="ja">ジグソーパズルフィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -51,7 +51,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Jigsaw</quote> applied</para>
-          <para lang="ja"><quote>ジグソーパズル</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>ジグソーパズル</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -61,7 +61,7 @@
       makes them look better (i. e., Gaussian blur with radius 1.0).
     </para>
     <para lang="ja">
-      <guimenuitem>ジグソーパズル...</guimenuitem> フィルタは
+      <guimenuitem>ジグソーパズル...</guimenuitem> フィルターは
       画像をジグソーパズル化します。 ただし輪郭がアンチエイリアスなしで描かれる
       ので、 ぎざぎざになる線を少しでも減らすため例えばこのフィルタを通したあと
       <link linkend="plug-in-gauss">ガウスぼかし</link> を半径 1.0 でかけてやる
@@ -78,8 +78,8 @@
       </para>
       <para lang="ja">
         パズルピースの形のとおりに範囲を選択する作業を簡単に行なうには、 別に
-        単色白のレイヤーを作成してこれにジグソーパズルフィルタをかけ、 レイヤー
-        のモードを乗算にします。  あとはそのレイヤーで 
+        単色白のレイヤーを作成してこれにジグソーパズルフィルターをかけ、 
+        レイヤーのモードを乗算にします。  あとはそのレイヤーで 
         <link linkend="gimp-tool-fuzzy-select">ファジー選択</link> (魔法の杖) 
         ツールを使ってパズルのピースを選択するのです。
       </para>
@@ -88,7 +88,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -101,7 +101,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>下塗り</guisubmenu>
         <guisubmenu>パターン</guisubmenu>
         <guimenuitem>ジグソーパズル...</guimenuitem>
@@ -115,7 +115,7 @@
     <figure>
       <title lang="en"><quote>Jigsaw</quote> filter options</title>
       <title lang="ja">
-        <quote>ジグソーパズル</quote>フィルタのオプション
+        <quote>ジグソーパズル</quote>フィルターのオプション
       </title>
       <mediaobject>
         <imageobject>
@@ -156,8 +156,8 @@
             a higher value).
           </para>
           <para lang="ja">
-            <guilabel>斜角幅</guilabel> スライダはパズル
-            ピースの縁に描かれる傾斜 (ベベル) の幅を調節します。 硬い木製の
+            <guilabel>斜角幅</guilabel> スライダーはパズルピースの
+            縁に描かれる傾斜 (ベベル) の幅を調節します。 硬い木製の
             パズルなら低い値が適当ですが、 柔らかな厚紙製のパズルならば高い
             値になるでしょう。
           </para>
@@ -178,7 +178,7 @@
             suitable for a 500x500 pixel image.
           </para>
           <para lang="ja">
-            <guilabel>ハイライト</guilabel> スライダはピースの縁に描かれる
+            <guilabel>ハイライト</guilabel> スライダーはピースの縁に描かれる
             照り返しの強さを調節します。 ちょうどパズルの材質によるてかり具合の
             違いになぞらえてもよいでしょう。 ハイライト部分の幅は斜角幅に
             比例します。 概して言えばパズルピースの多い画像にするときは斜角幅や

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.6-HELP\n"
 "POT-Creation-Date: 2011-02-24 00:22+0900\n"
-"PO-Revision-Date: 2012-01-07 02:32+0900\n"
+"PO-Revision-Date: 2012-03-06 19:36+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -241,10 +241,9 @@ msgstr "繰り返し"
 msgid "The number of repetitions of effect when applying filter."
 msgstr "フィルターの適用を繰り返す回数です。"
 
-# v2.8 "周辺部分の処理"
 #: src/filters/map/warp.xml:133(term)
 msgid "On edges"
-msgstr "周辺部"
+msgstr "周辺部分の処理"
 
 #: src/filters/map/warp.xml:135(para)
 msgid ""
@@ -654,8 +653,8 @@ msgid ""
 "original image."
 msgstr ""
 "元の画像を変更せず、 フィルターの生成画像を新たなウィンドウで<quote>名称未設"
-"定</quote>として開くには <guilabel>新規画像を作成</guilabel> オプションを有効"
-"にします。"
+"定</quote>として開くには <guilabel>新しい画像を作成する</guilabel> オプション"
+"を有効にします。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -1219,13 +1218,13 @@ msgid ""
 "When this option is checked, a new image is created with the result of "
 "filter application, so preserving the original image."
 msgstr ""
-"<guilabel>別画像を生成</guilabel> オプションを有効にすると元画像の複製が生成"
-"されて新たなウィンドウで開かれ、 複製側にフィルターが適用されるため、 元の画"
-"像が保たれます。"
+"<guilabel>新しい画像を生成</guilabel> オプションを有効にすると元画像の複製が"
+"生成されて新たなウィンドウで開かれ、 複製側にフィルターが適用されるため、 元"
+"の画像が保たれます。"
 
 #: src/filters/map/map-object.xml:178(term)
 msgid "Enable antialiasing"
-msgstr "滑らかに"
+msgstr "なめらかに"
 
 #: src/filters/map/map-object.xml:180(para)
 msgid ""
@@ -1385,8 +1384,8 @@ msgid ""
 "in image, according to the X, Y, Z coordinates of the object upper left "
 "corner."
 msgstr ""
-"X、 Y、 Z の 3 つのスライダと付属する数値記入欄で画像上でのオブジェクトの位置"
-"の座標を変更できます。 X、 Y、 Z はオブジェクトの左上角の位置の座標を示しま"
+"X、 Y、 Z の 3 つのスライダーと付属する数値記入欄で画像上でのオブジェクトの位"
+"置の座標を変更できます。 X、 Y、 Z はオブジェクトの左上角の位置の座標を示しま"
 "す。"
 
 #: src/filters/map/map-object.xml:358(term)
@@ -1397,8 +1396,8 @@ msgstr "回転"
 msgid ""
 "These three sliders make the object rotate around X, Y, Z axes respectively."
 msgstr ""
-"X、 Y、 Z の 3 つのスライダはそれぞれ X 軸、 Y 軸、 Z 軸でオブジェクトを回転"
-"させる角度を設定します。"
+"X、 Y、 Z の 3 つのスライダーはそれぞれ X 軸、 Y 軸、 Z 軸でオブジェクトを回"
+"転させる角度を設定します。"
 
 #: src/filters/map/map-object.xml:370(title)
 msgid "Box"
@@ -1527,7 +1526,7 @@ msgid ""
 msgstr ""
 "<guimenuitem>シームレス化</guimenuitem> フィルターは画像を継ぎ目なく並べられ"
 "る画像に加工します。 ウェブページ用のパターン画像として利用できます。 この"
-"フィルターにはオプションがなく、 あとで仕上りに修正が必要です。"
+"フィルターにはオプションがなく、 あとで仕上りに修正が必要かもしれません。"
 
 #: src/filters/map/make-seamless.xml:51(title)
 msgid "Activation"
@@ -1623,6 +1622,7 @@ msgstr "common"
 msgid "Illusion"
 msgstr "幻..."
 
+# OMG!
 #: src/filters/map/illusion.xml:43(para)
 #: src/filters/map/fractal-trace.xml:42(para)
 msgid "Filter <quote>Fractal Trace</quote> applied"
@@ -1685,9 +1685,15 @@ msgstr "モード 2"
 msgid "You have two arrangement modes for copies in image:"
 msgstr "画像上にその複製の断片を配置するにはつぎの 2 通りの方法があります。"
 
+# 1. Each image has its own description.
+# 2. Though the original title (this text) expects these images should
+#    be displayed side by side, there's possibility that they may be
+#    listed vertically.
 #: src/filters/map/illusion.xml:105(title)
 msgid "From left to right: original image, mode 1, mode 2, with Divisions=4"
-msgstr "左から順に、 元画像、 モード 1、 モード 2 (いずれも分割を 4 に設定)"
+msgstr ""
+"幻フィルターのモードの例 (分割を 4 に設定)<!--左から順に、 元画像、 モード "
+"1、 モード 2 (いずれも分割を 4 に設定)-->"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -2564,8 +2570,8 @@ msgid ""
 "With this slider, you can vary bump height and hollow depth. The higher the "
 "value, the higher the difference between both. Values vary from 1 to 65."
 msgstr ""
-"このスライダで起伏の底部と頂部の高度差を設定できます。 値を高くすれば起伏は大"
-"きくなります。 値の範囲は 1 から 65 までです。"
+"このスライダーで起伏の底部と頂部の高度差を設定できます。 値を高くすれば起伏は"
+"大きくなります。 値の範囲は 1 から 65 までです。"
 
 #: src/filters/map/bumpmap.xml:193(term)
 msgid "X offset"

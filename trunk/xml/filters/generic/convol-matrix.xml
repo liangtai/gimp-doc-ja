@@ -10,7 +10,7 @@
   2005-08-30 de replaced informalfigure by axel.wernicke
   2005-09-01 de added by axel.wernicke
 -->
-<!--2010-12-09-->
+<!--2012-03-06-->
 <sect2 id="plug-in-convmatrix">
   <title lang="en">Convolution Matrix</title>
   <title lang="ja">コンボリューション行列...</title>
@@ -24,7 +24,7 @@
     <primary>Convolution Matrix</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ハンヨウ">汎用</secondary>
     <tertiary sortas="コンボリューションギョウレツ">
       コンボリューション行列
@@ -72,9 +72,9 @@
       A simple example:
     </para>
     <para lang="ja">
-      ここは数学者の独壇場です。 フィルタはほとんどがコンボリューション行列を
+      ここは数学者の独壇場です。 フィルターはほとんどがコンボリューション行列を
       使用しています。 <guimenuitem>コンボリューション行列...</guimenuitem> 
-      フィルタと想像力があればどんなフィルタも創れます。
+      フィルターと想像力があればどんなフィルターも創れます。
     </para>
     <para lang="ja">
       コンボリューション (二次元畳み込み) 行列とは何なのでしょう。 数学の小道具
@@ -83,7 +83,7 @@
       <quote>カーネル</quote>と呼ばれる別の行列式で処理することです。
     </para>
     <para lang="ja">
-      コンボリューション行列フィルタは<quote>像</quote>を処理する最初の行列を
+      コンボリューション行列フィルターは<quote>像</quote>を処理する最初の行列を
       使います。 像とは画素を縦横の座標に並べた 2 次元の集合です。 ほしい効果に
       よって利用されるカーネルは異なります。
     </para>
@@ -95,10 +95,10 @@
       にこれを 3&times;3 行列であると見做します。
     </para>
     <para lang="ja">
-      画像でフィルタはそのあらゆる画素についてつぎつぎと検討します。 そのときの
-      画素を<quote>初期画素</quote>と呼び毎回この画素とその周りの 8 つの画素の
-      値に対しカーネルの相応する値との積をそれぞれ得ます。 それらの値の合計が
-      初期画素の最終的な値となります。
+      画像でフィルターはそのあらゆる画素についてつぎつぎと検討します。 その
+      ときの画素を<quote>初期画素</quote>と呼び毎回この画素とその周りの 8 つの
+      画素の値に対しカーネルの相応する値との積をそれぞれ得ます。 それらの値の
+      合計が初期画素の最終的な値となります。
     </para>
     <para lang="ja">つぎに簡単な例をご紹介します。</para>
     <mediaobject>
@@ -128,12 +128,12 @@
       囲ってある画素です。 右にあるのがコンボリューションによる結果です。
     </para>
     <para lang="ja">
-      この計算で何が起きているかご説明いたしましょう。 フィルタはカーネルの作用
-      領域の全ての画素を左から右へ上から下へ順番に読みとります。 カーネルに相応
-      する部分の値とそれぞれ掛け合わされそれらの和を求めます。 初期画素は 
+      この計算で何が起きているかご説明いたしましょう。 フィルターはカーネルの
+      作用領域の全ての画素を左から右へ上から下へ順番に読みとります。 カーネルに
+      相応する部分の値とそれぞれ掛け合わされそれらの和を求めます。 初期画素は 
       (40&times;0)+(42&times;1)+(46&times;0) + 
       (46&times;0)+(50&times;0)+(55&times;0) + 
-      (52&times;0)+(56&times;0)+(58&times;0) = 42 となります。 (このフィルタは
+      (52&times;0)+(56&times;0)+(58&times;0) = 42 となります。 (このフィルターは
       元画像に直接作用せずその複製に結果を記録します)。 画像のほうでは初期画素
       が 1 ピクセル下に移動しました。
     </para>
@@ -141,7 +141,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -153,7 +153,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>汎用</guisubmenu>
         <guimenuitem>コンボリューション行列...</guimenuitem>
       </menuchoice>
@@ -233,7 +233,7 @@
           </para>
           <para lang="ja">
             初期画素が画像の縁にあるとカーネルの一部が画像からはみ出してしまい
-            ます。 このときフィルタはどうすべきかを設定します。
+            ます。 このときフィルターはどうすべきかを設定します。
           </para>
           <para>
             <inlinemediaobject>
@@ -320,7 +320,7 @@
             with.
           </para>
           <para lang="ja">
-            ここでフィルタの操作対象に 1 つまたは複数のチャンネルを選べます。
+            ここでフィルターの操作対象に 1 つまたは複数のチャンネルを選べます。
           </para>
         </listitem>
       </varlistentry>
@@ -354,7 +354,7 @@
             blurring.
           </para>
           <para lang="ja">
-            このオプションを無効にするとこのフィルタは透明度を考慮しませんが、
+            このオプションを無効にするとこのフィルターは透明度を考慮しませんが、
             ぼかしがかかったときに加工痕が現れるおそれがあります。
           </para>
         </listitem>

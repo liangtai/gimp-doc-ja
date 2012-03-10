@@ -13,7 +13,7 @@
   2006-02-24 Written Brush Editor en;fr by j.h
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2011-03-14-->
+<!--2012-03-03-->
 <sect2 id="gimp-brush-dialog">
   <title lang="en">Brushes Dialog</title>
   <title lang="ja">ブラシダイアログ</title>
@@ -73,7 +73,7 @@
     <link linkend="gimp-toolbox-indicator-area">ブラシ/パターン/グラデーション
     </link> の区画にその姿のアイコンで表示されます。 <acronym>GIMP</acronym>に
     は数十個の基本的ブラシと、 ブラシの多様性の幅を示すのが主な目的のへんてこな
-    ブラシが数個、 最初から付いてきます。 さらにはブラシエディタを使ったり
+    ブラシが数個、 最初から付いてきます。 さらにはブラシエディターを使ったり
     画像をブラシ専用の特別なファイル形式で保存すればお手製のブラシも作れます。
   </para>
 
@@ -326,7 +326,7 @@
               変更できるのは自作のブラシや自前でインストールしたものに限られ、
               <acronym>GIMP</acronym>同梱でインストールされたブラシは対象外
               です。 仮に同梱版のブラシの名前を変えてみれば確かに編集はでき
-              ますが、 確定しようとして <keycap>Return</keycap> キーを押したり
+              ますが、 確定しようとして <keycap>Enter</keycap> キーを押したり
               どこか他のところをクリックするとたちまち名前は元に戻されてしまい
               ます。 <acronym>GIMP</acronym>と同時にインストールされるブラシ、
               パターン、 グラデーションなどの資源は原則として変更不可です。 
@@ -379,7 +379,7 @@
         ブラシの見本をクリックするとそのブラシが現在のブラシに選ばれ、 ツール
         ボックスのブラシの標識や描画ツールのブラシオプションはそのブラシに
         替わります。 ブラシの見本をダブルクリックすると (後述の)
-        <link linkend="gimp-brush-editor-dialog">ブラシエディタ</link> 
+        <link linkend="gimp-brush-editor-dialog">ブラシエディター</link> 
         が起用されます。 ブラシダイアログの底部に並ぶアイコンボタンには
         さまざまなはたらきがあります。
       </para>
@@ -425,7 +425,7 @@
         At the bottom of the dialog you find a slider and some buttons:
       </para>
       <para lang="ja">
-        ダイアログの底部にはスライダと 5 つのアイコンボタンがあります。
+        ダイアログの底部にはスライダーと 5 つのアイコンボタンがあります。
       </para>
       <variablelist>
         <mediaobject>
@@ -445,7 +445,7 @@
               200.
             </para>
             <para lang="ja">
-              マウスポインタがなぞった線上に並ぶブラシの刻印の互いの間隔を
+              マウスポインターがなぞった線上に並ぶブラシの刻印の互いの間隔を
               このスライダで調節します。 間隔の値はブラシの幅の百分率で表し、
               1 から 200 の範囲で指定してください。
             </para>
@@ -475,8 +475,8 @@
             </para>
             <para lang="ja">
               このボタンは (後述する)
-              <link linkend="gimp-brush-editor-dialog">ブラシエディタ</link> 
-              を呼び出します。 どんなブラシを選んでいてもブラシエディタを開け
+              <link linkend="gimp-brush-editor-dialog">ブラシエディター</link> 
+              を呼び出します。 どんなブラシを選んでいてもブラシエディターを開け
               ますが、 媒介変数つきブラシだけしか扱えないため、 他の種類の
               ブラシを開いたときは<quote>読み込み専用</quote>と表示されて何も
               変更できません。
@@ -506,10 +506,10 @@
             </para>
             <para lang="ja">
               このボタンをクリックすると新しい媒介変数つきブラシが境界にぼかし
-              が入った丸い形に作られ、 これを編集できるようブラシエディタが
+              が入った丸い形に作られ、 これを編集できるようブラシエディターが
               開かれます。 この新しいブラシは自動的に個人用
-              <acronym>GIMP</acronym> ディレクトリ内の 
-              <filename class="directory">brushes</filename> フォルダに
+              <acronym>GIMP</acronym> ディレクトリー内の 
+              <filename class="directory">brushes</filename> フォルダーに
               保存されます。
             </para>
           </listitem>
@@ -538,10 +538,10 @@
             </para>
             <para lang="ja">
               このボタンは現在選ばれているブラシが媒介変数つきであるときのみ
-              利用できます。 ブラシの複製をとるとブラシエディタが開かれてその
+              利用できます。 ブラシの複製をとるとブラシエディターが開かれてその
               複製の加工ができるようになっています。 作成が済むと自動的にその
-              ブラシファイルは個人用<acronym>GIMP</acronym>ディレクトリの
-              <filename class="directory">brushes</filename> フォルダに
+              ブラシファイルは個人用<acronym>GIMP</acronym>ディレクトリーの
+              <filename class="directory">brushes</filename> フォルダーに
               保存されます。
             </para>
           </listitem>
@@ -598,10 +598,10 @@
               entries will be available in the dialog.
             </para>
             <para lang="ja">
-              ブラシエディタで作成されたブラシファイルが自動的に保存される
-              個人用<acronym>GIMP</acronym>ディレクトリの 
-              <filename class="directory">brushes</filename> フォルダをはじめ、
-              ブラシ検索パスに登録されたフォルダに何かブラシファイルを
+              ブラシエディターで作成されたブラシファイルが自動的に保存される
+              個人用<acronym>GIMP</acronym>ディレクトリーの 
+              <filename class="directory">brushes</filename> フォルダーを
+              はじめ、 ブラシ検索パスに登録されたフォルダに何かブラシファイルを
               新たに収めたら、 
               このボタンをクリックすればダイアログの一覧表は読み込み直され、
               新しく追加されたブラシがダイアログで利用できるようになります。
@@ -678,10 +678,10 @@
 
   <sect3 id="gimp-brush-editor-dialog">
     <title lang="en">Brush Editor</title>
-    <title lang="ja">ブラシエディタ</title>
+    <title lang="ja">ブラシエディター</title>
     <figure>
       <title lang="en">The <quote>Brushes</quote> Editor dialog</title>
-      <title lang="ja"><quote>ブラシ</quote>エディタダイアログ</title>
+      <title lang="ja"><quote>ブラシ</quote>エディターダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -708,17 +708,17 @@
       time in this preview.
     </para>
     <para lang="ja">
-      ブラシエディタでは<acronym>GIMP</acronym>とともに提供されたブラシの
+      ブラシエディターでは<acronym>GIMP</acronym>とともに提供されたブラシの
       媒介変数を見られるほか (ただし変更はできない) 、 円形、 正方形、 菱形の
-      ような幾何学図形をもとにブラシの自作ができます。 このエディタの各部品を
+      ような幾何学図形をもとにブラシの自作ができます。 このエディターの各部品を
       順に見てゆきましょう。
     </para>
     <para lang="ja">
       <emphasis>ダイアログバー</emphasis>: 
       どんなダイアログウィンドウにも共通するタブメニューボタンがあります。
       ブラシ編集の脈絡メニューは <guimenuitem>現在のブラシを編集</guimenuitem>
-      の 1 項目だけです。 これを無効にしているなら、 ブラシエディタに読み込まれる
-      ブラシを切り替えるには目的のブラシを選択してからブラシダイアログの
+      の 1 項目だけです。 これを無効にしているなら、 ブラシエディターに読み
+      込まれるブラシを切り替えるには目的のブラシを選択してからブラシダイアログの
       <quote>ブラシを編集</quote>のアイコンボタンをクリックしてください。
     </para>
     <para lang="ja">

@@ -8,7 +8,7 @@
   2006-11-01 lexa: made the file docbook compliant
   2008-01-28 jpl: update text & images
 -->
-<!--2011-01-18-->
+<!--2012-03-09-->
 <sect2 id="gimp-prefs-image-window">
   <title lang="en">Image Windows</title>
   <title lang="ja">画像ウィンドウ</title>
@@ -71,9 +71,7 @@
         <primary>Image size</primary>
       </indexterm>
       <indexterm lang="ja">
-        <primary sortas="テンニテンヲタイオウサセル">
-          点に点を対応させる
-        </primary>
+        <primary sortas="ピクセルトウバイ">ピクセル等倍</primary>
       </indexterm>
       <indexterm lang="ja">
         <primary sortas="アリノコウシンソクド">蟻の行進速度</primary>
@@ -86,9 +84,7 @@
       </indexterm>
       <varlistentry>
         <term lang="en">Use <quote>Dot for dot</quote> by default</term>
-        <term lang="ja">
-          画像上のピクセルと画面上のピクセルを１対１で表示
-        </term>
+        <term lang="ja">ピクセル等倍をデフォルトとする</term>
         <listitem>
           <para lang="en">
             Using <quote>Dot for dot</quote> means that at 1:1 zoom, each
@@ -99,11 +95,11 @@
             more information.
           </para>
           <para lang="ja">
-            <quote>画像上のピクセルと画面上のピクセルを１対１で表示</quote>は
+            <quote>ピクセル等倍</quote>は
             <quote>Dot for dot</quote>とも言われ、 1:1 の等倍率にズーム
             されます。 このオプションを無効にすると、 画像の大きさは
             画像の X と Y の解像度 で判断されます。 より詳しくは 
-            <link linkend="gimp-image-scale">画像の拡大・縮小</link>
+            <link linkend="gimp-image-scale">画像の拡大または縮小</link>
             をご覧ください。
           </para>
         </listitem>
@@ -240,12 +236,12 @@
     </variablelist>
     <variablelist>
       <title lang="en">Mouse Cursors</title>
-      <title lang="ja">マウスポインタ</title>
+      <title lang="ja">マウスポインター</title>
       <indexterm lang="en">
         <primary>Mouse cursors</primary>
       </indexterm>
       <indexterm lang="ja">
-        <primary>マウスポインタ</primary>
+        <primary>マウスポインター</primary>
       </indexterm>
       <varlistentry>
         <term lang="en">Show brush outline</term>
@@ -261,17 +257,17 @@
           </para>
           <para lang="ja">
             このオプションにチェックを入れると、 描画ツールを起用したときに
-            画像上にブラシの輪郭が表示されマウスポインタとして動かせます。
+            画像上にブラシの輪郭が表示されマウスポインターとして動かせます。
             低速なシステムでの<acronym>GIMP</acronym>でとくに大きなブラシを
-            用いている場合に、 マウスやタブレットの動きとポインタの位置にずれが
-            生じることがあります。 このオプションを切ればそれを避けられ
+            用いている場合に、 マウスやタブレットの動きとポインターの位置に
+            ずれが生じることがあります。 このオプションを切ればそれを避けられ
             そうです。 でもブラシ表示は実に役に立つものではないでしょうか。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Show paint tool cursor</term>
-        <term lang="ja">描画ツールのポインタを表示</term>
+        <term lang="ja">描画ツールのポインターを表示</term>
         <listitem>
           <para lang="en">
             If this is checked, a cursor will be shown. This is in addition to
@@ -279,15 +275,15 @@
             of cursor is determined by the next option.
           </para>
           <para lang="ja">
-            ここにチェックを入れると、 ポインタの表示が変更できます。 ブラシの
+            ここにチェックを入れると、 ポインターの表示が変更できます。 ブラシの
             輪郭を表示している場合は、 その姿はブラシの輪郭に重ねられます。
-            ポインタの形状は次のオプションで定まります。
+            ポインターの形状は次のオプションで定まります。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Cursor mode</term>
-        <term lang="ja">ポインタのモード</term>
+        <term lang="ja">ポインターのモード</term>
         <listitem>
           <para lang="en">
             This option has no effect unless <guilabel>Show paint tool
@@ -299,20 +295,20 @@
             the cursor; or <guilabel>Crosshair only</guilabel>.
           </para>
           <para lang="ja">
-            このオプションは <guilabel>描画ツールのポインタを表示</guilabel>
+            このオプションは <guilabel>描画ツールのポインターを表示</guilabel>
             にチェックが入っていなければ何の効果もありません。 有効な場合には
             3 つの選択肢があります。 <guimenuitem>ツールアイコン</guimenuitem>
-            はポインタの側に現在起用しているツールを示す小さなアイコンが
+            はポインターの側に現在起用しているツールを示す小さなアイコンが
             付きます。 このアイコンは次のオプションでその姿が変更できます。
             <guimenuitem>十字付きツールアイコン</guimenuitem> もツールを示す
-            小さなアイコンが付きますが、 ポインタの中心を表す照準十字も表示され
+            小さなアイコンが付きますが、 ポインターの中心を表す照準十字も表示され
             ます。 そのほか <guimenuitem>十字のみ</guimenuitem> があります。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Cursor rendering</term>
-        <term lang="ja">ポインタの表現方法</term>
+        <term lang="ja">ポインターの表現方法</term>
         <listitem>
           <para lang="en">
             If you choose <quote>Fancy</quote> here, the cursor is drawn in
@@ -321,7 +317,7 @@
             you have speed issues.
           </para>
           <para lang="ja">
-            ここで <guimenuitem>装飾的</guimenuitem> を選ぶと、 ポインタの側に
+            ここで <guimenuitem>装飾的</guimenuitem> を選ぶと、 ポインターの側に
             示されるツールアイコンはグレースケールで表示されます。 もう一方の
             <guimenuitem>黒と白</guimenuitem> は簡素な表示になります。 こちらは
             処理速度に問題のあるシステムでわずかに速度向上の役に立つと

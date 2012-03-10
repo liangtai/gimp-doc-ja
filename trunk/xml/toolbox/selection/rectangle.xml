@@ -12,7 +12,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050517 de reviewed by axel.wernicke
 -->
-<!--2012-01-08-->
+<!--2012-03-10-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-rect-select">
   <title lang="en">Rectangle Selection</title>
   <title lang="ja">矩形選択</title>
@@ -228,7 +228,7 @@
           <para lang="ja">
             この両方のキーを選択範囲を作り始めた後で押したなら、 開始点を
             中心とした正方形の選択範囲ができます。 選択範囲を作り始める前に
-            この両方のキーを押していた場合は、 ポインタカーソルがこのように 
+            この両方のキーを押していた場合は、 ポインターカーソルがこのように 
             <guiicon>
               <inlinegraphic
                 fileref="images/toolbox/cursor-select-rect-intersect.png"/>
@@ -325,7 +325,7 @@
       始めから正確にとる必要はありません。 後で簡単に整形[や移動]ができます。
     </para>
     <para lang="ja">
-      マウスポインタを画面上で移動させると場所によりその姿が変化し、
+      マウスポインターを画面上で移動させると場所によりその姿が変化し、
       選択の矩形の形状を変える方法が示されます。
     </para>
     <para lang="ja">
@@ -335,18 +335,18 @@
       つくられます。
     </para>
     <para lang="ja">
-      - ロ.  選択範囲の周辺部では、 マウスポインタの移動に合わせて敏感に
-      反応する部位がはっきりと現れ、 ポインタの姿も様々に変化します。
+      - ロ.  選択範囲の周辺部では、 マウスポインターの移動に合わせて敏感に
+      反応する部位がはっきりと現れ、 ポインターの姿も様々に変化します。
       これらの部位は <quote>ハンドル</quote>といい、 選択範囲の矩形の高さや幅を
-      変更するのに使います。 選択範囲の矩形の角地では、 ポインタは角地と
+      変更するのに使います。 選択範囲の矩形の角地では、 ポインターは角地と
       判るような姿に変わります。 例えば左下角ではこのような
       <guiicon>
         <inlinegraphic fileref="images/toolbox/corner-pt.png" />
       </guiicon>
       姿です。 そこでクリックしてドラッグすれば選択範囲の形状を拡げたり狭めたり
-      できます。 上下左右の辺の中間部では、 ポインタは辺上にふさわしい姿に
+      できます。 上下左右の辺の中間部では、 ポインターは辺上にふさわしい姿に
       変わります。 
-      例えば、 マウスポインタが左辺の中程にあるとき、 ポインタはこのような
+      例えば、 マウスポインターが左辺の中程にあるとき、 ポインターはこのような
       <guiicon>
         <inlinegraphic fileref="images/toolbox/side-pt.png"/>
       </guiicon> 
@@ -354,7 +354,7 @@
       選択範囲の辺の長さを伸縮できます。
     </para>
     <para lang="ja">
-      - ハ. 選択範囲の中央部ではマウスポインタの姿が部品移動でよく見る四方矢印
+      - ハ. 選択範囲の中央部ではマウスポインターの姿が部品移動でよく見る四方矢印
       <guiicon>
         <inlinegraphic fileref="images/toolbox/pointer.png" />
       </guiicon> (移動十字) になります。
@@ -372,7 +372,8 @@
         <keycap>Shift</keycap> you can move it by a 25 pixel step.
       </para>
       <para lang="ja">
-        <keycap>矢印</keycap> キーを用いた選択範囲の移動もしくは変形は
+        <keycap>上</keycap> <keycap>下</keycap> <keycap>左</keycap>
+        <keycap>右</keycap> 矢印キーを用いた選択範囲の移動や変形は
         1 ピクセルずつ変化します。 このキーと<keycap>Shift</keycap> キーとの
         組み合わせでは 25 ピクセルずつの変化です。
       </para>
@@ -390,7 +391,7 @@
           with respect to the selection area.
         </para>
           <para lang="ja">
-            選択範囲内外各所でのポインタのはたらきを全て示した模式図
+            選択範囲内外各所でのポインターのはたらきをすべて示した模式図
           </para>
         </caption>
       </mediaobject>
@@ -450,11 +451,11 @@
             selection.
           </para>
           <para lang="ja">
-            このオプションを有効にするとスライダが現れます。
+            このオプションを有効にするとスライダーが現れます。
             選択の矩形の角を丸める円の半径を定めるのに使えます。
           </para>
   <!--<para lang="ja">-->
-    <!--矩形の4つの角の先を丸めたいときは、 <guilabel>角を丸める</guilabel>
+    <!--矩形の 4 つの角の先を丸めたいときは、 <guilabel>角を丸める</guilabel>
     オプションを入りにします。 内接円の半径が
     調節できます。 角を丸く抉りたいときは、 画像ウィンドウのメニューより
     <menuchoice>
@@ -589,14 +590,14 @@
 
       <varlistentry>
         <term lang="en">Guides</term>
-        <term lang="ja">見当 (見当線)</term>
+        <term lang="ja">ガイド (見当線)</term>
         <listitem>
           <indexterm lang="en">
             <primary>Guides</primary>
             <secondary>Selection guides</secondary>
           </indexterm>
           <indexterm lang="ja">
-            <primary sortas="ケントウセン">ガイド</primary>
+            <primary sortas="ガイド (ケントウセン)">ガイド (見当線)</primary>
             <secondary sortas="センタクハンイナイヲブンカツスルケントウセン">
               選択範囲内を分割するガイド
             </secondary>
@@ -697,7 +698,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Shrink merged</term>
-        <term lang="ja">レイヤー結合部分を基準に縮小</term>
+        <term lang="ja">すべての可視レイヤーを対象にする</term>
         <listitem>
           <para lang="en">
             If <guilabel>Sample Merged</guilabel>
@@ -708,11 +709,11 @@
             <link linkend="glossary-samplemerge">Sample Merge</link>.
           </para>
           <para lang="ja">
-            <guilabel>レイヤー結合色</guilabel> も有効な場合に、
+            <guilabel>見えている色で</guilabel> も有効な場合に、
             <quote>選択範囲の自動縮小</quote>は活性レイヤーだけではなく画像の
             可視部分から画素 (ピクセル) の情報を得て
-            作動します。 レイヤー結合色に関する情報は、 用語集の
-            <link linkend="glossary-samplemerge">レイヤー結合色</link> 
+            作動します。 <quote>見えている色で</quote>に関する情報は、 用語集の
+            <link linkend="glossary-samplemerge">見えている色で</link> 
             の項で詳しく書かれています。
           </para>
         </listitem>

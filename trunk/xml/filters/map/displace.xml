@@ -15,7 +15,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-10-14 ceated by julien hardelin
 -->
-<!--2010-12-09-->
+<!--2012-03-06-->
 <sect2 id="plug-in-displace">
   <title lang="en">Displace</title>
   <title lang="ja">ずらしマップ...</title>
@@ -29,7 +29,7 @@
     <primary>Displace</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>マップ</secondary>
     <tertiary sortas="ズラシマップ">ずらしマップ</tertiary>
   </indexterm>
@@ -42,7 +42,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Displacement examples</title>
-      <title lang="ja"><quote>ずらしマップ</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>ずらしマップ</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -102,21 +102,21 @@
       </emphasis>. This filter allows interesting distortion effects.
     </para>
     <para lang="ja">
-      <guimenuitem>ずらしマップ...</guimenuitem> フィルタは画像に対応する
+      <guimenuitem>ずらしマップ...</guimenuitem> フィルターは画像に対応する
       <quote>ずらしマップ</quote>を用いて画素ごとにずらし方を調節できます。 
-      このフィルタは描画対象 (活性レイヤーや選択範囲) の画素を、 同じ位置の
+      このフィルターは描画対象 (活性レイヤーや選択範囲) の画素を、 同じ位置の
       ずらしマップの画素の濃さに <guilabel>X ずらし</guilabel> や 
       <guilabel>Y ずらし</guilabel> の値を乗算した値に基づいて X 方向と Y 方向
       にそれぞれ移動させます。 <emphasis>X 方向と Y 方向のいずれのずらし
       マップも適用を受ける描画対象と同じ寸法でなければなりません。</emphasis> 
-      [このフィルタはずらしマップに選ばれた画像を内部的にグレースケール画像に
-      変換して利用しています。] 面白い変形効果を引き出せるフィルタです。
+      [このフィルターはずらしマップに選ばれた画像を内部的にグレースケール画像に
+      変換して利用しています。] 面白い変形効果を引き出せるフィルターです。
     </para>
   </sect3>
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -128,7 +128,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>マップ</guisubmenu>
         <guimenuitem>ずらしマップ...</guimenuitem>
       </menuchoice>
@@ -140,7 +140,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en">Displace filter options</title>
-      <title lang="ja">ずらしマップフィルタのオプション</title>
+      <title lang="ja">ずらしマップフィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -158,9 +158,9 @@
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
-            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            にしておれば画像に実際にフィルターをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
-            お使いのコンピュータが処理に時間を多く費すときはプレビューに
+            お使いのコンピューターが処理に時間を多く費すときはプレビューに
             チェックを入れっぱなしにしないのがコツです。
           </para>
         </listitem>
@@ -182,7 +182,8 @@
             Please see the next sections for details about these options.
           </para>
           <para lang="ja">
-            このフィルタの操作は、 水平方向 X と垂直方向 Y に分けて画素をずらす
+            このフィルターの操作は、 水平方向 X と垂直方向 Y に分けて画素を
+            ずらす
             <link linkend="plug-in-displace-cartesian">直交座標</link> モード
             と、 角度と正接方向に分けて画素をずらし回転やひねりを加える 
             <link linkend="plug-in-displace-polar">極座標</link> モードの
@@ -257,7 +258,7 @@
       <title lang="ja">直交座標ずらしモード</title>
       <figure>
         <title lang="en">Displace filter options (Cartesian)</title>
-        <title lang="ja">ずらしマップフィルタのオプション (直交座標)</title>
+        <title lang="ja">ずらしマップフィルターのオプション (直交座標)</title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
@@ -287,7 +288,7 @@
       <para lang="ja">
         マップ用画像は 256 階調の灰色濃淡 (0-255) グレースケール画像に変換され
         てから利用され、 階調の (理論的な) 平均値は 127.5 となるはずです。 
-        フィルタは画像上でどの画素もそれと同じ位置のマップ画素が 127.5 より
+        フィルターは画像上でどの画素もそれと同じ位置のマップ画素が 127.5 より
         小さい (0-127) 値の場合に所定の方向へ、 逆に同じ位置のマップ画素が 128 
         から 255 までの間の値ならばその反対側の方向へずらされます。
       </para>
@@ -383,7 +384,7 @@
             <para lang="ja">
               引き出しリストにはずらしマップに使えるレイヤーが並んでおり、 そこ
               からひとつを選びます。 レイヤーがここに現れるにはつぎの条件が
-              あります。 まずひとつめは、 このフィルタを呼び出した時点でその
+              あります。 まずひとつめは、 このフィルターを呼び出した時点でその
               レイヤーを含む画像が開かれていなければなりません。 さらにふたつめ
               は、 ずらしの対象となる画像もしくはその選択範囲と同じ寸法で
               なければなりません。 これを作るためにずらしの対象となる画像
@@ -404,7 +405,7 @@
       <title lang="ja">極座標ずらしモード</title>
       <figure>
         <title lang="en">Displace filter options (Polar)</title>
-        <title lang="ja">ずらしマップフィルタのオプション (極座標)</title>
+        <title lang="ja">ずらしマップフィルターのオプション (極座標)</title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
@@ -472,7 +473,7 @@
             </para>
             <para lang="ja">
               上図は 160&times;120 ピクセルの画像を、 ひねりオプションに真っ白
-              なずらしマップと係数 20.0 を設定した例です。 フィルタを適用した
+              なずらしマップと係数 20.0 を設定した例です。 フィルターを適用した
               ところ中央に向かって 20 ピクセルのずれとなりました。 しかしこの
               ずれは水平方向では 25%、 水平方向では 33%、 対角線方向では 20% と
               まちまちなため画像にひずみが生まれます。
@@ -522,9 +523,9 @@
         </para>
         <para lang="ja">
           中間濃度以外の平坦なマップを用いて<quote>極座標</quote>ずらしモードで
-          このフィルタを適用すると結果的に 
-          <link linkend="plug-in-whirl-pinch">グルグルひねる</link> 変形
-          フィルタと同じような効果が得られます。
+          このフィルターを適用すると結果的に 
+          <link linkend="plug-in-whirl-pinch">渦巻きと吸い込み</link> 変形
+          フィルターと同じような効果が得られます。
         </para>
       </note>
     </sect4>
@@ -589,7 +590,7 @@
           脈絡メニューを呼び出して 
           <guimenuitem>レイヤーをキャンバスに合わせる</guimenuitem> 
           コマンドを実行します。 ちなみにテキストレイヤーは文字と透明な背景で
-          できており、 フィルタは完全透過ピクセルを移動しないため文字の画素
+          できており、 フィルターは完全透過ピクセルを移動しないため文字の画素
           だけがずらせます。
         </para>
         <mediaobject>
@@ -606,8 +607,8 @@
           the result in Preview. Click <guilabel>OK</guilabel>.
         </para>
         <para lang="ja">
-          テキストレイヤーを活性化させます。 ずらしマップフィルタを呼び出し、
-          プレビュー画面を参考にしながらパラメータ、 とりわけ係数の調節を行い
+          テキストレイヤーを活性化させます。 ずらしマップフィルターを呼び出し、
+          プレビュー画面を参考にしながらパラメーター、 とりわけ係数の調節を行い
           ます。 <guibutton>OK</guibutton> ボタンをクリックして実行です。
         </para>
       </step>

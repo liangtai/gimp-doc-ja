@@ -14,7 +14,7 @@
    2005-12-01 informalfigure replaced by figure by lexa
    050521 de reviewed by axel.wernicke
 -->
-<!--2010-12-03-->
+<!--2012-03-09-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-eraser">
   <title lang="en">Eraser</title>
   <title lang="ja">消しゴム</title>
@@ -250,9 +250,9 @@
           </para>
           <para lang="ja">
             消しゴムツールは <keycap>Alt</keycap> キーを押している間は
-            <quote>逆消ゴム</quote>モードになります。 逆消ゴムについては
+            <quote>逆消しゴム</quote>モードになります。 逆消しゴムについては
             ツールオプションの節で説明があります。 システムによっては
-            <keycap>Alt</keycap> キーがウィンドウマネージャに奪われることが
+            <keycap>Alt</keycap> キーがウィンドウマネージャーに奪われることが
             あります。 この場合はかわりに
             <keycombo><keycap>Alt</keycap><keycap>Shift</keycap></keycombo>
             の組み合わせを使ってみてください。
@@ -286,8 +286,7 @@
           Brush; Scale; Brush Dynamics; Fade Out; Apply Jitter; Incremental
         </term>
         <term lang="ja">
-          ブラシ; 拡大・縮小; ブラシ感度の調整;
-          フェードアウト; 揺らぎ; 重ね塗り
+          ブラシ; 拡大・縮小; 動的特性; フェードアウト; 散布; 重ね塗り
         </term>
         <listitem>
           <xi:include href="about-common-paint-options.xml"/>
@@ -329,7 +328,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Anti Erase</term>
-        <term lang="ja">逆消ゴム</term>
+        <term lang="ja">逆消しゴム</term>
         <listitem>
           <para lang="en">
             The Anti Erase option of the Erase tool can un-erase areas of an
@@ -342,12 +341,12 @@
             <keycombo><keycap>Alt</keycap><keycap>Shift</keycap></keycombo>).
           </para>
           <para lang="ja">
-            逆消ゴムオプションは消しゴムツールで画像を部分的に反消去するための
+            逆消しゴムオプションは消しゴムツールで画像を部分的に反消去するための
             もので、 完全透過な領域にも作用します。 この機能はアルファ
             チャンネルのあるレイヤーにのみ作用します。 ツールオプション上
             のチェックボタンに加え、 作業中には <keycap>Alt</keycap> キーを
             使ってもこのオプションを起用できます (もしも <keycap>Alt</keycap>
-            キーがウィンドウマネージャに囚われるのでしたら、
+            キーがウィンドウマネージャーに囚われるのでしたら、
             <keycombo><keycap>Alt</keycap><keycap>Shift</keycap></keycombo>
             を使ってください)。
           </para>
@@ -371,13 +370,13 @@
               チャンネルのいずれでもなくアルファチャンネルにのみはたらくことを
               理解せねばなりません。 たとえ結果的に全く透明になってしまっても、
               単に見えなくなっただけで、 <acronym>RGB</acronym>データは依然と
-              して残っています。 逆消ゴムの作用はアルファ値を増やすものなので、
-              <acronym>RGB</acronym>データは再び見られます。
+              して残っています。 逆消しゴムの作用はアルファ値を増やすもの
+              なので、<acronym>RGB</acronym>データは再び見られます。
             </para>
             <!--TODO: CHECK: I can't reproduce it and it doesn't make
                 make any sense to me - ude, 2009-05-03
             <para lang="ja">
-              困った機能: 背景色を透明にしたレイヤー上で逆消ゴムをかけると、
+              困った機能: 背景色を透明にしたレイヤー上で逆消しゴムをかけると、
               何も描かれていない領域では黒く着色されてしまいます。
             </para>
             -->

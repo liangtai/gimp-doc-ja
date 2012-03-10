@@ -18,7 +18,7 @@
   2005-11-30 replaced informalfigure by figure by lexa
   2005-05-23 de reviewed by axel.wernicke
 -->
-<!--2010-12-03-->
+<!--2012-03-09-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-clone">
   <title lang="en">Clone</title>
   <title lang="ja">スタンプで描画 (クローン)</title>
@@ -257,8 +257,8 @@
           Hard Edges
         </term>
         <term lang="ja">
-          モード; 不透明度; ブラシ; 拡大・縮小; ブラシ感度の調整;
-          フェードアウト; 揺らぎ; ハードエッジ
+          モード; 不透明度; ブラシ; 拡大・縮小; 動的特性;
+          フェードアウト; 散布; ハードエッジ
         </term>
         <listitem>
           <xi:include href="about-common-paint-options.xml"/>
@@ -315,13 +315,13 @@
                   <acronym>GIMP</acronym>に教えなければなりません。
                 </para>
                 <para lang="ja">
-                  <guilabel>レイヤー結合色</guilabel> にチェックを入れておけば、
+                  <guilabel>見えている色で</guilabel> にチェックを入れておけば、
                   転写される絵は <emphasis>見たまま</emphasis> に、 そして
                   レイヤーが複数ある画像はすべてのレイヤーを通して採られた色を
                   使うようになります。 チェックを外すと、 選択されたレイヤー 
                   (活性レイヤー) だけから転写します。 より詳しい情報が、 
                   用語集の
-                  <link linkend="glossary-samplemerge">レイヤー結合色</link>
+                  <link linkend="glossary-samplemerge">見えている色で</link>
                   の項目にあります。
                 </para>
               </listitem>
@@ -400,7 +400,7 @@
                   cloning strokes successively.
                 </para>
                 <para lang="ja">
-                  背景に単色だけ塗られた画像。 これから続けて3度にわたり
+                  背景に単色だけ塗られた画像。 これから続けて 3 度にわたり
                   転写の描画を行う。
                 </para>
               </caption>
@@ -532,7 +532,7 @@
                 </para>
                 <para lang="ja">
                   いずれの描線も元画像への参照位置は転写を受けるレイヤー上の
-                  マウスポインタの位置に適応します。 次の例図では受け側の
+                  マウスポインターの位置に適応します。 次の例図では受け側の
                   レイヤーが元画像よりも小さいので画像は途切れません。
                 </para>
                 <figure>
@@ -613,7 +613,7 @@
             <quote>スタンプで描画</quote>ツールでの透過効果はいくぶん複雑です。
             不透明度は転写できません。 透明な画像から転写すると何も描画され
             ません。 不完全透過な画像から転写すると、 元画像の不透明度に従った
-            効果が描画に及びます。 それでは不透明度を100%としてぼかしなしの
+            効果が描画に及びます。 それでは不透明度を 100% としてぼかしなしの
             ブラシを使うとすると、
           </para>
           <itemizedlist>
@@ -667,14 +667,14 @@
       </varlistentry>
       <varlistentry>
         <term lang="en"><quote>Filter</quote> brushes</term>
-        <term lang="ja"><quote>フィルタ</quote>ブラシ</term>
+        <term lang="ja"><quote>フィルター</quote>ブラシ</term>
         <indexterm lang="en">
           <primary>Brushes</primary>
           <secondary>Filter brushes</secondary>
         </indexterm>
         <indexterm lang="ja">
           <primary>ブラシ</primary>
-          <secondary>フィルタブラシ</secondary>
+          <secondary>フィルターブラシ</secondary>
         </indexterm>
         <listitem>
           <para lang="en">
@@ -692,16 +692,16 @@
           <para lang="ja">
             <quote>スタンプで描画</quote>ツールには一風変わった方法でもっと
             強力な効果を引きだす技があります。 その一つが
-            <quote>フィルタブラシ</quote>を作るやり方で、 これはフィルタの
+            <quote>フィルターブラシ</quote>を作るやり方で、 これはフィルターの
             効果をブラシで描いてかけるものです。 その方法はまず作業する
-            レイヤーの複製をとり、 コピーの側にフィルタをかけておきます。 
+            レイヤーの複製をとり、 コピーの側にフィルターをかけておきます。 
             それから<quote>スタンプで描画</quote>ツールを起用して、 
             オプションはスタンプソースに <guimenuitem>画像から</guimenuitem> 
             を、 位置合わせには <guimenuitem>登録したもの</guimenuitem> を
             選択しておきます。 <keycap>Ctrl</keycap> キーを押しながら
-            フィルタのかかった方のレイヤーをクリックして元画像として
+            フィルターのかかった方のレイヤーをクリックして元画像として
             登録してから、 複製元の画像上で描画します。 ポインタでドラッグして
-            なぞったところにフィルタのかかった画像が塗られます。
+            なぞったところにフィルターのかかった画像が塗られます。
           </para>
         </listitem>
       </varlistentry>
@@ -733,7 +733,7 @@
             an <quote>undo brush</quote> or a <quote>redo brush</quote>.
           </para>
           <para lang="ja">
-            <quote>フィルタブラシ</quote>によく似た技法を使って<productname>
+            <quote>フィルターブラシ</quote>によく似た技法を使って<productname>
             Photoshop</productname> の<quote>ヒストリーブラシ</quote>を模倣する
             こともできます。 このブラシは部分選択的に取り消しややり直しをする
             ためのものです。 その方法はまず<!--レイヤーではなく-->画像を複製

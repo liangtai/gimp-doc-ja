@@ -6,7 +6,7 @@
   2007-03-27 KoSt: added 'no'
   2005-08-18 de reviewed by axel.wernicke
 -->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="filters-blur-introduction">
   <title lang="en">Introduction</title>
   <title lang="ja">あらまし</title>
@@ -16,7 +16,7 @@
     <secondary>Blur</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ボカシ">ぼかし</secondary>
   </indexterm>
 
@@ -41,18 +41,18 @@
     you to vary the magnitude or type of blurring.
   </para>
   <para lang="ja">
-    ここに挙げたフィルタはいずれも画像の全体もしくは部分にさまざまな方法で
+    ここに挙げたフィルターはいずれも画像の全体もしくは部分にさまざまな方法で
     ぼかしをかけます。 画像に選択範囲があればその範囲内でのみ画像にぼかしが
     かかります。 しかしぼかしの境界線付近ではぼかしなしの部分の色がぼかしの
-    かかった部分に混ざり込むかもしれません。 このあとはそれぞれのフィルタの
-    使用例を載せますので、 どのぼかしフィルタを選ぶかの参考にしてください。
-    もちろんここに示したのはほんの一例に過ぎず、 ほとんどのフィルタはパラメータ
-    の設定によりぼかしの加減やぼかしの風合いがさまざまに変化します。
+    かかった部分に混ざり込むかもしれません。 このあとはそれぞれのフィルターの
+    使用例を載せますので、 どのぼかしフィルターを選ぶかの参考にしてください。
+    もちろんここに示したのはほんの一例に過ぎず、 ほとんどのフィルターは
+    パラメーターの設定によりぼかしの加減やぼかしの風合いがさまざまに変化します。
   </para>
 
   <figure>
     <title lang="en">Gaussian blur (radius 10)</title>
-    <title lang="ja">ガウシアンぼかし (半径 10)</title>
+    <title lang="ja">ガウスぼかし (半径 10)</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -69,10 +69,10 @@
   </para>
   <para lang="ja">
     いろんな場面で一番よく使えそうなのが 
-    <guimenuitem>ガウシアンぼかし...</guimenuitem> です。 (偉大な数学者ガウスの
-    名前が付いているけれど敬遠する必要はありません。 このフィルタは最も基本的な
-    方法で画像をぼかします。) しかも比較的短時間でたっぷりぼかせる効果的な
-    実装が施されています。
+    <guimenuitem>ガウスぼかし...</guimenuitem> です。 (偉大な数学者ガウスの
+    名前が付いていますけれども敬遠する必要はありません。 このフィルターは最も
+    基本的な方法で画像をぼかします。) しかも比較的短時間でたっぷりぼかせる
+    効果的な実装が施されています。
   </para>
 
   <figure>
@@ -96,19 +96,19 @@
   </para>
   <para lang="ja">
     ちょっとだけ画像をぼかしたい&mdash;そのままの状態で柔らかな雰囲気にしたい
-    &mdash;ときには単なる <guimenuitem>ぼかし</guimenuitem>
-    フィルタを使ってみる価値があります。 このフィルタはダイアログがなく、 すぐ
+    &mdash;ときには単なる <guimenuitem>ぼかし</guimenuitem> フィルターを
+    使ってみる価値があります。 このフィルターはダイアログがなく、 すぐ
     自動的に実行します。 ぼかしをかけたことに気付かないぐらいのかすかな効果
     しかありませんが、 繰り返すとどんどん強くぼやけてきます。 
-    <application><acronym>GIMP</acronym> 2.0</application> 以降このフィルタは
+    <application><acronym>GIMP</acronym> 2.0</application> 以降このフィルターは
     繰り返し回数をお知らせするウィンドウが現れるようになりました。 とはいえ強く
-    ぼかすつもりで好みの状態までこのフィルタを繰り返していてはおそらく時間が
-    かかり過ぎます。 こんなときは代わりにガウシアンぼかしを使うべきでしょう。
+    ぼかすつもりで好みの状態までこのフィルターを繰り返していてはおそらく時間が
+    かかり過ぎます。 こんなときは代わりにガウスぼかしを使うべきでしょう。
   </para>
 
   <figure>
     <title lang="en">Selective blur</title>
-    <title lang="ja">選択的ガウシアンぼかし</title>
+    <title lang="ja">選択的ガウスぼかし</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -127,16 +127,16 @@
     really need the selectivity.
   </para>
   <para lang="ja">
-    <guimenuitem>選択的ガウシアンぼかし...</guimenuitem> 
-    フィルタはしきい値を設定して互いに類似した色の画素同士だけが混ざりあう
+    <guimenuitem>選択的ガウスぼかし...</guimenuitem> 
+    フィルターはしきい値を設定して互いに類似した色の画素同士だけが混ざりあう
     ぼかしを施します。 写真の粒度を減らす用途なら鋭い輪郭を保ったまま処理
     できますので便利です。 (この例の画像では背景の粒度が減ったことに注目して
-    ください。) しかし実装上ガウシアンぼかしと比べると処理に結構時間がかかり
-    ますので、 選択的なぼかしが必要な場合だけこのフィルタを使うとよいでしょう。
+    ください。) しかし実装上ガウスぼかしと比べると処理に結構時間がかかります
+    ので、 選択的なぼかしが必要な場合だけこのフィルターを使うとよいでしょう。
   </para>
 
   <figure>
-    <title lang="en">ピクセル化</title>
+    <title lang="en">モザイク処理</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -152,10 +152,10 @@
     irregular blobs instead of perfectly square pixels.)
   </para>
   <para lang="ja">
-    <guimenuitem>ピクセル化...</guimenuitem> フィルタはいわゆるモザイク処理とか
+    <guimenuitem>モザイク処理...</guimenuitem> フィルターとは
     よく知られた<quote>エイブラハム・リンカーン</quote> 効果のことで、 画像を
-    正方形の巨大な画素で表します。 (ちなみに芸術的効果フィルタの 
-    <link linkend="plug-in-oilify">油絵化...</link> フィルタも元は同じ効果を
+    正方形の巨大な画素で表します。 (ちなみに芸術的効果フィルターの 
+    <link linkend="plug-in-oilify">油絵化...</link> フィルターも元は同じ効果を
     利用していて、 こちらはきっちり正方形の画素にせず不定形なかけらの寄り合わせ
     で表現します。)
   </para>
@@ -191,7 +191,7 @@
     rotational.
   </para>
   <para lang="ja">
-    <guimenuitem>モーションぼかし...</guimenuitem> フィルタは
+    <guimenuitem>モーションぼかし...</guimenuitem> フィルターは
     画像上の位置により定められた方向にぼかしをかけて動きのある絵にします。 
     直線的一方向、 集中線、 回転の各効果から選べます。
   </para>
@@ -203,7 +203,7 @@
     image side by side.
   </para>
   <para lang="ja">
-    最後の <guimenuitem>タイル化可能ぼかし</guimenuitem> はガウシアンぼかしと
+    最後の <guimenuitem>タイル化可能ぼかし</guimenuitem> はガウスぼかしと
     まるで変わりませんが、 画像の外縁付近では反対側の辺と連続したぼかしを
     行ないますので、 この画像をタイル状に並べて文様にするときに継ぎ目が
     目立たなくなります。
@@ -214,7 +214,7 @@
       the Gaussian blur plug-in.
     </para>
     <para lang="ja">
-      タイル化可能ぼかしの実体はガウシアンぼかしプラグインを利用する Script-Fu
+      タイル化可能ぼかしの実体はガウスぼかしプラグインを利用する Script-Fu
       スクリプトです。
     </para>
   </note>

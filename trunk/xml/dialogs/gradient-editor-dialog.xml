@@ -11,10 +11,10 @@
   2006-04-30 lexa: made almost docbook compliant and added german translation
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2011-01-18-->
+<!--2012-03-03-->
 <sect3 id="gimp-gradient-editor-dialog">
   <title lang="en">The Gradient Editor</title>
-  <title lang="ja">グラデーションエディタ</title>
+  <title lang="ja">グラデーションエディター</title>
   <anchor id="gimp-gradient-edit"/>
   <indexterm lang="en">
     <primary>Gradient</primary>
@@ -26,7 +26,7 @@
   </indexterm>
   <figure>
     <title lang="en">The gradient editor</title>
-    <title lang="ja">グラデーションエディタ</title>
+    <title lang="ja">グラデーションエディター</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -48,26 +48,26 @@
     shape of the transition from left to right.
   </para>
   <para lang="ja">
-    グラデーションエディタはグラデーションの配色を編集するためのものです。
+    グラデーションエディターはグラデーションの配色を編集するためのものです。
     ご自身で作られたグラデーションファイル (あるいはシステムが提供するものの
     複製) を対象としており、 <acronym>GIMP</acronym>と一緒にインストールされた
-    システム付属のグラデーションファイルは編集できません。 このエディタは凝った
-    つくりの精巧なツールなので習得するまでにちょっと骨が折れます。 そのコツは
-    グラデーションをいくつかの <emphasis>セグメント</emphasis> (分節) の連なり
-    ととらえ、 それぞれの分節は左端の色から右端の色へ徐々に変化がついていると
-    考えることです。 グラデーションエディタではセグメントをいくつでも連ねられ、
-    各分節の左右の端の色にはどんな色も使えますし、 左から右への色変化の形状にも
-    さまざまな選択肢があります。
+    システム付属のグラデーションファイルは編集できません。 このエディターは
+    凝ったつくりの精巧なツールなので習得するまでにちょっと骨が折れます。 その
+    コツはグラデーションをいくつかの <emphasis>セグメント</emphasis> (分節) の
+    連なりととらえ、 それぞれの分節は左端の色から右端の色へ徐々に変化が
+    ついていると考えることです。 グラデーションエディターではセグメントを
+    いくつでも連ねられ、 各分節の左右の端の色にはどんな色も使えますし、 左から
+    右への色変化の形状にもさまざまな選択肢があります。
   </para>
 
   <sect4 id="gimp-gradient-editor-dialog-activate">
     <title lang="en">How to Activate the Gradient Editor</title>
-    <title lang="ja">グラデーションエディタダイアログの呼び出し方</title>
+    <title lang="ja">グラデーションエディターダイアログの呼び出し方</title>
     <para lang="en">
       You can activate the Gradient Editor in several ways:
     </para>
     <para lang="ja">
-      グラデーションエディタダイアログを起用する方法はつぎのいずれかです。
+      グラデーションエディターダイアログを起用する方法はつぎのいずれかです。
     </para>
     <itemizedlist>
       <listitem>
@@ -85,9 +85,9 @@
           gradient name,
         </para>
         <para lang="ja">
-          一覧表で加工対象のグラデーションを <mousebutton>第2ボタン
-          </mousebutton> クリックして出てきた脈絡メニューの <guimenuitem>
-          グラデーションの編集...</guimenuitem> を選択
+          一覧表で加工対象のグラデーションを 
+          <mousebutton>第2ボタン</mousebutton> クリックして出てきた脈絡
+          メニューの <guimenuitem>グラデーションの編集...</guimenuitem> を選択
         </para>
       </listitem>
       <listitem>
@@ -186,7 +186,7 @@
             反映されます。
           </para>
           <para lang="ja">
-            マウスポインタは図面上にかざすと<quote>スポイトツール</quote>
+            マウスポインターは図面上にかざすと<quote>スポイトツール</quote>
             のようなはたらきをします。 各地点でのピクセル情報はダイアログの下部
             にやや変わった方法で表示されます。 <guilabel>位置</guilabel> は
             小数点以下が 3 桁の数値で表され、 0.000 がグラデーションの左端を、
@@ -200,7 +200,7 @@
           <para lang="ja">
             図面上をクリックしてドラッグすると <guilabel>位置</guilabel> と 
             <guilabel>RGB</guilabel> のみの表示になります。 この操作ではマウス
-            ポインタの位置の色がツールボックスにも示される描画色になり、 
+            ポインターの位置の色がツールボックスにも示される描画色になり、 
             グラデーションダイアログの一覧表の最初の 4 つのグラデーションは
             この色を基に再構成されます。 (<keycap>Ctrl</keycap> キーを
             押しながらだと背景色が換わります。)
@@ -209,7 +209,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Range Selection/Control Sliders</term>
-        <term lang="ja">区間の選択と制御スライダ</term>
+        <term lang="ja">区間の選択と制御スライダー</term>
         <listitem>
           <para lang="en">
             Below the gradient display, you see a set of black and white
@@ -248,7 +248,7 @@
             <emphasis>黒</emphasis> い三角形で区切られた分節のことです。 どの
             セグメントにもその中に白い三角形があり、 その移動がセグメントの
             色の変化位置を<quote>逸らせる</quote>のに使えるところは
-            <quote>レベル</quote>ツールのダイアログで中間スライダポイントの
+            <quote>レベル</quote>ツールのダイアログで中間スライダーポイントの
             果たす役目に近いものがあります。 セグメントを選びとるにはその
             区切りとなる黒い三角形の間をクリックしてください。 するとその
             区間が強調表示されます。 複数のセグメントを連ねて選択するには 
@@ -257,15 +257,15 @@
             いなければならないため、 <keycap>Shift</keycap> キーを押しながら
             隣り合わないセグメントを選ぶと両者の間のセグメントも自動的に
             選択されます。 <guilabel>即時更新</guilabel> をチェックすると
-            スライダの移動につられて図面がすぐさま変化を反映します。
+            スライダーの移動につられて図面がすぐさま変化を反映します。
             チェックが入っていないときはマウスボタンを放したときに変更が
             反映されます。
           </para>
           <para lang="ja">
-            スライダやセグメントや選択対象を移動できます。 
-            <emphasis>直にスライダを</emphasis> クリックして曳けばその周囲の
+            スライダーやセグメントや選択対象を移動できます。 
+            <emphasis>直にスライダーを</emphasis> クリックして曳けばその周囲の
             色変化が調節できます。 <emphasis>セグメントを</emphasis> 
-            クリックして曳くと隣のセグメントの白スライダまで移動できます。 
+            クリックして曳くと隣のセグメントの白スライダーまで移動できます。 
             <keycap>Shift</keycap> キーを押しながらだとセグメントもしくは
             選択区間を移動できますが、 両隣のセグメントの一方を拡大させつつ
             一方が幅 0 になるまで寄せられます。
@@ -281,8 +281,8 @@
             zoom in using the buttons at the bottom.
           </para>
           <para lang="ja">
-            スライダが並ぶ帯の下にはスクロールバーがあります。 ダイアログ下部に
-            ある拡大ズーム表示ボタンを使ったときには繰り寄せが必要に
+            スライダーが並ぶ帯の下にはスクロールバーがあります。 ダイアログ
+            下部にある拡大ズーム表示ボタンを使ったときには繰り寄せが必要に
             なるでしょう。
           </para>
         </listitem>
@@ -338,7 +338,7 @@
                 <para lang="ja">
                   このアイコンボタンをクリックするとグラデーションが個人用 
                   <filename class="directory">gradients</filename> 
-                  フォルダに現在の状態で保存されます。 
+                  フォルダーに現在の状態で保存されます。 
                   つまり次回から<acronym>GIMP</acronym>起動時に
                   このグラデーションも自動的に読み込まれます。
                 </para>
@@ -475,10 +475,10 @@
 
   <sect4 id="gimp-gradient-editor-dialog-menu">
     <title lang="en">The Gradient Editor pop-up Menu</title>
-    <title lang="ja">グラデーションエディタの脈絡メニュー</title>
+    <title lang="ja">グラデーションエディターの脈絡メニュー</title>
     <figure>
       <title lang="en">The Gradient Editor pop-up menu</title>
-      <title lang="ja">グラデーションエディタの脈絡メニュー</title>
+      <title lang="ja">グラデーションエディターの脈絡メニュー</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -496,11 +496,11 @@
     </para>
     <para lang="en">The following commands can be found in the menu:</para>
     <para lang="ja">
-      グラデーションエディタの脈絡メニューを呼び出すにはこのダイアログの図面上
+      グラデーションエディターの脈絡メニューを呼び出すにはこのダイアログの図面上
       を <mousebutton>第2ボタン</mousebutton> でクリックするか、 タブメニューの
       最初の項目を進んでください。 このメニューでは終端の色の編集 (各セグメント
       の左端と右端の色の設定) や混色の編集ができ、 色モデルの選択とセグメントの
-      編集ができます。 このエディタが対象とするグラデーションファイルは自作や
+      編集ができます。 このエディターが対象とするグラデーションファイルは自作や
       自前のものと、 システム提供ファイルからの複製に限られます。
     </para>
     <para lang="en">つぎにメニューに並ぶ各項目を見てゆきましょう。</para>
@@ -988,7 +988,7 @@
         so be careful!
       </para>
       <para lang="ja">
-        グラデーションエディタでの作業は<quote>取り消し</quote>が効きません。
+        グラデーションエディターでの作業は<quote>取り消し</quote>が効きません。
         十分お気をつけください。
       </para>
     </caution>
@@ -996,7 +996,7 @@
 
   <sect4>
     <title lang="en">Using example for the Gradient Editor</title>
-    <title lang="ja">グラデーションエディタの使用例</title>
+    <title lang="ja">グラデーションエディターの使用例</title>
     <indexterm lang="en">
       <primary>Tutorials</primary>
       <secondary>New gradient</secondary>
@@ -1045,7 +1045,7 @@
               </textobject>
             </inlinemediaobject>
           </guiicon>
-          アイコンボタンをクリックします。 グラデーションエディタダイアログが
+          アイコンボタンをクリックします。 グラデーションエディターダイアログが
           開かれ、 その図面領域に黒から白のグラデーションが表示されています。
         </para>
         <figure>
@@ -1087,9 +1087,9 @@
                 segments.
               </para>
               <para lang="ja">
-                各セグメントは黒の三角形スライダで区切られている。 三角形の間を
-                クリックしてセグメントを活性化しよう。 <keycap>Shift</keycap>
-                キーを押しながらなら連続して複数選べる。
+                各セグメントは黒の三角形スライダーで区切られている。 三角形の
+                間をクリックしてセグメントを活性化しよう。 
+                <keycap>Shift</keycap> キーを押しながらなら連続して複数選べる。
               </para>
             </caption>
           </mediaobject>

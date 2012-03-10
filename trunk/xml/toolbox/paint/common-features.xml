@@ -16,7 +16,7 @@
   2006-02-05 fr revised by j.h
   2005-05-20 de reviewed by axel.wernicke
 -->
-<!--2012-01-08-->
+<!--2012-03-09-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
@@ -48,7 +48,7 @@
     the pointer across the image display, creating brush-strokes. Four of them
   </para>
   <para lang="ja">
-    以上のツールの共通点は、 マウスポインタを画面上で滑らせてブラシ描画を
+    以上のツールの共通点は、 マウスポインターを画面上で滑らせてブラシ描画を
     行う機能です。 このうち、
   </para>
 
@@ -295,7 +295,7 @@
             キーです。 <emphasis>直線</emphasis> が引けるモードに変わるのです。
             どの描画ツールの場合も直線を引くにはまず始点をクリックして、
             <emphasis>その後に</emphasis> <keycap>Shift</keycap> キーを
-            押します。 キーを押したままでポインタを移動すると始点と現在地
+            押します。 キーを押したままでポインターを移動すると始点と現在地
             を繋ぐ細い線が示されます。 <keycap>Shift</keycap> キーを
             押し続けながらそこで次の点を打つと、 直線が描かれます。
             この動作を繰り返すと線分が繋がって描けます。
@@ -446,13 +446,13 @@
             is, the more transparency you get.
           </para>
           <para lang="ja">
-            不透明度スライダはブラシ操作での透明度レベルを設定します。
+            不透明度スライダーはブラシ操作での透明度レベルを設定します。
             その効果を理解するには、 現在のレイヤーに直接描いているのではなく、
             このツールによってその上に新たに透明なレイヤーが用意されていると
             みなすことです。 ツールオプションで不透明度を変更したときの
             効果は、 その仮のレイヤーの不透明度をレイヤーダイアログで変更する
-            のと同じです。 このスライダは活性レイヤーに描画するブラシツール
-            だけでなく、 全ての描画ツールの<quote>強さ</quote>を
+            のと同じです。 このスライダーは活性レイヤーに描画するブラシツール
+            だけでなく、 すべての描画ツールの<quote>強さ</quote>を
             調節しています。 消しゴムツールに関して言えば少々混乱しそうです。
             <quote>不透明度</quote>が高いほど、 このツールが消した部分の
             透明感が増す結果になります。
@@ -478,7 +478,7 @@
             distribution of a brush is relevant.
           </para>
           <para lang="ja">
-            ブラシ選びが、ポインタを滑らせ描画する過程でツールが画像に
+            ブラシ選びが、ポインターを滑らせ描画する過程でツールが画像に
             及ぼす大きさと刻印の内容を決めます。
             <acronym>GIMP</acronym>で使えるブラシは様々な種類があります。
             <link linkend="gimp-concepts-brushes">ブラシ</link> の節に
@@ -518,11 +518,11 @@
 
       <varlistentry id="gimp-tool-brush-dynamics" xreflabel="Brush Dynamics">
         <term lang="en">Brush Dynamics</term>
-        <term lang="ja">ブラシ感度の調整</term>
+        <term lang="ja">動的特性</term>
         <listitem>
           <figure>
             <title lang="en">The Brush Dynamics check box.</title>
-            <title lang="ja">ブラシ感度の調整チェックボックス</title>
+            <title lang="ja">動的特性チェックボックス</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -560,7 +560,7 @@
             Here is what they do:
           </para>
           <para lang="ja">
-            ブラシ感度の調整オプションは、 絶えず変化する圧力、 筆速、
+            動的特性オプションは、 絶えず変化する圧力、 筆速、
             不規則変化の 3 つの情報からひとつもしくは組み合わされた入力値を、
             いろいろなブラシにまつわる変数、 少なくとも一般的にはその大きさや
             透明度に振り分けて反映させるためのものです。 ペンタブレットで
@@ -697,13 +697,13 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Apply Jitter</term>
-        <term lang="ja">揺らぎ</term>
+        <term lang="ja">散布</term>
         <listitem>
           <indexterm lang="en">
             <primary>Jitter</primary>
           </indexterm>
           <indexterm lang="ja">
-            <primary sortas="ユラギ">揺らぎ</primary>
+            <primary sortas="サンプ">散布</primary>
           </indexterm>
           <para lang="en">
             You know <quote>spacing</quote> in brush strokes: strokes are
@@ -716,12 +716,12 @@
             ブラシ描画での<quote>間隔</quote>について思い出して下さい。
             描線は次々と繰り出されるブラシの刻印で成り立っており、
             互いの間隔が非常に狭ければ繋がった線の姿になります。 そこで、
-            <guimenuitem>量</guimenuitem> スライダを調節すれば、
+            <guimenuitem>量</guimenuitem> スライダーを調節すれば、
             整列していたブラシの刻印を散り散りに離すこともできます。
           </para>
           <figure>
             <title lang="en"><quote>Jitter</quote> example</title>
-            <title lang="ja"><quote>揺らぎ</quote>の例</title>
+            <title lang="ja"><quote>散布</quote>の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -732,7 +732,7 @@
                   From top to bottom: without jitter, jitter = 1, jitter = 4.
                 </para>
                 <para lang="ja">
-                  上から順に: 揺らぎ無し、 揺らぎ量 = 1、 揺らぎ量 = 4。
+                  上から順に: 散布無し、 散布量 = 1、 散布量 = 4。
                 </para>
               </caption>
             </mediaobject>
@@ -994,11 +994,11 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Dissolve</term>
-        <term lang="ja">ディザ合成</term>
+        <term lang="ja">ディザー合成</term>
         <listitem>
           <figure>
             <title lang="en">Dissolve mode example</title>
-            <title lang="ja">ディザ合成の例</title>
+            <title lang="ja">ディザー合成の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -1032,7 +1032,7 @@
           </para>
           <figure>
             <title lang="en">Painting in Dissolve mode</title>
-            <title lang="ja">ディザ合成モードで描画</title>
+            <title lang="ja">ディザー合成モードで描画</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -1243,7 +1243,7 @@
           <para lang="ja">
             このモードは描画色を消去して不完全透明にします。 そのはたらきは
             <link linkend="plug-in-colortoalpha">色を透明度に</link>
-            フィルタに似ており、 ブラシでなぞった部分に適用されます。
+            フィルターに似ており、 ブラシでなぞった部分に適用されます。
             このモードはアルファチャンネルのあるレイヤーでのみ有効で、
             無い場合は標準モードと同一であることにご注意ください。
           </para>
@@ -1328,7 +1328,7 @@
       perfectly hard and disables sub-pixel anti-aliasing.
     </para>
     <para lang="ja">
-      先進的なユーザにとっては描画ツールがサブピクセルの細かさまで処理を
+      先進的なユーザーにとっては描画ツールがサブピクセルの細かさまで処理を
       すすめて絵がギザギザになるのを防いでいることに興味を持たれるのでは
       ないでしょうか。 その成果は仮に<quote>Circle</quote>ブラシ
       のような縁のはっきりしたブラシを用いても、 描かれる線の画素には

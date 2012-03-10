@@ -6,7 +6,7 @@
   2009-09-23 j.h: reviewed for v2.6
   2007-05-08 Added Spanish translation by AntI
 -->
-<!--2010-12-08-->
+<!--2012-03-04-->
 <sect1 id="gimp-using-animated-brushes">
   <title lang="en">The GIH Dialog Box</title>
   <title lang="ja">GIH ダイアログ</title>
@@ -90,7 +90,7 @@
           diameter.
         </para>
         <para lang="ja">
-          <quote>間隔</quote>とはポインタでなぞった描線上に並べられるブラシの
+          <quote>間隔</quote>とはポインターでなぞった描線上に並べられるブラシの
           刻印の互いの間隔のことです。 これはどんな描画ツールであっても、
           ブラシをスタンプのように考えてください。 間隔が狭い場合はそのスタンプ
           が互いに近づいて重なるので連続した描線に見えます。 逆に間隔が広い場合
@@ -281,12 +281,12 @@
           の画像ファイルに保存したあとでレイヤーダイアログを見るとわかります。
         </para>
         <para lang="ja">
-          つぎに<acronym>GIMP</acronym>はこのスタックをコンピュータ式配列に
+          つぎに<acronym>GIMP</acronym>はこのスタックをコンピューター式配列に
           記録します。 この配列は 1 次元から 4 次元までの
           <guilabel>次元</guilabel> に示された数値を用います。 
         </para>
         <para lang="ja">
-          コンピュータ科学での 3 次元 (3D) では配列が myarray(x,y,z) のような
+          コンピューター科学での 3 次元 (3D) では配列が myarray(x,y,z) のような
           形式になります。 2 次元を想像するのは簡単でしょう。 つまり紙の上の
           行と列の配列のことです。
           <mediaobject>
@@ -307,7 +307,7 @@
         <para lang="ja">
           <acronym>GIMP</acronym>はスタックの上のセル (先に入ったセル) から順に
           取り出してこの配列を埋めてゆきます。 配列を埋める様子は自動車の走行
-          メータのカウンタのようなものです。 並びを桁とみなしてください。
+          メーターのカウンターのようなものです。 並びを桁とみなしてください。
           右端の桁をまず回し、 そこが最大数に達したら左隣の桁を回します。
           プログラミングの基本を思い返していただきたいのですが、 array(4,2,2)
           を展開すると (1,1,1)、 (1,1,2)、 (1,2,1)、 (1,2,2)、 (2,1,1)、
@@ -454,7 +454,7 @@
               <acronym>RGB</acronym>画像を新規に用意します。 テキストツールで
               テキストレイヤーを 4 層、 それぞれ <quote>1</quote>、
               <quote>2</quote>、 <quote>3</quote>、 <quote>4</quote>と記入
-               します。 背景レイヤーは削除してください。
+              します。 背景レイヤーは削除してください。
             </para>
           </step>
           <step>
@@ -480,18 +480,18 @@
               OK.
             </para>
             <para lang="en">
-              <acronym>GIH</acronym>形式で保存するときにはまず<quote>
-              画像を保存</quote>ダイアログが出ますから名前と保存先を指定して
-              ください。 次に<quote>ブラシパイプ形式で保存</quote>ダイアログ
-              が現れますから、 <guilabel>間隔</guilabel> は <userinput>100
-              </userinput> パーセントに、 <guilabel>説明</guilabel> には任意
-              の名前を、 <guilabel>セルサイズ</guilabel> は <userinput>30
-              </userinput> &times; <userinput>30</userinput> のまま、
+              <acronym>GIH</acronym>形式で保存するときにはまず
+              <quote>画像を保存</quote>ダイアログが出ますから名前と保存先を
+              指定しましょう。 次に<quote>ブラシパイプ形式で保存</quote>
+              ダイアログが現れますから、 <guilabel>間隔</guilabel> は 
+              <userinput>100</userinput> パーセントに、 
+              <guilabel>説明</guilabel> には任意の名前を、 
+              <guilabel>セルサイズ</guilabel> は <userinput>30</userinput>
+              &times; <userinput>30</userinput> のまま、
               <guilabel>次元</guilabel> は <userinput>1</userinput> 次元に、
               <guilabel>並び</guilabel> には <userinput>4</userinput> と
               <guimenuitem>Incremental</guimenuitem> を指定してから、
-              <guibutton>保存</guibutton>
-              ボタンを押します。
+              <guibutton>保存</guibutton> ボタンを押します。
             </para>
           </step>
           <step>
@@ -524,10 +524,10 @@
               </mediaobject>
             </para>
             <para lang="en">
-              <acronym>GIMP</acronym>のブラシディレクトリに直接保存する機能が
+              <acronym>GIMP</acronym>のブラシディレクトリーに直接保存する機能が
               うまくはたらかないときは、 後で個人用の<acronym>GIMP</acronym>
-              フォルダ内にある <filename class="directory">brushes</filename>
-              フォルダに <filename class="extension">.gih</filename> ファイル
+              フォルダー内にある <filename class="directory">brushes</filename>
+              フォルダーに <filename class="extension">.gih</filename> ファイル
               を移してください。 さてツールボックスに戻ったら、 ブラシ
               アイコンをクリックしてブラシダイアログを呼びだし、 ダイアログ
               下部の
@@ -699,10 +699,10 @@
               名前で保存します。
             </para>
             <para lang="ja">
-              レイヤーダイアログを開いて、 そのレイヤーの名前を <quote>
-              <userinput>左手　0黒</userinput></quote>にします。 (レイヤー
-              名欄をダブルクリックして直に書き直すか、 レイヤーメニューより
-              <guimenuitem>レイヤー名を変更...</guimenuitem>
+              レイヤーダイアログを開いて、 そのレイヤーの名前を 
+              <quote><userinput>左手　0黒</userinput></quote>にします。 
+              (レイヤー名欄をダブルクリックして直に書き直すか、 レイヤー
+              メニューより <guimenuitem>レイヤー名を変更...</guimenuitem>
               と進んで<quote>レイヤー名の変更</quote>ダイアログ上で新しい名前に
               します)。
             </para>
@@ -751,9 +751,9 @@
             </para>
             <para lang="ja">
               <quote><userinput>左手　0黒</userinput></quote>レイヤーを複製
-              します。 複製レイヤーのみ可視化して、 レイヤー名を<quote>
-              <userinput>右手　0黒</userinput></quote>に変更します。 画像
-              ウィンドウのメニューより
+              します。 複製レイヤーのみ可視化して、 レイヤー名を
+              <quote><userinput>右手　0黒</userinput></quote>に変更します。 
+              画像ウィンドウのメニューより
               <menuchoice>
                 <guimenu>レイヤー</guimenu>
                 <guisubmenu>変換</guisubmenu>
@@ -844,18 +844,18 @@
               つぎに<quote><userinput>左手　0黒</userinput></quote>レイヤーと
               その青コピーを統合しなければなりません。 <acronym>GIMP</acronym>
               には 2 通りの方法がありますのでお好きな手順をとってください。 
-              ひとつめは、 青の複製レイヤーをレイヤーダイアログ上で<quote>
-              <userinput>左手　0黒</userinput></quote>のすぐ下に置いて、 
-              レイヤーメニューから <guimenuitem>
-              下のレイヤーと統合</guimenuitem>する方法です。
+              ひとつめは、 青の複製レイヤーをレイヤーダイアログ上で
+              <quote><userinput>左手　0黒</userinput></quote>のすぐ下に置いて、 
+              レイヤーメニューから 
+              <guimenuitem>下のレイヤーと統合</guimenuitem> する方法です。
               もうひとつは<quote><userinput>左手　0黒</userinput></quote>
               レイヤーとその青い複製レイヤーだけを可視化したうえで、 レイヤー
-              メニューから <guimenuitem>可視レイヤーの統合...
-              </guimenuitem> とすると現れるダイアログで <guimenuitem>
-              対象レイヤーを内包するサイズ</guimenuitem> を選んで実行します。 
-              左側に黒の掌、 右側に青の掌が並んだ 60&times;30 ピクセルの
-              レイヤーができあがります。 その名前を<quote><userinput>左手　0
-              </userinput></quote>に変えてください。
+              メニューから <guimenuitem>可視レイヤーの統合...</guimenuitem> 
+              とすると現れるダイアログで 
+              <guimenuitem>対象レイヤーを内包するサイズ</guimenuitem> を選んで
+              実行します。 左側に黒の掌、 右側に青の掌が並んだ 60&times;30 
+              ピクセルのレイヤーができあがります。 その名前を
+              <quote><userinput>左手　0</userinput></quote>に変えてください。
             </para>
             <para lang="ja">
               他のレイヤーに対しても同じ手順を繰り返してください。
@@ -934,9 +934,9 @@
               読み込むか？</emphasis>: <acronym>GIMP</acronym>が最初に読み取る
               のは第 1 次元です。 例題では <guimenuitem>angular</guimenuitem>
               (ブラシ方向: 例えば 90 度) に結びつけてプログラムされています。
-              90 度の位をみると、 黄色で示した第 2 次元では <guimenuitem>
-              incremental</guimenuitem> 選択によって左右の転換をしています。
-              そして第 3 の次元では、 無作為に色を選択しています。
+              90 度の位をみると、 黄色で示した第 2 次元では 
+              <guimenuitem>incremental</guimenuitem> 選択によって左右の転換を
+              しています。 そして第 3 の次元では、 無作為に色を選択しています。
               よって最終的にレイヤーの順序は次のようにしなければなりません。
               <mediaobject>
                 <imageobject>
@@ -957,7 +957,7 @@
               ほらね。 ブラシができました。 先に拡張子
               <filename class="extension">.xcf</filename> をつけて
               保存してから、 <acronym>GIH</acronym>形式ではつぎのような
-              パラメータで保存します。
+              パラメーターで保存します。
             </para>
             <itemizedlist>
               <listitem>
@@ -1019,8 +1019,8 @@
               box. You can now use your brush.
             </para>
             <para lang="ja">
-              個人用の<acronym>GIMP</acronym>ブラシディレクトリに <filename 
-              class="extension">.gih</filename> ファイルを置いて
+              個人用の<acronym>GIMP</acronym>ブラシディレクトリーに 
+              <filename class="extension">.gih</filename> ファイルを置いて
               ブラシダイアログで再読み込みします。 
               その時点でこのブラシが使用できるようになりました。
             </para>

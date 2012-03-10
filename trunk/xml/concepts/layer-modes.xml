@@ -15,7 +15,7 @@
                    examples and equations
   2006-09-06 scb: thorough review and/or rewrite of English
 -->
-<!--2010-12-20-->
+<!--2012-02-26-->
 <sect1 id="gimp-concepts-layer-modes">
   <title lang="en">Layer Modes</title>
   <title lang="ja">レイヤーのモード</title>
@@ -83,7 +83,7 @@
     <para lang="ja">
       描画ツールのうち鉛筆、 絵筆、 エアブラシ、 インク、 スタンプの各ツール
       には描画モードがあり、 レイヤーモードと共通のはたらきをする 21 種類の
-      モードと描画モード特有の 2 種類のモードがあります。
+      モードが使えるのに加え描画モード特有の 2 種類のモードもあります。
       <link linkend="gimp-paint-mode-examples">描画ツール特有のモード</link>
       をご覧ください。
     </para>
@@ -134,7 +134,7 @@
       </imageobject>
       <caption>
         <para lang="en">Key fob</para>
-        <para lang="ja">キーホルダアクセサリ</para>
+        <para lang="ja">キーホルダーアクセサリー</para>
       </caption>
     </mediaobject>
     <mediaobject>
@@ -300,7 +300,7 @@
 
     <varlistentry>
       <term lang="en">Dissolve</term>
-      <term lang="ja">ディザ合成</term>
+      <term lang="ja">ディザー合成</term>
       <listitem>
         <indexterm lang="en">
           <primary>Layer Modes</primary>
@@ -311,16 +311,16 @@
         </indexterm>
         <indexterm lang="ja">
           <primary>レイヤーモード</primary>
-          <secondary sortas="ディザゴウセイ">ディザ合成</secondary>
+          <secondary sortas="ディザーゴウセイ">ディザー合成</secondary>
         </indexterm>
         <indexterm lang="ja">
-          <primary sortas="ディザゴウセイ">ディザ合成</primary>
+          <primary sortas="ディザーゴウセイ">ディザー合成</primary>
         </indexterm>
         <figure>
           <title lang="en">
             Example for layer mode <quote>Dissolve</quote>
           </title>
-          <title lang="ja">レイヤーモード<quote>ディザ合成</quote>の例</title>
+          <title lang="ja">レイヤーモード<quote>ディザー合成</quote>の例</title>
           <mediaobject>
             <imageobject>
               <imagedata format="JPG"
@@ -347,7 +347,7 @@
                 with <quote>dissolve</quote>.
               </para>
               <para lang="ja">
-                <quote>ディザ合成</quote>の場合、 上のレイヤーが不透明度 100%
+                <quote>ディザー合成</quote>の場合、 上のレイヤーが不透明度 100%
                 ならば重なった部分は上のレイヤーだけが見える。
               </para>
             </caption>
@@ -369,8 +369,8 @@
           mode, where it can be clearly seen how the pixels are dispersed.
         </para>
         <para lang="ja">
-          <guimenuitem>ディザ合成</guimenuitem> は画素を無作為に透過させる
-          ディザ効果を上側のレイヤーにかけてその下のレイヤーと合成します。
+          <guimenuitem>ディザー合成</guimenuitem> は画素を無作為に透過させる
+          ディザー効果を上側のレイヤーにかけてその下のレイヤーと合成します。
           この技法はレイヤーモードのみならず描画のモードでもたびたび
           役立ちます。
         </para>
@@ -378,7 +378,7 @@
           このモードは画像を重ねた縁の付近で特にその特徴が顕著に現れます。 拡大
           したスクリーンショットをご覧になればもっとわかりやすいでしょう。 
           下図の左の[上の]画像は<quote>標準</quote>レイヤーモードを、 右の
-          [下の]画像は<quote>ディザ合成</quote>レイヤーモードを使った同じ
+          [下の]画像は<quote>ディザー合成</quote>レイヤーモードを使った同じ
           部分を抜き出したものですが、 画素の散乱の様子がはっきりわかります。
         </para>
         <figure>
@@ -401,7 +401,7 @@
             </imageobject>
             <caption>
               <para lang="en">Dissolve mode.</para>
-              <para lang="ja">ディザ合成モード</para>
+              <para lang="ja">ディザー合成モード</para>
             </caption>
           </mediaobject>
         </figure>
@@ -470,9 +470,9 @@
         </para>
         <para lang="ja">
           <guimenuitem>乗算</guimenuitem> モードは上側のレイヤーの画素の値と
-          その下側のレイヤーの画素の値の積を255で除算します。 結果として画像が
-          暗くなる場合がほとんどです。 どちらかのレイヤーに純白があればその部分
-          はもう一方のレイヤーの色と同じになります (1 &times; I = I)。 
+          その下側のレイヤーの画素の値の積を 255 で除算します。 結果として
+          画像が暗くなる場合がほとんどです。 どちらかのレイヤーに純白があれば
+          その部分はもう一方のレイヤーの色と同じになります (1 &times; I = I)。 
           どちらかのレイヤーに黒があればその部分は完全な黒になります
           (0 &times; I = 0)。
         </para>
@@ -527,7 +527,7 @@
                 Mask 1 is used as upper layer with 100% opacity.
               </para>
               <para lang="ja">
-                マスク 1 を 100%不 透明な上側のレイヤーとして使う。
+                マスク 1 を 100% 不透明な上側のレイヤーとして使う。
               </para>
             </caption>
           </mediaobject>
@@ -939,10 +939,10 @@
         <para lang="ja">
           写真の業界では焼き込みとは暗室での現像作業で画像の特定の部分の露出を
           強める技法をさしています。 結果として眩しくなっていた部分が詳しく
-          見えるようになります。 この本来の目的で焼き込みモードを使いたいのなら、
+          見えるようになります。 この本来の目的で焼き込みモードを使うのならば、
           レイヤーモードよりむしろ
           描画ツールを用いたグレースケール画像に対しての操作で真価を発揮します。
-          maybe レイヤーモードよりむしろ描画ツールを焼き込みモードにして
+          /maybe/ レイヤーモードよりむしろ描画ツールを焼き込みモードにして
           グレースケール画像に対して操作する方が真価を発揮します。
         </para>
         <para lang="ja">等式はつぎのとおり。</para>

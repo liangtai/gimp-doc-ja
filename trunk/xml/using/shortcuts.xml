@@ -9,7 +9,7 @@
   2006-06-22 Added italian content by ciampix
   2005-11-01 Created by julien hardelin
 -->
-<!--2010-11-22-->
+<!--2012-03-04-->
 <sect1 id="gimp-concepts-shortcuts">
   <title lang="en">Creating Shortcuts to Menu Functions</title>
   <title lang="ja">メニューの各機能にショートカットを作成</title>
@@ -57,8 +57,8 @@
       <para lang="ja">
         第1の方法は、
         <link linkend="gimp-prefs-interface">環境設定</link> ダイアログを呼び
-        だし、 <quote>ユーザーインタフェース</quote>のページを開いて <guilabel>
-        動的なキーボードショートカットを使用</guilabel> の
+        だし、 <quote>ユーザーインターフェース</quote>のページを開いて 
+        <guilabel>動的なキーボードショートカットを使用</guilabel> の
         オプションを有効にしてください。 このオプションは通常はチェックが入って
         いません。 不意にキーを押してしまい意図しないショートカットが作成される
         のを防ぐためです。
@@ -86,8 +86,8 @@
       </para>
       <para lang="ja">
         キーボードショートカットを付けるには、 まずメニュー上でお目当ての
-        コマンドにマウスポインタをかざしてください。 するとその行が強調表示
-        されます。 マウスポインタが動かないように注意しながら関連づけたい
+        コマンドにマウスポインターをかざしてください。 するとその行が強調表示
+        されます。 マウスポインターが動かないように注意しながら関連づけたい
         キー、 もしくは修飾キーとの組み合わせを押したまま
         <footnote>
           <para>
@@ -143,9 +143,9 @@
         <link linkend="gimp-prefs-interface">Preferences</link> menu.
       </para>
       <para lang="ja">
-        このエディタダイアログは
+        このエディターダイアログは
         <link linkend="gimp-prefs-interface">環境設定</link> ダイアログの
-        <quote>ユーザーインタフェース</quote>のページで 
+        <quote>ユーザーインターフェース</quote>のページで 
         <guibutton>キーボードショートカット設定...</guibutton> ボタンを
         クリックすると出てきます。
       </para>
@@ -174,10 +174,10 @@
         tool types are marked with small icons.
       </para>
       <para lang="ja">
-        このショートカットエディタはキーボードによる <emphasis>ツールの
-        パラメータ制御</emphasis> も可能にします。 ダイアログの上の方に
-        ツールのパラメータをまとめた <guilabel>状況<!--XXX [作業] に変更の
-        可能性あり--></guilabel> というメニュー項目があります。 作業の便のため
+        このショートカットエディターはキーボードによる <emphasis>ツールの
+        パラメーター制御</emphasis> も可能にします。 ダイアログの上の方に
+        ツールのパラメーターをまとめた <guilabel>作業</guilabel> という
+        メニュー項目があります。 作業の便のため
         小さなアイコンでツールの分類がわかるようにしてあります。
       </para>
     </step>
@@ -198,17 +198,19 @@
     </para>
     <para lang="ja">
       誂えたキーボードショートカットは<acronym>GIMP</acronym>の個人用
-      ディレクトリ内で <filename>menurc</filename> という名前のファイルに書き
+      ディレクトリー内で <filename>menurc</filename> という名前のファイルに書き
       込まれて保存されます。 <productname>UNIX</productname> システム風の
       システムなら <filename>~/.gimp-2.6/menurc</filename>、 
-      <productname>Windows XP</productname>なら <filename role="html">
-      C:\Documents&nbsp;and&nbsp;Settings\ユーザー名\.gimp-2.6\menurc
-      </filename> <filename role="tex">
-C:\\Documents~and~Settings\\{\\rm\\langle ユーザー名\\rangle}\\.gimp-2.6\\menurc
-      </filename> 、 <productname>Mac OS</productname> なら 
-      <filename>/Users/ユーザー名/.gimp-2.6/menurc</filename> です。 
-      中身は単なる<acronym>ASCII</acronym>テキストファイルなので、
-      他のコンピュータに渡すのも容易です。
+      <productname>Windows XP</productname>なら <filename role="html"><!--
+      -->C:\Documents&nbsp;and&nbsp;Settings\<replaceable>&lt;ユーザー名&gt;<!--
+      --></replaceable>\.gimp-2.6\menurc</filename> <filename role="tex">
+      C:\\Documents~and~Settings\\{\\rm\\langle{}ユーザー名\\rangle}%
+      \\.gimp-2.6\\menurc</filename>、 <productname>Mac OS</productname> なら 
+      <filename role="html">/Users/<replaceable>&lt;ユーザー名&gt;<!--
+      --></replaceable>/.gimp-2.6/menurc</filename> 
+      <filename role="tex">/Users/{\\rm\\langle{}ユーザー名\\rangle}/%
+      .gimp-2.6/menurc</filename> です。 中身は単なる<acronym>ASCII</acronym>
+      テキストファイルなので、 他のコンピューターに渡すのも容易です。
     </para>
   </note>
 </sect1>

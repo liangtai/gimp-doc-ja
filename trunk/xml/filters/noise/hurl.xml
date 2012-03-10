@@ -8,7 +8,7 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-26 de added by axel.wernicke
 -->
-<!--2010-12-10-->
+<!--2012-03-06-->
 <sect2 id="plug-in-randomize-hurl">
   <title lang="en">Hurl</title>
   <title lang="ja">浴びせ...</title>
@@ -22,7 +22,7 @@
     <primary>Hurl</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>ノイズ</secondary>
     <tertiary sortas="アビセ">浴びせ</tertiary>
   </indexterm>
@@ -35,7 +35,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Example for the <quote>Hurl</quote> filter</title>
-      <title lang="ja"><quote>浴びせ</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>浴びせ</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -53,7 +53,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Hurl</quote> applied</para>
-          <para lang="ja"><quote>浴びせ</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>浴びせ</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -78,15 +78,16 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ノイズ</guisubmenu>
         <guimenuitem>浴びせ...</guimenuitem>
       </menuchoice>
     </para>
     <para lang="ja">
-      <guimenuitem>浴びせ...</guimenuitem> フィルタは対象となった画素それぞれに
-      不規則な色付けを行ないますので、 真の <emphasis>ランダムノイズ</emphasis> 
-      をもたらします。 全ての色チャンネルはもちろん、 アルファチャンネル 
+      <guimenuitem>浴びせ...</guimenuitem> フィルターは対象となった
+      画素それぞれに不規則な色付けを行ないますので、 
+      真の <emphasis>ランダムノイズ</emphasis> 
+      をもたらします。 すべての色チャンネルはもちろん、 アルファチャンネル 
       (あれば) も不規則変化をします。 各チャンネルのとりうるすべての値が等しい
       確率で散布されます。 元の値は考慮されません。 このような処理は活性
       レイヤーもしくはその選択範囲のすべての画素に及ぼすことができるほか、 
@@ -127,14 +128,14 @@
           </para>
           <para lang="ja">
             浴びせ処理の不規則性を制御します。 同じ状況で同じ乱数種を用いると
-            このフィルタは全く同じ結果を生みます。 乱数種が変われば結果も違う
+            このフィルターは全く同じ結果を生みます。 乱数種が変われば結果も違う
             ものになります。 乱数種は数値記入欄で直に指定できるほか、 
             <guibutton>新しい種</guibutton> ボタンをクリック
             して無作為に生成させる方法もあります。
           </para>
           <para lang="ja">
             <guilabel>乱数化</guilabel> オプションを有効に
-            すると乱数種を直に指定できなくなりますが、 その代わりこのフィルタ
+            すると乱数種を直に指定できなくなりますが、 その代わりこのフィルター
             を実行する度に新しい乱数種が自動生成されるようになります。 この
             オプションを無効にしている間は前回利用した乱数種が記憶されています
             ので再利用が容易です。
@@ -151,7 +152,7 @@
             more pixels are hurled.
           </para>
           <para lang="ja">
-            このスライダは活性レイヤーもしくはその選択範囲における画素のうち
+            このスライダーは活性レイヤーもしくはその選択範囲における画素のうち
             浴びせ処理の対象となる画素の割合を設定します。 値を高くするにつれ
             より多くの画素が不規則変化をし、 元画像の面影が失われてゆきます。
           </para>
@@ -168,8 +169,8 @@
             higher <guilabel>Randomization (%)</guilabel> value.
           </para>
           <para lang="ja">
-            <guilabel>繰り返し</guilabel> 値はこのフィルタによる処理を
-            繰り返す回数です。 しかし浴びせフィルタに限ってはこのオプションは
+            <guilabel>繰り返し</guilabel> 値はこのフィルタにーよる処理を
+            繰り返す回数です。 しかし浴びせフィルターに限ってはこのオプションは
             あまり使い勝手がよろしくありません。 その理由は同等な結果を得る
             目的ならば <guilabel>乱数度 (%)</guilabel> を高く設定した方が
             早く済むからです。

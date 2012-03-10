@@ -6,7 +6,7 @@
   2007-12-29 MikaS : added 'fr'
   2007-10-06 ude: created 'en','de'
 -->
-<!--2010-12-22-->
+<!--2012-03-06-->
 <sect2 id="script-fu-perspective-shadow">
   <title lang="en">Perspective</title>
   <title lang="ja">遠近法...</title>
@@ -20,7 +20,7 @@
     <primary>Perspective</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ショウメイトトウエイ">照明と投影</secondary>
     <tertiary sortas="エンキンホウ">遠近法</tertiary>
   </indexterm>
@@ -35,7 +35,7 @@
       <title lang="en">
         Example for the <quote>Perspective</quote> filter
       </title>
-      <title lang="ja"><quote>遠近法</quote>フィルタの使用例</title>
+      <title lang="ja"><quote>遠近法</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -53,7 +53,7 @@
         </imageobject>
         <caption>
           <para lang="en"><quote>Perspective</quote> applied</para>
-          <para lang="ja"><quote>遠近法</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>遠近法</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -68,13 +68,13 @@
       background to make the shadow visible.
     </para>
     <para lang="ja">
-      <guimenuitem>遠近法...</guimenuitem> フィルタは選択範囲
+      <guimenuitem>遠近法...</guimenuitem> フィルターは選択範囲
       もしくはアルファチャンネルの裏に遠近感のある影を作り、 活性レイヤーの
       下側に新たなレイヤーとして加えるスクリプトです。 影の色と長さと方向
       ならびに地平線からの距離を設定してください。
     </para>
     <para lang="ja">
-      必要とあればフィルタは画像の寸法を拡げます。 ただし影を見易くするには
+      必要とあればフィルターは画像の寸法を拡げます。 ただし影を見易くするには
       背景側にレイヤーを置く必要がありますが、 このスクリプトは自動追加を行ない
       ません。
     </para>
@@ -82,7 +82,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can access this filter in the image window menu through
       <menuchoice>
@@ -94,7 +94,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>照明と投影</guisubmenu>
         <guimenuitem>遠近法...</guimenuitem>
       </menuchoice>
@@ -133,7 +133,7 @@
             です。 値の範囲は 0 度から 180 度までで、 90 度がちょうど選択範囲
             もしくはレイヤーの真正面から照らす設定になります。 90 度未満の角度
             にすると影は右側につきますので光源は左側ということになります。 90
-            度を越す角度ならその逆になります。 スライダの位置を光源の位置と
+            度を越す角度ならその逆になります。 スライダーの位置を光源の位置と
             みなしてみると覚え易いでしょう。
           </para>
           <figure>
@@ -226,9 +226,9 @@
             times the selection's height.
           </para>
           <para lang="ja">
-            上図の例では黄色の部分がフィルタを適用した選択範囲です。 中央付近で
-            水平に延びる青色の線が仮想的な水平線です。 選択範囲の底辺と赤く
-            示された線との角度は 45 度です。 赤い線の長さは黄色い選択範囲の
+            上図の例では黄色の部分がフィルターを適用した選択範囲です。 中央
+            付近で水平に延びる青色の線が仮想的な水平線です。 選択範囲の底辺と
+            赤く示された線との角度は 45 度です。 赤い線の長さは黄色い選択範囲の
             高さの 1.8 倍です。 選択範囲の底辺から仮想的水平線まではその距離が
             選択範囲の高さの 2.4 倍です。
           </para>
@@ -359,7 +359,7 @@
             のことです (
             <xref linkend="gimp-layer-properties"/> を参照してください)。
             初期値は 80% ですが 0% (完全透過) から 100% (完全不透明) までの範囲
-            で設定できます。 影の濃度はフィルタ適用後でも 
+            で設定できます。 影の濃度はフィルター適用後でも 
             <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> で
             影のレイヤーの不透明度を変えれば調節が可能です。
           </para>

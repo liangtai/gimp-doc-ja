@@ -5,7 +5,7 @@
   2008-03-12 jpl: fr & en update
   2007-11-27 ude: created (en,de)
 -->
-<!--2012-01-06-->
+<!--2012-03-04-->
 <sect3 id="gimp-using-script-fu-api">
   <title lang="en">
     The Script-Fu parameter API<footnote><para>
@@ -13,7 +13,7 @@
     </para></footnote>
   </title>
   <title lang="ja">
-    Script-Fuパラメータ<acronym>API</acronym>
+    Script-Fu パラメーター<acronym>API</acronym>
     <footnote>
       <para>この節は原文の演習には含まれていません。</para>
     </footnote>
@@ -29,11 +29,11 @@
       shipped with the <acronym>GIMP</acronym> source code.
     </para>
     <para lang="ja">
-      上記のパラメータ型に加え、 操作盤ダイアログ上に使えるさらに多くの
+      上記のパラメーター型に加え、 操作盤ダイアログ上に使えるさらに多くの
       相互対話モード用ウィジェットの型があります。 <acronym>GIMP</acronym>の
       ソースコードとともに配布されているテスト用スクリプト 
       <filename>plug-ins/script-fu/scripts/test-sphere.scm</filename> に
-      そういったパラメータの説明や使用例があります。
+      そういったパラメーターの説明や使用例があります。
     </para>
   </note>
 
@@ -43,7 +43,7 @@
         <row>
           <entry>
             <para lang="en">Param Type</para>
-            <para lang="ja">パラメータの型</para>
+            <para lang="ja">パラメーターの型</para>
           </entry>
           <entry>
             <para lang="en">Description</para>
@@ -70,7 +70,10 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-ADJUSTMENT</function> "<replaceable>label</replaceable>" '(<replaceable>value lower upper step_inc page_inc digits type</replaceable>)
+                <function>SF-ADJUSTMENT</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->'(<replaceable>value lower upper step_inc page_inc <!--
+                -->digits type</replaceable>)
               </synopsis>
             </para>
             <segmentedlist>
@@ -129,7 +132,7 @@
                 <seg lang="en">One of: SF-SLIDER or 0, SF-SPINNER or 1</seg>
                 <seg lang="ja"><replaceable>type</replaceable></seg>
                 <seg lang="ja">
-                  スライダは SF-SLIDER もしくは 0、
+                  スライダーは SF-SLIDER もしくは 0、
                   スピンボックスは SF-SPINNER もしくは 1
                 </seg>
               </seglistitem>
@@ -149,13 +152,17 @@
             <para lang="ja">ダイアログにカラーボタンを作成します。</para>
             <para lang="ja">
               <synopsis>
-                <function>SF-COLOR</function> "<replaceable>label</replaceable>" '(<replaceable>red green blue</replaceable>)
+                <function>SF-COLOR</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->'(<replaceable>red green blue</replaceable>)
               </synopsis>
             </para>
             <para lang="ja">もしくは</para>
             <para lang="ja">
               <synopsis>
-                <function>SF-COLOR</function> "<replaceable>label</replaceable>" "<replaceable>color</replaceable>"
+                <function>SF-COLOR</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->"<replaceable>color</replaceable>"
               </synopsis>
             </para>
             <segmentedlist>
@@ -223,7 +230,7 @@
               <itemizedlist>
                 <para>
                   <acronym>GIMP</acronym>にはこの返し値を手軽に扱えるテキスト
-                  処理プロシージャが 2 つ備わっています。
+                  処理プロシージャーが 2 つ備わっています。
                 </para>
                 <listitem>
                   <para>
@@ -250,7 +257,9 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-FONT</function> "<replaceable>label</replaceable>" "<replaceable>fontname</replaceable>"
+                <function>SF-FONT</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->"<replaceable>fontname</replaceable>"
               </synopsis>
             </para>
             <segmentedlist>
@@ -310,7 +319,10 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-BRUSH</function> "<replaceable>label</replaceable>" '("<replaceable>Brush Name</replaceable>" <replaceable>opacity spacing mode</replaceable>)
+                <function>SF-BRUSH</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->'("<replaceable>Brush Name</replaceable>" <!--
+                --><replaceable>opacity spacing mode</replaceable>)
               </synopsis>
             </para>
             <para lang="ja">
@@ -345,7 +357,7 @@
             <para lang="ja">
               例えば<quote>SF-BRUSH "Brush" '("Circle (03)" 100 44 0)</quote>
               として呼び出してダイアログで何も変更しなかった場合、 返ってくる
-              パラメータは<quote><parameter>'("Circle (03)" 100 44 0)
+              パラメーターは<quote><parameter>'("Circle (03)" 100 44 0)
               </parameter></quote>となります。
             </para>
           </entry>
@@ -378,7 +390,9 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-PATTERN</function> "<replaceable>label</replaceable>" "<replaceable>Pattern Name</replaceable>"
+                <function>SF-PATTERN</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->"<replaceable>Pattern Name</replaceable>"
               </synopsis>
             </para>
             <para lang="ja">
@@ -400,8 +414,8 @@
               スクリプトが呼び出されたときに返される値はパターンの名前をもつ
               文字列変数です。 例えば<quote>SF-PATTERN "Pattern" "Maple
               Leaves"</quote>として呼び出してダイアログで何も変更しなかった
-              場合、 返ってくるパラメータは<quote><parameter>"Maple Leaves"
-              </parameter></quote>となります。
+              場合、 返ってくるパラメーターは
+              <quote><parameter>"Maple Leaves"</parameter></quote>となります。
             </para>
           </entry>
         </row>
@@ -436,7 +450,9 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-GRADIENT</function> "<replaceable>label</replaceable>" "<replaceable>gradientname</replaceable>"
+                <function>SF-GRADIENT</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->"<replaceable>gradientname</replaceable>"
               </synopsis>
             </para>
             <para lang="ja">
@@ -458,8 +474,8 @@
               スクリプトが呼び出されたときに返される値はグラデーションの
               名前をもつ文字列変数です。 例えば<quote><code>SF-GRADIENT 
               "Gradient" "Deep Sea"</code></quote>として呼び出してダイアログ
-              で何も変更しなかった場合、 返ってくるパラメータは<quote>
-              <parameter>"Deep Sea"</parameter></quote>となります。
+              で何も変更しなかった場合、 返ってくるパラメーターは
+              <quote><parameter>"Deep Sea"</parameter></quote>となります。
             </para>
           </entry>
         </row>
@@ -491,7 +507,9 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-PALETTE</function> "<replaceable>label</replaceable>" "<replaceable>Palette Name</replaceable>"
+                <function>SF-PALETTE</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->"<replaceable>Palette Name</replaceable>"
               </synopsis>
             </para>
             <para lang="ja">
@@ -515,8 +533,8 @@
               スクリプトが呼び出されたときに返される値はパレットの名前をもつ
               文字列変数です。 例えば<quote><code>SF-PALETTE "Palette" 
               "Named Colors"</code></quote>として呼び出してダイアログで何も
-              変更しなかった場合、 返ってくるパラメータは<quote><parameter>
-              "Named Colors"</parameter></quote>となります。
+              変更しなかった場合、 返ってくるパラメーターは
+              <quote><parameter>"Named Colors"</parameter></quote>となります。
             </para>
           </entry>
         </row>
@@ -549,7 +567,10 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-FILENAME</function> "<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path/to/file.ext</replaceable>")
+                <function>SF-FILENAME</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->(string-append "" gimp-data-directory <!--
+                -->"<replaceable>path/to/file.ext</replaceable>")
               </synopsis>
             </para>
             <para lang="ja">
@@ -594,13 +615,16 @@
               containing the dirname.
             </para>
             <para lang="ja">
-              対話式操作でのみ有益です。 ファイルではなくディレクトリを選択する
-              ウィジェットであることのほかは <function>SF-FILENAME</function> と
-              酷似しています。
+              対話式操作でのみ有益です。 ファイルではなくディレクトリーを
+              選択するウィジェットであることのほかは 
+              <function>SF-FILENAME</function> と酷似しています。
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-DIRNAME</function> "<replaceable>label</replaceable>" (string-append "" gimp-data-directory "<replaceable>path</replaceable>")
+                <function>SF-DIRNAME</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->(string-append "" gimp-data-directory <!--
+                -->"<replaceable>path</replaceable>")
               </synopsis>
             </para>
             <para lang="ja">
@@ -619,7 +643,7 @@
                   <seg>gimp-data-directory からの相対パス</seg>
                 </seglistitem>
               </segmentedlist>
-              スクリプトが呼び出されたときに返される値はディレクトリ名と
+              スクリプトが呼び出されたときに返される値はディレクトリー名と
               それまでの筋道を記した文字列変数です。
             </para>
           </entry>
@@ -652,7 +676,11 @@
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-OPTION</function> "<replaceable>label</replaceable>" '("<replaceable>option 1</replaceable>" "<replaceable>option 2</replaceable>" [... "<replaceable>option n</replaceable>"])
+                <function>SF-OPTION</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->'("<replaceable>option 1</replaceable>" <!--
+                -->"<replaceable>option 2</replaceable>" <!--
+                -->[... "<replaceable>option n</replaceable>"])
               </synopsis>
             </para>
             <para lang="ja">
@@ -672,7 +700,7 @@
                 </seglistitem>
                 <seglistitem>
                   <seg>"<replaceable>option 2</replaceable>"</seg>
-                  <seg>第2のオプション</seg>
+                  <seg>第 2 のオプション</seg>
                 </seglistitem>
                 <seglistitem>
                   <seg>"<replaceable>option n</replaceable>"</seg>
@@ -710,13 +738,16 @@
             <para lang="ja">
               ダイアログに列挙型リストの選択ウィジェットを作成します。 指定
               された列挙型の項目を並べたコンボボックスが設けられます。 使える
-              列挙型は登録済のものに限られ、 その名前から冒頭の<quote>Gimp
-              </quote>を取り除いた語で指定します。 第2のパラメータには初期
-              設定値を、 その略称で指定します。
+              列挙型は登録済のものに限られ、 その名前から冒頭の
+              <quote>Gimp</quote>を取り除いた語で指定します。 第 2 の
+              パラメーターには初期設定値を、 その略称で指定します。
             </para>
             <para lang="ja">
               <synopsis>
-                <function>SF-ENUM</function> "<replaceable>label</replaceable>" '("<replaceable>enum type</replaceable>" "<replaceable>default choice</replaceable>")
+                <function>SF-ENUM</function> <!--
+                -->"<replaceable>label</replaceable>" <!--
+                -->'("<replaceable>enum type</replaceable>" <!--
+                -->"<replaceable>default choice</replaceable>")
               </synopsis>
             </para>
             <para lang="ja">

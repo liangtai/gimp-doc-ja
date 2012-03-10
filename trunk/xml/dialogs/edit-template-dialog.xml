@@ -10,7 +10,7 @@
   2006-03-01 added Activate Dialog by j.h
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2010-12-22-->
+<!--2012-03-03-->
 <sect3 id="edit-template-dialog">
   <title lang="en">Edit Template</title>
   <title lang="ja">テンプレートを編集</title>
@@ -76,8 +76,7 @@
           In this text box, you can modify the displayed template name.
         </para>
         <para lang="ja">
-          <guilabel>名前</guilabel> 入力欄ではテンプレート
-          名を変更できます。
+          <guilabel>名前</guilabel> 入力欄ではテンプレート名を変更できます。
         </para>
       </listitem>
     </varlistentry>
@@ -110,12 +109,12 @@
           <guimenu>View</guimenu> menu.
         </para>
         <para lang="ja">
-          新しい画像の <guilabel>幅</guilabel> と <guilabel>
-          高さ</guilabel> はここで定めます。 初期設定の単位は
-          既定ではピクセルですが、 その引き出しメニューを操作すれば変更でき
-          ます。 ただし、 別の単位から画面表示ピクセルへの換算については、 後述
-          する <guilabel>詳細設定</guilabel> での X 及び Y 
-          方向の解像度や、 <guimenu>表示</guimenu> メニューの
+          新しい画像の <guilabel>幅</guilabel> と <guilabel>高さ</guilabel> は
+          ここで定めます。 初期設定の単位は既定ではピクセルですが、 
+          その引き出しメニューを操作すれば変更できます。 ただし、 
+          別の単位から画面表示ピクセルへの換算については、 後述する 
+          <guilabel>詳細設定</guilabel> での X 及び Y 方向の解像度や、 
+          <guimenu>表示</guimenu> メニューの
           <xref linkend="gimp-view-dot-for-dot"/> の設定いかんによって
           異なります。
         </para>
@@ -127,9 +126,9 @@
             time for every function you're applying to the image.
           </para>
           <para lang="ja">
-            このとき気を付けていただきたいのは、 画像のあらゆる画素がメモリ上に
-            保管されるということです。 高密度な画素数の多い大きなファイルを作成
-            すると、 画像に何か操作を実行するたびに<acronym>GIMP</acronym>が
+            このとき気を付けていただきたいのは、 画像のあらゆる画素がメモリー
+            上に保管されるということです。 高密度な画素数の多い大きなファイルを
+            作成すると、 画像に何か操作を実行するたびに<acronym>GIMP</acronym>が
             幾許かの時間を費すことになるでしょう。
           </para>
         </note>
@@ -203,18 +202,19 @@
           the Preferences dialog.
         </para>
         <para lang="ja">
-          この 2 つの値は主にプリンタで印刷するときに関わってきます。 画像の
+          この 2 つの値は主にプリンターで印刷するときに関わってきます。 画像の
           画素数は変わりませんが、 印刷物の絵の大きさに違いが出ます。 
-          コンピュータ画面で表示される画像の大きさも、 
+          コンピューター画面で表示される画像の大きさも、 
           画像ウィンドウのメニューで
           <menuchoice>
             <guimenu>表示</guimenu>
-            <guimenuitem>点に点を対応させる</guimenuitem>
+            <guimenuitem>ピクセル等倍</guimenuitem>
           </menuchoice>
           を無効にしたうえで、 表示倍率を等倍にすると、 <acronym>GIMP</acronym>
           は画面上の画素の大きさと解像度を考慮して実物大になるよう調節します。
-          ただしモニタ画面の測定が済んでいない場合は画面表示は不正確です。
-          測定作業は<acronym>GIMP</acronym>の導入時にできますが、 あとからでも
+          ただしモニター画面のキャリブレーション測定が済んでいない場合は
+          画面表示は不正確です。 測定作業は<acronym>GIMP</acronym>の導入時に
+          できますが、 あとからでも
           <link linkend="gimp-prefs-display">環境設定</link> ダイアログの
           <quote>ディスプレイ</quote>のページでディスプレイ画面の実測調整や測定
           ができます。
@@ -311,7 +311,7 @@
             <para>
               日本語文字などのマルチバイト文字はほとんどのファイル形式で使用
               できません。 誤って混入しても何の警告もなく、 保存したときに
-              コメントは削除され空になりますので細心の注意が必要です。
+              コメントはまるごと削除されますので細心の注意が必要です。
             </para>
           </caution>
         </para>

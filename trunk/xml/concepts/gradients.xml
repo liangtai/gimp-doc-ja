@@ -11,7 +11,7 @@
   2005-11-28 Lexa: replaced informalfigures by figures.
   2005-05-08 added french translation
 -->
-<!--2010-12-08-->
+<!--2012-02-28-->
 <sect1 id="gimp-concepts-gradients">
   <title lang="en">Gradients</title>
   <title lang="ja">グラデーション</title>
@@ -84,7 +84,7 @@
     </varlistentry>
     <varlistentry>
       <term lang="en">The Gradient Map filter</term>
-      <term lang="ja">グラデーションマップフィルタ</term>
+      <term lang="ja">グラデーションマップフィルター</term>
       <listitem>
         <para lang="en">
            This filter is now in the Colors menu, and allows you to
@@ -97,13 +97,13 @@
            <xref linkend="plug-in-gradmap"/> for more information.
          </para>
         <para lang="ja">
-           現在このフィルタは
+           現在このフィルターは
            <menuchoice>
              <guimenu>色</guimenu>
              <guisubmenu>マップ</guisubmenu>
              <guimenuitem>グラデーションマップ</guimenuitem>
            </menuchoice>
-           に置かれています。 このフィルタは画素の強度を読みとって現在活性化
+           に置かれています。 このフィルターは画素の強度を読みとって現在活性化
            しているグラデーションから相応の位置の色に置き換えるしくみで画像に
            <quote>着色</quote>が可能となりました。 (強度 0 は最も暗い色をさし、
            グラデーションの左端の色で置き換えられます。 強度が増すにつれ徐々に
@@ -245,7 +245,7 @@
               <quote>Pencil Sketch</quote>ブラシを用いグラデーションで描画;
               <quote>Fuzzy</quote>ブラシを用いて線を描いてから
               <link linkend="plug-in-gradmap">グラデーションマップ</link>
-              フィルタで着色。
+              フィルターで着色。
             </para>
           </caption>
         </mediaobject>
@@ -277,19 +277,20 @@
         gradients transition smoothly between any two colors you want.
       </para>
       <para lang="ja">
-        グラデーションダイアログのリストの最初の 4 つは特別なグラデーションです。
-        これらは固定した色順ではなくツールボックスに示されている描画色と
-        背景色を使います。 <guilabel>描画色から背景色 (RGB)</guilabel> は
-        ツールボックスで表された描画色から背景色へのグラデーションを<acronym>
-        RGB</acronym> 上で表現したものです。 <guilabel>描画色から背景色 (HSV
-        反時計回り)</guilabel> は選択された色相から色相環上を 360 度まで変転する
-        ところを示しています。 <guilabel>描画色から背景色 (HSV 時計回り)
-        </guilabel> は選択された色相から色相環上を 0 度まで進むところを示して
-        います。 <guilabel>描画色から透明へ</guilabel> では選択された色相が
-        徐々に透過していきます。 これらの色は色を変更するダイアログを通して
-        変えられます。 要するにこれらのグラデーションは描画色と背景色を変えれば
-        その 2 色がどんな色でもその間を徐々に移り変わる内容で作成できるという
-        ことです。
+        グラデーションダイアログのリストの最初の 4 つは特別な
+        グラデーションです。 これらは固定した色順ではなくツールボックスに
+        示されている描画色と背景色を使います。
+        <guilabel>描画色から背景色 (RGB)</guilabel> はツールボックスで表された
+        描画色から背景色へのグラデーションを<acronym>RGB</acronym>上で
+        表現したものです。 <guilabel>描画色から背景色 (HSV
+        反時計回り)</guilabel> は選択された色相から色相環上を 360 度まで
+        変転するところを示しています。 <guilabel>描画色から背景色 (HSV
+        時計回り)</guilabel> は選択された色相から色相環上を 0 度まで進む
+        ところを示しています。 <guilabel>描画色から透明へ</guilabel> では
+        選択された色相が徐々に透過していきます。 これらの色は色を変更する
+        ダイアログを通して変えられます。 要するにこれらのグラデーションは
+        描画色と背景色を変えればその 2 色がどんな色でもその間を徐々に移り
+        変わる内容で作成できるということです。
       </para>
     </listitem>
     <listitem>
@@ -305,7 +306,7 @@
         あります。 同梱のグラデーションには全く透過しないものもいくつか
         ありますが、 それ以外は透明もしくは半透明な部分が入っています。  
         完全不透明ではないグラデーションで塗りつぶしたり描画したりすれば、 
-        その下側にあるレイヤの内容が透けて見えることになるでしょう。
+        その下側にあるレイヤーの内容が透けて見えることになるでしょう。
       </para>
     </listitem>
     <listitem>
@@ -317,7 +318,7 @@
         create new ones, and then edit those.
       </para>
       <para lang="ja">
-        <link linkend="gimp-gradient-editor-dialog">グラデーションエディタ
+        <link linkend="gimp-gradient-editor-dialog">グラデーションエディター
         </link> を使って <emphasis>自作の</emphasis> グラデーションが作れます。
         <acronym>GIMP</acronym>に添付されているグラデーションは変更が
         できませんが、 その複製をとるか新規に作成すればそれを編集できます。
@@ -348,21 +349,21 @@
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>に同梱のグラデーションファイルはシステム用の
-    <filename class="directory">gradients</filename> フォルダに入っています。 
-    初期設定では、 自作のグラデーションファイルは個人用の<acronym>GIMP
-    </acronym>ディレクトリ内の <filename class="directory">gradients</filename>
-    フォルダに入れられます。 グラデーションファイル (拡張子 <filename
-    class="extension">.ggr</filename> で終わる名前のファイル) はいずれもどちら
-    かのフォルダ内に入っていて、 <acronym>GIMP</acronym>を起動すると自動的に
-    読み込まれます。 この 2 つのディレクトリ以外のフォルダでもグラデーションを
-    検索させるには、 
+    <filename class="directory">gradients</filename> フォルダーに入っています。 
+    初期設定では、 自作のグラデーションファイルは個人用の
+    <acronym>GIMP</acronym>ディレクトリー内の
+    <filename class="directory">gradients</filename> フォルダーに入れられます。
+    グラデーションファイル (拡張子 <filename class="extension">.ggr</filename>
+    で終わる名前のファイル) はいずれもどちらかのフォルダー内に入っていて、
+    <acronym>GIMP</acronym>を起動すると自動的に読み込まれます。 この 2 つの
+    ディレクトリー以外のフォルダーでもグラデーションを検索させるには、 
     <link linkend="gimp-prefs-folders-data">環境設定</link> ダイアログの左側の
     一覧から 
     <menuchoice>
-      <guimenu>フォルダ</guimenu>
+      <guimenu>フォルダー</guimenu>
       <guimenuitem>グラデーション</guimenuitem>
     </menuchoice>
-    をクリックして出てくるページでそのフォルダを追加してください。
+    をクリックして出てくるページでそのフォルダーを追加してください。
   </para>
   <para lang="ja">
     <application><acronym>GIMP</acronym> 2.2</application> から新たに
@@ -370,9 +371,9 @@
     なりました。 <acronym>SVG</acronym>形式はベクター画像を扱う多くの
     プログラムで使われています。 <acronym>GIMP</acronym>に
     <acronym>SVG</acronym>形式のグラデーションファイルを読み込ませる方法はただ
-    単にそのファイルを個人用の<acronym>GIMP</acronym>ディレクトリ内の 
-    <filename class="directory">gradients</filename> フォルダか、 
-    あるいは検索パスに登録した他のフォルダに入れることだけです。
+    単にそのファイルを個人用の<acronym>GIMP</acronym>ディレクトリー内の 
+    <filename class="directory">gradients</filename> フォルダーか、 
+    あるいは検索パスに登録した他のフォルダーに入れることだけです。
   </para>
   <tip>
     <para lang="en">
@@ -387,7 +388,7 @@
       ありますが、 とくに OpenClipArt Gradients
       <xref linkend="bibliography-online-openclipart-gradients"/>
       を挙げておきましょう。 ただし<acronym>SVG</acronym>形式の画像ファイルを
-      表示できるブラウザでないとどんなグラデーションの内容なのかが判らずに
+      表示できるブラウザーでないとどんなグラデーションの内容なのかが判らずに
       ダウンロードすることになります。
       </para>
   </tip>

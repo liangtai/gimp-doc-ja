@@ -6,7 +6,7 @@
    2008-06-07 ude: added new sections: Refresh, Console, Server
    2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2012-01-07-->
+<!--2012-03-08-->
 <sect2 id="gimp-filters-script-fu">
   <title lang="en">The <quote>Script-Fu</quote> Submenu</title>
   <title lang="ja"><quote>Script-Fu</quote>サブメニュー</title>
@@ -61,7 +61,7 @@
         <para lang="ja">
           画像ウィンドウのメニューより
           <menuchoice>
-            <guimenu>フィルタ</guimenu>
+            <guimenu>フィルター</guimenu>
             <guisubmenu>Script-Fu</guisubmenu>
           </menuchoice>
         </para>
@@ -122,7 +122,7 @@
     </para>
     <figure>
       <title lang="en">Script-Fu Console</title>
-      <title lang="ja">Script-Fuコンソール</title>
+      <title lang="ja">Script-Fu コンソール</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -160,8 +160,8 @@
           <para lang="ja">
             <guibutton>参照</guibutton> ボタンは Scheme 命令の
             記入欄の右隣にあります。 クリックすると 
-            <link linkend="plug-in-dbbrowser">プロシージャブラウザ</link> が
-            開かれます。 プロシージャブラウザには 
+            <link linkend="plug-in-dbbrowser">プロシージャーブラウザー</link> が
+            開かれます。 プロシージャーブラウザーには 
             <guibutton>適用</guibutton> ボタンがついています。
           </para>
           <mediaobject>
@@ -174,7 +174,7 @@
                 The additional button of the Procedure Browser
               </para>
               <para lang="ja">
-                プロシージャブラウザから取り込むためのボタン
+                プロシージャーブラウザーから取り込むためのボタン
               </para>
             </caption>
           </mediaobject>
@@ -184,8 +184,8 @@
             text box:
           </para>
           <para lang="ja">
-            プロシージャブラウザの <guibutton>適用</guibutton> ボタンを
-            クリックすると、 ブラウザで選択した手続き命令のコードが
+            プロシージャーブラウザーの <guibutton>適用</guibutton> ボタンを
+            クリックすると、 ブラウザーで選択した手続き命令のコードが
             コンソールの Scheme 命令記入欄に貼り付けられます。
           </para>
           <mediaobject>
@@ -202,7 +202,7 @@
               <para lang="ja">
                 取り込まれた
                 <link linkend="glossary-pdb"><acronym>PDB</acronym></link>
-                手続き命令 (プロシージャ)
+                手続き命令 (プロシージャー)
               </para>
             </caption>
           </mediaobject>
@@ -213,7 +213,7 @@
             <keycap>Enter</keycap>.
           </para>
           <para lang="ja">
-            そうしたらもうパラメータの名前 (上図の例では<quote>layer</quote>と
+            そうしたらもうパラメーターの名前 (上図の例では<quote>layer</quote>と
             <quote>mode</quote>) を値に置き換えるだけで、 あとは 
             <keycap>Enter</keycap> を押せばよいのです。
           </para>
@@ -233,7 +233,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <!-- gtk/gtkstock.c:328 -->
+        <!-- gtk/gtkstock.c:329 -->
         <term lang="en">Clear</term>
         <term lang="ja">クリア</term>
         <listitem>
@@ -264,7 +264,7 @@
             ウィンドウ、 つまりScript-Fuの出力表示の内容をそっくりそのまま (
             エコーバック行の<quote><code>&gt;</code></quote>記号も含め) 
             テキスト形式のファイルとして保存します。 ボタンをクリックすると
-            ファイルブラウザが開かれますので保管場所とファイル名を指定して
+            ファイルブラウザーが開かれますので保管場所とファイル名を指定して
             ください。
           </para>
         </listitem>
@@ -274,19 +274,19 @@
 
   <sect3 id="plug-in-script-fu-server">
     <title lang="en">Start Server</title>
-    <title lang="ja">サーバスタート...</title>
+    <title lang="ja">サーバースタート...</title>
     <para lang="en">
       This command will start a server, which reads and executes Script-Fu
       (Scheme) statements you send him via a specified port.
     </para>
     <para lang="ja">
-      <guimenuitem>サーバスタート...</guimenuitem> コマンドは
-      サーバプログラムを起動します。 起動時に指定したポートを介してサーバに
+      <guimenuitem>サーバースタート...</guimenuitem> コマンドは
+      サーバープログラムを起動します。 起動時に指定したポートを介してサーバーに
       Script-Fu 命令 (Scheme 言語のコード) を送ると解釈され実行されます。
     </para>
     <figure>
       <title lang="en">The Script-Fu Server Options</title>
-      <title lang="ja">Script-Fu サーバオプション</title>
+      <title lang="ja">Script-Fu サーバーオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -297,7 +297,7 @@
     <variablelist>
       <varlistentry>
         <term lang="en">Server Port</term>
-        <term lang="ja">サーバポート</term>
+        <term lang="ja">サーバーポート</term>
         <listitem>
           <para lang="en">
             The port number where the Script-Fu server will listen. It is
@@ -305,15 +305,15 @@
             numbers, of course.
           </para>
           <para lang="ja">
-            この番号のポートを介しScript-Fuサーバが送受信します。 サーバは複数
-            起動させることも可能ですが、 もちろん互いに異なるポート番号を指定
-            しなければなりません。
+            この番号のポートを介し Script-Fu サーバーが送受信します。 
+            サーバーは複数起動させることも可能ですが、 もちろん互いに異なる
+            ポート番号を指定しなければなりません。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Server Logfile</term>
-        <term lang="ja">サーバログファイル</term>
+        <term lang="ja">サーバーログファイル</term>
         <listitem>
           <para lang="en">
             Optionally you can specify the name of a file the server will use
@@ -321,8 +321,8 @@
             messages will be written to stdout.
           </para>
           <para lang="ja">
-            必須ではありませんがここでファイル名を指定するとサーバが発する不正
-            や事故のメッセージがそのファイルに書き込まれます。 ファイル名を
+            必須ではありませんがここでファイル名を指定するとサーバーが発する
+            不正や事故のメッセージがそのファイルに書き込まれます。 ファイル名を
             指定しない場合はメッセージが標準出力に送られます。
           </para>
         </listitem>
@@ -330,13 +330,13 @@
     </variablelist>
     <itemizedlist>
       <title lang="en">The Script-Fu Server Protocol</title>
-      <title lang="ja">Script-Fu サーバのプロトコル</title>
+      <title lang="ja">Script-Fu サーバーのプロトコル</title>
       <para lang="en">
         The protocol used to communicate with the Script-Fu server is very
         simple:
       </para>
       <para lang="ja">
-        Script-Fu サーバと交信するためのプロトコルはとても単純です。
+        Script-Fu サーバーと交信するためのプロトコルはとても単純です。
       </para>
       <listitem>
         <para lang="en">
@@ -344,12 +344,12 @@
           the server has to be preceded with the following 3 bytes:
         </para>
         <para lang="ja">
-          サーバに送るメッセージ (Script-Fu 命令文) にはいずれもその文字列の
+          サーバーに送るメッセージ (Script-Fu 命令文) にはいずれもその文字列の
           長さ <code>L</code> を含むつぎのような 3 バイトを頭に付加します。
         </para>
         <table>
           <title lang="en">Header format for commands</title>
-          <title lang="ja">コマンドのヘッダ部の形式</title>
+          <title lang="ja">コマンドのヘッダー部の形式</title>
           <tgroup cols="3">
             <thead>
               <row lang="en">
@@ -404,13 +404,13 @@
           length <code>L</code> will be preceded with the following 4 bytes:
         </para>
         <para lang="ja">
-          サーバが返すメッセージ (返し値もしくはエラーメッセージ) にはいずれも
+          サーバーが返すメッセージ (返し値もしくはエラーメッセージ) にはいずれも
           その文字列の長さ <code>L</code> を含むつぎのような 4 バイトが
           付加されています。
         </para>
         <table>
           <title lang="en">Header format for responses</title>
-          <title lang="ja">返し値のヘッダ部の形式</title>
+          <title lang="ja">返し値のヘッダー部の形式</title>
           <tgroup cols="3">
             <thead>
               <row lang="en">
@@ -479,10 +479,10 @@
       </para>
       <para lang="ja">
         面倒くさそうですか? それなら 
-        <application><acronym>GIMP</acronym> 2.7 <application> 版 (2.8 用
+        <application><acronym>GIMP</acronym> 2.7<application> 版 (2.8 用
         開発者版) のソースコードに含まれている 
         <application>servertest.py</application> という名前の Python 
-        スクリプトはいかがでしょう。 これは Script-Fu サーバと交信できる
+        スクリプトはいかがでしょう。 これは Script-Fu サーバーと交信できる
         単純なコマンドライン端末用プログラムです。
       </para>
     </tip>

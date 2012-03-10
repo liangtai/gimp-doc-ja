@@ -7,7 +7,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-09 de added by axel.wernicke
 -->
-<!--2010-12-09-->
+<!--2012-03-05-->
 <sect2 id="plug-in-newsprint">
   <title lang="en">Newsprint</title>
   <title lang="ja">新聞印刷...</title>
@@ -21,7 +21,7 @@
     <primary>Newsprint</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ヘンケイ">変形</secondary>
     <tertiary sortas="シンブンインサツ">新聞印刷</tertiary>
   </indexterm>
@@ -35,7 +35,7 @@
     <figure>
     <figure>
       <title lang="en">Applying example for the Newsprint filter</title>
-      <title lang="ja">新聞印刷フィルタの適用例</title>
+      <title lang="ja">新聞印刷フィルターの適用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -53,7 +53,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Newsprint</quote> applied</para>
-          <para lang="ja"><quote>新聞印刷</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>新聞印刷</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -93,15 +93,15 @@
       fully black to fully white may be controlled.
     </para>
     <para lang="ja">
-      <guimenuitem>新聞印刷...</guimenuitem> フィルタは団子状
-      のドットを用いたディザリングにより画像を網点化します。 網点とは多段階の
-      灰色濃淡画像や色変化に連続性のあるカラー画像を、 ある種の印刷機や植字機の
-      ような 2 階調デバイスをはじめとする色数の極めて限られたデバイスで描画する
-      ための処理方法です。
+      <guimenuitem>新聞印刷...</guimenuitem> フィルターは団子状のドットを
+      用いたディザリングにより画像を網点化します。 別名ハーフトーンフィルター
+      ともいいます。 網点とはもともと多階調な灰色濃淡画像だとか色変化に
+      連続性のあったカラー画像を、 色数の極めて限られたある種の印刷機や
+      植字機のような 2 階調デバイスなどで描画するための処理方法です。
     </para>
     <para lang="ja">
       基本的前提として解像度の向上と色深度の擬似的増強は相反関係にあります
-      (空間的なディザ処理で知られていることです)。
+      (空間的なディザー処理で知られていることです)。
     </para>
     <para lang="ja">
       網点化にはいろいろな技法が考えられていますが、 一番簡単な方法は色の階調
@@ -111,9 +111,10 @@
       低下しません。
     </para>
     <para lang="ja">
-      このフィルタは整列させた密集ドットによるディザ処理を用います。 これは画像
-      の微小な区画を小さな点で描き、 画像上でのその区画を表現するのに必要な強度
-      に応じて点の大きさを伸縮させる表現方法であり、 画像の解像度は下がります。
+      このフィルターは整列させた密集ドットによるディザ処理を用います。 これは
+      画像の微小な区画を小さな点で描き、 画像上でのその区画を表現するのに必要な
+      強度に応じて点の大きさを伸縮させる表現方法であり、 画像の解像度は
+      下がります。
     </para>
     <para lang="ja">
       仮に元画像の上に方眼をかぶせてみたと想像してください。 画像は格子線で
@@ -132,7 +133,7 @@
 
   <sect3>
     <title lang="en">Starting filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -144,7 +145,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>変形</guisubmenu>
         <guimenuitem>新聞印刷...</guimenuitem>
       </menuchoice>
@@ -156,7 +157,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Newsprint</quote> filter options</title>
-      <title lang="ja"><quote>新聞印刷</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>新聞印刷</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -184,7 +185,7 @@
             <guilabel>プレビュー</guilabel> オプションを有効
             にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
-            お使いのコンピュータが処理に時間を多く費すときはプレビューに
+            お使いのコンピューターが処理に時間を多く費すときはプレビューに
             チェックを入れっぱなしにしないのがコツです。
           </para>
         </listitem>
@@ -198,7 +199,7 @@
             output resolutions, or directly.
           </para>
           <para lang="ja">
-            これら 3 つのスライダは微小区画の大きさを直接もしくは
+            これら 3 つのスライダーは微小区画の大きさを直接もしくは
             入出力解像度で調節します。
           </para>
           <variablelist>
@@ -380,11 +381,11 @@
           <para lang="ja">
             厳密な意味では網点処理にアンチエイリアス化は必要ありません。 その
             目的自体が色深度の低減にあるからです。 だけどこのプラグインにとって
-            は特殊効果という位置付けなので、 出力結果は白黒プリンタだけとは
-            限らずコンピュータ画面にも現れます。 というわけで紙の上でインクが
+            は特殊効果という位置付けなので、 出力結果は白黒プリンターだけとは
+            限らずコンピューター画面にも現れます。 というわけで紙の上でインクが
             擦れた感じを再現するためにちょっとアンチエイリアスをかけると結構
             便利です。 紙に実際に印刷するつもりならアンチエイリアス化の値は 1
-            (つまりオフ) にしてください。
+            に (つまりオフに) してください。
           </para>
           <variablelist>
             <varlistentry>

@@ -6,7 +6,7 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2010-11-23-->
+<!--2012-03-04-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
@@ -31,12 +31,12 @@
     Script-Fu.
   </para>
   <para lang="ja">
-    この訓練過程はScript-Fuを扱う上で必須のScheme言語の基礎を身につけ、 例題
-    で便利なスクリプトを書いて道具箱に収めるまでを修めていただきます。 例題の
-    スクリプトはユーザに語句の入力を促し、 そのテキストの大きさにぴったり合う
-    画像を新たに作成します。 つづいてテキストまわりに余裕をもたせる空隙を
-    つくれるようにスクリプトを改造します。 少しずつScript-Fuの知識が身に
-    つくよう、 ここでとりあげる議題は最小限にとどめることにしました。
+    この訓練過程は Script-Fu を扱う上で必須の Scheme 言語の基礎を身につけ、 
+    例題で便利なスクリプトを書いて道具箱に収めるまでを修めていただきます。 
+    例題のスクリプトはユーザーに語句の入力を促し、 そのテキストの大きさに
+    ぴったり合う画像を新たに作成します。 つづいてテキストまわりに余裕をもたせる
+    空隙をつくれるようにスクリプトを改造します。 少しずつ Script-Fu の知識が
+    身につくよう、 ここでとりあげる議題は最小限にとどめることにしました。
   </para>
   <note>
     <para lang="en">
@@ -48,16 +48,16 @@
       この節は <application><acronym>GIMP</acronym> 1</application> 用の
       ユーザーマニュアルに掲載されたマイク・テリー氏著の演習 (日本語訳は 
       <ulink url="http://www.geocities.jp/gimpfile/gum_jp/43.html">
-      マイク・テリーのScript-Fu黒帯道場</ulink>) を再編成したものです。
+      マイク・テリーの Script-Fu 黒帯道場</ulink>) を再編成したものです。
     </para>
   </note>
 
   <sect2 id="gimp-using-script-fu-tutorial-scheme">
     <title lang="en">Getting Acquainted With Scheme</title>
-    <title lang="ja">Schemeに精通</title>
+    <title lang="ja">Scheme に精通</title>
     <sect3>
       <title lang="en">Let's Start Scheme'ing</title>
-      <title lang="ja">Schemeをはじめよう</title>
+      <title lang="ja">Scheme をはじめよう</title>
       <para lang="en">The first thing to learn is that:</para>
       <para lang="ja">最もはじめに学んでほしいことは、</para>
       <blockquote>
@@ -65,7 +65,7 @@
           Every statement in Scheme is surrounded by parentheses ().
         </para>
         <para lang="ja">
-          Scheme言語ではどんな構文も丸括弧 () でくくられること
+          Scheme 言語ではどんな構文も丸括弧 () でくくられること
         </para>
       </blockquote>
       <para lang="en">The second thing you need to know is that:</para>
@@ -73,7 +73,7 @@
         そのつぎに覚えてほしいことは、
         <blockquote>
           <para>
-            関数名や演算子は常に括弧内の先頭に置かれ、 つづくパラメータが
+            関数名や演算子は常に括弧内の先頭に置かれ、 つづくパラメーターが
             その関数や演算子に渡されること
           </para>
         </blockquote> です。
@@ -99,13 +99,13 @@
       <para lang="ja">
         もちろん括弧でくくられるのは関数だけにとどまりません。 リストと
         呼ばれる一連の項目の羅列も括弧でくくります。 これについてはあとで
-        触れます。 Schemeは前置記法の規則にしたがい関数が式の最初に来ます。 
+        触れます。 Scheme は前置記法の規則にしたがい関数が式の最初に来ます。 
         後置記法に馴染みのある方や<acronym>HP</acronym>社製のほとんどの種類の
-        電卓のような逆ポーランド記法の電卓をお持ちの方にとってはSchemeで式を
+        電卓のような逆ポーランド記法の電卓をお持ちの方にとっては Scheme で式を
         書けるようになるのに問題はないはずです。
       </para>
       <para lang="ja">
-        3つ目にご理解いただきたいことは、
+        3 つ目にご理解いただきたいことは、
         <blockquote>
           <para>
             算数で使われている演算子も関数の一種とみなされており、 数式を
@@ -151,7 +151,7 @@
           </para>
           <para lang="ja">
             前置記法では <userinput>+ 1 23</userinput> と書きます。 
-            Scheme言語はこの方式です。
+            Scheme 言語はこの方式です。
           </para>
         </listitem>
         <listitem>
@@ -178,7 +178,7 @@
 
     <sect3>
       <title lang="en">Practicing In Scheme</title>
-      <title lang="ja">Schemeの練習</title>
+      <title lang="ja">Scheme の練習</title>
       <para lang="en">
         Now, let's practice what we have just learned. Start up
         <acronym>GIMP</acronym>, if you have not already done so, and choose
@@ -195,12 +195,12 @@
         では早速学んだことを練習してみましょう。 まだ<acronym>GIMP</acronym>
         が動いていなければ立て上げます。 そして画像ウィンドウのメニューから
         <menuchoice>
-          <guimenu>フィルタ</guimenu>
+          <guimenu>フィルター</guimenu>
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>Script-Fu コンソール</guimenuitem>
         </menuchoice>
         と進んでいただくと<quote>Script-Fu コンソール</quote>が開きます。 
-        これはScheme言語を対話的に作動させる目的で作られた機能です。 間も無く
+        これは Scheme 言語を対話的に作動させる目的で作られた機能です。 間も無く
         <quote>Script-Fu コンソール</quote>が現れます。
       </para>
     </sect3>
@@ -215,10 +215,10 @@
         start out easy, and add some numbers:
       </para>
       <para lang="ja">
-        ウィンドウの下部にある一行記入欄はかつて <guilabel>現在のコマンド
-        </guilabel> とタイトルがついていました。 このコンソールでSchemeの単純
-        なコマンドが対話的に試せます。 まずは気楽に括弧から書きはじめ、 数字
-        を加えてみます。
+        ウィンドウの下部にある一行記入欄はかつて 
+        <guilabel>現在のコマンド</guilabel> とタイトルがついていました。 この
+        コンソールで Scheme の単純なコマンドが対話的に試せます。 まずは気楽に
+        括弧から書きはじめ、 数字を加えてみます。
       </para>
       <programlisting>(+ 3 5)</programlisting>
       <para lang="en">
@@ -227,11 +227,11 @@
       </para>
       <para lang="ja">
         このように記入したら <keycap>Enter</keycap> を押して送ると期待通りの
-        8という答えが中央のウィンドウに表示されます。
+        8 という答えが中央のウィンドウに表示されます。
       </para>
       <figure>
         <title lang="en">Use Script-Fu Console.</title>
-        <title lang="ja">Script-Fuコンソールを使う</title>
+        <title lang="ja">Script-Fu コンソールを使う</title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
@@ -246,7 +246,7 @@
       </para>
       <para lang="ja">
         ではもっとたくさんの数値を合算させたいときはどうすれば
-        よいのでしょう。 <quote>+</quote>の機能は2つ以上の引数を渡せるので
+        よいのでしょう。 <quote>+</quote>の機能は 2 つ以上の引数を渡せるので
         これは難しくありません。
       </para>
       <programlisting>(+ 3 5 6)</programlisting>
@@ -256,11 +256,11 @@
         immediately in the Script-Fu Console window. Now for a word of
         caution&hellip;
       </para>
-      <para lang="ja">この式も期待通りの答えとなる14を返します。</para>
+      <para lang="ja">この式も期待通りの答えとなる 14 を返します。</para>
       <para lang="ja">
-        ここまではよろしいですか。 Scheme構文を<quote>Script-Fuコンソール
-        </quote>で実行すれば直ちに答えが返されます。 ではここで注意を申し
-        上げます。
+        ここまではよろしいですか。 Scheme 構文を
+        <quote>Script-Fu コンソール</quote>で実行すれば直ちに答えが返されます。 
+        ではここで注意を申し上げます。
       </para>
     </sect3>
 
@@ -279,9 +279,10 @@
       <para lang="ja">
         複雑な数式を書くときも読むときもその構成をはっきりさせる目的で部分
         ごとに括弧をつけることを私などはよくやりますが、 そういう人はどこでも
-        好きなところに括弧をつけ足す習慣がついています。 ところがSchemeでは
+        好きなところに括弧をつけ足す習慣がついています。 ところが Scheme では
         そういった余分な括弧を書かないよう気をつけねばなりません。 例えばもし
-        5たす6の結果に3[や7]を足そうとしたら普通はこんな風に書くでしょう。
+        5 たす 6 の結果に 3 [や 7] を足そうとしたら普通はこんな風に
+        書くでしょう。
       </para>
       <programlisting>3 + (5 + 6) + 7 = ?</programlisting>
       <para lang="en">
@@ -304,10 +305,10 @@
         The correct way to write the above statement would be:
       </para>
       <para lang="ja">
-        でもこれは間違いです。 Schemeの構文はいずれも丸括弧ではじまり丸括弧で
-        終わることを思い出してください。 Schemeのインタープリタは2つめの括弧
-        に出会ったときに括弧内の数値を足すのではなく先頭の<quote>5</quote>と
-        いう関数で始まる式の答えを出して3に足そうとします。
+        でもこれは間違いです。 Scheme の構文はいずれも丸括弧ではじまり丸括弧で
+        終わることを思い出してください。 Scheme のインタープリターは 2 つめの
+        括弧に出会ったときに括弧内の数値を足すのではなく先頭の<quote>5</quote>と
+        いう関数で始まる式の答えを出して 3 に足そうとします。
       </para>
       <para lang="ja">正しい記法はつぎのようにします。</para>
       <programlisting>(+ 3 (+ 5 6) 7)</programlisting>
@@ -322,8 +323,8 @@
         operators to properly form an expression:
       </para>
       <para lang="ja">
-        C/C++やPerlやJavaのような他のプログラミング言語に慣れ親しんだ人なら
-        演算子の周囲に空白をどう置くか注意しなくても数式は適切に書けると
+        C/C++ や Perl や Java のような他のプログラミング言語に慣れ親しんだ
+        人なら演算子の周囲に空白をどう置くか注意しなくても数式は適切に書けると
         思っているはずです。
       </para>
       <programlisting>
@@ -340,13 +341,13 @@
         Console until you're totally comfortable with these initial concepts.
       </para>
       <para lang="ja">
-        C/C++とPerlとJavaのコンパイラは上の数式のいずれも受け入れます。 
-        ところが同じ規則がSchemeには通用しません。 Schemeでは数式記号や関数名
-        や演算子のあとに空白を置かなければSchemeインタープリタに正しく解釈
-        してもらえません。
+        C/C++ と Perl と Java のコンパイラは上の数式のいずれも受け入れます。 
+        ところが同じ規則が Scheme には通用しません。 Scheme では数式記号や
+        関数名や演算子のあとに空白を置かなければ Scheme インタープリターに
+        正しく解釈してもらえません。
       </para>
       <para lang="ja">
-        Script-Fuコンソールを使ってもうすこしの間簡単な数式で練習を積み、 
+        Script-Fu コンソールを使ってもうすこしの間簡単な数式で練習を積み、 
         以上の基本的な構えにすっかり慣れるようにしてください。
       </para>
     </sect3>
@@ -362,7 +363,7 @@
       start with the variables.
     </para>
     <para lang="ja">
-      さて今、 どんなScheme構文も丸括弧でくくられること、 関数名や演算子は
+      さて今、 どんな Scheme 構文も丸括弧でくくられること、 関数名や演算子は
       その先頭に置かれることが判りましたが、 つぎは変数の作り方と使い方や、
       関数の作り方と使い方を知っておかなければなりません。 まずは変数から始め
       ましょうか。
@@ -381,9 +382,9 @@
         initialized to 1 and 2, respectively, you'd write:
       </para>
       <para lang="ja">
-        変数の定義のしかたには2通りの方法があるのですが、 <command>let*
-        </command> を使う方が好まれています。 他のプログラミング言語に馴染
-        まれた方には、 この定義文が局所 (ローカル) 変数の定義と有効な
+        変数の定義のしかたには2通りの方法があるのですが、 
+        <command>let*</command> を使う方が好まれています。 他のプログラミング
+        言語に馴染まれた方には、 この定義文が局所 (ローカル) 変数の定義と有効な
         スコープを定めるコードと同じだと申しあげておきます。 具体的には
         例えば a と b の 2 変数を定義してそれぞれ 1 と 2 で初期化[し、 合算]
         するのなら、
@@ -410,7 +411,7 @@
           We'll talk a bit more about this in the section on White Space.
         </para>
         <para lang="ja">
-          コンソールウィンドウでは1行にまとめて記入しなければなりません。 
+          コンソールウィンドウでは 1 行にまとめて記入しなければなりません。 
           でも普通はスクリプトが見易くなるように字下げを適宜行ないたい
           ですよね。 この節で空白文字についてもう少し掘り下げて説明します。
         </para>
@@ -420,7 +421,7 @@
         prints the sum of the two variables.
       </para>
       <para lang="ja">
-        このコードは a と b の2つの変数を定義して初期化し、 両局所変数の
+        このコードは a と b の 2 つの変数を定義して初期化し、 両局所変数の
         合算を表示して終わります。
       </para>
     </sect3>
@@ -447,10 +448,11 @@
       </para>
       <para lang="ja">
         その理由はスクリプト内に書かれた <code>let*</code> 式がそこで定義した
-        変数の利用可能な範囲を決めているためです。 もし <userinput>(+ a b)
-        </userinput> 式を <userinput>(let* &hellip;)</userinput> のあとに
-        置いたのなら、 <code>let*</code> 式内で定義しておいた変数はこの式内で
-        しか使えないのでエラーとなります。 このような変数のことをプログラマは
+        変数の利用可能な範囲を決めているためです。 もし 
+        <userinput>(+ a b)</userinput> 式を
+        <userinput>(let* &hellip;)</userinput> のあとに置いたのなら、 
+        <code>let*</code> 式内で定義しておいた変数はこの式内でしか使えないので
+        エラーとなります。 このような変数のことをプログラマは
         ローカル (局所) 変数と呼んでいるのです。
       </para>
     </sect3>
@@ -479,7 +481,7 @@
       </para>
       <para lang="ja">
         となります。 <userinput>(a 2)</userinput> のようにして変数を括弧内で
-        定義します。 <replaceable>式</replaceable> はSchemeで通用
+        定義します。 <replaceable>式</replaceable> は Scheme で通用
         する表現を与えます。 繰り返しますが使ってよい変数は <code>let*</code>
         構文内で定義した変数だけです。 これらを局所変数というのでした。
       </para>
@@ -502,12 +504,12 @@
       <para lang="ja">
         先程、 スクリプトは字下げをして明確でまとまりのある書き方ができると
         申し上げました。 やってみたいと思われたことでしょう。 身に付けると
-        良い習慣ですし、 Scheme言語に問題を起こすことはありません。 空白文字
-        はいくら増やしてもSchemeインタープリタが無視しますので、 自由に
-        使ってスクリプトを判り易くまとめるのに役立てられます。 ただし
-        Script-Fuコンソール上でだけは式全体を1行に書く必要があります。 つまり
+        良い習慣ですし、 Scheme 言語に問題を起こすことはありません。 空白文字
+        はいくら増やしても Scheme インタープリターが無視しますので、 自由に
+        使ってスクリプトを判り易くまとめるのに役立てられます。 ただし Script-Fu
+        コンソール上でだけは式全体を 1 行に書く必要があります。 つまり
         式の最初の括弧 <code>(</code> から最後の括弧 <code>)</code> までが
-        Script-Fuコンソールの1行記入欄の中に全部入らなくてはなりません。
+        Script-Fu コンソールの 1 行記入欄の中に全部入らなくてはなりません。
       </para>
     </sect3>
 
@@ -536,7 +538,7 @@
       </para>
       <para lang="ja">
         この構文がどんなことをしているかあててみてください。 そうしたら
-        Script-Fuコンソールに実際に書き込んで試してみましょう。
+        Script-Fu コンソールに実際に書き込んで試してみましょう。
       </para>
       <note>
         <para lang="en">
@@ -547,7 +549,7 @@
         <para lang="ja">
           例題に<quote><code>\</code></quote>記号が書かれていることがあり
           ますが、 これは実際は改行していないことを示しています。 この文字は
-          無視し、 そのまま次の行の内容を続けてください。 つまりScript-Fu
+          無視し、 そのまま次の行の内容を続けてください。 つまり Script-Fu
           コンソールではこの文字は記入せず、 また <keycap>Enter</keycap> も
           途中で押してはいけません。
         </para>
@@ -578,7 +580,7 @@
         (define
            (
               <replaceable>関数名</replaceable>
-              <replaceable>パラメータの一群</replaceable>
+              <replaceable>パラメーターの一群</replaceable>
            )
            <replaceable>式</replaceable>
         )
@@ -592,10 +594,10 @@
       </para>
       <para lang="ja">
         ここで <replaceable>関数名</replaceable> には関数につけられた名前を、 
-        <replaceable>パラメータの一群</replaceable> にはひとつもしくは複数の
-        パラメータの名前もしくは値を空白で区切って並べます。 <replaceable>式
-        </replaceable> には関数が呼ばれたときに実行する一連の式を書きます。
-        例えば、
+        <replaceable>パラメーターの一群</replaceable> にはひとつもしくは複数の
+        パラメーターの名前もしくは値を空白で区切って並べます。 
+        <replaceable>式</replaceable> には関数が呼ばれたときに実行する一連の
+        式を書きます。 例えば、
       </para>
       <programlisting>(define (AddXY inX inY) (+ inX inY) )</programlisting>
       <para lang="en">
@@ -610,14 +612,14 @@
         this function definition when compared to other programming languages.
       </para>
       <para lang="ja">
-        の関数定義では <varname>AddXY</varname> が関数名であり、 <varname>inX
-        </varname> と <varname>inY</varname> が変数名です。 この関数は2つの
-        パラメータを受けとり両者の和を返します。
+        の関数定義では <varname>AddXY</varname> が関数名であり、 
+        <varname>inX</varname> と <varname>inY</varname> が変数名です。 この
+        関数は 2 つのパラメーターを受けとり両者の和を返します。
       </para>
       <para lang="ja">
-        C/C++やJavaやPascalのような他の命令型言語のプログラミングを経験された
-        方はそういった言語と比べて見るとこの関数定義に2つのことがらが抜け
-        落ちていることに気付かれたことでしょう。
+        C/C++ や Java や Pascal のような他の命令型言語のプログラミングを
+        経験された方はそういった言語と比べて見るとこの関数定義に 2 つの
+        ことがらが抜け落ちていることに気付かれたことでしょう。
       </para>
       <itemizedlist>
         <listitem>
@@ -629,7 +631,7 @@
             writing.
           </para>
           <para lang="ja">
-            ひとつめはどのパラメータにも<quote>型</quote>がありません。 
+            ひとつめはどのパラメーターにも<quote>型</quote>がないことです。 
             つまり文字列型とか整数型といった宣言が見あたりません。 Scheme
             言語は型なし言語なのです。 この特徴があるので手軽に素早く
             スクリプトが書けます。
@@ -645,7 +647,7 @@
           </para>
           <para lang="ja">
             ふたつめは関数が得た結果の値を<quote>返す</quote>ことに気を
-            とられる必要がありません。 一連の式のうち最後の式の値が関数を
+            とられる必要がないことです。 一連の式のうち最後の式の値が関数を
             呼んだところに<quote>返され</quote>ます。 コンソールで試しに
             つぎのような式を書いてみて関数のはたらきを確かめましょう。
           </para>
@@ -663,7 +665,7 @@
       murky swamps of Scheme's lists.
     </para>
     <para lang="ja">
-      変数と関数の鍛錬をしたばかりですが、 ここからはSchemeのリストの
+      変数と関数の鍛錬をしたばかりですが、 ここからは Scheme のリストの
       霧靄立ち籠める湿地に足を踏み入れます。
     </para>
 
@@ -711,8 +713,8 @@
       </para>
       <para lang="ja">
         変数は単なる値のみならず一連の他の値をまとめたリストを指す
-        こともできます。 値 1、 3、 5 からなるリストを変数 <varname>x
-        </varname> に代入するにはこのように書きます。
+        こともできます。 値 1、 3、 5 からなるリストを変数 
+        <varname>x</varname> に代入するにはこのように書きます。
       </para>
       <programlisting>(let* ( (x '(1 3 5))) x)</programlisting>
       <para lang="en">
@@ -721,7 +723,7 @@
         it simply replies with the result:
       </para>
       <para lang="ja">
-        先の構文とこの構文をおのおのScript-Fuコンソールに打ち込んでどんな
+        先の構文とこの構文をおのおの Script-Fu コンソールに打ち込んでどんな
         結果が返されるか試してみましょう。 先の構文を打ち込んだ場合は
         このような簡単な答えになります。
       </para>
@@ -764,11 +766,11 @@
       </para>
       <para lang="en">An empty list can be defined as such:</para>
       <para lang="ja">
-        のように書く規則になっており、 <varname>a</varname>、 <varname>b
-        </varname>、 <varname>c</varname> はリテラル (値の直接表記) です。
-        これらをまとめた丸括弧の前にアポストロフィ<quote><code>'</code>
-        </quote>をつけるとその括弧は関数や式ではなくリテラルだけで構成された
-        リストであることを示します。
+        のように書く規則になっており、 <varname>a</varname>、 
+        <varname>b</varname>、 <varname>c</varname> はリテラル (値の直接表記) 
+        です。 これらをまとめた丸括弧の前にアポストロフィ
+        <quote><code>'</code></quote>をつけるとその括弧は関数や式ではなく
+        リテラルだけで構成されたリストであることを示します。
       </para>
       <para lang="ja">空のリストもつぎのようにすれば定義できます。</para>
       <programlisting>'()</programlisting>
@@ -804,7 +806,7 @@
       </para>
       <para lang="ja">
         ちなみに最初にアポストロフィをつけてしまえば、 その内部でさらにリスト
-        をつくるときにアポストロフィを省略できます。 それでは直ちにScript-Fu
+        をつくるときにアポストロフィを省略できます。 それでは直ちに Script-Fu
         コンソールに上記のリストを写してどんな結果がでるか見てみましょう。
       </para>
       <para lang="ja">
@@ -836,7 +838,7 @@
       <title lang="en">
         Creating Lists Through Concatenation (The Cons Function)
       </title>
-      <title lang="ja">連結でリストを作成 (Cons関数)</title>
+      <title lang="ja">連結でリストを作成 (Cons 関数)</title>
       <para lang="en">
         One of the more common functions you'll encounter is the cons
         function. It takes a value and places it to its second argument, a
@@ -849,10 +851,11 @@
       <para lang="ja">
         今後使うことになる関数のなかでも <function>cons</function> は多く
         目にすることになる関数です。 この関数がとる変数のひとつはリストで
-        あり、 第2引数として与えます。 さきほどリストのことを先頭の要素と後続
-        の要素群としてとらえてみるよう勧めました。 それが <function>cons
-        </function> のやっていることです。 この関数は要素をリストの先頭に
-        差し込みます。 それではつぎのようにリストを作ってみましょう。
+        あり、 第 2 引数として与えます。 さきほどリストのことを先頭の要素と後続
+        の要素群としてとらえてみるよう勧めました。 それが 
+        <function>cons</function> のやっていることです。 この関数は要素を
+        リストの先頭に差し込みます。 それではつぎのようにリストを
+        作ってみましょう。
       </para>
       <programlisting>(cons 1 '(2 3 4) )</programlisting>
       <para lang="en">The result is the list <code>(1 2 3 4)</code>.</para>
@@ -882,8 +885,8 @@
         variables, use the <function>list</function> function:
       </para>
       <para lang="ja">
-        リテラルと予め定義しておいた変数を組み合わせて、 <function>list
-        </function> 関数を使ってリストを定義できます。
+        リテラルとあらかじめ定義しておいた変数を組み合わせて、 
+        <function>list</function> 関数を使ってリストを定義できます。
       </para>
       <programlisting>(list 5 4 3 a b c)</programlisting>
       <para lang="en">
@@ -995,11 +998,11 @@
       </para>
       <para lang="ja">
         はい、 もう十分です。 リストから先頭の要素も後続の要素たちも取り出せる
-        ようになりました。 それではリストの2番目や3番目などほかの要素はどんな
-        ふうにしたら取り出せるのでしょう。 ここで使える<quote>便利</quote>な
-        関数があります。 たとえば後続の先頭の先頭を引き出すには <code>caadr
-        </code> が、 後続から後続の要素群を引き出すには <code>cddr</code> が
-        使えるというふうになっています。
+        ようになりました。 それではリストの 2 番目や 3 番目などほかの要素は
+        どんなふうにしたら取り出せるのでしょう。 ここで使える
+        <emphasis>便利</emphasis> な関数があります。 たとえば後続の先頭の先頭を
+        引き出すには <code>caadr</code> が、 後続から後続の要素群を引き出すには
+        <code>cddr</code> が使えるというふうになっています。
       </para>
       <para lang="ja">
         根本的に命名規則は簡単です。 a や d がそれぞれリストの先頭や後続を
@@ -1017,9 +1020,9 @@
       </para>
       <para lang="ja">
         リスト用引き出し関数の練習のためつぎのスクリプトを書いてみましょう。
-        コンソール上で試すときは1行につづけて書きます。 そうしたら <function>
-        car</function> と <function>cdr</function> の両関数をいろいろ組み
-        合わせてリスト内の要素群を取り出す式を作ってみましょう。
+        コンソール上で試すときは1行につづけて書きます。 そうしたら 
+        <function>car</function> と <function>cdr</function> の両関数を
+        いろいろ組み合わせてリスト内の要素群を取り出す式を作ってみましょう。
       </para>
       <programlisting lang="en">
         (let* (
@@ -1043,8 +1046,8 @@
         Script-Fu Master!
       </para>
       <para lang="ja">
-        両関数だけをいろいろ組み合わせて、 リストから数字の3を引き出す式を
-        書きましょう。 これができるならあなたはScript-Fuの達人になりつつ
+        両関数だけをいろいろ組み合わせて、 リストから数字の 3 を引き出す式を
+        書きましょう。 これができるならあなたは Script-Fu の達人になりつつ
         あるのです。
       </para>
       <note>
@@ -1055,9 +1058,9 @@
           your memory when you look at the script later.
         </para>
         <para lang="ja">
-          Scheme言語ではセミコロン (<code>;</code>) がコメントを
+          Scheme 言語ではセミコロン (<code>;</code>) がコメントを
           表しています。 この記号とここから行の終わりまでは何を書いても
-          スクリプトのインタープリタが無視しますので、 この方法でスクリプトに
+          スクリプトのインタープリターが無視しますので、 この方法でスクリプトに
           コメントをさしはさみ、 あとで読むときの記憶の助けに利用しましょう。
         </para>
       </note>
@@ -1074,7 +1077,7 @@
     </para>
     <para lang="ja">
       ひと息ついて休みをとる必要はないですか。 大丈夫ですね。 よろしい、では
-      いよいよはじめてのScript-Fuスクリプトを書く第4段階に進みましょう。
+      いよいよはじめての Script-Fu スクリプトを書く第4段階に進みましょう。
     </para>
 
     <sect3>
@@ -1107,7 +1110,7 @@
         見当がつきません。
       </para>
       <para lang="ja">
-        Script-Fuの達人も入門者のみなさんもScript-Fuを使ったら簡単かつ自動的
+        Script-Fu の達人も入門者のみなさんも Script-Fu を使ったら簡単かつ自動的
         にこの問題を解決できるとすぐ気付くはずです。
       </para>
       <para lang="ja">
@@ -1148,15 +1151,15 @@
       </para>
       <para lang="ja">
         自作のスクリプトをどこに置くかは好みの設定の問題でもあります。 もし
-        <acronym>GIMP</acronym>の標準のスクリプト用ディレクトリを操作できる
+        <acronym>GIMP</acronym>の標準のスクリプト用ディレクトリーを操作できる
         権限をお持ちならそこに保管することもできます。 でも私なら自作の
-        スクリプトは個人用スクリプト保管ディレクトリに収めるようにして、 
+        スクリプトは個人用スクリプト保管ディレクトリーに収めるようにして、 
         <acronym>GIMP</acronym>提供の同梱スクリプトとは混ぜないようにします。
       </para>
       <para lang="ja">
         ホームディレクトリ内に<acronym>GIMP</acronym>が作成する 
-        <filename class="directory">.gimp-2.6</filename> ディレクトリに 
-        <filename class="directory">scripts</filename> フォルダができている
+        <filename class="directory">.gimp-2.6</filename> ディレクトリーに 
+        <filename class="directory">scripts</filename> フォルダーができている
         のをお確かめください。<footnote><para>
           <productname>Mac OS X</productname> では <filename role="html"
           class="directory">~/Library/Application&nbsp;Support/Gimp/scripts
@@ -1164,9 +1167,9 @@
           <filename role="tex" class="directory">~/Library/Application
           Support/Gimp/scripts</filename> です。</para></footnote>
         <acronym>GIMP</acronym>は必ず 
-        <filename class="directory">.gimp-2.6</filename> ディレクトリ内で
-        <filename class="directory">scripts</filename> フォルダを探し、 
-        このディレクトリパスをScript-Fuデータベースに入れます。 個人用の
+        <filename class="directory">.gimp-2.6</filename> ディレクトリー内で
+        <filename class="directory">scripts</filename> フォルダーを探し、 
+        このディレクトリパスを Script-Fu データベースに入れます。 個人用の
         スクリプトはここに入れるべきでしょう。
       </para>
     </sect3>
@@ -1183,12 +1186,12 @@
         can access it within GIMP.
       </para>
       <para lang="ja">
-        どんなScript-Fuスクリプトもそのメイン関数として少なくとも1つの関数を
-        定義します。 この作業にとりかかりましょう。
+        どんな Script-Fu スクリプトもそのメイン関数として少なくとも 1 つの
+        関数を定義します。 この作業にとりかかりましょう。
       </para>
       <para lang="ja">
-        またどんなScript-Fuもプロシージャデータベースに登録して<acronym>GIMP
-        </acronym>から呼び出せるようにもしなければなりません。
+        またどんな Script-Fu もプロシージャーデータベースに登録して
+        <acronym>GIMP</acronym>から呼び出せるようにもしなければなりません。
       </para>
       <para lang="en">We'll define the main function first:</para>
       <para lang="ja">ではメイン関数をまず定義しましょう。</para>
@@ -1204,8 +1207,8 @@
       </para>
       <para lang="ja">
         この式で <function>script-fu-text-box</function> という名前の関数を
-        定義し、 テキストや書体や書体の寸法や文字色を受け入れる4つの
-        パラメータをとることにします。 関数は今のところ中身がないので
+        定義し、 テキストや書体や書体の寸法や文字色を受け入れる 4 つの
+        パラメーターをとることにします。 関数は今のところ中身がないので
         何もできません。 ここまではよろしいですか。 目新しいところは
         まだありません。
       </para>
@@ -1233,16 +1236,16 @@
       <para lang="ja">
         Schemeの変数や関数の名前は小文字の英字を適宜ハイフンでつないだ表現が
         好まれているようです。 それで私も同じ規則でこの関数の名前をつけ
-        ました。 ただしパラメータについてはその規則から外れた方法をとることに
-        します。 私は変数やパラメータにはもっと説明的な書き方をするのが好き
-        なので、 パラメータの頭に<quote>in</quote>をつけて関数が受け取った
+        ました。 ただしパラメーターについてはその規則から外れた方法をとることに
+        します。 私は変数やパラメーターにはもっと説明的な書き方をするのが好き
+        なので、 パラメーターの頭に<quote>in</quote>をつけて関数が受け取った
         変数だとすぐ判るようにして、 他のところで作った変数と区別します。 
         またスクリプト内で定義した変数の頭には<quote>the</quote>をつけます。
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>ではScript-Fuスクリプトの関数名を <function>
-        script-fu-abc</function> とする習慣になっています。 こうすると
-        プロシージャデータベースを検索するとき関数名で整列させるとscript-fu
+        <acronym>GIMP</acronym>では Script-Fu スクリプトの関数名を 
+        <function>script-fu-abc</function> とする習慣になっています。 こうすると
+        プロシージャーデータベースを検索するとき関数名で整列させると script-fu
         ではじまる名前でまとまるからです。 またこの方法はプラグインと区別
         するのにも役立ちます。
       </para>
@@ -1268,12 +1271,12 @@
         ではこの関数を<acronym>GIMP</acronym>に登録しましょう。 この操作には
         <function>script-fu-register</function> という関数を起用します。
         <acronym>GIMP</acronym>はスクリプトを見るとこの関数を実行し
-        プロシージャデータベースに登録させます。 この関数の実行コードは
+        プロシージャーデータベースに登録させます。 この関数の実行コードは
         スクリプトのどの位置に置いても構いませんが、 私なら他のコードを全部
         書き終えたあとの最後に置きます。
       </para>
       <para lang="ja">
-        関数を登録している様子をつぎに示します。 パラメータに関してはまもなく
+        関数を登録している様子をつぎに示します。 パラメーターに関してはまもなく
         説明します。
       </para>
       <programlisting><![CDATA[
@@ -1329,9 +1332,9 @@
       <para lang="ja">
         以上の関数をテキストファイルにして <filename class="extension">.scm
         </filename> という拡張子をつけた名前で保存し、 スクリプトの個人用
-        フォルダに置いたら、 画像ウィンドウのメニューより 
+        フォルダーに置いたら、 画像ウィンドウのメニューより 
         <menuchoice>
-          <guimenu>フィルタ</guimenu>
+          <guimenu>フィルター</guimenu>
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>スクリプトを再読み込み</guimenuitem>
         </menuchoice>
@@ -1351,10 +1354,10 @@
         ついてはあとで詳しく説明します。
       </para>
       <para lang="ja">
-        最後にプロシージャブラウザを画像ウィンドウのメニューより 
+        最後にプロシージャーブラウザーを画像ウィンドウのメニューより 
         <menuchoice>
           <guimenu>ヘルプ</guimenu>
-          <guimenuitem>プロシージャブラウザ</guimenuitem>
+          <guimenuitem>プロシージャーブラウザー</guimenuitem>
         </menuchoice>
         と辿って開き、 作ったばかりのスクリプトがデータベースに登録されて
         いることをご確認ください。
@@ -1373,12 +1376,12 @@
       <para lang="ja">
         <acronym>GIMP</acronym>にスクリプトを登録するために登録関数 
         <function>script-fu-register</function> を起用しますが、 これには
-        7つの必須パラメータとスクリプト独自のパラメータ、 そして説明文と
-        それぞれのパラメータの初期設定値を加えることになります。
+        7 つの必須パラメーターとスクリプト独自のパラメーター、 そして説明文と
+        それぞれのパラメーターの初期設定値を加えることになります。
       </para>
       <itemizedlist>
         <title lang="en">The Required Parameters</title>
-        <title lang="ja">必須のパラメータ</title>
+        <title lang="ja">必須のパラメーター</title>
         <listitem>
           <para lang="en">
             The <emphasis>name</emphasis> of the function we
@@ -1503,7 +1506,7 @@
           </para>
           <para lang="ja">
             スクリプトの <emphasis>説明</emphasis> 文をつけると、 
-            プロシージャブラウザで表示されます。
+            プロシージャーブラウザーで表示されます。
           </para>
         </listitem>
         <listitem>
@@ -1563,7 +1566,7 @@
 
     <sect3>
       <title lang="en">Registering The Script's Parameters</title>
-      <title lang="ja">スクリプトのパラメータを登録</title>
+      <title lang="ja">スクリプトのパラメーターを登録</title>
       <para lang="en">
         Once we have listed the required parameters, we then need to list the
         parameters that correspond to the parameters our script needs. When we
@@ -1575,7 +1578,7 @@
         This section of the registration process has the following format:
       </para>
       <para lang="ja">
-        必須のパラメータを列挙したので、 ここでスクリプトが使うパラメータに
+        必須のパラメーターを列挙したので、 ここでスクリプトが使うパラメーターに
         ついて一覧表にまとめておきます。 これらの媒介変数を紹介するにあたり
         その型式がわかるようにしました。 これはスクリプトが呼ばれると現れる
         ダイアログを構成するために使います。 また変数には初期設定値を与えて
@@ -1590,7 +1593,7 @@
             <row>
               <entry>
                 <para lang="en">Param Type</para>
-                <para lang="ja">パラメータの型</para>
+                <para lang="ja">パラメーターの型</para>
               </entry>
               <entry>
                 <para lang="en">Description</para>
@@ -1616,9 +1619,9 @@
                 </para>
                 <para lang="ja">
                   既に開いてある画像を操作するためのスクリプトを作るときは、
-                  必須のパラメータの直後にこのパラメータを置かねばなりません。
-                  <acronym>GIMP</acronym>は画像を参照するための情報をこの
-                  パラメータに乗せてスクリプトに渡します。
+                  必須のパラメーターの直後にこのパラメーターを置かねば
+                  なりません。 <acronym>GIMP</acronym>は画像を参照するための
+                  情報をこのパラメーターに乗せてスクリプトに渡します。
                 </para>
               </entry>
               <entry>
@@ -1639,10 +1642,10 @@
                 </para>
                 <para lang="ja">
                   既に開いてある画像を操作するためのスクリプトを作るときは、
-                  <function>SF-IMAGE</function> 型のパラメータのつぎにこの
-                  パラメータを置かなくてはなりません。 これは活性レイヤーを
+                  <function>SF-IMAGE</function> 型のパラメーターのつぎにこの
+                  パラメーターを置かなくてはなりません。 これは活性レイヤーを
                   参照します。 <acronym>GIMP</acronym>は活性レイヤーを参照する
-                  ための情報をこのパラメータに乗せてスクリプトに渡します。
+                  ための情報をこのパラメーターに乗せてスクリプトに渡します。
                 </para>
               </entry>
               <entry>
@@ -1691,7 +1694,7 @@
                   Indicates that a color is requested in this parameter.
                 </para>
                 <para lang="ja">
-                  このパラメータが要求する色の情報を示します。
+                  このパラメーターが要求する色の情報を示します。
                 </para>
               </entry>
               <entry>
@@ -1769,13 +1772,13 @@
       <para lang="ja">
         先の講義では中身のない関数を作成し<acronym>GIMP</acronym>に登録
         しました。 この講義ではスクリプトに肉付けを行ないます。 スクリプト
-        には新しい画像を作成させ、 ユーザが指定するテキストを加えてテキスト
+        には新しい画像を作成させ、 ユーザーが指定するテキストを加えてテキスト
         にぴったりな大きさに画像の寸法を調節させるつもりです。
       </para>
       <para lang="ja">
         変数の設定や関数の定義、 リストの要素を引き出す方法についてはもう
         学びましたので、 あとは坂を滑り下りるだけです。 これからなすべきこと
-        は<acronym>GIMP</acronym>のプロシージャデータベースで利用可能な関数に
+        は<acronym>GIMP</acronym>のプロシージャーデータベースで利用可能な関数に
         慣れ親しみ、 それらの機能を直に呼び出すことが全てです。 では早速
         <xref linkend="plug-in-dbbrowser"/> を立て上げてお料理しましょう。
       </para>
@@ -1785,12 +1788,13 @@
         <acronym>GIMP</acronym>の組み込み機能を実行して得た値を代入するのです。
       </para>
       <para lang="ja">
-        プロシージャデータベースのブラウザによると、 <function>gimp-image-new
-        </function> は画像の幅、 高さ、 型式の3つのパラメータをとります。 画像の
-        大きさはあとでテキストに合わせて変更するので、 とりあえず 10&times;10
-        ピクセルの<acronym>RGB</acronym>画像を作成させます。 画像の幅と高さ
-        のパラメータやいくつかの変数はあとでスクリプトが操作するために参照
-        する必要があるのでここで保管しておきます。
+        プロシージャーデータベースのブラウザーによると、 
+        <function>gimp-image-new</function> は画像の幅、 高さ、 型式の 3 つの
+        パラメーターをとります。 画像の大きさはあとでテキストに合わせて
+        変更するので、 とりあえず 10&times;10 ピクセルの<acronym>RGB</acronym>
+        画像を作成させます。 画像の幅と高さのパラメーターやいくつかの変数は
+        あとでスクリプトが操作するために参照する必要があるのでここで
+        保管しておきます。
       </para>
       <programlisting lang="en">
         (define (script-fu-text-box inText inFont inFontSize inTextColor)
@@ -1857,7 +1861,7 @@
       <para lang="ja">
         関数を呼び出した結果の値から先頭の要素を引き出しているところにご注目
         ください。 これは奇妙な感じがします。 というのもデータベースには
-        はっきりとこの関数が返す値はたったひとつ新しい画像のID番号だけだと
+        はっきりとこの関数が返す値はたったひとつ新しい画像の ID 番号だけだと
         記されているからです。 実は<acronym>GIMP</acronym>の関数はたとえ返し
         値がひとつだけであっても必ずこれをリストにして返します。 ですからその
         リストの先頭を引き出してやる必要があるのです。
@@ -1880,11 +1884,11 @@
         variable declarations:
       </para>
       <para lang="ja">
-        画像ができたのでこんどはレイヤーを追加する必要があります。 <function>
-        gimp-layer-new</function> 関数を呼び出して先程作った画像のID番号を渡し、
-        レイヤーを生成させます。 (ここからの説明では関数の中身を全部ここに
-        掲載する代わりに、 追加される行だけを載せます。 最終的なスクリプトの
-        全貌はこの演習の 
+        画像ができたのでこんどはレイヤーを追加する必要があります。 
+        <function>gimp-layer-new</function> 関数を呼び出して先程作った画像の
+        ID 番号を渡し、 レイヤーを生成させます。 (ここからの説明では関数の
+        中身を全部ここに掲載する代わりに、 追加される行だけを載せます。 
+        最終的なスクリプトの全貌はこの演習の 
         <link linkend="gimp-using-script-fu-tutorial-result">最後</link> で
         ご覧いただけます。) これで使う予定の局所変数は全て宣言し終えました
         ので、 変数宣言を示す括弧もここで閉じることにします。
@@ -1957,7 +1961,7 @@
       <para lang="ja">
         以上の工作を保存します。 そのあと画像ウィンドウのメニューより 
         <menuchoice>
-          <guimenu>フィルタ</guimenu>
+          <guimenu>フィルター</guimenu>
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>スクリプトを再読み込み</guimenuitem>
         </menuchoice>
@@ -1982,8 +1986,8 @@
       </para>
       <para lang="ja">
         先に進みたいので先程画像を表示させるために追加した行を削除して
-        ください。 (もしくはその行の最初にセミコロン (<code>;</code>)
-        を書き加えてコメントアウトしてください。)
+        ください。 (もしくはその行の最初にセミコロン
+        <quote><code>;</code></quote>を書き加えてコメントアウトしてください。)
       </para>
       <para lang="ja">
         画像にテキストを加える前に、 画像の背景色と描画色を設定してテキスト
@@ -2039,10 +2043,10 @@
         the image and the image's layer to the text's size:
       </para>
       <para lang="ja">
-        長い関数呼び出しになっていますが、 プロシージャデータベースのブラウザ
-        でそれぞれのパラメータについて見てみればどの項目もありきたりなもの
-        ばかりです。 要するにここでは新しいテキストレイヤーを作成して変数 
-        <varname>theText</varname> に代入しているのです。
+        長い関数呼び出しになっていますが、 プロシージャーデータベースの
+        ブラウザーでそれぞれのパラメーターについて見てみればどの項目も
+        ありきたりなものばかりです。 要するにここでは新しいテキストレイヤーを
+        作成して変数 <varname>theText</varname> に代入しているのです。
       </para>
       <para lang="ja">
         さてテキストができましたので、 つぎはその幅と高さをつかめば画像と
@@ -2107,13 +2111,13 @@
         To do this, we can clear the dirty flag after displaying the image:
       </para>
       <para lang="ja">
-        でき上がった画像をファイルに保存せずに閉じようとすると、 <acronym>
-        GIMP</acronym>は画像を閉じる前に保存しませんかと尋ねるはずです。 これ
-        は画像が<quote>手付き</quote>になっている、 すなわち保存されていない
-        ために起こります。 今回作ったスクリプトの場合は単に試しで画像化して
-        あとは何も加工していないのに毎回こんな風に尋ねられたら面倒です。 
-        しかも同じようなスクリプトならまたしても起こりうる事例なので、 ここは
-        <quote>手付き</quote>フラグを消すことを考えてみます。
+        でき上がった画像をファイルに保存せずに閉じようとすると、 
+        <acronym>GIMP</acronym>は画像を閉じる前に保存しませんかと尋ねる
+        はずです。 これは画像が<quote>手付き</quote>になっている、 すなわち
+        保存されていないために起こります。 今回作ったスクリプトの場合は単に
+        試しで画像化してあとは何も加工していないのに毎回こんな風に尋ねられたら
+        面倒です。 しかも同じようなスクリプトならまたしても起こりうる
+        事例なので、 ここは<quote>手付き</quote>フラグを消すことを考えてみます。
       </para>
       <para lang="ja">
         この目的のためには<quote>手付き</quote>フラグの解消を画像の表示後に
@@ -2133,8 +2137,8 @@
         an existing image, you will probably not want to use this function.
       </para>
       <para lang="ja">
-        この処理は手付きの回数を 0 にするので結果的に画像が<quote>手付きなし
-        </quote>となります。
+        この処理は手付きの回数を 0 にするので結果的に画像が
+        <quote>手付きなし</quote>となります。
       </para>
       <para lang="ja">
         このような行を挿し挟むか否かは個人的な好みに委ねられます。 私なら
@@ -2203,7 +2207,7 @@
       <para lang="ja">
         今やテキストボックスを作るとっても素敵便利な<footnote>
             <para>handy-dandy &supe; オテテミテテアテテゴッコ</para>
-          </footnote>スクリプトができているので、 2つの機能を追加して
+          </footnote>スクリプトができているので、 2 つの機能を追加して
         やりましょう。
       </para>
       <itemizedlist>
@@ -2220,7 +2224,7 @@
             現在はテキストの周りをぴったり囲む大きさに画像が調節されます。 
             ドロップシャドウみたいな特殊効果がつけば他のスクリプトなら自動的
             に寸法を必要なだけ増やせるのに、 余地も調節機能も全くありません。
-            そこでテキストまわりに余裕をもたせて、 しかもその幅をユーザが
+            そこでテキストまわりに余裕をもたせて、 しかもその幅をユーザーが
             テキストの結果的な大きさに対する比率で指定できるようにします。
           </para>
         </listitem>
@@ -2245,13 +2249,13 @@
       <title lang="en">
         Modifying The Parameters And The Registration Function
       </title>
-      <title lang="ja">パラメータと登録関数の変更</title>
+      <title lang="ja">パラメーターと登録関数の変更</title>
       <para lang="en">
         To let the user specify the amount of buffer, we'll add a parameter to
         our function and the registration function:
       </para>
       <para lang="ja">
-        テキスト周りの余裕を設定できるよう、 メイン関数にパラメータを追加して
+        テキスト周りの余裕を設定できるよう、 メイン関数にパラメーターを追加して
         登録関数を変更します。
       </para>
       <programlisting lang="en">
@@ -2378,12 +2382,12 @@
         返すためのコードです。
       </para>
       <para lang="ja">
-        テキストの高さと幅が判ったら、 ユーザが指定したテキスト周りの余裕の
-        量 (bufferAmount) に基づいてその大きさを変更します。 入力された値が
-        正しく 0% から 100% までの範囲に収まっているかどうか確かめる
-        エラーチェックについては、 何が起きても深刻にはなりえず、 また余裕の
-        量に 200% などという法外な値をユーザに指定させまいとする理由も
-        見当たらないことから、 一切検査しません。
+        テキストの高さと幅が判ったら、 ユーザーが指定したテキスト周りの余裕の
+        量 (<varname>inBufferAmount</varname>) に基づいてその大きさを
+        変更します。 入力された値が正しく 0% から 100% までの範囲に収まって
+        いるかどうか確かめるエラーチェックについては、 何が起きても深刻には
+        なりえず、 また余裕の量に 200% などという法外な値をユーザーに
+        指定させまいとする理由も見当たらないことから、 一切検査しません。
       </para>
       <programlisting>
         (set! theBuffer (* theImageHeight (/ inBufferAmount 100) ) )
@@ -2406,7 +2410,7 @@
       </para>
       <para lang="ja">
         このコードが行なっているのはテキストの高さに基づいて余裕の量を算出
-        し、 新たにできた画像の高さや幅にそれぞれ2度ずつ加えていること
+        し、 新たにできた画像の高さや幅にそれぞれ 2 度ずつ加えていること
         だけです。 縦にも横にも2度ずつ加算している理由は、 余裕の幅をテキスト
         の両側に加える必要があるからです。
       </para>
@@ -2469,7 +2473,7 @@
         Congratulations, you are on your way to your Black Belt of Script-Fu!
       </para>
       <para lang="ja">
-        おめでとう。 あなたはScript-Fuの黒帯への道を進んでいますよ。
+        おめでとう。 あなたは Script-Fu の黒帯への道を進んでいますよ。
       </para>
     </sect3>
   </sect2>

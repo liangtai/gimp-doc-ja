@@ -14,7 +14,7 @@
   2005-12-01 informalfigure replaced by figure by lexa
   0506609 de reviewed by axel.wernicke
   -->
-<!--2011-01-18-->
+<!--2012-03-10-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-crop">
   <title lang="en">Crop</title>
   <title lang="ja">切り抜き</title>
@@ -107,9 +107,10 @@
     <keycap>Enter</keycap> キーを押します。
   </para>
   <para lang="ja">
-    マウスポインタの姿が移動十字矢印になっているときはキーボードの矢印キーで
-    切り抜き矩形を移動できます。 <keycap>Shift</keycap> キーを押しながらだと
-    25 ピクセルづつ移動します。
+    マウスポインターの姿が移動十字矢印になっているときはキーボードの
+    <keycap>上</keycap> <keycap>下</keycap> <keycap>左</keycap>
+    <keycap>右</keycap> 矢印キーで切り抜き矩形を移動できます。 
+    <keycap>Shift</keycap> キーを押しながらだと 25 ピクセルづつ移動します。
   </para>
   <para lang="ja">
     切り抜く領域の位置をびたりと合わせるのにガイド (見当線) が使えます。
@@ -542,8 +543,9 @@
         </listitem>
       </varlistentry>
       <varlistentry>
+        <!-- XXX -->
         <term lang="en">Shrink Merged</term>
-        <term lang="ja">レイヤー結合部分を基準に縮小</term>
+        <term lang="ja"><quote>見えている色</quote>を基準に縮小</term>
         <listitem>
           <para lang="en">
             This option works the same, with Auto Shrink or not. It uses the
@@ -551,7 +553,7 @@
             rather than just from the active layer.
           </para>
           <para lang="ja">
-            このオプションは<quote>レイヤー結合部分</quote>オプションのように
+            このオプションは<quote>見えている色で</quote>オプションのように
             はたらきます。 活性レイヤーのみならず、 すべての 
             <emphasis>可視</emphasis> レイヤーからのピクセル情報をもとに
             判断します。

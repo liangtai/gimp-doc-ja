@@ -8,7 +8,7 @@
   2006-05-03 added italian translation by ciampix
   2005-11-30 replaced informalfigure by axel.wernicke
 -->
-<!--2010-11-23-->
+<!--2012-03-04-->
 <sect1 id="gimp-using-text">
   <title lang="en">Text</title>
   <title lang="ja">テキスト</title>
@@ -47,7 +47,7 @@
             everything except font size.
           </para>
           <para lang="ja">
-            ロゴスクリプトによる趣向を凝らしたテキスト品目4例:
+            ロゴスクリプトによる趣向を凝らしたテキスト品目 4 例:
             <quote>エイリアンネオン</quote>、 <quote>牛模様</quote>、
             <quote>霜</quote>、 <quote>チョーク</quote>。 書体の大きさを除き
             初期設定のままで作成。
@@ -91,9 +91,9 @@
       できます。 ここに示したスクリプトはいずれも何らかの語句を定めるとそれを
       もとにロゴが作られて新しい画像としてウィンドウが開かれます。 スクリプトは
       変更したり新たに作成することもできます。 詳しくは
-      <link linkend="gimp-concepts-script-fu">Script-Fuスクリプトを使用</link>
+      <link linkend="gimp-concepts-script-fu">Script-Fu スクリプトを使用</link>
       や
-      <link linkend="gimp-using-script-fu-tutorial">Script-Fu作成演習</link>
+      <link linkend="gimp-using-script-fu-tutorial">Script-Fu 作成演習</link>
       をご覧ください。 もちろん Script-Fu で必ずしもこういった効果機能を作成
       する必要はなく、 ただ自動化するだけが目的でも構いません。
     </para>
@@ -144,27 +144,28 @@
     <para lang="ja">
       <acronym>GIMP</acronym>におけるフォントについての最新情報は、 公式のもの
       が<acronym>GIMP</acronym>のウェブサイト内の<quote>Fonts in GIMP
-      2.X</quote> (英語; <productname>UNIX</productname>系限定)
+      2.X</quote> (英語; <productname>UNIX</productname> 系限定)
       <xref linkend="bibliography-online-gimp-fonts"/> にあります。
       この節は役立ちそうな概説を試みます。
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>はフォントの描写に <productname>FreeType
-      2</productname> フォントエンジンを使用し、 <productname>Fontconfig
-      </productname> というシステムで管理しています。 Fontconfig に登録された
-      フォントパス (保管ディレクトリ) にあるフォントならいずれも<acronym>GIMP
-      </acronym>で使えます。 さらにまた環境設定ダイアログの
-      <link linkend="gimp-prefs-folders-data">データフォルダ (フォント)</link>
+      <acronym>GIMP</acronym>はフォントの描写に 
+      <productname>FreeType 2</productname> フォントエンジンを使用し、 
+      <productname>Fontconfig</productname> というシステムで管理しています。 
+      Fontconfig に登録されたフォントパス (保管ディレクトリー) にあるフォント
+      ならいずれも<acronym>GIMP</acronym>で使えます。 さらにまた環境設定
+      ダイアログの
+      <link linkend="gimp-prefs-folders-data">データフォルダー (フォント)</link>
       のページで登録された<acronym>GIMP</acronym>のフォント検索パスにある
-      フォントも全て使用できます。 初期設定ではこの検索対象となる保管場所として
-      は<acronym>GIMP</acronym>のシステム用フォントフォルダ (仮に中身が空でも
-      変更不可です) と、 個人用の<acronym>GIMP</acronym>ディレクトリ内の
-      <filename class="directory">fonts</filename> フォルダが登録されています。
-      必要とあらば検索対象に他のディレクトリを加えることも可能です。
+      フォントもすべて使用できます。 初期設定ではこの検索対象となる保管場所と
+      しては<acronym>GIMP</acronym>のシステム用フォントフォルダ (仮に中身が
+      空でも変更不可) と、 個人用の<acronym>GIMP</acronym>ディレクトリー内の
+      <filename class="directory">fonts</filename> フォルダーが登録されて
+      います。 必要とあらば検索対象に他のディレクトリーを加えることも可能です。
     </para>
     <para lang="ja">
       FreeType 2 はたいへん強力で柔軟なシステムです。 初期設定でも次のような
-      フォントファイル形式を扱えます:
+      フォントファイル形式を扱えます。
     </para>
     <itemizedlist>
       <listitem>
@@ -247,14 +248,15 @@
       <para lang="ja">
         UNIX 風のシステムの場合、 通常の方法で Fontconfig ユーティリティを導入・
         設置しておれば、 新たにフォントを追加するには単にそのファイルを
-        <filename>~/.fonts</filename> ディレクトリに入れるだけです。 この方法は
-        <acronym>GIMP</acronym>のみならず Fontconfig を使用する他の全ての
-        プログラムでこのフォントが利用できるようになります。 そのフォントを
-        何かの理由で<acronym>GIMP</acronym>専用にしたい場合は、 <acronym>GIMP
-        </acronym>の個人用ディレクトリ内の <filename>fonts</filename>
-        ディレクトリに入れるか、 <acronym>GIMP</acronym>のフォント検索パスの
-        どこかに入れることになります。 いずれの方法でも次回<acronym>GIMP
-        </acronym>を起動するとそのフォントが利用できますが、
+        <filename class="directory">~/.fonts</filename> ディレクトリーに入れる
+        だけです。 この方法は<acronym>GIMP</acronym>のみならず Fontconfig を
+        使用する他のすべてのプログラムでこのフォントが利用できるように
+        なります。 そのフォントを何かの理由で<acronym>GIMP</acronym>専用に
+        したい場合は、 <acronym>GIMP</acronym>の個人用ディレクトリー内の
+        <filename class="directory">fonts</filename> ディレクトリーに入れるか、
+        <acronym>GIMP</acronym>のフォント検索パスのどこかに入れることに
+        なります。 いずれの方法でも次回<acronym>GIMP</acronym>を起動するとその
+        フォントが利用できますが、
         <link linkend="gimp-font-dialog">フォントダイアログ</link> の
         <guiicon>
           <inlinemediaobject>
@@ -286,7 +288,7 @@
         <acronym>GIMP</acronym>, but also to other Windows applications.
       </para>
       <para lang="ja">
-        フォントを導入する最も簡単な方法はそのファイルをフォント用ディレクトリ
+        フォントを導入する最も簡単な方法はそのファイルをフォント用ディレクトリー
         までドラッグして放つことです。 すると自動的にシェル機能が拡張子を見て
         反応します。 何か特別な設定を加えていたのでなければ、 標準的なフォントの
         保管場所は
@@ -300,16 +302,17 @@
         ウィンドウが現れますが、 場合によってはそのときインストールも
         行われます。 この方法では<acronym>GIMP</acronym>のみならず全ての 
         Windows アプリケーションでそのフォントを利用できるようになります。 
-        <acronym>GIMP</acronym>専用で使いたい場合はそのフォントを <filename 
-        class="directory" role="html">C:\Documents&nbsp;and&nbsp;Settings\
-        &lt;あなたのユーザ名&gt;\.gimp-2.6\fonts</filename> 
-        <filename class="directory" role="tex">
-C:\\Documents~and~Settings\\\\lt あなたのユーザ名\\gt\\.gimp-2.6\\fonts
-        </filename> か <filename class="directory" role="html">
-        C:\Users\&lt;あなたのユーザ名&gt;\.gimp-2.6\fonts</filename>
-        <filename class="directory" role="tex">
-C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
-        </filename> に入れてください。
+        <acronym>GIMP</acronym>専用で使いたい場合はそのフォントを
+        <filename class="directory" role="html">C:\Documents&nbsp;and<!--
+        -->&nbsp;Settings\<replaceable>&lt;あなたのユーザー名&gt;<!--
+        --></replaceable>\.gimp-2.6\fonts</filename> 
+        <filename class="directory" role="tex">C:\\Documents~and~Settings%
+        \\\\lt あなたのユーザー名\\gt\\.gimp-2.6\\fonts</filename> か
+        <filename class="directory" role="html">C:\Users\<replaceable><!--
+        -->&lt;あなたのユーザー名&gt;</replaceable>\.gimp-2.6\fonts</filename>
+        <filename class="directory" role="tex">C:\\Users\\{\\rm\\langle{}%
+        あなたのユーザー名\\rangle}\\.gimp-2.6\\fonts</filename> に
+        入れてください。
       </para>
     </formalpara>
     <formalpara>
@@ -336,10 +339,10 @@ C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
         </quote>→<quote>Fonts</quote>までドラッグして放つ方法です。 あるいは 
         Finder 上のフォントファイルアイコンをダブルクリックすると現れる 
         <application>Font Book</application> で、 
-        <guibutton>フォントをインストール</guibutton> ボタンをクリックする方法も
-        あります。 いずれも個人用に限定したインストール方法ですが、 ユーザを
-        問わないインストール方法をとる場合はフォントファイルを <productname>
-        Mac OS X</productname> ディスクの
+        <guibutton>フォントをインストール</guibutton> ボタンをクリックする
+        方法もあります。 いずれも個人用に限定したインストール方法ですが、 
+        ユーザを問わないインストール方法をとる場合はフォントファイルを 
+        <productname>Mac OS X</productname> ディスクの
         <quote>ライブラリ</quote>→<quote>Fonts</quote>フォルダか、
         <application>Font Book</application> の <guilabel>コレクション
         </guilabel> 列にある<quote>コンピュータ</quote>フォルダにドラッグして
@@ -371,8 +374,8 @@ C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
     <para lang="ja">
       Type 1 形式のファイルをインストールするには <filename class="extension">
       .pfb</filename> と <filename class="extension">.pfm</filename> の両方が
-      必要です。 いずれか一方をフォント用フォルダに放り込めばアイコン化され
-      ます。 もう一方は必ずしも同じフォルダに入れなくても構いません。 という
+      必要です。 いずれか一方をフォント用フォルダーに放り込めばアイコン化され
+      ます。 もう一方は必ずしも同じフォルダーに入れなくても構いません。 という
       のも無ければ探すしくみが備わっているからですが、 やはり同じディレクトリに
       入れる方が無難です。
     </para>
@@ -380,18 +383,19 @@ C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
       <productname>Windows</productname>では、 <acronym>GIMP</acronym>は
       原則として FreeType が扱う全てのフォントが使えますが、 Windows が扱えない
       一部のフォント形式については、 <acronym>GIMP</acronym>の個人用
-      ディレクトリ内の <filename class="directory">fonts</filename> にその
-      フォントを入れるか、あるいはそのフォントを収めたフォルダを<acronym>GIMP
-      </acronym>のフォント検索対象に登録しなくてはなりません。 どの形式が 
-      <productname>Windows</productname> 非対応なのかは、 <productname>Windows
-      </productname>の版によってまちまちです。 <acronym>GIMP</acronym>が作動
-      できる版ならば少なくとも TrueType 形式と Windows FON および Windows FNT 
-      形式ならば必ず使えます。 <productname>Windows 2000</productname> とそれ
-      以降はさらに Type 1 形式と OpenType 形式が加わります。 <productname>
-      Windows ME</productname> はおそらく OpenType 形式と Type 1 形式も
-      使えるでしょう (最もよく使われている <productname>Windows<productname>
-      版<acronym>GIMP</acronym>のインストーラは、 <productname>Windows ME
-      </productname> をサポートしていませんが、 一応は導入できるようです)。
+      ディレクトリー内の <filename class="directory">fonts</filename>
+      フォルダーにそのフォントを入れるか、あるいはそのフォントを収めた
+      フォルダーを<acronym>GIMP</acronym>のフォント検索対象に登録しなくては
+      なりません。 どの形式が <productname>Windows</productname>
+      非対応なのかは、 <productname>Windows</productname> の版によって
+      まちまちです。 <acronym>GIMP</acronym>が作動できる版ならば少なくとも
+      TrueType 形式と Windows FON および Windows FNT 形式ならば必ず使えます。
+      <productname>Windows 2000</productname> とそれ以降はさらに Type 1 形式と
+      OpenType 形式が加わります。 <productname>Windows ME</productname> は
+      おそらく OpenType 形式と Type 1 形式も使えるでしょう (最もよく使われて
+      いる <productname>Windows<productname> 版<acronym>GIMP</acronym>の
+      インストーラーは、 <productname>Windows ME</productname> を
+      サポートしていませんが、 一応は導入できるようです)。
     </para>
     <note>
       <para lang="en">
@@ -405,13 +409,13 @@ C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
       </para>
       <para lang="ja">
         <acronym>GIMP</acronym>は UNIX 系だけでなく Windows 上でも Fontconfig を
-        使います。 ここで述べた教訓は既定では Windows のフォントディレクトリを
+        使います。 ここで述べた教訓は既定では Windows のフォントディレクトリーを
         Fontconfig が利用するので、 Windows 自身と同じフォントが使えるということ
         が前提になっています。 何らかの理由で Fontconfig の設定が初期設定とは
         異なる場合は、 <acronym>GIMP</acronym>が見つけ易い場所がどこかが問題に
-        なります。 どんな場合でも、 <acronym>GIMP</acronym>の個人用ディレクトリ
-        の <filename class="directory">fonts</filename> フォルダならば
-        うまくいきます。
+        なります。 どんな場合でも、 <acronym>GIMP</acronym>の個人用
+        ディレクトリーの <filename class="directory">fonts</filename>
+        フォルダーならばうまくいきます。
       </para>
     </note>
   </sect2>
@@ -462,20 +466,21 @@ C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
     </para>
     <para lang="ja">
       フォントにまつわるバグ報告は 2.0 版の発表以降版を重ねるごとに減ってきては
-      いますが、 それでも<acronym>GIMP</acronym>2のバグ報告としては他の問題と
-      比べるとより責任の重いものとなりつつあるようです。 寄せられる例の最多を
-      占めるのが壊れたフォントファイルを読み込んだ Fontconfig のトラブルに起因
-      する問題です。 起動時に<acronym>GIMP</acronym>がフォントディレクトリを
-      検分していて異常終了するのならば、 最も良い解決法はFontconfigを 2.2.0
-      以降の新しい版にアップグレードすることです。 それ以外の手っ取り早い対処
-      のしかたとしてはコマンドライン上で <option>--no-fonts</option> オプション
-      をつけて <command>gimp</command> コマンドを走らせる方法がありますが、
+      いますが、 それでも <application><acronym>GIMP</acronym> 2</application>
+      のバグ報告としては他の問題と比べるとより責任の重いものとなりつつある
+      ようです。 寄せられる例の最多を占めるのが壊れたフォントファイルを読み
+      込んだ Fontconfig のトラブルに起因する問題です。 起動時に
+      <acronym>GIMP</acronym>がフォントディレクトリーを検分していて異常終了する
+      のならば、 最も良い解決法は Fontconfig を 2.2.0以降の新しい版に
+      アップグレードすることです。 それ以外の手っ取り早い対処のしかたとしては
+      コマンドライン上で <option>--no-fonts</option> オプションをつけて
+      <command>gimp</command> コマンドを走らせる方法がありますが、
       これだとテキストツールが使えません。
     </para>
     <para lang="ja">
       その他に、 文字配置情報 (character mapping) に Unicode を使っていない
       フォントをPango 1.2 が読み込めない問題が判っています。 (Pango はテキスト
-      レイアウトライブラリで、 <acronym>GIMP</acronym>で使われています。)
+      レイアウトライブラリーで、 <acronym>GIMP</acronym>で使われています。)
       数多くの記号フォントがこの系統です。 システムによってはそのようなフォント
       を読み込むと<acronym>GIMP</acronym>が異常終了します。 Pangoを 1.4 以降の
       版にアップグレードするとこの問題は解決し、 <acronym>GIMP</acronym>で記号
@@ -493,11 +498,11 @@ C:\\Users\\\\langle あなたのユーザ名\\rangle\\.gimp-2.6\\fonts
       </emphasis>
       このウィンドウを見ると<acronym>GIMP</acronym>が異常終了したと思われること
       が多いですが、 そうではありません。 このコンソールウィンドウを閉じると、
-      Windowsは<acronym>GIMP</acronym>を終了させてしまうのです。 厄介なこと
+      Windows は<acronym>GIMP</acronym>を終了させてしまうのです。 厄介なこと
       ですが、 残念ながらこれは<acronym>GIMP</acronym>がリンクしている
-      ライブラリとWindowsの間で引き起こされるという事情があって、 <acronym>GIMP
-      </acronym>独自の解決策がありません。 結局、 このような事態になると、
-      そのコンソールウィンドウを最小化してやりすごすしかありません。
+      ライブラリーと Windows の間で引き起こされるという事情があって、
+      <acronym>GIMP</acronym>独自の解決策がありません。 結局、 このような事態に
+      なると、そのコンソールウィンドウを最小化してやりすごすしかありません。
     </para>
   </sect2>
 </sect1>

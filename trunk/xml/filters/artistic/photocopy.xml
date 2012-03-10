@@ -8,7 +8,7 @@
   050916 added by axel.wernicke
   051022 en;fr by julien hardelin
 -->
-<!--2010-12-08-->
+<!--2012-03-05-->
 <sect2 id="plug-in-photocopy">
   <title lang="en">Photocopy</title>
   <title lang="ja">写真コピー...</title>
@@ -22,7 +22,7 @@
     <primary>Photocopy</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ゲイジュツテキコウカ">芸術的効果</secondary>
     <tertiary sortas="シャシンコピー">写真コピー</tertiary>
   </indexterm>
@@ -37,7 +37,7 @@
       <title lang="en">
         Example for the <quote>Photocopy</quote> filter
       </title>
-      <title lang="en"><quote>写真コピー</quote>フィルタの使用例</title>
+      <title lang="en"><quote>写真コピー</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -55,7 +55,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Photocopy</quote> applied</para>
-          <para lang="en"><quote>写真コピー</quote>フィルタ適用後</para>
+          <para lang="en"><quote>写真コピー</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -67,7 +67,7 @@
       neighborhood average, and setting other pixels to white.
     </para>
     <para lang="ja">
-      <guimenuitem>写真コピー...</guimenuitem> フィルタは
+      <guimenuitem>写真コピー...</guimenuitem> フィルターは
       活性レイヤーもしくはその選択範囲を加工してあたかもトナーインクを特定の
       部分で比較的暗いところに乗せた白黒のコピーのような画像にします。 この処理
       は画像で周囲の平均よりも暗いと測定された部分を黒く残し、 それ以外の画素を
@@ -82,18 +82,19 @@
         to get the best result.
       </para>
       <para lang="ja">
-        画像を鮮鋭化する用途でこのフィルタが使えます。 活性レイヤーもしくはその
-        選択範囲の複製レイヤーをつくりこのフィルタで処理します。 そのレイヤーの
+        画像を鮮鋭化する用途でこのフィルターが使えます。 活性レイヤーもしくは
+        その選択範囲の複製レイヤーをつくりこのフィルターで処理します。
+        そのレイヤーの
         <link linkend="gimp-concepts-layer-modes">モード</link> を 
-        <guimenuitem>乗算</guimenuitem> にしてから不透明度スライダで最良の状態
-        を探ります。
+        <guimenuitem>乗算</guimenuitem> にしてから不透明度スライダーで最良の
+        状態を探ります。
       </para>
     </tip>
   </sect3>
 
   <sect3>
     <title lang="en">Starting Filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter from the image menu through
       <menuchoice>
@@ -105,7 +106,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>芸術的効果</guisubmenu>
         <guimenuitem>写真コピー...</guimenuitem>
       </menuchoice>
@@ -117,7 +118,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Photocopy</quote> filter options</title>
-      <title lang="ja"><quote>写真コピー</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>写真コピー</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -136,7 +137,7 @@
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
-            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            にしておれば画像に実際にフィルターをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
           </para>
         </listitem>
@@ -154,7 +155,7 @@
             values result in less toner overall and more details everywhere.
           </para>
           <para lang="ja">
-            このパラメータは画素を暗くするかどうか決めるために周囲の画素の平均
+            このパラメーターは画素を暗くするかどうか決めるために周囲の画素の平均
             濃度とこの画素とを比較するときに、 どの程度の遠くの画素までその計算
             に入れるかを設定します。 大きな値をとれば黒の部分がとても太く輪郭を
             描き、  白いところも細かな描写もほとんど残りません。 小さな値に
@@ -179,7 +180,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Percent black</term>
-        <term lang="ja">黒パーセント</term>
+        <term lang="ja">黒の割合</term>
         <listitem>
           <para lang="en">
             This parameter controls the amount of black color added to the
@@ -192,7 +193,7 @@
             Values vary from 0.0 to 1.0.
           </para>
           <para lang="ja">
-            <guilabel>黒パーセント</guilabel> パラメータは
+            <guilabel>黒の割合</guilabel> パラメーターは
             画像に加えられる黒の量を調節します。 値を小さくとると白い部分から
             墨ベタ塗り部分への移り変わりが滑らかになり、 暗い色の線は細くあまり
             目立たなくなります。 値を大きくとると線が太くなり、 暗く鋭く
@@ -204,15 +205,14 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Percent white</term>
-        <term lang="ja">白パーセント</term>
+        <term lang="ja">白の割合</term>
         <listitem>
           <para lang="en">
             This parameter increases white pixels percentage.
           </para>
           <para lang="ja">
-            <guilabel>白パーセント</guilabel> パラメータは
-            白い画素の割合を調節します。 0.000 から 1.000 の範囲で指定して
-            ください。
+            <guilabel>白の割合</guilabel> パラメーターは白い画素の割合を
+            調節します。 0.000 から 1.000 の範囲で指定してください。
           </para>
         </listitem>
       </varlistentry>

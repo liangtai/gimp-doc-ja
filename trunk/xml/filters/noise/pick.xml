@@ -8,7 +8,7 @@
   2005-09-30 de replaced informalfigure by axel.wernicke
   2005-08-26 de added by axel.wernicke
 -->
-<!--2010-12-10-->
+<!--2012-03-06-->
 <sect2 id="plug-in-randomize-pick">
   <title lang="en">Pick</title>
   <title lang="ja">つまむ...</title>
@@ -22,7 +22,7 @@
     <primary>Pick</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>ノイズ</secondary>
     <tertiary sortas="ツマム">つまむ</tertiary>
   </indexterm>
@@ -37,7 +37,7 @@
       <title lang="en">
         Example of applying the <quote>Pick</quote> filter
       </title>
-      <title lang="ja"><quote>つまむ</quote>フィルタの適用例</title>
+      <title lang="ja"><quote>つまむ</quote>フィルターの適用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -55,7 +55,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>Pick</quote> applied</para>
-          <para lang="ja"><quote>つまむ</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>つまむ</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -67,7 +67,7 @@
       <guilabel>Randomization (%)</guilabel> option.
     </para>
     <para lang="ja">
-      <guimenuitem>つまむ...</guimenuitem> フィルタは対象となる画素の周囲 
+      <guimenuitem>つまむ...</guimenuitem> フィルターは対象となる画素の周囲 
       3&times;3 ピクセルの範囲内で自身を含む 9 個の画素から無作為にどれか
       ひとつを選んでその値で自身の値を置き換えます。 このような処理は
       活性レイヤーもしくはその選択範囲のすべての画素に及ぼすことができるほか、 
@@ -78,7 +78,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -90,7 +90,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ノイズ</guisubmenu>
         <guimenuitem>つまむ...</guimenuitem>
       </menuchoice>
@@ -102,7 +102,7 @@
     <title lang="ja">オプション</title>
     <figure>
       <title lang="en"><quote>Pick</quote> filter options</title>
-      <title lang="ja"><quote>つまむ</quote>フィルタのオプション</title>
+      <title lang="ja"><quote>つまむ</quote>フィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG" fileref="images/filters/noise/pick.png"/>
@@ -129,15 +129,15 @@
           </para>
           <para lang="ja">
             つまむ処理の不規則性を制御します。 同じ状況で同じ乱数種を用いると
-            このフィルタは全く同じ結果を生みます。 乱数種が変われば結果も違う
+            このフィルターは全く同じ結果を生みます。 乱数種が変われば結果も違う
             ものになります。 乱数種は数値記入欄で直に指定できるほか、 
             <guibutton>新しい種</guibutton> ボタンをクリック
             して無作為に生成させる方法もあります。
           </para>
           <para lang="ja">
-            <guilabel>乱数化</guilabel> オプションを有効に
-            すると乱数種を直に指定できなくなりますが、 その代わりこのフィルタ
-            を実行する度に新しい乱数種が自動生成されるようになります。 この
+            <guilabel>乱数化</guilabel> オプションを有効にすると
+            乱数種を直に指定できなくなりますが、 その代わりこのフィルターを
+            実行する度に新しい乱数種が自動生成されるようになります。 この
             オプションを無効にしている間は前回利用した乱数種が記憶されています
             ので再利用が容易です。
           </para>
@@ -153,7 +153,7 @@
             more pixels are picked.
           </para>
           <para lang="ja">
-            このスライダは活性レイヤーもしくはその選択範囲における画素のうち
+            このスライダーは活性レイヤーもしくはその選択範囲における画素のうち
             つまむ処理の対象となる画素の割合を設定します。 値を高くするにつれ
             より多くの画素が不規則変化をし、 元画像の面影が失われてゆきます。
           </para>
@@ -169,9 +169,9 @@
             being transferred farther away.
           </para>
           <para lang="ja">
-            このスライダでフィルタによる処理の回数を定めます。 高い値にするほど
-            つまむ処理が多くなり、 画素の値がどんどん離れた場所に移動することに
-            もなります。
+            このスライダーでフィルターによる処理の回数を定めます。 高い値に
+            するほどつまむ処理が多くなり、 画素の値がどんどん離れた場所に
+            移動することにもなります。
           </para>
         </listitem>
       </varlistentry>

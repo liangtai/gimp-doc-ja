@@ -11,7 +11,7 @@
   050901 de added by axel.wernicke
   050716 en added sect "more information"
 -->
-<!--2010-12-09-->
+<!--2012-03-06-->
 <sect2 id="plug-in-unsharp-mask">
   <title lang="en">Unsharp Mask</title>
   <title lang="ja">アンシャープマスク...</title>
@@ -25,7 +25,7 @@
     <primary>Unsharp Mask</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="キョウチョウ">強調</secondary>
     <tertiary>アンシャープマスク</tertiary>
   </indexterm>
@@ -56,7 +56,7 @@
         <caption>
           <para lang="en">Filter <quote>Unsharp mask</quote> applied</para>
           <para lang="ja">
-            <quote>アンシャープマスク</quote>フィルタ適用後
+            <quote>アンシャープマスク</quote>フィルター適用後
           </para>
         </caption>
       </mediaobject>
@@ -85,7 +85,7 @@
     <para lang="ja">
       <guimenuitem>アンシャープマスク...</guimenuitem> (直訳
       は非明晰化マスクですからまぎらわしいですね) は物体の輪郭を明晰化します。 
-      ノイズや汚れが増えることはありません。 シャープ化フィルタの王者です。
+      ノイズや汚れが増えることはありません。 シャープ化フィルターの王者です。
     </para>
     <tip>
       <para lang="en">
@@ -95,10 +95,10 @@
         you regain the full control over the sharpening of your images.
       </para>
       <para lang="ja">
-        デジタルカメラやスキャナのような画像化デバイスには取り込んだ画像を
+        デジタルカメラやスキャナーのような画像化デバイスには取り込んだ画像を
         シャープ化する機能が付いているものがあります。 でもデバイス付属のこの
         ようなシャープ化機能のスイッチは切っておき、 代わりに
-        <acronym>GIMP</acronym>のフィルタを利用されることを強くお勧めします。 
+        <acronym>GIMP</acronym>のフィルターを利用されることを強くお勧めします。 
         そうすれば
         あなたの手で画像の明晰化処理にかかる全面的な制御が可能になるからです。
       </para>
@@ -128,8 +128,8 @@
     <para lang="ja">
       シャープ化の際に色の歪みが起こるのを防ぐため、 画像を
       <acronym>HSV</acronym>にチャンネル分解して明度 V チャンネル上にだけ
-      フィルタをかけるとよいでしょう。 そのあとまた<acronym>HSV</acronym>画像に
-      合成するのです。 まずは画像ウィンドウのメニューより 
+      フィルターをかけるとよいでしょう。 そのあとまた<acronym>HSV</acronym>
+      画像に合成するのです。 まずは画像ウィンドウのメニューより 
       <menuchoice>
         <guimenu>色</guimenu>
         <guisubmenu>色要素</guisubmenu>
@@ -139,11 +139,11 @@
       <guilabel>分解したチャンネルをレイヤーに展開</guilabel> に
       チェックを入れてください。 <guilabel>取り出すチャンネル</guilabel> に
       <acronym>HSV</acronym>を選択して <guibutton>OK</guibutton> をクリック
-      します。 これで 3 層の灰色陰影で描かれたレイヤーからなる画像が
+      します。 これで 3 層の灰色濃淡で描かれたレイヤーからなる画像が
       生成されます。 レイヤーはそれぞれ色相、 彩度、 明度を表しています。 
       (混乱しないために元画像は閉じておきましょう。) 明度レイヤーを選択したら
-      ここでシャープ化フィルタを適用します。 そのあとは同じレイヤーを選んでから
-      処理を逆に辿ります。 画像ウィンドウのメニューより 
+      ここでシャープ化フィルターを適用します。 そのあとは同じレイヤーを
+      選んでから処理を逆に辿ります。 画像ウィンドウのメニューより 
       <menuchoice>
         <guimenu>色</guimenu>
         <guisubmenu>色要素</guisubmenu>
@@ -157,7 +157,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -169,7 +169,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>強調</guisubmenu>
         <guimenuitem>アンシャープマスク...</guimenuitem>
       </menuchoice>
@@ -182,7 +182,7 @@
     <figure>
       <title lang="en"><quote>Unsharp Mask</quote> filter options</title>
       <title lang="ja">
-        <quote>アンシャープマスク</quote>フィルタのオプション
+        <quote>アンシャープマスク</quote>フィルターのオプション
       </title>
       <mediaobject>
         <imageobject>
@@ -202,7 +202,7 @@
           </para>
           <para lang="ja">
             <guilabel>プレビュー</guilabel> オプションを有効
-            にしておれば画像に実際にフィルタをかける前からダイアログ上で調節
+            にしておれば画像に実際にフィルターをかける前からダイアログ上で調節
             したとおりに即座に効果のようすが見て判るようになっています。
           </para>
         </listitem>
@@ -218,7 +218,7 @@
             sharpen an image at its final resolution.
           </para>
           <para lang="ja">
-            スライダや数値記入欄で、 シャープ化される輪郭周辺の画素数を決める
+            スライダーや数値記入欄で、 シャープ化される輪郭周辺の画素数を決める
             ことになる値を 0.1 から 120.0 の範囲で設定します。 高解像度の画像
             なら半径に大きな値がとれます。 画像のシャープ化はいつもその最終
             解像度で行なう方が良いでしょう。
@@ -234,8 +234,8 @@
             strength of sharpening.
           </para>
           <para lang="ja">
-            このスライダや数値記入欄でシャープ化の強度が設定できます。 値の範囲
-            は 0.00 から 5.00 です。
+            このスライダーや数値記入欄でシャープ化の強度が設定できます。 値の
+            範囲は 0.00 から 5.00 です。
           </para>
         </listitem>
       </varlistentry>
@@ -251,8 +251,8 @@
             face, sky or water surface.
           </para>
           <para lang="ja">
-            このスライダや数値記入欄で、 輪郭がシャープ化を受けるかどうかを示す
-            画素の値の最小差異を設定できます。 値の範囲は 0 から 255 です。 
+            このスライダーや数値記入欄で、 輪郭がシャープ化を受けるかどうかを
+            示す画素の値の最小差異を設定できます。 値の範囲は 0 から 255 です。 
             これを用いてシャープ化を受けたくない滑らかな色変化の部分を守れます
             ので、 天空や水面のような被写体に汚点を作らずに済みます。
           </para>
@@ -379,9 +379,9 @@
           </menuchoice>
           つぎに
           <menuchoice>
-            <guimenu>フィルタ</guimenu>
+            <guimenu>フィルター</guimenu>
             <guisubmenu>ぼかし</guisubmenu>
-            <guimenuitem>ガウシアンぼかし...</guimenuitem>
+            <guimenuitem>ガウスぼかし...</guimenuitem>
           </menuchoice>
           を初期設定の<acronym>IIR</acronym>オプションと
           半径が 5 の設定でコピーのレイヤーにかけます。

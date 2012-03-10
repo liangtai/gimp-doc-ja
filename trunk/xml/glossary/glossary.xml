@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--2012-01-05-->
+<!--2012-03-04-->
 <glossary id="glossary">
   <title lang="en">Glossary</title>
   <title lang="ja">用語集</title>
@@ -141,8 +141,8 @@
       </para>
       <para lang="ja">
 アンチエイリアス化とは近似 (エイリアス) されたところを元に戻す工程を
-指しており、 つまりは<quote>ギザギザ現象</quote>を減らすしくみと
-いえます。 アンチエイリアスが掛けられた領域の画素と背景との境目は、 
+指しており、 つまりは<quote>ギザギザ現象</quote>を減らす処理のこと
+です。 アンチエイリアスが掛けられた領域の画素と背景との境目は、 
 滑らかな曲線になるよう調整されます。 一般的には画素の発色や不透明度に
 変化をつけることによって背景と滑らかにつながったように見せています。 
 選択をとると、 選択範囲の境界線付近では選択の強度が適度に弱められます。
@@ -274,7 +274,7 @@
         <blockquote>
           <para>
 bitmap &mdash; 画面上に表示される画像の画素と 1 対 1 で対応するデータ
-ファイルもしくは構造のことをいい、 ディスプレイ用ビデオメモリ上に
+ファイルもしくは構造のことをいい、 ディスプレイ用ビデオメモリー上に
 展開される形式とおそらくは同一であり、 機種非依存のビットマップ形式
 を指すこともある。 ビットマップの特性は画像の幅と高さの画素数と各
 画素のビット深度によって決まる。 画素のビット深度は灰色陰影の階調
@@ -596,7 +596,7 @@ Separate+</ulink> というツール集が開発を継続しており、 すで�
       </para>
       <para lang="ja">
 このモードは印刷に利用されています。 これら 4 色のインクカートリッジが
-お使いのプリンタに入っているはずです。 絵画や、 私たちの身の回りにある
+お使いのプリンターに入っているはずです。 絵画や、 私たちの身の回りにある
 発光物体を除く光を反射するあらゆる物が、 このモードによって発色して
 います。 物体は光波を浴びるとその一部だけを吸収し、 私たちはその残りの
 反射光だけを見ています。 ちなみにヒトの目の角膜はこの反射光を
@@ -612,8 +612,8 @@ Separate+</ulink> というツール集が開発を継続しており、 すで�
 を減法混色することになりますから、 目に見える光は何も残らなくなり、 
 つまりは黒く見えるはずです。 しかし実際の問題はもっと複雑です。 
 上図では濃い茶色に見えますでしょう。 そういうわけでこのモードには黒の
-値が加えられており、 プリンタにも黒のカートリッジが付いているのです。 
-こうした方が安価で済みます。 プリンタは 3 つの色を混ぜてこのような
+値が加えられており、 プリンターにも黒のカートリッジが付いているのです。 
+こうした方が安価で済みます。 プリンターは 3 つの色を混ぜてこのような
 不完全な黒を作ることはなく、 黒のインクを使用します。
       </para>
     </glossdef>
@@ -694,7 +694,8 @@ Separate+</ulink> というツール集が開発を継続しており、 すで�
 しばしば区別が曖昧になっています。
       </para>
       <para lang="ja">
-色空間は入力デバイスと出力デバイス (スキャナ、 モニタ、 プリンタなど) 
+色空間は入力デバイスと出力デバイス (スキャナー、 モニター、
+プリンターなど) 
 が認識もしくは描出できる範囲の色のまとまりです。 色空間にある色は色空間
 の座標系で数値化できます。 ヒトの目の構造上、 ヒトが認識できる色空間
 には 3 色の基軸があります。 このことから実用的なアプリケーションは色を
@@ -803,7 +804,7 @@ Separate+</ulink> というツール集が開発を継続しており、 すで�
       <para lang="ja">
 <link linkend="plug-in-newsprint">新聞印刷</link> フィルタもまた
 ディザリングを利用しています。 ディザリングで画像にできた乱れは 
-<link linkend="plug-in-nlfilt">非線形フィルタ</link> で除去できます。
+<link linkend="plug-in-nlfilt">非線形フィルター</link> で除去できます。
       </para>
       <para lang="ja">
 ちなみに<acronym>GIMP</acronym>は 24 ビットカラーで動作してはいますが、 
@@ -932,7 +933,7 @@ Exif、 <acronym>EXIF</acronym>ではない) はデジタルカメラが利用�
         <link linkend="gimp-using-fileformats">Format types</link>.
       </para>
       <para lang="ja">
-ファイル形式とはコンピュータで扱うデータを保存するための規格です。 
+ファイル形式とはコンピューターで扱うデータを保存するための規格です。 
 オペレーティングシステムはファイルを何バイトから数千億バイトまである
 一定の長さのひと連なりのバイト列として保存しますが、 その実際の中身の
 データの種類がはっきり判るような記述をするしくみがありません。 そこで
@@ -1096,6 +1097,7 @@ Louis Steinberg 氏による
         use the middle slider to change the gamma value.
       </para>
       <para lang="ja">
+<!--perceptuallyの訳に自信がない-->
 ガンマもしくはガンマ補正とは、 ビデオ映像や静止画像のシステムにおいて
 輝度や色の値を符号化および復号化するのに使われる一種の非線形操作です。 
 画像や映像を扱うさまざまな種類の機器の信号から発光への反応や強度から信号
@@ -1105,7 +1107,6 @@ Louis Steinberg 氏による
 直線的ではありません。 ガンマによる符号化は、 データを視覚線形な領域に
 分布させることで限りある信号帯域 (つまり<acronym>RGB</acronym>の各信号に
 ある限られたビット数) でもうまく視覚的に適合させるのに役立ちます。
-<!--訳者はperceptuallyの意味がわかりませんでした-->
       </para>
       <para lang="ja">
 ガンマ値は指数として補正の数式に登場します。 ガンマ圧縮 (つまりガンマ値
@@ -1115,23 +1116,24 @@ Louis Steinberg 氏による
 への電流-電圧関数が非線形であるとき使われます。
       </para>
       <para lang="ja">
+<!--FIX訳文-->
 [ウィンドウズ系の]パソコンの画面ではガンマ値がおよそ 0.45 で画像を
 符号化し、 2.2 で復号しています。 <productname>Mac</productname> の
 システムでは画像の符号化におよそ 0.55 のガンマ値を、 復号に 1.8 の
-ガンマ値を使うのが典型的です。 大多数のカメラやパソコンやプリンタが
+ガンマ値を使うのが典型的です。 大多数のカメラやパソコンやプリンターが
 利用しているs<acronym>RGB</acronym>色空間の標準が用いる数式は単純な
 指数関数ではなく、 復号に使うガンマ値はその値の範囲を大きく越えた 2.2
-近くになっています。<!--FIX訳文-->
+近くになっています。
       </para>
       <para lang="ja">
 ガンマ補正をオプションにもつ<acronym>GIMP</acronym>のプラグインには、 
-<link linkend="plug-in-gimpressionist">GIMPressionist</link> フィルタの
-<guilabel>ブラシ</guilabel> タブや、 
-<link linkend="plug-in-flame">炎</link> フィルタがあります。 また、 
-<link linkend="gimp-display-filter-dialog">ディスプレイフィルタ</link>
+<link linkend="plug-in-gimpressionist">GIMPressionist</link> 
+フィルターの <guilabel>ブラシ</guilabel> タブや、 
+<link linkend="plug-in-flame">炎</link> フィルターがあります。 また、 
+<link linkend="gimp-display-filter-dialog">ディスプレイフィルター</link>
 もガンマフィルタを含んでいます。 そのほか
 <link linkend="gimp-tool-levels">レベルツール</link> のダイアログを
-見ていただくと、 ここでは中央のスライダを使ってガンマ値が変更できます。
+見ていただくと、 ここでは中央のスライダーを使ってガンマ値が変更できます。
       </para>
     </glossdef>
   </glossentry>
@@ -1163,8 +1165,8 @@ Louis Steinberg 氏による
         <xref linkend="bibliography-online-wkpd-gamut"/>
       </para>
       <para lang="ja">
-コンピュータグラフィックスやコンピュータ上の写真での色再現の場面で
-言われるガモット (<foreignphrase>gamut:</foreignphrase> 英語) 
+コンピューターグラフィックスやコンピューター上の写真での色再現の
+場面で言われるガモット (<foreignphrase>gamut:</foreignphrase> 英語) 
 とは、 れっきとした色[空間]の部分集合のことです。 最も一般的な
 利用法だと、 所定の色空間の範囲内だとか何かしらの出力デバイスで決め
 られる環境のような制約のなかで正確に再現できる色の部分集合をさします。 
@@ -1362,7 +1364,7 @@ X ウィンドウシステムです。 足りないものは新たに始めか�
       </para>
       <para lang="ja">
 <acronym>GIMP</acronym> (<acronym>GNU</acronym> Image Manipulation 
-Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
+Program) は<acronym>GNU</acronym>の公式アプリケーションです。
 <link linkend="bibliography-online-wkpd-gnu">ウィキペディア</link> も
 ご覧ください。
       </para>
@@ -1545,7 +1547,7 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
 <link linkend="glossary-colormodel">色モデル</link> のことです。
       </para>
       <para lang="ja">
-<acronym>RGB</acronym>モードはコンピュータ画面には非常によく適応し
+<acronym>RGB</acronym>モードはコンピューター画面には非常によく適応し
 ますが、 明るい緑色や薄紅色、 眩しい赤など日常見るものすべてまでを描出
 しうるものではありません。 <acronym>HSV</acronym>モデルはこのような特徴
 を考慮に入れています。 <acronym>HSV</acronym>と<acronym>RGB</acronym>
@@ -1574,10 +1576,11 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
               colors</quote>.)
             </para>
             <para lang="ja">
-これは色そのもので、 基本色の合成から成っています。 灰色階調を除く全て
-の濃淡<!--???-->がイエローや青やさらには紫やオレンジなど、 <quote>
-色相環</quote>で表現されます。 色相環は 0 度から 360 度の範囲の値があります。 
-(<quote>色</quote>はしばしば<quote>色相</quote>の代わりに使われます。 
+これは色そのもので、 基本色の合成から成っています。 イエローや
+青やさらには紫やオレンジなど、 灰色濃淡を除くすべての色合い
+<!--???-->が<quote>色相環</quote>で表現されます。 色相環は 0 
+度から 360 度の範囲の値があります。 (<quote>色</quote>はしばしば
+<quote>色相</quote>の代わりに使われます。 
 <acronym>RGB</acronym>の各色は<quote>基本色</quote>です。)
             </para>
           </listitem>
@@ -1594,10 +1597,10 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
               from white to the purest color.
             </para>
             <para lang="ja">
-この値はその色がどの程度薄まっているかを示します。 完全に彩度を失った
-色は灰色になります。 彩度が増すと、 色はパステル調に近づきます。 彩度が
-完全な色は純色です。 彩度は 0 から 100 の間の値をとり、 つまり白から
-純粋色の幅があります。
+この値はその色がどの程度薄まっているかを示します。 完全に彩度を
+失った色は灰色になります。 彩度が増すと、 色はパステル調に
+近づきます。 彩度が完全な色は純色です。 彩度は 0 から 100 の間の
+値をとり、 つまり白から純粋色の幅があります。
             </para>
           </listitem>
         </varlistentry>
@@ -1616,11 +1619,12 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
               the RGB space (scaled to 0-100).
             </para>
             <para lang="ja">
-この値は明度、 つまり明るさの強さを示します。 色が発する光の量です。
-明度の変化は例えば日陰から日向に移動した物体の色や、 コンピュータ画面
-の明度を増したときにわかります。 0 から 100 の範囲の値を持ちます。 3 つの
-チャンネルそれぞれの画素の値も明度です。 <acronym>HSV</acronym>色モデル
-の明度とは<acronym>RGB</acronym>色空間の 3 つの基本の値 (0 から 100 
+この値は明度、 つまり明るさの強さを示します。 色が発する光の
+量です。 明度の変化は例えば日陰から日向に移動した物体の色や、
+コンピューター画面の明度を増したときにわかります。 0 から 100
+の範囲の値を持ちます。 3 つのチャンネルそれぞれの画素の値も
+明度です。 <acronym>HSV</acronym>色モデルの明度とは
+<acronym>RGB</acronym>色空間の 3 つの基本の値 (0 から 100 
 の範囲) の最大値から得られます。
             </para>
           </listitem>
@@ -1661,11 +1665,11 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
         and <quote>bb</quote> represents blue.
       </para>
       <para lang="ja">
-6 桁の 16 進数はコンピュータで扱う色を符号化する方法になります。 最初の
-<quote>#</quote>記号はそのあとにつづく英数字が 16 進数であることを示して
-います。 3 つの基本色はそれぞれが 2 けたで表され、 3 つ合わさって
-<quote>#rrggbb</quote>の形になります。 この<quote>rr</quote>は赤を、 
-<quote>gg</quote>は緑を、 <quote>bb</quote>は青を表します。
+6 桁の 16 進数はコンピューターで扱う色を符号化する方法になります。
+最初の<quote>#</quote>記号はそのあとにつづく英数字が 16 進数である
+ことを示しています。 3 つの基本色はそれぞれが 2 けたで表され、 3 つ
+合わさって<quote>#rrggbb</quote>の形になります。 この<quote>rr</quote>
+は赤を、 <quote>gg</quote>は緑を、 <quote>bb</quote>は青を表します。
       </para>
     </glossdef>
   </glossentry>
@@ -1673,7 +1677,7 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
   <glossentry id="glossary-imagehose">
     <glossterm>
       <phrase lang="en">Image Hose</phrase>
-      <phrase lang="ja">散播式ブラシ</phrase>
+      <phrase lang="ja">パイプブラシ</phrase>
     </glossterm>
     <indexterm significance="normal" lang="en">
       <primary>Image Hose</primary>
@@ -1751,7 +1755,7 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
 部分はブラシの最大不透明度を越えない範囲でブラシの効果が増します。
       </para>
       <para lang="ja">
-重ね塗りモードが無効の場合、 ブラシの刻印はキャンバスのバッファ上に
+重ね塗りモードが無効の場合、 ブラシの刻印はキャンバスのバッファー上に
 描画され、 そのつぎに活性レイヤーと合成されます。 ブラシの最大効果は
 そのとき不透明度で決定されるため、 ブラシの刻印が重なってもその効果は
 この限界を越えません。
@@ -1784,8 +1788,8 @@ Program) は<acronym>GNU</acronym>の正式なアプリケーションです。
       </para>
       <para lang="ja">
 上に示した 2 つの図はブラシ間隔を 60 パーセントにした描線です。 左図は
-<quote>重ね塗り</quote>なしで描いたもので、 右図の<quote>重ね塗り
-</quote>ありの描線との違いがわかります。
+<quote>重ね塗り</quote>なしで描いたもので、 右図の
+<quote>重ね塗り</quote>ありの描線との違いがわかります。
       </para>
       <para lang="ja">
 重ね塗りモードは<quote>割合</quote>オプションがないブラシツールの
@@ -1967,8 +1971,8 @@ Web用の画像を省量化したいときは<acronym>JPEG</acronym>にしまし
 形式が断然優れています。
       </para>
       <para lang="ja">
-ほぼ間違いなく<acronym>JPEG</acronym>への変換は不可逆的です。 <acronym>
-JPEG</acronym>画像を開いてそれを保存するだけで圧縮による劣化が
+ほぼ間違いなく<acronym>JPEG</acronym>への変換は不可逆的です。 
+<acronym>JPEG</acronym>画像を開いてそれを保存するだけで圧縮による劣化が
 起こります。 あとから品質オプションの値を上げても失われた画像の情報は
 取り戻せません。
       </para>
@@ -2247,9 +2251,9 @@ Lab 色空間は L と a と b の 3 つの値で色を表現します。 L は�
       </para>
       <para lang="ja">
 元画像ファイルを作り直すわけにはいかないとき、 副作用がありますが
-<acronym>GIMP</acronym>についてくるフィルタを利用する手があります。 
+<acronym>GIMP</acronym>についてくるフィルターを利用する手があります。 
 <link linkend="plug-in-despeckle">ノイズ除去</link> フィルタや
-<link linkend="plug-in-nlfilt">非線形フィルタ</link> の説明をご覧
+<link linkend="plug-in-nlfilt">非線形フィルター</link> の説明をご覧
 ください。
       </para>
     </glossdef>
@@ -2358,10 +2362,10 @@ Lab 色空間は L と a と b の 3 つの値で色を表現します。 L は�
         <link linkend="plug-in-dbbrowser">Procedure Browser</link>.
       </para>
       <para lang="ja">
-<acronym>GIMP</acronym>やその拡張プログラムがもつ機能は全てプロシージャ
+<acronym>GIMP</acronym>やその拡張プログラムがもつ機能は全てプロシージャー
 データベース (<acronym>PDB</acronym>) に登録されています。 各機能に
 ついては 
-<link linkend="plug-in-dbbrowser">プロシージャブラウザ</link> を使えば
+<link linkend="plug-in-dbbrowser">プロシージャーブラウザー</link> を使えば
 <acronym>PDB</acronym>から探し出してその有益なプログラミング用情報が
 得られます。
       </para>
@@ -2531,11 +2535,11 @@ PostScript の仕様上の欠落を充てて新たに開発した
         be edited using <acronym>GIMP</acronym> or another graphics program.
       </para>
       <para lang="ja">
-Adobe 社の開発になる PostScript とは印刷業務やプリンタなど出力デバイスの
-ために使用されるページ記述言語のことです。 これも文書の配布には非常に
-もってこいの規格です。 <acronym>GIMP</acronym>の PostScript サポートは
-直接ではなく、 Ghostscript という強力なフリーソフトウェアプログラムに
-依存しています。
+Adobe 社の開発になる PostScript とは印刷業務やプリンターなど出力
+デバイスのために使用されるページ記述言語のことです。 これも文書の
+配布には非常にもってこいの規格です。 <acronym>GIMP</acronym>の
+PostScript サポートは直接ではなく、 Ghostscript という強力なフリー
+ソフトウェアプログラムに依存しています。
       </para>
       <para lang="ja">
 PostScript の最大の強みは直線や曲線とテキスト、 パスなどからなるベクター
@@ -2824,7 +2828,7 @@ Rendering Intent はつぎのとおりです。
 このような色は塗られた色から反射するのではなく画面の要素から発色され
 ます。 ここで得られる色はすべて 3 つの<acronym>RGB</acronym>原色が
 おのおの明度を変えて合成された結果でできています。 もしテレビ画面を
-近付いてご覧になったら、 コンピュータの画面よりも画素の密度が粗いので、 
+近付いてご覧になったら、 コンピューターの画面よりも画素の密度が粗いので、 
 赤・緑・青の要素が別々の明るさできらめいているのが判るはずです。
 <acronym>RGB</acronym>色モデルは <emphasis>加法混色</emphasis> です。
       </para>
@@ -2953,7 +2957,7 @@ Rendering Intent はつぎのとおりです。
   <glossentry id="glossary-samplemerge">
     <glossterm>
       <phrase lang="en">Sample Merge</phrase>
-      <phrase lang="ja">レイヤー結合色</phrase>
+      <phrase lang="ja">見えている色で</phrase>
     </glossterm>
     <glossdef>
       <para lang="en">
@@ -2970,16 +2974,16 @@ Rendering Intent はつぎのとおりです。
         the color used is the color of the active layer itself.
       </para>
       <para lang="ja">
-レイヤー結合色オプションは
+<quote>見えている色で</quote>オプションは
 <link linkend="gimp-tool-bucket-fill">塗りつぶし</link> ツールと
 <link linkend="gimp-tool-color-picker">スポイト</link> ツールと幾種もの
 選択ツールにあります。 これは複数のレイヤーがある画像でしかも活性
 レイヤーが半透明あるいは <guimenuitem>標準</guimenuitem> 以外の
 <link linkend="gimp-concepts-layer-modes">レイヤーモード</link> に指定
-されている場合に役立ちます。 レイヤー結合色オプションを有効にすると、 
-操作に参照される色はすべての可視レイヤーを通した合成色に求められます。 
-レイヤー結合色オプションを無効にした場合には活性レイヤーの色が使われ
-ます。
+されている場合に役立ちます。 <quote>見えている色で</quote>オプションを
+有効にすると、 操作に参照される色はすべての可視レイヤーを通した合成色に
+求められます。 <quote>見えている色で</quote>オプションを無効にした
+場合には活性レイヤーの色が使われます。
       </para>
     </glossdef>
   </glossentry>
@@ -3070,7 +3074,7 @@ Rendering Intent はつぎのとおりです。
       <para lang="ja">
 仕上りの品質はサンプル数の大小に依存します。 スーパーサンプリングは
 主に元画像の2倍から16倍で処理されます。 サンプル数の大きな画像処理は、 
-それに必要な処理時間もメモリ上の消費容量も格段に増えます。
+それに必要な処理時間もメモリー上の消費容量も格段に増えます。
       </para>
       <para lang="ja">
 容量や時間の必要量を減らす方法のひとつが適応型スーパーサンプリング
@@ -3112,7 +3116,7 @@ Rendering Intent はつぎのとおりです。
       </para>
       <para lang="ja">
 <acronym>SVG</acronym>とは <foreignphrase>Scalable Vector Graphics
-</foreignphrase> の略です。 2次元ベクター画像の 
+</foreignphrase> の略です。 2 次元ベクター画像の 
 <link linkend="glossary-fileformat">ファイル形式</link> のひとつで、 
 静止画とアニメーションの両方に対応しています。 <acronym>GIMP</acronym>
 <link linkend="glossary-paths">パス</link> が<acronym>SVG</acronym>に
@@ -3154,8 +3158,8 @@ Rendering Intent はつぎのとおりです。
         Adapter.
       </para>
       <para lang="ja">
-<acronym>TGA</acronym> (<acronym>TARGA</acronym>画像アダプタ) ファイル
-形式は 1 画素あたり8、 16、 24、 32 ビットカラーのいずれかと可逆連長圧縮
+<acronym>TGA</acronym> (<acronym>TARGA</acronym>画像アダプター) ファイル
+形式は 1 画素あたり 8、 16、 24、 32 ビットカラーのいずれかと可逆連長圧縮
 がサポートされています。 この形式はトゥルービジョン社により開発され
 ました。  <acronym>TGA</acronym>は <foreignphrase>Truevision Graphics 
 Adapter</foreignphrase> の略であり、 <acronym>TARGA</acronym>は 
@@ -3188,7 +3192,7 @@ Adapter</foreignphrase> の略であり、 <acronym>TARGA</acronym>は
       </para>
       <para lang="ja">
 <acronym>TIFF</acronym> (<foreignphrase>Tagged Image File Format
-</foreignphrase>) とはそもそもスキャナで生成される色分け用ラスター画像
+</foreignphrase>) とはそもそもスキャナーで生成される色分け用ラスター画像
 <link linkend="glossary-fileformat">ファイル形式</link> として開発
 されました。 6 つの異なる符号化処方が白黒 2 色とグレースケールとカラーの
 3 つの画像モードいずれにおいてもサポートされています。 画素ごとのビット
@@ -3231,23 +3235,23 @@ Postscript 形式とともに印刷の前段階で最も重要な形式のひと
       </para>
       <para lang="ja">
 タイルとは現時点で<acronym>GIMP</acronym>が開いている画像の断片です。 
-一気に画像を丸ごとメモリに読み込まないようにするため、 <acronym>GIMP
-</acronym>は画像を小さな断片に切り分けています。 タイルは通常64 &times;
-64 ピクセルの正方形をします。 外縁部でこれよりも小さくなってしまい
-ますが同様の切り分けを行ないます。
+一気に画像を丸ごとメモリーに読み込まないようにするため、 
+<acronym>GIMP</acronym>は画像を小さな断片に切り分けています。 タイルは
+通常64 &times;64 ピクセルの正方形をします。 外縁部でこれよりも小さく
+なってしまいますが同様の切り分けを行ないます。
       </para>
       <para lang="ja">
-タイルはメインメモリ、 <acronym>RAM</acronym>上の 
+タイルはメインメモリー、 <acronym>RAM</acronym>上の 
 <link linkend="gimp-using-setup-tile-cache">タイルキャッシュ</link>、 
 ディスク上のいずれかにいつも置かれています。 現時点で作業対象のタイルは
-メインメモリ上に置かれます。 最近使われたタイルは<acronym>RAM</acronym>
+メインメモリー上に置かれます。 最近使われたタイルは<acronym>RAM</acronym>
 上です。 <acronym>RAM</acronym>のタイルキャシュが満杯になると、 最も
 古くに使われたタイルからディスクに移されます。 <acronym>GIMP</acronym>
 は必要になったタイルを<acronym>RAM</acronym>やディスクから取り出し
 ます。
       </para>
       <para lang="ja">
-<link linkend="plug-in-tile">タイル状に並べる</link> フィルタと
+<link linkend="plug-in-tile">タイル状に並べる</link> フィルターと
 混同しないようにしましょう。
       </para>
     </glossdef>
@@ -3272,7 +3276,7 @@ Postscript 形式とともに印刷の前段階で最も重要な形式のひと
 <acronym>URI</acronym> (<foreignphrase>Uniform Resource Identifier
 </foreignphrase>: 統一資源識別子) とは抽象的もしくは物理的な資源を
 示す文字列です。  <acronym>URI</acronym>はウェブページや様々なネット上
-のファイルやウェブサービスの呼び出しや E メールのレシーバなどの
+のファイルやウェブサービスの呼び出しや E メールのレシーバーなどの
 インターネット上の資源を指し示すために利用され、 とくに世界的なウェブ
 <acronym>WWW</acronym>でよく使われています。
       </para>
@@ -3304,7 +3308,7 @@ Postscript 形式とともに印刷の前段階で最も重要な形式のひと
 </foreignphrase>: 統一資源位置指定子) は
 <link linkend="glossary-uri"><acronym>URI</acronym></link> (統一資源
 識別子) の一種であると位置づけられています。 (通例httpやftpなどの) 
-第一義的な接取機構にまつわる資源や、 コンピュータネットワーク上の資源の
+第一義的な接取機構にまつわる資源や、 コンピューターネットワーク上の資源の
 位置情報を<acronym>URL</acronym>は指し示します。 <acronym>URI</acronym>
 の枠組みに基づく名前はそれゆえ一般的には利用されるネットワーク規約から
 派生したものになります。 ネットワーク規約には例えば http や ftp や 
@@ -3415,7 +3419,7 @@ mailto があります。
 <acronym>GIMP</acronym>画像を構成する全てのデータが保存されるよう特別に
 用意されました。 このため<acronym>XCF</acronym>ファイルはすっかり
 こんがらがってしまうようで、 <acronym>GIMP</acronym>以外にこれを読み
-こなせるプラグラムは僅かしかありません。
+こなせるプログラムは僅かしかありません。
       </para>
       <para lang="ja">
 画像を<acronym>XCF</acronym>で保存するとその画像で判ることがほとんど
@@ -3426,7 +3430,7 @@ mailto があります。
       </para>
       <para lang="ja">
 <acronym>XCF</acronym>ファイルの画素の情報は劣化のない圧縮をかけられた
-状態になります。 画像の断片ブトックは連長圧縮アルゴリズムで圧縮され
+状態になります。 画像の断片ブロックは連長圧縮アルゴリズムで圧縮され
 ます。 これはつまりこの形式で画像の保存と読み込みを何度繰り返しても
 画像のデータは 1 画素でさえも失われることがないのです。 
 <acronym>XCF</acronym>は非常に大きなものになりやすいファイル形式です。 
@@ -3539,7 +3543,7 @@ YCbCr モデルはそのような<quote>明るさ-色</quote>モデルにちょ�
 もしくは青緑色への方向で同様な差を得ます。 このとらえ方はヒトの目が特に
 緑の光に敏感な特性を生かしています。 このような理由から、 緑の配分に
 関する情報は基本の明るさ Y と、 表現に必要な赤と青部分の差だけに
-なっています。 Y の値は<acronym>DVD</acronym>[ビデオプレーヤ]のような
+なっています。 Y の値は<acronym>DVD</acronym>[ビデオプレーヤー]のような
 ほとんどの実用的なアプリケーションでは Cb と Cr の 2 つの他の値よりも
 解像度が 2 倍です。
       </para>

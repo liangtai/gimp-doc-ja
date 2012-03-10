@@ -11,7 +11,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2010-12-13-->
+<!--2012-03-02-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -169,9 +169,10 @@
       ます。 一覧表のパレットの見本画像をダブルクリックしたときは (後述する)
       <link linkend="gimp-palette-editor-dialog">パレット編集</link> ダイアログ
       が開かれ、 同様に描画色もしくは背景色を変えられます。 パレットを選ぶ際に
-      <keycap>上下矢印</keycap> キーや <keycap>PgUp</keycap>、 <keycap>PgDn
-      </keycap> キーが使えます (<quote>並べて表示</quote>のときは <keycap>
-      左右矢印</keycap> キーも使えます)。
+      <keycap>上</keycap> <keycap>下</keycap> 矢印キーや
+      <keycap>PgUp</keycap>、 <keycap>PgDn</keycap> キーが使えます 
+      (<quote>並べて表示</quote>のときは <keycap>左</keycap>
+      <keycap>右</keycap> 矢印キーも使えます)。
     </para>
     <para lang="ja">
       ダイアログのパレット一覧表 (<quote>一覧で表示</quote>モードの場合) で
@@ -179,7 +180,7 @@
       できます。 ただし変更できるのは自前で追加インストールしたものに限られ、
       <acronym>GIMP</acronym>と一緒に提供されたパレットファイルは対象外です。
       仮に権限の及ばないものの名前を編集しても、 これを確定しようとして 
-      <keycap>Return</keycap> キーを押したりどこか他のところに操作の焦点を移すと
+      <keycap>Enter</keycap> キーを押したりどこか他のところに操作の焦点を移すと
       たちまち名前は元に戻されます。
     </para>
     <variablelist>
@@ -498,7 +499,7 @@
             ない白紙の状態で作成し、 このパレットに色を加えられるようにするため
             パレット編集ダイアログを開きます。 作業の結果は自動的に
             <acronym>GIMP</acronym>の個人用 <filename class="directory">
-            palettes</filename> フォルダに保存され、 次回から
+            palettes</filename> フォルダーに保存され、 次回から
             パレットダイアログを通じて利用可能になります。
           </para>
         </listitem>
@@ -599,7 +600,7 @@
                       active layer only, even though not visible.
                     </para>
                     <para lang="ja">
-                      <guilabel>レイヤー結合色</guilabel>:
+                      <guilabel>見えている色で</guilabel>:
                       このオプションにチェックが入ると、 全ての可視レイヤーから
                       色が採取されます。 [すなわち見たままの色が拾えます。]
                       チェックを入れない場合は、 現在活性化しているレイヤー
@@ -705,8 +706,8 @@
                   この <guilabel>間隔</guilabel> を増やすとある
                   程度似た色はまとめられ、 より適切なパレットが作成できます。 
                   あらかじめインデックス化された画像の色を転用する場合には
-                  <quote>色数</quote>および<quote>間隔</quote>の設定は
-                  無視され、 これらの スライダは灰色無効に変わり操作できません。
+                  <quote>色数</quote>および<quote>間隔</quote>の設定は無視され、
+                  これらのスライダーは灰色無効に変わり操作できません。
                 </para>
               </listitem>
             </varlistentry>
@@ -721,7 +722,7 @@
           <para lang="ja">
             インポートされたパレットはパレットダイアログの一覧表に加えられ、
             <acronym>GIMP</acronym>を終了するときに自動的に個人用 
-            <filename class="directory">palettes</filename> フォルダに保存
+            <filename class="directory">palettes</filename> フォルダーに保存
             されますから、 次回からも利用できます。
           </para>
         </listitem>
@@ -743,7 +744,7 @@
             パレットの写しをとって新たなパレットを作成しパレット編集ダイアログ
             を開きますので、直ちにパレットが編集できます。 編集後の結果は
             <acronym>GIMP</acronym>を終了する際に自動的に個人用 
-            <filename class="directory">palettes</filename> フォルダに保存
+            <filename class="directory">palettes</filename> フォルダーに保存
             されますから、 次回からもこのパレットが利用できます。
           </para>
         </listitem>
@@ -774,7 +775,7 @@
           </para>
           <para lang="ja">
             このコマンドはパレットファイルの保管場所のパス名をクリップボードに
-            写し取れます。 これは後からテキストエディタに取り込めます。
+            写し取れます。 これは後からテキストエディターに取り込めます。
           </para>
         </listitem>
       </varlistentry>
@@ -816,7 +817,7 @@
             <guimenuitem>パレットを再読み込み</guimenuitem> は検索対象パスに登録
             されているパレットファイルの保管場所を読み込み直し、 新たに発見
             されたパレットをパレットダイアログの一覧表に加えます。 何らかの手段
-            で外部から入手したパレットファイルを個人用パレットフォルダにコピー
+            で外部から入手したパレットファイルを個人用パレットフォルダーにコピー
             したときに、<acronym>GIMP</acronym>を再起動せずとも即座にその
             パレットが利用可能になる便利なボタンです。
           </para>
@@ -1005,8 +1006,8 @@
                 <emphasis>RGB</emphasis> and <emphasis>HSV</emphasis>
               </para>
               <para lang="ja">
-                <guilabel>色モデル</guilabel>: <acronym>RGB
-                </acronym>と<acronym>HSV</acronym>からいずれかを選びます。
+                <guilabel>色モデル</guilabel>: <acronym>RGB</acronym>と
+                <acronym>HSV</acronym>からいずれかを選びます。
               </para>
             </listitem>
             <listitem>
@@ -1226,7 +1227,7 @@
             </para>
             <para lang="ja">
               このアイコンボタンをクリックするとパレットが個人用
-              <filename class="directory">palettes</filename> フォルダに保存
+              <filename class="directory">palettes</filename> フォルダーに保存
               されます。 とはいえ実際は何もしなくてもパレットに加えた操作は
               <acronym>GIMP</acronym>を終了するときに自動的に保存されます。 
               これは、 何かの拍子に<acronym>GIMP</acronym>が異常終了しかねないと
@@ -1468,9 +1469,9 @@
           <para lang="ja">
             <guimenuitem>色の編集...</guimenuitem> は色の変更ダイアログを呼び
             出しますので、 選ばれたパレットの色項目の色をここで変更できます。 
-            ただし開いているパレットの改変権限がない場合 (つまり<acronym>GIMP
-            </acronym>の導入時についてきたシステム付属パレットを開いているとき)
-            には、 このメニュー項目は灰色無効になっています。
+            ただし開いているパレットの改変権限がない場合 (つまり
+            <acronym>GIMP</acronym>の導入時についてきたシステム付属パレットを
+            開いているとき) には、 このメニュー項目は灰色無効になっています。
           </para>
         </listitem>
       </varlistentry>
@@ -1489,8 +1490,8 @@
           </para>
           <para lang="ja">
             これらのコマンドはいずれもパレットに新しい色項目を作り、 
-            (ツールボックスの色標識で表示されている) 現在の<acronym>GIMP
-            </acronym>の描画色や背景色をその新項目の色に使います。
+            (ツールボックスの色標識で表示されている) 現在の
+            <acronym>GIMP</acronym>の描画色や背景色をその新項目の色に使います。
           </para>
         </listitem>
       </varlistentry>
@@ -1551,7 +1552,7 @@
             display area.
           </para>
           <para lang="ja">
-            <guimenuitem>すべてを表示</guimenuitem> は全ての色項目が表示部に
+            <guimenuitem>すべてを表示</guimenuitem> はすべての色項目が表示部に
             収まるようにパレット表示部の升目の高さを調節します。
           </para>
         </listitem>

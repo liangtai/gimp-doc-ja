@@ -11,7 +11,7 @@
   2007-01-05 lexa: added de translation
   2006-12-27 created by j.h
 -->
-<!--2010-12-10-->
+<!--2012-03-07-->
 <sect2 id="plug-in-imagemap">
   <title lang="en">ImageMap</title>
   <title lang="ja">イメージマップ...</title>
@@ -25,7 +25,7 @@
     <primary>ImageMap</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary>ウェブ</secondary>
     <tertiary sortas="クリックカンノウガゾウ">クリック感応画像</tertiary>
   </indexterm>
@@ -43,10 +43,10 @@
     way.
   </para>
   <para lang="ja">
-    感応画像はウェブページ内の特定の領域にマウスポインタをかざしたとき何らかの
+    感応画像はウェブページ内の特定の領域にマウスポインターをかざしたとき何らかの
     反応を起こすしかけを作るときよく使われます。 なかでも感応画像の一部に
     リンクを張り、 クリックされると他のウェブページを開くようにする用途はすぐ
-    思い付かれることでしょう。 このフィルタを使えば一枚の画像の特定の部分
+    思い付かれることでしょう。 このフィルターを使えば一枚の画像の特定の部分
     だけが感応するように画像を簡単に加工できます。 同様の機能はウェブデザイン
     専用ソフトにも標準的にありますが、 <acronym>GIMP</acronym>を使っても
     同じことができるわけです。
@@ -81,7 +81,7 @@
       このツールはこのてびきの 1 ページで説明し尽くすには複雑過ぎます。 
       なにしろこの用途では専用のウェブページ作成アプリケーションとほぼ同等な
       機能がついているからです。 ともかく最新の活用法のいくつかをここで紹介
-      することにしましょう。 全てを詳細に網羅した説明が必要なら、 
+      することにしましょう。 すべてを詳細に網羅した説明が必要なら、 
       <citetitle pubwork="book">Grokking the GIMP</citetitle>
       <xref linkend="bibliography-online-grokking-gimp-imagemap"/> をご覧
       ください。
@@ -90,7 +90,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       From an image window, you can find this filter through
       <menuchoice>
@@ -102,7 +102,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ウェブ</guisubmenu>
         <guimenuitem>イメージマップ...</guimenuitem>
       </menuchoice>
@@ -114,7 +114,7 @@
     <title lang="en">オプション</title>
     <figure>
       <title lang="en">Imagemap filter options</title>
-      <title lang="ja">イメージマップフィルタのオプション</title>
+      <title lang="ja">イメージマップフィルターのオプション</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -143,12 +143,11 @@
           zone; you can call these functions with the Mapping menu,
         </para>
         <para lang="ja">
-          左端の辺で縦に並ぶアイコンはそれぞれ、 一番上の矢印がポインタ、 
+          左端の辺で縦に並ぶアイコンはそれぞれ、 一番上の矢印がポインター、 
           つぎの青い 3 つのボタンは形の異なる領域選択ツール、 5 番目のボタンは
-          領域の属性設定、 そして最後のゴミ箱アイコンボタンは選択された
-          領域を撤去するはたらきがあります。 なおこれらの機能は全てこの
-          ダイアログの <guimenu>マッピング</guimenu> 
-          メニューからも呼び出せます。
+          領域の属性設定、 そして最後のゴミ箱アイコンボタンは選択された領域を
+          撤去するはたらきがあります。 なおこれらの機能はすべてこのダイアログの 
+          <guimenu>マッピング</guimenu> メニューからも呼び出せます。
         </para>
       </listitem>
       <listitem>
@@ -169,7 +168,7 @@
         <para lang="ja">
           さらに右側にはアイコンが縦に並んでいます。 ダイアログの右側に表示
           されている領域の一覧表に関わる操作ができます。 それぞれのはたらき
-          はアイコンを見れば想像できますが、 ポインタをかざすと現れる
+          はアイコンを見れば想像できますが、 ポインターをかざすと現れる
           ツールチップが機能の説明をします。
         </para>
       </listitem>
@@ -214,8 +213,8 @@
                     text format.
                   </para>
                   <para lang="ja">
-                    他のフィルタは画像を生成するのにこのプラグインだけは画像を
-                    加工せずテキストファイルを生成します。 つまりこの
+                    他のフィルターは画像を生成するのにこのプラグインだけは
+                    画像を加工せずテキストファイルを生成します。 つまりこの
                     ダイアログで行なった操作の成果はテキストファイル形式で保存
                     することになります。
                   </para>
@@ -457,10 +456,10 @@
                     <guilabel>タイトル</guilabel> と
                     <guilabel>デフォルト<accel>U</accel>RL</guilabel> に
                     それぞれ指定してください。 マップファイル形式は
-                    ウェブページを置くウェブサーバの一部の機能に依存する 
+                    ウェブページを置くウェブサーバーの一部の機能に依存する 
                     <guilabel><accel>N</accel>CSA</guilabel> や 
                     <guilabel>C<accel>E</accel>RN</guilabel> よりも、 ほぼ
-                    どんなウェブサーバでも利用可能な 
+                    どんなウェブサーバーでも利用可能な 
                     <guilabel>C<accel>S</accel>IM</guilabel> をお勧めします。 
                   </para>
                 </listitem>
@@ -602,9 +601,10 @@
               of the area list.
             </para>
             <para lang="ja">
-              右の一覧表で領域の項目の順序を変えます。 <quote>前面に移動
-              </quote>で一覧表の一番下に、 <quote>背面に移動</quote>で一覧表
-              の一番上に移動します。 ややこしい。
+              右の一覧表で領域の項目の順序を変えます。 
+              <quote>前面に移動</quote>で一覧表の一番下に、 
+              <quote>背面に移動</quote>で一覧表の一番上に移動します。
+              ややこしい。
             </para>
           </listitem>
         </varlistentry>

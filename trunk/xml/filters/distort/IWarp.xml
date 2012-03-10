@@ -8,7 +8,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-04 de added by axel.wernicke
 -->
-<!--2010-12-09-->
+<!--2012-03-05-->
 <sect2 id="plug-in-iwarp">
   <title lang="en">IWarp</title>
   <title lang="ja">対話的歪め...</title>
@@ -22,7 +22,7 @@
     <primary>IWarp</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ヘンケイ">変形</secondary>
     <tertiary sortas="タイワテキユガメ">対話的歪め</tertiary>
   </indexterm>
@@ -35,7 +35,7 @@
     <title lang="ja">概観</title>
     <figure>
       <title lang="en">Applying example for the IWarp filter</title>
-      <title lang="ja">対話的歪めフィルタの適用例</title>
+      <title lang="ja">対話的歪めフィルターの適用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -53,7 +53,7 @@
         </imageobject>
         <caption>
           <para lang="en">Filter <quote>IWarp</quote> applied</para>
-          <para lang="ja"><quote>対話的歪め</quote>フィルタ適用後</para>
+          <para lang="ja"><quote>対話的歪め</quote>フィルター適用後</para>
         </caption>
       </mediaobject>
     </figure>
@@ -68,7 +68,7 @@
       the mouse pointer.
     </para>
     <para lang="ja">
-      <guimenuitem>対話的歪め...</guimenuitem> フィルタは
+      <guimenuitem>対話的歪め...</guimenuitem> フィルターは
       相互対話的に画像を変形させられます。 さらにアニメーションオプションを
       使えば元画像から変形後の画像までの間にフェードインやフェードアウトする
       部品を作成でき、 ウェブページに活用できます。
@@ -81,7 +81,7 @@
 
   <sect3>
     <title lang="en">Activating the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       You can find this filter through
       <menuchoice>
@@ -93,7 +93,7 @@
     <para lang="ja">
       画像ウィンドウのメニューより
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>変形</guisubmenu>
         <guimenuitem>対話的歪め...</guimenuitem>
       </menuchoice>
@@ -109,7 +109,7 @@
       options.
     </para>
     <para lang="ja">
-      このフィルタのオプションはいろいろたくさんありますので 2 つのタブに
+      このフィルターのオプションはいろいろたくさんありますので 2 つのタブに
       分かれています。 最初のタブは全般的なオプションが入っています。 2 番目の
       タブはアニメーション用のオプションです。
     </para>
@@ -122,7 +122,7 @@
           <quote>IWarp</quote> filter options (Settings tab)
         </title>
         <title lang="ja">
-          <quote>対話的歪め</quote>フィルタのオプション (設定タブ)
+          <quote>対話的歪め</quote>フィルターのオプション (設定タブ)
         </title>
         <mediaobject>
           <imageobject>
@@ -137,8 +137,8 @@
         modes to different parts of the preview.
       </para>
       <para lang="ja">
-        設定タブではプレビュー画面で加工をすすめながらさまざまなパラメータを
-        調節できます。 つまりプレビュー画面で加工中に歪めモードやパラメータを
+        設定タブではプレビュー画面で加工をすすめながらさまざまなパラメーターを
+        調節できます。 つまりプレビュー画面で加工中に歪めモードやパラメーターを
         いろいろ切り替えて重ねて適用できるということです。
       </para>
       <variablelist>
@@ -156,7 +156,7 @@
             <para lang="ja">
               このプレビュー画面が作業場になります。 画面をクリックして
               曳いてください。 画像のなぞられた部分が現在の歪めモードと
-              パラメータに従って加工されます。 作業内容が都合悪くなったときは 
+              パラメーターに従って加工されます。 作業内容が都合悪くなったときは 
               <guibutton>リセット</guibutton> ボタンで加工前の状態に戻せます。
             </para>
           </listitem>
@@ -181,7 +181,7 @@
               </varlistentry>
               <varlistentry>
                 <term lang="en"><guilabel>Remove</guilabel></term>
-                <term lang="ja"><guilabel>ゆがみを直す</guilabel></term>
+                <term lang="ja"><guilabel>歪みを直す</guilabel></term>
                 <listitem>
                   <para lang="en">
                     This remove the distortion where you drag the mouse
@@ -191,7 +191,7 @@
                     affect one frame only.
                   </para>
                   <para lang="ja">
-                    ポインタでなぞった部分の歪みを徐々にとり除きます。
+                    ポインターでなぞった部分の歪みを徐々にとり除きます。
                     これにより <guibutton>リセット</guibutton> ボタンを
                     使わなくても部分的に画像を元に戻せます。 ただし動画化の
                     作業をされているときはご注意ください。 
@@ -242,14 +242,14 @@
         </varlistentry>
         <varlistentry>
           <term lang="en">Deform Radius</term>
-          <term lang="ja">ゆがめる半径</term>
+          <term lang="ja">歪める半径</term>
           <listitem>
             <para lang="en">
               Defines the radius, in pixels (5-100), of the filter action
               circle around the pixel pointed by the mouse.
             </para>
             <para lang="ja">
-              ブラシの大きさのようになぞった部分のフィルタが及ぶ幅をここで
+              ブラシの大きさのようになぞった部分のフィルターが及ぶ幅をここで
               設定します。 値は半径で示し、 単位はピクセル、 範囲は 5 から
               100 です。
             </para>
@@ -257,7 +257,7 @@
         </varlistentry>
         <varlistentry>
           <term lang="en">Deform Amount</term>
-          <term lang="ja">ゆがめる量</term>
+          <term lang="ja">歪める量</term>
           <listitem>
             <para lang="en">
               Sets how much out of shape your image will be put (0.0-1.0).
@@ -335,7 +335,7 @@
           <quote>IWarp</quote> filter options (Animation tab)
         </title>
         <title lang="ja">
-          <quote>対話的歪め</quote>フィルタのオプション (動画化タブ)
+          <quote>対話的歪め</quote>フィルターのオプション (動画化タブ)
         </title>
         <mediaobject>
           <imageobject>

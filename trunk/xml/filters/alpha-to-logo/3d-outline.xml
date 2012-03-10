@@ -6,7 +6,7 @@
   2008-04-24 alex falappa: added 'it' translation
   2008-04-16 ude: initial release ('en','de')
 -->
-<!--2010-10-03-->
+<!--2012-03-05-->
 <sect2 id="script-fu-3d-outline-logo-alpha">
   <title lang="en">3D Outline</title>
   <title lang="ja">3D アウトライン...</title>
@@ -20,7 +20,7 @@
     <primary>3D Outline</primary>
   </indexterm>
   <indexterm lang="ja">
-    <primary>フィルタ</primary>
+    <primary>フィルター</primary>
     <secondary sortas="ロゴコウカ">ロゴ効果</secondary>
     <tertiary>3D アウトライン</tertiary>
   </indexterm>
@@ -33,7 +33,7 @@
     <title lang="en">概観</title>
     <figure>
       <title lang="en">Example for the <quote>3D Outline</quote> filter</title>
-      <title lang="en"><quote>3D アウトライン</quote>フィルタの使用例</title>
+      <title lang="en"><quote>3D アウトライン</quote>フィルターの使用例</title>
       <mediaobject>
         <imageobject>
           <imagedata format="JPG"
@@ -41,7 +41,7 @@
         </imageobject>
         <caption>
           <para lang="en">The <quote>3D Outline</quote> filter</para>
-          <para lang="ja"><quote>3D アウトライン</quote>フィルタ</para>
+          <para lang="ja"><quote>3D アウトライン</quote>フィルター</para>
         </caption>
       </mediaobject>
       <mediaobject>
@@ -82,9 +82,9 @@
       too.
     </para>
     <para lang="ja">
-      このフィルタは縁取りつき文字とドロップシャドウからなるロゴ文字 (上図
-      参照) を作成する<quote>3D アウトライン</quote>スクリプトから派生
-      しました。 ロゴスクリプトは画像ウィンドウのメニューの 
+      このフィルターは縁取りつき文字とドロップシャドウからなるロゴ文字 
+      (上図参照) を作成する<quote>3D アウトライン</quote>スクリプトから
+      派生しました。 ロゴスクリプトは画像ウィンドウのメニューの 
       <menuchoice>
         <guimenu>ファイル</guimenu>
         <guisubmenu>画像の作成</guisubmenu>
@@ -94,20 +94,20 @@
       にあります。
     </para>
     <para lang="ja">
-      <guimenuitem>3D アウトライン...</guimenuitem> フィルタ
-      は活性レイヤーの半透明や不透明な部分の輪郭をアルファチャンネルより
+      <guimenuitem>3D アウトライン...</guimenuitem> フィルターは
+      活性レイヤーの半透明や不透明な部分の輪郭をアルファチャンネルより
       読み取り、 パターンで縁取ってドロップシャドウを付けます。 以下の説明では
       <quote>アルファ域</quote>を活性レイヤーの半透明や不透明な部分を
       指す用語として扱います。
     </para>
     <para lang="ja">
-      このフィルタはアルファ域の輪郭を抽出するために 
+      このフィルターはアルファ域の輪郭を抽出するために 
       <link linkend="plug-in-edge">ソーベル輪郭抽出</link> を利用します。 
       すると例えばまっさらの矩形の選択範囲のような単純なアルファ域であれば
       単なる境界線がとれることでしょう。 しかしつぎの例のようにレイヤーマスク
       を使った場合は (そしてもちろんレイヤーマスクの適用をお忘れなく)、 輪郭
       はもっといろいろ抽出されるはずですし、 ひいてはその輪郭のどれにも
-      フィルタの効果が施されます。
+      フィルターの効果が施されます。
     </para>
     <figure>
       <title lang="en">Example based on multicolored layer mask</title>
@@ -147,7 +147,7 @@
 
   <sect3>
     <title lang="en">Activate the filter</title>
-    <title lang="ja">フィルタの呼び出し方</title>
+    <title lang="ja">フィルターの呼び出し方</title>
     <para lang="en">
       This filter is found in the image window menu under
       <menuchoice>
@@ -163,13 +163,13 @@
     <para lang="ja">
       画像ウィンドウのメニューより 
       <menuchoice>
-        <guimenu>フィルタ</guimenu>
+        <guimenu>フィルター</guimenu>
         <guisubmenu>ロゴ効果</guisubmenu>
         <guimenuitem>3D アウトライン...</guimenuitem>
       </menuchoice>
     </para>
     <para lang="ja">
-      このフィルタは活性レイヤーにアルファチャンネルがある場合に作動し、 
+      このフィルターは活性レイヤーにアルファチャンネルがある場合に作動し、 
       なければメニュー項目が灰色無効となって使用できません。
     </para>
   </sect3>
@@ -200,8 +200,8 @@
           </para>
           <para lang="ja">
             ここには現在選択されているパターンが表示されています。 パターン
-            見本はクリックすると大きく表示されます。 <guibutton>
-            参照...</guibutton> ボタンをクリックすると
+            見本はクリックすると大きく表示されます。 
+            <guibutton>参照...</guibutton> ボタンをクリックすると
             <quote>パターンの選択 (Script-Fu)</quote>ダイアログが現れ、 
             別のパターンに変更できます。
           </para>
@@ -328,7 +328,7 @@
             立体効果を生む 
             <link linkend="plug-in-bump-map">バンプマップ</link> には活性
             レイヤー (アルファレイヤー) に 
-            <link linkend="plug-in-edge">輪郭抽出</link> フィルタを適用
+            <link linkend="plug-in-edge">輪郭抽出</link> フィルターを適用
             したものを用います。 さらにパターン用レイヤーにエンボス加工を
             施しますが、 その前にこのぼかし半径で 
             <link linkend="plug-in-gauss">ガウスぼかし</link> がかけられます。
@@ -351,7 +351,7 @@
           </para>
           <para lang="ja">
             このオプションを既定どおり有効にするとバンプマッププラグインは
-            初期設定値で適用されます。 無効の場合はフィルタを実行中に 
+            初期設定値で適用されます。 無効の場合はフィルターを実行中に 
             <link linkend="plug-in-bump-map">バンプマップ</link> ダイアログ
             が開かれ、 任意にオプションの設定ができます。 ただしこの
             ダイアログを <guibutton>キャンセル</guibutton>

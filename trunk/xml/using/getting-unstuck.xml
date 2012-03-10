@@ -14,7 +14,7 @@
   2006-02-20 fixed #322305
   2005-11-30 replaced informalfigure by axel.wernicke
 -->
-<!--2010-11-23-->
+<!--2012-03-04-->
 <sect1 id="gimp-using-getting-unstuck">
   <title lang="en">Getting Unstuck</title>
   <title lang="ja">固まったときの対処</title>
@@ -70,11 +70,11 @@
     </title>
     <sect3>
       <title lang="en">There is a floating selection</title>
-      <title lang="ja">フローティング (浮層) 選択範囲がある</title>
+      <title lang="ja">フローティング選択範囲がある</title>
       <figure>
         <title lang="en">Layers dialog showing a floating selection.</title>
         <title lang="ja">
-          フローティング選択範囲があることを示すレイヤーダイアログ
+          フローティング (浮層) 選択範囲があることを示すレイヤーダイアログ
         </title>
         <mediaobject>
           <imageobject>
@@ -163,8 +163,7 @@
         他の問題は思い付きはしても、 まさかここが関係するとはなかなか察知
         しづらいからではないでしょうか。 選択範囲を示す点滅破線はしばしば
         画像の重要な細部を見えづらくしてしまう難点があるため、
-        <acronym>GIMP</acronym>では
-        <guimenu>表示</guimenu>メニューの
+        <acronym>GIMP</acronym>では <guimenu>表示</guimenu> メニューの
         <guimenuitem>選択範囲の境界線を表示</guimenuitem>
         のチェックを外せば選択範囲の線を隠せるようになっています。
         ところがその後で忘れてしまいやすいのです。
@@ -174,7 +173,7 @@
         これが何ら警鐘を鳴らすものではないのなら、 もともと問題でもありません。
         これが問題だと思わなければよいだけの話になります。 その逆の場合も、
         すでにあなたはもうどうすれば良いかご存知です。 でも一応申し上げますが、
-        <guimenu>表示</guimenu>メニューを開き、
+        <guimenu>表示</guimenu> メニューを開き、
         <guimenuitem>選択範囲の境界線を表示</guimenuitem>
         のチェックが外れていたらクリックして入れてください。
       </para>
@@ -197,7 +196,7 @@
               in the Select menu to make sure that everything is selected.
             </para>
             <para lang="ja">
-              選択範囲を全域にするため <guimenu>選択</guimenu>メニューの
+              選択範囲を全域にするため <guimenu>選択</guimenu> メニューの
               <guimenuitem>すべて選択</guimenuitem> をクリックする。
             </para>
           </caption>
@@ -327,11 +326,11 @@
       <para lang="ja">
         <emphasis>みわけかた:</emphasis>
         不透明度が0のレイヤー上ではどんな描画をしても何も表示されません。
-        レイヤーダイアログ上部の <guilabel>不透明度</guilabel> スライダを
+        レイヤーダイアログ上部の <guilabel>不透明度</guilabel> スライダーを
         見てください。 もし最左端にあれば、 それが原因です。
       </para>
       <para lang="ja">
-        <emphasis>対処法:</emphasis>スライダを動かします。
+        <emphasis>対処法:</emphasis>スライダーを動かします。
       </para>
     </sect3>
 
@@ -364,8 +363,8 @@
         矩形領域をさがしだし、 その内側で作業しているのかどうか確かめるのです。
       </para>
       <para lang="ja">
-        レイヤーを大きくします。 <guimenuitem>レイヤー</guimenuitem>メニューの
-        下のほうにある2つの操作がどちらもこの問題を解決します。 
+        レイヤーを大きくします。 <guimenuitem>レイヤー</guimenuitem> メニューの
+        下のほうにある 2 つの操作がどちらもこの問題を解決します。 
         <variablelist>
           <varlistentry>
             <term>
@@ -412,12 +411,12 @@
       </para>
       <para lang="ja">
         <emphasis>みわけかた:</emphasis>
-        <acronym>GIMP</acronym>は3つの異なる色のモード
+        <acronym>GIMP</acronym>は 3 つの異なる色のモード
         <link linkend="glossary-colormodel">RGB(A)とインデックス化と
         グレースケール</link> を扱えます。 インデックス化カラーのモードは
         カラーマップを使用しており、 画像のすべての色は色目録から
         とられています。 しかし<acronym>GIMP</acronym>の
-        <link linkend="gimp-tool-color-picker">スポイト</link>は
+        <link linkend="gimp-tool-color-picker">スポイト</link> は
         <acronym>RGB</acronym>カラーのモードを前提にした仕様で色を抽出します。
         要するに、 カラーマップの目録外の色で描こうとすると、
         (変な色がついたり、 何も描けなかったり) おかしな結果になるのです。
