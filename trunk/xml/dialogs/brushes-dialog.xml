@@ -2,18 +2,16 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2009-06-02 j.h: added Ctrl+F for search field in list
-  2008-12-13 j.h: updated to v2.6 en;fr
-  2007-12-13 ude: updated de; changed en layout
+  2012-03-04 j.h: updated to v2.8
+  2012-03-02 j.h: added link to tagging
+  2008-12-13 j.h: updated to v2.6
+  2007-12-13 ude: changed en layout
   2007-08-13 j.h added Copy Brush Location
-  2007-08-04 jh : updated en;fr to 2.4
-  2007-03-06 KoSt: added 'no'
-  2006-08-19 ciampix: added italian translation
-  2006-03-30 lexa: added german translation and docbook compliance
+  2007-08-04 jh : updated to 2.4
   2006-02-24 Written Brush Editor en;fr by j.h
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2012-03-03-->
+<!--2012-03-12-->
 <sect2 id="gimp-brush-dialog">
   <title lang="en">Brushes Dialog</title>
   <title lang="ja">ブラシダイアログ</title>
@@ -57,10 +55,10 @@
     section for basic information on brushes and how they are used in GIMP.
     The dialog also gives you access to several functions for manipulating
     brushes. You can select a brush by clicking on it in the list: it will
-    then be shown in the Brush/Pattern/Gradient area of the Toolbox. A few
-    dozen basic brushes come pre-installed with GIMP, along with a few
-    assorted bizarre ones that mainly serve to show you the range of
-    possibilities. You can also create custom brushes using the Brush Editor,
+    then be shown in the Brush/Pattern/Gradient area of the Toolbox. GIMP
+    comes now with 56 brushes, different from each other, because the
+    size, the ration and the angle of every brush can be set in the tool
+    options dialog.  You can also create custom brushes using the Brush Editor,
     or by saving images in a special brush file format.
   </para>
   <para lang="ja">
@@ -71,9 +69,10 @@
     います。 ブラシを拾うには一覧表でそのアイコンをクリックしてください。 掴ん
     だブラシはツールボックスの
     <link linkend="gimp-toolbox-indicator-area">ブラシ/パターン/グラデーション
-    </link> の区画にその姿のアイコンで表示されます。 <acronym>GIMP</acronym>に
-    は数十個の基本的ブラシと、 ブラシの多様性の幅を示すのが主な目的のへんてこな
-    ブラシが数個、 最初から付いてきます。 さらにはブラシエディターを使ったり
+    </link> の区画にその姿のアイコンで表示されます。 今回から
+    <acronym>GIMP</acronym>の同梱ブラシは形が違うもので 56 種類となりました。
+    というのもブラシの大きさや割合や角度がツールオプションでそれぞれ設定可能に
+    なったからです。 これに加えて、 ブラシエディターを使ったり
     画像をブラシ専用の特別なファイル形式で保存すればお手製のブラシも作れます。
   </para>
 
@@ -332,7 +331,7 @@
               パターン、 グラデーションなどの資源は原則として変更不可です。 
               変更できるのは自作のものや自前のものだけです。
             </para>
-            <tip>
+            <!--<tip>
               <para lang="en">
                 <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
                 opens a search field.
@@ -344,7 +343,7 @@
                 <link linkend="gimp-dock-view-as-list">一覧表ダイアログの検索窓
                 </link> をご覧ください。
               </para>
-            </tip>
+            </tip>-->
           </listitem>
         </varlistentry>
       </variablelist>
@@ -368,7 +367,7 @@
       it gets selected in the brush area of Toolbox and the Brush option of
       painting tools. When you double-click on a brush preview, you will
       activate the
-      <link linkend="gimp-brush-editor-dialog">Brush?Editor</link>. You can also
+      <link linkend="gimp-brush-editor-dialog">Brush Editor</link>. You can also
       click on buttons at the bottom of the dialog to perform various actions.
     </para>
       <para lang="en">
@@ -397,8 +396,8 @@
         </listitem>
         <listitem>
           <para lang="en">
-          A small cross means that the brush is in a reduced size. You can
-          get it in normal size by maintaining left click on it.
+          A small cross means that the brush preview is in a reduced size. You
+          can get it in normal size by maintaining left click on it.
         </para>
           <para lang="ja">
             右下の十字は見本が縮小されたものであることを表しています。 見本を
@@ -416,6 +415,19 @@
           </para>
         </listitem>
       </itemizedlist>
+    </sect4>
+
+    <sect4 id="gimp-brush-dialog-tags">
+      <title lang="en">Tagging</title>
+      <title lang="ja">タグ付け</title>
+      <para lang="en">
+        You can use tags to reorganize the brushes display.
+        See <xref linkend="gimp-tagging"/>.
+      </para>
+      <para lang="ja">
+        タグはブラシの一覧表示を再構成するのに使えます。
+        <xref linkend="gimp-tagging"/> をご覧ください。
+      </para>
     </sect4>
 
     <sect4 id="gimp-brush-dialog-buttons">
@@ -441,28 +453,23 @@
             <para lang="en">
               This slider lets you set the distance between consecutive brush
               marks when you trace out a brushstroke with the mouse pointer.
-              Spacing is a percentage of the brush width and varies from 1 to
-              200.
+              Spacing is a percentage of the brush.
             </para>
             <para lang="ja">
               マウスポインターがなぞった線上に並ぶブラシの刻印の互いの間隔を
-              このスライダで調節します。 間隔の値はブラシの幅の百分率で表し、
-              1 から 200 の範囲で指定してください。
+              このスライダーで調節します。 間隔の値はブラシの幅の百分率で
+              指定します。
             </para>
           </listitem>
         </varlistentry>
+
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Edit Brush</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">ブラシを編集</phrase>
+            <phrase condition="tag-is-required" lang="en">Edit Brush</phrase>
+            <phrase condition="tag-is-required" lang="ja">ブラシを編集</phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -484,17 +491,14 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">New Brush</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">新しいブラシを作成</phrase>
+            <phrase condition="tag-is-required" lang="en">New Brush</phrase>
+            <phrase condition="tag-is-required" lang="ja">
+              新しいブラシを作成
+            </phrase>
           </term>
           <listitem>
             <anchor id="gimp-brush-new"/>
@@ -515,17 +519,12 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-dupkicate-16.png"/>
+              <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Duplicate Brush</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-dupkicate-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">ブラシの複製</phrase>
+            <phrase condition="tag-is-required" lang="en">Duplicate Brush</phrase>
+            <phrase condition="tag-is-required" lang="ja">ブラシの複製</phrase>
           </term>
           <listitem>
             <anchor id="gimp-brush-duplicate"/>
@@ -547,26 +546,23 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Delete Brush</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">ブラシの削除</phrase>
+            <phrase condition="tag-is-required" lang="en">Delete Brush</phrase>
+            <phrase condition="tag-is-required" lang="ja">ブラシの削除</phrase>
           </term>
           <listitem>
             <anchor id="gimp-brush-delete"/>
             <para lang="en">
+              This option is active for parametric brushes only.
               This removes all traces of the brush, both from the dialog and
               the folder where its file is stored, if you have permission to
               do so. It asks for confirmation before doing anything.
             </para>
             <para lang="ja">
+              このオプションはパラメーターつきブラシにのみ有効です。
               現在選ばれているブラシを削除できる権限をお持ちでしたら、
               このボタンをクリックすればダイアログ上のみならず保存されていた
               ブラシファイルまで跡形もなく消し去れます。 実行に移すまえに確認が
@@ -575,17 +571,16 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Refresh Brushes</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">ブラシの再読み込み</phrase>
+            <phrase condition="tag-is-required" lang="en">
+              Refresh Brushes
+            </phrase>
+            <phrase condition="tag-is-required" lang="ja">
+              ブラシの再読み込み
+            </phrase>
           </term>
           <listitem>
             <anchor id="gimp-brush-refresh"/>
@@ -593,9 +588,9 @@
               If you add brushes to your personal
               <filename class="drectory">brushes</filename>
               folder or any other folder in your brush search path, by some
-              means other than the Brush Editor,
-              this button causes the list to be reloaded, so that the new
-              entries will be available in the dialog.
+              means other than the Brush Editor, this button causes the list
+              to be reloaded, so that the new entries will be available in the
+              dialog.
             </para>
             <para lang="ja">
               ブラシエディターで作成されたブラシファイルが自動的に保存される
@@ -616,7 +611,7 @@
         <guisubmenu>Brushes menu</guisubmenu>, from the dialog Tab menu.
       </para>
       <para lang="ja">
-        以上5つのボタンでできる機能は、 ブラシダイアログの一覧表 (升目並びと
+        以上 5 つのボタンでできる機能は、 ブラシダイアログの一覧表 (升目並びと
         名前表示つき列挙のいずれも) 内の標的のブラシをマウスの 
         <mousebutton>第2ボタン</mousebutton> でクリックすると出てくる
         ポップアップメニューや、 ダイアログのタブメニューの 
@@ -687,13 +682,23 @@
           <imagedata format="PNG"
                      fileref="images/dialogs/brushes-editor-dialog.png"/>
         </imageobject>
+        <caption>
+          <para lang="en">
+            THe Brush Editor, activated for a new brush.
+          </para>
+          <para lang="ja">
+            ブラシエディター。 新しいブラシの作成で呼び出したところ。
+          </para>
+        </caption>
       </mediaobject>
     </figure>
     <para lang="en">
-      The Brush Editor allows you either to view the brush parameters of a
-      brush supplied by GIMP, and you can't change them, or to create a custom
-      brush from a geometrical shape, a circle, a square, a diamond. This
-      editor has several elements:
+      The Brush Editor allows you to view the brush parameters of a
+      brush supplied by GIMP, and you can't change them. you can also create
+      a custom brush: click on the <guilabel>New Brush</guilabel> button to
+      activate the functions of the brush editor; you can select a
+      geometrical shape, a circle, a square, or a diamond. This editor has
+      several elements:
     </para>
     <para lang="en">
       <emphasis>The dialog bar</emphasis>:
@@ -709,8 +714,13 @@
     </para>
     <para lang="ja">
       ブラシエディターでは<acronym>GIMP</acronym>とともに提供されたブラシの
-      媒介変数を見られるほか (ただし変更はできない) 、 円形、 正方形、 菱形の
-      ような幾何学図形をもとにブラシの自作ができます。 このエディターの各部品を
+      媒介変数を見られます (ただしそれらの変更は不可)。 ブラシの自作もできます。
+      <quote>新しいブラシを作成</quote>ボタン
+      <guiicon>
+        <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
+      </guiicon>
+      をクリックするとブラシの編集機能がはたらきはじめます。 そこで円形、
+      正方形、 菱形のような幾何学図形が選べます。 このエディターの各部品を
       順に見てゆきましょう。
     </para>
     <para lang="ja">
@@ -764,9 +774,9 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Spikes</term>
-        <term lang="ja">尖り</term>
+        <term lang="ja">とがり</term>
         <listitem>
-          <para lang="en"><!-- Well, also a circle becomes star shaped when increasing the value! -->
+          <para lang="en">
             This parameter is useful only for square and diamond. With a
             square, increasing spikes results in a polygon. With a diamond,
             you get a star.

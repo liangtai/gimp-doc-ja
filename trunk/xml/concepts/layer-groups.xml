@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+
+<!--Section History
+  2012-03-06 j.h: created
+-->
+
+<!--2012-03-14-->
+<sect1 id="gimp-layer-groups">
+  <title lang="en">Layer Groups</title>
+  <title lang="ja">レイヤーグループ</title>
+
+  <para lang="en">
+    This possibility appeared with <acronym>GIMP-2.8</acronym>.
+  </para>
+  <para lang="ja">
+    この機能は <application><acronym>GIMP</acronym> 2.8</application>
+    で登場する見込みです。
+  </para>
+
+  <para lang="en">
+    You can group layers that have similarities in a tree-like way. So, the
+    layer list becomes easier to manage. You can merge layer modes to the
+    group and make new creative effect possible.
+  </para>
+  <para lang="ja">
+    レイヤーを樹木のような構造に仕分けられます。 だからレイヤーのリストはもっと
+    管理しやすくなりました。 レイヤーのモードをグループに統合<!--XXX ???-->
+    したり、 新しい創造的効果の可能性が追求できます。
+  </para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata format="PNG"
+        fileref="images/dialogs/layer-group.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <variablelist>
+    <varlistentry>
+      <term lang="en">Create a Layer Group</term>
+      <term lang="ja">レイヤーグループをつくる</term>
+      <listitem>
+        <para lang="en">
+          You can create a layer group by clicking on the
+          <guibutton>Create a new layer group</guibutton><guiicon></guiicon>
+          button at the bottom of the layer dialog,
+        </para>
+        <para lang="en">
+          through
+          <menuchoice>
+            <guimenu>Layer</guimenu>
+            <guimenuitem>New Layer Group</guimenuitem>
+          </menuchoice>,
+          or through the layer dialog context menu.
+        </para>
+        <para lang="en">
+          This empty layer group appears just above the current layer. It is
+          important to name it (double-click on the name to edit it), else
+          you will get confused when several ones are created.
+        </para>
+        <para lang="en">
+          You can create several layer groups and you can
+          <emphasis role= "bold">embbed</emphasis> them, that is include a
+          layer group in another one.
+        </para>
+        <para lang="ja">
+          レイヤーグループをつくるにはレイヤーダイアログ底部の<quote>新しい
+          レイヤーグループを作成</quote>ボタン
+          をクリックします。
+        </para>
+        <para lang="ja">
+          あるいはレイヤーダイアログの脈絡メニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>新しいレイヤーグループ...</guimenuitem>
+          </menuchoice>
+          に進みます。
+        </para>
+        <para lang="ja">
+          空のレイヤーグループが現在のレイヤーのすぐ手前側に現れます。 
+          重要なことは、 グループに名前をつけることです (名前をダブルクリック
+          しても編集ができます)。 これを怠ってレイヤーグループをいくつも作ると
+          混乱をきたすはめになります。
+        </para>
+        <para lang="ja">
+          いくつかレイヤーグループをつくったあと他のレイヤーグループに入れ子で 
+          <emphasis role="bold">埋め込み</emphasis> ができます。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Adding Layers to a Layer Group</term>
+      <term lang="ja">レイヤーをレイヤーグループに入れる</term>
+      <listitem>
+        <para lang="en">
+          You can add <emphasis>existing layers</emphasis> to a layer group
+          by click-and-dragging them.
+          <note>
+            <para>
+              The hand representing the mouse pointer must turn smaller
+              before releasing the mouse button.
+            </para>
+            <para>
+              A thin horizontal line marks where the layer will be laid
+              down.
+            </para>
+          </note>
+        </para>
+        <para lang="en">
+          To add a <emphasis>new layer</emphasis> to the current layer
+          group,
+          click on the <guibutton>Create a new layer</guibutton> at the
+          bottom of the layer dialog, or use the
+          <guimenuitem>New Layer</guimenuitem> command in the image menu.
+        </para>
+        <para lang="en">
+          When a layer group is not empty, a small <quote>></quote> icon
+          appears. By clicking on it, you can fold/unfold the layer list.
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/dialogs/fold-unfold.png"/>
+            </imageobject>
+          </mediaobject>
+        </para>
+        <para lang="en">
+          You can put layers to be added together to a layer group by making
+          them, them only, visible, and using the <quote>New From Visible
+          </quote> command. All visible layers, outside and inside layer
+          groups, will be added to the active layer group.
+        </para>
+        <para lang="en">
+          Layers that belong to a layer group are slightly indented to the
+          right, allowing you know easily which layers are part of the
+          group.
+        </para>
+        <para lang="ja">
+          <emphasis>既にできているレイヤー</emphasis> をレイヤーグループに
+          入れるにはそのレイヤーをクリックしたまま目標のレイヤーグループ上まで
+          ドラッグで曳いてきて放ちます。
+          <note>
+            <para>
+              マウスポインターの代わりに表示される掌のアイコンが小さくなって
+              からしかマウスボタンを放してはいけません。
+            </para>
+            <para>
+              レイヤーに伴って表示される横向きの線がレイヤーの行き場を示します。
+            </para>
+          </note>
+        </para>
+        <para lang="ja">
+          現在のレイヤーグループへ <emphasis>新しいレイヤー</emphasis> を
+          追加するには、 レイヤーダイアログ底部の
+          <quote>新しいレイヤーの追加</quote>ボタン
+          をクリックするか、 画像ウィンドウメニューより
+          <menuchoice>
+            <guimenu>レイヤー</guimenu>
+            <guimenuitem>レイヤーを追加...</guimenuitem>
+          </menuchoice>
+          を実行します。
+        </para>
+        <para lang="ja">
+          レイヤーグループが空でないときは樹形図の枝分かれ部分に
+          <quote>></quote>アイコンが表示されます。 これをクリックすれば
+          レイヤーリストを畳んだり拡げたりできます。
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/dialogs/fold-unfold.png"/>
+            </imageobject>
+          </mediaobject>
+        </para>
+        <para lang="ja">
+          いくつかレイヤーを一緒にひとつのレイヤーグループに入れるには、
+          まずそれらのレイヤーだけを可視化して (つまり他のレイヤーやレイヤー
+          グループを不可視にして)、 <quote>可視部分をレイヤーに</quote>
+          コマンドを実行します。 レイヤーグループに既に入っていようとなかろうと
+          可視化されたレイヤーはすべて現在のレイヤーグループに加わります。
+        </para>
+        <para lang="ja">
+          レイヤーグループに入っているレイヤーは少しだけ右寄りにずれて
+          一覧表に表示されるので、 ひとめでどのレイヤーがどのレイヤーグループに
+          所属しているかが判ります。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Raise and Lower Layer Groups</term>
+      <term lang="ja">レイヤーグループを上下させる</term>
+      <listitem>
+        <para lang="en">
+          You can raise and lower layer groups in the layer dialog as you do
+          with normal layers: click-and-dragging, using arrow up and down
+          keys at the bottom of the layer dialog.
+        </para>
+        <para lang="ja">
+          レイヤーグループは一般のレイヤーと同じようにレイヤーダイアログで
+          重なりの順番を変更できます。 グループをクリックしてダイアログの
+          上下ボタンで、 あるいはクリックしたままドラッグして任意の位置へ
+          移動します。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Duplicate a Layer Group</term>
+      <term lang="ja">レイヤーグループを複製する</term>
+      <listitem>
+        <para lang="en">
+          You can duplicate a layer group: click on the
+          <guibutton>Create a duplicate of the layer</guibutton> button or
+          right-click and select the <command>Duplicate Layer</command>
+          command in the pop up context menu.
+        </para>
+        <para lang="ja">
+          レイヤーグループは複製が作れます。 レイヤーダイアログ底部の
+          <quote>レイヤーグループの複製を作成</quote>ボタン
+          をクリックするか、 レイヤーダイアログの脈絡メニューより
+          <guimenuitem>レイヤーの複製</guimenuitem> を実行します。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Move Layer Groups</term>
+      <term lang="ja">レイヤーグループを移動する</term>
+      <listitem>
+        <para lang="en">
+          You can <emphasis role="bold">move a layer group to another image
+          </emphasis> by click-and-dragging.
+          You can also copy-paste it using Ctrl-C and Ctrl-V: then, you get
+          a floating selection that you must anchor (anchor button at the
+          bottom of the layer dialog).
+        </para>
+        <para lang="en">
+          You can also <emphasis role="bold">move and duplicate a layer group
+          inside the canvas</emphasis>: chain all layers in the layer group,
+          activate the Move tool, click-and-drag an element of the layer
+          group in the image. That's a way to multiply objects in an image.
+        </para>
+        <para lang="ja">
+          レイヤーグループはクリックして他の画像までドラッグしてきて放てば
+          <emphasis role="bold">画像間の移動</emphasis> が可能です。 あるいは、
+          <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> のあと
+          <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> する
+          コピーアンドペースト (写し取り貼り付け) の技も使えます。 そのあとは
+          フローティングレイヤーとして画像に入ってきますので固定してやる必要が
+          あります (レイヤーダイアログ底部の<quote>レイヤーを固定</quote>
+          ボタンが使えます)。
+        </para>
+        <para lang="ja">
+          レイヤーグループは同一キャンバス内で
+          <emphasis role="bold">移動や複製</emphasis> も可能です。 レイヤー
+          グループに属するすべての
+          <link linkend="gimp-layer-attributes">レイヤーを連結</link> してから
+          <quote>移動</quote>ツールを呼び出し、 グループ内の任意のレイヤーを
+          クリックしたままドラッグします。 この方法で画像内の像を複製できます。
+        </para>
+      </listitem>
+    </varlistentry>
+    
+    <varlistentry>
+      <term lang="en">Delete a Layer Group</term>
+      <term lang="ja">レイヤーグループを削除する</term>
+      <listitem>
+        <para lang="en">
+          To delete a layer group, click on the red cross button at the
+          bottom of the layer dialog or right-click and select <command>
+          Delete layer</command>.
+        </para>
+        <para lang="ja">
+          レイヤーグループを削除したいときは、 そのグループを選択してから
+          レイヤーダイアログ底部の<quote>レイヤーを削除</quote>ボタン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/dialogs-icon-delete.png"/>
+          </guiicon>
+          をクリックするか、 あるいはそのグループ上で
+          <mousebutton>第2ボタン</mousebutton> クリックをして出てきたメニュー
+          の <guimenuitem>レイヤーの削除</guimenuitem> を実行します。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Embedd Layer Groups</term>
+      <term lang="ja">レイヤーグループを入れ子にする</term>
+      <listitem>
+        <para lang="en">
+          When a layer group is activated, you can add another group inside
+          it with the <quote>Add New Layer Group</quote> command. There
+          seems to be no limit, excepted memory, to the number of embedded
+          layer groups.
+        </para>
+        <para lang="ja">
+          レイヤーグループを活性化させているときに
+          <guimenuitem>新しいレイヤーグループ...</guimenuitem> コマンドを
+          使えば他のグループのなかに接木できます。 メモリー容量の許すかぎり
+          入れ子は何段でも重ねられます。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Layer Modes and Groups</term>
+      <term lang="ja">レイヤーのモードとグループ</term>
+      <listitem>
+        <para lang="en">
+          A layer inside a layer group acts on layers that are in this group
+          only. A layer above a layer group acts on all layers underneath,
+          outside and inside the layer groups.
+        </para>
+        <para lang="ja">
+          レイヤーグループ内のとあるレイヤーの効果が及ぶ範囲はそのレイヤー
+          グループ内のレイヤーだけです。 いまいるレイヤーグループよりも上にある
+          レイヤーの実効範囲は、 当レイヤーグループ内外をふくめ
+          そのレイヤー以下のすべての層です。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/dialogs/layer-group-original.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              Original image
+            </para>
+            <para lang="ja">元画像</para>
+          </caption>
+        </mediaobject>
+        <figure>
+          <title lang="en">Layer Mode in or out Layer Group</title>
+          <title lang="ja">
+            レイヤーグループの内外におけるレイヤーモードの様子
+          </title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/dialogs/layer-group-merge-in.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                We added a white layer <emphasis>in</emphasis> the layer group
+                with saturation mode: only square and triangle are grayed out.
+              </para>
+              <para lang="ja">
+                白いレイヤーを彩度モードにしてレイヤーグループの
+                <emphasis>中に</emphasis> 置いた。 四角と三角だけが灰色に
+                変色している。
+              </para>
+            </caption>
+          </mediaobject>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/dialogs/layer-group-merge-out.png"/>
+            </imageobject>
+            <caption>
+              <para lang="en">
+                We added a white layer <emphasis>out</emphasis> of the layer
+                group with saturation mode: all layers underneath are grayed
+                out, background layer also.
+              </para>
+              <para lang="ja">
+                白いレイヤーを彩度モードにしてレイヤーグループの
+                <emphasis>外に</emphasis> 置いた。 その下側にあるすべての
+                レイヤーが灰色に変色している。
+                背景レイヤーさえも同様に変化している。
+              </para>
+            </caption>
+          </mediaobject>
+        </figure>        
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Opacity</term>
+      <term lang="ja">不透明度</term>
+      <listitem>
+        <para lang="en">
+          When a layer group is activated, opacity changes are applied to all
+          the layers of the group.
+        </para>
+        <para lang="ja">
+          レイヤーグループを選択して活性化し、 不透明度を操作すると、
+          グループ内のすべてのレイヤーの不透明度が変化します。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Layer Mask</term>
+      <term lang="ja">レイヤーマスク</term>
+      <listitem>
+        <para lang="en">
+          As with normal layers, you can add a layer mask to a layer in the
+          group to mask a part of the image.
+        </para>
+        <para lang="ja">
+          一般のレイヤーと同様にレイヤーグループにもレイヤーマスクを加える
+          ことができてその画像の一部にマスクがかけられます。
+        </para>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/dialogs/layer-group-mask.png"/>
+          </imageobject>
+          <caption>
+            <para lang="en">
+              We added a white (Full opacity) layer mask to the triangle layer.
+            </para>
+            <para lang="ja">
+              完全不透明な白いレイヤーマスクを三角形があるレイヤーに加えた。
+            </para>
+          </caption>
+        </mediaobject>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+
+</sect1>

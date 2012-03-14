@@ -2,6 +2,7 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2012-03-02 j.h: added link to tagging
   2008-12-15 j.h: updated en;fr to v2.6
   2008-02-22 j.h: added description for the four first gradients en;fr.
   2008-01-18 ude: added v2.4. gradient menu options and screenshot
@@ -9,7 +10,7 @@
   2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2012-03-03-->
+<!--2012-03-10-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
   <title lang="en">Gradients Dialog</title>
   <title lang="ja">グラデーションダイアログ</title>
@@ -73,7 +74,7 @@
   </para>
   <itemizedlist>
     <para lang="en">
-      The first four gradients are particular: they reproduce the gradient
+      The first five gradients are particular: they reproduce the gradient
       between Foreground and background colors of toolbox in different ways.
     </para>
     <para lang="ja">
@@ -82,13 +83,24 @@
     </para>
     <listitem>
       <para lang="en">
+        <guilabel>FG to BG (Hardedge)</guilabel>: only black and white with a
+        sharp limit.
+      </para>
+      <para lang="ja"><!--Swapped. This is lang.-depend order.-->
+        <guilabel>描画色から透明</guilabel>: 1 色だけ (描画色) 使用し、 完全
+        不透明から完全透過まで徐々に変化がついています。 このグラデーションは
+        穏やかに混じりあうコラージュ作品や霧の効果に非常に役立ちます。
+      </para>
+    </listitem>
+    <listitem>
+      <para lang="en">
         <guilabel>FG to BG (RGB)</guilabel>: default gradient, between the
         Foreground and the background colors of the Toolbox, in the RGB mode.
       </para>
       <para lang="ja"><!--Swapped. This is lang.-depend order.-->
-        <guilabel>描画色から透明</guilabel>: 1色だけ (描画色) 使用し、 完全
-        不透明から完全透過まで徐々に変化がついています。 このグラデーションは
-        穏やかに混じりあうコラージュ作品や霧の効果に非常に役立ちます。
+        <guilabel>描画色から背景色 (HSV 時計回り/反時計回り)</guilabel>:
+        色相環の色を全て使い、 描画色と背景色の間を時計回りと反時計回りに
+        それぞれ切り出しました。
       </para>
     </listitem>
     <listitem>
@@ -97,10 +109,9 @@
         all hues in the color circle between the Foreground and the
         background color, clockwise or counter-clockwise.
       </para>
-      <para lang="ja">
-        <guilabel>描画色から背景色 (HSV 時計回り/反時計回り)</guilabel>:
-        色相環の色を全て使い、 描画色と背景色の間を時計回りと反時計回りに
-        それぞれ切り出しました。
+      <para lang="ja"><!--Swapped. This is lang.-depend order.-->
+        <guilabel>描画色から背景色 (ハードエッジ)</guilabel>:
+        黒と白だけで描かれたくっきりとした仕上りになります。
       </para>
     </listitem>
     <listitem>
@@ -283,6 +294,7 @@
             初期設定のままの<quote>一覧で表示</quote>の方がもっと便利で、 
             グラデーションは各行ごとに名前つきで表示されています。
           </para>
+<!--
           <tip>
             <para lang="en">
               <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
@@ -296,6 +308,7 @@
               </link> をご覧ください。
             </para>
           </tip>
+-->
           <para lang="en">
             In the Tab menu, the option <guilabel>Preview Size</guilabel>
             allows you to adapt the size of gradient previews to your
@@ -319,17 +332,14 @@
     </para>
     <variablelist>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Edit Gradient</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">グラデーションの編集</phrase>
+          <phrase condition="tag-is-required" lang="en">Edit Gradient</phrase>
+          <phrase condition="tag-is-required" lang="ja">
+            グラデーションの編集
+          </phrase>
         </term>
         <listitem>
           <para lang="en">
@@ -344,17 +354,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">New Gradient</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">
+          <phrase condition="tag-is-required" lang="en">New Gradient</phrase>
+          <phrase condition="tag-is-required" lang="ja">
             新しいグラデーションを作成
           </phrase>
         </term>
@@ -387,19 +392,18 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic
               fileref="images/dialogs/stock-duplicate-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Duplicate Gradient</phrase>
+          <phrase condition="tag-is-required" lang="en">
+            Duplicate Gradient
+          </phrase>
+          <phrase condition="tag-is-required" lang="ja">
+            グラデーションの複製
+          </phrase>
         </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic
-              fileref="images/dialogs/stock-duplicate-16.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">グラデーションの複製</phrase>
         <listitem>
           <anchor id="gimp-gradient-duplicate"/>
           <para lang="en">
@@ -414,19 +418,18 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic
               fileref="images/dialogs/dialogs-icon-delete.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Delete Gradient</phrase>
+          <phrase condition="tag-is-required" lang="en">
+            Delete Gradient
+          </phrase>
+          <phrase condition="tag-is-required" lang="ja">
+            グラデーションの削除
+          </phrase>
         </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic
-              fileref="images/dialogs/dialogs-icon-delete.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">グラデーションの削除</phrase>
         </term>
         <listitem>
           <anchor id="gimp-gradient-delete"/>
@@ -442,17 +445,14 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Refresh Gradient</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">
+          <phrase condition="tag-is-required" lang="en">
+            Refresh Gradient
+          </phrase>
+          <phrase condition="tag-is-required" lang="ja">
             グラデーションを再度読み込み
           </phrase>
         </term>
@@ -554,6 +554,20 @@
         </listitem>
       </varlistentry>
     </variablelist>
+
+    <sect4 id="gimp-brush-dialog-tags">
+      <title lang="en">Tagging</title>
+      <title lang="ja">タグ付け</title>
+      <para lang="en">
+        You can use tags to reorganize the gradients display.
+        See <xref linkend="gimp-tagging"/>.
+      </para>
+      <para lang="ja">
+        タグはグラデーションの一覧表示を再構成するのに使えます。
+        <xref linkend="gimp-tagging"/> をご覧ください。
+      </para>
+    </sect4>
+
   </sect3>
   <xi:include href="gradient-editor-dialog.xml"/>
 </sect2>

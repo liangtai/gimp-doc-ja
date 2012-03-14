@@ -2,16 +2,14 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2008-12-15 j.h: updated en;fr to v2.6
-  2007-10-05 j.h: updated en;fr to v2.4.New options added
+  2012-03-04 j.h: updated to v2.8
+  2008-12-15 j.h: updated to v2.6
+  2007-10-05 j.h: updated to v2.4.New options added
   2007-08-15 j.h: v2.4 added Edit Active Palette option en;fr
-  2007-01-09 manuq: added es translation
-  2006-09-09 ciampix: added it translation
-  2006-05-02 lexa: added de translation
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-03-02-->
+<!--2012-03-12-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -239,6 +237,7 @@
             <guisubmenu>プレビューサイズ</guisubmenu> 
             サブメニューではパレットの見本画像にお好みの大きさが選べます。
           </para>
+<!--
           <tip>
             <para lang="en">
               <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>
@@ -252,20 +251,46 @@
               </link> をご覧ください。
             </para>
           </tip>
+-->
         </listitem>
       </varlistentry>
+    </variablelist>
+
+    <variablelist id="gimp-palettes-dialog-tags">
       <varlistentry>
-        <term lang="en">
+        <term lang="en">Tagging</term>
+        <term lang="ja">タグ付け</term>
+        <listitem>
+          <para lang="en">
+            You can use tags to reorganize the palettes display.
+            See <xref linkend="gimp-tagging"/>.
+          </para>
+          <para lang="ja">
+            タグはパレットの一覧表示を再構成するのに使えます。
+            <xref linkend="gimp-tagging"/> をご覧ください。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <variablelist>
+      <title lang="en">The buttons of the Palettes Dialog</title>
+      <title lang="ja">パレットダイアログのボタン群</title>
+      <para lang="en">
+        Below the palettes view, at the bottom of the dialog window, there are
+        several buttons:
+      </para>
+      <para lang="ja">
+        パレット一覧より下側、 ダイアログウィンドウの底部にいろいろなボタンが
+        あります。
+      </para>
+      <varlistentry>
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Edit Palette</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">パレットの編集</phrase>
+          <phrase condition="tag-is-required" lang ="en">Edit Palette</phrase>
+          <phrase condition="tag-is-required" lang ="ja">パレットの編集</phrase>
         </term>
         <listitem>
           <para lang="en">
@@ -274,23 +299,18 @@
           </para>
           <para lang="ja">
             このアイコンボタンは (後述する)
-            <link linkend="gimp-palette-editor-dialog">パレット編集</link>
+            <xref linkend="gimp-palette-editor-dialog"/>
             ダイアログを呼び出します。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry id="palette-new">
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">New Palette</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">新規パレット</phrase>
+          <phrase condition="tag-is-required" lang="en">New Palette</phrase>
+          <phrase condition="tag-is-required" lang="ja">新規パレット</phrase>
         </term>
         <listitem>
           <indexterm lang="en">
@@ -303,27 +323,21 @@
           </indexterm>
           <para lang="en">
             For more information on this button please refer to
-            <link linkend="gimp-palette-new">New Palette</link>.
+            <xref linkend="gimp-palette-new"/>.
           </para>
           <para lang="ja">
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-new">新しいパレット</link> をご覧
-            ください。
+            <link linkend="gimp-palette-new"/> をご覧ください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Duplicate Palette</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">パレットの複製</phrase>
+          <phrase condition="tag-is-required" lang="en">Duplicate Palette</phrase>
+          <phrase condition="tag-is-required" lang="ja">パレットの複製</phrase>
         </term>
         <listitem>
           <indexterm lang="en">
@@ -340,23 +354,17 @@
           </para>
           <para lang="ja">
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-duplicate">パレットの複製</link> を
-            ご覧ください。
+            <xref linkend="gimp-palette-duplicate"/> をご覧ください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Delete Palette</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">パレットの削除</phrase>
+          <phrase condition="tag-is-required" lang="en">Delete Palette</phrase>
+          <phrase condition="tag-is-required" lang="ja">パレットの削除</phrase>
         </term>
         <listitem>
           <indexterm lang="en">
@@ -373,23 +381,21 @@
           </para>
           <para lang="ja">
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-delete">パレットの削除</link> を
-            ご覧ください。
+            <xref linkend="gimp-palette-delete"/> をご覧ください。
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">
+        <term>
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">Refresh Palettes</phrase>
-        </term>
-        <term lang="ja">
-          <guiicon>
-            <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
-          </guiicon>
-          <phrase condition="tag-is-required">パレットを再度読み込み</phrase>
+          <phrase condition="tag-is-required" lang="en">
+            Refresh Palettes
+          </phrase>
+          <phrase condition="tag-is-required" lang="ja">
+            パレットを再度読み込み
+          </phrase>
         </term>
         <listitem>
           <indexterm lang="en">
@@ -406,8 +412,7 @@
           </para>
           <para lang="ja">
             このアイコンボタンについては (後述する) 脈絡メニューの
-            <link linkend="gimp-palette-refresh">パレットを再度読み込み
-            </link> をご覧ください。
+            <xref linkend="gimp-palette-refresh"/> をご覧ください。
           </para>
         </listitem>
       </varlistentry>
@@ -472,7 +477,7 @@
               <inlinemediaobject>
                 <imageobject>
                   <imagedata
-                    fileref="images/dialogs/stock-gtk-edit-16.png"/>
+                    fileref="images/dialogs/stock-edit-16.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>「パレットを編集」</phrase>
@@ -1090,6 +1095,7 @@
       パレットを改変すると、 その成果は<acronym>GIMP</acronym>を終了するときに
       自動的に保存されます。
     </para>
+
     <sect4>
       <title lang="en">How to Activate the Palette Editor</title>
       <title lang="ja">パレット編集ダイアログの呼び出し方</title>
@@ -1131,6 +1137,7 @@
         <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
       </para>
     </sect4>
+
     <sect4>
       <title lang="en">Using the Palette Editor</title>
       <title lang="ja">パレット編集ダイアログの利用法</title>
@@ -1204,17 +1211,12 @@
       </para>
       <variablelist>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-save-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Save</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-save-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">保存</phrase>
+            <phrase condition="tag-is-required" lang="en">Save</phrase>
+            <phrase condition="tag-is-required" lang="ja">保存</phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1236,17 +1238,12 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-revert-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Revert</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-revert-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">復帰</phrase>
+            <phrase condition="tag-is-required" lang="en">Revert</phrase>
+            <phrase condition="tag-is-required" lang="ja">復帰</phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1256,17 +1253,12 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Edit Color</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">色の編集</phrase>
+            <phrase condition="tag-is-required" lang="en">Edit Color</phrase>
+            <phrase condition="tag-is-required" lang="ja">色の編集</phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1276,16 +1268,6 @@
               <link linkend="gimp-palette-editor-edit">below</link>
             </para>
             <para lang="ja">
-                <inlinemediaobject>
-                  <imageobject>
-                    <imagedata
-                      fileref="images/dialogs/stock-gtk-edit-16.png"/>
-                  </imageobject>
-                  <textobject>
-                    <phrase>「色の編集」</phrase>
-                  </textobject>
-                </inlinemediaobject>
-              </guiicon> 
               このアイコンボタンは色の変更ダイアログを呼び出しますので、 
               選んだ色項目の色を変更できます。 ただし開いたパレットを
               改変する権限がないときはこのボタンは灰色無効になっています。
@@ -1296,17 +1278,16 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">New Color from FG</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">現在の描画色を追加</phrase>
+            <phrase condition="tag-is-required" lang="en">
+              New Color from FG
+            </phrase>
+            <phrase condition="tag-is-required" lang="ja">
+              現在の描画色を追加
+            </phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1321,17 +1302,12 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Delete Color</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/dialogs-icon-delete.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">色の削除</phrase>
+            <phrase condition="tag-is-required" lang="en">Delete Color</phrase>
+            <phrase condition="tag-is-required" lang="ja">色の削除</phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1346,17 +1322,14 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-zoom-out-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Zoom Out</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-zoom-out-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">表示倍率を下げて縮小表示</phrase>
+            <phrase condition="tag-is-required" lang="en">Zoom Out</phrase>
+            <phrase condition="tag-is-required" lang="ja">
+              表示倍率を下げて縮小表示
+            </phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1371,17 +1344,14 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-zoom-in-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Zoom In</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-zoom-in-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">表示倍率を上げて拡大表示</phrase>
+            <phrase condition="tag-is-required" lang="en">Zoom In</phrase>
+            <phrase condition="tag-is-required" lang="ja">
+              表示倍率を上げて拡大表示
+            </phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1396,19 +1366,13 @@
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term lang="en">
+          <term>
             <guiicon>
               <inlinegraphic
                 fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
             </guiicon>
-            <phrase condition="tag-is-required">Zoom All</phrase>
-          </term>
-          <term lang="ja">
-            <guiicon>
-              <inlinegraphic
-                fileref="images/dialogs/stock-zoom-best-fit-16.png"/>
-            </guiicon>
-            <phrase condition="tag-is-required">
+            <phrase condition="tag-is-required" lang="en">Zoom All</phrase>
+            <phrase condition="tag-is-required" lang="ja">
               すべて表示されるように表示倍率を調整
             </phrase>
           </term>
