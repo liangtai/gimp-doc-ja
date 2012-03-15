@@ -2,15 +2,12 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2008-12-13 j.h: updated en;fr to v2.6
-  2007-12-04 ude: updated 'de'
-  2007-11-08 KoSt: updated 'no'
-  2007-09-30 j.h: updated en;fr to v2.4. Lock Alpha channel example added
+  2012-03-09 j.h: update to v2.8
+  2008-12-13 j.h: updated to v2.6
+  2007-09-30 j.h: updated to v2.4. Lock Alpha channel example added
   2006-12-27 lexa: applied patch from ude to enhance de content
-  2006-03-09 lexa: reviewed and spellchecked german version
-  2005-11-04 reviewed by axel.wernicke
 -->
-<!--2012-03-02-->
+<!--2012-03-14-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-layer-dialog">
   <title lang="en">Layers Dialog</title>
   <title lang="ja">レイヤーダイアログ</title>
@@ -281,19 +278,48 @@
               </listitem>
             </varlistentry>
             <varlistentry>
+              <term lang="en">Layer thumbnail</term>
+              <term lang="ja">レイヤーのサムネール</term>
+              <listitem>
+                <para lang="en">
+                  The layer content is represented in a thumbnail. Maintaining
+                  left-click for a second on this thumbnail makes it larger.
+                  When the layer is active, the thumbnail has a white border.
+                  The border is black if the layer is inactive.
+                  When the layer has a mask, the inactive element takes a black
+                  border.
+                </para>
+                <para lang="ja">
+                  レイヤーの内容は縮小見本画像 (サムネール) で表示されます。 
+                  ここをしばらくクリックしたまま待つと見本画像が少し大きく
+                  なります。 レイヤーが活性化しているときは見本画像に白枠が
+                  つきます。 それ以外の活性化していないレイヤーは黒枠が
+                  つきます。 レイヤーにマスクがある場合も不活性なら黒枠です。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
               <term lang="en">Layer name</term>
               <term lang="ja">レイヤー名</term>
               <listitem>
                 <para lang="en">
                   The main attribute is the name of the layer. You can edit
-                  this by a double-click on the name or the thumbnail of the
-                  layer.
+                  this by a double-click on the name or the layer. You can
+                  also use the <quote>Edit Layer Attirbutes</quote> dialog you
+                  get by double-clicking on the thumbnail (or the mask), or
+                  through right-click on the layer and select <quote>Edit Layer
+                  Attributes...</quote>.
                 </para>
                 <para lang="ja">
                   属性の要はレイヤー名です。 名前を編集するにはレイヤーの
-                  縮小見本画像かレイヤー名をダブルクリックしてください。 
-                  <keycap>Enter</keycap> キーを押すか他のレイヤーの欄を
-                  クリックすれば編集が終わります。
+                  名前をダブルクリックしてください。 <keycap>Enter</keycap>
+                  キーを押すか他のレイヤーの欄をクリックすれば編集が終わります。
+                  他にも縮小見本画像 (あるいはマスク) をダブルクリックすると
+                  現れる<quote>レイヤー名の変更</quote>ダイアログを使う方法や、
+                  レイヤーを <mousebutton>第2ボタン</mousebutton> でクリック
+                  すると出てくるメニューから
+                  <guimenuitem>レイヤー名の変更...</guimenuitem> を実行する
+                  方法もあります。
                 </para>
               </listitem>
             </varlistentry>
@@ -333,15 +359,17 @@
           <para lang="en">
             Above the layer list, it is possible to specify some properties
             for the active layer. The active layer is the one highlighted in
-            blue. The properties are : <quote>Layer mode<quote>,
-            <quote>Opacity<quote>, and <quote>Lock Alpha channel<quote>.
+            blue. The properties are: <quote>Layer mode<quote>,
+            <quote>Opacity<quote>, <quote>Lock pixels</quote> and
+            <quote>Lock Alpha channel<quote>.
           </para>
           <para lang="ja">
             レイヤーの一覧表より上に現在活性化しているレイヤーの属性のいくつか
             を指定する項目があります。 活性化レイヤーは下図で青く強調表示されて
             います。 <guilabel>モード</guilabel>、 
-            <guilabel>不透明度</guilabel>、 <guilabel>透明保護</guilabel> の
-            3 つの属性があります。
+            <guilabel>不透明度</guilabel>、
+            <guilabel>すべてのピクセルを保護</guilabel>、
+            <guilabel>不透明度</guilabel> の 4 つの属性があります。
           </para>
           <variablelist>
             <varlistentry id="gimp-layer-dialog-paint-mode-menu">
@@ -405,12 +433,23 @@
               <term lang="ja">透明保護</term>
               <listitem>
                 <indexterm lang="en">
+                  <primary>Lock alpha channel</primary>
+                </indexterm>
+                <indexterm lang="en">
                   <primary>Transparency</primary>
                   <secondary>Keep Layer Transparency</secondary>
                 </indexterm>
                 <indexterm lang="en">
                   <primary>Transparency</primary>
-                  <secondary>Block Alpha channel</secondary>
+                  <secondary>Lock Alpha channel</secondary>
+                </indexterm>
+                <indexterm lang="en">
+                  <primary sortas="トウメイブブンヲホゴ">
+                    透明部分を保護
+                  </primary>
+                </indexterm>
+                <indexterm lang="en">
+                  <primary>Lock pixels</primary>
                 </indexterm>
                 <indexterm lang="ja">
                   <primary sortas="トウカコウカ">透過効果</primary>
@@ -419,23 +458,51 @@
                   </secondary>
                 </indexterm>
                 <indexterm lang="ja">
-                  <primary sortas="とうかこうか">透過効果</primary>
-                  <secondary sortas="アルファチャンネルヲフウイン">
-                    アルファチャンネルを封印
+                  <primary sortas="トウカコウカ">透過効果</primary>
+                  <secondary sortas="トウメイブブンヲホゴ">
+                    透明部分を保護
                   </secondary>
                 </indexterm>
+                <indexterm lang="ja">
+                  <primary sortas="スベテノピクセルヲホゴ">
+                    すべてのピクセルを保護
+                  </primary>
+                </indexterm>
                 <para lang="en">
-                  If you check this option the transparent areas of the layer
-                  will be kept, even if you have checked the
-                  <guilabel>Fill transparent areas</guilabel>
-                  option for the Bucket fill tool.
+                  You have two possibilities:
                 </para>
-                <para lang="ja">
-                  このオプションにチェックを入れるとレイヤーの透過部分が保護
-                  されます。 <quote>塗りつぶし</quote>ツールではたとえ 
-                  <guilabel>透明領域を塗りつぶす</guilabel> オプションを有効に
-                  したとしても着色できません。
-                </para>
+                <para lang="ja">方法は 2 つあります。</para>
+                <itemizedlist>
+                  <listitem>
+                    <para lang="en">
+                      <emphasis role="bold">Lock pixels</emphasis>: when this
+                      option is checked, you can't modify layer pixels. This
+                      may be necesary to protect them from unwanted changes.
+                    </para>
+                    <para lang="ja">
+                      <emphasis role="bold">すべてのピクセルを保護</emphasis>:
+                      このオプションにチェックを入れるとレイヤーの画素が変更
+                      できなくなります。 思わぬ改変が起きないようにしたいとき
+                      ここを有効にする必要がありそうです。
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para lang="en">
+                      <emphasis role="bold">Lock alpha channel</emphasis>: if
+                      you check this option the transparent areas of the layer
+                      will be kept, even if you have checked the
+                      <guilabel>Fill transparent areas</guilabel>
+                      option for the Bucket fill tool.
+                    </para>
+                    <para lang="ja">
+                      <emphasis role="bold">透明部分を保護</emphasis>:
+                      このオプションにチェックを入れるとレイヤーの透過部分が
+                      保護されます。 <quote>塗りつぶし</quote>ツールではたとえ 
+                      <guilabel>透明領域を塗りつぶす</guilabel> オプションを
+                      有効にしたとしても着色できません。
+                    </para>
+                  </listitem>
+                </itemizedlist>
                 <figure>
                   <title lang="en">Example for Locking Alpha Channel</title>
                   <title lang="ja">透明保護の実行例</title>
