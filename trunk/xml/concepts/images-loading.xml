@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2012-02-28-->
+<!--2012-03-19-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -228,13 +228,13 @@
     </para>
     <para lang="ja">
       画像を示すものがファイル名ではなく <acronym>URI</acronym>
-      (例:ウェブアドレス) だったならば、 メニューを
+      (例:ウェブアドレス) だったならば、 画像ウィンドウのメニューより
       <menuchoice>
         <guimenu>ファイル</guimenu>
         <guimenuitem>場所を開く...</guimenuitem>
       </menuchoice>
-      と辿り、 出て来た小さなダイアログの書き込み欄に
-      <acronym>URI</acronym>を直接打鍵するか貼り付けてください。
+      を使います。 小さなダイアログが出て来ますので書き込み欄に
+      <acronym>URI</acronym>を直接打鍵するか貼り付けます。
     </para>
     <figure>
       <title lang="en">The <quote>Open Location</quote> dialog</title>
@@ -393,7 +393,7 @@
           </para>
           <para lang="ja">
             <productname>Windows</productname> 用のインストールパッケージを
-            ダウンロードしてください。 例えば 
+            ダウンロードします。 例えば 
             <filename>gs854w32.exe</filename>、
             <filename>gs864w32.exe</filename>、
             <filename>gs864w64.exe</filename> がダウンロードできます。
@@ -405,7 +405,7 @@
             installation procedure.
           </para>
           <para lang="ja">
-            実行ファイルを起動してインストーラーの画面に従ってください。
+            実行ファイルを起動してインストーラーの画面に従いましょう。
           </para>
         </listitem>
         <listitem>
@@ -417,10 +417,10 @@
           </para>
           <para lang="ja">
             <filename>gswin32c.exe</filename> の保管場所までの経路名 (パス) を
-            環境変数 <envar>GS_PRG</envar> に代入してください。 例えば
-            <userinput role="html">SET GS_PRG=C:\gs\gs<!--
+            環境変数 <envar>GS_PRG</envar> に代入します。 例えば
+            <userinput role="html">SET&nbsp;GS_PRG=C:\gs\gs<!--
             --><replaceable>X.YY</replaceable>\bin\gswin32c.exe</userinput>
-            <userinput role="tex">SET GS_PRG=C:\\gs\\gs{\\it X.YY\\/}<!--
+            <userinput role="tex">SET~GS_PRG=C:\\gs\\gs{\it{}X.YY\/}<!--
             -->\\bin\\gswin32c.exe</userinput> とします。
           </para>
         </listitem>
