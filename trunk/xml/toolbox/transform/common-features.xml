@@ -14,7 +14,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   0500606 de extracted general tool features by axel.wernicke
 -->
-<!--2012-03-10-->
+<!--2012-03-24-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-transform">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
@@ -26,9 +26,9 @@
     and an Information dialog to set parameters.
   </para>
   <para lang="ja">
-    変換ツールメニューには 8 つのツールが並んでいます。 これらはいずれも画像など
+    変形ツールメニューには 8 つのツールが並んでいます。 これらはいずれも画像など
     の表象を加工するためのもので、 画像全体を対象とするほか、 画像や選択範囲、
-    レイヤー、 パスの一部要素を対象とすることもあります。 いずれの変換ツールも
+    レイヤー、 パスの一部要素を対象とすることもあります。 いずれの変形ツールも
     媒介変数を設定するためのオプションダイアログと情報ダイアログを
     備えています。
   </para>
@@ -38,7 +38,7 @@
     <title lang="ja">ツールオプション</title>
     <figure>
       <title lang="en">Common options of transform tools</title>
-      <title lang="ja">変換ツールの共通機能</title>
+      <title lang="ja">変形ツールの共通機能</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -51,21 +51,21 @@
       them here. More specific options will be described with their tool.
     </para>
     <para lang="ja">
-      オプションのいくつかは変換ツールに広く共有されています。 ここではそれらに
+      オプションのいくつかは変形ツールに広く共有されています。 ここではそれらに
       ついて説明します。 各ツール固有のオプションについてはそれぞれのツールの
       節で個別に説明します。
     </para>
     <variablelist>
       <varlistentry>
         <term lang="en">Transform</term>
-        <term lang="ja">変換対象</term>
+        <term lang="ja">変形対象</term>
         <listitem>
           <para lang="en">
             <acronym>GIMP</acronym> offers you three buttons which let you
             select which image element the transform tool will work on.
           </para>
           <para lang="ja">
-            <acronym>GIMP</acronym>は変換ツールが作用する画像の要素を選ぶための
+            <acronym>GIMP</acronym>は変形ツールが作用する画像の要素を選ぶための
             ボタンを 3 つ用意しました。
           </para>
           <note>
@@ -74,7 +74,7 @@
               tool.
             </para>
             <para lang="ja">
-              変換対象オプションで選んだ項目はツールを替えても変化しないことを
+              変形対象オプションで選んだ項目はツールを替えても変化しないことを
               忘れないでください。
             </para>
           </note>
@@ -96,7 +96,7 @@
                     fileref="images/tool-options/rotate-affect-layer.png"/>
                 </guiicon>
                 を有効にするとツールは活性レイヤーに対して作用します。 
-                選択範囲がないときはレイヤー全体が変換されます。
+                選択範囲がないときはレイヤー全体が変形されます。
               </para>
             </listitem>
             <listitem>
@@ -142,7 +142,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Direction</term>
-        <term lang="ja">変換方向</term>
+        <term lang="ja">方向</term>
         <listitem>
           <para lang="en">
             <guilabel>Direction</guilabel> sets which way or direction a
@@ -162,14 +162,14 @@
             not vertical...). See <xref linkend="gimp-tool-rotate" />.
           </para>
           <para lang="ja">
-            <guilabel>変換方向</guilabel> はレイヤーの変換方向を定めたり逆変換
-            を可能にします。
+            <guilabel>方向</guilabel> はレイヤーの変形方向を定めたり逆変換を
+            可能にします。
           </para>
           <para lang="ja">
             <guimenuitem>正変換</guimenuitem> モードは画像やレイヤーを指示した
-            とおり順当に変換します。 変換作業はハンドルを操作して行ないます。
+            とおり順当に変形します。 変形作業はハンドルを操作して行ないます。
             (後述する) 格子線を使うと、 格子で描かれていた位置と形状のとおりに
-            画像もしくはレイヤーが変換されて収まります。
+            画像もしくはレイヤーが変形されて収まります。
           </para>
           <para lang="ja">
             <guimenuitem>逆変換</guimenuitem> はその方向が逆になります。 主な
@@ -190,7 +190,7 @@
           </para>
           <para lang="ja">
             <guilabel>補間アルゴリズム</guilabel> の引き出しメニューはつぎの
-            方法からいずれかを選ぶためのものであり、 これにより変換の品質が
+            方法からいずれかを選ぶためのものであり、 これにより変形の品質が
             変わります。
           </para>
           <variablelist>
@@ -272,7 +272,7 @@
           </para>
           <para lang="ja">
             補間方法の既定値は 
-            <link linkend="gimp-prefs-tool-options">環境設定</link> ダイアログ
+            <link linkend="gimp-prefs-tool-options">設定</link> ダイアログ
             の<quote>ツールオプション</quote>のページで設定できます。
           </para>
         </listitem>
@@ -290,8 +290,8 @@
             <indexterm>
               <primary sortas="ケッカヲクリップ">結果をクリップ</primary>
             </indexterm>
-            変換後の画像は大きくなりがちです。 このオプションは元の画像の大きさ
-            に合わせて切り揃えるためのものです。
+            変形後の画像は大きくなりがちです。 このオプションは元の画像の大きさ
+            に合わせて切り揃えるために使います。
           </para>
           <para lang="ja">
             切り抜く方法はいろいろありますので、 次の中から選んでください。
@@ -437,7 +437,7 @@
                   will be removed.
                 </para>
                 <para lang="ja">
-                  このオプションを選ぶと、 変換操作によって周辺部にできる
+                  このオプションを選ぶと、 変形操作によって周辺部にできる
                   透明部分が残らないように画像が切り詰められます。
                 </para>
               </listitem>
@@ -484,7 +484,7 @@ Commented until somebody finds a valid example-->
           </indexterm>
           <indexterm lang="ja">
             <primary>プレビュー</primary>
-            <secondary sortas="ヘンカンツール">変換ツール</secondary>
+            <secondary sortas="ヘンケイツール">変形ツール</secondary>
           </indexterm>
           <variablelist>
             <para lang="en">
@@ -507,8 +507,8 @@ Commented until somebody finds a valid example-->
                   according to the selected Affect mode.
                 </para>
                 <para lang="ja">
-                  画像のアウトラインを表す外枠線を示し、 その4隅には
-                  ハンドルがついています。 変換のプレビューとして変形
+                  画像のアウトラインを表す外枠線を示し、 その 4 隅には
+                  ハンドルがついています。 変形のプレビューとして変形
                   するのはこの外枠線だけですが、 結果的には画像の内容は
                   もちろん、 指定された他のオプションによっては選択領域の
                   外部も含め変形の対象となります。
@@ -527,8 +527,8 @@ Commented until somebody finds a valid example-->
                   Transform mode.
                 </para>
                 <para lang="ja">
-                  画像上に格子線 (グリッド) が表示され、 その4隅にはハンドルが
-                  ついています。 変換のプレビューとして変形するのはこの
+                  画像上に格子線 (グリッド) が表示され、 その 4 隅にはハンドルが
+                  ついています。 変形のプレビューとして変形するのはこの
                   格子線だけですが、 結果的には画像の内容はもちろん、
                   指定された他のオプションによっては選択領域の外部も含め
                   変形の対象となります。

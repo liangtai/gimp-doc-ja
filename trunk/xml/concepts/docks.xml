@@ -12,7 +12,7 @@
   2006-02-08 added norwegian translation by KoSt
   2005-12-18 reviewed by lexa
 -->
-<!--2012-02-28-->
+<!--2012-03-24-->
 <sect2 id="gimp-concepts-docks">
   <title lang="en">Dialogs and Docking</title>
   <title lang="ja">ダイアログとその合体</title>
@@ -58,7 +58,7 @@
       ダイアログをそれぞれウィンドウとして置く方法のほか、 ドック上で繋いだり
       纏めることもできます。 ドックとは、 ツールオプションダイアログや
       ブラシダイアログやパレットダイアログ等の常設ダイアログを重ねあわせて
-      保持する容器ウィンドウのことです。 ただし環境設定ダイアログや
+      保持する容器ウィンドウのことです。 ただし設定ダイアログや
       画像ウィンドウのような非常設ダイアログは入れられません。
     </para>
     <para lang="en">
@@ -396,7 +396,7 @@
       初期設定では<quote>レイヤー, チャンネル, パス</quote>の各ダイアログを
       まとめたドックにはその最上部に画像選択メニューがついていて、 他のドック
       にはそれがありません。 画像選択メニューは後で述べる 
-      <guilabel>選択画像を表示</guilabel> メニューで
+      <guilabel>画像選択ボックスの表示</guilabel> メニューで
       ドック上に表示したり隠したりできます。 (ただし、
       ツールボックスを含むドックには画像選択メニューを加えられません。)
     </para>
@@ -484,7 +484,7 @@
 
       <varlistentry id="gimp-dock-tab-add">
         <term lang="en">Add Tab</term>
-        <term lang="ja">タブに追加</term>
+        <term lang="ja">タブの追加</term>
         <listitem>
           <!--<anchor id="gimp-dock-tab-add"/>-->
           <indexterm lang="en">
@@ -493,20 +493,20 @@
           </indexterm>
           <indexterm lang="ja">
             <primary>ドック</primary>
-            <secondary sortas="タブニツイカ">タブに追加</secondary>
+            <secondary sortas="タブノツイカ">タブの追加</secondary>
           </indexterm>
           <para lang="en">
             <guilabel>Add Tab</guilabel> opens into a submenu allowing you to
             add a large variety of dockable dialogs as new tabs.
           </para>
           <para lang="ja">
-            <guisubmenu>タブに追加</guisubmenu> はドック入りが可能な
+            <guisubmenu>タブの追加</guisubmenu> はドック入りが可能な
             ダイアログを一覧にまとめたサブメニューを開き、 ここで選んだ
             ダイアログはタブ化して追加されます。
           </para>
           <figure>
             <title lang="en"><quote>Add tab</quote> sub-menu</title>
-            <title lang="ja"><quote>タブに追加</quote>サブメニュー</title>
+            <title lang="ja"><quote>タブの追加</quote>サブメニュー</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -543,7 +543,7 @@
 
       <varlistentry id="gimp-dock-tab-detach">
         <term lang="en">Detach Tab</term>
-        <term lang="ja">タブを切り放す</term>
+        <term lang="ja">タブの切り放し</term>
         <listitem>
           <!--<anchor id="gimp-dock-tab-detach"/>-->
           <indexterm lang="en">
@@ -552,7 +552,7 @@
           </indexterm>
           <indexterm lang="ja">
             <primary>ドック</primary>
-            <secondary sortas="タブヲキリハナス">タブを切り放す</secondary>
+            <secondary sortas="タブノキリハナシ">タブの切り放し</secondary>
           </indexterm>
           <para lang="en">
             Detache the dialog from the dock, creating a new dock
@@ -579,7 +579,7 @@
 
       <varlistentry id="gimp-dock-tab-lock">
         <term lang="en">Lock tab to Dock</term>
-        <term lang="ja">タブをロック</term>
+        <term lang="ja">タブのロック</term>
         <listitem>
           <indexterm lang="en">
             <primary>Docks</primary>
@@ -587,7 +587,7 @@
           </indexterm>
           <indexterm lang="ja">
             <primary>ドック</primary>
-            <secondary sortas="タブヲロック">タブをロック</secondary>
+            <secondary sortas="タブノロック">タブのロック</secondary>
           </indexterm>
           <para lang="en">
             Prevent the dialog from being moved or detached. When activated,
@@ -596,7 +596,7 @@
           </para>
           <para lang="ja">
             ダイアログの移動や切り放しを禁じます。 これが有効なときは 
-            <guimenuitem>タブを切り放す</guimenuitem> 
+            <guimenuitem>タブの切り放し</guimenuitem> 
             メニュー項目を灰色無効にして使用できなくします。
           </para>
         </listitem>
@@ -817,6 +817,7 @@
             ブラシやパターンのダイアログは升目状に、
             それ以外のほとんどのダイアログは縦排列にしてあります。
           </para>
+<!--
           <tip>
             <para lang="en">
               When the treeview is <quote>View as list</quote>, pressing
@@ -837,8 +838,10 @@
               寄せられます。 <quote>並べて表示</quote>の場合は検索窓が
               開けません。
             </para>
+-->
             <!-- IMHO colored blocks (like tips) should be short, so I
                  moved the closing tag here - ude 2009-09-23 -->
+<!--
           </tip>
           <figure>
             <title lang="en">The list search field.</title>
@@ -881,12 +884,13 @@
               の一覧表で検索窓を呼び出せるショートカットが利用できます。
             </para>
           </note>
+-->
         </listitem>
       </varlistentry>
 
       <varlistentry id="gimp-dock-show-button-bar">
         <term lang="en">Show Button Bar</term>
-        <term lang="ja">ボタンバーを表示</term>
+        <term lang="ja">ボタンバーの表示</term>
         <listitem>
           <para lang="en">
             Some dialogs display a button bar on the bottom of the dialog; for
@@ -915,7 +919,7 @@
 
       <varlistentry>
         <term lang="en">Show Image Selection</term>
-        <term lang="ja">選択画像を表示</term>
+        <term lang="ja">画像選択ボックスの表示</term>
         <listitem>
           <para lang="en">
             This is a toggle. If it is checked, then an Image Menu is shown at

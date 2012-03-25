@@ -8,7 +8,7 @@
   2006-11-01 lexa: made the file docbook compliant
   2008-01-28 jpl: update text & images
 -->
-<!--2012-03-09-->
+<!--2012-03-24-->
 <sect2 id="gimp-prefs-environment">
   <title lang="en">Environment</title>
   <title lang="ja">環境</title>
@@ -23,17 +23,17 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ダイアログ</primary>
-    <secondary sortas="カンキョウセッテイ">環境設定</secondary>
+    <secondary sortas="カンキョウセッテイ">設定</secondary>
     <tertiary sortas="カンキョウ">環境</tertiary>
   </indexterm>
   <indexterm lang="ja">
-    <primary sortas="カンキョウセッテイ">環境設定</primary>
+    <primary sortas="カンキョウセッテイ">設定</primary>
     <secondary sortas="シゲン">資源</secondary>
   </indexterm>
 
   <figure>
     <title lang="en">Environment Preferences</title>
-    <title lang="ja">環境設定 環境のページ</title>
+    <title lang="ja">設定 環境のページ</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -63,7 +63,7 @@
       <title lang="ja">リソースの使い方</title>
       <varlistentry>
         <term lang="en">Minimal number of undo levels</term>
-        <term lang="ja">操作履歴の最小エントリ数</term>
+        <term lang="ja">作業履歴の最小エントリ数</term>
         <listitem>
           <para lang="en">
             GIMP allows you to undo most actions by maintaining an
@@ -77,11 +77,11 @@
           </para>
           <para lang="ja">
             <acronym>GIMP</acronym>はほとんどの操作が取り消せるようにするため、
-            各画像ごとに<quote>操作履歴</quote>を保持していますが、 その目的で
+            各画像ごとに<quote>作業履歴</quote>を保持していますが、 その目的で
             一定量のメモリーを割り当てることになります。 ただし
             <acronym>GIMP</acronym>はメモリーの総消費量を無視してでも直近の
             操作には最小限の取り消し手数を確保します。 その手数はここで
-            指定します。<acronym>GIMP</acronym>の操作履歴機能についての
+            指定します。<acronym>GIMP</acronym>の作業履歴機能についての
             さらなる情報が
             <xref linkend="gimp-concepts-undo"/> にあります。
           </para>
@@ -103,7 +103,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Maximum undo memory</term>
-        <term lang="ja">操作履歴のメモリーサイズ</term>
+        <term lang="ja">作業履歴のメモリーサイズ</term>
         <listitem>
           <para lang="en">
             This is the amount of undo memory allocated for each image. If the
@@ -112,8 +112,8 @@
             minimal number specified above.
           </para>
           <para lang="ja">
-            これは各画像ごとに割り当てる操作履歴のためのメモリー量の仮の
-            上限です。 操作履歴がこの容量を越すと、 最も古い操作の記録から順に
+            これは各画像ごとに割り当てる作業履歴のためのメモリー量の仮の
+            上限です。 作業履歴がこの容量を越すと、 最も古い操作の記録から順に
             削除されることになりますが、 もし履歴の手数が上記の最小
             エントリー数を下回るようならば削除しません。
           </para>
@@ -234,14 +234,12 @@
     </variablelist>
     <variablelist>
       <title lang="en">Document history</title>
-      <title lang="ja">最近開いた画像ドキュメント</title>
+      <title lang="ja">最近開いたファイル</title>
       <varlistentry>
         <term lang="en">
           Keep record of used files in the Recent Documents list
         </term>
-        <term lang="ja">
-          システムの<quote>最近開いたドキュメント</quote>にも記録・反映
-        </term>
+        <term lang="ja">システムの [最近開いたファイル] にも記録・反映</term>
         <listitem>
           <para lang="en">
               When checked, files you have opened will be saved in the
@@ -259,13 +257,12 @@
             保存されます。 それらファイルの一覧は画像ウィンドウのメニューの
             <menuchoice>
               <guimenu>ファイル</guimenu>
-              <guisubmenu>最近開いた画像ドキュメント</guisubmenu>
+              <guisubmenu>最近開いたファイル</guisubmenu>
             </menuchoice>
             サブメニュー上の若干数のほか、 その底部にあるメニュー項目
-            <guimenuitem>画像ドキュメント履歴</guimenuitem>
-            をクリックすると開かれる
-            <link linkend="gimp-document-dialog">最近開いた画像ドキュメント
-            </link> ダイアログにもあります。
+            <guimenuitem>ファイル履歴</guimenuitem> をクリックすると開かれる
+            <link linkend="gimp-document-dialog">最近開いたファイル</link> 
+            ダイアログにもあります。
           </para>
         </listitem>
       </varlistentry>

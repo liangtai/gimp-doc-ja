@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
 "POT-Creation-Date: 2011-02-01 06:56+0900\n"
-"PO-Revision-Date: 2012-03-14 19:06+0900\n"
+"PO-Revision-Date: 2012-03-25 20:32+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -863,7 +863,7 @@ msgstr ""
 
 #: src/glossary/glossary.xml:604(phrase)
 msgid "Floyd-Steinberg Dithering"
-msgstr "Floyd-Steinberg ディザリング"
+msgstr "誤差拡散法"
 
 #: src/glossary/glossary.xml:607(primary)
 msgid "Floyd-Steinberg"
@@ -881,14 +881,13 @@ msgid ""
 "(below and to the right of the original pixel). Because of the order of "
 "processing, the procedure can be done in a single pass over the image."
 msgstr ""
-"フロイド-スタインバーグ・ディザリングとは Robert W. Floyd 氏と Louis "
-"Steinberg 氏による <link linkend=\"glossary-dithering\">ディザリング</link> "
-"技法のひとつで、 その初版は1976年に発表されました。 ディザリングは画像の左上"
-"隅の画素から処理を開始します。 個々の画素ではパレットから使える最も近い色が選"
-"び出され、 その色と元の色との差が<acronym>RGB</acronym>の各チャンネルごとに算"
-"出されます。 その次にこれらの差の値からなる特別な分数が、 近接する未訪問の画"
-"素 (元の画素の下側と右側) に拡散されます。 処理には順序があるのでその進行は画"
-"像全体に対し 1 過程です。"
+"誤差拡散法とは Robert W. Floyd 氏と Louis Steinberg 氏による <link linkend="
+"\"glossary-dithering\">ディザリング</link> 技法のひとつで、 その初版は1976年"
+"に発表されました。 ディザリングは画像の左上隅の画素から処理を開始します。 "
+"個々の画素ではパレットから使える最も近い色が選び出され、 その色と元の色との差"
+"が<acronym>RGB</acronym>の各チャンネルごとに算出されます。 その次にこれらの差"
+"の値からなる特別な分数が、 近接する未訪問の画素 (元の画素の下側と右側) に拡散"
+"されます。 処理には順序があるのでその進行は画像全体に対し 1 過程です。"
 
 #: src/glossary/glossary.xml:623(para)
 msgid ""
@@ -897,8 +896,8 @@ msgid ""
 "Steinberg dithering."
 msgstr ""
 "<acronym>GIMP</acronym>で画像を<link linkend=\"gimp-image-convert-indexed\">"
-"インデックスつき</link> のモードにするときのオプションには、 Floyd-Steinberg "
-"のアルゴリズムの 2 変種が選択肢にあります。"
+"インデックスつき</link> のモードにするときのオプションには、 誤差拡散法アルゴ"
+"リズムの 2 変種が選択肢にあります。"
 
 #: src/glossary/glossary.xml:634(phrase)
 #: src/glossary/glossary.xml:637(primary)
@@ -1541,8 +1540,8 @@ msgid ""
 "methods</link>)."
 msgstr ""
 "補間とは中間値の算出を意味します。 デジタル画像の拡大 (<quote>デジタル的引き"
-"延ばし</quote>) をしたり変換 (回転や剪断変形あるいは遠近法変換) をすると、 変"
-"換を受けた画像の画素の色を算出するために補間処理が行われます。 "
+"延ばし</quote>) をしたり変形 (回転や剪断変形あるいは遠近法変形) をすると、 変"
+"形を受けた画像の画素の色を算出するために補間処理が行われます。 "
 "<acronym>GIMP</acronym>は処理速度と品質に違いがある 3 つの補間方法からいずれ"
 "かを選べるようになっています。 概して言えば品質が高いものほど補間処理に時間が"
 "かかります。 <link linkend=\"gimp-tool-interpolation-methods\">補間方法</"
@@ -1557,7 +1556,7 @@ msgid ""
 msgstr ""
 "<acronym>GIMP</acronym>が補間処理を実行するのは、 レイヤーや画像を <link "
 "linkend=\"gimp-image-scale\">拡大・縮小</link> するときと、 画像を <link "
-"linkend=\"gimp-tools-transform\">変換</link> するときです。"
+"linkend=\"gimp-tools-transform\">変形</link> するときです。"
 
 #: src/glossary/glossary.xml:1120(phrase)
 #: src/glossary/glossary.xml:1123(primary)
@@ -2143,7 +2142,7 @@ msgstr ""
 
 #: src/glossary/glossary.xml:1604(term)
 msgid "Perceptual"
-msgstr "鮮やかさ重視"
+msgstr "知覚的"
 
 #: src/glossary/glossary.xml:1606(para)
 msgid ""
@@ -2157,7 +2156,7 @@ msgstr ""
 
 #: src/glossary/glossary.xml:1614(term)
 msgid "Relative colorimetric"
-msgstr "相対色距離"
+msgstr "相対的な色域を維持"
 
 #: src/glossary/glossary.xml:1616(para)
 msgid ""
@@ -2180,7 +2179,7 @@ msgstr ""
 
 #: src/glossary/glossary.xml:1635(term)
 msgid "Absolute colorimetric"
-msgstr "絶対色距離"
+msgstr "絶対的な色域を維持"
 
 #: src/glossary/glossary.xml:1637(para)
 msgid ""
@@ -2610,7 +2609,7 @@ msgstr ""
 "画像を<acronym>XCF</acronym>で保存するとその画像で判ることがほとんど何もかも"
 "データ化されてファイルに収められます。 その対象は各レイヤーや現在の選択範囲の"
 "画素の情報、 もしあれば追加されたチャンネルやパスやガイドです。 ただし重要な"
-"ことですが<acronym>XCF</acronym>ファイルに操作履歴だけは保存されません。"
+"ことですが<acronym>XCF</acronym>ファイルに作業履歴だけは保存されません。"
 
 #: src/glossary/glossary.xml:2039(para)
 msgid ""

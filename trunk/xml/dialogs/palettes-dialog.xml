@@ -9,7 +9,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-03-12-->
+<!--2012-03-25-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -132,7 +132,7 @@
               fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
-            <guimenu>タブに追加</guimenu>
+            <guimenu>タブの追加</guimenu>
             <guimenuitem>パレット</guimenuitem>
           </menuchoice>
         </para>
@@ -165,9 +165,9 @@
       <quote>パレット</quote>のタブにこのパレットの色が全て表示され、 どれかの
       色をクリックすれば<acronym>GIMP</acronym>の描画色または背景色を変えられ
       ます。 一覧表のパレットの見本画像をダブルクリックしたときは (後述する)
-      <link linkend="gimp-palette-editor-dialog">パレット編集</link> ダイアログ
-      が開かれ、 同様に描画色もしくは背景色を変えられます。 パレットを選ぶ際に
-      <keycap>上</keycap> <keycap>下</keycap> 矢印キーや
+      <link linkend="gimp-palette-editor-dialog">パレットエディター</link> 
+      ダイアログが開かれ、 同様に描画色もしくは背景色を変えられます。 
+      パレットを選ぶ際に <keycap>上</keycap> <keycap>下</keycap> 矢印キーや
       <keycap>PgUp</keycap>、 <keycap>PgDn</keycap> キーが使えます 
       (<quote>並べて表示</quote>のときは <keycap>左</keycap>
       <keycap>右</keycap> 矢印キーも使えます)。
@@ -469,7 +469,7 @@
             button at the bottom of the dialog.
           </para>
           <para lang="ja">
-            <link linkend="gimp-palette-editor-dialog">パレット編集</link>
+            <link linkend="gimp-palette-editor-dialog">パレットエディター</link>
             ダイアログ (後述) を呼び出すもうひとつの方法が、 このメニュー項目を
             クリックすることです。 またほかにも、 パレットダイアログの一覧表の
             パレット見本をダブルクリックする方法や、 ダイアログの底部にある
@@ -502,7 +502,7 @@
           <para lang="ja">
             <quote>新しいパレット</quote>は新たに無名のパレットをまだ何も色が
             ない白紙の状態で作成し、 このパレットに色を加えられるようにするため
-            パレット編集ダイアログを開きます。 作業の結果は自動的に
+            パレットエディターダイアログを開きます。 作業の結果は自動的に
             <acronym>GIMP</acronym>の個人用 <filename class="directory">
             palettes</filename> フォルダーに保存され、 次回から
             パレットダイアログを通じて利用可能になります。
@@ -511,9 +511,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-import" lang="en">Import Palette</term>
-        <term id="gimp-palette-import" lang="ja">
-          パレットをインポート...
-        </term>
+        <term id="gimp-palette-import" lang="ja">パレットのインポート...</term>
         <listitem>
           <indexterm lang="en">
             <primary>Palette</primary>
@@ -746,9 +744,9 @@
           </para>
           <para lang="ja">
             <guimenuitem>パレットの複製</guimenuitem> は現在選択されている
-            パレットの写しをとって新たなパレットを作成しパレット編集ダイアログ
-            を開きますので、直ちにパレットが編集できます。 編集後の結果は
-            <acronym>GIMP</acronym>を終了する際に自動的に個人用 
+            パレットの写しをとって新たなパレットを作成しパレットエディター
+            ダイアログを開きますので、直ちにパレットが編集できます。 編集後の
+            結果は<acronym>GIMP</acronym>を終了する際に自動的に個人用 
             <filename class="directory">palettes</filename> フォルダーに保存
             されますから、 次回からもこのパレットが利用できます。
           </para>
@@ -808,7 +806,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-refresh" lang="en">Refresh Palettes</term>
-        <term id="gimp-palette-refresh" lang="ja">パレットを再読み込み</term>
+        <term id="gimp-palette-refresh" lang="ja">パレットを更新</term>
         <listitem>
           <para lang="en">
             Refresh Palettes rescans all of the folders in your palette
@@ -819,7 +817,7 @@
             current session.
           </para>
           <para lang="ja">
-            <guimenuitem>パレットを再読み込み</guimenuitem> は検索対象パスに登録
+            <guimenuitem>パレットを更新</guimenuitem> は検索対象パスに登録
             されているパレットファイルの保管場所を読み込み直し、 新たに発見
             されたパレットをパレットダイアログの一覧表に加えます。 何らかの手段
             で外部から入手したパレットファイルを個人用パレットフォルダーにコピー
@@ -1054,7 +1052,7 @@
 
   <sect3 id="gimp-palette-editor-dialog">
     <title lang="en">Palette Editor</title>
-    <title lang="ja">パレット編集</title>
+    <title lang="ja">パレットエディター</title>
     <indexterm lang="en">
       <primary>Palette</primary>
       <secondary>Editor</secondary>
@@ -1065,7 +1063,7 @@
     </indexterm>
     <figure>
       <title lang="en">The Palette Editor</title>
-      <title lang="ja">パレット編集ダイアログ</title>
+      <title lang="ja">パレットエディターダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -1085,20 +1083,20 @@
       automatically be saved when you exit from GIMP.
     </para>
     <para lang="ja">
-      パレット編集ダイアログは主に 2 つの用途があります。 そのひとつはパレット
-      から色を選んで<acronym>GIMP</acronym>の描画色と背景色 (ツールボックスの
-      色標識にも表示される) を設定すること、 ふたつめがパレットを改変すること
-      です。 パレットダイアログに並ぶどのパレットに対してもパレット編集
-      ダイアログが呼び出せますが、 改変できるものは自作のパレットに限られ、
-      <acronym>GIMP</acronym>の導入の際に提供されたシステム付属のパレットは
-      対象外です。 (もちろん複製をとれば新しくできた方を編集できます。) 
-      パレットを改変すると、 その成果は<acronym>GIMP</acronym>を終了するときに
-      自動的に保存されます。
+      パレットエディターダイアログは主に 2 つの用途があります。 そのひとつは
+      パレットから色を選んで<acronym>GIMP</acronym>の描画色と背景色 (ツール
+      ボックスの色標識にも表示される) を設定すること、 ふたつめがパレットを
+      改変することです。 パレットダイアログに並ぶどのパレットに対してもパレット
+      エディターダイアログが呼び出せますが、 改変できるものは自作のパレットに
+      限られ、 <acronym>GIMP</acronym>の導入の際に提供されたシステム付属の
+      パレットは対象外です。 (もちろん複製をとれば新しくできた方を編集
+      できます。) パレットを改変すると、 その成果は<acronym>GIMP</acronym>を
+      終了するときに自動的に保存されます。
     </para>
 
     <sect4>
       <title lang="en">How to Activate the Palette Editor</title>
-      <title lang="ja">パレット編集ダイアログの呼び出し方</title>
+      <title lang="ja">パレットエディターダイアログの呼び出し方</title>
       <para lang="en">
         The Palette Editor is only accessible from the Palettes dialog: you
         can activate it by double-clicking on a palette, or by pressing the
@@ -1114,9 +1112,9 @@
         for help on manipulating it.
       </para>
       <para lang="ja">
-        パレット編集ダイアログは<quote>パレット</quote>ダイアログを通じて起用
-        する方法しかありません。 一覧表のパレットの縮小見本画像をダブルクリック
-        するか、 ダイアログ底部の
+        パレットエディターダイアログは<quote>パレット</quote>ダイアログを通じて
+        起用する方法しかありません。 一覧表のパレットの縮小見本画像をダブル
+        クリックするか、 ダイアログ底部の
         <guiicon>
           <inlinemediaobject>
             <imageobject>
@@ -1132,7 +1130,7 @@
         を選んでください。
       </para>
       <para lang="ja">
-        <quote>パレット編集</quote>ダイアログはドッキング可能です。
+        <quote>パレットエディター</quote>ダイアログはドッキング可能です。
         その扱い方については
         <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
       </para>
@@ -1140,7 +1138,7 @@
 
     <sect4>
       <title lang="en">Using the Palette Editor</title>
-      <title lang="ja">パレット編集ダイアログの利用法</title>
+      <title lang="ja">パレットエディターダイアログの利用法</title>
       <para lang="en">
         If you click on a color box in the palette display, GIMP's foreground
         color will be set to the selected color: you can see this in the
@@ -1189,8 +1187,8 @@
       </para>
       <para lang="ja">
         パレットの表示部を <mousebutton>第2ボタン</mousebutton> でクリックする
-        とパレット編集ダイアログの脈絡メニューが現れます。 メニューに並ぶ主な
-        項目はダイアログの底部にあるアイコンボタンと同じはたらきをします。
+        とパレットエディターダイアログの脈絡メニューが現れます。 メニューに並ぶ
+        主な項目はダイアログの底部にあるアイコンボタンと同じはたらきをします。
       </para>
       <para lang="ja">
         パレットの表示部より下の左側には選ばれた色の名前 (まだないときは
@@ -1204,10 +1202,10 @@
         には初期設定の値が使われます。
       </para>
       <para lang="ja">
-        ダイアログの底部に並ぶアイコンボタンはほとんどがパレット編集ダイアログ
-        のメニューの各項目と一致しています。 このメニューはパレットの表示部を
-        <mousebutton>第2ボタン</mousebutton> でクリックすると呼び出せます。
-        ではアイコンボタンをひとつずつ見てゆきましょう。
+        ダイアログの底部に並ぶアイコンボタンはほとんどがパレットエディター
+        ダイアログのメニューの各項目と一致しています。 このメニューはパレットの
+        表示部を <mousebutton>第2ボタン</mousebutton> でクリックすると呼び
+        出せます。 ではアイコンボタンをひとつずつ見てゆきましょう。
       </para>
       <variablelist>
         <varlistentry>
@@ -1258,7 +1256,7 @@
               <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
             </guiicon>
             <phrase condition="tag-is-required" lang="en">Edit Color</phrase>
-            <phrase condition="tag-is-required" lang="ja">色の編集</phrase>
+            <phrase condition="tag-is-required" lang="ja">色の変更</phrase>
           </term>
           <listitem>
             <para lang="en">
@@ -1272,7 +1270,7 @@
               選んだ色項目の色を変更できます。 ただし開いたパレットを
               改変する権限がないときはこのボタンは灰色無効になっています。
               (後述する) 脈絡メニューの
-              <link linkend="gimp-palette-editor-edit">色の編集...</link> を
+              <link linkend="gimp-palette-editor-edit">色の変更...</link> を
               ご覧ください。
             </para>
           </listitem>
@@ -1297,7 +1295,7 @@
             <para lang="ja">
               このアイコンボタンについては (後述する) 脈絡メニューの
               <link linkend="gimp-palette-editor-new">
-              描画色から新しい色</link> をご覧ください。
+              描画色でエントリーを追加</link> をご覧ください。
             </para>
           </listitem>
         </varlistentry>
@@ -1394,10 +1392,10 @@
 
   <sect3 id="gimp-palette-editor-menu">
     <title lang="en">The Palette Editor pop-menu</title>
-    <title lang="ja">パレット編集ダイアログの脈絡メニュー</title>
+    <title lang="ja">パレットエディターダイアログの脈絡メニュー</title>
     <figure>
       <title lang="en">The Palette Editor pop-menu</title>
-      <title lang="ja">パレット編集ダイアログの脈絡メニュー</title>
+      <title lang="ja">パレットエディターダイアログの脈絡メニュー</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -1412,16 +1410,17 @@
       using the buttons at the bottom of the Palette Editor dialog.
     </para>
     <para lang="ja">
-      パレット編集ダイアログの脈絡メニューを呼び出すにはパレット編集ダイアログ
-      のパレット表示部を <mousebutton>第2ボタン</mousebutton> クリックするか、
-      このダイアログのタブメニューの最初の項目を進んでください。 このメニューで
-      できる操作はパレット編集ダイアログの底部に並ぶアイコンボタンからも起用
-      できます。
+      パレットエディターダイアログの脈絡メニューを呼び出すにはパレット
+      エディターダイアログのパレット表示部を
+      <mousebutton>第2ボタン</mousebutton> クリックするか、 このダイアログの
+      タブメニューの最初の項目を進んでください。 このメニューでできる操作は
+      パレットエディターダイアログの底部に並ぶアイコンボタンからも
+      起用できます。
     </para>
     <variablelist>
       <varlistentry>
         <term id="gimp-palette-editor-edit" lang="en">Edit Color</term>
-        <term id="gimp-palette-editor-edit" lang="ja">色の編集...</term>
+        <term id="gimp-palette-editor-edit" lang="ja">色の変更...</term>
         <listitem>
           <para lang="en">
             <quote>Edit Color</quote> brings up a color editor that allows
@@ -1431,7 +1430,7 @@
             be insensitive.
           </para>
           <para lang="ja">
-            <guimenuitem>色の編集...</guimenuitem> は色の変更ダイアログを呼び
+            <guimenuitem>色の変更...</guimenuitem> は色の変更ダイアログを呼び
             出しますので、 選ばれたパレットの色項目の色をここで変更できます。 
             ただし開いているパレットの改変権限がない場合 (つまり
             <acronym>GIMP</acronym>の導入時についてきたシステム付属パレットを
@@ -1444,7 +1443,7 @@
           New Color from FG; New Color from BG
         </term>
         <term id="gimp-palette-editor-new" lang="ja">
-          描画色から新しい色; 背景色から新しい色
+          描画色でエントリーを追加; 背景色でエントリーを追加
         </term>
         <listitem>
           <para lang="en">
@@ -1536,7 +1535,7 @@
           <para lang="ja">
             このオプションを有効に (初期設定は有効です) したときは、 パレット
             ダイアログの一覧表で他のパレットをクリックするだけでそのパレットを
-            パレット編集ダイアログに読み込みます。
+            パレットエディターダイアログに読み込みます。
           </para>
         </listitem>
       </varlistentry>

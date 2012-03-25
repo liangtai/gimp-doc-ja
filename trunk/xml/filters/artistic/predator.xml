@@ -7,7 +7,7 @@
   2007-12-02 lexa: created initial version
 -->
 <!--TODO es lt pl ru: translate new content (and review en)-->
-<!--2012-03-05-->
+<!--2012-03-23-->
 <sect2 id="script-fu-predator">
   <title lang="en">Predator</title>
   <title lang="ja">プレデター...</title>
@@ -172,7 +172,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Pixelize</term>
-        <term lang="ja">ピクセル化</term>
+        <term lang="ja">モザイク処理</term>
         <listitem>
           <para lang="en">
             If checked, the filter will simplify the image into solid-colored
@@ -183,8 +183,8 @@
             examples below).
           </para>
           <para lang="ja">
-            <guilabel>ピクセル化</guilabel> オプションを有効にすると画像は 
-            <link linkend="plug-in-pixelize">ピクセル化...</link> フィルターに
+            <guilabel>モザイク処理</guilabel> オプションを有効にすると画像は 
+            <link linkend="plug-in-pixelize">モザイク処理...</link> フィルターに
             よって単色の小さな正方形の集まりに単純化されてからプレデター処理の
             適用を受けます。 正方形の大きさは <guilabel>ピクセル量</guilabel>
             の増減により変化しますが、 これが仕上がりに多大な影響 (後述の例) を
@@ -206,15 +206,15 @@
           </para>
           <para lang="ja">
             <guilabel>ピクセル量</guilabel> スライダーは 
-            <guilabel>ピクセル化</guilabel> オプションを有効にしているときに
+            <guilabel>モザイク処理</guilabel> オプションを有効にしているときに
             画像を単純化するために使われる正方形のかけらの大きさを調節します。 
             この値を増せば実質的に画像の解像度が落ちます。 つぎの例を
             ご覧になればピクセル量を増すと升目が大きくなって
-            <quote>大ピクセル化</quote>していく様子がつかめるでしょう。
+            <quote>粗モザイク処理</quote>していく様子がつかめるでしょう。
           </para>
           <figure>
             <title lang="en"><quote>Pixelize</quote> examples</title>
-            <title lang="ja"><quote>ピクセル化</quote>の例</title>
+            <title lang="ja"><quote>モザイク処理</quote>の例</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -321,7 +321,7 @@
           </imageobject>
           <caption>
             <para lang="en">Pixelize</para>
-            <para lang="ja">ピクセル化</para>
+            <para lang="ja">モザイク処理</para>
           </caption>
         </mediaobject>
         <mediaobject>
@@ -357,8 +357,8 @@
           reducing the image resolution.
         </para>
         <para lang="ja">
-          オプションで<quote>ピクセル化</quote>を選ぶとこの時点で画像に 
-          <link linkend="plug-in-pixelize">ピクセル化</link> フィルターが適用
+          オプションで<quote>モザイク処理</quote>を選ぶとこの時点で画像に 
+          <link linkend="plug-in-pixelize">モザイク処理</link> フィルターが適用
           されます。 画像は画素より大きめの色升目で構成されるので画像の解像度が
           実質的に下がります。
         </para>

@@ -8,10 +8,10 @@
   2006-01-24 en;fr reviewed by j.h
   2005/09/15 reviewed; de added by axel.wernicke
 -->
-<!--2012-03-09-->
+<!--2012-03-25-->
 <sect2 id="gimp-selection-float">
   <title lang="en">Float</title>
-  <title lang="ja">選択範囲をフロート化</title>
+  <title lang="ja">選択範囲のフロート化</title>
 
   <indexterm lang="en">
     <primary>Selection</primary>
@@ -19,7 +19,7 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>選択範囲</primary>
-    <secondary>選択範囲をフロート化コマンド</secondary>
+    <secondary>選択範囲のフロート化コマンド</secondary>
   </indexterm>
 
   <para lang="en">
@@ -36,7 +36,7 @@
     clicking on the image outside of the floating selection (see below).
   </para>
   <para lang="ja">
-    <guimenuitem>選択範囲をフロート化</guimenuitem> コマンド
+    <guimenuitem>選択範囲のフロート化</guimenuitem> コマンド
     は通常の選択範囲を<quote>フローティング選択範囲</quote>に変更します。
   </para>
   <para lang="ja">
@@ -76,8 +76,8 @@
       anchor it to a new layer. Then simply remove the original layer.
     </para>
     <para lang="ja">
-      <link linkend="gimp-view-show-layer-boundary">レイヤーの境界線を表示
-      </link> してレイヤーが点線で囲まれていると、 レイヤー内で厳密に何らかの
+      <link linkend="gimp-view-show-layer-boundary">レイヤー境界線の表示</link> 
+      によってレイヤーが点線で囲まれていると、 レイヤー内で厳密に何らかの
       領域を選択する作業がやりづらくなる場合があります。 この問題を避けるには、 
       矩形の選択範囲を作成してからフローティング選択範囲に変換し、 これを
       新しいレイヤーとして固定するとよいでしょう。 あとは元のレイヤーを
@@ -113,7 +113,7 @@
           画像ウィンドウのメニューより
           <menuchoice>
             <guimenu>選択</guimenu>
-            <guimenuitem>選択範囲をフロート化</guimenuitem>
+            <guimenuitem>選択範囲のフロート化</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -183,13 +183,13 @@
           <link linkend="gimp-tool-shear">剪断変形</link>、
           <link linkend="gimp-tool-scale">拡大・縮小</link>、
           <link linkend="gimp-tool-rotate">回転</link>、
-          <link linkend="gimp-tool-perspective">遠近法</link> の各変換ツールが
+          <link linkend="gimp-tool-perspective">遠近法</link> の各変形ツールが
           作用しているときにもフローティング選択範囲が生成されます。 
-          選択範囲が活性化している画像で変換ツールを使うとき、 
-          <guilabel>変換対象</guilabel> にレイヤーを選んでいるとそのツールは
-          選択範囲を変換したうえでフローティング選択範囲を生成します。 
-          選択範囲がない画像では[文字通り]レイヤーが変換され、 フローティング
-          選択範囲は生成されません。 (<guilabel>変換対象</guilabel> に
+          選択範囲が活性化している画像で変形ツールを使うとき、 
+          <guilabel>変形対象</guilabel> にレイヤーを選んでいるとそのツールは
+          選択範囲を変形したうえでフローティング選択範囲を生成します。 
+          選択範囲がない画像では[文字通り]レイヤーが変形され、 フローティング
+          選択範囲は生成されません。 (<guilabel>変形対象</guilabel> に
           選択範囲を選んでいる場合もフローティング選択範囲は生成されません。)
         </para>
       </listitem>
@@ -240,7 +240,7 @@
           (<keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo>).
         </para>
         <para lang="ja">
-          <link linkend="gimp-layer-anchor">レイヤーを固定</link> コマンド
+          <link linkend="gimp-layer-anchor">レイヤーの固定</link> コマンド
           (<keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo>)
           を実行します。
         </para>
@@ -253,8 +253,7 @@
         </para>
         <para lang="ja">
           <link linkend="gimp-layer-dialog">レイヤーダイアログ</link> の脈絡
-          メニューの <guimenuitem>レイヤーを固定
-          </guimenuitem> か
+          メニューの <guimenuitem>レイヤーの固定</guimenuitem> か
           <guiicon>
             <inlinemediaobject>
               <imageobject>

@@ -9,10 +9,10 @@
   2006-04-29 lexa: minor changes to reach docbook compliance
   2006-02-29 Added Activate Dialog en;fr by j.h
 -->
-<!--2012-03-03-->
+<!--2012-03-24-->
 <sect2 id="gimp-document-dialog">
   <title lang="en">Document History Dialog</title>
-  <title lang="ja">最近開いた画像ドキュメントダイアログ</title>
+  <title lang="ja">最近開いたファイルダイアログ</title>
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Document History</secondary>
@@ -22,16 +22,14 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ダイアログ</primary>
-    <secondary sortas="ガゾウドキュメントリレキ">
-      画像ドキュメント履歴
-    </secondary>
+    <secondary sortas="ファイルリレキ">ファイル履歴</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary sortas="ガゾウドキュメントリレキ">画像ドキュメント履歴</primary>
+    <primary sortas="ファイルリレキ">ファイル履歴</primary>
   </indexterm>
   <figure>
     <title lang="en">Document History dialog</title>
-    <title lang="ja">最近開いた画像ドキュメントダイアログ</title>
+    <title lang="ja"><quote>最近開いたファイル<quote>ダイアログ</title>
     <mediaobject>
       <imageobject>
         <imagedata fileref="images/dialogs/history.png" format="PNG"/>
@@ -44,12 +42,12 @@
     <quote>Open Recent</quote> command.
   </para>
   <para lang="ja">
-    <quote>最近開いた画像ドキュメント</quote>ダイアログは今までに
+    <quote>最近開いたファイル</quote>ダイアログは今までに
     <acronym>GIMP</acronym>で開いた画像の一覧表を表示します。 
     画像ウィンドウのメニューにある
     <menuchoice>
       <guimenu>ファイル</guimenu>
-      <guisubmenu>最近開いた画像ドキュメント</guisubmenu>
+      <guisubmenu>最近開いたファイル</guisubmenu>
     </menuchoice>
     サブメニューの完全版といえます。
   </para>
@@ -66,7 +64,7 @@
       You can access it:
     </para>
     <para lang="ja">
-      <quote>最近開いた画像ドキュメント</quote>ダイアログはドッキング可能です。
+      <quote>最近開いたファイル</quote>ダイアログはドッキング可能です。
       その扱い方については
       <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
     </para>
@@ -86,7 +84,7 @@
           <menuchoice>
             <guimenu>ウィンドウ</guimenu>
             <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
-            <guimenuitem>画像ドキュメント履歴</guimenuitem>
+            <guimenuitem>ファイル履歴</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -109,8 +107,8 @@
                 fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
-            <guimenu>タブに追加</guimenu>
-            <guimenuitem>画像ドキュメント履歴</guimenuitem>
+            <guimenu>タブの追加</guimenu>
+            <guimenuitem>ファイル履歴</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -127,8 +125,8 @@
           画像ウィンドウのメニューより
           <menuchoice>
             <guimenu>ファイル</guimenu>
-            <guisubmenu>最近開いた画像ドキュメント</guisubmenu>
-            <guimenuitem>画像ドキュメント履歴</guimenuitem>
+            <guisubmenu>最近開いたファイル</guisubmenu>
+            <guimenuitem>ファイル履歴</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -137,7 +135,7 @@
 
   <sect3>
     <title lang="en">Using the Document History dialog</title>
-    <title lang="ja">画像ドキュメント履歴ダイアログの利用法</title>
+    <title lang="ja">ファイル履歴ダイアログの利用法</title>
     <para lang="en">
       The scroll bar allows you to browse all images you have opened before.
     </para>
@@ -154,7 +152,7 @@
       スクロールバーを動かして今までに扱った画像を探れます。
     </para>
     <para lang="ja">
-      <quote>最近開いた画像ドキュメント</quote>ダイアログのタブメニューで
+      <quote>最近開いたファイル</quote>ダイアログのタブメニューで
       <guimenuitem>一覧で表示</guimenuitem> か 
       <guimenuitem>並べて表示</guimenuitem> を切り替えられます。 
       <quote>並べて表示</quote>の場合は開いたことのある画像の見本が升目状に
@@ -246,8 +244,8 @@
       </guiicon>
       このアイコンボタンをクリックするか、 脈絡メニューの 
       <guimenuitem>エントリーの削除</guimenuitem> に進むと、 選ばれた画像が
-      このダイアログの一覧表から消去され、 画像ドキュメント履歴から削除
-      されます。 画像ファイルが削除されるのではありません。
+      このダイアログの一覧表から消去され、 ファイル履歴から削除されます。 
+      画像ファイルが削除されるのではありません。
     </para>
     <para lang="ja">
       <guiicon>
@@ -256,12 +254,12 @@
             <imagedata fileref="images/dialogs/stock-edit-clear-16.png"/>
           </imageobject>
           <textobject>
-            <phrase>「画像ドキュメント履歴を消去」</phrase>
+            <phrase>「ファイル履歴を消去」</phrase>
           </textobject>
         </inlinemediaobject>
       </guiicon>
       このアイコンボタンをクリックするか、 脈絡メニューの 
-      <guimenuitem>画像ドキュメント履歴を消去</guimenuitem> に進むと、
+      <guimenuitem>ファイル履歴を消去</guimenuitem> に進むと、
       開いた画像の履歴上の記録が全て消去されます。
     </para>
     <para lang="ja">

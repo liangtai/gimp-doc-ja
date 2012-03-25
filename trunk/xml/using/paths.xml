@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2012-03-04-->
+<!--2012-03-24-->
 <sect1 id="gimp-using-paths">
   <title lang="en">
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -432,7 +432,7 @@
 
   <sect2 id="gimp-using-paths-transforming">
     <title lang="en">Transforming Paths</title>
-    <title lang="ja">パスの変換</title>
+    <title lang="ja">パスの変形</title>
     <para lang="en">
       Each of the Transform tools (Rotate, Scale, Perspective, etc) can be set
       to act on a layer, selection, or path. Select the transform tool in the
@@ -460,29 +460,29 @@
     </para>
     <para lang="ja">
       回転、拡大・縮小、 遠近法など、 どんな 
-      <link linkend="gimp-tool-transform">変換ツール</link> もレイヤーか
-      選択範囲かパスを操作できます。 ツールボックスでどれかの変換ツールを
+      <link linkend="gimp-tool-transform">変形ツール</link> もレイヤーか
+      選択範囲かパスを操作できます。 ツールボックスでどれかの変形ツールを
       選んでから、 そのツールのツールオプションダイアログの 
-      <guilabel>変換対象:</guilabel> オプションでレイヤーか選択範囲か
-      パスのいずれかを指定します。 強力な変換ツールの機能を利用して、 
+      <guilabel>変形対象:</guilabel> オプションでレイヤーか選択範囲か
+      パスのいずれかを指定します。 強力な変形ツールの機能を利用して、 
       画像上の他の構成要素に全く影響を与えずにパスの形状を変更できます。
     </para>
     <para lang="ja">
-      パスを変換対象にしたときの変換ツールは、 はじめ初期設定では一面のパスに
+      パスを変形対象にしたときの変形ツールは、 はじめ初期設定では一面のパスに
       のみ作用します。 これをパスダイアログでは <emphasis>活性パス</emphasis>
-      として目立たせて表示します。 変換作用を一面のパスに限らずに、 
+      として目立たせて表示します。 変形作用を一面のパスに限らずに、 
       パスダイアログの<quote>アイテムの連結</quote>ボタンを使うことで数面の
-      パスを同時に変化させることも可能です。 変換アイテムの連結はパス同士だけ
-      ではなくレイヤーやチャンネルとも連係できます。 変換用に連結されている
-      要素に変換作用を及ぼすと、 連結されていたそれ以外の要素にも一緒に作用
+      パスを同時に変化させることも可能です。 変形アイテムの連結はパス同士だけ
+      ではなくレイヤーやチャンネルとも連係できます。 変形用に連結されている
+      要素に変形作用を及ぼすと、 連結されていたそれ以外の要素にも一緒に作用
       します。 ですから例えば、 レイヤーとパスを同程度に拡大・縮小したい
       ときは、 レイヤーダイアログでそのレイヤーの左隣をクリックして
       <quote>鎖</quote>のしるし
       <guiicon>
         <inlinegraphic fileref="images/dialogs/stock-vchain-24.png" />
       </guiicon>
-      を出し、 パスダイアログでも同様にすれば、 拡大・縮小ツールでの変換対象が
-      パスであってもレイヤーであっても、 もう一方にも変換が自動的に作用します。
+      を出し、 パスダイアログでも同様にすれば、 拡大・縮小ツールでの変形対象が
+      パスであってもレイヤーであっても、 もう一方にも変形が自動的に作用します。
     </para>
   </sect2>
 
@@ -584,7 +584,7 @@
             Perspective tool.
           </para>
           <para lang="ja">
-            パスに転換され、 遠近法ツールで変換されたテキスト。
+            パスに転換され、 遠近法ツールで変形されたテキスト。
           </para>
         </caption>
       </mediaobject>
@@ -635,9 +635,9 @@
           transforming the pixel data.
         </para>
         <para lang="ja">
-          テキストの形状変換はさらに重要。 テキストをパスに転換、 続いてパスを
-          変換、 最後はパスの境界線に描画したり、 パスを選択に転換して
-          塗りつぶすこと。 テキストレイヤーの画素情報 (ピクセルデータ) を変換
+          テキストの形状変形はさらに重要。 テキストをパスに転換、 続いてパスを
+          変形、 最後はパスの境界線に描画したり、 パスを選択に転換して
+          塗りつぶすこと。 テキストレイヤーの画素情報 (ピクセルデータ) を変形
           描画するよりも高品質に仕上りやすい。
         </para>
       </listitem>

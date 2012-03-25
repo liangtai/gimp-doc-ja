@@ -8,10 +8,10 @@
   2006-03.18 lexa: added german translation and made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-03-01-->
+<!--2012-03-24-->
 <sect2 id="gimp-undo-dialog">
   <title lang="en">Undo History Dialog</title>
-  <title lang="ja">操作履歴ダイアログ</title>
+  <title lang="ja">作業履歴ダイアログ</title>
   <indexterm lang="en">
     <primary>Dialogs</primary>
     <secondary>Undo History</secondary>
@@ -21,15 +21,15 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ダイアログ</primary>
-    <secondary sortas="ソウサリレキ">操作履歴</secondary>
+    <secondary sortas="ソウサリレキ">作業履歴</secondary>
   </indexterm>
   <indexterm lang="ja">
-    <primary sortas="ソウサリレキ">操作履歴</primary>
+    <primary sortas="ソウサリレキ">作業履歴</primary>
   </indexterm>
 
   <figure>
     <title lang="en">The Undo History dialog</title>
-    <title lang="ja">操作履歴ダイアログ</title>
+    <title lang="ja">作業履歴ダイアログ</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -48,7 +48,7 @@
   <para lang="ja">
     このダイアログは、 画像に対して行なわれた最近の操作をひと手間ごとに、
     画像に起きた変化を表す小さなスケッチつきで一覧表にしています。 画像を
-    操作履歴のいずれの時点へ戻すにもただその項目をクリックするだけです。
+    作業履歴のいずれの時点へ戻すにもただその項目をクリックするだけです。
     <acronym>GIMP</acronym>の取り消し機能についての情報とその裏側の説明が
     <link linkend="gimp-concepts-undo">取り消し</link> で述べられています。
   </para>
@@ -65,7 +65,7 @@
       You can access it:
     </para>
     <para lang="ja">
-      <quote>操作履歴</quote>ダイアログはドッキング可能です。
+      <quote>作業履歴</quote>ダイアログはドッキング可能です。
       その扱い方については
       <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
     </para>
@@ -85,7 +85,7 @@
           <menuchoice>
             <guimenu>ウィンドウ</guimenu>
             <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
-            <guimenuitem>操作履歴</guimenuitem>
+            <guimenuitem>作業履歴</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -107,8 +107,8 @@
               fileref="images/dialogs/stock-menu-left-12.png"/>
           </guiicon> をクリックすると出てくるタブメニューより
           <menuchoice>
-            <guimenu>タブに追加</guimenu>
-            <guimenuitem>操作履歴</guimenuitem>
+            <guimenu>タブの追加</guimenu>
+            <guimenuitem>作業履歴</guimenuitem>
           </menuchoice>
         </para>
       </listitem>
@@ -117,7 +117,7 @@
 
   <sect3>
     <title lang="en">Using the Undo History dialog</title>
-    <title lang="ja">操作履歴ダイアログの利用法</title>
+    <title lang="ja">作業履歴ダイアログの利用法</title>
     <para lang="en">
       The most basic thing you can do is to select a point in the Undo History
       by clicking on it in the list. You can go back and forth between states
@@ -125,7 +125,7 @@
       consuming any resources. In most cases, the changes are very fast.
     </para>
     <para lang="ja">
-      操作履歴の一覧表のどれかの項目をクリックするのが基本的な扱い方です。
+      作業履歴の一覧表のどれかの項目をクリックするのが基本的な扱い方です。
       この方法は何ら情報を損失することも資源を浪費することもなく、
       いくらでも好きなだけ履歴上の様々な状態を遡ったり進んだりできます。
       操作の反応はほとんどいつも非常に高速です。
@@ -180,7 +180,7 @@
             </menuchoice>
             を指示しても、 あるいはキーボードショートカット
             <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
-            を使っても同じ結果が出ます。 操作履歴において一手だけ画像を元に
+            を使っても同じ結果が出ます。 作業履歴において一手だけ画像を元に
             戻します。
           </para>
         </listitem>
@@ -217,7 +217,7 @@
             </menuchoice>
             を指示しても、 あるいはキーボードショートカット
             <keycombo><keycap>Ctrl</keycap><keycap>Y</keycap></keycombo>
-            を使っても同じ結果が出ます。 操作履歴において一手だけ先の状態に画像
+            を使っても同じ結果が出ます。 作業履歴において一手だけ先の状態に画像
             を進めます。
           </para>
         </listitem>
@@ -233,7 +233,7 @@
           <guiicon>
             <inlinegraphic fileref="images/dialogs/stock-edit-clear-16.png"/>
           </guiicon>
-          <phrase condition="tag-is-required">操作履歴を消去</phrase>
+          <phrase condition="tag-is-required">作業履歴を消去</phrase>
         </term>
         <listitem>
           <para lang="en">
@@ -270,7 +270,7 @@
               linkend="gimp-prefs-environment">Preferences/Environment</link>.
             </para>
             <para lang="ja">
-              <link linkend="gimp-prefs-environment">環境設定</link> ダイアログ
+              <link linkend="gimp-prefs-environment">設定</link> ダイアログ
               の<quote>環境</quote>のページで取り消し手数の調節ができます。
             </para>
           </note>

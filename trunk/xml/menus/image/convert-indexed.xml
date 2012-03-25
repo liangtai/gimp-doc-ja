@@ -7,7 +7,7 @@
   2006-07-17 note added about the Colormap Dialog by j.h
   2005/10/25 created from image-mode.xml by axel.wernicke
 -->
-<!--2012-03-08-->
+<!--2012-03-25-->
 <sect2 id="gimp-image-convert-indexed">
   <title lang="en">Indexed mode</title>
   <title lang="ja">インデックス...</title>
@@ -138,7 +138,7 @@
                 palette that is optimized for the web.
               </para>
               <para lang="ja">
-                <guilabel>ウェブ最適化パレットを使用</guilabel>: 
+                <guilabel>ウェブ用最適化パレットを使用</guilabel>: 
                 ウェブブラウザーに適したパレットを使用します。
               </para>
             </listitem>
@@ -249,7 +249,7 @@
           </para>
           <para lang="ja">
             ディザリングフィルターは 3 種類あります。 
-            <guimenuitem>なし</guimenuitem> を含め 
+            <guimenuitem>ディザリングしない</guimenuitem> を含め 
             <guilabel>色ディザリング</guilabel> ではそのいずれかか選べます。 
             どのフィルターがどんな効果を画像にもたらすかは予測がつきません
             ので、 全部のフィルターを試してその画像に最適なものを見付けるしか
@@ -297,7 +297,7 @@
           </figure>
           <figure>
             <title lang="en">Example: Floyd-Steinberg (normal)</title>
-            <title lang="ja">例: Floyd-Steinberg ディザリング (通常)</title>
+            <title lang="ja">例: 誤差拡散 (通常)</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -309,8 +309,8 @@
                   <quote>Floyd-Steinberg (normal)</quote> dithering.
                 </para>
                 <para lang="ja">
-                  同じ画像を <guimenuitem>Floyd-Steinberg ディザリング (通常)
-                  </guimenuitem> で4 色のインデックス化カラー画像に変換したもの
+                  同じ画像を <guimenuitem>誤差拡散 (通常)</guimenuitem> で
+                  4 色のインデックス化カラー画像に変換したもの
                 </para>
               </caption>
             </mediaobject>
@@ -319,9 +319,7 @@
             <title lang="en">
               Example: Floyd-Steinberg (reduced color bleeding)
             </title>
-            <title lang="ja">
-              例: Floyd-Steinberg ディザリング (使用される色数を減らす)
-            </title>
+            <title lang="ja">例: 誤差拡散 (補正あり)</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
@@ -334,9 +332,8 @@
                   dithering.
                 </para>
                 <para lang="ja">
-                  同じ画像を <guimenuitem>Floyd-Steiberg ディザリング 
-                  (使用する色数を減らす)</guimenuitem> で 4 色のインデックス化
-                  カラー画像に変換したもの
+                  同じ画像を <guimenuitem>誤差拡散 (補正あり)</guimenuitem> で
+                  4 色のインデックス化カラー画像に変換したもの
                 </para>
               </caption>
             </mediaobject>

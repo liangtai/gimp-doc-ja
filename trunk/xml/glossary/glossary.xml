@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                           "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--2012-03-04-->
+<!--2012-03-25-->
 <glossary id="glossary">
   <title lang="en">Glossary</title>
   <title lang="ja">用語集</title>
@@ -787,7 +787,7 @@ Separate+</ulink> というツール集が開発を継続しており、 すで�
         dithering</link>, which is used in <acronym>GIMP</acronym>.
       </para>
       <para lang="ja">
-ディザリングとはコンピュータグラフィックの技法のひとつで、 少ない
+ディザリングとはコンピューターグラフィックの技法のひとつで、 少ない
 <link linkend="glossary-colordepth">色深度</link> の画像でより多くの
 色数を表現できます。 ディザリングを利用した画像では、 本来無い色を再現
 するとき、 利用できるいくつかの他の色の画素を一定の規則で配置します。
@@ -1003,7 +1003,7 @@ Exif、 <acronym>EXIF</acronym>ではない) はデジタルカメラが利用�
   <glossentry id="glossary-floyd-steinberg-dithering">
     <glossterm>
       <phrase lang="en">Floyd-Steinberg Dithering</phrase>
-      <phrase lang="ja">Floyd-Steinberg ディザリング</phrase>
+      <phrase lang="ja">誤差拡散法</phrase>
     </glossterm>
     <indexterm significance="normal">
       <primary>Floyd-Steinberg</primary>
@@ -1029,8 +1029,7 @@ Exif、 <acronym>EXIF</acronym>ではない) はデジタルカメラが利用�
         dithering.
       </para>
       <para lang="ja">
-フロイド-スタインバーグ・ディザリングとは Robert W. Floyd 氏と 
-Louis Steinberg 氏による 
+誤差拡散法とは Robert W. Floyd 氏と Louis Steinberg 氏による 
 <link linkend="glossary-dithering">ディザリング</link> 技法のひとつで、
  その初版は1976年に発表されました。 ディザリングは画像の左上隅の画素から
 処理を開始します。 個々の画素ではパレットから使える最も近い色が選び
@@ -1042,7 +1041,7 @@ Louis Steinberg 氏による
       <para lang="ja">
 <acronym>GIMP</acronym>で画像を
 <link linkend="gimp-image-convert-indexed">インデックスつき</link> の
-モードにするときのオプションには、 Floyd-Steinberg のアルゴリズムの
+モードにするときのオプションには、 誤差拡散法アルゴリズムの
 2 変種が選択肢にあります。
       </para>
     </glossdef>
@@ -1876,8 +1875,8 @@ Program) は<acronym>GNU</acronym>の公式アプリケーションです。
       </para>
       <para lang="ja">
 補間とは中間値の算出を意味します。 デジタル画像を拡大 (<quote>デジタル
-的引き延ばし</quote>) をしたり変換 (回転や剪断変形あるいは遠近法変換) 
-をすると、 変換を受けた画像の画素の色を算出するために補間処理が
+的引き延ばし</quote>) をしたり変形 (回転や剪断変形あるいは遠近法変形) 
+をすると、 変形を受けた画像の画素の色を算出するために補間処理が
 行われます。 <acronym>GIMP</acronym>は処理速度と品質に違いがある 3 つの
 補間方法からいずれかを選べるようになっています。 概して言えば品質が
 高いものほど補間処理に時間がかかります。 
@@ -1893,7 +1892,7 @@ Program) は<acronym>GNU</acronym>の公式アプリケーションです。
       <para lang="ja">
 <acronym>GIMP</acronym>が補間処理を実行するのは、 レイヤーや画像を
 <link linkend="gimp-image-scale">拡大・縮小</link> するときと、 画像を
-<link linkend="gimp-tools-transform">変換</link> するときです。 
+<link linkend="gimp-tools-transform">変形</link> するときです。 
       </para>
     </glossdef>
   </glossentry>
@@ -2689,7 +2688,7 @@ Rendering Intent はつぎのとおりです。
       <variablelist>
         <varlistentry>
           <term lang="en">Perceptual</term>
-          <term lang="ja">鮮やかさ重視</term>
+          <term lang="ja">知覚的</term>
           <listitem>
             <para lang="en">
               This rendering intent is typically used for photographic
@@ -2705,7 +2704,7 @@ Rendering Intent はつぎのとおりです。
         </varlistentry>
         <varlistentry>
           <term lang="en">Relative colorimetric</term>
-          <term lang="ja">相対色距離</term>
+          <term lang="ja">相対的な色域を維持</term>
           <listitem>
             <para lang="en">
               This rendering intent is typically used for spot colors. Colors
@@ -2738,7 +2737,7 @@ Rendering Intent はつぎのとおりです。
         </varlistentry>
         <varlistentry>
           <term lang="en">Absolute colorimetric</term>
-          <term lang="ja">絶対色距離</term>
+          <term lang="ja">絶対的な色域を維持</term>
           <listitem>
             <para lang="en">
               This rendering intent is most often used in proofing. It
@@ -3426,7 +3425,7 @@ mailto があります。
 何もかもデータ化されてファイルに収められます。 その対象は各レイヤーや
 現在の選択範囲の画素の情報、 もしあれば追加されたチャンネルやパスや
 見当線です。 ただし重要なことですが<acronym>XCF</acronym>ファイルに
-操作履歴だけは保存されません。
+作業履歴だけは保存されません。
       </para>
       <para lang="ja">
 <acronym>XCF</acronym>ファイルの画素の情報は劣化のない圧縮をかけられた

@@ -7,7 +7,7 @@
   2007-12-26 lexa: initial version for en and de
   2008-01-28 jpl: update text & images
 -->
-<!--2012-03-09-->
+<!--2012-03-25-->
 <sect2 id="gimp-prefs-color-management">
   <title lang="en">Color Management</title>
   <title lang="ja">カラーマネジメント (色管理)</title>
@@ -24,7 +24,7 @@
   </indexterm>
   <indexterm lang="ja">
     <primary>ダイアログ</primary>
-    <secondary sortas="カンキョウセッテイ">環境設定</secondary>
+    <secondary sortas="カンキョウセッテイ">設定</secondary>
     <tertiary sortas="イロカンリ">色管理</tertiary>
   </indexterm>
   <indexterm lang="ja">
@@ -36,7 +36,7 @@
 
   <figure>
     <title lang="en">Color Management Preferences</title>
-    <title lang="ja">環境設定 カラーマネジメントのページ</title>
+    <title lang="ja">設定 カラーマネジメントのページ</title>
     <mediaobject>
       <imageobject>
         <imagedata format="PNG"
@@ -110,7 +110,7 @@
                 selection shuts down the color management in GIMP completely.
               </para>
               <para lang="ja">
-                <guimenuitem>色管理なし</guimenuitem>:
+                <guimenuitem>カラーマネジメントなし</guimenuitem>:
                 これを選ぶと<acronym>GIMP</acronym> は色管理を一切行いません。
               </para>
             </listitem>
@@ -122,9 +122,10 @@
                 the given color profile for the display.
               </para>
               <para lang="ja">
-                <guimenuitem>色管理されたディスプレイ</guimenuitem>: この選択肢
-                はディスプレイ用のプロファイルが作用し<acronym>GIMP</acronym>の
-                色管理が画像の表示を完全に正しく行えるようにします。
+                <guimenuitem>モニター表示のカラーマネジメント</guimenuitem>: 
+                この選択肢はディスプレイ用のプロファイルが作用し
+                <acronym>GIMP</acronym>の色管理が画像の表示を完全に正しく
+                行えるようにします。
               </para>
             </listitem>
             <listitem>
@@ -136,11 +137,11 @@
                 color results of a print with that printer.
               </para>
               <para lang="ja">
-                <guimenuitem>印刷シミュレーション</guimenuitem>: この場合には
-                <acronym>GIMP</acronym>の色管理はディスプレイのプロファイルを
-                適用するだけでなく選択された印刷模擬試験プロファイルも適用
-                します。 これでプリンターの印刷物の色が予め画面でも見られる
-                ようになります。
+                <guimenuitem>デバイスのシミュレーション</guimenuitem>: この
+                場合には<acronym>GIMP</acronym>の色管理はディスプレイの
+                プロファイルを適用するだけでなく選択された印刷模擬試験
+                プロファイルも適用します。 これでプリンターの印刷物の色が
+                あらかじめ画面でも見られるようになります。
               </para>
               <note>
                 <para lang="en">
@@ -221,7 +222,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Display rendering intent</term>
-        <term lang="ja">ディスプレイ描画方法</term>
+        <term lang="ja">モニター表示のレンダリングインテント</term>
         <listitem>
           <para lang="en">
             Rendering intents, as the one you can configure with this option,
@@ -244,7 +245,7 @@
                 <guimenuitem>Perceptual</guimenuitem>
               </para>
               <para lang="ja">
-                <guimenuitem>鮮やかさ重視</guimenuitem>
+                <guimenuitem>知覚的</guimenuitem>
               </para>
             </listitem>
             <listitem>
@@ -252,7 +253,7 @@
                 <guimenuitem>Relative colorimetric</guimenuitem>
               </para>
               <para lang="ja">
-                <guimenuitem>相対色距離</guimenuitem>
+                <guimenuitem>相対的な色域を維持</guimenuitem>
               </para>
             </listitem>
             <listitem>
@@ -268,7 +269,7 @@
                 <guimenuitem>Absolute colorimetric</guimenuitem>
               </para>
               <para lang="ja">
-                <guimenuitem>絶対色距離</guimenuitem>
+                <guimenuitem>絶対的な色域を維持</guimenuitem>
               </para>
             </listitem>
           </itemizedlist>
@@ -284,7 +285,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Print simulation mode</term>
-        <term lang="ja">印刷プロファイル</term>
+        <term lang="ja">シミュレーション対象のプロファイル</term>
         <listitem>
           <para lang="en">
             You should select a printer profile for this option. The selected
@@ -298,7 +299,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Softproof rendering intent</term>
-        <term lang="ja">ソフトプルーフ描画方法</term>
+        <term lang="ja">ソフトプルーフのレンダリングインテント</term>
         <listitem>
           <para lang="en">
             This option again provides two different elements for interaction:
@@ -330,7 +331,7 @@
                 checkbox.
               </para>
               <para lang="ja">
-                <guilabel>表現不可能な色領域をマーキング</guilabel> を有効に
+                <guilabel>色域外の色をマーキングする</guilabel> を有効に
                 すると、 印刷で発色できない色のある画素は代わりに特別な色で
                 着色されます。 その色もここで選べます。 このチェックボックス
                 の右側にある色アイコンをクリックして開かれるダイアログ上で指定
@@ -389,7 +390,7 @@
                 color profile to convert the image to the workspace.
               </para>
               <para lang="ja">
-                <guimenuitem>画像をRGBカラースペースに変換</guimenuitem>: 
+                <guimenuitem>RGB 作業用スペースに変換</guimenuitem>: 
                 これを指定すると<acronym>GIMP</acronym>は自動的にファイルの
                 添付プロファイルを利用して画像を作業用色空間に変換します。
               </para>
