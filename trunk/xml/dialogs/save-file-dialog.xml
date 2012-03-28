@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+
+<!--2012-03-28-->
+<sect2 id="gimp-save-dialog">
+  <title lang="en">Save File</title>
+  <title lang="ja">ファイルを保存</title>
+  <indexterm lang="en">
+    <primary>Image</primary>
+    <secondary>Save image</secondary>
+    <tertiary>Save</tertiary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>Save</primary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ガゾウ">画像</primary>
+    <secondary sortas="ガゾウヲホゾン">画像を保存</secondary>
+    <tertiary sortas="ホゾン">保存</tertiary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary sortas="ホゾン">保存</primary>
+  </indexterm>
+
+  <para lang="en">
+    The <guimenuitem>Save</guimenuitem> command saves your image to disk. With
+    <acronym>GIMP</acronym>-2.8, this command saves in XCF format only. If you
+    try to save to a format other than XCF, you get an error message:
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/save-message.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+    Please see <xref linkend="save-export-image"/>.
+  </para>
+  <para lang="en">
+    If you have already saved the image, the previous image file is
+    overwritten with the current version. If you have not already saved the
+    image, the <guimenuitem>Save</guimenuitem> command opens the Save Image
+    dialog.
+  </para>
+  <para lang="ja">
+    <guimenuitem>保存</guimenuitem> コマンドはいま作業している画像をディスクに
+    保存します。 <application><acronym>GIMP</acronym>&nbsp;2.8</application>
+    以降、 このコマンドが画像を保存する形式は<acronym>XCF</acronym>形式だけと
+    なりました。 <acronym>XCF</acronym>以外の形式で保存しようとすると、
+    このようなエラーメッセージが現れます。
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/save-message.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+    <xref linkend="save-export-image"/> をご覧ください。
+  </para>
+  <para lang="ja">
+    いま作業している画像を一旦保存しておけば、 再び最新の状態を保存しなおす
+    ときは同じ画像ファイルに上書きで保存されます。 まだ一度も画像を保存して
+    いない場合は <guimenuitem>保存</guimenuitem> コマンドを呼び出すと
+    <quote>画像を保存</quote>ダイアログが開かれます。
+  </para>
+
+  <para lang="en">
+    If you quit without having saved your image,
+    <acronym>GIMP</acronym> asks you if you really want to do so,
+    if the <quote>Confirm closing of unsaved images</quote> option is
+    checked in the <link linkend="gimp-prefs-environment">Environment</link>
+    page of the Preferences dialog.
+  </para>
+  <para lang="ja">
+    新たに作成した画像や変更が加わった画像を保存しないまま、 その画像
+    ウィンドウを閉じるか<acronym>GIMP</acronym>を終了しようとしたときは、 
+    <acronym>GIMP</acronym>はその実行前に確認を求めます。 ただしこれは
+    <link linkend="gimp-prefs-environment">設定</link> ダイアログの
+    <quote>環境</quote>のページで
+    <guilabel>未保存の画像を閉じるときに確認</guilabel> が有効に
+    なっている場合に限ります。"
+  </para>
+
+  <figure>
+    <title lang="en">Save Image Dialog</title>
+    <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/save-image-dialog.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect3>
+    <title lang="en">Activate the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          You can access this command in the image menu bar through
+          <menuchoice>
+            <guimenu>File</guimenu>
+            <guimenuitem>Save</guimenuitem>
+          </menuchoice>,
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ファイル</guimenu>
+            <guimenuitem>保存</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or from the keyboard by using the shortcut
+          <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">The Save Image Dialog</title>
+    <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
+    <para lang="en">
+      With this file browser, you can edit filename directly in name box
+      (default is <quote>Untitled.xml</quote>) or by selecting a file in name
+      list.
+      We repeat that only XCF format is permitted. You must also fix the image
+      destination in <guilabel>Save in Folder</guilabel>. You can create a new
+      folder if necessary.
+    </para>
+    <para lang="ja">
+      このファイルブラウザーを使い、 上部の記入欄でファイルの名前
+      (何もしなければ <userinput>名称未設定.xcf</userinput>) を直に書くか、
+      あるいはその下部の一覧表からファイルを選びます。 繰り返し申し上げますが
+      使って良い画像ファイル形式は<acronym>XCF</acronym> (拡張子が
+      <filename class="extension">.xcf</filename>) だけです。 さらに[一覧表や]
+      <guilabel>フォルダーの中に保存</guilabel> で画像を保存する場所の
+      フォルダーを指定しなくてはいけません。 必要なら
+      <guibutton>フォルダーの作成</guibutton> ボタンをクリックすれば現在の
+      ディレクトリー内へ新しくフォルダーを作成できます。
+    </para>
+    <formalpara>
+      <title lang="en">Select File Type</title>
+      <title lang="ja">ファイル形式の選択</title>
+      <para lang="en">
+        If you develop this option, you can select a compressed format for your
+        XCF file:
+      </para>
+      <para lang="ja">
+        このオプションを拡げると、 <acronym>XCF</acronym>ファイルを圧縮する
+        方法が選べます。
+      </para>
+    </formalpara>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/using/save-select-file-type.png"
+        format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </sect3>
+</sect2>

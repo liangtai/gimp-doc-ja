@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
-"POT-Creation-Date: 2012-03-14 23:45+0900\n"
-"PO-Revision-Date: 2012-03-25 09:13+0900\n"
+"POT-Creation-Date: 2012-03-26 00:27+0900\n"
+"PO-Revision-Date: 2012-03-28 07:44+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -738,6 +738,151 @@ msgstr ""
 "タグを削除するには、 ブラシを選び、 <quote>タグを付ける</quote>欄に表示された"
 "タグより消したいものを選んで <keycap>Delete</keycap> キーを押しましょう。 タ"
 "グがもう他のブラシにも使われていないものだったら、 一覧表からも消えます。"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: src/dialogs/save-file-dialog.xml:22(None)
+#, fuzzy
+msgid ""
+"@@image: 'images/using/save-message.png'; "
+"md5=da96fa7596dc2d6e5e9a4d5921f6848f"
+msgstr "localized"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: src/dialogs/save-file-dialog.xml:46(None)
+#, fuzzy
+msgid ""
+"@@image: 'images/using/save-image-dialog.png'; "
+"md5=3f56a0964e3be0073960f3340c9152f2"
+msgstr "localized"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: src/dialogs/save-file-dialog.xml:92(None)
+#, fuzzy
+msgid ""
+"@@image: 'images/using/save-select-file-type.png'; "
+"md5=052b52f2c4f4eae50068d0b3e2389753"
+msgstr "localized"
+
+#: src/dialogs/save-file-dialog.xml:6(title)
+msgid "Save File"
+msgstr "ファイルを保存..."
+
+#: src/dialogs/save-file-dialog.xml:8(primary)
+#: src/dialogs/images-dialog.xml:21(primary)
+msgid "Image"
+msgstr "画像"
+
+#: src/dialogs/save-file-dialog.xml:9(secondary)
+msgid "Save image"
+msgstr "画像を保存"
+
+#: src/dialogs/save-file-dialog.xml:10(tertiary)
+#: src/dialogs/save-file-dialog.xml:13(primary)
+#: src/dialogs/palettes-dialog.xml:706(phrase)
+#: src/dialogs/gradient-editor-dialog.xml:189(phrase)
+msgid "Save"
+msgstr "保存"
+
+#: src/dialogs/save-file-dialog.xml:16(para)
+msgid ""
+"The <guimenuitem>Save</guimenuitem> command saves your image to disk. With "
+"<acronym>GIMP</acronym>-2.8, this command saves in XCF format only. If you "
+"try to save to a format other than XCF, you get an error message: "
+"<placeholder-1/> Please see <xref linkend=\"save-export-image\"/>."
+msgstr ""
+"<guimenuitem>保存</guimenuitem> コマンドはいま作業している画像をディスクに保"
+"存します。 <application><acronym>GIMP</acronym>&nbsp;2.8</application> 以"
+"降、 このコマンドが画像を保存する形式は<acronym>XCF</acronym>形式だけとなりま"
+"した。 <acronym>XCF</acronym>以外の形式で保存しようとすると、 このようなエ"
+"ラーメッセージが現れます。 <placeholder-1/> <xref linkend=\"save-export-"
+"image\"/> をご覧ください。"
+
+#: src/dialogs/save-file-dialog.xml:27(para)
+msgid ""
+"If you have already saved the image, the previous image file is overwritten "
+"with the current version. If you have not already saved the image, the "
+"<guimenuitem>Save</guimenuitem> command opens the Save Image dialog."
+msgstr ""
+"いま作業している画像を一旦保存しておけば、 再び最新の状態を保存しなおすときは"
+"同じ画像ファイルに上書きで保存されます。 まだ一度も画像を保存していない場合"
+"は <guimenuitem>保存</guimenuitem> コマンドを呼び出すと<quote>画像を保存</"
+"quote>ダイアログが開かれます。"
+
+#: src/dialogs/save-file-dialog.xml:34(para)
+msgid ""
+"If you quit without having saved your image, <acronym>GIMP</acronym> asks "
+"you if you really want to do so, if the <quote>Confirm closing of unsaved "
+"images</quote> option is checked in the <link linkend=\"gimp-prefs-"
+"environment\">Environment</link> page of the Preferences dialog."
+msgstr ""
+"新たに作成した画像や変更が加わった画像を保存しないまま、 その画像ウィンドウを"
+"閉じるか<acronym>GIMP</acronym>を終了しようとしたときは、 <acronym>GIMP</"
+"acronym>はその実行前に確認を求めます。 ただしこれは <link linkend=\"gimp-"
+"prefs-environment\">設定</link> ダイアログの<quote>環境</quote>のページで "
+"<guilabel>未保存の画像を閉じるときに確認</guilabel> が有効になっている場合に"
+"限ります。"
+
+#: src/dialogs/save-file-dialog.xml:43(title)
+msgid "Save Image Dialog"
+msgstr "<quote>画像の保存</quote>ダイアログ"
+
+#: src/dialogs/save-file-dialog.xml:52(title)
+msgid "Activate the Dialog"
+msgstr "ダイアログの呼び出し方"
+
+#: src/dialogs/save-file-dialog.xml:55(para)
+msgid ""
+"You can access this command in the image menu bar through "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Save</guimenuitem></"
+"menuchoice>,"
+msgstr ""
+"画像ウィンドウのメニューより <menuchoice><guimenu>画像</guimenu><guimenuitem>"
+"保存</guimenuitem></menuchoice>"
+
+#: src/dialogs/save-file-dialog.xml:64(para)
+msgid ""
+"or from the keyboard by using the shortcut <keycombo><keycap>Ctrl</"
+"keycap><keycap>S</keycap></keycombo>."
+msgstr ""
+"キーボードショートカット (初期設定) <keycombo><keycap>Ctrl</"
+"keycap><keycap>S</keycap></keycombo>"
+
+#: src/dialogs/save-file-dialog.xml:73(title)
+msgid "The Save Image Dialog"
+msgstr "<quote>画像の保存</quote>ダイアログ"
+
+#: src/dialogs/save-file-dialog.xml:74(para)
+msgid ""
+"With this file browser, you can edit filename directly in name box (default "
+"is <quote>Untitled.xml</quote>) or by selecting a file in name list. We "
+"repeat that only XCF format is permitted. You must also fix the image "
+"destination in <guilabel>Save in Folder</guilabel>. You can create a new "
+"folder if necessary."
+msgstr ""
+"このファイルブラウザーを使い、 上部の記入欄でファイルの名前 (何もしなければ "
+"<userinput>名称未設定.xcf</userinput>) を直に書くか、 あるいはその下部の一覧"
+"表からファイルを選びます。 繰り返し申し上げますが使って良い画像ファイル形式は"
+"<acronym>XCF</acronym> (拡張子が <filename class=\"extension\">.xcf</"
+"filename>) だけです。 さらに[一覧表や] <guilabel>フォルダーの中に保存</"
+"guilabel> で画像を保存する場所のフォルダーを指定しなくてはいけません。 必要な"
+"ら <guibutton>フォルダーの作成</guibutton> ボタンをクリックすれば現在のディレ"
+"クトリー内へ新しくフォルダーを作成できます。"
+
+#: src/dialogs/save-file-dialog.xml:83(title)
+#: src/dialogs/export-file-dialog.xml:49(title)
+msgid "Select File Type"
+msgstr "ファイル形式の選択"
+
+#: src/dialogs/save-file-dialog.xml:84(para)
+msgid ""
+"If you develop this option, you can select a compressed format for your XCF "
+"file:"
+msgstr ""
+"このオプションを拡げると、 <acronym>XCF</acronym>ファイルを圧縮する方法が選べ"
+"ます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -2876,6 +3021,14 @@ msgstr ""
 "<filename class=\"directory\">palettes</filename> フォルダーに保存され、 次回"
 "からパレットダイアログを通じて利用可能になります。"
 
+#: src/dialogs/gradient-dialog.xml:296(para)
+msgid ""
+"You can use tags to reorganize the gradients display. See <xref linkend="
+"\"gimp-tagging\"/>."
+msgstr ""
+"タグはグラデーションの一覧表示を再構成するのに使えます。 <xref linkend="
+"\"gimp-tagging\"/> をご覧ください。"
+
 #: src/dialogs/palettes-dialog.xml:305(term)
 msgid "Import Palette"
 msgstr "パレットのインポート..."
@@ -3374,11 +3527,6 @@ msgstr ""
 "のメニューの各項目と一致しています。 このメニューはパレットの表示部を "
 "<mousebutton>第2ボタン</mousebutton> でクリックすると呼び出せます。 ではアイ"
 "コンボタンをひとつずつ見てゆきましょう。"
-
-#: src/dialogs/palettes-dialog.xml:706(phrase)
-#: src/dialogs/gradient-editor-dialog.xml:189(phrase)
-msgid "Save"
-msgstr "保存"
 
 #: src/dialogs/palettes-dialog.xml:709(para)
 msgid ""
@@ -4996,10 +5144,6 @@ msgstr "画像一覧ダイアログ"
 #: src/dialogs/images-dialog.xml:18(secondary)
 msgid "Images"
 msgstr "画像一覧"
-
-#: src/dialogs/images-dialog.xml:21(primary)
-msgid "Image"
-msgstr "画像"
 
 #: src/dialogs/images-dialog.xml:25(title)
 msgid "The Images dialog"
@@ -6759,14 +6903,6 @@ msgstr ""
 "るスクリプトを起用します。 ダイアログウィンドウが現れますのでグラデーションの"
 "向きや画像の幅と高さを指定してください。"
 
-#: src/dialogs/gradient-dialog.xml:296(para)
-msgid ""
-"You can use tags to reorganize the gradients display. See <xref linkend="
-"\"gimp-tagging\"/>."
-msgstr ""
-"タグはグラデーションの一覧表示を再構成するのに使えます。 <xref linkend="
-"\"gimp-tagging\"/> をご覧ください。"
-
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/dialogs/fonts-dialog.xml:25(None)
@@ -6939,206 +7075,141 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/export-file-dialog.xml:41(None)
+#: src/dialogs/export-file-dialog.xml:33(None)
+#, fuzzy
 msgid ""
-"@@image: 'images/dialogs/export-file-png.png'; "
-"md5=8db09adf88778a1c93d2e691bcbe87de"
+"@@image: 'images/using/export-image-dialog.png'; "
+"md5=6aca937c44153f7aec97b1cb86cbaf3d"
 msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/export-file-dialog.xml:70(None)
+#: src/dialogs/export-file-dialog.xml:58(None)
+#, fuzzy
 msgid ""
-"@@image: 'images/dialogs/export-file-jpeg.png'; "
-"md5=b5f2dfe2da85206947a35b2aedd98868"
+"@@image: 'images/using/export-select-file-type.png'; "
+"md5=dd236bd2e77177b631ea3a1455a52f00"
 msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/export-file-dialog.xml:98(None)
+#: src/dialogs/export-file-dialog.xml:81(None)
+#, fuzzy
 msgid ""
-"@@image: 'images/dialogs/export-file-mng.png'; "
-"md5=630b3310e58e40fd47eb11acaf83180c"
+"@@image: 'images/using/overwriting-file.png'; "
+"md5=db382b2e4db268fe109072df00d16ad1"
 msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/export-file-dialog.xml:126(None)
+#: src/dialogs/export-file-dialog.xml:92(None)
+#, fuzzy
 msgid ""
-"@@image: 'images/dialogs/export-file-gif.png'; "
-"md5=38309cdae6edf9b5f1f6811c6415b153"
+"@@image: 'images/using/export-to.png'; md5=bb58d4f2503c6a5235eec7be76ac6422"
 msgstr "localized"
 
-#: src/dialogs/export-file-dialog.xml:14(title)
-#: src/dialogs/export-file-dialog.xml:17(primary)
-#: src/dialogs/export-file-dialog.xml:20(anchor:xreflabel)
+#: src/dialogs/export-file-dialog.xml:8(title)
+#: src/dialogs/export-file-dialog.xml:11(primary)
 msgid "Export File"
 msgstr "ファイルのエクスポート"
 
-#: src/dialogs/export-file-dialog.xml:21(para)
+#: src/dialogs/export-file-dialog.xml:14(para)
 msgid ""
-"The <quote>Export file</quote> is opened when you try to save a file in a "
-"format which does not support several layers or transparency."
+"With <acronym>GIMP</acronym>-2.8, the Save command saves images in XCF "
+"format only. The Export command is now used to save images to various file "
+"formats."
 msgstr ""
-"<quote>ファイルのエクスポート</quote>ダイアログは、 画像をある種のファイルに"
-"保存しようとしたときに、 そのファイル形式が複数のレイヤー構造や透明効果を受け"
-"入れないものである場合に出てきます。"
+"<application><acronym>GIMP</acronym>&nbsp;2.8</application> 以降、 <quote>保"
+"存</quote>コマンドが画像を保存する形式は<acronym>XCF</acronym>形式だけとなり"
+"ました。 これからは<quote>エクスポート</quote>コマンドが画像をいろいろなファ"
+"イル形式で保存する役目を担います。"
 
-#: src/dialogs/export-file-dialog.xml:26(title)
-msgid "The file format does not support animation"
-msgstr "アニメーション機能のないファイル形式"
-
-#: src/dialogs/export-file-dialog.xml:28(term)
-msgid "Portable Network Graphics (PNG)"
-msgstr "Portable Network Graphics (PNG)"
-
-#: src/dialogs/export-file-dialog.xml:31(primary)
-msgid "PNG"
-msgstr "PNG"
-
-#: src/dialogs/export-file-dialog.xml:34(primary)
-msgid ".png"
-msgstr ".png"
-
-#: src/dialogs/export-file-dialog.xml:37(title)
-msgid "Export PNG file dialog"
-msgstr "<acronym>PNG</acronym>ファイル形式に変換"
-
-#: src/dialogs/export-file-dialog.xml:45(para)
+#: src/dialogs/export-file-dialog.xml:19(para)
 msgid ""
-"The PNG format, a lossless format, supports transparency but doesn't support "
-"animation. So, you only can <guilabel>Flatten image</guilabel>, i.e. merge "
-"layers into a single one, according to the mode you have selected for the "
-"image."
+"You can access to this command through <menuchoice><guimenu>File</"
+"guimenu><guimenuitem>Export...</guimenuitem></menuchoice>, or from the "
+"keyboard by using the shortcut <keycombo><keycap>Ctrl</keycap><keycap>Shift</"
+"keycap><keycap>S</keycap></keycombo>."
 msgstr ""
-"<acronym>PNG</acronym>ファイル形式は画質の劣化がなく透明度も扱えますが、 アニ"
-"メーション機能がありません。 [レイヤーも扱えません。] ですから、 複数のレイ"
-"ヤーがあるときはそれらをすべて統合する <guilabel>画像の統合</guilabel> か、 "
-"選択的に統合する <guilabel>可視レイヤーの統合</guilabel> のどちらかを選ばなく"
-"てはなりません。 またそのとき画像の色空間モードにより、 まとめられて 1 層に"
-"なったレイヤーのモードが決まります。"
+"このコマンドを呼び出す方法は <itemizedlist><listitem><para>画像ウィンドウのメ"
+"ニューより <menuchoice><guimenu>ファイル</guimenu><guimenuitem>エクスポー"
+"ト...</guimenuitem></menuchoice></para></listitem><listitem><para>キーボード"
+"ショートカット <keycombo><keycap>Ctrl</keycap><keycap>Shift</"
+"keycap><keycap>S</keycap></keycombo></para></listitem></itemizedlist> のいず"
+"れかです。"
 
-#: src/dialogs/export-file-dialog.xml:54(term)
-msgid "JPEG File Interchange Format (JFIF, JPEG)"
-msgstr "JPEG File Interchange Format (JFIF, JPEG)"
+#: src/dialogs/export-file-dialog.xml:30(title)
+msgid "Export Image Dialog"
+msgstr "<quote>画像をエクスポート</quote>ダイアログ"
 
-#: src/dialogs/export-file-dialog.xml:57(primary)
-msgid "JPG"
-msgstr "JPG"
+#: src/dialogs/export-file-dialog.xml:40(title)
+msgid "The Export Image Dialog"
+msgstr "<quote>画像をエクスポート</quote>ダイアログ"
 
-#: src/dialogs/export-file-dialog.xml:60(primary)
-msgid "JPEG"
-msgstr "JPEG"
+#: src/dialogs/export-file-dialog.xml:41(para)
+msgid ""
+"With this file browser, you can edit filename and extension directly in name "
+"box (default is <quote>Untitled.png</quote>) or by selecting a file in name "
+"list. You must also fix the image destination in <guilabel>Export in Folder</"
+"guilabel>. You can create a new folder if necessary."
+msgstr ""
+"このファイルブラウザーを使い、 上部の記入欄でファイルの名前や拡張子 (何もしな"
+"ければ <userinput>名称未設定.png</userinput>) を直に書くか、 あるいはその下部"
+"の一覧表からファイルを選びます。 さらに[一覧表や] <guilabel>フォルダーの中に"
+"保存</guilabel> で画像を保存する場所のフォルダーを指定しなくてはいけません。 "
+"必要なら <guibutton>フォルダーの作成</guibutton> ボタンをクリックすれば現在の"
+"ディレクトリー内へ新しくフォルダーを作成できます。"
 
-#: src/dialogs/export-file-dialog.xml:63(primary)
-msgid ".jpg"
-msgstr ".jpg"
+#: src/dialogs/export-file-dialog.xml:50(para)
+msgid ""
+"If you develop this option, you can select an extension in the drop-down "
+"list for your file:"
+msgstr ""
+"このオプションを拡げると、 保存したいファイルの拡張子がドロップダウンリストか"
+"ら選択できます。"
 
-#: src/dialogs/export-file-dialog.xml:66(title)
-msgid "Export JPEG file dialog"
-msgstr "<acronym>JPEG</acronym>ファイル形式に変換"
+#: src/dialogs/export-file-dialog.xml:61(para)
+msgid ""
+"File formats dialogs are described in <xref linkend=\"gimp-using-fileformats"
+"\"/>."
+msgstr ""
+"ファイル形式ごとのダイアログについては <xref linkend=\"gimp-using-"
+"fileformats\"/> に説明があります。"
+
+#: src/dialogs/export-file-dialog.xml:68(title)
+msgid "Exporting"
+msgstr "エクスポートを実行"
+
+#: src/dialogs/export-file-dialog.xml:69(para)
+msgid ""
+"When file name and destination are set, click on <guibutton>Export</"
+"guibutton>. This opens the export dialog for the specified file format."
+msgstr ""
+"ファイル名も保存場所も決めたら、 <guibutton>エクスポート</guibutton> ボタンを"
+"クリックします。 すると指定したファイル形式に応じたエクスポート用ダイアログが"
+"開かれます。"
 
 #: src/dialogs/export-file-dialog.xml:74(para)
 msgid ""
-"The JPEG format, a compression format with loss, doesn't support animation "
-"nor transparency. The file will be flattened and transparency will be "
-"replaced with the background color of Toolbox."
+"If you have loaded a non-XCF file, a new item appears in File menu, allowing "
+"you to to export file in the same format, overwriting the original file. "
+"<placeholder-1/>"
 msgstr ""
-"<acronym>JPEG</acronym>ファイル形式は画質の劣化がある圧縮形式で、 アニメー"
-"ション機能や透過効果はありません。 レイヤーは統合され、 透過部分はツールボッ"
-"クスに示される背景色で置き換えられます。"
+"<acronym>XCF</acronym>以外の形式のファイルを開いて作業してきた場合は、 画像"
+"ウィンドウの <guimenu>ファイル</guimenu> メニューに <guimenuitem>&hellip;に上"
+"書きエクスポート</guimenuitem> という項目が出現し、 これを使えば元のファイル"
+"へ同じ形式にエクスポートして上書き保存ができます。 <placeholder-1/>"
 
-#: src/dialogs/export-file-dialog.xml:83(title)
-msgid "The file format supports animation"
-msgstr "アニメーション機能があるファイル形式"
-
-#: src/dialogs/export-file-dialog.xml:85(term)
-msgid "Multiple-Image Network Graphics (MNG)"
-msgstr "Multiple-Image Network Graphics (MNG)"
-
-#: src/dialogs/export-file-dialog.xml:88(primary)
-msgid "MNG"
-msgstr "MNG"
-
-#: src/dialogs/export-file-dialog.xml:91(primary)
-msgid ".mng"
-msgstr ".mng"
-
-#: src/dialogs/export-file-dialog.xml:94(title)
-msgid "Export MNG File Dialog"
-msgstr "<acronym>MNG</acronym>ファイル形式に変換"
-
-#: src/dialogs/export-file-dialog.xml:102(para)
+#: src/dialogs/export-file-dialog.xml:85(para)
 msgid ""
-"The MNG format is an animation format and supports 256 transparency levels "
-"(which, at last, are recognized by Internet Explorer 7). The dialog offers "
-"two options. Select <guilabel>Save as animation</guilabel>, since "
-"<guilabel>Flatten Image</guilabel> does not make sense here. Note that MNG "
-"images are not recognized by <acronym>GIMP</acronym>."
+"If you modify an image that you already have exported, the <command>Export "
+"to</command> command in File menu is changed, allowing you to export file "
+"again in the same format. <placeholder-1/>"
 msgstr ""
-"<acronym>MNG</acronym>ファイル形式はアニメーション用の形式であり、 256 階調の"
-"透明度を扱えます。 (ようやく最近になって <application>Internet Exploer 7</"
-"application> で認識されるようになりました。) このダイアログには 2 つの選択肢"
-"があります。 <guilabel>画像の統合</guilabel> を選んでしまうとこのファイル形式"
-"の意味がないので、 <guilabel>アニメーションとして保存</guilabel> を選ぶことに"
-"なるでしょう。 ちなみに<acronym>MNG</acronym>画像は<acronym>GIMP</acronym>で"
-"認識されませんのでご注意ください。"
-
-#: src/dialogs/export-file-dialog.xml:113(term)
-msgid "Graphics Interchange Format (GIF)"
-msgstr "Graphics Interchange Format (GIF)"
-
-#: src/dialogs/export-file-dialog.xml:116(primary)
-msgid "GIF"
-msgstr "GIF"
-
-#: src/dialogs/export-file-dialog.xml:119(primary)
-msgid ".gif"
-msgstr ".gif"
-
-#: src/dialogs/export-file-dialog.xml:122(title)
-msgid "Export GIF File Dialog"
-msgstr "<acronym>GIF</acronym>ファイル形式に変換"
-
-#: src/dialogs/export-file-dialog.xml:130(para)
-msgid ""
-"The GIF format, less sophisticated than the MNG format, supports 256 colors "
-"and 2 transparency levels only."
-msgstr ""
-"<acronym>GIF</acronym>ファイル形式は<acronym>MNG</acronym>形式ほど高度ではな"
-"く、 色数に 256 色までの制限があり、 透過効果は 2 階調しかありません。"
-
-#: src/dialogs/export-file-dialog.xml:134(para)
-msgid ""
-"The dialog offers you either <guilabel>Flatten Image</guilabel> or "
-"<guilabel>Save as animation</guilabel>. See the glossary (<xref linkend="
-"\"glossary-gif\"/>) for more details about the GIF format."
-msgstr ""
-"このダイアログではまず <guilabel>画像の統合</guilabel> により一枚絵にする"
-"か、 <guilabel>アニメーションとして保存</guilabel> するかを決めます。 "
-"<acronym>GIF</acronym>ファイル形式についての詳しい説明は <link linkend="
-"\"glossary-gif\">用語集</link> をご覧ください。"
-
-#: src/dialogs/export-file-dialog.xml:140(para)
-msgid ""
-"If you have not transformed your image into a 256 colors indexed image "
-"before, this dialog will ask you choose between <guilabel>Convert to "
-"grayscale</guilabel> and <guilabel>Convert to indexed using default "
-"settings</guilabel>. Be careful: an indexed image undergoes a severe loss of "
-"colors and the added palette can give it a size bigger and a quality less "
-"than if it was saved as JPEG."
-msgstr ""
-"画像がまだ 256 色にインデックス化されていないときは、 このダイアログで "
-"<guilabel>既定値でインデックス画像に自動変換する</guilabel> か、 <guilabel>グ"
-"レースケールに変換</guilabel> するかのどちらかを選択できます。 [自動変換では"
-"なくインデックス化の様々なオプションを活用したいときは、 一旦この保存作業を中"
-"止してから画像ウィンドウのメニューより <menuchoice><guimenu>画像</"
-"guimenu><guisubmenu>モード</guisubmenu><guimenuitem>インデックス...</"
-"guimenuitem></menuchoice> でインデックス化カラーモードに変換して、 保存してく"
-"ださい。] <emphasis>ご注意</emphasis>: インデックス化カラー画像はフルカラーに"
-"比べ色の劣化が大きいこと、 インデックス化パレットの付加により一定のファイルサ"
-"イズ増加が見込まれること、 <acronym>JPEG</acronym>ファイル形式に比べ画質が劣"
-"ることをご承知おきください。"
+"一旦作業中の画像をエクスポートしておけば画像ウィンドウの <guimenu>ファイル</"
+"guimenu> メニューに <guimenuitem>&hellip;に再エクスポート</guimenuitem> とい"
+"う項目が出現するので、 これを使って再び同じ形式にエクスポートした上書き保存が"
+"すぐできます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.

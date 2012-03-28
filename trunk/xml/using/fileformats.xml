@@ -2,17 +2,14 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history。
-  2008-04-03 Mr.Dust : added 'ko' for some missing part
+  2012-03-23 j.h: update to v2.8
   2007-10-06 ude: added description for "quality settings from original image"
   2007-07-15 lexa: added PackBits description
   2007-03-19 lexa: added description for save dialogs for jpeg gif png and tif
-  2007-02-14 added Spanish translation by manuq
-  2006-11-25 added enhanced Korean translation by Dust
-  2006-09-12 added norwegian translation by KoSt
   2006-07-11 lexa: enhanced docbook compliance
   2006-02-25 fixed invalid image reference
 -->
-<!--2012-03-24-->
+<!--2012-03-28-->
 <sect1 id="gimp-using-fileformats">
   <title lang="en">Files</title>
   <title lang="ja">ファイル</title>
@@ -24,16 +21,11 @@
   </indexterm>
 
   <para lang="en">
-    The <acronym>GIMP</acronym> is capable of reading and writing a large
+    <acronym>GIMP</acronym> is capable of reading and writing a large
     variety of graphics file formats.  With the exception of
     <acronym>GIMP</acronym>'s native XCF file type, file handling is done by
     Plugins.  Thus, it is relatively easy to extend <acronym>GIMP</acronym>
     to support new file types when the need arises.
-  </para>
-  <para lang="en">
-    Not all file types are equally good for all purposes. This part of the
-    documentation should help you understand the advantages and disadvantages
-    of each type.
   </para>
   <para lang="ja">
     <acronym>GIMP</acronym>は膨大な種類の画像ファイル形式を読み書きできます。
@@ -41,14 +33,57 @@
     どのファイルの取り扱いもプラグインがこなします。 そのおかげで比較的簡単に
     <acronym>GIMP</acronym>は新しいファイル形式への対応要望に応えられます。
   </para>
-  <para lang="ja">
-    どんなファイル形式であれすべての目的に適うものではありません。 このあたりで
-    それぞれの形式の有利な点と不利な点をお話しすることにしましょう。
-  </para>
 
   <sect2>
-    <title lang="en">Saving Images</title>
-    <title lang="ja">画像を保存する方法</title>
+    <title lang="en">Save / Export Images</title>
+    <title lang="ja">画像の保存方法とエクスポート方法</title>
+    <indexterm lang="en">
+      <primary>Save/Export Images</primary>
+    </indexterm>
+    <indexterm lang="en">
+      <primary>Export Images</primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウノホゾンホウホウトエクスポートホウホウ">
+        画像の保存方法とエクスポート方法
+      </primary>
+    </indexterm>
+    <indexterm lang="ja">
+      <primary sortas="ガゾウノエクスポート">画像のエクスポート</primary>
+    </indexterm>
+    <note>
+      <para lang="en">
+        In former <acronym>GIMP</acronym> releases, when you loaded an image in
+        some format, let us say JPG or PNG, the image kept its format and
+        was saved in the same format by <command>Save</command>. With
+        <acronym>GIMP</acronym>-2.8, images are loaded, imported, in the XCF
+        format as a new project. For example, a <quote>sunflower.png</quote>
+        image will be loaded as <quote>*[sunflower] (imported)-1.0 (indexed
+        color, 1 layer)</quote>. The leading asterisk indicates that this file
+        has been changed. This image will be saved as
+        <quote>sunflower.xcf</quote> by <command>Save</command>. To save this
+        image in a format other than XCF, you must use
+        <command>Export</command>.
+      </para>
+      <para lang="ja">
+        これまでの版の<acronym>GIMP</acronym>で画像を保存しようとするとき、
+        それがたとえば <filename class="extension">.jpg</filename> や
+        <filename class="extension">.png</filename> などの何かしらの
+        ファイル形式の画像を読み込んで加工していた場合なら、
+        <command>保存</command> を実行すればそのまま同じ形式で保存するように
+        なっていました。
+        <application><acronym>GIMP</acronym>&nbsp;2.8</application> 以降、
+        [どんな形式の画像でも]読み込まれたものであれインポートされたものであれ
+        画像は必ず<acronym>XCF</acronym>形式に換えて扱われる仕様となりました。
+        例えば<quote>sunflower.png</quote>という画像を読み込んだら[タイトルバー
+        表示にあるとおり]<quote>*[sunflower]&nbsp;(インポートされた画像)-1.0<!--
+        XXX -->&nbsp;(インデックス化カラー,&nbsp;1枚のレイヤー)</quote>
+        となります。 そしてこの画像は <command>保存</command> を実行すると
+        <quote>sunflower.xcf</quote>となるのです。 <acronym>XCF</acronym>以外の
+        ファイル形式で保存したいときは <command>エクスポート</command>
+        コマンドを使用する必要があります。
+      </para>
+    </note>
     <para lang="en">
       When you are finished working with an image, you will want to save the
       results. (In fact, it is often a good idea to save at intermediate
@@ -64,7 +99,7 @@
       intermediate results, and for saving images to be re-opened later in
       <acronym>GIMP</acronym>.
       XCF files are not readable by most other programs that display images,
-      so once you have finished, you will probably also want to save the image
+      so once you have finished, you will probably also want to export the image
       in a more widely used format, such as JPEG, PNG, TIFF, etc.
     </para>
     <para lang="ja">
@@ -82,74 +117,48 @@
       画像を表示できる他のプログラムで<acronym>XCF</acronym>形式のファイルを
       開けるものは少ないので、 画像加工が完成したらそれらをより広く
       使われている<acronym>JPEG</acronym>や<acronym>PNG</acronym>や
-      <acronym>TIFF</acronym>の形式で保存することになるでしょう。
+      <acronym>TIFF</acronym>の形式にエクスポートすることになるでしょう。
     </para>
   </sect2>
 
   <sect2 id="gimp-using-fileformats-export-dialog">
-    <title lang="en">Saving Files</title>
-    <title lang="ja">ファイルを保存する方法</title>
+    <title lang="en">File Formats</title>
+    <title lang="ja">ファイル形式</title>
     <para lang="en">
-      There are several commands for saving images. A list, and information on
-      how to use them, can be found in the section covering the
-      <link linkend="gimp-file-menu">File Menu</link>.
+      There are several commands for <emphasis>saving</emphasis> images. A list,
+      and information on how to use them, can be found in the section covering
+      the <link linkend="gimp-file-menu">File Menu</link>.
     </para>
     <para lang="en">
-      <acronym>GIMP</acronym> allows you to save the images you create in a
-      wide variety of formats.  It is important to realize that the only
-      format capable of saving <emphasis>all</emphasis> of the information in
-      an image, including layers, transparency, etc., is GIMP's native XCF
-      format.   Every other format preserves some image properties and loses
-      others.  When you save an image, <acronym>GIMP</acronym> tries to warn
-      you, but it is up to you to understand the
+      <acronym>GIMP</acronym> allows you to <emphasis>save</emphasis> the
+      images you create in a wide variety of formats.  It is important to
+      realize that the only format capable of saving <emphasis>all</emphasis> of
+      the information in an image, including layers, transparency, etc., is
+      GIMP's native XCF format. Every other format preserves some image
+      properties and loses others. It is up to you to understand the
       capabilities of the format you choose.
     </para>
+    <para lang="en">
+      Exporting an image does not modify the image itself, so you do not lose
+      anything by exporting. See
+      <link linkend="gimp-export-dialog">Export file</link>.
+    </para>
     <para lang="ja">
-      画像をファイルに保存するコマンドは幾通りか用意されています。
-      その操作法を整理したものが
+      画像をファイルに <emphasis>保存する</emphasis> コマンドは幾通りか
+      用意されています。その操作法を整理したものが
       <link linkend='gimp-file-menu'>ファイルメニュー</link>
       の節付近にあります。
     </para>
     <para lang="ja">
-      出来上がった画像を保存するファイル形式について、 <acronym>GIMP</acronym>
-      は幾種類もの対応ができます。 ただしレイヤーや透明度をはじめ画像の情報を
-      <emphasis>すべて</emphasis> 保存できる形式は、 <acronym>GIMP</acronym>
-      由来の<acronym>XCF</acronym>形式をおいて他にないということは重要です。 
-      これ以外の形式はいずれも、 画像の属性を一定の範囲は保存できても一部は
-      失ないます。 画像を保存する際に<acronym>GIMP</acronym>はこの事実を警告
-      しますが、 どんな形式を選びその形式がどんな性能かを理解するのは
-      あなた次第です。
-    </para>
-    <figure>
-      <title lang="en">Example of an Export dialog</title>
-      <title lang="ja">エクスポートダイアログの例</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata format="PNG"
-            fileref="images/using/export-dialog.png"/>
-        </imageobject>
-      </mediaobject>
-    </figure>
-    <para lang="en">
-      As stated above, there is no file format, with the exception of GIMP's
-      native <link linkend="glossary-xcf">XCF</link> format, that is capable
-      of storing all the information in a <acronym>GIMP</acronym>
-      image. When you ask to save an image in a format that will lose
-      information, <acronym>GIMP</acronym>
-      notifies, tells you what information will be lost,
-      and asks you whether you would like to <quote>export</quote> the image
-      in a form that the file type can handle. Exporting an image does not
-      modify the image itself, so you do not lose anything by exporting. See
-      <link linkend="gimp-export-dialog">Export file</link>.
+      出来上がった画像を <emphasis>保存する</emphasis> ファイル形式について、
+      <acronym>GIMP</acronym>は幾種類もの対応ができます。 ただしレイヤーや
+      透明度をはじめ画像の情報を <emphasis>すべて</emphasis> 保存できる形式は、
+      <acronym>GIMP</acronym>由来の<acronym>XCF</acronym>形式をおいて他に
+      ないということは重要です。 これ以外の形式はいずれも、 画像の属性を一定の
+      範囲は保存できても一部は失ないます。 どんな形式を選びその形式がどんな
+      性能かを理解するのはあなた次第です。
     </para>
     <para lang="ja">
-      先に述べたとおり、 <acronym>GIMP</acronym>で作成した画像情報を何の損失
-      もなく保存できるファイル形式は、 <acronym>GIMP</acronym>由来の 
-      <link linkend="glossary-xcf">XCF</link> 形式を措いて他に全くありません。
-      画像の情報に損失がでるファイル形式が選択されているときには、 
-      <acronym>GIMP</acronym>はそのことを伝えるとともに、 どの情報が
-      損なわれるかを示し、 あわせてそのファイル形式に合った画像に 
-      <quote>エクスポート</quote> (変換書き出し) するかどうか訊ねます。
       画像のエクスポートで元の画像そのものが変更されるものではありませんので、
       それが原因で何かを失なうおそれはありません。
       <link linkend="gimp-export-dialog">画像のエクスポート</link>
@@ -159,14 +168,33 @@
       <para lang="en">
         When you close an image (possibly by quitting GIMP), you are warned if
         the image is "dirty"; that is, if it has been changed without
-        subsequently being saved. Saving an image in any file format will
-        cause the image to be considered "not dirty", even if the file format
-        does not represent all of the information from the image.
+        subsequently being saved (an asterisk is in front of the image name).
       </para>
       <para lang="ja">
         画像を閉じたとき (あるいは<acronym>GIMP</acronym>を終了したとき) 画像が
         <quote>手付き</quote>ならば警告が出ます。 つまり未保存の変更が残って
-        いることを示しています。 何らかのファイル形式で画像を保存した時点で
+        いることを示しています。
+        <link linkend="gimp-prefs-image-window-title">画像ウィンドウのタイトル
+        </link> でファイル名の前に<quote>*</quote> (アスタリスク) が
+        ついているときにそうなります。
+      </para>
+      <figure>
+        <title lang="en">Closing warning</title>
+        <title lang="ja">閉じるときの警告</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/close-warning.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        Saving an image in any file format will cause the image to be considered
+        "not dirty", even if the file format does not represent all of the
+        information from the image.
+      </para>
+      <para lang="ja">
+        何らかのファイル形式で画像を保存した時点で
         画像は必ず<quote>手付かず</quote>だと見做されます。
         この判断は保存に用いたファイル形式が
         画像の情報を完全には再現できないものであっても同様に行なわれます。
@@ -174,8 +202,8 @@
     </note>
 
     <sect3 id="file-gif-save">
-      <title lang="en">Saving as GIF</title>
-      <title lang="ja">GIF 形式で保存</title>
+      <title lang="en">Export Image as GIF</title>
+      <title lang="ja">GIF 形式に画像をエクスポート</title>
       <anchor id="file-gif-load" xreflabel="GIF"/>
 
       <indexterm>
@@ -185,14 +213,16 @@
         <primary>.gif</primary>
       </indexterm>
       <indexterm lang="en">
-        <primary>Save as GIF</primary>
+        <primary>Export Image as GIF</primary>
       </indexterm>
       <indexterm lang="en">
         <primary>Formats</primary>
         <secondary>GIF</secondary>
       </indexterm>
       <indexterm lang="ja">
-        <primary sortas="GIFケイシキデホゾン">GIF 形式で保存</primary>
+        <primary sortas="GIFケイシキニガゾウヲエクスポート">
+          GIF 形式に画像をエクスポート
+        </primary>
       </indexterm>
       <indexterm lang="ja">
         <primary sortas="ケイシキ">形式</primary>
@@ -200,22 +230,23 @@
       </indexterm>
 
       <figure>
-        <title lang="en">The GIF Save dialog</title>
-        <title lang="ja"><quote>GIF 形式で保存</quote>ダイアログ</title>
+        <title lang="en">The GIF Export dialog</title>
+        <title lang="ja">
+          <quote>画像をエクスポート: GIF</quote>ダイアログ
+        </title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/using/gif-save-dialog.png"/>
+              fileref="images/using/export-gif-dialog.png"/>
           </imageobject>
         </mediaobject>
       </figure>
       <warning>
         <para lang="en">
           The GIF file format does not support some basic image
-          properties such as
-          <emphasis>print resolution</emphasis>.
-          If you care for these properties, use a different
-          file format like PNG.
+          properties such as <emphasis>print resolution</emphasis>.
+          If you care for these properties, use a different file
+          format like PNG.
         </para>
         <para lang="ja">
           <acronym>GIF</acronym>形式は <emphasis>印刷解像度</emphasis> のような
@@ -259,7 +290,7 @@
                   <para lang="en">
                     GIF comments support only 7-bit ASCII characters.
                     If you use a character outside the 7-bit ASCII set,
-                    <acronym>GIMP</acronym> will save the image without
+                    <acronym>GIMP</acronym> will export the image without
                     a comment, and then inform you that the comment was not
                     saved.
                   </para>
@@ -268,8 +299,8 @@
                     <acronym>ASCII</acronym>文字列のみコメントに使えます。 
                     もしうっかり 7 ビット<acronym>ASCII</acronym>文字集合以外の
                     文字を入れてしまうと<acronym>GIMP</acronym>はコメント自体を
-                    削除して画像を保存し、 コメントは保存されなかったことを
-                    告げます。
+                    削除して画像をエクスポートし、 コメントは保存されなかった
+                    ことを告げます。
                   </para>
                 </listitem>
               </varlistentry>
@@ -308,7 +339,7 @@
                 </listitem>
               </varlistentry>
               <varlistentry>
-                <term lang="en">Delay between frames if unspecified</term>
+                <term lang="en">Delay between frames where unspecified</term>
                 <term lang="ja">指定しない場合のフレーム間の時間</term>
                 <listitem>
                   <para lang="en">
@@ -325,7 +356,7 @@
                 </listitem>
               </varlistentry>
               <varlistentry>
-                <term lang="en">Frame disposal when unspecified</term>
+                <term lang="en">Frame disposal where unspecified</term>
                 <term lang="ja">指定しない場合のフレーム処理</term>
                 <listitem>
                   <para lang="en">
@@ -375,6 +406,28 @@
                   </itemizedlist>
                 </listitem>
               </varlistentry>
+              <varlistentry>
+                <term lang="en">Use delay entered above for all frames</term>
+                <term lang="ja">全フレームのディレイにこの値を使用</term>
+                <listitem>
+                  <para lang="en">
+                    Self-explanatory.
+                  </para>
+                  <para lang="ja">
+                  </para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term lang="en">Use disposal entered above for all frames</term>
+                <term lang="ja">全フレームのフレーム処理にこの値を使用</term>
+                <listitem>
+                  <para lang="en">
+                    Self-explanatory.
+                  </para>
+                  <para lang="ja">
+                  </para>
+                </listitem>
+              </varlistentry>
             </variablelist>
           </listitem>
         </varlistentry>
@@ -382,8 +435,8 @@
     </sect3>
 
     <sect3 id="file-jpeg-save">
-      <title lang="en">Saving as JPEG</title>
-      <title lang="ja">JPEG 形式で保存</title>
+      <title lang="en">Export Image as JPEG</title>
+      <title lang="ja">JPEG 形式に画像をエクスポート</title>
       <anchor id="file-jpeg-load" xreflabel="JPEG"/>
 
       <indexterm>
@@ -396,14 +449,16 @@
         <primary>.jpeg</primary>
       </indexterm>
       <indexterm lang="en">
-        <primary>Save as JPEG</primary>
+        <primary>Export Image as JPEG</primary>
       </indexterm>
       <indexterm lang="en">
         <primary>Formats</primary>
         <secondary>JPEG</secondary>
       </indexterm>
       <indexterm lang="ja">
-        <primary sortas="JPEGケイシキデホゾン">JPEG 形式で保存</primary>
+        <primary sortas="JPEGケイシキニガゾウヲエクスポート">
+          JPEG 形式に画像をエクスポート
+        </primary>
       </indexterm>
       <indexterm lang="ja">
         <primary sortas="ケイシキ">形式</primary>
@@ -415,9 +470,7 @@
         very widely used format, because it compresses images very
         efficiently, while minimizing the loss of image quality. No other
         format comes close to achieving the same level of compression. It does
-        not, however, support transparency or multiple layers. For this
-        reason, saving images as JPEG often requires them to be exported from
-        <acronym>GIMP</acronym>.
+        not, however, support transparency or multiple layers.
       </para>
       <para lang="ja">
         <acronym>JPEG</acronym>ファイルは通常 <filename class="extension">
@@ -426,16 +479,16 @@
         持っています。 画像を非常に効率的に圧縮しつつも画像の品質低下を最小限に
         抑える性能があり、 広範に使われています。 その圧縮能率は他の形式の
         追随を許しません。 しかし透過画像や複数レイヤーはサポートされません。 
-        そのため <acronym>GIMP</acronym> から<acronym>JPEG</acronym>形式で
-        画像を保存する度にエクスポートが要求されます。
       </para>
       <figure>
         <title lang="en">The JPEG Save dialog</title>
-        <title lang="ja"><quote>JPEG形式で保存</quote>ダイアログ</title>
+        <title lang="ja">
+          <quote>画像をエクスポート: JPEG</quote>ダイアログ
+        </title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/using/save-jpeg-dialog.png"/>
+              fileref="images/using/export-jpeg-dialog.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -453,30 +506,6 @@
         オプションがついてくるため、 その内容はこの文書の及ぶところでは
         ありません。 殊に<acronym>JPEG</acronym>の達人でもない限り、 指定すべき
         オプションは品質パラメーターの他には何もないでしょう。
-      </para>
-      <para>
-        <caution>
-          <para lang="en">
-            After you save an image as a JPEG file, the image is no longer
-            considered <quote>dirty</quote> by <acronym>GIMP</acronym>,
-            so unless you make further changes to it, you will not receive
-            any warning if you close it. Because JPEG is lossy and does not
-            support transparency or multiple layers, some of the information
-            in the image might then be lost. If you want to save all of the
-            information in an image, use <acronym>GIMP</acronym>'s native
-            <link linkend="glossary-xcf">XCF format</link>.
-          </para>
-          <para lang="ja">
-            画像を<acronym>JPEG</acronym>ファイルで保存すると、 すぐさま
-            <acronym>GIMP</acronym>はこの画像を<quote>手付き</quote>ではないと
-            見做します。 つまりその後何も変更しなかった場合は、 画像を閉じる
-            ときの警告すらありません。 しかし<acronym>JPEG</acronym>は損失が
-            起きるうえに、 透明部分や複数レイヤーがサポートされない形式である
-            ため、 画像の情報の一部が失なわれてしまいます。 もし画像の情報を
-            すべて保存したいという場合は、 <acronym>GIMP</acronym>由来の
-            <link linkend="glossary-xcf">XCF</link>を使ってください。
-          </para>
-        </caution>
       </para>
       <variablelist>
         <varlistentry>
@@ -614,15 +643,15 @@
                     read and write EXIF data, the library is not
                     automatically packaged with GIMP. If GIMP was built with
                     libexif support, then EXIF data is preserved if you open a
-                    JPEG file, work with the resulting image, and then save it
-                    as JPEG. The EXIF data is not altered in any way when you
-                    do this. The EXIF data may indicate things such as image
-                    creation time and file name, which may no longer be
+                    JPEG file, work with the resulting image, and then export
+                    it as JPEG. The EXIF data is not altered in any way when
+                    you do this. The EXIF data may indicate things such as
+                    image creation time and file name, which may no longer be
                     correct. 
                     If GIMP was not built with EXIF support, you can still
                     open JPEG files containing EXIF data, but the EXIF data
                     is ignored, and will not be saved when the resulting image
-                    is later saved.
+                    is later exported.
                   </para>
                   <para lang="ja">
                     デジタルカメラの生成する<acronym>JPEG</acronym>には
@@ -635,13 +664,13 @@
                     ライブラリーが導入されており<acronym>GIMP</acronym>の
                     ビルド時にそのサポートを有効にしていたならば、 Exif 
                     データを扱うことができ、 <acronym>JPEG</acronym>ファイルを
-                    保存する際にはファイル内にそのデータが記録できます。
+                    エクスポートする際にファイル内にそのデータが記録できます。
                     このとき Exif データは一切変更されません。 つまり Exif 
                     データが示す作成日付やファイル名などの一部の情報が不正な
                     まま残されてしまいます。 <acronym>GIMP</acronym>のビルド
                     時にこのサポートを無効にしていた場合も、 Exif データを
                     含んだ<acronym>JPEG</acronym>ファイルは支障なく開けますが、 
-                    そのあとこの画像を保存すると
+                    そのあとこの画像をエクスポートすると
                     ファイル内に Exif データが残りません。
                   </para>
                 </listitem>
@@ -952,20 +981,22 @@
     </sect3>
 
     <sect3 id="file-png-save">
-      <title lang="en">Saving as PNG</title>
-      <title lang="ja">PNG形式で保存</title>
+      <title lang="en">Export Image as PNG</title>
+      <title lang="ja">PNG形式に画像をエクスポート</title>
       <anchor id="file-png-load" xreflabel="PNG"/>
       <anchor id="file-png-save-defaults" xreflabel="PNG"/>
 
       <indexterm>
-        <primary lang="en">Save as PNG</primary>
+        <primary lang="en">Export Image as PNG</primary>
       </indexterm>
       <indexterm lang="en">
         <primary>Formats</primary>
         <secondary>PNG</secondary>
       </indexterm>
       <indexterm lang="ja">
-        <primary sortas="PNGケイシキデホゾン">PNG形式で保存</primary>
+        <primary sortas="PNGケイシキニガゾウヲエクスポート">
+          PNG形式に画像をエクスポート
+        </primary>
       </indexterm>
       <indexterm>
         <primary>PNG</primary>
@@ -976,12 +1007,14 @@
       </indexterm>
 
       <figure>
-        <title lang="en">The <quote>Save as PNG</quote> dialog</title>
-        <title lang="ja"><quote>PNG 形式で保存する</quote>ダイアログ</title>
+        <title lang="en">The <quote>Export Image as PNG</quote> dialog</title>
+        <title lang="ja">
+          <quote>画像をエクスポート: PNG</quote>ダイアログ
+        </title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/using/save-png-dialog.png"/>
+              fileref="images/using/export-png-dialog.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -1121,8 +1154,8 @@
           <term lang="ja">透明ピクセルの色の値を保存</term>
           <listitem>
             <para lang="en">
-              With this option is checked, the color values are saved even if the
-              pixels are completely transparent.
+              With this option is checked, the color values are saved even if
+              the pixels are completely transparent.
             </para>
             <para lang="ja">
               このオプションが入りのときは、 
@@ -1217,32 +1250,36 @@
     </sect3>
 
     <sect3 id="file-tiff-save">
-      <title lang="en">Saving as TIFF</title>
-      <title lang="ja">TIFF 形式で保存</title>
+      <title lang="en">Export Image as TIFF</title>
+      <title lang="ja">TIFF 形式に画像をエクスポート</title>
+      <indexterm lang="en">
+        <primary>Export Image as TIFF</primary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Formats</primary>
+        <secondary>TIFF</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary sortas="TIFFケイシキニガゾウヲエクスポート">
+          TIFF 形式に画像をエクスポート
+        </primary>
+      </indexterm>
+      <indexterm>
+        <primary>TIFF</primary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary sortas="ケイシキ">形式</primary>
+        <secondary>TIFF</secondary>
+      </indexterm>
       <figure>
-        <title lang="en">The TIFF Save dialog</title>
-        <title lang="ja"><quote>TIFF 形式で保存</quote>ダイアログ</title>
-        <indexterm lang="en">
-          <primary>Save as TIFF</primary>
-        </indexterm>
-        <indexterm lang="en">
-          <primary>Formats</primary>
-          <secondary>TIFF</secondary>
-        </indexterm>
-        <indexterm lang="ja">
-          <primary sortas="TIFFケイシキデホゾン">TIFF 形式で保存</primary>
-        </indexterm>
-        <indexterm>
-          <primary>TIFF</primary>
-        </indexterm>
-        <indexterm lang="ja">
-          <primary sortas="ケイシキ">形式</primary>
-          <secondary>TIFF</secondary>
-        </indexterm>
+        <title lang="en">Export TIFF File dialog</title>
+        <title lang="ja">
+          <quote>画像をエクスポート: TIFF</quote>ダイアログ
+        </title>
         <mediaobject>
           <imageobject>
             <imagedata format="PNG"
-              fileref="images/using/save-tiff-dialog.png"/>
+              fileref="images/using/export-tiff-dialog.png"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -1403,6 +1440,65 @@
           </listitem>
         </varlistentry>
       </variablelist>
+    </sect3>
+
+    <sect3 id="file-tiff-save">
+      <title lang="en">Export Image as MNG</title>
+      <title lang="ja">MNG 形式に画像をエクスポート</title>
+      <indexterm lang="en">
+        <primary>Export Image as MNG</primary>
+      </indexterm>
+      <indexterm lang="en">
+        <primary>Formats</primary>
+        <secondary>MNG</secondary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary sortas="MNGケイシキニガゾウヲエクスポート">
+          MNG 形式に画像をエクスポート
+        </primary>
+      </indexterm>
+      <indexterm>
+        <primary>MNG</primary>
+      </indexterm>
+      <indexterm lang="ja">
+        <primary sortas="ケイシキ">形式</primary>
+        <secondary>MNG</secondary>
+      </indexterm>
+      <figure>
+        <title lang="en">Export MNG File dialog</title>
+        <title lang="ja">
+          <quote>画像をエクスポート: MNG</quote>ダイアログ
+        </title>
+        <mediaobject>
+          <imageobject>
+            <imagedata format="PNG"
+              fileref="images/using/export-mng-dialog.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para lang="en">
+        MNG is acronym for <quote>Multiple-Image Network Graphics</quote>. 
+      </para>
+      <para lang="en">
+        The main problem is that Konqueror is the only Web navigator that 
+        recognizes the MNG animation format. Please see 
+        <ulink url="http://en.wikipedia.org/wiki/Multiple-image_Network_Graphics"/>.
+      </para>
+      <para lang="ja">
+        <acronym>MNG</acronym>は
+        <foreignphrase>Multiple-Image Network Graphics</foreignphrase> 
+        の略です。
+      </para>
+      <para lang="ja">
+        最大の問題は<acronym>MNG</acronym>形式の動画を表示できる[代表的な]
+        ウェブナビゲーターが <application>Konqueror</application> しかない
+        (出典: 
+        <ulink url="http://en.wikipedia.org/wiki/Multiple-image_Network_Graphics">
+        英語版Wikipedia</ulink>) ことです。 [ただし
+        <ulink url="http://ja.wikipedia.org/wiki/Multiple-image_Network_Graphics">
+        日本語版Wikipedia</ulink> によれば携帯電話の一部のブラウザーが
+        対応できているそうです。]
+      </para>
     </sect3>
   </sect2>
 </sect1>
