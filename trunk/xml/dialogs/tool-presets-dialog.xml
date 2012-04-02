@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--Section history
+  2012-03-29 j.h: created
+-->
+
+<!--2012-04-03-->
+<sect2 id="gimp-presets-dialog">
+  <title lang="en">Tool Presets Dialog</title>
+  <title lang="ja">ツールプリセットダイアログ</title>
+
+  <indexterm lang="en">
+    <primary>Presets</primary>
+    <secondary>Presets Dialog</secondary>
+  </indexterm>
+  <indexterm lang="ja">
+    <primary>プリセット</primary>
+    <secondary>プリセットダイアログ</secondary>
+  </indexterm>
+
+  <para lang="en">
+    In <acronym>GIMP</acronym>-2.6, tool presets were not easy to use. You had
+    to click on a tool first, and then click on the <guibutton>Restore
+    Presets...</guibutton> button in the button bar at the bottom of the Tool
+    options dialog... if you had not disabled this button bar in the Tab menu
+    to make place on your desk! Now, with <acronym>GIMP</acronym>-2.8, a
+    dockable Tool Presets Dialog is available where you just have to click on a
+    preset to open the corresponding tool with its saved options.
+  </para>
+  <para lang="ja">
+    <application><acronym>GIMP</acronym>&nbsp;2.6</application> では
+    ツールプリセットが使い辛いものでした。 先にツールをクリックしてから
+    ツールオプションダイアログ底部のボタンバー上の 
+    <guibutton>プリセットを復元...</guibutton> ボタンをクリック…のようにして
+    ゆくしかなく、 しかも画面の広さを確保するためボタンバーを撤去
+    (タブメニューより可能) するとこの方法も使えなくなってしまうのでした。
+    それも今や <application><acronym>GIMP</acronym>&nbsp;2.8</application> から
+    ドッキング可能なツールプリセットダイアログが登場したので、 ツールを
+    同じようにオプションが仕込み済みの状態で開くには
+    このダイアログでお好みのプリセットをクリックするだけで良くなりました。
+  </para>
+  
+  <figure>
+    <title lang="en">The Tool Presets Dialog</title>
+    <title lang="ja">ツールプリセットダイアログ</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/dialogs/tool-presets-dialog.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <sect3>
+    <title lang="en">Activating the Dialog</title>
+    <title lang="ja">ダイアログの呼び出し方</title>
+    <para lang="en">
+      The <quote>Tool Presets Dialog</quote> is a dockable dialog; see the
+      section <xref linkend="gimp-concepts-docks"/> for help on manipulating
+      it.
+    </para>
+    <para lang="ja">
+      <quote>ツールプリセット</quote>ダイアログはドッキング可能です。 その
+      扱い方については
+      <xref linkend="gimp-concepts-docks"/> をご覧ください。
+    </para>
+    <para lang="en">
+      You can access it:
+      <itemizedlist>
+        <listitem>
+          <para>
+            from an image menu:
+            <menuchoice>
+              <guimenu>Windows</guimenu>
+              <guisubmenu>Dockable Dialogs</guisubmenu>
+              <guimenuitem>Tool Presets</guimenuitem>
+            </menuchoice>;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            or, as a tab in Toolbox window, through
+            <menuchoice>
+              <guimenu>Tab Menu</guimenu>
+              <guisubmenu>Add Tab</guisubmenu>
+              <guimenuitem>Tool Presets</guimenuitem>
+            </menuchoice>.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para lang="ja">
+      呼び出し方はつぎのとおりです。
+      <itemizedlist>
+        <listitem>
+          <para>
+            画像ウィンドウのメニューより
+            <menuchoice>
+              <guimenu>ウィンドウ</guimenu>
+              <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+              <guimenuitem>ツールプリセット</guimenuitem>
+            </menuchoice>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            任意のドッキング可能なダイアログのボタンアイコン
+            <guiicon>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-menu-left-12.png"/>
+            </guiicon> をクリックすると出てくるタブメニューより
+            <menuchoice>
+              <guimenu>タブの追加</guimenu>
+              <guimenuitem>ツールプリセット</guimenuitem>
+            </menuchoice>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Using the Tool Presets Dialog</title>
+    <title lang="ja">ツールプリセットダイアログの利用法</title>
+    <para lang="en">
+      This dialog comes with a list of predefined presets. Each of them has an
+      icon representing the tool presets will be applied to and a name.
+    </para>
+    <para lang="en">
+      Presets can be tagged so that you can arrange presets display as
+      you want. Please see <xref linkend="gimp-tagging"/> for more information
+      about tagging.
+    </para>
+    <para lang="en">
+      Double-clicking on a preset icon opens the Tool Preset Editor.
+    </para>
+    <para lang="en">
+      Double-clicking on preset name allows you to edit this name.
+    </para>
+    <para lang="en">
+      At the bottom of the dialog appear four buttons:
+      <itemizedlist>
+        <listitem >
+          <para>
+            <guilabel>Edit this tool preset</guilabel>: clicking on this button
+            opens the Tool Preset Editor for the selected preset. You can
+            actually edit presets you have created; predefined presets options
+            are all grayed out and inactive. But you can create a new preset
+            from a predefined preset and edit its options.
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/dialogs/tool-preset-editor.png"/>
+              </imageobject>
+            </mediaobject>
+            The Tool Preset Editor is described in
+              <xref linkend="tool-preset-editor"/>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Create a new tool preset</guilabel>: before clicking on
+            this button, you can either select an existing preset, or select a
+            tool in Toolbox, for example the Healing Tool which is not in the 
+            presets list. A new preset is created at the top of the dialog and
+            the Tool Preset Editor is opened. Please see
+            <xref linkend="tool-preset-editor"/>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Delete this tool preset</guilabel>: this button is active
+            only for presets you have created.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Refresh tool presets</guilabel>: If you have added a
+            preset manually in gimp/2.0/tool-presets folder, you have to click
+            on this button to include it in the presets list.
+          </para>
+          <note>
+            <para>
+            With <acronym>GIMP</acronym>-2.8, tool presets are saved in a new
+            format (.gtp). To use your 2.6 presets, you have to convert them
+            using
+       <ulink url="http://wiki.gimp.org/index.php/Mindstorm:Preset_converter"/>,
+            until it is included in GIMP.
+            </para>
+          </note>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para lang="ja">
+      このダイアログは定義済みプリセットの一覧表を中心にできています。 
+      一覧表各項目は、 プリセットがどのツールに適用されるかを示すアイコンと
+      プリセット名が表示されます。
+    </para>
+    <para lang="ja">
+      プリセットにタグづけすればお好みの条件で絞り込んだ一覧表示もできます。
+      タグづけについての詳しい解説が
+      <xref linkend="gimp-tagging"/> にありますのでご覧ください。 
+    </para>
+    <para lang="ja">
+      プリセット項目のアイコンをダブルクリックするとツールプリセット
+      エディターが開きます。
+    </para>
+    <para lang="ja">
+      プリセット項目の名前はダブルクリックすると変更できます。
+    </para>
+    <para lang="ja">
+      ダイアログの底部には 4 つのボタンがあります。
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guiicon> 
+              <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
+            </guiicon> 
+            <guilabel>ツールプリセットを編集する</guilabel>:
+            このボタンをクリックするといま選ばれているプリセット項目用の
+            ツールプリセットエディターが現れます。 作成しておいたプリセットの
+            設定内容をここで変更できます。 定義済みで提供されているプリセットの
+            オプションはどれも灰色無効となっていて変えられません。 しかし
+            定義済みオプションの複製を作成すればその内容を変更したものが
+            作成できます。
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/dialogs/tool-preset-editor.png"/>
+              </imageobject>
+            </mediaobject>
+            ツールプリセットエディターについては
+              <xref linkend="tool-preset-editor"/> で説明しています。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guiicon> 
+              <inlinegraphic
+                fileref="images/dialogs/stock-document-new-16.png"/>
+            </guiicon> 
+            <guilabel>新しいツールプリセットを作成する</guilabel>:
+            このボタンをクリックするその前に、 既存のプリセットをどれかひとつ
+            選んでおく方法と、 プリセット一覧にまだないツール、 例えば修復
+            ツールをツールボックスで選んでおく方法もあります。 新しくできた
+            プリセットはダイアログの一覧表最上部に置かれ、 すぐさま
+            ツールプリセットエディターが現れます。
+            <xref linkend="tool-preset-editor"/> を参照してください。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guiicon>
+              <inlinegraphic
+                fileref="images/dialogs/dialogs-icon-delete.png"/>
+            </guiicon>
+            <guilabel>このツールプリセットを削除する</guilabel>:
+            このボタンは自作のプリセットを選んでいるときだけ有効です。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
+            </guiicon>
+            <guilabel>ツールプリセットを再読み込みする</guilabel>:
+            プリセットファイルを保管フォルダー
+            <filename class="directory">gimp/2.0/tool-presets/</filename>
+            に置いたあと、 プリセット一覧表に加えるためにこのボタンを
+            クリックする必要があります。
+          </para>
+          <note>
+            <para>
+            <application><acronym>GIMP</acronym>&nbsp;2.8</application> は
+            ツールプリセットを新型のファイル形式 (拡張子が
+            <filename class="extension">.gtp</filename>) で保存します。
+            <application><acronym>GIMP</acronym>&nbsp;2.6</application> で
+            作成したプリセットを利用するには、 <acronym>GIMP</acronym>に
+            読み込ませる前に
+            <ulink url="http://wiki.gimp.org/index.php/Mindstorm:<!--
+            -->Preset_converter"/> によって変換しておく必要があります。
+            </para>
+          </note>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </sect3>
+
+  <sect3>
+    <title lang="en">The Tool Presets Dialog Context Menu</title>
+    <title lang="ja">
+      <quote>ツールプリセットダイアログ</quote>の脈絡メニュー
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/menus/presets-dialog-context-menu.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para lang="en">
+      Right-clicking on the Presets Dialog opens a context menu where you find
+      some commands already described with buttons: Edit tool preset, New tool
+      preset, Refresh tool presets. You also find two new commands:
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Duplicate Tool Preset</guilabel>: this command is always
+            disabled. It is not necessary since, as we saw above, a duplicate
+            is automatically created when you create a new preset from an
+            existing preset.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Copy Tool Preset Location</guilabel>: this command copies
+            the path to the tool preset file into clipboard.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para lang="ja">
+      プリセットダイアログをマウスの <mousebutton>第2ボタン</mousebutton> で
+      クリックすると現れる脈絡メニューにも、 前述のボタンの機能と同じコマンドが
+      あります。 それら <guimenuitem>ツールプリセットの編集...</guimenuitem>、
+      <guimenuitem>新しいツールプリセット</guimenuitem>、
+      <guimenuitem>ツールプリセットの更新</guimenuitem> の各コマンドの他に、 
+      つぎの 2 つのコマンドもあります。
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guiicon>
+              <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
+            </guiicon>
+            <guilabel>ツールプリセットの複製</guilabel>:
+            このコマンドは常に利用が不可能です。 しかし前述のとおり新しい
+            プリセットの作成は既存のプリセットを基にした自動的な複製のため
+            これは問題になりません。
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <!--<guiicon>
+              <inlinegraphic fileref="images/dialogs/stock_copy.png"/>
+            </guiicon>-->
+            <guilabel>ツールプリセットの場所をコピー</guilabel>:
+            このコマンドはツールプリセットファイルの保管場所と名前からなる
+            パスをクリップボードに貼り付けます。
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </sect3>
+</sect2>
+    
