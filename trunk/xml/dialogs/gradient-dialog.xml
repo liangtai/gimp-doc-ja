@@ -2,15 +2,15 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2012-03-04 j.h: updated to v2.8
   2012-03-02 j.h: added link to tagging
-  2008-12-15 j.h: updated en;fr to v2.6
+  2008-12-15 j.h: updated to v2.6
   2008-02-22 j.h: added description for the four first gradients en;fr.
   2008-01-18 ude: added v2.4. gradient menu options and screenshot
   2007-09-30 j.h : revised en ;fr for v2.4. no change
-  2006-08-30 ciampix: added italian translation
   2006-04-29 lexa: made file docbook compliant
 -->
-<!--2012-03-29-->
+<!--2012-04-04-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-gradient-dialog">
   <title lang="en">Gradients Dialog</title>
   <title lang="ja">グラデーションダイアログ</title>
@@ -553,9 +553,78 @@
           </para>
         </listitem>
       </varlistentry>
+      <varlistentry id="python-fu-gradient-save-as-css">
+        <term lang="en">Save as CSS</term>
+        <term lang="ja">Save as CSS...</term>
+        <listitem>
+          <!--Written with the help of Joao S.O Bueno, plugin author-->
+          <indexterm lang="en">
+            <primary>Gradient CSS code snippet</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="グラデーションノCSSコードカ">
+              グラデーションのCSSコード化
+            </primary>
+          </indexterm>
+          <para lang="en">
+            The CSS (Cascading Style Sheets) language is used to format the
+            display of HTML and XML files, for instance background color, font
+            size... and background gradient. The "CSS Save" plugin is a CSS3
+            linear gradient generator that allows you to save a CSS3
+            code snippet, containing the gradient data for a given GIMP
+            gradient. This code snippet is a text file: you can copy-past it to
+            the stylesheet related to your HTML file, to get a gradient
+            background on opening the HTML file in Firefox, Chrome or Safari web
+            navigators. This CSS3 code snippet can also be used as a gradient in
+            SVG files.
+          </para>
+          <para lang="en">
+            Here is an example of code snippet, got using the Blue Green
+            gradient:
+          </para>
+          <para lang="ja">
+            <acronym>CSS</acronym> (<foreignphrase>Cascading Style
+            Sheets</foreignphrase>) 言語の使い道は、
+            <acronym>HTML</acronym>や<acronym>XML</acronym>ファイルの表示形式、
+            具体的にいえば背景色やフォントの大きさなど、
+            そしてグラデーションがかかった背景です。 この<acronym>CSS</acronym>
+            化保存スクリプトは<acronym>CSS3</acronym>形式の線形グラデーション
+            生成機能になっており、 <acronym>GIMP</acronym>の任意の
+            グラデーションからデータを取り出して<acronym>CSS3</acronym>式コード
+            の断片に変換したものをファイルに保存できます。 このコード断片は
+            テキスト形式のファイルですので内容をスタイルシートに貼り付ければ、
+            それを読み込んだ<acronym>HTML</acronym>ファイルは 
+            <application>Firefox</application> や 
+            <application>Chrome</application> や 
+            <application>Safari</application> のようなウェブナビゲーター上の
+            表示がグラデーション背景つきになります。
+          </para>
+          <para lang="ja">
+            コード断片の例をつぎに示します。 これは青緑のグラデーションです。
+          </para>
+          <formalpara>
+            <title lang="en">A CSS snippet created with Save as CSS</title>
+            <title lang="ja">
+              <quote>Save as CSS...</quote>で作成した<acronym>CSS</acronym>断片
+            </title>
+            <para>
+              <literallayout>
+background-image: linear-gradient(top, rgb(0,123,255) 0%, rgb(72,226,255) 56%,
+     rgb(0,255,161) 100%);
+background-image: -moz-linear-gradient(center top, rgb(0,123,255) 0%,rgb(72,
+    226,255) 56%,rgb(0,255,
+    161) 100%);
+background-image: -webkit-gradient(linear, left top, left bottom,
+     color-stop(0.000, rgb(0,123,255)),color-stop(0.566, rgb(72,226,255)),
+    color-stop(1.000, rgb(0,255,161)));
+              </literallayout>
+          </para>
+          </formalpara>
+        </listitem>
+      </varlistentry>
     </variablelist>
 
-    <sect4 id="gimp-brush-dialog-tags">
+    <sect4 id="gimp-gradient-dialog-tags">
       <title lang="en">Tagging</title>
       <title lang="ja">タグ付け</title>
       <para lang="en">
