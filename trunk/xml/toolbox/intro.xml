@@ -2,15 +2,12 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2007-12-01 up to v2.4 fr; en by PP
-  2007-05-29 KoSt: added 'no'
-  2006-09-26 added Korean contents by Mr.Dust
+  2012-04-27 update to v2.8 by j.h
+  2007-12-01 up to v2.4 by PP
   2006-01-29 added sect1info
-  2005-11-27 fixed fr lang tag by lexa
   2005-11-26 fixed images and tips structure by romanofski
-  2005-05-15 de reviewed by axel.wernicke
 -->
-<!--2012-03-24-->
+<!--2012-05-01-->
 <sect1 id="gimp-toolbox" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">The Toolbox</title>
   <title lang="ja">ツールボックス</title>
@@ -160,7 +157,12 @@
       In the default setup, created when <acronym>GIMP</acronym> is first
       installed, not all tools show icons in the Toolbox: the Color tools are
       omitted. You can customize the set of tools that are shown in the
-      Toolbox using the <link linkend="gimp-tools-dialog">Tools dialog</link>.
+      Toolbox through
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+        <guisubmenu>Preferences</guisubmenu>
+        <guimenuitem>Toolbox</guimenuitem>
+      </menuchoice>.
       There are two reasons you might want to do this: first, if you only
       rarely use a tool, it might be easier to find the tools you want if the
       distracting icon is removed; second, if you use the Color tools a lot,
@@ -195,9 +197,16 @@
     <para lang="ja">
       <acronym>GIMP</acronym>を初めてインストールした時点での初期設定では、
       全てのツールがツールボックス上でアイコン化されているわけではありません。
-      色ツールは省かれています。 ツールボックスに載せるツールは
-      <link linkend="gimp-tools-dialog">ツールアイコンダイアログ</link> で
-      選定できます。 ここで調整すると助かる理由は 2 つあるでしょう。 第一に、
+      色ツールは省かれています。 ツールボックスに載せるツールの選定は
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>編集</guimenu>
+        <guimenuitem>設定</guimenuitem>
+      </menuchoice>
+      と辿ると現れる
+      <link linkend="gimp-prefs-toolbox">GIMP の設定</link> ダイアログの
+      <quote>ツールボックス</quote>のページで指定できます。
+      ここで調整すると助かる理由は 2 つあるでしょう。 第一に、
       ツールを頻繁には使わないけれど、 イザというときアイコンを見付けやすい
       ように目障りなアイコンは片付けておきたいとき、 第二に、 カラーツールを
       頻繁に使うので、 すぐに利用しやすいと都合がよいとき。 どちらにしても、
@@ -234,16 +243,9 @@
         </imageobject>
         <caption>
           <para lang="en">
-            Tool Options dialog of the Paintbrush tool (with
-            <link linkend="gimp-dockable-dock-bars">docking bars</link> at its
-            top and bottom).
+            Tool Options dialog of the Airbrush tool.
           </para>
-          <para lang="ja">
-            <quote>ブラシで描画</quote>ツールのツールオプションダイアログ
-            (上端と下端に 
-            <link linkend=\"gimp-dockable-dock-bars\">ドッキングバー</link>
-            が見える)
-          </para>
+          <para lang="ja">エアブラシツールのツールオプションダイアログ</para>
         </caption>
       </mediaobject>
     </figure>
@@ -290,14 +292,14 @@
     <para lang="en">
       Each tool has its own specific set of options. The choices you make for
       them are kept throughout the session, until you change them. In fact,
-      the tool options are maintained from session to session. The persistance
+      the tool options are maintained from session to session. The persistence
       of tool options across sessions can sometimes be an annoying nuisance: a
       tool behaves very strangely, and you can't figure out why until you
       remember that you were using some unusual option the last time you
       worked with it, two weeks ago.
     </para>
     <para lang="en">
-      At the bottom of the Tool Options dialog appear four buttons:
+      At the bottom of the Tool Options dialog, four buttons appear:
     </para>
     <para lang="ja">
       ツールはそれぞれに定められるオプションがあります。 選んだオプションは
@@ -327,18 +329,19 @@
         <listitem>
           <para lang="en">
             This button allows you to save the settings for the current tool,
-            so that you can restore them later. It brings up a small dialog
-            allowing you to give a name to the array of saved options. When
-            you Restore options, only saved sets for the active tool are
+            so that you can restore them later. It brings up the <xref
+            linkend="gimp-presets-dialog"/>
+            allowing you to give a name forthe new preset. When
+            you Restore options, only saved presets for the active tool are
             shown, so you need not worry about including the name of the tool
             when you assign a name here.
           </para>
           <para lang="ja">
             このボタンは現在使用中のツールの設定を後で使えるように保存します。
-            小さなダイアログが現れ、 保存される一揃いのオプションにつけたい
-            名前をここに記入します。
-            保存されたオプションを復帰させる際には、 現在使用しているツール
-            に関わりのあるファイルのみ列挙されることから、 ファイルに与える
+            <xref linkend="gimp-presets-dialog"/> ダイアログが現れますので、 
+            新しいプリセットにつけたい名前をここに記入します。 あとで
+            保存しておいたオプションを呼び戻すときには、 現在使用しているツール
+            に関わりのあるプリセットだけが並びますので、 ファイルに与える
             名前にはツール名を明記しなくても大丈夫です。
           </para>
         </listitem>
@@ -357,19 +360,19 @@
         </term>
         <listitem>
           <para lang="en">
-            This button allows you to restore a previously saved set of
-            options for the active tool. If no option-sets have ever been
+            This button allows you to restore a previously saved preset of
+            options for the active tool. If no presets have ever been
             saved for the active tool, the button will be insensitive.
             Otherwise, clicking it will bring up a menu showing the names of
             all saved option sets: choosing a menu entry will apply those
             settings.
           </para>
           <para lang="ja">
-            このボタンは保存してあった一まとまりのオプションを現在使用中の
-            ツールに読み込ませます。 まだ一件も現在使用中のツールの
-            オプション群を保存していないときは、 このボタンは灰色無効に
-            なっています。 逆に有効になっているときクリックすると、 
-            保存されている全てのオプションの名前が並ぶメニューが出てきます。
+            このボタンは保存してあったプリセットを現在使用中のツールに
+            読み込ませます。 まだ一件もプリセットを保存していない場合、 
+            このボタンは灰色無効になります。 
+            逆に有効になっているときクリックすると、 
+            保存されているすべてのオプションの名前が並ぶメニューが出てきます。
             メニューからひとつを選ぶと設定に反映されます。
           </para>
         </listitem>
@@ -390,17 +393,17 @@
           <para lang="en">
             This button allows you to delete a previously saved set of options
             for the active tool. If no option-sets have ever been saved for
-            the active tool, the button will be insensitive. Otherwise,
-            clicking it will bring up a menu showing the names of all saved
-            option sets: choosing a menu entry will delete those settings.
+            the active tool, the button will simply repeat the tool name.
+            Otherwise, clicking it will bring up a menu showing the names of all
+            saved presets: the selected preset will be deleted.
           </para>
           <para lang="ja">
             このボタンは保存してあった現在使用中のツールに関連のある
-            オプションの一組を削除します。 まだ一件も現在使用中のツールの
-            オプション群を保存していないときは、 このボタンは灰色無効に
-            なっています。 逆に有効になっているときクリックすると、 
-            保存されている全てのオプション群の名前が並ぶメニューが出てきます。
-            メニューからひとつを選ぶとその設定が削除されます。
+            プリセットを削除します。 まだ一件も現在使用中のツールの
+            プリセットを保存していない場合、 このボタンは単にツール名を繰り
+            返します。 逆に有効になっているときクリックすると、 
+            保存されているすべてのプリセットの名前が並ぶメニューが出てきます。
+            選んだプリセットが削除されます。
           </para>
         </listitem>
       </varlistentry>

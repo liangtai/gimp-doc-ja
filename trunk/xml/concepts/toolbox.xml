@@ -2,17 +2,12 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- Version History:
+  2012-04-15 j.h: update to v2.8
   2009-02-19 j.h: added tip for Removing Wilber's eyes
   2008-12-10 JPL: updated to v2.6
-  2008-06-04 prokoudine: fixes to Russian translation
   2008-01-04 ude: replaced calloutlist with orderedlist
-  2007-02-15: fixed Korean translation by Dust
-  2006-09-06: added norwegian translation by KoSt
-  2006-05-02: added Korean translation by Dust
-  2006-02-17: added italian translation by ciampix
-  2005-09-03: Addition en;fr at file end
 -->
-<!--2012-03-24-->
+<!--2012-05-01-->
 <sect2 id="gimp-concepts-toolbox">
   <title lang="en">The Toolbox</title>
   <title lang="ja">ツールボックス</title>
@@ -37,13 +32,11 @@
     </mediaobject>
   </figure>
   <para lang="en">
-    The Toolbox is the heart of <acronym>GIMP</acronym>. If you close it, you
-    quit <acronym>GIMP</acronym>. Here is a quick tour of what you will find
-    there.
+    The Toolbox is the heart of <acronym>GIMP</acronym>.
+    Here is a quick tour of what you will find there.
   </para>
   <para lang="ja">
     ツールボックスは<acronym>GIMP</acronym>の心臓部です。
-    これを閉じると<acronym>GIMP</acronym>は終了します。
     さて図にでているものを順に素早く見てゆきましょう。
   </para>
   <tip>
@@ -64,6 +57,30 @@
       なっています。
     </para>
   </tip>
+  <para lang="en">
+    By default, only the Foreground-background icon is visible. You can add
+    Brush-Pattern-Gradient icons and Active Image icon through
+    <menuchoice>
+      <guimenu>Edit</guimenu>
+      <guisubmenu>Preferences</guisubmenu>
+      <guimenuitem>Toolbox</guimenuitem>
+    </menuchoice>:
+    <xref linkend="prefs-tools-config"/>.
+  </para>
+  <para lang="ja">
+    初期設定ではこの場所に現在の描画色と背景色の色見本だけが表示されています。
+    現在のブラシやパターンやグラデーションの状態を示す各アイコンや、
+    活性画像の縮小見本アイコンをここに表示させるには、 画像ウィンドウの
+    メニューより
+    <menuchoice>
+      <guimenu>編集</guimenu>
+      <guimenuitem>設定</guimenuitem>
+    </menuchoice>
+    と辿って
+    <link linkend="prefs-tools-config"><acronym>GIMP</acronym>の設定</link>
+    ダイアログを開き、 <quote>ツールボックス</quote>のページでそれぞれ
+    指定します。
+  </para>
   <orderedlist>
     <listitem>
       <para lang="en">
@@ -135,31 +152,41 @@
         image is the <quote>active image</quote>. Here you find a small
         iconic representation of the active image. Clicking the icon to display
         a dialog with a list of the currently open images, click an
-        image in the dialog to make it active. You can also click an
-        image window to make it the active image.
+        image in the dialog to make it active. Usually, you click an
+        image window in multi-window mode, or an image tab in single-window
+        mode, to make it the active image.
       </para>
       <para lang="ja">
         <emphasis>活性画像:</emphasis> <acronym>GIMP</acronym>では同時に複数の
-        画像を扱えますが、 どの時点でもそのうちのただ一枚だけが<quote>活性画像
-        </quote> (アクティブな画像) です。 今の活性画像をアイコン化したものが
-        ここに表示されます。 これをクリックすると現在開かれているすべての
-        画像をリストにしたダイアログが出てきて、 どれかの画像をクリックすると
-        それが活性画像になります。 もちろん、 画像を表示しているウィンドウを
-        クリックしてもその画像を活性化できます。
+        画像を扱えますが、 どの時点でもそのうちのただ一枚だけが
+        <quote>活性画像</quote> (アクティブな画像) です。 今の活性画像を
+        アイコン化したものがここに表示されます。 これをクリックすると現在
+        開かれているすべての画像をリストにしたダイアログが出てきて、 どれかの
+        画像をクリックするとそれが活性画像になります。 しかし普段はマルチ
+        ウィンドウモードなら目的の画像ウィンドウをクリック、 シングルウィンドウ
+        モードなら目的の画像タブをクリックしてその画像を活性化させる方法を
+        いちばんよく行なうことになるでしょう。
       </para>
-      <note>
-        <para lang="en">
-          The <quote>Active Image</quote> preview is disabled by default. If
-          you want it, you can enable it in the
-          <link linkend="gimp-prefs-toolbox">Toolbox Preferences</link> tab.
-        </para>
-        <para lang="ja">
-          <quote>活性画像</quote>のプレビュー機能は初期設定では無効に
-          なっています。 これを使いたい場合は、 
-          <link linkend="gimp-prefs-toolbox">設定</link> ダイアログの
-          <quote>ツールオプション</quote>のページで有効にします。
-        </para>
-      </note>
+      <para lang="en">
+        <indexterm>
+          <primary>XDS</primary>
+        </indexterm>
+        You can <quote>Drop to an XDS file manager to save
+        the image</quote>. <acronym>XDS</acronym> is an acronym for <quote>X
+        Direct Save Protocol</quote>: an additional feature for the X Window
+        System graphical user interface for Unix-like operating systems.
+      </para>
+      <para lang="ja">
+        <indexterm>
+          <primary>XDS</primary>
+        </indexterm>
+        <acronym>XDS</acronym>対応のファイルマネージャーに画像見本アイコンを
+        ドラッグしていって放つと画像の保存ができます。 <acronym>XDS</acronym>
+        とは <foreignphrase>X Direct Save Protocol</foreignphrase> という
+        <productname>X</productname> 用の追加機能のことです。 X は
+        UNIX 風システムでグラフィカルユーザーインターフェースを担う
+        X ウィンドウシステムの規格を提供しています。
+      </para>
     </listitem>
   </orderedlist>
   <note>
@@ -204,18 +231,13 @@
   </tip>
   <tip>
     <para lang="en">
-      Drag and drop an image into the Toolbox window to open the image
-      in its own Image window. This is very differnt than dragging
-      an image into an existing Image window, which adds it to the
-      currently open image in a new layer&mdash;usually not what
-      you want.
+      Drag and drop an image from a file browser into the Toolbox window to open
+      the image in its own Image window or tab.
     </para>
     <para lang="ja">
-      画像アイコンをツールボックスまでドラッグして放つとその画像用の画像で
-      ウィンドウ画像が開かれます。 代わりに画像アイコンを他の画像ウィンドウ上
-      に放つと全く異なる動作をします。 この場合はドラッグで曳き込まれた画像が
-      新たなレイヤーとなってその画像に追加されますので、 大半の人にとっては
-      想像通りではない動作でしょう。
+      ファイルブラウザーの画像アイコンをツールボックスまでドラッグして放つと
+      その画像が新たな画像ウィンドウになって、 あるいは画像表示領域の新たな
+      タブとなって開かれます。
     </para>
   </tip>
 </sect2>
