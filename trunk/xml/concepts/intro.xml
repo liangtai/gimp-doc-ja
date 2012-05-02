@@ -4,13 +4,10 @@
 <!--  section history:
   2009-02-19 j.h: revised for v2.6
   2008-12-29 j.h: added language selection through GTK Environment
-  2008-03-21 Mr.Dust: reviewed ko
-  2007-09-30 lexa: reviewed en and de for GIMP 2.4
-  2006-10-17: dust added/enhanced ko translation
-  2006-02-17: added italian translation by ciampix
+  2007-09-30 lexa: reviewed for GIMP 2.4
   2005-12-16: made valid docbook and reviewed by lexa
 -->
-<!--2012-03-20-->
+<!--2012-05-02-->
 <sect1 id="gimp-concepts-running">
   <title lang="en">Running GIMP</title>
   <title lang="ja"><acronym>GIMP</acronym>を起動する</title>
@@ -129,20 +126,37 @@
     </indexterm>
     <para lang="en">
       <acronym>GIMP</acronym> automatically detects and uses the system
-      language. In the
-      unlikely event that language detection fails, or if you just want to
-      use a different language, you may do so:
+      language. In the unlikely event that language detection fails, or if
+      you just want to use a different language, since
+      <acronym>GIMP</acronym>-2.8, you can do so through:
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+        <guisubmenu>Preferences</guisubmenu>
+        <guimenuitem>Interface</guimenuitem>
+      </menuchoice>.
+    </para>
+    <para lang="en">
+      You can also use:
     </para>
     <para lang="ja">
       [<acronym>GIMP</acronym>のメニューやダイアログはさまざまな国や民族の言葉
       に翻訳されています。] <acronym>GIMP</acronym>はシステムで設定されている
       言語を自動的に見付け出し使えるようにします。 めったにないことですが言語を
-      見付けるのに失敗する場合や、 システムとは別の言語を使用したい場合はつぎの
-      ようにしてください。
+      見付けるのに失敗する場合や、 システムとは別の言語を使用したいときは、
+      <application><acronym>GIMP</acronym>&nbsp;2.8</application> 以降であれば
+      画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>編集</guimenu>
+        <guimenuitem>設定</guimenuitem>
+      </menuchoice>
+      と辿ると開かれる
+      <link linkend="gimp-prefs-interface">設定</link> ダイアログの
+      <quote>インターフェース</quote>のページで選択できます。
     </para>
+    <para lang="ja">このほかにつぎの方法があります。</para>
     <variablelist>
       <varlistentry>
-        <term lang="en">Linux</term>
+        <term lang="en">Under Linux</term>
         <term lang="ja">Linux など UNIX システム風のシステム</term>
         <listitem>
           <para lang="en">
@@ -171,7 +185,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term lang="en">Windows XP</term>
+        <term lang="en">Under Windows XP</term>
         <term lang="ja">Windows XP / Windows Vista</term>
         <listitem>
           <para lang="en">
@@ -192,7 +206,7 @@
             commands (for french for instance):
             <!--do not reformat the following lines (literallayout)-->
             <literallayout><userinput>set lang=fr
-start gimp-2.6.exe</userinput></literallayout>
+            start gimp-2.6.exe</userinput></literallayout>
             Save this file as <filename>GIMP-FR.BAT</filename> (or another
             name, but always with a
             <filename class="extension">.BAT</filename> extension). Create
@@ -206,7 +220,7 @@ start gimp-2.6.exe</userinput></literallayout>
               <guimenuitem>GTK Runtime Environment</guimenuitem>
             </menuchoice>
             Then <guimenuitem>Select language</guimenuitem> and select the
-            language you want in the dropping list.
+            language you want in the drop-down list.
           </para>
           <para lang="ja">
             <variablelist>
@@ -269,7 +283,7 @@ start gimp-2.6.exe</userinput></literallayout>
             利用をおすすめします。メモ帳などのテキストエディタを開き、
             たとえば以下のようなコマンドを記入します。
             <literallayout><userinput>set lang=zh_TW.Big5
-start GIMP-2.6.exe</userinput></literallayout>
+            start GIMP-2.6.exe</userinput></literallayout>
             この例では臺灣繁體字を選択しているのでファイル名を
             <filename>GIMP臺灣.bat</filename> のように (ファイル名はご自由に、
             ただし拡張子 <filename class="extension">.bat</filename> は必須) 
@@ -307,21 +321,27 @@ start GIMP-2.6.exe</userinput></literallayout>
         <term lang="en">Another GIMP instance</term>
         <term lang="ja">重複して<acronym>GIMP</acronym>を走らせるとき</term>
         <listitem>
+          <indexterm lang="en">
+            <primary>New instance</primary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="フクスウドウジキドウ">複数同時起動</primary>
+          </indexterm>
           <para lang="en">
-            Use <userinput>-n</userinput> to run multiple instances
+            Use <userinput>-n</userinput> to run multiple instances of
             <acronym>GIMP</acronym>.
-            For example, use <userinput>gimp-2.6</userinput> to start
+            For example, use <userinput>gimp-2.8</userinput> to start
             <acronym>GIMP</acronym> in the default system language, and
-            <userinput>LANGUAGE=en gimp-2.6 -n</userinput> to start another
+            <userinput>LANGUAGE=en gimp-2.8 -n</userinput> to start another
             instance of <acronym>GIMP</acronym> in English; This is very
             useful for translators.
           </para>
           <para lang="ja">
-            <acronym>GIMP</acronym>を複数同時に稼動させるには <option>-n
-            </option> オプションを使います。 例えば、 先にシステムの普段の
-            言語で <command>gimp-2.6</command> を起動し、 英語版の<acronym>GIMP
-            </acronym>を <command>LANGUAGE=en gimp-2.6 -n</command> として起動
-            するのです。 こうすると翻訳者も非常に助かります。
+            <acronym>GIMP</acronym>を複数同時に稼動させるには 
+            <option>-n</option> オプションを使います。 例えば、 先にシステムの
+            普段の言語で <command>gimp-2.8</command> を起動し、 英語版の
+            <acronym>GIMP</acronym>を <command>LANGUAGE=en gimp-2.8 -n</command>
+            として起動するのです。 こうすると翻訳者も非常に助かります。
           </para>
         </listitem>
       </varlistentry>

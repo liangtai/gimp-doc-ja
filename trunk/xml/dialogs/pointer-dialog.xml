@@ -2,13 +2,12 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2008-12-16 j.h: updated en;fr to v2.6. Standardized xml structure, may be
-             with some errors in lt;no,ru languages.
+  2012-05-01 j.h: updated to v2.8.
+  2008-12-16 j.h: updated en;fr to v2.6.
   2008-03-01 ude: renamed id (old: gimp-pointer-dialog)
-  2008-01-23 ude: de translation
   2007-11-22 j.h: created
 -->
-<!--2012-03-02-->
+<!--2012-05-02-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-pointer-info-dialog">
   <title lang="en">Pointer Dialog</title>
   <title lang="en">ピクセル情報ダイアログ</title>
@@ -92,7 +91,7 @@
           </guiicon> and selecting
           <menuchoice>
             <guimenu>Add Tab</guimenu>
-            <guimenuitem>Pointeur</guimenuitem>
+            <guimenuitem>Pointer</guimenuitem>
           </menuchoice>.
         </para>
         <para lang="ja">
@@ -114,8 +113,6 @@
     <title lang="en"><quote>Pointer</quote> dialog options</title>
     <title lang="ja"><quote>ピクセル情報</quote>ダイアログのオプション</title>
     <variablelist>
-      <title lang="en">Pointer Information</title>
-      <title lang="ja">ピクセル情報</title>
       <varlistentry>
         <term lang="en">Pixels</term>
         <term lang="ja">ピクセル</term>
@@ -139,6 +136,41 @@
             Shows the distance from the origin, in inches.
           </para>
           <para lang="ja">原点からの距離をインチ単位で表示しています。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Pointer Bounding Box</term>
+        <term lang="ja">選択範囲の境界</term>
+        <listitem>
+          <para lang="en">
+            This information is active when a selection exists. X and Y are
+            the coordinates of the upper left corner of the rectangular frame
+            that bounds rectangular and ellipse selections. H and W are
+            the height and width of this box.
+          </para>
+          <para lang="en">
+            This information also exits for the other selections, but they are
+            of less interest and the bounding box is not visible.
+          </para>
+          <para lang="en">
+            This information concerning the selection remains unchanged when you
+            use another tool, while pointer coordinates vary.
+          </para>
+          <para lang="ja">
+            この情報は選択範囲があるときに数値を表示します。 
+            <guilabel>X</guilabel>  と <guilabel>Y</guilabel> は矩形の
+            選択範囲の、 あるいは不定形選択範囲を囲む最小の矩形枠の左上角の
+            座標を示します。 <guilabel>高</guilabel> と <guilabel>幅</guilabel>
+            はこの矩形枠の高さと幅です。
+          </para>
+          <para lang="ja">
+            この欄はこれ以外の選択範囲のために表示されたままですが、 いささか
+            益体もない情報ですし境界枠は見えません。
+          </para>
+          <para lang="ja">
+            ここに表示される数値は選択範囲が主眼のため、 他のツールを手に取った
+            場合にピクセル情報が変化してもこの内容は同じままです。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
