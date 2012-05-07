@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
-<!--  section history:
-  2009-02-23 j.h: copied content from gimp.org as astart for v2.6
-  2009-02-23 j.h: move v2.4 content to appendix/history-24.xml
-  2008-03-21 Mr.Dust: added 'ko'
-  2007-11-08 KoSt: added 'no'
-  2007-09-21 AntI: Added 'es'
-  2007-09-02 lexa: copied content from gimp.org as a start for 2.4 for en de
-  2007-09-02 lexa: moved 2.2 content to the appendix to make room for 2.4 news
-      -->
-<!--2012-03-29-->
 <sect1 id="gimp-introduction-whats-new">
-  <title lang="en">What's New in GIMP 2.6?</title>
+<!--2012-05-06-->
+  <title lang="en">What's New in GIMP 2.8? </title>
   <title lang="ja">
-    <application><acronym>GIMP</acronym> 2.6</application> の新機能
+    <application><acronym>GIMP</acronym> 2.8</application> の新機能
   </title>
 
   <para lang="en">
-    GIMP 2.6 is an important release from a development point of view. It
-    features changes to the user interface addressing some often received
-    complaints, and a tentative integration of GEGL, the graph based image
-    processing library that will eventually bring high bit-depth and
-    non-destructive editing to GIMP.
+    <acronym>GIMP</acronym> 2.8 is an another important release from a
+    development point of view, even more that it was for 2.6. It
+    features a big change to the user interface addressing one of the
+    most often received complain: the missing of a single windowing
+    mode. Morover the integration effort of GEGL library had taken a
+    big step forward, reaching more the 90% of the
+    <acronym>GIMP</acronym> core, a new powerful transformation tool,
+    layer groups, new common options, new brushes, improved text tool,
+    and more.
   </para>
   <para lang="ja">
-    <application><acronym>GIMP</acronym> 2.6</application> は開発者にとっても
-    重要な公開版です。 これまでに何度も寄せられた要望をもとに
-    ユーザーインターフェイスの改善を行なったことに加え、 試験的に
-    <acronym>GEGL</acronym>の導入も行いました。 <acronym>GEGL</acronym>は
-    グラフ形式のデータ構造からなる画像処理ライブラリーであり、 結果的に高い
-    ビット深度と非破壊編集を<acronym>GIMP</acronym>にもたらすものと
-    なるはずです。
+    <application><acronym>GIMP</acronym>&nbsp;2.8</application> の重要さは
+    技術開発的側面から観ても 2.6 版にさらに輪をかけるものとなりました。
+    ユーザーインターフェイスには今まで最も高かった要望に応える大変革が
+    取り入れられました。 シングルウィンドウモードです。 しかも
+    <acronym>GEGL</acronym>ライブラリーとの統合化がさらに推し進められて
+    <acronym>GIMP</acronym>中枢部では 90% 以上に達したのをはじめ、 かつてない
+    強力な変形ツールや、 レイヤーグループ、 新機軸の共通化オプション、
+    新型ブラシ、 改良テキストツールなどなど目覚ましい成果が加わりました。
   </para>
 
   <variablelist>
@@ -39,39 +35,33 @@
     <title lang="ja">ユーザーインターフェイス</title>
 
     <varlistentry>
-      <term lang="en">Toolbox Menubar removed</term>
-      <term lang="ja">ツールボックスのメニューバーを撤去</term>
+      <term lang="en">New single window mode</term>
+      <term lang="ja">シングルウィンドウモードが新登場</term>
       <listitem>
         <para lang="en">
-          The toolbox menubar has been removed and merged with the image
-          window menubar. To be able to do this a window called the empty
-          image window has been introduced. It hosts the menubar and keeps
-          the application instance alive when no images are opened. It also
-          acts as a drag and drop target. When opening the first image the
-          empty image window is transformed into a normal image window, and
-          when closing the last image, that window becomes the empty image
-          window.
+          With this new feature it will be possible to work with all
+          the <acronym>GIMP</acronym> dialogs inside one big window,
+          usually with the image(s) centered inside.  No more floating
+          panels or toolbox but the dialogs could be arranged inside
+          this single window.  This mode could be enabled or disabled
+          all the time, even while working, and the option will be
+          remembered through the sessions.
         </para>
         <para lang="ja">
-          ツールボックスのメニューバーが撤去されその内容は画像ウィンドウの
-          メニューバーに統合されました。 このために無画像ウィンドウというものが
-          導入されました。 画像が何も開かれていない場合にもメニューバーを
-          表示するとともにアプリケーションそのものの存在を保持する役目が
-          あります。 またここはドラッグして放つ動作の目的地にもなります。 最初に
-          開いた画像は無画像ウィンドウが通常の画像ウィンドウに変化して表示
-          します。 最後の画像を閉じた後のウィンドウが無画像ウィンドウに
-          なります。
+          新しいこの機能を使えば<acronym>GIMP</acronym>のダイアログを全部
+          ひとつの大ウィンドウに収めつつ画像は普段中央に置いて作業ができます。
+          このモードではツールボックスもパネルも別ウィンドウ化しませんが、
+          単一ウィンドウの中で配置替えが可能です。 従来のマルチウィンドウ
+          モードにたとえ作業中であってもいつでも切り替えできますし、 この設定は
+          終了後も保存され次回に引き継がれます。
         </para>
         <figure>
-          <title lang="en">New Look of the image window in GIMP 2.6</title>
-          <title lang="ja">
-            新しい <application><acronym>GIMP</acronym> 2.6</application> の
-            画像ウィンドウの外観
-          </title>
+          <title lang="en">The new look of the single window mode</title>
+          <title lang="ja">新しいシングルウィンドウモードの外観</title>
           <mediaobject>
             <imageobject>
               <imagedata format="PNG"
-                fileref="images/using/empty-image-window.png"/>
+                fileref="images/using/single-window-mode.png"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -79,54 +69,35 @@
     </varlistentry>
 
     <varlistentry>
-      <term lang="en">Toolbox and docks are utility windows</term>
-      <term lang="ja">ツールボックスとドックは補助ウィンドウに</term>
+      <term lang="en">New file save workflow</term>
+      <term lang="ja">新しいファイル保存の手順</term>
       <listitem>
         <para lang="en">
-          With the empty image window acting as a natural main window, the
-          Toolbox and Docks windows are now utility windows rather than main
-          windows. This enables window managers to do a much better
-          job of managing the GIMP windows, including omitting the Toolbox
-          and Docks from the taskbar and ensuring that the Toolbox and Docks
-          always are above image windows.
+          Now Save and Save as works only with xcf formats. If you
+          want to export an image in another format, say jpg or png,
+          you have to explicitly Export it. This enhance the workflow
+          and let you simple overwrite the original file or export to
+          various other formats.
         </para>
         <para lang="ja">
-          無画像ウィンドウが自然にメインウィンドウとなったことで、 ツール
-          ボックスとドックはメインウィンドウではなく補助ウィンドウと
-          なりました。 ウィンドウマネージャーにとってはこの変更により、
-          ツールボックスやドックをタスクバーから除外できるので、 常に画像
-          ウィンドウ上にツールバーやドックが存在することが明確になったため、
-          より<acronym>GIMP</acronym>のウィンドウを正しく管理することが
-          可能になりました。
-        </para>
-      </listitem>
-    </varlistentry>
-
-    <varlistentry>
-      <term lang="en">Ability to scroll beyond image border</term>
-      <term lang="ja">画像の外にまでスクロールが可能に</term>
-      <listitem>
-        <para lang="en">
-          The navigation dialog now allows panning beyond the image border;
-          so it is no longer a problem to use a brush on the edge of
-          an image that fills the entire display window. Also, if a utility
-          window covers the image, you can pan the image to view or edit the
-          portion covered by the utility window.
-        </para>
-        <para lang="ja">
-          ナビゲーションダイアログは画像の境界を過ぎても繰り寄せられるように
-          なりました。 これでもう画像が画像ウィンドウいっぱいに広がっていて
-          境界線付近で描画ブラシが使いづらかった問題はなくなりました。 さらに、
-          補助ウィンドウが画像にかぶっていても、 画像の方を移動すれば簡単に
-          隠れた部分を見たり編集したりできるようになります。
+          今度の版から <guimenuitem>保存</guimenuitem> と
+          <guimenuitem>名前を付けて保存...</guimenuitem> は
+          <acronym>XCF</acronym>形式専用となりました。 それ以外の、
+          例えば <filename class="extension">.jpg</filename> や
+          <filename class="extension">.png</filename> のようなファイル形式の
+          画像に変換書き出ししたい場合は、 保存とは別に
+          <emphasis>エクスポート</emphasis> を実行する必要があります。 
+          またこの仕様は作業手順に応じた拡張が施されており、 元のファイルに
+          そのままの形式で上書きしたり他のファイル形式にエクスポートする作業も
+          簡単に行なえます。
         </para>
         <figure>
-          <title lang="en">Scrolling beyond border</title>
-          <title lang="ja">画像の外へスクロール</title>
+          <title lang="en">The new image workflow</title>
+          <title lang="ja">新しい画像の作業手順</title>
           <mediaobject>
             <imageobject>
               <imagedata format="PNG"
-                    fileref="images/using/scroll-beyond-border.png"/>
+                fileref="images/using/save-image-overwrite.png"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -134,102 +105,27 @@
     </varlistentry>
 
     <varlistentry>
-      <term lang="en">Minor changes</term>
-      <term lang="ja">小規模な変更</term>
-      <listitem>
-      <itemizedlist>
-        <listitem>
-          <para lang="en">
-            Renamed Dialogs menu to Windows.
-          </para>
-          <para lang="ja">
-            <guimenu>ダイアログ</guimenu> メニューは
-            <guimenu>ウィンドウ</guimenu> メニューに名前が変更されました。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            Keep a list of recently closed Docks and allow reopening them.
-          </para>
-          <para lang="ja">
-            最近閉じたドックのリストが保持され、 再び開くのが容易になりました。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            Make opening images in already running GIMP instances work better
-            on Windows.
-          </para>
-          <para lang="ja">
-            <productname>Windows</productname>環境で画像を開く際に、 既に
-            <acronym>GIMP</acronym>を実行していた場合の動作が改善されました。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            You can now enter the image zoom ratio directly in the status bar.
-          </para>
-          <para lang="ja">
-            画像ウィンドウのステータスバーで、 ズーム倍率を直接入力できるように
-            なりました。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            Added support for using online help instead of a locally
-            installed GIMP Help package.
-          </para>
-          <para lang="ja">
-            <acronym>GIMP</acronym>ヘルプシステムは インストール版のヘルプ
-            パッケージだけでなく、 オンライン版も利用できるようになりました。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            Make it possible to lock tabs in docks to prevent accidental
-            moving.
-          </para>
-          <para lang="ja">
-            ドック上でタブ化したダイアログを誤って消してしまわないための
-            ロック機能が付きました。
-          </para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-    </varlistentry>
-  </variablelist>
-
-  <variablelist>
-    <title lang="en">Tools, Filters and Plug-ins</title>
-    <title lang="ja">ツールとフィルターとプラグイン</title>
-    <varlistentry>
-      <term lang="en">Improved Free Select Tool</term>
-      <term lang="ja">自由選択ツールの改良</term>
+      <term lang="en">New image bar</term>
+      <term lang="ja">画像バーが新登場</term>
       <listitem>
         <para lang="en">
-          The freehand select tool has been enhanced to support polygonal
-          selections. It also allows mixing free hand segments with polygonal
-          segments, editing of existing segments, applying angle-constraints
-          to segments, and of course the normal selection tool operations
-          like add and subtract. Altogether this ends up making the Free
-          Select Tool a very versatile, powerful and easy-to-use selection
-          tool.
+          With the new single window mode comes a new useful image bar
+          that lets you switch easily between open images through the
+          means of a tab bar with the miniature of the images.
         </para>
         <para lang="ja">
-          これまでの手書き選択ツールが多角形選択が可能なツールに進化しました。
-          手書き曲線と線分を繋ぎあわせたり、 線分を編集したり、 限定方角で
-          線分を引いたりできるようになりましたが、 もちろん一般的な選択ツール
-          としての操作 (選択範囲の加減など) もできます。 これはつまり自由選択
-          ツールが極めて柔軟かつ強力な、 しかも使い易い選択ツールに発展したこと
-          を意味します。
+          新しく導入されたシングルウィンドウモードには、 現在開いている画像から
+          簡単に作業対象を切り替えできる便利な画像バーがつきました。 画像
+          それぞれのタブ爪に縮小見本画像が表示されますので、 タブバーと同じ
+          要領で活性画像を選択できます。
         </para>
         <figure>
-          <title lang="en">Polygonal Selection</title>
-          <title lang="ja">多角形選択</title>
+          <title lang="en">The new image bar</title>
+          <title lang="ja">新登場の画像バー</title>
           <mediaobject>
             <imageobject>
               <imagedata format="PNG"
-                fileref="images/using/new-free-select-tool.png"/>
+                fileref="images/using/multiple-image-tabs.png"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -237,57 +133,102 @@
     </varlistentry>
 
     <varlistentry>
-      <term lang="en">Brush Dynamics</term>
-      <term lang="ja">ブラシ感度の調整</term>
+      <term lang="en">New arrangement options</term>
+      <term lang="ja">新しい整理整頓機能</term>
       <listitem>
         <para lang="en">
-          Brush dynamics uses an input dynamic such as pressure, velocity, or
-          random, to modify brush parameters such as opacity, hardness, size,
-          or color; every brush supports size and opacity, most support more.
-          Velocity and random are usable with a mouse. The Ink tool, that
-          supported velocity, has been overhauled to better handle
-          velocity-dependent painting.
+          <acronym>GIMP</acronym> will make high resolution monitor
+          owners happy: now it is possible to arrange the dialogs one
+          over the other, in tabs and in colums too.
         </para>
         <para lang="ja">
-          ブラシ感度の調整オプションにより、 圧力や筆速や不規則変化のような
-          絶えず変化する入力情報を使って不透明度や硬さや大きさや色のような
-          ブラシにまつわる変数を操作できます。 すべてのブラシが大きさと
-          不透明度をサポートしていますし、 ほかの変数も多数のブラシが
-          サポートしています。 筆速や不規則変化はマウスにも有効です。 
-          インクツールは以前から筆速対応ができていましたが、 筆速に依存する
-          描画をもっとうまくこなせるように全面改修を行ないました。
+          高解像度モニターをご利用のユーザーに朗報です。
+          <acronym>GIMP</acronym>のダイアログは今度からタブ化と縦列連結に加え
+          横列連結もできるので整理が仕易くなりました。
         </para>
         <figure>
-          <title lang="en">Brush Dynamics</title>
-          <title lang="ja">ブラシ感度の調整</title>
+          <title lang="en">Multi column docks</title>
+          <title lang="ja">横重列ドック</title>
           <mediaobject>
             <imageobject>
-              <imagedata format="JPG"
-                fileref="images/using/brush-dynamics.jpg"/>
+              <imagedata format="PNG"
+                fileref="images/using/multi-column-docks.png"/>
             </imageobject>
           </mediaobject>
         </figure>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">New resources tags</term>
+      <term lang="ja">リソースタグが新登場</term>
+      <listitem>
         <para lang="en">
-          Brush dynamics have enabled a new feature in stroking paths. There
-          is now a check box under the <quote>paint tool</quote> option, for
-          emulating brush dynamics if you stroke using a paint tool. What this
-          means is that when your stroke is painted, GIMP tells
-          the brush that the pressure and velocity are varying along the
-          length of the stroke. Pressure starts with no pressure, ramps up to
-          full pressure, and then ramps down again to no pressure.
-          Velocity starts from zero and ramps up to full speed by the end of
-          the stroke.
+          <acronym>GIMP</acronym> Brushes, Gradients, Pattern and
+          Palettes can be filtered and searched via tags. Tags are
+          text labels that the user can assign to resources. With Tags
+          the user can easily find the resources by means of a input
+          text box. Tags can be manually assigned by the user with the
+          same input box used for search tags, or they can be
+          automatically tagged using the directory name of the
+          imported items.
         </para>
         <para lang="ja">
-          ブラシ感度の調整の機能がパスの境界線の描画に新機能として生かされて
-          います。 ダイアログでは描画ツールのオプションの下にブラシ感度の調整
-          を模倣するチェックボックスが加わり、 描画ツールを使用した境界線の
-          描画に活用できます。 つまり境界線の描画を実行すると
-          <acronym>GIMP</acronym>はあたかも筆圧や筆速が輪郭線の伸びに合わせて
-          変化しているようにブラシに伝えます。 筆圧は圧力無しから開始し、
-          最大圧力まで駆け上がって再び圧力無しまで減圧してゆきます。 筆速は 0
-          から加速を始め、 描線の終端で最大速となります。
+          <acronym>GIMP</acronym>のブラシやグラデーション、 パターン、 そして
+          パレットはタグによって仕分けたり絞り込んで検索したりできます。
+          タグとはこれら資材に自由に結び付けられる語句ラベルのことです。
+          タグを利用すればちょうど記入欄に語句を入力するだけの手軽さで資材を
+          見付け出せます。 タグづけはタグ検索用にも使う同じ記入欄を使って
+          手作業で行えるほか、 インポートする品目のディレクトリー名を利用して
+          自動化もできます。
         </para>
+        <figure>
+          <title lang="en">Resource tags</title>
+          <title lang="ja">資材のタグ</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/painting-resources-tags.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Simple math in size entries</term>
+      <term lang="ja">簡易数式を使った寸法記入</term>
+      <listitem>
+        <para lang="en">
+          Enhancements have also been made to the size entry widget,
+          which is used for inputting most of the x, y, width, height
+          parameters. For example, in the scale dialog it is now
+          possible to write <quote>50%</quote> in the Width field to
+          scale the image to 50% of the width. Expressions such as
+          <quote>30in + 40px</quote> and <quote>4 * 5.4in</quote>
+          work, too.
+        </para>
+        <para lang="ja">
+          主に X・Y・幅・高さのパラメータを入力するのに使われる寸法記入
+          ウィジェットにも改良が加えられました。 例えば、
+          <quote>拡大・縮小</quote>ダイアログで幅の記入欄に
+          <quote><userinput>50%</userinput></quote>と
+          書けば画像は元の幅の 50% に縮小できます。
+          <quote><userinput>30in&nbsp;+&nbsp;40px</userinput></quote>とか
+          <quote><userinput>4&nbsp;*&nbsp;5.4in</userinput></quote>などという
+          書式も使えます。 [<quote>*</quote>記号は積算記号<quote>×</quote>の
+          代用です。]
+        </para>
+        <figure>
+          <title lang="en">Math size entries</title>
+          <title lang="ja">数式寸法記入</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/math-size-entries.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
       </listitem>
     </varlistentry>
 
@@ -298,181 +239,168 @@
         <itemizedlist>
           <listitem>
             <para lang="en">
-              Added a bounding box for the Text Tool that supports automatic
-              wrapping of text within that bounding box.
+              The new <quote>Lock Pixels</quote> option in the layers
+              dialog can avoid undesired painting on a layer when
+              switching between them.
             </para>
             <para lang="ja">
-              テキストツールには囲み枠が加わり、 枠内の文字を自動改行させる
-              ことが可能になりました。
+              レイヤーダイアログに新しく
+              <guilabel>すべてのピクセルを保護</guilabel> オプションが加わり、
+              レイヤーを切り替えたときレイヤーの不意の描画を防止します。
             </para>
             <figure>
-              <title lang="en">Text tool bounding box</title>
-              <title lang="ja">テキストツールの囲み枠</title>
+              <title lang="en">The new Lock Pixels option</title>
+              <title lang="ja">
+                新登場の<quote>すべてのピクセルを保護</quote>オプション
+              </title>
               <mediaobject>
                 <imageobject>
                   <imagedata format="PNG"
-                    fileref="images/using/text-tool.png"/>
+                    fileref="images/using/image-lock-pixels.png"/>
                 </imageobject>
               </mediaobject>
             </figure>
           </listitem>
           <listitem>
             <para lang="en">
-              Move handles for rectangle based tools like Crop and Rectangle
-              Select to the outside of the rectangle when the rectangle is
-              narrow.
+              Now is possible to move between images in single and multi
+              windows mode using the shortcuts
+              <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>
+              or
+              <keycombo><keycap>Alt</keycap><keycap>Number</keycap></keycombo>.
             </para>
             <para lang="ja">
-              矩形の枠が基本になっている切り抜きツールや矩形選択ツールと同じ
-              ように、 枠が小さいときは加工ハンドルが枠外に現れる。
-            </para>
-            <figure>
-              <title lang="en">Rectangle handles</title>
-              <title lang="ja">矩形枠のハンドル</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-                    fileref="images/using/rectangle-handles.png"/>
-                </imageobject>
-              </mediaobject>
-            </figure>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Added motion constraints to the Move Tool.
-            </para>
-            <para lang="ja">
-              移動ツールに限定動作のオプションを追加。
+              シングルウィンドウモードでの画像切り替えにショートカット
+              <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>
+              キーや
+              <keycombo><keycap>Alt</keycap><keycap>数字</keycap></keycombo>
+              キーが使えます。
             </para>
           </listitem>
           <listitem>
             <para lang="en">
-              Improved event smoothing for paint tools.
+              Add support for F2 to rename items in lists.
             </para>
             <para lang="ja">
-              描画ツールでのイベント平滑化改善。
+              一覧表内の項目名変更にショートカット <keycap>F2</keycap> キーが
+              利用可能に。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Since the keyboard shortcuts
+              <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>
+              and
+              <keycombo>
+                <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>E</keycap>
+              </keycombo>
+              have been repurposed for the image export mechanisms, new
+              keyboard shortcuts have been setup for <quote>Shrink
+              Wrap</quote> and <quote>Fit in Window</quote>, namely
+              <keycombo><keycap>Ctrl</keycap><keycap>J</keycap></keycombo>
+              and
+              <keycombo>
+                <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>J</keycap>
+              </keycombo>
+              respectively.
+            </para>
+            <para lang="ja">
+              画像エクスポート動作用に
+              <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>
+              と
+              <keycombo>
+                <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>E</keycap>
+              </keycombo>
+              の両キーボードショートカットを割り当てたため、
+              <guimenuitem>ウィンドウサイズを合わせる</guimenuitem> と
+              <guimenuitem>ウィンドウ内に全体を表示</guimenuitem> の各コマンド
+              には、 新たに別のキーボードショートカットすなわち
+              <keycombo><keycap>Ctrl</keycap><keycap>J</keycap></keycombo>
+              と
+              <keycombo>
+                <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>J</keycap>
+              </keycombo>
+              がそれぞれ割り当てられました。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added
+              <menuchoice><guimenu>Windows</guimenu><guimenuitem>Hide
+              docks</guimenuitem></menuchoice> menu item that does what
+              <quote>Tab</quote> does and also displays its state, which
+              is now persistent across sessions, too.
+            </para>
+            <para lang="ja">
+              <guimenu>ウィンドウ</guimenu> メニューに
+              <guimenuitem>ドックを隠す</guimenuitem> を新設しこれまで
+              <keycap>Tab</keycap> キーで行なったのと同じ動作をさせます。 また
+              そこで現在の状態を表示します。 この設定も保存され、 次の
+              セッションに引き継がれます。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              The layer modes have been rearranged into more logical and
+              useful groups based on the effect they have on compositing
+              of a layer. Layer modes that make the composite lighter
+              are in one group, layer modes that make the composite
+              darker in another group, and so forth.
+            </para>
+            <para lang="ja">
+              レイヤーモードの分類は、 レイヤーに及ぼす合成の種類に基づく順当で
+              使い易い並びに再度編成しなおしました。 明るくなる合成のレイヤー
+              モードでひとつのグループを成し、 暗くなる合成のレイヤーモードが
+              もう一方のグループとなる、 などというふうにしてあります。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Allow closing the toolbox without closing the whole
+              application.
+            </para>
+            <para lang="ja">
+              アプリケーションを終了させずにツールボックスが閉じられるように
+              しました。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Removed Toolbox from list of Recently Closed Docks, handle that
+              directly in the Windows menu. 
+            </para>
+            <para lang="ja">
+              <quote>最近閉じたドック</quote>のリストにツールボックスが入らない
+              ようにし、 ウィンドウメニューから直接操作するものとします。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              New docks are created at the pointer position. 
+            </para>
+            <para lang="ja">
+              新たに作ったドックはポインターのある場所に現れます。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Allow binding arbitrary actions to extra mouse buttons.
+            </para>
+            <para lang="ja">
+              拡張マウスボタンにもあらゆるアクションが結び付けられます。
             </para>
           </listitem>
           <listitem>
-            <para lang="en">
-              Mark the center of rectangles while they are moved, and snap
-              the center to grid and rulers.
+            <para>
+              .
             </para>
-            <para lang="ja">
-              矩形枠の中央点が移動時に図示され、 ガイドや定規に近づくと吸着。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Enable brush scaling for the Smudge tool.
-            </para>
-            <para lang="ja">
-              にじみツールでブラシの拡大・縮小が可能に。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Added ability to save presets in all color tools for color
-              adjustments you use frequently.
-            </para>
-            <para lang="ja">
-              色ツールによく使う色調整が保存できるプリセット機能を追加。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Allow to transfer settings from <emphasis>Brightness-Contrast
-              </emphasis> to <emphasis>Levels</emphasis>, and from
-              <emphasis>Levels</emphasis> to <emphasis>Curves</emphasis>.
-            </para>
-            <para lang="ja">
-              <emphasis>明るさ-コントラスト</emphasis> ツールから 
-              <emphasis>レベル</emphasis> ツールへ、 あるいは 
-              <emphasis>レベル</emphasis> ツールから 
-              <emphasis>トーンカーブ</emphasis> ツールへの設定内容の
-              受け渡しが可能になりました。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Allow changing opacity on transform tool previews.
-            </para>
-            <para lang="ja">
-              変換ツールのプレビュー機能の透明度が変更可能に。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              The Screenshot plug-in has been given the ability to capture
-              the mouse cursor (using Xfixes).
-            </para>
-            <para lang="ja">
-              スクリーンショットプラグインが新たにマウスカーソルを含めた
-              取り込みも可能に (Xfixes が必要です)。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Display aspect ratio of the Crop and Rectangle Select Tool
-              rectangles in the status bar.
-            </para>
-            <para lang="ja">
-              切り抜きツールや矩形選択ツールの矩形枠の縦横比をステイタスバーに
-              表示。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Desaturate has been given an on-canvas preview.
-            </para>
-            <para lang="ja">
-              脱色ツールにプレビュー機能を追加。 キャンバス上で見られる。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              The Flame plug-in has been extended with 22 new variations.
-            </para>
-            <para lang="ja">炎プラグインが 22 の変種に発展。</para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Data file folders like brush folders are searched recursively
-              for files.
-            </para>
-            <para lang="ja">
-              ブラシフォルダーなどのデータディレクトリ内を再帰的にファイル検索。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Replaced the PSD import plug-in with a rewritten version that
-              does what the old version did plus some other things, for
-              example reading of ICC color profiles.
-            </para>
-            <para lang="ja">
-              <acronym>PSD</acronym>形式のファイル転換読み込みプラグインは
-              書き直された新版を採用し、 新たに<acronym>ICC</acronym>色
-              プロファイルが読み込めるようになるなどいくつかの機能が増えた。
-            </para>
-          </listitem>
-          <listitem>
-            <para lang="en">
-              Several displays use Cairo library.
-            </para>
-            <para lang="ja">
-              いくつかの画像表示に Cairo ライブラリーを使用。
-            </para>
-            <figure id="gimp-cairo-2-4-vs-2-6">
-              <title lang="en">Comparing 2.6 display vs 2.4</title>
-              <title lang="ja">2.6 と 2.4 の表示の比較</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata format="PNG"
-              fileref="images/using/gimp-curves-tool-2-4-vs-2-6.png"/>
-                </imageobject>
-              </mediaobject>
-            </figure>
           </listitem>
         </itemizedlist>
       </listitem>
@@ -480,60 +408,121 @@
   </variablelist>
 
   <variablelist>
-    <title lang="en">Under the Hood</title>
-    <title lang="ja">手の内</title>
+    <title lang="en">Tools, Filters and Plug-ins</title>
+    <title lang="ja">ツールとフィルターとプラグイン</title>
+
     <varlistentry>
-      <term>GEGL</term>
+      <term lang="en">A new tool: Cage Transform</term>
+      <term lang="ja">新ツール: ケージ変形</term>
       <listitem>
         <para lang="en">
-          Important progress towards high bit-depth and non-destructive
-          editing in GIMP has been made. Most color operations in GIMP are
-          now ported to the powerful graph based image processing framework
-          GEGL <xref linkend="bibliography-online-gegl"/>, meaning that the
-          internal processing is done in 32bit floating point linear
-          light RGBA. By default the legacy 8bit code paths are still used,
-          but a curious user can turn on the use of GEGL for the color
-          operations with <link linkend="gimp-config-use-gegl">Colors / Use
-          GEGL</link>.
-        </para>
-        <para lang="en">
-          In addition to porting color operations to GEGL, an experimental
-          GEGL Operation tool has been added, found in the Tools menu. It
-          enables applying GEGL operations to an image and it gives on-canvas
-          previews of the results. The screenshot below shows this
-          for a Gaussian Blur.
+          With this new tool is now possible to create custom bending
+          of a selection just moving its vector frame control points.
         </para>
         <para lang="ja">
-          高いビット深度と非破壊編集への道に<acronym>GIMP</acronym>は重要な
-          一歩を踏み出しました。 <acronym>GIMP</acronym>で行なえるほとんどの
-          色操作が、 グラフ形式のデータ構造からなる強力な画像処理フレームワーク
-          である<acronym>GEGL</acronym>
-          <xref linkend="bibliography-online-gegl"/> にも移植されました。 この
-          ことは内部処理に軽量<acronym>RGBA</acronym>上で 32 ビット浮動小数点
-          線形演算が使えることを意味しています。 初期設定では今までどおり旧来の
-          8 ビットコードによる内部伝達を行いますが、 <acronym>GEGL</acronym>に
-          よる色操作にご興味を持たれた方は画像ウィンドウの<quote>色</quote>
-          メニューで 
-          <link linkend="gimp-config-use-gegl">GEGL を使用</link> (現
-          <quote>GEGL の利用</quote>) にチェックを入れてみてください。
-        </para>
-        <para lang="ja">
-          <acronym>GEGL</acronym>に色操作を移植したことに加え、 試験的に
-          <acronym>GEGL</acronym>操作ツールが作られ、 ツールメニュー上に加わり
-          ました。 画像に<acronym>GEGL</acronym>による処理が適用でき、 その結果
-          をキャンバス上でプレビューする機能もあります。 下図はガウシアンぼかし
-          をかけたときのスクリーンショットです。
+          この新しいツールを使用すれば選択した図画をまるでベクトル式フレームの
+          制御点を操作するかのように思い通りに曲げ加工ができます。
         </para>
         <figure>
-          <title lang="en">GEGL operation</title>
-          <title lang="ja">GEGL 操作</title>
+          <title lang="en">Cage Transform</title>
+          <title lang="ja">ケージ変形</title>
           <mediaobject>
             <imageobject>
               <imagedata format="PNG"
-                fileref="images/using/2.6-experimental-gegl-tool.png"/>
+                fileref="images/using/new-cage-tool.png"/>
             </imageobject>
           </mediaobject>
-            </figure>
+        </figure>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Improved Text Tool</term>
+      <term lang="ja">改良テキストツール</term>
+      <listitem>
+        <para lang="en">
+          The text tool has been enhanced to support in-place text
+          writing and the possibility to change the single char
+          attributes.
+        </para>
+        <para lang="ja">
+          テキストツールは画像に書き込むまさにその位置で編集する方式になった
+          ほか、 1 文字づつ変化をつけられるようになるなど強化されました。
+        </para>
+        <figure>
+          <title lang="en">Improved text tool</title>
+          <title lang="ja">改良テキストツール</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/improved-text-tool.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">New layer groups</term>
+      <term lang="ja">レイヤーグループが新登場</term>
+      <listitem>
+        <para lang="en">
+          It is now possible to group set of layers and treat them
+          like a entity. It is possible to switch a group on or off an
+  ---     like an entity. It is possible to switch a group on or off
+          to move the group in the layers dialog. It is easy to add /
+          remove existings layers to a group or to create / delete a
+          layer inside the group and it is even possible to create
+          nested groups of groups. To a group is possible apply a
+          layer mode as it was with a single layer. All this greatly
+          improve the workflow with complex multilayer images making
+          them easier to manage.
+        </para>
+        <para lang="ja">
+          とうとうレイヤーはまとめてグループ仕分けが可能となり、 グループも
+          レイヤーの一形態として扱えるようになりました。 グループ化と解除が
+          できるので、 グループをレイヤーダイアログ上で移動するときに切り替えて
+          活用できます。 既存のレイヤーをグループに入れたり脱したりでき、
+          グループ内でレイヤーの生成・削除も可能ですし、 グループ内にグループを
+          入れ子にする編成もできます。 レイヤーモードはグループに対しても
+          単独のレイヤーと同じように適用できます。 どれもレイヤーを多く使う
+          複雑な画像の加工を劇的に簡単にし、 作業工程に大変革をもたらします。
+        </para>
+        <figure>
+          <title lang="en">New layer groups</title>
+          <title lang="ja">レイヤーグループが新登場</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/image-layer-groups.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Rotating brushes</term>
+      <term lang="ja">ブラシ回転</term>
+      <listitem>
+        <para lang="en">
+          Brushes can now be rotated at will, acting on the brush
+          option <quote>Angle</quote>.
+        </para>
+        <para lang="ja">
+          ブラシに新たに追加された <guilabel>角度</guilabel> オプションを使えば
+          思い通りにブラシを回転できます。
+        </para>
+        <figure>
+          <title lang="en">Rotating brushes</title>
+          <title lang="ja">ブラシ回転</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/rotating-brushes.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
       </listitem>
     </varlistentry>
 
@@ -541,122 +530,209 @@
       <term lang="en">Minor changes</term>
       <term lang="ja">小規模な変更</term>
       <listitem>
-        <para lang="en">
-          Ported many widgets to use the 2D graphics library cairo
-          <xref linkend="bibliography-online-cairo"/> for drawing. See this
-          <link linkend="gimp-cairo-2-4-vs-2-6">comparison</link> for an
-          example of how much better this looks.
-        </para>
-        <para lang="ja">
-          多くのウィジェットが 2 次元画像ライブラリー Cairo 
-          <xref linkend="bibliography-online-cairo"/> を使った描画方式に
-          移植されました。 見た目にどんな変化が起きたかを上図の 
-          <link linkend="gimp-cairo-2-4-vs-2-6">比較例</link> でご覧ください。
-        </para>
+        <itemizedlist>
+          <listitem>
+            <para lang="en">
+              The default Quick Mask color is now configurable.
+            </para>
+            <para lang="ja">
+              クイックマスクの既定色が設定変更可能になりました。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              The text tool improved the RTL mode.
+            </para>
+            <para lang="ja">
+              テキストツールの右から左へ書くモードが改良されました。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              A Cairo based PDF exporter was implemented. While being
+              somewhat simplistic the exporter saves text, embedding
+              fonts into the final PDF file, and attempts to convert
+              all flat filled areas to vector objects.
+            </para>
+            <para lang="ja">
+              Cairo を利用した<acronym>PDF</acronym>エクスポート機能が実装され
+              ました。 多少割り切った方法ながら、 テキストを保存し、 最終的な
+              <acronym>PDF</acronym>ファイルにフォントを埋め込み、 平坦な領域が
+              続く部分をすべてベクトルオブジェクト化変化ができないか試します。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              Added support arbitrary affine transforms of brushes.
+            </para>
+            <para lang="ja">
+              ブラシの任意なアッフィン系変形をサポート。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added plug-in for loading JPEG2000 images. 
+            </para>
+            <para lang="ja">
+              JPEG2000 形式の画像を読み込むプラグインを追加。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added plug-ins for X11 Mouse Cursor import and export support.
+            </para>
+            <para lang="ja">
+              X11 マウスカーソル形式のインポートとエクスポートをサポートする
+              プラグインを追加。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added fundamental OpenRaster (.ora) import and export support.
+            </para>
+            <para lang="ja">
+              OpenRaster <filename class="extension">.ora</filename> 形式の
+              基本的なインポートとエクスポートのサポート。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added RGB565 support to the csource plug-in.
+            </para>
+            <para lang="ja">
+              c ソースプラグインに RGB565 のサポートを追加。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              A Web-page plug-in was added to render any web page into an
+              image using Webkit.
+            </para>
+            <para lang="ja">
+              WebKit を利用してどんなウェブページでも画像化してしまうウェブ
+              ページプラグインが追加されました。
+            </para>
+          </listitem>
+        </itemizedlist>
       </listitem>
     </varlistentry>
+
   </variablelist>
 
   <variablelist>
-    <title lang="en">Miscellaneous</title>
-    <title lang="ja">雑載</title>
+    <title lang="en">Under the Hood</title>
+    <title lang="ja">手の内</title>
+
     <varlistentry>
-      <term lang="en">Plug-in Development</term>
-      <term lang="ja">プラグイン開発</term>
+      <term><acronym>GEGL</acronym></term>
       <listitem>
         <para lang="en">
-          There are new things for a plug-in developer to enjoy as well.
-          For example, procedures can now give a detailed error
-          description in case of an error, and the error can be propagated
-          to the user.
+          The porting of the <acronym>GIMP</acronym> core towards the
+          new high bit-depth and non-destructive editing GEGL <xref
+          linkend="bibliography-online-gegl"/> library has done big
+          steps and now more than 90% of the task is already finished.
         </para>
         <para lang="en">
-          GIMP 2.6 also further enhances its scripting abilities. In
-          particular there is now a much richer API for the creation and
-          manipulation of text layers. Here is a list of new symbols in GIMP
-          2.6: <xref linkend="bibliography-online-gimp-dev-new"/>.
+          In addition to porting color operations to
+          <acronym>GEGL</acronym>, an experimental GEGL Operation tool
+          has been added, found in the Tools menu. It enables applying
+          <acronym>GEGL</acronym> operations to an image and it gives
+          on-canvas previews of the results. The screenshot below
+          shows this for a Gaussian Blur.
         </para>
         <para lang="ja">
-          プラグイン開発を楽しくするための新しいものがあります。 例えばエラーが
-          起きたときにプロシージャーが示すエラーの説明はより詳しくなりました。 
-          またそのエラーをユーザーに伝えることも可能です。
+          高ビット深度で非破壊編集を行う新しい<acronym>GEGL</acronym>
+          ライブラリー
+          <xref linkend="bibliography-online-gegl"/> に<acronym>GIMP</acronym>
+          中枢部を移植する作業が大きな進展を果たし、 すでに 90% 以上の工程を
+          逐えました。
         </para>
         <para lang="ja">
-          <application><acronym>GIMP</acronym> 2.6</application> はスクリプト
-          機能も更に強化されました。 特にテキストレイヤーの操作と作成の
-          <acronym>API</acronym>は格段に豊富なものとなりました。 
-          <application><acronym>GIMP</acronym> 2.6</application> で新しくなった
-          シンボルのリストがあります
-          <xref linkend="bibliography-online-gimp-dev-new"/>。
+          色処理が<acronym>GEGL</acronym>に移植されたのに加え、 試作版
+          <acronym>GEGL</acronym>操作ツールが追加され、 ツールメニューより
+          利用できます。 これを使えば<acronym>GEGL</acronym>操作を画像に適用
+          できるうえキャンバス上プレビューにより作業中でも仕上りを確認できます。
+          下図はガウスぼかしの様子です。
         </para>
+        <figure>
+          <title lang="en"><acronym>GEGL</acronym> operation</title>
+          <title lang="ja"><acronym>GEGL</acronym>操作</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/experimental-gegl-tool.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
       </listitem>
+
     </varlistentry>
 
     <varlistentry>
-      <term lang="en">Backwards Compatibility</term>
-      <term lang="ja">後方互換性</term>
+
+      <term lang="en">Cairo porting</term>
+      <term lang="ja">Cairo 移植</term>
       <listitem>
         <para lang="en">
-          Some old scripts could not be used with GIMP-2.4. This has been
-          improved and 2.6 should run 2.0 and 2.2 scripts.
+          Started with <acronym>GIMP</acronym> version 2.6, it is now
+          completed the port to <xref
+          linkend="bibliography-online-cairo"/> of all tools rendering
+          on canvas. It provide smooth antialiased graphics and update
+          the <acronym>GIMP</acronym> look &amp; feel. All but a few
+          plug-ins have been upgraded to Cairo as well. Additionally
+          all tools now use an on-canvas progress indicator instead of
+          the one in the statusbar.
         </para>
         <para lang="ja">
-        古いスクリプトの一部が <application><acronym>GIMP</acronym>
-        2.4</application> で使用できませんでした。 この問題は
-        <application><acronym>GIMP</acronym> 2.6</application> で改善され
-        2.0 や 2.2 用のスクリプトも動作します。
+          <application><acronym>GIMP</acronym>&nbsp;2.6</application> より
+          開始された Cairo
+          <xref linkend="bibliography-online-cairo"/> 化移植が完了し、 すべての
+          ツールがキャンバス上で描出されるようになりました。 これで画面上の
+          <acronym>GIMP</acronym>の部品はなめらかにアンチエイリアス化して
+          表示され見た目が良くなりました。 しかもどのツールも進捗表示が
+          ツールバーではなくキャンバス上で表示されるようになりました。
         </para>
+        <figure>
+          <title lang="en">Progress indicator</title>
+          <title lang="ja">進捗表示</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                fileref="images/using/cairo-progress-indicator.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
       </listitem>
+
     </varlistentry>
 
-    <varlistentry>
-      <term lang="en">Known Problems</term>
-      <term lang="ja">既知の問題</term>
-      <listitem>
-      <itemizedlist>
-        <listitem>
-          <para lang="en">
-            The Utility window hint is currently only known to work well in
-            the Linux GNOME desktop environment and on Windows starting with
-            GIMP 2.6.1.
-          </para>
-          <para lang="ja">
-            補助ウィンドウのヒント機構は現在[2.6.0]のところ 
-            <productname>Linux</productname> <acronym>GNOME</acronym> 
-            デスクトップ環境でのみ動作することがわかっており、 
-            <productname>Windows</productname>対応は
-            <application><acronym>GIMP</acronym> 2.6.1</application> 
-            からになります。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            Using the Text Tool is currently not an optimal experience.
-            Making it work better is a goal for GIMP 2.8.
-          </para>
-          <para lang="ja">
-            テキストツールの使い勝手はまだ最適化への運用が足りません。
-            より良くなる時期は <application><acronym>GIMP</acronym>
-            2.8</application> を目標にしています。
-          </para>
-        </listitem>
-        <listitem>
-          <para lang="en">
-            If you build GIMP yourself and don't have GVfs support on your
-            platform you need to explicitly pass
-            <option>--without-gvfs</option> to <command>configure</command>,
-            otherwise opening remote files will not work properly.
-          </para>
-          <para lang="ja">
-            <application>GVfs</application>のサポートがないシステムで
-            <acronym>GIMP</acronym>を自己ビルドされるときは 
-            <command>configure</command> に <option>--without-gvfs</option> 
-            を明示する必要があります。
-            これがないと遠隔ファイルを開く動作が適切に行なわれません。
-          </para>
-        </listitem>
-      </itemizedlist>
-    </listitem>
-    </varlistentry>
   </variablelist>
+
+  <variablelist>
+
+    <title lang="en">Miscellaneous</title>
+    <title lang="ja">進捗表示</title>
+
+    <varlistentry>
+      <term>.</term>
+      <listitem>
+        <para lang="en">
+          The GIMP license has been changed to (L)GPLv3+.
+        </para>
+        <para lang="ja">
+          <acronym>GIMP</acronym>のライセンスが (L)GPLv3+ に変更されました。
+        </para>
+        <para>
+	      .
+        </para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
 </sect1>

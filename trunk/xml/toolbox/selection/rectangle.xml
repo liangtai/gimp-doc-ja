@@ -12,7 +12,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   050517 de reviewed by axel.wernicke
 -->
-<!--2012-03-25-->
+<!--2012-05-07-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-rect-select">
   <title lang="en">Rectangle Selection</title>
   <title lang="ja">矩形選択</title>
@@ -541,7 +541,7 @@
             </varlistentry>
             <varlistentry>
               <term lang="en">Size</term>
-              <term lang="ja">大きさ</term>
+              <term lang="ja">サイズ</term>
               <listitem>
                 <para lang="en">
                   With this choice you can fix the width and height of the
@@ -557,18 +557,35 @@
       </varlistentry>
 
       <varlistentry>
-        <term lang="en">X; Y; Width; Height</term>
-        <term lang="ja">X; Y; 幅; 高さ</term>
+        <term lang="en">Position</term>
+        <term lang="ja">左上角の座標</term>
         <listitem>
           <para lang="en">
-            These four text fields contain the current place and size of the
-            selection. You can use these fields to adjust size and place of
-            the selection by numbers.
+            These two text fields contain the current horizontal and vertical
+            coordinates of the upper left corner of the selection. You can use
+            these fields to adjust the selection position precisely.
           </para>
           <para lang="ja">
-            これら 4 つの記入欄の数値は現在の選択範囲の位置と大きさに
-            基づいています。 ここに数値を記入することにより選択範囲の位置と
-            大きさを指定できます。
+            これら 2 つの記入欄の数値は現在の選択範囲の左上角の座標の
+            水平方向および垂直方向の各成分に基づいています。 
+            ここに数値を記入することにより選択範囲の位置を精密に指定できます。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Size</term>
+        <term lang="ja">サイズ</term>
+        <listitem>
+          <para lang="en">
+            These two text fields contain the current width and height of the
+            the selection. You can use these fields to adjust the selection
+            size precisely.
+          </para>
+          <para lang="ja">
+            これら 2 つの記入欄の数値は現在の選択範囲の幅と高さに
+            基づいています。 
+            ここに数値を記入することにより選択範囲の大きさを精密に指定できます。
           </para>
         </listitem>
       </varlistentry>
@@ -588,7 +605,7 @@
         </listitem>
       </varlistentry>
 
-      <varlistentry>
+      <varlistentry id="composition-guides">
         <term lang="en">Guides</term>
         <term lang="ja">ガイド (見当線)</term>
         <listitem>
@@ -596,11 +613,17 @@
             <primary>Guides</primary>
             <secondary>Selection guides</secondary>
           </indexterm>
+          <indexterm lang="en">
+            <primary>Composition guides</primary>
+          </indexterm>
           <indexterm lang="ja">
             <primary sortas="ガイド (ケントウセン)">ガイド (見当線)</primary>
             <secondary sortas="センタクハンイナイヲブンカツスルケントウセン">
               選択範囲内を分割するガイド
             </secondary>
+          </indexterm>
+          <indexterm lang="ja">
+            <primary sortas="コウヅガイド">構図ガイド</primary>
           </indexterm>
           <para lang="en">
             With this menu you can select the type of guides that is shown
@@ -612,58 +635,76 @@
             ガイドが現れますので、 選択範囲の <emphasis>写真の構図法</emphasis>
             に凖じた構図が作りやすくなります。
           </para>
-          <variablelist>
-            <varlistentry>
-              <term lang="en">No Guides</term>
-              <term lang="ja">ガイドなし</term>
+          <para lang="en">
+            Six options are available:
+            <itemizedlist>
               <listitem>
-                <para lang="en">
-                  No guides are shown at all.
-                </para>
-                <para lang="ja">ガイドは表示されません。</para>
-              </listitem>
-            </varlistentry>
-
-            <varlistentry>
-              <term lang="en">Center lines</term>
-              <term lang="ja">センターライン</term>
-              <listitem>
-                <para lang="en">
-                  Only center lines are shown as guides within the selected
-                  area.
-                </para>
-                <para lang="ja">
-                  選択範囲の縦横の中心にガイドが引かれます。
+                <para>
+                  <guilabel>No Guides</guilabel>
                 </para>
               </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Rule of thirds</term>
-              <term lang="ja">三分割法</term>
               <listitem>
-                <para lang="en">
-                  Guides are shown along the rule of thirds while creating the
-                  selection.
-                </para>
-                <para lang="ja">
-                  選択範囲を 3&times;3 等分するようにガイドが引かれます。
+                <para>
+                  <guilabel>Center lines</guilabel>
                 </para>
               </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Golden sections</term>
-              <term lang="ja">黄金分割</term>
               <listitem>
-                <para lang="en">
-                  With this option, guides show up to mark the golden
-                  sections.
-                </para>
-                <para lang="ja">
-                  このオプションではガイドが黄金分割を示します。
+                <para>
+                  <guilabel>Rule of thirds</guilabel>
                 </para>
               </listitem>
-            </varlistentry>
-          </variablelist>
+              <listitem>
+                <para>
+                  <guilabel>Rule of fifths</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>Golden sections</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>Diagonal lines</guilabel>
+                </para>
+              </listitem>
+            </itemizedlist>
+          </para>
+          <para lang="ja">
+            オプションは 6 種類あります。
+            <itemizedlist>
+              <listitem>
+                <para>
+                  <guilabel>表示しない</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>センターライン</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>三分割法</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>五分割法</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>黄金分割</guilabel>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <guilabel>対角線構図</guilabel>
+                </para>
+              </listitem>
+            </itemizedlist>
+          </para>
         </listitem>
       </varlistentry>
 
