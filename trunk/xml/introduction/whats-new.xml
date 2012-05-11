@@ -2,7 +2,7 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <sect1 id="gimp-introduction-whats-new">
-<!--2012-05-06-->
+<!--2012-05-08-->
   <title lang="en">What's New in GIMP 2.8? </title>
   <title lang="ja">
     <application><acronym>GIMP</acronym> 2.8</application> の新機能
@@ -289,6 +289,42 @@
 
           <listitem>
             <para lang="en">
+              You can now
+              <keycombo><keycap>Alt</keycap><keycap>Click</keycap></keycombo>
+              on layers in the Layers dialog to create a selection from
+              it. Add, subtract and intersect modifiers
+              <keycap>Click</keycap>, <keycap>Shift</keycap> and
+              <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap></keycombo>
+              keys work too. This makes it easy to compose contents of a
+              layer based on the contents of other layers, without
+              detours.
+            </para>
+            <para lang="ja">
+              <keycap>Alt</keycap> キーを押しながらレイヤーダイアログ上で
+              レイヤーをクリックすればレイヤーの不透明部分に基づいて選択範囲が
+              作成できるようになりました。 既存の選択範囲に
+              <quote>追加統合</quote>するには
+              <keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo>
+              キーを押しながら、 <quote>共通部分</quote>を得るには
+              <keycombo>
+                <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Alt</keycap>
+              </keycombo>
+              キーを押しながら同様に行ないます。 <footnote>
+                <para>
+                  一部のシステムやウィンドウマネージャーにおいて、
+                  <keycap>Alt</keycap> キーだけ押してクリックする方法では
+                  選択範囲が<quote>作成</quote>できない場合がありますが、 
+                  <quote>追加統合</quote>の方法で代用できます。 しかしつまり
+                  その環境ではレイヤーダイアログに<quote>作成し置換</quote>の
+                  ショートカットが存在しません。
+                </para>
+              </footnote> このようなバイパス的な操作方法で他のレイヤーの内容を
+              基に手軽にレイヤーの内容を編成できます。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
               Since the keyboard shortcuts
               <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>
               and
@@ -371,8 +407,8 @@
 
           <listitem>
             <para lang="en">
-              Removed Toolbox from list of Recently Closed Docks, handle that
-              directly in the Windows menu. 
+              Removed Toolbox from list of Recently Closed Docks, handle
+              that directly in the Windows menu. 
             </para>
             <para lang="ja">
               <quote>最近閉じたドック</quote>のリストにツールボックスが入らない
@@ -397,11 +433,18 @@
               拡張マウスボタンにもあらゆるアクションが結び付けられます。
             </para>
           </listitem>
+
           <listitem>
-            <para>
-              .
+            <para lang="en">
+              Now it is possible to change the application language
+              directly from the preference menu.
+            </para>
+            <para lang="ja">
+              アプリケーションの言語設定が直に<quote>設定</quote>ダイアログ上で
+              行なえるようになりました。
             </para>
           </listitem>
+
         </itemizedlist>
       </listitem>
     </varlistentry>
@@ -418,10 +461,13 @@
         <para lang="en">
           With this new tool is now possible to create custom bending
           of a selection just moving its vector frame control points.
+          This is the result of one of our Google Summer of Code 2010
+          students.
         </para>
         <para lang="ja">
           この新しいツールを使用すれば選択した図画をまるでベクトル式フレームの
-          制御点を操作するかのように思い通りに曲げ加工ができます。
+          制御点を操作するかのように思い通りに曲げ加工ができます。 この機能は
+          Google Summer of Code 2010 に参加した学生たちの功績です。
         </para>
         <figure>
           <title lang="en">Cage Transform</title>
@@ -539,6 +585,7 @@
               クイックマスクの既定色が設定変更可能になりました。
             </para>
           </listitem>
+
           <listitem>
             <para lang="en">
               The text tool improved the RTL mode.
@@ -547,6 +594,38 @@
               テキストツールの右から左へ書くモードが改良されました。
             </para>
           </listitem>
+
+          <listitem>
+            <para lang="en">
+              Allow specifying the written language in the Text
+              Tool. This helps with choosing an appropriate font, or
+              appropriate glyphs for the selected language.
+            </para>
+            <para lang="ja">
+              テキストツール内で文字の言語が指定できます。 この機能は、 指定した
+              言語に合った適切なフォントと適切なグリフが選択されるのを助けます。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added optional diagonal guides to the crop tool.
+            </para>
+            <para lang="ja">
+              切り抜きツールで対角線のガイドが利用できるようになりました。
+            </para>
+          </listitem>
+
+          <listitem>
+            <para lang="en">
+              Added <quote>Rule of fifths</quote> crop guide overlay.
+            </para>
+            <para lang="ja">
+              <quote>五分割法</quote>切り抜きガイドがオーバーレイできるように
+              なりました。
+            </para>
+          </listitem>
+
           <listitem>
             <para lang="en">
               A Cairo based PDF exporter was implemented. While being
@@ -561,6 +640,7 @@
               続く部分をすべてベクトルオブジェクト化変化ができないか試します。
             </para>
           </listitem>
+
           <listitem>
             <para lang="en">
               Added support arbitrary affine transforms of brushes.
@@ -610,8 +690,8 @@
 
           <listitem>
             <para lang="en">
-              A Web-page plug-in was added to render any web page into an
-              image using Webkit.
+              A Web-page plug-in was added to render any web page into
+              an image using Webkit.
             </para>
             <para lang="ja">
               WebKit を利用してどんなウェブページでも画像化してしまうウェブ
@@ -716,10 +796,11 @@
   <variablelist>
 
     <title lang="en">Miscellaneous</title>
-    <title lang="ja">進捗表示</title>
+    <title lang="ja">雑載</title>
 
     <varlistentry>
-      <term>.</term>
+      <term lang="en">License change</term>
+      <term lang="ja">使用許諾規定の変更</term>
       <listitem>
         <para lang="en">
           The GIMP license has been changed to (L)GPLv3+.
@@ -727,8 +808,82 @@
         <para lang="ja">
           <acronym>GIMP</acronym>のライセンスが (L)GPLv3+ に変更されました。
         </para>
-        <para>
-	      .
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">New script API</term>
+      <term lang="ja">新しいスクリプト<acronym>API</acronym></term>
+      
+      <listitem>
+       <itemizedlist>
+         <listitem>
+           <para lang="en">
+              A lot of GIMP APIs have been refactored to simplify
+              developing new scripts.
+            </para>
+            <para lang="ja">
+              数々の<acronym>GIMP</acronym>&nbsp;<acronym>API</acronym>が、
+              もっと簡単に新しいスクリプトを書けるようにリファクタリング
+              されました。
+            </para>
+          </listitem>
+          <listitem>
+            <para lang="en">
+              To further enhances its scripting abilities, have been made
+              API changes to support layer groups.
+            </para>
+            <para lang="ja">
+              スクリプト化適応力強化のため、 レイヤーグループをサポートするよう
+              <acronym>API</acronym>が変更されています。
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Backwards Compatibility</term>
+      <term lang="ja">後方互換性</term>
+      <listitem>
+        <para lang="en">
+          To address the needs to migrate from the old tools presets
+          system to the new one there is a Python <ulink
+          url="http://wiki.gimp.org/index.php/Mindstorm:Preset_converter">script</ulink>
+          downloadable from the <acronym>GIMP</acronym> wiki
+          site. However, the old tools presets are not 100%
+          convertible to the new tool presets. For instance, brush
+          scale from 2.6 can't be converted to brush size in 2.8.
+        </para>
+        <para lang="ja">
+          これまでの古いツールプリセットを新しいシステムに移行させる要望に
+          応えるため、 <acronym>GIMP</acronym>の Wiki サイトから
+          ダウンロードしてお使いいただける Python
+          <ulink url="http://wiki.gimp.org/index.php/<!--
+          -->Mindstorm:Preset_converter">スクリプト</ulink> を用意しました。
+          ただし、 古いツールプリセットは新しいツールプリセットに 100% 転換可能
+          ではありません。 具体的には、 2.6 系のブラシ倍率は 2.8 系の
+          ブラシサイズに変換できません。
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term lang="en">Known Problems</term>
+      <term lang="ja">既知の問題点</term>
+      <listitem>
+        <para lang="en">
+          Working with graphics tablets could be problematic due to
+          the GTK+2 library in use. If in this case either use the
+          older version 2.6 or wait for the up coming version 3.0
+          for the full GTK+3 support.
+        </para>
+        <para lang="ja">
+          グラフィックタブレットから使うとき、
+          援用している<acronym>GTK+2</acronym>ライブラリーの所為で問題が起こる
+          かもしれません。 この場合は以前の 2.6 版をご使用いただくか、
+          <acronym>GTK+3</acronym>の完全サポートがある予定の 3.0 版が出るまで
+          お待ちください。
         </para>
       </listitem>
     </varlistentry>
