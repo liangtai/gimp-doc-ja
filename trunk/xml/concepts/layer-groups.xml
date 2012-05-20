@@ -6,7 +6,7 @@
   2012-03-06 j.h: created
 -->
 
-<!--2012-03-25-->
+<!--2012-05-18-->
 <sect1 id="gimp-layer-groups">
   <title lang="en">Layer Groups</title>
   <title lang="ja">レイヤーグループ</title>
@@ -21,13 +21,11 @@
 
   <para lang="en">
     You can group layers that have similarities in a tree-like way. So, the
-    layer list becomes easier to manage. You can merge layer modes to the
-    group and make new creative effect possible.
+    layer list becomes easier to manage.
   </para>
   <para lang="ja">
     レイヤーを樹木のような構造に仕分けられます。 だからレイヤーのリストはもっと
-    管理しやすくなりました。 レイヤーのモードをグループに統合<!--XXX ???-->
-    したり、 新しい創造的効果の可能性が追求できます。
+    管理しやすくなりました。
   </para>
 
   <mediaobject>
@@ -57,8 +55,11 @@
         </para>
         <para lang="en">
           This empty layer group appears just above the current layer. It is
-          important to name it (double-click on the name to edit it), else
-          you will get confused when several ones are created.
+          important to give it an evocative name (double-click or
+          <keycap>F2</keycap> on the name, or use <command>Edit Layer
+          Attributes</command> in the context menu you get by right clicking the
+          Layer dialog, to edit it), else you will get confused when several
+          ones are created.
         </para>
         <para lang="en">
           You can create several layer groups and you can
@@ -80,8 +81,13 @@
         </para>
         <para lang="ja">
           空のレイヤーグループが現在のレイヤーのすぐ手前側に現れます。 
-          重要なことは、 グループに名前をつけることです (名前をダブルクリック
-          しても編集ができます)。 これを怠ってレイヤーグループをいくつも作ると
+          重要なことは、 グループにそれと判る名前をつけることです (名前をダブル
+          クリックするか <keycap>F2</keycap> キーを押せばダイアログ上で
+          直接編集できるほか、 レイヤーダイアログをマウスの
+          <mousebutton>第2ボタン</mousebutton> でクリックすると現れる脈絡
+          メニューの <guimenuitem>レイヤー名の変更...</guimenuitem> を実行すれば
+          小さな<quote>レイヤー名の変更</quote>ダイアログ上でも編集できます)。
+          これを怠ってレイヤーグループをいくつも作ると
           混乱をきたすはめになります。
         </para>
         <para lang="ja">
@@ -237,10 +243,12 @@
           bottom of the layer dialog).
         </para>
         <para lang="en">
-          You can also <emphasis role="bold">move and duplicate a layer group
-          inside the canvas</emphasis>: chain all layers in the layer group,
-          activate the Move tool, click-and-drag an element of the layer
-          group in the image. That's a way to multiply objects in an image.
+          You can also <emphasis role="bold">move a layer group to the
+          canvas</emphasis>: this duplicates the group <emphasis>in</emphasis>
+          the group. Chain all layers in the duplicated layer group, activate
+          the Move tool, then, in the image, move the layer. That's a way to
+          multiply multi-layer objects in an image.
+        </para>
         </para>
         <para lang="ja">
           レイヤーグループはクリックして他の画像までドラッグしてきて放てば
@@ -253,12 +261,14 @@
           ボタンが使えます)。
         </para>
         <para lang="ja">
-          レイヤーグループは同一キャンバス内で
-          <emphasis role="bold">移動や複製</emphasis> も可能です。 レイヤー
-          グループに属するすべての
+          レイヤーグループを <emphasis role="bold">キャンバスまで</emphasis>
+          ドラッグして放つ方法もあります。 この場合グループの複製がその
+          グループの <emphasis>中に</emphasis> 追加されます。 複製してできた
+          レイヤーグループに属するすべての
           <link linkend="gimp-layer-attributes">レイヤーを連結</link> してから
-          <quote>移動</quote>ツールを呼び出し、 グループ内の任意のレイヤーを
-          クリックしたままドラッグします。 この方法で画像内の像を複製できます。
+          <quote>移動</quote>ツールを呼び出し、 グループ内のいずれかのレイヤーを
+          画像内で任意の場所までします。 この方法で画像内の複数のレイヤーに
+          またがって描かれた像を複製できます。
         </para>
       </listitem>
     </varlistentry>
@@ -287,7 +297,7 @@
     </varlistentry>
 
     <varlistentry>
-      <term lang="en">Embedd Layer Groups</term>
+      <term lang="en">Embed Layer Groups</term>
       <term lang="ja">レイヤーグループを入れ子にする</term>
       <listitem>
         <para lang="en">
@@ -310,15 +320,15 @@
       <term lang="ja">レイヤーのモードとグループ</term>
       <listitem>
         <para lang="en">
-          A layer inside a layer group acts on layers that are in this group
-          only. A layer above a layer group acts on all layers underneath,
-          outside and inside the layer groups.
+          A layer mode applied to a layer group acts on layers that are in this
+          group only. A layer mode above a layer group acts on all layers
+          underneath, outside and inside the layer groups.
         </para>
         <para lang="ja">
-          レイヤーグループ内のとあるレイヤーの効果が及ぶ範囲はそのレイヤー
-          グループ内のレイヤーだけです。 いまいるレイヤーグループよりも上にある
-          レイヤーの実効範囲は、 当レイヤーグループ内外をふくめ
-          そのレイヤー以下のすべての層です。
+          レイヤーグループ内のとあるレイヤーに設定したレイヤーモードの効果が
+          及ぶ範囲はそのレイヤーグループ内のレイヤーだけです。 いまいる
+          レイヤーグループよりも上にあるレイヤーのモードの実効範囲は、 当
+          レイヤーグループ内外をふくめそのレイヤー以下のすべての層です。
         </para>
         <mediaobject>
           <imageobject>
@@ -397,12 +407,15 @@
       <term lang="ja">レイヤーマスク</term>
       <listitem>
         <para lang="en">
-          As with normal layers, you can add a layer mask to a layer in the
-          group to mask a part of the image.
+          You cannot add a layer mask to a layer group (the corresponding
+          option is grayed out). But, as with normal layers, you can add a layer
+          mask to a layer in the group to mask a part of the layer.
         </para>
         <para lang="ja">
-          一般のレイヤーと同様にレイヤーグループにもレイヤーマスクを加える
-          ことができてその画像の一部にマスクがかけられます。
+          レイヤーグループにレイヤーマスクは付けられません (該当オプションは
+          灰色無効になっています)。 ただし一般のレイヤーと同様にレイヤー
+          グループ内のレイヤーにもレイヤーマスクを付けてレイヤーの一部に
+          マスクがかけられます。
         </para>
         <mediaobject>
           <imageobject>

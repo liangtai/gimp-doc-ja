@@ -4,7 +4,7 @@
 <!--  section history:
   2012-04-12 j.h: update to v2.8
 -->
-<!--2012-05-01-->
+<!--2012-05-17-->
 <sect2 id="gimp-image-window">
   <title lang="en">Image Window</title>
   <title lang="ja">画像ウィンドウ</title>
@@ -188,7 +188,7 @@
       <!--2-->
       <para lang="en">
         <emphasis>Image Menu:</emphasis>
-        Directly below the Title Bar appears the Image Menu (unless it has
+        Directly below the Title Bar appears the Menu bar (unless it has
         been suppressed). The Image Menu provides access to nearly every
         operation you can perform on an image. You can also right-click
         on an image to display a pop-up image menu,
@@ -557,6 +557,7 @@
     </listitem>
   </orderedlist>
   
+<!--
   <para lang="en">
     <anchor id="dotted-strips"/>
     <indexterm>
@@ -602,6 +603,7 @@
     そこでクリックして曳くと間仕切りが移動しパネルやキャンバスの横幅が
     変更できます。
   </para>
+-->
     
   <tip>
     <para lang="en">
@@ -609,10 +611,8 @@
       open the image in its own Image window or tab.
     </para>
     <para lang="en">
-      In multi-window mode, dragging an image into an existing Image window, 
-      adds it to the currently open image in a new layer. This feature 
-      is not available in single-window mode but you can, of course, drop the 
-      image in the Layers dialog.
+      Dragging an image file into the Layer dialog adds it to the image as a
+      new layer.
     </para>
     <para lang="ja">
       ファイルブラウザーの画像アイコンをツールボックスまでドラッグして放つと
@@ -620,11 +620,63 @@
       タブとなって開かれます。
     </para>
     <para lang="ja">
-      マルチウィンドウモードで画像を開いている画像ウィンドウ上に別の画像の
-      アイコンをドラッグしてきて放つと、 ドロップされた画像はレイヤー化されて
-      画像ウィンドウの画像に追加されます。 この動作はシングルウィンドウモード
-      の場合には機能しませんが、 もちろん代わりにレイヤーダイアログに放てば
-      同じ結果となります。
+      レイヤーダイアログに画像アイコンをドラッグしてきて放つと、 ドロップされた
+      画像はレイヤー化されて現在の画像に追加されます。
     </para>
   </tip>  
+
+  <para lang="en">
+    Image size and image window size can be different. You can make image fit
+    window, and vice versa, using two keyboard shortcuts:
+    <itemizedlist>
+      <listitem>
+        <para>
+          <keycombo><keycap>Ctrl</keycap><keycap>J</keycap></keycombo>: this
+          command keeps the zoom level; it adapts window size to image size.
+          The Shrink Wrap command does the same.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap>
+          <keycap>J</keycap></keycombo>: this command modifies the zoom level
+          to adapt the image display to the window.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </para>
+  <para lang="ja">
+    画像表示の大きさと画像ウィンドウの大きさがいつも同じとは限りません。 画像を
+    画像ウィンドウにすっぽり入る大きさで表示させたり、 逆に画像表示に合わせて
+    画像ウィンドウの大きさを調節するキーボードショートカットがあります。
+    <variablelist>
+      <varlistentry>
+        <term>
+          <keycombo><keycap>Ctrl</keycap><keycap>J</keycap></keycombo>
+        </term>
+        <listitem>
+          <para>
+            このコマンドは表示倍率を維持します。 画像ウィンドウの大きさが
+            画像の表示寸法に合わせて変化します。
+            <guimenuitem>ウィンドウサイズを合わせる</guimenuitem> コマンドと
+            同じ働きです。
+          </para>
+        </listitem>
+      <varlistentry>
+      </varlistentry>
+        <term>
+          <keycombo>
+            <keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>J</keycap>
+          </keycombo>
+        </term>
+        <listitem>
+          <para>
+            このコマンドは表示倍率を変更して画像ウィンドウ内で画像の全体像が
+            見える最大限の大きさにします。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+
 </sect2>
