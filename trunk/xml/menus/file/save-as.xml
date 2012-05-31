@@ -10,7 +10,7 @@
   2006-02-25 fixed invalid image reference
   2005/10/18 zh_CN removed by romanofski - missing translation
 -->
-<!--2012-03-25-->
+<!--2012-05-31-->
 <sect2 id="gimp-file-save-as">
   <title lang="en">Save as</title>
   <title lang="ja">名前を付けて保存...</title>
@@ -59,22 +59,23 @@
   </para>
   <para lang="ja">
     <guimenuitem>名前を付けて保存...</guimenuitem> コマンドは
-    <quote>画像の保存</quote>ダイアログを開きます。 下図に示すとおり、 
+    <quote>画像の保存</quote>ダイアログを開きます。 <!--下図に示すとおり、 
     ダイアログの基本的な構成はファイルに名前をつける語句記入欄とその保管場所を
-    選ぶのに使えるブックマークの引き出しリストでできています。 通常ファイルの
-    形式はファイル名に付けた拡張子で判定 ( <filename class="extension">.jpg
-    </filename> を付ければ<acronym>JPEG</acronym>形式のファイルに) されます。
+    選ぶのに使えるブックマークの引き出しリストでできています。通常は
+    ファイルの形式がファイル名に付けた拡張子で判定 (例えば
+    <filename class="extension">.jpg</filename> を付ければ
+    <acronym>JPEG</acronym>形式のファイルに) されます。
     <guilabel>ファイル形式の選択</guilabel> を使えばその
     ファイル形式の標準的な拡張子とは別の名前をつけられますが、 無用な混乱を
-    避けるため絶対に必要な場合を除きこの方法はおすすめできません。
+    避けるため絶対に必要な場合を除きこの方法はおすすめできません。--> 
   </para>
   <para lang="ja">
-    ブックマークに入れていないディレクトリーに保存したいときは 
+    <!--ブックマークに入れていないディレクトリーに保存したいときは 
     <guilabel>他のフォルダー</guilabel> をクリックしてください。 すると
-    ダイアログの畳まれていた部分が拡がります。 その中身とブックマークの
-    作成法や利用法については
-    <link linkend="gimp-using-fileformats">ファイル</link> の節に説明が
-    あります。
+    ダイアログの畳まれていた部分が拡がります。--> ダイアログの中身と
+    ブックマークの作成法や利用法については
+    <link linkend="gimp-using-fileformats">ファイルのエクスポート</link> の節に
+    説明があります。
   </para>
   <para lang="ja">
     以前に保存したことのある画像を保存するときにファイル名とオプションは
@@ -122,7 +123,7 @@
 
   <sect3>
     <title lang="en">The Basic <quote>Save as</quote> Dialog</title>
-    <title lang="ja"><quote>画像の保存</quote>ダイアログの基本形</title>
+    <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
     <para lang="en">
       There are two different forms of the <guimenu>Save as</guimenu>
       dialog. The simple form only lets you type in the filename and
@@ -134,6 +135,7 @@
       <filename class="extension">.xcf</filename> or
       <filename class="extension">.png</filename>).
     </para>
+<!--
     <para lang="ja">
       <quote>画像の保存</quote>ダイアログの構成は[主に] 2 つの種類があります。
       簡単な方はファイル名の記入欄とその保管場所を選ぶ機能だけでできています。
@@ -146,9 +148,10 @@
       <filename class="extension">.png</filename>) を指定できるオプションが
       現れて画像形式を選択できます。
     </para>
+-->
     <figure>
       <title lang="en">The basic <quote>File Save</quote> dialog</title>
-      <title lang="ja"><quote>画像の保存</quote>ダイアログの基本形</title>
+      <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="images/menus/file/save-as.png" format="PNG"/>
@@ -159,12 +162,10 @@
 
   <sect3>
     <title lang="en">The <quote>Save</quote> Dialog with a Browser</title>
-    <title lang="ja">
-      ブラウザーを開いた<quote>画像の保存</quote>ダイアログ
-    </title>
+    <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
     <figure>
       <title lang="en">The <quote>Save</quote> Dialog (Browser)</title>
-      <title lang="ja"><quote>画像の保存</quote>ダイアログ (ブラウザー)</title>
+      <title lang="ja"><quote>画像の保存</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
           <imagedata format="PNG"
@@ -193,13 +194,22 @@
           が並んでいます。 これらはここで加工できません。 下側の部分は
           ブックマーク (しおり) です。 ブックマークは追加と削除ができます。 
           ブックマークを追加するには中央のパネル (2) でディレクトリーか
-          ファイルを探し出してクリックしてから左下の 
-          <guibutton>追加</guibutton> ボタンをクリックします。 あるいは中央の
+          ファイルを探し出してクリックしてから左下の<quote>追加</quote>ボタン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-gtk-add-16.png"/>
+          </guiicon>
+          をクリックします。 あるいは中央の
           パネルで選んだ項目を <mousebutton>第2ボタン</mousebutton> で
           クリックして出てくる脈絡メニューの 
           <guimenuitem>ブックマークに追加</guimenuitem> コマンドでも
           追加できます。 ブックマークから削除するにはそのブックマーク項目を
-          クリックしてから <guibutton>削除</guibutton> ボタンをクリックします。
+          クリックしてから<quote>削除</quote>ボタン
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-remove-16.png"/>
+          </guiicon>
+          をクリックします。
         </para>
       </listitem>
       <listitem>
@@ -323,6 +333,7 @@
           選べば表示を限定できます。
         </para>
       </listitem>
+<!--
       <listitem>
         <para lang="en">
           At <guilabel>Select File Type</guilabel>, you have to select
@@ -353,6 +364,7 @@
           </para>
         </note>
       </listitem>
+-->
     </orderedlist>
   </sect3>
 </sect2>

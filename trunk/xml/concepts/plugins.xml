@@ -8,7 +8,7 @@
   2006-07-31 lexa: applied patch from hans de jonge
   2008-02-08 jpl: relecture et legeres corrections
 -->
-<!--2012-03-24-->
+<!--2012-05-30-->
 <sect1 id="gimp-concepts-plugins">
   <title lang="en">Plugins</title>
   <title lang="ja">プラグイン</title>
@@ -369,7 +369,7 @@
         </filename></userinput> というコマンドを走らせることだけです。
         このコマンドでプラグインのコンパイルが行われ、 個人用プラグインの
         ディレクトリー (初期設定どおりなら <filename class="directory">
-        ~/.gimp-2.6/plugins/</filename> ) にインストールされます。
+        ~/.gimp-2.8/plugins/</filename> ) にインストールされます。
         これで次回の<acronym>GIMP</acronym>起動時よりこのプラグインが自動的に
         読み込まれるようになります。 この作業はルートになる必要がありません。
         むしろなってはいけません。 ところでもしもプラグインのコンパイルに失敗
@@ -383,11 +383,12 @@
         <menuchoice>
           <guimenu>ヘルプ</guimenu>
           <guimenuitem>プラグインブラウザー</guimenuitem>
-        </menuchoice>
-        と進んで<quote>プラグインブラウザー</quote>を開き、 プラグインの名前で
-        <guilabel>検索</guilabel> して <guilabel>ツリー表示
-        </guilabel> のタブをご覧になって得てください。 それでも依然として判ら
-        ない場合は、 メニューをしらみつぶしに探すかソースコードの登録動作部分
+        </menuchoice> と進んで
+        <link linkend="plug-in-plug-in-details">プラグインブラウザー</link> を
+        開き、 プラグインの名前で <guilabel>検索</guilabel> して 
+        <guilabel>ツリー表示</guilabel> のタブをご覧になって得てください。 
+        それでも依然として判らない場合は、 メニューをしらみつぶしに探すか
+        ソースコードの登録動作部分
         (例えば <function>gimp_install_procedure</function>) を見付けるか
         のどちらか簡単な方をするしかもう成す術がありません。
       </para>

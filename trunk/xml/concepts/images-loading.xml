@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2012-04-29-->
+<!--2012-05-29-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -48,14 +48,14 @@
       メニューより
       <menuchoice>
         <guimenu>ファイル</guimenu>
-        <guimenuitem>開く...</guimenuitem>
+        <guimenuitem>開く/インポート...</guimenuitem>
       </menuchoice>
-      と進みましょう。 ファイルを見回れる<quote>画像を開く</quote>ダイアログが
-      出てきますので開きたいファイルを見つけ出してクリックします。
+      と進みましょう。 ファイルを見回れる<quote>画像ファイルを開く</quote>
+      ダイアログが出てきますので開きたいファイルを見つけ出してクリックします。
       このやり方はファイル名もその場所も既に知っているものを開くのには都合が
-      よろしい。 しかし<quote>画像を開く</quote>ダイアログにはサムネイル 
-      (縮小画像) 表示があるのにも関わらず、 画像のサムネイルを見ながらファイル
-      を探るには不便で面倒です。
+      よろしい。 しかし<quote>画像ファイルを開く</quote>ダイアログには
+      サムネイル (縮小画像) 表示があるのにも関わらず、 画像のサムネイルを
+      見ながらファイルを探るには不便で面倒です。
     </para>
     <note>
       <para lang="en">
@@ -137,22 +137,31 @@
       text box.
     </para>
     <para lang="ja">
-      <application><acronym>GIMP</acronym> 2.2</application> から、 欲しい
+      <application><acronym>GIMP</acronym>&nbsp;2.2</application> から、 欲しい
       ファイルをすばやく探しだすために見回すのを助けるいろいろな機能がついた
-      <quote>画像を開く</quote>ダイアログが加わりました。 
+      <quote>画像ファイルを開く</quote>ダイアログが加わりました。 
       <guilabel>場所</guilabel> 欄によく使われるフォルダーを登録できる
       <quote>ブックマーク</quote>をとれるようになったのがおそらく決定的
       でしょう。 その先頭には、 <quote>デスクトップ</quote>などが自動的に
-      挿入されます。 <guibutton>追加</guibutton> ボタンをクリックすると現在
-      選択しているディレクトリーがブックマークに追加登録できます。
-      <guibutton>削除</guibutton> ボタンをクリックすれば現在選ばれている
-      ディレクトリーがブックマークから撤去されます。 ブックマークは
-      ダブルクリックすれば、 そのディレクトリーに即座に移動できます。
+      挿入されます。 <quote>追加</quote>ボタン
+      <guibutton>
+        <inlinegraphic format="PNG"
+          filelef="images/dialogs/stock-gtk-add-16.png"/>
+      </guibutton>
+      をクリックすると現在選択しているディレクトリーがブックマークに
+      追加登録できます。 <quote>削除</quote>ボタン
+      <guibutton>
+        <inlinegraphic format="PNG"
+          filelef="images/dialogs/stock-remove-16.png"/>
+      </guibutton>
+      をクリックすれば現在選ばれているディレクトリーがブックマークから
+      撤去されます。 ブックマークはクリックすれば、 
+      そのディレクトリーに即座に移動できます。
     </para>
     <para lang="ja">
       選ばれたディレクトリーの内容がダイアログの中央部に現れます。 その一覧の
       上部はサブ (下位) ディレクトリーが並び、ファイルはその後に整列します。
-      はじめはディレクトリーにあるファイルが全て並べられますが、 ダイアログの
+      はじめはディレクトリーにあるファイルがすべて並べられますが、 ダイアログの
       下部にある <guilabel>ファイル形式の選択</guilabel> メニューで
       ファイル形式を指定すればその種類のファイルだけが並んで出てくるように
       制限できます。
@@ -166,7 +175,7 @@
       キーを押しながらクリックすれば強制的にプレビュー画を更新できます。
     </para>
     <para lang="ja">
-      初期設定の場合、 <quote>画像を開く</quote>ダイアログには 
+      初期設定の場合、 <quote>画像ファイルを開く</quote>ダイアログには 
       <guilabel>場所</guilabel> 文字記入欄があります。 これは隠せます。
       <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>
       で表示を切り替えるのです。 またこのほか左上の紙と鉛筆のアイコン

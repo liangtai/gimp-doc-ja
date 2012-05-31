@@ -4,7 +4,7 @@
 <!-- section history:
   2012-03-18 j.h: created
  -->
-<!--2012-05-18-->
+<!--2012-05-30-->
 <sect1 id="gimp-text-management">
   <title lang="en">Text Management</title>
   <title lang="ja">文字入れ</title>
@@ -318,8 +318,10 @@
               full of text.
             </para>
             <para lang="ja">
-              <guilabel>切り取り</guilabel> <guilabel>写し取り</guilabel>
-              <guilabel>貼り付け</guilabel> <guilabel>削除</guilabel>:
+              <guimenuitem>切り取り</guimenuitem>
+              <guimenuitem>コピー</guimenuitem>
+              <guimenuitem>貼り付け</guimenuitem>
+              <guimenuitem>削除</guimenuitem>:
               これらのオプションは選択してある文字に作用します。
               選択されている文字がないときはいずれも灰色無効の表示になります。
               <guilabel>貼り付け</guilabel> はクリップボードの中身が文や語句の
@@ -332,7 +334,7 @@
               browser where you can find the wanted text file.
             </para>
             <para lang="ja">
-              <guilabel>テキストファイルを開く</guilabel>: このコマンドは
+              <guimenuitem>テキストファイルを開く</guimenuitem>: このコマンドは
               ファイルブラウザーを開きますので目当てのファイルを探し
               出しましょう。
             </para>
@@ -343,8 +345,8 @@
               selected or not.
             </para>
             <para lang="ja">
-              <guilabel>消去</guilabel>: このコマンドはそのレイヤー内の文字を
-              選択のあるなしにかかわらず全部消去します。
+              <guimenuitem>消去</guimenuitem>: このコマンドはそのレイヤー内の
+              文字を選択のあるなしにかかわらず全部消去します。
             </para>
           </listitem>
           <listitem>
@@ -364,19 +366,20 @@
               </menuchoice>.
             </para>
             <para lang="ja">
-              <guilabel>テキストからパスを作成</guilabel>: このコマンドは現在の
-              テキストの文字の輪郭をもとにパスを作成します。 しかしその結果は
-              すぐには解りません。 キャンバスで表示するにはパスダイアログを
-              開いて、 できたパスを可視状態に切り替える必要があります。 そのあと
-              パスツールを呼び出してから文字をクリックします。 すべての文字や
-              記号がパス成分で囲まれている様子が見られます。 つまりこのあと
-              パスのコントロールポイントを操作すれば文字の形が加工できるのです。
+              <guimenuitem>テキストからパスを作成</guimenuitem>: このコマンドは
+              現在のテキストの文字の輪郭をもとにパスを作成します。 しかしその
+              結果はすぐには解りません。 キャンバスで表示するにはパスダイアログ
+              を開いて、 できたパスを可視状態に切り替える必要があります。 
+              そのあとパスツールを呼び出してから文字をクリックします。 すべての
+              文字や記号がパス成分で囲まれている様子が見られます。 つまり
+              このあとパスのコントロールポイントを操作すれば文字の形が
+              加工できるのです。
             </para>
             <para lang="ja">
               このコマンドは画像ウィンドウのメニューの
               <menuchoice>
                 <guimenu>レイヤー</guimenu>
-                <guisubmenu>テキストをパスに</guisubmenu>
+                <guimenuitem>テキストをパスに</guimenuitem>
               </menuchoice>
               と同じものです。
             </para>
@@ -399,10 +402,10 @@
               This command is also available from the <quote>Layer</quote> menu:
             </para>
             <para lang="ja">
-              <guilabel>パスに沿ってテキストを変形</guilabel>:
+              <guilabel>テキストをパスに沿って変形</guilabel>:
               <indexterm>
-                <primary sortas="パスニソッテテキストヲヘンケイ">
-                  パスに沿ってテキストを変形
+                <primary sortas="テキストヲパスニソッテヘンケイ">
+                  テキストをパスに沿って変形
                 </primary>
               </indexterm>
             </para>
@@ -452,8 +455,8 @@
               dialog</link>. All path options should apply to this new path.
             </para>
             <para lang="ja">
-              <guibutton>パスに沿ってテキストを変形</guibutton> ボタンを
-              クリックします。 するとテキストはパスに沿ってうねるように
+              <guimenuitem>パスに沿ってテキストを変形</guimenuitem> コマンドを
+              実行します。 するとテキストはパスに沿ってうねるように
               綴られます。 それぞれの文字は輪郭だけが描かれています。
               これらは新たなパスの成分になっていて、
               <link linkend="gimp-path-dialog">パスダイアログ</link> でも
@@ -496,7 +499,7 @@
               transforms your keyboard into an Inuktitut keyboard, temporarily.
             </para>
             <para lang="ja">
-              <guilabel>入力方法</guilabel>: いくつかの言語は入力メソッドが
+              <guisubmenu>入力方法</guisubmenu>: いくつかの言語は入力メソッドが
               選べます。 例えば <guimenuitem>イヌクティトゥト
               (翻字)</guimenuitem> を選ぶと一時的にキーボードが
               イヌクティトゥト言語用に替わります。
@@ -507,4 +510,3 @@
     </varlistentry>
   </variablelist>
 </sect1>
-

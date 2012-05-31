@@ -9,7 +9,7 @@
   2007-01-11 fr modified by Pierre ; 1rst part re-written
   2006-09-10 added norwegian translation by KoSt
 -->
-<!--2012-05-07-->
+<!--2012-05-29-->
 <sect1 id="gimp-using-paths">
   <title lang="en">
     <anchor id="gimp-concepts-paths" xreflabel="Paths"/>
@@ -348,7 +348,7 @@
       パスは非常に複雑になりやすいものです。 パスツールを用いて手書きでパスを
       描くならば、 こだわり過ぎなければアンカー点の数はせいぜい数十個程度、
       普段はもっと少なく抑えられるでしょう。
-      ところが選択をパスに変換するだとか、 テキストをパスに変換するといった
+      ところが選択範囲をパスに変換するだとか、 テキストをパスに変換するといった
       操作があるとたちまち何千、 何万ものアンカー点ができてしまいます。
     </para>
     <para lang="ja">
@@ -412,16 +412,19 @@
       obtained by executing "Sharpen" from the Select menu.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>では画像上の選択をパスに変換できます。 また
-      パスから選択へも変換できます。 選択についての情報とその働きについては、
-      <link linkend="gimp-concepts-selection">選択</link> の節をご覧ください。
+      <acronym>GIMP</acronym>では画像上の選択範囲をパスに変換できます。 また
+      パスから選択範囲へも変換できます。 選択範囲についての情報とその働きに
+      ついては、
+      <link linkend="gimp-concepts-selection">選択範囲</link> の節を
+      ご覧ください。
     </para>
     <para lang="ja">
-      選択をパスに変換すると、 パスは点滅破線 (<quote>蟻の行進</quote>) に
-      沿ってひかれます。 ところが選択は二次元の構造を持っているのにパスは一次元
-      のため、 選択からパスへの変換にはどうしても情報の欠損が生じます。 実際に
-      選択をパスに変換すると不完全選択な部分 (ぼかし) の情報は全て失われます。 
-      パスを選択に変換しなおすと、 一切か無かの選択になりますが、 これは
+      選択範囲をパスに変換すると、 パスは点滅破線 (<quote>蟻の行進</quote>) に
+      沿ってひかれます。 ところが選択範囲は二次元の構造を持っているのにパスは
+      一次元のため、 選択範囲からパスへの変換にはどうしても情報の欠損が
+      生じます。 実際に選択範囲をパスに変換すると不完全選択な部分 (ぼかし) の
+      情報はすべて失われます。 パスを選択範囲に変換しなおすと、 一切か無かの
+      選択範囲になりますが、 これは
       <menuchoice>
         <guimenu>選択</guimenu>
         <guimenuitem>境界を明確化</guimenuitem>
@@ -536,7 +539,12 @@
       と進むか、 もしくはパスダイアログの脈絡メニューの
       <guimenuitem>パスの境界線を描画...</guimenuitem>
       を選ぶ方法と、 パスツールのツールオプションダイアログ上で
-      <guilabel>パスの境界線を描画</guilabel> ボタンを押す方法があります。
+      <quote>パスの境界線を描画</quote>ボタン
+      <guiicon>
+        <inlinegraphic format="PNG"
+          fileref="images/dialogs/stock-path-stroke-16.png"/>
+      </guiicon>
+      を押す方法があります。
     </para>
     <para lang="ja">
       いずれの方法も<quote>パスの境界線を描画</quote>に進めばダイアログが現れ、
@@ -612,8 +620,8 @@
       purposes, including:
     </para>
     <para lang="ja">
-      テキストツールで作られたテキストは、 テキストツールの脈絡メニューの
-      <guimenuitem>テキストからパスを生成</guimenuitem> コマンドを使ってパスに
+      テキストツールで作られたテキストは、 テキストレイヤーの脈絡メニューの
+      <guimenuitem>テキストをパスに</guimenuitem> コマンドを使ってパスに
       転換できます。 次のようなさまざまな用途に便利です。
     </para>
     <itemizedlist>

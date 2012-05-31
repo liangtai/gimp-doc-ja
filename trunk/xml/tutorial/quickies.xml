@@ -5,7 +5,7 @@
   2011-04-02 Michael: rewrote tutorial
   2007-05-11 lexa: initial version
 -->
-<!--2012-05-25-->
+<!--2012-05-29-->
 <sect1 id="gimp-tutorial-quickies">
   <title lang="en">Common Tasks</title>
   <title lang="ja">よくある使い方</title>
@@ -771,10 +771,10 @@
       information about the image size, resolution, mode and much more.
     </para>
     <para lang="ja">
-      画像についての諸元を調べたいときは 画像ウィンドウのメニューより
+      画像についての諸元を調べたいときは、 画像ウィンドウのメニューより
       <menuchoice>
         <guimenu>画像</guimenu>
-        <guimenuitem>画像の情報...</guimenuitem>
+        <guimenuitem>画像の情報</guimenuitem>
       </menuchoice>
       と辿りましょう。 するとダイアログが現れ、 画像の画素数や解像度、
       モードなどさまざまな情報がわかります。
@@ -855,7 +855,7 @@
       palette</quote> to best represent your image.
     </para>
     <para lang="ja">
-      <emphasis>RGB</emphasis>- 初期設定ではこのモードです。 高品質な
+      <guimenuitem>RGB</guimenuitem>- 初期設定ではこのモードです。 高品質な
       カラー画像に向いており、 一千数百万色以上の表現能力があります。 画像の
       拡大・縮小や切り抜き、 さらには反転など、 作業のほとんどをするための
       モードでもあります。 <acronym>RGB</acronym>モードではどの画素も 3 つに
@@ -864,7 +864,7 @@
       見えているのは 3 つの要素の合成なのです。
     </para>
     <para lang="ja">
-      <emphasis>インデックスつき</emphasis>- このモードはたいていファイルの
+      <guimenuitem>インデックス...</guimenuitem>- このモードはたいていファイルの
       容量に気をつけている場合か色数の少ない画像で作業しているときに用います。
       使える色数は 256 以下の一定数に限られており、 そのいずれかの色が
       各画素の色を表します。 パレットつき画像に変更したとき初期設定では
@@ -899,8 +899,8 @@
     </para>
     <para lang="ja">
       それぞれのピクセルの色を表現するのに必要な情報が少なくなりますから、
-      予想どおりファイルの大きさも随分小さくなります。 ところがどういうわけか、
-      メニューの一部が数カ所灰色無効になっていることがしばしばあります。
+      予想どおりファイルの大きさも随分小さくなります。 ところが思いがけず
+      メニューの一部が数ヶ所灰色無効になっていることがしばしばあります。
       その理由のほとんどは画像の現在のモードでは適用できないフィルターや
       オプションだからです。 先段で述べた方法で<acronym>RGB</acronym>にモード
       変換すればこの問題は解決するはずです。 そうしてもまだできないときは、
@@ -935,15 +935,17 @@
       properly export the image.
     </para>
     <para lang="ja">
-      <emphasis>グレースケール</emphasis>- グレースケール画像は灰色濃淡だけで
-      表された画像です。 このモードは特定の用途があり、 ファイル形式によっては
-      ディスクに占める容量が小さくなる画像モードですが、 数多くの
+      <guimenuitem>グレースケール</guimenuitem>- グレースケール画像は灰色濃淡
+      だけで表された画像です。 このモードは特定の用途があり、 ファイル形式に
+      よってはディスクに占める容量が小さくなる画像モードですが、 数多くの
       アプリケーションで閲覧がサポート外なため一般的な利用にはお勧めできません。
     </para>
     <para lang="ja">
+      &lt;!--
       画像を保存する前にいずれかのモードに変換しておく必要はありません。
       <acronym>GIMP</acronym>はちゃんとしたファイルのエクスポートも颯爽と
       こなします。
+      --&gt;
     </para>
   </sect2>
 
@@ -1025,7 +1027,7 @@
       クリックすれば出てきます。
       <keycap>Ctrl</keycap> キーでも水平と垂直に反転の向きを切り替えられます。
     </para>
-    <para lang="ja">反転の全ての型をこのページに載せました。</para>
+    <para lang="ja">反転のすべての型をこのページに載せました。</para>
     <figure id="quickie-flip-images">
       <title lang="en">Example Image to Flip</title>
       <title lang="ja">鏡像反転の例</title>
@@ -1122,8 +1124,8 @@
         <guisubmenu>変形</guisubmenu>
         <guimenuitem>時計回りに 90 度回転</guimenuitem>
       </menuchoice>
-      と (もしくは反時計回りに) 進みましょう。 
-      実演のため <guilabel>反時計回りに 90 度回転</guilabel> も実行しました。
+      と (もしくは反時計回りに) 進みましょう。 実演のため 
+      <guilabel>反時計回りに 90 度回転</guilabel> を実行してみました。
     </para>
     <figure>
       <title lang="en">Example for <quote>Rotate An Image</quote></title>

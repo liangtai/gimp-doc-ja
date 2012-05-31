@@ -9,7 +9,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-05-13-->
+<!--2012-05-31-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -310,7 +310,7 @@
             <inlinegraphic fileref="images/dialogs/dialogs-icon-new.png"/>
           </guiicon>
           <phrase condition="tag-is-required" lang="en">New Palette</phrase>
-          <phrase condition="tag-is-required" lang="ja">新規パレット</phrase>
+          <phrase condition="tag-is-required" lang="ja">新しいパレット</phrase>
         </term>
         <listitem>
           <indexterm lang="en">
@@ -393,9 +393,7 @@
           <phrase condition="tag-is-required" lang="en">
             Refresh Palettes
           </phrase>
-          <phrase condition="tag-is-required" lang="ja">
-            パレットを再度読み込み
-          </phrase>
+          <phrase condition="tag-is-required" lang="ja">パレットの更新</phrase>
         </term>
         <listitem>
           <indexterm lang="en">
@@ -404,7 +402,7 @@
           </indexterm>
           <indexterm lang="ja">
             <primary>パレット</primary>
-            <secondary sortas="サイドヨミコミ">再度読み込み</secondary>
+            <secondary sortas="コウシン">更新</secondary>
           </indexterm>
           <para lang="en">
             For more information on this button please refer to
@@ -804,7 +802,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-refresh" lang="en">Refresh Palettes</term>
-        <term id="gimp-palette-refresh" lang="ja">パレットを更新</term>
+        <term id="gimp-palette-refresh" lang="ja">パレットの更新</term>
         <listitem>
           <para lang="en">
             Refresh Palettes rescans all of the folders in your palette
@@ -815,7 +813,7 @@
             current session.
           </para>
           <para lang="ja">
-            <guimenuitem>パレットを更新</guimenuitem> は検索対象パスに登録
+            <guimenuitem>パレットの更新</guimenuitem> は検索対象パスに登録
             されているパレットファイルの保管場所を読み込み直し、 新たに発見
             されたパレットをパレットダイアログの一覧表に加えます。 何らかの手段
             で外部から入手したパレットファイルを個人用パレットフォルダーにコピー
@@ -938,7 +936,7 @@
             emitted.
           </para>
           <para lang="ja">
-            このコマンドはパレットの全ての色を用いて繰り返しのグラデーション
+            このコマンドはパレットのすべての色を用いて繰り返しのグラデーション
             を作成します。  このグラデーションはグラデーションダイアログに
             出現して現在の活性グラデーションになります。 グラデーションの
             セグメント数はパレットの色数より 1 つ多い数です。 最も左端の
@@ -972,14 +970,14 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-sort" lang="en">Sort Palette...</term>
-        <term id="gimp-palette-sort" lang="ja">パレットの並び替え</term>
+        <term id="gimp-palette-sort" lang="ja">パレットの並べ替え</term>
         <listitem>
           <para lang="en">
             This command opens a dialog window which allows you to sort the
             colors of the palette according to certain criterions:
           </para>
           <para lang="ja">
-            このコマンドはパレットの色をある一定の基準で並び替えるための
+            このコマンドはパレットの色をある一定の基準で並べ替えるための
             ダイアログを開きます。
             <note>
               <para>
@@ -1018,12 +1016,12 @@
                 three HSV channels if the HSV channel is selected.
               </para>
               <para lang="ja">
-                <guilabel>並び替えるチャンネル</guilabel>:
+                <guilabel>並べ替えるチャンネル</guilabel>:
                 <acronym>RGB</acronym>モードの色モデルを選んだときは、 ここで
                 赤・緑・青の 3 つの色チャンネルからひとつを選び、 
                 <acronym>HSV</acronym>モードの色モデルを選んだときは色相、 
                 彩度、 明度の 3 つのチャンネルからひとつを選びます。 選ばれた
-                チャンネルの値を比較して並び替えられます。
+                チャンネルの値を比較して並べ替えられます。
               </para>
             </listitem>
             <listitem>

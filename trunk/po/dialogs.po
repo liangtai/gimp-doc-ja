@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
 "POT-Creation-Date: 2012-05-03 01:23+0900\n"
-"PO-Revision-Date: 2012-05-14 07:18+0900\n"
+"PO-Revision-Date: 2012-05-31 18:37+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -137,7 +137,7 @@ msgstr ""
 "任意のドッキング可能なダイアログのボタンアイコン <guiicon><inlinegraphic "
 "format=\"PNG\" fileref=\"images/dialogs/stock-menu-left-12.png\"/></guiicon> "
 "をクリックすると出てくるタブメニューより <menuchoice><guimenu>タブの追加</"
-"guimenu><guimenuitem>ファイル履歴</guimenuitem></menuchoice>"
+"guimenu><guimenuitem>作業履歴</guimenuitem></menuchoice>"
 
 #: src/dialogs/undo-history-dialog.xml:76(title)
 msgid "Using the Undo History dialog"
@@ -405,12 +405,12 @@ msgid ""
 "new preset is created at the top of the dialog and the Tool Preset Editor is "
 "opened. Please see <xref linkend=\"tool-preset-editor\"/>."
 msgstr ""
-"<guiicon><inlinegraphic fileref=\"images/dialogs/stock-document-new-16.png\"/"
-"></guiicon><guilabel>新しいツールプリセットを作成する</guilabel>: このボタン"
-"をクリックするその前に、 既存のプリセットをどれかひとつ選んでおく方法と、 プ"
-"リセット一覧にまだないツール、 例えば修復ツールをツールボックスで選んでおく方"
-"法もあります。 新しくできたプリセットはダイアログの一覧表最上部に置かれ、 す"
-"ぐさまツールプリセットエディターが現れます。 <xref linkend=\"tool-preset-"
+"<guiicon><inlinegraphic fileref=\"images/dialogs/dialogs-icon-new.png\"/></"
+"guiicon><guilabel>新しいツールプリセットを作成する</guilabel>: このボタンをク"
+"リックするその前に、 既存のプリセットをどれかひとつ選んでおく方法と、 プリ"
+"セット一覧にまだないツール、 例えば修復ツールをツールボックスで選んでおく方法"
+"もあります。 新しくできたプリセットはダイアログの一覧表最上部に置かれ、 すぐ"
+"さまツールプリセットエディターが現れます。 <xref linkend=\"tool-preset-"
 "editor\"/> を参照してください。"
 
 #: src/dialogs/tool-presets-dialog.xml:118(para)
@@ -489,7 +489,7 @@ msgstr ""
 "す。 それら <guimenuitem>ツールプリセットの編集...</guimenuitem>、 "
 "<guimenuitem>新しいツールプリセット</guimenuitem>、 <guimenuitem>ツールプリ"
 "セットの更新</guimenuitem> の各コマンドの他に、 つぎの 2 つのコマンドもありま"
-"す。"
+"す。 <placeholder-1/>"
 
 #: src/dialogs/tool-preset-editor.xml:9(title)
 #: src/dialogs/tool-preset-editor.xml:13(secondary)
@@ -959,8 +959,8 @@ msgstr ""
 "閉じるか<acronym>GIMP</acronym>を終了しようとしたときは、 <acronym>GIMP</"
 "acronym>はその実行前に確認を求めます。 ただしこれは <link linkend=\"gimp-"
 "prefs-environment\">設定</link> ダイアログの<quote>環境</quote>のページで "
-"<guilabel>未保存の画像を閉じるときに確認</guilabel> が有効になっている場合に"
-"限ります。"
+"<guilabel>未保存の画像を閉じるときに確認する</guilabel> が有効になっている場"
+"合に限ります。"
 
 #: src/dialogs/save-file-dialog.xml:43(title)
 msgid "Save Image Dialog"
@@ -1003,10 +1003,11 @@ msgstr ""
 "<userinput>名称未設定.xcf</userinput>) を直に書くか、 あるいはその下部の一覧"
 "表からファイルを選びます。 繰り返し申し上げますが使って良い画像ファイル形式は"
 "<acronym>XCF</acronym> (拡張子が <filename class=\"extension\">.xcf</"
-"filename>) だけです。 さらに[一覧表や] <guilabel>フォルダーの中に保存</"
-"guilabel> で画像を保存する場所のフォルダーを指定しなくてはいけません。 必要な"
-"ら <guibutton>フォルダーの作成</guibutton> ボタンをクリックすれば現在のディレ"
-"クトリー内へ新しくフォルダーを作成できます。"
+"filename> [または下図のように示される<acronym>XCF</acronym>アーカイブ形式]) "
+"だけです。 さらに記入欄のすぐ下に並ぶ <guilabel>フォルダーの中に保存</"
+"guilabel> パス選択ボタンで画像を保存する場所のフォルダーを指定しなくてはいけ"
+"ません。 必要なら <guibutton>フォルダーの作成</guibutton> ボタンをクリックす"
+"れば現在のディレクトリー内へ新しくフォルダーを作成できます。"
 
 #: src/dialogs/save-file-dialog.xml:83(title)
 #: src/dialogs/export-file-dialog.xml:49(title)
@@ -1174,8 +1175,8 @@ msgid ""
 msgstr ""
 "初期設定では採色はすべてのレイヤーを通じて行われます。 活性レイヤーからのみ採"
 "色したいときは、 タブメニューの最初の項目を進むと現れる脈絡メニューの "
-"<guimenuitem>見えている色で</guimenuitem> のチェックを外して無効にしてくださ"
-"い。"
+"<guimenuitem>見えている色の情報を表示</guimenuitem> のチェックを外して無効に"
+"してください。"
 
 #: src/dialogs/sample-points.xml:99(title)
 msgid "The <quote>Sample Point</quote> menu"
@@ -1218,9 +1219,9 @@ msgid ""
 "emphasis>, <emphasis>Blue</emphasis> and <emphasis>Alpha</emphasis> values "
 "of the pixel, as numbers between 0 and 255."
 msgstr ""
-"この場合は画素の <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 "
-"<guilabel>青</guilabel>、 <guilabel>アルファ</guilabel> の各チャンネルの値を "
-"0 から 255 の範囲で示します。"
+"この場合は画素の <guilabel>R (赤)</guilabel>、 <guilabel>G (緑)</guilabel>、 "
+"<guilabel>B (青)</guilabel>、 <guilabel>A (不透明度)</guilabel> の各チャンネ"
+"ルの値を 0 から 255 の範囲で示します。"
 
 #: src/dialogs/sample-points.xml:143(term)
 #: src/dialogs/pointer-dialog.xml:143(term)
@@ -1235,10 +1236,10 @@ msgid ""
 "of the pixel, as percentages. It also shows the hexadecimal value of the "
 "pixel's color."
 msgstr ""
-"これを選択すると画素の <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 "
-"<guilabel>青</guilabel>、 <guilabel>アルファ</guilabel> の各チャンネルの値を"
-"百分率で表します。 さらに画素の色を <guilabel>16進数</guilabel> で表示しま"
-"す。"
+"これを選択すると画素の <guilabel>R (赤)</guilabel>、 <guilabel>G (緑)</"
+"guilabel>、 <guilabel>B (青)</guilabel>、 <guilabel>A (不透明度)</guilabel> "
+"の各チャンネルの値を百分率で表します。 さらに画素の色を <guilabel>16進数</"
+"guilabel> で表示します。"
 
 #: src/dialogs/sample-points.xml:154(term)
 #: src/dialogs/pointer-dialog.xml:156(term)
@@ -1251,9 +1252,9 @@ msgid ""
 "the <emphasis>Saturation</emphasis>, <emphasis>Value</emphasis> and "
 "<emphasis>Alpha</emphasis> of the pixel, as percentages."
 msgstr ""
-"この選択肢は画素の <guilabel>色相</guilabel> を角度で、 <guilabel>彩度</"
-"guilabel>、 <guilabel>明度</guilabel>、 <guilabel>アルファ</guilabel> の各値"
-"を百分率で表示します。"
+"この選択肢は画素の <guilabel>H (色相)</guilabel> を角度で、 <guilabel>S (彩"
+"度)</guilabel>、 <guilabel>V (明度)</guilabel>、 <guilabel>A (不透明度)</"
+"guilabel> の各値を百分率で表示します。"
 
 #: src/dialogs/sample-points.xml:165(term)
 #: src/dialogs/pointer-dialog.xml:168(term)
@@ -1268,17 +1269,17 @@ msgid ""
 "emphasis>, <emphasis>Yellow</emphasis>, <emphasis>Black</emphasis> and "
 "<emphasis>Alpha</emphasis> values of the pixel, as percentages."
 msgstr ""
-"これを選択すると画素の <guilabel>シアン</guilabel>、 <guilabel>マゼンタ</"
-"guilabel>、 <guilabel>イエロー</guilabel>、 <guilabel>ブラック</guilabel>、 "
-"<guilabel>アルファ</guilabel> の各値が百分率で表されます。"
+"これを選択すると画素の <guilabel>C (シアン)</guilabel>、 <guilabel>M (マゼン"
+"タ)</guilabel>、 <guilabel>Y (イエロー)</guilabel>、 <guilabel>K (黒)</"
+"guilabel>、 <guilabel>A (不透明度)</guilabel> の各値が百分率で表されます。"
 
 #: src/dialogs/sample-points.xml:176(para)
 msgid ""
 "Data are supplied for every channel in the chosen color model. The Alpha is "
 "present only if the image holds an Alpha channel."
 msgstr ""
-"選択された色モデルのいずれのチャンネルについてもデータが得られますが、 アル"
-"ファ値だけは画像にアルファチャンネルが加わっている場合に限られます。"
+"選択された色モデルのいずれのチャンネルについてもデータが得られますが、 不透明"
+"度だけは画像にアルファチャンネルが加わっている場合に限られます。"
 
 #: src/dialogs/sample-points.xml:180(para)
 msgid ""
@@ -1673,9 +1674,9 @@ msgid ""
 "pixel, as numbers between 0 and 255."
 msgstr ""
 "<link linkend=\"glossary-rgb\"><acronym>RGB</acronym></link> チャンネルの値を"
-"表示します。 画素の <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 "
-"<guilabel>青</guilabel>、 <guilabel>アルファ</guilabel> の各チャンネル値を 0 "
-"から 255 の範囲で表します。"
+"表示します。 画素の <guilabel>R (赤)</guilabel>、 <guilabel>G (緑)</"
+"guilabel>、 <guilabel>B (青)</guilabel>、 <guilabel>A (不透明度)</guilabel> "
+"の各チャンネル値を 0 から 255 の範囲で表します。"
 
 #: src/dialogs/pointer-dialog.xml:145(para)
 msgid ""
@@ -1686,9 +1687,9 @@ msgid ""
 "color."
 msgstr ""
 "<link linkend=\"glossary-rgb\"><acronym>RGB</acronym></link> チャンネルの値を"
-"表示します。 画素の <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 "
-"<guilabel>青</guilabel>、 <guilabel>アルファ</guilabel> の各チャンネル値を百"
-"分率で表します。 さらに画素の色を 16 進数で表示します。"
+"表示します。 画素の <guilabel>R (赤)</guilabel>、 <guilabel>G (緑)</"
+"guilabel>、 <guilabel>B (青)</guilabel>、 <guilabel>A (不透明度)</guilabel> "
+"の各チャンネル値を百分率で表します。 さらに画素の色を 16 進数で表示します。"
 
 #: src/dialogs/pointer-dialog.xml:158(para)
 msgid ""
@@ -1698,9 +1699,9 @@ msgid ""
 "<emphasis>Alpha</emphasis> of the pixel, as percentages."
 msgstr ""
 "<link linkend=\"glossary-hsv\"><acronym>HSV</acronym></link> 成分です。 画素"
-"の <guilabel>色相</guilabel> を角度で表示し、 <guilabel>彩度</guilabel>、 "
-"<guilabel>明度</guilabel>、 <guilabel>アルファ</guilabel> の各値を百分率で表"
-"示します。"
+"の <guilabel>H (色相)</guilabel> を角度で表示し、 <guilabel>S (彩度)</"
+"guilabel>、 <guilabel>V (明度)</guilabel>、 <guilabel>A (不透明度)</"
+"guilabel> の各値を百分率で表示します。"
 
 #: src/dialogs/pointer-dialog.xml:170(para)
 msgid ""
@@ -1710,13 +1711,13 @@ msgid ""
 "emphasis> values of the pixel, as percentages."
 msgstr ""
 "<link linkend=\"glossary-cmyk\"><acronym>CMYK</acronym></link> チャンネルの値"
-"です。 画素の <guilabel>シアン</guilabel>、 <guilabel>マゼンタ</guilabel>、 "
-"<guilabel>イエロー</guilabel>、 <guilabel>ブラック</guilabel>、 <guilabel>ア"
-"ルファ</guilabel> の各値を百分率で表示します。"
+"です。 画素の <guilabel>C (シアン)</guilabel>、 <guilabel>M (マゼンタ)</"
+"guilabel>、 <guilabel>Y (イエロー)</guilabel>、 <guilabel>K (黒)</"
+"guilabel>、 <guilabel>A (不透明度)</guilabel> の各値を百分率で表示します。"
 
 #: src/dialogs/pointer-dialog.xml:183(term)
 msgid "Sample Merged"
-msgstr "見えている色で"
+msgstr "見えている色の情報を表示"
 
 #: src/dialogs/pointer-dialog.xml:185(para)
 msgid ""
@@ -2366,12 +2367,12 @@ msgstr ""
 
 #: src/dialogs/path-dialog.xml:223(term) src/dialogs/path-dialog.xml:382(term)
 msgid "Duplicate Path"
-msgstr "パスを複製"
+msgstr "パスの複製"
 
 #: src/dialogs/path-dialog.xml:225(para)
 msgid "See <link linkend=\"gimp-path-duplicate\">Duplicate Path</link>."
 msgstr ""
-"後述するパスメニューの <link linkend=\"gimp-path-duplicate\">パスを複製</"
+"後述するパスメニューの <link linkend=\"gimp-path-duplicate\">パスの複製</"
 "link> をご覧ください。"
 
 #: src/dialogs/path-dialog.xml:231(term)
@@ -2442,7 +2443,7 @@ msgstr ""
 
 #: src/dialogs/path-dialog.xml:283(term) src/dialogs/path-dialog.xml:502(term)
 msgid "Stroke Path"
-msgstr "パスに沿って描画"
+msgstr "パスの境界線を描画"
 
 #: src/dialogs/path-dialog.xml:285(para)
 msgid "See <link linkend=\"gimp-path-stroke\">Stroke Path</link>."
@@ -2452,11 +2453,11 @@ msgstr ""
 
 #: src/dialogs/path-dialog.xml:291(term) src/dialogs/path-dialog.xml:394(term)
 msgid "Delete Path"
-msgstr "パスを削除"
+msgstr "パスの削除"
 
 #: src/dialogs/path-dialog.xml:293(para) src/dialogs/path-dialog.xml:397(para)
 msgid "<guilabel>Delete Path</guilabel> deletes the current selected path."
-msgstr "このボタンは現在活性化しているパスを削除します。"
+msgstr "現在活性化しているパスを削除します。"
 
 #: src/dialogs/path-dialog.xml:303(title)
 #: src/dialogs/path-dialog.xml:305(title)
@@ -2549,7 +2550,7 @@ msgid ""
 "active path for the image. The copy will be visible only if the original "
 "path was visible."
 msgstr ""
-"<guimenuitem>パスを複製</guimenuitem> は活性パスのコピーを作成し、 [元のパス"
+"<guimenuitem>パスの複製</guimenuitem> は活性パスのコピーを作成し、 [元のパス"
 "の名前を利用しつつも]重複しない名前を与え、 パスダイアログの一覧表に加え、 そ"
 "の画像においての活性パスにします。 元のパスが可視化されている場合に限りそのパ"
 "スも最初から可視となります。"
@@ -2711,14 +2712,14 @@ msgstr ""
 
 #: src/dialogs/path-dialog.xml:551(term)
 msgid "Copy Path"
-msgstr "パスをコピー"
+msgstr "パスのコピー"
 
 #: src/dialogs/path-dialog.xml:554(para)
 msgid ""
 "<guilabel>Copy Path</guilabel> copies the active path to the Paths "
 "Clipboard, enabling you to paste it into a different image."
 msgstr ""
-"<guimenuitem>パスをコピー</guimenuitem> は活性パスをパス用クリップボードに取"
+"<guimenuitem>パスのコピー</guimenuitem> は活性パスをパス用クリップボードに取"
 "り込み、 他の画像に貼り付けられるようにするためにあります。"
 
 #: src/dialogs/path-dialog.xml:559(para)
@@ -2739,7 +2740,7 @@ msgstr ""
 
 #: src/dialogs/path-dialog.xml:573(term)
 msgid "Paste Path"
-msgstr "パスを貼り付け"
+msgstr "パスの貼り付け"
 
 #: src/dialogs/path-dialog.xml:576(para)
 msgid ""
@@ -2748,7 +2749,7 @@ msgid ""
 "active path for the image. If no path has previously been copied into the "
 "clipboard, the menu entry will be insensitive."
 msgstr ""
-"<guimenuitem>パスを貼り付け</guimenuitem> はパス用クリップボードの内容から新"
+"<guimenuitem>パスの貼り付け</guimenuitem> はパス用クリップボードの内容から新"
 "たなパスを作成し、 パスダイアログの一覧表にそのパスを追加し、 その画像におい"
 "ての活性パスにします。 もしまだパス用クリップボードに何も取り込まれていないと"
 "きは、 このメニューは一切何もしません。"
@@ -3077,7 +3078,7 @@ msgstr ""
 #: src/dialogs/palettes-dialog.xml:183(phrase)
 #: src/dialogs/palettes-dialog.xml:292(term)
 msgid "New Palette"
-msgstr "新規パレット"
+msgstr "新しいパレット"
 
 #: src/dialogs/palettes-dialog.xml:188(secondary)
 msgid "New palette"
@@ -3129,11 +3130,11 @@ msgstr ""
 #: src/dialogs/palettes-dialog.xml:237(phrase)
 #: src/dialogs/palettes-dialog.xml:476(term)
 msgid "Refresh Palettes"
-msgstr "パレットを再度読み込み"
+msgstr "パレットの更新"
 
 #: src/dialogs/palettes-dialog.xml:242(secondary)
 msgid "Refresh"
-msgstr "再度読み込み"
+msgstr "更新"
 
 #: src/dialogs/palettes-dialog.xml:244(para)
 msgid ""
@@ -3244,10 +3245,10 @@ msgstr ""
 "パレットに転用できるファイルは<acronym>GIMP</acronym>のグラデーションファイ"
 "ル (<guilabel>グラデーション</guilabel> の隣のメニューで選んでください) や現"
 "在開かれている画像ファイルの一枚 (<guilabel>画像</guilabel> の隣メニューで選"
-"ぶ) のいずれかです。 <application><acronym>GIMP</acronym> 2.2</application> "
-"以降は <productname>Microsoft Windows</productname> 系のアプリケーションで使"
-"用されている<acronym>RIFF</acronym>ファイル形式 (拡張子は <filename class="
-"\"extension\">.pal</filename>) も転用可能となりました。"
+"ぶ) のいずれかです。 <application><acronym>GIMP</acronym>&nbsp;2.2</"
+"application> 以降は <productname>Microsoft Windows</productname> 系のアプリ"
+"ケーションで使用されている<acronym>RIFF</acronym>ファイル形式 (拡張子は "
+"<filename class=\"extension\">.pal</filename>) も転用可能となりました。"
 
 #: src/dialogs/palettes-dialog.xml:347(para)
 msgid "Two options concerning image as source, available for RGB images only:"
@@ -3414,7 +3415,7 @@ msgid ""
 "them into one of your palettes folders, and want to make them available "
 "during the current session."
 msgstr ""
-"<guimenuitem>パレットを更新</guimenuitem> は検索対象パスに登録されているパ"
+"<guimenuitem>パレットの更新</guimenuitem> は検索対象パスに登録されているパ"
 "レットファイルの保管場所を読み込み直し、 新たに発見されたパレットをパレットダ"
 "イアログの一覧表に加えます。 何らかの手段で外部から入手したパレットファイルを"
 "個人用パレットフォルダーにコピーしたときに、 <acronym>GIMP</acronym>を再起動"
@@ -3514,14 +3515,14 @@ msgstr "上図はパレット。 下図はこのコマンドで作成された�
 
 #: src/dialogs/palettes-dialog.xml:575(term)
 msgid "Sort Palette..."
-msgstr "パレットの並び替え"
+msgstr "パレットの並べ替え"
 
 #: src/dialogs/palettes-dialog.xml:577(para)
 msgid ""
 "This command opens a dialog window which allows you to sort the colors of "
 "the palette according to certain criterions:"
 msgstr ""
-"このコマンドはパレットの色をある一定の基準で並び替えるためのダイアログを開き"
+"このコマンドはパレットの色をある一定の基準で並べ替えるためのダイアログを開き"
 "ます。 <note><para>この機能は Python-Fu をインストールしていなければ使えませ"
 "ん。 <!--<xref linkend=\"gimp-concepts-python-fu\"/> をご覧ください。 --></"
 "para></note>"
@@ -3544,10 +3545,10 @@ msgid ""
 "channels if the RGB model is selected, or the three HSV channels if the HSV "
 "channel is selected."
 msgstr ""
-"<guilabel>並び替えるチャンネル</guilabel>: <acronym>RGB</acronym>モードの色モ"
+"<guilabel>並べ替えるチャンネル</guilabel>: <acronym>RGB</acronym>モードの色モ"
 "デルを選んだときは、 ここで赤・緑・青の 3 つの色チャンネルからひとつを選び、 "
 "<acronym>HSV</acronym>モードの色モデルを選んだときは色相、 彩度、 明度の 3 つ"
-"のチャンネルからひとつを選びます。 選ばれたチャンネルの値を比較して並び替えら"
+"のチャンネルからひとつを選びます。 選ばれたチャンネルの値を比較して並べ替えら"
 "れます。"
 
 #: src/dialogs/palettes-dialog.xml:605(para)
@@ -4567,7 +4568,7 @@ msgstr ""
 
 #: src/dialogs/layer-dialog.xml:188(term)
 msgid "Layer thumbnail"
-msgstr "レイヤーのサムネール"
+msgstr "レイヤーのサムネイル"
 
 #: src/dialogs/layer-dialog.xml:190(para)
 msgid ""
@@ -4576,7 +4577,7 @@ msgid ""
 "thumbnail has a white border. The border is black if the layer is inactive. "
 "When the layer has a mask, the inactive element takes a black border."
 msgstr ""
-"レイヤーの内容は縮小見本画像 (サムネール) で表示されます。 ここをしばらくク"
+"レイヤーの内容は縮小見本画像 (サムネイル) で表示されます。 ここをしばらくク"
 "リックしたまま待つと見本画像が少し大きくなります。 レイヤーが活性化していると"
 "きは見本画像に白枠がつきます。 それ以外の活性化していないレイヤーは黒枠がつき"
 "ます。 レイヤーにマスクがある場合も不活性なら黒枠です。"
@@ -5889,8 +5890,8 @@ msgid ""
 "<guilabel>Percentile</guilabel> : The ratio between the number of pixels in "
 "the interval and the total number of pixels in the active layer or selection."
 msgstr ""
-"<guilabel>パーセント</guilabel>: 総ピクセル数に対する対象ピクセル数の割合を百"
-"分率で表します。"
+"<guilabel>パーセンタイル</guilabel>: 総ピクセル数に対する対象ピクセル数の割合"
+"を百分率で表します。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -6061,14 +6062,13 @@ msgstr "最初の語句入力欄でグラデーションにつける名前を編
 msgid "The Gradient Preview Window"
 msgstr "グラデーションのプレビュー"
 
+# "Instant update" is always enabled and its toggle switch is removed.
 #: src/dialogs/gradient-editor-dialog.xml:100(para)
 msgid ""
 "Below the name, you see the current result of your work if the "
 "<guilabel>Instant update</guilabel> option is checked; else, changes will "
 "appear only when you release the mouse button."
 msgstr ""
-"名前の下の図面では <guilabel>即時更新</guilabel> が有効ならば作業の成果が即座"
-"に反映され、 無効ならばマウスボタンを放した時に変更が反映されます。"
 
 #: src/dialogs/gradient-editor-dialog.xml:105(para)
 msgid ""
@@ -6132,9 +6132,7 @@ msgstr ""
 "には <keycap>Shift</keycap> キーを押しながらクリックしてください。 同時に選択"
 "できるセグメントは <emphasis>連続</emphasis> していなければならないため、 "
 "<keycap>Shift</keycap> キーを押しながら隣り合わないセグメントを選ぶと両者の間"
-"のセグメントも自動的に選択されます。 <guilabel>即時更新</guilabel> をチェック"
-"するとスライダーの移動につられて図面がすぐさま変化を反映します。 チェックが"
-"入っていないときはマウスボタンを放したときに変更が反映されます。"
+"のセグメントも自動的に選択されます。"
 
 #: src/dialogs/gradient-editor-dialog.xml:146(para)
 msgid ""
@@ -6789,8 +6787,8 @@ msgid ""
 "color) from complete opacity to complete transparency. This gradient is very "
 "useful when you work with softly blended collages or fog effects."
 msgstr ""
-"<guilabel>描画色から背景色 (ハードエッジ)</guilabel>: 黒と白だけで描かれた"
-"くっきりとした仕上りになります。"
+"<guilabel>描画色から背景色 (ハードエッジ)</guilabel>: 描画色と背景色だけで描"
+"かれたくっきりとした仕上りになります。"
 
 #: src/dialogs/gradient-dialog.xml:83(para)
 msgid ""
@@ -7381,10 +7379,10 @@ msgid ""
 msgstr ""
 "このファイルブラウザーを使い、 上部の記入欄でファイルの名前や拡張子 (何もしな"
 "ければ <userinput>名称未設定.png</userinput>) を直に書くか、 あるいはその下部"
-"の一覧表からファイルを選びます。 さらに[一覧表や] <guilabel>フォルダーの中に"
-"保存</guilabel> で画像を保存する場所のフォルダーを指定しなくてはいけません。 "
-"必要なら <guibutton>フォルダーの作成</guibutton> ボタンをクリックすれば現在の"
-"ディレクトリー内へ新しくフォルダーを作成できます。"
+"の一覧表からファイルを選びます。 さらに記入欄のすぐ下に並ぶ <guilabel>フォル"
+"ダーの中に保存</guilabel> パス選択ボタンで画像を保存する場所のフォルダーを指"
+"定しなくてはいけません。 必要なら <guibutton>フォルダーの作成</guibutton> ボ"
+"タンをクリックすれば現在のディレクトリー内へ新しくフォルダーを作成できます。"
 
 #: src/dialogs/export-file-dialog.xml:50(para)
 msgid ""
@@ -7537,9 +7535,10 @@ msgid ""
 msgstr ""
 "このアイコンボタンをクリックするとエラーメッセージの全履歴の保存操作に入れま"
 "す。 書き出された履歴はマウスでクリックしたまま一部だけなぞるか、 "
-"<keycombo><keycap>Shift</keycap><keycap>上下左右</keycap></keycombo> キーの組"
-"み合わせでなぞって強調表示させてから、 <keycap>Shift</keycap> キーを押しなが"
-"らこのボタンをクリックすれば部分的に保存できます。"
+"<keycap>Shift</keycap> キーを押しながら <keycap>上</keycap> <keycap>下</"
+"keycap> <keycap>左</keycap> <keycap>右</keycap> キーでなぞって強調表示させて"
+"から、 <keycap>Shift</keycap> キーを押したままこのボタンをクリックすれば部分"
+"的に保存できます。"
 
 #: src/dialogs/error-console.xml:110(para)
 msgid ""
@@ -7983,8 +7982,8 @@ msgid ""
 msgstr ""
 "ここで述べるダイアログは <link linkend=\"gimp-concepts-layers\">レイヤー</"
 "link>、 <link linkend=\"glossary-channels\">チャンネル</link>、 <link "
-"linkend=\"gimp-using-paths\">パス</link> のような画像の構造を制御したり操作す"
-"るためのものです。"
+"linkend=\"gimp-using-paths\">パス</link> のような画像の構造を制御したり操作し"
+"ます。"
 
 #: src/dialogs/dialogs-misc.xml:10(title)
 msgid "Misc. Dialogs"
@@ -8047,7 +8046,7 @@ msgstr ""
 "stock-save-16.png\"/></imageobject><textobject><phrase>「デバイスの状態を保"
 "存」</phrase></textobject></inlinemediaobject></guiicon> アイコンボタンは "
 "<link linkend=\"gimp-prefs-input-devices\">設定</link> ダイアログの<quote>入"
-"力デバイス</quote>のページの <guibutton>現在の入力デバイスの設定を保存</"
+"力デバイス</quote>のページの <guibutton>今すぐ入力デバイス設定を保存</"
 "guibutton> ボタンに似たはたらきをします。"
 
 #: src/dialogs/device-status-dialog.xml:48(para)
@@ -8163,16 +8162,16 @@ msgid ""
 "five different modes: GIMP, CMYK, Triangle, Watercolor and Scales. It has an "
 "interesting eyedropper to pick up a color anywhere on your screen."
 msgstr ""
-"この色ダイアログは色を管理したり色を新たに引き出すためのものです。 使えるモー"
-"ドが<acronym>GIMP</acronym>、 <acronym>CMYK</acronym>、 水彩色、 三角形、 ス"
-"ケールの 5 通りあります。 コンピューター画面上ならどこでも色が採取できるとい"
-"う面白いスポイトがついています。"
+"このダイアログで色を管理したり色を新たに引き出せます。 使えるモードが"
+"<acronym>GIMP</acronym>、 <acronym>CMYK</acronym>、 水彩色、 三角形、 スケー"
+"ルの 5 通りあります。 コンピューター画面上ならどこでも色が採取できるという面"
+"白いスポイトがついています。"
 
 #: src/dialogs/color-dialog.xml:43(para)
 msgid ""
 "the sliders are permanently visible instead of selected from the scale menu,"
 msgstr ""
-"<quote>スケール</quote>モードが無く、 そこにあった<acronym>HSV</acronym>と"
+"<quote>スケール</quote>メニューで選ばずとも<acronym>HSV</acronym>と"
 "<acronym>RGB</acronym>の 6 本のスライダーが常時表示されています。"
 
 #: src/dialogs/color-dialog.xml:49(para)
@@ -8652,12 +8651,12 @@ msgstr ""
 #: src/dialogs/channel-dialog.xml:284(secondary)
 #: src/dialogs/channel-dialog.xml:322(phrase)
 msgid "Edit Channel Attributes"
-msgstr "チャンネルプロパティを編集"
+msgstr "チャンネルプロパティの編集"
 
 #: src/dialogs/channel-menu.xml:36(guilabel)
 #: src/dialogs/channel-dialog.xml:345(phrase)
 msgid "New Channel"
-msgstr "チャンネルを追加..."
+msgstr "チャンネルの追加..."
 
 #: src/dialogs/channel-menu.xml:37(guilabel)
 #: src/dialogs/channel-dialog.xml:372(phrase)

@@ -6,7 +6,7 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2012-03-29-->
+<!--2012-05-30-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
@@ -45,7 +45,7 @@
       Manual by Mike Terry.
     </para>
     <para lang="ja">
-      この節は <application><acronym>GIMP</acronym> 1</application> 用の
+      この節は <application><acronym>GIMP</acronym>&nbsp;1</application> 用の
       ユーザーマニュアルに掲載されたマイク・テリー氏著の演習 (日本語訳は 
       <ulink url="http://www.geocities.jp/gimpfile/gum_jp/43.html">
       マイク・テリーの Script-Fu 黒帯道場</ulink>) を再編成したものです。
@@ -170,7 +170,7 @@
           <para lang="ja">
             後置記法では <userinput>1 23 +</userinput> と書きます。 多数の
             <acronym>HP</acronym>社製電卓がこの方式です。
-            [1 に 23 を 足す という日本語文によく馴染む記法です。]
+            [1 と 23 とを 足す という日本語文によく馴染む記法です。]
           </para>
         </listitem>
       </itemizedlist>
@@ -199,9 +199,10 @@
           <guisubmenu>Script-Fu</guisubmenu>
           <guimenuitem>Script-Fu コンソール</guimenuitem>
         </menuchoice>
-        と進んでいただくと<quote>Script-Fu コンソール</quote>が開きます。 
+        と進んでいただくと<quote>Script-Fu&nbsp;コンソール</quote>を開きます。 
         これは Scheme 言語を対話的に作動させる目的で作られた機能です。 間も無く
-        <quote>Script-Fu コンソール</quote>が現れます。
+        <link linkend="plug-in-script-fu-console">Script-Fu コンソール</link>
+        が現れます。
       </para>
     </sect3>
 
@@ -506,7 +507,7 @@
         申し上げました。 やってみたいと思われたことでしょう。 身に付けると
         良い習慣ですし、 Scheme 言語に問題を起こすことはありません。 空白文字
         はいくら増やしても Scheme インタープリターが無視しますので、 自由に
-        使ってスクリプトを判り易くまとめるのに役立てられます。 ただし Script-Fu
+        使ってスクリプトを解り易くまとめるのに役立てられます。 ただし Script-Fu
         コンソール上でだけは式全体を 1 行に書く必要があります。 つまり
         式の最初の括弧 <code>(</code> から最後の括弧 <code>)</code> までが
         Script-Fu コンソールの 1 行記入欄の中に全部入らなくてはなりません。
@@ -830,7 +831,7 @@
         リストを<quote>先頭</quote>と<quote>後続</quote>からできていると
         とらえるのがうまい考え方です。 先頭とはリストの最初の要素のことであり、
         後続はリストの残りの要素のことです。 リストから要素をとりだしたり
-        加えたりする方法を学ぶなかでこうしたとらえ方の重要性が判るはずです。
+        加えたりする方法を学ぶなかでこうしたとらえ方の重要性が解るはずです。
       </para>
     </sect3>
 
@@ -1069,7 +1070,7 @@
 
   <sect2 id="gimp-using-script-fu-tutorial-first-script">
     <title lang="en">Your First Script-Fu Script</title>
-    <title lang="ja">はじめてのScript-Fuスクリプト</title>
+    <title lang="ja">はじめての Script-Fu スクリプト</title>
     <para lang="en">
       Do you not need to stop and catch your breath? No? Well then,
       let's proceed with your fourth lesson &mdash; your first Script-Fu
@@ -1158,16 +1159,16 @@
       </para>
       <para lang="ja">
         ホームディレクトリ内に<acronym>GIMP</acronym>が作成する 
-        <filename class="directory">.gimp-2.6</filename> ディレクトリーに 
+        <filename class="directory">.gimp-2.8</filename> ディレクトリーに 
         <filename class="directory">scripts</filename> フォルダーができている
         のをお確かめください。<footnote><para>
           <productname>Mac OS X</productname> では <filename role="html"
           class="directory">~/Library/Application&nbsp;Support/Gimp/scripts
           </filename>
-          <filename role="tex" class="directory">~/Library/Application
-          Support/Gimp/scripts</filename> です。</para></footnote>
+          <filename role="tex" class="directory">$\tilde{}$/Library/%
+          Application~Support/Gimp/scripts</filename> です。</para></footnote>
         <acronym>GIMP</acronym>は必ず 
-        <filename class="directory">.gimp-2.6</filename> ディレクトリー内で
+        <filename class="directory">.gimp-2.8</filename> ディレクトリー内で
         <filename class="directory">scripts</filename> フォルダーを探し、 
         このディレクトリパスを Script-Fu データベースに入れます。 個人用の
         スクリプトはここに入れるべきでしょう。

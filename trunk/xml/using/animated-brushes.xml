@@ -6,7 +6,7 @@
   2009-09-23 j.h: reviewed for v2.6
   2007-05-08 Added Spanish translation by AntI
 -->
-<!--2012-03-24-->
+<!--2012-05-29-->
 <sect1 id="gimp-using-animated-brushes">
   <title lang="en">The GIH Dialog Box</title>
   <title lang="ja">GIH ダイアログ</title>
@@ -465,10 +465,10 @@
               <filename class="extension">.gih</filename>.
             </para>
             <para lang="ja">
-              画像は拡張子 <filename class="extension">.gih</filename> をつけて
-              保存しますが、 元の画像の属性を余さず保持したいのでその前に
-              拡張子 <filename class="extension">.xcf</filename> をつけた
-              形式で保存しておいてください。
+              画像は拡張子 <filename class="extension">.gih</filename> がついた
+              ファイルに書き出しますが、 元の画像の属性を余さず保持したいので
+              その前に拡張子 <filename class="extension">.xcf</filename> を
+              つけた形式で保存しておいてください。
             </para>
           </step>
           <step>
@@ -480,9 +480,10 @@
               OK.
             </para>
             <para lang="en">
-              <acronym>GIH</acronym>形式で保存するときにはまず
-              <quote>画像を保存</quote>ダイアログが出ますから名前と保存先を
-              指定しましょう。 次に<quote>ブラシパイプ形式で保存</quote>
+              <acronym>GIH</acronym>形式で書き出すときにはまず
+              <quote>画像をエクスポート</quote>ダイアログが出ますから名前と
+              保存先を指定しましょう。 次に
+              <quote>画像をエクスポート: ブラシパイプ</quote>
               ダイアログが現れますから、 <guilabel>間隔</guilabel> は 
               <userinput>100</userinput> パーセントに、 
               <guilabel>説明</guilabel> には任意の名前を、 
@@ -491,7 +492,7 @@
               <guilabel>次元</guilabel> は <userinput>1</userinput> 次元に、
               <guilabel>並び</guilabel> には <userinput>4</userinput> と
               <guimenuitem>Incremental</guimenuitem> を指定してから、
-              <guibutton>保存</guibutton> ボタンを押します。
+              <guibutton>エクスポート</guibutton> ボタンをクリックします。
             </para>
           </step>
           <step>
@@ -524,7 +525,7 @@
               </mediaobject>
             </para>
             <para lang="en">
-              <acronym>GIMP</acronym>のブラシディレクトリーに直接保存する機能が
+              <acronym>GIMP</acronym>のブラシディレクトリーに直接書き出す機能が
               うまくはたらかないときは、 後で個人用の<acronym>GIMP</acronym>
               フォルダー内にある <filename class="directory">brushes</filename>
               フォルダーに <filename class="extension">.gih</filename> ファイル
@@ -541,7 +542,7 @@
                     <phrase>「ブラシの更新」</phrase>
                   </textobject>
                 </inlinemediaobject>
-              </guiicon> アイコンボタンをクリックしてください。
+              </guiicon> アイコンボタンをクリックします。
               ダイアログウィンドウ内にあなたのブラシが現れますので、 それを
               選びましょう。 試しに<quote>鉛筆で描画</quote>ツールを選んで
               白紙の画像に描いてみるとこうなります。
@@ -577,7 +578,8 @@
               保存しておいた <filename class="extension">.xcf</filename> 
               画像を読み戻してから、 今度は並びの選択に 
               <guimenuitem>Random</guimenuitem> を選んで
-              <filename class="extension">.gih</filename> 形式で保存します。
+              <filename class="extension">.gih</filename> 形式にエクスポート
+              します。
               <mediaobject>
                 <imageobject>
                   <imagedata format="PNG"
@@ -702,7 +704,7 @@
               レイヤーダイアログを開いて、 そのレイヤーの名前を 
               <quote><userinput>左手　0黒</userinput></quote>にします。 
               (レイヤー名欄をダブルクリックして直に書き直すか、 レイヤー
-              メニューより <guimenuitem>レイヤー名を変更...</guimenuitem>
+              メニューより <guimenuitem>レイヤー名の変更...</guimenuitem>
               と進んで<quote>レイヤー名の変更</quote>ダイアログ上で新しい名前に
               します)。
             </para>
@@ -957,7 +959,7 @@
               ほらね。 ブラシができました。 先に拡張子
               <filename class="extension">.xcf</filename> をつけて
               保存してから、 <acronym>GIH</acronym>形式ではつぎのような
-              パラメーターで保存します。
+              パラメーターで書き出します。
             </para>
             <itemizedlist>
               <listitem>

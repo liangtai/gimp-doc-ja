@@ -7,7 +7,7 @@
   2008-03-01 ude: renamed id (old: gimp-pointer-dialog)
   2007-11-22 j.h: created
 -->
-<!--2012-05-02-->
+<!--2012-05-31-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-pointer-info-dialog">
   <title lang="en">Pointer Dialog</title>
   <title lang="en">ピクセル情報ダイアログ</title>
@@ -213,10 +213,11 @@
                 </para>
                 <para lang="ja">
                   <link linkend="glossary-rgb"><acronym>RGB</acronym></link>
-                  チャンネルの値を表示します。 画素の <guilabel>赤</guilabel>、
-                  <guilabel>緑</guilabel>、 <guilabel>青</guilabel>、
-                  <guilabel>アルファ</guilabel> の各チャンネル値を 0 から 255
-                  の範囲で表します。
+                  チャンネルの値を表示します。 画素の
+                  <guilabel>R (赤)</guilabel>、
+                  <guilabel>G (緑)</guilabel>、 <guilabel>B (青)</guilabel>、
+                  <guilabel>A (不透明度)</guilabel> の各チャンネル値を 0 から
+                  255 の範囲で表します。
                 </para>
               </listitem>
             </varlistentry>
@@ -233,9 +234,10 @@
                 </para>
                 <para lang="ja">
                   <link linkend="glossary-rgb"><acronym>RGB</acronym></link>
-                  チャンネルの値を表示します。 画素の <guilabel>赤</guilabel>、
-                  <guilabel>緑</guilabel>、 <guilabel>青</guilabel>、
-                  <guilabel>アルファ</guilabel> の各チャンネル値を百分率で
+                  チャンネルの値を表示します。 画素の
+                  <guilabel>R (赤)</guilabel>、 <guilabel>G (緑)</guilabel>、
+                  <guilabel>B (青)</guilabel>、
+                  <guilabel>A (不透明度)</guilabel> の各チャンネル値を百分率で
                   表します。 さらに画素の色を 16 進数で表示します。
                 </para>
               </listitem>
@@ -252,9 +254,10 @@
                 </para>
                 <para lang="ja">
                   <link linkend="glossary-hsv"><acronym>HSV</acronym></link>
-                  成分です。 画素の <guilabel>色相</guilabel> を角度で表示し、
-                  <guilabel>彩度</guilabel>、 <guilabel>明度</guilabel>、
-                  <guilabel>アルファ</guilabel> の各値を百分率で表示します。
+                  成分です。 画素の <guilabel>H (色相)</guilabel> を角度で
+                  表示し、 <guilabel>S (彩度)</guilabel>、
+                  <guilabel>V (明度)</guilabel>、
+                  <guilabel>A (不透明度)</guilabel> の各値を百分率で表示します。
                 </para>
               </listitem>
             </varlistentry>
@@ -270,10 +273,11 @@
                 </para>
                 <para lang="ja">
                   <link linkend="glossary-cmyk"><acronym>CMYK</acronym></link>
-                  チャンネルの値です。 画素の <guilabel>シアン</guilabel>、
-                  <guilabel>マゼンタ</guilabel>、 <guilabel>イエロー</guilabel>、
-                  <guilabel>ブラック</guilabel>、 <guilabel>アルファ</guilabel>
-                  の各値を百分率で表示します。
+                  チャンネルの値です。 画素の <guilabel>C (シアン)</guilabel>、
+                  <guilabel>M (マゼンタ)</guilabel>、
+                  <guilabel>Y (イエロー)</guilabel>、
+                  <guilabel>K (黒)</guilabel>、
+                  <guilabel>A (不透明度)</guilabel> の各値を百分率で表示します。
                 </para>
               </listitem>
             </varlistentry>
@@ -282,7 +286,7 @@
       </varlistentry>
       <varlistentry>
         <term lang="en">Sample Merged</term>
-        <term lang="ja">見えている色で</term>
+        <term lang="ja">見えている色の情報を表示</term>
         <listitem>
           <para lang="en">
             If this option is checked (default), sampling is performed on all

@@ -11,7 +11,7 @@
   2005-11-28 Lexa: replaced informalfigures by figures.
   2005-05-08 added french translation
 -->
-<!--2012-03-24-->
+<!--2012-05-29-->
 <sect1 id="gimp-concepts-gradients">
   <title lang="en">Gradients</title>
   <title lang="ja">グラデーション</title>
@@ -277,16 +277,17 @@
         gradients transition smoothly between any two colors you want.
       </para>
       <para lang="ja">
-        グラデーションダイアログのリストの最初の 4 つは特別な
+        グラデーションダイアログのリストの最初の 5 つは特別な
         グラデーションです。 これらは固定した色順ではなくツールボックスに
-        示されている描画色と背景色を使います。
-        <guilabel>描画色から背景色 (RGB)</guilabel> はツールボックスで表された
-        描画色から背景色へのグラデーションを<acronym>RGB</acronym>上で
-        表現したものです。 <guilabel>描画色から背景色 (HSV
+        示されている描画色と背景色を使います。 <guilabel>描画色から背景色 (HSV
         反時計回り)</guilabel> は選択された色相から色相環上を 360 度まで
         変転するところを示しています。 <guilabel>描画色から背景色 (HSV
         時計回り)</guilabel> は選択された色相から色相環上を 0 度まで進む
-        ところを示しています。 <guilabel>描画色から透明へ</guilabel> では
+        ところを示しています。 <guilabel>描画色から背景色 (RGB)</guilabel> は
+        ツールボックスで表された描画色から背景色へのグラデーションを
+        <acronym>RGB</acronym>上で表現したものです。 <guilabel>描画色から背景色
+        (ハードエッジ)</guilabel> は描画色と背景色の 2 色のみで中間色のない
+        塗り分けをします。 <guilabel>描画色から透明へ</guilabel> では
         選択された色相が徐々に透過していきます。 これらの色は色を変更する
         ダイアログを通して変えられます。 要するにこれらのグラデーションは
         描画色と背景色を変えればその 2 色がどんな色でもその間を徐々に移り
@@ -357,7 +358,7 @@
     で終わる名前のファイル) はいずれもどちらかのフォルダー内に入っていて、
     <acronym>GIMP</acronym>を起動すると自動的に読み込まれます。 この 2 つの
     ディレクトリー以外のフォルダーでもグラデーションを検索させるには、 
-    <link linkend="gimp-prefs-folders-data">設定</link> ダイアログの左側の
+    <link linkend="gimp-prefs-folders-gradients">設定</link> ダイアログの左側の
     一覧から 
     <menuchoice>
       <guimenu>フォルダー</guimenu>
@@ -366,7 +367,7 @@
     をクリックして出てくるページでそのフォルダーを追加してください。
   </para>
   <para lang="ja">
-    <application><acronym>GIMP</acronym> 2.2</application> から新たに
+    <application><acronym>GIMP</acronym>&nbsp;2.2</application> から新たに
     <acronym>SVG</acronym>形式のグラデーションファイルが読み込めるように
     なりました。 <acronym>SVG</acronym>形式はベクター画像を扱う多くの
     プログラムで使われています。 <acronym>GIMP</acronym>に
