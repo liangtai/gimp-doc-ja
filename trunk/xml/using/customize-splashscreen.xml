@@ -9,7 +9,7 @@
   2007-05-16: ude: German translation
   2007-05-10: created by j.h
 -->
-<!--2012-05-30-->
+<!--2012-06-10-->
 <sect1 id="customize-splashscreen">
   <title lang="en">Customize Splash-Screen</title>
   <title lang="ja">自分流のスプラッシュスクリーン</title>
@@ -58,21 +58,57 @@
   </para>
   <para lang="ja">
     もちろんこのスプラッシュスクリーンの画像も誂えられます。 
-    <acronym>GIMP</acronym>の個人用ディレクトリー内に
+    はじめに<acronym>GIMP</acronym>の個人用ディレクトリー内に
     <filename class="directory">splashes</filename> フォルダーを
-    作成してください。 (<productname>UNIX</productname> システム風の
-    システムならば <filename class="directory">/home/<replaceable><!--
-    -->&lt;ユーザー名&gt;</replaceable>/.gimp-2.8/</filename>、 
-    <productname>Windows XP</productname> ならば 
-    <filename class="directory" role="html">C:\Documents&nbsp;and&nbsp;<!--
-    -->Settings\<replaceable>&lt;ユーザー名&gt;</replaceable>\.gimp-2.8\<!--
-    --></filename> <filename class="directory" role="tex">C:\\Documents~and~%
-    Settings\\{\\rm\\langle{}ユーザー名\\rangle}\\.gimp-2.8\\</filename>、
-    <productname>Mac OS</productname> ならば
-    <filename class="directory">/Users/<replaceable>&lt;ユーザー名&gt;<!--
-    --></replaceable>/.gimp-2.8/</filename> か <filename class="directory"><!--
-    -->/Users/<replaceable>&lt;ユーザー名&gt;</replaceable>/Library/<!--
-    -->Application&nbsp;Support/Gimp/</filename> です。)
+    作成します。 その位置は例えば
+    <variablelist>
+      <varlistentry>
+        <term>
+          <productname>UNIX</productname> システム風のシステムならば
+        </term>
+        <listitem>
+          <para>
+            <filename class="directory" role="html">/home/<replaceable><!--
+            -->&lt;ユーザー名&gt;</replaceable>/.gimp-2.8/</filename>
+            <filename class="directory" role="tex">/home/{\rm\langle{}%
+            ユーザー名\rangle}/.gimp-2.8/</filename>、 
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <productname>Windows XP</productname> ならば 
+        </term>
+        <listitem>
+          <para>
+            <filename class="directory" role="html">C:\Documents&nbsp;and<!--
+            -->&nbsp;Settings\<replaceable>&lt;ユーザー名&gt;</replaceable><!--
+            -->\.gimp-2.8\</filename>
+            <filename class="directory" role="tex">C:\\Documents~and~Settings%
+            \\{\rm\langle{}ユーザー名\rangle}\\.gimp-2.8\\</filename>、
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <productname>Mac OS X</productname> ならば
+        </term>
+        <listitem>
+          <para>
+            <filename class="directory" role="html">/Users/<replaceable><!--
+            -->&lt;ユーザー名&gt;</replaceable>/.gimp-2.8/</filename>
+            <filename class="directory" role="tex">/Users/{\rm\langle{}%
+            ユーザー名\rangle}/.gimp-2.8/</filename>
+            か <filename class="directory" role="html">/Users/<!--
+            --><replaceable>&lt;ユーザー名&gt;</replaceable>/Library/<!--
+            -->Application&nbsp;Support/Gimp/</filename>
+            <filename class="directory" role="tex">/Users/{\rm\langle{}%
+            ユーザー名\rangle}/Library/Application~Support/Gimp/</filename>
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    です。
   </para>
   <para lang="ja">
     画像 (複数可) をこの <filename class="directory">splashes</filename>
