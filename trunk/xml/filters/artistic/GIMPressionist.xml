@@ -8,7 +8,7 @@
   2005-12-07 replaced <simplesect> by <sect3> by lexa
   2005-09-12 de added by axel.wernicke
 -->
-<!--2012-03-25-->
+<!--2012-06-02-->
 <sect2 id="plug-in-gimpressionist" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>GIMPressionist</title>
 
@@ -137,11 +137,20 @@
       <para lang="ja">
         <guibutton>OK</guibutton> ボタンで変更を確定するまでは、 ダイアログで
         設定した内容を反映できる縮小見本画像をご利用ください。
-        <guibutton>更新</guibutton> ボタンをクリックすると縮小見本画像が最新の
+        <guibutton>
+          <inlinegraphic format="PNG"
+            fileref="images/dialogs/stock-reload-16.png"/>
+          更新
+        </guibutton> 
+        ボタンをクリックすると縮小見本画像が最新の
         状態に変わります。 (このプレビュー機能には自動更新がありません。
         GIMPressionist フィルターはとても沢山の作業をこなしているのです。)
-        <guibutton>リセット</guibutton> ボタンをクリックすれば元画像の表示に
-        戻ります。
+        <guibutton>
+          <inlinegraphic format="PNG"
+            fileref="images/dialogs/stock-reset-16.png"/>
+          リセット
+        </guibutton> 
+        ボタンをクリックすれば元画像の表示に戻ります。
       </para>
     </sect4>
 
@@ -263,7 +272,7 @@
         <title lang="ja">紙のオプション</title>
         <varlistentry>
           <term lang="en">Invert</term>
-          <term lang="ja">反転</term>
+          <term lang="ja">階調を反転する</term>
           <listitem>
             <para lang="en">
               Inverts the paper texture: what was a hollow turns to a bump
@@ -389,8 +398,12 @@
               表示されますのでレイヤーを選べばそれもブラシに利用できます。
             </para>
             <para lang="ja">
-              <guibutton>別名で保存</guibutton> ボタンは
-              選択したブラシを保存するときに使用します。
+              <guibutton>
+                <inlinegraphic format="PNG"
+                  fileref="images/dialogs/stock-save-16.png"/>
+                別名で保存
+              </guibutton> 
+              ボタンは選択したブラシを保存するときに使用します。
             </para>
           </listitem>
         </varlistentry>
@@ -598,7 +611,11 @@
                     directions manually.
                   </para>
                   <para lang="ja">
-                    <guibutton>編集</guibutton> ボタンをクリックすると
+                    <guibutton>
+                      <inlinegraphic format="PNG"
+                        fileref="images/dialogs/stock-edit-16.png"/>
+                      編集
+                    </guibutton> ボタンをクリックすると
                     <link linkend="gimpressionist-orient-map-editor">
                     方向マップエディターダイアログ</link> が開かれ、 運筆方向を
                     描けます。
@@ -679,8 +696,8 @@
               will be determined.
             </para>
             <para lang="ja">
-              ブラシの大きさを決めるオプションをつぎのいずれかに
-              選んでください。
+              <guilabel>サイズの決定基準</guilabel> でブラシの大きさを決める
+              オプションをつぎのいずれかに選んでください。
             </para>
             <variablelist>
               <varlistentry>
@@ -779,7 +796,11 @@
                     strokes by yourself.
                   </para>
                   <para lang="ja">
-                    <guibutton>編集</guibutton> ボタンをクリックすると
+                    <guibutton>
+                      <inlinegraphic format="PNG"
+                        fileref="images/dialogs/stock-edit-16.png"/>
+                      編集
+                    </guibutton> ボタンをクリックすると
                     <link linkend="gimpressionist-size-map-editor">
                     サイズマップエディターダイアログ</link> が開かれます。 
                     筆触の大きさを制御できます。
@@ -995,8 +1016,7 @@
             <variablelist>
               <varlistentry>
                 <term lang="en"><guilabel>Keep Original</guilabel></term>
-                <!--元画像を残す-->
-                <term lang="ja"><guilabel>オリジナルを残す</guilabel></term>
+                <term lang="ja"><guilabel>元画像を残す</guilabel></term>
                 <listitem>
                   <para lang="en">
                     The original image will be used as a background.
@@ -1018,8 +1038,7 @@
               </varlistentry>
               <varlistentry>
                 <term lang="en"><guilabel>Solid</guilabel></term>
-                <!--単色-->
-                <term lang="ja"><guilabel>ソリッド</guilabel></term>
+                <term lang="ja"><guilabel>単色</guilabel></term>
                 <listitem>
                   <para lang="en">
                     By clicking on the color dwell you can select a solid

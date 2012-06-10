@@ -6,7 +6,7 @@
    2008-06-07 ude: added new sections: Refresh, Console, Server
    2005-11-24 split of from menus-toolbox.xml by axel.wernicke
 -->
-<!--2012-05-07-->
+<!--2012-06-02-->
 <sect2 id="gimp-filters-script-fu">
   <title lang="en">The <quote>Script-Fu</quote> Submenu</title>
   <title lang="ja"><quote>Script-Fu</quote>サブメニュー</title>
@@ -243,9 +243,18 @@
             the <guilabel>Save</guilabel> command.
           </para>
           <para lang="ja">
-            <guibutton>クリア</guibutton> ボタンをクリックすると、 
-            主ウィンドウ部分から現在のコマンド出力の表示が消えます。 ちなみに
-            コンソール出力に表示された内容は <guibutton>保存</guibutton> 
+            <guibutton>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-edit-clear-16.png"/>
+                クリア
+            </guibutton>
+            ボタンをクリックすると、 主ウィンドウ部分から現在のコマンド出力の
+            表示が消えます。 ちなみにコンソール出力に表示された内容は
+            <guibutton>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-save-16.png"/>
+                保存
+            </guibutton>
             していても一旦クリアすると復元ができません。
           </para>
         </listitem>
@@ -260,12 +269,16 @@
             <quote><code>&gt;</code></quote>-characters).
           </para>
           <para lang="ja">
-            <guibutton>保存</guibutton> コマンドは主
-            ウィンドウ、 つまりScript-Fuの出力表示の内容をそっくりそのまま (
-            エコーバック行の<quote><code>&gt;</code></quote>記号も含め) 
-            テキスト形式のファイルとして保存します。 ボタンをクリックすると
-            ファイルブラウザーが開かれますので保管場所とファイル名を指定して
-            ください。
+            <guibutton>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-save-16.png"/>
+                保存
+            </guibutton>
+            コマンドは主ウィンドウ、 つまり Script-Fu の出力表示の内容を
+            そっくりそのまま (エコーバック行の<quote><code>&gt;</code></quote>
+            記号も含め) テキスト形式のファイルとして保存します。 ボタンを
+            クリックするとファイルブラウザーが開かれますので保管場所と
+            ファイル名を指定してください。
           </para>
         </listitem>
       </varlistentry>

@@ -8,7 +8,7 @@
   2005/09/23 created by axel.wernicke
   2005/10/23 en;fr and adds-on by julien hardelin
 -->
-<!--2012-04-07-->
+<!--2012-06-03-->
 <sect2 id="plug-in-fractalexplorer">
   <title lang="en">Fractal Explorer</title>
   <title lang="ja">フラクタルエクスプローラー...</title>
@@ -156,11 +156,30 @@
             </para>
             <para lang="ja">
               <guilabel>サイズ変更</guilabel> の 4 つのボタンは生成した図形を
-              拡大・縮小するのに使います。 <guibutton>元に戻す</guibutton>
-              ボタンは直前の大きさに戻します。 <guibutton>やり直す</guibutton>
-              ボタンは元に戻した操作を <guibutton>拡大</guibutton> や 
-              <guibutton>縮小</guibutton> ボタンを使わずに
-              再び実行するために使います。
+              拡大・縮小するのに使います。
+              <guibutton>
+                <inlinegraphic format="PNG"
+                  fileref="images/dialogs/stock-undo-16.png"/>
+                元に戻す
+              </guibutton>
+              ボタンは直前の大きさに戻します。
+              <guibutton>
+                <inlinegraphic format="PNG"
+                  fileref="images/dialogs/stock-redo-16.png"/>
+                やり直す
+              </guibutton>
+              ボタンは元に戻した操作を
+              <guibutton>
+                <inlinegraphic format="PNG"
+                  fileref="images/dialogs/stock-zoom-in-16.png"/>
+                拡大
+              </guibutton> や 
+              <guibutton>
+                <inlinegraphic format="PNG"
+                  fileref="images/dialogs/stock-zoom-out-16.png"/>
+                縮小
+              </guibutton>
+              ボタンを使わずに再び実行するために使います。
             </para>
           </listitem>
         </varlistentry>
@@ -291,7 +310,12 @@
                     フォルダーです。 標準フォルダーに保管した設定情報は
                     <quote>プリセット</quote>タブの一覧表からも読み込めます。 
                     それ以外の場所に保管したデータファイルは
-                    <guibutton>開く</guibutton> ボタンをクリックすると現れる
+                    <guibutton>
+                      <inlinegraphic format="PNG"
+                        fileref="images/dialogs/stock-fileopen-16.png"/>
+                      開く
+                    </guibutton>
+                    ボタンをクリックすると現れる
                     ファイルブラウザーで探してください。
                   </para>
                 </listitem>
@@ -378,7 +402,7 @@
         </varlistentry>
         <varlistentry>
           <term lang="en">Use loglog smoothing</term>
-          <term lang="ja">loglog スムージングを使用</term>
+          <term lang="ja">loglog スムージングを使用する</term>
           <listitem>
             <para lang="en">
               If this option is checked, the band effect is smoothed.
@@ -459,7 +483,7 @@
         </varlistentry>
         <varlistentry>
           <term lang="en"><guilabel>None</guilabel>
-          <term lang="ja"><guilabel>なし</guilabel>
+          <term lang="ja"><guilabel>使用しない</guilabel>
           <listitem>
             <para lang="en">Color densities will vary linearly.</para>
             <para lang="ja">色あいは一次関数に従って変化します。</para>
@@ -555,21 +579,34 @@
       </para>
       <para lang="ja">
         この一覧表には<quote>パラメーター</quote>タブ内で 
-        <guibutton>保存</guibutton> したフラクタル図形の設定情報や
+        <guibutton>
+          <inlinegraphic format="PNG"
+            fileref="images/dialogs/stock-save-16.png"/>
+          保存
+        </guibutton>
+        したフラクタル図形の設定情報や
         <acronym>GIMP</acronym>に同梱されている 36 種類のプリセットデータが
         並んでいます。 どれでもひとつ任意にクリックして強調表示 (反転) 
         させてから <guibutton>適用</guibutton> ボタンをクリックすれば
         設定情報が読み込め、 たたき台として利用できます。
       </para>
       <para lang="ja">
-        <guibutton>更新</guibutton> ボタンを使えば新たに保存した
-        設定情報もこのリストに加えられますので、 
+        <guibutton>
+          <inlinegraphic format="PNG"
+            fileref="images/dialogs/stock-reload-16.png"/>
+          更新
+        </guibutton>
+        ボタンを使えば新たに保存した設定情報もこのリストに加えられますので、 
         <acronym>GIMP</acronym>を再起動する必要がありません。 
-        <guibutton>削除</guibutton> ボタンをクリックすると一覧表で
-        選択されている項目が保存したファイルごと削除できます。 
-        <acronym>GIMP</acronym>同梱のデータも一旦はこの一覧表から
-        撤去できますが、 再びこのフィルターを呼び出すと自動的にこの表に
-        復活します。
+        <guibutton>
+          <inlinegraphic format="PNG"
+            fileref="images/dialogs/dialogs-icon-delete.png"/>
+          削除
+        </guibutton>
+        ボタンをクリックすると一覧表で選択されている項目が保存したファイルごと
+        削除できます。 <acronym>GIMP</acronym>同梱のデータも一旦はこの
+        一覧表から撤去できますが、 再びこのフィルターを呼び出すと自動的に
+        この表に復活します。
       </para>
     </sect4>
   </sect3>

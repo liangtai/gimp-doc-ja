@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
 "POT-Creation-Date: 2010-12-20 07:46+0900\n"
-"PO-Revision-Date: 2012-04-07 21:29+0900\n"
+"PO-Revision-Date: 2012-06-03 16:28+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -253,6 +253,7 @@ msgstr "色の塗り方"
 msgid "Color"
 msgstr "色"
 
+# "勾配/グラデーション" for sinus,
 #: src/filters/render/spyrogimp.xml:170(term)
 #: src/filters/render/sinus.xml:194(term)
 #: src/filters/render/lava.xml:106(term)
@@ -361,10 +362,11 @@ msgid ""
 "Properties area, but you can change them by operating in this area, provided "
 "that your new texture is highlighted."
 msgstr ""
-"<guibutton>新規</guibutton> ボタンは新たなテクスチャーを生成して上記リストに"
-"加えます。 新しいテクスチャーの名前と機能は <guilabel>プロパティ</guilabel> "
-"のところで指定した内容になっていて、 一覧表をクリックして選択した項目はここで"
-"変更できます。"
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/dialogs-"
+"icon-new.png\"/> 新規</guibutton> ボタンは新たなテクスチャーを生成して上記リ"
+"ストに加えます。 新しいテクスチャーの名前と機能は <guilabel>プロパティ</"
+"guilabel> のところで指定した内容になっていて、 一覧表をクリックして選択した項"
+"目はここで変更できます。"
 
 #: src/filters/render/spheredesigner.xml:115(term)
 msgid "Duplicate"
@@ -372,7 +374,10 @@ msgstr "複製"
 
 #: src/filters/render/spheredesigner.xml:117(para)
 msgid "Copies the selected texture and adds the copy to the end of the list."
-msgstr "一覧表で選択されているテクスチャーの複製が追加されます。"
+msgstr ""
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"duplicate-16.png\"/> 複製</guibutton> ボタンは一覧表で選択されているテクス"
+"チャーの複製を追加します。"
 
 #: src/filters/render/spheredesigner.xml:124(term)
 #: src/filters/render/ifsfractal.xml:115(term)
@@ -381,7 +386,10 @@ msgstr "削除"
 
 #: src/filters/render/spheredesigner.xml:126(para)
 msgid "Deletes the selected texture from the list."
-msgstr "一覧表で選択されているテクスチャーの項目が撤去されます。"
+msgstr ""
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/dialogs-"
+"icon-delete.png\"/> 削除</guibutton> ボタンは一覧表で選択されているテクス"
+"チャーの項目を撤去します。"
 
 #: src/filters/render/spheredesigner.xml:132(term)
 #: src/filters/render/qbist.xml:103(term)
@@ -389,7 +397,9 @@ msgstr "一覧表で選択されているテクスチャーの項目が撤去さ
 #: src/filters/render/flame.xml:144(term)
 #: src/filters/render/cmlexplorer.xml:104(term)
 msgid "Open"
-msgstr "開く"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"fileopen-16.png\"/></guiicon> 開く"
 
 #: src/filters/render/spheredesigner.xml:133(term)
 #: src/filters/render/qbist.xml:104(term)
@@ -397,14 +407,19 @@ msgstr "開く"
 #: src/filters/render/flame.xml:153(term)
 #: src/filters/render/cmlexplorer.xml:105(term)
 msgid "Save"
-msgstr "保存"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"save-16.png\"/></guiicon> 保存"
 
 #: src/filters/render/spheredesigner.xml:135(para)
 msgid "Allows to save current settings or load previously saved settings."
 msgstr ""
-"<guibutton>保存</guibutton> ボタンをクリックすると現在のダイアログ上の設定値"
-"が名前をつけてファイルに保存できます。 <guibutton>開く</guibutton> ボタンをク"
-"リックすると保存された設定情報を読み込んで再び利用できます。"
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"save-16.png\"/> 保存</guibutton> ボタンをクリックすると現在のダイアログ上の設"
+"定値が名前をつけてファイルに保存できます。 <guibutton><inlinegraphic format="
+"\"PNG\" fileref=\"images/dialogs/stock-fileopen-16.png\"/></guiicon> 開く</"
+"guibutton> ボタンをクリックすると保存された設定情報を読み込んで再び利用できま"
+"す。"
 
 #: src/filters/render/spheredesigner.xml:143(title)
 msgid "Properties"
@@ -529,8 +544,8 @@ msgid ""
 "With the Wood texture, this options gives an aspect of venetian blind, more "
 "or less open."
 msgstr ""
-"<guimenuitem>木目</guimenuitem> テクスチャーの場合にこのオプションが連子窓の"
-"開き具合を制御します。"
+"<guimenuitem>木目</guimenuitem> テクスチャーの場合に <guilabel>ベキ指数</"
+"guilabel> オプションが連子窓の開き具合を制御します。"
 
 #: src/filters/render/spheredesigner.xml:239(title)
 msgid "Transformations"
@@ -954,12 +969,12 @@ msgid ""
 "background</guilabel> colors in the toolbox, or you can <guilabel>Choose</"
 "guilabel> a color with the color icons."
 msgstr ""
-"このタブでは文様を作るのに使われる 2 色を設定します。 白黒の画像にするか、 "
-"ツールボックスの色標識に示される現在の描画色と背景色で描くか、 もしくは 2 つ"
-"の色だまりボタンでそれぞれ指定した色を使う方法があります。 <guilabel>アルファ"
-"チャンネル</guilabel> スライダーはそれぞれの色の不透明度を設定します。 フィル"
-"ターを呼び出したレイヤーにアルファチャンネルがないときは、 どちらのスライダー"
-"も灰色無効になり使用できません。"
+"<quote>色</quote>タブでは文様を作るのに使われる 2 色を設定します。 白黒の画像"
+"にしたり、 ツールボックスの色標識に示される現在の描画色と背景色で描いたり、 "
+"もしくは 2 つの色だまりボタンでそれぞれ指定した色を使う方法があります。 "
+"<guilabel>アルファチャンネル</guilabel> スライダーはそれぞれの色の不透明度を"
+"設定します。 フィルターを呼び出したレイヤーにアルファチャンネルがないとき"
+"は、 どちらのスライダーも灰色無効になり使用できません。"
 
 #: src/filters/render/sinus.xml:169(term)
 msgid "Alpha Channels"
@@ -1575,7 +1590,7 @@ msgstr "選択範囲を解除しない"
 #: src/filters/render/lava.xml:122(term)
 #: src/filters/render/circuit.xml:129(term)
 msgid "Separate layer"
-msgstr "レイヤーに分ける"
+msgstr "別レイヤーを生成する"
 
 #: src/filters/render/lava.xml:130(term)
 msgid "Use current gradient"
@@ -1934,15 +1949,21 @@ msgstr ""
 
 #: src/filters/render/ifsfractal.xml:106(term)
 msgid "Move"
-msgstr "移動"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/toolbox/stock-tool-"
+"move-22.png\"/></guiicon> 移動"
 
 #: src/filters/render/ifsfractal.xml:107(term)
 msgid "Rotate/Scale"
-msgstr "回転/拡大縮小"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/toolbox/stock-tool-"
+"rotate-22.png\"/></guiicon> 回転/拡大縮小"
 
 #: src/filters/render/ifsfractal.xml:108(term)
 msgid "Stretch"
-msgstr "延伸変形"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/toolbox/stock-tool-"
+"perspective-22.png\"/></guiicon> 延伸変形"
 
 #: src/filters/render/ifsfractal.xml:110(para)
 msgid "Select the action to perform using the (mouse) pointer."
@@ -1950,7 +1971,11 @@ msgstr "マウスのポインターで行なう作業を選びます。"
 
 #: src/filters/render/ifsfractal.xml:117(para)
 msgid "Add or remove fractals."
-msgstr "フラクタル素片の追加と削除を行ないます。"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/dialogs-icon-"
+"new.png\"/></guiicon> アイコンボタンと <guiicon><inlinegraphic format=\"PNG"
+"\" fileref=\"images/dialogs/dialogs-icon-delete.png\"/></guiicon> アイコンボ"
+"タンでフラクタル素片の追加と削除を行ないます。"
 
 #: src/filters/render/ifsfractal.xml:122(term)
 msgid "Redo"
@@ -1959,12 +1984,17 @@ msgstr "やり直し"
 #: src/filters/render/ifsfractal.xml:124(para)
 msgid "Standard."
 msgstr ""
-"左から順に<quote>取り消し</quote>と<quote>やり直し</quote>のボタンは操作の履"
-"歴を辿る標準的機能を提供します。"
+"<quote>取り消し</quote> <guiicon><inlinegraphic format=\"PNG\" fileref="
+"\"images/dialogs/stock-undo-16.png\"/></guiicon> アイコンボタンと<quote>やり"
+"直し</quote> <guiicon><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/"
+"stock-redo-16.png\"/></guiicon> アイコンボタンは操作の履歴を辿る標準的機能を"
+"提供します。"
 
 #: src/filters/render/ifsfractal.xml:128(term)
 msgid "Select all"
-msgstr "すべて選択"
+msgstr ""
+"<guiicon><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"selection-all-16.png\"/></guiicon> すべて選択"
 
 #: src/filters/render/ifsfractal.xml:130(para)
 msgid "Link fractals and let apply actions to all fractals."
@@ -2202,10 +2232,10 @@ msgstr ""
 "このフィルターを呼び出す前に画像ウィンドウのメニューより (以下同じ) "
 "<menuchoice><guimenu>ファイル</guimenu><guimenuitem>新しい画像...</"
 "guimenuitem></menuchoice> と進んで空の画像を新規に作成します。 さらにそこに "
-"<menuchoice><guimenu>レイヤー</guimenu><guimenuitem>レイヤーの追加...</"
+"<menuchoice><guimenu>レイヤー</guimenu><guimenuitem>新しいレイヤーの追加...</"
 "guimenuitem></menuchoice> で透明なレイヤーを追加します。 つぎに <keycap>D</"
-"keycap> を押して描画色を黒、 背景色を白に設定します。 これはツールボックスの"
-"色標識に示されます。"
+"keycap> キーを押して描画色を黒、 背景色を白に設定します。 これはツールボック"
+"スの色標識に示されます。"
 
 #: src/filters/render/ifsfractal.xml:319(para)
 msgid ""
@@ -2249,13 +2279,17 @@ msgid ""
 "guibutton> to adjust the size of the overlong triangle. You'll probably also "
 "have to move and rotate the new fractal to make it look convincing."
 msgstr ""
-"<guibutton>追加</guibutton> アイコンボタンをクリックして編成画面にもうひとつ"
-"フラクタル素片を加えます。 これは葉柄を描くのに使いたいので長細くします。 "
-"<guibutton>延伸変形</guibutton> アイコンボタンをクリックしてから 4 番目の三角"
-"形をドラッグで曳き延ばしましょう。 プレビュー画像がとんでもない形になるかもし"
-"れませんが、 伸縮機能 (<guibutton>回転/拡大縮小</guibutton> アイコンボタン) "
-"を使えば長過ぎた三角形の調整も簡単ですから慌てないでください。 収まりよくする"
-"には位置や傾きの調整も必要になるかもしれません。"
+"<quote>追加</quote> <guiicon><inlinegraphic format=\"PNG\" fileref=\"images/"
+"dialogs/dialogs-icon-new.png\"/></guiicon> アイコンボタンをクリックして編成画"
+"面にもうひとつフラクタル素片を加えます。 これは葉柄を描くのに使いたいので長細"
+"くします。 <quote>延伸変形</quote> <guiicon><inlinegraphic format=\"PNG\" "
+"fileref=\"images/toolbox/stock-tool-perspective-22.png\"/></guiicon> アイコン"
+"ボタンをクリックしてから 4 番目の三角形をドラッグで曳き延ばしましょう。 プレ"
+"ビュー画像がとんでもない形になるかもしれませんが、 伸縮機能 (<quote>回転/拡大"
+"縮小</quote> <guiicon><inlinegraphic format=\"PNG\" fileref=\"images/toolbox/"
+"stock-tool-rotate-22.png\"/></guiicon> アイコンボタン) を使えば長過ぎた三角形"
+"の調整も簡単ですから慌てないでください。 収まりよくするには位置や傾きの調整も"
+"必要になるかもしれません。"
 
 #: src/filters/render/ifsfractal.xml:365(title)
 msgid "Tutorial Step 3"
@@ -2275,9 +2309,10 @@ msgid ""
 msgstr ""
 "まだもっと葉っぱぼくする作業が残っています。 葉の先端の三角形の大きさを増して"
 "よく繁った葉の雰囲気を出します。 どのフラクタル素片にも納得ができるまで加工し"
-"たら、 <guibutton>全要素選択</guibutton> のアイコンボタンをクリックします。 "
-"すると全部のフラクタル素片が選択され、 これで葉を全体的に回転/拡大縮小できる"
-"ようになります。"
+"たら、 <quote>全要素選択</quote> <guiicon><inlinegraphic format=\"PNG\" "
+"fileref=\"images/dialogs/stock-selection-all-16.png\"/></guiicon> アイコンボ"
+"タンをクリックします。 すると全部のフラクタル素片が選択され、 これで葉を全体"
+"的に回転/拡大縮小できるようになります。"
 
 #: src/filters/render/ifsfractal.xml:391(title)
 msgid "Tutorial Step 4"
@@ -2822,23 +2857,28 @@ msgstr "選択オブジェクトを背面に"
 
 #: src/filters/render/gfig.xml:273(para)
 msgid "With this tool, you can push the selected object one level up or down."
-msgstr "オブジェクトの重ね合わせ順の一段上に活性オブジェクトを移動します。"
+msgstr "オブジェクトの重ね合わせ順の一段上や下に活性オブジェクトを移動します。"
 
+# "上へ" for gfig, "上" for fractalexplorer
 #. Raise selected object to top
 #: src/filters/render/gfig.xml:282(term)
 #: src/filters/render/fractalexplorer.xml:142(term)
 msgid "Top"
-msgstr "選択オブジェクトを最前面に"
+msgstr "上"
 
+# "下へ" for gfig, "下" for fractalexplorer
 #. Lower selected object to bottom
 #: src/filters/render/gfig.xml:284(term)
 #: src/filters/render/fractalexplorer.xml:144(term)
 msgid "Bottom"
-msgstr "選択オブジェクトを最背面に"
+msgstr "下"
 
 #: src/filters/render/gfig.xml:286(para)
 msgid "Self explanatory."
-msgstr "文字通りのはたらきをします。"
+msgstr ""
+"<quote>選択オブジェクトを最前面に</quote>コマンドと<quote>選択オブジェクトを"
+"最背面に</quote>コマンドはオブジェクトの重ね合わせの一番上や一番下に活性オブ"
+"ジェクトを移動します。"
 
 #: src/filters/render/gfig.xml:291(title)
 msgid "Functions for object display"
@@ -3126,10 +3166,14 @@ msgid ""
 "guibutton> or <guibutton>Zoom Out</guibutton> buttons."
 msgstr ""
 "<guilabel>サイズ変更</guilabel> の 4 つのボタンは生成した図形を拡大・縮小する"
-"のに使います。 <guibutton>元に戻す</guibutton> ボタンは直前の大きさに戻しま"
-"す。 <guibutton>やり直す</guibutton> ボタンは元に戻した操作を <guibutton>拡大"
-"</guibutton> や  <guibutton>縮小</guibutton> ボタンを使わずに再び実行するため"
-"に使います。"
+"のに使います。 <guibutton><inlinegraphic format=\"PNG\" fileref=\"images/"
+"dialogs/stock-undo-16.png\"/> 元に戻す</guibutton> ボタンは直前の大きさに戻し"
+"ます。 <guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/"
+"stock-redo-16.png\"/> やり直す</guibutton> ボタンは元に戻した操作を "
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-zoom-"
+"in-16.png\"/> 拡大</guibutton> や <guibutton><inlinegraphic format=\"PNG\" "
+"fileref=\"images/dialogs/stock-zoom-out-16.png\"/> 縮小</guibutton> ボタンを"
+"使わずに再び実行するために使います。"
 
 #: src/filters/render/fractalexplorer.xml:111(title)
 msgid "Parameters"
@@ -3208,7 +3252,9 @@ msgstr ""
 
 #: src/filters/render/fractalexplorer.xml:176(term)
 msgid "Reset"
-msgstr "リセット"
+msgstr ""
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"reset-16.png\"/> リセット"
 
 #: src/filters/render/fractalexplorer.xml:179(para)
 msgid ""
@@ -3221,8 +3267,10 @@ msgstr ""
 "きます。 保存場所は標準で個人用<acronym>GIMP</acronym>ディレクトリー内の "
 "<filename class=\"directory\">fractalexplorer</filename> フォルダーです。 標"
 "準フォルダーに保管した設定情報は<quote>プリセット</quote>タブの一覧表からも読"
-"み込めます。 それ以外の場所に保管したデータファイルは <guibutton>開く</"
-"guibutton> ボタンをクリックすると現れるファイルブラウザーで探してください。"
+"み込めます。 それ以外の場所に保管したデータファイルは "
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"fileopen-16.png\"/> 開く</guibutton> ボタンをクリックすると現れるファイルブラ"
+"ウザーで探してください。"
 
 #: src/filters/render/fractalexplorer.xml:191(term)
 msgid "Fractal Type"
@@ -3276,7 +3324,7 @@ msgstr ""
 
 #: src/filters/render/fractalexplorer.xml:235(term)
 msgid "Use loglog smoothing"
-msgstr "loglog スムージングを使用"
+msgstr "loglog スムージングを使用する"
 
 #: src/filters/render/fractalexplorer.xml:237(para)
 msgid "If this option is checked, the band effect is smoothed."
@@ -3341,7 +3389,7 @@ msgstr "色あいは余弦関数に従って変化します。"
 
 #: src/filters/render/fractalexplorer.xml:292(term)
 msgid "None"
-msgstr "なし"
+msgstr "使用しない"
 
 #: src/filters/render/fractalexplorer.xml:294(para)
 msgid "Color densities will vary linearly."
@@ -3401,7 +3449,8 @@ msgid ""
 "This tab contains a big list of fractals with their parameters, that you can "
 "use as a model: only click on the wanted one."
 msgstr ""
-"この一覧表には<quote>パラメーター</quote>タブ内で <guibutton>保存</"
+"この一覧表には<quote>パラメーター</quote>タブ内で <guibutton><inlinegraphic "
+"format=\"PNG\" fileref=\"images/dialogs/stock-save-16.png\"/> 保存</"
 "guibutton> したフラクタル図形の設定情報や<acronym>GIMP</acronym>に同梱されて"
 "いる 36 種類のプリセットデータが並んでいます。 どれでもひとつ任意にクリックし"
 "て強調表示 (反転) させてから <guibutton>適用</guibutton> ボタンをクリックすれ"
@@ -3414,12 +3463,14 @@ msgid ""
 "can delete the selected fractal from the list by clicking on the "
 "<guibutton>Delete</guibutton>."
 msgstr ""
-"<guibutton>更新</guibutton> ボタンを使えば新たに保存したフラクタル図形の設定"
-"情報もこのリストに加えられますので、 <acronym>GIMP</acronym>を再起動する必要"
-"がありません。 <guibutton>削除</guibutton> ボタンをクリックすると一覧表で選択"
-"されている項目が保存したファイルごと削除できます。 <acronym>GIMP</acronym>同"
-"梱のデータも一旦はこの一覧表から撤去できますが、 再びこのフィルターを呼び出す"
-"と自動的にこの表に復活します。"
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"reload-16.png\"/> 更新</guibutton>  ボタンを使えば新たに保存したフラクタル図"
+"形の設定情報もこのリストに加えられますので、 <acronym>GIMP</acronym>を再起動"
+"する必要がありません。 <guibutton><inlinegraphic format=\"PNG\" fileref="
+"\"images/dialogs/dialogs-icon-delete.png\"/> 削除</guibutton> ボタンをクリッ"
+"クすると一覧表で選択されている項目が保存したファイルごと削除できます。 "
+"<acronym>GIMP</acronym>同梱のデータも一旦はこの一覧表から撤去できますが、 再"
+"びこのフィルターを呼び出すと自動的にこの表に復活します。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -3516,9 +3567,9 @@ msgid ""
 "\">Plasma</link> filter: it controls the complexity of the clouds, from soft "
 "(low values) to hard (high values)."
 msgstr ""
-"これは <link linkend=\"plug-in-plasma\">プラズマ</link> フィルターの<quote>霧"
-"の深さ</quote>オプションそのものです。 雲の立ち籠め具合を、 薄く (低い値) し"
-"たり濃く (高い値) したりできます。"
+"<guilabel>桐の深さ</guilabel> は <link linkend=\"plug-in-plasma\">プラズマ</"
+"link> フィルターの<quote>乱れ</quote>オプションそのものです。 雲の立ち籠め具"
+"合を、 薄く (低い値) したり濃く (高い値) したりできます。"
 
 #: src/filters/render/fog.xml:110(term)
 msgid "Opacity"
@@ -3691,8 +3742,9 @@ msgstr "編集"
 #: src/filters/render/flame.xml:116(para)
 msgid "Pressing this button brings up the Edit dialog:"
 msgstr ""
-"<guibutton>編集</guibutton> ボタンをクリックすると<quote>炎の詳細</quote>ダイ"
-"アログが開く。"
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"edit-16.png\"/> 開く</guibutton> ボタンをクリックすると<quote>炎の詳細</"
+"quote>ダイアログが開きます。"
 
 #: src/filters/render/flame.xml:120(title)
 msgid "The Edit Flame dialog"
@@ -3725,19 +3777,21 @@ msgid ""
 "This button brings up a file selector that allows you to open a previously "
 "saved Flame settings file."
 msgstr ""
-"<guibutton>開く</guibutton> ボタンをクリックするとファイル選択ダイアログが開"
-"かれ、 既に保存してある炎プラグインの設定情報がもしあれば選択して開くとその設"
-"定内容が再現できます。"
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"fileopen-16.png\"/> 開く</guibutton> ボタンをクリックするとファイル選択ダイア"
+"ログが開かれ、 既に保存してある炎プラグインの設定情報がもしあれば選択して開く"
+"とその設定内容が再現できます。"
 
 #: src/filters/render/flame.xml:155(para)
 msgid ""
 "This button brings up a file save dialog that allows you to save the current "
 "settings for the plug-in, so that you can recreate them later."
 msgstr ""
-"<guibutton>保存</guibutton> ボタンをクリックするとファイルを保存するダイアロ"
-"グが開かれ、 現在のパラメーター設定情報を記録するファイルが作成できます。 こ"
-"のファイルは単純な<acronym>ASCII</acronym>テキストです。 この記録はあとで読み"
-"込めばパラメーターの設定が再現できます。"
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"save-16.png\"/> 保存</guibutton> ボタンをクリックするとファイルを保存するダイ"
+"アログが開かれ、 現在のパラメーター設定情報を記録するファイルが作成できま"
+"す。 このファイルは単純な<acronym>ASCII</acronym>テキストです。 この記録はあ"
+"とで読み込めばパラメーターの設定が再現できます。"
 
 #: src/filters/render/flame.xml:164(title)
 msgid "Rendering"
@@ -4556,7 +4610,7 @@ msgstr ""
 "これらのオプションは<acronym>HSV</acronym>のいずれかのチャンネルから他のチャ"
 "ンネルへ設定値をやりとりします。 <guilabel>コピー元チャンネル</guilabel> と "
 "<guilabel>コピー先チャンネル</guilabel> をそれぞれ選んで <guibutton>パラメー"
-"ターをコピーする</guibutton> ボタンをクリックすると転写が実行されます。"
+"ターをコピー</guibutton> ボタンをクリックすると転写が実行されます。"
 
 #: src/filters/render/cmlexplorer.xml:465(term)
 msgid "Selective Load Settings"
@@ -4568,10 +4622,12 @@ msgid ""
 "previously loaded settings. If you don't want to load all of them, you can "
 "select a source and a destination channel here."
 msgstr ""
-"このフィルターでは <guibutton>開く</guibutton> ボタンをクリックするとダイアロ"
-"グが開かれ、 以前に設定したときの設定内容を記録した設定ファイルがあれば選択し"
-"て読み込めます。 しかしそのまま全部読み込まず一部だけ利用したいときは、 ここ"
-"で元チャンネルと読み込み先チャンネルを指定して読み込めます。"
+"以前に設定したときの設定内容を記録した設定ファイルがあれば、 "
+"<guibutton><inlinegraphic format=\"PNG\" fileref=\"images/dialogs/stock-"
+"fileopen-16.png\"/> 開く</guibutton> ボタンをクリックすると開かれるダイアログ"
+"で選択してこのフィルターに読み込めます。 しかしそのまま全部読み込まず一部のパ"
+"ラメーターだけを利用したいときは、 ここで元チャンネルと読み込み先チャンネルを"
+"指定した読み込みもできます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -4672,7 +4728,7 @@ msgstr "乱数の種値を 1 から 3000000 の間で指定します。 デフ�
 
 #: src/filters/render/circuit.xml:108(term)
 msgid "No background (only for separate layer)"
-msgstr "背景なし （[別レイヤーを生成する] を適用する場合のみ有効）"
+msgstr "背景なし ([別レイヤーを生成する] を適用する場合のみ有効)"
 
 #: src/filters/render/circuit.xml:110(para)
 msgid ""
@@ -4683,8 +4739,8 @@ msgid ""
 msgstr ""
 "このオプションを有効にすると、 回路図の暗い画素に透明度が加わり穴となって下側"
 "のレイヤーが見えるようになります。 このオプションはデフォルトでは無効です。 "
-"<guilabel>レイヤーに分ける</guilabel> オプションも合わせて有効にする必要があ"
-"ります。"
+"<guilabel>別レイヤーを生成する</guilabel> オプションも合わせて有効にする必要"
+"があります。"
 
 #: src/filters/render/circuit.xml:121(para)
 msgid ""

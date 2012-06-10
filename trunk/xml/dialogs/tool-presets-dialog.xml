@@ -5,7 +5,7 @@
   2012-03-29 j.h: created
 -->
 
-<!--2012-04-03-->
+<!--2012-05-02-->
 <sect2 id="gimp-presets-dialog">
   <title lang="en">Tool Presets Dialog</title>
   <title lang="ja">ツールプリセットダイアログ</title>
@@ -32,8 +32,9 @@
     <application><acronym>GIMP</acronym>&nbsp;2.6</application> では
     ツールプリセットが使い辛いものでした。 先にツールをクリックしてから
     ツールオプションダイアログ底部のボタンバー上の 
-    <guibutton>プリセットを復元...</guibutton> ボタンをクリック…のようにして
-    ゆくしかなく、 しかも画面の広さを確保するためボタンバーを撤去
+    <guibutton>プリセットを復元...</guibutton> アイコンボタンをクリックして
+    読み込み&hellip;のようにしてゆくしかなく、 
+    しかも画面の広さを確保するためボタンバーを撤去
     (タブメニューより可能) するとこの方法も使えなくなってしまうのでした。
     それも今や <application><acronym>GIMP</acronym>&nbsp;2.8</application> から
     ドッキング可能なツールプリセットダイアログが登場したので、 ツールを
@@ -217,7 +218,7 @@
             <guiicon> 
               <inlinegraphic fileref="images/dialogs/stock-edit-16.png"/>
             </guiicon> 
-            <guilabel>ツールプリセットを編集する</guilabel>:
+            <quote>ツールプリセットを編集する</quote>:
             このボタンをクリックするといま選ばれているプリセット項目用の
             ツールプリセットエディターが現れます。 作成しておいたプリセットの
             設定内容をここで変更できます。 定義済みで提供されているプリセットの
@@ -238,9 +239,9 @@
           <para>
             <guiicon> 
               <inlinegraphic
-                fileref="images/dialogs/stock-document-new-16.png"/>
+                fileref="images/dialogs/dialogs-icon-new.png"/>
             </guiicon> 
-            <guilabel>新しいツールプリセットを作成する</guilabel>:
+            <quote>新しいツールプリセットを作成する</quote>:
             このボタンをクリックするその前に、 既存のプリセットをどれかひとつ
             選んでおく方法と、 プリセット一覧にまだないツール、 例えば修復
             ツールをツールボックスで選んでおく方法もあります。 新しくできた
@@ -255,7 +256,7 @@
               <inlinegraphic
                 fileref="images/dialogs/dialogs-icon-delete.png"/>
             </guiicon>
-            <guilabel>このツールプリセットを削除する</guilabel>:
+            <quote>このツールプリセットを削除する</quote>:
             このボタンは自作のプリセットを選んでいるときだけ有効です。
           </para>
         </listitem>
@@ -264,7 +265,7 @@
             <guiicon>
               <inlinegraphic fileref="images/dialogs/stock-reload-16.png"/>
             </guiicon>
-            <guilabel>ツールプリセットを再読み込みする</guilabel>:
+            <quote>ツールプリセットを再読み込みする</quote>:
             プリセットファイルを保管フォルダー
             <filename class="directory">gimp/2.0/tool-presets/</filename>
             に置いたあと、 プリセット一覧表に加えるためにこのボタンを
@@ -323,17 +324,31 @@
     <para lang="ja">
       プリセットダイアログをマウスの <mousebutton>第2ボタン</mousebutton> で
       クリックすると現れる脈絡メニューにも、 前述のボタンの機能と同じコマンドが
-      あります。 それら <guimenuitem>ツールプリセットの編集...</guimenuitem>、
-      <guimenuitem>新しいツールプリセット</guimenuitem>、
-      <guimenuitem>ツールプリセットの更新</guimenuitem> の各コマンドの他に、 
-      つぎの 2 つのコマンドもあります。
+      あります。 それら
+      <guimenuitem>
+        <inlinegraphic format="PNG"
+          fileref="images/dialogs/stock-edit-16.png"/>
+        ツールプリセットの編集...
+      </guimenuitem>、
+      <guimenuitem>
+        <inlinegraphic format="PNG"
+          fileref="images/dialogs/dialogs-icon-new.png"/>
+        新しいツールプリセット
+      </guimenuitem>、
+      <guimenuitem>
+        <inlinegraphic format="PNG"
+          fileref="images/dialogs/stock-reload-16.png"/>
+        ツールプリセットの更新
+      </guimenuitem> 
+      の各コマンドの他に、 つぎの 2 つのコマンドもあります。
       <itemizedlist>
         <listitem>
           <para>
-            <guiicon>
-              <inlinegraphic fileref="images/dialogs/stock-duplicate-16.png"/>
-            </guiicon>
-            <guilabel>ツールプリセットの複製</guilabel>:
+            <guimenuitem>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-duplicate-16.png"/>
+              ツールプリセットの複製
+            </guimenuitem>:
             このコマンドは常に利用が不可能です。 しかし前述のとおり新しい
             プリセットの作成は既存のプリセットを基にした自動的な複製のため
             これは問題になりません。
@@ -341,10 +356,10 @@
         </listitem>
         <listitem>
           <para>
-            <!--<guiicon>
-              <inlinegraphic fileref="images/dialogs/stock_copy.png"/>
-            </guiicon>-->
-            <guilabel>ツールプリセットの場所をコピー</guilabel>:
+            <guimenuitem>
+              <!--<inlinegraphic fileref="images/dialogs/stock_copy.png"/>-->
+            ツールプリセットの場所をコピー
+            </guimenuitem>:
             このコマンドはツールプリセットファイルの保管場所と名前からなる
             パスをクリップボードに貼り付けます。
           </para>

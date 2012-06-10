@@ -9,7 +9,7 @@
   2005-10-11 en;fr updated by julien hardelin
   2005-09-19 de added by axel.wernicke
 -->
-<!--2012-03-25-->
+<!--2012-06-02-->
 <sect2 id="plug-in-ifscompose">
   <title lang="en">IFS Fractal</title>
   <title lang="ja">IFS フラクタル...</title>
@@ -176,12 +176,30 @@
         脈絡メニューを開きます。
       </para>
       <varlistentry>
-        <term lang="en">Move</guibutton>
-        <term lang="en">Rotate</guibutton>
-        <term lang="en">Stretch</guibutton>
-        <term lang="ja">移動</guibutton>
-        <term lang="ja">回転/拡大縮小</guibutton>
-        <term lang="ja">延伸変形</guibutton>
+        <term lang="en">Move</term>
+        <term lang="en">Rotate</term>
+        <term lang="en">Stretch</term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/toolbox/stock-tool-move-22.png"/>
+          </guiicon>
+            移動
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/toolbox/stock-tool-rotate-22.png"/>
+          </guiicon>
+          回転/拡大縮小
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/toolbox/stock-tool-perspective-22.png"/>
+          </guiicon>
+          延伸変形
+        </term>
         <listitem>
           <para lang="en">
             Select the action to perform using the (mouse) pointer.
@@ -192,8 +210,20 @@
       <varlistentry>
         <term lang="en">New</term>
         <term lang="en">Delete</term>
-        <term lang="ja">追加</term>
-        <term lang="ja">削除</term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/dialogs-icon-new.png"/>
+          </guiicon>
+          追加
+        </term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/dialogs-icon-delete.png"/>
+          </guiicon>
+          削除
+        </term>
         <listitem>
           <para lang="en">Add or remove fractals.</para>
           <para lang="ja">フラクタル素片の追加と削除を行ないます。</para>
@@ -208,14 +238,29 @@
         <listitem>
           <para lang="en">Standard.</para>
           <para lang="ja">
-            左から順に<quote>取り消し</quote>と<quote>やり直し</quote>の
-            ボタンは操作の履歴を辿る標準的機能を提供します。
-            </para>
+            <quote>取り消し</quote>
+            <guiicon>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-undo-16.png"/>
+            </guiicon>
+            アイコンボタンと<quote>やり直し</quote>
+            <guiicon>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-redo-16.png"/>
+            </guiicon>
+            アイコンボタンは操作の履歴を辿る標準的機能を提供します。
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term lang="en">Select All</term>
-        <term lang="ja">すべて選択</term>
+        <term lang="ja">
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-selection-all-16.png"/>
+          </guiicon>
+          すべて選択
+        </term>
         <listitem>
           <para lang="en">
             Link fractals and let apply actions to all fractals.
@@ -516,9 +561,9 @@
           と進んで空の画像を新規に作成します。 さらにそこに 
           <menuchoice>
             <guimenu>レイヤー</guimenu>
-            <guimenuitem>レイヤーの追加...</guimenuitem>
+            <guimenuitem>新しいレイヤーの追加...</guimenuitem>
           </menuchoice>
-          で透明なレイヤーを追加します。 つぎに <keycap>D</keycap> を押して
+          で透明なレイヤーを追加します。 つぎに <keycap>D</keycap> キーを押して
           描画色を黒、 背景色を白に設定します。 これはツールボックスの色標識に
           示されます。
         </para>
@@ -587,14 +632,28 @@
           new fractal to make it look convincing.
         </para>
         <para lang="ja">
-          <guibutton>追加</guibutton> アイコンボタンをクリックして編成画面に
-          もうひとつフラクタル素片を加えます。 これは葉柄を描くのに使いたいので
-          長細くします。 <guibutton>延伸変形</guibutton> アイコンボタンを
-          クリックしてから 4 番目の三角形を曳き延ばしましょう。 プレビュー
-          画像がとんでもない形になるかもしれませんが、 伸縮機能 
-          (<guibutton>回転/拡大縮小</guibutton> アイコンボタン) を使えば
-          長過ぎた三角形の調整も簡単ですから慌てないでください。 収まりよく
-          するには位置や傾きの調整も必要になるかもしれません。
+          <quote>追加</quote>
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/dialogs-icon-new.png"/>
+          </guiicon>
+          アイコンボタンをクリックして編成画面にもうひとつフラクタル素片を
+          加えます。 これは葉柄を描くのに使いたいので長細くします。 
+          <quote>延伸変形</quote>
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/toolbox/stock-tool-perspective-22.png"/>
+          </guiicon>
+          アイコンボタンをクリックしてから 4 番目の三角形を曳き延ばしましょう。
+          プレビュー画像がとんでもない形になるかもしれませんが、 伸縮機能 
+          (<quote>回転/拡大縮小</quote>
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/toolbox/stock-tool-rotate-22.png"/>
+          </guiicon>
+          アイコンボタン) を使えば長過ぎた三角形の調整も簡単ですから
+          慌てないでください。 収まりよくするには
+          位置や傾きの調整も必要になるかもしれません。
         </para>
         <figure>
           <title lang="en">Tutorial Step 3</title>
@@ -629,9 +688,13 @@
         <para lang="ja">
           まだもっと葉っぱぼくする作業が残っています。 葉の先端の三角形の大きさ
           を増してよく繁った葉の雰囲気を出します。 どのフラクタル素片にも納得が
-          できるまで加工したら、 <guibutton>全要素選択</guibutton> のアイコン
-          ボタンをクリックします。 すると全部のフラクタル素片が選択され、 
-          これで葉を全体的に回転/拡大縮小できるようになります。
+          できるまで加工したら、 <quote>全要素選択</quote>
+          <guiicon>
+            <inlinegraphic format="PNG"
+              fileref="images/dialogs/stock-selection-all-16.png"/>
+          </guiicon>
+          のアイコンボタンをクリックします。 すると全部のフラクタル素片が
+          選択され、 これで葉を全体的に回転/拡大縮小できるようになります。
         </para>
         <figure>
           <title lang="en">Tutorial Step 4</title>

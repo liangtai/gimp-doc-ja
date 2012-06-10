@@ -8,7 +8,7 @@
   yyyy-mm-tt n.n.: added section for context menu
 -->
 
-<!--2012-03-04-->
+<!--2012-06-09-->
 <sect1 id="gimp-menus-introduction">
   <title lang="en">Introduction to Menus</title>
   <title lang="ja">メニューのあらまし</title>
@@ -23,6 +23,7 @@
   </indexterm>
 
   <!--TODO: add image menubar screenshot (?)-->
+  <!--Done-->
 
   <para lang="en">
     There are many places in <acronym>GIMP</acronym> where you can
@@ -41,6 +42,26 @@
     <link linkend="dialogs">個々のダイアログの説明</link> のなかで解説して
     います。
   </para>
+
+  <sect2 id="context-menus">
+    <title lang="en">The Image Menu Bar</title>
+    <title lang="en">画像ウィンドウのメニューバー</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/menus/image-menu-bar.png"/>
+      </imageobject>
+    </mediaobject>
+    <para lang="en">
+      This menu bar may contain other entries if you have added script-fus,
+      python-fus or videos to your GIMP.
+    </para>
+    <para lang="ja">
+      Script-Fu や Python-Fu のスクリプトを追加したり動画プラグインなどを
+      <acronym>GIMP</acronym>に導入した場合、 このメニューバーに新たに別の
+      メニューが加わることもあります。
+    </para>
+  </sect2>
 
   <sect2 id="context-menus">
     <title lang="en">Context Menus</title>
@@ -191,13 +212,24 @@
       on your computer (often by clicking on an X icon in the upper right
       corner of the window).
     </para>
+    <para lang="en">
+      These tear-off submenus are also created in single-window mode, but are
+      of less interest since they are masked by the window as soon as you
+      click on it.
+    </para>
     <para lang="ja">
       切り取られたメニューは実質的に独立しています。 これは常設になり、 現在
       活性化している画像にその機能が適用されます。 画像が全て閉じられてもその
       メニューは残ります。 このウィンドウ化したメニューを閉じるには再び破線を
       クリックするか、 お使いのコンピューターのウィンドウマネージャーの
-      ウィンドウを閉じる機能 (よくある例はタイトルバーの端の×印をクリック)
-      を利用します。
+      ウィンドウを閉じる機能 (よくある例はタイトルバーの端の<quote>×</quote>
+      印をクリック) を利用します。
+    </para>
+    <para lang="ja">
+      この切り取りメニューはシングルウィンドウモードでも作成できますが、
+      メニュー項目をクリックした途端に主ウィンドウが手前に出てきて切り取り
+      メニューを隠してしまうのでマルチウィンドウモードほどには使い勝手がよく
+      ありません。
     </para>
   </sect2>
 
