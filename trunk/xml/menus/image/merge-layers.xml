@@ -7,7 +7,7 @@
   2007-03-13 alex falappa: added it translation
      2005/10/30 rewiewed, de added by axel.wernicke
 -->
-<!--2012-05-31-->
+<!--2012-06-11-->
 <sect2 id="gimp-image-merge-layers">
   <title lang="en">Merge Visible Layers</title>
   <title lang="ja">可視レイヤーの統合...</title>
@@ -97,17 +97,16 @@
 
   <sect3>
     <title lang="en">
-      Description of the <quote>Merge Layers</quote> Dialog
+      Description of the <quote>Layer Merge Options</quote> Dialog
     </title>
     <title lang="ja">
       <quote>レイヤー統合の設定</quote>ダイアログのご説明
     </title>
     <figure>
-      <title lang="en">The <quote>Merge Layers</quote> Dialog</title>
+      <title lang="en">The <quote>Layers Merge Options</quote> Dialog</title>
       <title lang="ja"><quote>レイヤー統合の設定</quote>ダイアログ</title>
       <mediaobject>
         <imageobject>
-          <!--was: images/dialogs/dialogs-image-merge-visible.png-->
           <imagedata format="PNG"
             fileref="images/menus/image/merge-visible.png"/>
         </imageobject>
@@ -176,6 +175,25 @@
           </itemizedlist>
         </listitem>
       </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Merge within active group only</term>
+        <term lang="ja">アクティブなレイヤーグループ内のみで統合</term>
+        <listitem>
+          <para lang="en">
+            This self-explanatory option is enabled when a layer group exists.
+          </para>
+          <para lang="ja">
+            活性レイヤーが属しているレイヤーグループ内 (なければ画像内) の
+            すべてのレイヤーとレイヤーグループがひとつのレイヤーに統合されます。
+            統合したいレイヤーグループそのものを選択し活性化してはいけません。
+            選んだグループが属する上級グループ内全体 (なければ画像全体) が
+            統合されてしまうからです。 このオプションは画像にレイヤーグループが
+            なければ灰色無効となって使用できません。
+          </para>
+        </listitem>
+      </varlistentry>
+
       <varlistentry>
         <term lang="en">Discard invisible layers</term>
         <term lang="ja">不可視レイヤーの削除</term>
