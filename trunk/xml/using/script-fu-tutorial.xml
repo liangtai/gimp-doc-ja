@@ -6,7 +6,7 @@
   2007-04-13 alex falappa: started it translation
   2008-03-12 jpl : french update
 -->
-<!--2012-06-12-->
+<!--2012-06-15-->
 <sect1 id="gimp-using-script-fu-tutorial"
  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title lang="en">A Script-Fu Tutorial</title>
@@ -100,7 +100,7 @@
         もちろん括弧でくくられるのは関数だけにとどまりません。 リストと
         呼ばれる一連の項目の羅列も括弧でくくります。 これについてはあとで
         触れます。 Scheme は前置記法の規則にしたがい関数が式の最初に来ます。 
-        後置記法に馴染みのある方や<acronym>HP</acronym>社製のほとんどの種類の
+        後置記法に馴染みのある方や <acronym>HP</acronym> 社製のほとんどの種類の
         電卓のような逆ポーランド記法の電卓をお持ちの方にとっては Scheme で式を
         書けるようになるのに問題はないはずです。
       </para>
@@ -169,7 +169,7 @@
           </para>
           <para lang="ja">
             後置記法では <userinput>1 23 +</userinput> と書きます。 多数の
-            <acronym>HP</acronym>社製電卓がこの方式です。
+            <acronym>HP</acronym> 社製電卓がこの方式です。
             [1 と 23 とを 足す という日本語文によく馴染む記法です。]
           </para>
         </listitem>
@@ -192,7 +192,7 @@
         Console will appear:
       </para>
       <para lang="ja">
-        では早速学んだことを練習してみましょう。 まだ<acronym>GIMP</acronym>
+        では早速学んだことを練習してみましょう。 まだ <acronym>GIMP</acronym>
         が動いていなければ立て上げます。 そして画像ウィンドウのメニューから
         <menuchoice>
           <guimenu>フィルター</guimenu>
@@ -1104,7 +1104,7 @@
         font, font size and text color.
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>を使った私の経験では一番多い使い道のひとつが
+        <acronym>GIMP</acronym> を使った私の経験では一番多い使い道のひとつが
         ウェブ用にテキストの入ったロゴやら何やらの作成でした。 でもみなさんに
         とっては新規画像をどれ位の寸法で作ったら良いか全然判らないはずです。 
         テキストに使いたい文字の大きさが判ってもそれが画像をどれ位占めるのか
@@ -1152,13 +1152,13 @@
       </para>
       <para lang="ja">
         自作のスクリプトをどこに置くかは好みの設定の問題でもあります。 もし
-        <acronym>GIMP</acronym>の標準のスクリプト用ディレクトリーを操作できる
+        <acronym>GIMP</acronym> の標準のスクリプト用ディレクトリーを操作できる
         権限をお持ちならそこに保管することもできます。 でも私なら自作の
         スクリプトは個人用スクリプト保管ディレクトリーに収めるようにして、 
-        <acronym>GIMP</acronym>提供の同梱スクリプトとは混ぜないようにします。
+        <acronym>GIMP</acronym> 提供の同梱スクリプトとは混ぜないようにします。
       </para>
       <para lang="ja">
-        ホームディレクトリ内に<acronym>GIMP</acronym>が作成する 
+        ホームディレクトリ内に <acronym>GIMP</acronym> が作成する 
         <filename class="directory">.gimp-2.8</filename> ディレクトリーに 
         <filename class="directory">scripts</filename> フォルダーができている
         のをお確かめください。<footnote><para>
@@ -1167,7 +1167,7 @@
           </filename>
           <filename role="tex" class="directory">$\tilde{}$/Library/%
           Application~Support/Gimp/scripts</filename> です。</para></footnote>
-        <acronym>GIMP</acronym>は必ず 
+        <acronym>GIMP</acronym> は必ず 
         <filename class="directory">.gimp-2.8</filename> ディレクトリー内で
         <filename class="directory">scripts</filename> フォルダーを探し、 
         このディレクトリパスを Script-Fu データベースに入れます。 個人用の
@@ -1192,7 +1192,7 @@
       </para>
       <para lang="ja">
         またどんな Script-Fu もプロシージャーデータベースに登録して
-        <acronym>GIMP</acronym>から呼び出せるようにもしなければなりません。
+        <acronym>GIMP</acronym> から呼び出せるようにもしなければなりません。
       </para>
       <para lang="en">We'll define the main function first:</para>
       <para lang="ja">ではメイン関数をまず定義しましょう。</para>
@@ -1244,7 +1244,7 @@
         またスクリプト内で定義した変数の頭には<quote>the</quote>をつけます。
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>では Script-Fu スクリプトの関数名を 
+        <acronym>GIMP</acronym> では Script-Fu スクリプトの関数名を 
         <function>script-fu-abc</function> とする習慣になっています。 こうすると
         プロシージャーデータベースを検索するとき関数名で整列させると script-fu
         ではじまる名前でまとまるからです。 またこの方法はプラグインと区別
@@ -1269,9 +1269,9 @@
         explain all its parameters in a minute):
       </para>
       <para lang="ja">
-        ではこの関数を<acronym>GIMP</acronym>に登録しましょう。 この操作には
+        ではこの関数を <acronym>GIMP</acronym> に登録しましょう。 この操作には
         <function>script-fu-register</function> という関数を起用します。
-        <acronym>GIMP</acronym>はスクリプトを見るとこの関数を実行し
+        <acronym>GIMP</acronym> はスクリプトを見るとこの関数を実行し
         プロシージャーデータベースに登録させます。 この関数の実行コードは
         スクリプトのどの位置に置いても構いませんが、 私なら他のコードを全部
         書き終えたあとの最後に置きます。
@@ -1375,7 +1375,7 @@
         description and default value for each parameter.
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>にスクリプトを登録するために登録関数 
+        <acronym>GIMP</acronym> にスクリプトを登録するために登録関数 
         <function>script-fu-register</function> を起用しますが、 これには
         7 つの必須パラメーターとスクリプト独自のパラメーター、 そして説明文と
         それぞれのパラメーターの初期設定値を加えることになります。
@@ -1397,7 +1397,7 @@
             関数の <emphasis>名前</emphasis> を定めました。 スクリプトを起用
             したときに呼び出される関数がこれです。 スクリプトへの入口の役目を
             果たしています。 同じファイル内に他にも関数を書き加えることになる
-            かもしれないので、 <acronym>GIMP</acronym>がどの関数をまず呼び
+            かもしれないので、 <acronym>GIMP</acronym> がどの関数をまず呼び
             出すべきか判断できるよう、 こうして定義することが重要です。 先の
             例で登録したのは text-box というたったひとつの関数です。
           </para>
@@ -1458,7 +1458,7 @@
           <para lang="ja">
             既存の画像を加工しないスクリプトを書いた場合 (このテキスト
             ボックスのような画像を新たに作成するスクリプトもこの分類に
-            含まれる)、 <acronym>GIMP</acronym>の分類に従いそのスクリプトを 
+            含まれる)、 <acronym>GIMP</acronym> の分類に従いそのスクリプトを 
             <menuchoice>
               <guimenu>ファイル</guimenu>
               <guisubmenu>画像の生成</guisubmenu>
@@ -1482,7 +1482,7 @@
             <para>
               マイクテリー氏の原文はツールボックスメニュー内の 
               <guimenu>Xtns</guimenu> 以下にスクリプトを置いていますが、 
-              <application><acronym>GIMP</acronym> 2.6</application> で
+              <application><acronym>GIMP</acronym>&nbsp;2.6</application> で
               ツールボックスメニューが廃止され画像ウィンドウメニューに
               されました。</para></footnote>つまり
             <menuchoice>
@@ -1497,7 +1497,7 @@
             もうお気付きだとは思いますが <guisubmenu>画像の生成</guisubmenu>
             以下に <guisubmenu>Text</guisubmenu> サブメニューがまだできて
             いません。 存在しないメニューやサブメニューを使った場合は
-            <acronym>GIMP</acronym>が自動的にそのメニューを作成します。
+            <acronym>GIMP</acronym> が自動的にそのメニューを作成します。
           </para>
         </listitem>
         <listitem>
@@ -1543,12 +1543,12 @@
             image on which we work.
           </para>
           <para lang="ja">
-            スクリプトが作動できる画像の <emphasis>形式</emphasis> を
-            定めます。 適合できる 
-            <xref linkend="gimp-concepts-image-types"/> を<acronym>RGB
-            </acronym>、 <acronym>RGBA</acronym>、 GRAY、GRAYA、 INDEXED、
-            INDEXEDAのなかから選びます (複数可)。 しかし今回の例では画像を
-            生成するスクリプトを書いているので画像の形式を設定する必要は
+            スクリプトが作動できる画像の <emphasis>形式</emphasis> を定めます。 
+            適合できる 
+            <xref linkend="gimp-concepts-image-types"/> を 
+            <acronym>RGB</acronym>、 <acronym>RGBA</acronym>、 GRAY、GRAYA、
+            INDEXED、 INDEXEDA のなかから選びます (複数可)。 しかし今回の例では
+            画像を生成するスクリプトを書いているので画像の形式を設定する必要は
             ありません。
           </para>
         </listitem>
@@ -1621,7 +1621,7 @@
                 <para lang="ja">
                   既に開いてある画像を操作するためのスクリプトを作るときは、
                   必須のパラメーターの直後にこのパラメーターを置かねば
-                  なりません。 <acronym>GIMP</acronym>は画像を参照するための
+                  なりません。 <acronym>GIMP</acronym> は画像を参照するための
                   情報をこのパラメーターに乗せてスクリプトに渡します。
                 </para>
               </entry>
@@ -1645,7 +1645,7 @@
                   既に開いてある画像を操作するためのスクリプトを作るときは、
                   <function>SF-IMAGE</function> 型のパラメーターのつぎにこの
                   パラメーターを置かなくてはなりません。 これは活性レイヤーを
-                  参照します。 <acronym>GIMP</acronym>は活性レイヤーを参照する
+                  参照します。 <acronym>GIMP</acronym> は活性レイヤーを参照する
                   ための情報をこのパラメーターに乗せてスクリプトに渡します。
                 </para>
               </entry>
@@ -1771,28 +1771,28 @@
         the script.
       </para>
       <para lang="ja">
-        先の講義では中身のない関数を作成し<acronym>GIMP</acronym>に登録
+        先の講義では中身のない関数を作成し <acronym>GIMP</acronym> に登録
         しました。 この講義ではスクリプトに肉付けを行ないます。 スクリプト
         には新しい画像を作成させ、 ユーザーが指定するテキストを加えてテキスト
         にぴったりな大きさに画像の寸法を調節させるつもりです。
       </para>
       <para lang="ja">
         変数の設定や関数の定義、 リストの要素を引き出す方法についてはもう
-        学びましたので、 あとは坂を滑り下りるだけです。 これからなすべきこと
-        は<acronym>GIMP</acronym>のプロシージャーデータベースで利用可能な関数に
+        学びましたので、 あとは坂を滑り下りるだけです。 これからなすべきことは 
+        <acronym>GIMP</acronym> のプロシージャーデータベースで利用可能な関数に
         慣れ親しみ、 それらの機能を直に呼び出すことが全てです。 では早速
         <xref linkend="plug-in-dbbrowser"/> を立て上げてお料理しましょう。
       </para>
       <para lang="ja">
         新しい画像を作成するところから始めます。 <varname>theImage</varname>
         という新しい変数を作り、 <function>gimp-image-new</function> という
-        <acronym>GIMP</acronym>の組み込み機能を実行して得た値を代入するのです。
+        <acronym>GIMP</acronym> の組み込み機能を実行して得た値を代入するのです。
       </para>
       <para lang="ja">
         プロシージャーデータベースのブラウザーによると、 
         <function>gimp-image-new</function> は画像の幅、 高さ、 型式の 3 つの
         パラメーターをとります。 画像の大きさはあとでテキストに合わせて
-        変更するので、 とりあえず 10&times;10 ピクセルの<acronym>RGB</acronym>
+        変更するので、 とりあえず 10&times;10 ピクセルの <acronym>RGB</acronym>
         画像を作成させます。 画像の幅と高さのパラメーターやいくつかの変数は
         あとでスクリプトが操作するために参照する必要があるのでここで
         保管しておきます。
@@ -1852,9 +1852,9 @@
       <para lang="ja">
         <note>
           <para>
-            ここでは<acronym>RGB</acronym>画像を示すために <code>RGB</code> 
+            ここでは <acronym>RGB</acronym> 画像を示すために <code>RGB</code> 
             という値を使いました。 代わりに <code>0</code> としても同じ結果に
-            なりますが、 コードを読む人にとっては<acronym>RGB</acronym>
+            なりますが、 コードを読む人にとっては <acronym>RGB</acronym>
             と明示した方が説明的で理解し易くなります。
           </para>
         </note>
@@ -1863,7 +1863,7 @@
         関数を呼び出した結果の値から先頭の要素を引き出しているところにご注目
         ください。 これは奇妙な感じがします。 というのもデータベースには
         はっきりとこの関数が返す値はたったひとつ新しい画像の ID 番号だけだと
-        記されているからです。 実は<acronym>GIMP</acronym>の関数はたとえ返し
+        記されているからです。 実は <acronym>GIMP</acronym> の関数はたとえ返し
         値がひとつだけであっても必ずこれをリストにして返します。 ですからその
         リストの先頭を引き出してやる必要があるのです。
       </para>
@@ -2113,7 +2113,7 @@
       </para>
       <para lang="ja">
         でき上がった画像をファイルに保存せずに閉じようとすると、 
-        <acronym>GIMP</acronym>は画像を閉じる前に保存しませんかと尋ねる
+        <acronym>GIMP</acronym> は画像を閉じる前に保存しませんかと尋ねる
         はずです。 これは画像が<quote>手付き</quote>になっている、 すなわち
         保存されていないために起こります。 今回作ったスクリプトの場合は単に
         試しで画像化してあとは何も加工していないのに毎回こんな風に尋ねられたら
@@ -2183,7 +2183,7 @@
         <function>gimp-undo-push-group-start</function> と
         <function>gimp-undo-push-group-end</function> の両関数で挟めば
         できます。 考え方としては画像上で行なわれる操作の記録を開始し終了する
-        時点を<acronym>GIMP</acronym>に知らせて、 あとでその操作を取り消せる
+        時点を <acronym>GIMP</acronym> に知らせて、 あとでその操作を取り消せる
         ようにしている対の式だと見て間違いありません。 
       </para>
       <para lang="ja">

@@ -8,7 +8,7 @@
   2006-08-19 Added Norwegian translation by KoSt
   2006-07-22 dust: added ko translation
 -->
-<!--2012-03-24-->
+<!--2012-06-15-->
 <sect1 id="gimp-using-setup-tile-cache">
   <title lang="en">How to Set Your Tile Cache</title>
   <title lang="ja">タイルキャッシュの設定方法</title>
@@ -44,27 +44,27 @@
     help you decide what value to use, as well as a few tricks:
   </para>
   <para lang="ja">
-    データの処理や絵の操作をすすめるにつれ、 <acronym>GIMP</acronym>はより多く
+    データの処理や絵の操作をすすめるにつれ、 <acronym>GIMP</acronym> はより多く
     のメモリーが必要になってゆきます。 多く使えるに越したことはありません。
-    <acronym>GIMP</acronym>はオペレーティングシステムが利用を許したメモリー
+    <acronym>GIMP</acronym> はオペレーティングシステムが利用を許したメモリー
     資源を可能な限り効果的に使いつつ、 使う人にとっての快適さと画像処理の速さを
     維持するよう努めています。 処理される内部データはその間、 記憶装置上で
     ブロック状の画像データに分割管理されます。 これらの置かれる場所は遅い固定
-    記憶装置や速い主<acronym>RAM</acronym>のいずれかもしくは両方の 2 つの異なる
-    データ記憶形態です。 <acronym>GIMP</acronym>は<acronym>RAM</acronym>を
+    記憶装置や速い主<acronym>RAM</acronym> のいずれかもしくは両方の 2 つの異なる
+    データ記憶形態です。 <acronym>GIMP</acronym> は <acronym>RAM</acronym> を
     好んで使おうとしますが、 そのメモリー容量が足りなくなると残りのデータは
     ハードディスク上に置かれます。 こういった画像データの固まりを参照するとき
     通常はこれらを<quote>タイル</quote>と呼び、 その全体的な機構のことを
     <quote>タイルキャッシュ</quote>といいます。
   </para>
   <para lang="ja">
-    タイルキャッシュ値を低くすると<acronym>GIMP</acronym>は、 
-    <acronym>RAM</acronym>に空きがあっても全く使おうとせず、 データをいきなり
+    タイルキャッシュ値を低くすると <acronym>GIMP</acronym> は、 
+    <acronym>RAM</acronym> に空きがあっても全く使おうとせず、 データをいきなり
     ディスクに送るので、 さして意味もなくディスクをはたらかせてしまいます。 
     タイルキャッシュ値が高すぎると、 他のアプリケーションが使う分のシステム
     リソースが欠乏してスワップ現象が起きだし、 やはりディスクばかりに負担を
-    かける結果になります。 しかもこういうときは<acronym>RAM</acronym>が不足して
-    いるので不意に終了するものや異常をきたしはじめるものさえ
+    かける結果になります。 しかもこういうときは <acronym>RAM</acronym> が
+    不足しているので不意に終了するものや異常をきたしはじめるものさえ
     出てくるかもしれません。
   </para>
   <para lang="ja">
@@ -83,12 +83,12 @@
       </para>
       <para lang="ja">
         一番楽なやり方は何も気にしないで、 既定値でうまくいくと信じることです。
-        コンピューターに搭載されている<acronym>RAM</acronym>がたとえ少なかったと
-        しても、 <acronym>GIMP</acronym>で扱う画像が小さくて、 同時に稼動して
-        いる他のアプリケーションが 1 つか 2 つぐらいだったらそれでも大丈夫
-        でしょう。 難しいことが嫌いな方にとっては、 <acronym>GIMP</acronym>の
-        主な用途がスクリーンショットを撮ったりロゴを作成したりするだけならば、
-        これが最良の処方だといえそうです。
+        コンピューターに搭載されている <acronym>RAM</acronym> がたとえ
+        少なかったとしても、 <acronym>GIMP</acronym> で扱う画像が小さくて、 
+        同時に稼動している他のアプリケーションが 1 つか 2 つぐらいだったら
+        それでも大丈夫でしょう。 難しいことが嫌いな方にとっては、 
+        <acronym>GIMP</acronym> の主な用途がスクリーンショットを撮ったりロゴを
+        作成したりするだけならば、 これが最良の処方だといえそうです。
       </para>
     </listitem>
     <listitem>
@@ -100,10 +100,10 @@
       </para>
       <para lang="ja">
         メモリーをふんだんに搭載 (512 メガバイト以上) した最新のコンピューター
-        なら、 タイルキャッシュの設定量がその<acronym>RAM</acronym>量の半分
+        なら、 タイルキャッシュの設定量がその <acronym>RAM</acronym> 量の半分
         あれば、 他のアプリケーションと奪い合いにならない限り
-        <acronym>GIMP</acronym>の処理状況はおそらく良好です。
-        <acronym>RAM</acronym>量の 4 分の 3 
+        <acronym>GIMP</acronym> の処理状況はおそらく良好です。
+        <acronym>RAM</acronym> 量の 4 分の 3 
         ぐらいにしておけばほぼ大丈夫でしょう。
       </para>
     </listitem>
@@ -118,9 +118,9 @@
       </para>
       <para lang="ja">
         お使いのコンピューターが大勢で共有されているものならば、 管理者か誰かに
-        設定を頼むのが良策です。 ただし<acronym>GIMP</acronym>なんか走らせる
+        設定を頼むのが良策です。 ただし <acronym>GIMP</acronym> なんか走らせる
         から計算機が台無しになるんだと言って怒る人や、 かえって
-        <acronym>GIMP</acronym>の処理状況を悪化させるような人物は避けましょう。
+        <acronym>GIMP</acronym> の処理状況を悪化させるような人物は避けましょう。
         お使いのコンピューターがあなたご自身の所有でしかも一度に一人だけで
         使えるもの (パソコン) だったら、 謝礼にお金か飲み物を用意しましょうか。
       </para>
@@ -187,24 +187,24 @@
   <para lang="ja">
     最後の提案にあったちょうど良い値が気になると思います。 これを得るには、
     まずはじめにお使いのコンピューターについていくつかのデータを用意せねば
-    なりません。 システムに搭載されている<acronym>RAM</acronym>の容量、
+    なりません。 システムに搭載されている <acronym>RAM</acronym> の容量、
     オペレーティングシステムのスワップスペースの利用可能な容量を調べることは
     もちろん、 さらにはオペレーティングシステムのスワップスペースがあるディスク
-    や<acronym>GIMP</acronym>のスワップスペースがあるディスクの読み書き速度に
+    や <acronym>GIMP</acronym> のスワップスペースがあるディスクの読み書き速度に
     ついてもおおよその目安をつけてください。 ディスクの検査をするとか回転速度 
     (<acronym>RPM</acronym>) を確かめるという意味ではありません。 複数台ある
     ときにどちらかが明らかに速かったりもしくはほとんど同じだったりするので、
-    そういったことを知っておけば十分です。 <acronym>GIMP</acronym>のスワップ用
+    そういったことを知っておけば十分です。 <acronym>GIMP</acronym> のスワップ用
     フォルダーを置くディレクトリーについては、
     <link linkend="gimp-prefs-folders">設定</link> ダイアログの
     <quote>フォルダー</quote>のページの
     <guilabel>スワップ用フォルダー</guilabel> で変更できます。
   </para>
   <para lang="ja">
-    つぎに、 <acronym>GIMP</acronym>と同時に稼動させたい他のアプリケーションが
+    つぎに、 <acronym>GIMP</acronym> と同時に稼動させたい他のアプリケーションが
     使う資源量を見積らなくてはなりません。 この測定ではそのとき使いたい
-    <acronym>GIMP</acronym>以外のアプリケーションを全部起動して使用量を
-    調べます。 測定に使うアプリケーションはお使いの<acronym>OS</acronym>などの
+    <acronym>GIMP</acronym> 以外のアプリケーションを全部起動して使用量を
+    調べます。 測定に使うアプリケーションはお使いの <acronym>OS</acronym> などの
     使用環境によって異なりますが、 例えば <command>top</command> や 
     <command>free</command> コマンドが利用できます。 見てほしいのは残りメモリー
     容量と、ファイルキャッシュ残量です。 最近の UNIX 系システムなら未使用
@@ -217,8 +217,8 @@
   </para>
   <para lang="ja">
     あとはいよいよ決断ですがちょっとだけ簡単な計算が必要です。 決断で肝心な
-    点は、 全てのタイルキャッシュを<acronym>RAM</acronym>にたよるか、 
-    <acronym>RAM</acronym>だけでなく一部をオペレーティングシステムのスワップ
+    点は、 すべてのタイルキャッシュを <acronym>RAM</acronym> にたよるか、 
+    <acronym>RAM</acronym> だけでなく一部をオペレーティングシステムのスワップ
     領域にも依存するのかどうかということで、 これで考え方も変わります。
   </para>
   <procedure>
@@ -232,13 +232,13 @@
         RAM and just go to the final decision; no more things to check.
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>と他のアプリケーションと頻繁に切り替えながら
-        作業されていますか？ それともずっと長時間専ら<acronym>GIMP</acronym>
-        だけで作業されているのでしょうか？ <acronym>GIMP</acronym>と長く過ごす
-        方は<acronym>RAM</acronym>とスワップの両方に空き容量があるか確かめて
+        <acronym>GIMP</acronym> と他のアプリケーションと頻繁に切り替えながら
+        作業されていますか？ それともずっと長時間専ら <acronym>GIMP</acronym>
+        だけで作業されているのでしょうか？ <acronym>GIMP</acronym> と長く過ごす
+        方は <acronym>RAM</acronym> とスワップの両方に空き容量があるか確かめて
         ください。 ほとんど残っていない場合は 2. に進みましょう。 (よくわから
         ない方も 2. に進みましょう。) 一方、 細切れにアプリケーションを切り替え
-        ながら使う方は<acronym>RAM</acronym>の空き容量だけを読み取ってから 4. 
+        ながら使う方は <acronym>RAM</acronym> の空き容量だけを読み取ってから 4. 
         に進んでください。 他の値を調べる必要はありません。
       </para>
     </step>
@@ -249,8 +249,8 @@
       </para>
       <para lang="ja">
         オペレーティングシステムのスワップ領域が置かれているのと同じディスク内
-        に<acronym>GIMP</acronym>のスワップ用フォルダーを置いていますか？ 
-        同じであれば<acronym>RAM</acronym>とシステムのスワップを増やすとよい
+        に <acronym>GIMP</acronym> のスワップ用フォルダーを置いていますか？ 
+        同じであれば <acronym>RAM</acronym> とシステムのスワップを増やすとよい
         でしょう。 ディスクが別の方は 3. に進んでください。
       </para>
     </step>
@@ -261,12 +261,12 @@
         faster or similar, add free RAM and swap.
       </para>
       <para lang="ja">
-        <acronym>OS</acronym>のスワップ領域があるディスクの速さは
-        <acronym>GIMP</acronym>のスワップ用フォルダーがあるディスクと同等
+        <acronym>OS</acronym> のスワップ領域があるディスクの速さは
+        <acronym>GIMP</acronym> のスワップ用フォルダーがあるディスクと同等
         もしくはそれ以上でしょうか？ 逆に遅いものであるなら
-        <acronym>RAM</acronym>の空き容量だけが問題です。 同等もしくはそれ以上の
-        速いディスクだったら、 そのシステム用スワップと<acronym>RAM</acronym>の
-        空き容量の両方を増やすとよいでしょう。
+        <acronym>RAM</acronym> の空き容量だけが問題です。 同等もしくは
+        それ以上の速いディスクだったら、 そのシステム用スワップと
+        <acronym>RAM</acronym> の空き容量の両方を増やすとよいでしょう。
       </para>
     </step>
     <step>
@@ -276,10 +276,10 @@
         the Tile Cache you could use as a good start.
       </para>
       <para lang="ja">
-        <acronym>RAM</acronym>の空き容量だけ、 もしくは<acronym>RAM</acronym>の
-        空き容量と<acronym>OS</acronym>のスワップの残量の和の数値が判りました
-        でしょうか。 この値を、 万全を期すため少し小さくしてからタイル
-        キャッシュの設定値にしてみるのが良策でしょう。
+        <acronym>RAM</acronym> の空き容量だけ、 もしくは
+        <acronym>RAM</acronym> の空き容量と <acronym>OS</acronym> のスワップの
+        残量の和の数値が判りましたでしょうか。 この値を、 万全を期すため少し
+        小さくしてからタイルキャッシュの設定値にしてみるのが良策でしょう。
       </para>
     </step>
   </procedure>
@@ -326,8 +326,8 @@
     It is also helpful to know if you will require more RAM and/or disk space.
   </para>
   <para lang="ja">
-    もうお判りになったと思いますが、 全ては記憶資源の残量の確認と、 いかに
-    <acronym>OS</acronym>のスワップを有効活用するかにかかっており、 さもなくば
+    もうお判りになったと思いますが、 すべては記憶資源の残量の確認と、 いかに
+    <acronym>OS</acronym> のスワップを有効活用するかにかかっており、 さもなくば
     手をつけられないほどの問題を抱えるおそれがあります。
   </para>
   <para lang="ja">
@@ -339,29 +339,29 @@
     変わらないかも知れませんし、 全然違う値が出てくるかもしれません。
   </para>
   <para lang="ja">
-    タイルキャッシュの値を変えるもうひとつの理由はどうも<acronym>GIMP</acronym>
+    タイルキャッシュの値を変えるもうひとつの理由はどうも <acronym>GIMP</acronym>
     の動きが鈍くて他のアプリケーションと比べると遅いように感じられる場合です。
     考えられるのは他のアプリケーションの邪魔をするほどではなくとももう少し多く
-    <acronym>GIMP</acronym>にメモリーを与えてもよいかもしれないということです。
+    <acronym>GIMP</acronym> にメモリーを与えてもよいかもしれないということです。
     逆に他のアプリケーションがメモリー不足を訴える場合には、 あまり
-    <acronym>GIMP</acronym>が食べ過ぎないよう調節するといいかもしれません。
+    <acronym>GIMP</acronym> が食べ過ぎないよう調節するといいかもしれません。
   </para>
   <para lang="ja">
-    <acronym>RAM</acronym>だけ使うと判断していて<acronym>GIMP</acronym>の動作が
-    遅い場合は、 設定値を少しだけ増やしてみましょう。 ただしスワップの残りも
-    全部使ってしまわないようにしてください。 その逆の場合、 つまり
-    <acronym>RAM</acronym>とシステムスワップの両方を使っていて記憶資源不足が
-    問題になっているときは、 <acronym>GIMP</acronym>が使える
-    <acronym>RAM</acronym>の分量を減らしたほうがよいでしょう。
+    <acronym>RAM</acronym> だけ使うと判断していて <acronym>GIMP</acronym> の
+    動作が遅い場合は、 設定値を少しだけ増やしてみましょう。 ただしスワップの
+    残りも全部使ってしまわないようにしてください。 その逆の場合、 つまり
+    <acronym>RAM</acronym> とシステムスワップの両方を使っていて記憶資源不足が
+    問題になっているときは、 <acronym>GIMP</acronym> が使える
+    <acronym>RAM</acronym> の分量を減らしたほうがよいでしょう。
   </para>
   <para lang="ja">
     このほかには手持ちの一番速いディスクや、 普段使っているファイルを収める
     ディスクとは別のディスクにスワップ用フォルダーを置く技があります。 通常は
     オペレーティングシステムが管理するスワップ領域を複数のディスクに分散して
-    置くのも良策といえます。 言わずもがなではありますが<acronym>RAM</acronym>を
-    もっと容量の大きなものに買い替えるか増設する手がありますし、 同時にあまり
+    置くのも良策といえます。 言わずもがなではありますが <acronym>RAM</acronym>
+    をもっと容量の大きなものに買い替えるか増設する手がありますし、 同時にあまり
     たくさんのプログラムを走らせ過ぎないようにするのも方法です。 そもそも
-    [搭載メモリ]16<acronym>MB</acronym>のコンピューターでポスター大の画像を
+    [搭載メモリ] 16 <acronym>MB</acronym> のコンピューターでポスター大の画像を
     編集できるわけがありませんし、 きびきびとした操作は無理というものです。
   </para>
   <para lang="ja">
@@ -369,7 +369,7 @@
     大きいものほど、 また作業履歴が長くなればなるほど、 資源の消費量も増えて
     いきます。 ここで得られる数値を参考にするのもひとつの方法ではあります。
     ただし扱う画像の大きさがほとんど同じで、 消費される実際のメモリー量も変化
-    しないことが条件です。 そのほかこの消費量を参考にすれば必要な<acronym>RAM
-    </acronym>容量やディスク容量の目安にもなるでしょう。
+    しないことが条件です。 そのほかこの消費量を参考にすれば必要な
+    <acronym>RAM</acronym> 容量やディスク容量の目安にもなるでしょう。
   </para>
 </sect1>

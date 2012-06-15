@@ -7,7 +7,7 @@
   2007-08-29 j.h : link to glossary Alpha Channel added
   2006-03-06 lexa: made docbook compliant
 -->
-<!--2012-06-10-->
+<!--2012-06-15-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-channel-dialog">
   <title lang="en">Channels Dialog</title>
   <title lang="ja">チャンネルダイアログ</title>
@@ -79,7 +79,7 @@
   <para lang="ja">
     <emphasis>カラーチャンネル</emphasis> は、 特定のレイヤーではなく画像に
     対して適用されます。 原則として自然な色全般を描写するには 3 原色が必須です。
-    他のディジタル式ソフトウェアと同じく<acronym>GIMP</acronym>も赤・緑・青を 
+    他のディジタル式ソフトウェアと同じく <acronym>GIMP</acronym> も赤・緑・青を 
     3 原色にしています。 上段の原色チャンネルが画像の各画素にある
     <guilabel>赤</guilabel>、 <guilabel>緑</guilabel>、 <guilabel>青</guilabel>
     の値をそれぞれ表現しています。 各チャンネルの左側にチャンネルを
@@ -98,14 +98,14 @@
     透過効果なしで作成された画像にはアルファチャンネルがありませんが、 
     <link linkend="gimp-layer-dialog">レイヤーダイアログのメニュー</link> など
     に追加のコマンドがあります。 そのうえレイヤーが 1 層の画像にレイヤーを追加
-    して複数層にすると、 <acronym>GIMP</acronym>は自動的にその 
+    して複数層にすると、 <acronym>GIMP</acronym> は自動的にその 
     <emphasis>画像に</emphasis> アルファチャンネルを追加します。
   </para>
   <note>
     <para lang="en">GIMP doesn't support CMYK or YUV color models.</para>
     <para lang="ja">
-      <acronym>GIMP</acronym>は<acronym>CMYK</acronym>色モデルや
-      <acronym>YUV</acronym>色モデルを扱えません。
+      <acronym>GIMP</acronym> は <acronym>CMYK</acronym> 色モデルや
+      <acronym>YUV</acronym> 色モデルを扱えません。
     </para>
   </note>
   <figure>
@@ -158,7 +158,7 @@
       </imageobject>
       <caption>
         <para lang="en"><!-- All channels combined -->All channels</para>
-        <para lang="ja"><!--すべてのチャンネルの合成 -->すべ全てのチャンネル</para>
+        <para lang="ja"><!--すべてのチャンネルの合成 -->すべてのチャンネル</para>
       </caption>
     </mediaobject>
   </figure>
@@ -174,7 +174,7 @@
   <para lang="ja">
     右端の画像を赤・緑・青の 3 つの色チャンネルと透明度を表すアルファ
     チャンネルに分解した様子です。 右端の画像では透過部分を灰色濃淡による
-    市松模様で表現してあります。 いずれの色チャンネルでも白の部分は全ての色が
+    市松模様で表現してあります。 いずれの色チャンネルでも白の部分はすべての色が
     出ているので白くなっており、 黒の部分は黒くなっています。 赤い帽子は赤
     チャンネルでは見えても他の色チャンネルでは全く見えません。 このことは仮に
     純緑や純青であっても同じで、 その色のチャンネルでは見えても他の色
@@ -372,10 +372,11 @@
             </para>
             <para lang="ja">
               原色チャンネル (チャンネル一覧表の上段に置かれる既定のチャンネル)
-              もまとめられます。 初期設定では全ての色チャンネル (およびアルファ
-              チャンネル) が選択されており、 一覧表上ではいずれも強調表示がされ
-              ています。 操作は全てのチャンネルに対して実行されます。 一覧表の
-              チャンネル項目はクリックすると不活性となります。 レイヤーに
+              もまとめられます。 初期設定ではすべての色チャンネル (および
+              アルファチャンネル) が選択されており、 一覧表上ではいずれも
+              強調表示がされています。 操作はすべてのチャンネルに対して
+              実行されます。 一覧表のチャンネル項目はクリックすると
+              不活性となります。 レイヤーに
               <link linkend="gimp-tool-colorize">着色</link> ツールによるような
               操作を実行すると、 選択された (<quote>連結された</quote>)
               チャンネルだけがその効果を受けます。 チャンネル項目は再びクリック

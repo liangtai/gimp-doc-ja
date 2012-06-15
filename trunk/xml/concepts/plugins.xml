@@ -8,7 +8,7 @@
   2006-07-31 lexa: applied patch from hans de jonge
   2008-02-08 jpl: relecture et legeres corrections
 -->
-<!--2012-05-30-->
+<!--2012-06-15-->
 <sect1 id="gimp-concepts-plugins">
   <title lang="en">Plugins</title>
   <title lang="ja">プラグイン</title>
@@ -74,19 +74,19 @@
     </para>
     <para lang="ja">
       プラグインがあるおかげで手軽に機能拡張できるところは
-      <acronym>GIMP</acronym>の最大の魅力のひとつといえます。 
-      プラグインは外部プログラムでありながら<acronym>GIMP</acronym>の主幹
+      <acronym>GIMP</acronym> の最大の魅力のひとつといえます。 
+      プラグインは外部プログラムでありながら <acronym>GIMP</acronym> の中枢
       アプリケーションの制御下で動作し、 両者は緊密に相互作用します。 
       ユーザーが[手で]行う画像操作はほとんど何でもプラグインで実行できます。 
       ちょっとばかりプラグインのコードを書けば、 <acronym>GIMP</acronym>
       中枢部の膨大な数の複雑なコードに手をつけることなく、 簡単に機能を
-      <acronym>GIMP</acronym>に追加できるところが強みです。 現に価値ある
+      <acronym>GIMP</acronym> に追加できるところが強みです。 現に価値ある
       プラグインの大多数はほぼ 100 行から 200 行の C 言語ソースだけで
       できています。
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>には数十個のプラグインが配付版に入っていて、
-      自動的に<acronym>GIMP</acronym>と一緒にインストールされます。 それらの
+      <acronym>GIMP</acronym> には数十個のプラグインが配付版に入っていて、
+      自動的に <acronym>GIMP</acronym> と一緒にインストールされます。 それらの
       ほとんどが <guimenu>フィルター</guimenu> メニュー (実はこのメニューの
       中身はいずれもプラグイン[もしくはスクリプト]) から呼び出せますが、 他の
       メニューに属するものもかなりあります。 プラグインを使うといっても
@@ -95,7 +95,7 @@
       ですが、 使っている人にそのことを伝えるものは何もありません。
     </para>
     <para lang="ja">
-      プラグインは<acronym>GIMP</acronym>同梱のもの以外にもネット上にはもっと
+      プラグインは <acronym>GIMP</acronym> 同梱のもの以外にもネット上にはもっと
       たくさんあります。 プラグインの中心的な貯蔵庫の役割を担う目的で設立された
       <acronym>GIMP</acronym> Plugin Registry (英語)
       <xref linkend="bibliography-online-gimp-plugin-registry"/> でならたくさん
@@ -104,13 +104,13 @@
       方法が使えます。
     </para>
     <para lang="ja">
-      世界中の誰でも自作の<acronym>GIMP</acronym>プラグインを
+      世界中の誰でも自作の <acronym>GIMP</acronym> プラグインを
       <acronym>GIMP</acronym> Plugin Registry や自身のウェブサイト上で
       公開できますし、 数有る有益なプラグインがそうしたところから手に入ります。
       この使用のてびきのどこかでもそんなプラグインのことに触れています。
       しかし自由勝手さの反面で、 
       ある程度の危険が伴います。 誰でもできるということは実質的な品質管理が
-      行なわれないことを意味します。 <acronym>GIMP</acronym>同梱で配布される
+      行なわれないことを意味します。 <acronym>GIMP</acronym> 同梱で配布される
       プラグインならば開発者によるテストと調整を経ていますが、 ダウンロードで
       手に入る物のなかにはほんの数時間だけで捻り出してすぐ流布された代物が
       少なくありません。 また動作の健全さに注意を払わずに作成する者もいますし、
@@ -150,7 +150,8 @@
       ません。 この登録サイトはプラグインを作成したら誰でも使える場所です。
       組織立った取締りはありません。 明らかな悪意のある代物が置かれているのを
       管理者が気付けば、 削除の対象となるでしょう。 (まだそのような事態は
-      起きていません。) しかしながら<acronym>GIMP</acronym>やそのプラグインは、
+      起きていません。) しかしながら <acronym>GIMP</acronym> やその
+      プラグインは、
       他のどのフリーソフトウェアとも同様、 <emphasis>無保証</emphasis> です。
     </para>
     <caution>
@@ -164,13 +165,13 @@
         that it is written for your version of <acronym>GIMP</acronym>.
       </para>
       <para lang="ja">
-        プラグインはいつも<acronym>GIMP</acronym>の各バージョンの目玉で
-        ありつづけています。 ところがある版の<acronym>GIMP</acronym>のために
+        プラグインはいつも <acronym>GIMP</acronym> の各バージョンの目玉で
+        ありつづけています。 ところがある版の <acronym>GIMP</acronym> のために
         書かれたプラグインが他の版でちゃんと使えたという例はめったにありません。
         移植が必要なのですが、 簡単に済むこともあればそうはいかない場合も
         あります。 多くのプラグインは既にさまざまな版に対応ができています。
-        プラグインを導入する際には最低限それがお使いの<acronym>GIMP</acronym>に
-        適合しているかどうかご確認ください。
+        プラグインを導入する際には最低限それがお使いの <acronym>GIMP</acronym>
+        に適合しているかどうかご確認ください。
       </para>
     </caution>
   </sect2>
@@ -193,13 +194,13 @@
       without worrying about it.
     </para>
     <para lang="ja">
-      だいたいいつもはプラグインだと意識せずとも他の<acronym>GIMP</acronym>
+      だいたいいつもはプラグインだと意識せずとも他の <acronym>GIMP</acronym>
       ツールと同じように使えます。 しかし僅かですが理解しておくと便利な事柄が
       あります。
     </para>
     <para lang="ja">
-      ひとつには通常プラグインは<acronym>GIMP</acronym>中枢部と比較して
-      頑丈にはできていないといえます。 仮にも<acronym>GIMP</acronym>が異常終了
+      ひとつには通常プラグインは <acronym>GIMP</acronym> 中枢部と比較して
+      頑丈にはできていないといえます。 仮にも <acronym>GIMP</acronym> が異常終了
       するのは非常に深刻な事態です。 ユーザーにとっても計り知れない災厄と頭痛が
       襲いかかるでしょう。 一方でプラグインが異常終了した場合にその結果は通常
       さほど酷くはありません。 ほぼ通常はそういったことを恐れないで作業を
@@ -216,7 +217,7 @@
       </para>
       <para lang="ja">
         プラグインは分離独立したプログラムなので、 <acronym>GIMP</acronym>
-        中枢部とは特別な方法で通信を行います。 <acronym>GIMP</acronym>開発者は
+        中枢部とは特別な方法で通信を行います。 <acronym>GIMP</acronym> 開発者は
         それを<quote>talking over a wire</quote> (有線会話) と呼んでいます。
         プラグインが異常終了して通信が途絶えた時には、 <quote>wire read error
         </quote> (通信線解読障害) を知らせるエラーメッセージが出ます。
@@ -236,15 +237,15 @@
         went wrong, and weigh it against the odds.
       </para>
       <para lang="ja">
-        プラグインが異常終了すると<acronym>GIMP</acronym>はあたかもその
+        プラグインが異常終了すると <acronym>GIMP</acronym> はあたかもその
         プラグインで壊れてしまったかのように言い、 画像を保存して一旦終了する
         ように促す非常に気味の悪いメッセージを出します。 厳密な意味では、
-        プラグインには<acronym>GIMP</acronym>のほぼ全てを改変する能力があるので
-        この指摘は決して間違いではありませんが、 実際的な面でみるとそういった
-        破壊が起きた経験は事実上ほとんど無く、 気にせずそのまま作業を続ける人が
-        大勢です。 私たちが申し上げたいのは、 何か問題が発生したときにどの程度
-        の影響がご自身に及ぶかをちょっと考えて被害を推し量っていただきたいと
-        いうことです。
+        プラグインには <acronym>GIMP</acronym> のほぼすべてを改変する能力が
+        あるのでこの指摘は決して間違いではありませんが、 実際的な面でみると
+        そういった破壊が起きた経験は事実上ほとんど無く、 気にせずそのまま作業を
+        続ける人が大勢です。 私たちが申し上げたいのは、 何か問題が発生した
+        ときにどの程度の影響がご自身に及ぶかをちょっと考えて被害を推し量って
+        いただきたいということです。
       </para>
     </tip>
     <para lang="en">
@@ -260,7 +261,7 @@
       won't even be able to recover from your foolishness.
     </para>
     <para lang="ja">
-      プラグインと<acronym>GIMP</acronym>の通信方法には、 プラグインを実行
+      プラグインと <acronym>GIMP</acronym> の通信方法には、 プラグインを実行
       している最中に画像の変更があってもそれを伝えるしくみがありません。
       プラグインを開始してから他のツールで画像に手を加えると、 プラグインが
       異常終了するのがほとんどで、 仮にそうならなくてもたいていは別物になり果て
@@ -292,15 +293,15 @@
       the two are best considered separately.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>同梱のプラグインについては特別なインストール作業は
+      <acronym>GIMP</acronym> 同梱のプラグインについては特別なインストール作業は
       全く必要ありません。 逆にご自身でダウンロードされたプラグインにはそれが
-      必要です。 作業の順路はお使いの<acronym>OS</acronym>が何であるかや、
-      プラグインの構成によっていくつかに分かれています。 <productname>Linux
-      </productname> をはじめ <productname>UNIX</productname> システム風の
-      システムなら新しいプラグインの導入は通常きわめて易しいものです。 
-      <productname>Windows</productname> では簡単にできることもあれば非常に
-      難しいこともあります。 いずれにせよ最良と考えられている順路は 2 つ
-      あります。
+      必要です。 作業の順路はお使いの <acronym>OS</acronym> が何であるかや、
+      プラグインの構成によっていくつかに分かれています。 
+      <productname>Linux</productname> をはじめ <productname>UNIX</productname>
+      システム風のシステムなら新しいプラグインの導入は通常きわめて易しい
+      ものです。 <productname>Windows</productname> では簡単にできることも
+      あれば非常に難しいこともあります。 いずれにせよ最良と考えられている順路は 
+      2 つあります。
     </para>
     <sect3>
       <title lang="en">Linux</title>
@@ -370,7 +371,7 @@
         このコマンドでプラグインのコンパイルが行われ、 個人用プラグインの
         ディレクトリー (初期設定どおりなら <filename class="directory">
         ~/.gimp-2.8/plugins/</filename> ) にインストールされます。
-        これで次回の<acronym>GIMP</acronym>起動時よりこのプラグインが自動的に
+        これで次回の <acronym>GIMP</acronym> 起動時よりこのプラグインが自動的に
         読み込まれるようになります。 この作業はルートになる必要がありません。
         むしろなってはいけません。 ところでもしもプラグインのコンパイルに失敗
         してしまっても、 これを前向きにとらえて創造的になりましょう。
@@ -401,8 +402,8 @@
         書かれれば無数の失望を買うようなものです。
       </para>
       <para lang="ja">
-        プラグインのなかには (とくに<acronym>GIMP</acronym>プラグイン用雛形を
-        もとに作成されたものは) <acronym>GIMP</acronym>の個人用ディレクトリー
+        プラグインのなかには (とくに <acronym>GIMP</acronym> プラグイン用雛形を
+        もとに作成されたものは) <acronym>GIMP</acronym> の個人用ディレクトリー
         ではなくシステム用のディレクトリーに導入することを前提にしているものも
         あります。 導入作業は最後の段階で <command>make install</command> を
         実行しますが、 このようなプラグインのときはルートになって作業する
@@ -412,7 +413,7 @@
         個人用のプラグインディレクトリーに入れる場合で、 そのプラグインの名前と
         同じものがシステムディレクトリーにもあると、 読み込まれるのは
         ひとつだけ、 ホームディレクトリーにある方になります。 このことを
-        <acronym>GIMP</acronym>は起動時に毎回知らせてくるはずです。 このような
+        <acronym>GIMP</acronym> は起動時に毎回知らせてくるはずです。 このような
         状況は避けたほうがよいでしょう。
       </para>
     </sect3>
@@ -452,12 +453,12 @@
         かけるか、 もしくはたいへんな努力と知識を積む必要があります。
       </para>
       <para lang="ja">
-        このことが<acronym>GIMP</acronym>プラグインと関わるとどういう意味が
+        このことが <acronym>GIMP</acronym> プラグインと関わるとどういう意味が
         あるかを、 ソフトウェア構築の環境が整っている場合とない場合に分けて見て
         ゆきましょう。 コンパイル環境がない場合はコンパイル済みのプラグイン
         ソフトウェアを探すか、 誰かに頼んでコンパイルしてもらうことになります。
         そのあとは個人用のプラグインディレクトリーに収めれば完了です。
-        ソフトウェア構築環境 (その目的からして<acronym>GIMP</acronym>をビルド
+        ソフトウェア構築環境 (その目的からして <acronym>GIMP</acronym> をビルド
         できる環境とも言える) がある場合には、 こういったことは既にかなりご
         存知のはずですから、 Linux の方法に従っていただくだけで十分です。
       </para>
@@ -489,12 +490,12 @@
       </para>
       <para lang="ja">
         プラグインを OS X にインストールする方法はどのように
-        <acronym>GIMP</acronym>自身をインストールしたかにかなり依存します。
+        <acronym>GIMP</acronym> 自身をインストールしたかにかなり依存します。
         もし darwinports
         <xref linkend="bibliography-online-darwinports"/> (現在の macports) や
         fink
         <xref linkend="bibliography-online-fink"/> のようなパッケージ
-        マネージャーを通じて<acronym>GIMP</acronym>を導入する勇者の仲間に入る
+        マネージャーを通じて <acronym>GIMP</acronym> を導入する勇者の仲間に入る
         つもりならば、 プラグインの導入はまさに既に UNIX 系の説明で述べた方法で
         できます。 たったひとつの違いは、 パッケージマネージャのレポジトリでも
         プラグインが 2 つ手に入るということですので、 試してみては
@@ -502,12 +503,12 @@
       </para>
       <para lang="ja">
         それとは逆に <application>GIMP.app</application> のような一発
-        インストールが可能な<acronym>GIMP</acronym>パッケージを好むユーザー
+        インストールが可能な <acronym>GIMP</acronym> パッケージを好むユーザー
         ならば恐らくコンパイル済みのもの一本に絞りたいのではないかと思います。 
         つまりプラグインの作者からコンパイル済みのパッケージを入手できたら
         との考えではないかと思うわけですが、 この方法には賛成しかねます。
         先に触れたパッケージマネージャーがバイナリー実行ファイルをビルドする
-        際に<acronym>GIMP</acronym>のインストールも
+        際に <acronym>GIMP</acronym> のインストールも
         実施するはめになるからです。<!--脈絡断絶？-->
       </para>
     </sect3>
@@ -538,14 +539,15 @@
       things after just a couple of days of work.
     </para>
     <para lang="ja">
-      プラグインの書き方を学ぶ際に<acronym>GIMP</acronym>の開発者用ウェブサイト
+      プラグインの書き方を学ぶ際に <acronym>GIMP</acronym> の開発者用
+      ウェブサイト
       <xref linkend="bibliography-online-gimp-dev-plugin"/> (英語) を
-      ご覧になれば豊富な手掛かりがつかめます。 <acronym>GIMP</acronym>は複雑な
+      ご覧になれば豊富な手掛かりがつかめます。 <acronym>GIMP</acronym> は複雑な
       プログラムですが、 開発チームはプラグインが書けるまでに学ぶべきことの
       壁ができるだけなだらかになるように奮闘しています。 既に優れたてびきや
-      例がありますし、 プラグインが<acronym>GIMP</acronym>と交信するための
+      例がありますし、 プラグインが <acronym>GIMP</acronym> と交信するための
       ライブラリー (<quote>libgimp</quote>という) には十分に文書化された
-      <acronym>API</acronym>があります。 既にあるプログラムを改変するところから
+      <acronym>API</acronym> があります。 既にあるプログラムを改変するところから
       学ぶ優れたプログラマなら、 ほんの一両日中のうちに何か面白いことができて
       しまう場合が少なくありません。
     </para>

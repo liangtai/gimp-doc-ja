@@ -7,7 +7,7 @@
   2006-03-12 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-03-24-->
+<!--2012-06-15-->
 <sect2 id="gimp-indexed-palette-dialog">
   <title lang="en">Colormap Dialog</title>
   <title lang="ja">カラーマップダイアログ</title>
@@ -59,7 +59,7 @@
     カラーマップダイアログ (カラーマップというよりはインデックス化パレットの
     ほうがダイアログの名前としてふさわしい) はインデックス化画像の
     カラーマップを変更するのに使えます。 (もし画像がインデックス化されておらず
-    <acronym>RGB</acronym>やグレースケールのモードだった場合は、 
+    <acronym>RGB</acronym> やグレースケールのモードだった場合は、 
     このダイアログは空になり利用できません。)
   </para>
 
@@ -185,28 +185,28 @@
     </para>
     <para lang="ja">
       インデックス化された画像では、 各画素に直接色を与える方法 (つまり
-      <acronym>RGB</acronym>画像やグレースケール画像での方式) をとらず、 各画素
+      <acronym>RGB</acronym> 画像やグレースケール画像での方式) をとらず、 各画素
       の色は <emphasis>カラーマップ</emphasis> と呼ばれる対照表を通す遠回りな
       方法で画素に与えられます。 [各画素には索引への参照番号が記録されます。]
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>は画素に表示する色を判定するときに画像のカラー
+      <acronym>GIMP</acronym> は画素に表示する色を判定するときに画像のカラー
       マップを見て、 参照番号に割り当てられた色を出します。 インデックス化
       画像はそれぞれ固有のカラーマップを持っています。 <acronym>GIMP</acronym>
       ではカラーマップに並べられる色数は最大で 256 色の制限があります。
       カラーマップは最大色数ならば 0 から 255 までの、 索引番号のひとつひとつに
-      任意の<acronym>RGB</acronym>色が割り振られます。 対照表に登録できる色には
-      何ら制限はなく、 その順序も問いません。 どの索引番号にどの色を結び付けても
-      構わないのです。
+      任意の <acronym>RGB</acronym> 色が割り振られます。 対照表に登録できる
+      色には何ら制限はなく、 その順序も問いません。 どの索引番号にどの色を結び
+      付けても構わないのです。
     </para>
     <para lang="ja">
       インデックス化カラー画像で <emphasis>使える</emphasis> 色はカラーマップに
       <emphasis>登録されている色に限られる</emphasis> ことは重要ですので
       しっかり理解してください (つまり使いたい色が他にあれば最大色数が許す
-      範囲で再登録すればよいとも言えます)。 この制約は<acronym>GIMP</acronym>で
-      の大多数の操作に大きな影響を及ぼします。 例えば、 パターンで埋め尽くそう
+      範囲で再登録すればよいとも言えます)。 この制約は <acronym>GIMP</acronym>
+      での大多数の操作に大きな影響を及ぼします。 例えば、 パターンで埋め尽くそう
       とするとほとんどの場合カラーマップには同等な色が見付からないので、
-      <acronym>GIMP</acronym>は一番近そうな色で近似を行ないます。 この処理に
+      <acronym>GIMP</acronym> は一番近そうな色で近似を行ないます。 この処理に
       <link linkend="glossary-quantization">量子化</link> を援用することも
       よくあります。 カラーマップの制約が大きかったり色数が乏しいと仕上がりは
       ほぼ確実に非常に貧相な画質になります。
@@ -239,7 +239,7 @@
           </para>
           <para lang="ja">
             するとクリックした色が (ツールボックスの色標識で表示されている)
-            <acronym>GIMP</acronym>描画色になります。 そのあとは塗色操作に
+            <acronym>GIMP</acronym> 描画色になります。 そのあとは塗色操作に
             この色が使えるようになります。
           </para>
         </listitem>
@@ -257,7 +257,7 @@
           </para>
           <para lang="ja">
             するとクリックした色が (ツールボックスの色標識で表示されている)
-            <acronym>GIMP</acronym>背景色になります。
+            <acronym>GIMP</acronym> 背景色になります。
           </para>
         </listitem>
       </varlistentry>
@@ -271,7 +271,7 @@
             colormap entry to a new color.
           </para>
           <para lang="ja">
-            するとクリックした色が<acronym>GIMP</acronym>描画色になり、 さらに
+            するとクリックした色が <acronym>GIMP</acronym> 描画色になり、 さらに
             <quote>インデックスカラーの変更</quote>ダイアログが開かれてカラー
             マップ上のその項目の色を別の色に変更できるようになります。
           </para>
@@ -306,9 +306,9 @@
           </para>
           <para lang="ja">
             <guilabel>HTML 表記</guilabel> の数値欄は現在選択されている検索番号
-            に登録されている色を、 16進表記 (<acronym>HTML</acronym>で使われて
+            に登録されている色を、 16進表記 (<acronym>HTML</acronym> で使われて
             いるものと同じ) で表示します。 お望みならば色編集ダイアログを
-            呼び出さなくても直接<acronym>RGB</acronym>値をここに記入して色を
+            呼び出さなくても直接 <acronym>RGB</acronym> 値をここに記入して色を
             指定する方法がとれます。 用語集の
             <link linkend="glossary-html-notation"><acronym>HTML</acronym> 
             表記法</link> をご覧ください。
@@ -341,7 +341,7 @@
             <quote>インデックスカラーの変更</quote>ダイアログが開かれ、 現在
             選択しているカラーマップの索引項目の色がそこで変更できます。 
             色見出しをダブルクリックしたときと似ていますが、 このボタンを使った
-            場合は<acronym>GIMP</acronym>描画色の変更はありません。
+            場合は <acronym>GIMP</acronym> 描画色の変更はありません。
           </para>
         </listitem>
       </varlistentry>
@@ -433,7 +433,7 @@
       </para>
       <para lang="ja">
         インデックス化カラー画像に塗った色がカラーマップになかった場合は、
-        <acronym>GIMP</acronym>はカラーマップにあるよく似た色を代わりに使って
+        <acronym>GIMP</acronym> はカラーマップにあるよく似た色を代わりに使って
         発色させます。
       </para>
     </note>

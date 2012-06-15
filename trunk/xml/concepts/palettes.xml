@@ -12,7 +12,7 @@
   2005-11-28 Lexa: replaced informalfigures by figures.
   2005-05-09 nn: added french translation
 -->
-<!--2012-03-25-->
+<!--2012-06-15-->
 <sect1 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-concepts-palettes">
   <title lang="en">Palettes</title>
   <title lang="ja">パレット</title>
@@ -47,7 +47,7 @@
   </para>
   <para lang="ja">
     <emphasis>パレット</emphasis> とは[必ずしも]連続しないさまざまな色の
-    集合です。 <acronym>GIMP</acronym>はパレットを主に 2 つの用途に使います。
+    集合です。 <acronym>GIMP</acronym> はパレットを主に 2 つの用途に使います。
   </para>
   <itemizedlist>
     <listitem>
@@ -70,8 +70,9 @@
       <para lang="ja">
         インデックス (色索引) つき画像のカラーマップのように。 インデックス化
         カラー画像は使える色数が 256 までに制限されますが、 パレットは何色でも
-        入ります。 インデックス化カラー画像のカラーマップのことを<acronym>GIMP
-        </acronym>では<acronym>インデックス化パレット</acronym>と呼んでいます。
+        入ります。 インデックス化カラー画像のカラーマップのことを
+        <acronym>GIMP</acronym> では<quote>インデックス化パレット</quote>と
+        呼んでいます。
       </para>
     </listitem>
   </itemizedlist>
@@ -86,10 +87,10 @@
     files.
   </para>
   <para lang="ja">
-    実際のところいずれの用途も<acronym>GIMP</acronym>の使用目的の主流にはなり
+    実際のところいずれの用途も <acronym>GIMP</acronym> の使用目的の主流にはなり
     そこねています。 パレットに頼らなくても洗練された方法をとることが
-    <acronym>GIMP</acronym>で可能だからです。 それでもなお達人にとっては知って
-    おくべきこととはいえ、 達人ほどではない方にとっては<acronym>GIF</acronym>
+    <acronym>GIMP</acronym> で可能だからです。 それでもなお達人にとっては知って
+    おくべきこととはいえ、 達人ほどではない方にとっては <acronym>GIF</acronym>
     ファイルを扱うときのようなある種の場面になって思い出す必要がでてくる
     ことがらです。
   </para>
@@ -115,11 +116,11 @@
     This is also the starting point if you want to create a new palette.
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>をインストールすると数十種類もの配色ずみパレットが
+    <acronym>GIMP</acronym> をインストールすると数十種類もの配色ずみパレットが
     ついてきますし、 新規に追加もできます。 <quote>ウェブセーフカラー</quote>
     を念頭に置いた<quote>Web</quote>パレットのような配色ずみパレットは並程度
     には有益ですが、 大多数のパレットは多かれ少なかれ気紛れに色を選んだように
-    思えます。 利用可能なパレットは全て 
+    思えます。 利用可能なパレットはすべて 
     <link linkend="gimp-palette-dialog">パレットダイアログ</link> を通して
     扱います。 これは新たなパレットを作るときの出発点にもなります。
   </para>
@@ -181,34 +182,36 @@
     する
     <link linkend="gimp-palette-editor-dialog">パレットエディター</link> 
     ダイアログが開きます。 これを使ってパレットによる絵が描けます。 クリック
-    した色が<acronym>GIMP</acronym>の描画色になり、 ツールボックスの色標識領域
+    した色が <acronym>GIMP</acronym> の描画色になり、 ツールボックスの色標識領域
     でも表されます。 一方で <keycap>Ctrl</keycap> キーを押しながらクリック
-    するとその色が<acronym>GIMP</acronym>の背景色になります。
+    するとその色が <acronym>GIMP</acronym> の背景色になります。
   </para>
   <para lang="ja">
     パレットエディターダイアログはその名前のとおりパレット上の色を変更できます。
-    (ただし変更は自作のパレットに限ります)。 <acronym>GIMP</acronym>に同梱の
+    (ただし変更は自作のパレットに限ります)。 <acronym>GIMP</acronym> に同梱の
     パレットは編集できませんが、 それらの複製を作って編集することは可能です。
   </para>
   <para lang="ja">
-    パレットエディターダイアログを使ってパレットを作成したあと、 <acronym>GIMP
-    </acronym> を終了するとそれらは直ちに自動的に <acronym>GIMP</acronym>
-    の個人用ディレクトリーの <filename>palettes</filename> フォルダー内へ保存
-    されます。 このディレクトリー内や、 <acronym>GIMP</acronym>のインストール
-    時に作成されたシステム用の <filename>palettes</filename> フォルダーに入って
-    いるパレットは、 いずれも<acronym>GIMP</acronym>を起動したときに自動的に
-    読み込まれ、 パレットダイアログ上にずらりと並びます。 他のディレクトリーを
-    パレット用のフォルダーとして検索対象に加えたいときは、
+    パレットエディターダイアログを使ってパレットを作成したあと、 
+    <acronym>GIMP</acronym> を終了するとそれらは直ちに自動的に
+    <acronym>GIMP</acronym> の個人用ディレクトリーの
+    <filename class="directory">palettes</filename> フォルダー内へ保存されます。
+    このディレクトリー内や、 <acronym>GIMP</acronym> のインストール時に
+    作成されたシステム用の <filename class="directory">palettes</filename> 
+    フォルダーに入っているパレットは、 いずれも <acronym>GIMP</acronym> を
+    起動したときに自動的に読み込まれ、 パレットダイアログ上にずらりと並びます。
+    他のディレクトリーをパレット用のフォルダーとして検索対象に加えたいときは、
     <link linkend="gimp-prefs-folders-data">設定</link> ダイアログの
     <quote>パレット用フォルダー</quote>のページで追加登録します。
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>のパレットは専用のファイル形式で保存され、 その名前
+    <acronym>GIMP</acronym> のパレットは専用のファイル形式で保存され、 その名前
     には拡張子 <filename class="extension">.gpl</filename> が付きます。 内容は
-    大変簡素な<acronym>ASCII</acronym>テキストのみによる形式なので、 仮に他所
-    から取得したパレットを<acronym>GIMP</acronym>用に使う要求が生じたとしても、
-    それを<acronym>GIMP</acronym>用に転換する作業は大して難しくはならない
-    でしょう。 まずはどれかひとつ <filename class="extension">.gpl</filename> 
+    大変簡素な <acronym>ASCII</acronym> テキストのみによる形式なので、 仮に他所
+    から取得したパレットを <acronym>GIMP</acronym> 用に使う要求が生じたと
+    しても、 それを <acronym>GIMP</acronym> 用に転換する作業は大して難しくは
+    ならないでしょう。 まずはどれかひとつ
+    <filename class="extension">.gpl</filename> 
     形式のファイルの中身を見てください。 何をすればよいか理解できるはずです。
   </para>
 
@@ -230,7 +233,7 @@
       functional significance.)
     </para>
     <para lang="ja">
-      ややこしいことに、 <acronym>GIMP</acronym>は 2 つの型のパレットを使い
+      ややこしいことに、 <acronym>GIMP</acronym> は 2 つの型のパレットを使い
       分けています。 一方のよく知られる型はパレットダイアログに出てくる
       ものです。 これらのパレットは画像とは独立して存在しています。 第 2 の型は 
       <emphasis>インデックス化パレット</emphasis> といい、 インデックス化カラー
@@ -299,7 +302,7 @@
       の上で <mousebutton>第2ボタン</mousebutton> クリックすると現れるメニュー
       で <guimenuitem>パレットのインポート...</guimenuitem> を選択するのです。
       出てきたダイアログにはいろいろオプションがありますが、 その中に画像から
-      パレットを抽出するオプションがあります。 (<acronym>GIMP</acronym>の
+      パレットを抽出するオプションがあります。 (<acronym>GIMP</acronym> の
       グラデーションもパレットに抽出転換できます。) この能力がインデックス化
       カラー画像を同じ配色で揃えることになった場合に重要になります。
     </para>

@@ -6,10 +6,10 @@
   2008-04-05 Mr.Dust : added 'ko' contents
   2007-12-26 lexa: initial version for en and de
 -->
-<!--2012-06-10-->
+<!--2012-06-15-->
 <sect1 id="gimp-concepts-color-management">
   <title lang="en">Color Management in GIMP</title>
-  <title lang="ja"><acronym>GIMP</acronym>での色管理</title>
+  <title lang="ja"><acronym>GIMP</acronym> での色管理</title>
 
   <indexterm lang="en">
     <primary>Color</primary>
@@ -37,7 +37,7 @@
     ディスプレイモニター、 プリンターなど様々な機器が使われますが、 これらは
     色再現指標を個別に持っています。 このことを何ら考慮せず画像を開いたり
     編集したり保存すると、その画像に有害な調整が行われるはめになります。
-    <acronym>GIMP</acronym>なら
+    <acronym>GIMP</acronym> なら
     ウェブ掲示と印刷の両方にまたがって信頼できる出力を得る方法があります。
   </para>
   <figure>
@@ -125,7 +125,7 @@
     <para lang="ja">
       その記述を <emphasis>カラープロファイル</emphasis> といいます。 カラー
       プロファイルは、 基本的には機器固有の色指標を機種非依存の色空間 (いわゆる
-      作業空間) に読み替えるための対照表です。 そして画像編集は全て作業空間に
+      作業空間) に読み替えるための対照表です。 そして画像編集はすべて作業空間に
       置かれた画像に対して行なわれます。 さらにカラープロファイルは機器によって
       色がどのように表現されるのかを試演するのにも役立ちます。
     </para>
@@ -133,7 +133,7 @@
       いろいろなカラープロファイルを最も頻繁に作成するのは機器自身の生産者
       (メーカー) です。 これらプロファイルが機種やオペレーティングシステムに
       依存せずに使えるように、 <acronym>ICC</acronym> (<foreignphrase>
-      International Color Consortium</foreignphrase>) は<acronym>ICC</acronym>
+      International Color Consortium</foreignphrase>) は <acronym>ICC</acronym>
       プロファイルという標準規格を作成しました。 この規格ではカラープロファイル
       のファイルへの保存方法や画像への埋め込み方が定められています。
     </para>
@@ -149,8 +149,8 @@
         <xref linkend="gimp-prefs-color-management"/> for details.
       </para>
       <para lang="ja">
-        ここに示した媒介変数やプロファイルはほとんどが<acronym>GIMP</acronym>の
-        設定ダイアログで決められます。 詳しくは
+        ここに示した媒介変数やプロファイルはほとんどが <acronym>GIMP</acronym>
+        の設定ダイアログで決められます。 詳しくは
         <xref linkend="gimp-prefs-color-management"/> をご覧ください。
       </para>
     </tip>
@@ -169,7 +169,7 @@
       </para>
       <figure>
         <title lang="en">Applying the ICC-profile</title>
-        <title lang="ja"><acronym>ICC</acronym>プロファイルの適用</title>
+        <title lang="ja"><acronym>ICC</acronym> プロファイルの適用</title>
         <mediaobject>
           <imageobject>
             <imagedata fileref="images/using/icc-apply.png" format="PNG"/>
@@ -190,10 +190,10 @@
         manually assign it to that image.
       </para>
       <para lang="ja">
-        カラープロファイルが埋め込まれた画像を<acronym>GIMP</acronym>で開くと、
-        そのファイルを作業空間 (<acronym>RGB</acronym>色空間) に合わせて変換
-        するかどうか尋ねられます。 この色空間は初期設定では 
-        s<acronym>RGB</acronym>が指定されていますが、 作業の全工程をその
+        カラープロファイルが埋め込まれた画像を <acronym>GIMP</acronym> で
+        開くと、 そのファイルを作業空間 (<acronym>RGB</acronym> 色空間) に
+        合わせて変換するかどうか尋ねられます。 この色空間は初期設定では 
+        s<acronym>RGB</acronym> が指定されていますが、 作業の全工程をその
         色空間で行うようお勧めします。 それでもなお埋め込まれていたカラー
         プロファイルの方を残しておくにしても、 やはり画像は正しく表示されます。
       </para>
@@ -231,12 +231,12 @@
       <para lang="ja">
         最良の結果を得るためには、 モニター装置にカラープロファイルが必要です。
         モニタープロファイルの作成は、 システム全般で行なっても
-        <acronym>GIMP</acronym>で設定ダイアログの色管理のページから
+        <acronym>GIMP</acronym> で設定ダイアログの色管理のページから
         行なっても、 いずれの場合も画像の色が最も正確に
         表現されるようになります。
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>の色管理用の最重要コマンドのひとつが
+        <acronym>GIMP</acronym> の色管理用の最重要コマンドのひとつが
         <xref linkend="gimp-display-filter-dialog"/> に述べられています。
       </para>
       <para lang="ja">
@@ -293,11 +293,11 @@
           通例 2 段階を要します。 まずさきにコントラストや明るさ、 色温度などの
           外部モニター制御を調節しますが、 これらはモニターの機種に大きく
           依存しています。 そのあとにモニターを標準状態にできるだけ近づける
-          ためにビデオカードの<acronym>LUT</acronym>に読み込ませることになる
+          ためにビデオカードの <acronym>LUT</acronym> に読み込ませることになる
           調整があります。 この情報はモニタープロファイル内のいわゆる vcgt 
           タグに保存されます。 <productname>Windows XP</productname> や 
           <productname>Mac OS</productname> ではおそらく起動時に
-          オペレーティングシステムがこの情報 (<acronym>LUT</acronym>[対照表]) 
+          オペレーティングシステムがこの情報 (<acronym>LUT</acronym> [対照表]) 
           をビデオカードに読み込ませるはずです。 <productname>UNIX</productname>
           システム風のシステムなら今のところ <application>xcalib</application>
           や <application>dispwin</application> のような外部プログラムが
@@ -306,12 +306,12 @@
           だけを使って読み込ませることになります。)
         </para>
         <para lang="ja">
-          第二段階はプロファイル作成です。 これをもとに<acronym>GIMP</acronym>
-          が画像の<acronym>RGB</acronym>値を画面の適正な色に転換するための
+          第二段階はプロファイル作成です。 これをもとに <acronym>GIMP</acronym>
+          が画像の <acronym>RGB</acronym> 値を画面の適正な色に転換するための
           規則集が生成できます。 これはモニタープロファイルにも収められます。
-          この転換は画像の<acronym>RGB</acronym>値を変更するのではなく、 
+          この転換は画像の <acronym>RGB</acronym> 値を変更するのではなく、 
           ビデオメモリー (フレームバッファー) に書き込む値を変えています。 
-          (ビデオカードは既に vcgt <acronym>LUT</acronym>を
+          (ビデオカードは既に vcgt <acronym>LUT</acronym> を
           持っているものとします。)
         </para>
       </sect4>
@@ -330,7 +330,7 @@
         images to the printer.
       </para>
       <para lang="ja">
-        <acronym>GIMP</acronym>を使えば、 印刷物での画像の見え方が簡単に
+        <acronym>GIMP</acronym> を使えば、 印刷物での画像の見え方が簡単に
         プレビューできます。 お使いのプリンターからカラープロファイルを得れば、
         ディスプレイ装置は色校正モードに切り替えることが可能になります。
         こういった印刷試演においては性能上再現ができない色は灰色無色で表示

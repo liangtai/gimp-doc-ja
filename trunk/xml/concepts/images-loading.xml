@@ -6,7 +6,7 @@
   2009-02-19 j.h: revised for v2.6
   2007-03-14 lexa: split out from another file
 -->
-<!--2012-06-12-->
+<!--2012-06-15-->
 <sect1 id="gimp-using-fileformats-opening">
   <title lang="en">Opening Files</title>
   <title lang="ja">ファイルの開き方</title>
@@ -23,7 +23,7 @@
     <acronym>GIMP</acronym>:
   </para>
   <para lang="ja">
-    既存の画像を<acronym>GIMP</acronym>にとりこむ方法はいろいろあります。
+    既存の画像を <acronym>GIMP</acronym> にとりこむ方法はいろいろあります。
   </para>
 
   <sect2 id="gimp-using-open-file">
@@ -72,19 +72,19 @@
         <acronym>GIMP</acronym> resort to using the extension.
       </para>
       <para lang="ja">
-        ファイルを開くときは<acronym>GIMP</acronym>はそのファイル形式を判定し
-        なければなりません。 形式が多様であることに加え、 残念ながらそれを表す
-        拡張子 (例: <filename class="extension">.jpg</filename>) に信頼が
-        置けないので、 <acronym>GIMP</acronym>が拡張子からファイルの形式を
+        ファイルを開くときは <acronym>GIMP</acronym> はそのファイル形式を判定
+        しなければなりません。 形式が多様であることに加え、 残念ながらそれを
+        表す拡張子 (例: <filename class="extension">.jpg</filename>) に信頼が
+        置けないので、 <acronym>GIMP</acronym> が拡張子からファイルの形式を
         そのまま判断することはありません。 じっさいにシステムごとに拡張子が
         異なったり、 機能追加でファイル名が変化することもあるからです。 
         さらに、 ファイル名から拡張子が省かれることもあるのが大きな理由です。 
-        そこで<acronym>GIMP</acronym>は、 ファイルの中身を見て確かめてから形式
-        を判断しようとします。 一般的に通用している画像ファイル形式の
+        そこで <acronym>GIMP</acronym> は、 ファイルの中身を見て確かめてから
+        形式を判断しようとします。 一般的に通用している画像ファイル形式の
         ほとんどは、 その形式を認識させるための
         <quote>マジックヘッダー</quote>を持っています。
         マジックでは判断がつかない限られた場合のために、
-        <acronym>GIMP</acronym>は拡張子を利用する余地を残しています。
+        <acronym>GIMP</acronym> は拡張子を利用する余地を残しています。
       </para>
     </note>
     <figure>
@@ -213,13 +213,13 @@
             開く
         </guibutton>
         ボタンをクリックすると、 ほぼ必ず
-        <acronym>GIMP</acronym>はファイルの形式を自動的に判別します。 
+        <acronym>GIMP</acronym> はファイルの形式を自動的に判別します。 
         しかしまれにファイル形式が異例でその拡張子が不完全なとき、 
-        <acronym>GIMP</acronym>はファイルの本当の形式を推定できないかも
+        <acronym>GIMP</acronym> はファイルの本当の形式を推定できないかも
         しれません。 必要ならダイアログの下部にある
         <guilabel>ファイル形式を選択</guilabel>
         オプションを引き出し、 手動でファイル形式を特定できます。 でも
-        <acronym>GIMP</acronym>がその画像ファイルを読み込めなかった理由は、 
+        <acronym>GIMP</acronym> がその画像ファイルを読み込めなかった理由は、 
         十中八九そのファイルが破損していたか、 もともとサポートされて
         いなかった形式だったと考えられます。
       </para>
@@ -248,7 +248,7 @@
         <guimenuitem>場所を開く...</guimenuitem>
       </menuchoice>
       を使います。 小さなダイアログが出て来ますので書き込み欄に
-      <acronym>URI</acronym>を直接打鍵するか貼り付けます。
+      <acronym>URI</acronym> を直接打鍵するか貼り付けます。
     </para>
     <figure>
       <title lang="en">The <quote>Open Location</quote> dialog</title>
@@ -282,8 +282,8 @@
       Select an open the desired image.
     </para>
     <para lang="ja">
-      最近<acronym>GIMP</acronym>で開いたことのある画像なら、 画像ウィンドウの
-      メニューの 
+      最近 <acronym>GIMP</acronym> で開いたことのある画像なら、 画像
+      ウィンドウのメニューの 
       <menuchoice>
         <guimenu>ファイル</guimenu>
         <guisubmenu>最近開いた画像ファイルを開く</guisubmenu>
@@ -345,10 +345,10 @@
       <application>Ghostscript</application>.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>は画像ファイルを読み書きするとき、 
-      <acronym>XCF</acronym>形式を除くあらゆるファイル形式にプラグインを
+      <acronym>GIMP</acronym> は画像ファイルを読み書きするとき、 
+      <acronym>XCF</acronym> 形式を除くあらゆるファイル形式にプラグインを
       使用しています。 このようなプラグインがプログラム用の外部ライブラリーを
-      使うこともよくあります。 たとえば<acronym>GIMP</acronym>は 
+      使うこともよくあります。 たとえば <acronym>GIMP</acronym> は 
       <link linkend="glossary-postscript">PostScript</link> を直接にサポート
       してはいませんが、 Postscript ファイル (ファイルの拡張子は 
       <filename class="extension">.ps</filename> や
@@ -448,7 +448,7 @@
         http://www.kirchgessner.net.)
       </para>
       <para lang="ja">
-        以上で <productname>Postscript</productname> を<acronym>GIMP</acronym>
+        以上で <productname>Postscript</productname> を <acronym>GIMP</acronym>
         で扱えるようになります。 インストールが終わったあとで 
         <application>Ghostscript</application> のディレクトリーを移動しては
         いけません。 一緒にインストールされたライブラリーがレジストリーに
@@ -472,14 +472,14 @@
       the image will open in <acronym>GIMP</acronym>.
     </para>
     <para lang="ja">
-      <acronym>GIMP</acronym>のインストール時かその後で画像ファイルの形式を
-      <acronym>GIMP</acronym>に関連づけておけば、 ファイルマネージャー
+      <acronym>GIMP</acronym> のインストール時かその後で画像ファイルの形式を
+      <acronym>GIMP</acronym> に関連づけておけば、 ファイルマネージャー
       (<productname>Linux</productname> における 
       <application>Nautilus</application> や
       <application>Dolphin</application>、 <productname>Windows</productname> 
       における <application>WindowsExplorer</application>) を使ってファイルを
       見回し、 見付けたファイルアイコンをダブルクリックするだけで、 
-      設定が正しくできておれば、 <acronym>GIMP</acronym>がその画像を開きます。
+      設定が正しくできておれば、 <acronym>GIMP</acronym> がその画像を開きます。
     </para>
   </sect2>
 
@@ -499,17 +499,17 @@
       <acronym>GIMP</acronym>'s toolbox.
     </para>
     <para lang="ja">
-      開きたいファイルのアイコンをクリックしたまま<acronym>GIMP</acronym>の
+      開きたいファイルのアイコンをクリックしたまま <acronym>GIMP</acronym> の
       ツールボックスの上までドラッグしてくる方法があります。 また画像を現在
-      <acronym>GIMP</acronym>で開いている画像のウィンドウ上までドラッグして
+      <acronym>GIMP</acronym> で開いている画像のウィンドウ上までドラッグして
       放つと、 新たなレイヤーとしてその画像に加えられます。
     </para>
     <para lang="ja">
-      アプリケーションの多くが画像をクリックしたまま<acronym>GIMP</acronym>の
+      アプリケーションの多くが画像をクリックしたまま <acronym>GIMP</acronym> の
       ツールボックスの上までドラッグしてくると開けるようになっています。 例えば
       <application>Firefox</application> のブラウザー画面にある画像ファイル
-      項目をクリックして<acronym>GIMP</acronym>のツールボックスまでドラッグして
-      放つとその画像が開けます。
+      項目をクリックして <acronym>GIMP</acronym> のツールボックスまで
+      ドラッグして放つとその画像が開けます。
     </para>
   </sect2>
 
@@ -555,7 +555,7 @@
         <guimenuitem>画像</guimenuitem>
       </menuchoice>
       と進みます。 数多くのアプリケーションに、 画像をクリップボードに写し
-      取れるしくみが備わっていますから、 あとで<acronym>GIMP</acronym>にその
+      取れるしくみが備わっていますから、 あとで <acronym>GIMP</acronym> にその
       画像を取り込めます。 また数々のオペレーティングシステムで画面の表示
       がクリップボードに写し取れます。 クリップボードに取り込む典型的な方法は 
       <keycap>Print&nbsp;Screen</keycap> キーを押すだけでよく、 また組み合わせ 
@@ -565,7 +565,7 @@
       キーを使えば今使っているウィンドウだけ取り込めます。 ただし 
       <keycap>Print&nbsp;Screen</keycap> キーを使った技はどんな環境でも使える
       というものではなく、 また画像をクリップボードに取り込める
-      オペレーティングシステム上であっても必ずしも<acronym>GIMP</acronym>が
+      オペレーティングシステム上であっても必ずしも <acronym>GIMP</acronym> が
       その画像を利用できるとは限りません。 まずはご自分で試してみて
       お確かめください。
     </para>
@@ -593,10 +593,10 @@
       画像管理アプリケーションがあります。 優れた画像縦覧ソフトとして使える
       だけでなく、 画像上で <mousebutton>第2ボタン</mousebutton> クリックすると
       出てくるメニューから <guimenuitem>他で開く...</guimenuitem> に進むと
-      現れる<quote>画像を開く</quote>ダイアログで<acronym>GIMP</acronym>を
+      現れる<quote>画像を開く</quote>ダイアログで <acronym>GIMP</acronym> を
       選択して <guibutton>開く</guibutton> ボタンをクリックしても開けます。
       また <application>gThumb</application> で表示されている画像を
-      クリックしたまま<acronym>GIMP</acronym>のツールボックス上にドラッグして
+      クリックしたまま <acronym>GIMP</acronym> のツールボックス上にドラッグして
       放っても開けます。 より詳しくは gThumb のホームページ 
       <xref linkend="bibliography-online-gthumb"/> をご覧ください。
       その他の同様なアプリケーションとして、 <application>GQview</application>

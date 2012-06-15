@@ -6,7 +6,7 @@
   2008-07-31 alex falappa: added 'it'
   2008-04-05 ude: created 'en','de'
 -->
-<!--2012-06-03-->
+<!--2012-06-15-->
 <sect2 id="python-fu-slice">
   <title lang="en">Slice</title>
   <title lang="ja">画像分割...</title>
@@ -70,18 +70,18 @@
     </para>
     <para lang="ja">
       <guimenuitem>画像分割...</guimenuitem> フィルターは
-      <acronym>HTML</acronym>ページで感応する画像の作成を支援する単純で使い
+      <acronym>HTML</acronym> ページで感応する画像の作成を支援する単純で使い
       易いスクリプトです。 このフィルターは垂直と水平に置かれた見当線に沿って 
       <link linkend="plug-in-guillotine">ギロチン</link> コマンドのように
       画像を切り分け、 ひと揃いの断片画像を作成します。 また同時にこの
-      フィルターは生成される画像ファイルを接ぎ合わせる<acronym>HTML</acronym>
+      フィルターは生成される画像ファイルを接ぎ合わせる <acronym>HTML</acronym>
       の表組みコードをテキストファイルで生成します。 表組みのそれぞれの升目
       に画像の断片が入っている構造です。 あとはこのテキストファイルの内容を
-      <acronym>HTML</acronym>文書に埋め込むことになります。
+      <acronym>HTML</acronym> 文書に埋め込むことになります。
     </para>
     <para lang="ja">
       繰り返しますがこのフィルターは実にとても単純な支援ツールです。 書き出さ
-      れる<acronym>HTML</acronym>コードは精々次の例のようなものになります。
+      れる <acronym>HTML</acronym> コードは精々次の例のようなものになります。
     </para>
     <example>
       <title lang="en">
@@ -130,7 +130,7 @@
         omitted.
       </para>
       <para lang="ja">
-        生成される<acronym>HTML</acronym>コード。 <quote>style</quote>属性
+        生成される <acronym>HTML</acronym> コード。 <quote>style</quote>属性
         は省かれている。
       </para>
     </example>
@@ -208,7 +208,7 @@
             you can select a different location.
           </para>
           <para lang="ja">
-            生成された<acronym>HTML</acronym>ファイルと画像ファイルの保管場所
+            生成された <acronym>HTML</acronym> ファイルと画像ファイルの保管場所
             です。 初期状態では現在の作業ディレクトリーにこれらのファイルが
             保管されます。 記入欄の右端の三角形のボタンをクリックすると他の
             フォルダーを辿れる引き出しメニューが出てきます。
@@ -224,7 +224,7 @@
             textbox.
           </para>
           <para lang="ja">
-            生成される<acronym>HTML</acronym>コードを収めたファイルの名前
+            生成される <acronym>HTML</acronym> コードを収めたファイルの名前
             です。 記入欄で他の名前も指定できます。
           </para>
         </listitem>
@@ -340,7 +340,7 @@
             width:
           </para>
           <para lang="ja">
-            この数値は<acronym>HTML</acronym>テーブルのセル同士の間隔を指定
+            この数値は <acronym>HTML</acronym> テーブルのセル同士の間隔を指定
             する<quote>celllspacing</quote>属性値になります。 値の範囲は 0 
             ピクセルから 15 ピクセルまでです。  ここに正の整数を設定すると
             縦や横の見当線はこの太さをした平行線で現れます。
@@ -356,7 +356,7 @@
               <caption>
                 <para lang="en">Corresponding HTML code snippet</para>
                 <para lang="ja">
-                  関連している<acronym>HTML</acronym>コードの抜粋
+                  関連している <acronym>HTML</acronym> コードの抜粋
                 </para>
               </caption>
             </mediaobject>
@@ -368,7 +368,7 @@
           </para>
           <para lang="ja">
             ここで気をつけていただきたいことは、 この間隔を拡げても画像の規模
-            は大きくならないことです。 むしろ<acronym>HTML</acronym>テーブル
+            は大きくならないことです。 むしろ <acronym>HTML</acronym> テーブル
             で揃えられた画像は消しゴムツールで縦横の線状に消されたように
             見えることでしょう。
           </para>
@@ -387,10 +387,10 @@
           </para>
           <para lang="ja">
             このオプションを有効にするとこのフィルターは Javascript コードを
-            追加します。 <acronym>HTML</acronym>の場合と同じく生成された
+            追加します。 <acronym>HTML</acronym> の場合と同じく生成された
             ままの状態では何の効果もありませんが、 動的機能を追加してゆく
-            には良好な手掛かりとなります。 この Javascript コードは<quote>
-            onmouseover</quote>のようなイベントを扱う関数に利用できます。
+            には良好な手掛かりとなります。 この Javascript コードは
+            <quote>onmouseover</quote>のようなイベントを扱う関数に利用できます。
           </para>
           <example>
             <title lang="en">JavaScript code snippet</title>
@@ -439,7 +439,7 @@ function exchange (image, images_array_name, event)
             <code language="HTML">&lt;a?href="#"&gt;?...?&lt;/a&gt;</code>
             というハイパーリンク素枠を加えます。 逆に初期設定どおりこれを
             有効にすると、 見当線が水平方向と垂直方向のどちらにも少なくとも
-            2本以上ある場合に、 フィルターは各行各列の全ての先頭と最後のセル
+            2本以上ある場合に、 フィルターは各行各列のすべての先頭と最後のセル
             だけはこのハイパーリンク素枠を省きます。 この処置は画像に枠が
             描かれていてその部分は反応させたくないときに役立ちます。
           </para>
@@ -449,7 +449,7 @@ function exchange (image, images_array_name, event)
             </title>
             <title lang="ja">
               外周部の画像片にはアンカータグを省略
-              (簡易<acronym>HTML</acronym>コード)
+              (簡易 <acronym>HTML</acronym> コード)
             </title>
             <programlisting><![CDATA[
 <table cellpadding="0" border="0" cellspacing="0">

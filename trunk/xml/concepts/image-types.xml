@@ -8,7 +8,7 @@
   2006-05-02 added Korean translation by Dust
   2005-12-18 reviewed and added rewrote de image explenation by lexa
 -->
-<!--2012-06-10-->
+<!--2012-06-15-->
 <sect1 id="gimp-concepts-image-types">
   <title lang="en">Image Types</title>
   <title lang="ja">画像の形式</title>
@@ -52,20 +52,20 @@
   <para lang="ja">
     ここでは<emphasis>画像</emphasis>のことを単体の表示ウィンドウや 
     <link linkend="file-jpeg-load">JPEG</link> のようなファイルに対応する存在
-    とする考え方で話をすすめます。 ただし本来の<acronym>GIMP</acronym>の画像は
+    とする考え方で話をすすめます。 ただし本来の <acronym>GIMP</acronym> の画像は
     重ね合わされたレイヤーをはじめ、 選択マスクや数層のチャンネル、 パスや
     作業履歴など、 様々な要素からなるもっと複雑な構造を持っています。 この章では
-    <acronym>GIMP<acronym>画像の構成要素をひとつづつ詳しく見てゆき、 
+    <acronym>GIMP<acronym> 画像の構成要素をひとつづつ詳しく見てゆき、 
     それらをどのように使ったらよいか説明します。
   </para>
   <para lang="ja">
      画像の最も基本的な属性は <emphasis>モード</emphasis> です。 扱えるモードは
      <acronym>RGB</acronym>、 グレースケール、 インデックス化カラーの 3 つです。
-     <acronym>RGB</acronym>とは赤・緑・青の頭文字からとられた言葉で、 画像の
+     <acronym>RGB</acronym> とは赤・緑・青の頭文字からとられた言葉で、 画像の
      各点が<quote>赤色</quote>レベル、 <quote>緑色</quote>レベル、 
      <quote>青色</quote>レベルの 3 つで表せる状態を示しています。
      <!--人間の視覚できる色彩は赤緑青の混成ですべて表現できるため、-->
-     <acronym>RGB</acronym>画像は総天然色です。
+     <acronym>RGB</acronym> 画像は総天然色です。
      色素チャンネルの強度ははそれぞれが 256 階調で表されています。
      <link linkend="glossary-colormodel">カラーモデル</link> に詳しい説明が
      あります。
@@ -77,7 +77,7 @@
   <figure>
     <title lang="en">Components of the RGB and CMY Color Model</title>
     <title lang="ja">
-      <acronym>RGB</acronym>と<acronym>CMY</acronym>の各カラーモデルの相関図
+      <acronym>RGB</acronym> と <acronym>CMY</acronym> の各カラーモデルの相関図
     </title>
     <mediaobject>
       <imageobject>
@@ -90,7 +90,7 @@
           which is what happens on your screen.
         </para>
         <para lang="ja">
-          <acronym>RGB</acronym>色モデルでは、 赤・緑・青の混色が白になります。
+          <acronym>RGB</acronym> 色モデルでは、 赤・緑・青の混色が白になります。
           画面の表示はこれを利用しています。
         </para>
       </caption>
@@ -108,7 +108,7 @@
           reasons and better color rendering.
         </para>
         <para lang="ja">
-          <acronym>CMY(K)</acronym>カラーモデルでは、 シアン、 マゼンタ、
+          <acronym>CMY(K)</acronym> カラーモデルでは、 シアン、 マゼンタ、
           イエローの混色が黒になります。 これはプリンターで白紙に印刷すると
           起こります。 ただし実際はプリンターには黒インクカートリッジがあって、
           経済的かつ美しい仕上りが図られています。
@@ -139,14 +139,14 @@
     layer and color from underneath.
   </para>
   <para lang="ja">
-    <acronym>RGB</acronym>画像とグレースケール画像は概念上その
+    <acronym>RGB</acronym> 画像とグレースケール画像は概念上その
     <quote>色チャンネル</quote>の数が違います。 グレースケール画像は
-    ひとつだけですが、 <acronym>RGB</acronym>画像には 3 つあります。 
-    つまり<acronym>RGB</acronym>画像は、 赤・緑・青の各色がついた 3 つの
+    ひとつだけですが、 <acronym>RGB</acronym> 画像には 3 つあります。 
+    つまり <acronym>RGB</acronym> 画像は、 赤・緑・青の各色がついた 3 つの
     グレースケール画像を重ね合わせたものと考えることができます。
   </para>
   <para lang="ja">
-    実際には<acronym>RGB</acronym>画像とグレースケール画像のどちらもさらに
+    実際には <acronym>RGB</acronym> 画像とグレースケール画像のどちらもさらに
     <emphasis>アルファ</emphasis> チャンネルと呼ばれるチャンネルが 1 つ加わって
     おり、 透明度を表すはたらきがあります。 たとえばあるレイヤーの一部の
     アルファ値がゼロだと、 このレイヤーのその部分は完全な透明になり、 その下が
@@ -160,7 +160,7 @@
       Example of an image in RGB and Grayscale mode
     </title>
     <title lang="ja">
-      <acronym>RGB</acronym>とグレースケールの各モードの画像の例
+      <acronym>RGB</acronym> とグレースケールの各モードの画像の例
     </title>
     <mediaobject>
       <imageobject>
@@ -172,7 +172,7 @@
           Green and Blue.
         </para>
         <para lang="ja">
-          <acronym>RGB</acronym>モードの画像は、 赤・緑・青の
+          <acronym>RGB</acronym> モードの画像は、 赤・緑・青の
           各チャンネルからなる。
         </para>
       </caption>
@@ -204,10 +204,10 @@
     with slowly varying color gradients, the difference may be perceptible.
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>では、それぞれの色チャンネルおよびアルファチャンネル
+    <acronym>GIMP</acronym> では、それぞれの色チャンネルおよびアルファチャンネル
     は 0 から 255 の範囲の値をとっています。 これはコンピュータ用語で色深度 8 
     ビットといいます。 ディジタルカメラの機種によっては各色チャンネルが色深度
-    16  ビットのファイルを生成するものもあります。 <acronym>GIMP</acronym>で
+    16  ビットのファイルを生成するものもあります。 <acronym>GIMP</acronym> で
     このようなファイルを読みこんだときは解像度が落とされます。
     その場合の影響は人間の眼にはかなり微妙な違いにしか見えませんが、
     場合によりとくに広い範囲を極めてゆるやかな勾配でかけられた
@@ -268,7 +268,7 @@
           A color image in RGB mode with an Alpha channel.
         </para>
         <para lang="ja">
-          アルファチャンネルつきの<acronym>RGB</acronym>モードのカラー画像。
+          アルファチャンネルつきの <acronym>RGB</acronym> モードのカラー画像。
         </para>
       </caption>
     </mediaobject>
@@ -318,26 +318,26 @@
     暗黒時代 (つまり十数年前)<!--「十年前」の執筆時は2007年2月--> はこれが
     あたりまえでした。 時代は移り、 
     だんだん使われなくなってきましたが、 まだその重要性はあるとして
-    <acronym>GIMP</acronym>はサポートしています。 (それから、 
-    <acronym>RGB</acronym>の連続色画像よりもインデックス化カラー画像のほうが
+    <acronym>GIMP</acronym> はサポートしています。 (それから、 
+    <acronym>RGB</acronym> の連続色画像よりもインデックス化カラー画像のほうが
     実装しやすい画像処理がほんの数種類あります。)
   </para>
   <para lang="ja">(
     <link linkend="file-gif-load">GIF</link> や 
     <link linkend="file-png-load">PNG</link> などのようないくつかのよく使われる
-    ファイル形式では、 <acronym>GIMP</acronym>で開いた画像をインデックス化
-    カラー画像にして生成できます。 <acronym>GIMP</acronym>のインデックス化カラー
-    画像の処理は大多数のツールがその実力をあまり発揮できませんし、 一部のものは
-    全く作動しません。 使える色数が少ないのが原因です。 ですから、
+    ファイル形式では、 <acronym>GIMP</acronym> で開いた画像をインデックス化
+    カラー画像にして生成できます。 <acronym>GIMP</acronym> のインデックス化
+    カラー画像の処理は大多数のツールがその実力をあまり発揮できませんし、 一部の
+    ものは全く作動しません。 使える色数が少ないのが原因です。 ですから、
     むしろこういった処理の前に画像を
-    <acronym>RGB</acronym>モードに変換しておくのが良策です。 必要に応じて、
+    <acronym>RGB</acronym> モードに変換しておくのが良策です。 必要に応じて、
     ファイルに保存する前にインデックス化カラー画像に変換しなおせばよいでしょう。
   </para>
   <para lang="ja">
-    <acronym>GIMP</acronym>で画像のモードを他のモードに変換するには、
+    <acronym>GIMP</acronym> で画像のモードを他のモードに変換するには、
     <guimenu>画像</guimenu>メニューの
     <link linkend="gimp-image-mode">モード</link> 変換コマンドを用いれば
-    簡単です。 もちろん<acronym>RGB</acronym>からグレースケールやインデックス
+    簡単です。 もちろん <acronym>RGB</acronym> からグレースケールやインデックス
     化カラー画像へのような一部の変換は、 とり戻すことの不可能な情報の欠損を
     もたらします。
   </para>
@@ -354,11 +354,11 @@
     <para lang="ja">
       使おうとしたフィルタがメニューで灰色無効にされているときは、 ほとんどが
       その画像 (とくにそのレイヤー) に問題があります。 大多数のフィルターは
-      インデックス化カラー画像には適用できません。 <acronym>RGB</acronym>画像
+      インデックス化カラー画像には適用できません。 <acronym>RGB</acronym> 画像
       限定のものや、 グレースケール画像限定のものもあります。 ほかにも
       アルファチャンネルがあることを前提にしているものや、 逆に
       アルファチャンネルがあると作動しないものもあります。 ほとんどの問題は画像
-      を別のモード (たいていは<acronym>RGB</acronym>) に変換すれば解決します。
+      を別のモード (たいていは <acronym>RGB</acronym>) に変換すれば解決します。
     </para>
   </note>
 </sect1>

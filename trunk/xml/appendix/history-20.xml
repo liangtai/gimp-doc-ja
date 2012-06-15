@@ -4,7 +4,7 @@
 <!--  section history:
   2007-09-02 lexa: split out from history.xml
  -->
-<!--2012-06-10-->
+<!--2012-06-15-->
 <sect1 id="gimp-introduction-history-2-0">
   <title>Version 2.0</title>
 
@@ -24,18 +24,20 @@
     maintainable than was the case for <acronym>GIMP</acronym> 1.2.
   </para>
   <para lang="ja">
-    まずは分析から&ndash;<acronym>GIMP</acronym>のコードは C で書かれた基コード
-    が 23 万行あり、 そのほとんどが 1.2 から 2.0 への進化のために書き直され
-    ました。 しかしユーザーの視点から見れば <application><acronym>GIMP</acronym>
-    2</application> は基本的に <application><acronym>GIMP</acronym>
-    1</application> から何も変わっていません。 機能は 
-    <application><acronym>GIMP</acronym> 1</application> ユーザーが迷わないよう
-    徹底して同じ物にしました。 構造改革の面では開発者はユーザーに見えない
-    ところでコードを大幅に整理し、 管理がし易く将来に渡って機能追加に伴う労力を
-    減らすための投資的改造を施しました。 このように、 
-    <application><acronym>GIMP</acronym> 2</application> の基コードは重点的に
-    <application><acronym>GIMP</acronym> 1</application> に比べてもっと優れた
-    構成になり、 より管理がゆきとどくものに変えられています。
+    まずは分析から&ndash; <acronym>GIMP</acronym> のコードは C で書かれた基
+    コードが 23 万行あり、 そのほとんどが 1.2 から 2.0 への進化のために書き
+    直されました。 しかしユーザーの視点から見れば
+    <application><acronym>GIMP</acronym>&nbsp;2</application> は基本的に
+    <application><acronym>GIMP</acronym>&nbsp;1</application> から
+    何も変わっていません。 機能は 
+    <application><acronym>GIMP</acronym>&nbsp;1</application> ユーザーが
+    迷わないよう徹底して同じ物にしました。 構造改革の面では開発者はユーザーに
+    見えないところでコードを大幅に整理し、 管理がし易く将来に渡って機能追加に
+    伴う労力を減らすための投資的改造を施しました。 このように、 
+    <application><acronym>GIMP</acronym>&nbsp;2</application> の基コードは
+    重点的に
+    <application><acronym>GIMP</acronym>&nbsp;1</application> に比べてもっと
+    優れた構成になり、 より管理がゆきとどくものに変えられています。
   </para>
   <variablelist>
     <varlistentry>
@@ -76,12 +78,12 @@
           easily be found.
         </para>
         <para lang="ja">
-          <application><acronym>GIMP</acronym> 2</application> の基本の
-          ツールは <application><acronym>GIMP</acronym> 1</application>
+          <application><acronym>GIMP</acronym>&nbsp;2</application> の基本の
+          ツールは <application><acronym>GIMP</acronym>&nbsp;1</application>
           からあったものとあまり違いがありません。 色域選択ツールがツール
-          ボックスに加わりましたが、 これは <application>
-          <acronym>GIMP</acronym> 1</application> で選択ツールの
-          メニューオプションとして既にあった機能です。 変換ツールは
+          ボックスに加わりましたが、 これは 
+          <application><acronym>GIMP</acronym>&nbsp;1</application> で
+          選択ツールのメニューオプションとして既にあった機能です。 変換ツールは
           回転、 拡大・縮小、 剪断変形、 遠近法の各ツールに分かれて
           特化しました。 色操作は今回レイヤーと結びつけられて、 
           <menuchoice>
@@ -157,18 +159,19 @@
           and easily choosing a brush).
         </para>
         <para lang="ja">
-          多くのツールのツールオプションで <application><acronym>GIMP</acronym> 
-          1</application> には無かった能力が新たに加わりました。 
+          多くのツールのツールオプションで 
+          <application><acronym>GIMP</acronym>&nbsp;1</application> には
+          無かった能力が新たに加わりました。 
           留まるところなくさらに顕著に改良が加えられています。
         </para>
         <para lang="ja">
-          全ての選択ツールに置換、 追加、 除外、 交わりのモードボタンが
-          付きました。 かつて <application><acronym>GIMP</acronym>
-          1</application> では選択ツールのモードを
-          切り替える手段は <keycap>Ctrl</keycap> キーもしくは 
-          <keycap>Shift</keycap> キーとの組み合わせしかなく、 これらのキーが
-          他の機能でも使われていたために混乱のもととなっていました。 具体的には
-          例えば矩形選択ツールで正方形を形づくらせるには、 
+          すべての選択ツールに置換、 追加、 除外、 交わりのモードボタンが
+          付きました。 かつて 
+          <application><acronym>GIMP</acronym>&nbsp;1</application> では
+          選択ツールのモードを切り替える手段は <keycap>Ctrl</keycap> キー
+          もしくは <keycap>Shift</keycap> キーとの組み合わせしかなく、 これらの
+          キーが他の機能でも使われていたために混乱のもととなっていました。 
+          具体的には例えば矩形選択ツールで正方形を形づくらせるには、 
           <keycap>Shift</keycap> キーを押しながら操作することになっています。 
           これだと[既にある選択範囲に]正方形の選択範囲を加えるためには、 まず 
           <keycap>Shift</keycap> キーを押してマウスがクリックしたら 
@@ -186,10 +189,11 @@
         <para lang="ja">
           <quote>フェードアウト</quote>と<quote>グラデーションで描画</quote>
           が描画ツールのオプションに加わりました。 描画ツールで使うブラシ、 
-          グラデーション、 パターンは <application><acronym>GIMP</acronym>
-          1</application> でこれまで全ツールに共通した設定しかできなかったの
-          とは対照的に、 個々の描画ツールごとに異なる設定を保持できるように
-          なりました。 もうこれからは<quote>鉛筆で描画</quote>ツールと
+          グラデーション、 パターンは 
+          <application><acronym>GIMP</acronym>&nbsp;1</application> でこれまで
+          全ツールに共通した設定しかできなかったのとは対照的に、 
+          個々の描画ツールごとに異なる設定を保持できるようになりました。 
+          もうこれからは<quote>鉛筆で描画</quote>ツールと
           <quote>ブラシで描画</quote>ツールで異なるブラシが選べるように
           なりますし、 <quote>スタンプ</quote>ツールと
           <quote>塗りつぶし</quote>ツールで違うパターンを選べるようになります。 
@@ -291,17 +295,17 @@
           <acronym>GIMP</acronym>.
         </para>
         <para lang="ja">
-          <application><acronym>GIMP</acronym> 2</application> で最も目につく
-          変化がユーザーインターフェースです。 <acronym>GIMP</acronym>は今回
-          <acronym>GTK+</acronym>に代わって<acronym>GTK2+</acronym>
+          <application><acronym>GIMP</acronym>&nbsp;2</application> で最も
+          目につく変化がユーザーインターフェースです。 <acronym>GIMP</acronym>
+          は今回 <acronym>GTK+</acronym> に代わって <acronym>GTK2+</acronym>
           グラフィカルツールキットを採用しました。 ライブラリーの入れ替えに
           伴いドッキング可能なダイアログと、 同じウィンドウでの
           タブ化ドッキングという素敵な機能が加わりました。 
           タブ化は人気のある各種のウェブブラウザーで実現している機能です。 
-          <application><acronym>GIMP</acronym> 1</application> はダイアログが
-          コンピューター画面上のどこにでも開くということで
+          <application><acronym>GIMP</acronym>&nbsp;1</application> は
+          ダイアログがコンピューター画面上のどこにでも開くということで
           有名になっていました。 
-          この点 <application><acronym>GIMP</acronym> 2</application> は
+          この点 <application><acronym>GIMP</acronym>&nbsp;2</application> は
           定位置の枠を使うと説明できます。 ダイアログには小さな
           タブ調整メニューがつき、 系統だった作業空間を最大限柔軟に構築
           できます。
@@ -331,7 +335,7 @@
           ウィンドウに戻すには <keycap>Esc</keycap> キーを使います。)
         </para>
         <para lang="ja">
-          <application><acronym>GIMP</acronym> 2</application> から
+          <application><acronym>GIMP</acronym>&nbsp;2</application> から
           キーボードアクセラレーター機能がついたのでメニュー操作が楽に
           なりました。 マウスでメニューを辿るのが煩わしいとお感じならば、 
           キーボードを使う方法が近道かもしれません。 一例を挙げれば、 
@@ -345,24 +349,24 @@
           <quote>新しい画像を作成</quote>ダイアログが呼び出せます。
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>はいつも使うメニュー項目を簡単に呼び出せる
+          <acronym>GIMP</acronym> はいつも使うメニュー項目を簡単に呼び出せる
           ように長年に渡り動的ショートカットを提供してきました。 これは、 
           メニューを開いてから使いたいメニュー項目の上にマウスポインターを
           かざし、 割り当てたいキーの組み合わせを押すだけでキーボードショート
           カットが登録できるしくみです。 この機能はひきつづき置かれますが、 
           既にあるショートカットを不意に上書きすることのないよう
-          <application><acronym>GIMP</acronym> 2.0</application> 以降は
+          <application><acronym>GIMP</acronym>&nbsp;2.0</application> 以降は
           初期状態では無効の設定となります。
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>は出荷時からメニュー上の数々の項目にキー
+          <acronym>GIMP</acronym> は出荷時からメニュー上の数々の項目にキー
           割り付けがしてあります。 しかしキー割り付けを出荷時設定ではなく
           例えば <application>Photoshop</application> 風に変更したい場合は、 
-          個人用<acronym>GIMP</acronym>ディレクトリーの 
+          個人用 <acronym>GIMP</acronym> ディレクトリーの 
           <filename>menurc</filename> ファイルを <filename>oldmenurc</filename> 
           のような名前に変えて、 代わりに <filename>ps-menurc</filename>
           ファイルを <filename>menurc</filename> の名前に変更もしくは
-          複製してから<acronym>GIMP</acronym>を再起動します。
+          複製してから <acronym>GIMP</acronym> を再起動します。
         </para>
       </listitem>
     </varlistentry>
@@ -382,7 +386,7 @@
           group.
         </para>
         <para lang="ja">
-          <application><acronym>GIMP</acronym> 2.0</application> からタブ化
+          <application><acronym>GIMP</acronym>&nbsp;2.0</application> からタブ化
           ダイアログが導入され、 みんなが望んでいた作業空間の視界が
           手に入りました。 ほとんどのダイアログは他のダイアログの
           ウィンドウ上までドラッグアンドドロップするとタブ化したダイアログの
@@ -452,31 +456,31 @@
         </para>
         <para lang="ja">
           <quote>Python-Fu</quote>が今回から 
-          <application><acronym>GIMP</acronym> 2</application> 標準の外部的な
-          スクリプトインターフェースになりました。 つまり Python 言語で
-          書かれたスクリプトで<acronym>GIMP</acronym>の機能が使えるように
-          なります。 逆に見れば<acronym>GIMP</acronym>プラグインを書くために
+          <application><acronym>GIMP</acronym>&nbsp;2</application> 標準の
+          外部的なスクリプトインターフェースになりました。 つまり Python 言語で
+          書かれたスクリプトで <acronym>GIMP</acronym> の機能が使えるように
+          なります。 逆に見れば <acronym>GIMP</acronym> プラグインを書くために
           Pythonが使えるのです。 Pythonなら初心者にとっても、 とりわけ
-          <application><acronym>GIMP</acronym> 1</application> で Script-Fu を
-          書くために Lisp 風の Scheme 言語を理解するのに比べれば判り易い
-          はずです。 Python 結合の面では共通制御のクラス群で増設が
-          図られたので、 基本機能を実行するのに<acronym>GIMP</acronym>の
+          <application><acronym>GIMP</acronym>&nbsp;1</application> で
+          Script-Fu を書くために Lisp 風の Scheme 言語を理解するのに比べれば
+          解り易いはずです。 Python 結合の面では共通制御のクラス群で増設が
+          図られたので、 基本機能を実行するのに <acronym>GIMP</acronym> の
           プロシージャーデータベースを隅々まで探す必要がありません。 しかも
           Python には統合開発環境や大規模なライブラリーが
           ついていますし、 <productname>Linux</productname> どころか 
           <productname>Microsoft Windows</productname> や 
           <productname>AppleMac OS X</productname> でさえ動作できます。 
-          <application><acronym>GIMP</acronym> 2.0</application> で最大の欠点は
-          Python-Fu で使っているユーザーインターフェースが Python 言語の能力を
-          完全には活かしきれていないことです。 現在のインターフェースの設計は
-          単純なスクリプトのサポートにとどまっていますが、 
+          <application><acronym>GIMP</acronym>&nbsp;2.0</application> で最大の
+          欠点は Python-Fu で使っているユーザーインターフェースが Python 言語の
+          能力を完全には活かしきれていないことです。 現在のインターフェースの
+          設計は単純なスクリプトのサポートにとどまっていますが、 
           今後の開発ではもっと精巧な版にするのが目標です。
         </para>
         <para lang="ja">
           <acronym>GIMP</acronym>-Perl は
-          <application><acronym>GIMP</acronym>2</application> 標準の
+          <application><acronym>GIMP</acronym>&nbsp;2</application> 標準の
           配布物に含まれなくなりましたが、 別パッケージとして導入可能です。 
-          現在<acronym>GIMP</acronym>-Perlは <productname>UNIX</productname> 
+          現在 <acronym>GIMP</acronym>-Perl は <productname>UNIX</productname> 
           システム風のオペレーティングシステムでのみサポートされています。 
           その中身は簡単なスクリプト言語と、 <acronym>GTK2</acronym>-Perl
           モジュールを使うさらに洗練されたインターフェースをコード化する能力
@@ -487,7 +491,7 @@
           Script-Fu は<quote>Scheme</quote>の派生であることもあり、 直観的で
           なく、 使いにくくまた本物の開発環境が欠けているかねてからの欠点が
           いまだにあります。 でも一点だけ Python-Fu に比べて大きな利点が
-          あります。 Script-Fu スクリプトは<acronym>GIMP</acronym>が直接解釈
+          あります。 Script-Fu スクリプトは <acronym>GIMP</acronym> が直接解釈
           するので追加でソフトウェアを導入する必要がないのです。 Python-Fu は
           Python 言語のパッケージの導入が欠かせません。
         </para>
@@ -525,15 +529,16 @@
           opens the editor, and you can then modify your text.
         </para>
         <para lang="ja">
-          <application><acronym>GIMP</acronym> 1</application> の標準
+          <application><acronym>GIMP</acronym>&nbsp;1</application> の標準
           テキストツールの重大問題はテキストをいったん描画させると
           変更できなくなることでした。 テキストに何か変更を加えたいときは
           <quote>取り消し</quote>てから加工し直すしか方法がありません 
           (もちろん操作履歴にそこまで遡れる余裕がある幸運が必要ですし、 
           この方法はテキストを置いてから今までに行なった他の作業も
-          取り消してしまいます)。 <application><acronym>GIMP</acronym>
-          1.2</application> では<quote>ダイナミックテキスト</quote>プラグインも
-          あり、 特殊なテキストレイヤーを作成でき、 変更フォームを使って
+          取り消してしまいます)。 
+          <application><acronym>GIMP</acronym>&nbsp;1.2</application> では
+          <quote>ダイナミックテキスト</quote>プラグインもあり、 
+          特殊なテキストレイヤーを作成でき、 変更フォームを使って
           決め打ちせずに保持できるしくみになっていましたが、 
           不具合があり扱いに困りました。 この第二世代のテキストツールはかつての
           テキストツールとダイナミックテキストプラグインとの発展的融合です。
@@ -617,11 +622,12 @@
           行ないます。
         </para>
         <para lang="ja">
-          他にも 2 つのパス関連の機能が <application><acronym>GIMP</acronym>
-          2.0</application> に加わりました。 <acronym>GIMP</acronym>は
-          <acronym>SVG</acronym>画像をラスター画像に転用できるだけでなく、
-          <acronym>SVG</acronym>のパスから<acronym>GIMP</acronym>のパスへと
-          内容を損わず移せます。 つまりいよいよ<acronym>GIMP</acronym>が
+          他にも 2 つのパス関連の機能が 
+          <application><acronym>GIMP</acronym>&nbsp;2.0</application> に
+          加わりました。 <acronym>GIMP</acronym> は <acronym>SVG</acronym>
+          画像をラスター画像に転用できるだけでなく、 <acronym>SVG</acronym>
+          のパスから <acronym>GIMP</acronym> のパスへと内容を損わず移せます。 
+          つまりいよいよ <acronym>GIMP</acronym> が
           お好みのベクター描画ツールの補助ツール以上のはたらきができるように
           なったことを意味します。 もうひとつの機能はベクトル指向の描線の
           導入であり、 パスツールをさらに向上させるものとなります。 以前の
@@ -762,8 +768,8 @@
               </menuchoice>)。
               これを使うと画像を変更することなくガンマ値やコントラストを
               別の値にしてみたり色覚異常を想定した仮想的な表示が可能に。
-              実はこの機能は長らく<acronym>GIMP</acronym>開発版でのみ
-              利用可能だったが今までの安定版<acronym>GIMP</acronym>に
+              実はこの機能は長らく <acronym>GIMP</acronym> 開発版でのみ
+              利用可能だったが今までの安定版 <acronym>GIMP</acronym> に
               登場させるには安定度が足りなかった。
             </para>
           </listitem>
@@ -773,7 +779,7 @@
               the printer icon.
             </para>
             <para lang="ja">
-              色選択ダイアログに新たに<acronym>CMYK</acronym>モードが登場、 
+              色選択ダイアログに新たに <acronym>CMYK</acronym> モードが登場、 
               タブはプリンターアイコン。
             </para>
           </listitem>
@@ -784,7 +790,7 @@
               for JPEG files.
             </para>
             <para lang="ja">
-              <acronym>JPEG</acronym>ファイルの読み込み、 書き込みのモードで
+              <acronym>JPEG</acronym> ファイルの読み込み、 書き込みのモードで
               ディジタルカメラが埋め込む Exif タグのデータを取り扱い。
             </para>
           </listitem>
@@ -798,10 +804,10 @@
               it.
             </para>
             <para lang="ja">
-              <acronym>MNG</acronym>アニメーションをサポート。 
-              <acronym>MNG</acronym>とはアニメーション可能な
-              <acronym>PNG</acronym>の一形式。 <acronym>PNG</acronym>は
-              <acronym>GIF</acronym>に比べ、 色数の多さ、 256 階調の透明度、 
+              <acronym>MNG</acronym> アニメーションをサポート。 
+              <acronym>MNG</acronym> とはアニメーション可能な
+              <acronym>PNG</acronym> の一形式。 <acronym>PNG</acronym> は
+              <acronym>GIF</acronym> に比べ、 色数の多さ、 256 階調の透明度、 
               そしてとりわけ特許の呪縛がないなど全ての面において有利。 
               ウェブ標準の形式であり最近の人気のあるウェブブラウザーなら
               どれもサポート有り。
@@ -814,7 +820,7 @@
               bluescreen feature was added as well as audio support.
             </para>
             <para lang="ja">
-              <acronym>GIMP</acronym>アニメーションパッケージ 
+              <acronym>GIMP</acronym> アニメーションパッケージ 
               (<acronym>GAP</acronym>) にオニオンスキン効果、 
               ブルースクリーン機能、 さらには音響サポートが加わった。
             </para>

@@ -6,7 +6,7 @@
   2009-09-23 j.h: reviewed for v2.6
   2007-05-08 Added Spanish translation by AntI
 -->
-<!--2012-05-29-->
+<!--2012-06-15-->
 <sect1 id="gimp-using-animated-brushes">
   <title lang="en">The GIH Dialog Box</title>
   <title lang="ja">GIH ダイアログ</title>
@@ -34,14 +34,14 @@
   </para>
   <para lang="ja">
     アニメーションするブラシができたなら、 それを画像ウィンドウで表示したうえで
-    <acronym>GIH</acronym>形式で保存することになります。 画像ウィンドウの
+    <acronym>GIH</acronym> 形式で保存することになります。 画像ウィンドウの
     メニューより
     <menuchoice>
       <guimenu>ファイル</guimenu>
-      <guimenuitem>名前を付けて保存...</guimenuitem>
+      <guimenuitem>エクスポート...</guimenuitem>
     </menuchoice>
     するときに拡張子 <filename class="extension">.gih</filename> をファイル名に
-    付けてから、<guibutton>保存</guibutton> ボタンをクリックすると
+    付けてから、 <guibutton>エクスポート</guibutton> ボタンをクリックすると
     下図のようなウィンドウが現れます。
   </para>
 
@@ -58,7 +58,7 @@
           This dialog box shows up, if you save an image as GIMP image hose
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>ブラシパイプ形式の画像を保存する際に
+          <acronym>GIMP</acronym> ブラシパイプ形式の画像を保存する際に
           現れるダイアログ
         </para>
       </caption>
@@ -268,8 +268,8 @@
           説明するところから始めましょう。
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>はこの種のブラシに対してはまずレイヤーごとに
-          セルを読み込みにゆき、 それらを<acronym>FIFO</acronym>
+          <acronym>GIMP</acronym> はこの種のブラシに対してはまずレイヤーごとに
+          セルを読み込みにゆき、 それらを <acronym>FIFO</acronym>
           (先入れ先出し: 収められた最も古いものから順に取り出せる収録方法) 式の
           スタックに収めることから始めます。 先の例では 4 層のレイヤーに
           それぞれ 2 個のセルが上下の順に入っています。 これらの読み込みは第 1 
@@ -281,7 +281,7 @@
           の画像ファイルに保存したあとでレイヤーダイアログを見るとわかります。
         </para>
         <para lang="ja">
-          つぎに<acronym>GIMP</acronym>はこのスタックをコンピューター式配列に
+          つぎに <acronym>GIMP</acronym> はこのスタックをコンピューター式配列に
           記録します。 この配列は 1 次元から 4 次元までの
           <guilabel>次元</guilabel> に示された数値を用います。 
         </para>
@@ -305,7 +305,7 @@
           </mediaobject>
         </para>
         <para lang="ja">
-          <acronym>GIMP</acronym>はスタックの上のセル (先に入ったセル) から順に
+          <acronym>GIMP</acronym> はスタックの上のセル (先に入ったセル) から順に
           取り出してこの配列を埋めてゆきます。 配列を埋める様子は自動車の走行
           メーターのカウンターのようなものです。 並びを桁とみなしてください。
           右端の桁をまず回し、 そこが最大数に達したら左隣の桁を回します。
@@ -380,7 +380,7 @@
                 つまり 2 番目の位は第 4 象限、 3 番目の位は第 3 象限、 4 番目の
                 位は第 2 象限の各方向への動きに反応するようになるのです。
                 <footnote><para>
-                  前の版の<acronym>GIMP</acronym>でブラシを作成される方は
+                  前の版の <acronym>GIMP</acronym> でブラシを作成される方は
                   <quote>時計回り</quote>を<quote>反時計回り</quote>と
                   読み替えてください。
                 </para></footnote>
@@ -451,7 +451,7 @@
             </para>
             <para lang="ja">
               大きさが 30&times;30 ピクセルで塗りつぶし色を透明にした 
-              <acronym>RGB</acronym>画像を新規に用意します。 テキストツールで
+              <acronym>RGB</acronym> 画像を新規に用意します。 テキストツールで
               テキストレイヤーを 4 層、 それぞれ <quote>1</quote>、
               <quote>2</quote>、 <quote>3</quote>、 <quote>4</quote>と記入
               します。 背景レイヤーは削除してください。
@@ -480,7 +480,7 @@
               OK.
             </para>
             <para lang="en">
-              <acronym>GIH</acronym>形式で書き出すときにはまず
+              <acronym>GIH</acronym> 形式で書き出すときにはまず
               <quote>画像をエクスポート</quote>ダイアログが出ますから名前と
               保存先を指定しましょう。 次に
               <quote>画像をエクスポート: ブラシパイプ</quote>
@@ -525,8 +525,8 @@
               </mediaobject>
             </para>
             <para lang="en">
-              <acronym>GIMP</acronym>のブラシディレクトリーに直接書き出す機能が
-              うまくはたらかないときは、 後で個人用の<acronym>GIMP</acronym>
+              <acronym>GIMP</acronym> のブラシディレクトリーに直接書き出す機能が
+              うまくはたらかないときは、 後で個人用の <acronym>GIMP</acronym>
               フォルダー内にある <filename class="directory">brushes</filename>
               フォルダーに <filename class="extension">.gih</filename> ファイル
               を移してください。 さてツールボックスに戻ったら、 ブラシ
@@ -689,7 +689,7 @@
             </para>
             <para lang="ja">
               塗りつぶし色に透明を
-              指定した 30&#times;30 ピクセルの<acronym>RGB</acronym>画像を
+              指定した 30&#times;30 ピクセルの <acronym>RGB</acronym> 画像を
               新たに用意します。 拡大ズーム表示を利用しながら指が上向きの左手を
               描いてください。<footnote>
               <para>
@@ -907,15 +907,15 @@
             </para>
             <para lang="ja">
               ブラシを使った
-              ときの動作に対して要求通りの形象を<acronym>GIMP</acronym>が拾える
-              ように、 レイヤーを順序よく配置しなければなりません。 既に例題の
-              レイヤーはその順序で並べ終えていますが、 レイヤーの配置順の一般的
-              な方則についても理解しておく必要があるでしょう。 序列化のしくみに
-              ついて見当をつける方法が 2 通りありますのでご紹介しましょう。
-              1 つめは数学的な見方です。 <acronym>GIMP</acronym>は 16 層の
-              レイヤーを 4 層ごとに区切って 4 つのグループとみなし、 これが
-              第 1 次元になります。 それぞれのグループがブラシの方角を表す
-              のです。 さらに、 それぞれのグループを 2 つに分けて、 2 層の
+              ときの動作に対して要求通りの形象を <acronym>GIMP</acronym> が
+              拾えるように、 レイヤーを順序よく配置しなければなりません。 既に
+              例題のレイヤーはその順序で並べ終えていますが、 レイヤーの配置順の
+              一般的な法則についても理解しておく必要があるでしょう。 序列化の
+              しくみについて見当をつける方法が 2 通りありますのでご紹介
+              しましょう。 1 つめは数学的な見方です。 <acronym>GIMP</acronym> 
+              は 16 層のレイヤーを 4 層ごとに区切って 4 つのグループとみなし、 
+              これが第 1 次元になります。 それぞれのグループがブラシの方角を
+              表すのです。 さらに、 それぞれのグループを 2 つに分けて、 2 層の
               レイヤーからなる 8 つのグループとみなし、 これが第 2 次元に
               なります。 このグループはそれぞれ左右の掌の転換を表します。 
               第 3 次元では全体を 2 つのグループ に分け、 
@@ -932,8 +932,8 @@
               </mediaobject>
             </para>
             <para lang="ja">
-              <emphasis><acronym>GIMP</acronym>はどんなふうにしてこの配列を
-              読み込むか？</emphasis>: <acronym>GIMP</acronym>が最初に読み取る
+              <emphasis><acronym>GIMP</acronym> はどんなふうにしてこの配列を
+              読み込むか？</emphasis>: <acronym>GIMP</acronym> が最初に読み取る
               のは第 1 次元です。 例題では <guimenuitem>angular</guimenuitem>
               (ブラシ方向: 例えば 90 度) に結びつけてプログラムされています。
               90 度の位をみると、 黄色で示した第 2 次元では 
@@ -958,7 +958,7 @@
             <para lang="ja">
               ほらね。 ブラシができました。 先に拡張子
               <filename class="extension">.xcf</filename> をつけて
-              保存してから、 <acronym>GIH</acronym>形式ではつぎのような
+              保存してから、 <acronym>GIH</acronym> 形式ではつぎのような
               パラメーターで書き出します。
             </para>
             <itemizedlist>
@@ -1021,7 +1021,7 @@
               box. You can now use your brush.
             </para>
             <para lang="ja">
-              個人用の<acronym>GIMP</acronym>ブラシディレクトリーに 
+              個人用の <acronym>GIMP</acronym> ブラシディレクトリーに 
               <filename class="extension">.gih</filename> ファイルを置いて
               ブラシダイアログで再読み込みします。 
               その時点でこのブラシが使用できるようになりました。
