@@ -8,7 +8,7 @@
      2007-03-12 Kolbjorn: added no translation
      2006-07-31 scb: revised 'en'
      -->
-<!--2012-06-15-->
+<!--2012-06-17-->
 <sect2 id="plug-in-align-layers">
   <title lang="en">Align Visible Layers</title>
   <title lang="ja">可視レイヤーの整列...</title>
@@ -114,8 +114,9 @@
             <guimenu>Image</guimenu>
             <guimenuitem>Align Visible layers</guimenuitem>
           </menuchoice>.
-          There is no default keyboard shortcut. The dialog doesn't show up
-          if the image holds a single layer only.
+          There is no default keyboard shortcut. If the image holds a single
+          layer only, you get a message from GIMP telling that there must be
+          more than one layer in the image to execute the command.
         </para>
         <para lang="ja">
           画像ウィンドウのメニューより
@@ -124,10 +125,22 @@
             <guimenuitem>可視レイヤーの整列...</guimenuitem>
           </menuchoice> 。
           初期設定ではキーボードショートカットがまだありません。 レイヤーが 
-          1 層しかない画像でこのコマンドを呼び出してもダイアログは現れません。
+          1 層しかない画像でこのコマンドを呼び出すと、 <acronym>GIMP</acronym>
+          は<quote>画像に 2 層以上のレイヤーが必要である</quote>ことを
+          知らせます。
         </para>
       </listitem>
     </itemizedlist>
+    <figure>
+      <title lang="en">The <quote>Not enough layers</quote> message</title>
+      <title lang="ja"><quote>レイヤー不足</quote>のメッセージ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/menus/image/align-no-layer.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>          
   </sect3>
 
   <sect3>
