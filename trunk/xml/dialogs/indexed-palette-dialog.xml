@@ -7,7 +7,7 @@
   2006-03-12 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-06-15-->
+<!--2012-06-21-->
 <sect2 id="gimp-indexed-palette-dialog">
   <title lang="en">Colormap Dialog</title>
   <title lang="ja">カラーマップダイアログ</title>
@@ -187,7 +187,7 @@
       インデックス化された画像では、 各画素に直接色を与える方法 (つまり
       <acronym>RGB</acronym> 画像やグレースケール画像での方式) をとらず、 各画素
       の色は <emphasis>カラーマップ</emphasis> と呼ばれる対照表を通す遠回りな
-      方法で画素に与えられます。 [各画素には索引への参照番号が記録されます。]
+      方法で画素に与えられます。 [各画素には対照表への参照番号が記録されます。]
     </para>
     <para lang="ja">
       <acronym>GIMP</acronym> は画素に表示する色を判定するときに画像のカラー
@@ -471,7 +471,12 @@
             the color.
           </para>
           <para lang="ja">
-            このコマンドは色を探るダイアログを開きますから、 そこで現在選択して
+            <guimenuitem>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-gtk-edit-16.png"/>
+                色の変更...
+            </guimenuitem>
+            は色を探るダイアログを開きますから、 そこで現在選択して
             いる索引番号に対する色を変更できます。
           </para>
         </listitem>

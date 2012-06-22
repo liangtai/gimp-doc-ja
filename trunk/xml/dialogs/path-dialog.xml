@@ -9,7 +9,7 @@
   2006-02-25 fixed invalid image reference
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-06-15-->
+<!--2012-06-21-->
 <sect2 id="gimp-path-dialog">
   <title lang="en"><quote>Paths</quote> Dialog</title>
   <title lang="ja">パスダイアログ</title>
@@ -652,11 +652,15 @@
             you want to stroke them all in the same way, etc.
           </para>
           <para lang="ja">
-            <guimenuitem>可視パスの統合</guimenuitem> はその
-            画像にあるパスの全ての可視パス (すなわちパスダイアログで
-            <quote>開いた目</quote>の印がついているものすべて) の成分を一面の
-            パスの成分としてまとめます。 これはパスの境界線を同じ方法で描画する
-            という場合などに便利な機能です。
+            <guimenuitem>可視パスの統合</guimenuitem> はその画像にあるパスの
+            すべての可視パス (すなわちパスダイアログで<quote>開いた目</quote>
+            <guiicon>
+              <inlinegraphic format="PNG"
+                fileref="images/dialogs/stock-eye-20.png"/>
+            </guiicon>
+            の印がついているものすべて) の成分を一面のパスの成分として
+            まとめます。 これはパスの境界線を同じ方法で描画するという
+            場合などに便利な機能です。
           </para>
         </listitem>
       </varlistentry>
@@ -795,7 +799,7 @@
             するものではありません。
           </para>
           <para lang="ja">
-            もともと 2 次元の選択マスクを一次元のパスに変換するわけですから、
+            もともと 2 次元の選択マスクを 1 次元のパスに変換するわけですから、
             その算出方法には奇策がいくつか含まれることになります。 これら高度な
             オプションはパスダイアログの底部にある
             <guiicon>
@@ -809,9 +813,11 @@
                 </textobject>
               </inlinemediaobject>
             </guiicon>
-            アイコンボタンを、  <keycap>Shift</keycap> キーを押しながらクリック
-            すると開かれる<quote>選択領域からパスの詳細設定</quote>ダイアログで
-            設定できます。 ただしそのオプションや変数は 20 個もあり、 いずれも
+            アイコンボタンを、  <keycap>Shift</keycap> キーを押しながら
+            クリックすると開かれる
+            <!--<quote>選択領域からパスの詳細設定</quote>ダイアログ-->
+            <xref linkend="advanced-settings-for-selection-to-path"/>
+            で設定できます。 ただしそのオプションや変数は 20 個もあり、 いずれも
             暗号めいた名前が[英語のまま]つけられています。 実のところこれらの
             高度なオプションは開発者のために設けられたものなので、 それらの詳細
             に立ち入ることはこの文書の持ち場の範囲を越えています。 通例
