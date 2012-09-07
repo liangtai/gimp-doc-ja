@@ -9,7 +9,7 @@
   2006-04-29 lexa: made docbook compliant
   2005-11-29 replaced informalfigures by figures by lexa
 -->
-<!--2012-06-21-->
+<!--2012-08-07-->
 <sect2 id="gimp-palette-dialog">
   <title lang="en">Palettes Dialog</title>
   <title lang="ja">パレットダイアログ</title>
@@ -451,6 +451,34 @@
       <inlinegraphic fileref="images/dialogs/stock-menu-left-12.png"/>
       をクリックして出てくる飛び出しメニューの最初の項目を進んでください。
     </para>
+    <note>
+      <para lang="en">
+        Some of the listed pop-menu entries are installation dependend
+        and need the <ulink url="http://www.python.org">Python language
+          interpreter</ulink> to be installed.  This includes at the
+        time of writing: <link linkend="gimp-palette-offset">Offset
+          Palette...</link>, <link
+          linkend="gimp-palette-to-gradient">Palette to gradient</link>,
+        <link linkend="gimp-palette-to-repeat-gradient">Palette to
+          Repeating Gradient</link> and <link
+          linkend="gimp-palette-sort">Sort Palette...</link>.
+      </para>
+      <para lang="ja">
+        このヘルプ文書でとりあげたポップアップメニュー項目の中には、
+        インタープリター言語 
+        <ulink url="http://www.python.org">Python</ulink> (パイソン) を必要と
+        するものが若干含まれており、 Python をインストールしていない場合それ
+        らはメニューに現れません。 当文書執筆時点でパレットダイアログと
+        パレットエディターダイアログの脈絡メニューのうち、
+        <link linkend="gimp-palette-offset">色の順番をずらす...</link>、
+        <link linkend="gimp-palette-to-gradient">パレットをグラデーションに
+        </link>、
+        <link linkend="gimp-palette-to-repeat-gradient">
+        パレットを循環型グラデーションに</link>、
+        <link linkend="gimp-palette-sort">パレットの並べ替え...</link>
+        がこれに該当します。
+      </para>
+    </note>
     <variablelist>
       <varlistentry>
         <term id="gimp-palette-edit" lang="en">Edit Palette</term>
@@ -972,7 +1000,7 @@
       </varlistentry>
       <varlistentry>
         <term id="gimp-palette-sort" lang="en">Sort Palette...</term>
-        <term id="gimp-palette-sort" lang="ja">パレットの並べ替え</term>
+        <term id="gimp-palette-sort" lang="ja">パレットの並べ替え...</term>
         <listitem>
           <para lang="en">
             This command opens a dialog window which allows you to sort the
