@@ -16,7 +16,7 @@
   2006-02-05 fr revised by j.h
   2005-05-20 de reviewed by axel.wernicke
 -->
-<!--2012-06-15-->
+<!--2012-10-28-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
@@ -492,209 +492,127 @@
         </listitem>
       </varlistentry>
 
-<!--
       <varlistentry>
         <term lang="en">Scale</term>
-        <term lang="ja">拡大・縮小</term>
+        <term lang="ja">サイズ</term>
         <listitem>
           <para lang="en">
             This option lets you to modify precisely the size of the brush.
             You can use the arrow keys to vary by ±0.01 or the Page-Up and
-            Page-Down keys to vary by ±0.05. You can obtain the same result if
+            Page-Down keys to vary by ±1.00. You can obtain the same result if
             you have correctly set your mouse-wheel in the Preferences. See
             <link linkend="gimp-using-variable-size-brush">How to vary the
             size a brush</link>
           </para>
           <para lang="ja">
             このオプションでブラシの大きさを緻密に調整できます。
-            <keycap>上</keycap> <keycap>下</keycap> の各キーで &times;0.01 ずつ、
-            <keycap>PgUp</keycap> <keycap>PgDn</keycap> の各キーで &times;0.05
-            ずつ変えられます。 マウスホイールでの操作も<quote>設定</quote>
-            で正しく設定すれば利用できます。
+            <keycap>上</keycap> <keycap>下</keycap> の各キーで &times;0.01
+            ずつ、 <keycap>PgUp</keycap> <keycap>PgDn</keycap> の各キーで 
+            &times;1.00 ずつ増減できます。 マウスホイールでの操作も
+            <quote>設定</quote>で正しく設定すれば利用できます。
             <link linkend="gimp-using-variable-size-brush">ブラシの大きさの
             変更方法</link> をご覧ください。
           </para>
         </listitem>
       </varlistentry>
--->
+ 
+      <varlistentry>
+        <term lang="en">Aspect Ratio</term>
+        <term lang="ja">縦横比</term>
+        <listitem>
+          <para lang="en">
+            This determines the ratio between the height and the width
+            of the brush. The slider is scaled from -20.00 to 20.00 with the
+            default value set to 0.00. A negative value from 0.00 to -20 will
+            narrow the height of the brush while a positive value between 0.00
+            and 20.00 indicates the narrowing rate of the width of the brush.
+          </para>
+          <para lang="ja">
+            ここでブラシの高さと幅の比を決めます。 このスライダーは -20.00 から
+            20.00 の間の値をとり、 デフォルト値は 0.00 です。 -20 から 0.00
+            未満までの負の値にするとブラシの高さが狭まり、 その一方で 0.00 を
+            越し 20.00 までの正の値にするとブラシの幅が狭まります。
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Angle</term>
+        <term lang="ja">角度</term>
+        <listitem>
+          <para>
+            TO DO
+          </para>
+        </listitem>
+      </varlistentry>                  
 
       <varlistentry id="gimp-tool-brush-dynamics" xreflabel="Brush Dynamics">
-        <term lang="en">Brush Dynamics</term>
+        <term lang="en">Dynamics</term>
         <term lang="ja">動的特性</term>
         <listitem>
           <figure>
-            <title lang="en">The Brush Dynamics check box.</title>
-            <title lang="ja">動的特性チェックボックス</title>
+            <title lang="en">
+              The Brush Dynamics in the Tool Options Dialog
+            </title>
+            <title lang="ja">ツールオプションダイアログの動的特性</title>
             <mediaobject>
               <imageobject>
                 <imagedata format="PNG"
-                           fileref="images/toolbox/brush-dynamics.png"/>
+                           fileref="images/toolbox/paint-dynamics-options.png"/>
               </imageobject>
             </mediaobject>
           </figure>
           <para lang="en">
-            Brush dynamics let you map different brush parameters, commonly at
-            least size and opacity, to one or more of three input dynamics:
-            pressure, velocity and random. They are mostly used with tablets,
-            but Velocity and Random are also usable with a mouse. The
-            Ink tool, that supported velocity before, has been overhauled and
-            now handles velocity-dependent painting much better.
+            Brush dynamics let you map different brush parameters to several
+            input dynamics. They are mostly used with tablets, but some of
+            them are also  usable with a mouse.
           </para>
           <para lang="en">
-            A new option has been added in stroking paths. Stoke Path and
-            Stroke Selection have now a check box for emulating brush
-            dynamics when you stroke using a paint tool. That means that when
-            you stoke, brush pressure and velocity are varying along the length
-            of the stroke. Pressure starts with zero, ramps up to full pressure
-            and then ramps down again to no pressure. Velocity starts from
-            zero and ramps up to full speed by the end of the stroke.
+            You may read more about dynamics in
+            <link linkend="gimp-tool-dynamics">Dynamics</link>
           </para>
           <para lang="en">
-            The Pressure Sensitivity section is only meaningful if you are
-            using a tablet:  it allows you to decide which aspects of the
-            tool's action should be affected by how hard you press the stylus
-            against the tablet.  The possibilities are
-            <guilabel>opacity</guilabel>, <guilabel>hardness</guilabel>,
-            <guilabel>rate</guilabel>, <guilabel>size</guilabel>, and
-            <guilabel>color</guilabel>.  They  work together:  you can enable
-            as many of them as you like.
-            For each tool, only the ones that are meaningful are listed.
-            Here is what they do:
+            When stroking paths and selections using a paint tool there is a
+            an option to select <quote>Emulate brush dynamics</quote>. That
+            means that when you stoke, brush pressure and velocity are varying
+            along the length of the stroke. Pressure starts with zero, ramps
+            up to full pressure and then ramps down again to no pressure.
+            Velocity starts from zero and ramps up to full speed by the end of
+            the stroke.
           </para>
           <para lang="ja">
-            動的特性オプションは、 絶えず変化する圧力、 筆速、
-            不規則変化の 3 つの情報からひとつもしくは組み合わされた入力値を、
-            いろいろなブラシにまつわる変数、 少なくとも一般的にはその大きさや
-            透明度に振り分けて反映させるためのものです。 ペンタブレットで
-            使われる場合がほとんどですが、 筆速や不規則変化はマウスに対しても
-            有効です。 インクツールに関して言えば、 以前から筆速対応ができて
-            いましたが、 全面改修を行ないましたので筆速に依存する描画ももっと
-            うまくこなせるようになっています。
+            動的特性オプションは、 入力側のさまざまな動作とブラシの出力
+            パラメーターを結び付けるためにあります。 ペンタブレットで
+            使われる場合がほとんどですが、 その一部はマウスに対しても有効です。
           </para>
           <para lang="ja">
-             <quote>パスの境界線を描画</quote>機能に新たなオプション
-             が加わりました。 <quote>パスの境界線を描画</quote>と
-             <quote>選択範囲の境界線を描画</quote>が描画ツールを使うときに
-             ブラシの動的特性を模倣する機能のチェックボックスができています。 
-             それらの輪郭線が伸びるにつれてブラシの圧力や筆速が変化していると
-             みなしているのです。 筆圧は 0 から開始し、 最大圧力まで
-             駆け上がって再び圧力無しまで減圧してゆきます。 筆速は 0 から
-             加速を始め、 描線の終端で最大速になります。
+            動的特性に関してはさらに
+            <link linkend="gimp-tool-dynamics">動的特性</link> で
+            説明しています。
           </para>
           <para lang="ja">
-            筆圧感知の部門はタブレットを使用している場合に限り意味があります:
-            ここではタブレット板に尖筆を押しあてる強度などをツールのどの相と
-            結びつけるかを決めます。 <guilabel>不透明度</guilabel>、
-            <guilabel>強度</guilabel>、 <guilabel>割合</guilabel>、
-            <guilabel>大きさ</guilabel>、 <guilabel>色</guilabel>
-            から選べます。 かけもちが可能なので、 任意に複数の相を有効に
-            できます。 それぞれのツールごとに利用できる相だけを列挙しています。
-            各相のはたらきは以下のとおりです。
+            パスや選択範囲に添って描画ツールで描くときに
+            <guilabel>描画の動的特性をエミュレートする</guilabel> という
+            オプションが選べます。 それらの輪郭線上を筆が進むにつれてブラシの
+            圧力や筆速が変化しているとみなすしくみです。 筆圧は 0 から開始し、
+            最大圧力まで駆け上がって再び圧力無しまで減圧してゆきます。
+            筆速は 0 から加速を始め、 描線の終端で最大速になります。
           </para>
-          <variablelist>
-            <varlistentry>
-              <term lang="en">Opacity</term>
-              <term lang="ja">不透明度</term>
-              <listitem>
-                <para lang="en">
-                  The effect of this option is described above.
-                </para>
-                <para lang="ja">
-                  このオプションの効果は既に述べたとおりです。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Hardness</term>
-              <term lang="ja">強度</term>
-              <listitem>
-                <para>
-                  This option applies to brushes with fuzzy edges. If it is
-                  enabled, the harder you press, the darker the fuzzy parts of
-                  the brush will appear.
-                </para>
-                <para lang="ja">
-                  このオプションは輪郭のぼやけたブラシに適用されます。
-                  オプションが有効ならば、 筆圧が強ければブラシの縁がより
-                  濃く出ます。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Rate</term>
-              <term lang="ja">割合</term>
-              <listitem>
-                <para lang="en">
-                  This option applies to the Airbrush, Convolve tool, and
-                  Smudge tool, all of which have time-based effects. Pressing
-                  harder makes these tools act more rapidly.
-                </para>
-                <para lang="ja">
-                  このオプションは経過時間効果をもつツールであるエアブラシ、
-                  ぼかし/シャープ、 にじみの各ツールに適用されます。 強く
-                  押しあてるとツールが速く作動します。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Size</term>
-              <term lang="ja">大きさ</term>
-              <listitem>
-                <para lang="en">
-                  This option applies to all of the pressure sensitive paint
-                  tools. If the option is checked, then pressing harder will
-                  increase the size of the area affected by the brush.
-                </para>
-                <para lang="ja">
-                  このオプションは感圧対応の描画ツールすべてに適用できます。
-                  オプションが有効な場合は、 筆圧の強さでブラシの描く領域
-                  が拡がります。
-                </para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term lang="en">Color</term>
-              <term lang="ja">色</term>
-              <listitem>
-                <para lang="en">
-                  This option only applies to the brush tools: the Pencil,
-                  Paintbrush, and Airbrush; and only if you are using colors
-                  from a gradient. If these conditions are met, then pressing
-                  harder causes colors to be taken from higher in the
-                  gradient.
-                </para>
-                <para lang="ja">
-                  このオプションは鉛筆、 絵筆、 エアブラシの各ブラシツールに
-                  対して、 <guilabel>グラデーションで描画</guilabel>
-                  オプションを利用している場合にのみ適用されます。 これらの
-                  条件が揃ったときに、 強く筆圧がかかるほどにグラデーション
-                  の高い方の色が使われます。 <!--XXX: 高い方ってどっち？-->
-                </para>
-              </listitem>
-            </varlistentry>
-          </variablelist>
         </listitem>
       </varlistentry>
 
-<!-- should be revised -->
       <varlistentry>
         <term lang="en">Fade Out</term>
         <term lang="ja">フェードアウト</term>
         <listitem>
           <para lang="en">
-            This option causes each stroke to fade out over the specified
-            distance. It is easiest to visual for <quote>real</quote> painting
-            tools, and applies to all of the brush tools. It is equivalent to
-            gradually reducing the opacity along the trajectory of the stroke.
-            Note that, if you are using a tablet, this option does not change
-            the effects of brush pressure.
+            This belongs to the dynamics and is described in
+            <link linkend="gimp-tool-dynamic-options">Dynamics Options</link>
           </para>
           <para lang="ja">
-            このオプションによって一筆ごとに描線が所定の長さ以内で消え入ります。
-            <quote>現存する</quote>描画ツールなら視覚的にも判り易いですが、 
-            このオプションはどのブラシツールにも適用できます。 筆運びの軌道に
-            沿って徐々に透明度を増すのと同じです。 タブレットをお使いの場合、 
-            このオプションでは筆圧による効果は変化しないことにご注意ください。
+            このオプションは動的特性の設定の一部をなしており、
+            <link linkend="gimp-tool-dynamic-options">動的特性のオプション
+            </link> に説明があります。
           </para>
         </listitem>
       </varlistentry>
@@ -714,13 +632,13 @@
             made of successive brush marks which, when they are very near,
             seem to draw a continuous line. Here, instead of being aligned
             brush marks are scattered over a distance you can set with the
-            <guimenuitem>Quantity</guimenuitem> slider.
+            <guimenuitem>Amount</guimenuitem> slider.
           </para>
           <para lang="ja">
             ブラシ描画での<quote>間隔</quote>について思い出して下さい。
             描線は次々と繰り出されるブラシの刻印で成り立っており、
             互いの間隔が非常に狭ければ繋がった線の姿になります。 そこで、
-            <guimenuitem>量</guimenuitem> スライダーを調節すれば、
+            <guimenuitem>散布量</guimenuitem> スライダーを調節すれば、
             整列していたブラシの刻印を散り散りに離すこともできます。
           </para>
           <figure>
@@ -741,42 +659,63 @@
               </caption>
             </mediaobject>
           </figure>
+         <para lang="en">
+           Jitter is also available in the Paint Dynamic Editor where you may
+           connect jitter to the behaviour of the brush.
+         </para>
+         <para lang="ja">
+           散布は動的特性と結びつけることもでき、 描画の動的特性エディターで
+           ブラシの性格づけに利用できます。
+         </para>
         </listitem>
       </varlistentry>
 
-<!-- should be revised -->
+      <varlistentry>
+        <term lang="en">Smooth Stroke</term>
+        <term lang="ja">手ブレ補正</term>
+        <listitem>
+          <para>
+            TO DO
+         </para>
+        </listitem>
+      </varlistentry>
+
       <varlistentry>
         <term lang="en">Incremental</term>
-        <term lang="ja">重ね塗り</term>
+        <term lang="ja">ストローク中の重ね塗り</term>
         <listitem>
           <para lang="en">
-            The Incremental check-box activates incremental mode for the tool.
-            If it is deactivated, the maximum effect of a single stroke is
-            determined by the opacity, and moving the brush repeatedly over
-            the same spot will not increase the effect beyond this limit. If
-            Incremental is active, each additional pass with the brush will
-            increase the effect, but the opacity can't exceed the opacity set
-            for the tool. This option is available for all paint tools except
-            those which have a <quote>rate</quote>
-            control, which automatically implies an incremental effect. See
+            At least in my version of GIMP 2.8 the incremental check-box does
+            not works quite as I expected. If it is deactivated (the default
+            value) the maximum effect of a single stroke is determined by the
+            opacity set in the opacity slider. If the opacity is set to less
+            than 100, moving the brush over the same spot will increase the
+            opacity if the brush is lifted in the meantime. Painting over with
+            the same stroke has no such effect. If Incremental is active the
+            brush will paint with full opacity independent of the slider
+            setting. This option is available for all paint tools except those
+            which have a <quote>rate</quote> control, which automatically
+            implies an incremental effect. See
             also <xref linkend="gimp-concepts-layer-modes"/>.
           </para>
           <para lang="ja">
-            重ね塗りのチェックボックスを入りにするとそのツールは重ね塗りが
-            できる状態になります。 もし無効としていたならば、 一筆ごとの描画の
-            不透明度は決まっており、 同じ部分を繰り返しブラシでなぞっても
-            不透明度の限界を越えて塗色されることはありません。 重ね塗りを
-            有効にすると、 ブラシで上塗りするたびに描画効果が増します。
-            ただしツールに設定された不透明度を越すことはありません。
-            <quote>割合</quote>調節オプションつきの描画ツールは
-            自動的に重ね塗りの効果を実現していますが、
+            筆者が <application><acronym>GIMP</acronym>&nbsp;2.8</application>
+            で試した限りでは <guilabel>ストローク中の重ね塗り</guilabel>
+            チェックボックスを入りにしても期待したほどには効果がありません
+            でした。 仮にこのチェックボックスを無効としていた (初期設定どおり)
+            ならば、 一筆ごとの描画の最大効果は不透明度スライダーで決めた
+            とおりとなります。 不透明度を 100 未満に設定しているとき一旦ブラシを
+            浮かせたのち再び同じ場所を塗れば不透明度が増します。 一筆で
+            繰り返し同じ場所を往復してもこうはなりません。 <quote>ストローク
+            中の重ね塗り</quote>を有効にすると、 不透明度スライダーの値とは
+            無関係に完全不透明で塗れます。 <quote>割合</quote>調節スライダー
+            つきの描画ツールは自動的に重ね塗りの効果を実現していますが、
             それらを除くすべての描画ツールでこのオプションが使えます。
             <xref linkend="gimp-concepts-layer-modes"/> もご覧ください。
           </para>
         </listitem>
       </varlistentry>
 
-<!-- should be revised -->
       <varlistentry id="gimp-tool-painting-gradient">
         <term lang="en">Color from Gradient</term>
         <term lang="ja">グラデーションで描画</term>
