@@ -5,7 +5,7 @@
   This is at the moment a suggestion. Hoping somebody will enhance it.
   Kolbjoern
 -->
-<!--2012-11-08-->
+<!--2012-11-22-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-dynamics">
   <title lang="en">Dynamics</title>
   <title lang="ja">動的特性</title>
@@ -26,25 +26,26 @@
 
   <para lang="en">
     The dynamics apply a more <quote>real feeling</quote> to the brush by
-    connecting one or more of the brush parameters to the use of the brush.
-    You may for instance let the width of the pencil vary according to the
-    speed of the stylus or the mouse, make the color saturation depending
-    on the stylus pressure, make the color changing as the direction of the
-    brush changes on the canvas, and so on. You may choose among several
-    presets or define your own. The dynamics are created to be used together
-    with drawing tablets, but some are available using the mouse.
+    connecting one or more of the brush parameters to the way of using the
+    brush. You may for instance let the width of the pencil vary according to
+    the speed of the stylus or the mouse, make the color saturation
+    depending on the stylus pressure, make the color changing as the
+    direction of the brush changes on the canvas, and so on. You may choose
+    among several presets or define your own. The dynamics are created to be
+    used together with drawing tablets, but some are available using the mouse.
   </para>
   <para lang="en">
-    The dynamics will make some of the behaviours of the drawing tools act more
-    like the physical (<quote>real</quote>) tools.
+    The dynamics will make some of the behaviors of the drawing tools act more
+    like the physical (<quote>real</quote>) tools. 
   </para>
   <para lang="ja">
-    <quote>あたかも本物のような描き心地</quote>に近付けるため、 実際の
-    ブラシ類の用法にブラシのパラメーターをひとつ以上接続します。
+    <quote>あたかも本物のような描き心地</quote>に近付けるため、 ブラシ類の
+    操作のしくみには実際のブラシのパラメーターをひとつ以上接続します。
     これが動的特性です。 実践例を挙げれば、 鉛筆の幅を尖筆またはマウスの速度に
     応じて変化させたり、 尖筆の筆圧に応じて彩度を変えてみたり、 ブラシが
-    キャンバス上をなぞる方向によって色を変化させたりと、 使い方はいろいろです。
-    自己流の各種プリセットや設定のなかからどれかを選択させることもできます。
+    キャンバス上をなぞる方向によって色を変化させたりと、 いろいろ試せます。
+    自己流の設定を保存しておいたなかから選択して再利用できるほか、 設定済み
+    プリセットも若干数用意してあります。
     動的特性 (ダイナミクス設定) は描画タブレットで使うために開発されましたが、
     その一部はマウスでの利用も可能です。
   </para>
@@ -65,16 +66,16 @@
   </figure>
 
   <para lang="en">
-    The dynamics area in the tools option dialog shows from left to right, the
+    The Dynamics area in the Tool Option dialog shows from left to right, the
     button to open the list containing the available dynamic presets, a field
     displaying the name of the current preset, and rightmost the edit button.
-    Click on the button
+    Click on the
     <guiicon>
       <inlinegraphic
         fileref="images/toolbox/stock-tool-folders-dynamics-22.png"/>
     </guiicon>
-    to open the dialog window displaying the available dynamics presets to
-    select another preset.
+    button to open the dialog window displaying the available dynamics presets
+    and select another preset.
   </para>
   <para lang="ja">
     ツールオプションダイアログの動的特性の区画は、 左から順に、 プリセット選択
@@ -85,7 +86,7 @@
         fileref="images/toolbox/stock-tool-folders-dynamics-22.png"/>
     </guiicon>
     をクリックすると利用可能な動的特性プリセットの簡易一覧表ウィンドウが現れ、
-    ここで他のプリセットを選んで換えられます。
+    ここで他のプリセットを選んで替えられます。
   </para>
 
   <sect3>
@@ -102,7 +103,7 @@
       </mediaobject>
     </figure>
     <para lang="en">
-      The paint dynamics dialog can be opened
+      The Paint Dynamics dialog window can be opened
     </para>
     <para lang="ja">
       描画の動的特性ダイアログの呼び出し方はつぎのいずれかです。
@@ -129,7 +130,7 @@
       <listitem>
         <para lang="en">
           or by clicking on the button <guibutton>Open the dynamics
-          selection</guibutton> in the list of dynamics presets.
+          selection</guibutton> button in the list of dynamics presets.
         </para>
         <para lang="ja">
           動的特性プリセットの選択ボタンをクリックすると現れる簡易プリセット
@@ -139,14 +140,14 @@
       </listitem>
     </itemizedlist>
     <para lang="en">
-      The <guilabel>Dynamics Selection</guilabel> dialog is a dockable dialog;
-      see the section <xref linkend="gimp-concepts-docks"/> for help on
+      The <guilabel>Paint Dynamics</guilabel> dialog is a dockable dialog;
+      please see the section <xref linkend="gimp-concepts-docks"/> for help on
       manipulating it.
     </para>
     <para lang="ja">
       <quote>描画の動的特性</quote>ダイアログはドッキング可能です。
       その扱い方については
-      <xref linkend="gimp-concepts-docks"/> の節をご覧ください。
+      <xref linkend="gimp-concepts-docks"/> の節を是非ご覧ください。
     </para>
 
     <itemizedlist>
@@ -244,14 +245,14 @@
     </figure>
     <itemizedlist>
       <para lang="en">
-        The paint dynamics edit dialog can be called from
+        The Paint Dynamics Editor can be called from:
       </para>
       <para lang="ja">
         動的特性エディターの呼び出し方はつぎのいずれかです。
       </para>
       <listitem>
         <para lang="en">
-          the edit button in the Tool options dialog,
+          the edit button in the Tool Options dialog,
         </para>
         <para lang="ja">
           各ツールオプションダイアログ内の動的特性の欄の右端にある
@@ -264,9 +265,9 @@
       </listitem>
       <listitem>
         <para lang="en">
-          from the Paint Dynamics Selection dialog by either clicking the
-          button <guibutton>Edit Dynamics</guibutton> or the button
-          <guibutton>Create a New Dynamics</guibutton>.
+          the Paint Dynamics selection dialog by clicking either the
+          <guibutton>Edit Dynamics</guibutton> button or the <guibutton>Create
+          a New Dynamics</guibutton> button.
         </para>
         <para lang="ja">
           <quote>描画の動的特性</quote>ダイアログの一覧表の下にある
@@ -294,14 +295,14 @@
     </para>
     <note>
       <para lang="en">
-        If you open a dynamics in the edit dialog it is usually grayed out
-        meaning you are not allowed to change the settings. To edit the
-        options you have to work on a copy made from one of the preinstalled
-        dynamics or create a new dynamics.
+        Pre-installed dynamics are grayed out meaning you are not allowed to
+        change the settings. To edit the options you have to work on a copy
+        made from one of the pre-installed dynamics or create a new dynamics.
       </para>
       <para lang="ja">
-        既存の動的特性プリセットを動的特性エディターで開くと普通はどの項目も
-        灰色無効になっていて設定の変更はできません。 調整したいオプションが
+        <acronym>GIMP</acronym> に同梱の動的特性プリセットは動的特性
+        エディターで開くとどの設定項目も灰色無効になっていて
+        変更ができません。 調整したいオプションが
         あるときはインストール済みプリセットから複製をとって変更するか
         もしくは新たに動的特性プリセットを生成して調節します。
       </para>
@@ -309,7 +310,7 @@
 
   </sect3>
   <sect3>
-    <title lang="en">The Paint Dynamics Matrix</title>
+    <title lang="en">Mapping Matrix</title>
     <title lang="ja">
       <quote>動的特性エディター</quote>ダイアログの
       <guimenuitem>対応状況の一覧</guimenuitem>
@@ -338,7 +339,7 @@
       The main part of the edit dialog is a table where you can decide
       which brush parameters should be affected by the way you use the stylus
       or the mouse. You may enable as many parameters and parameter
-      combinations as you wish but usually the fewer the better.
+      combinations you want, but usually the fewer the better.
     </para>
     <para lang="ja">
       動的特性エディターははじめに多数のチェックボックスからなる
@@ -350,7 +351,7 @@
 
     <itemizedlist>
       <para lang="en">
-        Each column in the table represents a stylus or mouse action except
+        Each column in the table represents a stylus or mouse action except for 
         the random and the fade functions.
       </para>
       <para lang="ja">
@@ -359,80 +360,80 @@
       </para>
       <listitem>
         <para lang="en">
-          <guilabel>Pressure</guilabel>: This is only meaningful if you are
-          using a graphic tablet. It allows you to decide which aspects of the
-          tool's action should be affected by the press of the stylus against
-          the tablet.
+          <guilabel>Pressure</guilabel>: (Graphic tablet). It allows you to
+          decide which aspects of the tool's action should be affected by
+          pressing the stylus against the tablet.
         </para>
         <para lang="ja">
-          <guilabel>筆圧</guilabel>: このオプションは描画タブレットを使用する
-          場合に限り意味があります。 尖筆をタブレット表面に押しつける強さの
-          変化をツールの動作のどの局面に反映させるかが指定できます。
+          <guilabel>筆圧</guilabel>: (描画タブレット用)
+          尖筆をタブレット表面に押しつける強さの変化を
+          ツールの動作のどの局面に反映させるかが指定できます。
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          <guilabel>Velocity</guilabel>: This is the
+          <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). This is the
           speed of the stylus or the mouse.
         </para>
         <para lang="ja">
-          <guilabel>筆速</guilabel>: 尖筆またはマウスの移動の速さです。
+          <guilabel>筆速</guilabel>: (描画タブレットとマウス用)
+          尖筆またはマウスの移動の速さです。
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          <guilabel>Direction</guilabel>: This is the direction of the stylus
-          or the mouse.
+          <guilabel>Direction</guilabel>: (Graphic tablet, mouse). This is the
+          moving direction of the stylus or the mouse.
         </para>
         <para lang="ja">
-          <guilabel>方向</guilabel>: 尖筆またはマウスの移動方向です。
+          <guilabel>方向</guilabel>: (描画タブレットとマウス用)
+          尖筆またはマウスの移動方向です。
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          <guilabel>Tilt</guilabel>: This is only meaningful if you are using
-          a graphic tablet. The behavior of the
+          <guilabel>Tilt</guilabel>: (Graphic tablet). The behavior of the
           function depends on the tilting of the stylus.
         </para>
         <para lang="ja">
-          <guilabel>傾き</guilabel>: このオプションは描画タブレットを使用する
-          場合に限り意味があります。 尖筆をタブレット表面に立てる角度に伴って
-          この相関的要素が変動します。
+          <guilabel>傾き</guilabel>: (描画タブレット用)
+          尖筆をタブレット表面に立てる角度に伴ってこの
+          相関的要素が変動します。
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          <guilabel>Wheel</guilabel>: This is only meaningful if you are using
-          a graphic tablet. The output depends on the rotation of the stylus
-          or the setting of the wheel on the airbrush pen.
+          <guilabel>Wheel</guilabel>: (Graphic tablet). The output depends on
+          the rotation of the stylus or the setting of the wheel on the
+          airbrush pen.
         </para>
         <para lang="ja">
-          <guilabel>ホイール</guilabel>: このオプションは描画タブレットを
-          使用する場合に限り意味があります。 尖筆を軸方向に回転させたり
-          エアブラシペンに付属するホイールを設定するのに伴って出力が変動します。
+          <guilabel>ホイール</guilabel>: (描画タブレット用)
+          尖筆を軸方向に回転させたりエアブラシペンに
+          付属するホイールを設定するのに伴って出力が変動します。
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          <guilabel>Random</guilabel>: The selected option will change
-          at random.
+          <guilabel>Random</guilabel>: (Graphic tablet, mouse). The selected
+          option will change at random.
         </para>
         <para lang="ja">
-          <guilabel>不規則</guilabel>: ここに
+          <guilabel>不規則</guilabel>: (描画タブレットとマウス用) ここに
           繋いだオプションは不規則に変化します。
         </para>
       </listitem>
       <listitem>
         <para lang="en">
-          <guilabel>Fade</guilabel>: The selected
+          <guilabel>Fade</guilabel>: (Graphic tablet, mouse). The selected
           option will be faded in or out depending on the settings of the
-          fade options in the Dynamic Options menu.
+          fade options in the Dynamic Options menu of the Tools Option dialog.
         </para>
         <para lang="ja">
-          <guilabel>フェード</guilabel>: ここに
-          繋いだオプションにフェードインまたはフェードアウト効果を
-          かけられます。 変化の詳細は引き出しメニューより
-          各出力の個別設定に進んでから調節します。
+          <guilabel>フェード</guilabel>: (描画タブレットとマウス用) ここに
+          繋いだオプションにフェード効果がかかります。 ツールオプション
+          ダイアログの動的特性オプションでフェードインかフェードアウトの
+          どちらにするか決めます。
         </para>
       </listitem>
     </itemizedlist>
@@ -456,64 +457,66 @@
         <term lang="ja">不透明度</term>
         <listitem>
           <para lang="en">
-            <guilabel>Pressure</guilabel>: Press harder to
+            <guilabel>Pressure</guilabel>: (Graphic tablet). Press harder to
             make the drawing less transparent.
           </para>
           <para lang="en">
-            <guilabel>Velocity</guilabel>:
-            The opacity decrease as the speed of the stylus increase.
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). The
+            opacity decrease as the speed of the stylus increase.
           </para>
           <para lang="en">
-            <guilabel>Direction</guilabel>: The opacity depends on the
-            direction of the stylus or the mouse. The effect seems to have a
-            touch of randomness built in.
+            <guilabel>Direction</guilabel>: (Graphic tablet, mouse). The
+            opacity depends on the direction of the stylus or the mouse. The
+            effect seems to have a touch of randomness built in.
           </para>
           <para lang="en">
-            <guilabel>Tilt</guilabel>: The opacity depends
+            <guilabel>Tilt</guilabel>: (Graphic tablet). The opacity depends
             on the tilt of the stylus.
           </para>
           <para lang="en">
-            <guilabel>Wheel</guilabel>: TO DO
+            <guilabel>Wheel</guilabel>: (Graphic tablet). TO DO
           </para>
           <para lang="en">
-            <guilabel>Random</guilabel>: The opacity change at random in
-            the interval set by the opacity slider in the toolbox.
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The opacity
+            change at random in the interval set by the opacity slider in the
+            Tool Options dialog.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>: Starting with
+            <guilabel>Fade</guilabel>: (Graphic tablet, mouse). Starting with
             full transparency and ending with the opacity set by the opacity
-            slider in the tool options dialog.
+            slider in the Tool Options dialog.
           </para>
           <para lang="ja">
-            <guilabel>筆圧</guilabel>: [個別詳細設定で
+            <guilabel>筆圧</guilabel>: (描画タブレット用) [個別詳細設定で
             入力・出力曲線が単調右肩上がりであれば]
             筆圧を軽くするにつれ透明感が増し、
             逆に強く尖筆を押しあてるにつれ透過しなくなってゆきます。
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>: [同上]
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用) [同上]
             尖筆やマウスの動きをすばやくすればするほど透明度が増します。
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: 尖筆や
+            <guilabel>方向</guilabel>: (描画タブレットとマウス用) 尖筆や
             マウスの移動する方向に従って不透明度が変動します。 やや出力に
             不規則なばらつきが起きるかもしれません。
           </para>
           <para lang="ja">
-            <guilabel>傾き</guilabel>: 不透明度が
+            <guilabel>傾き</guilabel>: (描画タブレット用) 不透明度が
             尖筆を立てる角度により変化します。
           </para>
           <para lang="ja">
-            <guilabel>ホイール</guilabel>: TO DO
+            <guilabel>ホイール</guilabel>: (描画タブレット用) TO DO
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: 不透明度はツールオプションの不透明度
-            スライダーで定めた値を上限とする範囲で不規則に変化します。
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用) 不透明度は
+            ツールオプションの不透明度スライダーで定めた値を上限とする範囲で
+            不規則に変化します。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>:
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
             [個別詳細設定が同上のとき]完全透過な状態で筆が入り、
-            ツールボックスの不透明度スライダーで定めた不透明度で終わります。
+            ツールオプションの不透明度スライダーで定めた不透明度で終わります。
           </para>
         </listitem>
       </varlistentry>
@@ -523,64 +526,66 @@
         <term lang="ja">サイズ</term>
         <listitem>
           <para lang="en">
-            <guilabel>Pressure</guilabel>: Press harder to
+            <guilabel>Pressure</guilabel>: (Graphic tablet). Press harder to
             make the brush wider.
           </para>
           <para lang="en">
-            <guilabel>Velocity</guilabel>: Increasing
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). Increasing
             speed decrease the width of the brush.
           </para>
           <para lang="en">
-            <guilabel>Direction</guilabel>: The size of the brush depends on
-            the direction of the stylus or the mouse. The effect seems to
-            have a touch of randomness built in.
+            <guilabel>Direction</guilabel>: (Graphic tablet, mouse). The size
+            of the brush depends on the moving direction of the stylus or the
+            mouse. The effect seems to have a touch of randomness built in.
           </para>
           <para lang="en">
-            <guilabel>Tilt</guilabel>: The size of the brush
+            <guilabel>Tilt</guilabel>: (Graphic tablet). The size of the brush
             depends on the tilt of the stylus.
           </para>
           <para lang="en">
-            <guilabel>Wheel</guilabel>:
+            <guilabel>Wheel</guilabel>: (Graphic tablet). TO DO
           </para>
           <para lang="en">
-            <guilabel>Random</guilabel>: The size of the brush change at
-            random up to the size set in the brush size slider in the toolbox.
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The size of
+            the brush change at random up to the size set in the brush size
+            slider in the Tool Options dialog.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>: Fades from a narrow brush to the size
-            set  in the brush size slider in the tool options dialog.
+            <guilabel>Fade</guilabel>: (Graphic tablet, mouse). Fades from a
+            narrow brush to the size set in the brush size slider in the Tools
+            Options dialog.
           </para>
           <para lang="ja">
-            <guilabel>筆圧</guilabel>:
+            <guilabel>筆圧</guilabel>: (描画タブレット用)
             [個別詳細設定で入力・出力曲線が単調右肩上がりであれば]
             筆圧を軽くするにつれブラシが細くなり、 逆に強く
             尖筆を押しあてるにつれブラシの幅が増します。
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>: [同上]
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用) [同上]
             尖筆やマウスの動きをすばやくすればするほどブラシが細くなります。
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: 尖筆やマウスの移動する方向に従って
-            ブラシのサイズが変動します。 やや出力に
+            <guilabel>方向</guilabel>: (描画タブレットとマウス用) 尖筆や
+            マウスの移動する方向に従ってブラシのサイズが変動します。 やや出力に
             不規則なばらつきが起きるかもしれません。
           </para>
           <para lang="ja">
-            <guilabel>傾き</guilabel>: ブラシのサイズが
+            <guilabel>傾き</guilabel>: (描画タブレット用) ブラシのサイズが
             尖筆を立てる角度により変化します。
           </para>
           <para lang="ja">
-            <guilabel>ホイール</guilabel>: TO DO
+            <guilabel>ホイール</guilabel>: (描画タブレット用) TO DO
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: ブラシのサイズは
-            ツールオプションのブラシサイズスライダーで定めた値を
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用) ブラシの
+            サイズはツールオプションのブラシサイズスライダーで定めた値を
             上限とする範囲で不規則に変化します。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>: [個別詳細設定が同上のとき]
-            筆は細く入り、 ツールボックスのブラシサイズスライダーで定めた
-            サイズで終わります。
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
+            [個別詳細設定が同上のとき]筆は細く入り、 ツールオプションの
+            ブラシサイズスライダーで定めたサイズで終わります。
           </para>
         </listitem>
       </varlistentry>
@@ -612,27 +617,27 @@
           </para>
 
           <para lang="en">
-            <guilabel>Velocity</guilabel>: At slow speeds the color is
-            collected from the right side of the gradient. As the speed
-            increase the color is picked more and more from the
-            left side of the gradient.
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). At slow
+            speeds the color is collected from the right side of the gradient.
+            As the speed increases, the color is picked more and more from
+            the left side of the gradient.
           </para>
           <para lang="en">
-            <guilabel>Direction</guilabel>: The direction determine where on
-            the gradient the color is picked from. Mostly moving to the right
-            and moving downward the color is picked from the left side of the
-            gradient and the other directions get the color picked from the
-            right half of the gradient.
+            <guilabel>Direction</guilabel>: (Graphic tablet, mouse). The
+            direction determine where on the gradient the color is picked
+            from. Mostly moving to the right and moving downward the color is
+            picked from the left side of the gradient and the other directions
+            get the color picked from the right half of the gradient.
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>:
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用)
             [個別詳細設定で入力・出力曲線が単調右肩上がりであれば]
             ゆっくり筆をすべらせているときはグラデーションの
             右側から色が採られます。 尖筆やマウスの移動が速くなるにつれ
             グラデーションの左寄りの位置の色が使われます。
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: マウスや
+            <guilabel>方向</guilabel>: (描画タブレットとマウス用) マウスや
             尖筆の移動する方角がグラデーションのどの位置の色を使うかを
             決めます。 [同上]右方向や下方向に引いた線はグラデーションの左端の
             色で塗られ、 その外の方角に移動するときは色もグラデーションの
@@ -640,21 +645,22 @@
           </para>
 
           <para lang="en">
-            <guilabel>Random</guilabel>: The color is
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The color is
             picked at random from the gradient.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>: The start color is collected from the
-            left side of the gradient and then more and more from the right
-            side during the stroke. The behavior of the fading is set in the
-            fade options in the tool options dialog.
+            <guilabel>Fade</guilabel>: (Graphic tablet, mouse). The start
+            color is collected from the left side of the gradient and then
+            more and more from the right side during the stroke. The behavior
+            of the fading is set in the fade options in the Tool Options
+            dialog.
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: 色は
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用) 色は
             グラデーションを構成する色から不規則に採られます。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>:
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
             [個別詳細設定が同上のとき]はじめの色はグラデーションの左端から
             採られ、 筆を進めるにしたがって徐々に使われる色がグラデーションの
             右へ変化します。 ツールオプションでフェード効果の性格を決めます。
@@ -675,31 +681,33 @@
           </para>
 
           <para lang="en">
-            <guilabel>Velocity</guilabel>: At slow speed the brush is hard
-            and become more fuzzy as the speed increase.
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). At slow
+            speed the brush is hard and become more fuzzy as the speed
+            increases.
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>:
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用)
             [個別詳細設定で入力・出力曲線が単調右肩上がりであれば]
             ゆっくり筆をすべらせているときにブラシの輪郭が際立ち、
             速く動かすにつれだんだんとぼやけた線になります。
           </para>
 
           <para lang="en">
-            <guilabel>Random</guilabel>: The fussiness of the brush varies
-            at random.
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The
+            fussiness of the brush varies at random.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>: The brush become less fuzzy during the
-            stroke. The behavior of the fading is set in the fade options in
-            the toolbox.
+            <guilabel>Fade</guilabel>: (Graphic tablet, mouse). The brush
+            become less fuzzy during the stroke. The behavior of the fading
+            is set in the fade options in the Tools Options dialog.
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: ブラシの
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用) ブラシの
             輪郭は不規則にぼやけたり際立ったりします。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>: [個別詳細設定が同上のとき]筆を
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
+            [個別詳細設定が同上のとき]筆を
             走らせるにつれだんだんと輪郭がはっきりしてきます。
             ツールオプションでフェード効果の性格を決めます。
           </para>
@@ -737,41 +745,42 @@
           </para>
 
           <para lang="en">
-            <guilabel>Velocity</guilabel>: The aspect ratio of the brush
-            (width / height) varies with the speed.
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). The aspect
+            ratio of the brush (width / height) varies with the speed.
           </para>
           <para lang="en">
-            <guilabel>Direction</guilabel>: The aspect ratio of the brush
-            varies with the moving direction of the brush.  The effect seems
-            to have a touch of randomness built in.
+            <guilabel>Direction</guilabel>: (Graphic tablet, mouse). The aspect
+            ratio of the brush varies with the moving direction of the brush.
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>: ブラシの縦横比 (高さと幅) が筆の速さに
-            よって変動します。
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用) ブラシの
+            縦横比 (高さと幅) が筆の速さによって変動します。
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: ブラシの縦横比がブラシの移動方向によって
-            変化します。 やや出力に不規則なばらつきが起きるかもしれません。
+            <guilabel>方向</guilabel>: (描画タブレットとマウス用) ブラシの
+            縦横比がブラシの移動方向によって変化します。
           </para>
 
           <para lang="en">
-            <guilabel>Random</guilabel>: The aspect ratio of the brush varies
-            at random.
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The aspect
+            ratio of the brush varies at random.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>:
-            If the Aspect Ratio Slider is set to a positive value the brush
+            <guilabel>Fade</guilabel>:  (Graphic tablet, mouse). If the Aspect
+            Ratio Slider is set to a positive value the brush
             will fade from full height at the start of the stroke to the
             height set by the aspect ratio slider. If the slider is set to a
             negative value the brush fades from full width to the width set
             by the aspect ratio slider. The behavior of the fading is set in
-            the fade options in the tool options dialog.
+            the fade options in the toolbox.
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: ブラシの縦横比は不規則変化します。
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用)
+            ブラシの縦横比は不規則変化します。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>: [個別詳細設定が同上のとき]ツール
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
+            [個別詳細設定が同上のとき]ツール
             オプションで縦横比を正の値にすればブラシの高さが描き始めに最大値を
             とり筆を進めるにつれ徐々に縦横比から得られる値に近づきます。 また
             縦横比を負の値にすればブラシの幅が描き始めに最大値をとり筆の移動に
@@ -786,51 +795,52 @@
         <term lang="ja">間隔</term>
         <listitem>
           <para lang="en">
-            Spacing is the distance between the marks set by the
-            brush when drawing lines. With this option set the spacing
-            is affected by how the the stylus is used.
-            brush when drawing lines. This option determines if the spacing
-            is affected and how, by the way the stylus is used.
+            Spacing is the distance between the marks set by the brush when
+            drawing lines. With this option set the spacing is affected by how
+            the stylus is used.
           </para>
           <para lang="ja">
             間隔とはブラシが走りながら続けざまに描く個々のブラシ刻印どうしの
             距離のことです。 このオプションで尖筆の使い方が間隔に変化を
-            及ぼす有無や程度を決定します。
+            及ぼします。
           </para>
 
           <para lang="en">
-            <guilabel>Velocity</guilabel>: The spacing between the footprints
-            of the brush increase with increasing speed.
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). The spacing
+            between the footprints of the brush increases with increasing speed.
           </para>
           <para lang="en">
-            <guilabel>Direction</guilabel>: The spacing varies with the
-            moving direction of the brush.
+            <guilabel>Direction</guilabel>: (Graphic tablet, mouse). The
+            spacing varies with the moving direction of the brush.
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>: [個別詳細設定で入力・出力曲線が単調右肩
-            上がりであれば]ブラシの歩幅は描く速さに応じて広くなってゆきます。
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用)
+            [個別詳細設定で入力・出力曲線が単調右肩上がりであれば]
+            ブラシの歩幅は描く速さに応じて広くなってゆきます。
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: 間隔がブラシの進む方向のよって
-            変化します。
+            <guilabel>方向</guilabel>: (描画タブレットとマウス用)
+            間隔がブラシの進む方向によって変化します。
           </para>
 
           <para lang="en">
-            <guilabel>Random</guilabel>: The spacing varies at random.
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The spacing
+            varies at random.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>:
-            Starting with a wide spacing and gradually make the spacing
-            narrower. The behavior of the fading is set in the fade options
-            in the tool options dialog.
+            <guilabel>Fade</guilabel>:  (Graphic tablet, mouse). Start with a
+            wide spacing and gradually make the spacing narrower. The behavior
+            of the fading is set in the fade options in the Tool Options
+            dialog.
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: 間隔は不規則変化します。
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用)
+            間隔は不規則変化します。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>: [個別詳細設定が同上のとき]大きな
-            間隔で描きはじめ、 だんだんと間隔が狭くなります。
-            ツールオプションでフェード効果の性格を決めます。
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
+            [個別詳細設定が同上のとき]大きな間隔で描きはじめ、 だんだんと間隔が
+            狭くなります。 ツールオプションでフェード効果の性格を決めます。
           </para>
         </listitem>
       </varlistentry>
@@ -843,12 +853,19 @@
             This option applies to the Airbrush, Convolve tool, and
             Smudge tool, all of which have time-based effects.
           </para>
-          <para>
-            TO DO
+          <para lang="en">
+            The actions of these tools are more or less quick. The amount
+            of Rate depends on the setting of the Rate slider in the Tool
+            Options dialog.
           </para>
           <para lang="ja">
-           このオプションは経過時間効果をもつツールであるエアブラシ、
-           ぼかし/シャープ、 にじみの各ツールに適用されます。
+           このオプションは効果が経過時間に依存するツール、 すなわち
+           エアブラシ、 ぼかし/シャープ、 にじみの各ツールに適用されます。
+          </para>
+          <para lang="ja">
+            これらのツールの色の出具合を速くしたり遅くしたりできます。
+            <quote>割合</quote>の量はツールオプションダイアログの割合スライダー
+            に基づきます。
           </para>
         </listitem>
       </varlistentry>
@@ -857,8 +874,18 @@
         <term lang="en">Flow</term>
         <term lang="ja">流量</term>
         <listitem>
-          <para>
-            TO DO
+          <para lang="en">
+            Significant only for the Airbrush: more or less paint is delivered.
+            The amount of flow depends on the setting of the Flow slider in the
+            Tool Options dialog.
+          </para>
+          <para lang="ja">
+            エアブラシでのみ効果が出ます。 拡散傾向を調節します (この値を
+            大きくすると、 <quote>割合</quote>と同じく色乗りが速くなり、
+            色づきがブラシ中心部と同等な領域がブラシ内で比較的大きくなります。
+            この値を小さくすると色乗りが遅くなり、 ブラシの中心部と周辺部との
+            着色の時間差が増します)。 <quote>流量</quote>の値は
+            ツールオプションダイアログの割合スライダーに基づきます。
           </para>
         </listitem>
       </varlistentry>
@@ -874,17 +901,20 @@
             of the jitter slider in the tool options dialog window.
           </para>
           <para lang="en">
-            <guilabel>Pressure</guilabel>:
+            <guilabel>Pressure</guilabel>: (Graphic tablet). At low pressure
+            the brush prints are spread according to the value set in the
+            jitter amount slider. As the pressure increases the scattering
+            amount decreases.
           </para>
           <para lang="en">
-            <guilabel>Velocity</guilabel>: At slow speed the brush prints are
-            spread according to the value set in the jitter amount slider. As
-            the speed increase the scattering amount decrease.
+            <guilabel>Velocity</guilabel>: (Graphic tablet, mouse). At slow
+            speed the brush prints are spread according to the value set in
+            the jitter amount slider. As the speed increases the scattering
+            amount decreases.
           </para>
           <para lang="en">
-            <guilabel>Direction</guilabel>: The jitter effect depends on the
-            direction of the brush. The effect seems to have a touch of
-            randomness built in. 
+            <guilabel>Direction</guilabel>: (Graphic tablet, mouse). The
+            jitter effect depends on the moving direction of the brush.
           </para>
           <para lang="ja">
             普通であればブラシが通った線にそってブラシ刻印が整然と並んで
@@ -893,35 +923,41 @@
             散布スライダーで設定します。
           </para>
           <para lang="ja">
-            <guilabel>筆圧</guilabel>:
+            <guilabel>筆圧</guilabel>: (描画タブレット用)
+            [個別詳細設定で入力・出力曲線が単調右肩上がりであれば]
+            筆圧が弱いときは<quote>散布</quote>スライダーで設定したとおりの
+            程度でブラシ刻印が散らばります。 尖筆を押しあてる強さを増すと
+            乱れが収まってきます。
           </para>
           <para lang="ja">
-            <guilabel>筆速</guilabel>: [個別詳細設定で入力・出力曲線が単調右肩
-            上がりであれば]ゆっくり筆を運んでいるときは散布度スライダーどおり
-            にブラシ刻印が散らばります。 速くなるにつれ散らばりが抑制されます。
+            <guilabel>筆速</guilabel>: (描画タブレットとマウス用) [同上]
+            ゆっくり筆を運んでいるときは散布度スライダーどおりに
+            ブラシ刻印が散らばります。 速くなるにつれ散らばりが抑制されます。
           </para>
           <para lang="ja">
-            <guilabel>方向</guilabel>: 散布効果はブラシの進む方向によって
-            変化します。 やや出力に不規則なばらつきが起きるかもしれません。
+            <guilabel>方向</guilabel>: (描画タブレットとマウス用) 
+            散布効果はブラシの進む方向によって変化します。
           </para>
 
           <para lang="en">
-            <guilabel>Random</guilabel>: The jitter varies at random.
+            <guilabel>Random</guilabel>: (Graphic tablet, mouse). The jitter
+            varies at random.
           </para>
           <para lang="en">
-            <guilabel>Fade</guilabel>:
+            <guilabel>Fade</guilabel>: (Graphic tablet, mouse).
             Starting with no jitter and ending with the amount of jitter set
             in the jitter amount slider. The behavior of the fading is set in
-            the fade options in the tool options dialog.
+            the fade options in the Tool Options dialog.
           </para>
           <para lang="ja">
-            <guilabel>不規則</guilabel>: 散布の度合いが不規則変化します。
+            <guilabel>不規則</guilabel>: (描画タブレットとマウス用)
+            散布の度合いが不規則変化します。
           </para>
           <para lang="ja">
-            <guilabel>フェード</guilabel>: [個別詳細設定が同上のとき]描き
-            はじめは全く散らばりが起きず、 筆が進むにつれ散布度スライダーで
-            設定した程度まで徐々に散らばってきます。
-            ツールオプションでフェード効果の性格を決めます。
+            <guilabel>フェード</guilabel>: (描画タブレットとマウス用)
+            [個別詳細設定が同上のとき]描きはじめは全く散らばりが起きず、
+            筆が進むにつれ散布度スライダーで設定した程度まで徐々に散らばって
+            きます。 ツールオプションでフェード効果の性格を決めます。
           </para>
         </listitem>
       </varlistentry>
@@ -942,9 +978,9 @@
       </mediaobject>
     </figure>
     <para lang="en">
-      If the current options do not suits you, you may fine-tune the settings
+      If the current options does not suit you, you may fine-tune the settings
       from the Paint Dynamics Editor. Click on the down arrow to open the
-      drop down menu and then select what option to change.
+      drop down menu and then select what option to be changed.
     </para>
     <para lang="ja">
       現在のオプション設定がしっくり来ないときは動的特性エディターの個別詳細
@@ -982,6 +1018,106 @@
       <guibutton>カーブのリセット</guibutton>
       ボタンをクリックすると初期設定の右肩上がりの比例直線に戻ります。
     </para>
+<!--
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Dynamics Examples</term>
+        <term lang="ja">動的特性の設定例</term>
+        <listitem>
+          <para lang="en">
+            A few brief examples on how to use dynamics settings.
+          </para>
+          <para lang="ja">
+            動的特性エディターを使った設定例を紹介します。
+          </para>
+          <figure>
+            <title lang="en">
+              Illustration of the effects of changing the dynamics settings.
+            </title>
+            <title lang="ja">動的特性の設定変更の効果の様子</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/dynamic-fade-example.png"/>
+              </imageobject>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/dynamic-fade-example-curve.png"/>
+              </imageobject>
+            </mediaobject>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/dynamic-fade-example-curve-color-fade.png"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          <para lang="en">
+            In these examples the foreground color is set to blue (#0000ff)
+            and the background color to yellow (#ffff00). Fading: 200 pixels.
+            Paintbrush size: 72.
+          </para>
+          <para lang="en">
+            Example 1 shows the result when the brush size is connected to the
+            fading. Default options. The brush fades gently from near zero to
+            the full width set by the brush sliders.
+          </para>
+          <para lang="en">
+            In example 2 the same settings as in the prior example, but the
+            fade curve is set as in image 5. The brush width fades from zero
+            to full width and then back again to zero.
+          </para>
+          <para lang="en">
+            In example 3 the settings are the same as in example 2 except that
+            now also color is connected to the fade option. The color is
+            picked from the active gradient, starting at the left side of the
+            gradient and ending at the right side of the gradient.
+          </para>
+          <para lang="en">
+            In example 4 the the setting of the color curve is as showed in
+            image 6. No other changes. At the start of the stroke the color is
+            picked from the left side of the gradient, then more from the
+            right side, fading back to the left side and at the end of the
+            fading from the rightmost side of the gradient.
+            Study the curve and compare it to the stroke.
+          </para>
+          <para lang="ja">
+            上の例は、 描画色を青 (#0000FF)、 背景色を黄 (#FFFF00) にして
+            あり、 フェードの長さを 200 ピクセル、 ブラシのサイズを 72 と
+            しました。
+          </para>
+          <para lang="ja">
+            <quote>例図 1</quote>はブラシのサイズパラメーターにフェード効果を
+            接続しました。 それ以外のオプションは初期設定のままです。 ブラシの
+            大きさがほぼ 0 から出発し、 徐々に大きくなってブラシサイズ
+            スライダーで決めたサイズまで膨らみました。
+          </para>
+          <para lang="ja">
+            <quote>例図 2</quote>は<quote>例図 1</quote>の設定を使いつつ
+            <guimenuitem>サイズ</guimenuitem> の詳細設定でフェードのカーブを
+            <quote>例図 5</quote>のように曲げてみます。 ブラシの幅がはじめ 0
+            から出発して設定最大幅に膨らみ再び 0 まで収縮しました。
+          </para>
+          <para lang="ja">
+            <quote>例図 3</quote>は<quote>例図 2</quote>の設定を使いつつさらに
+            色パラメーターもフェード効果に接続しました。 色は現在活性化している
+            グラデーション (描画色から背景色) から採られることになるので、
+            グラデーションの左端の色で始まり右端の色で終わりました。
+          </para>
+          <para lang="ja">
+            <quote>例図 4</quote>は<quote>例図 6</quote>のように色パラメーター
+            のカーブを設定しました。 それ以外の設定はしていません。 筆触の
+            始めの色はグラデーションの左端から得ており、 やがて途中で右端の色に
+            すっかり交替し、 再び徐々に左へ色が移って、 再び右へ戻りはじめ、
+            終わりはグラデーションの右端の色になりました。
+            カーブの形と色の変化を見比べて確かめましょう。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+-->
   </sect3>
 
 <!-- ****** Dynamic Options: ****** -->
@@ -1165,14 +1301,15 @@
         <term lang="ja">色のオプション</term>
         <listitem>
           <para lang="en">
-            Here you may choose which gradient to use as the color source
+            Here you can choose the gradient to use as color source
             when using the brush with the color option set. Click on the box
             showing the gradient to change to another one from the gradient
             list.
           </para>
           <para lang="en">
-            If none of the color options are selected, the brush will use the
-            foreground color set in the toolbox.
+            If no color option is selected in the currently used
+            dynamics, the brush will use the foreground color set in the
+            toolbox.
           </para>
           <para lang="ja">
             ここで選んだグラデーションが動的特性に色のパラメーターを加えた
@@ -1181,8 +1318,8 @@
             グラデーションに変更できます。
           </para>
           <para lang="ja">
-            色のオプションで何も選ばなかったときはツールボックスの色標識で
-            示されている描画色がブラシの色になります。
+            色のオプションで何も選ばなかったときはデフォルトの<quote>描画色から
+            背景色へ</quote>グラデーションからブラシの色が決まります。
           </para>
         </listitem>
       </varlistentry>

@@ -2,22 +2,12 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2009-04-29 ude: Moved Paint Mode examples to new sect3
-  2008-09-25 aprokoudine reviwed 'ru'
-  2008-06-01 ciampix reviewed for it
-  2008-04-14 JPL reviewed for fr
-  2008-03-12 Mr.Dust : added 'ko'
-  2008-03-01 ude: updated 'de'
-  2007-12-01 PP  reviewed for fr
-  2007-11-11 KoSt: updated 'no'
-  2007-10-29 j.h: updated fr ; documented Scale, Jitter en;fr
-  2007-10-06 lexa: reviewed for GIMP 2.4 (de)
-  2007-06-15 kost: added norwegian
-  2006-02-05 fr revised by j.h
-  2005-05-20 de reviewed by axel.wernicke
+  2012-11-16 j.h: documented Smooth Stroke
+  2012-10-15 Kolbjoern: documented Dynamics
+  2007-10-29 j.h: documented Scale, Jitter en;fr
 -->
-<!--2012-10-28-->
-<sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-brush">
+<!--2012-11-22-->
+<sect2 id="gimp-tool-brush">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
 
@@ -352,9 +342,8 @@
 
     <para lang="en">
       Many tool options are shared by several paint tools: these are described
-      here. Options that apply only to one specific
-      tool, or to a small number of tools, are described in the sections
-      devoted to those tools.
+      here. Options that apply only to one specific tool, or to a small number
+      of tools, are described in the sections devoted to those tools.
     </para>
     <para lang="ja">
       大多数のツールオプションがいくつかの描画ツールで共有されています。
@@ -439,11 +428,10 @@
             above the active layer and acts on that layer. Changing Opacity in
             the Tool Options has the same effect that changing opacity in the
             Layers dialog would have in the latter situation. It controls the
-            <quote>strength</quote>
-            of all paint tools, not just those that paint on the active layer.
-            In the case of the Eraser, this can come across as a bit
-            confusing: it works out that the higher the <quote>opacity</quote>
-            is, the more transparency you get.
+            <quote>strength</quote> of all paint tools, not just those that
+            paint on the active layer. In the case of the Eraser, this can
+            come across as a bit confusing: it works out that the higher the
+            <quote>opacity</quote> is, the more transparency you get.
           </para>
           <para lang="ja">
             不透明度スライダーはブラシ操作での透明度レベルを設定します。
@@ -540,8 +528,14 @@
         <term lang="en">Angle</term>
         <term lang="ja">角度</term>
         <listitem>
-          <para>
-            TO DO
+          <para lang="en">
+            This option makes the brush turn round its center. This is visible 
+            if the brush is not circular or made from a rotated figure.
+          </para>
+          <para lang="ja">
+            このオプションはブラシの中心を軸にしてブラシ刻印を一定の角度に
+            傾け回転します。 したがってブラシ刻印が円形だったり向きのない
+            回転体図形であったりすると変化が見えません。 
           </para>
         </listitem>
       </varlistentry>                  
@@ -564,11 +558,11 @@
           </figure>
           <para lang="en">
             Brush dynamics let you map different brush parameters to several
-            input dynamics. They are mostly used with tablets, but some of
-            them are also  usable with a mouse.
+            input dynamics. They are mostly used with graphic tablets, but
+            some of them are also  usable with a mouse.
           </para>
           <para lang="en">
-            You may read more about dynamics in
+            You can read more about dynamics in
             <link linkend="gimp-tool-dynamics">Dynamics</link>
           </para>
           <para lang="en">
@@ -602,17 +596,17 @@
       </varlistentry>
 
       <varlistentry>
-        <term lang="en">Fade Out</term>
-        <term lang="ja">フェードアウト</term>
+        <term lang="en">Dynamics Options</term>
+        <term lang="ja">動的特性のオプション</term>
         <listitem>
           <para lang="en">
-            This belongs to the dynamics and is described in
+            These options are described in
             <link linkend="gimp-tool-dynamic-options">Dynamics Options</link>
           </para>
           <para lang="ja">
-            このオプションは動的特性の設定の一部をなしており、
+            このオプションは
             <link linkend="gimp-tool-dynamic-options">動的特性のオプション
-            </link> に説明があります。
+            </link> で説明しています。
           </para>
         </listitem>
       </varlistentry>
@@ -660,7 +654,7 @@
             </mediaobject>
           </figure>
          <para lang="en">
-           Jitter is also available in the Paint Dynamic Editor where you may
+           Jitter is also available in the Paint Dynamic Editor where you can
            connect jitter to the behaviour of the brush.
          </para>
          <para lang="ja">
@@ -674,9 +668,53 @@
         <term lang="en">Smooth Stroke</term>
         <term lang="ja">手ブレ補正</term>
         <listitem>
-          <para>
-            TO DO
-         </para>
+          <para lang="en">
+            This option doesn't affect the rendering of the brush stroke but
+            its <quote>shape</quote>. It takes away the wobbles of the line you
+            are drawing. It makes drawing with a mouse easier.
+          </para>
+          <para lang="en">
+            When this option is checked, two setting areas appear,
+            <guilabel>Quality</guilabel> and <guilabel>Weight</guilabel>. You
+            can change the default values to adapt them to your skill.
+          </para>
+          <para lang="en">
+            High weight values rigidifies the brush stroke.
+          </para>
+          <para lang="ja">
+            このオプションで変化するのはブラシの刻印ではなく筆の
+            <quote>軌道</quote>です。 描いた線のブレを抑えます。 マウスを
+            使う描画が容易になります。
+          </para>
+          <para lang="ja">
+            このオプションはチェックを入れると <guilabel>品質</guilabel> と
+            <guilabel>ウエイト</guilabel> の 2 つのスライダーが現れます。
+            ご自分の技量と好みに合わせて初期値より増減が可能です。
+          </para>
+          <para lang="ja">
+            ウエイトを高く設定すると筆跡が硬くなりがちです。
+          </para>
+          <figure>
+            <title lang="en"><quote>Smooth Stroke</quote> example</title>
+            <title lang="ja"><quote>手ブレ補正</quote>の例</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/tool-options/smooth-stroke.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  Trying to draw a straight line and a sine curve with the
+                  mouse.  1 : option unchecked   2 : default values
+                  3 : maximum values
+                </para>
+                <para lang="ja">
+                  マウスを使い直線と正弦波曲線を描こうとした結果。
+                  1: オプション不使用、 2: 初期設定値、 3: 最大値
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
         </listitem>
       </varlistentry>
 
