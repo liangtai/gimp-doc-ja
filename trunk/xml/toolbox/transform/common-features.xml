@@ -14,7 +14,7 @@
   2005-12-06 replaced informalfigure by figure by lexa
   0500606 de extracted general tool features by axel.wernicke
 -->
-<!--2012-06-15-->
+<!--2012-12-11-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-transform">
   <title lang="en">Common Features</title>
   <title lang="ja">共通機能</title>
@@ -238,12 +238,12 @@
                 <para lang="en">
                   The color of each pixel is computed as the average color of
                   the eight closest pixels in the original image. This usually
-                  gives the best result, but it naturally takes more time.
+                  gives a good result, but it naturally takes more time.
                   Sometimes this method is called <quote>Bicubic</quote>.
                 </para>
                 <para lang="ja">
                   各画素の色は元画像において最近傍の 8 つの画素の色を平均した
-                  ものです。 大抵の画像で最高の仕上がりが得られますが、 当然
+                  ものです。 大抵の画像で上質の仕上がりが得られますが、 当然
                   もっと処理に時間がかかります。 この方法を
                   <quote>双三次補間</quote>とも言います。
                 </para>
@@ -254,12 +254,16 @@
               <listitem>
                 <para lang="en">
                   The Lanczos3 method uses the Sinc mathematical function and
-                  performs a high quality interpolation.
+                  performs a high quality interpolation. This is usually the
+                  best method but if you are not satisfied with the result,
+                  you may give <quote>Cubic</quote> a try.
                 </para>
                 <para lang="ja">
                   高品質な補間処理を行なうにはこの方式を選んでください。 これは
-                  Sinc 関数に似た 3 次ランツォシュ窓関数を低域通過フィルタとして
-                  用いています。
+                  Sinc 関数に似た 3 次ランツォシュ窓関数を低域通過フィルターと
+                  して用いています。 大概はこの方式が最良ですが、 仕上りに
+                  満足できないときは代わりに<quote>キュービック</quote>も試して
+                  みてはいかがでしょうか。
                 </para>
               </listitem>
             </varlistentry>
@@ -445,21 +449,40 @@
               <term lang="en">Crop with aspect</term>
               <term lang="ja">縦横比で切り抜き</term>
               <listitem>
-<!--                <figure>
+                <figure>
                   <title lang="en">Example for Crop with aspect</title>
                   <title lang="ja"><quote>縦横比で切り抜き</quote>の例</title>
                   <mediaobject>
                     <imageobject>
                       <imagedata format="PNG"
-                        fileref="images/toolbox/clip-4.png"/>
+                        fileref="images/toolbox/clip-4a.png"/>
                     </imageobject>
                     <caption>
-                      <para lang="en">Crop with aspect</para>
-                      <para lang="ja">縦横比で切り抜き</para>
+                      <para lang="en">Original image</para>
+                      <para lang="ja">元画像</para>
+                    </caption>
+                  </mediaobject>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/toolbox/clip-4b.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">Rotation -22°</para>
+                      <para lang="ja">-22° で回転</para>
+                    </caption>
+                  </mediaobject>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata format="PNG"
+                        fileref="images/toolbox/clip-4c.png"/>
+                    </imageobject>
+                    <caption>
+                      <para lang="en">The rotated image</para>
+                      <para lang="ja">回転後の画像</para>
                     </caption>
                   </mediaobject>
                 </figure>
-Commented until somebody finds a valid example-->
                 <para lang="en">
                   This option works like the one described before, but makes
                   sure, that the aspect ratio is maintained.
@@ -487,103 +510,156 @@ Commented until somebody finds a valid example-->
           </indexterm>
           <variablelist>
             <para lang="en">
-              <acronym>GIMP</acronym> lets you select among four Preview
-              possibilities:
+              If this is marked, which is the default setting, the transformed
+              image will be visible above the original image or layer. There
+              will also be a slider with which you may select the visibility of
+              the preview.
             </para>
             <para lang="ja">
-              <acronym>GIMP</acronym> はプレビューに 4 通りの方法を
-              提供しています。
+              初期設定では有効になっています。 このプレビュー機能は変形の
+              作業中に、 変形画像を元の画像かレイヤーの上に重ねて表示します。
+              また付属の <guilabel>プレビューの不透明度</guilabel> 
+              スライダーで、 変形途中の画像の可視性を調整して表示を一時的に
+              半透明化し、 元の画像まで見通せるようにできます。
             </para>
+          </variablelist>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term lang="en">Guides</term>
+        <term lang="ja">ガイド</term>
+        <listitem>
+          <para lang="en">
+            This is a drop down list where you select the type of guide lines
+            which suits your transforming. All the guides uses a frame to mark
+            the image's outline in addition to the lines used by the different
+            selections.
+          </para>
+          <para lang="ja">
+            これは補助線の形式が好みで選べる引き出しリストです。 変形操作が
+            しやすいものを選びましょう。 どのガイドも変形途中の画像の輪郭を
+            示す枠が描かれ、 その内部にさらにそれぞれの形式による補助線が
+            表示されます。
+          </para>
+          <variablelist>
             <varlistentry>
-              <term lang="en">Outline</term>
-              <term lang="ja">アウトライン</term>
+              <term lang="en">No guides</term>
+              <term lang="ja">表示しない</term>
               <listitem>
                 <para lang="en">
-                  Puts a frame to mark the image outline, with a handle on
-                  each corner. Movements will affect this frame only on the
-                  Preview, but the result of the transformation will concern
-                  either the content or the boundaries of the selection
-                  according to the selected Affect mode.
+                  As the name tells you, there are no guides used.
                 </para>
                 <para lang="ja">
-                  画像のアウトラインを表す外枠線を示し、 その 4 隅には
-                  ハンドルがついています。 変形のプレビューとして変形
-                  するのはこの外枠線だけですが、 結果的には画像の内容は
-                  もちろん、 指定された他のオプションによっては選択領域の
-                  外部も含め変形の対象となります。
+                  補助線が表示されません。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Grid</term>
-              <term lang="ja">グリッド</term>
+              <term lang="en">Center lines</term>
+              <term lang="ja">センターライン</term>
+                <listitem>
+                  <para lang="en">
+                    Uses one vertical line and one horizontal line crossing
+                    each other in the center of the image or layer.
+                  </para>
+                  <para lang="ja">
+                    補助線は画像かレイヤーを 2 等分する垂直な線と水平な線が
+                    各 1 本づつ、 中心で交差するように表示されます。
+                  </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Rule of thirds</term>
+              <term lang="ja">三分割法</term>
               <listitem>
                 <para lang="en">
-                  Puts a grid on the image, with four handles. Movements will
-                  affect this grid only on the Preview, but the result of the
-                  transformation will concern either the content or the
-                  boundaries of the selection according to the selected
-                  Transform mode.
+                  Divides the transforming area in nine equal parts by adding
+                  two horizontal lines and two vertical lines equally spaced.
+                  According to this rule the most interesting parts of the
+                  image should be placed at the intersection points.
                 </para>
                 <para lang="ja">
-                  画像上に格子線 (グリッド) が表示され、 その 4 隅にはハンドルが
-                  ついています。 変形のプレビューとして変形するのはこの
-                  格子線だけですが、 結果的には画像の内容はもちろん、
-                  指定された他のオプションによっては選択領域の外部も含め
-                  変形の対象となります。
+                  補助線は外枠から等間隔に垂直と水平に 2 本づつ、 変形途中の
+                  区画をちょうど 9 つに等分するように表示されます。 この
+                  構図法に従うときは、 縦横をそれぞれ 3 等分する補助線が
+                  交差する 4 つの位置に重点を置くようにしましょう。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Image</term>
-              <term lang="ja">画像</term>
+              <term lang="en">Rule of fifths</term>
+              <term lang="ja">五分割法</term>
               <listitem>
                 <para lang="en">
-                  Here, the preview is a copy of the image superimposed on the
-                  image, with an outline. Movements affect this copy and the
-                  underlying image appears.
+                  Just as the <quote>Rules of thirds</quote> but divides the
+                  area in five by five parts.
                 </para>
                 <para lang="ja">
-                  この場合、 プレビューは画像のコピーに外枠をつけたものを
-                  使い、 元画像の上に重なるように表示されます。 プレビュー
-                  の作業中は元画像が見えている上でそのコピーが変形します。
+                  しくみは<quote>三分割法</quote>と同じですが、 領域は
+                  5×5 個の区画に等分されます。
                 </para>
               </listitem>
             </varlistentry>
             <varlistentry>
-              <term lang="en">Grid+Image</term>
-              <term lang="ja">画像とグリッド</term>
+              <term lang="en">Golden sections</term>
+              <term lang="ja">黄金分割</term>
               <listitem>
-                <para lang="en">Both turn at the same time.</para>
-                <para lang="ja">これら両者が一緒に変形します。</para>
+                <para lang="en">
+                  Also called <quote>The Golden Ratio</quote>. This divides the
+                  transforming area in nine parts using a mathematical formula
+                  proportioning the parts to each others and to the area to be
+                  transformed.
+                </para>
+                <para lang="ja">
+                  補助線はある数式を利用して変形領域を大小さまざまな 9 つの
+                  区画に切り分けており、 各部が相互に均整をとり、 しかも
+                  変形後の領域全体に対しても釣り合うような区切りになります。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Diagonal lines</term>
+              <term lang="ja">対角線構図</term>
+              <listitem>
+                <para lang="en">
+                  Divide the transforming area using diagonally lines.
+                </para>
+                <para lang="ja">
+                  補助線は対角線が表示されます。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Number of lines</term>
+              <term lang="ja">グリッド線の数を指定</term>
+              <listitem>
+                <para lang="en">
+                  Puts a rectangular grid with equal numbers of vertically
+                  and horizontally lines. The number of lines is set in the
+                  slider popping up when this guide is selected.
+                </para>
+                <para lang="ja">
+                  補助線は縦横同じ数に等分割する格子線を表示します。
+                  この形式を選ぶと現れるスライダーにて線の数を指定します。
+                </para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term lang="en">Line spacing</term>
+              <term lang="ja">グリッド間隔を指定</term>
+              <listitem>
+                <para lang="en">
+                  Puts a rectangular grid on the transforming area using the
+                  spacing between the lines set in the slider.
+                </para>
+                <para lang="ja">
+                  補助線は升目の幅が一定の格子線を変形領域内に表示します。
+                  このオプションを選ぶと現れるスライダーで幅を指定します。
+                </para>
               </listitem>
             </varlistentry>
           </variablelist>
-          <para lang="en">
-            Preview is only for greater convenience. Whatever your choice,
-            result will be the same when you validate the transformation.
-          </para>
-          <para lang="en">
-            Options with grid activate a drop-list with two options:
-            <guilabel>Number of Grid Lines</guilabel> will allow control
-            over the total number of displayed grid lines. Use the
-            slider to set the number of grid lines.
-            <guilabel>Grid Line Spacing</guilabel> allows control over
-            the distance between the grid lines. Use the slider to set
-            the distance.
-          </para>
-          <para lang="ja">
-            プレビューは利便性を図る目的しかありません。 どれを選んでも変形を
-            実行したあとの結果は皆同じです。
-          </para>
-          <para lang="ja">
-            グリッドを利用するオプションが有効なときは、 2 つの選択肢をもつ
-            引き出しメニューが現れます。 <guilabel>グリッドの線数</guilabel> は
-            表示される格子線の各辺の総数の調整を行うときのもので、 スライダを用
-            いて格子線の数を設定します。 <guilabel>グリッド線の間隔</guilabel>
-            は格子線の互いの間隔の調整を行うときのもので、 スライダーを動かして
-            [ピクセル単位で]間隔を設定します。
-          </para>
         </listitem>
       </varlistentry>
       <varlistentry>

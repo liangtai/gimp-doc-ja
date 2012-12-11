@@ -13,7 +13,7 @@
   050529 de added content for rotate dialog
   050529 de reviewed by axel.wernicke
 -->
-<!--2012-06-10-->
+<!--2012-12-11-->
 <sect2 xmlns:xi="http://www.w3.org/2001/XInclude" id="gimp-tool-rotate">
   <title lang="en">Rotate</title>
   <title lang="ja">回転</title>
@@ -161,10 +161,10 @@
     <variablelist>
       <varlistentry>
         <term lang="en">
-          Transform; Direction, Interpolation; Clipping; Preview
+          Transform; Direction, Interpolation; Clipping; Preview; Guides
         </term>
         <term lang="ja">
-          変形対象; 方向; 補間アルゴリズム; クリッピング; プレビュー
+          変形対象; 方向; 補間アルゴリズム; クリッピング; プレビュー; ガイド
         </term>
         <listitem>
           <xi:include href="about-common-transform-options.xml"/>
@@ -191,7 +191,7 @@
             error.
           </para>
           <para lang="ja">
-            方向とはレイヤーが回転する方向や方法を定めるものです。 正変換は
+            方向オプションはレイヤーが回転する方向や方法を定めます。 正変換は
             順当な方向へ回転します。 レイヤーを 10 度右へ回転させるとすると、
             その向きにその角度でレイヤーが傾いて描かれます。 この動作は逆変換の
             場合とは対称です。
@@ -200,9 +200,10 @@
             逆向きの回転が一番よく使われるのは傾いて写っているディジタル写真を
             直す用途です。 仮に画像の傾きが 13 度という微妙な角度に
             なっていても、 その角度ぴったりに回転させるためにがんばらずに
-            すみます。 ここで <guilabel>逆変換</guilabel> の回転を使えば画像を
-            見ながらその傾きにレイヤーの回転方向を合わせる方法がとれます。
-            実際は逆に回転するので、 ぴったりの角度で画像の修正ができるのです。
+            すみます。 代わりに <guilabel>逆変換</guilabel> の回転を使えば画像を
+            見ながらその傾きにレイヤーの回転方向を合わせる方法がとれるのです。
+            実際は逆に回転するので、 ぴったりの角度で画像の修正ができる
+            というわけです。
           </para>
         </listitem>
       </varlistentry>
@@ -256,17 +257,37 @@
         <listitem>
           <para lang="en">
             This option allows you to set the position of the rotation center,
-            represented by a large point in the image. A click-and-drag on
-            this point also allows you to move this center. Default unit of
-            measurement is pixel, but you can change it by using the drop-down
-            list.
+            represented by a cross surrounded by a circle in the image. A
+            click-and-drag on this point also allows you to move this center
+            even outside the image. Default unit of measurement is pixel, but
+            you can change it by using the drop-down list.
           </para>
           <para lang="ja">
-            このオプションは画像上では大きな的で表されている回転の中心の位置を
-            定めるものです。 中心点はこの的をマウスで直にクリックしてドラッグ
-            しても移動できます。 座標の数値は初期設定ではピクセル単位ですが、
-            引き出し排列を操作して変更できます。
+            回転の中心点は画像上で丸に十字の印で表されており、 このオプションは
+            その位置を数値で指定できます。 中心点はこの的をマウスで直に
+            クリックしてドラッグしても移動でき、 画像の外にも置けます。
+            座標の数値は初期設定ではピクセル単位ですが、
+            引き出しリストで別の単位も選べます。
           </para>
+          <figure>
+            <title lang="en">The rotating center</title>
+            <title lang="ja">回転の中心</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata format="PNG"
+                  fileref="images/toolbox/transform-guides.png"/>
+              </imageobject>
+              <caption>
+                <para lang="en">
+                  The layer rotated around the rotating center outside the
+                  image
+                </para>
+                <para lang="ja">
+                  画像の外に中心点 (回転軸) を置いてレイヤーを回転させた
+                </para>
+              </caption>
+            </mediaobject>
+          </figure>
         </listitem>
       </varlistentry>
     </variablelist>
