@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+                       "http://www.docbook.org/xml/4.3/docbookx.dtd">
+<!--2012-12-12-->
+<sect2 id="gimp-tool-cage">
+  <title lang="en">The Cage Tool</title>
+  <title lang="ja">ケージ変形</title>
+
+  <indexterm lang="en">
+    <primary>Tools</primary>
+    <secondary>Cage Tool</secondary>
+  </indexterm>
+  <indexterm lang="en"><primary>Cage</primary></indexterm>
+  <indexterm lang="ja">
+    <primary>ツール</primary>
+    <secondary sortas="ケージヘンケイ">ケージ変形</secondary>
+  </indexterm>
+  <indexterm lang="ja"><primary>ケージ</primary></indexterm>
+
+  <figure>
+    <title lang="en">The Cage Tool in the Toolbox</title>
+    <title lang="ja">
+      ツールボックス上の<quote>ケージ変形</quote>ツールアイコン
+    </title>
+    <mediaobject>
+      <imageobject>
+        <imagedata format="PNG"
+          fileref="images/toolbox/toolbox-cage.png"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para lang="en">
+    The Cage tool is a special transforming tool allowing you to select the
+    transforming area by setting anchor points by free hand drawing similar
+    to the way you do it with the Free Selection (Lasso) tool. The tool adds
+    nothing to the image until you confirm the transformation by pressing the
+    <keycap>Enter</keycap> key.
+  </para>
+  <para lang="ja">
+    ケージ変形ツールは並外れた能力をもつ変形ツールであり、 変形したい領域は
+    自由選択 (なげなわ) ツールで選択範囲を作るときのようにフリーハンドで
+    アンカー点を並べる方法で自由自在に設定できます。 [領域を作成したあと
+    画像を歪めたい方向にアンカー点をずらしますが、] その時点では画像に実際の
+    変化はまだ起きません。 <keycap>Enter</keycap> キーを押すと変形が確定します。
+  </para>
+
+  <sect3>
+    <title lang="en">
+      <phrase>Activating the Tool</phrase>
+    </title>
+    <title lang="ja">呼び出し方</title>
+
+    <para lang="en">
+      You can activate the Cage tool in several ways:
+    </para>
+    <para lang="ja">
+      <quote>ケージ変形</quote>ツールを起用する方法はつぎのいずれかです。
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para lang="en">
+          From the image-menu, through:
+          <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guisubmenu>Transform Tools</guisubmenu>
+            <guimenuitem>Cage Transform</guimenuitem>
+          </menuchoice>
+        </para>
+        <para lang="ja">
+          画像ウィンドウのメニューより
+          <menuchoice>
+            <guimenu>ツール</guimenu>
+            <guisubmenu>変形ツール</guisubmenu>
+            <guimenuitem>ケージ変形</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          by clicking on the tool icon:
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-cage-22.png" />
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+          in the toolbox
+        </para>
+        <para lang="ja">
+          ツールボックスのツールアイコン
+          <guiicon>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/toolbox/stock-tool-cage-22.png" />
+              </imageobject>
+            </inlinemediaobject>
+          </guiicon>
+        </para>
+      </listitem>
+      <listitem>
+        <para lang="en">
+          or by using the <keycap>Shift</keycap> <keycap>G</keycap>
+          keyboard shortcut.
+        </para>
+        <para lang="ja">
+          キーボードショートカット
+          <keycombo><keycap>Shift</keycap><keycap>G</keycap></keycombo>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Tool Options</title>
+    <title lang="ja">ツールオプション</title>
+    <figure>
+      <title lang="en">Cage Tool options</title>
+      <title lang="ja"><quote>ケージ変形</quote>ツールのツールオプション</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/tool-options-cage.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para lang="en">
+      Normally, tool options are displayed in a window attached under the
+      Toolbox as soon as you activate a tool. If they are not, you can access
+      them from the image menu bar through
+      <menuchoice>
+        <guimenu>Windows</guimenu>
+        <guisubmenu>Dockable Windows</guisubmenu>
+        <guimenuitem>Tool Options</guimenuitem>
+      </menuchoice>
+      which opens the option window of the selected tool.
+    </para>
+    <para lang="ja">
+      一般的にはこのツールを起用すると、 そのツールオプションがツールボックスの
+      下に繋げられたウィンドウ上に現れます。 そのようなウィンドウが見あたらない
+      ときは、 画像ウィンドウのメニューより
+      <menuchoice>
+        <guimenu>ウィンドウ</guimenu>
+        <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+        <guimenuitem>ツールオプション</guimenuitem>
+      </menuchoice>
+      と辿れば今使っているツールのツールオプションウィンドウが開きます。
+    </para>
+    <variablelist>
+      <varlistentry>
+        <term lang="en">Create or adjust the cage</term>
+        <term lang="ja">ケージを作成または調整</term>
+        <listitem>
+          <para lang="en">
+            When activating the Cage Tool this option is selected. You can now
+            click in the image to make anchor points around the desired area.
+            If you need to add anchor points at a later stage, you click on
+            this option.
+          </para>
+          <para lang="ja">
+            ケージ変形ツールを呼び出したときはこのモードになっています。 
+            このときに変形させたい領域を囲むように画像をクリックしてつぎつぎと
+            アンカー点を置いてゆきます。 あとでアンカー点を追加する必要が
+            できたときはこのモードに切り替えてから画像をクリックします。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Deform the cage to deform the image</term>
+        <term lang="ja">ケージを移動してオブジェクトを変形</term>
+        <listitem>
+          <para lang="en">
+            <acronym>GIMP</acronym> switch to this option automatically when the
+            cage outline is finished. Now you are able to drag the anchor points
+            around in the image and even outside it to transform the picture.
+            The transforming starts when you release the mouse button.
+          </para>
+          <para lang="en">
+            You can activate more than one anchor point by holding down the
+            <keycap>Shift</keycap> key while clicking on the points. You can
+            also select more points by holding down the mouse button while
+            drawing a rectangle around the desired points.
+          </para>
+          <para lang="ja">
+            変形したい部分を囲むように一周してアンカー点が並びつながると
+            ケージの領域ができあがり、 自動的にオプションがこちらのモードに
+            切り替わります。 このモードでは画像を囲むアンカー点をクリックしては
+            歪めたい方向にドラッグして移動してゆきます。 移動先は画像の外でも
+            かまいません。 マウスボタンを放すと変形がはじまります。
+          </para>
+          <para lang="ja">
+            <keycap>Shift</keycap> キーを押しながらアンカー点を複数選び、
+            いちどにドラッグして同じ方向に移動できます。 あるいは移動したい
+            いくつかのアンカー点を囲むような長方形を思いうかべ、 その対角線の
+            端から端までドラッグしてもまとめてアンカー点を選択できます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">
+          Fill the original position of the cage with a plain color
+        </term>
+        <term lang="ja">初期ケージ内を単色で塗りつぶす</term>
+        <listitem>
+          <para lang="en">
+            If the transforming action results in empty areas these areas will
+            be filled with color if this option is checked. It looks like the
+            color is picked from the start pixel of the cage line.
+          </para>
+          <para lang="ja">
+            変形で隙間ができたとき、 このオプションが有効であれば、 単色で塗り
+            つぶします。 色は囲み線の始点の画素から採られているようです。
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3>
+    <title lang="en">Example for the <quote>Cage</quote> tool</title>
+    <title lang="ja"><quote>ケージ変形</quote>ツールの使用例</title>
+    <figure>
+      <title lang="en">Cage Tool example</title>
+      <title lang="ja">ケージ変形の例</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/cage-1.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">The cage area selected</para>
+          <para lang="ja">ケージ変形の領域が選択された</para>
+        </caption>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG"
+            fileref="images/toolbox/cage-2.png"/>
+        </imageobject>
+        <caption>
+          <para lang="en">Transformed</para>
+          <para lang="en">変形のようす</para>
+        </caption>
+      </mediaobject>
+    </figure>
+
+    <para lang="en">
+      When clicking on the cage icon in the toolbox the cage option is set to
+      <quote>Create or adjust the cage</quote>. You are now able to draw a cage
+      outline in the image by successively clicking around the area you want to
+      transform. Click on the starting point to finish the selection.
+      <acronym>GIMP</acronym> will then do some mathematics and activate the
+      <quote>Deform the cage to deform the image</quote> to allow you to drag
+      the points on the line to deform the cage and the image.
+    </para>
+    <para lang="en">
+      The selected point(s) turns to a square. Drag the points around in the
+      image to transform it. The transforming will occur every time you release
+      the press on the mouse button. The transforming may take some time so be
+      patient especially when working with large images.
+    </para>
+    <para lang="en">
+      If you desire to add more points to the line you have to select the
+      <quote>Create or adjust the cage</quote> in the tool options dialog.
+      Put the points on the line and switch back to the <quote>Deform the cage
+      to deform the image</quote> to transform the image or layer.
+    </para>
+    <para lang="en">
+      When the work is done, press the <keycap>Enter</keycap> key to confirm it.
+    </para>
+    <para lang="ja">
+      ツールボックスの<quote>ケージ変形</quote>ツールアイコンをクリックした
+      直後は、 <guilabel>ケージを作成または調整</guilabel> モードになります。
+      変形したい部分を囲むようにつぎつぎと画像をクリックしてケージ変形領域の
+      外枠線をつないでゆきます。 最後に最初のアンカー点を再びクリックすると
+      外枠線が一周し範囲の選択が完了します。 すると <acronym>GIMP</acronym> は
+      いくつかの計算を行ったあと、 <guilabel>ケージを移動してオブジェクトを変形
+      </guilabel> モードに切り替えますので、 あとはアンカー点をドラッグして
+      ケージの形を変えれば、 それにつられて画像が歪みます。
+    </para>
+    <para lang="ja">
+      ケージのアンカー点はいずれも丸印ですが、 選択したものは四角の姿に
+      なります。 選んだアンカー点をドラッグして移動するとそれらに囲まれている
+      部分が変形します。 マウスボタンを放すたびに画像表示が更新され変形の
+      ようすがわかります。 変形には大量の計算を要しますのでとくに大きな画像を
+      変形操作しているときはそのつどお待たせすることがあります。
+    </para>
+    <para lang="ja">
+      ケージ枠にアンカー点がもっと必要になったときはツールオプション
+      ダイアログの <guilabel>ケージを作成または調整</guilabel> モードに
+      切り替える必要があります。 枠線上でクリックしてアンカー点を増設したら、 
+      再び <guilabel>ケージを移動してオブジェクトを変形</guilabel> モードに
+      切り替えてから画像やレイヤーの変形を続行します。
+    </para>
+    <para lang="ja">
+      変形の操作を終えたあと <keycap>Enter</keycap> キーを押せば変形が実際に
+      確定します。
+    </para>
+  </sect3>
+</sect2>
