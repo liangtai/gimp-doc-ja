@@ -2,6 +2,7 @@
 <!DOCTYPE sect3 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2013-03-29 j.h; added non-documented feature
   2012-05-25 j.h: no change for 2.8
   2009-04-04 j.h: fixed bug #577170
   2008-02-22 j.h: added example for new gradient
@@ -9,7 +10,7 @@
   2006-04-30 lexa: made almost docbook compliant
   2005-11-28 replaced informalfigures by figures by lexa
 -->
-<!--2012-06-21-->
+<!--2013-03-30-->
 <sect3 id="gimp-gradient-editor-dialog">
   <title lang="en">The Gradient Editor</title>
   <title lang="ja">グラデーションエディター</title>
@@ -565,7 +566,7 @@
             <para lang="ja">
               このコマンドは前掲のメニューに連動しており、 その終端の色のタイプ
               に <guimenuitem>指定色</guimenuitem> 以外を選んでいるときは、
-              終端色を選ぶこのメニューは灰色無効になります。
+              終端色を選ぶこのメニューが灰色無効になります。
             </para>
           </note>
         </listitem>
@@ -662,7 +663,7 @@
                   be assigned to the endpoint.
                 </para>
                 <para lang="ja">
-                  このサブメニューの残りは 10 個の<quote>保存枠</quote>です。
+                  このサブメニューの残りは 10 個の<quote>保存庫</quote>です。
                   後述する <guisubmenu>色の保存先</guisubmenu> サブメニューで
                   個々に色を割り当てられます。 ここで選んだ枠の色が終端色に
                   使われます。 <!--セーブ数は10個-->
@@ -685,7 +686,49 @@
           </para>
           <para lang="ja">
             この2つのサブメニューは現在その端点に使われている色を、
-            サブメニュー内で指定した<quote>保存枠</quote>にとりこみます。
+            サブメニュー内で指定した<quote>保存庫</quote>にとりこみます。
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term lang="en">Click and drag colors</term>
+        <term lang="ja">色のクリックおよびドラッグ</term>
+        <listitem>
+          <para lang="en">
+            You can also click and drag a color from the toolbox FG-BG colors
+            or from a palette
+            <itemizedlist>
+              <listitem>
+                <para>
+                  to an endpoint (a black triangle), to set left [right] colors,
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  to the gradient display area, to add a new endpoint with this
+                  color on both sides.
+                </para>
+              </listitem>
+            </itemizedlist>
+          </para>
+          <para lang="ja">
+            <quote>パレットダイアログ</quote>や<quote>描画色/背景色</quote>
+            ダイアログ、 あるいはツールボックスから色標識をクリックして
+            ドラッグで
+            <itemizedlist>
+              <listitem>
+                <para>
+                  終端点 (黒三角形) 上に曳き込めばそこに接する左右の終端色が
+                  変更でき、
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  グラデーション表示領域に曳き込めば新たに終端点が追加され、
+                  できた端点の両面の終端色がその色に設定されます。
+                </para>
+              </listitem>
+            </itemizedlist>
           </para>
         </listitem>
       </varlistentry>
