@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
-"POT-Creation-Date: 2013-03-30 06:56+0900\n"
-"PO-Revision-Date: 2013-03-30 09:45+0900\n"
+"POT-Creation-Date: 2013-03-31 21:22+0900\n"
+"PO-Revision-Date: 2013-03-31 21:45+0900\n"
 "Last-Translator: liangtai <liangtai.s4@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -78,7 +78,7 @@ msgstr ""
 #: src/dialogs/patterns-dialog.xml:46(title)
 #: src/dialogs/path-dialog.xml:42(title)
 #: src/dialogs/palettes-dialog.xml:53(title)
-#: src/dialogs/navigation-dialog.xml:34(title)
+#: src/dialogs/navigation-dialog.xml:52(title)
 #: src/dialogs/layer-dialog.xml:60(title)
 #: src/dialogs/indexed-palette-dialog.xml:46(title)
 #: src/dialogs/images-dialog.xml:39(title)
@@ -101,7 +101,7 @@ msgstr ""
 #: src/dialogs/patterns-dialog.xml:52(para)
 #: src/dialogs/path-dialog.xml:48(para)
 #: src/dialogs/palettes-dialog.xml:58(para)
-#: src/dialogs/navigation-dialog.xml:40(para)
+#: src/dialogs/navigation-dialog.xml:58(para)
 #: src/dialogs/layer-dialog.xml:66(para)
 #: src/dialogs/indexed-palette-dialog.xml:51(para)
 #: src/dialogs/images-dialog.xml:44(para)
@@ -1029,7 +1029,7 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: src/dialogs/sample-points.xml:55(None)
 #: src/dialogs/pointer-dialog.xml:62(None)
-#: src/dialogs/navigation-dialog.xml:60(None)
+#: src/dialogs/navigation-dialog.xml:78(None)
 #: src/dialogs/error-console.xml:50(None)
 #: src/dialogs/error-console.xml:134(None)
 msgid ""
@@ -1069,7 +1069,7 @@ msgstr "サンプルポイントダイアログ"
 #: src/dialogs/patterns-dialog.xml:21(secondary)
 #: src/dialogs/path-dialog.xml:20(secondary)
 #: src/dialogs/palettes-dialog.xml:22(secondary)
-#: src/dialogs/navigation-dialog.xml:14(secondary)
+#: src/dialogs/navigation-dialog.xml:15(secondary)
 #: src/dialogs/layer-dialog.xml:19(secondary)
 #: src/dialogs/gradient-dialog.xml:22(secondary)
 #: src/dialogs/fonts-dialog.xml:18(secondary)
@@ -3946,7 +3946,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/navigation-dialog.xml:21(None)
+#: src/dialogs/navigation-dialog.xml:22(None)
 msgid ""
 "@@image: 'images/dialogs/navigation.png'; "
 "md5=dc993294cb087c2419d0ee1cd4758745"
@@ -3954,36 +3954,53 @@ msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/dialogs/navigation-dialog.xml:86(None)
+#: src/dialogs/navigation-dialog.xml:104(None)
 msgid ""
 "@@image: 'images/dialogs/icon-navigation.png'; "
 "md5=59a3ed5d4b20665276c36c1292b11a6f"
 msgstr "common"
 
-#: src/dialogs/navigation-dialog.xml:11(title)
-#: src/dialogs/navigation-dialog.xml:18(title)
+#: src/dialogs/navigation-dialog.xml:12(title)
+#: src/dialogs/navigation-dialog.xml:19(title)
 msgid "Navigation Dialog"
 msgstr "ナビゲーションダイアログ"
 
-#: src/dialogs/navigation-dialog.xml:13(primary)
+#: src/dialogs/navigation-dialog.xml:14(primary)
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: src/dialogs/navigation-dialog.xml:25(para)
+#: src/dialogs/navigation-dialog.xml:26(para)
 msgid ""
 "The Navigation dialog is designed to offer easy movement around the active "
 "image if the zoom is set higher than what the image window can display. If "
 "this is the case, there is an inversely colored rectangle that shows the "
-"location of the current view area in respect to the image. This rectangular "
-"outline can be dragged to change the viewing region."
+"location of the current view area in respect to the image."
 msgstr ""
 "ナビゲーションダイアログは、 画像が画像ウィンドウより大きかったりはみ出すほど"
 "に拡大ズーム表示されているときに、 活性画像の見たい部分を容易に繰り寄せられる"
 "ようにするために作られました。 使用時には画像の縮小見本画像上に画像ウィンドウ"
-"が現在表示している区域を示す白い矩形枠が描かれます。 この枠をドラッグして移動"
-"すれば画像ウィンドウの実際の表示領域も連動して変化します。"
+"が現在表示している区域を示す白い矩形枠が描かれます。"
 
-#: src/dialogs/navigation-dialog.xml:35(para)
+#: src/dialogs/navigation-dialog.xml:36(para)
+msgid "Click and drag the rectangular area."
+msgstr "ダイアログ縮小画面上の矩形枠をクリックしてドラッグで移動します。"
+
+#: src/dialogs/navigation-dialog.xml:41(para)
+msgid ""
+"Use <keycap>Shift</keycap> and mouse-wheel to move horizontally, "
+"<keycap>Alt</keycap> and mouse-wheel to move vertically. The mouse pointer "
+"must be on the rectangular area in the shape of a grabbing hand."
+msgstr ""
+"<keycap>Shift</keycap> キーを押しながらマウスホイールを回せば水平に移動、 "
+"<keycap>Alt</keycap> キーを押しながら回せば垂直に移動します。 この操作はマウ"
+"スポインターがダイアログ縮小画面上の矩形枠内にあり、 ポインターが<quote>掴む"
+"手</quote>の姿に変化していなければなりません。"
+
+#: src/dialogs/navigation-dialog.xml:32(para)
+msgid "To change the viewing region: <placeholder-1/>"
+msgstr "視野を移動する方法はつぎのいずれかです。 <placeholder-1/>"
+
+#: src/dialogs/navigation-dialog.xml:53(para)
 msgid ""
 "The <quote>Navigation</quote> dialog is a dockable dialog; see the section "
 "<xref linkend=\"gimp-concepts-docks\"/> for help on manipulating it."
@@ -3991,7 +4008,7 @@ msgstr ""
 "<quote>ナビゲーション</quote>ダイアログはドッキング可能です。 その扱い方につ"
 "いては <xref linkend=\"gimp-concepts-docks\"/> の節をご覧ください。"
 
-#: src/dialogs/navigation-dialog.xml:45(para)
+#: src/dialogs/navigation-dialog.xml:63(para)
 msgid ""
 "from the image menu: <menuchoice><guimenu>Windows</"
 "guimenu><guisubmenu>Dockable Dialogs</guisubmenu><guimenuitem>Navigation</"
@@ -4001,7 +4018,7 @@ msgstr ""
 "guimenu><guisubmenu>ドッキング可能なダイアログ</guisubmenu><guimenuitem>ナビ"
 "ゲーション</guimenuitem></menuchoice>"
 
-#: src/dialogs/navigation-dialog.xml:55(para)
+#: src/dialogs/navigation-dialog.xml:73(para)
 msgid ""
 "from the Tab menu in any dockable dialog by clicking on <placeholder-1/> and "
 "selecting <menuchoice><guimenu>Add Tab</guimenu><guimenuitem>Navigation</"
@@ -4011,7 +4028,7 @@ msgstr ""
 "すると出てくるタブメニューより <menuchoice><guimenu>タブの追加</"
 "guimenu><guimenuitem>ナビゲーション</guimenuitem></menuchoice>"
 
-#: src/dialogs/navigation-dialog.xml:71(para)
+#: src/dialogs/navigation-dialog.xml:89(para)
 msgid ""
 "from the image-menu: <menuchoice><guimenu>View</"
 "guimenu><guimenuitem>Navigation window</guimenuitem></menuchoice>."
@@ -4019,7 +4036,7 @@ msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>表示</guimenu><guimenuitem>"
 "ナビゲーションウィンドウ</guimenuitem></menuchoice>"
 
-#: src/dialogs/navigation-dialog.xml:80(para)
+#: src/dialogs/navigation-dialog.xml:98(para)
 msgid ""
 "You can access more quickly to it (but without the zoom functions) by "
 "clicking on the icon at the right bottom corner of the image window: "
@@ -4028,27 +4045,32 @@ msgstr ""
 "もっと手軽なナビゲーション (ただしズーム機能はありません) が画像ウィンドウの"
 "右下隅のボタンをクリックすると呼び出せます。 <placeholder-1/>"
 
-#: src/dialogs/navigation-dialog.xml:95(title)
+#: src/dialogs/navigation-dialog.xml:113(title)
 msgid "Using the Navigation Dialog"
 msgstr "ナビゲーションダイアログの利用法"
 
-#: src/dialogs/navigation-dialog.xml:98(term)
+#: src/dialogs/navigation-dialog.xml:116(term)
 msgid "The slider"
 msgstr "スライダー"
 
-#: src/dialogs/navigation-dialog.xml:100(para)
+#: src/dialogs/navigation-dialog.xml:118(para)
 msgid ""
 "It allows easy zoom level control, more precise than with the <link linkend="
-"\"gimp-view-zoom\">Zoom</link> command."
+"\"gimp-view-zoom\">Zoom</link> command. This slider can also be moved using "
+"the mouse wheel when the mouse pointer is on the slider, or <keycap>Ctrl</"
+"keycap> and mouse wheel when the mouse pointer is on the rectangular area."
 msgstr ""
 "表示倍率を簡単に、 しかも画像ウィンドウメニューの <link linkend=\"gimp-view-"
-"zoom\">拡大ズーム表示</link> よりも事細かく制御できます。"
+"zoom\">拡大ズーム表示</link> よりも事細かく制御できます。 スライダー上にマウ"
+"スポインターをかざしマウスホイールを回転しても、 あるいは矩形枠内にマウスポイ"
+"ンターを入れてから <keycap>Ctrl</keycap> キーを押しながらマウスホイールを回転"
+"してもスライダーの値を変えられます。"
 
-#: src/dialogs/navigation-dialog.xml:107(term)
+#: src/dialogs/navigation-dialog.xml:128(term)
 msgid "The buttons"
 msgstr "付属ボタン"
 
-#: src/dialogs/navigation-dialog.xml:109(para)
+#: src/dialogs/navigation-dialog.xml:130(para)
 msgid ""
 "<emphasis>Zoom Out</emphasis><guiicon><inlinegraphic fileref=\"images/"
 "dialogs/stock-zoom-out-16.png\"/></guiicon><emphasis>Zoom In</"
@@ -4070,21 +4092,21 @@ msgstr ""
 "対 1 ズーム」</phrase></textobject></inlinemediaobject></guiicon> は等倍率に"
 "します。"
 
-#: src/dialogs/navigation-dialog.xml:127(term)
+#: src/dialogs/navigation-dialog.xml:148(term)
 msgid "Adjust the zoom ratio so that the image becomes fully visible"
 msgstr "ウィンドウ内に画像すべてが表示されるように表示倍率を調整します"
 
-#: src/dialogs/navigation-dialog.xml:131(para)
+#: src/dialogs/navigation-dialog.xml:152(para)
 msgid ""
 "The zoom ratio is adjusted so that the whole image becomes visible in the "
 "window as it is."
 msgstr "画像ウィンドウ上に画像の全体が見えるように表示倍率を調整します。"
 
-#: src/dialogs/navigation-dialog.xml:138(term)
+#: src/dialogs/navigation-dialog.xml:159(term)
 msgid "Adjust the zoom ratio so that the window is used optimally"
 msgstr "ウィンドウ内に画像が最大限表示されるように表示倍率を調整します"
 
-#: src/dialogs/navigation-dialog.xml:142(para)
+#: src/dialogs/navigation-dialog.xml:163(para)
 msgid ""
 "The image size and the zoom are adjusted so that the image is fully "
 "displayed with the lesser zoom."
@@ -4093,11 +4115,11 @@ msgstr ""
 "比が画像ウィンドウの縦横比よりも大きければ画像は左右にはみ出し、 小さければ上"
 "下にはみ出します。"
 
-#: src/dialogs/navigation-dialog.xml:149(term)
+#: src/dialogs/navigation-dialog.xml:170(term)
 msgid "Reduce the image window to the size of the image display"
 msgstr "画像の表示サイズに従って、 ウィンドウサイズを変更します"
 
-#: src/dialogs/navigation-dialog.xml:153(para)
+#: src/dialogs/navigation-dialog.xml:174(para)
 msgid ""
 "Restore the image window to the size which allows the image to be fully "
 "displayed with the zoom unchanged. This command is also as menu entry "

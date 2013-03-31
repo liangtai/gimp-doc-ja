@@ -2,12 +2,13 @@
 <!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
+  2013-03-31 j.h: added non-documented features
   2012-05-25 j.h: no change for v2.8
   2008-12-13 j.h: updated to v2.6
   2007-09-30 j.h : revised v.2.4. Documented buttons.
   2006-03-11 lexa: made file docbook compliant
 -->
-<!--2012-06-13-->
+<!--2013-03-31-->
 <sect2 id="gimp-navigation-dialog">
   <title lang="en">Navigation Dialog</title>
   <title lang="ja">ナビゲーションダイアログ</title>
@@ -33,15 +34,49 @@
     The Navigation dialog is designed to offer easy movement around the active
     image if the zoom is set higher than what the image window can display. If
     this is the case, there is an inversely colored rectangle that shows the
-    location of the current view area in respect to the image. This
-    rectangular outline can be dragged to change the viewing region.
+    location of the current view area in respect to the image.
   </para>
   <para lang="ja">
     ナビゲーションダイアログは、 画像が画像ウィンドウより大きかったりはみ出す
     ほどに拡大ズーム表示されているときに、 活性画像の見たい部分を容易に繰り寄せ
     られるようにするために作られました。 使用時には画像の縮小見本画像上に画像
-    ウィンドウが現在表示している区域を示す白い矩形枠が描かれます。 この枠を
-    曳いて移動すれば画像ウィンドウの実際の表示領域も連動して変化します。
+    ウィンドウが現在表示している区域を示す白い矩形枠が描かれます。
+  </para>
+  <para lang="en">
+    To change the viewing region:
+    <itemizedlist>
+      <listitem>
+        <para>
+          Click and drag the rectangular area.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Use <keycap>Shift</keycap> and mouse-wheel to move horizontally,
+          <keycap>Alt</keycap> and mouse-wheel to move vertically. The mouse
+          pointer must be on the rectangular area in the shape of a grabbing
+          hand.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </para>
+  <para lang="ja">
+    視野を移動する方法はつぎのいずれかです。
+    <itemizedlist>
+      <listitem>
+        <para>
+          ダイアログ縮小画面上の矩形枠をクリックしてドラッグで移動します。
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <keycap>Shift</keycap> キーを押しながらマウスホイールを回せば水平に
+          移動、 <keycap>Alt</keycap> キーを押しながら回せば垂直に移動します。
+          この操作はマウスポインターがダイアログ縮小画面上の矩形枠内にあり、
+          ポインターが<quote>掴む手</quote>の姿に変化していなければなりません。
+        </para>
+      </listitem>
+    </itemizedlist>
   </para>
 
   <sect3>
@@ -158,12 +193,18 @@
         <listitem>
           <para lang="en">
             It allows easy zoom level control, more precise than with the
-            <link linkend="gimp-view-zoom">Zoom</link> command.
+            <link linkend="gimp-view-zoom">Zoom</link> command. This slider can
+            also be moved using the mouse wheel when the mouse pointer is on
+            the slider, or <keycap>Ctrl</keycap> and mouse wheel when the mouse
+            pointer is on the rectangular area.
           </para>
           <para lang="ja">
             表示倍率を簡単に、 しかも画像ウィンドウメニューの
             <link linkend="gimp-view-zoom">拡大ズーム表示</link>
-            よりも事細かく制御できます。
+            よりも事細かく制御できます。 スライダー上にマウスポインターをかざし
+            マウスホイールを回転しても、 あるいは矩形枠内にマウスポインターを
+            入れてから <keycap>Ctrl</keycap> キーを押しながらマウスホイールを
+            回転してもスライダーの値を変えられます。
           </para>
         </listitem>
       </varlistentry>
