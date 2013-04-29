@@ -11,7 +11,7 @@
   2005-11-28 Lexa: replaced informalfigures by figures.
   2005-05-08 added french translation
 -->
-<!--2012-06-15-->
+<!--2013-04-29-->
 <sect1 id="gimp-concepts-gradients">
   <title lang="en">Gradients</title>
   <title lang="ja">グラデーション</title>
@@ -190,23 +190,39 @@
       </figure>
     </listitem>
     <listitem>
-      <para lang="en">Use a gradient with a drawing tool:</para>
+      <para lang="en">Painting with a gradient:</para>
       <para lang="en">
-        You can also use a gradient with pencil, brush or airbrush tools
-        if you check <guilabel>Use color from gradient</guilabel>
-        In the example below the option is checked for a pencil tool. You
-        see in the drawing in the right side the succession of the colors
-        of the gradient (to infinity...).
+        You can also use a gradient with the Pencil, Paintbrush or Airbrush
+        tools if you choose the dynamics <guilabel>Color From
+        Gradient</guilabel>.  In the next step choose a suitable gradient from
+        <guilabel>Color options</guilabel> and in the
+        <guilabel>Fade options</guilabel> set the gradients length
+        and the style of the repeating. The chapter
+        <xref linkend="gimp-tool-dynamic-options"/> describes these
+        parameters in more detail.
+        </para>
+        <para lang="en">
+        The following example shows the impact on the Pencil tool.
+        You see in the upper side of the figure the necessary settings
+        and the lower side of the figure shows the resulting succession
+        of the gradients colors.
       </para>
       <para lang="ja">
-        筆触ツールでグラデーションをかけるにはつぎのようにします。
+        グラデーションで描画する方法について
       </para>
       <para lang="ja">
+        <guilabel>動的特性のオプション</guilabel> に
+        <guimenuitem>Color&nbsp;From&nbsp;Gradient</guimenuitem> を指定すれば、
         鉛筆、 絵筆、 エアブラシの各ツールでもグラデーションが使えます。
-        <guilabel>グラデーションで描画</guilabel> オプションにチェックを入れて
-        ください。 つぎの例では<quote>鉛筆で描画</quote>ツールを起用しこの
-        オプションを使っています。 下図右側の描線ではグラデーションの色順が
-        (折り返しながら繰り返し) 現れているのがわかるでしょう。
+        さらに <guilabel>色のオプション</guilabel> で好みのグラデーションを
+        選び、 <guilabel>フェードのオプション</guilabel> で<quote>フェードの
+        長さ</quote>や<quote>反復</quote>のしかたを設定します。
+        <xref linkend="gimp-tool-dynamic-options"/> の節でさらに詳しく
+        これらのパラメーターについて解説しています。
+      </para>
+      <para lang="ja">
+        下図は<quote>鉛筆で描画</quote>ツールでの使用例です。
+        必須の設定項目とその実行結果をご覧ください。
       </para>
       <figure>
         <title lang="en">
@@ -220,6 +236,26 @@
           </imageobject>
         </mediaobject>
       </figure>
+      <para lang="en">
+        To use the Paint tools with the same settings as they were known
+        as option <guilabel>Use color from gradient</guilabel> in GIMP
+        up to version 2.6 open the
+        <link linkend="gimp-presets-dialog">Tool Presets Dialog</link>.
+        Then choose one of the items <guilabel>Airbrush (Color From
+        Gradient)</guilabel>,
+        <guilabel>Paintbrush (Color From Gradient)</guilabel> or
+        <guilabel>Pencil (Color From Gradient)</guilabel> from it.
+      </para>
+      <para lang="ja">
+        <application><acronym>GIMP</acronym>&nbsp;2.6</application> 以前の版の
+        描画ツールにあった <guilabel>グラデーションで描画</guilabel>
+        オプションと同等の効果を得るには、
+		<link linkend="gimp-presets-dialog">ツールプリセットダイアログ</link>
+		にて <guimenuitem>Airbrush&nbsp;(Color&nbsp;From&nbsp;Gradient)</guimenuitem> か
+		<guimenuitem>Paintbrush&nbsp;(Color&nbsp;From&nbsp;Gradient)</guimenuitem> か
+		<guimenuitem>Pencil&nbsp;(Color&nbsp;From&nbsp;Gradient)</guimenuitem>
+        のいずれかの設定を利用します。
+      </para>
     </listitem>
     <listitem>
       <para lang="en">Different productions with the same gradient:</para>
