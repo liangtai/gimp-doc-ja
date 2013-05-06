@@ -2,16 +2,10 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
                        "http://www.docbook.org/xml/4.3/docbookx.dtd">
 <!-- section history:
-  2009-02-19 j.h: revised for v2.6. No change
-  2008-04-04 Mr.Dust : reviewed and added 'ko'
-  2006-05-08 added Korean translation by Dust
-  2006-04-30 HdJ: added dutch translation.
-  2006-04-10 Ciampix: added italian translation.
-  2006-03-04 Lexa: added german translation and made docbook compliant.
+  2006-03-04 Lexa: made docbook compliant.
   2005-11-28 Lexa: replaced informalfigures by figures.
-  2005-05-08 added french translation
 -->
-<!--2013-04-29-->
+<!--2013-05-06-->
 <sect1 id="gimp-concepts-gradients">
   <title lang="en">Gradients</title>
   <title lang="ja">グラデーション</title>
@@ -65,23 +59,6 @@
     にも以下のような重要なグラデーションの利用方法があります。
   </para>
   <variablelist>
-    <varlistentry>
-      <term lang="en">Painting with a gradient</term>
-      <term lang="ja">グラデーションで描画</term>
-      <listitem>
-        <para lang="en">
-          Each of <acronym>GIMP</acronym>'s basic painting tools allows you
-          the option of using
-          colors from a gradient. This enables you to create brushstrokes that
-          change color from one end to the other.
-        </para>
-        <para lang="ja">
-          <acronym>GIMP</acronym> の基本的な描画ツールはいずれもグラデーション
-          から色を得るオプションがあります。 有効にすると筆運びの始めから終り
-          まで色が変化します。
-        </para>
-      </listitem>
-    </varlistentry>
     <varlistentry>
       <term lang="en">The Gradient Map filter</term>
       <term lang="ja">グラデーションマップフィルター</term>
@@ -191,7 +168,7 @@
     </listitem>
     <listitem>
       <para lang="en">Painting with a gradient:</para>
-      <para lang="en">
+<!--
         You can also use a gradient with the Pencil, Paintbrush or Airbrush
         tools if you choose the dynamics <guilabel>Color From
         Gradient</guilabel>.  In the next step choose a suitable gradient from
@@ -200,17 +177,6 @@
         and the style of the repeating. The chapter
         <xref linkend="gimp-tool-dynamic-options"/> describes these
         parameters in more detail.
-        </para>
-        <para lang="en">
-        The following example shows the impact on the Pencil tool.
-        You see in the upper side of the figure the necessary settings
-        and the lower side of the figure shows the resulting succession
-        of the gradients colors.
-      </para>
-      <para lang="ja">
-        グラデーションで描画する方法について
-      </para>
-      <para lang="ja">
         <guilabel>動的特性のオプション</guilabel> に
         <guimenuitem>Color&nbsp;From&nbsp;Gradient</guimenuitem> を指定すれば、
         鉛筆、 絵筆、 エアブラシの各ツールでもグラデーションが使えます。
@@ -219,6 +185,102 @@
         長さ</quote>や<quote>反復</quote>のしかたを設定します。
         <xref linkend="gimp-tool-dynamic-options"/> の節でさらに詳しく
         これらのパラメーターについて解説しています。
+-->
+      <para lang="en">
+        In former versions of <acronym>GIMP</acronym>, you had  a
+        <guilabel>Color from Gradient</guilabel> option in tool options that
+        allowed you to paint with a gradient. This option no longer exists in
+        <acronym>GIMP-2.8</acronym>. But you can still paint with a gradient
+        by creating a custom new dynamics. Here is the trick:
+      </para>
+      <para lang="ja">
+        グラデーションで描画する方法について
+      </para>
+      <para lang="ja">
+        かつての <acronym>GIMP</acronym> の描画ツールのツールオプション
+        ダイアログには <guilabel>グラデーションで描画</guilabel> オプションが
+        あり、 これを有効にすると描いた線はグラデーションどおりに色変わり
+        しました。 このオプションは廃止されましたが、 代わりに
+        <application><acronym>GIMP</acronym>&nbsp;2.8</application> 以降は
+        動的特性でこの効果が選択でき、 プリセットを作成してお好みの設定を
+        保存できます。 作成方法はつぎのとおり。
+      </para>
+      <procedure>
+        <step>
+          <para lang="en">
+            Open the <emphasis>Windows/Dockable Dialogs/Paint
+            Dynamics</emphasis> dialog.
+          </para>
+          <para lang="ja">
+            画像ウィンドウのメニューより
+            <menuchoice>
+              <guimenu>ウィンドウ</guimenu>
+              <guisubmenu>ドッキング可能なダイアログ</guisubmenu>
+              <guimenuitem>描画の動的特性</guimenuitem>
+            </menuchoice>
+            と進むと、 <quote>描画の動的特性</quote>ダイアログが開かれます。
+          </para>
+        </step>
+        <step>
+          <para lang="en">
+            Right-click in this dialog and choose the <guilabel>New
+            Dynamics</guilabel> command, or click on the <guilabel>Create a new
+            dynamics</guilabel> button at the bottom of the dialog. This opens
+            the Paint Dynamics Editor.
+          </para>
+          <para lang="ja">
+            ダイアログのタブメニューの最初の項目を進むかもしくはダイアログ上を
+            <mousebutton>第2ボタン</mousebutton> でクリックすると現れる脈絡
+            メニューから、 <guimenuitem>新しい動的特性</guimenuitem> を
+            選びます。 あるいはダイアログ底部の
+            <guiicon>
+              <inlinegraphic
+                fileref="images/dialogs/dialogs-icon-new.png"/>
+            </guiicon>
+            <quote>新しい動的特性を作成</quote>ボタンをクリックします。 すると
+            <quote>動的特性エディター</quote>ダイアログが開かれます。
+          </para>
+        </step>
+        <step>
+          <para lang="en">
+            In this editor, rename <quote>Untitled</quote> to <quote>Color from
+            Gradient</quote> and check the Color/Fade box. This new dynamics
+            appears at the top of the dynamics list.
+          </para>
+          <para lang="ja">
+            <quote>動的特性エディター</quote>で<quote>名称未設定</quote>を
+            例えば<quote>グラデーションの色遣い</quote>のような名前に書き
+            直し、 入力側の動作 <guilabel>フェード</guilabel> と出力
+            パラメーターの <guilabel>色</guilabel> の交点のチェックボックスに
+            印を入れます。 こうしでできた動的特性プリセットは<quote>描画の
+            動的特性</quote>選択ダイアログの一覧表の最上部に加えられます。
+          </para>
+        </step>
+        <step>
+          <para lang="en">
+            Now choose the dynamics <guilabel>Color From Gradient</guilabel>
+            option. In the next step choose a suitable gradient from
+            <guilabel>Color options</guilabel> and in the
+            <guilabel>Fade options</guilabel> set the gradients length
+            and the style of the repeating. The chapter
+            <xref linkend="gimp-tool-dynamic-options"/> describes these
+            parameters in more detail.
+          </para>
+          <para lang="ja">
+            作成したプリセットを選択します。 つづいて
+            <guilabel>色のオプション</guilabel> で好みのグラデーションを選び、
+            <guilabel>フェードのオプション</guilabel> で<quote>フェードの
+            長さ</quote>や<quote>反復</quote>のしかたを設定します。
+            <xref linkend="gimp-tool-dynamic-options"/> の節でさらに詳しく
+            これらのパラメーターについて解説しています。
+          </para>
+        </step>
+      </procedure>
+      <para lang="en">
+        The following example shows the impact on the Pencil tool.
+        You see in the upper side of the figure the necessary settings
+        and the lower side of the figure shows the resulting succession
+        of the gradients colors.
       </para>
       <para lang="ja">
         下図は<quote>鉛筆で描画</quote>ツールでの使用例です。
