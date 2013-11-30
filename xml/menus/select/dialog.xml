@@ -9,7 +9,7 @@
   2005/09/16 reviewed; de added by axel.wernicke
   2005-06-02 created by julien hardelin
 -->
-<!--2012-03-25-->
+<!--2015-11-30-->
 <sect2 id="gimp-selection-dialog">
   <title lang="en">Selection Editor</title>
   <title lang="ja">選択範囲エディター</title>
@@ -347,6 +347,7 @@
           If two endpoints are closer than this value, they are made to be
           equal.
         </para>
+        <!-- 連接しきい値 -->
         <para lang="ja">
           <guilabel>Align Threshold</guilabel>:
           この値よりも接近した 2 つの端点はひとつの点であるとみなされます。
@@ -360,6 +361,7 @@
           even if it is within <emphasis>Corner Surround</emphasis>
           pixels of a point with a smaller angle.
         </para>
+        <!-- 確定折れ曲がり角度しきい値 -->
         <para lang="ja">
           <guilabel>Corner Always Threshold</guilabel>:
           ある点とその前後の点を結んでできた角度がこの値よりも小さいときは、
@@ -373,6 +375,7 @@
           Number of points to consider when determining if a
           point is a corner or not.
         </para>
+        <!-- 折れ曲がり角必須端点数 -->
         <para lang="ja">
           <guilabel>Corner Surround</guilabel>:
           ある点がまがり角になるかそうでないかを判定する点の数。
@@ -384,6 +387,7 @@
           If a point, its predecessors, and its successors
           define an angle smaller than this, it is a corner.
         </para>
+        <!-- 折れ曲がり角度しきい値 -->
         <para lang="ja">
           <guilabel>Corner Threshold</guilabel>:
           ある点とその前後の点を結んでできた角度がこの値よりも小さいとき、
@@ -411,6 +415,7 @@
           is unacceptable. If any pixel is further away than this from the
           fitted curve, the algorithm tries again.
         </para>
+        <!-- エラー許容しきい値 -->
         <para lang="ja">
           <guilabel>Error Threshold</guilabel>:
           あてがわれたスプライン
@@ -437,9 +442,10 @@
           A second number of adjacent points to consider
           when filtering.
         </para>
+        <!-- 追加フィルター必須端点数 -->
         <para lang="ja">
           <guilabel>Filter Alternative Surround</guilabel>:
-          フィルターを掛けるときに考慮される隣接点の秒数。
+          フィルターを掛けるときに考慮される追加の隣接点の数。
         </para>
       </listitem>
       <listitem>
@@ -451,6 +457,7 @@
           points differ by more than this, use the one from
           <emphasis>Filter Alternative Surround</emphasis>.
         </para>
+        <!-- フィルターイプシロン角度 -->
         <para lang="ja">
           <guilabel>Filter Epsilon</guilabel>:
           <guilabel>Filter Surround</guilabel> と <guilabel>Filter Alternative 
@@ -468,6 +475,7 @@
           any points that <quote>should</quote> be corners aren't found,
           the curve goes wild around that point.
         </para>
+        <!-- フィルター反復回数 -->
         <para lang="ja">
           <guilabel>Filter Iteration Count</guilabel>:
           元のデータにある点を滑らかにする回数。 この数の増加は劇的な効果が
@@ -481,6 +489,7 @@
           <emphasis>Filter Percent</emphasis>: To produce the new point,
           use the old point plus this times the neighbors.
         </para>
+        <!-- フィルターパーセント -->
         <para lang="ja">
           <guilabel>Filter Percent</guilabel>:
           新たな点を生成するときは従来の点とここで定めた割合ぶんの隣接点が利用
@@ -494,6 +503,7 @@
           <emphasis>Filter Surround</emphasis> points defines a
           straight line.
         </para>
+        <!-- 副フィルター必須端点数 -->
         <para lang="ja">
           <guilabel>Filter Secondary Surround</guilabel>:
           <guilabel>Filter Surround</guilabel> 数の点が直線をなす場合に考慮
@@ -505,6 +515,7 @@
           <emphasis>Filter Surround</emphasis>:
           Number of adjacent points to consider when filtering.
         </para>
+        <!-- フィルター必須端点数 -->
         <para lang="ja">
           <guilabel>Filter Surround</guilabel>:
           フィルターを掛けるときに考慮される隣接点の数。
@@ -516,6 +527,7 @@
           This check box says whether or not to remove <quote>knee</quote>
           points after finding the outline.
         </para>
+        <!-- 膝点を残す -->
         <para lang="ja">
           <guilabel>Keep Knees</guilabel>:
           このチェックボックスは輪郭線を判定したあとで<quote>膝</quote>点を
@@ -531,6 +543,7 @@
           square of the curve length, to make shorter curves
           more likely to be reverted.
         </para>
+        <!-- 直線判定しきい値 -->
         <para lang="ja">
           <guilabel>Line Reversion Threshold</guilabel>:
           スプライン曲線がこの限界値よりも直線的になっている場合に、 むしろ
@@ -545,6 +558,7 @@
           diverge from the line determined by its endpoints
           before it is changed to a straight line.
         </para>
+        <!-- 直線化しきい値 -->
         <para lang="ja">
           <guilabel>Line Threshold</guilabel>:
           スプラインが直線化されるまでにその端点でできる直線からスプラインが
@@ -557,6 +571,7 @@
           If reparameterization doesn't improve the fit by this
           much percent, the algorithm stops doing it.
         </para>
+        <!-- 再パラメーター改良法 -->
         <para lang="ja">
           <guilabel>Reparametrize Improvement</guilabel>:
           この値 (百分率) により再パラメーター化をはかっても合い具合が向上しない
@@ -573,6 +588,7 @@
           iteration to improve it.  It may be that it would be better
           to detect the cases where the algorithm didn't find any corners.
         </para>
+        <!-- 再パラメーターしきい値 -->
         <para lang="ja">
           <guilabel>Reparametrize Threshold</guilabel>:
           再パラメーター化には点の数が不足しているところでのエラー発生数[上限]。
@@ -589,6 +605,7 @@
           Percentage of the curve away from the worst point
           to look for a better place to subdivide.
         </para>
+        <!-- 細分化検索 -->
         <para lang="ja">
           <guilabel>Subdivide Search</guilabel>:
           細分化する良好な位置を探すにあたり最悪な点から曲線が離れる百分率。
@@ -600,6 +617,7 @@
           Number of points to consider when deciding whether
           a given point is a better place to subdivide.
         </para>
+        <!-- 細分化必須端点数 -->
         <para lang="ja">
           <guilabel>Subdivide Surround</guilabel>:
           与えられた点が細分化する良好な位置であることを見極めるために考慮
@@ -613,10 +631,11 @@
           line and still be considered a better place to
           subdivide.
         </para>
+        <!-- 細分化しきい値 -->
         <para lang="ja">
           <guilabel>Subdivide Threshold</guilabel>:
-          1 点あたりいくつの画素が直線から離れつつも細分化するのに良好な位置と
-          見做されるかを規定します。
+          細分化するのに良好な位置と見做せそうな点においてまだ許容できる
+          直線から離れた画素数。
         </para>
       </listitem>
       <listitem>
@@ -626,6 +645,7 @@
           point when computing the approximation to the
           tangent at that point.
         </para>
+        <!-- 接面必須端点数 -->
         <para lang="ja">
           <guilabel>Tangent Surround</guilabel>:
           ある点の接面を近似算出するときのその点の側で注目される点の数。

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
 "POT-Creation-Date: 2010-12-24 08:07+0900\n"
-"PO-Revision-Date: 2012-08-28 22:30+0900\n"
+"PO-Revision-Date: 2013-11-27 23:57+0900\n"
 "Last-Translator: liangtai <liangtai.s16@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -1265,6 +1265,7 @@ msgstr ""
 "なっているためです。 それだけ開発者寄りの高度な内容であるともいえます。: 訳者"
 "注]"
 
+# 連接しきい値:
 #: src/menus/select/dialog.xml:201(para)
 msgid ""
 "<emphasis>Align Threshold</emphasis>: If two endpoints are closer than this "
@@ -1273,6 +1274,7 @@ msgstr ""
 "<guilabel>Align Threshold</guilabel>: この値よりも接近した 2 つの端点はひとつ"
 "の点であるとみなされます。"
 
+# 確定折れ曲がり角度しきい値:
 #: src/menus/select/dialog.xml:208(para)
 msgid ""
 "<emphasis>Corner Always Threshold</emphasis>: If the angle defined by a "
@@ -1284,6 +1286,7 @@ msgstr ""
 "きた角度がこの値よりも小さいときは、 その小さな角に入る画素数が "
 "<guilabel>Corner Surround</guilabel> 以下であっても角であるとみなします。"
 
+# 折れ曲がり角必須端点数:
 #: src/menus/select/dialog.xml:217(para)
 msgid ""
 "<emphasis>Corner Surround</emphasis>: Number of points to consider when "
@@ -1292,6 +1295,7 @@ msgstr ""
 "<guilabel>Corner Surround</guilabel>: ある点がまがり角になるかそうでないかを"
 "判定する点の数。"
 
+# 折れ曲がり角度しきい値:
 #: src/menus/select/dialog.xml:224(para)
 msgid ""
 "<emphasis>Corner Threshold</emphasis>: If a point, its predecessors, and its "
@@ -1311,6 +1315,7 @@ msgstr ""
 "くは用語集の  <xref linkend=\"glossary-bezier-curve\"/> の項をお読みくださ"
 "い。"
 
+# エラー許容しきい値:
 #: src/menus/select/dialog.xml:231(para)
 msgid ""
 "<emphasis>Error Threshold</emphasis>: Amount of error at which a fitted "
@@ -1321,14 +1326,16 @@ msgstr ""
 "> 上に起きるエラーの許容数。 あてがわれた曲線からこの上限を越える数の点がはみ"
 "出すとアルゴリズムが再試行されます。"
 
+# 追加フィルター必須端点数:
 #: src/menus/select/dialog.xml:250(para)
 msgid ""
 "<emphasis>Filter Alternative Surround</emphasis>: A second number of "
 "adjacent points to consider when filtering."
 msgstr ""
 "<guilabel>Filter Alternative Surround</guilabel>: フィルターを掛けるときに考"
-"慮される隣接点の秒数。"
+"慮される追加の隣接点の数。"
 
+# フィルターイプシロン角度:
 #: src/menus/select/dialog.xml:257(para)
 msgid ""
 "<emphasis>Filter Epsilon</emphasis>: If the angles between the vectors "
@@ -1341,6 +1348,7 @@ msgstr ""
 "従って生成されたベクトル間の角度がこの値よりも大きいときは <guilabel>Filter "
 "Alternative Surround</guilabel> の値が使われます。"
 
+# フィルター反復回数:
 #: src/menus/select/dialog.xml:267(para)
 msgid ""
 "<emphasis>Filter Iteration Count</emphasis>: The number of times to smooth "
@@ -1353,6 +1361,7 @@ msgstr ""
 "が得られます。 しかし角をなす <emphasis>べき</emphasis> 点が見付からないとき"
 "はその点の付近が荒れた曲線になってしまいます。"
 
+# フィルターパーセント:
 #: src/menus/select/dialog.xml:277(para)
 msgid ""
 "<emphasis>Filter Percent</emphasis>: To produce the new point, use the old "
@@ -1361,6 +1370,7 @@ msgstr ""
 "<guilabel>Filter Percent</guilabel>: 新たな点を生成するときは従来の点とここで"
 "定めた割合ぶんの隣接点が利用されます。"
 
+# 副フィルター必須端点数:
 #: src/menus/select/dialog.xml:283(para)
 msgid ""
 "<emphasis>Filter Secondary Surround</emphasis>: Number of adjacent points to "
@@ -1370,6 +1380,7 @@ msgstr ""
 "<guilabel>Filter Secondary Surround</guilabel>: <guilabel>Filter Surround</"
 "guilabel> 数の点が直線をなす場合に考慮される隣接点の数。"
 
+# フィルター必須端点数:
 #: src/menus/select/dialog.xml:291(para)
 msgid ""
 "<emphasis>Filter Surround</emphasis>: Number of adjacent points to consider "
@@ -1378,6 +1389,7 @@ msgstr ""
 "<guilabel>Filter Surround</guilabel>: フィルターを掛けるときに考慮される隣接"
 "点の数。"
 
+# 膝点を残す
 #: src/menus/select/dialog.xml:297(para)
 msgid ""
 "<emphasis>Keep Knees</emphasis>: This check box says whether or not to "
@@ -1386,6 +1398,7 @@ msgstr ""
 "<guilabel>Keep Knees</guilabel>: このチェックボックスは輪郭線を判定したあとで"
 "<quote>膝</quote>点を消去するかどうかを定めます。"
 
+# 直線判定しきい値:
 #: src/menus/select/dialog.xml:304(para)
 msgid ""
 "<emphasis>Line Reversion Threshold</emphasis>: If a spline is closer to a "
@@ -1397,6 +1410,7 @@ msgstr ""
 "も直線的になっている場合に、 むしろ曲線に戻せそうでも直線にします。 小振りな"
 "曲部が戻りやすくなるよう曲線の長さの 2 乗で加重されて使用されます。"
 
+# 直線化しきい値:
 #: src/menus/select/dialog.xml:314(para)
 msgid ""
 "<emphasis>Line Threshold</emphasis>: How many pixels (on the average) a "
@@ -1406,6 +1420,7 @@ msgstr ""
 "<guilabel>Line Threshold</guilabel>: スプラインが直線化されるまでにその端点で"
 "できる直線からスプラインが逸れる画素数 (平均値) の許容値です。"
 
+# 再パラメーター改良法:
 #: src/menus/select/dialog.xml:322(para)
 msgid ""
 "<emphasis>Reparametrize Improvement</emphasis>: If reparameterization "
@@ -1415,6 +1430,7 @@ msgstr ""
 "メーター化をはかっても合い具合が向上しない場合にこのアルゴリズムは処理を止め"
 "ます。"
 
+# 再パラメーターしきい値:
 #: src/menus/select/dialog.xml:329(para)
 msgid ""
 "<emphasis>Reparametrize Threshold</emphasis>: Amount of error at which it is "
@@ -1430,6 +1446,7 @@ msgstr ""
 "法で適合させるには当初の合わせ方からだと不十分な性能しかありません。 このアル"
 "ゴリズムが角を判定できないような場合を探りあてるのによさそうかもしれません。"
 
+# 細分化検索:
 #: src/menus/select/dialog.xml:340(para)
 msgid ""
 "<emphasis>Subdivide Search</emphasis>: Percentage of the curve away from the "
@@ -1438,6 +1455,7 @@ msgstr ""
 "<guilabel>Subdivide Search</guilabel>: 細分化する良好な位置を探すにあたり最悪"
 "な点から曲線が離れる百分率。"
 
+# 細分化必須端点数:
 #: src/menus/select/dialog.xml:347(para)
 msgid ""
 "<emphasis>Subdivide Surround</emphasis>: Number of points to consider when "
@@ -1446,15 +1464,17 @@ msgstr ""
 "<guilabel>Subdivide Surround</guilabel>: 与えられた点が細分化する良好な位置で"
 "あることを見極めるために考慮される点の数。"
 
+# 細分化しきい値:
 #: src/menus/select/dialog.xml:354(para)
 msgid ""
 "<emphasis>Subdivide Threshold</emphasis>: How many pixels a point can "
 "diverge from a straight line and still be considered a better place to "
 "subdivide."
 msgstr ""
-"<guilabel>Subdivide Threshold</guilabel>: 1 点あたりいくつの画素が直線から離"
-"れつつも細分化するのに良好な位置と見做されるかを規定します。"
+"<guilabel>Subdivide Threshold</guilabel>: 細分化するのに良好な位置と見做せそ"
+"うな点においてまだ許容できる直線から離れた画素数。"
 
+# 接面必須端点数:
 #: src/menus/select/dialog.xml:362(para)
 msgid ""
 "<emphasis>Tangent Surround</emphasis>: Number of points to look at on either "
