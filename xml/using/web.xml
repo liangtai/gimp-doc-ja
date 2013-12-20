@@ -10,7 +10,7 @@
   050930 de replaced informalfigure by axel.wernicke
   050829 de added by axel.wernicke
 -->
-<!--2012-06-15-->
+<!--2013-12-20-->
 <sect1 id="gimp-using-web">
   <title lang="en">Preparing your Images for the Web</title>
   <title lang="ja">ウェブ用の画像の作成</title>
@@ -112,7 +112,7 @@
             If the image has a soft transition into the transparent areas, you
             should not remove the alpha channel, since the information
             used for the transition is not be saved in the file.
-            To save an image with transparent areas which do not have a
+            To export an image with transparent areas which do not have a
             soft transition, (similar to
             <link linkend="file-gif-save">GIF</link>),
             remove the alpha channel.
@@ -124,30 +124,30 @@
             なだらかな色変化の情報がファイルに保存されなくなるからです。
             透明部分がある画像でも、 徐々に変化する部分を含まないのであれば、 (
             <link linkend="file-gif-save">GIF</link>の場合と同じく、)
-            保存するときはアルファチャンネルを削除しましょう。
+            エクスポートする前にアルファチャンネルを削除しましょう。
           </para>
         </note>
       </step>
       <step>
         <para lang="en">
           After you have flattened the image,
-          <link linkend="gimp-file-save">save the image</link>
+          <link linkend="gimp-file-export">export the image</link>
           in the <link linkend="file-png-save-defaults">PNG format</link>
           for your web site.
         </para>
         <para lang="ja">
           画像を統合したあとは、 ウェブサイト用に
           <link linkend="file-png-save-defaults">PNG形式</link> で
-          <link linkend="gimp-file-save">画像を保存</link> します。
+          <link linkend="gimp-file-save">画像をエクスポート</link> します。
         </para>
       </step>
     </procedure>
     <note>
       <para lang="en">
-        You can save your image in the PNG format with the default settings.
+        You can export your image in the PNG format with the default settings.
         Always using maximum compression when creating the image.
         Maximum compression has no affect on image quality or the time
-        required to display the image, but it does take longer to save.
+        required to display the image, but it does take longer to export.
         A <link linkend="file-jpeg-save">JPEG</link> image, however,
         loses quality as the compression is increased.
         If your image is a photogaph with lots of colors, you should
@@ -156,10 +156,11 @@
         information about this topic in <xref linkend="file-jpeg-save"/>.
       </para>
       <para lang="ja">
-        画像を <acronym>PNG</acronym> 形式で保存するときは既定の設定が利用
-        できます。 画像を作成するときはいつも最高の圧縮率を使うことに
+        画像を <acronym>PNG</acronym> 形式にエクスポートするときは既定の設定が
+        利用できます。 画像を作成するときはいつも最高の圧縮率を使うことに
         なりますが、 画像の品質には全く影響がなく、 しかも表示に要する時間も
-        変わりません。 ただし保存のときだけは処理時間が長くなります。 これに対し
+        変わりません。 ただしエクスポートのときだけは処理時間が長くなります。
+        これに対し
         <link linkend="file-jpeg-save">JPEG</link> 形式は圧縮率を上げると画質
         の劣化が進みます。 色数が大変多い写真画像なら <acronym>JPEG</acronym>
         形式をも使うべきでしょう。 品質と圧縮の最高の
@@ -225,14 +226,14 @@
       <step>
         <para lang="en">
           After you convert am image to indexed mode, you are once
-          again able to <link linkend="gimp-file-save">save</link> the
+          again able to <link linkend="gimp-file-export">export</link> the
           image in <link linkend="file-png-save-defaults">PNG
           format</link>.
         </para>
         <para lang="ja">
           画像をインデックス化モードに変換したら、 こんどは
-          <link linkend="file-png-save-defaults">PNG形式</link> で
-          <link linkend="gimp-file-save">保存</link> しましょう。
+          <link linkend="file-png-save-defaults">PNG形式</link> に
+          <link linkend="gimp-file-export">エクスポート</link> しましょう。
         </para>
       </step>
     </procedure>
@@ -377,8 +378,7 @@
         <para lang="ja">
           画像が仕上がったら、
           <link linkend="file-png-save-defaults">PNG形式</link> に
-          エクスポートしましょう。<!--
-          <link linkend="gimp-file-save">保存</link>しましょう。-->
+          <link linkend="gimp-file-export">エクスポート</link>しましょう。
         </para>
       </step>
     </procedure>
