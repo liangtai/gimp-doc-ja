@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
-"POT-Creation-Date: 2012-06-08 07:12+0900\n"
-"PO-Revision-Date: 2012-12-05 19:04+0900\n"
+"POT-Creation-Date: 2013-12-22 16:02+0900\n"
+"PO-Revision-Date: 2012-12-22 16:24+0900\n"
 "Last-Translator: liangtai <liangtai.s16@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -1306,18 +1306,22 @@ msgid ""
 "md5=6aca937c44153f7aec97b1cb86cbaf3d"
 msgstr "localized"
 
-#: src/menus/file/export.xml:9(title) src/menus/file/export.xml:13(secondary)
+#: src/menus/file/export.xml:9(title)
+msgid "Export As..."
+msgstr "名前を付けてエクスポート..."
+
+#: src/menus/file/export.xml:13(secondary)
 #: src/menus/file/export.xml:16(primary)
-msgid "Export"
-msgstr "エクスポート..."
+msgid "Export As"
+msgstr "名前を付けてエクスポート"
 
 #: src/menus/file/export.xml:19(para)
 msgid ""
-"<command>Export</command> allows you to save your image in a format other "
-"than XCF."
+"<command>Export As...</command> allows you to save your image in a format "
+"other than XCF."
 msgstr ""
-"<command>エクスポート...</command> コマンドを使えば <acronym>XCF</acronym> 形"
-"式以外のファイル形式に画像を書き出せます。"
+"<command>名前を付けてエクスポート...</command> コマンドを使えば "
+"<acronym>XCF</acronym> 形式以外のファイル形式に画像を書き出せます。"
 
 #: src/menus/file/export.xml:31(para)
 msgid ""
@@ -1330,11 +1334,11 @@ msgstr ""
 #: src/menus/file/export.xml:41(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Export</guimenuitem></"
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Export As...</guimenuitem></"
 "menuchoice>,"
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>ファイル</"
-"guimenu><guimenuitem>エクスポート...</guimenuitem></menuchoice>"
+"guimenu><guimenuitem>名前を付けてエクスポート...</guimenuitem></menuchoice>"
 
 #: src/menus/file/export.xml:50(para)
 msgid ""
@@ -1346,19 +1350,29 @@ msgstr ""
 
 #: src/menus/file/export-to.xml:8(title)
 #: src/menus/file/export-to.xml:11(primary)
-msgid "Export to"
-msgstr "元ファイルにエクスポート"
+msgid "Export"
+msgstr "エクスポート..."
 
 #: src/menus/file/export-to.xml:14(para)
 msgid ""
-"This command is called <quote>Export to</quote> for a native XCF file. Then, "
-"it does the same thing as <command>Export</command>."
+"This command is called <quote>Export</quote> for a native XCF file. Then, it "
+"does the same thing as <command>Export As</command>. At early "
+"<application><acronym>GIMP</acronym> 2.8</application> releases, this menu "
+"label was <quote>Export to</quote>. Since the version 2.8.10, <quote>Export "
+"to</quote> and <quote>Export</quote> have been renamed to <quote>Export</"
+"quote> and <quote>Export As</quote> after the manner of <quote>Save</quote> "
+"and <quote>Save As</quote>."
 msgstr ""
 "このコマンドは <acronym>GIMP</acronym> 由来の <acronym>XCF</acronym> ファイル"
 "から直にエクスポートするとき呼ばれます。 そのあとは <xref linkend=\"gimp-"
-"file-export\"/> と同じ動作をします。"
+"file-export\"/> と同じ動作をします。 エクスポートが保存コマンドから分離された"
+"ばかりの初期の <application><acronym>GIMP</acronym> 2.8</application> 系はこ"
+"のメニュー項目が<quote>元ファイルにエクスポート</quote>と書かれていました。 "
+"バージョン 2.8.10 から、 <quote>保存</quote>と<quote>名前を付けて保存</quote>"
+"の例に倣い<quote>エクスポート</quote>と<quote>名前を付けてエクスポート</"
+"quote>にメニュー項目名が改められました。"
 
-#: src/menus/file/export-to.xml:18(para)
+#: src/menus/file/export-to.xml:23(para)
 msgid ""
 "The name becomes <quote>Overwriting name.extension</quote> for an imported "
 "image. So, you can export the imported image directly in its original file "
