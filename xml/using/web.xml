@@ -10,7 +10,7 @@
   050930 de replaced informalfigure by axel.wernicke
   050829 de added by axel.wernicke
 -->
-<!--2013-12-20-->
+<!--2014-03-18-->
 <sect1 id="gimp-using-web">
   <title lang="en">Preparing your Images for the Web</title>
   <title lang="ja">ウェブ用の画像の作成</title>
@@ -244,11 +244,13 @@
     <title lang="ja">透過画像の保存</title>
     <indexterm lang="en">
       <primary>Transparency</primary>
-      <secondary>Saving images with transparency</secondary>
+      <secondary>Exporting images with transparency</secondary>
     </indexterm>
     <indexterm lang="ja">
       <primary sortas="トウカコウカ">透過効果</primary>
-      <secondary sortas="トウカガゾウノホゾン">透過画像の保存</secondary>
+      <secondary sortas="トウカガゾウノエクスポート">
+        透過画像のエクスポート
+      </secondary>
     </indexterm>
     <para lang="en">
       There are two different approaches used by graphic file formats
@@ -313,7 +315,7 @@
       </step>
       <step>
         <para lang="en">
-          To save an image with alpha transparency, you must have an alpha
+          To export an image with alpha transparency, you must have an alpha
           channel. To check if the image has an alpha channel, go to the
           <link linkend="gimp-channel-dialog">channel dialog</link> and
           verify that an entry for <quote>Alpha</quote> exists, besides
@@ -327,8 +329,8 @@
           </menuchoice>.
         </para>
         <para lang="ja">
-          アルファ透過つきの画像で保存するにはアルファチャンネルが必要です。
-          画像のアルファチャンネルの有無は、
+          アルファ透過つきの画像にエクスポートするにはアルファチャンネルが
+          必要です。 画像のアルファチャンネルの有無は、
           <link linkend="gimp-channel-dialog">チャンネルダイアログ</link>
           を開いて、 赤・緑・青のほかに<quote>アルファ値</quote>の層があるか
           どうかで確かめます。 もし無ければ、 画像ウィンドウのメニューより
@@ -393,12 +395,12 @@
         <caption>
           <para lang="en">
             Mid-Tone Checks in the background layer represent the transparent
-            region of the saved image while you are working on it in
+            region of the exported image while you are working on it in
             <acronym>GIMP</acronym>.
           </para>
           <para lang="ja">
             <acronym>GIMP</acronym> 上での作業では背景レイヤー越しに中間色をみて
-            保存された画像の透明部分を確かめる
+            エクスポートされた画像の透明部分を確かめる
           </para>
         </caption>
       </mediaobject>
