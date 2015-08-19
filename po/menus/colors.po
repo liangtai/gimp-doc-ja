@@ -1,9 +1,9 @@
-# 島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2013.
+# 島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
-"POT-Creation-Date: 2010-10-03 17:26+0900\n"
-"PO-Revision-Date: 2012-08-28 22:26+0900\n"
+"POT-Creation-Date: 2015-08-17 19:21+0900\n"
+"PO-Revision-Date: 2015-08-19 15:16+0900\n"
 "Last-Translator: liangtai <liangtai.s16@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -68,8 +68,7 @@ msgstr "明度の反転"
 #: src/menus/colors/tools.xml:17(secondary)
 #: src/menus/colors/retinex.xml:17(primary)
 #: src/menus/colors/max_rgb.xml:16(primary)
-#: src/menus/colors/invert.xml:15(primary)
-#: src/menus/colors/hot.xml:16(primary)
+#: src/menus/colors/invert.xml:15(primary) src/menus/colors/hot.xml:16(primary)
 #: src/menus/colors/filterpack.xml:18(primary)
 #: src/menus/colors/colorify.xml:19(primary)
 #: src/menus/colors/auto.xml:15(primary) src/menus/colors/auto.xml:52(primary)
@@ -266,8 +265,11 @@ msgid ""
 msgstr "localized"
 
 #: src/menus/colors/retinex.xml:14(title)
-#: src/menus/colors/retinex.xml:20(primary)
 msgid "Retinex"
+msgstr "レティネックス..."
+
+#: src/menus/colors/retinex.xml:20(primary)
+msgid "Retinex…"
 msgstr "レティネックス..."
 
 #: src/menus/colors/retinex.xml:26(title)
@@ -311,7 +313,7 @@ msgstr ""
 #: src/menus/colors/retinex.xml:66(para)
 msgid ""
 "This filter is found in the image window menu under "
-"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Retinex</guimenuitem></"
+"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Retinex…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</guimenu><guimenuitem>レ"
@@ -461,6 +463,9 @@ msgid ""
 msgstr "localized"
 
 #: src/menus/colors/max_rgb.xml:13(title)
+msgid "Maximum RGB…"
+msgstr "RGB 値最大..."
+
 #: src/menus/colors/max_rgb.xml:17(secondary)
 #: src/menus/colors/max_rgb.xml:20(primary)
 msgid "Max RGB"
@@ -489,8 +494,8 @@ msgstr ""
 #: src/menus/colors/max_rgb.xml:55(para)
 msgid ""
 "This filter is found in the image window menu under "
-"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Max RGB</guimenuitem></"
-"menuchoice>."
+"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Maximum RGB…</"
+"guimenuitem></menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</"
 "guimenu><guimenuitem>RGB 値最大...</guimenuitem></menuchoice>"
@@ -525,9 +530,9 @@ msgid ""
 msgstr ""
 "<guilabel>最大値チャンネルを残す</guilabel>: 各チャンネルごとに "
 "<acronym>RGB</acronym> 値を互いに比較し、 最も高い値をもつチャンネルだけを残"
-"して他の値を 0 に変えます。 たとえば画素の値が (220,158,175) ならば (220,0,0) "
-"と変わります。 最大値が複数のチャンネルに共通する場合はそのどちらも保持されま"
-"す。 たとえば (210,54,210) は (210,0,210) に変わります。"
+"して他の値を 0 に変えます。 たとえば画素の値が (220,158,175) ならば "
+"(220,0,0) と変わります。 最大値が複数のチャンネルに共通する場合はそのどちらも"
+"保持されます。 たとえば (210,54,210) は (210,0,210) に変わります。"
 
 #: src/menus/colors/max_rgb.xml:94(para)
 msgid ""
@@ -539,9 +544,9 @@ msgid ""
 msgstr ""
 "<guilabel>最小値チャンネルを残す</guilabel>: 各チャンネルごとに "
 "<acronym>RGB</acronym> 値を互いに比較し、 最も低い値をもつチャンネルだけを残"
-"して他の値を 0 に変えます。 たとえば画素の値が (220,158,175) ならば (0,158,0) "
-"と変わります。 最小値が複数のチャンネルに共通する場合はそのどちらも保持されま"
-"す。 たとえば (210,54,54) は (0,54,54) に変わります。"
+"して他の値を 0 に変えます。 たとえば画素の値が (220,158,175) ならば "
+"(0,158,0) と変わります。 最小値が複数のチャンネルに共通する場合はそのどちらも"
+"保持されます。 たとえば (210,54,54) は (0,54,54) に変わります。"
 
 #: src/menus/colors/max_rgb.xml:102(para)
 msgid ""
@@ -696,8 +701,11 @@ msgid ""
 "@@image: 'images/menus/colors/hot.png'; md5=984484be105aaa084b50a95b77b7913b"
 msgstr "localized"
 
-#: src/menus/colors/hot.xml:13(title) src/menus/colors/hot.xml:17(secondary)
-#: src/menus/colors/hot.xml:20(primary)
+#: src/menus/colors/hot.xml:13(title)
+msgid "Hot…"
+msgstr "ホット..."
+
+#: src/menus/colors/hot.xml:17(secondary) src/menus/colors/hot.xml:20(primary)
 msgid "Hot"
 msgstr "ホット..."
 
@@ -717,7 +725,7 @@ msgstr "コマンドの呼び出し方"
 #: src/menus/colors/hot.xml:33(para)
 msgid ""
 "You can access the command from the image menu bar through "
-"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Hot</guimenuitem></"
+"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Hot…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</guimenu><guimenuitem>"
@@ -842,6 +850,9 @@ msgid ""
 msgstr "localized"
 
 #: src/menus/colors/filterpack.xml:15(title)
+msgid "Filter Pack…"
+msgstr "フィルターパック..."
+
 #: src/menus/colors/filterpack.xml:19(secondary)
 #: src/menus/colors/filterpack.xml:22(primary)
 msgid "Filter Pack"
@@ -871,8 +882,8 @@ msgstr ""
 #: src/menus/colors/filterpack.xml:61(para)
 msgid ""
 "You can find this filter in the image window menu under "
-"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Filter Pack</guimenuitem></"
-"menuchoice>."
+"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Filter Pack…</"
+"guimenuitem></menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</guimenu><guimenuitem>"
 "フィルターパック...</guimenuitem></menuchoice>"
@@ -1149,7 +1160,7 @@ msgid ""
 msgstr "localized"
 
 #: src/menus/colors/colortoalpha.xml:16(title)
-msgid "Color to Alpha"
+msgid "Color to Alpha…"
 msgstr "色を透明度に..."
 
 #: src/menus/colors/colortoalpha.xml:21(title)
@@ -1179,7 +1190,7 @@ msgstr ""
 #: src/menus/colors/colortoalpha.xml:55(para)
 msgid ""
 "This filter is found in the image window menu under "
-"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Color to Alpha</"
+"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Color to Alpha…</"
 "guimenuitem></menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</guimenu><guimenuitem>色"
@@ -1229,6 +1240,9 @@ msgid ""
 msgstr "localized"
 
 #: src/menus/colors/colorify.xml:16(title)
+msgid "Colorify…"
+msgstr "単色塗り..."
+
 #: src/menus/colors/colorify.xml:20(secondary)
 #: src/menus/colors/colorify.xml:23(primary)
 msgid "Colorify"
@@ -1273,7 +1287,7 @@ msgstr ""
 #: src/menus/colors/colorify.xml:68(para)
 msgid ""
 "This filter is found in the image window menu under "
-"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Colorify</guimenuitem></"
+"<menuchoice><guimenu>Colors</guimenu><guimenuitem>Colorify…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>色</guimenu><guimenuitem>単"
@@ -1523,4 +1537,4 @@ msgstr "<quote>HSV 伸長</quote>の例"
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: src/menus/colors/auto.xml:0(None)
 msgid "translator-credits"
-msgstr "島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2013."
+msgstr "島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2015."

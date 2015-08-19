@@ -1,9 +1,9 @@
-# 島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2013.
+# 島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
-"POT-Creation-Date: 2012-07-06 07:09+0900\n"
-"PO-Revision-Date: 2012-08-28 22:29+0900\n"
+"POT-Creation-Date: 2015-08-17 19:23+0900\n"
+"PO-Revision-Date: 2012-08-19 08:11+0900\n"
 "Last-Translator: liangtai <liangtai.s16@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -88,7 +88,7 @@ msgstr ""
 "にあった情報が失われるおそれがあるのです。"
 
 #: src/menus/image/zealous-crop.xml:39(title)
-#: src/menus/image/canvas-size.xml:246(title)
+#: src/menus/image/canvas-size.xml:247(title)
 #: src/menus/image/autocrop.xml:53(title)
 msgid "Example"
 msgstr "使用例"
@@ -98,7 +98,7 @@ msgid "<quote>Zealous Crop</quote> Example"
 msgstr "<quote>最小枠で切り抜き</quote>の例"
 
 #: src/menus/image/zealous-crop.xml:47(para)
-#: src/menus/image/canvas-size.xml:248(title)
+#: src/menus/image/canvas-size.xml:249(title)
 msgid "Original image"
 msgstr "元画像"
 
@@ -112,14 +112,12 @@ msgstr "<quote>最小枠で切り抜き</quote>を実施"
 
 #: src/menus/image/zealous-crop.xml:72(title)
 #: src/menus/image/transform-guillotine.xml:31(title)
-#: src/menus/image/scale.xml:50(title)
-#: src/menus/image/properties.xml:22(title)
+#: src/menus/image/scale.xml:50(title) src/menus/image/properties.xml:22(title)
 #: src/menus/image/merge-layers.xml:38(title)
 #: src/menus/image/guides-remove.xml:28(title)
 #: src/menus/image/guides-new.xml:33(title)
 #: src/menus/image/guides-new-percent.xml:37(title)
-#: src/menus/image/flatten.xml:38(title)
-#: src/menus/image/autocrop.xml:38(title)
+#: src/menus/image/flatten.xml:38(title) src/menus/image/autocrop.xml:38(title)
 #: src/menus/image/align-layers.xml:67(title)
 msgid "Activate the Command"
 msgstr "コマンドの呼び出し方"
@@ -391,7 +389,7 @@ msgstr ""
 #: src/menus/image/scale.xml:53(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Image</guimenu><guimenuitem>Scale Image</guimenuitem></"
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Scale Image…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>画像</guimenu><guimenuitem>"
@@ -483,8 +481,8 @@ msgstr ""
 "画素を加減する処理を<quote>再標本化</quote> (<foreignphrase>resampling</"
 "foreignphrase>) といいます。"
 
-#: src/menus/image/scale.xml:123(term) src/menus/image/print-size.xml:85(term)
-#: src/menus/image/canvas-size.xml:68(term)
+#: src/menus/image/scale.xml:123(term) src/menus/image/print-size.xml:86(term)
+#: src/menus/image/canvas-size.xml:69(term)
 msgid "Width; Height"
 msgstr "幅; 高さ"
 
@@ -522,8 +520,7 @@ msgstr ""
 "直解像度</guilabel> に適切な値を設定しなければなりません。 この解像度をもとに"
 "実寸から画像の画素数による寸法への変形が行なわれるためです。"
 
-#: src/menus/image/scale.xml:151(term)
-#: src/menus/image/print-size.xml:104(term)
+#: src/menus/image/scale.xml:151(term) src/menus/image/print-size.xml:105(term)
 msgid "X resolution; Y resolution"
 msgstr "水平解像度; 垂直解像度"
 
@@ -818,7 +815,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/print-size.xml:60(None)
+#: src/menus/image/print-size.xml:61(None)
 msgid ""
 "@@image: 'images/menus/image/print-size.png'; "
 "md5=5586f708f5f46b043bbeab776f0b4f22"
@@ -840,12 +837,12 @@ msgstr "大きさと解像度"
 
 #: src/menus/image/print-size.xml:29(para)
 msgid ""
-"You can use the <guimenuitem>Print Size</guimenuitem> dialog to change the "
-"<emphasis>dimensions of a printed image</emphasis> and its "
-"<emphasis>resolution</emphasis>. This command does not change the number of "
-"pixels in the image and it does not resample the image. (If you want to "
-"change the size of an image by resampling it, use the <link linkend=\"gimp-"
-"image-scale\">Scale Image</link> command.)"
+"This command opens the <quote>Set Image Print Resolution</quote> dialog that "
+"allows you to change the <emphasis>dimensions of a printed image</emphasis> "
+"and its <emphasis>resolution</emphasis>. This command does not change the "
+"number of pixels in the image and it does not resample the image. (If you "
+"want to change the size of an image by resampling it, use the <link linkend="
+"\"gimp-image-scale\">Scale Image</link> command.)"
 msgstr ""
 "<guimenuitem>印刷サイズ...</guimenuitem> コマンドで呼び出せる<quote>画像印刷"
 "解像度の設定</quote>ダイアログを用いて印刷物の <emphasis>寸法</emphasis> と "
@@ -855,28 +852,28 @@ msgstr ""
 "大・縮小...</link> コマンドか <link linkend=\"gimp-tool-scale\">拡大・縮小</"
 "link> ツールをご利用ください。)"
 
-#: src/menus/image/print-size.xml:39(title)
+#: src/menus/image/print-size.xml:40(title)
 msgid "Activating the Dialog"
 msgstr "ダイアログの呼び出し方"
 
-#: src/menus/image/print-size.xml:42(para)
+#: src/menus/image/print-size.xml:43(para)
 msgid ""
 "You can access this dialog from the image menubar through "
-"<menuchoice><guimenu>Image</guimenu><guimenuitem>Print Size</guimenuitem></"
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Print Size…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>画像</guimenu><guimenuitem>"
 "印刷サイズ...</guimenuitem></menuchoice>"
 
-#: src/menus/image/print-size.xml:54(title)
+#: src/menus/image/print-size.xml:55(title)
 msgid "Options in the <quote>Print Size</quote> Dialog"
 msgstr "<quote>画像印刷解像度の設定</quote>ダイアログのオプション"
 
-#: src/menus/image/print-size.xml:56(title)
-msgid "The <quote>Print Size</quote> dialog"
-msgstr "<quote>画像印刷解像度の設定</quote>ダイアログ"
+#: src/menus/image/print-size.xml:57(title)
+msgid "The <quote>Set Image Print Resolution</quote> dialog"
+msgstr "<quote>画像の拡大・縮小</quote>ダイアログ"
 
-#: src/menus/image/print-size.xml:64(para)
+#: src/menus/image/print-size.xml:65(para)
 msgid ""
 "The output resolution determines the number of pixels used per unit length "
 "for the printed image. Do not confuse the output resolution with the "
@@ -888,7 +885,7 @@ msgstr ""
 "特有機能であり、 dpi [ドット毎インチ]で表わされ、 1 画素に数ドットを割り当て"
 "ることもあります。"
 
-#: src/menus/image/print-size.xml:70(para)
+#: src/menus/image/print-size.xml:71(para)
 msgid ""
 "When the dialog is displayed, the resolution shown in the boxes is the "
 "resolution of the original image. If you increase the output resolution, the "
@@ -901,7 +898,7 @@ msgstr ""
 "さくなります。 同じ理由から逆に印刷物の幅や高さを変えると出力解像度も変化しま"
 "す。"
 
-#: src/menus/image/print-size.xml:77(para)
+#: src/menus/image/print-size.xml:78(para)
 msgid ""
 "Increasing the resolution results in increasing the sharpness of the printed "
 "page. This is quite different from simply reducing the image size by scaling "
@@ -911,7 +908,7 @@ msgstr ""
 "すが]元の画像をただ縮小するのとは異なり画素は減りません (つまり画像の情報が劣"
 "化しません)。"
 
-#: src/menus/image/print-size.xml:87(para)
+#: src/menus/image/print-size.xml:88(para)
 msgid ""
 "You can set the printing Width and Height by using the text boxes. You can "
 "also choose the units for these values from the dropdown list."
@@ -919,7 +916,7 @@ msgstr ""
 "印刷される画像の大きさはこの数値記入欄で指定できます。 引き出しリストから他の"
 "単位も選択できます。"
 
-#: src/menus/image/print-size.xml:92(para)
+#: src/menus/image/print-size.xml:93(para)
 msgid ""
 "As soon as you change the Width or the Height, the X and/or Y resolution "
 "values automatically change accordingly. If the two resolution values remain "
@@ -933,7 +930,7 @@ msgstr ""
 "この鎖のしるしをクリックすれば比例関係は断たれますので縦と横で個別に解像度を"
 "指定できるようになります。"
 
-#: src/menus/image/print-size.xml:106(para)
+#: src/menus/image/print-size.xml:107(para)
 msgid ""
 "You can set the resolution used to calculate the printed width and height "
 "from the physical size of the image, that is, the number of pixels in it."
@@ -941,7 +938,7 @@ msgstr ""
 "印刷される画像の幅や高さを実際に算出するときに利用される実寸での単位距離あた"
 "りの画素数をここで指定できます。"
 
-#: src/menus/image/print-size.xml:111(para)
+#: src/menus/image/print-size.xml:112(para)
 msgid ""
 "Use the text boxes to change these resolution values. They can be linked to "
 "keep their relationship constant. The closed chain symbol between the two "
@@ -1117,7 +1114,7 @@ msgstr ""
 #: src/menus/image/merge-layers.xml:41(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Image</guimenu><guimenuitem>Merge Visible Layers</"
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Merge Visible Layers…</"
 "guimenuitem></menuchoice>,"
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>画像</guimenu><guimenuitem>"
@@ -1132,7 +1129,7 @@ msgstr ""
 "keycombo>"
 
 #: src/menus/image/merge-layers.xml:59(title)
-msgid "Description of the <quote>Layers merge Options</quote> Dialog"
+msgid "Description of the <quote>Layers Merge Options</quote> Dialog"
 msgstr "<quote>レイヤー統合の設定</quote>ダイアログのご説明"
 
 #: src/menus/image/merge-layers.xml:63(title)
@@ -1449,7 +1446,7 @@ msgstr ""
 #: src/menus/image/convert-indexed.xml:34(title)
 #: src/menus/image/convert-grayscale.xml:32(title)
 #: src/menus/image/configure-grid.xml:30(title)
-#: src/menus/image/canvas-size.xml:40(title)
+#: src/menus/image/canvas-size.xml:41(title)
 msgid "Activating the Command"
 msgstr "コマンドの呼び出し方"
 
@@ -1543,7 +1540,7 @@ msgid "Flatten Image"
 msgstr "画像の統合"
 
 #: src/menus/image/flatten.xml:14(primary)
-#: src/menus/image/canvas-size.xml:145(term)
+#: src/menus/image/canvas-size.xml:146(term)
 msgid "Layers"
 msgstr "レイヤー"
 
@@ -2043,8 +2040,8 @@ msgstr "例: 誤差拡散 (通常)"
 
 #: src/menus/image/convert-indexed.xml:177(para)
 msgid ""
-"The same image, with four indexed colors and <quote>Floyd-Steinberg (normal)"
-"</quote> dithering."
+"The same image, with four indexed colors and <quote>Floyd-Steinberg "
+"(normal)</quote> dithering."
 msgstr ""
 "同じ画像を <guimenuitem>誤差拡散 (通常)</guimenuitem> で 4 色のインデックス化"
 "カラー画像に変換したもの"
@@ -2121,7 +2118,7 @@ msgid ""
 msgstr "localized"
 
 #: src/menus/image/configure-grid.xml:11(title)
-msgid "Configure Grid"
+msgid "Configure Grid…"
 msgstr "グリッドの設定..."
 
 #: src/menus/image/configure-grid.xml:15(primary)
@@ -2151,18 +2148,18 @@ msgstr ""
 #: src/menus/image/configure-grid.xml:33(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Image</guimenu><guimenuitem>Configure Grid</"
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Configure Grid…</"
 "guimenuitem></menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>画像</guimenu><guimenuitem>"
 "グリッドの設定...</guimenuitem></menuchoice>"
 
 #: src/menus/image/configure-grid.xml:45(title)
-msgid "Description of the <quote>Configure Grid</quote> dialog"
-msgstr "<quote>グリッドの調整</quote>ダイアログのご説明"
+msgid "Description of the <quote>Configure Image Grid</quote> dialog"
+msgstr "<quote>画像のグリッドを調整</quote>ダイアログのご説明"
 
 #: src/menus/image/configure-grid.xml:49(title)
-msgid "The <quote>Configure grid</quote> dialog"
+msgid "The <quote>Configure Grid</quote> dialog"
 msgstr "<quote>グリッドの調整</quote>ダイアログ"
 
 #: src/menus/image/configure-grid.xml:58(title)
@@ -2171,12 +2168,12 @@ msgstr "表示形式"
 
 #: src/menus/image/configure-grid.xml:59(para)
 msgid ""
-"In the <guimenu>Configure Image Grid</guimenu> dialog, you can set the "
-"properties of the grid which is shown when you turn on the image grid."
+"In the <guimenu>Configure Grid</guimenu> dialog, you can set the properties "
+"of the grid which is shown when you turn on the image grid."
 msgstr ""
-"<quote>画像のグリッドを調整</quote>ダイアログでは <link linkend=\"gimp-view-"
-"show-grid\">グリッドを表示</link> を有効にしているときに画像上に表示されるグ"
-"リッド (格子線) の属性を設定できます。"
+"<quote>グリッドの調整</quote>ダイアログでは <link linkend=\"gimp-view-show-"
+"grid\">グリッドを表示</link> を有効にしているときに画像上に表示されるグリッ"
+"ド (格子線) の属性を設定できます。"
 
 #: src/menus/image/configure-grid.xml:65(term)
 msgid "Line style"
@@ -2264,7 +2261,7 @@ msgstr ""
 "のしるしが連結の姿ならば幅と高さはその比を保って連動します。"
 
 #: src/menus/image/configure-grid.xml:139(title)
-#: src/menus/image/canvas-size.xml:95(title)
+#: src/menus/image/canvas-size.xml:96(title)
 msgid "Offset"
 msgstr "オフセット"
 
@@ -2279,7 +2276,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:61(None)
+#: src/menus/image/canvas-size.xml:62(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size.png'; "
 "md5=5f4f3f0d42e573d4229d7c6bca813102"
@@ -2287,7 +2284,7 @@ msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:160(None)
+#: src/menus/image/canvas-size.xml:161(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size-list.png'; "
 "md5=905ef66630106a1a914428981da7fa1d"
@@ -2295,7 +2292,7 @@ msgstr "localized"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:252(None)
+#: src/menus/image/canvas-size.xml:253(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size-ex1.png'; "
 "md5=559f2f64da560a98ab17ee9b34c29fab"
@@ -2303,7 +2300,7 @@ msgstr "common"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:271(None)
+#: src/menus/image/canvas-size.xml:272(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size-ex2.png'; "
 "md5=5c965a03aaaa40a352e759251f1913a3"
@@ -2311,7 +2308,7 @@ msgstr "common"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:287(None)
+#: src/menus/image/canvas-size.xml:288(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size-ex3.png'; "
 "md5=1fbf828cba9b59fd059f5f6fbd0b9f12"
@@ -2319,7 +2316,7 @@ msgstr "common"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:315(None)
+#: src/menus/image/canvas-size.xml:316(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size-ex4.png'; "
 "md5=9f6d98883e41848510ad04b284999c26"
@@ -2327,14 +2324,14 @@ msgstr "common"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/image/canvas-size.xml:330(None)
+#: src/menus/image/canvas-size.xml:331(None)
 msgid ""
 "@@image: 'images/menus/image/canvas-size-ex5.png'; "
 "md5=ea89ab944513d03214f85e750ded5334"
 msgstr "common"
 
 #: src/menus/image/canvas-size.xml:13(title)
-#: src/menus/image/canvas-size.xml:66(title)
+#: src/menus/image/canvas-size.xml:67(title)
 msgid "Canvas Size"
 msgstr "キャンバスサイズの変更..."
 
@@ -2350,11 +2347,12 @@ msgstr "サイズ"
 msgid ""
 "The <quote>canvas</quote> is the visible area of the image. By default the "
 "size of the canvas coincides with the size of the layers. The "
-"<guimenuitem>Canvas Size</guimenuitem> command lets you enlarge or reduce "
-"the canvas size. You can, if you want, modify the size of the layers. When "
-"you enlarge the canvas, you create free space around the contents of the "
-"image. When you reduce it, the visible area is cropped, however the layers "
-"still extend beyond the canvas border."
+"<guimenuitem>Canvas Size…</guimenuitem> command opens the <quote>Set Image "
+"Canvas Size</quote> dialog that lets you enlarge or reduce the canvas size. "
+"You can, if you want, modify the size of the layers. When you enlarge the "
+"canvas, you create free space around the contents of the image. When you "
+"reduce it, the visible area is cropped, however the layers still extend "
+"beyond the canvas border."
 msgstr ""
 "<quote>キャンバス</quote>とは画像の可視領域のことです。 初期設定ではキャンバ"
 "スの大きさはレイヤーの大きさとぴったり一致しています。 <guimenuitem>キャンバ"
@@ -2364,7 +2362,7 @@ msgstr ""
 "と可視領域が切り詰められますが、 レイヤーは[オプション次第では]キャンバスをは"
 "み出して残ります。"
 
-#: src/menus/image/canvas-size.xml:33(para)
+#: src/menus/image/canvas-size.xml:34(para)
 msgid ""
 "When you reduce the canvas size, the new canvas appears surrounded with a "
 "thin negative border in the preview. The mouse pointer is a moving cross: "
@@ -2375,24 +2373,24 @@ msgstr ""
 "を示す四方矢印の姿になります。 これをクリックしてドラッグするとキャンバスの枠"
 "はそのままに見本画像が移動できます。"
 
-#: src/menus/image/canvas-size.xml:43(para)
+#: src/menus/image/canvas-size.xml:44(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Image</guimenu><guimenuitem>Canvas Size</guimenuitem></"
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Canvas Size…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>画像</guimenu><guimenuitem>"
 "キャンバスサイズの変更...</guimenuitem></menuchoice>"
 
-#: src/menus/image/canvas-size.xml:55(title)
-msgid "Description of the <quote>Canvas Size</quote> dialog"
+#: src/menus/image/canvas-size.xml:56(title)
+msgid "Description of the <quote>Set Image Canvas Size</quote> dialog"
 msgstr "<quote>キャンバスサイズの変更</quote>ダイアログのご説明"
 
-#: src/menus/image/canvas-size.xml:57(title)
-msgid "The <quote>Canvas Size</quote> dialog"
+#: src/menus/image/canvas-size.xml:58(title)
+msgid "The <quote>Set Image Canvas Size</quote> dialog"
 msgstr "<quote>キャンバスサイズの変更</quote>ダイアログ"
 
-#: src/menus/image/canvas-size.xml:70(para)
+#: src/menus/image/canvas-size.xml:71(para)
 msgid ""
 "You can set the <guilabel>Width</guilabel> and the <guilabel>Height</"
 "guilabel> of the canvas. The default units are pixels but you can choose "
@@ -2411,7 +2409,7 @@ msgstr ""
 "この鎖のしるしはクリックすると分解した鎖のしるしに替わり、 幅と高さの値は個別"
 "に指定できるようになります。"
 
-#: src/menus/image/canvas-size.xml:82(para)
+#: src/menus/image/canvas-size.xml:83(para)
 msgid ""
 "Whatever units you use, information about the size in pixels and the current "
 "resolution are always displayed below the <emphasis>Width</emphasis> and "
@@ -2425,7 +2423,7 @@ msgstr ""
 "は <link linkend=\"gimp-image-print-size\">画像印刷解像度の設定</link> ダイア"
 "ログをご利用ください。"
 
-#: src/menus/image/canvas-size.xml:96(para)
+#: src/menus/image/canvas-size.xml:97(para)
 msgid ""
 "The <guilabel>Offset</guilabel> values are used to place the image (the "
 "image, not the active layer) on the canvas. You can see the size and the "
@@ -2438,15 +2436,15 @@ msgstr ""
 "キャンバスの内容や大きさがわかります。 キャンバスが元画像よりも小さければ、 "
 "見本画像内にその大きさを表す枠が反転色で表示されます。"
 
-#: src/menus/image/canvas-size.xml:104(term)
+#: src/menus/image/canvas-size.xml:105(term)
 msgid "X ; Y"
 msgstr "X; Y"
 
-#: src/menus/image/canvas-size.xml:115(para)
+#: src/menus/image/canvas-size.xml:116(para)
 msgid "by click-and-dragging the image,"
 msgstr "画像をクリックしてドラッグする方法"
 
-#: src/menus/image/canvas-size.xml:120(para)
+#: src/menus/image/canvas-size.xml:121(para)
 msgid ""
 "by entering values in the <guilabel>X</guilabel> and <guilabel>Y</guilabel> "
 "text boxes,"
@@ -2454,13 +2452,13 @@ msgstr ""
 "数値記入欄 <guilabel><accel>X</accel></guilabel> と <guilabel><accel>Y</"
 "accel></guilabel> に値を記入する方法"
 
-#: src/menus/image/canvas-size.xml:126(para)
+#: src/menus/image/canvas-size.xml:127(para)
 msgid ""
 "by clicking on the small arrow-heads. This increments the value by one pixel "
 "(unit)."
 msgstr "数値の欄に付属する矢印をクリックする方法 (1 単位ずつ増減します)"
 
-#: src/menus/image/canvas-size.xml:132(para)
+#: src/menus/image/canvas-size.xml:133(para)
 msgid ""
 "And when the focus is on a text box, you can use the keyboard arrow keys, "
 "<keycap>Up</keycap> and <keycap>Down</keycap> to change by one pixel (unit), "
@@ -2472,7 +2470,7 @@ msgstr ""
 "<keycap>PageUp</keycap> キーか <keycap>PageDown</keycap> キーを押して値を増減"
 "する方法"
 
-#: src/menus/image/canvas-size.xml:106(para)
+#: src/menus/image/canvas-size.xml:107(para)
 msgid ""
 "The <guilabel>X</guilabel> and <guilabel>Y</guilabel> specify the "
 "coordinates of the upper left corner of the image relative to the upper left "
@@ -2486,7 +2484,7 @@ msgstr ""
 "かの方法で指定できます。 (言わずもがなのことながら、 キャンバスの枠外には座標"
 "が動かせません。) <placeholder-1/>"
 
-#: src/menus/image/canvas-size.xml:147(para)
+#: src/menus/image/canvas-size.xml:148(para)
 msgid ""
 "Before the GIMP-2.4 version, <quote>Canvas Size</quote> had no influence on "
 "layer size. To change it, you had to use the <link linkend=\"gimp-layer-"
@@ -2502,11 +2500,11 @@ msgstr ""
 "調節できます。 つぎに示す引き出しメニューでその幾通りかの方法から選んでくださ"
 "い。"
 
-#: src/menus/image/canvas-size.xml:156(title)
+#: src/menus/image/canvas-size.xml:157(title)
 msgid "The Resize layers list"
 msgstr "キャンバスに合わせるメニュー"
 
-#: src/menus/image/canvas-size.xml:166(para)
+#: src/menus/image/canvas-size.xml:167(para)
 msgid ""
 "<guilabel>None</guilabel>: default option. No layer is resized, only the "
 "canvas is."
@@ -2514,13 +2512,13 @@ msgstr ""
 "<guilabel>なし</guilabel>: 初期設定で選ばれるオプションです。 キャンバスだけ"
 "が大きさを変更され、 レイヤーの大きさは変化しません。"
 
-#: src/menus/image/canvas-size.xml:172(para)
+#: src/menus/image/canvas-size.xml:173(para)
 msgid "<guilabel>All Layers</guilabel>: all layers are resized to canvas size."
 msgstr ""
 "<guilabel>すべてのレイヤー</guilabel>: すべてのレイヤーがキャンバスと同じ大き"
 "さに変わります。"
 
-#: src/menus/image/canvas-size.xml:178(para)
+#: src/menus/image/canvas-size.xml:179(para)
 msgid ""
 "<guilabel>Image-sized layers</guilabel>: only layers with the same size as "
 "the image are sized to canvas size."
@@ -2528,7 +2526,7 @@ msgstr ""
 "<guilabel>キャンバスサイズのレイヤー</guilabel>: 画像と同じ大きさのレイヤーだ"
 "けはキャンバスと同じ大きさの変更をうけます。"
 
-#: src/menus/image/canvas-size.xml:184(para)
+#: src/menus/image/canvas-size.xml:185(para)
 msgid ""
 "<guilabel>All visible layers</guilabel>: only visible layers, marked with a "
 "<guiicon><inlinegraphic fileref=\"images/dialogs/stock-eye-20.png\"/></"
@@ -2538,7 +2536,7 @@ msgstr ""
 "では <guiicon><inlinegraphic fileref=\"images/dialogs/stock-eye-20.png\"/></"
 "guiicon> の印がついている) のすべてがキャンバスと同じ大きさになります。"
 
-#: src/menus/image/canvas-size.xml:194(para)
+#: src/menus/image/canvas-size.xml:195(para)
 msgid ""
 "<guilabel>All linked layers</guilabel>: only linked layers, marked with a "
 "<guiicon><inlinegraphic fileref=\"images/dialogs/stock-vchain-24.png\"/></"
@@ -2549,11 +2547,11 @@ msgstr ""
 "vchain-24.png\"/></guiicon> の印がついている) のすべてがキャンバスと同じ大き"
 "さになります。"
 
-#: src/menus/image/canvas-size.xml:208(term)
+#: src/menus/image/canvas-size.xml:209(term)
 msgid "Center"
 msgstr "中央"
 
-#: src/menus/image/canvas-size.xml:210(para)
+#: src/menus/image/canvas-size.xml:211(para)
 msgid ""
 "The <guilabel>Center</guilabel> button allows you to center the image on the "
 "canvas. When you click on the Center button, the offset values are "
@@ -2564,7 +2562,7 @@ msgstr ""
 "れ、 <guilabel><accel>X</accel></guilabel> と <guilabel><accel>Y</accel></"
 "guilabel> の数値記入欄にその値が表示されます。"
 
-#: src/menus/image/canvas-size.xml:220(para)
+#: src/menus/image/canvas-size.xml:221(para)
 msgid ""
 "When you click on the <guilabel>Resize</guilabel> button, the canvas is "
 "resized, but the pixel information and the drawing scale of the image are "
@@ -2573,7 +2571,7 @@ msgstr ""
 "<guibutton>サイズ変更</guibutton> ボタンをクリックするとキャンバスの大きさは"
 "変更されますが、 画素情報や画像の描画縮尺<!--XXX-->は変わりません。"
 
-#: src/menus/image/canvas-size.xml:225(para)
+#: src/menus/image/canvas-size.xml:226(para)
 msgid ""
 "If the layers of the image did not extend beyond the borders of the canvas "
 "before you changed its size, there are no layers on the part of the canvas "
@@ -2601,7 +2599,7 @@ msgstr ""
 "らディジタルなパスパルトゥ (写真を挟める台紙が自由に貼りつけられるおおきめの"
 "透明板) のできあがりです。"
 
-#: src/menus/image/canvas-size.xml:255(para)
+#: src/menus/image/canvas-size.xml:256(para)
 msgid ""
 "We started with a green background layer 100x100 pixels, which defines a "
 "default canvas with the same size. Then we added a new red layer 80x80 "
@@ -2616,11 +2614,11 @@ msgstr ""
 "い。 レイヤーがないところは透明である。 ツールボックスに示される背景色には黄"
 "色を選んだ。"
 
-#: src/menus/image/canvas-size.xml:267(title)
+#: src/menus/image/canvas-size.xml:268(title)
 msgid "Canvas enlarged (layers unchanged)"
 msgstr "キャンバスの拡張 (レイヤーは変化なし)"
 
-#: src/menus/image/canvas-size.xml:274(para)
+#: src/menus/image/canvas-size.xml:275(para)
 msgid ""
 "The canvas has been enlarged to 120x120 pixels. The layers size remained "
 "unchanged. The unoccupied part of the canvas is transparent."
@@ -2628,11 +2626,11 @@ msgstr ""
 "キャンバスの大きさを 120&times;120 ピクセルに変更した。 レイヤーの大きさは変"
 "更していない。 キャンバスの塞がれていない領域は透明だ。"
 
-#: src/menus/image/canvas-size.xml:283(title)
+#: src/menus/image/canvas-size.xml:284(title)
 msgid "Canvas enlarged (all layers changed)"
 msgstr "キャンバスの拡張 (すべてのレイヤーも変更)"
 
-#: src/menus/image/canvas-size.xml:290(para)
+#: src/menus/image/canvas-size.xml:291(para)
 msgid ""
 "The canvas has been enlarged to 120x120 pixels. All layers have been "
 "enlarged to the canvas size. The undrawn part is transparent in the red "
@@ -2644,11 +2642,11 @@ msgstr ""
 "は何も塗られていなかった領域は、 薄紅色のレイヤーでは透明部分となり、 薄緑色"
 "のレイヤーでは黄色 (ツールボックスに示される背景色) に塗られる。"
 
-#: src/menus/image/canvas-size.xml:302(title)
+#: src/menus/image/canvas-size.xml:303(title)
 msgid "What's Canvas Size useful for?"
 msgstr "キャンバスサイズの変更が役立つ場面"
 
-#: src/menus/image/canvas-size.xml:303(para)
+#: src/menus/image/canvas-size.xml:304(para)
 msgid ""
 "You may want to add some stuff around your image: enlarge canvas size, add a "
 "new layer that will have the same size as the new canvas and then paint this "
@@ -2657,15 +2655,15 @@ msgstr ""
 "画像の領域をもっと大きくとり、 その大きさいっぱいのレイヤーを新たに追加して新"
 "しいレイヤーに描画するという場合にいかがでしょう。 切り抜き操作の逆です。"
 
-#: src/menus/image/canvas-size.xml:309(para)
+#: src/menus/image/canvas-size.xml:310(para)
 msgid "You can also use this command to crop an image:"
 msgstr "画像の切り抜きにも使えます。"
 
-#: src/menus/image/canvas-size.xml:311(title)
+#: src/menus/image/canvas-size.xml:312(title)
 msgid "Resizing canvas"
 msgstr "キャンバスの大きさの変更"
 
-#: src/menus/image/canvas-size.xml:319(para)
+#: src/menus/image/canvas-size.xml:320(para)
 msgid ""
 "Click on the chain next to Width and Height entries to unlink dimensions. By "
 "modifying these dimensions and moving image against canvas, by trial and "
@@ -2678,11 +2676,11 @@ msgstr ""
 "たり、 キャンバスの大きさを再度調整してゆきます。 最後に <guibutton>サイズ変"
 "更</guibutton> ボタンをクリックして確定です。"
 
-#: src/menus/image/canvas-size.xml:326(title)
+#: src/menus/image/canvas-size.xml:327(title)
 msgid "Cropped image"
 msgstr "切り出された画像"
 
-#: src/menus/image/canvas-size.xml:335(para)
+#: src/menus/image/canvas-size.xml:336(para)
 msgid "The <link linkend=\"gimp-tool-crop\">Crop tool</link> is easier to use."
 msgstr ""
 "<link linkend=\"gimp-tool-crop\">切り抜きツール</link> のほうが使い易いと思い"
@@ -2837,7 +2835,7 @@ msgid ""
 msgstr "common"
 
 #: src/menus/image/align-layers.xml:12(title)
-msgid "Align Visible Layers"
+msgid "Align Visible Layers…"
 msgstr "可視レイヤーの整列..."
 
 #: src/menus/image/align-layers.xml:17(tertiary)
@@ -2903,7 +2901,7 @@ msgstr ""
 #: src/menus/image/align-layers.xml:70(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Image</guimenu><guimenuitem>Align Visible layers</"
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Align Visible layers…</"
 "guimenuitem></menuchoice>. There is no default keyboard shortcut. If the "
 "image holds a single layer only, you get a message from GIMP telling that "
 "there must be more than one layer in the image to execute the command."
@@ -3078,4 +3076,4 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: src/menus/image/align-layers.xml:0(None)
 msgid "translator-credits"
-msgstr "島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2013."
+msgstr "島本良太 (SimaMoto,RyōTa) <liangtai.s16@gmail.com>, 2009-2015."

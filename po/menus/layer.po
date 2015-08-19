@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GIMP-2.8-HELP\n"
-"POT-Creation-Date: 2015-08-10 22:21+0900\n"
-"PO-Revision-Date: 2015-08-11 13:47+0900\n"
+"POT-Creation-Date: 2015-08-17 19:24+0900\n"
+"PO-Revision-Date: 2015-08-19 14:59+0900\n"
 "Last-Translator: liangtai <liangtai.s16@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -239,7 +239,7 @@ msgstr ""
 #: src/menus/layer/top.xml:34(title)
 #: src/menus/layer/threshold-alpha.xml:33(title)
 #: src/menus/layer/text-discard.xml:50(title)
-#: src/menus/layer/scale.xml:31(title)
+#: src/menus/layer/scale.xml:32(title)
 #: src/menus/layer/rotate-arbitrary.xml:29(title)
 #: src/menus/layer/rotate-90.xml:33(title)
 #: src/menus/layer/rotate-270.xml:34(title)
@@ -249,7 +249,7 @@ msgstr ""
 #: src/menus/layer/raise.xml:28(title)
 #: src/menus/layer/raise-to-top.xml:27(title)
 #: src/menus/layer/previous.xml:46(title) src/menus/layer/offset.xml:30(title)
-#: src/menus/layer/next.xml:36(title) src/menus/layer/new.xml:30(title)
+#: src/menus/layer/next.xml:36(title) src/menus/layer/new.xml:31(title)
 #: src/menus/layer/new-layer-group.xml:22(title)
 #: src/menus/layer/new-from-visible.xml:29(title)
 #: src/menus/layer/merge-down.xml:44(title)
@@ -623,7 +623,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/layer/scale.xml:51(None)
+#: src/menus/layer/scale.xml:52(None)
 msgid ""
 "@@image: 'images/menus/layer/scale.png'; md5=1dc8a4455df0655ed81745bf2e112f4f"
 msgstr "localized"
@@ -650,38 +650,40 @@ msgstr "レイヤーの拡大・縮小"
 
 #: src/menus/layer/scale.xml:23(para)
 msgid ""
-"The <guimenuitem>Scale Layer</guimenuitem> command resizes the layer and its "
-"contents. The image loses some of its quality by being scaled. The command "
-"displays a dialog where you can set parameters concerning the size of the "
-"layer and the image quality."
+"The <guimenuitem>Scale Layer</guimenuitem> command opens the <quote>Scale "
+"Layer</quote> dialog that allows you to resize the layer and its contents. "
+"The image loses some of its quality by being scaled. The command displays a "
+"dialog where you can set parameters concerning the size of the layer and the "
+"image quality."
 msgstr ""
-"<guimenuitem>レイヤーの拡大・縮小...</guimenuitem> コマンドはレイヤーをそこに"
-"描かれた内容ごと伸縮して大きさを変えます。 拡大・縮小により画像の品質がやや損"
-"われます。 このコマンドはダイアログを開きますので、 ここでレイヤーの大きさと"
-"画像の品質を左右する補間方法を指定してください。"
+"<guimenuitem>レイヤーの拡大・縮小...</guimenuitem> コマンドは<quote>レイヤー"
+"の拡大・縮小</quote>ダイアログを開き、 レイヤーをそこに描かれた内容ごと伸縮し"
+"て大きさを変えます。 拡大・縮小により画像の品質がやや損われます。 このコマン"
+"ドが開くダイアログでは、 レイヤーの大きさと画像の品質を左右する補間方法を指定"
+"します。"
 
-#: src/menus/layer/scale.xml:34(para)
+#: src/menus/layer/scale.xml:35(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Layer</guimenu><guimenuitem>Scale Layer</guimenuitem></"
+"<menuchoice><guimenu>Layer</guimenu><guimenuitem>Scale Layer…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>レイヤー</"
 "guimenu><guimenuitem>レイヤーの拡大・縮小...</guimenuitem></menuchoice>"
 
-#: src/menus/layer/scale.xml:46(title)
+#: src/menus/layer/scale.xml:47(title)
 msgid "Description of the <quote>Scale Layer</quote> Dialog"
 msgstr "<quote>レイヤーの拡大・縮小</quote>ダイアログのご説明"
 
-#: src/menus/layer/scale.xml:48(title)
+#: src/menus/layer/scale.xml:49(title)
 msgid "The <quote>Scale Layer</quote> dialog"
 msgstr "<quote>レイヤーの拡大・縮小</quote>ダイアログ"
 
-#: src/menus/layer/scale.xml:57(term) src/menus/layer/resize.xml:61(term)
+#: src/menus/layer/scale.xml:58(term) src/menus/layer/resize.xml:61(term)
 msgid "Layer Size"
 msgstr "レイヤーサイズ"
 
-#: src/menus/layer/scale.xml:59(para)
+#: src/menus/layer/scale.xml:60(para)
 msgid ""
 "When you enlarge a layer, <acronym>GIMP</acronym> has to calculate new "
 "pixels from the existing ones. This procedure is called "
@@ -700,12 +702,12 @@ msgstr ""
 "とでしょう。 逆にレイヤーを縮小した場合も、 画素が減らされるわけですから同じ"
 "く画質は落ちます。"
 
-#: src/menus/layer/scale.xml:73(term) src/menus/layer/resize.xml:65(term)
-#: src/menus/layer/new.xml:76(term)
+#: src/menus/layer/scale.xml:74(term) src/menus/layer/resize.xml:65(term)
+#: src/menus/layer/new.xml:77(term)
 msgid "Width; Height"
 msgstr "幅; 高さ"
 
-#: src/menus/layer/scale.xml:75(para)
+#: src/menus/layer/scale.xml:76(para)
 msgid ""
 "The command displays a dialog which shows the dimensions of the original "
 "layer in pixels. You can set the new <guilabel>Width</guilabel> and "
@@ -722,7 +724,7 @@ msgstr ""
 "るしをクリックすると鎖は解かれ、 幅と高さを個別に指定できますが、 結果として"
 "レイヤーを歪めます。"
 
-#: src/menus/layer/scale.xml:86(para)
+#: src/menus/layer/scale.xml:87(para)
 msgid ""
 "However, you do not have to set the dimensions in pixels. You can choose "
 "different units from the drop-down menu. If you choose percent as units, you "
@@ -735,7 +737,7 @@ msgstr ""
 "で大きさを指定できます。 インチやミリメートルなどの物理的単位も利用できま"
 "す。 ただしこの場合は画像の解像度を考慮する必要があります。"
 
-#: src/menus/layer/scale.xml:95(para)
+#: src/menus/layer/scale.xml:96(para)
 msgid ""
 "If you enlarge a layer, the missing pixels are calculated by interpolation, "
 "but no new details are added. The more the layer is enlarged, and the more "
@@ -756,11 +758,11 @@ msgstr ""
 "するにしろやはり初めから高い解像度にしておくに越したことはありません。 もとも"
 "とラとラスター画像の引き伸ばしはうまくできないものなのです。"
 
-#: src/menus/layer/scale.xml:115(term)
+#: src/menus/layer/scale.xml:116(term)
 msgid "Quality"
 msgstr "品質"
 
-#: src/menus/layer/scale.xml:117(para)
+#: src/menus/layer/scale.xml:118(para)
 msgid ""
 "To change the size of the layer, <acronym>GIMP</acronym> either has to add "
 "or remove pixels. The method it uses to do this has a considerable impact on "
@@ -773,15 +775,15 @@ msgstr ""
 "ます。 画素の色を補間する技法が <guilabel>補間方法</guilabel> 引き出しメ"
 "ニューで選択できます。"
 
-#: src/menus/layer/scale.xml:126(term)
+#: src/menus/layer/scale.xml:127(term)
 msgid "Interpolation"
 msgstr "補間方法"
 
-#: src/menus/layer/scale.xml:130(term)
+#: src/menus/layer/scale.xml:131(term)
 msgid "None"
 msgstr "補間しない"
 
-#: src/menus/layer/scale.xml:132(para)
+#: src/menus/layer/scale.xml:133(para)
 msgid ""
 "No interpolation is used. Pixels are simply enlarged or removed, as they are "
 "when zooming. This method is low in quality, but very fast."
@@ -790,31 +792,31 @@ msgstr ""
 "されるか削除されます。 この処理による品質は低くなりますが非常に高い処理速度が"
 "出ます。"
 
-#: src/menus/layer/scale.xml:140(term)
+#: src/menus/layer/scale.xml:141(term)
 msgid "Linear"
 msgstr "線形"
 
-#: src/menus/layer/scale.xml:142(para)
+#: src/menus/layer/scale.xml:143(para)
 msgid "This method is a good compromise between speed and quality."
 msgstr "この方式は比較的高速なうえ、 かなり良い結果が出せます。"
 
-#: src/menus/layer/scale.xml:149(term)
+#: src/menus/layer/scale.xml:150(term)
 msgid "Cubic"
 msgstr "キュービック"
 
-#: src/menus/layer/scale.xml:151(para)
+#: src/menus/layer/scale.xml:152(para)
 msgid "This method takes a lot of time, but it produces the best results."
 msgstr "この処理は比較的多くの時間を費しますが、 最高の仕上りが得られます。"
 
-#: src/menus/layer/scale.xml:158(term)
+#: src/menus/layer/scale.xml:159(term)
 msgid "Sinc (Lanczos3)"
 msgstr "Sinc (Lanczos3)"
 
-#: src/menus/layer/scale.xml:163(para)
+#: src/menus/layer/scale.xml:164(para)
 msgid "Sinus cardinalis"
 msgstr "非正規化 sinc 関数"
 
-#: src/menus/layer/scale.xml:160(para)
+#: src/menus/layer/scale.xml:161(para)
 msgid ""
 "The Lanczos (pronounce <quote>lanzosh</quote>) method uses the "
 "Sinc<placeholder-1/> mathematical function to perform a high quality "
@@ -1556,7 +1558,7 @@ msgstr "キーボードショートカット <keycap>PageDown</keycap>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: src/menus/layer/new.xml:50(None)
+#: src/menus/layer/new.xml:51(None)
 msgid ""
 "@@image: 'images/menus/layer/new.png'; md5=16ba97364a105bf8906bdff0d9887a84"
 msgstr "localized"
@@ -1571,33 +1573,34 @@ msgstr "新しいレイヤーを作成"
 
 #: src/menus/layer/new.xml:22(para)
 msgid ""
-"The <guimenuitem>New Layer</guimenuitem> command adds a new, empty layer to "
-"the layer stack of the image, just above the active layer. The command "
-"displays a dialog in which you can specify the size of the new layer."
+"The <guimenuitem>New Layer…</guimenuitem> command opens the <quote>Create a "
+"New Layer</quote> dialog that allows you to add a new, empty layer to the "
+"layer stack of the image, just above the active layer. The command displays "
+"a dialog in which you can specify the size of the new layer."
 msgstr ""
-"<guimenuitem>新しいレイヤーの追加...</guimenuitem> コマンドは新たに何も描かれ"
-"ていないレイヤーを画像のレイヤーの積み重ねに加え、 活性レイヤーの手前に置きま"
-"す。 コマンドを呼び出すとダイアログが現れ、 追加されるレイヤーの大きさが設定"
-"できます。"
+"<guimenuitem>新しいレイヤーの追加...</guimenuitem> コマンドは<quote>新しいレ"
+"イヤー</quote>ダイアログを開き、 新たに何も描かれていないレイヤーを画像に追加"
+"し、 これをレイヤー各層のうち活性レイヤーの手前の位置に挿入します。 現れるダ"
+"イアログで、 新規追加のレイヤーの大きさが設定できます。"
 
-#: src/menus/layer/new.xml:33(para)
+#: src/menus/layer/new.xml:34(para)
 msgid ""
 "You can access this command from the image menubar through "
-"<menuchoice><guimenu>Layer</guimenu><guimenuitem>New Layer</guimenuitem></"
+"<menuchoice><guimenu>Layer</guimenu><guimenuitem>New Layer…</guimenuitem></"
 "menuchoice>."
 msgstr ""
 "画像ウィンドウのメニューより <menuchoice><guimenu>レイヤー</"
 "guimenu><guimenuitem>新しいレイヤーの追加...</guimenuitem></menuchoice>"
 
-#: src/menus/layer/new.xml:45(title)
+#: src/menus/layer/new.xml:46(title)
 msgid "Description of the <quote>New Layer</quote> Dialog"
 msgstr "<quote>新しいレイヤー</quote>ダイアログのご説明"
 
-#: src/menus/layer/new.xml:47(title)
+#: src/menus/layer/new.xml:48(title)
 msgid "The <quote>New Layer</quote> dialog"
 msgstr "<quote>新しいレイヤー</quote>ダイアログ"
 
-#: src/menus/layer/new.xml:54(para)
+#: src/menus/layer/new.xml:55(para)
 msgid ""
 "Under the title <quote>Create a new layer</quote> you can see the name of "
 "the image for that you create this new layer and next to the title a "
@@ -1608,11 +1611,11 @@ msgstr ""
 "の名前、 表題の右側には見本画像が表示されます。 複数の画像を同時に開いている"
 "方はここを見れば目的の画像を扱っているかどうか確認できます。"
 
-#: src/menus/layer/new.xml:62(term)
+#: src/menus/layer/new.xml:63(term)
 msgid "Layer Name"
 msgstr "レイヤー名"
 
-#: src/menus/layer/new.xml:64(para)
+#: src/menus/layer/new.xml:65(para)
 msgid ""
 "The name of the new layer. It does not have any functional significance; it "
 "is simply a convenient way for you to remember the purpose of the layer. The "
@@ -1628,7 +1631,7 @@ msgstr ""
 "<guibutton>OK</guibutton> ボタンのクリックで確定ののち重複を避けるため新たな"
 "名前のあとに自動的に番号が<quote>新しいレイヤー#1</quote>のように振られます。"
 
-#: src/menus/layer/new.xml:78(para)
+#: src/menus/layer/new.xml:79(para)
 msgid ""
 "The dimensions of the new layer. When the dialog appears, the values are "
 "initialized to the dimensions of the image. You can change them by using the "
@@ -1640,11 +1643,11 @@ msgstr ""
 "ます。 既定の単位はピクセルですが、 右側にある引き出しメニューで他の単位にも"
 "切り替えられます。"
 
-#: src/menus/layer/new.xml:87(term)
+#: src/menus/layer/new.xml:88(term)
 msgid "Layer Fill Type"
 msgstr "レイヤー塗りつぶし方法"
 
-#: src/menus/layer/new.xml:89(para)
+#: src/menus/layer/new.xml:90(para)
 msgid ""
 "There are four options for the solid color that fills the layer: the current "
 "<guilabel>Foreground color</guilabel>, the current <guilabel>Background "
@@ -1679,7 +1682,7 @@ msgstr ""
 #: src/menus/layer/new-layer-group.xml:25(para)
 msgid ""
 "You can access this command from an image menu through "
-"<menuchoice><guimenu>Layer</guimenu><guimenuitem>New Layer Group</"
+"<menuchoice><guimenu>Layer</guimenu><guimenuitem>New Layer Group…</"
 "guimenuitem></menuchoice>, or from the layer context menu you get by right "
 "clicking on the layer dialog."
 msgstr ""
